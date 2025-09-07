@@ -158,6 +158,12 @@ export function DynamicListingPage({
 
     setCurrentPriceFilter([min, max])
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 export function DynamicListingPage({title,description,categorySlug,listings: allListings,categoryFilters,initialPrice = { min: 0, max: 10000 },prev.includes(category)? prev.filter(c => c !== category): [...prev, category];
@@ -244,6 +250,12 @@ if ( {) {$2;
   let filteredListings: ProductListing[] = []
   try {
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <LayoutGrid className="h-4 w-4" />
 
   ),
@@ -287,7 +299,6 @@ if ( {) {$2;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
-            tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
       const matchesSpecs =
         !specQuery ||
@@ -374,7 +385,22 @@ if ( {) {$2;
         case 'newest':;
         default:;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           return (
             new Date(b.createdAt).getTime() -
             new Date(a.createdAt).getTime()
@@ -499,10 +525,30 @@ export function DynamicListingPage({;
 
   }
 
+<<<<<<< HEAD
 
 
 
   const handleRequestQuote = (listingId: string) => {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+  const handleRequestQuote = (listingId: string) => {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const handleRequestQuote = (listingId: string) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
@@ -513,6 +559,15 @@ export function DynamicListingPage({;
           title: 'Quote Requested'
           description: `Your quote request for ${listing.title} has been sent.`
         })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
@@ -728,12 +783,24 @@ export function DynamicListingPage(): any ({;
         });
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         router.push ('/request - quote');
 
       }
     }, 500);
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
@@ -742,11 +809,23 @@ export function DynamicListingPage(): any ({;
         toast({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`}),
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug,
           specificItem: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             id: listing.id
             title: listing.title
             category: listing.category
@@ -755,6 +834,12 @@ export function DynamicListingPage(): any ({;
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {;
@@ -996,7 +1081,17 @@ export function DynamicListingPage(): any ({;
         router.push("/request-quote");
       }
     }, 500);
+<<<<<<< HEAD
   },;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  },
+>>>>>>> origin/resolved-merge-conflicts
       )filtered_listings = all_listings.filter (listing => {      const matches_search =;
         !search_query ||;
         listing.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
@@ -1137,11 +1232,29 @@ max: 10000 ;
         router.push("/request-quote")}
     }, 500)},return (<div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
+<<<<<<< HEAD
+=======
+  return (;
+    <div className=min-h-screen bg-zion-blue py-12 px-4">;"
+      <div className=container mx-auto>;"
+        <div className="text-center mb-12>;
+          <GradientHeading>{title}</GradientHeading>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  },;
+>>>>>>> origin/resolved-merge-conflicts
   return (;"
     <div className="min-h-screen bg-zion-blue py-12 px-4">;"
       <div className="container mx-auto">;"
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
             {description}
           </p>;
@@ -1169,6 +1282,12 @@ max: 10000 ;
                 </div>
               </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       >;{filter.label}
                       </label>;
                     </div>;
@@ -1193,7 +1312,18 @@ max: 10000 ;
                       {brandOptions.map((b) => (<SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">;
                           {b || 'N/A'}
                         </SelectItem>;))}
+<<<<<<< HEAD
                           className='text-white'>                          {b || 'N/A'}
+=======
+                          className=text-white'>                          {b || 'N/A}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          className='text-white'>                          {b || 'N/A'}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                         </SelectItem>;
 
                     value={selectedBrand}
@@ -1231,7 +1361,22 @@ max: 10000 ;
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e && e.target.value);
@@ -1240,11 +1385,28 @@ max: 10000 ;
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
+<<<<<<< HEAD
                   className="bg-zion-blue border border-zion-blue-light text-white"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  className="bg-zion-blue border border-zion-blue-light text-white"
+                  className=bg-zion-blue border border-zion-blue-light text-white
+>>>>>>> origin/resolved-merge-conflicts
                 />
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>
 
               {availabilityOptions.length > 0 && (
@@ -1252,9 +1414,24 @@ max: 10000 ;
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Availability
                   </label>
+<<<<<<< HEAD
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               )}<div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  className='bg-zion-blue border border-zion-blue-light text-white'                />;
+              )}<div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  className=bg-zion-blue border border-zion-blue-light text-white'                />;
+              )}<div className='mb-6>;
+                <label className=text-sm font-medium text-zion-slate-light block mb-2'>;
+>>>>>>> origin/resolved-merge-conflicts
                   Specifications;
                 </label>;
                 <Input;
@@ -1281,6 +1458,12 @@ max: 10000 ;
                       setSelectedAvailability(value);
                     }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
@@ -1312,6 +1495,12 @@ max: 10000 ;
                           {a || 'N/A'}
                         </SelectItem>;
                       ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       setSelectedAvailability(value)}>;
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                       <SelectValue placeholder="Select Availability" />;
@@ -1357,6 +1546,12 @@ max: 10000 ;
                   </Select>
                 </div>
               )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   Price Range
                 </label>
@@ -1367,7 +1562,6 @@ max: 10000 ;
 
                     defaultValue={[0, priceRange.max]}
                     min={0}
-
 
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
@@ -1382,6 +1576,12 @@ max: 10000 ;
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     step={priceRange && priceRange.max / 100}value={currentPriceFilter}
                     onValueChange={handleSliderChange}className="mb-4";
                   />;
@@ -1391,7 +1591,17 @@ max: 10000 ;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
                     className='mb-4'                  />;
+=======
+                    className=mb-4'                  />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                   <div className='flex justify-between text-sm text-zion-slate-light'>;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -1414,7 +1624,17 @@ max: 10000 ;
 
                       aria-pressed = {selectedRating === rating,}
 
+<<<<<<< HEAD
                       className={`{;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      className={`{
+>>>>>>> origin/resolved-merge-conflicts
                   {[null, 3, 4, 5].map(rating => (<Button;
                       key={rating === null ? 'any' : rating}
                       variant='outline';
@@ -1430,6 +1650,10 @@ max: 10000 ;
                           {[...Array(rating)].map((_, i) => (<Star;
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
+<<<<<<< HEAD
+=======
+                              className=h-3 w-3 fill-zion-cyan text-zion-cyan                            />;
+>>>>>>> origin/resolved-merge-conflicts
 
 
               <div className="mb-6">
@@ -1443,9 +1667,25 @@ max: 10000 ;
                       variant="outline"
                       size="sm"
                       onClick={() => {
+<<<<<<< HEAD
                         selectedRating === rating;"
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple";"
                           : "border-zion-blue-light text-zion-slate-light";`
+=======
+                        selectedRating === rating;
+                          ? bg-zion-purple/30 border-zion-purple text-zion-purple";"
+                          : border-zion-blue-light text-zion-slate-light;`
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      className={`{;
+                        selectedRating === rating;"
+                          ? "bg-zion-purple/30 border-zion-purple text-zion-purple";"
+                          : "border-zion-blue-light text-zion-slate-light";`
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                       } focus-visible:ring-zion-purple`}
                     >;
                       {rating === null ? (;'
@@ -1493,6 +1733,12 @@ max: 10000 ;
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;<div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Minimum Rating;
@@ -1524,6 +1770,12 @@ max: 10000 ;
 
                           <span className="ml-1">& Up</span>
                         </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <span className='ml-1'>& Up</span>;
                         </div>;
                       )}
@@ -1546,6 +1798,12 @@ max: 10000 ;
 
           </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>;
               </div>;
               <Button;
@@ -1715,12 +1973,30 @@ max: 10000 ;
                 <div className="relative flex-grow">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                   <Input;
+<<<<<<< HEAD
                     type="text";
                     placeholder="Search listings...";
+=======
+                    type="text;
+                    placeholder=Search listings...";
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4 />
+                  <Input
+                    type="text"
+                    placeholder=Search listings..."
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   <Input"
                     type="text""
                     placeholder="Search listings..."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;
               </div>;
               <Button;"
@@ -1742,6 +2018,15 @@ max: 10000 ;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           <div className="lg:col-span-3">;
                 onClick={() => {logInfo("Clearing filters"),setSearchQuery(""),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(""),setSelectedAvailability("all")}>;
@@ -1759,12 +2044,45 @@ max: 10000 ;
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e.target.value }),;
+<<<<<<< HEAD
+=======
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                      logInfo(Search query:, { data: e.target.value }),
+>>>>>>> origin/resolved-merge-conflicts
                       setSearchQuery(e.target.value);
                     }
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
                 </div>
 
+<<<<<<< HEAD
+=======
+                <div className=flex items-center gap-2 ml-auto>
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+          <div className="lg:col-span-3">;
+            <div className=bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light>;
+              <div className="flex flex-col md:flex-row gap-4">;
+                <div className=relative flex-grow>;
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+
+                    placeholder=Search listings...;
+                    value={searchQuery}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {'
+                      logInfo('Search query:, { data: e.target.value }),
+                      setSearchQuery(e.target.value);
+                    }}"
+                    className="pl-10 bg-zion-blue border border-zion-blue-light text-white
+                  />
+                </div>
+
+>>>>>>> origin/resolved-merge-conflicts
                 <div className="flex items-center gap-2 ml-auto">
 
 
@@ -1807,10 +2125,29 @@ max: 10000 ;
                   </Select>
 
                       logInfo('Search query:', { data: e && e.target.value });
+<<<<<<< HEAD
                       setSearchQuery(e && e.target.value);                    }'
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {logInfo('Search query:', { data: e.target.value }),setSearchQuery(e.target.value)}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+=======
+<<<<<<< HEAD
+                      setSearchQuery(e && e.target.value);                    }}
+                    className=pl-10 bg-zion-blue border border-zion-blue-light text-white';
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {logInfo('Search query:, { data: e.target.value }),setSearchQuery(e.target.value)}}
+                    className=pl-10 bg-zion-blue border border-zion-blue-light text-white;
+=======
+                      setSearchQuery(e && e.target.value);                    }}'
+                    className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   />;
                 </div>;
 '
@@ -1836,7 +2173,22 @@ max: 10000 ;
                 <div className='relative flex - grow'>;'
                   <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     variant="outline"
 
                     size="icon"
@@ -1850,13 +2202,30 @@ max: 10000 ;
                     <span className='sr-only'>;
                       {isGrid ? 'List view' : 'Grid view'}
 
+<<<<<<< HEAD
                     <span className="sr-only">
                       {isGrid ? "List view" : "Grid view"}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                    <span className=sr-only>
+                      {isGrid ? "List view" : Grid view}
+>>>>>>> origin/resolved-merge-conflicts
                     </span>
                   </Button>
                 </div>
               </div>
             </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <div className="mb-6">
 
               <p className="text-zion-slate-light">
@@ -1866,6 +2235,12 @@ max: 10000 ;
             </div>
 
                   <Button;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </Select>;<Button;
                     variant="outline";
                     size="icon";
@@ -1891,6 +2266,12 @@ max: 10000 ;
               </p>;
             </div>;
             {isLoading ? (<Button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     variant='outline';
                     size='icon';
                     on_click={() => set_view (is_grid ? 'list' : 'grid')}
@@ -1953,6 +2334,12 @@ max: 10000 ;
 
                     : "flex flex-col gap-6"
                 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               >
                 {[1, 2, 3, 4].map(i => (
                   <div
@@ -2053,6 +2440,12 @@ max: 10000 ;
                   Try adjusting your filters or search query
                 </p>
                 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               >;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
@@ -2077,6 +2470,12 @@ max: 10000 ;
                   }"
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -2112,7 +2511,11 @@ import {
   categoryFilters;
   initialPrice;
                     setSelectedAvailability("all")
+<<<<<<< HEAD
                   }
+=======
+                  }}
+>>>>>>> origin/resolved-merge-conflicts
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -2127,11 +2530,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setCurrentPriceFilter([0, priceRange && priceRange.max]);
                     setSelectedRating(null);
                     setSelectedBrand('all');
+<<<<<<< HEAD
                     setSpecQuery('');
                     setSelectedAvailability('all');                  }
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
                     setSelectedAvailability("all")}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+=======
+                    setSpecQuery();
+                    setSelectedAvailability('all');                  }}
+                  className=border-zion-purple text-zion-purple hover:bg-zion-purple/10;
+                    setSelectedAvailability("all")}}
+                  className=border-zion-purple text-zion-purple hover:bg-zion-purple/10;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >;
                   Clear All;
                 </Button>;
@@ -2139,9 +2556,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             )}
 
+<<<<<<< HEAD
 };
 if (typeof window !== 'undefined') {';
   sessionStorage && sessionStorage.setItem ('quoteRequestData', JSON && JSON.stringify (quoteData) ) ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+if (typeof window !== 'undefined') {;
+  sessionStorage && sessionStorage.setItem (quoteRequestData', JSON && JSON.stringify (quoteData) ) ;
+>>>>>>> origin/resolved-merge-conflicts
           </div>
         </div>
       </div>
@@ -2178,8 +2607,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ` {;
   selectedRating === rating <Star key= {;
   i ";
+<<<<<<< HEAD
                   onClick={() => {setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
+=======
+                  onClick={() => {setSearchQuery('')clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery('')setSelectedAvailability('all')}}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
+  selectedRating === rating <Star key= {
+  i ;
+                  onClick={() => {setSearchQuery()clearCategories()setCurrentPriceFilter([0, priceRange && priceRange.max])setSelectedRating(null)setSelectedBrand('all')setSpecQuery()setSelectedAvailability('all')}}
+                  className=border-zion-purple text-zion-purple hover:bg-zion-purple/10;
+>>>>>>> origin/resolved-merge-conflicts
                 >;
                   Clear All;
                 </Button>;
@@ -2268,6 +2706,11 @@ return (</p> </div> <div className="grid grid - cols - 1 lg:grid - cols - 4 gap 
 }";
 }className="pl - 10 bg - zion - blue border border - zion - blue - light text - white" /> </div> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="newest" className="text - white" >Newest</SelectItem> <SelectItem value="price - asc" className="text - white" >Price: Low to High</SelectItem> <SelectItem value="price - desc" className="text - white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text - white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {is_loading ? (<div className= {> {[1, 2,  3, 4].map ( (i) => (<div key= {i ";
 }className="rounded - lg overflow - hidden border border - zion - blue - light" > </div> </div> </div>) )}</div> > {filtered_listings.map ( (listing) => (<ProductListingCard key= {listing.id;}listing= {listing;
+<<<<<<< HEAD
+=======
+}className="pl - 10 bg - zion - blue border border - zion - blue - light text - white /> </div> </SelectTrigger> <SelectContent className=bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="newest className=text - white" >Newest</SelectItem> <SelectItem value="price - asc className=text - white" >Price: Low to High</SelectItem> <SelectItem value="price - desc className=text - white" >Price: High to Low</SelectItem> <SelectItem value="rating className=text - white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {is_loading ? (<div className= {> {[1, 2,  3, 4].map ( (i) => (<div key= {i ";
+}className=rounded - lg overflow - hidden border border - zion - blue - light > </div> </div> </div>) )}</div> > {filtered_listings.map ( (listing) => (<ProductListingCard key= {listing.id;}listing= {listing;
+>>>>>>> origin/resolved-merge-conflicts
 }view= {view;
 }onRequestQuote= {handleRequestQuote;
 }detailBasePath= {if (typeof window !== 'undefined') {';
@@ -2312,6 +2755,7 @@ setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
+<<<<<<< HEAD
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ()setCurrentPriceFilter ([0, priceRange.max])setSelectedRating (null)> Clear All </Button> </div>)}</div> </div> </div> </div>)}'";
@@ -2319,14 +2763,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   is_loading ? (<div className= {
   > {
   [1, 2,  3, 4].map ( (i) => (<div key= {
+=======
+}'
+origin/cursor/automate-test-improve-and-merge-code-2533
+}</div> No listings found </h3> <p className=text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ()setCurrentPriceFilter ([0, priceRange.max])setSelectedRating (null)> Clear All </Button> </div>)}</div> </div> </div> </div>)}'";
+}className=pl - 10 bg - zion - blue border border - zion - blue - light text - white /> </div> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value=newest className="text - white" >Newest</SelectItem> <SelectItem value=price - asc className="text - white" >Price: Low to High</SelectItem> <SelectItem value=price - desc className="text - white" >Price: High to Low</SelectItem> <SelectItem value=rating className="text - white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {
+  is_loading ? (<div className= {
+  > {
+  [1, 2,  3, 4].map ( (i) => (<div key= {
+  selectedRating === rating <Star key= {
+  i ;
+}className=h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";
+}<span className=ml-1 >& Up</span> </div>) ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   selectedRating === rating <Star key= {;
   i ";
 }className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";
 }<span className="ml-1" >& Up</span> </div>) ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 }</Button>) ) ;
 }</div> </div> <Button clearCategories ();
 setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);";
+<<<<<<< HEAD
 > Clear All </Button> </div> </div> <div className="lg:col-span-3" > <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4" > <div className="relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input ;
 }";
 }className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {;
@@ -2347,6 +2814,28 @@ setSelectedRating (null);";
 }detailBasePath= {;
   detailBasePath ;
 }/>) ) ";
+=======
+> Clear All </Button> </div> </div> <div className="lg:col-span-3 > <div className=bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4 > <div className=relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4 /> <Input ;
+};
+}className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className=bg-zion-blue-dark border border-zion-blue-light > <SelectItem value="newest" className=text-white >Newest</SelectItem> <SelectItem value="price-asc" className=text-white >Price: Low to High</SelectItem> <SelectItem value="price-desc" className=text-white >Price: High to Low</SelectItem> <SelectItem value="rating" className=text-white >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {
+  isLoading ? (<div className= {
+  > {
+  [1, 2,  3, 4].map ( (i) => (<div key= {
+  i ";
+}className="rounded-lg overflow-hidden border border-zion-blue-light > </div> </div> </div>) ) ;
+}</div> > {
+  filteredListings.map ( (listing) => (<ProductListingCard key= {
+  listing.id ;
+}listing= {
+  listing ;
+}view= {
+  view ;
+}onRequestQuote= {
+  handleRequestQuote ;
+}detailBasePath= {
+  detailBasePath ;
+}/>) ) ;
+>>>>>>> origin/resolved-merge-conflicts
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ();
 setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);

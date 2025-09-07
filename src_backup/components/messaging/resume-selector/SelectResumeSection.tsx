@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 export function SelectResumeSection({import React from 'react';
@@ -17,9 +23,11 @@ export function SelectResumeSection({
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+>>>>>>> merged-prs-20250907-203621
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
 export function SelectResumeSection({
 
+<<<<<<< HEAD
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -39,11 +47,39 @@ interface SelectResumeSectionProps {
 
   isLoading: boolean
 }
+=======
+import React from react';
+import { FileText } from 'lucide-react;
+import { ResumeOption } from ../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard;
+import { Resume } from @/types/resume';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
+
+import React from 'react';
+import { FileText } from 'lucide-react';
+import { ResumeOption } from '../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+
+import React from 'react';
+import { FileText } from 'lucide-react'
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+>>>>>>> origin/chore/fix-lint-and-merge
+interface SelectResumeSectionProps {
+  resumeOptions: ResumeOption[];
+  selectedResume: ResumeOption | null;
+  handleResumeSelect: (resumeId: string) => void;
+  handleDownloadResume: () => void;
+  isLoading: boolean
+export function SelectResumeSection({
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
 origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
 }: SelectResumeSectionProps) {
@@ -64,6 +100,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {resumeOptions.map((option) => (
             <button
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick={() => handleResumeSelect(option.id)}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   isLoading: boolean;
 export function SelectResumeSection() {return (<div className="space-y-2">;
       {resumeOptions.length === 0 ? (<p className="text-sm text-zion-slate">No saved resumes found.</p>;
@@ -91,12 +140,61 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
               resume = {selectedResume.resume as Resume}
               onDownload = {handleDownloadResume}
               isLoading = {isLoading}
+<<<<<<< HEAD
             />;{selectedResume?.type === 'ai_resume' && selectedResume.resume && (<ResumePreviewCard;
+=======
+            />;{selectedResume?.type === 'ai_resume && selectedResume.resume && (<ResumePreviewCard;
+=======
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+              }`}
+              onClick={() => handleResumeSelect(option.id)}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            >
+              <div className='flex items-center'>
+                <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
+                <span className='text-white'>{option.title}</span>
+              </div>
+            </button>
+          ))}
+
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
+            <ResumePreviewCard
+              resume = {selectedResume.resume as Resume,}
+              onDownload = {handleDownloadResume,}
+              isLoading = {isLoading,}
+            />
+;
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
+            <ResumePreviewCard;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
             />;
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </>
+      )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </>;
       )}
   )}}</div>;
@@ -182,7 +280,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
   )}
+=======
+  )}}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
     </div>
   )
 }
+=======
+        </>
+      )});
+
+};
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import { 
+=======
+<<<<<<< HEAD
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -12,6 +15,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Select;
   SelectContent;
   SelectItem;
@@ -20,21 +24,40 @@ import {
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes";
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",
 
 import { Badge } from "@/components/ui/badge",
 import {}
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Select,
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
+<<<<<<< HEAD
+
+type RequestsHeaderProps = {
+
+  unreadCount: number,
+  statusFilter: QuoteStatus | 'all','
+  setStatusFilter: (value: QuoteStatus | 'all') => void,'
+  archiveFilter: 'active' | 'archived' | 'all',';
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+},
+
+=======
 <<<<<<< HEAD
 =======
   SelectValue 
@@ -64,10 +87,21 @@ type RequestsHeaderProps = {
 },
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setArchiveFilter'
 import React from './react';'
 import { Badge } from '@/components / ui / badge';'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';"
+<<<<<<< HEAD
+import type { QuoteStatus } from "@/types / quotes";
+type RequestsHeaderProps = {}
+  unread_count: number,'
+  status_filter: QuoteStatus | 'all','
+  setStatusFilter: (value: QuoteStatus | 'all') => void,'
+  archive_filter: 'active' | 'archived' | 'all','
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+}
+=======
 =======
 <<<<<<< HEAD
 type RequestsHeaderProps = {
@@ -96,6 +130,7 @@ type RequestsHeaderProps = {}
   archive_filter: 'active' | 'archived' | 'all','
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
@@ -110,6 +145,9 @@ type RequestsHeaderProps = {;
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 type RequestsHeaderProps = {
   unreadCount: number
   statusFilter: QuoteStatus | 'all'
@@ -117,9 +155,12 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
@@ -128,6 +169,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
   statusFilter;
@@ -181,11 +225,15 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
           value={archiveFilter} 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   archiveFilter,;
   setArchiveFilter;
 }) => {;
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
@@ -200,8 +248,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 }) => {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <div className = $2;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
       <div>
         <div className="flex items-center gap-3">
@@ -240,11 +291,14 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
         <Select 
           value={archiveFilter} 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >"
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">"
@@ -263,6 +317,8 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 
 }
@@ -276,6 +332,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
 import { Badge } from "@/components/ui/badge",;
@@ -312,14 +369,20 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             </Badge>;
           )}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
 
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       </div>;
@@ -398,6 +461,7 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <Select
           value={statusFilter} 
@@ -428,9 +492,15 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
             <SelectValue placeholder="All Statuses" />;
 
 =======
+<<<<<<< HEAD
+
+            <SelectValue placeholder="All Statuses" />;
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -443,12 +513,15 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           </SelectContent>;
         </Select>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <Select;
           value={archiveFilter} ;
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <Select;
           value={archive_filter}
@@ -456,7 +529,10 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <SelectValue placeholder="Active Only" />;
 
           </SelectTrigger>;
@@ -489,12 +565,15 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
 
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>;
   );
 };
 
 export default RequestsHeader;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default RequestsHeader;
     </div>);
@@ -530,6 +609,9 @@ type RequestsHeaderProps = {
 },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   unreadCount: number;,
   statusFilter: QuoteStatus | 'all
   setStatusFilter: (value: QuoteStatus | 'all') => void;',
@@ -621,6 +703,9 @@ pr-12325
       </div>;
     </div>;"
 
+<<<<<<< HEAD
+export default RequestsHeader;
+=======
 export default RequestsHeader;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -628,3 +713,4 @@ export default RequestsHeader;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

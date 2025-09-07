@@ -1,10 +1,22 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';'
+
+import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +40,12 @@ import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
   Cloud, Smartphone, Palette, Search, MessageSquare;
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
@@ -91,8 +109,32 @@ const serviceCategories = [
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform', description: 'Create AI civilizations', price: '$19,999/month' };'
 =======
     services: [
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories = [;
+  {
+    }
+    "title": '🚀 2028 Cutting-Edge Innovations''
+    "icon": Rocket,
+"color": 'from-violet-600 to-purple-600''
+    "description": 'Beyond the future of technology''
+    "services": [
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -197,6 +239,10 @@ const serviceCategories = [;
 <<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Evolve AI beyond human limits', price: '$9,999/month' };
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { name: 'Quantum Consciousness Interface', href: '/quantum-consciousness-interface', description: 'Bridge quantum computing with consciousness', price: '$15,999/month' };
@@ -290,6 +336,46 @@ const service_categories = [;
       { name: 'Autonomous AI Civilization', href: '/autonomous - ai - civilization - platform', description: 'Create AI civilizations', price: '$19, 999 / month' }
       { name: 'Quantum Time Manipulation', href: '/quantum - time - manipulation - platform', description: 'Manipulate time through quantum computing', price: '$25, 999 / month' }
     ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  };
+const companyLinks = ['
+  { name: '🏠 Home', href: '/', icon: Home }
+  {'
+    name: '🚀 2028 Services''
+    href: '/ultimate-2028-services-showcase'
+    icon: Rocket;
+  }
+{
+        }
+        "name": 'AI Consciousness Evolution','
+        "href": '/ai-consciousness-evolution-platform','
+        "description": 'Evolve AI beyond human limits','
+        "price": '$9,999/month','
+      },
+      {
+        }
+        "name": 'Quantum Consciousness Interface''
+        "href": '/quantum-consciousness-interface''
+        "description": 'Bridge quantum computing with consciousness''
+        "price": '$15,999/month''
+      }
+      {
+        }
+        "name": 'Autonomous AI Civilization''
+        "href": '/autonomous-ai-civilization-platform''
+        "description": 'Create AI civilizations''
+        "price": '$19,999/month''
+      }
+      {
+        }
+        "name": 'Quantum Time Manipulation','
+        "href": '/quantum-time-manipulation-platform','
+        "description": 'Manipulate time through quantum computing','
+        "price": '$25,999/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
     title: '🎯 2028 Practical Micro SAAS',
     icon: Target,
@@ -550,10 +636,53 @@ color: 'from-violet-600 to-purple-600',
   href: '/quantum-time-manipulation-platform',
         description: 'Manipulate time through quantum computing'}
   price: '$25,999/month'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ]
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    "title": '🎯 2028 Practical Micro SAAS','
+    "icon": Target,
+    "color": 'from-blue-600 to-cyan-600','
+    "description": 'Real business solutions for today','
+    "services": [
+{
+        }
+        "name": 'AI Customer Success Automation','
+        "href": '/ai-customer-success-automation-2028','
+        "description": 'Automate customer success with AI','
+        "price": '$299/month','
+      },
+      {
+        }
+        "name": 'Smart Inventory Management''
+        "href": '/smart-inventory-management-2028''
+        "description": 'AI inventory optimization''
+        "price": '$399/month''
+      }
+      {
+        }
+        "name": 'Automated HR Recruitment''
+        "href": '/automated-hr-recruitment-2028''
+        "description": 'AI-powered hiring automation''
+        "price": '$249/month''
+     
+}
+      {
+        }
+        "name": 'AI Content Marketing Suite','
+        "href": '/ai-content-marketing-suite-2028','
+        "description": 'AI-powered content creation','
+        "price": '$199/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
     title: '🎯 2028 Practical Micro SAAS',
 <<<<<<< HEAD
     icon: Target,
@@ -664,10 +793,90 @@ color: 'from-violet-600 to-purple-600',
   href: '/quantum-financial-trading-algorithm-platform-2028',
         description: 'Quantum trading algorithms'}
   price: '$12,999/month'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ]
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    "title": '⚛️ 2028 Quantum & Space Tech','
+    "icon": Atom,
+    "color": 'from-indigo-600 to-blue-600','
+    "description": 'Quantum computing and space exploration','
+    "services": [
+{
+        }
+        "name": 'Quantum Internet Security','
+        "href": '/quantum-internet-security-gateway-2028','
+        "description": 'Unbreakable quantum encryption','
+        "price": '$3,999/month','
+      },
+      {
+        }
+        "name": 'Quantum Neural Interface''
+        "href": '/quantum-neural-interface-platform-2028''
+        "description": 'Brain-computer quantum interface''
+        "price": '$8,999/month''
+      }
+      {
+        }
+        "name": 'Space Debris Management AI''
+        "href": '/space-debris-management-ai-2028''
+        "description": 'AI space safety and management''
+        "price": '$5,999/month''
+      }
+      {
+        }
+        "name": 'Quantum Financial Trading','
+        "href": '/quantum-financial-trading-algorithm-platform-2028','
+        "description": 'Quantum trading algorithms','
+        "price": '$12,999/month','
+      }
+    ]
+  },
+  {
+    }
+    "title": '🤖 2028 AI & Machine Learning','
+    "icon": Brain,
+    "color": 'from-emerald-600 to-teal-600','
+    "description": 'Next-generation AI solutions','
+    "services": [
+{
+        }
+        "name": 'AI Consciousness Evolution','
+        "href": '/ai-consciousness-evolution-platform-2028','
+        "description": 'Evolve AI beyond human limits','
+        "price": '$9,999/month','
+      },
+      {
+        }
+        "name": 'Autonomous AI Civilization''
+        "href": '/autonomous-ai-civilization-platform-2028''
+        "description": 'Create AI civilizations''
+        "price": '$19,999/month''
+      }
+      {
+        }
+        "name": 'AI Healthcare Companion''
+        "href": '/ai-healthcare-companion-2028''
+        "description": 'Revolutionary healthcare AI''
+        "price": '$399/month''
+     
+}
+      {
+        }
+        "name": 'AI Content Creation Revolution','
+        "href": '/ai-content-creation-revolution-2028','
+        "description": 'Unlimited AI content generation','
+        "price": '$599/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
     title: '🤖 2028 AI & Machine Learning',
   icon: Brain,
     color: 'from-emerald-600 to-teal-600',
@@ -697,10 +906,53 @@ color: 'from-violet-600 to-purple-600',
   href: '/ai-content-creation-revolution-2028',
         description: 'Unlimited AI content generation'}
   price: '$599/month'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ]
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    "title": '🏢 2028 Enterprise Solutions','
+    "icon": Shield,
+    "color": 'from-red-600 to-orange-600','
+    "description": 'Enterprise-grade solutions','
+    "services": [
+{
+        }
+        "name": 'Zero Trust Architecture 2028','
+        "href": '/zero-trust-network-architecture-2028','
+        "description": 'Next-gen security architecture','
+        "price": 'Custom pricing','
+      },
+      {
+        }
+        "name": 'Edge Computing Orchestration''
+        "href": '/edge-computing-orchestration-2028''
+        "description": 'Intelligent edge computing''
+        "price": 'Custom pricing''
+      }
+      {
+        }
+        "name": '5G Private Networks''
+        "href": '/5g-private-network-solutions-2028''
+        "description": 'Enterprise 5G solutions''
+        "price": 'Custom pricing''
+     
+}
+      {
+        }
+        "name": 'Blockchain Infrastructure','
+        "href": '/blockchain-infrastructure-platform-2028','
+        "description": 'Enterprise blockchain','
+        "price": 'Custom pricing','
+=======
+>>>>>>> origin/resolved-merge-conflicts
     title: '🏢 2028 Enterprise Solutions',
   icon: Shield,
     color: 'from-red-600 to-orange-600',
@@ -730,10 +982,52 @@ color: 'from-violet-600 to-purple-600',
   href: '/blockchain-infrastructure-platform-2028',
         description: 'Enterprise blockchain'}
   price: 'Custom pricing'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ]
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    "title": '🌌 2028 Metaverse & Digital Reality','
+    "icon": Globe,
+    "color": 'from-pink-600 to-rose-600','
+    "description": 'Virtual and augmented reality','
+    "services": [
+{
+        }
+        "name": 'Holographic Metaverse','
+        "href": '/holographic-metaverse-development-platform-2028','
+        "description": '3D holographic experiences','
+        "price": '$2,999/month','
+      },
+      {
+        }
+        "name": 'AI Multiverse Creation''
+        "href": '/ai-multiverse-creation-platform-2028''
+        "description": 'Create AI-powered multiverses''
+        "price": '$29,999/month''
+      }
+      {
+        }
+        "name": 'Virtual Event Holograms''
+        "href": '/virtual-event-hologram-platform-2028''
+        "description": 'Holographic event platform''
+        "price": '$1,999/month''
+      }
+      {
+        }
+        "name": 'Digital Reality Interface','
+        "href": '/digital-reality-interface-2028','
+        "description": 'Next-gen reality interface','
+        "price": '$4,999/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
     title: '🌌 2028 Metaverse & Digital Reality',
 <<<<<<< HEAD
     icon: Globe,
@@ -771,10 +1065,60 @@ color: 'from-violet-600 to-purple-600',
   href: '/digital-reality-interface-2028',
         description: 'Next-gen reality interface'}
   price: '$4,999/month'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ]
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const companyLinks = [;
+  { "name": '🏠 Home', "href": '/', "icon": Home,'
+},
+{
+    }
+    "name": '🚀 2028 Services','
+    "href": '/ultimate-2028-services-showcase','
+    "icon": Rocket
+  },
+  { name: '🏠 Home', href: '/', icon: Home }
+  {'
+    name: '🚀 2028 Services''
+    href: '/ultimate-2028-services-showcase'
+    icon: Rocket
+  }
+  {
+    }
+    "name": '⭐ Ultimate 2028''
+    "href": '/ultimate-2028-services-showcase''
+    "icon": Star
+ 
+}
+  {
+    }
+    "name": '💰 2028 Pricing','
+    "href": '/revolutionary-2028-pricing','
+    "icon": DollarSign
+  },
+  { "name": '📊 Case Studies', "href": '/case-studies', "icon": Briefcase,'
+},
+  { "name": '📚 Blog & Resources', "href": '/blog', "icon": BookOpen,'
+},
+  { "name": '📈 Reports', "href": '/reports', "icon": TrendingUp,'
+},
+  { "name": '🔧 Solutions', "href": '/solutions', "icon": Layers,'
+},
+  { "name": '💼 Careers', "href": '/careers', "icon": Users,'
+},
+{ "name": '📞 Contact', "href": '/contact', "icon": MessageCircle,'
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 const companyLinks = [
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -2423,6 +2767,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Star;
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ];
 
 const _serviceCategories = [
@@ -2506,10 +2854,68 @@ export default function UltraFuturisticNavigation2027() {
     email: 'kleber@ziontechgroup.com,
     address: 364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const quickLinks = [;
+    {
+      }
+      "name": 'Pricing''
+      "href": '/pricing''
+      "icon": <CreditCard className='w-4 h-4' />'
+
+   
+}
+    {"name": 'Case Studies';'
+      }
+      "href": '/case-studies';'
+      "icon": <FileText className='w-4 h-4' />;'
+    }
+    {"name": 'Support';'
+      }
+      "href": '/support';'
+      "icon": <MessageSquare className='w-4 h-4' />;'
+    }
+    { "name": 'Contact', "href": '/contact', "icon": <Mail className='w-4 h-4' /> }'
+  ]>
+
+      {/* Animated Background */}
+
+      <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />'
+      <div className='relative container mx-auto px-4'>'
+        <div className='flex items-center justify-between h-20'>'
+
+          {/* Logo *
+}
+          <Link;
+            href='/';'
+            className='flex items-center space-x-3 group relative z-10'>;'
+
+            <motion&& motion.div,
+className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-"hover":scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30''
+
+              whileHover={{ "rotate": 5, "scale": 1.1 }}
+              whileTap={{ "scale": 0.95 }}
+            >
+              <Zap className='w-7 h-7 text-white' />'
+            </motion.div>
+            <div className='hidden "sm":block'>'
+              <div className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-"hover":from-cyan-300 group-"hover":via-purple-300 group-"hover":to-pink-300 transition-all duration-300'>'
+                Zion Tech Group
+              </div>
+              <div className='text-xs text-gray-400 group-"hover":text-cyan-300 transition-colors'>'
+                Revolutionary Technology Solutions
+                Revolutionary Technology Solutions;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
               <div className='text-xs text-gray-400 group-hover:text-cyan-300 transition-colors'    />
                 Revolutionary Technology Solutions;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </div>
             </div>
           </Link>
@@ -2517,6 +2923,37 @@ export default function UltraFuturisticNavigation2027() {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {/* Desktop Navigation *
+}
+<nav className='hidden "xl":flex items-center space-x-1'>;'
+            {navigation.map(item => (<div key={item.name} className='relative group'>;'
+                <motion.button;
+                  className='flex items-center space-x-2 px-4 py-3 text-gray-300 "hover":text-white transition-all duration-300 rounded-xl "hover":bg-gray-800/50 "hover":shadow-lg "hover":shadow-cyan-500/20';'
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  whileHover={{ "y": -2 }}
+                  whileTap={{ "scale": 0.95 
+}
+                >;
+<div;
+                    className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>`
+                    {item.icon}
+
+                  </div>
+                  <span className='font-medium'>{item.name}</span>'
+                  <ChevronDown className='w-4 h-4 group-"hover": rotate-180 transition-transform duration-300' />'
+                </motion.button>
+
+
+                {/* Dropdown Menu *
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (<motion&& motion.div;
                       }
@@ -2594,6 +3031,30 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
 
                     {item.icon}
                   </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <span className='font - medium'>{item.name}</span>;'
+                  <ChevronDown className='w - 4 h - 4 group - "hover": rotate - 180 transition - transform duration - 300' />                </motion.button>                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`}>`
+                    {item.ico
+}
+                  </div>;
+                  <span className="font - medium">{item.name}</span>;"
+                  <ChevronDown className="w - 4 h - 4 group - "hover":rotate - 180 transition - transform duration - 300" />;"
+                {/* Dropdown Menu */}
+                <AnimatePresence>;
+                  {active_dropdown === item.name && (<motion.div;
+                      }
+                      initial={{ "opacity": 0, "coordinate_y": 10, "scale": 0.95 
+}
+                      animate={{ "opacity": 1, "coordinate_y": 0, "scale": 1 
+}
+                      exit={{ "opacity": 0, "coordinate_y": 10, "scale": 0.95 }}
+                      transition={{ "duration": 0.2 }}
+                            {item.ico
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   <span className='font - medium'    />{item.name}</span>;
                   <ChevronDown className='w - 4 h - 4 group - hover: rotate - 180 transition - transform duration - 300'    />                </motion.button>                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`}    />
 
@@ -4693,9 +5154,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                             {item.icon}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                           </div>;
 
+<<<<<<< HEAD
                                 <div className='text - sm text - gray - 400>;
+=======
+<<<<<<< HEAD
+                              <span className='text - 2xl'>{child.ico,'
+}</span>;
+                              <div className='flex - 1'>;'
+                                <div className='font - medium text - white group - "hover":text - cyan - 300 transition - colors'>;'
+                                  {child.name}
+                                </div>;
+                                <div className='text - sm text - gray - 400'>;'
+=======
+                                <div className='text - sm text - gray - 400>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                                   {child.description}
                                 </div>;
                               </div>;
@@ -4729,11 +5208,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <div className='text-sm font-medium text-cyan-400'>{child && child.price}</div>;'
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />;
                               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                              <div className='text - right'>;'
+                                <div className='text - sm font - medium text - cyan - 400'>;'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
                               <div className='text - right'>;
                                 <div className='text - sm font - medium text - cyan - 400'>;
                                   {child.price}<div className="p-4">;
                         <div className="flex items-center space-x-3 mb-4">;
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                                   {child.price}
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
@@ -4747,8 +5238,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <h3 className='text-lg font-semibold text-white'>{item.name}</h3>;
                             <p className='text-sm text-gray-400'>{item.description}</p>;
                           </div>;
+<<<<<<< HEAD
                         </div>;
                         <div className='space-y-2'>;
+=======
+<<<<<<< HEAD
+=======
+                        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                        <div className="space-y-2">;
+>>>>>>> origin/resolved-merge-conflicts
                           {item.children.map((child) => (<Link;
                               key={child && child.name}
                               href={child && child.href}
@@ -4767,13 +5266,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                             </Link>
                 >
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
                     {item.icon}
                   </div>
                   <span className="font-medium">{item.name}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </motion.button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                          )
+}
+                        </div>;
+                    </motion && motion.div>;
+                  )}
+                </AnimatePresence>;
+              </div>;
+            ))}
+          {/* Right Side */}<div className='flex items-center space-x-4'>;'
+            {/* Contact Info */}
+            <div className='hidden "lg":flex items-center space-x-4 text-sm'>;'
+              <a;
+                href={`"tel": ${contactInfo && contactInfo.mobile},`}
+                className='flex items-center space-x-2 text-gray-300 "hover":text-cyan-400 transition-colors'>;'
+                <Phone className='w-4 h-4' />;'
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </a>;
+              <a;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
                 {/* Dropdown Menu */}
@@ -4950,6 +5480,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             </Link>;
                                 </div>'
                                 <ChevronRight className=w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors />                              </div>
@@ -4968,6 +5502,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
                     </motion && motion.div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                                 <div className='text - sm text - gray - 400'    />;
                                   {child.description}
@@ -5125,10 +5664,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   )}
                 </AnimatePresence>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </nav>;
+          {/* Right Side */}<div className='flex items-center space-x-4'>;
+<div className='flex items-center space-x-4'>;
+          <div className='flex items-center space-x-4'>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
           </nav>
           {/* Right Side */}
@@ -5180,8 +5732,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {/* Right Side */}
+
+<div className='flex items-center space-x-4'>'
+
+            {/* Contact Info */}
+            <div className='hidden "lg":flex items-center space-x-4 text-sm'>;'
+              <a;
+                href={`"tel": ${contactInfo && contactInfo.mobile},`}
+                className="flex items-center space-x-2 text-gray-300 "hover":text-cyan-400 transition-colors">;"
+                <Phone className="w-4 h-4" />;"
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </a>;
+              <a;
+            {/* CTA Button */}<motion.div whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 
+}>;
+              <Link;
+                href='/contact';'
+                className='hidden "lg":inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 "hover":shadow-xl "hover":shadow-cyan-500/40 transition-all duration-300'>;'
+                <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link;'
+            <motion.div;
+              whileHover={{ "scale": 1.05 }}
+              whileTap={{ "scale": 0.95 
+}
+            >;
+                href={`"mailto": ${contactInfo.email}`}`
+                className='flex items-center space-x-2 text-gray-300 "hover":text-cyan-400 transition-colors''
+              >
+                <Mail className='w-4 h-4' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
             {/* CTA Button */}
 
@@ -5203,6 +5792,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <span>{contactInfo.email}</span>
               </a>
             </div>
@@ -5247,8 +5840,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href=/contact"
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300
+=======
+<<<<<<< HEAD
+                href="/contact"
+                className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300"
+=======
+<<<<<<< HEAD
+                href=/contact"
+                className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               >
                 <Rocket className=w-4 h-4" />
                 <span>Get Started</span>
@@ -5260,6 +5864,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>{contactInfo.email}</span>;
               </a>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {/* CTA Button */}href="/contact";
+                href="/contact"
+=======
+>>>>>>> origin/resolved-merge-conflicts
             {/* CTA Button */}href="/contact;
                 href=/contact"
 =======
@@ -5295,6 +5906,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href="/contact"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
                 className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300>;
@@ -5321,11 +5936,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors"
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
               className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
               )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >
             {/* Mobile Menu Button */}
             <button
@@ -5342,6 +5967,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='hidden lg:flex items-center space-x-4 text-sm'>
+              <a;`
+                href={`tel:${contactInfo && contactInfo.mobile}`}"
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;"
+                <Phone className="w-4 h-4" />;
+=======
+>>>>>>> origin/resolved-merge-conflicts
           {/* Right Side */}
 
           <div className=flex items-center space-x-4'>
@@ -5377,6 +6012,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
                 <Phone className=w-4 h-4" />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <span>{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a;
@@ -5384,6 +6023,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <motion.div whileHover={ scale: 1.05 } whileTap={ scale: 0.95 }>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <Link'
+                href='/contact''
+                className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;'
+                <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link;
+            <motion.div;
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >`
+                href={`mailto:${contactInfo.email}`}'
+                className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
+              >
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <Link
                 href='/contact'
                 className=hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;'
@@ -5423,6 +6078,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <Mail className='w-4 h-4' />
                 <span>{contactInfo.email}</span>
               </a>
@@ -5443,6 +6102,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<motion.div whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }}>
+              <Link,
+href='/contact''
+                className='hidden "lg":inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 "hover":shadow-xl "hover":shadow-cyan-500/40 transition-all duration-300''
+              >
+                <Rocket className='w-4 h-4' />'
+                <span>Get Started</span>
+              </Link>
+            </motion.div>
+
+            {/* Mobile Menu Button *
+}
+            <button;
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+
+className='"xl": hidden p-2 text-gray-300 "hover":text-white transition-colors''
+            >
+              {isMenuOpen ? (
+                <X className='w-6 h-6' />'
+              ) : (
+                <Menu className='w-6 h-6' />'
+
+              
+}
+            </button>
+          </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -5544,6 +6234,10 @@ className='xl: hidden p-2 text-gray-300 hover:text-white transition-colors'
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {/* Mobile Menu Button */}
             <button;
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -5564,6 +6258,18 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
             >;
               {isMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />})}</button>;
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </button>;
+          </div>;
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+=======
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       </div>;
 =======
@@ -5625,10 +6331,24 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            className="xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
+          >
+            <div className="container mx-auto px-4 py-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Services */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 
@@ -5698,6 +6418,10 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
                     </h3>;
                     <div className='space-y-2'>;
                       {quickLinks && quickLinks.map(link => (;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <div>
                   <h3 className='text-lg font-semibold text-white mb-4'>Services</h3>
                   <div className='space-y-3'>
@@ -5718,6 +6442,13 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                {/* Quick Links & Contact */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
                 {/* Quick Links & Contact */}
                 <div className='space-y-6'>
@@ -5795,6 +6526,10 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 {/* Quick Links & Contact */}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <div className="space-y-6">
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>Quick Links</h3>
@@ -5802,10 +6537,63 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                       {quickLinks.map((link) => (
                         <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                           key={link.name}
                           href={link.href}
                           className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'
                         >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                          {link.icon}
+                          <span className="text-white">{link.name}</span>
+                  <div>
+<h3 className='text-lg font-semibold text-white mb-4'>'
+                      Contact Info
+                    </h3>
+                    <div className='space-y-3'>'
+                      <a,
+href={`"tel":${contactInfo && contactInfo.mobile},`}
+                        className='flex items-center space-x-3 p-3 rounded-xl "hover":bg-gray-800/50 transition-all duration-200'>;'
+                        <Phone className='w-4 h-4 text-cyan-400' />;'
+                        <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;'
+                      </a>;
+
+                      <a,
+href={`"mailto": ${contactInfo.email},`}
+                        className='flex items-center space-x-3 p-3 rounded-xl "hover":bg-gray-800/50 transition-all duration-200'>'
+
+                        <Mail className='w-4 h-4 text-cyan-400' />;'
+                        <span className='text-white'>{contactInfo.email}</span>;'
+                      </a>;
+                      <div className='flex items-center space-x-3 p-3 rounded-xl'>;'
+                        <MapPin className='w-4 h-4 text-cyan-400' />;'
+                        <span className='text-white text-sm'>;'
+                          {contactInfo.address}
+                      <a
+
+                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <Phone className="w-4 h-4 text-cyan-400" />
+                        <span className="text-white">{contactInfo.mobile}</span>
+                      </a>
+                      <a 
+                        href={`mailto:${contactInfo.email}`}
+                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <Mail className="w-4 h-4 text-cyan-400" />
+                        <span className="text-white">{contactInfo.email}</span>
+                      </a>
+                      <div className="flex items-center space-x-3 p-3 rounded-xl">
+                        <MapPin className="w-4 h-4 text-cyan-400" />
+                        <span className="text-white text-sm">{contactInfo.address}</span>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                           </div>;
                           <div>;
@@ -6230,6 +7018,10 @@ href={`mailto: ${contactInfo.email}
                         <span className="text-white text-sm">{contactInfo.address}</span>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
                         href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -6240,7 +7032,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;'
                         <Phone className='w-4 h-4 text-cyan-400' />;'
                         <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
+<<<<<<< HEAD
                         <span className='text-white>{contactInfo && contactInfo.mobile}</span>;
+=======
+<<<<<<< HEAD
+=======
+                        <span className='text-white>{contactInfo && contactInfo.mobile}</span>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       </a>;
                       <a"
                         className=flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200
@@ -6270,6 +7069,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {contactInfo.address}
                         </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      </div>
+
+              {/* Mobile CTA */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                         </span>
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -6293,11 +7100,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {/* Mobile CTA */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 <div className='mt-6 pt-6 border-t border-gray-700/50'>'
                 <Link,
 href='/contact''
                   className='inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300''
                 >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <Rocket className='w-4 h-4 mr-2' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   <Rocket className="w-4 h-4 mr-2" />
               {/* Mobile CTA */}
 <div className='mt-6 pt-6 border-t border-gray-700/50'>
@@ -6306,6 +7123,10 @@ href='/contact''
                   className='inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300'
                 >
                   <Rocket className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   Get Started Today
 =======
 <div className='mt-6 pt-6 border-t border-gray-700/50'    />
@@ -6326,6 +7147,56 @@ href='/contact'
 <<<<<<< HEAD
   )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {`  }
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion.div> <div className="hidden "sm": block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-"hover":from-cyan-300 group-"hover":via-purple-300 group-"hover":to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-"hover":text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {"
+  `p-2 rounded-lg bg-gradient-to-br $ {`  }
+  item.color
+}shadow-lg`,`}> {
+  }
+  item.icon;
+}</div> </motion.button> {}
+  /* Dropdown Menu */;
+}<AnimatePresence> </div> </a>) );
+}</div> </div> </motion.div>);
+}</AnimatePresence> </div>) );
+}</nav> </a> </div> {}
+  /* CTA Button */;
+}<motion.div while_hover= {
+  {
+  }
+  "scale": 1.05;
+}while_tap= {
+  {
+  }
+  "scale": 0.95;
+}> <Link href="/contact" className="hidden "lg":inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 "hover":shadow - xl "hover":shadow - cyan - 500 / 40 transition - all duration - 300" > <Rocket className="w - 4 h - 4" /> <span > Get Started</span> </a> </motion.div> {"
+  /* Mobile Menu Button */;
+}<button </button> </div> </div> </div> {
+  /* Mobile Menu */;
+}<AnimatePresence> > <div className= {
+  `p - 2 rounded - lg bg - gradient - to - br $ {`  }
+  item.color;
+}`;`
+}> {
+
+  }
+
+  item.icon 
+}</div> <div> </div> </a> </div>) ) 
+}</div> </div>) ) 
+}</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>) "
+}</AnimatePresence> </header>) 
+};
+export default UltraFuturisticNavigation2027;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+export default UltraFuturisticNavigation2027;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default UltraFuturisticNavigation2027;
                         </span>;
 =======
@@ -6754,3 +7625,7 @@ export default UltraFuturisticNavigation2027;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

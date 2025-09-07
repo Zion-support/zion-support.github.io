@@ -1,10 +1,210 @@
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx,
 export function AdminHeader() {
 }
 export function AdminHeader() {;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { Download, Settings } from "lucide-react";
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+export function AdminHeader() {
+  const { user } = useAuth($2);
+  const { company } = useCompanyWorkspace($2);
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
+          <p className="text-muted-foreground mt-1">
+            Manage your company's account, team members, and subscription
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button variant="outline" size="sm" className="gap-2">
+            <Settings className="h-4 w-4" />
+            Settings
+          </Button>
+          <Button variant="outline" size="sm" className="gap-2">
+            <Download className="h-4 w-4" />
+            Export Data
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>
+          <div className="text-xl font-medium">{company?.plan |"Enterprise"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Team Members</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>
+          <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
+        </div>
+      </div>
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
+            <img
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
+              className="max-h-10 max-w-10"
+            />
+          </div>
+          <div>
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+            </p>
+          </div>
+        </div>
+        <Button>Customize Workspace</Button>
+      </div>
+    </div>
+  )
+=======
+<<<<<<< HEAD
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+
+import React from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Download, Settings} from "lucide-react";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+
+import React from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Download, Settings} from "lucide-react";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+
+export function AdminHeader() {
+<<<<<<< HEAD
+
+export function AdminHeader() {;
+
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
+import React from "react","
+import { useAuth } from "@/hooks/useAuth","
+import { Button } from "@/components/ui/button","
+import { Download, Settings } from "lucide-react","
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {}
+  const { user } = useAuth(),
+  const { company } = useCompanyWorkspace(),
+
+export function AdminHeader() {;
+=======
+export function AdminHeader() {;
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Download, Settings } from "lucide-react",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+  const { user } = useAuth(),
+  const { company } = useCompanyWorkspace(),
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
+          <p className="text-muted-foreground mt-1">
+            Manage your company's account, team members, and subscription
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button variant="outline" size="sm" className="gap-2">
+            <Settings className="h-4 w-4" />
+            Settings
+          </Button>
+          <Button variant="outline" size="sm" className="gap-2">
+            <Download className="h-4 w-4" />
+            Export Data
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>
+          <div className="text-xl font-medium">{company?.plan |"Enterprise"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Team Members</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>
+          <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
+        </div>
+      </div>
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
+            <img
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
+              className="max-h-10 max-w-10"
+            />
+          </div>
+          <div>
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+            </p>
+          </div>
+        </div>
+        <Button>Customize Workspace</Button>
+      </div>
+    </div>
+  )
+=======
+
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+export function AdminHeader() {
+
+export function AdminHeader() {;
+
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
+import React from "react","
+import { useAuth } from "@/hooks/useAuth","
+import { Button } from "@/components/ui/button","
+import { Download, Settings } from "lucide-react","
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {}
+  const { user } = useAuth(),
+  const { company } = useCompanyWorkspace(),
+
+export function AdminHeader() {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   }
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
+<<<<<<< HEAD
 return (;
 import { useAuth } from "@/hooks/useAuth";"
 import { Button } from "@/components/ui/button";"
@@ -12,24 +212,208 @@ import { Download, Settings } from "lucide-react",;"
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;"
 export function AdminHeader() {;
   }
+=======
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Download, Settings } from "lucide-react",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+  const { user } = useAuth(),
+  const { company } = useCompanyWorkspace(),
+
+  return (
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
+          <p className="text-muted-foreground mt-1">
+            Manage your company's account, team members, and subscription
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button variant="outline" size="sm" className="gap-2">
+            <Settings className="h-4 w-4" />
+            Settings
+          </Button>
+          <Button variant="outline" size="sm" className="gap-2">
+            <Download className="h-4 w-4" />
+            Export Data
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>
+          <div className="text-xl font-medium">{company?.plan |"Enterprise"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Team Members</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>
+          <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
+        </div>
+      </div>
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
+            <img
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
+              className="max-h-10 max-w-10"
+            />
+          </div>
+          <div>
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+            </p>
+          </div>
+        </div>
+        <Button>Customize Workspace</Button>
+      </div>
+    </div>
+  )
+
+export function AdminHeader() {;
+
+  return (
+
+}
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from "react",;
+
+import React from "react",;
+
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Download, Settings } from "lucide-react",;
+
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
+export function AdminHeader() { return null; }
+>>>>>>> origin/resolved-merge-conflicts
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (;
+<<<<<<< HEAD
     <div className="space-y-4">;"
       <div className="flex items-center justify-between">;"
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+;
+export function AdminHeader() {;
+  const { user } = useAuth(),;
+  const { company } = useCompanyWorkspace(),;
+;
+  return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className="space-y-4">;
+
+      <div className="flex items-center justify-between">;
+        <div>;"
+          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;"
+          <p className="text-muted-foreground mt-1">;
+            Manage your company's account, team members, and subscription;
+          </p>;
+        </div>;"
+        <div className="flex items-center gap-2">;"
+          <Button variant="outline" size="sm" className="gap-2">;"
+            <Settings className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
+            Settings;
+<<<<<<< HEAD
+
+=======
+          </Button>;
+          <Button variant="outline" size="sm" className="gap-2">;
+            <Download className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
+=======
+:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
+import React from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Download, Settings } from './lucide-react';
+import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
+export /**
+ * AdminHeader - Function description
+ */
+function AdminHeader() {
+  const { user } = use_auth ();
+  const { company } = useCompanyWorkspace ();
+;
+  return (
+    <div className="space - y-4">;
+      <div className="flex items - center justify - between">;
+>>>>>>> origin/resolved-merge-conflicts
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;"
           <p className="text-muted-foreground mt-1">;"
             Manage your company's account, team members, and subscription;'
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="flex items-center gap-2">;"
           <Button variant="outline" size="sm" className="gap-2">;"
             <Settings className="h-4 w-4" />;"
+=======
+        <div className="flex items - center gap - 2">;
+          <Button variant="outline" size="sm" className="gap - 2">;
+            <Settings className="h - 4 w - 4" />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             Settings;
+
+            Export Data;
           </Button>;
+<<<<<<< HEAD
           <Button variant="outline" size="sm" className="gap-2">;"
             <Download className="h-4 w-4" />;            Export Data;"
+=======
+<<<<<<< HEAD
+        </div>;
+      </div>;
+
+}
+
+;
+}
+            <Download className="h-4 w-4" />;            Export Data;
+=======
+          <Button variant="outline" size="sm" className="gap - 2">;
+            <Download className="h - 4 w - 4" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+            Export Data;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </Button>;
         </div>;
       </div>;
@@ -37,8 +421,97 @@ export function AdminHeader() {;
 ;
 
 }
+<<<<<<< HEAD
+      ;"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;"
+        <div className="bg-card rounded-lg p-4 border border-border">;"
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>;"
+          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;
+        </div>;"
+        <div className="bg-card rounded-lg p-4 border border-border">;"
+          <div className="text-sm text-muted-foreground">Team Members</div>;"
+          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
+        </div>;"
+        <div className="bg-card rounded-lg p-4 border border-border">;"
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>;"
+          <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>;
+        </div>;
+      </div>;"
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">;"
+        <div className="flex items-center gap-4">;"
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
+            <img;"
+              src={company?.logoUrl || "/placeholder.svg"} ;"
+              alt={company?.name || "Company"} ;"
+              className="max-h-10 max-w-10";
+            />;
+          </div>;
+          <div>;"
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>;"
+            <p className="text-sm text-muted-foreground">;"
+=======
       ;
+<<<<<<< HEAD
       <div className="grid grid-cols-1 "md":grid-cols-3 gap-4">;"
+=======
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>;
+          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;
+        </div>;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Team Members</div>;
+          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
+        </div>;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>;
+          <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>;
+        </div>;
+      </div>;
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">;
+        <div className="flex items-center gap-4">;
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
+            <img;
+              src={company?.logoUrl || "/placeholder.svg"} ;
+              alt={company?.name || "Company"} ;
+              className="max-h-10 max-w-10";
+            />;
+          </div>;
+          <div>;
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
+            <p className="text-sm text-muted-foreground">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              Workspace URL: {company?.workspaceUrl || "loading..."}
+            </p>;
+          </div>;
+        </div>;
+        <Button>Customize Workspace</Button>;
+      </div>;
+    </div>;
+  );
+}
+<<<<<<< HEAD
+;
+=======
+;
+=======
+
+>>>>>>> merged-prs-20250907-203621
+}
+
+;
+}
+            <Download className="h-4 w-4" />;            Export Data;
+          </Button>;
+        </div>;
+      </div>;
+}}
+;
+
+}
+      ;"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;"
+>>>>>>> origin/resolved-merge-conflicts
         <div className="bg-card rounded-lg p-4 border border-border">;"
           <div className="text-sm text-muted-foreground">Subscription Plan</div>;"
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;"
@@ -74,3 +547,13 @@ export function AdminHeader() {;
 }
 ;
 }
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

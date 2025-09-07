@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,9 +46,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { action,}
 >>>>>>> origin/chore/fix-lint-and-merge
 } = req.query;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const body = null;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { stores } = await connectOrbit();
+  if (!stores) {
+    return res.status(503).json({ error: 'OrbitDB unavailable' });
+  }
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const { action } = req.query;
 
 <<<<<<< HEAD
@@ -243,9 +265,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const body = typeof req.body === string ? JSON.parse(req.body) : req.body;
   const { stores } = await connectOrbit();'
   if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   try {
     if (action === 'chat' && req && req.method === POST) {}
       await appendChatMessage(stores, body);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      return res.status(200).json({ ok: true });
+    }
+
+    if (action === 'vote' && req.method === 'POST') {
+      await recordVote(stores, body);
+      return res.status(200).json({ ok: true });
+    }
+
+    if (action === 'constitution' && req.method === 'POST') {
+      await editConstitution(stores, body);
+      return res.status(200).json({ ok: true });
+    }
+
+    return res.status(400).json({ error: 'Unsupported action' });
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
       return res && res.status(200).json({ ok: true });
 
   try {'
@@ -363,3 +412,7 @@ return res.status(200).json({ ok: true,}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

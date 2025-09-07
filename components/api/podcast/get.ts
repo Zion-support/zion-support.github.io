@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -72,6 +80,10 @@ export default function handler() {
   }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   ensureStorage();
   const { id } = req.query as { id?: string };'
@@ -96,6 +108,17 @@ const episode = episodes.find(e => { return e.id === id); }
 });
 
   return res.status(200).json({ episode });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+  if ()) {}
+  $2;
+}'
+    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json');
+;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 return res.status(200).json({ episode });
 import type { NextApiRequest, NextApiResponse } from 'next;
 import fs from 'fs';
@@ -173,6 +196,10 @@ const EPISODES_PATH = path.join (
   data,'
   'podcast,
   'episodes.json');
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 /**
  * ensure_storage - Function description;
  */
@@ -180,6 +207,11 @@ function ensure_storage() {}
   const dir = path.dirname (EPISODES_PATH);
   if () fs.mkdir_sync (dir, { recursive: true })) {}
   $2;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
   if ()) {}
   $2;
@@ -190,6 +222,10 @@ function ensure_storage() {}
  */
   if () fs.mkdir_sync (dir, { recursive: true })) {}
   $2;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   if ()) {}
   $2;
@@ -214,10 +250,22 @@ function handler() {}
 }
 <<<<<<< HEAD
   return res.status (200).json ({ episode });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return res.status(200).json({ episode });
   return res.status(200).json({ ok: true });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -232,6 +280,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status (200).json ({ episode });
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 <<<<<<< HEAD

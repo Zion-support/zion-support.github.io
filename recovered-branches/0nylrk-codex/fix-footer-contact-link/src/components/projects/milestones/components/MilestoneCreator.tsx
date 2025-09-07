@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+projectScope?: string;
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
@@ -16,11 +19,14 @@ export function MilestoneCreator({
 projectScope?: string;
 =======
   projectScope?: string;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
 
+<<<<<<< HEAD
+=======
 
 
 export function MilestoneCreator({;
@@ -57,22 +63,30 @@ export function MilestoneCreator({;
   projectType?: string;
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function MilestoneCreator({;
 
 export function MilestoneCreator({;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope;
   projectStartDate;
   projectEndDate;
+<<<<<<< HEAD
+<AddMilestoneForm
+
+=======
 <<<<<<< HEAD
   projectType
 }: MilestoneCreatorProps) {
@@ -101,6 +115,7 @@ export function MilestoneCreator({;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',;
 
 import { AddMilestoneForm } from '../AddMilestoneForm',;
@@ -118,6 +133,11 @@ interface MilestoneCreatorProps {;
 
   projectType;
 }: MilestoneCreatorProps) {;
+<<<<<<< HEAD
+  return (
+    <AddMilestoneForm
+
+=======
 <<<<<<< HEAD
   return (
     <AddMilestoneForm
@@ -163,10 +183,18 @@ export function MilestoneCreator({;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
       projectScope={projectScope}
+<<<<<<< HEAD
+      projectStartDate={projectStartDate}
+      projectEndDate={projectEndDate}
+      projectType={projectType}
+
+  on_submit: (data: any) => Promise < void>,
+=======
 <<<<<<< HEAD
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
@@ -239,3 +267,4 @@ function MilestoneCreator() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

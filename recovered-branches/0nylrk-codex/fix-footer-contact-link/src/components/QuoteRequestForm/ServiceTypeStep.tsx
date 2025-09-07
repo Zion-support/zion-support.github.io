@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+interface ServiceTypeStepProps {
+=======
+<<<<<<< HEAD
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
@@ -40,6 +43,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 =======
 <<<<<<< HEAD
 interface ServiceTypeStepProps {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
 
@@ -54,6 +58,10 @@ interface ServiceTypeStepProps {
 
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
+<<<<<<< HEAD
+}
+
+=======
 =======
 <<<<<<< HEAD
 import {useState} from "react";
@@ -107,12 +115,18 @@ interface ServiceTypeStepProps {
 }
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
+<<<<<<< HEAD
+  {
+    id: "service-1",
+    title: "AI Development",
+=======
 <<<<<<< HEAD
 =======
   {
@@ -219,6 +233,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     category: "Services",
     image:"
@@ -262,12 +277,17 @@ const SAMPLE_LISTINGS: ListingItem[] = [;
   },
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     updateFormData({
 
       specificItem: item,
       serviceCategory: item.category,
 
+<<<<<<< HEAD
+=======
 =======
 ;
 export /**
@@ -310,6 +330,7 @@ if (return false) {
   });
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div className="space - y-6">;
       <div>;
@@ -323,15 +344,58 @@ if (return false) {
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
+<<<<<<< HEAD
+
+    updateFormData({
+      specificItem: item,
+      serviceCategory: item.category,
+
+      serviceType: item.category.toLowerCase() as ServiceType,
+    });
+  };
+
+  const filteredListings = SAMPLE_LISTINGS.filter((item) => {}
+    // Filter by category only when a service type has been selected"
+    if (formData.serviceType !== "") {}
+=======
 });
   }
   const filteredListings = SAMPLE_LISTINGS.filter((item) => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const categoryMatch =
         item.category.toLowerCase() === formData.serviceType.toLowerCase();
       if (!categoryMatch) return false;
     }
+<<<<<<< HEAD
+"
+    if (searchQuery.trim() === "") return true;
+    return (
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  });
+
+  return ("
+    <div className="space-y-6">
+      <div>"
+        <h3 className="text-xl font-semibold text-white mb-4">
+          What are you looking for?
+        </h3>"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            onClick={() => handleTypeSelect("service")}
+          >"
+            <h4 className="font-medium text-white">Services</h4>"
+            <p className="text-sm text-zion-slate-light">
+              AI solutions, consulting, development;
+            </p>
+          </Card>
+
+            className={`p-4 cursor-pointer border-2 transition-colors ${
+
+=======
     if (searchQuery.trim() === "") return true;
     return (
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -432,20 +496,34 @@ export function ServiceTypeStep({
 <<<<<<< HEAD
           <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
+<<<<<<< HEAD
+
+            onClick={() => handleTypeSelect("talent")}
+          >"
+            <h4 className="font-medium text-white">Talent</h4>"
+            <p className="text-sm text-zion-slate-light">
+              AI specialists, developers, consultants;
+=======
             onClick={() => handleTypeSelect("talent")}
           >
             <h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">
               AI specialists, developers, consultants
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </p>
           </Card>
           <Card
 =======
 
+<<<<<<< HEAD
+          <Card
+
+=======
     updateFormData({
       specificItem: item,
       serviceCategory: item.category,
@@ -524,6 +602,7 @@ export function ServiceTypeStep({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -539,10 +618,24 @@ export function ServiceTypeStep({
         </div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
+<<<<<<< HEAD
+
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
+
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -599,6 +692,7 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
             <Input
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -610,6 +704,10 @@ interface ServiceTypeStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Sample data - would come from an API in a real application;
 const SAMPLE_LISTINGS: ListingItem[] = [;
   { id: "service-1", title: "AI Development", category: "Services", image: "https://images && images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format" },;
@@ -618,11 +716,22 @@ const SAMPLE_LISTINGS: ListingItem[] = [;
   { id: "talent-2", title: "Data Scientist", category: "Talents", image: "https://images && images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format" },;
   { id: "equipment-1", title: "Workstation", category: "Equipment", image: "https://images && images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format" },;
   { id: "equipment-2", title: "Server Rack", category: "Equipment", image: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" }],;
+<<<<<<< HEAD
+
+export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTypeStepProps) {;
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleTypeSelect = (type: ServiceType) => {;
+    updateFormData({ serviceType: type });
+  };
+
+=======
 export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
   const handleTypeSelect = (type: ServiceType) => {;
     updateFormData({ serviceType: type });
   };
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleItemSelect = (item: ListingItem) => {;
     updateFormData({ ;
       specificItem: item,;
@@ -630,6 +739,9 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
       serviceType: item && item.category.toLowerCase() as ServiceType;
     });
   };
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -694,10 +806,14 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
 ;
   return (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-6">;
       <div>;
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -707,12 +823,16 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }`}
             onClick={() => handleTypeSelect("service")}
           >;
             <h4 className="font-medium text-white">Services</h4>;
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>;
           </Card>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -723,12 +843,16 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }`}
             onClick={() => handleTypeSelect("talent")}
           >;
             <h4 className="font-medium text-white">Talent</h4>;
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>;
           </Card>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -739,6 +863,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }`}
             onClick={() => handleTypeSelect("equipment")}
           >;
@@ -748,11 +873,16 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}"
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
+<<<<<<< HEAD
+=======
             />
           </div>
 "
@@ -987,9 +1117,201 @@ title={item.title}
               onChange={(e) => setSearchQuery(e.target.value)}
 >>>>>>> merged-prs-20250907-203621
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />
           </div>
+"
+          <div className="grid grid-cols-1 gap-4 mt-4">
+            {filteredListings.length > 0 ? (
+              filteredListings.map((item) => (
+                <div;
+                  key={item.id}
+                  onClick={() => handleItemSelect(item)}`
+                  className={`cursor-pointer transition-all ${}
+                    formData.specificItem?.id === item.id"
+                      ? "ring-2 ring-zion-purple rounded-lg""
+                      : ""`
+                  }`}
+                >;
+                  <ListingScoreCard;
+                    title={item && item.title}
+                    category={item && item.category}
+                    aiScore={Math && Math.floor(Math && Math.random() * 30) + 70}
+                    rating={Math && Math.floor(Math && Math.random() * 2) + 3}
+                    reviewCount={Math && Math.floor(Math && Math.random() * 50) + 10}
+                    image={item && item.image}"
+                    description="Sample listing description"
+                  />;
+                </div>;
+              ));
+            ) : (;"
+              <div className="text-center py-8 text-zion-slate-light">;
+                No items found. Please try a different search.;
+              </div>;
+            )}
+          </div>;
+        </div>;
+      )});
 
+            on_click={() => handleTypeSelect ("service")}
+          >;
+            <h4 className="font - medium text-white">Services</h4>;
+            <p className="text - sm text - zion - slate-light">;
+
+              AI specialists, developers, consultants;
+            </p>;
+          </Card>;
+          <Card;`
+            className={`p - 4 cursor - pointer border - 2 transition - colors ${"
+              form_data.service_type === "equipment";"
+                ? "bg - zion - purple / 20 border - zion - purple";"
+                : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";`
+            }`}"
+            on_click={() => handleTypeSelect ("equipment")}
+
+              Servers, workstations, specialized hardware;
+            </p>;
+          </Card>;
+        </div>;
+      </div>;
+
+            {filtered_listings.length > 0 ? (
+              filtered_listings.map ((item) => (
+                <div;
+                  key={item.id}
+                  on_click={() => handleItemSelect (item)}`
+                  className={`cursor - pointer transition - all ${}
+                    form_data.specific_item?.id === item.id;"
+                      ? "ring - 2 ring - zion - purple rounded - lg";"
+                      : "";`
+                  }`}
+                >;
+                  <ListingScoreCard;
+import { useState } from "react";""
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";""
+import { Input } from "@/components/ui/input";""
+import { Card } from "@/components/ui/card";""
+import { Search } from "lucide-react";""
+import { ListingScoreCard } from "@/components/ListingScoreCard";"
+interface ServiceTypeStepProps {
+  // TODO: Implement
+}
+  formData: QuoteFormData;,
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+"
+    <div className="space-y-6">"
+</Input>
+          </div>;"
+          <div className="grid grid - cols - 1 gap - 4 mt - 4">;"
+</div>
+      <div>
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">"
+</h3>
+        </h3>"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
+          <Card;
+            className={`p-4 cursor-pointer border-2 transition-colors ${"
+              formData.serviceType === "service"""
+                ? "bg-zion-purple/20 border-zion-purple"""
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50""`;
+            }`}"
+            onClick={() => handleTypeSelect("service")}"
+            <h4 className="font-medium text-white">Services</h4>""
+            <p className="text-sm text-zion-slate-light">"
+</p>
+
+          <Card;`;
+              formData.serviceType === "talent"""
+            onClick={() => handleTypeSelect("talent")}"
+            <h4 className="font-medium text-white">Talent</h4>""
+
+              formData.serviceType === "equipment"""
+            onClick={() => handleTypeSelect("equipment")}"
+            <h4 className="font-medium text-white">Equipment</h4>""
+        <div className="space-y-4">"
+          <h3 className="text-xl font-semibold text-white">"
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>""
+          <div className="relative">"
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />"
+
+            <Input;`;
+              placeholder={`Search ${formData.serviceType}...`}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 gap-4 mt-4">"
+                <div;
+                  key={item.id}
+                  onClick={() => handleItemSelect(item)}
+                  <ListingScoreCard;
+                    title={item && item.title}
+                    category={item && item.category}
+                    aiScore={Math && Math.floor(Math && Math.random() * 30) + 70}
+                    rating={Math && Math.floor(Math && Math.random() * 2) + 3}
+                    reviewCount={Math && Math.floor(Math && Math.random() * 50) + 10}
+                    image={item && item.image}"
+                    description="Sample listing description""
+                  />;
+
+                </div>;"
+              <div className="text-center py-8 text-zion-slate-light">;"
+              </div>;
+            <h4 className="font - medium text - white">Services</h4>;""
+            <p className="text - sm text - zion - slate - light">;"
+            </p>;
+          ;
+            className={`p - 4 cursor - pointer border - 2 transition - colors ${"
+              form_data.service_type === "talent";""
+                ? "bg - zion - purple / 20 border - zion - purple";""
+                : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";"`;
+            on_click={() => handleTypeSelect ("talent")}"
+            <h4 className="font - medium text - white">Talent</h4>;""
+              form_data.service_type === "equipment";""
+            on_click={() => handleTypeSelect ("equipment")}"
+            <h4 className="font - medium text - white">Equipment</h4>;""
+        <div className="space - y-4">;"
+          <h3 className="text - xl font - semibold text - white">;"
+          </h3>;"
+          <div className="relative">;"
+            <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate - light h - 4 w - 4" />;"
+
+              placeholder={`Search ${form_data.service_type}...`}
+              value={search_query}
+              on_change={(e) => setSearchQuery (e.target.value)}
+
+          <div className="grid grid - cols - 1 gap - 4 mt - 4">;"
+                  on_click={() => handleItemSelect (item)}
+pr-12325
+                    title={item.title}
+                  on_click={() => handleItemSelect (item)}
+</div>
+
+                  <ListingScoreCard;
+title={item.title}
+                    category={item.category}
+
+                    ai_score={Math.floor (Math.random () * 30) + 70}
+                    rating={Math.floor (Math.random () * 2) + 3}
+                    review_count={Math.floor (Math.random () * 50) + 10}
+
+                    description="Sample listing description";
+                  />;
+                </div>))) : (
+              <div className="text - center py - 8 text - zion - slate - light">;
+                No items found. Please try a different search.;
+                    image={item.image}}
+                    image={item.image}"
+                    description="Sample listing description";"
+
+                </div>))) : ("
+              <div className="text - center py - 8 text - zion - slate - light">;"
+</div>)
+              </div>)}
+    </div>);
+
+=======
           <div className="grid grid-cols-1 gap-4 mt-4">
             {filteredListings.length > 0 ? (
               filteredListings.map((item) => (
@@ -1017,6 +1339,7 @@ title={item.title}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     description="Sample listing description"
                   />
                 </div>
@@ -1025,20 +1348,31 @@ title={item.title}
               <div className="text-center py-8 text-zion-slate-light">
                 No items found. Please try a different search.
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <div className="text-center py-8 text-zion-slate-light">"
     </div>"`;
 pr-12325
 </div>
 
+<<<<<<< HEAD
+              </div>
+=======
               </div>
 =======
               </div>
             )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>
         </div>
       )}
     </div>
+<<<<<<< HEAD
+  );
+}
+=======
 <<<<<<< HEAD
   )
 }
@@ -1054,3 +1388,4 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

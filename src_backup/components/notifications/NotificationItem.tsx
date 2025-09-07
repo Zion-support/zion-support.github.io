@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React from 'react';
@@ -18,7 +24,18 @@ export const getTypeIcon = null;
   TooltipProvider;
   TooltipTrigger } from '@/components/ui/tooltip';
 import { useRouter  } from 'next/router';
+<<<<<<< HEAD
 import React from 'react';
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from 'react';
+import React from react';
+>>>>>>> origin/resolved-merge-conflicts
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -50,8 +67,16 @@ import { Notification, NotificationType } from '@/context/notifications'
   onDismiss
 }) => {
       className={cn(
+<<<<<<< HEAD
                   onMarkAsRead(notification.id); import React from 'react'
+=======
+<<<<<<< HEAD
+                  onMarkAsRead(notification.id); import React from react'
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/notifications/NotificationItem.tsx
+=======
+                  onMarkAsRead(notification.id); import React from 'react'
+>>>>>>> origin/chore/fix-lint-and-merge
 
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -84,7 +109,12 @@ export const getTypeIcon = (type: NotificationType,) => {
     case 'order_status':
       return <span className='text-orange-500'>📦</span>
     default:
+<<<<<<< HEAD
       return <span className='text-gray-500'>📣</span>
+=======
+<<<<<<< HEAD
+      return <span className="text-gray-500>📣</span>
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/notifications/NotificationItem.tsx
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
@@ -121,6 +151,9 @@ export const getTypeIcon = (type: NotificationType) => {;
     case 'order_status':;
       return <span className='text-orange-500'>📦</span>,;
     default:;
+=======
+      return <span className="text-gray-500">📣</span>
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
@@ -148,10 +181,28 @@ import { Notification, NotificationType } from '@/context/notifications';
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
+<<<<<<< HEAD
       return <span className='text-blue-500'>💬</span>;
       return <span className='text-orange-500'>📦</span>;
+=======
+      return <span className="text-blue-500">💬</span>;
+    case 'quote_request':
+      return <span className="text-purple-500">📝</span>;
+    case 'booking_confirmation':
+      return <span className="text-green-500">✅</span>;
+    case 'hire_request':
+      return <span className="text-zion-purple">🤝</span>;
+    case 'project_update':
+      return <span className="text-orange-500">📦</span>;
+>>>>>>> origin/resolved-merge-conflicts
     default:
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     default:;
       return <span className='text-gray-500'>📣</span>;
   notification: Notification;
@@ -213,7 +264,18 @@ export const getTypeIcon = (type: NotificationType) => {switch (type) {case 'mes
     case 'project_update':;
       return <span className='text-orange-500'>📦</span>;
     default:;
+<<<<<<< HEAD
       return <span className='text-gray-500'>📣</span>;
+=======
+      return <span className=text-gray-500">📣</span>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      return <span className="text-gray-500">📣</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   }
 },;
 interface NotificationItemProps {;
@@ -235,6 +297,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification.action_url) {;
       router.push(notification.action_url), // Changed to router.push;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
   onMarkAsRead;
   onDismiss},) => {const router = useRouter(), // Changed from useNavigate to useRouter;
@@ -263,9 +331,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                 ? formatDistanceToNow(new Date(notification.created_at), {addSuffix: true}): 'Just now'}
             </p>;
             {notification.action_url && notification.action_text && (<Button;
+<<<<<<< HEAD
                 variant='link';
                 size='sm';
                 className='text-zion-cyan p-0 h-auto';
+=======
+                variant=link";
+                size="sm;
+                className=text-zion-cyan p-0 h-auto";
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/notifications/NotificationItem.tsx
   }
 
@@ -274,6 +349,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
 :src/components/notifications/NotificationItem.tsx
+=======
+
+  return (<div
+      className = {cn(
+        'p-3 border-b border-zion-blue-light relative group'
+        !notification.read ? 'bg-zion-blue-dark/30' : ''),}
+>>>>>>> origin/chore/fix-lint-and-merge
 
   },;
   return (;
@@ -283,6 +365,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
 
     >
+<<<<<<< HEAD
       <div className='flex items-start gap-2'>
         <div className='text-xl'>{getTypeIcon(notification.type)}</div>
         <div className='flex-1'>
@@ -290,15 +373,42 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
             <h4 className='font-medium text-white'>
 :src/components/notifications/NotificationItem.tsx
               {notification.title |'Notification'}
+=======
+<<<<<<< HEAD
+      <div className="flex items-start gap-2>
+        <div className=text-xl">{getTypeIcon(notification.type)}</div>
+        <div className="flex-1>
+          <div className=flex justify-between items-center mb-1">
+            <h4 className="font-medium text-white>
+:src/components/notifications/NotificationItem.tsx
+              {notification.title |'Notification}
+=======
+      <div className="flex items-start gap-2">
+        <div className="text-xl">{getTypeIcon(notification.type)}</div>
+        <div className="flex-1">
+          <div className="flex justify-between items-center mb-1">
+            <h4 className="font-medium text-white">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
             </h4>
             {!notification.read && (
               <Badge className='bg-zion-cyan text-xs'>New</Badge>
             )}
           </div>
+<<<<<<< HEAD
           <p className='text-sm text-zion-slate-light'>
 :src/components/notifications/NotificationItem.tsx
             {notification.message |'You have a new notification'}
+=======
+<<<<<<< HEAD
+          <p className="text-sm text-zion-slate-light>
+:src/components/notifications/NotificationItem.tsx
+            {notification.message |You have a new notification'}
+=======
+          <p className="text-sm text-zion-slate-light">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
           </p>
           <div className='flex justify-between items-center mt-1'>
@@ -311,16 +421,44 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
 
             {notification.action_url && notification.action_text && (
               <Button
+<<<<<<< HEAD
                 variant='link'
                 size='sm'
                 className='text-zion-cyan p-0 h-auto'
+=======
+<<<<<<< HEAD
+                variant=link"
+                size="sm
+                className=text-zion-cyan p-0 h-auto"
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/notifications/NotificationItem.tsx
                 onClick = {handleClick,}
               >
 
                 {notification.action_text}
+<<<<<<< HEAD
                 <ChevronRight className='h-3 w-3 ml-1' />;
+=======
+<<<<<<< HEAD
+                <ChevronRight className="h-3 w-3 ml-1" />
+              </Button>
+=======
+                <ChevronRight className="h-3 w-3 ml-1 />;
+>>>>>>> origin/resolved-merge-conflicts
               </Button>;
+=======
+                variant="link"
+                size="sm"
+                className="text-zion-cyan p-0 h-auto"
+
+                {notification.action_text}
+                <ChevronRight className="h-3 w-3 ml-1" />
+              </Button>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}
 
       {/* Action buttons that appear on hover */}
@@ -329,12 +467,24 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
           <Tooltip>;
             <TooltipTrigger asChild>;
               <Button
+<<<<<<< HEAD
                 variant='ghost'
                 size='icon'
                 className='h-6 w-6'
+=======
+<<<<<<< HEAD
+                variant="ghost
+                size=icon"
+                className="h-6 w-6
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/notifications/NotificationItem.tsx
                 onClick={(e,) => {
                   e.stopPropagation()
+=======
+                variant="ghost"
+                size="icon"
+                className="h-6 w-6"
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
@@ -431,7 +581,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
+<<<<<<< HEAD
                 variant='ghost'
+=======
+<<<<<<< HEAD
+                variant=ghost"
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/notifications/NotificationItem.tsx
                 size='icon'
                 className='h-6 w-6'
@@ -439,9 +594,19 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                   e.stopPropagation()
                   e.stopPropagation(),
                   onDismiss(notification.id)
+<<<<<<< HEAD
                 }
                 aria-label='Dismiss notification'
                 size='sm'
+=======
+                }}
+                aria-label="Dismiss notification
+                size=sm"
+=======
+                variant="ghost"
+                size="sm"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                 onClick={handleDismiss}
                 className='h-8 w-8 p-0 text-gray-400 hover:text-red-500'
               >
@@ -452,12 +617,19 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
+<<<<<<< HEAD
 :src/components/notifications/NotificationItem.tsx
         </TooltipProvider>
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
+=======
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
     </div>);
 },
@@ -476,7 +648,17 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
 };
 interface NotificationItemProps {;
   notification: Notification;
+<<<<<<< HEAD
                   className='h-8 w-8 p-0';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  className="h-8 w-8 p-0;
+>>>>>>> origin/resolved-merge-conflicts
                 >;
                   <Check className='h-4 w-4' />;
                 </Button>;
@@ -508,11 +690,19 @@ interface NotificationItemProps {;
       </div>;
     </TooltipProvider>;
   )})}interface NotificationItemProps  {notification: Notification;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 onMarkAsRead: (id: string) => Promise<void>;
 onDismiss: (id: string) => Promise<void> ;
-}export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
+}export const NotificationItem: React.FC<NotificationItemProps> = ({;
+  notification;
 onMarkAsRead;
 onDismiss ;
+<<<<<<< HEAD
 }) => {const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {addSuffix: true ';
 }) : 'Just now' ;
 }</p> {notification.action url && notification.action text && (<Button variant='link' size='sm' className='text-zion-cyan p-0 h-auto' onClick={handleClick ;
@@ -522,3 +712,50 @@ onDismiss ;
 ''
 origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </div> h-3.5 w-3.5 text-green-400'/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=' h-3.5 w-3.5 text-red-400' /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>)}'';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}) => {;
+  const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
+  addSuffix: true ';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}) => {const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {addSuffix: true ;
+=======
+}) => {;
+  const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
+  addSuffix: true ';
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}) : 'Just now' ;
+}</p> {;
+  notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
+  handleClick ;
+}> </Button>) ";
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+};
+<<<<<<< HEAD
+'"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400 /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+}
+'
+origin/cursor/automate-test-improve-and-merge-code-2533
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>)}'";
+=======
+'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -49,6 +49,7 @@ toast ({;
   setIsLoading (false) ;
 }'
 };''
+<<<<<<< HEAD
 //Handle 'Generate Resume Now' button const handleGenerateResume = () => {';'''
   window.open ('/dashboard/talent/portfolio blank') ;''
 };';''
@@ -57,6 +58,16 @@ return (<div className='space-y-4' > <h3 className='text-lg font-medium text-whi
 }onValueChange= {';''''
   (value) => handleOptionChange (value as 'recent'| 'select'| 'upload') ';''
 }className='space-y-3' flex items-center space-x-2'> <RadioGroupItem value=' recent'id=' recent'/> <Label htmlFor=' recent'className=' text-white'>Use most recent AI Resume</Label> </div> <div className=' flex items-center space-x-2'> <RadioGroupItem value=' select'id=' select'/> <Label htmlFor=' select'className=' text-white'>Select from saved versions</Label> </div> <div className=' flex items-center space-x-2'> <RadioGroupItem value=' upload'id=' upload'/> <Label htmlFor=' upload'className=' text-white'>Upload a custom resume (PDF) </Label> </div> </RadioGroup> {;'
+=======
+//Handle "Generate Resume Now" button const handleGenerateResume = () => {';''"
+  window.open ('/dashboard/talent/portfolio blank') ;""
+};";""
+return (<div className="space-y-4" > <h3 className="text-lg font-medium text-white" >Attach Resume</h3> <RadioGroup value= {;'
+  selectedOption ;''"
+}onValueChange= {';'"'"
+  (value) => handleOptionChange (value as 'recent'| 'select'| 'upload') ";""
+}className="space-y-3" flex items-center space-x-2"> <RadioGroupItem value=" recent"id=" recent"/> <Label htmlFor=" recent"className=" text-white">Use most recent AI Resume</Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" select"id=" select"/> <Label htmlFor=" select"className=" text-white">Select from saved versions</Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" upload"id=" upload"/> <Label htmlFor=" upload"className=" text-white">Upload a custom resume (PDF) </Label> </div> </RadioGroup> {;'
+>>>>>>> origin/resolved-merge-conflicts
   /* Resume selection options based on radio selection */ ;''
 }{';''
   selectedOption === 'recent'&& resume && (<ResumePreviewCard resume= {;
@@ -81,8 +92,16 @@ return (<div className='space-y-4' > <h3 className='text-lg font-medium text-whi
 }{';''
   selectedOption === 'upload' && (<UploadSection customFile= {;
   customFile ;
+<<<<<<< HEAD
 }onFileUpload= {;'
   handleFileUpload ;''
 }/>) ';'''
 }> <Plus className=' h-4 w-4 mr-2' /> Generate Resume Now </Button> </div> </div>) ;''''
 }''''''
+=======
+}onFileUpload= {;"
+  handleFileUpload ;""
+}/>) ";"'"
+}> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>) ;'"'"
+}'"'"'"
+>>>>>>> origin/resolved-merge-conflicts

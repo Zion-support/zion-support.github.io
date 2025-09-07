@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+import type { NextApiRequest } from 'next';
+export function getRequestUserEmail(req: NextApiRequest): string | null {
+  const emailHeader = $2;
+  if (Array.isArray(emailHeader)) return emailHeader[0] || null,
+  return (emailHeader as string) || null
+}
+
+export function isAdminEmail(email: string | null | undefined): boolean {
+=======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export function authenticateRequest(req: NextApiRequest, res: NextApiResponse): boolean {
@@ -52,8 +62,12 @@ export function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: bool
   return Promise.resolve(ensureAdmin(req));
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!email) return false,
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter($2);
   return admins.includes(email.toLowerCase())
 }
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

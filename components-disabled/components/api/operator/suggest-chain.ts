@@ -12,8 +12,26 @@ export default async function handler() {
   }
   if (req.method !== 'POST') return res.status(405).json({ 'error': 'Method not allowed' });'
   const { region, stakeUsd } = req.body |{
+<<<<<<< HEAD
 }
 const stake = Number(stakeUsd || 0);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const stake = Number(stakeUsd |0);
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+=======
+const stake = Number(stakeUsd |0);
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   // Simple heuristics
   // - Low 'stake': prefer low fees (Polygon, BNB, Avalanche)
@@ -78,6 +96,16 @@ function handler() {
   $2
 }
 const { region, stake_usd } = req.body || {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 export default async /**
  * handler - Function description
@@ -89,13 +117,32 @@ function handler() {
 }
 const { region, stake_usd } = req.body || {
 }
+<<<<<<< HEAD
+=======
+=======
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const stake = Number (stake_usd || 0);
   // Simple heuristics;
   // - Low 'stake': prefer low fees (Polygon, BNB, Avalanche);
   // - High 'stake': prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
   // - Region hints (very rough):;
   //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
+<<<<<<< HEAD
   let candidates = ['polygon', 'bnb', 'avalanche'];'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   // Check condition,
 if (candidates = ['arbitrum', 'optimism', 'ethereum']) {'
   $2
@@ -122,6 +169,26 @@ if (||) {
 region_lc.includes ('na') ||;'
     region_lc.includes ('america')) {'
     }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  // Check condition;
+if (candidates = ['arbitrum', 'optimism', 'ethereum']) {
+const region_lc = (region || ).to_string ().toLowerCase ();
+  if (|| region_lc.includes ('asia')) {) {
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     candidates =;
       stake > 5000;
         ? ['arbitrum', 'optimism', 'ethereum'];'
@@ -130,8 +197,18 @@ region_lc.includes ('na') ||;'
 const ranked = candidates.map (key => ({ 'key': k, 'chain': (CHAINS as any)[k] }));
   res;
     .status (200);
+<<<<<<< HEAD
     .json ({ 'recommendation': ranked[0], 'alternatives': ranked.slice (1) });
   const region_lc = (region || '').to_string ().toLowerCase ();'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    .json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
+>>>>>>> origin/resolved-merge-conflicts
   if (|| region_lc.includes ('asia')) {) {'
   $2
 }
@@ -145,5 +222,30 @@ candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumopti
 }
 candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];'
   
+<<<<<<< HEAD
 const ranked = candidates.map ((k) => ({ 'key': k, 'chain': (CHAINS as any)[k] }));
   res.status (200).json ({ 'recommendation': ranked[0], 'alternatives': ranked.slice (1) });
+=======
+const ranked = candidates.map ((k) => ({ "key": k, "chain": (CHAINS as any)[k] }));
+  res.status (200).json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    .json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
+    candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon'];
+    candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism'];
+  } else if (|| region_lc.includes ('na') || region_lc.includes ('america')) {) {
+    candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];
+const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
+  res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

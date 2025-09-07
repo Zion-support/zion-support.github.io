@@ -2,10 +2,13 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -17,6 +20,9 @@ import { addWorkExperienceSection  } from './sections/workExperienceSection';
 import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 export interface ExportOptions {
   theme: 'light' | 'dark',
@@ -31,6 +37,7 @@ export interface ExportOptions {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -43,6 +50,30 @@ import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
+<<<<<<< HEAD
+
+  theme: 'light' | 'dark';
+
+import {Resume} from '@/types / resume';
+import {jsPDF} from 'jspdf';
+import 'jspdf - autotable';
+import {getPdfThemeColors} from './theme_config';
+import {loadCustomFonts, FontFamily} from './font_config';
+import {addBasicInfoSection} from './sections / basicInfoSection';
+import {addSkillsSection} from './sections / skills_section';
+import {addWorkExperienceSection} from './sections / workExperienceSection';
+import {addEducationSection} from './sections / education_section';
+import {addCertificationsSection} from './sections / certifications_section';
+
+import {addPortfolioSection} from './sections / portfolio_section';
+export interface ExportOptions {';
+
+  theme: 'light' | 'dark';
+  include_portfolio?: boolean;
+  max_projects?: number,
+  font_family?: FontFamily;
+}
+=======
 <<<<<<< HEAD
 =======
 
@@ -209,6 +240,7 @@ export interface ExportOptions {';
   max_projects?: number,
   font_family?: FontFamily;
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 export async function exportResumeToPDF (
@@ -309,6 +341,11 @@ pr-12325
   // Add portfolio projects if needed;
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {;
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
+<<<<<<< HEAD
+  }
+  return doc.output('blob')
+}
+=======
 <<<<<<< HEAD
   }
   return doc.output('blob')
@@ -421,3 +458,4 @@ export async function exportResumeToPDF(;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

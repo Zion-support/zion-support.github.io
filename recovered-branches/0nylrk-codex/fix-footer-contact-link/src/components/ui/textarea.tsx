@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import * as React from "react"
+
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
+=======
+<<<<<<< HEAD
 =======
 import * as React from "react"
 
@@ -21,10 +28,13 @@ export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,14 +47,18 @@ export type TextareaProps = React.ComponentProps<"textarea">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         className = $2;
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 "
           "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
@@ -63,6 +77,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
 
       <textarea;
         className={cn(
+<<<<<<< HEAD
+=======
 =======
         className={cn(
 <<<<<<< HEAD
@@ -70,6 +86,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 
@@ -80,7 +97,13 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
         )}
 
 =======
+<<<<<<< HEAD
+          className
+        )}
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
@@ -95,7 +118,11 @@ export type TextareaProps = React.ComponentProps<&quot;textarea & quot;>;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from "react";
 ;
 import { cn } from "@/lib/utils";
@@ -113,7 +140,11 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ref={ref}
         {...props}
       />);
@@ -136,6 +167,9 @@ export { Textarea };
 
 );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 Textarea.display_name = &quot;Textarea & quot;
 
 export { Textarea }
@@ -181,6 +215,8 @@ Textarea.displayName = &quot;Textarea&quot;
 export { Textarea }
 export { Textarea };
 
+<<<<<<< HEAD
+=======
 =======
 
 export { Textarea };
@@ -190,11 +226,14 @@ export { Textarea };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 Textarea.displayName = "Textarea"
 
 export { Textarea }
 
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -228,10 +267,14 @@ export { Textarea }
 =======
 export { Textarea };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 Textarea.displayName = "Textarea"
 
 export { Textarea }
 ;
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -242,3 +285,4 @@ export { Textarea }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,5 +1,17 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
+  }
+  return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+import React, { useState } from 'react';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
   }
 }
@@ -48,8 +60,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const EnhancedNavigation = () =>: any {}
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
+;
+  return ('
+    <nav className='bg - white shadow - lg sticky top - 0 z - 50'>;'
+      <div className='container mx - auto px - 4'>;'
+        <div className='flex justify - between items - center py - 4'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState } from 'react';
@@ -76,9 +104,21 @@ const EnhancedNavigation = () =>: any {
     <nav className=bg - white shadow - lg sticky top - 0 z - 50'>;'
       <div className=container mx - auto px - 4>;'
         <div className='flex justify - between items - center py - 4>;
+<<<<<<< HEAD
           {/* Logo */}
 <<<<<<< HEAD
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          {/* Logo */}
+<<<<<<< HEAD
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+<<<<<<< HEAD
+'
+          <Link href='/' className='flex items - center space - x-2'>;'
+            <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
           <Link href='/' className=flex items - center space - x-2>;'
             <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center>;
@@ -94,6 +134,10 @@ const EnhancedNavigation = () => {
           <Link href='/' className='flex items - center space - x-2'>;
             <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <span className='text - white font - bold text - xl'>Z</span>;
             </div>;
             <span className=text - xl font - bold text - gray - 800'>;
@@ -143,6 +187,119 @@ const EnhancedNavigation = () => {
               className='bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - medium hover:bg - blue - 700 transition - colors';
             >              Get Startedconst EnhancedNavigation = () =>: any {}
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+<<<<<<< HEAD
+=======
+            >
+return (;
+    <nav className="bg - white shadow - lg sticky top-0 z-50">;"
+      <div className="container mx-auto px-4">;"
+        <div className="flex justify - between items-center py-4">;"
+          {/* Logo */}
+
+          <Link href="/" className="flex items-center space-x-2">"
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">"
+              <span className="text-white font-bold text-xl">Z</span>"
+            </div>
+            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>"
+          </Link>
+const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState(false)import Link from 'next/link';const EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState (false)return (<nav className='bg - white shadow - lg sticky top - 0 z - 50'>;
+      <div className='container mx - auto px - 4'>;
+        <div className='flex justify - between items - center py - 4'>;
+          {/* Logo */}
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),<Link href='/' className='flex items - center space - x-2'>;
+            <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
+              <span className='text - white font - bold text - xl'>Z</span>;
+            </div>;
+            <span className='text - xl font - bold text - gray - 800'>;
+              Zion Tech Group;
+            </span>;
+          </Link>;
+          {/* Desktop Navigation */}
+          <div className='hidden lg:flex items - center space - x-8'>;
+            <Link;
+              href='/';
+              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
+            >;
+              Home;
+            </Link>;
+            <Link;
+              href='/services';
+              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
+            >;
+              Services;
+            </Link>;
+            <Link;
+              href='/products';
+              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
+            >;
+              Products;
+            </Link>;
+            <Link;
+              href='/about';
+              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
+            >;
+              About;
+            </Link>;
+            <Link;
+              href='/blog';
+              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
+            >;
+              Blog;
+            </Link>;
+            <Link;
+              href='/talent';
+              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
+            >;
+              Careers;
+            </Link>;
+            <Link;
+              href='/contact';
+              className='bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - medium hover:bg - blue - 700 transition - colors';
+<<<<<<< HEAD
+            >              Get Startedconst EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),>;
+  return (<nav className="bg - white shadow - lg sticky top-0 z-50">;
+      <div className="container mx-auto px-4">;
+        <div className="flex justify - between items-center py-4">;
+          {/* Logo */}onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >;
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
+          <Link href="/" className="flex items-center space-x-2">;
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
+              <span className="text-white font-bold text-xl">Z</span>;
+            </div>;
+            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>;
+          </Link>;
+          {/* Desktop Navigation */}
+          <div className="hidden "lg":flex items-center space-x-8">;"
+            <Link href="/" className="text-gray-600 "hover":text-blue-600 font-medium transition-colors">;"
+              Home;
+            </Link>;
+            <Link href="/services" className="text-gray-600 "hover":text-blue-600 font-medium transition-colors">;"
+              Services;
+            </Link>;
+            <Link href="/products" className="text-gray-600 "hover":text-blue-600 font-medium transition-colors">;"
+              Products;
+            </Link>;
+            <Link href="/about" className="text-gray-600 "hover":text-blue-600 font-medium transition-colors">;"
+              About;
+            </Link>;
+            <Link href="/blog" className="text-gray-600 "hover":text-blue-600 font-medium transition-colors">;"
+              Blog;
+            </Link>;
+            <Link href="/talent" className="text-gray-600 "hover":text-blue-600 font-medium transition-colors">;"
+              Careers;
+            </Link>;
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium "hover":bg-blue-700 transition-colors">;"
+              Get Started;
+            </Link>;
+          </div>;
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+=======
+            >              Get Startedconst EnhancedNavigation = () =>: any {}
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             >
 =======
@@ -545,6 +702,10 @@ const EnhancedNavigation = (
 
           <div className="hidden lg:flex items-center space-x-8>
             <Link href=/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               Home
             </Link>
             <Link href=/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors>
@@ -567,6 +728,19 @@ const EnhancedNavigation = (
             </Link>
           </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <path;
+                strokeLinecap='round';'
+                strokeLinejoin='round';'
+                strokeWidth={2}
+
+                d='M4 6h16M4 12h16M4 18h16'' />
+            </svg>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           <Link href=\"/\" className=\"flex items-center space-x-2\"    />
             <div className=\"w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center\"    />
@@ -619,11 +793,67 @@ className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-g
                  />
             </svg>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </button>
         </div>
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='"lg": hidden border-t border-gray-200 py-4'>'
+            <div className='space-y-2'>'
+              <Link
+}
+href='/''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+                Home
+              </Link>
+              <Link,
+href='/services''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+                Services
+              </Link>
+              <Link,
+href='/products''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+                Products
+              </Link>
+              <Link,
+href='/about''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+                About
+              </Link>
+              <Link,
+href='/blog''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+                Blog
+              </Link>
+              <Link,
+href='/talent''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+                Careers
+              </Link>
+              <Link,
+href='/contact''
+                className='block px-4 py-2 text-gray-600 "hover":bg-gray-50 rounded-md''
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                Contact
+              </Link>
+            </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -679,10 +909,22 @@ href='/contact'
               </Link>
             </div>}
           </div>}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         )}
       </div>
     </nav>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+};
+export default EnhancedNavigation;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 export default EnhancedNavigation;
@@ -697,3 +939,7 @@ export default EnhancedNavigation;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -64,7 +64,70 @@ return { "hasError": true,;
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 const features = [;
+=======
+  const features = [
+  export default function SecretsRotationAutomationPage() {
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+=======
+>>>>>>> merged-prs-20250907-203621
+
+<<<<<<< HEAD
+=======
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from \"react\";}
+import SEO from \"../components/SEO\";}
+import { Check, ExternalLink } from \"lucide-react\";
+export default function SecretsRotationAutomationPage() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const features = [
+  export default function SecretsRotationAutomationPage() {
+
+  const features = [;
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+>>>>>>> origin/resolved-merge-conflicts
   export default function SecretsRotationAutomationPage() {
 
   }
@@ -92,9 +155,45 @@ const features = [;
     "Policy approvals and audit trails""
     "CI/CD integration (GitHub Actions, CircleCI)""
     "Cloud KMS and Vault support""
+<<<<<<< HEAD
+=======
+=======
+  const features = [
+  export default function SecretsRotationAutomationPage() {
+
+  const features = [;
+
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const features = [
+    \"Automated key and secret rotation\"
+    \"JIT credentials with expirations\"
+    \"Policy approvals and audit trails\"
+    \"CI/CD integration (GitHub Actions, CircleCI)\"
+    \"Cloud KMS and Vault support\"
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+  ];
+  return (
+export default function SecretsRotationAutomationPage() {
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   ];
 return (;
 export default function SecretsRotationAutomationPage() {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+  ];
+  return (
+export default function SecretsRotationAutomationPage() {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 }
 const features = [;
     "Automated key and secret rotation","
@@ -102,6 +201,28 @@ const features = [;
     "Policy approvals and audit trails","
     "CI / CD integration (GitHub Actions, CircleCI)","
     "Cloud KMS and Vault support""
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const features = [
+    \"Automated key and secret rotation\",
+    \"JIT credentials with expirations\",
+    \"Policy approvals and audit trails\",
+    \"CI / CD integration (GitHub Actions, CircleCI)\",
+    \"Cloud KMS and Vault support\"
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ];
 ;
 return (;
@@ -268,8 +389,28 @@ key={
       </main>;</>)}</>)}ursor/fix-website-loading-errors-and-merge-6662;
     </>)}
 
+<<<<<<< HEAD
 const features = [;
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
+=======
+const features = [
+  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ];
 
 const features  = null;return (<>;
@@ -322,8 +463,28 @@ const features  = null;return (<>;
     </>);
 }
 
+<<<<<<< HEAD
 const features = [;
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
+=======
+const features = [
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 	];
 return (;
 		<>

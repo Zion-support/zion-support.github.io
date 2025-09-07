@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
 import { useAuth } from '@/hooks/useAuth';'
 import { MessagingContextType } from '@/types/messaging',;'
@@ -22,6 +23,50 @@ const "defaultContext": MessagingContextType = {;
 export function MessagingProvider() {;
   }
   const { user } = useAuth();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessagingContextType  } from '@/types/messaging';
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
+// Default context used when React type definitions are missing
+const defaultContext: MessagingContextType = $2;
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async() => {},
+  createConversation: async() => {},
+  markAsRead: async() => {},
+  setActiveConversation: () => {},
+  fetchConversations: async() => {},
+  loadMessages: async() => {}
+},
+
+const defaultContext: MessagingContextType = {
+  messages: []
+  conversations: []
+  unreadCount: 0
+  activeConversation: null
+  activeMessages: []
+  isLoading: false
+  sendMessage: async () => {}
+  createConversation: async () => {}
+  markAsRead: async () => {}
+  setActiveConversation: () => {}
+  fetchConversations: async () => {}
+  loadMessages: async () => {}
+}
+// "createContext" may be untyped if React type definitions are missing.
+// To avoid TS2347 when the definitions are unavailable, we cast the default
+// value instead of passing a generic type parameter directly.
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   const {;
     }
@@ -39,22 +84,281 @@ export function MessagingProvider() {;
     create_conversation;
     markAsRead;
 
+<<<<<<< HEAD
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     }
     throw new Error('useMessaging must be used within a MessagingProvider');'
+=======
+<<<<<<< HEAD
+  const context = useContext(MessagingContext) as MessagingContextType;
+
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessagingContextType  } from '@/types/messaging';
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
+// Default context used when React type definitions are missing
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const defaultContext: MessagingContextType = {
+
+  messages: [],
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async () => {},
+  createConversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetchConversations: async () => {},
+  loadMessages: async () => {}
+};
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessagingContextType } from '@/types/messaging',;
+
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;
+// Default context used when React type definitions are missing;
+const defaultContext: MessagingContextType = {;
+  messages: [],;
+  conversations: [],;
+  unreadCount: 0,;
+  activeConversation: null,;
+  activeMessages: [],;
+  isLoading: false,;
+  sendMessage: async () => {},;
+  createConversation: async () => {},;
+  markAsRead: async () => {},;
+  setActiveConversation: () => {},;
+  fetchConversations: async () => {},;
+  loadMessages: async () => {}
+},
+
+<<<<<<< HEAD
+const defaultContext: MessagingContextType = {}
+=======
+<<<<<<< HEAD
+const defaultContext: MessagingContextType = {}
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+const defaultContext: MessagingContextType = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  messages: []
+  conversations: []
+  unreadCount: 0;
+  activeConversation: null;
+  activeMessages: []
+  isLoading: false;
+
+<<<<<<< HEAD
+  defaultContext as MessagingContextType;
+=======
+<<<<<<< HEAD
+  defaultContext as MessagingContextType;
+=======
+<<<<<<< HEAD
+
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessagingContextType } from '@/types/messaging',;
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;
+;
+// Default context used when React type definitions are missing;
+const defaultContext:MessagingContextType = {;
+  messages:[],;
+  conversations:[],;
+  unreadCount:0,;
+  activeConversation:null,;
+  activeMessages:[],;
+  isLoading:false,;
+  sendMessage:async () => {},;
+  createConversation:async () => {},;
+  markAsRead:async () => {},;
+  setActiveConversation:() => {},;
+  fetchConversations:async () => {},;
+  loadMessages:async () => {}
+},;
+;
+=======
+import {useAuth} from '@/hooks/useAuth';
+import {MessagingContextType} from '@/types/messaging';
+import {useMessagingOperations, useMessagingRealtime} from '@/hooks/messaging';
+
+// Default context used when React type definitions are missing;
+const defaultContext: MessagingContextType = {;
+  messages: [],;
+  conversations: [],;
+  unreadCount: 0,;
+  activeConversation: null,;
+  activeMessages: [],;
+  isLoading: false,;
+  sendMessage: async () => {},;
+  createConversation: async () => {},;
+  markAsRead: async () => {},;
+  setActiveConversation: () => {},;
+  fetchConversations: async () => {},;
+  loadMessages: async () => {}
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// "createContext" may be untyped if React type definitions are missing.;
+// To avoid TS2347 when the definitions are unavailable, we cast the default;
+// value instead of passing a generic type parameter directly.;
+const MessagingContext = createContext(;
+  defaultContext as MessagingContextType;
+<<<<<<< HEAD
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+=======
+);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+// Hook for using the messaging context;
+export function useMessaging(): MessagingContextType {};
+  // Cast to avoid type errors when React type definitions are missing;
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+),
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+// Hook for using the messaging context
+export function useMessaging(): MessagingContextType {
+
+  if (context === undefined) {
+
+    throw new Error('useMessaging must be used within a MessagingProvider')
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+  }
+  return context;
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  }
+  return context;
+}
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   }
   return context;
 }
   const {
 
 // Provider component
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React, { create_context, useContext, useEffect, ReactNode } from 'react';
+import {use_auth} from '@/hooks / use_auth';
+import {MessagingContextType} from '@/types / messaging';
+import {useMessagingOperations, useMessagingRealtime} from '@/hooks / messaging';
+// Default context used when React type definitions are missing;
+const default_context: MessagingContextType = {
+  messages: [],
+  conversations: [],
+  unread_count: 0,
+  active_conversation: null,
+  active_messages: [],
+  is_loading: false,
+  send_message: async () => {},
+  create_conversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetch_conversations: async () => {},
+  load_messages: async () => {}
+>>>>>>> origin/resolved-merge-conflicts
 }
 export function MessagingProvider() {;
   }
   const { user } = useAuth();
   const {;
+<<<<<<< HEAD
     }
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+
+  const { user } = useAuth();
+  const {;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     messages;
     active_messages;
     setActiveMessages;
@@ -68,6 +372,15 @@ export function MessagingProvider() {;
     send_message;
     create_conversation;
     markAsRead;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const MessagingContext = createContext($2);
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
@@ -154,7 +467,28 @@ export function MessagingProvider() {;
   }
   const { user } = useAuth(),;
   const {;
+<<<<<<< HEAD
     }
+=======
+
+),
+
+// Hook for using the messaging context;
+  // TODO: Implement
+  // Cast to avoid type errors when React type definitions are missing;
+
+  if (context === undefined) {;
+  // TODO: Implement
+// Provider component;
+      {children}
+    </MessagingContext.Provider>
+  )
+// Provider component;
+  const { user } = useAuth(),;
+pr-12325
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
     messages,;
     activeMessages,;
     setActiveMessages,;
@@ -257,3 +591,213 @@ return (;
     </MessagingContext.Provider>);
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+;
+// Provider component;
+export function MessagingProvider({ children } { children:ReactNode }) {;
+  const { user } = useAuth(),;
+  ;
+  const {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    messages,;
+    activeMessages,;
+    setActiveMessages,;
+    conversations,;
+    setConversations,;
+    unreadCount,;
+    setUnreadCount,;
+    activeConversation,;
+    setActiveConversation,;
+    isLoading,;
+    sendMessage,;
+    createConversation,;
+    markAsRead,;
+    fetchConversations,;}
+    loadMessages;}
+  } = useMessagingOperations(user),;
+;
+  // Setup real-time subscription;
+  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
+;
+  // Calculate unread count from conversations;
+  useEffect(() => {;
+    if (conversations.length > 0) {;
+<<<<<<< HEAD
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;}
+      setUnreadCount(count);}
+=======
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
+      setUnreadCount(count),;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }
+  }, [conversations, setUnreadCount]),;
+;
+  // Fetch conversations when user changes;
+  useEffect(() => {;
+<<<<<<< HEAD
+  }, [conversations, setUnreadCount]),;
+  // Fetch conversations when user changes;
+pr-12325
+    if (user) {;
+      fetchConversations();
+    } else {;
+      setConversations([]),;
+
+      setConversations([]);
+
+      setUnreadCount(0);
+    }
+  }, [user, fetchConversations, setConversations, setUnreadCount]);
+
+    fetch_conversations;
+    load_messages;
+    if (user) {;}
+      fetchConversations();}
+    } else {;
+      setConversations([]),;
+    fetch_conversations;}
+    load_messages;}
+  } = useMessagingOperations (user);
+  // Setup real - time subscription;
+  useMessagingRealtime (user, active_conversation, setActiveMessages, fetch_conversations);
+  // Calculate unread count from conversations;
+
+}
+      const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
+      setUnreadCount (count);
+    }
+  }, [conversations, setUnreadCount]);
+  // Fetch conversations when user changes;
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      fetch_conversations ();
+
+      set_conversations ([]);
+      setUnreadCount (0);
+
+    }
+  }, [user, fetch_conversations, set_conversations, setUnreadCount]);
+  // Create context value with all the methods and states;
+
+    messages;
+    active_messages;
+    conversations;
+    unread_count;
+    active_conversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
+    setActiveConversation;
+
+      {children}
+
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}
+
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+    setActiveConversation;}
+  return (}
+    <MessagingContext && MessagingContext.Provider value={contextValue} />;
+      {children}      {children}
+    </MessagingContext && MessagingContext.Provider>;
+  );
+}
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+    <MessagingContext && MessagingContext.Provider value={contextValue} />;
+      {children}
+
+    fetch_conversations,
+    load_messages;
+  }
+<<<<<<< HEAD
+
+    <MessagingContext.Provider value={context_value}>;
+      {children}
+    </MessagingContext.Provider>);
+}
+=======
+;
+
+),;
+// Hook for using the messaging context;
+export function useMessaging():MessagingContextType {;
+  // Cast to avoid type errors when React type definitions are missing;
+  const context = useContext(MessagingContext) as MessagingContextType,;
+    throw new Error('useMessaging must be used within a MessagingProvider'),;
+  return context,;
+// Provider component;
+export function MessagingProvider({ children } { children:ReactNode }) {;
+  // Setup real-time subscription;
+  // Calculate unread count from conversations;
+      setUnreadCount(count),;
+  // Fetch conversations when user changes;
+      fetchConversations(),;
+      setUnreadCount(0),;
+  }, [user, fetchConversations, setConversations, setUnreadCount]),;
+  // Create context value with all the methods and states;
+  const contextValue:MessagingContextType = {;
+  // Create context value with all the methods and states;
+    fetchConversations;
+  return (;
+    <MessagingContext.Provider value={contextValue}>;
+
+    </MessagingContext.Provider>;)
+pr-12325
+  );
+}
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+    if (user) {;
+      fetchConversations(),;
+    } else {;
+      setConversations([]),;
+      setUnreadCount(0),;
+    }
+  }, [user, fetchConversations, setConversations, setUnreadCount]),;
+;
+  // Create context value with all the methods and states;
+  const contextValue:MessagingContextType = {;
+      setConversations([]),;
+      setUnreadCount(0);
+    }
+  }, [user, fetchConversations, setConversations, setUnreadCount]),;
+  // Create context value with all the methods and states;
+  const contextValue: MessagingContextType = {;
+    messages,;
+    activeMessages,;
+    conversations,;
+    unreadCount,;
+    activeConversation,;
+    isLoading,;
+    sendMessage,;
+    createConversation,;
+    markAsRead,;
+    setActiveConversation,;
+    fetchConversations;
+    loadMessages;
+  };
+  return (;
+    <MessagingContext.Provider value={contextValue}>;
+      {children}
+    </MessagingContext.Provider>;
+  );
+}
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

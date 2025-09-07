@@ -1,4 +1,26 @@
 <<<<<<< HEAD
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}"
+'\"export\": function FooterNewsletter() {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = (e) => { e && e.preventDefault () \'';\"";"
+""export": function FooterNewsletter() {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = (e) => { e && e.preventDefault () "";"";""""
+
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e && e.preventDefault () '';"";""}"
+
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}"
+'\"export\": function FooterNewsletter() {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = (e) => { e.preventDefault () \'';\"";"
+""export": function FooterNewsletter() {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = (e) => { e.preventDefault () "";"";""""
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}"
+'\"export\": function FooterNewsletter() {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = (e) => { e && e.preventDefault () \'';\"";"
+""export": function FooterNewsletter() {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = (e) => { e && e.preventDefault () "";"";""";"
+}
+ursor/automate-test-improve-and-merge-code-646c;
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}'\"export\": function FooterNewsletter() {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = (e) => { e.preventDefault () \'';\"";"
+""export": function FooterNewsletter() {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = (e) => { e.preventDefault () "";"";""";"
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}ursor/automate-test-improve-and-merge-code-646c;"
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}'\"export\": function FooterNewsletter() {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = (e) => { e.preventDefault () \'';\"";"
+""export": function FooterNewsletter() {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = (e) => { e.preventDefault () "";"";""";"
+'"export": function FooterNewsletter() {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = (e) => { e.preventDefault () '';"";""}
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 '\"export\": function FooterNewsletter () {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = e => { e.preventDefault () \'';\"";
@@ -41,3 +63,4 @@ ursor/automate-test-improve-and-merge-code-646c;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

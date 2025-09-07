@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Search } from 'lucide-react'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -7,6 +17,18 @@ import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 import { Search } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react;
+import { Input } from @/components/ui/input';
+import { Button } from '@/components/ui/button;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList;
+import { HelpArticleList } from ./HelpArticleList';
+import { HelpArticleView } from './HelpArticleView;
+import { HELP_CATEGORIES } from ./help-content';
+import { Search } from 'lucide-react;
+>>>>>>> origin/resolved-merge-conflicts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Search } from 'lucide-react'
@@ -61,6 +83,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+import { Search } from 'lucide-react'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
@@ -196,6 +225,12 @@ export default function HelpCenter() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Search  } from 'lucide-react';
 import React, { useState } from 'react';
@@ -239,7 +274,17 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
             </TabsList>;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (<HelpCategoryList;
+<<<<<<< HEAD
                   categories={HELP_CATEGORIES}import React, { useState } from "react",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { HelpCategoryList } from "./HelpCategoryList",import { HelpArticleList } from "./HelpArticleList",import { HelpArticleView } from "./HelpArticleView",import { HELP_CATEGORIES } from "./help-content",export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery]  = useState('')const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null)}const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null),const [selectedArticle, setSelectedArticle] = useState<string | null>(null),const [searchQuery, setSearchQuery]  = useState(""),const handleCategorySelect = (categoryId: string,) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string,) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null)setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState("")const handleCategorySelect  = null;return (<>;
+=======
+                  categories={HELP_CATEGORIES}import React, { useState } from "react",import { Input } from @/components/ui/input,import { Button } from "@/components/ui/button",import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs,import { HelpCategoryList } from "./HelpCategoryList",import { HelpArticleList } from ./HelpArticleList,import { HelpArticleView } from "./HelpArticleView",import { HELP_CATEGORIES } from ./help-content,export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery]  = useState()const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null)}const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null),const [selectedArticle, setSelectedArticle] = useState<string | null>(null),const [searchQuery, setSearchQuery]  = useState(""),const handleCategorySelect = (categoryId: string,) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string,) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null)setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState()const handleCategorySelect  = null;return (<>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <div className='container mx-auto px-4 py-8'>;
         <div className='max-w-4xl mx-auto'>;
           <h1 className='text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
@@ -248,9 +293,28 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
             team.;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+<<<<<<< HEAD
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
+=======
+  const handleCategorySelect = (categoryId: string) => {
+    setSelectedCategory(categoryId),
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId),;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
     setSelectedArticle(null);
 
   },;
@@ -266,8 +330,26 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
     setSelectedArticle(null);
   };
   return (;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             team.;const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null),setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}return (<>;
       <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
+=======
+        <div className=max-w-4xl mx-auto>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <>;"
+      <div className="container mx-auto px-4 py-8>;
+>>>>>>> origin/resolved-merge-conflicts
         <div className="max-w-4xl mx-auto">;
     <>;"
       <div className="container mx-auto px-4 py-8">;"
@@ -281,11 +363,31 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
           </p>;
 
           <div className='relative mb-8'>;
+<<<<<<< HEAD
             <Input'
               placeholder='Search for help articles...'
             Find answers to common questions or get in touch with our support team.;</p>;<div className='relative mb-8'>;
             <Input;
               placeholder='Search for help articles...';
+=======
+<<<<<<< HEAD
+            <Input
+              placeholder=Search for help articles...'
+            Find answers to common questions or get in touch with our support team.;</p>;<div className='relative mb-8>;
+            <Input;
+              placeholder=Search for help articles...';
+=======
+            <Input'
+              placeholder='Search for help articles...'
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               value={searchQuery}
               onChange={e => setSearchQuery(e && e.target.value)}'
               className='pl-10'            />;'
@@ -380,7 +482,17 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 "
                 <div className="space-y-6">
+<<<<<<< HEAD
                     <h3 className='font-medium text-zion-cyan mb-2'>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                    <h3 className=font-medium text-zion-cyan mb-2>
+>>>>>>> origin/resolved-merge-conflicts
                       How do I hire someone on Zion?
                     </h3>
                     <p className='text-zion-slate-light'>
@@ -388,6 +500,12 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                       matches or applications, interview candidates through our
                       platform, and extend an offer. Our secure payment system
                       protects both parties throughout the engagement.
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
@@ -397,11 +515,31 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   </div>
 
                   <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
 
+<<<<<<< HEAD
                     <h3 className='font-medium text-zion-cyan mb-2'>
+=======
+                    <h3 className=font-medium text-zion-cyan mb-2>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                       What are the payment terms?
                     </h3>
                     <p className='text-zion-slate-light'>
@@ -420,6 +558,12 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
               </div>
             </TabsContent>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </TabsContent>;
             <TabsContent value="faq">;
               <div className="bg-zion-blue-light/20 rounded-lg p-6">;
@@ -558,7 +702,18 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
 
 
             
+<<<<<<< HEAD
             <TabsContent value="contact">
+=======
+            <TabsContent value=contact>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <TabsContent value="contact">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
@@ -576,7 +731,18 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
 
                         </svg>
                       </div>"
+<<<<<<< HEAD
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                      <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      <a href="mailto:support@ziontechgroup.com className=text-zion-cyan hover:underline">
+>>>>>>> origin/resolved-merge-conflicts
                       </a>
                     </div>
 
@@ -601,7 +767,18 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                       </a>;
                       </Link>;
                     </div>;
+<<<<<<< HEAD
                         href='mailto:support@ziontechgroup && ziontechgroup.com';
+=======
+                        href=mailto:support@ziontechgroup && ziontechgroup.com;
+=======
+                      <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                       </Link>
 
@@ -612,6 +789,12 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                         className='text-zion-cyan hover:underline'>;
                         support@ziontechgroup && ziontechgroup.com;
                       </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </div>;<div className='flex items-center'>;
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>;<svg;
                           xmlns='http://www.w3.org/2000/svg';
@@ -626,11 +809,13 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                       <span className='text-zion-slate-light'>;
                         +1 302 464 0950;
                       </span>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </div>;
-      </div>;</>)}</div>;
-    </>;
-  ))
-  )
 '
                     <div className='flex items-center'>;'
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>;

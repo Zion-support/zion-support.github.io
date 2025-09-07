@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 :src/components/NotificationCenter.tsx
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect } from 'react;
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -23,8 +32,17 @@ export const NotificationCenter: React.FC;
   }
   return (
     <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
+<<<<<<< HEAD
 unreadCount, ;
     markAsRead, ;
+=======
+unreadCount,
+    markAsRead,
+=======
+unreadCount, ;
+    markAsRead, ;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
@@ -134,7 +152,12 @@ export const NotificationCenter: React.FC = () => {;
         <Button variant='ghost' size='icon' className='relative' aria-label='Open notifications'>
           <Bell className='h-5 w-5 text-zion-slate-light' />
           {unreadCount > 0 && (
+<<<<<<< HEAD
             <span className='absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium'>
+=======
+<<<<<<< HEAD
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium>
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/NotificationCenter.tsx
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
@@ -151,6 +174,9 @@ export const NotificationCenter: React.FC = () => {;
           onFilterChange = {handleFilterChange,}
         />
         <NotificationList
+=======
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
@@ -161,25 +187,61 @@ export const NotificationCenter: React.FC = () => {;
       logErrorToProduction('Failed to mark notifications as read:', { data: err }),;
       enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
     }
+<<<<<<< HEAD
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
+=======
+<<<<<<< HEAD
+  },
+  const handleFilterChange = (newFilter: FilterType) => {
+>>>>>>> origin/resolved-merge-conflicts
     setFilter(newFilter as any);
   };
 
+=======
+  },;
+  const handleFilterChange = (newFilter: FilterType) => {;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         />;
 
         <NotificationList
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
+<<<<<<< HEAD
 
 ;
 unreadCount,markAsRead,const handleFilterChange  = (newFilter: FilterType,) => {import React, { useState, useEffect } from 'react',import React, { useState, useEffect } from 'react';
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          loading = {loading}
+          error = {error}
+          notifications = {filteredNotifications}
+          onMarkAsRead = {markAsRead}
+          onDismiss = {dismissNotification}
+          onRetry = {fetchNotifications}
+unreadCount,markAsRead,const handleFilterChange  = (newFilter: FilterType,) => {import React, { useState, useEffect } from 'react,import React, { useState, useEffect } from react';
+>>>>>>> origin/resolved-merge-conflicts
 // Use the shared icon wrapper;
 import { Bell  } from 'lucide-react';
 import { Button } from '@/components/ui/button',import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',import { useNotifications } from '@/context/notifications/NotificationContext',import { useEnqueueSnackbar } from '@/context',import {logErrorToProduction} from '@/utils/productionLogger',import {NotificationFilter,NotificationHeader,NotificationList,NotificationFooter;
@@ -226,6 +288,7 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
         <NotificationFilter;
           filter={filter as FilterType}onFilterChange={handleFilterChange}/>;
         <NotificationList;
+>>>>>>> merged-prs-20250907-203621
 :src/components/NotificationCenter.tsx
         />
         <NotificationFooter onClose={() => setOpen(false)} />
@@ -249,6 +312,14 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
+=======
+          loading = {loading,}
+          error = {error,}
+          notifications = {filteredNotifications,}
+          onMarkAsRead = {markAsRead,}
+          onDismiss = {dismissNotification,}
+          onRetry = {fetchNotifications,}
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </Button>;
       </PopoverTrigger>;
@@ -262,8 +333,15 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
       </PopoverContent>;
     </Popover>;
   );
+<<<<<<< HEAD
 :src/components/NotificationCenter.tsx
+<<<<<<< HEAD
 };
+=======
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   );
 };
@@ -273,14 +351,36 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
   logErrorToProduction ('Failed to mark notifications as read:', {;
   data: err ;
 });
+<<<<<<< HEAD
 enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
     </Popover>)},;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {;
+    </Popover>)},
+>>>>>>> origin/resolved-merge-conflicts
         <NotificationHeader;
   )}, [open, loadedOnce, fetchNotifications])}catch (err) {logErrorToProduction ('Failed to mark notifications as read:', {data: err ;
 })enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
   variant: 'error' ;
 })}(v) => setOpen (v ?? false)}> <PopoverTrigger asChild> {';
   unreadCount > 9 ? '9+' : unreadCount ;
+<<<<<<< HEAD
+=======
+=======
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   variant: 'error' ;
 });
 
@@ -313,9 +413,23 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }/> <NotificationFooter onClose= {;
   () => setOpen (false) ;
 }/> </PopoverContent> </Popover>) ;
+<<<<<<< HEAD
 };
 ''
 }</span>)}</Button> </PopoverTrigger> <PopoverContent className='w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col' > <NotificationHeader unreadCount= {unreadCount ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+'
+}</span>)}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {unreadCount ;
+>>>>>>> origin/resolved-merge-conflicts
 }onMarkAllAsRead= {handleMarkAllAsRead ;
 }/> <NotificationFilter filter= {filter as FilterType ;
 }onFilterChange= {handleFilterChange ;
@@ -325,4 +439,16 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }onMarkAsRead= {markAsRead ;
 }onDismiss= {dismissNotification ;
 }onRetry= {fetchNotifications ;
+<<<<<<< HEAD
 }/> <NotificationFooter onClose= {() => setOpen (false)}/> </PopoverContent> </Popover>)}'';
+=======
+}/> <NotificationFooter onClose= {() => setOpen (false)}/> </PopoverContent> </Popover>)}'";
+=======
+};
+'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

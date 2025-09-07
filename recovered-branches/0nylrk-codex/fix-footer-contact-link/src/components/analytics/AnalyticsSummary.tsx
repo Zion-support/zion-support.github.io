@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -159,6 +161,7 @@ export function AnalyticsSummary() {
       
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Card, CardContent} from "@/components/ui/card";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -187,12 +190,18 @@ export function AnalyticsSummary() {}
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase'
         .from('analytics_events')'
         .select('user_id')'
         .eq('event_typepage_view')
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         .is('user_idnot.null');
       if (uniqueVisitorsError) throw uniqueVisitorsError;
@@ -201,11 +210,15 @@ export function AnalyticsSummary() {}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .is('user_idnot.null'),
         
       if (uniqueVisitorsError) throw uniqueVisitorsError,
       
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
       
@@ -214,12 +227,20 @@ export function AnalyticsSummary() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
 
         .eq('event_typeconversion')
+<<<<<<< HEAD
+
+        .single(),
+        '
+      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
+
+=======
 <<<<<<< HEAD
         .single();
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
@@ -237,12 +258,21 @@ export function AnalyticsSummary() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase'
         .from('analytics_events')'
         .select('created_at')'
         .order('created_at', { ascending: false })
         .limit(1)
+<<<<<<< HEAD
+
+        .single(),
+        '
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
+
+      return {
+=======
 <<<<<<< HEAD
         .single();
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
@@ -262,6 +292,7 @@ export function AnalyticsSummary() {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return {
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
@@ -280,6 +311,18 @@ export function AnalyticsSummary() {}
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
+<<<<<<< HEAD
+
+    },
+    refetchInterval: 300000, // Refetch every 5 minutes;
+  }),
+
+  // Calculate conversion rate
+  const conversionRate = stats && stats.totalPageViews > 0
+    ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
+
+  return ("
+=======
 =======
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
@@ -322,6 +365,7 @@ export function AnalyticsSummary() {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       <StatCard"
         title="Total Page Views""
@@ -360,7 +404,10 @@ export function AnalyticsSummary() {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
       />
     </div>
@@ -368,11 +415,18 @@ export function AnalyticsSummary() {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 interface StatCardProps {
   title: string
   value: React.ReactNode
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -381,12 +435,18 @@ interface StatCardProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Skeleton } from "@/components/ui/skeleton",;
 
 import { formatDistanceToNow } from "date-fns",;
+<<<<<<< HEAD
+
+export function AnalyticsSummary() { return null; }
+  const { data: stats, isLoading } = useQuery({;'
+=======
 <<<<<<< HEAD
 =======
 
@@ -398,6 +458,7 @@ export function AnalyticsSummary() { return null; }
 export function AnalyticsSummary() {;
   const { data: stats, isLoading } = useQuery({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     queryKey: ['analytics-summary'],;
     queryFn: async () => {;
       // Get total page views;
@@ -406,11 +467,16 @@ export function AnalyticsSummary() {;
         .select('count');'
         .eq('event_typepage_view');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '
 import { Card, CardContent } from '@/components / ui / card';'
 import { use_query } from '@tanstack / react - query';'
 import { supabase } from '@/integrations / supabase / client';'
 import { Skeleton } from '@/components / ui / skeleton';'
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -424,6 +490,7 @@ import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Skeleton } from '@/components / ui / skeleton';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { formatDistanceToNow } from './date - fns';
 export /**;
  * AnalyticsSummary - Function description;
@@ -498,6 +565,47 @@ if (throw lastEventError) {}
       <StatCard;"
         title="Total Page Views";"
         value={is_loading ? <Skeleton className="h - 8 w - 20 bg - zion - blue - light" /> : stats?.totalPageViews || 0}
+<<<<<<< HEAD
+
+      />;
+      <StatCard;"
+        title="Unique Visitors";"
+        value={is_loading ? <Skeleton className="h - 8 w - 20 bg - zion - blue - light" /> : stats?.unique_visitors || 0}
+
+      // Get unique visitors (by counting distinct user IDs);
+      const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase;'
+        .from('analytics_events');'
+        .select('user_id');'
+        .eq('event_typepage_view');
+
+      // Get conversion count;
+      const { data: conversionsData, error: conversionsError } = await supabase;'
+        .from('analytics_events');'
+        .select('count');'
+        .eq('event_typeconversion');
+"
+      // Get most recent event to calculate "last updated";
+      const { data: lastEventData, error: lastEventError } = await supabase;'
+        .from('analytics_events');'
+        .select('created_at');'
+        .order('created_at', { ascending: false });
+        .limit(1);
+
+        .single();'
+      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
+        icon={"
+          <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><path d="m2 12 5 - 3-5 - 3v6Z"/><path d="M7 9v10c0 .6.4 1 1 1h2a1 1 0 0 0 1 - 1v - 6"/><path d="M11 13h4"/><path d="M15 13v7a1 1 0 0 0 1 1h2c.6 0 1-.4 1 - 1V8.5"/><path d="M19 8.5a3.5 3.5 0 0 0 - 7 0"/><path d="M22 2 2 22"/></svg>;
+        }
+        icon={"
+          <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/><path d="M10 15H6a4 4 0 0 0 - 4 4v2"/><path d="m21.7 16.4-.9-.3"/><path d="m15.2 13.9-.9-.3"/><path d="m16.6 18.7.3-.9"/><path d="m19.1 12.2.3-.9"/><path d="m19.6 18.7-.4 - 1"/><path d="m16.8 12.3-.4 - 1"/><path d="m14.3 16.6 1-.4"/><path d="m20.7 13.8 1-.4"/></svg>;
+        }
+"`
+        value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
+
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+        .single(),
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
+=======
 <<<<<<< HEAD
 
 =======
@@ -703,6 +811,7 @@ if (throw lastEventError) {}
       />;
     </div>;
   );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -717,6 +826,11 @@ interface StatCardProps {;
   title: string;
   value: React.ReactNode;
   icon: React.ReactNode;
+<<<<<<< HEAD
+
+  icon: React.ReactNode;
+}
+=======
 <<<<<<< HEAD
 =======
 }
@@ -737,6 +851,7 @@ function StatCard({ title, value, icon }: StatCardProps) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface StatCardProps {;
   title: string,;
@@ -745,9 +860,13 @@ interface StatCardProps {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 }
 function StatCard(): any ({ title, value, icon }: StatCardProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -765,7 +884,11 @@ function StatCard(): any ({ title, value, icon }: StatCardProps) {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />;
       <StatCard;
         title="Conversion Rate";
@@ -913,6 +1036,9 @@ function StatCard({ title, value, icon } StatCardProps) {;
               {title}
             </p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <h4 className="text - 2xl font - bold text-white">;
               {value}
 
@@ -1040,6 +1166,8 @@ import {formatDistanceToNow} from "date-fns";"
           <div className="h - 12 w - 12 rounded - lg bg - zion - purple / 20 flex items - center justify - center text - zion - purple">;"
             <p className="text - sm font - medium text - zion - slate - light mb - 1">;"
             <h4 className="text - 2xl font - bold text - white">;"
+<<<<<<< HEAD
+=======
 =======
             <h4 className="text - 2xl font - bold text - white">;
 
@@ -1166,12 +1294,16 @@ function StatCard({ title, value, icon } StatCardProps) {;
             <h4 className="text-2xl font-bold text-white">;
               {value}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </h4>;
       ;
     );"`;
 pr-12325
           </div>;
         </div>;
+<<<<<<< HEAD
+      </CardContent>;
+=======
 <<<<<<< HEAD
       </CardContent>;
 =======
@@ -1235,3 +1367,4 @@ return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

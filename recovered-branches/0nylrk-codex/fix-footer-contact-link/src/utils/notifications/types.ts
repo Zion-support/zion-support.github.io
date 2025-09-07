@@ -9,9 +9,12 @@ export interface CreateNotificationParams {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 }
@@ -20,16 +23,21 @@ export interface SystemNotificationParams {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   userId: string;
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title: string;
   message: string;
   type: NotificationType;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -43,6 +51,7 @@ export interface CreateNotificationParams {;
   message: string;
   type: NotificationType;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null
@@ -50,10 +59,13 @@ export interface CreateNotificationParams {;
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   relatedId?: string | null;
   sendEmail?: boolean;
@@ -71,6 +83,8 @@ export interface CreateNotificationResult {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export interface CreateNotificationResult {
@@ -79,11 +93,14 @@ export interface CreateNotificationResult {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   success: boolean;
   notificationId?: string;
   error?: any;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -98,6 +115,7 @@ export interface HireRequestNotificationParams {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -108,9 +126,13 @@ export interface HireRequestNotificationParams {;
 
 }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
@@ -140,10 +162,15 @@ export interface OnboardingNotificationParams {
   user_role: 'talent' | 'client';
 export interface SystemNotificationParams {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement
 
 export interface OnboardingNotificationParams {;
 
+<<<<<<< HEAD
+=======
 =======
   user_id: string;
 
@@ -163,12 +190,16 @@ export interface OnboardingNotificationParams {;
 <<<<<<< HEAD
 
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface SystemNotificationParams {;
 
-  userId: string;
   title: string;
   message: string;
 
+<<<<<<< HEAD
+  message: string;
+  type: NotificationType;
+=======
 export interface SystemNotificationParams {
 
 export interface SystemNotificationParams {;
@@ -221,6 +252,7 @@ export interface SystemNotificationParams {;
   actionUrl?: string | null,;
   actionText?: string | null;
   sendEmail?: boolean;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;
 
@@ -249,6 +281,13 @@ export interface SystemNotificationParams {
   sendEmail?: boolean;
 }
 =======
+<<<<<<< HEAD
+  actionUrl?: string | null;
+  actionText?: string | null;
+  sendEmail?: boolean;
+}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

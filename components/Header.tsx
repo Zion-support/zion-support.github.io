@@ -1,3 +1,198 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'use client';
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ChevronDown, 
+  Menu, 
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+
+"use client";
+<<<<<<< HEAD
+"use client";
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+"use client";
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+<<<<<<< HEAD
+  Menu,
+
+'use client';
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+  Menu, 
+  X, 
+  Phone, 
+  Mail, 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+"use client";
+;
+import React, { useState, useEffect } from './react';
+import Link from './next / link';
+<<<<<<< HEAD
+import {
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+Phone,
+  Mail, 
+MapPin,
+  MapPin,
+  Brain,
+  Network,
+  Cloud,
+  ArrowRight
+} from 'lucide-react';
+origin/main
+
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+Instagram,
+  ChevronDown, 
+  Menu, 
+
+origin/automation-improvements-final
+=======
+
+import {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  X,
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
+  Shield,
+  Zap,
+  Building,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+<<<<<<< HEAD
+  CreditCard
+} from 'lucide-react';
+=======
+
+<<<<<<< HEAD
+
+
+CreditCard,
+
+  CreditCard,
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  Menu
+  X
+  ChevronDown
+  Code
+  Smartphone
+  Cloud
+  Database
+  Shield
+  Zap
+  Building
+  ShoppingCart
+  Heart
+  GraduationCap
+  Factory
+  Truck
+  CreditCard
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Code,;
+  Smartphone,;
+  Cloud,;
+  Database,;
+  Shield,;
+  Zap,;
+  Building,;
+  ShoppingCart,;
+  Heart,;
+  GraduationCap,;
+  Factory,;
+  Truck,;
+  CreditCard,;
+} from "lucide-react";
+
+  CreditCard,;
+
+  CreditCard,;
+} from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+const Header: React.FC = () => {
+=======
+>>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -8,6 +203,7 @@ import Link from 'next/link';'
 import { motion, AnimatePresence  } from 'framer-motion';'
 import { Menu, X, ChevronDown, Phone, Mail, MapPin  } from 'lucide-react';'
 
+<<<<<<< HEAD
 const Header = () => {const [isMenuOpen, setIsMenuOpen] =;
   }
   useState(false);
@@ -79,6 +275,107 @@ const navigation = [;
 }
       ];
     },{"name": 'Contact',"href": '/contact';'
+=======
+'use client';
+"use client";
+
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Menu,
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+const Header = () => {
+=======
+'use client';
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+
+const Header = () => {
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown } from 'lucide-react';
+<<<<<<< HEAD
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigation = [
+    {
+      name: 'Home',
+      href: '/'
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Finance', href: '/solutions/finance' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    {
+      name: 'Industries',
+      href: '/industries',
+      dropdown: [
+        { name: 'Financial Services', href: '/industries/financial' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Government', href: '/industries/government' }
+      ]
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'API Documentation', href: '/api-docs' }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact'
+>>>>>>> origin/resolved-merge-conflicts
     }
   ];
 
@@ -609,6 +906,7 @@ className=""md":hidden""
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Mobile menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -646,6 +944,283 @@ key={item.name}
 
     </header>
   );
+=======
+export default Header;
+<<<<<<< HEAD
+}
+export default Header;
+
+    </header>
+  );
+}
+}
+=======
+=======
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-slate-300 hover:text-white p-2"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden"
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+>>>>>>> origin/chore/fix-lint-and-merge
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+      </div>
+    </header>
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      </nav>
+    </header>
+  );
+<<<<<<< HEAD
+};
+
+export default Header;
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+
+const servicesDropdown = [
+  {
+    icon: Brain,
+    title: 'AI & Machine Learning',
+    description: 'Intelligent solutions for business automation',
+    href: '/ai-services',
+  },
+  {
+    icon: Shield,
+    title: 'Cybersecurity',
+    description: 'Advanced security and threat protection',
+    href: '/it-services',
+  },
+  {
+    icon: Cloud,
+    title: 'Cloud Infrastructure',
+    description: 'Scalable cloud solutions and migration',
+    href: '/it-services',
+  },
+  {
+    icon: Code,
+    title: 'Custom Software Development',
+    description: 'Tailored applications to meet your specific business needs',
+    href: '/services',
+  },
+  {
+    icon: Network,
+    title: 'System Integration',
+    description: 'Seamless integration of existing systems',
+    href: '/services',
+  },
+  {
+    icon: Zap,
+    title: 'Digital Transformation',
+    description: 'Complete digital overhaul of your business processes',
+    href: '/services',
+  }
+];
+
+const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+const Header = () => {
+>>>>>>> merged-prs-20250907-203621
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
+  return (
+<<<<<<< HEAD
+    <header className="bg-white shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+          
+=======
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <nav className="hidden md:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+<<<<<<< HEAD
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+=======
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+<<<<<<< HEAD
+          
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t">
+=======
+
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+              Sign In
+            </button>
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+              Get Started
+            </button>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <nav className="flex flex-col space-y-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+<<<<<<< HEAD
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+=======
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+<<<<<<< HEAD
+=======
+              <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 text-left">
+                  Sign In
+                </button>
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                  Get Started
+                </button>
+              </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+<<<<<<< HEAD
+};
+
+export default Header;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
 };
 
 export default Header;
@@ -877,3 +1452,26 @@ export default Header;
 }
 }
 }
+<<<<<<< HEAD
+=======
+export default Header;
+=======
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

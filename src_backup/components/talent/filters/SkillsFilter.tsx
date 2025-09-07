@@ -20,9 +20,21 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp  } from 'lucide-react';
 import { Button } from "@/components/ui/button",import { Checkbox  } from '@/components/ui/checkbox';
 import { SkillsFilterProps  } from '@/types/filters';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { ChevronDown, ChevronUp  } from 'lucide-react;
+import { Button } from "@/components/ui/button,import { Checkbox  } from @/components/ui/checkbox';
+import { SkillsFilterProps  } from '@/types/filters;
+>>>>>>> origin/resolved-merge-conflicts
 // Common skills in AI and tech;
 import { Button  } from '@/components/ui/button';
 // Common skills in AI and tech;
@@ -87,7 +99,18 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];<Checkbox;
+<<<<<<< HEAD
             <div key={skill} className="flex items-center">
+=======
+            <div key={skill} className="flex items-center>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <div key={skill} className="flex items-center">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
@@ -136,6 +159,12 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
 
     </div>;
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 onCheckedChange={() => toggleSkill(skill)}{skill}
               ">;
                 {skill}
@@ -171,6 +200,12 @@ function SkillsFilter() {return (<div className="mb - 6 border - b border - zion
                 onCheckedChange={() => toggle_skill (skill)}
                 className='border - zion - slate - light data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple'              />;
               <label;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -183,8 +218,10 @@ function SkillsFilter() {return (<div className="mb - 6 border - b border - zion
               </label>;
             </div>))}
         </div>)}
-    </div>)}
-        </div>;
+    </div>);
+}
+        </div>
+
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {skill}
@@ -197,5 +234,22 @@ function SkillsFilter() {return (<div className="mb - 6 border - b border - zion
     </div>;
   );
 }
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

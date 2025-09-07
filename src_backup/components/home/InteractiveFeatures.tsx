@@ -6,11 +6,23 @@ import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
   style?: React.CSSProperties;
 }
 interface InteractiveFeaturesProps {
+<<<<<<< HEAD
 
 ;
 import { ArrowRight, Search, Users, Zap, Settings  } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps  {class_name?: string,style?: React.CSSProperties;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { ArrowRight, Search, Users, Zap, Settings  } from lucide-react';
+import Link from 'next / link;
+import { cn } from @/lib / utils';interface InteractiveFeaturesProps  {class_name?: string,style?: React.CSSProperties;
+>>>>>>> origin/resolved-merge-conflicts
 }
 interface InteractiveFeaturesProps  {className?: string;
   style?: React.CSSProperties;
@@ -38,7 +50,18 @@ import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
   className?: string,;
+<<<<<<< HEAD
+=======
+import { cn } from @/lib/utils';interface InteractiveFeaturesProps {
+  className?: string,
+>>>>>>> origin/resolved-merge-conflicts
   style?: React && React.CSSProperties;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   class_name?: string;
   style?: React.CSSProperties;
@@ -126,7 +149,17 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       link: '/equipment'}],;
   const handleToggle = (index: number) => {;
 
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps  {className?: string,style?: React && React.CSSProperties;}interface InteractiveFeaturesProps  {className?: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { cn } from '@/lib/utils;interface InteractiveFeaturesProps  {className?: string,style?: React && React.CSSProperties;}interface InteractiveFeaturesProps  {className?: string;
+>>>>>>> origin/resolved-merge-conflicts
   style?: React && React.CSSProperties;export function InteractiveFeatures(): any ({className,style}: InteractiveFeaturesProps) {const [openIndex, setOpenIndex]  = React && React.useState<number | null>(null)const features = [;
     {title: 'AI Talent Matching',description:;
         'Connect with the perfect talent using intelligent matching.',details:;
@@ -145,6 +178,12 @@ import { cn } from '@/lib/utils';interface InteractiveFeaturesProps  {className?
             Hover or click a card to learn more about what Zion offers;
           </p>;
         </div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               key={index}
 
               onMouseEnter={() => setOpenIndex(index)}
@@ -156,9 +195,32 @@ import { cn } from '@/lib/utils';interface InteractiveFeaturesProps  {className?
               <CardHeader className='flex flex-row items-start space-x-3'>
 
                 {feature.icon}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <div>
+                  <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div>;
+<<<<<<< HEAD
                   <CardTitle className='text-lg text-white'>{feature.title}</CardTitle>;
                   <CardDescription className='text-zion-slate-light'>;
+=======
+                  <CardTitle className=text-lg text-white">{feature.title}</CardTitle>;
+                  <CardDescription className="text-zion-slate-light>;
+=======
+                <div>
+                  <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     {feature.description}
                   </CardDescription>
                 </div>
@@ -210,6 +272,13 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default InteractiveFeatures;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )</Card>))}
         </div>;
       </div>;
@@ -222,3 +291,10 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
  } from '@/components/ui/card';
   )export default InteractiveFeatures;
 export default InteractiveFeatures;
+=======
+export default InteractiveFeatures;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

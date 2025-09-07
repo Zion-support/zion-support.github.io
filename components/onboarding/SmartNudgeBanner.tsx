@@ -2,6 +2,40 @@
 =======
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+import React from 'react';'
+import { X  } from 'lucide-react';'
+
+export type SmartNudgeBannerProps = any;
+export type SmartNudgeBannerProps = {
+  }
+  "role": 'talent' | 'client';'
+
+  user_id?: string | null;
+  "message": string;() => `zion-nudge-${role}-${userId ?? 'anon'}`,[role, userId];)const [hidden, setHidden] = React.useState<boolean>(false)React.useEffect(() => {`}
+try {const v =;
+        }
+        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;'
+      setHidden(v = == 'dismissed')} catch ;'
+}
+
+export type SmartNudgeBannerProps = {"role": 'talent' | 'client',userId?: string | null;'
+  }
+  "message": string;
+
+
+}
+
+export default function SmartNudgeBanner() {
+}
+const storageKey = React.useMemo(;
+    () => `zion-nudge-${role}-${userId ?? 'anon'}``
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 import React from 'react';
 import { X } from 'lucide-react';
@@ -45,6 +79,10 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     [role, userId]
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -52,6 +90,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+
+    try {
+}
+const v =;
+        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;'
+      setHidden(v === 'dismissed');'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -116,10 +166,21 @@ const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;}
       setHidden(v === 'dismissed');}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     } catch {}
   }, [storageKey]);
 
 const dismiss = React && React.useCallback(() => {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     setHidden(true);
 
     try {
@@ -194,11 +255,20 @@ if (return null) {}
 }
   return ('
     <div className='relative rounded - xl border border - cyan - 300 / 40 dark:border - cyan - 400 / 30 bg - cyan - 50 / 60 dark:bg - cyan - 900 / 20 p - 4'>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from 'react;
 
   return (
 <div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4' />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <button;
         on_click={dismiss}'
         aria - label=Dismiss;'
@@ -214,6 +284,13 @@ import React from 'react;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     try {
 if (typeof window !== undefined)
         localStorage.setItem(storageKey, 'dismissed');
@@ -479,6 +556,10 @@ if (return null) {
 <div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'    />
       <button;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 onClick={dismiss}
         aria-label=Dismiss
         className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'

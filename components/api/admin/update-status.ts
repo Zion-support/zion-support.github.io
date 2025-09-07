@@ -2,23 +2,37 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return res.status(405).json({ error: 'Method Not Allowed' });
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     res.status(405).json($2);
     return
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
-  if (!isInternalAgentRequest(req)) {
-    res.status(401).json($2);
-    return
-  }
-  const body = $2;
-  const dataDir = path.join(process.cwd(), 'dataadmin'),
-  if (!fs.existsSync(dataDir)) fs.mkdirSync($2);
-  const statusPath = path.join($2);
-  const existing = fs.existsSync(statusPath) ? JSON.parse(fs.readFileSync(statusPath, 'utf8')) : { agents: [] },
 
+<<<<<<< HEAD
+  if (!isInternalAgentRequest(req)) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+
+  const body = req.body;
+  res.status(200).json({ ok: true });
+}
+=======
   const merged = $2;
     ...body,
     updatedAt: new Date().toISOString()},
@@ -32,7 +46,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   if (!isInternalAgentRequest(req)) {
     }
+<<<<<<< HEAD
     res && res.status(401).json({ 'error': 'Unauthorized','
+=======
+    res && res.status(401).json({ "error": 'Unauthorized','
+>>>>>>> origin/resolved-merge-conflicts
 });
 return;
   }
@@ -240,3 +258,7 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import { Button  } from '@/components / ui / button';
+interface Contract {
+
+=======
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 interface Contract {
 =======
@@ -15,11 +20,45 @@ import { Button  } from '@/components / ui / button';
 interface Contract {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   title: string;
   client: string;
   talent: string;
   date: string;
+<<<<<<< HEAD
+
+interface RecentContractsTableProps {;
+
+interface RecentContractsTableProps {
+
+import { Button } from "@/components/ui/button",
+
+interface Contract {
+
+  id: string,
+  title: string,
+  client: string,
+  talent: string,
+
+  date: string,
+  isSmartContract: boolean";
+import { Button } from "@/components/ui/button",;
+  isSmartContract: boolean;"
+import { Button } from "@/components/ui/button",;"
+pr-12325
+  isSmartContract: boolean;"
+import { Button } from "@/components/ui/button",;"
+
+interface Contract {;
+  id: string,;
+  title: string,;
+  client: string,;
+  talent: string,;
+  date: string,;}
+  isSmartContract: boolean;}
+}
+=======
 <<<<<<< HEAD
 =======
   isSmartContract: boolean
@@ -93,6 +132,7 @@ interface Contract {;
   date: string,;}
   isSmartContract: boolean;}
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 interface RecentContractsTableProps {;
 
@@ -103,9 +143,12 @@ interface RecentContractsTableProps {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 
@@ -117,6 +160,9 @@ interface RecentContractsTableProps {;
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 interface RecentContractsTableProps {;
   contracts: Contract[];
@@ -127,6 +173,8 @@ export function RecentContractsTable(): any ({;
   onViewContract,;
 }: RecentContractsTableProps) {;
   return (
+<<<<<<< HEAD
+=======
 =======
 
 <<<<<<< HEAD
@@ -140,6 +188,7 @@ export function RecentContractsTable(): any ({;
 }: RecentContractsTableProps) {;
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Button } from "@/components/ui/button",;
 ;
@@ -162,16 +211,24 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
   return (
 
 =======
+<<<<<<< HEAD
+  return (
+
+=======
 =======
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
         <table className="min-w-full divide-y divide-border">;
           <thead className="bg-muted">;
             <tr>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -195,6 +252,7 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
                 className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
                 Contract Title;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </th>;
               <th"
                 scope="col""
@@ -217,8 +275,12 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Type;
               </th>;"
               <th scope="col" className="relative px-6 py-3">;"
@@ -227,6 +289,57 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
             </tr>;
           </thead>;"
           <tbody className="bg-card divide-y divide-border">;
+<<<<<<< HEAD
+
+                    onClick={() => onViewContract(contract && contract.id)}
+interface RecentContractsTableProps {}
+  contracts: Contract[];
+  onViewContract: (contract_id: string) => void;
+}
+export /**;
+ * RecentContractsTable - Function description;
+ */
+function RecentContractsTable() {}
+  return (
+
+                  <Button ;
+
+                    variant="ghost" ;
+                    size="sm";
+                    onClick={() => onViewContract(contract.id)}
+
+                  >;
+                    View;
+                  </Button>;
+                </td>;
+
+          </tbody>;
+        </table>;
+      </div>;
+    </>;
+
+              </tr>))}
+          </tbody>;
+        </table>;
+      </div>;
+    </>);
+}
+
+  ),;}
+ interface Contract {
+  id: string;
+title: string;
+client: string;
+talent: string;
+date: string;
+isSmartContract: boolean 
+}interface RecentContractsTableProps {
+  contracts: Contract[];
+onViewContract: (contractId: string) => void 
+}export function RecentContractsTable ({
+  contracts, onViewContract 
+}: RecentContractsTableProps) {
+=======
 <<<<<<< HEAD
 
                     onClick={() => onViewContract(contract && contract.id)}
@@ -436,6 +549,7 @@ onViewContract: (contractId: string) => void
 }export function RecentContractsTable ({
   contracts, onViewContract 
 }: RecentContractsTableProps) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<> <h2 className="text-2xl font-bold mb-4" >Recent Contracts</h2> <div className="overflow-x-auto rounded-md border" > <table className="min-w-full divide-y divide-border" > <thead className="bg-muted" > col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Contract Title </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Client </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Talent </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Date </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Type </th> <th scope=" col"className=" relative px-6 py-3"> <span className=" sr-only">Actions</span> </th> </tr> </thead> <tbody className=" bg-card divide-y divide-border"> {
   contracts.map ( (contract) => (<tr key= {
   contract.id 
@@ -443,6 +557,9 @@ onViewContract: (contractId: string) => void
 }</td> <td className=" px-6 py-4 whitespace-nowrap text-right text-sm" > <Button > View </Button> </td> </tr>) ) 
 }</tbody> </table> </div> </>) 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   // TODO: Implement
 }
@@ -454,18 +571,24 @@ date: string;,
   isSmartContract: boolean;
 }interface RecentContractsTableProps {
   // TODO: Implement
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
           </tbody>
         </table>
       </div>
     </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   )
 }
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 
   contracts: Contract[];,
@@ -542,14 +665,20 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 
                 </td>;
 pr-12325
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </tbody>;
         </table>;
       </div>;
     </>;
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 });
               </tr>))}
     </>);

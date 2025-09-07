@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import useSWR from 'swr';'
+
+const fetcher = ("url": string) => fetch(url).then(r => { return r.json()); }
+
+export function useProjectDisputeStatus("projectId": string): {
+  }
+  "hasActiveDispute": boolean;
+
+  "isLoading": boolean;
+} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some(("d": any) =>;`
+      d && d.projectId === projectId &&;
+const fetcher = $2;
+export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean} {
+  const { data, error } = useSWR($2);
+  const hasActiveDispute = $2;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import useSWR from 'swr';
 <<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
@@ -5,12 +25,22 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return ('
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
 =======
@@ -229,12 +259,29 @@ if (return null) {$2;
       Under Dispute;
     </span>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
   return { hasActiveDispute, isLoading: !data && !error }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+
+const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+  if (!hasActiveDispute) return null;
+return (;
+
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 
@@ -262,13 +309,29 @@ const { hasActiveDispute } = useProjectDisputeStatus(projectId);
 }
   );
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       Under Dispute
     </span>
   );
 return (;
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">"
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
       Under Dispute
+=======
+<<<<<<< HEAD
+      Under Dispute
+  return (
+    <span className=\"inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs\" />
+      Under Dispute;
+=======
+>>>>>>> merged-prs-20250907-203621
+      Under Dispute
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </span>
 );
 }
@@ -282,10 +345,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -329,6 +401,15 @@ if (return null) {
     <span className='inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs'>;
       Under Dispute;
     </span>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+)}
+  )
+}
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 )}
   )
@@ -417,3 +498,7 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

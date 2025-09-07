@@ -17,6 +17,8 @@ export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 
 export interface FraudFlag {;
 
+<<<<<<< HEAD
+=======
 =======
 
 export interface FraudFlag {;
@@ -26,6 +28,7 @@ export interface FraudFlag {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   user_id: string;
   user_email?: string;"
@@ -42,6 +45,16 @@ export interface FraudFlag {;
 
   gpt_explanation?: string;
   is_false_positive?: boolean;
+<<<<<<< HEAD
+
+export interface FraudStats {;
+
+  total_flags: number;
+
+  pending_flags: number;
+  suspicious_count: number;,
+  dangerous_count: number;
+=======
 
 <<<<<<< HEAD
 export interface FraudStats {;
@@ -121,3 +134,4 @@ export interface FraudStats {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

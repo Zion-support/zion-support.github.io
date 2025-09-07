@@ -1,4 +1,47 @@
 <<<<<<< HEAD
+import {useState} from "react";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import {z} from "zod";
+import {User, Mail, AtSign, GraduationCap} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+
+const profileSchema = z.object({
+  displayName: z.string().min(2, "Name must be at least 2 characters");
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
+type ProfileFormValues = z.infer<typeof profileSchema>;
+
+import { useState } from "react",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { User, Mail, AtSign, GraduationCap } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+
+import { Textarea } from "@/components/ui/textarea",
+import {}
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+
+const profileSchema = z.object({
+  displayName: z.string().min(2, "Name must be at least 2 characters"),
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
+
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
+
+type ProfileFormValues = z.infer<typeof profileSchema>,
+
+interface ProfileSetupProps {
+=======
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -114,6 +157,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface ProfileSetupProps {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onComplete: (data: ProfileFormValues) => void
   userType: string
 
@@ -125,6 +169,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {}
       displayName: """
       bio: """
       headline: ""}})
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -189,6 +236,7 @@ function ProfileSetup() {
       case "service_provider": return "Service Provider";
       case "talent":;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return "Talent";
       case "client":;
 
@@ -202,6 +250,11 @@ function ProfileSetup() {
     switch (userType) {
       case "serviceProvider": return "Service Provider",
 
+<<<<<<< HEAD
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+
+=======
 =======
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
@@ -212,18 +265,29 @@ function ProfileSetup() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       case "talent":
         return "Talent",
       case "client":
 
         return "Client",
       default:"
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return "User"
     }
 
   return (
 
+<<<<<<< HEAD
+          <FormField
+            control={form.control}
+
+            name="displayName"
+            render={({ field }) => (
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -297,6 +361,7 @@ function ProfileSetup() {
 
             name="displayName"
             render={({ field }) => (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <FormItem>"
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                 <FormControl>"
@@ -312,6 +377,9 @@ function ProfileSetup() {
       default:;"
         return "User";
     }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -357,6 +425,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
 
@@ -364,6 +433,8 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
           Help others get to know you better;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       ;
       <Form {...form}>;
@@ -380,6 +451,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                 <FormControl>
                   <div className="relative">
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <FormField
             control={form && form.control}
@@ -395,14 +467,65 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                     <Input"
                       placeholder="Your full name""
 =======
+<<<<<<< HEAD
+
+                    <Input"
+                      placeholder="Your full name""
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Input
                       placeholder="Your full name"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                       {...field}
                     />;"
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+<<<<<<< HEAD
+                  </div>;
+                </FormControl>;"
+                <FormMessage className="text-red-400" />;
+
+            )}
+          <FormField;
+            control={form && form.control}"
+            name="headline"
+
+            render={({ field }) => (;
+              <FormItem>;"
+                <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
+                <FormControl>;"
+                  <div className="relative">;
+
+                    <Input
+                      placeholder={`e && e.g., ${
+
+                      }`}
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+                      {...field}
+                    />;
+          <FormField
+            control={form && form.control}
+            name="bio"
+/>;
+          />;
+          <FormField
+            control={form && form.control}
+            name="bio"
+                    <Input;
+                      placeholder={`e.g., ${;
+                        userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :;
+                        userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
+                        "Creative Director at XYZ Studios";
+                      }`}
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+                      {...field}
+                    />;
+                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  </div>;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+=======
                   </div>;
                 </FormControl>;"
                 <FormMessage className="text-red-400" />;
@@ -412,11 +535,14 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
           <FormField
             control={form && form.control}
             name="headline"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </FormItem>;            )}
           />;
           ;
           <FormField;
             control={form.control}
+<<<<<<< HEAD
+=======
             name="headline";
             render={({ field }) => (;
               <FormItem>;
@@ -445,11 +571,22 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
           ;
           <FormField;
             control={form.control}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             name="bio";
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
+                  <Textarea
+                    placeholder={`Tell us about your ${
+                      user_type === "service_provider" ? "services and expertise" :;
+                      user_type === "talent" ? "skills and experience" :;
+                      "business and needs";
+                    }`}
+                    className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min-h-[120px]";
+                    {...field}
+=======
               </FormItem>;
 <<<<<<< HEAD
             )}
@@ -516,9 +653,13 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                   />;
                 </FormControl>;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   />;
                 </FormControl>;
+
           />;
+<<<<<<< HEAD
+=======
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
@@ -589,11 +730,15 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                 </FormControl>;
 
           />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <Button
             type="submit"
 
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
+<<<<<<< HEAD
+"
+=======
 <<<<<<< HEAD
 "
 =======
@@ -604,12 +749,24 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
           />;
           <Button;"
             type="submit";"
             className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+<<<<<<< HEAD
+
+          >;
+
+            Complete Profile;
+
+          </Button>;
+        </form>;
+      </Form>;
+
+=======
 <<<<<<< HEAD
 
           >;
@@ -642,6 +799,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             Complete Profile;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </Button>;
         </form>;
       </Form>;
@@ -656,24 +814,42 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 
 <<<<<<< HEAD
 }
+</div>);
+}
+}
     </div>);
     </div>;
+<<<<<<< HEAD
+  ); import {};
+=======
   ); import {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Form;
 FormControl;
 FormField;
 FormItem;
 FormLabel;
+<<<<<<< HEAD
+const profileSchema = z.object ({"
+  displayName: z.string () .min (2, "Name must be at least 2 characters");"
+bio: z.string () .min (10, "Bio must be at least 10 characters") .max (500, "Bio must be less than 500 characters");"
+headline: z.string () .min (5, "Headline must be at least 5 characters") .max (100, "Headline must be less than 100 characters") 
+});"
+case "talent": return "Talent";"
+=======
 const profileSchema = z.object ({
   displayName: z.string () .min (2, "Name must be at least 2 characters");
 bio: z.string () .min (10, "Bio must be at least 10 characters") .max (500, "Bio must be less than 500 characters");
 headline: z.string () .min (5, "Headline must be at least 5 characters") .max (100, "Headline must be less than 100 characters") 
 });
 case "talent": return "Talent";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 case "client": return "Client";
 default: 
 }
 };
+<<<<<<< HEAD
+=======
 getTypeLabel () 
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
   ...field 
@@ -717,6 +893,7 @@ default:
 }
 <<<<<<< HEAD
 };
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 getTypeLabel () "
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {}
   ...field "
@@ -737,8 +914,12 @@ getTypeLabel () "
 }
 ;
     </div>);
+<<<<<<< HEAD
+}
+=======
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

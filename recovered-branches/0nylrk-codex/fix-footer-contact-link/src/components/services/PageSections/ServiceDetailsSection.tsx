@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { CountryServiceSelector } from "../CountryServiceSelector",
+
+import { CountryPricing } from "@/data/onsiteServicePricing";
+
+import { CountryServiceSelector } from "../CountryServiceSelector";
+interface ServiceDetailsSectionProps {}
+  selectedCountry: CountryPricing | null;
+
+  setSelectedCountry: (country: CountryPricing | null) => void;
+}
+
+=======
+<<<<<<< HEAD
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 interface ServiceDetailsSectionProps {
@@ -62,6 +76,7 @@ interface ServiceDetailsSectionProps {}
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ServiceDetailsSection({}
   selectedCountry,
   setSelectedCountry,
@@ -81,6 +96,12 @@ export function ServiceDetailsSection({}
           <p className="text-zion-slate-light mb-6">
             Choose a country from the options above to see service details and;
             pricing;
+<<<<<<< HEAD
+          </p>
+        </div>
+
+  return (
+=======
 >>>>>>> merged-prs-20250907-203621
           </p>
         </div>
@@ -150,12 +171,17 @@ export /**
 function ServiceDetailsSection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div id="service - details" className="mt - 12">;
 
       {selected_country ? (
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
 
@@ -166,6 +192,10 @@ interface ServiceDetailsSectionProps {;
   selectedCountry: CountryPricing | null,;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {;
   return (
     <div id="service-details" className="mt-12">;
@@ -176,6 +206,8 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
         />;
       ) : (;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -196,6 +228,7 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
         />;
       ) :(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="text-center">;
           <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>;
           <p className="text-zion-slate-light mb-6">;
@@ -203,6 +236,9 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
           </p>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       )}
     </div>
@@ -221,10 +257,13 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
           </p>;
         </div>)}
     </div>);
+<<<<<<< HEAD
+=======
 =======
       )}
     </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       )}
     </div>
@@ -234,6 +273,10 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
   )
 
 }
+<<<<<<< HEAD
+
+;
+=======
 <<<<<<< HEAD
 
 ;
@@ -268,3 +311,4 @@ setSelectedCountry: (country: CountryPricing | null) => void
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

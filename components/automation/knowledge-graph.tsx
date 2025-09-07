@@ -2,6 +2,25 @@
 export default function KnowledgeGraph({ report }: Props) {
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import fs from 'fs','
+import path from 'path';'
+import type { GetStaticProps } from 'next';'
+
+interface Node { "id": string, "tokens": string[]
+}
+
+interface Edge { "source": string, "target": string, "weight": number, "terms": string[]
+}
+
+interface Report { "generatedAt": string, "nodes": Node[], "edges": Edge[], "topTerms": { "term": string, "count": number }[]
+}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 type Props = { report: Report | null },
 
 <<<<<<< HEAD
@@ -70,6 +89,10 @@ interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
           <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Nodes</div><div className="text-2xl font-semibold">{report && report.nodes.length}</div></div>;
           <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Edges</div><div className="text-2xl font-semibold">{report && report.edges.length}</div></div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       </section>;
       <section>;
@@ -214,6 +237,11 @@ type Props = any;
 <<<<<<< HEAD
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import fs from 'fs;,
 import path from path';
 import type { GetStaticProps } from 'next;
@@ -316,6 +344,10 @@ type Props = any
           {report.topTerms.map((t, i) => (
             <li key={i} className=px-2 py-1 rounded bg-gray-100 dark:bg-gray-800>{t.term} <span className="text-gray-500">({t.count})</span></li>
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           ))}
         </ul>
       </section>
@@ -331,6 +363,15 @@ type Props = any
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
           {report.edges.slice(0, 200).map((e, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text-gray-500 truncate">{e.terms.join(', ')}</span></li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          ))}
+          {report && report.edges.slice(0, 200).map((e, i) => (;}"
+            <li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{e && e.source} ⇄ {e && e.target}</span><span className=\"text-gray-500 truncate\" />{e && e.terms.join(', ')}</span></li>;
+          ))}
+=======
+>>>>>>> origin/resolved-merge-conflicts
           ))}
 <<<<<<< HEAD
 =======
@@ -341,6 +382,10 @@ type Props = any
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 ) );
 }</ul> </section> <section>) );
@@ -382,6 +427,11 @@ if (return <div > No knowledge graph yet.</div>) {}
     </div>);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
           {report && report.edges.slice(0, 200).map((e, i) => (;}"
             <li key={i} className=\"flex justify-between gap-4\"    /><span className=\"truncate\"    />{e && e.source} ⇄ {e && e.target}</span><span className=\"text-gray-500 truncate\"    />{e && e.terms.join(', ')}</span></li>;
           ))}
@@ -413,11 +463,23 @@ export default function KnowledgeGraph({ report }: Props) {
 
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </ul>
       </section>
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 "
@@ -490,3 +552,7 @@ export default function KnowledgeGraph({ report }: Props) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

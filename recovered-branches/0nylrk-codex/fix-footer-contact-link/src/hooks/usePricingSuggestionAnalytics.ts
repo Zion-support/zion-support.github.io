@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
@@ -9,6 +11,7 @@ interface PricingSuggestionAnalytics {
   recentSuggestions: {
     id: string,
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface PricingSuggestionAnalytics {
 
   total_suggestions: number;
@@ -18,17 +21,23 @@ interface PricingSuggestionAnalytics {
 <<<<<<< HEAD
   recent_suggestions: {}
 =======
+<<<<<<< HEAD
+  recent_suggestions: {}
+=======
   recent_suggestions: {
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     id: string;
     user_id: string;
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     accepted: boolean;
@@ -56,12 +65,17 @@ interface PricingSuggestionAnalytics {
   isLoading: boolean
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     createdAt: string
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
 
+<<<<<<< HEAD
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
@@ -74,6 +88,7 @@ import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ';
 import {useState, useEffect} from 'react';"
@@ -81,7 +96,10 @@ import {supabase} from "@/integrations/supabase/client";'
 import { useState, useEffect } from 'react',"
 import { supabase } from "@/integrations/supabase/client",
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface PricingSuggestionAnalytics {
 
   averagePriceGap: number
@@ -115,6 +133,9 @@ interface PricingSuggestionAnalytics {
   recentSuggestions: {}
     id: string,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
   total_suggestions: number;,
@@ -128,6 +149,8 @@ interface PricingSuggestionAnalytics {
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> merged-prs-20250907-203621
     userId: string,
@@ -204,6 +227,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     isLoading: true,
     error: null
@@ -211,16 +235,22 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
@@ -282,12 +312,18 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         setAnalytics({
 
           ...mockData;
           isLoading: false;
           error: null;
         });
+<<<<<<< HEAD
+
+        // Mock data for demonstration;
+        const mockData = {}
+=======
 <<<<<<< HEAD
 
         // Mock data for demonstration;
@@ -303,6 +339,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         // Mock data for demonstration
         const mockData = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           totalSuggestions: 256,
           acceptanceRate: 0.72,
           averagePriceGap: 12.5,
@@ -314,12 +351,17 @@ export function usePricingSuggestionAnalytics(days = 30) {
             { category: 'data', count: 11, acceptanceRate: 0.78 }],
           recentSuggestions: Array(10).fill(null).map((_, i) => ({}
             id: `suggestion-${i}`,`
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             userId: `user-${Math.floor(Math.random() * 100)}`,
             suggestedMin: 30 + Math.floor(Math.random() * 30),
             suggestedMax: 60 + Math.floor(Math.random() * 40),
             actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
             accepted: Math.random() > 0.25,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString($2);
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
@@ -327,6 +369,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
         setAnalytics($2);
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),'
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         },
@@ -341,14 +384,23 @@ export function usePricingSuggestionAnalytics(days = 30) {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase'
         //   .from('pricing_suggestions')
         //   .select(...)
+<<<<<<< HEAD
+
+        // Process data and setAnalytics({...})
+      } catch (error) {
+        console && console.error("Error fetching pricing suggestion analytics:", error);
+=======
 <<<<<<< HEAD
         console && console.error("Error fetching pricing suggestion analytics:", error);
         //   .gte('created_at', `now() - interval '${days} days'`);
@@ -397,6 +449,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         console.error("Error fetching pricing suggestion analytics:", error),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         setAnalytics({
           ...analytics,
           isLoading: false,
@@ -433,6 +486,9 @@ interface PricingSuggestionAnalytics {;
     accepted: boolean,;
     createdAt: string,;
 
+<<<<<<< HEAD
+'
+=======
 <<<<<<< HEAD
 '
 =======
@@ -532,6 +588,7 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -615,6 +672,12 @@ if (throw error) {}
 }
 
 <<<<<<< HEAD
+        // In a real implementation with Supabase, you might do:
+        // const { data, error } = await supabase
+        //   .from('pricing_suggestions')
+        //   .select(...)
+=======
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
@@ -647,3 +710,4 @@ if (throw error) {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

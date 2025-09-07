@@ -11,10 +11,28 @@ import { MessageSquare, ArchiveIcon } from 'lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 
+<<<<<<< HEAD
   type: 'active' | 'archived';
 },;
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  type: 'active' | 'archived';
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { MessageSquare, ArchiveIcon } from lucide-react';'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/card;'
+
+  type: active' | 'archived;
+},
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
+  const isActive = type === active';
+>>>>>>> origin/resolved-merge-conflicts
 
   return (
     <Card className='bg-zion-blue-dark border border-zion-blue-light text-center py-12'>;
@@ -50,10 +68,23 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: 'active' | 'archiv
         </h3>;
         <p className='text-zion-slate-light max-w-md mx-auto'>;
           {isActive;
+<<<<<<< HEAD
             ? 'You haven't received any hire requests yet. Promote your profile and services to attract potential clients.';
             : 'You haven't archived any hire requests yet. Archive requests to keep your active list organized.';
+=======
+            ? You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
+            : "You havent archived any hire requests yet. Archive requests to keep your active list organized.;
+=======
+  type: 'active' | 'archived';
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           }
-        </p>;
+        </p>
       </CardContent>;
     </Card>;
   );
@@ -78,5 +109,9 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: 'active' | 'archiv
         </p>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
     </Card>)}type EmptyStateCardProps = any;
 }
+=======
+}
+>>>>>>> origin/resolved-merge-conflicts

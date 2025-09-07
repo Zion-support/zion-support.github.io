@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { supabase } from '../../../utils/supabase/client';
+
+function getUserId(req: NextApiRequest): string {
+  // Extract user ID from request (implement based on your auth system)
+  return req.headers['x-user-id'] as string || 'anonymous';
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { id } = req.body;
+  if (!id) {
+    return res.status(400).json({ error: 'Notification ID required' });
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 function getUserId(req: NextApiRequest): string {
@@ -7,6 +30,10 @@ function getUserId(req: NextApiRequest): string {
   if (match) return decodeURIComponent(match.split('=')[1]),
   return 'demo-user-1'
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 <<<<<<< HEAD
@@ -88,6 +115,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { error } = await supabase
       .from('notifications')
       .update({ read_status: true })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      .eq('id', id)
+      .eq('user_id', userId);
+
+    if (error) {
+      return res.status(500).json({ error: 'Failed to mark notification as read' });
+    }
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
       .eq(id', id)'
       .eq(user_id, userId);
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev;
@@ -302,10 +341,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     return res.status(200).json({ ok: true });
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     return res.status(200).json({ ok: true })
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
@@ -319,3 +368,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

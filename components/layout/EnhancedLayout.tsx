@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type EnhancedLayoutProps = any;
+
+export default function EnhancedLayout() {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 interface EnhancedLayoutProps {
   children: React.ReactNode;
 }
@@ -94,6 +102,7 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   useEffect(() => {
     const lng = i18n.resolvedLanguage |i18n.language;
@@ -185,19 +194,31 @@ document.documentElement.setAttribute('lang', lng);
 <<<<<<< HEAD
       </main>      <main id="main" className=flex-1 container mx-auto px-4 py-6>{children}</main>;
 =======
+<<<<<<< HEAD
+      </main>      <main id="main" className=flex-1 container mx-auto px-4 py-6>{children}</main>;
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 });
 });
 }"
     <div className="min - h-screen flex flex - col>;
+<<<<<<< HEAD
+=======
 =======
   );
 <<<<<<< HEAD
@@ -228,6 +249,10 @@ document.documentElement.setAttribute('lang', lng);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="min - h-screen flex flex - col">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
       </header>;
@@ -242,7 +267,10 @@ document.documentElement.setAttribute('lang', lng);
 });
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD
 
@@ -253,6 +281,9 @@ document.documentElement.setAttribute('lang', lng);
         <LanguageSwitchPrompt />
       </header>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
   return (
@@ -267,6 +298,8 @@ document.documentElement.setAttribute('lang', lng);
       </main>
       <footer    />
         <EnhancedFooter    />
+<<<<<<< HEAD
+=======
 =======
 =======
   );
@@ -367,10 +400,14 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       </main>
       <footer    />
         <EnhancedFooter    />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </footer>
     </div>
   );
 }
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
@@ -379,3 +416,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

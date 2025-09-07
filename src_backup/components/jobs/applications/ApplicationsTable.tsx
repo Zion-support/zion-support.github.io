@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
   TableBody,TableCell,TableHead,TableHeader,import { format } from "date-fns",import { JobApplication  } from '@/types/jobs';
@@ -26,6 +32,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   TableHead,
   TableHeader,
   TableRow
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -36,8 +48,23 @@ import React, { useState } from "react", // Import React and useState
 import { toast } from "@/hooks/use-toast",
 import Image from 'next/image', // Import next/image
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplicationsTableProps {
   applications: JobApplication[],
   processingId: string | null,
@@ -102,6 +129,15 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
@@ -117,6 +153,7 @@ import { ApplicationActions } from './ApplicationActions';
 import { StatusBadge } from './StatusBadge';
 import { Briefcase, User } from 'lucide-react';
 import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
+<<<<<<< HEAD
   TableRow;
  } from '@/components/ui/table';
 import { ApplicationActions  } from './ApplicationActions';
@@ -125,10 +162,47 @@ import { HireConfirmationModal  } from '@/components/hiring-tracker/HireConfirma
 import React, { useState } from 'react'; // Import React and useState;
 import { toast  } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
+=======
+  TableRow;
+ } from '@/components/ui/table';
+import { ApplicationActions  } from './ApplicationActions';
+import { StatusBadge  } from './StatusBadge';
+import { HireConfirmationModal  } from '@/components/hiring-tracker/HireConfirmationModal';
+import React, { useState } from 'react'; // Import React and useState;
+import { toast  } from '@/hooks/use-toast';
+import Image from 'next/image'; // Import next/image;
+import { format } from 'date-fns;
+import { JobApplication } from @/types/jobs';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar; // Renamed;
+import { ClickableBadge } from @/components/ui/clickable-badge';
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from '@/components/ui/table;
+import { ApplicationActions } from ./ApplicationActions';
+import { StatusBadge } from './StatusBadge;
+import { Briefcase, User } from lucide-react';
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal;
+  TableRow;
+ } from @/components/ui/table';
+import { ApplicationActions  } from './ApplicationActions;
+import { StatusBadge  } from ./StatusBadge';
+import { HireConfirmationModal  } from '@/components/hiring-tracker/HireConfirmationModal;
+import React, { useState } from react'; // Import React and useState;
+import { toast  } from '@/hooks/use-toast;
+import Image from next/image'; // Import next/image;
+>>>>>>> origin/resolved-merge-conflicts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
@@ -161,7 +235,17 @@ import {  Table,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';interface ApplicationsTableProps  {applications: JobApplication[];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/components/ui/table';interface ApplicationsTableProps  {applications: JobApplication[];
+>>>>>>> origin/resolved-merge-conflicts
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
@@ -175,6 +259,12 @@ import { HireConfirmationModal  } from '@/components / hiring - tracker / HireCo
 import { toast  } from '@/hooks / use - toast';
 import Image from 'next / image'; // Import next / image;
 interface ApplicationsTableProps  {applications: JobApplication[];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   TableRow,';
 } from '@/components / ui / table';'
 import { ApplicationActions } from './ApplicationActions';'
@@ -190,11 +280,26 @@ interface ApplicationsTableProps {}
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (application_id: string, new_status: string) => Promise < void>;
   onViewScore: (application: JobApplication) => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 // Sub - component for avatar to handle its own error state;
 
 const ApplicationAvatar = ({}
@@ -223,6 +328,12 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Sub - component for avatar to handle its own error state;const ApplicationAvatar = ({application;
 }: {// Sub-component for avatar to handle its own error state;
 const ApplicationAvatar = ({application}: {application: JobApplication;
@@ -232,6 +343,12 @@ interface ApplicationsTableProps  {applications: JobApplication[],processingId: 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {const [avatarError, setAvatarError] = useState(false),const talentName  = application && application.talent_profile?.full_name || "Candidate",const ApplicationAvatar = ({ application }: { application: JobApplication },) => {const [avatarError, setAvatarError] = useState(false)const talentName = application.talent_profile?.full_name |"Candidate";
   return (<AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (<Image;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <Image;
           src={application.talent_profile.profile_picture_url}
           alt={talentName}
@@ -243,6 +360,12 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           priority={false}
         />
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ) : (
         <User className="h-4 w-4" />
       )}
@@ -380,6 +503,12 @@ function ApplicationsTable() {const [hireModalOpen, setHireModalOpen] = useState
 // Sub-component for avatar to handle its own error state;
 const ApplicationAvatar  = null;return (<>;<div>;
                       <div className='font-medium'>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <User className="h-4 w-4" />
       )}
 
@@ -432,10 +561,25 @@ const ApplicationAvatar = null;
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {applications.map((application) => (
               <TableRow key={application.id}>
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   applications,
   processingId,
@@ -487,7 +631,18 @@ export function ApplicationsTable({}
 
                 <TableCell>
 
+<<<<<<< HEAD
                   <div className="flex items-center gap-3">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <div className="flex items-center gap-3">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  <div className=flex items-center gap-3">
+>>>>>>> origin/resolved-merge-conflicts
                 </TableCell>;</TableBody>;
         </Table>;
       </div>;<HireConfirmationModal;
@@ -510,7 +665,18 @@ export function ApplicationsTable({}
           <TableBody>;
             {applications.map((application) => (<TableRow key={application.id}>;
                 <TableCell>;
+<<<<<<< HEAD
                   <div className="flex items-center gap-3">;
+=======
+                  <div className=flex items-center gap-3">;
+=======
+                  <div className="flex items-center gap-3">
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
 
@@ -569,11 +735,26 @@ export function ApplicationsTable({}
   handleHireConfirmed;
 }/> </>)'"
 }'"}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       />;
     </>;
       />
     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       />
     </>
@@ -581,7 +762,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
   /* Using Renamed AvatarPrimitive */ ;
+<<<<<<< HEAD
 }{;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}{;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}{
+>>>>>>> origin/resolved-merge-conflicts
                 </TableCell>;
 }h-4 w-4"/>)}</AvatarPrimitive>)}";
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {applications.map ( (application) => (<TableRow key= {application.id;
@@ -605,6 +797,13 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
                   {format (new Date (application.created_at), 'PP')}
                 </TableCell>;
                 <TableCell className="hidden md:table-cell">;
+=======
+}{;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   {format(new Date(application.created_at), "PP")}
                 </TableCell>;"
@@ -612,7 +811,22 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
                   <StatusBadge status={application.status} />;
                 </TableCell>;"
                 <TableCell className="hidden lg:table-cell">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
                   {application.match_score !== undefined && application.match_score !== null ? (<ClickableBadge;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+                  {application.match_score !== undefined && application.match_score !== null ? (<ClickableBadge;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {application.match_score !== undefined && application.match_score !== null ? (;
                     <ClickableBadge;"
                       variant="outline";"
@@ -621,7 +835,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
                     >;
                       {application.match_score}%;
                     </ClickableBadge>;
-                  ) : (;
                   ) : (;"
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
@@ -653,6 +866,15 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       />;32;
 }//for h - 8 w - 8 height= {32 ";
 }//for h - 8 w - 8 className="rounded - full object - cover" on_error= {() => setAvatarError (true)}priority= {false ";
@@ -685,6 +907,12 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }onClose= {() => setHireModalOpen (false)}application= {selectedApplication || undefined ;
 }onConfirm= {handleHireConfirmed ;
 }/> </>)}'";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />;
 
   () => setAvatarError (true);

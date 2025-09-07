@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,14 +10,20 @@
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 export function TalentOnboardingSteps() {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { user } = useAuth();
+
   const onboardingStatus = useOnboardingStatus();
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -27,21 +35,29 @@ export function TalentOnboardingSteps() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 export function TalentOnboardingSteps() {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const { user } = useAuth();
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const onboardingStatus = useOnboardingStatus();
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
   
+<<<<<<< HEAD
+=======
 =======
 
   const onboardingStatus = useOnboardingStatus();
@@ -54,12 +70,47 @@ export function TalentOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
   
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
+<<<<<<< HEAD
+
+  const steps: OnboardingStep[] = [
+    {
+      id: "profile",
+      label: "Complete your profile",
+      completed: onboardingStatus.profileCompleted,
+      link: "/profile",
+      action: "Update",
+    },
+    {
+      id: "skills",
+      label: "Add your top skills",
+      completed: onboardingStatus.skillsAdded,
+      link: "/profile/skills",
+      action: "Add Skills",
+    },
+    {
+      id: "availability",
+      label: "Set your availability",
+      completed: onboardingStatus.availabilitySet,
+      link: "/profile/availability",
+      action: "Set",
+    },
+
+id: "match"
+      id: "match"
+
+      label: "Receive your first job match"
+      completed: onboardingStatus.matchReceived"
+      link: "/talent-dashboard""
+      action: "View Matches"
+    }
+=======
 <<<<<<< HEAD
   const { user } = useAuth($2);
   const onboardingStatus = useOnboardingStatus($2);
@@ -232,6 +283,7 @@ id: "match"
       link: "/talent-dashboard""
       action: "View Matches"
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ];"
       id: "match","
       label: "Receive your first job match",
@@ -286,6 +338,9 @@ id: "match"
   ];
 ;
   return <OnboardingTracker steps={steps} />;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 =======
@@ -376,3 +431,4 @@ return <OnboardingTracker steps= {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

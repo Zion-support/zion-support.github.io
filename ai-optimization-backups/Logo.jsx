@@ -1,6 +1,26 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export function Logo() {
+  return (
+    <Link to="/" className="flex items-center">
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+          <span className="text-white font-bold text-lg">Z</span>
+        </div>
+        <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+      </div>
+    </Link>
+  );
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 import React from 'react';
 <<<<<<< HEAD
@@ -698,9 +718,13 @@ origin/automation-improvements-final
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
 =======
       </div>
     </Link>
   );
 }
 >>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

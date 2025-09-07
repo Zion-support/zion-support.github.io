@@ -29,8 +29,13 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
 
+<<<<<<< HEAD
         <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
+=======
+        <SidebarGroup title="Dashboard">
+          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
+>>>>>>> origin/resolved-merge-conflicts
             <span>Home</span>
 
 

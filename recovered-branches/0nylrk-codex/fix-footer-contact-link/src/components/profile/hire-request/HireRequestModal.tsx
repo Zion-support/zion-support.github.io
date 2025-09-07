@@ -2,10 +2,13 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {HireRequestForm} from "./HireRequestForm";
 import {TalentProfile} from "@/types/talent";
@@ -17,6 +20,9 @@ import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {}
   Dialog,
@@ -39,6 +45,8 @@ export function HireRequestModal({}
   isOpen,
   onClose,
   userDetails,
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -101,6 +109,7 @@ export function HireRequestModal({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     onClose();
   };
@@ -111,12 +120,17 @@ export function HireRequestModal({
   if (!talent) return null,
 
 import React from './react';
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
@@ -133,6 +147,7 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireR
   const handleClose = $2;
   if (!talent) return null,
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } from '@/components / ui / dialog';
 import { HireRequestForm  } from './HireRequestForm';
 import { TalentProfile  } from '@/types / talent';
@@ -160,8 +175,14 @@ if (return null) {
   return (
 
 =======
+<<<<<<< HEAD
+
+  return (
+
+=======
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Dialog open={is_open} onOpenChange={handle_close}>;
       <DialogContent className="bg - zion - blue - dark border - zion - blue - light max - w-4xl w-[95vw] max - h-[90vh] overflow - y-auto">;
         <DialogHeader>;
@@ -170,12 +191,19 @@ if (return null) {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {HireRequestForm} from "./HireRequestForm";
 import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
   if (!talent) return null;
@@ -208,6 +236,16 @@ import {UserProfile} from "@/types/auth";
     </Dialog>
   );
 }
+<<<<<<< HEAD
+
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm 
+
+        <HireRequestForm
+        <HireRequestForm         <HireRequestForm
+=======
 =======
 <<<<<<< HEAD
 onClose();
@@ -295,6 +333,7 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
         <HireRequestForm
         <HireRequestForm         <HireRequestForm
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
@@ -303,6 +342,8 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
     </Dialog>
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -317,6 +358,7 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
         </DialogHeader>;
         <HireRequestForm
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
@@ -347,7 +389,11 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;

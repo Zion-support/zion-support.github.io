@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -12,6 +15,27 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 <<<<<<< HEAD
+
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {useAuth} from '@/hooks/useAuth';
+import {MilestoneCard} from './MilestoneCard';
+import {AddMilestoneForm} from './AddMilestoneForm';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import {Plus} from '@/components/icons';
+
+import {EmptyState} from '@/components/ui/empty-state';
+interface MilestonesListProps {}
+
+  milestones: Milestone[],
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean,
+  isClient: boolean,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+=======
+<<<<<<< HEAD
 interface MilestonesListProps {
   milestones: Milestone[],
   activities: Record<string, MilestoneActivity[]>,
@@ -19,12 +43,17 @@ interface MilestonesListProps {
   isClient: boolean,
   onCreateMilestone: (data: any) => Promise<Milestone | null>,
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
   isSubmitting: boolean,
   onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
 }
+<<<<<<< HEAD
+
+export const MilestonesList: React.FC<MilestonesListProps> = ({;
+=======
 =======
 >>>>>>> merged-prs-20250907-203621
 
@@ -72,6 +101,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   milestones;
   activities;
   isLoading;
@@ -244,6 +274,133 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 <<<<<<< HEAD
   isSubmitting;
 
+<<<<<<< HEAD
+import React, { useState } from 'react',;
+
+import { EmptyState } from '@/components/ui/empty-state',;
+interface MilestonesListProps {;
+  milestones: Milestone[],;
+  activities: Record<string MilestoneActivity[]>,;
+  isLoading: boolean,;
+  isClient: boolean,;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
+  onDeleteMilestone: (id: string) => Promise<boolean>,;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+  isSubmitting: boolean,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean;
+  isClient: boolean;
+
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean
+  isClient: boolean
+
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>
+
+  onApprove?: (id: string) => Promise<void>
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import { Plus  } from '@/components/icons';
+import { EmptyState } from '@/components/ui/empty-state';
+
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { MilestoneCard  } from './MilestoneCard';''
+import { AddMilestoneForm  } from './AddMilestoneForm';''
+import { Button  } from '@/components/ui/button';''
+import { Card, CardContent  } from '@/components/ui/card';''
+// lucide-react doesn't export PlusIcon, use our icon wrapper;''
+import { Plus  } from '@/components/icons';''
+import { EmptyState } from '@/components/ui/empty-state';'
+interface MilestonesListProps {
+
+  onReject?: (id: string) => Promise<void>
+
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {useAuth} from '@/hooks/useAuth';
+import {MilestoneCard} from './MilestoneCard';
+import {AddMilestoneForm} from './AddMilestoneForm';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import {Plus} from '@/components/icons';
+import {EmptyState} from '@/components/ui/empty-state';
+interface MilestonesListProps {;
+  milestones: Milestone[],;
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean,;
+  isClient: boolean,;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>,;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+  isSubmitting: boolean,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+
+export const MilestonesList: React.FC<MilestonesListProps> = ({;
+
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
+import {use_auth} from '@/hooks / use_auth';
+import {MilestoneCard} from './MilestoneCard';
+import {AddMilestoneForm} from './AddMilestoneForm';
+import {Button} from '@/components / ui / button';
+import {Card, CardContent} from '@/components / ui / card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import {Plus} from '@/components / icons';
+
+import {EmptyState} from '@/components / ui / empty - state';
+interface MilestonesListProps {}
+
+  milestones: Milestone[],
+  activities: Record<string MilestoneActivity[]>,;
+</string>)
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
+  onDeleteMilestone: (id: string) => Promise<boolean>,;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>
+  onApprove?: (id: string) => Promise<void>
+
+export const MilestonesList: React.FC<MilestonesListProps> = ({
+
+  activities: Record < string, MilestoneActivity[]>;
+  is_loading: boolean,
+  is_client: boolean,)
+  onCreateMilestone: (data: any) => Promise < Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
+  onDeleteMilestone: (id: string) => Promise < boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise < any>,
+  is_submitting: boolean,
+  on_approve?: (id: string) => Promise < void>,
+  on_reject?: (id: string) => Promise < void>;
+
+  milestones;
+  activities;
+  is_loading;
+  is_client;
+
+  onCreateMilestone;
+  onUpdateStatus;
+  onDeleteMilestone;
+
+=======
   onApprove
   onReject
 }) => {
@@ -253,6 +410,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   milestones,
   activities,
   isLoading,
@@ -262,6 +420,14 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onDeleteMilestone,
   onUploadDeliverable,
   isSubmitting,
+<<<<<<< HEAD
+
+  onApprove,
+
+  const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data)
+    setShowAddForm(false)
+=======
 <<<<<<< HEAD
 =======
 
@@ -275,6 +441,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
     setShowAddForm(false)
   }
   },
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   if (isLoading) {
     return (
@@ -290,6 +457,11 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
         ))}
       </div>
     )
+<<<<<<< HEAD
+  });
+  }
+
+=======
   }
 =======
   const handleSubmit = async (data: any) => {
@@ -397,6 +569,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (milestones.length === 0 && !showAddForm) {
 
     return (
@@ -413,6 +586,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 <<<<<<< HEAD
           } : undefined;
 =======
+<<<<<<< HEAD
+          } : undefined;
+=======
           } : undefined
 <<<<<<< HEAD
 =======
@@ -420,6 +596,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
       <EmptyState"
@@ -434,6 +611,10 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             text: "Create First Milestone",;
             onClick: () => setShowAddForm(true);
           } : undefined;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
       />;
     );
@@ -442,20 +623,28 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
       />
     )
   }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
   return (
     <div className = $2;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 
   return (
@@ -482,6 +671,8 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 ;
   return (;
 
+<<<<<<< HEAD
+=======
 =======
 
 <<<<<<< HEAD
@@ -514,6 +705,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-6">;
       {isClient && !showAddForm && (;"
         <div className="flex justify-end">;
@@ -522,6 +714,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             Add Milestone;
           </Button>;
         </div>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
       )}
@@ -547,11 +742,19 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {showAddForm && (;
         <Card>;"
           <CardContent className="pt-6">;"
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 
+<<<<<<< HEAD
+            <AddMilestoneForm;
+            <AddMilestoneForm ;
+
+              onSubmit={handleSubmit}
+
+=======
 <<<<<<< HEAD
             <AddMilestoneForm;
             <AddMilestoneForm ;
@@ -564,10 +767,18 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
               onSubmit={handleSubmit}
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             onApprove={onApprove}
             onReject={onReject}
           />;
         ))}
+<<<<<<< HEAD
+
+}
+
+  onUploadDeliverable;
+
+=======
 =======
 
       
@@ -587,6 +798,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             amount={parseFloat(milestone && milestone.amount.toString())}
             status={milestone && milestone.status}
             dueDate={milestone && milestone.due_date}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
@@ -663,6 +875,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </CardContent>;
           </Card>))}
@@ -725,11 +940,14 @@ if ( {) {}
     </div>;
   );
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   is_submitting;
   on_approve,
   on_reject;
@@ -817,6 +1035,10 @@ if ( {) {
 
 };
 =======
+<<<<<<< HEAD
+
+};
+=======
 ;
 <<<<<<< HEAD
   ),;
@@ -878,3 +1100,4 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

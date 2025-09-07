@@ -1,9 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import {FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';import { Checkbox  } from '@/components/ui/checkbox';
 import { cn  } from '@/lib/utils';
 import React, { useState, useEffect } from 'react'
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react
+>>>>>>> origin/resolved-merge-conflicts
 import {
   FormField
   FormItem
@@ -24,8 +37,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 interface ValidationRule {
+<<<<<<< HEAD
 interface ValidationRule {;
 import { Button } from '@/components/ui/button';
+=======
+interface ValidationRule {
+import { Button } from @/components/ui/button';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   required?: boolean;
 
@@ -102,6 +127,7 @@ interface ValidationRule {}
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {}
   name: string;
+<<<<<<< HEAD
 import { CheckCircle, AlertCircle, Eye, EyeOff  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage   } from '@/components/ui/form';
@@ -110,6 +136,22 @@ import { Textarea   } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from '@/components/ui/select';
 import { Checkbox   } from '@/components/ui/checkbox';
 import { cn   } from '@/lib/utils';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { CheckCircle, AlertCircle, Eye, EyeOff  } from 'lucide-react;
+import { Button  } from @/components/ui/button';
+import { FormField, FormItem, FormLabel, FormControl, FormMessage   } from '@/components/ui/form;
+import { Input   } from @/components/ui/input';
+import { Textarea   } from '@/components/ui/textarea;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from @/components/ui/select';
+import { Checkbox   } from '@/components/ui/checkbox;
+import { cn   } from @/lib/utils';
+>>>>>>> origin/resolved-merge-conflicts
 import { FormField;
   FormItem;
   FormLabel;
@@ -126,6 +168,12 @@ interface ValidationRule  {interface ValidationRule  {required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;name: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   label: string;
   type?:;'
     | 'text';'
@@ -323,6 +371,12 @@ export function ValidatedFormField({;
               className={baseClasses}
               rows={4}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   const getFieldClasses = () =>: any {// Check condition;
 if (return '') {$2;
@@ -412,6 +466,12 @@ interface ValidatedFormFieldProps  {name: string;
 
       case 'checkbox':;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return (
           <div className='relative'>
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
@@ -429,8 +489,24 @@ interface ValidatedFormFieldProps  {name: string;
           <div className='flex items-center space-x-2'>;
 
             <Checkbox
+<<<<<<< HEAD
         )case 'checkbox':;return (<div className='flex items-center space-x-2'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        )case 'checkbox:;return (<div className=flex items-center space-x-2'>;
+>>>>>>> origin/resolved-merge-conflicts
             <Checkbox;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               id={name}
               checked={fieldValue}
@@ -449,6 +525,12 @@ interface ValidatedFormFieldProps  {name: string;
 
         ),
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ),
 
 
@@ -460,8 +542,23 @@ interface ValidatedFormFieldProps  {name: string;
           </div>;
         )case 'password':;return (<div className='relative'>;
             <Input;
+<<<<<<< HEAD
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}'
+=======
+              type={showPassword ? text' : 'password}
+              disabled={disabled}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      case 'password':
+
+              type={showPassword ? 'text' : 'password'}
+              disabled={disabled}'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
               className={cn(baseClasses, 'pr-20')}
 
               {...form.register(name)}
@@ -478,7 +575,6 @@ interface ValidatedFormFieldProps  {name: string;
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
-
                 {showPassword ? (
 
                   <EyeOff className='h-4 w-4' />
@@ -488,11 +584,13 @@ interface ValidatedFormFieldProps  {name: string;
 
         ),
 
-        ),
-
-
-
       default:
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Button;
                 type='button';
                 variant='ghost';
@@ -510,6 +608,12 @@ interface ValidatedFormFieldProps  {name: string;
           </div>;
         )default:;return (<div className='relative'>;
             <Input;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               type={type}
               disabled={disabled}
@@ -538,11 +642,31 @@ interface ValidatedFormFieldProps  {name: string;
                 {fieldError && ('
                   <FormMessage className='text-sm text-red-500'>
 
+<<<<<<< HEAD
         render={() => (<FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
             <FormControl>{renderField()}
             </FormControl>;
             {(fieldError || description) && (<div className='space-y-1'>;
                 {fieldError && (<FormMessage className='text-sm text-red-500'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        render={() => (<FormItem className="flex flex-row items-start space-x-3 space-y-0>;
+            <FormControl>{renderField()}
+            </FormControl>;
+            {(fieldError || description) && (<div className=space-y-1">;
+                {fieldError && (<FormMessage className="text-sm text-red-500>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     {fieldError.message}
                   </FormMessage>;
                 )}
@@ -550,8 +674,26 @@ interface ValidatedFormFieldProps  {name: string;
 
                   <p className='text-sm text-muted-foreground'>{description}</p>
 
+<<<<<<< HEAD
                 {description && !fieldError && (<p className='text-sm text-muted-foreground'>{description}</p>;
                   <p className='text-sm text-muted-foreground'>{description}</p>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                {description && !fieldError && (<p className="text-sm text-muted-foreground>{description}</p>;
+                  <p className=text-sm text-muted-foreground">{description}</p>
+=======
+=======
+=======
+<<<<<<< HEAD
+                {description && !fieldError && (<p className="text-sm text-muted-foreground>{description}</p>;
+                  <p className=text-sm text-muted-foreground">{description}</p>
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  <p className="text-sm text-muted-foreground">{description}</p>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
                 )}
               </div>;
@@ -563,9 +705,9 @@ interface ValidatedFormFieldProps  {name: string;
         return ('
           <div className='relative'>;
             <Textarea;
-              disabled = {disabled }
-              class_name = {base_classes }
-              rows = {4 }
+              disabled = {disabled, }
+              class_name = {base_classes, }
+              rows = {4, }
               {...form.register (name)}
             />;'
             <div className='absolute top - 2 right - 2'>{getValidationIcon ()}</div>;
@@ -631,15 +773,16 @@ interface ValidatedFormFieldProps  {name: string;
         return ('
           <div className='relative'>;
             <Input;
-              type = {type }
-              disabled = {disabled }
-              class_name = {base_classes }
+              type = {type, }
+              disabled = {disabled, }
+              class_name = {base_classes, }
               {...form.register (name)}
             />;'
             <div className='absolute inset - y-0 right - 0 flex items - center pr - 3'>;
               {getValidationIcon ()}
             </div>;
-          </div>)}
+          </div>);
+    }
   }
   // Check condition;
 if ( {) {}
@@ -681,6 +824,12 @@ if ( {) {}
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>'
                   <AlertCircle className='h-3 w-3' />
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {validation.required && (/>;
     )}render={() => (<FormItem>;
           <FormLabel className='text-sm font-medium'>;
@@ -688,21 +837,38 @@ if ( {) {}
           </FormLabel>;
           <FormControl>{renderField()}
           </FormControl>;
+<<<<<<< HEAD
           {(fieldError || description) && (<div className='space-y-1'>;
               {fieldError && (<FormMessage className='text-sm text-red-500 flex items-center gap-1'>;
                   <AlertCircle className='h-3 w-3' />;
+=======
+          {(fieldError || description) && (<div className=space-y-1>;
+              {fieldError && (<FormMessage className="text-sm text-red-500 flex items-center gap-1">;
+                  <AlertCircle className=h-3 w-3 />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   {fieldError.message}
                 </FormMessage>;
               )}
               {description && !fieldError && (
 
+<<<<<<< HEAD
               {description && !fieldError && (<p className='text-sm text-muted-foreground'>{description}</p>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               )}
 
             </div>;
           )}
         </FormItem>;
-      )}<span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
+      )}
+
+              <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && ('
             <div className='space - y-1'>;
@@ -760,7 +926,14 @@ export const common_validations = {}
         return 'Please enter a valid phone number';
       }
       return null;
+<<<<<<< HEAD
     }}
+=======
+    },
+  },
+
+}
+>>>>>>> origin/resolved-merge-conflicts
     }
   }
     }
@@ -790,7 +963,23 @@ export const commonValidations = {;
     custom: (value: string,) => {;
       if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;'
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+<<<<<<< HEAD
     },password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }},password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return Password must contain at least 8 characters with uppercase, lowercase, number, and special character;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+    }},password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return Password must contain at least 8 characters with uppercase, lowercase, number, and special character;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
       return null;
     },;
@@ -807,9 +996,35 @@ export const commonValidations = {;
     }
 
       return null;
+<<<<<<< HEAD
     },
   },
       return null;}}
   }return null;
     }}
 };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    },
+  },
+};
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }},
+      return null;}}}
+  }}return null;
+    }}}
+}
+=======
+    },
+  },
+};
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

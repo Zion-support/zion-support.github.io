@@ -1,5 +1,8 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_backup/pages/OrderDetail.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useRouter  } from 'next/router';
 import { Button  } from '@/components/ui/button';
 import { Clipboard } from 'lucide-react'
@@ -14,6 +17,19 @@ export default function OrderDetailPage() {
   const router = null;
   if (isLoading || !order) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+    return (
+      <div className="container mx - auto px - 4 py - 8">;
+        <div className="animate - pulse">;
+          <div className="h - 8 bg - gray - 200 rounded w - 1/4 mb - 4"></div>;
+          <div className="space - y-4">;
+            {[1, 2, 3].map (index => (
+              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>))}
+          </div>;
+        </div>;
+      </div>);
+  }
+=======
 =======
 
 import { useAuth } from '@/hooks/useAuth';
@@ -325,6 +341,7 @@ if ( {) {
   if (!order) {
     return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/OrderDetail.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Order not found</h1>
@@ -334,6 +351,8 @@ if ( {) {
               Back to orders
             </Button>
           </Link>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_backup/pages/OrderDetail.tsx
 =======
         </div>
@@ -350,11 +369,15 @@ if ( {) {
       </div>;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/OrderDetail.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     );
   }
   return (
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -365,9 +388,13 @@ if ( {) {
         </Link>
         <h1 className="text-3xl font-bold">Order Details</h1>
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
@@ -541,6 +568,34 @@ if ( {) {
           </Card>;
         </div>;
         {/* Order Status & Tracking */}
+<<<<<<< HEAD
+        <div className="space - y-6">;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Order Status</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-4">;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Order placed</span>;
+                </div>;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Payment confirmed</span>;
+                </div>;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Processing</span>;
+                </div>;
+                {order.status === 'shipped' && (
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                    <span className="text - sm">Shipped</span>;
+                  </div>)}
+                {order.status === 'delivered' && (
+
+=======
         <div className="space-y-6">
           <Card>
             <CardHeader>
@@ -652,6 +707,7 @@ if ( {) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/OrderDetail.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -749,6 +805,11 @@ export default function OrderDetailPage() {;
 
 
       </div>
+<<<<<<< HEAD
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 <<<<<<< HEAD:src_backup/pages/OrderDetail.tsx
     </div>
   );
@@ -1132,3 +1193,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/OrderDetail.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

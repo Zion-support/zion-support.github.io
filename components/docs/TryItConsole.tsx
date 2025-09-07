@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface TryItProps  {path: string; // full URL or relative;
   requiresAuth: boolean;
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
+=======
+<<<<<<< HEAD
+
 =======
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -58,6 +64,7 @@ interface TryItProps {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 import React, { useMemo, useState } from 'react';
@@ -74,11 +81,16 @@ interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',metho
 
 export default function TryItConsole({
   method;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 path}
 requiresAuth}
 }: TryItProps) {
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os')
   path: string, // full URL or relative;}
@@ -101,6 +113,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
       const text = await res && res.text()
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   path: string, // full URL or relative;}
 requiresAuth: boolean}
@@ -120,6 +133,8 @@ requiresAuth}
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   path: string, // full URL or relative;}
 requiresAuth: boolean}
+<<<<<<< HEAD
+=======
 =======
   method,
   path,
@@ -134,6 +149,7 @@ requiresAuth: boolean}
   path: string, // full URL or relative
   requiresAuth: boolean
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState($2);
@@ -147,6 +163,8 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
@@ -156,6 +174,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 interface TryItProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
   requiresAuth: boolean;
@@ -176,6 +195,9 @@ requiresAuth: boolean}
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   path: string, // full URL or relative;
   requiresAuth: boolean;
 }
@@ -193,6 +215,8 @@ export default function TryItConsole() { return null; }
       const headers: Record<string, string> = { 'Content-Type': application/json }'
       if (requiresAuth && token) headers['Authorization] = `Bearer ${token}`;
       const res = await fetch(url, {}
+<<<<<<< HEAD
+=======
 =======
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
@@ -371,6 +395,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       const res = await fetch(url, {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         method;
         headers;
         body: method === 'GET' || method === DELETE ? undefined : body || undefined}),
@@ -417,6 +442,19 @@ return baseUrl.replace(/\/$/, '') + path;}
     } finally {
       setLoading(false)
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+<<<<<<< HEAD
+      setResponse(text)
+    } catch ("e": any) {
+      }
+      setResponse(String(e?.message |e))
+    } finally {
+      }
+      setLoading(false)
+origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+  }
+  return (
+=======
 >>>>>>> merged-prs-20250907-203621
       setResponse(text)
     } catch (e: any) {
@@ -480,12 +518,16 @@ const text = await res.text()
           <input
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             value={baseUrl}
             onChange={e = /> setBaseUrl(e.target.value}
 }
@@ -510,7 +552,10 @@ const text = await res.text();
     } catch (e) {
       setResponse(String(e?.message |e));}
     } finally {
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       setLoading(false);}
       setResponse(text)}
     } catch (e) {
@@ -518,11 +563,16 @@ const text = await res.text();
     } finally {}
       setLoading(false)}
 <<<<<<< HEAD
+    }
+  }
+=======
+<<<<<<< HEAD
 
 =======
     }
   }
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 <div className='space-y-2'    />
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'    />
@@ -530,14 +580,20 @@ const text = await res.text();
 
           <label className='block text-sm mb-1'    />Base URL</label>
 <<<<<<< HEAD
+          <input;
+=======
+<<<<<<< HEAD
           <input
 =======
           <input;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
 
             value={baseUrl}
             onChange={e =    /> setBaseUrl(e.target.value}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           />
@@ -560,6 +616,7 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
             readOnly
              />
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 >>>>>>> origin/chore/fix-lint-and-merge
           />;
@@ -568,6 +625,9 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
           <label className='block text-sm mb-1'    />Auth Token</label>;
           <input;
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             placeholder='Optional';
@@ -638,6 +698,7 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -650,6 +711,9 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>'
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && ('
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && ('
@@ -661,6 +725,8 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
 <label className='block text-sm mb-1'>Request Body (JSON)</label>'
           <textarea
 }
+<<<<<<< HEAD
+=======
 =======
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
@@ -817,6 +883,7 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
     <div className='space-y-2'>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     }
   }
@@ -828,6 +895,9 @@ className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high
         <div>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )
   )
 }
@@ -839,7 +909,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <label className='block text-sm mb-1'    />Request Body (JSON)</label>
           <textarea
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'}
 
             value={body}
@@ -909,8 +982,11 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {loading ? 'Sending…' : 'Send Request'}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         onClick={onSend}'
         className='px-3 py-2 rounded bg-high-contrast-accent text-black''
           <label className='block text - sm mb - 1'>Method</label>;
@@ -1011,7 +1087,10 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}    />;
         {loading ? 'Sending…' : 'Send Request'}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </button>
       <div    />
@@ -1020,6 +1099,10 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+    <div className='space-y-2'>
+
+=======
 =======
 <<<<<<< HEAD
     <div className='space-y-2'>
@@ -1039,11 +1122,18 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
     </div>
 );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return ('
     <div className='space-y-2>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
@@ -1055,7 +1145,14 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   );
 
@@ -1064,12 +1161,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 
   );
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 
   return (
@@ -1084,3 +1186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

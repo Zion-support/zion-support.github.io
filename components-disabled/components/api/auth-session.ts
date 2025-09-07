@@ -22,7 +22,17 @@ export default function handler() {
 ;
   res && res.status(200).json({ 'message': 'OK' });'
 
+<<<<<<< HEAD
     res.status (401).json ({ 'error': 'Unauthorized' });'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    res.status (401).json ({ "error": 'Unauthorized' });'
+>>>>>>> origin/resolved-merge-conflicts
     return;
 
     res.status(401).json({ 'error': 'Unauthorized' });'
@@ -50,6 +60,30 @@ export default function handler() {;
 
 res.status(200).json({ 'message': 'OK' });    return'
 ;
+<<<<<<< HEAD
   res.status(200).json({ 'message': 'OK' });'
+=======
+  res.status(200).json({ "message": 'OK' });'
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    res.status(401).json({ error: 'Unauthorized' });
+  res.status(200).json({ message: 'OK' });
+res.status (200).json ({ message: 'OK' });    return;
+  res.status (200).json ({ message: 'OK' });
+  getSessionFromReq;
+  isInternalAgentRequest;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 res.status(200).json({ message: 'OK' });    return;

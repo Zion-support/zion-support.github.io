@@ -449,8 +449,18 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
 <<<<<<< HEAD
   badgeList.find(b => b.key === key);
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  badgeList.find(b => b.key === key);
+=======
+>>>>>>> origin/resolved-merge-conflicts
   badgeList.find(b => b.key === key);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/gamification/badgeConfig.ts
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

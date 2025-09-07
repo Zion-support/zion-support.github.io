@@ -15,6 +15,20 @@ type RequestBody = {
   employmentType: 'contract' | 'freelance' | 'full-time'
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { TALENT_PROFILES, TalentProfile  } from '../../data/talent';'
+import OpenAI from 'openai';'
+
+type RequestBody = any;
+
+return res.status(200).json(response);
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
@@ -62,6 +76,10 @@ type RequestBody = any;
   return res.status(200).json(response)
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 const completion = await client.chat.completions.create ({
@@ -119,6 +137,12 @@ trendMonthly: { label: string; value: number,}
   "tags": string[];
 >>>>>>> merged-prs-20250907-203621
   gptRecommendation?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
 <<<<<<< HEAD
@@ -126,6 +150,10 @@ trendMonthly: { label: string; value: number,}
   gptRecommendation?: string;
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 =======
@@ -178,6 +206,36 @@ function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
+}
+
+
+function groupBy<T, K extends string | number>(
+  "items": T[]
+  "getKey": ("item": T) => K
+): Record<K, T[]> {
+    (acc, item) => {
+      }
+      const key = getKey(item);
+      (acc[key] |= []).push(item);
+      return acc;
+}function median(values: number[]): number {const arr = [...values].sort((a, b) => a - b)const mid = Math.floor(arr.length / 2)if (arr.length === 0) return 0;
+return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];function groupBy<T, K extends string | number>(items: T[];
+  getKey: (item: T) => K;
+): Record<K, T[]> {(acc, item) => {const key = getKey(item)(acc[key] |= []).push(item)return acc;
+    }
+    {} as Record<K, T[]>;
+  )function extractCountry("location": string): string {function calculateSimilarityScore("targetSkills": string[];
+  }
+  "profile": TalentProfile;
+): number {return () => {h += h << 13;
+    }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
@@ -309,6 +367,10 @@ function prng(seed: string): () => number {
   profile: TalentProfile;
 ): number {return () => {h += h << 13;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     h ^= h >>> 7;
     h += h << 3;
     h ^= h >>> 17;
@@ -345,6 +407,77 @@ const completion = await client.chat.completions.create({'model': 'gpt-4o-mini';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const now = new Date ();
+
+const seed = prng (seed_key);
+
+const "series": { "label": string; "value": number,;
+}[] = [];
+
+let current = baseMonthly * 0.92; // start slightly below base;
+  for (let i = 11; i >= 0; i--) {
+    }
+    const drift = (seed() - 0.5) * 0.03; // +/-3%
+    current = Math.max(baseMonthly * 0.7, current * (1 + drift));
+    series.push({ "label": months[date.getMonth()], "value": Math.round(current)
+});
+  }
+
+  return series;
+async function maybeGetGptRecommendation() {const apiKey = process.env.OPENAI_API_KEY;
+  }
+  if (!apiKey) return undefined;
+  try {const client = new OpenAI({ apiKey })const skillsStr = input.skills.join(', ';'
+  const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;`
+const completion = await client.chat.completions.create({"model": 'gpt-4o-mini';'
+      }
+      "messages": [;
+{"role": 'system',"content":;'
+            'You are a compensation analyst. Be specific and concise. Use USD.';'
+        }
+        { "role": 'user', "content": prompt }'
+
+    {} as Record<K, T[]    />
+  )function extractCountry(location: string): string {function calculateSimilarityScore(targetSkills: string[]
+  profile: TalentProfile
+): number {return () => {h += h << 13
+    h ^= h >>> 7
+    h += h << 3
+    h ^= h >>> 17
+    h += h << 5;}
+    return (h >>> 0) / 4294967295;}
+
+  ]
+const now = new Date ()
+const seed = prng (seed_key)
+const series: { label: string; value: number,}
+}[] = []
+  let current = baseMonthly * 0.92; // start slightly below base
+  for($2) {
+    const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
+const drift = (seed() - 0.5) * 0.03; // +/-3%
+    current = Math.max(baseMonthly * 0.7, current * (1 + drift));}
+    series.push({ label: months[date.getMonth()], value: Math.round(current),}
+})
+  return series
+async function maybeGetGptRecommendation() {const apiKey = process.env.OPENAI_API_KEY;}
+  if (!apiKey) return undefined;}
+  try {const client = new OpenAI({ apiKey })const skillsStr = input.skills.join(', '
+  const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
+const completion = await client.chat.completions.create({model: 'gpt-4o-mini'
+      messages: [
+{role: 'system',
+  content:;}
+            'You are a compensation analyst. Be specific and concise. Use USD.';}
+
+function extractCountry(location: string): string {
+  const parts = location.split().map((p) => p.trim());
+  return parts[parts.length - 1] || 'Global'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ;
 function build_trend (
   base_monthly: number,
@@ -374,9 +507,18 @@ function build_trend (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
@@ -454,6 +596,10 @@ function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile
   const overlap = profile.skills.filter((s) => set.has(s.toLowerCase())).length;
   return overlap / Math.max(1, targetSkills.length)
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let i = 0, i < seed.length, i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
@@ -461,7 +607,15 @@ function prng(seed: string): () => number {
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5;
     return (h >>> 0) / 4294967295
   }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+
+=======
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
   const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'];
   const now = new Date();
@@ -474,13 +628,32 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     current = Math.max(baseMonthly * 0.7, current * (1 + drift));
     series.push({ label: months[date.getMonth()], value: Math.round(current) })
   }
+<<<<<<< HEAD
   return series;
 }
+=======
+<<<<<<< HEAD
+  return series
+}
+
+=======
+  return series;
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const skillsStr = input.skills.join();
+    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 =======
@@ -600,8 +773,90 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+export default async function handler(
+  req: NextApiRequest
+res: NextApiResponse<InsightResponse | { error: string }    />
+) {
+  if($2) {}
+    return res.status(405).json({ error: 'Method not allowed',}
+})
+const body: RequestBody = req.body
+const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
+    body
+const country = extractCountry(region || 'Global')
+  // Score and filter candidate profiles
+  const scored = TALENT_PROFILES.map((p) => ({
+    profile: p;
+    score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
+    .filter((s) => s.score > 0)
+const skillsStr = input.skills.join(', ');
+    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+{
+          role: 'system',
+          content:
+            'You are a compensation analyst. Be specific and concise. Use USD.'
+        }
+        { role: 'user', content: prompt }
+      ]
+      "temperature": 0.2,
+"max_tokens": 300
+   
+});
+    return completion && completion.choices?.[0]?.message?.content || undefined;
+  } catch {
+    }
+    return undefined;
+  }
+
+export default async function handler() {
+  }
+  if (req.method !== 'POST') {'
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+  }
+
+const "body": RequestBody = req.body;
+
+const { roleTitle, skills, region, experienceLevel, remote, employmentType } =;
+    body;
+
+const country = extractCountry(region || 'Global');'
+
+  // Score and filter candidate profiles,
+const scored = TALENT_PROFILES.map(p => ({
+    }
+    "profile": p,
+    "score":
+      calculateSimilarityScore(skills |[], p) +
+      (extractCountry(p.location) === country ? 0.2 : 0)
+  }))
+    .filter(s => { return s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 20); }
+
+const sample =;
+    scored.length > 0 ? scored.map(s => { return s.profile) : TALENT_PROFILES; }
+
+const rates = sample.map(p => { return p.hourlyRateUsd); }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             'You are a compensation analyst. Be specific and concise. Use USD.',
         },
@@ -616,6 +871,10 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1025,6 +1284,11 @@ const min = Math.min(...rates);
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian
@@ -1268,12 +1532,30 @@ const expMultiplier =
           ? 1.2
 =======
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const sample = scored && scored.length > 0 ? scored && scored.map((s) => s && s.profile) : TALENT_PROFILES;
 
 const rates = sample && sample.map((p) => p && p.hourlyRateUsd);
 
 const baseMedian = median(rates);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const max = Math && Math.max(...rates);
+  // Adjustments,
+const expMultiplier =;
+    experienceLevel === 'Junior''
+      ? 0.8
+      : experienceLevel === 'Mid''
+        ? 1.0
+        : experienceLevel === 'Senior''
+          ? 1.2
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const min = Math && Math.min(...rates);
 
 const max = Math && Math.max(...rates);
@@ -1286,11 +1568,23 @@ const expMultiplier =
         : experienceLevel === 'Senior'
           ? 1.2;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           : 1.35;
 
 const remoteMultiplier = remote ? 1.1 : 1.0;
 
+<<<<<<< HEAD
 const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher;
+=======
+<<<<<<< HEAD
+const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher;'
+=======
+const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier;
   )const recommendedMonthly = Math.round(recommendedHourly * 160)// Confidence based on sample size and dispersion;
@@ -1299,6 +1593,33 @@ const sampleSize = rates.length;
 
 const dispersion = (max - min) / Math.max(1, baseMedian);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const confidence = Math.max(;
+    0.2,
+Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2)
+  );
+  // Trend series and regional comparison,
+const trend = buildTrend(;
+    recommendedMonthly
+    `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}``
+  );
+
+const byRegion = groupBy(TALENT_PROFILES, p => { return extractCountry(p.location)); }
+
+const regionalComparison = Object.entries(byRegion);
+    .map(([r, list]) => ({
+      }
+      "region": r,
+      "medianHourlyUsd": Math.round(median(list.map(p => { return p.hourlyRateUsd)))
+    }))
+    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
+    .slice(0, 8); }
+  // Tags,
+const scarceSkills = [;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const confidence = Math.max(
     0.2;
 Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2)
@@ -1468,6 +1789,10 @@ if ( {  } catch {) {}
 ;
   // Tags;
   const scarce_skills = [;'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     'RAG','
     'LangChain','
     'Vector DBs','
@@ -1475,6 +1800,40 @@ if ( {  } catch {) {}
     'AppSec','
     'Security','
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const undersupplied = (skills |[]).some(s => { return scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
+  ); }
+  if (remote) tags.push('Remote Premium');'
+  if (undersupplied) tags.push('Undersupplied Skill')'
+  const gptRecommendation = await maybeGetGptRecommendation(body, {
+    }
+    "median": baseMedian,
+min
+    max,
+country
+ 
+});
+
+const "response": InsightResponse = {
+
+    }
+
+    "recommendedHourlyUsd": recommendedHourly,
+    "recommendedMonthlyUsd": recommendedMonthly,
+    "medianHourlyUsd": Math.round(baseMedian),
+    "minHourlyUsd": Math.round(min),
+    "maxHourlyUsd": Math.round(max),
+    "confidence": Number(confidence.toFixed(2)),
+    "trendMonthly": trend,
+    regionalComparison,
+    tags,
+    gptRecommendation
+  };
+=======
+>>>>>>> origin/resolved-merge-conflicts
   const undersupplied = (skills || []).some (string =>;
     scarce_skills.some (t => s.toLowerCase ().includes (t.toLowerCase ())));'
   if (tags.push ('Remote Premium')) {}
@@ -1576,6 +1935,10 @@ return res.status (200).json (response);  return res.status (200).json (response
     gptRecommendation,}
   };
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   return res.status(200).json(response);
 

@@ -1,19 +1,27 @@
 export interface SearchSuggestion {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   text: string,
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface SearchSuggestion {;
 
   text: string;
 
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   iconUrl?: string
 
   text: string;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -68,6 +76,7 @@ export interface SearchHighlight {;
 }
 export interface SearchHighlight {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   before: string;
   match: string;
 
@@ -89,6 +98,9 @@ export interface SearchHighlight {;
 
   locations: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     label: string;
     value: string;
@@ -99,6 +111,8 @@ export interface SearchHighlight {;
   }[];
   ratingOptions: number[];
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     label: string,
@@ -117,16 +131,22 @@ export interface SearchHighlight {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface SearchSuggestion {;
 
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 ;
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 }
@@ -138,6 +158,7 @@ export interface SearchSuggestion {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface SearchHighlight {;
   before:string,;
   match:string,;
@@ -180,10 +201,16 @@ export interface FilterOptions {;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 export interface SearchSuggestion {
   text: string;
+<<<<<<< HEAD
+}
+=======
 }
 =======
 =======
@@ -192,3 +219,4 @@ export interface SearchSuggestion {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

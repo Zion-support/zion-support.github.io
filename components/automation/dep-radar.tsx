@@ -59,6 +59,36 @@ type Outdated = any;
   return { props: { outdated, generatedAt } }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || '';'
+  } catch {}
+  return { "props": { outdated, generatedAt } }
+}
+export default function DepRadarPage() {) : (<div className=\"overflow-auto border rounded\"  /> <table className=\"min-w-full text-sm\"  /> <thead className=\"bg-gray-50\"  /> <tr /> <th className=\"text-left p-2\"  />Package</th> <th className=\"text-left p-2\"  />Current</th> <th className=\"text-left p-2\"  />Latest</th> <th className=\"text-left p-2\"  />Type</th> </tr> </thead> <tbody /> {outdated && outdated.map (o => (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs';
+
+export default function DepRadarPage() {) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {outdated && outdated.map (o => { return (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs'; }'
+
+type Outdated = { "name": string, "current": string, "latest": string, "type": 'dependency' | 'devDependency','
+},export async function getServerSideProps() ;
+  const file = path && path.join(process && process.cwd(), 'datadep-radar && radar.json')let "outdated": Outdated[] = [];  let generatedAt = '';'
+  try {const raw = fs && fs.readFileSync(file, 'utf-8';'
+  }
+  const json = JSON && JSON.parse(raw)outdated = json && json.outdated || [];
+    generatedAt = json && json.generatedAt || '';'
+
+type Outdated = { "name": string, "current": string, "latest": string, "type": 'dependency' | 'dev_dependency','
+},export async /**;
+ * getServerSideProps - Function description;
+ */;
+function getServerSideProps() {const file = path.join (process.cwd (), 'datadep - radar.json')let "outdated": Outdated[] = [];  let generated_at = '';'
+  }
+  try {} catch {}
+  return { "props": { outdated, generated_at } }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || '';
 =======
@@ -121,6 +151,10 @@ type Outdated = { name: string, current: string, latest: string, type: 'dependen
  */;
 function getServerSideProps() {const file = path.join (process.cwd (), 'datadep - radar.json)let outdated: Outdated[] = [];  let generated_at = ';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 export default function DepRadarPage() {) : (<div className=\"overflow-auto border rounded\"     /> <table className=\"min-w-full text-sm\"     /> <thead className=\"bg-gray-50\"     /> <tr    /> <th className=\"text-left p-2\"     />Package</th> <th className=\"text-left p-2\"     />Current</th> <th className=\"text-left p-2\"     />Latest</th> <th className=\"text-left p-2\"     />Type</th> </tr> </thead> <tbody    /> {outdated && outdated.map (o => (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs';
@@ -146,6 +180,18 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
 
 export default /**;
  * DepRadarPage - Function description;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ */;
+function DepRadarPage() {return (<div className="space-y-6">;"
+      <h1 className="text-2xl font-semibold">AI "Automation": Dependency Radar</h1>;"
+      <div className="text - xs text-gray-500">Last "updated": {generated_at ? new Date (generated_at).toLocaleString () : '—,'
+}</div>;
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
  */;
 function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
@@ -177,16 +223,34 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default /**
  * DepRadarPage - Function description
  */
 function DepRadarPage() {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {outdated.length === 0 ? (
         <div className="text-sm text-gray-600>All dependencies up to date.</div>
       ) : (
@@ -195,15 +259,30 @@ function DepRadarPage() {
             <thead className=bg-gray-50">
               <tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <th className="text-left p-2">Package</th>
                 <th className="text-left p-2">Current</th>
                 <th className="text-left p-2">Latest</th>
                 <th className="text-left p-2">Type</th>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                 <th className="text-left p-2>Package</th>
                 <th className=text-left p-2">Current</th>
                 <th className="text-left p-2>Latest</th>
                 <th className=text-left p-2">Type</th>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 "
         <div className=\text-sm text-gray-600\ />All dependencies up to date.</div>
       ) : ("
@@ -211,6 +290,15 @@ function DepRadarPage() {
           <table className=\"min-w-full text-sm\" />
             <thead className=\bg-gray-50\" />
               <tr />"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <th className=\"text-left p-2\" />Package</th>"
+                <th className=\"text-left p-2\" />Current</th>"
+                <th className=\"text-left p-2\" />Latest</th>"
+                <th className=\"text-left p-2\" />Type</th>
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 <th className=\text-left p-2\ />Package</th>"
                 <th className=\"text-left p-2\ />Current</th>
                 <th className=\"text-left p-2\" />Latest</th>
@@ -235,10 +323,27 @@ function DepRadarPage() {return (<div className=\"space-y-6\"    />;"
                 <th className=\"text-left p-2\"    />Latest</th>"
                 <th className=\"text-left p-2\"    />Type</th>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </tr>
             </thead>
             <tbody    />}
               {outdated.map(o => (}"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <tr key={o.name} className=\"border-t\" />"
+                  <td className=\"p-2\" />{o.name}</td>"
+                  <td className=\"p-2\" />{o.current}</td>"
+                  <td className=\"p-2\" />{o.latest}</td>"
+                  <td className=\"p-2\" />{o.type}</td>
+                </tr>
+
+        <div className="text-sm text-gray-600">All dependencies up to date.</div>"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                 <tr key={o.name} className=\border-t\ />"
                   <td className=\"p-2\ />{o.name}</td>
@@ -271,6 +376,10 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
       {outdated.length === 0 ? (
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ) : (
         <div className="overflow-auto border rounded">"
           <table className="min-w-full text-sm">"
@@ -280,11 +389,28 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
                 <th className="text-left p-2">Current</th>"
                 <th className="text-left p-2">Latest</th>"
                 <th className="text-left p-2">Type</th>"
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </tr>
             </thead>
             <tbody>
               {outdated.map(o => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <tr key={o.name} className="border-t">"
+                  <td className="p-2">{o.name}</td>"
+                  <td className="p-2">{o.current}</td>"
+                  <td className="p-2">{o.latest}</td>"
+                  <td className="p-2">{o.type}</td>"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                 <tr key={o.name} className="border-t">
                   <td className="p-2">{o.name}</td>
@@ -294,6 +420,10 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
                 </tr>
 =======
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </tr>
       {outdated.length === 0 ? (<div className="text-sm text-gray-600">All dependencies up to date.</div>;
       ) : (<div className=overflow-auto border rounded>;
@@ -354,6 +484,11 @@ function DepRadarPage() {}
 '"
 
 "
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
     </div>
@@ -425,3 +560,7 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

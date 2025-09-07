@@ -1,15 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';'
 function isAuthorized("req": NextApiRequest): boolean {
   }
   const token = null;
 return res.status(500).json({ "error": 'Router failure' });'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 export default async function handler(
   req: NextApiRequest
@@ -39,6 +55,10 @@ export default async function handler(
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   export default async function handler(
     req: NextApiRequest
@@ -46,9 +66,18 @@ export default async function handler(
   ) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
     if (req.method !== "POST");
       return res.status(405).json({ error: "Method not allowed" });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+    if (req.method !== "POST");
+      return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
@@ -57,6 +86,11 @@ export default async function handler(
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { text, payload } = req && req.body || {};
@@ -106,6 +140,10 @@ function handler() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         module: "router",
         type: result && result.intent,
         status: "ok",
@@ -114,6 +152,14 @@ function handler() {
       });
 <<<<<<< HEAD
 function isAuthorized(req: NextApiRequest): boolean {}
+<<<<<<< HEAD
+=======
+  const token = req.headers['x-admin-token'] || req.query.token;
+  const superToken = process.env.SUPERADMIN_TOKEN;
+=======
+<<<<<<< HEAD
+function isAuthorized(req: NextApiRequest): boolean {}
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -126,6 +172,10 @@ function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
@@ -134,12 +184,24 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken || token === superToken
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   export default async function handler(;
     req: NextApiRequest;
     res: NextApiResponse;
@@ -157,9 +219,35 @@ function isAuthorized(req: NextApiRequest): boolean {
       });
 function isAuthorized(req: NextApiRequest): boolean {}
   const token = req.headers['x-admin-token'] || req.query.token;
+<<<<<<< HEAD
 
 }
 ;
+=======
+<<<<<<< HEAD
+
+}
+;
+  const started = Date.now();
+  try {}
+<<<<<<< HEAD
+    const { text, payload } = req.body || {};'
+    const result = detectIntent(String(text || ''));
+    const routed = await routeToChain(result.intent, payload || {});
+    const latencyMs = Date.now() - started;
+
+    return res.status(200).json({ ...result, routed })
+  } catch (e: any) {}
+    const latencyMs = Date.now() - started;'
+    appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } });'
+    return res.status(500).json({ error: 'Router failure' })
+  };
+
+=======
+
+}
+;
+>>>>>>> origin/resolved-merge-conflicts
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -187,6 +275,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -240,6 +332,40 @@ const result = detectIntent(String(text || ''));
 
 const routed = await routeToChain(result.intent, payload || {});
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return res.status(200).json({ ...result, routed })
+  } catch (e: any) {
+    const latencyMs = $2;
+    appendLog($2);
+    return res.status(500).json({ error: 'Router failure' })
+  }
+}
+
+      })
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = req.headers['x-admin-token'] || req.query.token
+  const started = Date.now()
+  try {}
+    const { text, payload } = req.body || {}
+const result = detectIntent(String(text || ''))
+const routed = await routeToChain(result.intent, payload || {})
+const latencyMs = Date.now() - started
+"
+export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: \"Unauthorized\"}
+})function isAuthorized(req: NextApiRequest): boolean {import type { NextApiRequest, NextApiResponse } from 'next'
+import { appendLog, detectIntent, routeToChain  } from '@/utils/zionBrain'
+=======
+    const { text, payload } = req.body || {};
+
+const result = detectIntent(String(text || ''));
+
+const routed = await routeToChain(result.intent, payload || {});
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const latencyMs = Date.now() - started;
 "
 export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: \"Unauthorized\"}
@@ -306,6 +432,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     });
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
   };
 }
@@ -338,3 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

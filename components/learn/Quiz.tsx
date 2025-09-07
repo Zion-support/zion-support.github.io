@@ -1,4 +1,76 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+import React, { useState } from 'react';'
+
+type Question = any;
+  "question": string;
+  "options": string[];
+  "answerIndex": number;
+}
+
+type Props = {"questions": Question[];
+  }
+  "onComplete": ("score": number) => void
+};
+export default function Quiz({ questions, onComplete }: Props) {}
+}
+export default function Quiz({ questions, onComplete }: Props) {;}
+}
+const [answers, setAnswers] = useState<Record<string, number />>({});
+
+  function submit() {
+}export default function Quiz() {export default function Quiz() {const [answers, setAnswers] = useState<Record<string, number>>({})const [submitted, setSubmitted]  = useState(false)const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),0;
+  )function submit() {setSubmitted(true)onComplete(score)}
+  return (<div className='space-y-4'>;
+      {questions && questions.map((q, idx) => (<div key={q && q.id} className='border rounded p-3'>;
+          <div className='font-medium'>;
+            {idx + 1}. {q && q.question}
+          </div>;
+          <div className='mt-2 grid gap-2'>;
+  function submit() {
+
+export default function Quiz() {
+
+}
+
+export default function Quiz() {;
+
+}
+
+const [answers, setAnswers] = useState<Record<string, number>>({});
+
+const [submitted, setSubmitted] = useState(false);
+
+const score = questions.reduce(;
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
+    0
+  );
+  function submit() {
+    }
+    setSubmitted(true);
+    onComplete(score);
+  }
+return (;
+    <div className='space-y-4'>;'
+      {questions && questions.map((q, idx) => (;
+        <div key={q && q.id} className='border rounded p-3'>;'
+
+          <div className='font-medium'>;'
+            {idx + 1}. {q && q.question}
+          </div>;
+          <div className='mt-2 grid gap-2'>;'
+
+            {q && q.options.map((opt, i) => (;
+              <label key={i} className='flex items-center gap-2'>;'
+                <input,
+type = 'radio''
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import React, { useState } from 'react';
 type Question = any;
   question: string;
@@ -59,9 +131,45 @@ export default function Quiz({ questions, onComplete }: Props) {
 
   function submit() {
     setSubmitted($2);
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     onComplete(score)
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="font-medium">{idx + 1}. {q && q.question}</div>;"
+          <div className="mt-2 grid gap-2">;"
+            {q && q.options.map((opt, i) => (<label key={i} className="flex items-center gap-2">;"
+                <input;
+                  type="radio";"
+            <div className='mt - 2 text - sm'>;'
+              {answers[q.id] === q.answer_index ? (<span className='text - green - 600'>Correct</span>) : (<span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className="text - green - 600">Correct</span>) : (<span className="text - red - 600">Incorrect</span>)}"
+            </div>)}
+        </div>))}
+      <button;
+        on_click={submit}
+        className='px - 4 py - 2 bg - blue - 600 text - white rounded'>'
+
+        Submit Quiz;
+      </button>;
+      {submitted && ("Score": {score} / {questions.length}
+        </div>)}
+    </div>)<button on_click={submi
+} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;"
+      {submitted && <div className="text - sm">"Score": {score} / {questions.length}</div>}"
+    </div>)<span>{op
+}</span>;
+              </label>;
+            ))}
+
+<div className='mt-2 text-sm'>
+    <div className="space-y-4">
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <div className="space-y-4">
 =======
@@ -127,10 +235,20 @@ const [answers, setAnswers] = useState<Record<string, number />>({});
       {questions && questions.map((q, idx) => (<div key={q && q.id} className='border rounded p-3'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     setSubmitted(true);
     onComplete(score);
   }
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className='space-y-4'>
+=======
+>>>>>>> origin/resolved-merge-conflicts
     <div className='space-y-4'>;
       {questions && questions.map((q, idx) => (;
         <div key={q && q.id} className='border rounded p-3'>;
@@ -470,6 +588,10 @@ type = 'radio'
   return (
     <div className='space-y-4'>
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {questions.map((q, idx) => (
         <div key={q.id} className=border rounded p-3">
           <div className="font-medium>{idx + 1}. {q.question}</div>
@@ -487,21 +609,53 @@ type = 'radio'
             ))}
           </div>
           {submitted && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<div className='mt-2 text-sm'>'
+              {answers[q.id] === q.answerIndex ? (
+                <span className='text-green-600'>Correct</span>'
+              ) : (
+                <span className='text-red-600'>Incorrect</span>'
+
+<div className='mt-2 text-sm' />
+              {answers[q.id] === q.answerIndex ? (
+                <span className="text-green-600">Correct</span>
+              ) : (
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <div className="mt-2 text-sm">
               {answers[q.id] === q.answerIndex ? (
                 <span className='text-green-600'>Correct</span>
               ) : (
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </div>;
           {submitted && (<div className='mt-2 text-sm'>;
               {answers[q.id] === q.answerIndex ? (<span className='text-green-600'>Correct</span>;
               ) : (<span className='text-red-600'>Incorrect</span>;
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <span className="text-red-600">Incorrect</span>
               )}
             </div>
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         </div>
       ))}
@@ -532,6 +686,10 @@ onClick={submit}
   );
 =======
               )}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </div>;
           )}
         </div>;
@@ -554,6 +712,11 @@ onClick={submit}
         <div className=text-sm'>
           Score: {score} / {questions.length}
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     </div>)<button on_click={submi}"
 } className=\"px - 4 py - 2 bg - blue - 600 text - white rounded\"    />Submit Quiz</button>;"
@@ -589,6 +752,10 @@ onClick={submit}
           Score: {score} / {questions.lengt}
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       )}
 
@@ -605,9 +772,18 @@ onClick={submit}
         </div>
       ))}
       <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 "
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
@@ -615,6 +791,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 =======
@@ -631,3 +812,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

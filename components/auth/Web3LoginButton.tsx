@@ -2,6 +2,35 @@
 =======
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+  render() {if (this.state.hasError) ;
+  }
+  return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useEffect, useState } from 'react';'
+
+
+import dynamic from 'next/dynamic';'
+
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {'
+  }
+  "ssr": false
+});
+async function resolveDisplayName("addr": string): Promise<string | null> {
+  }
+  try {
+}
+const did = data?.payload || ,;
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -104,10 +133,20 @@ async function resolveDisplayName(addr: string): Promise<string | null    /> {
     const did = data?.payload || ,}
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 return did.lens || did.ens || null;
   } catch {}
     return null;}
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function Web3LoginButton() {;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 async function resolveDisplayName(): any (addr: string): Promise<string | null> {
@@ -454,6 +493,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </button>;
 <<<<<<< HEAD
         <button className='text-xs text-red-600' onClick={disconnect}>;'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 
@@ -472,6 +515,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClose={() =    /> setOpen(false)}
             onLoggedIn={onLoggedIn}
           />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         )}</div>;
     )}
   return (<>    )}
@@ -483,6 +533,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <button;
 
         onClick={() => setOpen(true)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <button
 =======
 
@@ -563,6 +618,10 @@ onClick={() =    /> setOpen(true)}
         <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
@@ -583,6 +642,12 @@ onClick={() =    /> setOpen(true)}
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}'
 =======
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
@@ -601,6 +666,10 @@ onClick={() =    /> setOpen(true)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import dynamic from 'next / dynamic';
 ;'
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {}

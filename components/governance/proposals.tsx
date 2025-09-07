@@ -1,4 +1,21 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  data;
+}: {"data": { "updatedAt": string | null; "proposals": any[]
+}
+  data}: {"data": { "updatedAt": string | null; "proposals": any[] 
+}) {return (<div className='max-w-3xl mx-auto p-6 space-y-4'>;'
+      <h1 className='text-2xl font-semibold'>DAO Proposals</h1>;'
+      <div className='text-sm opacity-70'>"Updated": {data.updatedAt |'—,'
+}</div>;
+      <ul className='space-y-3'>;'
+        {data.proposals?.map(("p": any) => (<li key={p.i
+} className='border rounded p-3'>;'
+            <div className='font-medium'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import fs from 'fs'
 import path from 'path'
 =======
@@ -64,11 +81,20 @@ export default function Proposals({
         {data.proposals?.map((p: any) => (
           <li key={p.id} className='border rounded p-3'>
             <div className='font-medium'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               #{p.id} {p.title}
             </div>
             <div className='text-sm opacity-70'>
               by {p.author} · {new Date(p.created_at).toLocaleString()}
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
   data,
@@ -158,6 +184,10 @@ function Proposals() {
             <div className='text-sm opacity-70'    />;
               by {p.author} · {new Date(p.created_at).toLocaleString()}
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <a
               className='text-blue-600 underline'
               href={p.url}
@@ -167,6 +197,12 @@ function Proposals() {
               View
             </a>
           </li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/resolved-merge-conflicts
             </div>;
             <a;
               className='text-blue-600 underline';
@@ -178,6 +214,10 @@ function Proposals() {
             </a>;
 <<<<<<< HEAD
           </li>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ))}
         )}
 =======

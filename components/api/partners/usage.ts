@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,10 +20,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import { authenticateRequest, calculateUsageSummary } from \"../../../utils/api/partnerAuth\";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
   authenticateRequest
   calculateUsageSummary;
@@ -29,6 +42,21 @@ import {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  authenticateRequest
+  calculateUsageSummary;
+  authenticateRequest,;
+  calculateUsageSummary,;
+} from '../../../utils/api/partnerAuth';'
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from \'next\';"
 import { authenticateRequest, calculateUsageSummary } from \'../../../utils/api/partnerAuth\';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -40,6 +68,11 @@ calculateUsageSummary;
 } from '../../../utils/api/partnerAuth';
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 
@@ -64,6 +97,10 @@ export default async function handler(
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {"
   if (req && req.method !== \"GET\") {}"
@@ -94,6 +131,12 @@ const auth = await authenticateRequest(req);
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const summary = await calculateUsageSummary(auth.partner.id);
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -130,6 +173,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/chore/fix-lint-and-merge
   return res.status(200).json({ summary })
 }
@@ -139,6 +188,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   authenticate_request,
@@ -215,3 +269,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

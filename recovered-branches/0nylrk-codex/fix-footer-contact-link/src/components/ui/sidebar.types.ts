@@ -1,4 +1,31 @@
 <<<<<<< HEAD
+import React from "react";
+
+// This file fixes the ref type issues in sidebar components
+// Export a placeholder to ensure the file is recognized as a module
+
+// Safe ref casting helper type - this is the key to fixing our issues
+// We need to use a type that is compatible with both Slot's ref and React's ref handling
+export type SafeRef<T> = React.Ref<T>,
+
+// Helper type for component refs
+export type ElementRef<T extends React.ElementType> =
+
+  React.ComponentPropsWithRef<T>["ref"];
+
+// Helper type for wrapping refs that fixes the mismatch errors;
+export type PolymorphicRef<T extends React.ElementType> = React.Ref<
+  React.ElementRef<T>;
+>;
+
+// Helper for dealing with refs in complex situations;
+export type PolymorphicComponentProp<
+  T extends React.ElementType,
+  Props = {},;
+> = React.PropsWithChildren<Props & { as?: T }>;
+
+=======
+<<<<<<< HEAD
 import React from 'react';
 // This file fixes the ref type issues in sidebar components
 // Export a placeholder to ensure the file is recognized as a module
@@ -73,6 +100,7 @@ export type PolymorphicComponentProp<
   Props = {},;
 > = React.PropsWithChildren<Props & { as?: T }>;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Safe ref casting helper type - this is the key to fixing our issues;
 // We need to use a type that is compatible with both Slot's ref and React's ref handling;
 export type SafeRef<T> = React && React.Ref<T>;
@@ -81,10 +109,14 @@ export type SafeRef<T> = React && React.Ref<T>;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 export type SidebarState = "expanded" | "collapsed";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from './react';
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
@@ -121,16 +153,23 @@ export type SidebarState = "expanded" | "collapsed";
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type SidebarContext = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   state: SidebarState;
   open: boolean;
   set_open: (open: boolean) => void;
   open_mobile: boolean;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean;
@@ -157,6 +196,8 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.Elemen
 export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
   React.PropsWithChildren<Props & { as?:T }>,;
 ;
+<<<<<<< HEAD
+=======
 =======
   setOpenMobile: (open: boolean) => void;
 <<<<<<< HEAD
@@ -214,6 +255,7 @@ export type SidebarContext = {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export type SidebarState = "expanded" | "collapsed",;
 ;
@@ -231,6 +273,9 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =
   React.PropsWithChildren<Props & { as?: T }>,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type SidebarContext = {;
   state: SidebarState;
   open: boolean;
@@ -238,10 +283,13 @@ export type SidebarContext = {;
   openMobile: boolean;
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean,
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const SIDEBAR_REF_TYPE_FIX = true,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   state: SidebarState,
   open: boolean,
@@ -263,6 +311,8 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.Elemen
 export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =;
   React.PropsWithChildren<Props & { as?: T }>,;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Helper for dealing with refs in complex situations
@@ -363,6 +413,7 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =;
 export type SafeRef<T> = React.Ref<T>,;
 // Sidebar specific types;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type SidebarState = "expanded" | "collapsed",;
 export type SidebarContext = {;
   state: SidebarState,;
@@ -371,6 +422,9 @@ export type SidebarContext = {;
   openMobile: boolean,;
   setOpenMobile: (open: boolean) => void,;
   isMobile: boolean;
+<<<<<<< HEAD
+  toggleSidebar: () => void;
+=======
 <<<<<<< HEAD
   toggleSidebar: () => void;
 =======
@@ -383,3 +437,4 @@ export type SidebarContext = {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

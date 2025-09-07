@@ -1,5 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const allowlist = new Set<string>([
+  (process.env.EXPO_VIP_ADDRESS || '').toLowerCase()
+].filter(Boolean));
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const address = String(req.query.address || '').toLowerCase();
+  if (!address) {
+    return res.status(400).json({ allowed: false });
+  }
+
+  res.status(200).json({ allowed: allowlist.has(address) });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -325,3 +343,7 @@ const address = String(req.query.address || '').toLowerCase();}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

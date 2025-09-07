@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
@@ -15,6 +17,7 @@ import { toast } from '@/hooks/use-toast';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {format} from 'date-fns';
 import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
@@ -28,6 +31,9 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
   console.error(`Error: ${errorMessage}`, e);
 <<<<<<< HEAD
 =======
@@ -35,6 +41,7 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { format } from 'date-fns',
 
 import { toast } from '@/hooks/use-toast',
@@ -42,6 +49,14 @@ import { toast } from '@/hooks/use-toast',
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined,
 
+<<<<<<< HEAD
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
+},
+
+export const formatDateForDB = (date: Date | string | undefined) => {}
+  if (!date) return undefined'
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
+=======
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
 },
 
@@ -59,11 +74,31 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 // Error handling with toast;
 export const handleResumeError = (e: any, errorMessage: string) => {}
     title,;
     description;
+<<<<<<< HEAD
+  }),
+  return true;
+},'
+import { format } from 'date-fns',;'
+import { toast } from '@/hooks/use-toast',;
+// Utility function to format dates for DB operations;
+export const formatDateForDB = (date: Date | string | undefined) => {;
+  if (!date) return undefined,;'
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
+},;
+// Error handling with toast;
+export const handleResumeError = (e: any, errorMessage: string) => {;`
+  console.error(`Error: ${errorMessage}`, e),;
+  toast({;
+    title: "Error",`
+    description: `${errorMessage}: ${e.message}`,;"
+
+=======
   }),
   return true;
 },'
@@ -146,6 +181,7 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
   toast({;
     title: "Error",;
     description: `${errorMessage}: ${e.message}`,;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     variant: "destructive";
   }),;
   return false;
@@ -154,6 +190,13 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
 export const showSuccessToast = (title: string, description: string) => {;
   toast({;
     title,;
+<<<<<<< HEAD
+
+    description;
+  });
+  return true;
+};
+=======
     title,
 
     description;
@@ -174,3 +217,4 @@ export default UseResumeUtils;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

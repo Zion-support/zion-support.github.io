@@ -32,13 +32,43 @@ return res;
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags || []).includes(tag));'
     if (author && typeof author === 'string') posts = posts.filter((p) => p.author === author);'
     posts = posts.sort((a, b) => (new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()));
+<<<<<<< HEAD
     const o = parseInt(String(offset |0), 10) |0;
     const l = parseInt(String(limit |20), 10) |20;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 return res.status(200).json({ "items": posts.slice(o, o + l), "total": posts.length });
       .json({ "items": posts && posts.slice(o, o + l), "total": posts && posts.length });    if (status && typeof status === 'string') posts = posts && posts.filter((p) => p && p.status === status);'
     if (topic && typeof topic === 'string') posts = posts && posts.filter((p) => (p && p.topics || []).includes(topic));'
     if (tag && typeof tag === 'string') posts = posts && posts.filter((p) => (p && p.tags || []).includes(tag));'
     if (author && typeof author === 'string') posts = posts && posts.filter((p) => p && p.author === author);'
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
+      .json({ items: posts && posts.slice(o, o + l), total: posts && posts.length });    if (status && typeof status === 'string') posts = posts && posts.filter((p) => p && p.status === status);
+    if (topic && typeof topic === 'string') posts = posts && posts.filter((p) => (p && p.topics || []).includes(topic));
+    if (tag && typeof tag === 'string') posts = posts && posts.filter((p) => (p && p.tags || []).includes(tag));
+    if (author && typeof author === 'string') posts = posts && posts.filter((p) => p && p.author === author);
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     posts = posts && posts.sort((a, b) => (new Date(b && b.publishDate).getTime() - new Date(a && a.publishDate).getTime()));
     const o = parseInt(String(offset || 0), 10) || 0;
     const l = parseInt(String(limit || 20), 10) || 20;
@@ -63,6 +93,16 @@ const "post": BlogPost = {
     }
     if (!requireAdmin(req, res)) return;
     const body = req.body as Partial<BlogPost>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
       }
       return res.status(400).json({ "error": 'Missing required fields' });'
@@ -173,6 +213,16 @@ if ( {) {
 if () return) {
   $2
 }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const body = req.body as Partial < BlogPost>;
     // Check condition,
 if ( {) {
@@ -181,6 +231,15 @@ if ( {) {
 return res.status (400).json ({ "error": 'Missing required fields' });'
     const posts = read_posts ();
     if () {) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   $2
 }
 return res.status (409).json ({ "error": 'Slug already exists' });'
@@ -203,6 +262,39 @@ const "post": BlogPost = {
       "body": body.body || '','
       "status": body.status || 'draft','
       "metrics": { "views": 0, "likes": 0, "shares": 0 },
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      return res.status (409).json ({ error: 'Slug already exists' });
+const post: BlogPost = {,
+  id: uuidv4 (),
+      title: body.title!,
+      slug: body.slug!,
+      coverImageUrl: body.coverImageUrl || ,
+      author: body.author!,
+      publish_date: body.publish_date!,
+      tags: body.tags || [],
+      topics: body.topics || [],
+      seo: {,
+  meta_title: body.seo?.meta_title || body.title!,
+        meta_description: body.seo?.meta_description || ,
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || },
+      body: body.body || ,
+      status: body.status || 'draft',
+      metrics: { views: 0, likes: 0, shares: 0 },
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     posts.unshift (post);
     write_posts (posts);
@@ -216,6 +308,23 @@ import { readPosts, writePosts } from '@/utils/data/blogStore';'
 import { requireAdmin } from '@/utils/api/auth';'
 export default function handler() {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    if (status && typeof status === 'string')
+      posts = posts.filter(p => p.status === status);
+    if (topic && typeof topic === 'string')
+      posts = posts.filter(p => (p.topics |[]).includes(topic));
+      posts = posts.filter(p => (p.tags |[]).includes(tag));
+      posts = posts.filter(p => p.author === author);
+    posts = posts.sort()
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 
   if (req.method === 'GET') {'
@@ -300,3 +409,31 @@ return res.status(405).end();
 return res.status(405).end();
 
   return res.status(405).end();
+<<<<<<< HEAD
+=======
+=======
+    if (status && typeof status === 'string')
+      posts = posts.filter(p => p.status === status);
+    if (topic && typeof topic === 'string')
+      posts = posts.filter(p => (p.topics |[]).includes(topic));
+      posts = posts.filter(p => (p.tags |[]).includes(tag));
+      posts = posts.filter(p => p.author === author);
+    posts = posts.sort()
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      .json({ items: posts.slice(o, o + l), total: posts.length });    if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
+    if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics |[]).includes(topic));
+    if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags |[]).includes(tag));
+  if (req.method === 'POST') {
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

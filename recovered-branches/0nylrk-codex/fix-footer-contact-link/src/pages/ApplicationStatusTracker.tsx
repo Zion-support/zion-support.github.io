@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
@@ -8,6 +11,8 @@ import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -20,10 +25,13 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Briefcase, Inbox } from "lucide-react",
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -48,6 +56,7 @@ import { Briefcase, Inbox } from "lucide-react",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
@@ -59,6 +68,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {}
   const isMobile = useIsMobile();
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -77,6 +88,7 @@ function ApplicationStatusTrackerContent() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <>
       <SEO"
@@ -121,7 +133,10 @@ function ApplicationStatusTrackerContent() {
             <p className="text-muted-foreground mt-1">
               Track where you stand in the hiring process
             </p>
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>
         </div>
         <div className="grid grid-cols-1 gap-6">
@@ -132,16 +147,37 @@ function ApplicationStatusTrackerContent() {
               </CardTitle>
             </CardHeader>
 <<<<<<< HEAD
+            <CardContent className={`p-${isMobile ? "3" : "6"}`}>
+=======
+<<<<<<< HEAD
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>
 =======
             <CardContent className={`p-${isMobile ? "3" : "6"}`}>
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <ApplicationsTracker />
             </CardContent>
           </Card>
         </div>
       </div>
     </>
+<<<<<<< HEAD
+  );
+}
+
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+
+}
+
+export default function ApplicationStatusTracker() {
+
+=======
 <<<<<<< HEAD
   )
 }
@@ -155,6 +191,7 @@ function ApplicationStatusTrackerContent() {
 }
 >>>>>>> merged-prs-20250907-203621
 export default function ApplicationStatusTracker() {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <ProtectedRoute>
       <AppLayout>
@@ -163,6 +200,8 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -187,6 +226,7 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -198,9 +238,12 @@ import {useIsMobile} from "@/hooks/use-mobile";
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -208,6 +251,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
@@ -218,6 +263,7 @@ function ApplicationStatusTrackerContent() {;
         description="Track the status of your job applications in the Zion AI marketplace.";
       />;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
@@ -249,7 +295,10 @@ function ApplicationStatusTrackerContent() {;
 
       />;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
           <div>;
@@ -258,6 +307,8 @@ function ApplicationStatusTrackerContent() {;
           </div>;
         </div>;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -287,6 +338,7 @@ function ApplicationStatusTrackerContent() {;
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="grid grid-cols-1 gap-6">;
           <Card>;
             <CardHeader className="border-b bg-muted/50">;
@@ -297,8 +349,12 @@ function ApplicationStatusTrackerContent() {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
             <CardContent className={`p-${isMobile ? '3' :'6'}`}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>;
               <ApplicationsTracker />;
             </CardContent>;
@@ -306,6 +362,9 @@ function ApplicationStatusTrackerContent() {;
         </div>;
       </div>;
     </>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -317,6 +376,7 @@ function ApplicationStatusTrackerContent() {;
 }
 export default function ApplicationStatusTracker() {;
   return (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
@@ -382,6 +442,9 @@ export default /**
 function ApplicationStatusTracker() {
   return (
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
   ),;
   );
 }
@@ -391,21 +454,30 @@ export default function ApplicationStatusTracker() {;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ),;
   );
 }
 ;
 export default function ApplicationStatusTracker() {;
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <ProtectedRoute>;
       <AppLayout>;
 
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
 
+<<<<<<< HEAD
+    </ProtectedRoute>);
+
+}
+=======
 <<<<<<< HEAD
 
 
@@ -446,6 +518,7 @@ export default function ApplicationStatusTracker() {
 
 }
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 </ProtectedRoute>;
   ),;
 } function ApplicationStatusTrackerContent () {
@@ -549,9 +622,13 @@ export default function ApplicationStatusTracker() {
 }
 ;
     </ProtectedRoute>);
+<<<<<<< HEAD
+}
+=======
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
+
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
+interface BadgeEarnedProps {
+  badge: BadgeKey
+=======
+<<<<<<< HEAD
 import React from "react";
 import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 =======
@@ -20,11 +29,15 @@ interface BadgeEarnedProps {
 <<<<<<< HEAD
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
@@ -62,6 +75,26 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   show_desc?: boolean;
   earned_date?: string;
 }
+<<<<<<< HEAD
+export const BadgeEarned: React.FC < BadgeEarnedProps> = ({};
+  badge;
+
+  size?: number;
+
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+
+  show_name?: boolean;
+  show_desc?: boolean;
+  earned_date?: string;
+}
+
+  badge;
+
+  size = 44;"
+import React from "react","
+
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+=======
 
 <<<<<<< HEAD
   badge;
@@ -84,11 +117,20 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 interface BadgeEarnedProps {
 
   badge: BadgeKey
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   size?: number;
   showName?: boolean;
   showDesc?: boolean;
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+<<<<<<< HEAD
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+=======
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
@@ -111,6 +153,7 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -121,36 +164,62 @@ interface BadgeEarnedProps {
 }
 
 =======
+<<<<<<< HEAD
+
+}
+
+=======
   earnedDate?: string
 }
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
   showName = true;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   badge;
 
   size = 44;
   showName = true;
+<<<<<<< HEAD
+
+=======
   showDesc = false
   earnedDate}) => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const meta = getBadgeMeta(badge);
   if (!meta) return null;
   const Icon = meta.icon;
   badge,
   size = 44,
   showName = true,
+<<<<<<< HEAD
+
+=======
   showDesc = false,
   earnedDate}) => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const meta = getBadgeMeta(badge),
   if (!meta) return null,
   const Icon = meta.icon,
 
+<<<<<<< HEAD
+  return (
+
+    <div className="flex flex-col items-center text-center gap-1 px-2">;
+      <div
+        style={{
+
+=======
 
 
 =======
@@ -221,6 +290,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
@@ -231,6 +301,33 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from "react",;
+
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
+interface BadgeEarnedProps {;
+  badge: BadgeKey,;
+  size?: number,;
+  showName?: boolean,;
+  showDesc?: boolean,;
+  earnedDate?: string;
+}
+;
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+  badge,;
+  size = 44,;
+  showName = true,;
+  showDesc = false,;
+  earnedDate}) => {;
+  const meta = getBadgeMeta(badge),;
+  if (!meta) return null,;
+  const Icon = meta.icon,;
+
+        className="shadow hover-scale";
+        title={meta.name}
+      >;
+        <Icon color={meta.color} size={size * 0.7} />;
+      </div>;
+
 import React from "react",;
 
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
@@ -344,6 +441,10 @@ export const BadgeEarned:React.FC<BadgeEarnedProps> = ({;
         <span className="text-xs font-semibold mt-1" style={{ color:meta.color }}>;          {meta.name}
         </span>;
 =======
+<<<<<<< HEAD
+        <span className="text-xs font-semibold mt-1" style={{ color:meta.color }}>;          {meta.name}
+        </span>;
+=======
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
 
 
@@ -353,6 +454,7 @@ export const BadgeEarned:React.FC<BadgeEarnedProps> = ({;
         </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       )}
       {earnedDate && (;
         <span className="text-[10px] text-gray-400">;          {earnedDate}
@@ -401,6 +503,9 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
       )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>
   )
 }
@@ -408,6 +513,9 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
     </div>;
   );
     </div>;
+<<<<<<< HEAD
+  );
+=======
   );
 =======
 
@@ -574,3 +682,4 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

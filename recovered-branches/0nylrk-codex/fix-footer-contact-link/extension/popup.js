@@ -1,8 +1,13 @@
 <<<<<<< HEAD
 try {
 
+=======
+<<<<<<< HEAD
+try {
+
 <<<<<<< HEAD
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
   document && document.getElementById('ask')?.addEventListener('click', ask),
@@ -18,11 +23,14 @@ try {
   })
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
@@ -42,8 +50,11 @@ document && document.addEventListener('DOMContentLoaded', () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 async function ask() {
   const prompt = document.getElementById('prompt').value
   if (!prompt.trim()) {
@@ -61,6 +72,17 @@ async function ask() {
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
+<<<<<<< HEAD
+// Attach handlers once the DOM is fully loaded to avoid null element errors'
+document.addEventListener('DOMContentLoaded', () => {}
+'
+document && document.addEventListener('DOMContentLoaded', () => {'
+  document && document.getElementById('ask')?.addEventListener('click', ask),
+'
+  document.getElementById('post-job')?.addEventListener('click', () => {'
+    chrome.runtime.sendMessage({ type: 'post-job' })
+  })
+=======
   document.getElementById('ask')?.addEventListener('click', ask)
 
   document.getElementById('post-job')?.addEventListener('click', () => {
@@ -120,6 +142,7 @@ document && document.addEventListener('DOMContentLoaded', () => {'
   document.getElementById('post-job')?.addEventListener('click', () => {'
     chrome.runtime.sendMessage({ type: 'post-job' })
   })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '
   document.getElementById('post-job')?.addEventListener('click', () => {'
     chrome.runtime.sendMessage({ type: 'post-job' })
@@ -132,10 +155,15 @@ document && document.addEventListener('DOMContentLoaded', () => {'
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Attach handlers once the DOM is fully loaded to avoid null element errors;'
 document.addEventListener('DOMContentLoaded', () => {;'
   document.getElementById('ask')?.addEventListener('click', ask),;'
   document.getElementById('post-job')?.addEventListener('click', () => {;'
+<<<<<<< HEAD
+=======
 =======
 }),
 ;
@@ -163,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {;
   document.getElementById('ask')?.addEventListener('click', ask),;
   document.getElementById('post-job')?.addEventListener('click', () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     chrome.runtime.sendMessage({ type: 'post-job' });
   }),;'
   document.getElementById('resume-search')?.addEventListener('click', () => {;'
@@ -175,7 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
   document.getElementById('post-job')?.addEventListener('click', () => {;
     chrome.runtime.sendMessage({ type:'post-job' }),;
@@ -189,6 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {;
 <<<<<<< HEAD
 }),;
 =======
+<<<<<<< HEAD
+}),;
+=======
 }),; 
 =======
 
@@ -196,3 +231,4 @@ document.addEventListener('DOMContentLoaded', () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -48,6 +48,12 @@ const form_schema = z.object ({'
 type FormValues = z.infer < typeof form_schema>;
 
   on_cancel: () => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Loader2  } from 'lucide-react';
 import { ContractFormValues  } from '@/components/contracts/components/ContractForm';
@@ -88,6 +94,12 @@ import { Input  } from '@/components / ui / input';
 import { Switch  } from '@/components / ui / switch';
 const form_schema = z.object ({title: z.string ().min (1, 'Title is required'),is_default: z.boolean ()})type FormValues = z.infer < typeof form_schema>;
 interface TemplateSaveFormProps  {on_cancel: () => void;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   on_complete: () => void;
   edit_template?: ContractTemplate | null;
   current_values?: ContractFormValues;
@@ -110,7 +122,14 @@ if ( {) {}
 }
       return;
     }
+
     set_saving (true);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }set_saving (true)try {// Check condition;
 if ( {) {$2;
 }
@@ -118,6 +137,12 @@ if ( {) {$2;
 if ( {) {$2;
 }
         await create_template.mutate_async ({
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       // Check condition;
 if ( {) {}
@@ -162,6 +187,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           render={({ field }: { field: ControllerRenderProps<FormValues 'title'> }) => (
             <FormItem>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         await create_template.mutate_async ({title: values.title,template_data: current_values,is_default: values.is_default})}
       on_complete ()} finally {set_saving (false)}
   }return (<Form {...form}>;<form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
@@ -215,14 +246,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;
   };
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> origin/resolved-merge-conflicts
 
   return (;
     <Form {...form}>;'
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>;
         <FormField;
+<<<<<<< HEAD
           control={form.control}'
           name='title';'
           render={({ field }: { field: ControllerRenderProps<FormValues 'title'> }) => (;
+=======
+          control={form.control}
+          name=title";"
+          render={({ field }: { field: ControllerRenderProps<FormValues title> }) => (;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  };
+
+  return (;
+    <Form {...form}>;"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
+        <FormField;
+          control={form.control}"
+          name="title";"
+          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
             <FormItem>;
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;'
@@ -232,11 +288,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;
             </FormItem>;
           )}
+
         />;
+<<<<<<< HEAD
                 <Input {...field} placeholder='Enter template name' />;</FormControl>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                <Input {...field} placeholder=Enter template name" />;</FormControl>;
+>>>>>>> origin/resolved-merge-conflicts
               <FormMessage />;
             </FormItem>;
           )}/>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <FormField;
           control={form.control}'
           name='isDefault''
@@ -277,6 +350,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (;'
               `${editTemplate ? 'Update' : 'Save'} Template`;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}/>;
         <div className='flex gap-2 justify-end'>;
           <Button type='button' variant='outline' onClick={onCancel}>;
@@ -316,7 +395,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `${editTemplate ? 'Update' : 'Save'} Template`;
 
               <>
+<<<<<<< HEAD
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+=======
+                <Loader2 className=mr-2 h-4 w-4 animate-spin" />
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                 Saving...
               </>
             ) : (
@@ -334,8 +424,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Form>;
   );
 
+<<<<<<< HEAD
 ;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             )}
     </Form>;
   );
@@ -357,16 +457,34 @@ if ( {) {
   )// Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
   await update_template.mutate_async ({<FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {...field ';
 }placeholder='Enter template name' />;
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ';
 }/> <> <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' /> Saving... </>) : (`$ {';
   edit_template ? 'Update' : 'Save';
+=======
+  await update_template.mutate_async ({<FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {...field ;
+}placeholder="Enter template name" />;
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
+  edit_template ? "Update" : "Save";
+>>>>>>> origin/resolved-merge-conflicts
 }Template`);
 }</Button> </div> </form> </Form>);
 }'}
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           </Button>
         </div>
@@ -375,16 +493,32 @@ if ( {) {$2;
   );
 
 setSaving (true);
+<<<<<<< HEAD
 try {;
   if (editTemplate) {;
   await updateTemplate.mutateAsync ({;
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
   ...field ';
 }Template`)}</Button> </div> </form> </Form>)}'}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+try {
+  if (editTemplate) {
+  await updateTemplate.mutateAsync ({
+  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
+  ...field ;
+}Template`)}</Button> </div> </form> </Form>)}"}
+>>>>>>> origin/resolved-merge-conflicts
 }</Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
   )setSaving (true)try {if (editTemplate) {await updateTemplate.mutateAsync ({<FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {...field ';
 }placeholder='Enter template name' /> ;
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ';
@@ -394,3 +528,25 @@ try {;
 }</Button> </div> </form> </Form>) ;
 }Template`)}</Button> </div> </form> </Form>)}';
 }'
+=======
+  )setSaving (true)try {if (editTemplate) {await updateTemplate.mutateAsync ({<FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {...field ";
+}placeholder=Enter template name /> ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+try {;
+  if (editTemplate) {;
+  await updateTemplate.mutateAsync ({;
+  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
+  ...field ";
+}placeholder="Enter template name" /> ;
+>>>>>>> origin/chore/fix-lint-and-merge
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
+  editTemplate ? "Update" : "Save" ;
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"
+>>>>>>> origin/resolved-merge-conflicts

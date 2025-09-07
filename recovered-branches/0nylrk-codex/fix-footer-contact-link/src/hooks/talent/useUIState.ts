@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import {useState} from 'react';
+import {TalentProfile} from '@/types/talent';
+
+export function useUIState() {;
+=======
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useUIState() {
@@ -44,6 +50,7 @@ import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useState  } from 'react';
 import { TalentProfile } from '@/types/talent';
@@ -53,10 +60,15 @@ import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
 
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -79,13 +91,17 @@ function useUIState() {
   const [expanded_sections, setExpandedSections] = useState ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     skills: true;
     availability: true;
     region: true;
 
     price: true});
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
   // Toggle expanded sections in the sidebar;
 
@@ -95,6 +111,9 @@ function useUIState() {
   }
 ;
   // Handler for closing mobile filter sidebar;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
   const closeMobileFilter = () =>: any {
@@ -126,12 +145,18 @@ function useUIState() {
   // This would typically be in a useEffect hook, but we'll handle it via the button's onClick
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return {
 
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
+
+    selected_talent;
+    setSelectedTalent;
+=======
 <<<<<<< HEAD
 
     selected_talent;
@@ -147,6 +172,7 @@ function useUIState() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 
 import { TalentProfile } from '@/types/talent',;
@@ -173,6 +199,11 @@ export function useUIState() { return null; }
     selectedTalent,;
 
 <<<<<<< HEAD
+    toggleSection;
+    expanded_sections;
+    toggle_section;
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -190,6 +221,7 @@ export function useUIState() { return null; }
     expanded_sections;
     toggle_section;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     closeMobileFilter}
 }    expandedSections;
 
@@ -201,6 +233,8 @@ export function useUIState() { return null; }
 
     expanded_sections;
     toggle_section;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -254,5 +288,6 @@ export function useUIState() {;
     toggleSection;
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     closeMobileFilter}
 }

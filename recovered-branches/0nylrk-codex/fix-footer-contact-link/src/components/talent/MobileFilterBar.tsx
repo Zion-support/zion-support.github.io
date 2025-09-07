@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button",
 import { Search, Sliders } from "lucide-react";
 import { Input } from "@/components/ui/input";
 <<<<<<< HEAD
+import { Search, Sliders } from "lucide-react",
+
+=======
+<<<<<<< HEAD
 =======
 import { Search, Sliders } from "lucide-react",
 
@@ -31,6 +35,7 @@ import { Input } from "@/components/ui/input",
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface MobileFilterBarProps {
 
 interface MobileFilterBarProps {};
@@ -46,6 +51,8 @@ export function MobileFilterBar({
   setSearchTerm
   setIsMobileFilterOpen
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export function MobileFilterBar({ ;
   searchTerm;
@@ -65,15 +72,20 @@ export function MobileFilterBar({
   setIsMobileFilterOpen
 
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function MobileFilterBar({ ;
   searchTerm;
 export function MobileFilterBar({ 
   searchTerm,
   setSearchTerm, 
+<<<<<<< HEAD
+
+=======
   setIsMobileFilterOpen 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: MobileFilterBarProps) {
 
   return (
@@ -98,33 +110,50 @@ export function MobileFilterBar({
       </div>
     </div>
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
   )
 =======
 
 <<<<<<< HEAD
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
 
 import { Input } from "@/components/ui/input",;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
 
+<<<<<<< HEAD
+        <Sliders className="h-4 w-4" />;
+        Filter Talents;
+      </Button>;
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -194,6 +223,7 @@ export function MobileFilterBar(): any ({ ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from './react';
 
 import { Input } from '@/components / ui / input';
@@ -215,6 +245,9 @@ export /**;
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 ;
@@ -228,6 +261,13 @@ export /**;
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
         />;
 
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+}
+;
+=======
 =======
 ;
 
@@ -256,3 +296,4 @@ export /**;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/ai-enhancement/AIEnhancementButton.tsx
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -22,12 +23,20 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void
   buttonText?: string
   className?: string;
+<<<<<<< HEAD
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 }
 export function AIEnhancementButton({
+=======
+  variant?: "default | destructive" | "outline | secondary" | "ghost | link";
+  size?: "default | sm" | "lg | icon";  contentLength?: number
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 }
 
+<<<<<<< HEAD
 :src/components/ai-enhancement/AIEnhancementButton.tsx
   options
   onEnhanced
@@ -40,6 +49,8 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer()
   const [showActions, setShowActions] = useState(false)
   const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     if ((!options.content |options.content.trim().length < contentLength) &&
 
         (!options.context |options.context.trim().length < contentLength)) {
@@ -67,7 +78,12 @@ export function AIEnhancementButton({
       toast({
         title: "Not enough content",
         description: `Please enter at least ${contentLength} characters before enhancing.`,
+<<<<<<< HEAD
         variant: "destructive"
+=======
+<<<<<<< HEAD
+        variant: destructive"
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/ai-enhancement/AIEnhancementButton.tsx
       })
       return;
@@ -85,11 +101,18 @@ export function AIEnhancementButton({
       setGeneratedContent(null)
       }),
       return
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 
 ;
 }
+=======
+<<<<<<< HEAD
+=======
+import { useState } from 'react,
+import { Button } from @/components/ui/button'}
+>>>>>>> origin/resolved-merge-conflicts
 export function AIEnhancementButton({const handleEnhance = async () => {const handleEnhance = async () => {if ((!options.content |options.content.trim().length < contentLength) &&;
         (!options.context |options.context.trim().length < contentLength)) {toast({title: "Not enough content";
         description: `Please enter at least ${contentLength} characters before enhancing.`;
@@ -135,9 +158,27 @@ interface AIEnhancementButtonProps  {options: AIEnhancementOptions,onEnhanced: (
   onEnhanced;
   buttonText = "Enhance with AI";
   className;
+<<<<<<< HEAD
   variant = "ghost";
   size = "sm";
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+=======
+  variant = ghost";
+  size = "sm;
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react;
+=======
+        variant: "destructive"
+      }),
+      return
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 interface AIEnhancementButtonProps {;
   options: AIEnhancementOptions,;
@@ -162,6 +203,10 @@ export function AIEnhancementButton({;
   const [showActions, setShowActions] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
   const handleEnhance = async () => {;
+<<<<<<< HEAD
+=======
+}: AIEnhancementButtonProps) {
+>>>>>>> origin/resolved-merge-conflicts
     if ((!options.content || options.content.trim().length < contentLength) &&;
         (!options.context || options.context.trim().length < contentLength)) {;
       toast({;
@@ -190,7 +235,6 @@ export function AIEnhancementButton({;
         description: "AI-enhanced content has been applied."})
     }
 
-:src/components/ai-enhancement/AIEnhancementButton.tsx
   },
   
   const handleRegenerate = async () => {
@@ -209,6 +253,12 @@ import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIConten
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: AIEnhancementButtonProps) {const { enhanceContent, isEnhancing } = useAIContentEnhancer()const [showActions, setShowActions] = useState(false)const [generatedContent, setGeneratedContent]  = useState<string | null>(null)const handleEnhance = async () => {if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {toast({title: "Not enough content",description: `Please enter at least ${contentLength} characters before enhancing.`,variant: "destructive";
       })return;
@@ -217,6 +267,12 @@ interface AIEnhancementButtonProps {
 import { Button   } from '@/components/ui/button';
 import { useAIContentEnhancer, AIEnhancementOptions   } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementButtonProps  {options: AIEnhancementOptions;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string;
@@ -257,7 +313,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           size="sm"
           onClick = {handleRegenerate,}
 
+<<<<<<< HEAD
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+=======
+<<<<<<< HEAD
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20
+>>>>>>> origin/resolved-merge-conflicts
 :src/components/ai-enhancement/AIEnhancementButton.tsx
           disabled={isEnhancing}
         >
@@ -328,13 +389,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";
           disabled={isEnhancing}
         >;
+<<<<<<< HEAD
           disabled = {isEnhancing,}>;
+=======
+          disabled = {isEnhancing}>;
+=======
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+          disabled = {isEnhancing,}>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
           ) : (;
+<<<<<<< HEAD
             <RefreshCw className="h-4 w-4 mr-1" />;
 export function AIEnhancementButton() {return (<div className="flex gap-2 items-center">;
+=======
+<<<<<<< HEAD
+            <RefreshCw className="h-4 w-4 mr-1 />;
+export function AIEnhancementButton() {return (<div className=flex gap-2 items-center">;
+=======
+            <RefreshCw className="h-4 w-4 mr-1" />;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           )}
           Regenerate;
         </Button>;
@@ -355,10 +440,33 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
           <Check className="h - 4 w - 4 mr - 1" />;
 
           Apply;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Button>;<Button;
+<<<<<<< HEAD
           type="button";
           variant="ghost";
           size="sm";
+=======
+          type="button;
+          variant=ghost";
+          size="sm;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        </Button>;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
           on_click = {handle_regenerate, }
           className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
@@ -372,6 +480,7 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
 
         </Button>;
         <Button;
+<<<<<<< HEAD
           type="button";
           variant="ghost";
           size="sm";
@@ -380,6 +489,22 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
           variant="ghost";
           size="sm";on_click = {handle_accept }
           className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          type="button;
+          variant=ghost";
+          size="sm;
+    return (<div className=flex gap - 2 items - center">;<Button;
+          type="button;
+          variant=ghost";
+          size="sm;on_click = {handle_accept }
+          className=text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";
+>>>>>>> origin/resolved-merge-conflicts
         >;
           <Check className="h - 4 w - 4 mr - 1" />;Apply;
         </Button>;
@@ -390,6 +515,13 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
           on_click = {handle_regenerate, }
           size="sm";on_click = {handle_regenerate }
           className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
+<<<<<<< HEAD
+=======
+          size=sm";
+          on_click = {handle_regenerate}
+          size="sm;on_click = {handle_regenerate }
+          className=text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
+>>>>>>> origin/resolved-merge-conflicts
           disabled = {is_enhancing }
         >;
           {is_enhancing ? (
@@ -404,21 +536,64 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
           variant="ghost";
           size="sm";
           on_click = {handle_cancel }
+<<<<<<< HEAD
           className="text - gray - 500 hover: text - gray - 700 hover:bg - gray - 100 / 20";
           on_click = {handle_cancel, }
           className="text - gray - 500 hover: text - gray - 700 hover:bg - gray-100 / 20";
+=======
+          className=text - gray - 500 hover: text - gray - 700 hover:bg - gray - 100 / 20";
+          on_click = {handle_cancel}
+          className="text - gray - 500 hover: text - gray - 700 hover:bg - gray-100 / 20;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          type="button";
+          variant="ghost";
+          size="sm";
+          on_click = {handle_cancel, }
+          className="text - gray - 500 hover: text - gray - 700 hover:bg - gray-100 / 20";
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
         >;
           <X className="h - 4 w - 4 mr-1" />;
           Cancel;
         </Button>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>)}
   return (<Button;
       type="button";
       variant = {variant }
       size = {size }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      </div>),
+  }
+  return (
+    <Button;
+      type="button";
+      variant = {variant, }
+      size = {size, }
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       className={`gap - 1 ${class_name}`}
-      on_click = {handle_enhance }
-      disabled = {is_enhancing }
+      on_click = {handle_enhance, }
+      disabled = {is_enhancing, }
     >;
       {is_enhancing ? (
         <Loader2 className="h - 4 w - 4 animate-spin" />) : (
@@ -441,13 +616,24 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
         <Sparkles className="h-4 w-4" />
       )}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
+<<<<<<< HEAD
       <span className="text-xs">{buttonText}</span>
+=======
+      <span className="text-xs>{buttonText}</span>
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
     </Button>
 :src/components/ai-enhancement/AIEnhancementButton.tsx
   )
@@ -458,7 +644,14 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
 }Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)
 }</Button>)
+<<<<<<< HEAD
 }"}
+=======
+}}
+=======
+    </Button>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   );
 
 };";
@@ -468,7 +661,18 @@ export function AIEnhancementButton() {return (<div className="flex gap-2 items-
 }Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
 }</Button>) ;
+<<<<<<< HEAD
 }"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 }return (<Button) : (<Sparkles className=" h - 4 w - 4" />)}</Button>)}"}variant={variant}
       size={size}
@@ -484,3 +688,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
 }Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)}</Button>)}";
+=======
+}"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,5 +1,15 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React, { useState } from 'react';'
+
+type Props = any;
+    "title": string;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 type Props = {
   onSubmit: (payload: {
 export default function MilestoneForm(): any ({ onSubmit }: Props) {
@@ -58,6 +68,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
     title: string;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     description?: string;
     dueDate: string;
     amountUsd: number;
@@ -68,8 +82,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
   }) => Promise<void /> | void;
+<<<<<<< HEAD
 }
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+};
+=======
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function MilestoneForm({ onSubmit }: Props) {
   const [title, setTitle] = useState($2);
   const [description, setDescription] = useState($2);
@@ -84,6 +107,25 @@ export default function MilestoneForm({ onSubmit }: Props) {
     if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
       setError($2);
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void;
+};
+
+
+export default function MilestoneForm() {
+  }
+  const [title, setTitle] = useState('');'
+
+const [description, setDescription] = useState('');'
+
+const [dueDate, setDueDate] = useState('');'
+
+const [amountUsd, setAmountUsd] = useState<string>('');'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
@@ -257,11 +299,70 @@ const [description, setDescription] = useState('');
 const [dueDate, setDueDate] = useState('');
 
 const [amountUsd, setAmountUsd] = useState<string    />('');
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const [error, setError] = useState<string | null>(null);
 
 const [loading, setLoading] = useState(false);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const handleSubmit = async ("e": React.FormEvent) => {
+    }
+    e.preventDefault();
+    setError(null);
+
+const parsedAmount = Number(amountUsd);
+    if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {
+      }
+      setError('Please provide Title, Due Date and a valid Amount.');'
+return;
+    }
+    setLoading($2);
+    try {
+      }
+      await onSubmit({
+        }
+        title,
+"description": description |undefined,
+dueDate
+        "amountUsd": parsedAmount
+     
+});
+      setTitle('');'
+      setDescription('');'
+      setDueDate('');'
+      setAmountUsd('');'
+    } catch ("err": any) {
+      }
+      setError(err?.message |'Failed to create milestone');'
+    } finally {
+      }
+      setLoading(false);
+    }
+    setLoading(true)try {await onSubmit({title;
+        }
+        "description": description |undefined;
+        dueDate;
+        "amountUsd": parsedAmount;
+      })setTitle('')setDescription('')setDueDate('')setAmountUsd('')} catch ("err": any) {setError(err?.message |'Failed to create milestone')} finally {setLoading(false)}'
+  }
+  return (<form onSubmit={handleSubmi
+} className='space-y-4'>;'
+      {error && <div className='text-red-600 text-sm'>{error}</div>}'
+      <div>;
+        <label className='block text-sm font-medium'>Title</label>;'
+        <input;
+          className='mt-1 w-full rounded border px-3 py-2';'
+          value={title}
+          onChange={e => { return setTitle(e.target.value)}
+          placeholder='Phase 1 – Backend Setup'; }'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const handleSubmit = async (e: React.FormEvent) => {
 >>>>>>> origin/chore/fix-lint-and-merge
     e.preventDefault();
@@ -766,10 +867,20 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           value={title}
           onChange={e => setTitle(e.target.value)}
           placeholder='Phase 1 – Backend Setup';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           required;
         />;
       </div>;
       <div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<label className='block text-sm font-medium'>Description</label>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
       await onSubmit({
@@ -811,16 +922,39 @@ amountUsd: parsedAmount}
       <div    />;
 <label className='block text-sm font-medium'    />Description</label>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
         <textarea;
           className='mt-1 w-full rounded border px-3 py-2';
           value={description}
 <<<<<<< HEAD
 
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <textarea;
+          className='mt-1 w-full rounded border px-3 py-2';
+          value={description}
+<<<<<<< HEAD
+          onChange={e => { return setDescription(e.target.value)}
+          placeholder='Describe deliverables...'; }'
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           rows={3}
         />;
       </div>;
       <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
         <div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <label className='block text-sm font-medium'>Due Date</label>;'
+          <input;
+            type='date';'
+            className='mt-1 w-full rounded border px-3 py-2';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
           onChange={e =    /> setDescription(e.target.value)}
@@ -835,6 +969,10 @@ amountUsd: parsedAmount}
             type='date';
             className='mt-1 w-full rounded border px-3 py-2';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             value={dueDate}
             onChange={e =    /> setDueDate(e.target.value)}
             required;
@@ -844,6 +982,15 @@ amountUsd: parsedAmount}
 <label className='block text-sm font-medium'    />Amount (USD)</label>;
           <input;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            type='number';'
+            min={0}
+            step='0.01';'
+            className='mt-1 w-full rounded border px-3 py-2';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
             type='number';
@@ -851,6 +998,10 @@ amountUsd: parsedAmount}
             step='0.01';
             className='mt-1 w-full rounded border px-3 py-2';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             value={amountUsd}
             onChange={e =    /> setAmountUsd(e.target.value)}
             placeholder='3000';
@@ -859,6 +1010,16 @@ amountUsd: parsedAmount}
         </div>;
       </div>;
       <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+type='submit';'
+        className='bg-blue-600 text-white px-4 py-2 rounded "hover":bg-blue-700 "disabled":opacity-50';'
+        disabled={loading}
+      >;
+        {loading ? 'Adding...' : 'Add Milestone'}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 type='submit';
         className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50';
         disabled={loading}
@@ -875,6 +1036,10 @@ type='submit';
       setLoading(false)
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -929,12 +1094,22 @@ type='submit';
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {loading ? 'Adding...' : 'Add Milestone'}
+=======
+>>>>>>> origin/resolved-merge-conflicts
         {loading ? Adding... : 'Add Milestone'}
 =======
           />;
         {loading ? 'Adding...' : 'Add Milestone'}
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </button>
     </form>
 <<<<<<< HEAD

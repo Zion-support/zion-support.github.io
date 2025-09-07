@@ -11,6 +11,50 @@ function helpText(): string {
   ].join('\n')
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { App  } from '@slack/bolt';'
+
+import dotenv from 'dotenv';'
+import fetch from 'node-fetch';'
+dotenv.config()const apiBase = null;
+})function helpText(): string {return [;
+'*Zion Assistant Commands*','`/zion post-job [role]` – generate a job post','`/zion suggest-talent [query]` – AI match talent','`/zion track-project [name]` – milestone status','`/zion help` – command list'].join('\n')app.command('/zion', async ({ command, ack, respond    }) => {'
+
+}
+
+
+await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ';'
+  const userId = command.user_id;
+  try {if (!sub |sub.toLowerCase() === 'help') {await respond({ "response_type": 'ephemeral', "text": helpText(),'
+})return;
+    }
+
+    if (sub = == 'post-job') {'
+     ;
+  }
+  const role = rest.join(' ') |'Cloud Engineer';'
+
+const res = await fetch(`${apiBase}/jobs/generate`, {`        }
+        "method": 'POST','
+"headers": { 'content-type': 'application/json', 'x-user-id': userId },'
+        "body": JSON.stringify({ role
+})
+      });
+      const data = (await res.json()) as any;
+      await respond({
+        }
+        "response_type": 'ephemeral''
+        "text": `Here is a draft job post for *${role}*:\n\n${data.description}``     
+});
+      return;
+    if (sub === 'post-job') {const role = rest.join(' ') |'Cloud Engineer';
+      const res = await fetch(`${apiBase}/jobs/generate`, {method: 'POST',headers: { 'content-type': 'application/json', 'x-user-id': userId },body: JSON.stringify({ role }),})const data = (await res.json()) as any;
+      await respond({response_type: 'ephemeral';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 app.command('/zion', async ({ command, ack, respond }) => {
   await ack($2);
   const text = (command.text || '').trim($2);
@@ -257,6 +301,10 @@ if ( {) {
     if (sub === 'post-job) {const role = rest.join( ') |'Cloud Engineer;
       const res = await fetch(`${apiBase}/jobs/generate`, {method: POST',headers: { 'content-type: application/json', 'x-user-id: userId },body: JSON.stringify({ role })})const data = (await res.json()) as any;
       await respond({response_type: ephemeral';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         text: `Here is a draft job post for *${role}*:\n\n${data.description}`;
       })return;
     }
@@ -264,11 +312,59 @@ if ( {) {
       const q = rest && rest.join(' ') || 'AI researcher in Brazil';
 =======
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
     }
 
+=======
+<<<<<<< HEAD
+const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;`        {"headers": { 'x-user-id': userId }'
+        }
+      
+})return;
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }
+    if (sub = == 'track-project') ;'
+  const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`;`        {"headers": { 'x-user-id': userId }'
+       
+}
+      )const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({"response_type": 'ephemeral';'
+          }
+          "text": 'Project not found.';'
+        })return;
+      }
+      await respond({})return;
+    }
+    await respond({ "response_type": 'ephemeral', "text": helpText() })} catch ("err": any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name,`}/track`, {"headers": { 'x-user-id': userId }'
+     
+};
+  const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({ "response_type": 'ephemeral', "text": 'Project not found.','
+})return;
+      }
+      return;
+    }
+
+<<<<<<< HEAD
+    await respond({ "response_type": 'ephemeral', "text": helpText(),'
+});
+  } catch ("err": any) {
+    }
+    await respond({
+
+      }
+
+      "response_type": 'ephemeral','
+      "text": `"Error": ${err.message || 'unknown,'}`,`    });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;
         {headers: { 'x-user-id': userId }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -502,10 +598,23 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`)})()console.log (`�
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 });
 (async () => {
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const port = Number(process.env.SLACK_PORT |3001);
+  await app.start(port);
+  // eslint-disable-next-line no-console,
+console.log(`⚡️ Zion Slack bot running on port ${port}`);`
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }),
 
 (async () => {
@@ -529,6 +638,10 @@ console.log(`⚡️ Zion Slack bot running on port ${port}`)})()
   console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`)

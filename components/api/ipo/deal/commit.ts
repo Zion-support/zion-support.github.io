@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -38,8 +48,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   const { amount } = req.body |{}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { amount } = req.body || {};
+  const commits = readJsonFile('ipo-commits.json', []);
+  
+  const record = {
+    id: Date.now().toString(),
+    amount: Number(amount) || 0,
+    timestamp: new Date().toISOString()
+  };
+  
+  commits.push(record);
+  writeJsonFile('ipo-commits.json', commits);
+  
+  res.status(200).json(record);
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
 
@@ -100,3 +133,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

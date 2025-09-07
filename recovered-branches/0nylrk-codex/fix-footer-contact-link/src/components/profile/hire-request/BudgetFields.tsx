@@ -1,4 +1,30 @@
 <<<<<<< HEAD
+import { FormValues } from "./useHireRequestForm";
+interface BudgetFieldsProps {}
+
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+
+}
+
+}
+
+;
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+
+=======
+<<<<<<< HEAD
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -73,6 +99,7 @@ interface BudgetFieldsProps {
 >>>>>>> merged-prs-20250907-203621
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <>
       <FormField
@@ -97,7 +124,10 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
           </FormItem>
         )}
       />
+<<<<<<< HEAD
+=======
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <FormField
         control={form.control}
         name="budgetMax"
@@ -121,6 +151,9 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
         )}
       />
     </>
+<<<<<<< HEAD
+  );
+=======
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -149,10 +182,13 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 }
 
+<<<<<<< HEAD
+=======
 ;
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
@@ -357,6 +393,7 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
   return (
@@ -414,6 +451,9 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 }
@@ -449,6 +489,9 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
         control={form.control}
   )
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 <<<<<<< HEAD
@@ -479,3 +522,4 @@ talent?: TalentProfile
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

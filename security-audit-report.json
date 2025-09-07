@@ -3,8 +3,17 @@
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -14,8 +23,19 @@
       "details: No dependency vulnerabilities found"
       } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error("Error:, error);
     return res.status(500).json({ error: Internal server error" });
+=======
+<<<<<<< HEAD
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
+<<<<<<< HEAD
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
   ],
@@ -163,7 +183,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   "timestamp": "2025-09-07T10:14:30.085Z",
   "vulnerabilities": [],
   "recommendations": [
+<<<<<<< HEAD
   "recommendations": [
+=======
+<<<<<<< HEAD
+=======
+  "recommendations": [
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     {}
     {
       "type: file_permissions",
@@ -182,13 +209,52 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     securityScore": 90,
     "status: good"
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "priority": "high",
+      "category": "dependencies",
+      "message": "Update dependencies with known vulnerabilities",
+      "action": "Run npm audit fix to automatically fix vulnerabilities"
+    },
+    {
+      "priority": "high",
+      "category": "code_security",
+      "message": "Address code security issues",
+      "action": "Review and fix dangerous code patterns identified in the audit"
+    },
+    {
+      "priority": "medium",
+      "category": "environment",
+      "message": "Secure environment variables",
+      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
+    },
+    {
+      "priority": "low",
+      "category": "permissions",
+      "message": "Review file permissions",
+      "action": "Consider restricting file permissions for sensitive files"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
   ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
   "securityIssues": [
     {
       "file": "/workspace/src/utils/chunkErrorHandler.ts",
@@ -477,6 +543,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
   ],
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   "summary": {
     "totalVulnerabilities": 0,
     "totalSecurityIssues": 17,
@@ -488,7 +558,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error(Error:", error);
     return res.status(500).json({ error: "Internal server error });
   }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   } catch (error) {
     console.error(Error:", error);
     return res.status(500).json({ error: "Internal server error });
@@ -504,8 +581,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   "auditReportVersion": 2,
   "vulnerabilities": {},
   "metadata": {
@@ -516,6 +602,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "high": 0,
       "critical": 0,
       "total": 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
   auditReportVersion": 2,
   "vulnerabilities: {},
   metadata": {
@@ -526,6 +617,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "high: 0,
       critical": 0,
       "total: 0
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     },
     dependencies": {
       "prod: 253,
@@ -535,6 +630,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "peerOptional: 0,
       total": 1090
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+
+
+  "timestamp": "2025-09-06T00:32:21.706Z",
+  "vulnerabilities": 11,
+  "recommendations": [
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
 <<<<<<< HEAD
 }
@@ -554,3 +663,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

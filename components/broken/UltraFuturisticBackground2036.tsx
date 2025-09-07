@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+  return (<div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot    />
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -299,17 +304,24 @@ if ( {) {
   return (
     <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
         style={{ display: 'block' ,}
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
+interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
+  intensity?: 'low' | 'medium' | 'high';
+=======
 =======
 <<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export default function UltraFuturisticBackground2036({variant = 'default';
   intensity = 'medium';
@@ -531,6 +543,11 @@ export default function UltraFuturisticBackground2036({variant = 'default';
 <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {/* Grid overlay for cyber variant */}
 <<<<<<< HEAD
+        {variant === 'cyber && (
+          <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
+        )}
+=======
+<<<<<<< HEAD
         {variant === 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
         )}
@@ -591,6 +608,7 @@ export default UltraFuturisticBackground2036;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {/* Quantum field lines */}
 {variant === quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -629,6 +647,9 @@ export default UltraFuturisticBackground2036;
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 style={{{/* AI neural network overlay */}
 {variant === 'ai' && (<div className=&quot;absolute inset - 0&quot    />
 }
@@ -641,11 +662,17 @@ export default UltraFuturisticBackground2036;
                  />))}
           </div>,
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
       </div>;
 export default UltraFuturisticBackground2036;
 =======
       </div>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
                 style={{
 <<<<<<< HEAD
@@ -836,3 +863,7 @@ export default UltraFuturisticBackground2036;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

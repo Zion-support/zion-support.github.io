@@ -1,6 +1,23 @@
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';'
+import { useRouter  } from 'next/router';'
+import EnhancedLayout from '../../components/layout/EnhancedLayout';'
+import type { GrantApplication } from '../../types/grants';'
+
+export default function GrantDetailPage() {
+  }
+  const router = null;
+
+  const router = useRouter();
+  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
+  const router = useRouter();
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 =======
@@ -26,10 +43,28 @@ export default function GrantDetailPage() {
   const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const { id } = router.query as { id: string }
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const [loading, setLoading] = useState(true);
+
+const [updateContent, setUpdateContent] = useState('');'
+
+  useEffect(() => {
+;
+    }
+    if (!id) return;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 const [item, setItem] = useState<GrantApplication | null    />(null);
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -42,10 +77,37 @@ const [updateContent, setUpdateContent] = useState('');
 ;
     if (!id) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     setLoading(true);
     if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+fetch(`/api/grants/${id}`)`      .then(r => { return r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false)); }
+  }, [id]);
+
+const addUpdate = async () => {
+    }
+    if (!id || !updateContent.trim());
+  return;
+
+const resp = await fetch(`/api/grants/${id}/updates`, {`      }
+      "method": 'POST','
+      "headers": { 'Content-Type': 'application/json','
+},
+      "body": JSON.stringify({ "content": updateContent
+})
+    });
+      const u = await resp.json();
+=======
+>>>>>>> origin/resolved-merge-conflicts
     if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
@@ -80,11 +142,24 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
     });
 
 const u = await resp.json();
+<<<<<<< HEAD
       setItem(prev =>
         prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev;
       );
 <<<<<<< HEAD
 
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      setItem(prev =>
+        prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev;
+      );
+<<<<<<< HEAD
+      setUpdateContent('');'
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
   const router = useRouter()const { id } = router && router.query as { id: string }const [item, setItem] = useState<GrantApplication | null>(null)export default function GrantDetailPage() {const router  = useRouter()import { useEffect, useState   } from react';
 import { useRouter   } from 'next/router;
@@ -94,12 +169,22 @@ export default function GrantDetailPage() {const router  = null;const [item, set
     setLoading(true)if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))if (!id || !updateContent.trim()) return;if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))if (!id || !updateContent.trim()) return;fetch(`/api/grants/${id}`).then(r => r.json()).then(d => setItem(d.record)).finally(() => setLoading(false))}, [id])const addUpdate = async () => {if (!id || !updateContent.trim()) return;
 const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST,headers: { Content-Type': 'application/json },body: JSON.stringify({ content: updateContent })})const u = await resp.json()setItem(prev =>;
         prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      )setUpdateContent('')}
+=======
+>>>>>>> origin/resolved-merge-conflicts
       )setUpdateContent(')}
 =======
       setUpdateContent('');
     }
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   if (loading)return (<EnhancedLayout    />;
         <div    />Loading...</div>;
@@ -209,6 +294,15 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
         <div>Not found</div>;
       </EnhancedLayout>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+return (;
+    <EnhancedLayout>
+      <div className='flex items-center justify-between mb-4'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return (
 <<<<<<< HEAD
     <EnhancedLayout />
@@ -299,6 +393,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <aside className="space-y-4">
 =======
       <div className="flex items-center justify-between mb-4>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div>
           <h1 className='text-2xl font-semibold'>{item.projectName}</h1>'
           <div className='text-sm text-gray-600 "dark": text-gray-400'>'
@@ -308,6 +406,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {item.program === 'incubator' ? Incubator : 'Grant'}
     )return (<EnhancedLayout>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className='flex items-center justify-between mb-4'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <div className=flex items-center justify-between mb-4>;
 =======
 <<<<<<< HEAD
@@ -406,17 +510,32 @@ if (
     <EnhancedLayout>;
       <div className='flex items-center justify-between mb-4'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div>;
           <h1 className='text-2xl font-semibold'>{item.projectName}</h1>;
           <div className=text-sm text-gray-600 dark:text-gray-400>;
             {item.sector |'General'} • {item.region |Global} •{' '}{item.program === incubator ? 'Incubator' : Grant}
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>;'
         <div className='flex gap - 2 items - center'>;'
           {item.program === 'incubator' && (
           )}'
           {item && item.status === 'Approved' && (;'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
         </div>;
         <div className='flex gap-2 items-center'>;
@@ -431,10 +550,33 @@ if (
           )}
           {item && item.status === 'Approved' && (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
               Grant Winner;
             </span>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      <a'
+                        className='text-blue-600'
+                        href={l}'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                       <a'
 =======
@@ -607,11 +749,20 @@ export default function GrantDetailPage() {;
 >>>>>>> origin/chore/fix-lint-and-merge
                         rel='noreferrer'
                           />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
                         target='_blank''
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
@@ -719,6 +870,10 @@ export default function GrantDetailPage() {;
 <<<<<<< HEAD
                         rel='noreferrer'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                         {l}
                       </a>;
                     </li>;
@@ -726,6 +881,63 @@ export default function GrantDetailPage() {;
                 </ul>;
               </div>;
             )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </section>;
+<section className='border rounded p-4 bg-white/70 "dark":bg-black/40'>;'
+            <h2 className='font-medium mb-2'>Updates</h2>;'
+            <div className='space-y-3'>;'
+              {(item.updates |[]).slice().reverse().map(u => (<div key={u.id} className='text-sm'>;'
+                    <div className='text-xs text-gray-500'>;'
+                      {new Date(u.createdAt).toLocaleString()}
+                    </div>;
+                    <div className='whitespace-pre-wrap'>{u.content}</div>;'
+                  </div>;
+                ))}
+              {(!item.updates |item.updates.length === 0) && (<div className='text-sm text-gray-600'>No updates yet.</div>;'
+              )}
+              <div className='pt-2'>;'
+                <textarea;
+                  className='w-full border rounded p-2';'
+                  rows={3}
+                  placeholder='Post an update or progress note';'
+                  value={updateContent}
+                  onChange={e => { return setUpdateContent(e.target.value)}
+                />; }
+                <button;
+                  onClick={addUpdate}
+          <h1 className="text-2xl font-semibold">{item.projectName}</h1>
+          <div className="text-sm text-gray-600 dark:text-gray-400">{item.sector || 'General'} • {item.region || 'Global'} • {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+        </div>
+        <div className="flex gap-2 items-center">
+          {item.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}
+          {item.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}
+          <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{item.status}</span>
+        </div>
+
+                  className='mt-2 px-3 py-2 bg-gray-900 text-white rounded''
+                >
+                  Add Update
+                </button>
+              </div>
+          </section>
+        </div>
+
+<aside className='space-y-4'>'
+          <section className='border rounded p-4 bg-white/70 "dark": bg-black/40'>'
+            <h3 className='font-medium mb-2'>Milestones</h3>'
+            <ul className='space-y-2'>'
+              {(item.milestones |[]).map(m => (
+                <li key={m.id} className='text-sm flex items-start gap-2'>'
+                  <span,
+className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'},'
+} />;
+                  <div>;
+                    <div className='font-medium'>{m && m.title}</div>;'
+                    {m && m.description && (<div className='text-gray-600'>{m && m.description}</div>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           </section>;
 <section className='border rounded p-4 bg-white/70 dark:bg-black/40'    />;
@@ -824,11 +1036,24 @@ export default function GrantDetailPage() {;
                     <div className='font-medium'>{m && m.title}</div>;
                     {m && m.description && (;'
                       <div className='text-gray-600'>{m && m.description}</div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     )}
                     {m && m.trancheAmount ? (<div className='text-xs text-gray-600'>;
                         Tranche: {m && m.trancheAmount} {m && m.trancheCurrency}
                       </div>;
                     ) : null}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    {m && m.dueDate && (<div className='text-xs text-gray-600'>;'
+                        }
+                        "Due": {new Date(m && m.dueDate).toLocaleDateString(
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
                     {m && m.dueDate && (;'
                       <div className='text-xs text-gray-600'>;
                         Due: {new Date(m && m.dueDate).toLocaleDateString()}
@@ -863,16 +1088,34 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
                         Due: {new Date(m && m.dueDate).toLocaleDateString(,}
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       </div>;
                     )}
                   </div>;
                 </li>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ))}<div className="font-medium">{m.title}</div>;
+        <aside className="space-y-4">
+          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+            <h3 className="font-medium mb-2">Milestones</h3>
+            <ul className="space-y-2">
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
               ))}<div className=font-medium">{m.title}</div>;
         <aside className="space-y-4>
           <section className=border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2>Milestones</h3>
             <ul className=space-y-2">
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               {(item.milestones || []).map((m) => (
                 <li key={m.id} className="text-sm flex items-start gap-2>
                   <span className={`mt-1 inline-block h-3 w-3 rounded-full ${m.completed ? bg-emerald-500 : 'bg-gray-400'}`} />
@@ -884,6 +1127,33 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
                   </div>
                 </li>
               ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <div className="font-medium">{m.title}</div>
+                    {m.description && <div className="text-gray-600">{m.description}</div>}
+                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
+                    {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
+                  </div>
+                </li>
+              ))}
+              {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
+            </ul>
+            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
+          </section>
+          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+            <h3 className="font-medium mb-2">Team</h3>
+            <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
+              {(!item.milestones || item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
+            </ul>
+            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased || 0}</div>
+          </section>
+
+          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+            <h3 className="font-medium mb-2">Team</h3>
+            <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
               ))}
 =======
 <aside className="space-y-4">
@@ -933,6 +1203,10 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
                     <div className="font-medium">{m.title}</div>"
                     {m.description && <div className="text-gray-600">{m.description}</div>}"
                     {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}"
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
                   </div>
                 </li>
@@ -945,6 +1219,13 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
             <h3 className=font-medium mb-2">Team</h3>"
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
               {(!item.milestones |item.milestones.length === 0) && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <div className='text-sm text-gray-600'>'
+                  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 
@@ -953,6 +1234,10 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
               {(!item.milestones |item.milestones.length === 0) && (
                 <div className='text-sm text-gray-600'    />
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   Milestones will appear here.
                 </div>}
 }
@@ -964,6 +1249,15 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
             </div>
           </section>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <section className='border rounded p-4 bg-white/70 "dark":bg-black/40'>'
+            <h3 className='font-medium mb-2'>Team</h3>'
+            <div className='text-sm whitespace-pre-wrap'>{item.teamInf,'
+}</div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'    />
@@ -972,10 +1266,19 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
 >>>>>>> origin/chore/fix-lint-and-merge
 }</div>
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </section>
         </aside>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 );
 }
@@ -988,6 +1291,10 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
               {(!item && item.milestones || item && item.milestones.length === 0) && (;
 );
     </EnhancedLayout>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 }
 }

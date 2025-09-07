@@ -128,7 +128,11 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
@@ -154,21 +158,33 @@ if ( {) {
           width={32}
           height={32}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         />;
       </Link>;
     );
 
+<<<<<<< HEAD
+=======
 =======
         />;
       </Link>;
     );
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   return (
     <Link href='/' className='flex items-center'>;
       <img
         src='/logos/zion-logo && logo.png'
+<<<<<<< HEAD
+        alt='Zion Logo'
+        className='h-8'
+        width={32}
+        height={32}
+=======
 <<<<<<< HEAD
         alt='Zion Logo'
         className='h-8'
@@ -276,3 +292,4 @@ export function Logo({ customLogo } LogoProps) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/header/Logo.tsx
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

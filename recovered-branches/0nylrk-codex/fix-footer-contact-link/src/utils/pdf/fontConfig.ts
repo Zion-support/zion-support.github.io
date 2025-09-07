@@ -1,4 +1,39 @@
 <<<<<<< HEAD
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+
+  italic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer;
+}'
+export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
+/**
+
+      case 'montserrat':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'open-sans':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'roboto':
+        doc && doc.setFont('helvetica');
+        break;
+      default: doc && doc.setFont('helvetica')
+    }
+  } catch (error) {
+
+    console && console.error('Error loading custom fonts:', error);
+
+    // Fall back to default font
+=======
+<<<<<<< HEAD
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
   regular: ArrayBuffer,
@@ -99,6 +134,7 @@ export interface FontConfig {;
 
     // Fall back to default font
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         doc.setFont('helvetica');
         break;'
@@ -111,11 +147,14 @@ export interface FontConfig {;
     // Fall back to default font;
 }'
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     doc && doc.setFont('helvetica')
 import {jsPDF} from 'jspdf';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface FontConfig {
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
@@ -154,6 +193,10 @@ if (return, ) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
 
+<<<<<<< HEAD
+    doc.setFont('helvetica');
+
+=======
 
     doc.set_font ('helvetica');
 
@@ -215,5 +258,6 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 }

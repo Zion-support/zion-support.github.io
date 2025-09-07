@@ -8,6 +8,13 @@ import { motion } from 'framer-motion';
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 =======
 
 <<<<<<< HEAD
@@ -55,6 +62,10 @@ import {
 import { motion } from 'framer-motion';
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;}
@@ -88,9 +99,18 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Award'
   CheckCircle;} from lucide-react;import {}
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   Phone,
   Mail,
   MapPin,
@@ -116,6 +136,11 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -471,10 +496,130 @@ import {;
   Award,;
   CheckCircle,;} from 'lucide-react';import { ;
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const contactInfo = null;
+    "services": [
+      {
+        }
+        "name": 'AI Consciousness Evolution''
+        "href": '/ai-consciousness-evolution-platform''
+
+     
+}
+      {"name": 'AI Emotional Intelligence';'
+        }
+        "href": '/ai-emotion-intelligence-platform';'
+      }
+      {"name": 'AI Creativity Orchestrator';'
+        }
+        "href": '/ai-creativity-orchestrator';'
+      }
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+  Rocket, Shield, Cpu, Target, Microscope, Users,
+  Facebook, Twitter, Linkedin, Instagram, Youtube,
+  Github, ArrowRight, Heart, Star, Award, CheckCircle
+} from 'lucide-react',
+
+const contactInfo = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const serviceCategories = $2;
+    services: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotion-intelligence-platform' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator' },
+      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' }
+    ]
+  },
+  {
+    title: '⚛️ Quantum & Emerging Tech',
+    services: [
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },
+      { name: 'Quantum Learning Accelerator', href: '/quantum-learning-accelerator' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
+    ]
+        href: '/ai-consciousness-evolution-platform'
+      }
+      {'
+        name: 'AI Emotional Intelligence''
+        href: '/ai-emotion-intelligence-platform'
+      }
+      {'
+        name: 'AI Creativity Orchestrator''
+        href: '/ai-creativity-orchestrator'
+      }
+      {
+        }
+        "name": 'Quantum Cloud Infrastructure','
+        "href": '/quantum-cloud-infrastructure','
+      }
+    ]
+  },
+  {
+    }
+    "title": '🧬 Biotech & DNA Computing','
+    "services": [
+      {
+        }
+        "name": 'DNA Computing Platform','
+        "href": '/biotech-dna-computing-platform','
+      },
+      {
+        }
+        "name": 'Personalized Nutrition','
+        "href": '/biotech-personalized-nutrition','
+      },
+      {
+        }
+        "name": 'Predictive Health Analytics','
+        "href": '/ai-predictive-health-analytics','
+      },
+        { "name": 'Research Automation', "href": '/advanced-research-automation','
+}
+
+    ]
+  },
+  {
+    }
+    "title": '🏙️ Enterprise IT Solutions','
+    "services": [
+        { "name": 'Autonomous DevOps', "href": '/autonomous-devops-platform','
+},
+
+{
+        }
+        "name": 'Autonomous IT Operations','
+        "href": '/autonomous-it-operations-center','
+      },
+      {
+        }
+        "name": 'AI Enterprise Security','
+        "href": '/ai-powered-enterprise-security','
+      },
+      {
+        }
+        "name": 'Intelligent Data Governance','
+        "href": '/intelligent-data-governance','
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -629,10 +774,78 @@ const service_categories = [;
       {
         name: 'Quantum Cloud Infrastructure'}
   href: '/quantum-cloud-infrastructure'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ]
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    "title": '🌌 Space & Metaverse Tech','
+    "services": [
+      {
+        }
+        "name": 'Space Mining Automation','
+        "href": '/space-mining-automation-platform','
+      },
+      {
+        }
+        "name": 'Metaverse Digital Reality','
+        "href": '/metaverse-digital-reality-platform','
+      },
+        { "name": 'Quantum Research Platform', "href": '/quantum-research-platform','
+},
+
+        { "name": 'AI Research Assistant', "href": '/ai-research-assistant','
+}
+
+    ]
+  },
+  {
+    }
+    "title": '🎯 2030 Innovative Micro SAAS','
+    "services": [
+      {
+        }
+        "name": 'AI Business Intelligence Suite 2030','
+        "href": '/ai-business-intelligence-suite-2030','
+      },
+      {
+        name: 'AI HR Management Suite 2030'
+      }
+    ]
+  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
+
+        }
+
+        "name": 'AI Customer Experience Platform 2030','
+        "href": '/ai-customer-experience-platform-2030','
+      },
+      {
+        }
+        "name": 'AI Marketing Automation Suite 2030','
+        "href": '/ai-marketing-automation-2030','
+      },
+      {
+        }
+        "name": 'AI HR Management Suite 2030','
+        "href": '/ai-hr-management-suite-2030','
+      }
+    ]
+  }
+];
+
+const quickLinks = [;
+    { "name": 'Home', "href": '/','
+=======
+>>>>>>> origin/resolved-merge-conflicts
     title: '🧬 Biotech & DNA Computing',
   services: [
       {
@@ -1070,12 +1283,40 @@ const social_links = [;
 
     { name: Partners'}
   href: '/partners}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
 
     { name: Support'}
   href: '/support}
 },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    { "name": 'Solutions', "href": '/solutions','
+},
+
+    { "name": 'Pricing', "href": '/pricing','
+},
+
+    { "name": 'Resources', "href": '/resources','
+},
+
+
+    { "name": 'Case Studies', "href": '/case-studies','
+},
+
+    { "name": 'Blog', "href": '/blog','
+},
+
+  { "name": 'Contact', "href": '/contact','
+}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   { name: Status'}
   href: '/status}
 =======
@@ -1184,6 +1425,10 @@ const companyInfo = [;
       </div>;
       <div className="relative z-10">;
   { name: 'Status, href: /status' }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ];
 
   { name: 'Home, href: /' },
@@ -1230,6 +1475,38 @@ const companyInfo = [;
   'ISO 27001 Certified,SOC 2 Type II Compliant','GDPR Compliant,HIPAA Compliant','PCI DSS Level 1,FedRAMP Authorized'];export default function UltraFuturisticFooter2030() {return (<footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden>;
 export default function UltraFuturisticFooter2030() {return (<footer className=bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>;
       {/* Animated Background */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className='absolute inset-0'>;'
+        <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>;'
+        <div className='absolute top-0 left-0 w-full h-full'>;'
+          <div className='absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse'></div>;'
+          <div className='absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping'></div>;'
+          <div className='absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce'></div>;'
+          <div className='absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse'></div>;'
+        </div>;
+      <div className='relative z-10'>;'
+        {/* Main Footer Content */}
+        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-16'>;'
+          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8'>;'
+            {/* Company Info */}
+            <div className='space-y-6'>;'
+              <div className='flex items-center space-x-3'>;'
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center'>;'
+                  <Zap className='w-6 h-6 text-white' />;'
+                </div>;
+                <div>;
+                  <h3 className='text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent'>;'
+                    Zion Tech Group;
+                  </h3>;
+                  <p className='text-sm text-gray-400'>;'
+                    2030 Future Technology;
+                  </p>;
+                </div>;
+              <p className='text-gray-300 text-sm leading-relaxed'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
   'ISO 27001 Certified',
@@ -1409,6 +1686,10 @@ export default function UltraFuturisticFooter2030() {
 =======
               <p className='text-gray-300 text-sm leading-relaxed'    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 Pioneering the future with cutting-edge AI, quantum computing;
 =======
               <p className="text-gray-300 text-sm leading-relaxed">;
@@ -1447,6 +1728,17 @@ export default function UltraFuturisticFooter2030() {
                 innovative solutions and intelligent automation.;
               </p>;
               {/* Contact Info */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div className='space-y-3'>;'
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>;'
+                  <Phone className='w-4 h-4 text-purple-400' />;'
+                  <a;
+                    href={`"tel": ${contactInfo.mobile}`}`                    className='"hover":text-purple-400 transition-colors'>'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <div className='space-y-3'    />;
                 <div className='flex items-center space-x-3 text-sm text-gray-300'    />;
                   <Phone className='w-4 h-4 text-purple-400'    />;
@@ -1461,6 +1753,10 @@ export default function UltraFuturisticFooter2030() {
 
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     {contactInfo.mobile}
 
 <<<<<<< HEAD
@@ -1468,8 +1764,17 @@ export default function UltraFuturisticFooter2030() {
                     {contactInfo.website.replace('https://, ')}
 
 
+<<<<<<< HEAD
       <div className=relative z-10>
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+      <div className="relative z-10">
+=======
+      <div className=relative z-10>
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
@@ -1500,6 +1805,32 @@ export default function UltraFuturisticFooter2030() {
                     {contactInfo.mobile}
                   </a>
                 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>'
+                  <Mail className='w-4 h-4 text-purple-400' />'
+                  <a,
+href={`"mailto":${contactInfo.email}`}`
+                    className='"hover":text-purple-400 transition-colors''
+                  >
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>'
+                  <MapPin className='w-4 h-4 text-purple-400' />'
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>'
+                  <Globe className='w-4 h-4 text-purple-400' />'
+                  <a,
+href={contactInfo.websit
+}
+                    className='"hover":text-purple-400 transition-colors''
+                  >
+                    {contactInfo.website.replace('"https"://', '')}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <Mail className="w-4 h-4 text-purple-400" />
                   <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
@@ -1555,9 +1886,26 @@ href={contactInfo.websit}
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
             {/* Service Categories */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='space-y-6'>'
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'
+                <Rocket className='w-5 h-5 text-purple-400' />'
+                <span>Our Services</span>
+            {/* Service Categories */}
+<div className='space-y-6' />
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2' />
+                <Rocket className='w-5 h-5 text-purple-400' />
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Rocket className="w-5 h-5 text-purple-400" />
@@ -1629,6 +1977,10 @@ export default function UltraFuturisticFooter2030() {
 <div className='space-y-6 />
               <h4 className=text-lg font-semibold text-white flex items-center space-x-2' />
                 <Rocket className='w-5 h-5 text-purple-400 />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Our Services</span>
               </h4>'
@@ -1638,6 +1990,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h5 className='text-sm font-medium text-purple-300'>
                       {category.title}
                     </h5>'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              </h4>
+              <div className='grid grid-cols-1 gap-4'>'
+                {serviceCategories.slice(0, 3).map((category, index) => (
+                  <div key={index} className='space-y-2'>'
+                    <h5 className='text-sm font-medium text-purple-300'>'
+                      {category.title}
+                    </h5>
+
+                    <div className='space-y-1'>'
+                      {category.services.map((service, serviceIndex) => (
+                        <Link
+}
+key={serviceIndex}
+                          href={service.href}
+className='block text-xs text-gray-400 "hover": text-purple-300 transition-colors'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
             {/* Service Categories */}
@@ -1784,6 +2156,10 @@ key={serviceIndex}
                           href={service.href}
 className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'    />
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> merged-prs-20250907-203621
                           {service.name}
@@ -1805,6 +2181,13 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
                         >
                           {service.name}
                         </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      ))}
+                    </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1820,6 +2203,10 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
                   </div>;
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 ))}
 
 <<<<<<< HEAD
@@ -1857,6 +2244,26 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
             </div>
 
             {/* Quick Links */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<div className='space-y-6'>'
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'
+                <Target className='w-5 h-5 text-cyan-400' />'
+                <span>Quick Links</span>
+              </h4>
+              <div className='space-y-2'>'
+                {quickLinks.map((link, index) => (
+                  <Link
+}
+key={index}
+                    href={link.href}
+className='block text-sm text-gray-400 "hover": text-cyan-300 transition-colors flex items-center space-x-2 group''
+                  >
+                    <ArrowRight className='w-3 h-3 group-"hover":translate-x-1 transition-transform' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
@@ -1901,6 +2308,10 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
 className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex items-center space-x-2 group"
                   >
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     <span>{link.name}</span>
                   </Link>
                 ))}
@@ -1912,6 +2323,13 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               <div className='space-y-2'>;
                 <h5 className='text-sm font-medium text-cyan-300'>Company</h5>                {companyInfo && companyInfo.map((link, index) => (;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='space-y-2'>'
+                <h5 className='text-sm font-medium text-cyan-300'>Company</h5>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link
                     key={index}
@@ -1933,6 +2351,10 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="space-y-2">
                 <h5 className="text-sm font-medium text-cyan-300">Company</h5>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {companyInfo.map((link, index) => (
                   <Link
                     key={index}
@@ -1957,6 +2379,17 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                   <Link;}
 key={index}
                     href={link.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+className='block text-xs text-gray-400 "hover": text-cyan-300 transition-colors''
+                  >
+                    {link.name}
+                  </Link>
+                )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors flex items-center space-x-2 group'
                       />
                     <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform'    />
@@ -1988,6 +2421,10 @@ className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors fl
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <span>Connect & Trust</span>
               </h4>
             {/* Quick Links */}))}
@@ -2023,6 +2460,13 @@ className=block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex
                     key={index}
                     href={link.href}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    {link.nam
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 
@@ -2076,6 +2520,10 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'  
                     {link.nam}
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   </Link>;
                 ))}
                 <span    />Connect & Trust</span>;
@@ -2083,7 +2531,18 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'  
               </div>;
             </div>;{/* Social & Certifications */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            <div className='space-y-6'>;'
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;'
+                <Users className='w-5 h-5 text-green-400' />;'
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <span>Connect & Trust</span>;
 =======
             <div className='space-y-6'    />;
@@ -2095,6 +2554,18 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'  
               </div>;
             </div>;
             {/* Social & Certifications */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                ))}
+              </div>
+
+<div className='space-y-6'>'
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'
+                <Users className='w-5 h-5 text-green-400' />'
+                <span>Connect & Trust</span>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
@@ -2129,6 +2600,10 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'  
 <<<<<<< HEAD
                 <Users className=w-5 h-5 text-green-400' />
                 <span />Connect & Trust</span>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </h4>
 
                 <h5 className='text-sm font-medium text-green-300>;
@@ -2165,6 +2640,27 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'  
                 <div className='flex flex-wrap gap-2'>'
                   {socialLinks.map((social, index) => (
                     <a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+key={index}
+                      href={social.href}
+target='_blank''
+                      rel='noopener noreferrer''
+                      className='w-10 h-10 bg-gray-800/50 "hover": bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 "hover":text-purple-400 transition-all duration-200 "hover":shadow-lg "hover":shadow-cyan-400/40''
+                    >
+                      <social.icon className='w-5 h-5' />'
+                    </a>
+                  ))}
+                </div>
+              {/* Certifications *
+}
+<div className='space-y-3'>'
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>'
+                  <Award className='w-4 h-4' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
                       key={index}
             {/* Social & Certifications */}'
             <div className='space-y-6'>;'
@@ -2485,6 +2981,10 @@ target='_blank'
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />
                   <Award className='w-4 h-4' />
                   <Award className='w-4 h-4 />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                   <span>Certifications</span>
                 </h5>
@@ -2544,6 +3044,13 @@ target='_blank';
                       <span>{cert}</span>;
 <<<<<<< HEAD
                     </div>;"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div className="space-y-3">"
+                <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">"
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <div className=space-y-3>"
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2>
 =======
@@ -2559,6 +3066,10 @@ target='_blank';
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <Award className="w-4 h-4" />
                   <span>Certifications</span>
                 </h5>
@@ -2576,10 +3087,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 '
                       target='_blank';'
                       rel='noopener noreferrer';'
@@ -2591,7 +3111,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;'
                       <social.icon className='w - 5 h - 5' />))}
                 </div>;
+<<<<<<< HEAD
               </div>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               {/* Certifications */}'
               <div className='space - y-3'>;'
                 <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;'
@@ -2617,6 +3144,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
               {/* Certifications */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='space-y-3'>;'
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;'
+                  <Award className='w-4 h-4' />;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> merged-prs-20250907-203621
 
@@ -2646,6 +3181,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className=space-y-3">;
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2>;
                   <Award className=w-4 h-4" />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <span>Certifications</span>;
                 </h5>;
                 <div className="grid grid-cols-1 gap-2>;
@@ -2657,6 +3196,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{cert}</span>;
                     </div>;
                   ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </div>;
+                      target='_blank';'
+                      rel='noopener noreferrer';'
+                      className='w - 10 h - 10 bg - gray - 800 / 50 "hover":bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 "hover":text - purple - 400 transition - all duration - 200 "hover":shadow - lg "hover":shadow - cyan - 400 / 40'>'
+
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";"
+                      rel="noopener noreferrer";"
+                      className="w - 10 h - 10 bg - gray - 800 / 50 "hover": bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 "hover":text - purple - 400 transition - all duration - 200 "hover":shadow - lg "hover":shadow - cyan - 400 / 40">"
+
+                      <social.icon className="w - 5 h - 5" />),"
+}
+                </div>;
+              {/* Certifications */}
+              <div className='space - y-3'>;'
+                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;'
+                  <Award className='w - 4 h - 4' />;'
+                  <span > Certifications</span>;
+                </h5>;
+                <div className='grid grid - cols - 1 gap - 2'>;'
+                  {certifications.map ((cert, index) => (<div;
+                      }
+                      key={index}
+                      className='flex items - center space - x-2 text - xs text - gray - 400'>'
+
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;'
+                </h5>;
+                <div className="grid grid - cols - 1 gap - 2">;"
+                  {certifications.map ((cert, index) => (<div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;"
+                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;"
+                      <span>{cert}</span>;
+                    </div>))}</div>;
+              </div>;
+        {/* Bottom Bar */}
+<div className='border-t border-purple-500/20'>;'
+          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>;'
+            <div className='flex flex-col "md":flex-row items-center justify-between space-y-4 "md":space-y-0'>;'
+                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>;
+                <Link;
+                  href='/privacy';'
+                  className='"hover":text-purple-400 transition-colors'>;'
+                  Privacy Policy;
+                </Link>;
+                      <span>{cert}</span>
+                    </div>
+                  ))}
+                </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
               {/* Certifications *}
 }
@@ -2953,6 +3543,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </footer>
 <<<<<<< HEAD
   )
@@ -2964,6 +3558,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <Link;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  href='/terms';
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   href=/terms;
 =======
 =======
@@ -2974,6 +3574,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               <div className='flex items-center space-x-4 text-sm text-gray-400'>              </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <div className="flex items-center space-x-4 text-sm text-gray-400">;
                 <div className=flex items-center space-x-2>;
                   <Heart className="w-4 h-4 text-red-400" />;
@@ -3026,6 +3630,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </footer>;
+                </div>;
+  )}}
+}
+  )}
+  );
+}
+;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               </div>;
             </div>;
           </div>;
@@ -3053,12 +3670,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   );
 }
     </footer>);
 }
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> origin/chore/fix-lint-and-merge
 

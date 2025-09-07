@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
@@ -30,6 +39,7 @@ export function TalentProfile({
   // Create proper availability object from talent profile
   const availability: Availability;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button','
 import { HireNowCTA } from './HireNowCTA','
@@ -41,6 +51,35 @@ import { ProfileAvailability } from './ProfileAvailability','
 import { ProfileContact } from './ProfileContact','
 import { ProfileRatings } from './ProfileRatings','
 import { TalentProfile as TalentProfileType } from '@/types/talent',
+=======
+import { Handshake, MessageSquare, Star } from 'lucide-react
+import { Button } from "@/components/ui/button,
+import { HireNowCTA } from "./HireNowCTA",
+import { ProfileHero } from ./ProfileHero","
+import { ProfileSkills } from ./ProfileSkills,"
+import { ProfileExperience } from "./ProfileExperience,
+import { ProfileProjects } from "./ProfileProjects",
+import { ProfileAvailability } from ./ProfileAvailability","
+import { ProfileContact } from ./ProfileContact,"
+import { ProfileRatings } from "./ProfileRatings,
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Handshake, MessageSquare, Star } from 'lucide-react'
+import { Button } from "@/components/ui/button","
+import { HireNowCTA } from "./HireNowCTA","
+import { ProfileHero } from "./ProfileHero","
+import { ProfileSkills } from "./ProfileSkills","
+import { ProfileExperience } from "./ProfileExperience","
+import { ProfileProjects } from "./ProfileProjects","
+import { ProfileAvailability } from "./ProfileAvailability","
+import { ProfileContact } from "./ProfileContact","
+import { ProfileRatings } from "./ProfileRatings","
+>>>>>>> origin/chore/fix-lint-and-merge
+import { TalentProfile as TalentProfileType } from "@/types/talent",
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
@@ -110,7 +149,18 @@ export function TalentProfile({
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
+<<<<<<< HEAD
     <div className='container mx-auto px-4 py-8'>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className='container mx-auto px-4 py-8'>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className='container mx-auto px-4 py-8>
+>>>>>>> origin/resolved-merge-conflicts
 
 import { Handshake, MessageSquare, Star  } from 'lucide-react';
 import { Button } from '@/components/ui/button',import { HireNowCTA } from './HireNowCTA',import { ProfileHero } from './ProfileHero',import { ProfileSkills } from './ProfileSkills',import { ProfileExperience } from './ProfileExperience',import { ProfileProjects } from './ProfileProjects',import { ProfileAvailability } from './ProfileAvailability',import { ProfileContact } from './ProfileContact',import { ProfileRatings } from './ProfileRatings',import { TalentProfile as TalentProfileType } from '@/types/talent',import React from 'react';
@@ -145,7 +195,18 @@ export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: T
   onRequestHire: () => void;
   onMessageTalent?: () => void;
 }export function TalentProfile() {const { isAuthenticated } = useAuth()// Create proper availability object from talent profile;
+<<<<<<< HEAD
   const availability: Availability;return (<div className='container mx-auto px-4 py-8'>;
+=======
+  const availability: Availability;return (<div className=container mx-auto px-4 py-8'>;
+=======
+    <div className='container mx-auto px-4 py-8'>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -164,15 +225,37 @@ export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: T
           <ProfileContact;
             email={profile && profile.user_id}
             profileName={profile && profile.full_name}'
+<<<<<<< HEAD
             profileType='talent'          />;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            profileType='talent'          />;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            profileType=talent          />;
+>>>>>>> origin/resolved-merge-conflicts
     status:;
       profile.availability_type === 'full_time';
         ? 'available';
         : profile.availability_type === 'part_time';
           ? 'limited';
           : 'unavailable',
+<<<<<<< HEAD
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`,
   }
+=======
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`}
+=======
+            profileType='talent'          />;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
 
         <div className='lg:col-span-2 space-y-8'>;
@@ -262,6 +345,12 @@ export function TalentProfile() { return null; }
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         avatar_url={profile.profile_picture_url}
         profile_type='talent';
         rating={profile.average_rating}
@@ -313,6 +402,12 @@ import React from 'react',import { useAuth } from '@/hooks/useAuth',import { Ava
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />;{/* Main content area */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         profileType='talent'
         rating={profile.average_rating}
@@ -502,6 +597,15 @@ export function TalentProfile({}
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>
       </div>
     </div>
@@ -511,13 +615,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           )}</div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 }
 

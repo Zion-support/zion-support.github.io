@@ -15,6 +15,7 @@ import { formatDistanceToNow } from 'date-fns',
 import Link from 'next/link',
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 
+<<<<<<< HEAD
 import React from 'react',
 import { formatDistanceToNow } from 'date-fns',
 import Link from 'next/link',
@@ -27,6 +28,28 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 import { Button } from '@/components/ui/button',
 import { cn } from '@/lib/utils',
 import { ForumPost } from '@/types/community',
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community",
+>>>>>>> origin/resolved-merge-conflicts
 import { logInfo } from '@/utils/productionLogger',
 
       'transition-shadow hover: shadow-md',
@@ -171,4 +194,8 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   );
 };
 export default PostCard;
+<<<<<<< HEAD
 ''
+=======
+'"
+>>>>>>> origin/resolved-merge-conflicts

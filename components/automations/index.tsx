@@ -118,6 +118,22 @@ export default function AutomationsPage() {
 
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default function AutomationsPage() {
+  return (
+    <main className="mx-auto max-w-5xl px-4 py-12">
+      <h1 className="text-2xl font-bold text-gray-900">Autonomous Cloud Automations</h1>
+      <p className="mt-2 text-gray-600">
+        These automations run entirely in the cloud, orchestrate tasks intelligently, and sync changes back to the repository.
+      </p>
+
+
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> origin/resolved-merge-conflicts
 
 export default function AutomationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -142,9 +158,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               View Live Runs
             </a>
           </div>
@@ -153,6 +179,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>"
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>"
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
         <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>
           <h2 className='text-lg font-semibold text-gray-900'>
             AI Content Curator
@@ -175,6 +207,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <p className="mt-2 text-sm text-gray-600">
             Optionally uses AI to produce small, useful artifacts (e.g., growth experiments), committed into the repository.
           </p>"
@@ -184,6 +220,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
               className='rounded-md border border-gray-200 px-3 py-1 && 1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'>              href="https://github && github.com/Zion-Holdings/zion && zion.app/actions";
               target="_blank";
@@ -222,12 +263,22 @@ import Link from 'next / link';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               View Live Runs;
             </a>;
           </div>;
         </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
               rel='noreferrer
 
@@ -256,6 +307,12 @@ import Link from 'next / link';
               View Live Runs
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from 'react';
 import Link from 'next/link';
@@ -290,8 +347,16 @@ href='https://github.com/Zion-Holdings/zion.app/actions'
   );
 }
 
+<<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'    />
@@ -322,6 +387,11 @@ experiments), committed into the repository.
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
@@ -385,3 +455,7 @@ experiments), committed into the repository.
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

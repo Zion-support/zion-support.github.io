@@ -11,6 +11,58 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function GrantsAdminPage() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  const [token, setToken] = useState('');'
+
+const headers = useMemo(;
+    () =>
+      token
+        ? {
+            }
+            "Authorization": `Bearer ${token}``            'Content-Type': 'application/json''
+          }
+        : { 'Content-Type': 'application/json','
+}
+    [token]
+  );
+
+const load = () => {
+    }
+    fetch('/api/grants?status=Submitted')'
+      .then(r => { return r.json())
+      .then(d => setItems(d.items |[])); }
+  }
+  useEffect(() => {
+
+    }
+
+    load();
+  }, []);
+  const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
+    await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
+    load()
+  const setStatus = async (;
+    id: string,;
+    status: 'Under Review' | 'Approved' | 'Rejected';
+  ) => {;
+    await fetch(`/api/grants/${id}/status`, {;
+
+const setStatus = async (;
+    "id": string,
+"status": 'Under Review' | 'Approved' | 'Rejected''
+  ) => {
+    }
+    await fetch(`/api/grants/${i,`}/status`, {`      }
+      "method": 'POST''
+      headers,
+"body": JSON.stringify({ status })
+   
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]),
   const [selected, setSelected] = useState<GrantApplication | null>(null),
@@ -238,9 +290,34 @@ body: JSON.stringify({ status })
       body: JSON && JSON.stringify({ status }),;
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     load()
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const saveMilestones = async () => {
+    }
+    if (!selected);
+  return;
+await fetch(`/api/grants/${selected.id}/milestones`, {`      }
+      "method": 'POST','
+      headers,
+      "body": JSON.stringify({ milestones
+})
+    });
+    alert('Milestones saved')'
+};
+  const markComplete = async (milestoneId: string) => {;
+    if (!selected) return;    await fetch(`/api/grants/${selected && selected.id}/milestones`, { method: 'POST', headers, body: JSON && JSON.stringify({ milestones }) }),;
+    alert('Milestones saved')
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 const saveMilestones = async () => {
     if (!selected);}
@@ -281,6 +358,10 @@ await fetch(`/api/grants/${selected.id}/milestones`, {
     alert('Milestones saved');
   };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;
     await fetch(;
@@ -289,6 +370,13 @@ await fetch(`/api/grants/${selected.id}/milestones`, {
     );
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    setSelected(r && r.record)
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     setSelected(r && r.record)
 };
 =======
@@ -296,6 +384,10 @@ await fetch(`/api/grants/${selected.id}/milestones`, {
   return (
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types / grants';
@@ -509,6 +601,32 @@ if (return) {}
     const r = await fetch (`/api / grants/${selected.id}`).then (coordinate_x => x.json ());
     set_selected (r.record);  }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const markComplete = async ("milestoneId": string) => {
+    }
+    if (!selected);
+  return;
+await fetch(
+      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,`      { "method": 'POST', headers }'
+    );
+
+const r = await fetch(`/api/grants/${selected.id}`).then(x => { return x.json()); }`    setSelected(r.record)
+};
+
+
+return (;
+    <EnhancedLayout>
+<h1 className = 'text-2xl font-semibold mb-4'>Grants Admin</h1>'
+ ;
+return (;
+    <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { "method": 'POST', headers });'
+const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());`    set_selected (r.record)
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -520,11 +638,40 @@ await fetch(}
       `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
       { method: 'POST', headers }
     );
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
     setSelected(r.record)
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <h1 className='text - 2xl font - semibold mb - 4'>Grants Admin</h1>;'
+      <div className='grid "md":grid - cols - 3 gap - 6'>;'
+        <div className='"md":col - span - 2'>;'
+          <div className='mb - 3 flex items - center gap - 2'>;'
+            <input;
+              className='border rounded p - 2';'
+              placeholder='Admin Token';'
+              value={token}
+              on_change={e => { return set_token (e.target.value)}
+            />; }
+          </div>;
+          <div className='grid gap - 3'>;'
+            {items.map (g => { return (<div; }
+                }
+                key={g.id}
+                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`}>`
+                <div className='flex items - center justify - between'>;'
+                  <div>;
+                    <div className='font - medium'>{g.project_name}</div>;'
+                    <div className='text - xs text - gray - 600'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   return (
     <EnhancedLayout    />
@@ -604,6 +751,10 @@ const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
               value={token}
               on_change={e => set_token (e.target.value)}
             />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                       {g.sector} • {g.region} • {g.program}
                     </div>;
@@ -629,9 +780,20 @@ const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
                     >;
                       Reject;
                     </button>;
+<<<<<<< HEAD
                     <button;
 
                       className=px - 2 py - 1 border rounded;
+=======
+<<<<<<< HEAD
+                    <button;'
+                      className='px - 2 py - 1 border rounded';
+=======
+                    <button;
+
+                      className=px - 2 py - 1 border rounded;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       on_click={() => set_selected (g)}
                     <button;
                       className='px - 2 py - 1 border rounded';
@@ -702,6 +864,13 @@ className='px-2 py-1 border rounded'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     >;
                       Milestones;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </button>;
+                  </div>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
                     </button>                  </div>;
                 </div>;
 <<<<<<< HEAD
@@ -787,6 +956,10 @@ className='px-2 py-1 border rounded'
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </div>))}                  <div className="flex gap-2">;
                     <button className="px-2 py-1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald-600 text-white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -799,7 +972,14 @@ className='px-2 py-1 border rounded'
                 No submitted applications.;
               </div>)}
           </div>;
+<<<<<<< HEAD
         </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div>;'
           <div className='border rounded p - 3'>;'
             <h2 className='font - medium mb - 2'>Milestone Planner</h2>;
@@ -843,7 +1023,14 @@ className='px-2 py-1 border rounded'
             {selected ? (
               <div className='space - y-2'>;
           </div>;
+<<<<<<< HEAD
         </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div>;
           <div className='border rounded p-3'>;
             <h2 className='font-medium mb-2'>Milestone Planner</h2>;
@@ -851,6 +1038,11 @@ className='px-2 py-1 border rounded'
                 {(milestones.length === 0;
                   ? selected.milestones || [];
                   : milestones).map ((m, idx) => (<div key={m.id || idx} className='border rounded p - 2'>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <div className='space - y-2'>;
                 {(milestones.length === 0;
                   ? selected.milestones || [];
@@ -901,6 +1093,10 @@ className='px-2 py-1 border rounded'
                         set_milestones (ms = > ;
   const copy = ms.length;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             ? [...ms];
 <<<<<<< HEAD
                             : [...(selected.milestones || [])];}
@@ -913,6 +1109,31 @@ className='px-2 py-1 border rounded'
                           return copy;
                         })}
                     />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <textarea;
+                      className='w - full border rounded p - 2 mb - 2';'
+                      placeholder='Description';'
+                      value={m.description || ''}'
+                      on_change={e =>;
+                        }
+                        set_milestones (ms = > ;
+  const copy = ms.length;
+                            ? [...ms];
+                            : [...(selected.milestones || [])];
+                          copy[idx] = {...copy[idx],"description": e.target.value}
+                          return copy;
+                        })}
+                    />;
+                    <div className='grid grid - cols - 2 gap - 2'>;'
+                      <input;
+                        className='border rounded p - 2';'
+                        placeholder='Due date (YYYY - MM - DD)';'
+                        value={m.due_date || ''}'
+                        on_change={e =>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -952,6 +1173,10 @@ className='px-2 py-1 border rounded'
                           copy[idx] = {}
                             ...copy[idx],
                             description: e.target.value,
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                           }
                           return copy;
                         });
@@ -990,6 +1215,27 @@ className='px-2 py-1 border rounded'
                             const copy = ms.length;
                               ? [...ms];
                               : [...(selected.milestones || [])];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            copy[idx] = {...copy[idx],"due_date": e.target.value}
+                            return copy;
+                          })}
+                      />;
+                      <input;
+                        className='border rounded p - 2';'
+                        placeholder='Tranche (amount)';'
+                        type='number';'
+                        value={m.tranche_amount || 0}
+                        on_change={e =>;
+                          }
+                          set_milestones (ms = > ;
+  const copy = ms.length;
+                              ? [...ms];
+                              : [...(selected.milestones || [])];
+                            copy[idx] = {...copy[idx],"tranche_amount": Number (e.target.value)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
                             copy[idx] = {}
                               ...copy[idx],
                               due_date: e.target.value,
@@ -1025,6 +1271,10 @@ className='px-2 py-1 border rounded'
                               : [...(selected.milestones || [])];}
 >>>>>>> origin/chore/fix-lint-and-merge
                             copy[idx] = {...copy[idx],due_date: e.target.value,}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             return copy;
                           })}
                       />;
@@ -1112,6 +1362,78 @@ className='px-2 py-1 border rounded'
                         Mark Complete;
                       </button>;
                     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  </div>))}'
+                <div className='flex gap - 2 mt - 2'>;
+                  <button;'
+                    Add Milestone;
+                  </button>;
+      <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2">
+          <div className="mb-3 flex items-center gap-2">
+            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
+          </div>
+          <div className="grid gap-3">
+            {items.map((g) => (
+              <div key={g.id} className={`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-medium">{g.projectName}</div>
+                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>
+                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
+                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
+                    <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
+                  </div>
+            ) : (
+              <div className='text-sm text-gray-600'>'
+                Select a grant to plan milestones.
+              </div>
+            ) : (
+              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
+            )}
+          </div>
+    </EnhancedLayout>
+                        ...(ms.length ? ms : selected.milestones || []),{id: `${Date.now ()}-${Math.random ()}`,title: '',tranche_amount: 0,tranche_currency: 'USDC',} as any,])}>;
+                    Add Milestone;
+                  </button>;
+        </div>;
+        <div>;
+          <div className="border rounded p-3">;
+            <h2 className="font-medium mb-2">Milestone Planner</h2>;
+            {selected ? (<div className="space-y-2">;
+                {(milestones.length === 0 ? (selected.milestones |[]) : milestones).map((m, idx) => (<div key={m.id |idx} className="border rounded p-2">;
+                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
+                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m.description |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
+                    <div className="grid grid-cols-2 gap-2">;
+                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m.dueDate |''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], dueDate: e.target.value }, return copy })} />;
+                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.trancheAmount |0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones |[])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e.target.value) }, return copy })} />;
+                    </div>;
+                    <div className="mt-2 flex items-center gap-2">;
+                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m.id!)} disabled={!m.id}>Mark Complete</button>;
+                    </div>;
+                ))}
+                <div className="flex gap-2 mt-2">;
+                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
+                </div>;
+                  >;
+                    Add Milestone;
+                  </button>;
+                  <button;
+                    className='px-2 py-1 bg-blue-600 text-white rounded';
+                    onClick={saveMilestones}
+                  >;
+                    Save Milestones;
+                  </button>;
+                </div>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
                   </div>))}'
@@ -1381,11 +1703,21 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ) : (<div className='text-sm text-gray-600'>;
                 Select a grant to plan milestones.;
               </div>;
             )}
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </EnhancedLayout>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       </div>;
     </EnhancedLayout>;
@@ -1393,12 +1725,23 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
                     onClick={saveMilestones}>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                     onClick={saveMilestones}>;
                     Save Milestones;
                   </button>;
                 </div>;
+<<<<<<< HEAD
               </div>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ) : (<div className='text-sm text-gray-600'>;
                 Select a grant to plan milestones.;
               </div>            )}          </div>;
@@ -1417,13 +1760,27 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
                     <div className='mt-2 flex items-center gap-2'>;
                       <button className='px-2 py-1 border rounded' onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
                     </div>;
+<<<<<<< HEAD
                   </div>;
+=======
+<<<<<<< HEAD
+=======
+                  </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 ))}
                 <div className='flex gap-2 mt-2'>;
                   <button className='px-2 py-1 border rounded' onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
                   <button className='px-2 py-1 bg-blue-600 text-white rounded' onClick={saveMilestones}>Save Milestones</button>;
                 </div>;
+<<<<<<< HEAD
               </div>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ) : (<div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
             )}
           </div>;
@@ -1431,8 +1788,17 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
       </div>;
     </EnhancedLayout>;
   ))}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+  );
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   );
 }

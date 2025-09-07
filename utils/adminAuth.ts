@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+// Stub admin auth utility - placeholder for missing functionality
+export const requireAdminAuth = $2;
+export const isAdmin = $2;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -296,3 +301,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const requireAdminAuth = $2;
 export const isAdmin = $2;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

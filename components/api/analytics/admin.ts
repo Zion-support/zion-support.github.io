@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { createServerClient } from '../../../utils/supabase/server';
+
+function mockIfEmpty<T>(data: T[] | null, fallback: T[]): T[] {
+  return data && data.length > 0 ? data : fallback;
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -85,9 +100,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const supabase = null;
   try {
+<<<<<<< HEAD
     const supabase = createServerClient();
 <<<<<<< HEAD
     
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    const supabase = createServerClient();
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+    const result = await Promise.allSettled([
+      supabase.from('users').select('id, role, country'),
+=======
+>>>>>>> origin/resolved-merge-conflicts
     // Replace with your actual tables/queries
 
 <<<<<<< HEAD
@@ -96,14 +122,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Fallback to mock if querying fails;
 const result = await Promise.allSettled([
 supabase.from('users').select('id, role, country'),
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       supabase.from('jobs').select('id, status, category'),
       supabase.from('quotes').select('id, status'),
       supabase.from('projects').select('id, status'),
       supabase.from('referrals').select('id, converted, source'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/chore/fix-lint-and-merge
     ]);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -137,6 +176,31 @@ supabase.from('users').select('id, role, country'),
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const users = usersR && usersR.status === 'fulfilled' && usersR.value.data
+      ? (usersR.value.data as any[])
+      : [];
+
+    const jobs = jobsR && jobsR.status === 'fulfilled' && jobsR.value.data
+      ? (jobsR.value.data as any[])
+      : [];
+
+    const quotes = quotesR && quotesR.status === 'fulfilled' && quotesR.value.data
+      ? (quotesR.value.data as any[])
+      : [];
+
+    const projects = projectsR && projectsR.status === 'fulfilled' && projectsR.value.data
+      ? (projectsR.value.data as any[])
+      : [];
+
+    const referrals = referralsR && referralsR.status === 'fulfilled' && referralsR.value.data
+      ? (referralsR.value.data as any[])
+      : [];
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
 
 <<<<<<< HEAD
@@ -146,6 +210,10 @@ const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: US }'
       { id: 2, role: 'talent, country: IN' }'
@@ -162,6 +230,24 @@ const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
       { id: 22, status: accepted }'
       { id: 23, status: 'sent }
     ]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    const projectsData = mockIfEmpty(projects, [
+      { id: 31, status: 'active' },
+      { id: 32, status: 'completed' },
+      { id: 33, status: 'active' },
+    ]);
+
+    const referralsData = mockIfEmpty(referrals, [
+      { id: 41, converted: true, source: 'linkedin' },
+      { id: 42, converted: false, source: 'twitter' },
+      { id: 43, converted: true, source: 'partner' },
+    ]);
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
     const projectsData = mockIfEmpty(projects, ['
       { id: 31, status: 'active' }'
       { id: 32, status: 'completed' }'
@@ -316,12 +402,37 @@ const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCoun
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
+    const activeProjects = projectsData.filter(p => p.status === 'active').length;
+
+    const categoryCounts: Record<string, number> = {};
+    jobsData.forEach(j => {
+      categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1;
+    });
+
+    const referralConversions = referralsData.filter(r => r.converted).length;
+
+    const geoCounts: Record<string, number> = {};
+    usersData.forEach(u => {
+      geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1;
+    });
+
+    res.status(200).json({
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
 =======
@@ -370,6 +481,10 @@ const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCoun
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
     res && res.status(200).json({
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       totals: {
         totalUsers,
         totalTalents,
@@ -380,11 +495,25 @@ const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCoun
         quotesAccepted,
         activeProjects,
       },
+<<<<<<< HEAD
       topCategories: Object && Object.entries(categoryCounts)
+=======
+<<<<<<< HEAD
+      topCategories: Object.entries(categoryCounts)
+=======
+      topCategories: Object && Object.entries(categoryCounts)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value })),
       referralConversions,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      geo: Object.entries(geoCounts).map(([country, value]) => ({
+=======
+>>>>>>> origin/resolved-merge-conflicts
       geo: Object && Object.entries(geoCounts).map(([country, value]) => ({
 import { createServerClient } from '../../../utils / supabase / server';
 ;
@@ -526,11 +655,22 @@ res.status (200).json ({
         .map (([label, value]) => ({ label, value })),
       referral_conversions,
       geo: Object.entries (geo_counts).map (([country, value]) => ({
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         label: country,
         value,
       })),
     });
   } catch (e: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    res.status(200).json({
+      totals: {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
     });
@@ -572,12 +712,37 @@ res.status (200).json ({
     res.status (200).json ({
       totals: {
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         totalUsers: 4,
         totalTalents: 2,
         totalClients: 2,
         jobsPosted: 1,
         jobsFilled: 2,
         quotesSent: 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        quotesAccepted: 1,
+        activeProjects: 2,
+      },
+      topCategories: [
+        { label: 'AI/ML', value: 2 },
+        { label: 'Design', value: 1 },
+      ],
+      referralConversions: 2,
+      geo: [
+        { label: 'US', value: 2 },
+        { label: 'IN', value: 1 },
+        { label: 'GB', value: 1 },
+      ],
+    });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
         quotesAccepted: 1,}
         activeProjects: 2,}
       },
@@ -630,3 +795,7 @@ res.status (200).json ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

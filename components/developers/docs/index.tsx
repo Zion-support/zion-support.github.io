@@ -1,6 +1,25 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+import path from 'path';'
+import fs from 'fs';'
+
+
+import DocsLayout from '../../../components/docs/DocsLayout';'
+import CodeBlock from '../../../components/docs/CodeBlock';'
+
+export type Section = any;
+  "id": string;
+
+  "title": string;
+  html?: string;
+  code?: { language?: string; "content": string
+}[];
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -11,8 +30,29 @@ import type { GetServerSideProps } from 'next';
 
 import path from 'path';
 import fs from 'fs';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+<<<<<<< HEAD
+export const "getServerSideProps": GetServerSideProps<PageProps>  = async () => {const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json')const raw = fs.readFileSync(contentPath, 'utf8';'
+  }
+  const docs = JSON.parse(raw) as DocsContent;
+  return { "props": { docs } }
+
+}
+
+export default function ApiDocsPage() {
+      }
+      nav={docs.sections.map(s => ({ "id": s.id, "title": s.title }))}
+    >
+      {docs.sections.map(section => ('
+        <section key={section.id} id={section.id} className='scroll-mt-24'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import path from 'path';
 import fs from 'fs';
 import DocsLayout from '../../../components / docs / DocsLayout';
@@ -295,6 +335,10 @@ export default function ApiDocsPage({ docs }: PageProps) {
 <<<<<<< HEAD
           {section.code && section.code.length > 0 && (
               ))};
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </div>;
           )}
         </section>;

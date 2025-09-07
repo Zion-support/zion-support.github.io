@@ -3,7 +3,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { WorkspaceHeader } from "./WorkspaceHeader";
 import { SharedInbox } from "./SharedInbox";
@@ -15,6 +18,8 @@ export interface Company {;
   id: string;
   name: string;
   logoUrl?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   theme?: {
@@ -59,6 +64,7 @@ export interface Company {
     textColor: string},
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   theme?: {
     primaryColor: string;
     backgroundColor: string;
@@ -74,8 +80,27 @@ import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
 
 <<<<<<< HEAD
+import React from "react",;
+import { WorkspaceHeader } from "./WorkspaceHeader",;
+import { SharedInbox } from "./SharedInbox",;
+import { TeamStats } from "./TeamStats",;
+import { QuickActions } from "./QuickActions",;
+
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
+
+export interface Company {
+  // TODO: Implement
+}
+  id: string,
+  name: string,
+  logoUrl?: string,
+  theme?: {
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     primaryColor: string;
     backgroundColor: string;
@@ -92,6 +117,12 @@ import { QuickActions } from "./QuickActions",
 interface CompanyDashboardProps {
   company: Company;
 }
+<<<<<<< HEAD
+
+    primaryColor: string,
+
+  },
+=======
 =======
 =======
 
@@ -147,6 +178,7 @@ interface CompanyDashboardProps {
     primaryColor: string,
 
   },
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   plan: string,
   teamSize: number,
   teamLimit: number,
@@ -167,6 +199,11 @@ export interface Company {;
 <<<<<<< HEAD
     primaryColor: string;
     backgroundColor: string;
+
+=======
+<<<<<<< HEAD
+    primaryColor: string;
+    backgroundColor: string;
 =======
     primaryColor: string,;
     backgroundColor: string,;
@@ -181,14 +218,19 @@ export interface Company {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   teamLimit: number;
 
   billingCycle: string;
   workspaceUrl: string;
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   company: Company;
 }
 
@@ -207,6 +249,12 @@ interface CompanyDashboardProps {
 
 ;
 interface CompanyDashboardProps {;
+<<<<<<< HEAD
+
+  company: Company;
+}
+
+=======
 =======
 <<<<<<< HEAD
 ;
@@ -235,10 +283,16 @@ interface CompanyDashboardProps {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <WorkspaceHeader company={company} />
+<<<<<<< HEAD
+
+      <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
+
+=======
 <<<<<<< HEAD
       
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
@@ -263,11 +317,15 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
           <RecentActivity />
           <TalentPool />
         </div>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -285,6 +343,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-6">
 
         <div className="space-y-6">
@@ -293,6 +352,9 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <SharedInbox />
         </div>
       </div>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     </div>
   )
@@ -310,27 +372,40 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>
 
   );
 });
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface CompanyDashboardProps {;
   company: Company;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
   return (
 
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;
       <WorkspaceHeader company={company} />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;"
         <div className="lg:col-span-2 space-y-6">;
 
+<<<<<<< HEAD
+=======
 =======
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
@@ -338,6 +413,7 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from './react';
 
 import { WorkspaceHeader  } from './WorkspaceHeader';
@@ -370,10 +446,15 @@ export /**;
  */
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <WorkspaceHeader company={company} />;
       ;"
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">;"
         <div className="lg:col-span-2 space-y-6">;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -451,16 +532,26 @@ export function CompanyDashboard({ company } CompanyDashboardProps) {;
       ;
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <QuickActions />;
           <RecentActivity />;
           <TalentPool />;
         </div>;
+<<<<<<< HEAD
+        ;"
+=======
         ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-6">;
           <TeamStats />;
           <SharedInbox />;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+    </div>;
+  );
+=======
     </div>;
   );
 }
@@ -471,3 +562,4 @@ export function CompanyDashboard({ company } CompanyDashboardProps) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

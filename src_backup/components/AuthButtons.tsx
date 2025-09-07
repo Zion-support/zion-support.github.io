@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/AuthButtons.tsx
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -6,7 +7,13 @@ import { signIn } from 'next-auth/react';
 type Provider = any;
 import { Facebook } from 'lucide-react'
 
+<<<<<<< HEAD
 import { signIn } from 'next-auth/react';
+=======
+=======
+import { signIn } from 'next-auth/react';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 type Provider = any;
 import { signIn } from 'next-auth/react'
 type Provider = 'google' | 'github' | 'facebook' | 'credentials'
@@ -21,9 +28,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setLoadingProvider(provider)
     await signIn(provider)
   }
+<<<<<<< HEAD
 
 ;
 import { signIn  } from 'next-auth/react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { signIn  } from next-auth/react';
+>>>>>>> origin/resolved-merge-conflicts
 type Provider = any;
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps  {providers?: Provider[];
@@ -33,6 +50,10 @@ import { Facebook  } from 'lucide-react';
 import { sign_in  } from 'next - auth / react';
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps {;
+<<<<<<< HEAD
+=======
+interface AuthButtonsProps {
+>>>>>>> origin/resolved-merge-conflicts
   providers?: Provider[];
 
 export function AuthButtons(): any ({;
@@ -72,6 +93,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/AuthButtons.tsx
   const gridCols = `grid-cols-${providers.length}`
 
@@ -88,7 +110,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {loadingProvider === 'google' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
           ) : (
-
             <svg
               className='h-5 w-5'
               aria-hidden='true'
@@ -117,13 +138,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
       {providers.includes('github') && (
         <Button
+<<<<<<< HEAD
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('github')}
+=======
           disabled={loadingProvider !== null}
         >
+<<<<<<< HEAD
           <span className='sr-only'>Sign in with GitHub</span>
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('github')}
+=======
+          <span className=sr-only">Sign in with GitHub</span>
+          type='button
+          variant=outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan
+          onClick={() => handleSignIn(github')}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
           disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
@@ -141,6 +177,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
       {providers.includes('facebook') && (
         <Button
+<<<<<<< HEAD
 
 
 
@@ -148,12 +185,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('facebook')}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('facebook')}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+          type=button'
+          variant='outline
+          className=w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('facebook)}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
           disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with Facebook</span>
           {loadingProvider === 'facebook' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
           ) : (
+<<<<<<< HEAD
             <Facebook className='h-5 w-5' />
+=======
+<<<<<<< HEAD
+            <Facebook className='h-5 w-5' />
+=======
+            <Facebook className=h-5 w-5' />
+>>>>>>> origin/resolved-merge-conflicts
 interface AuthButtonsProps  {providers?: Provider[];
 export /**;
  * AuthButtons - Function description;
@@ -232,10 +295,27 @@ interface AuthButtonsProps  {providers?: Provider[];export function AuthButtons(
               fill='current_color';
               view_box='0 0 24 24';
 
+<<<<<<< HEAD
+=======
+import { useState } from react';
+import { Button } from '@/components / ui / button;
+import { Facebook } from lucide-react';
+import { sign_in } from 'next - auth / react;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+>>>>>>> origin/resolved-merge-conflicts
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Facebook } from 'lucide-react';
 import { sign_in } from 'next - auth / react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps {}
@@ -391,7 +471,6 @@ interface AuthButtonsProps {;
 
             <>Email Login</>
           )}
-:src/components/AuthButtons.tsx
         </Button>
       )};
     </div>;
@@ -399,6 +478,12 @@ interface AuthButtonsProps {;
 };
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </svg>
           )}
         </Button>
@@ -416,9 +501,24 @@ interface AuthButtonsProps {;
       )}
       {providers.includes('credentials') && (
         <Button
+<<<<<<< HEAD
           type='button'
           variant='outline'
           className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+=======
+          type="button
+          variant=outline"
+          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          type="button"
+          variant="outline"
+          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
           onClick={() => handleSignIn('credentials')}
           disabled={loadingProvider !== null}
@@ -435,8 +535,11 @@ interface AuthButtonsProps {;
 
     </div>;
   );
+<<<<<<< HEAD
 :src/components/AuthButtons.tsx
 }
+<<<<<<< HEAD
+=======
     </div>)}) : (<>Email Login</>;
           )}
         </Button>;
@@ -468,5 +571,9 @@ interface AuthButtonsProps {;
       )}</div>;
   )};</div>;
   )
+>>>>>>> merged-prs-20250907-203621
 ;
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

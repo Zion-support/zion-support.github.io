@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+export type ProjectStatus =
+  | "offer_sent"
+  | "offer_accepted"
+  | "changes_requested"
+  | "in_progress"
+  | "completed"
+  | "canceled";
+
+export type ProjectStatus =;
+  | 'offer_sent';
+  | 'offer_accepted';
+  | 'changes_requested';
+  | 'in_progress';
+  | 'completed';
+  | 'canceled';
+
+export interface Project {;
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type ProjectStatus =
   | "offer_sent"
   | "offer_accepted"
@@ -36,6 +57,8 @@ export type ProjectStatus =;
 
 export interface Project {;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export type ProjectStatus = $2;
 export interface Project {
@@ -92,6 +115,7 @@ export interface Project {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   client_id: string;
   talent_id: string;
   job_id: string;
@@ -102,6 +126,8 @@ export interface Project {;
   status: ProjectStatus;
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   job?: {
@@ -141,10 +167,16 @@ export interface ProjectNote {;
     display_name: string,
     avatar_url?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
 }
 
+<<<<<<< HEAD
+    display_name: string;
+    avatar_url?: string;
+  };
+=======
 <<<<<<< HEAD
     display_name: string;
     avatar_url?: string;
@@ -222,4 +254,5 @@ export interface ProjectNote {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

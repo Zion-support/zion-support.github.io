@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 export * from './use_milestones';
 ;
@@ -9,6 +11,7 @@ export * from './use_milestones';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Index utility
 export const Index = () => {
   // Implementation here
@@ -26,6 +29,8 @@ export * from './useMilestones';
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export * from './types';
@@ -40,12 +45,16 @@ export * from './useMilestones';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export * from './types',;
 export * from './useLoadMilestones',;
 export * from './useCreateMilestone',;
 export * from './useUpdateMilestone',;
 export * from './useDeleteMilestone',;
 export * from './useUploadDeliverable',;
+<<<<<<< HEAD
+export * from './useRecordActivity',;
+=======
 <<<<<<< HEAD
 export * from './useRecordActivity',;
 =======
@@ -60,3 +69,4 @@ export * from './useMilestones';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

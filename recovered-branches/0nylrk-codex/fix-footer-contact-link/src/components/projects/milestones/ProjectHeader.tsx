@@ -1,4 +1,45 @@
 <<<<<<< HEAD
+title: string;
+}
+export /**
+ * ProjectHeader - Function description
+ */
+function ProjectHeader() {
+  const navigate = use_navigate ();
+;
+
+  return (
+    <div className="flex flex - col md:flex - row justify - between items - start md:items - center py - 4 border - b">;
+      <div className="flex items - center">;
+        <Button;
+          variant="ghost";
+          size="sm";
+          className="mr - 2";
+          on_click={() => navigate (-1)}
+        >;
+          <ArrowLeft className="h - 4 w - 4 mr - 1" />;
+          Back;
+        </Button>;
+        <h1 className="text - 2xl md:text - 3xl font - bold truncate max - w-xl">;
+          {title}
+
+  title: string
+}
+
+export function ProjectHeader({ title }: ProjectHeaderProps) {;
+  const navigate = useNavigate();
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+import { ArrowLeft } from "lucide-react";
+interface ProjectHeaderProps {}
+  title: string;
+}
+
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
@@ -63,15 +104,19 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useNavigate} from 'react-router-dom';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft} from 'lucide-react';
+
 interface ProjectHeaderProps {;
   title: string;
 }
 export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -92,10 +137,13 @@ import {useNavigate} from 'react-router-dom';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft} from 'lucide-react';
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ProjectHeaderProps {;
   title: string;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface ProjectHeaderProps {;
   title: string;
@@ -175,6 +223,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">
           {title}
         </h1>
@@ -183,6 +232,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 }
 ;
@@ -195,6 +247,11 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 
   );
 }
+<<<<<<< HEAD
+  )
+}
+;
+=======
 >>>>>>> merged-prs-20250907-203621
   )
 }
@@ -228,3 +285,4 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

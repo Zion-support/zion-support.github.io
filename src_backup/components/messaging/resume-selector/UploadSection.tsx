@@ -1,14 +1,37 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React from 'react';
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button;
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 :src/components/messaging/resume-selector/UploadSection.tsx
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, FileText } from 'lucide-react';
+=======
+import React from react';
+import { Button } from @/components/ui/button";
+import { Button } from @/components/ui/button';
+import { Upload, FileText } from 'lucide-react;
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Upload, FileText } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
@@ -17,13 +40,9 @@ import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-:src/components/messaging/resume-selector/UploadSection.tsx
-export function UploadSection({
-  customFile
-  onFileUpload
-}: UploadSectionProps) {
 
   return (
+<<<<<<< HEAD
     <div className='space - y-3'>;
 import { Button  } from '@/components/ui/button';
 import { Upload, FileText  } from 'lucide-react';
@@ -36,16 +55,61 @@ interface UploadSectionProps  {customFile: File | null;
           {custom_file;
             ? custom_file.name;
             : 'Drag & drop your PDF or click to browse'}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className=space - y-3'>;
+import { Button  } from '@/components/ui/button;
+import { Upload, FileText  } from lucide-react';
+interface UploadSectionProps  {customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  return (<div className='space - y-3>;
+      <div className=flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
+        <Upload className='h - 8 w - 8 text - zion - purple mb - 2 />;
+        <p className=text - sm text - zion - slate mb - 2'>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className='space - y-3'>;
+      <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
+        <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
+        <p className='text - sm text - zion - slate mb - 2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+          {custom_file;
+            ? custom_file.name;
+            : 'Drag & drop your PDF or click to browse'}
+            : 'Drag & drop your PDF or click to browse}
+>>>>>>> origin/resolved-merge-conflicts
 
         </p>
         <Button variant='outline' className='relative'>
           Browse Files
           <input
+<<<<<<< HEAD
             type='file'
             className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
 :src/components/messaging/resume-selector/UploadSection.tsx
             accept='.pdf'            onChange={onFileUpload}
             accept='.pdf'
+=======
+<<<<<<< HEAD
+            type=file'
+            className='absolute inset-0 w-full h-full opacity-0 cursor-pointer
+:src/components/messaging/resume-selector/UploadSection.tsx
+            accept=.pdf'            onChange={onFileUpload}
+            accept='.pdf
+=======
+            type='file'
+            className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
+            accept='.pdf'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={onFileUpload}
           />
@@ -71,6 +135,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <span className='text-xs text-zion-slate'>
               {Math.round(customFile.size / 1024)} KB
+<<<<<<< HEAD
 :src/components/messaging/resume-selector/UploadSection.tsx
             </span>          </div>      {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
@@ -86,6 +151,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
@@ -130,11 +197,27 @@ import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {;
   customFile: File | null;
+<<<<<<< HEAD
             : 'Drag & drop your PDF or click to browse'}</p>;
         <Button variant='outline' className='relative'>;
           Browse Files;type="file";
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            : Drag & drop your PDF or click to browse'}</p>;
+        <Button variant='outline className=relative'>;
+          Browse Files;type="file;
+            className=absolute inset-0 w-full h-full opacity-0 cursor-pointer";
+            accept=".pdf;
+>>>>>>> origin/resolved-merge-conflicts
         </p>;
         <Button variant='outline' className='relative'>;
           Browse Files;
@@ -229,6 +312,12 @@ import React from 'react',import { Button } from "@/components/ui/button",interf
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}
+>>>>>>> merged-prs-20250907-203621
 :src/components/messaging/resume-selector/UploadSection.tsx
 }
       )}
+=======
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+      )}
+>>>>>>> origin/chore/fix-lint-and-merge

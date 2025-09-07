@@ -1,4 +1,95 @@
 <<<<<<< HEAD
+interface TemplateListProps {;
+  templates: ContractTemplate[],;
+  isLoading: boolean,;
+  onSelect: (template: ContractTemplate) => void,;
+  onEdit: (template: ContractTemplate) => void;
+}
+
+export function TemplateList(): any ({;
+  templates;
+  isLoading;
+  onSelect;
+  onEdit;
+}: TemplateListProps) {;
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
+
+  const handleDeleteClick = (templateId: string) => {;
+    setTemplateToDelete(templateId);
+  };
+
+  const handleDeleteConfirm = async () => {;
+    if (templateToDelete) {;
+      await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
+      setTemplateToDelete(null);
+    }
+  };
+
+import { ContractTemplate } from "@/types/contracts",
+import { Button } from "@/components/ui/button",
+import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
+import { useContractTemplates } from "@/hooks/useContractTemplates",
+
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+
+      await deleteTemplate.mutateAsync(templateToDelete);
+      setTemplateToDelete(null)
+    }
+  }
+
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+
+interface TemplateListProps {
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
+
+  const handleSetDefault = async (templateId: string) => {;
+    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
+  };
+
+  if (isLoading) {;
+
+    return (
+      <div className="flex justify-center items-center py-8">;
+
+        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
+      </div>;
+    );
+  }
+
+  if (!templates && templates.length) {;
+
+    return (
+      <div className="text-center py-8">;
+        <p className="text-muted-foreground">No templates found.</p>;
+        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>;
+      </div>;
+    );
+  }
+  return (
+    <div className="space-y-3">;
+      {templates && templates.map((template) => (;
+
+}
+
+  const handleSetDefault = async (templateId: string) => {}
+    await setDefaultTemplate.mutateAsync(templateId)
+  },
+=======
+<<<<<<< HEAD
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
@@ -257,20 +348,28 @@ interface TemplateListProps {
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
 
   if (isLoading) {;
+<<<<<<< HEAD
+    return ("
+      <div className="flex justify-center items-center py-8">;"
+=======
 
     return (
       <div className="flex justify-center items-center py-8">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
 
   if (!templates && templates.length) {;
 
@@ -304,6 +403,7 @@ interface TemplateListProps {
       </div>;
     );
   }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return ("
       <div className="text-center py-8">;"
         <p className="text-muted-foreground">No templates found.</p>;"
@@ -319,6 +419,11 @@ interface TemplateListProps {
             <div className="flex items-center justify-between">;"
               <div className="space-y-1">;"
                 <div className="flex items-center gap-2">;"
+<<<<<<< HEAD
+                  <h3 className="font-medium">{template && template.title}</h3>;
+                  {template && template.is_default && (;"
+                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
+=======
 =======
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -371,7 +476,9 @@ interface TemplateListProps {
                   <h3 className="font-medium">{template.title}</h3>
                   {template.is_default && (
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   )}
+
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
@@ -396,6 +503,8 @@ interface TemplateListProps {
               </div>
             </div>
             <Separator className="my-3" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <Button
               onClick={() => onSelect(template)}
@@ -433,11 +542,14 @@ interface TemplateListProps {
               </div>
             </div>
             <Separator className="my-3" />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <Button;
               onClick={() => onSelect(template)} "
               variant="outline" 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -479,10 +591,14 @@ interface TemplateListProps {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
                 </p>;
               </div>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
                   <h3 className="font-medium">{template.title}</h3>;
                   {template.is_default && (;
@@ -526,10 +642,58 @@ interface TemplateListProps {
                 <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template && template.id)}>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Trash className="h-4 w-4 text-destructive" />;
                 </Button>;
               </div>;
             </div>;
+<<<<<<< HEAD
+
+            </AlertDialogAction>;
+          </AlertDialogFooter>;
+        </AlertDialogContent>;
+      </AlertDialog>;
+
+    </div>;
+  ),; import {};
+
+  AlertDialog;
+AlertDialogAction;
+AlertDialogCancel;
+AlertDialogContent;
+AlertDialogDescription;
+AlertDialogFooter;
+AlertDialogHeader;
+
+  await deleteTemplate.mutateAsync (templateToDelete);
+setTemplateToDelete (null) 
+}
+
+  templates.map ( (template) => (<Card key= {
+  template.id;
+}className= {"
+  template.is default ? "border-zion-purple" : """
+}> template.title;
+
+}</h3> {)"
+  template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>)""
+}</div> <p className="text-xs text-muted-foreground"> Last updated: {"
+</p>"
+}</p> </div> ) : (<Button variant=" ghost"size=" icon"disabled> <StarOff className="h-4 w-4"/> )""
+}<Trash className="h-4 w-4 text-destructive"/>  </div> </div> <Separator className="my-3"/> <Button className="w-full"> Use This Template   ) )"
+
+}<AlertDialog open= {
+  !!templateToDelete;
+}onOpenChange= {
+  () => setTemplateToDelete (null) 
+
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) 
+}
+    </div>;
+  );
+}
+;
+=======
 
 <<<<<<< HEAD
 =======
@@ -820,3 +984,4 @@ setTemplateToDelete (null)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

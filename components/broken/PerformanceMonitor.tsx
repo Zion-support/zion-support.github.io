@@ -2,6 +2,107 @@
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback, useRef } from 'react';'
+import { motion, AnimatePresence  } from 'framer-motion';'
+import { Activity, Zap, Clock, TrendingUp, TrendingDown;
+  }
+  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
+  BarChart3, Gauge, HardDrive, Wifi, Cpu;
+  } from 'lucide-react';'
+
+interface PerformanceMetrics  {"loadTime": number;
+  }
+  "firstContentfulPaint": number;
+  "largestContentfulPaint": number;
+  "cumulativeLayoutShift": number;
+  "firstInputDelay": number;
+  "timeToInteractive": number;
+  memoryUsage?: number;
+  networkLatency?: number;
+}
+
+interface PerformanceMonitorProps {
+  }
+  showUI?: boolean;
+  autoRefresh?: boolean;
+  refreshInterval?: number;
+
+}
+
+const "PerformanceMonitor": React.FC<PerformanceMonitorProps> = ({showUI;
+
+}
+
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => ;'
+  return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document && document.readyState === 'complete') {})})}, [])//Check for performance issues and add alerts;'
+  const "newAlerts": string[] = [];
+if (newMetrics && newMetrics.loadTime > 3000) {const formatTime = ("ms": number) : (string) => {if (ms === 0);
+  }
+  return 'N/A';if (ms < 1000) return `$ {Math.round (ms)}ms`;if (ms < 1000) return `$ {Math.round (ms)}ms`;}}}}}}//Get device icon const getDeviceIcon = ("deviceType": string) => {switch (deviceType) {case 'mobile':;'  }
+  return Smartphone;
+case 'tablet': return Tablet;'
+"default": return Laptop;
+}}
+
+const getPerformanceScore = () => {let score = 0;
+}
+let totalMetrics = 0;
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {totalMetrics++;if (metrics.fcp < 1800) score += 100;
+}
+else if (metrics.fcp < 3000) score += 75;
+else if (metrics.fcp < 4000) score += 50;
+else score += 25;
+if (metrics.fcp < 1800) score += 100;
+else if (metrics.fcp < 3000) score += 75;
+else if (metrics.fcp < 4000) score += 50;
+else score += 25;
+}//LCP scoring (0-100) if (metrics.lcp !== null) {totalMetrics++;
+}
+if (metrics.lcp < 2500) score += 100;
+else if (metrics.lcp < 4000) score += 75;
+else if (metrics.lcp < 6000) score += 50;
+else score += 25;
+}//FID scoring (0-100) if (metrics.fid !== null) {totalMetrics++;
+}
+if (metrics.fid < 100) score += 100;
+else if (metrics.fid < 300) score += 75;
+else if (metrics.fid < 500) score += 50;
+else score += 25;
+}//CLS scoring (0-100) if (metrics.cls !== null) {totalMetrics++;
+}
+if (metrics.cls < 0.1) score += 100;
+else if (metrics.cls < 0.25) score += 75;
+else if (metrics.cls < 0.4) score += 50;else score += 25;
+}else score += 25;
+}//Don't render anything in production return (<AnimatePresence> {isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';'
+
+}
+
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ }
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+
+
+
+ ;
+  }
+  return new Promise ( (resolve) => {
+  }
+  if (typeof window !== 'undefined' && 'performance' in window) {'
+  //Wait for page to be fully loaded if (document.readyState === 'complete') {})'
+;
+  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
+  }
+  return new Promise ( (resolve) => {;
+  }
+  if (typeof window !== 'undefined' && 'performance' in window) {;'
+  //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -450,6 +551,10 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
   if (typeof window !== 'undefined' && 'performance' in window) {;'
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;'
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   
 
 }) 
@@ -490,6 +595,23 @@ if (ms < 1000) return `$ {
     return `${(ms / 1000).toFixed(2)}s`
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+const formatTime = ("ms": number) : (string) => {;
+  }
+  if (ms = == 0);
+return 'N/A';'
+};
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+};
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   // Get device icon
   const getDeviceIcon = (deviceType: string) => {
     switch (deviceType) {
@@ -527,6 +649,10 @@ if (ms < 1000) return `$ {
 =======
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {}
   return new Promise ( (resolve) => {}
   if (typeof window !== 'undefined && performance' in window) {'
@@ -534,6 +660,13 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 })
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+//Get device icon const getDeviceIcon = ("deviceType": string) => {
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -694,18 +827,37 @@ else if (metrics.cls < 0.4) score += 50;
 }
 
 //Get device icon const getDeviceIcon = (
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   switch (deviceType) {
   case mobile': return Smartphone;
 case 'tablet: return Tablet;
 default: return Laptop;
 }
 const getPerformanceScore = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  let score = 0;
+let totalMetrics = 0;
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
+  }
+  totalMetrics++;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   let score = 0;
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {
   totalMetrics++;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -729,7 +881,14 @@ else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 
 
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     // FID scoring (0-100)
     if (metrics.fid !== null) {
@@ -803,7 +962,14 @@ else if (metrics.cls < 0.4) score += 50;
                   <X className='w-4 h-4' />
                 </button>
               </div>
+<<<<<<< HEAD
             </div>
+=======
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             {/* Performance Score */}
             <div className='p-4 border-b border-gray-700/50'>
@@ -815,12 +981,26 @@ else if (metrics.cls < 0.4) score += 50;
                 <div className='text-2xl font-bold text-white'>
                   {getPerformanceScore()}
                 </div>
+<<<<<<< HEAD
               </div>
+=======
+<<<<<<< HEAD
+=======
+              </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               
               <div className='text-xs text-gray-400 text-center'>
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </div>
+<<<<<<< HEAD
             </div>
+=======
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             {/* Key Metrics */}
             <div className='p-4 space-y-3'>
@@ -830,6 +1010,7 @@ else if (metrics.cls < 0.4) score += 50;
                   <div className='text-sm font-semibold text-white'>
                     {formatTime(metrics.loadTime)}
                   </div>
+<<<<<<< HEAD
                 </div>
                 <div className='text-center p-2 bg-gray-800/50 rounded-lg'>
                   <div className='text-xs text-gray-400 mb-1'>FCP</div>
@@ -839,6 +1020,23 @@ else if (metrics.cls < 0.4) score += 50;
                 </div>
               </div>
             </div>
+=======
+<<<<<<< HEAD
+=======
+                </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                <div className="text-center p-2 bg-gray-800/50 rounded-lg">
+                  <div className="text-xs text-gray-400 mb-1">FCP</div>
+                  <div className="text-sm font-semibold text-white">
+                    {formatTime(metrics.firstContentfulPaint)}
+                  </div>
+<<<<<<< HEAD
+=======
+                </div>
+              </div>
+            </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             {/* Expanded View */}
             <AnimatePresence>
@@ -871,7 +1069,14 @@ else if (metrics.cls < 0.4) score += 50;
                           </div>
                         )}
                       </div>
+<<<<<<< HEAD
                     </div>
+=======
+<<<<<<< HEAD
+=======
+                    </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                     {/* Alerts */}
                     {alerts.length > 0 && (
@@ -885,7 +1090,14 @@ else if (metrics.cls < 0.4) score += 50;
                             </div>
                           ))}
                         </div>
+<<<<<<< HEAD
                       </div>
+=======
+<<<<<<< HEAD
+=======
+                      </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     )}
 
                     {/* Recommendations */}
@@ -903,13 +1115,28 @@ else if (metrics.cls < 0.4) score += 50;
                           <div>• Excellent performance! Keep monitoring for any regressions.</div>
                         )}
                       </div>
+<<<<<<< HEAD
                     </div>
                   </div>
+=======
+<<<<<<< HEAD
+=======
+                    </div>
+                  </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </motion.div>
     </AnimatePresence>
   )
@@ -923,6 +1150,13 @@ const getScoreIcon = (score: number) => {
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const getScoreLabel = (score: number) => {
+  if (score >= 90) return 'Excellent';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
 <<<<<<< HEAD
@@ -931,19 +1165,52 @@ if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   if (score >= 70) return 'Good';
   if (score >= 50) return 'Needs Improvement';
   return 'Poor'
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 else score += 25
 }
 else score += 25 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+else score += 25 
+
+//Don't render anything in production return (<AnimatePresence> {'
+  }
+  isVisible && (<motion.div </div> <div className = "flex items-center space-x-2" > <button > <RefreshCw className= {"
+  `w-4 h-4 $ {`  }
+  isLoading ? 'animate-spin': '''
+}``} /> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {"
+  /* Expanded View */
+}<AnimatePresence> {
+  }
+  isExpanded && (<motion.div </div>)
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 }
 =======
@@ -986,6 +1253,10 @@ else score += 25;
 }<AnimatePresence    /> {}
   isExpanded && (<motion.div </div    />)}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</div> </div> </div>) )
 }</div> </div>)
 }<> <div    />• Optimize images and assets</div> <div    />• Minimize JavaScript bundles</div> <div    />• Enable compression and caching</div> <   />)
@@ -994,6 +1265,23 @@ else score += 25;
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Helper functions;
+  const getScoreLabel = ("score": number) => {
+  }
+  if (score >= 90);
+  return 'Excellent';'
+if (score >= 70) return 'Good';'
+if (score >= 50) return 'Needs Improvement';'
+  if (score >= 90) return 'Excellent';'
+if (score >= 70) return 'Good';'
+if (score >= 50) return 'Needs Improvement';'
+}
+export default PerformanceMonitor;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 // Helper functions const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
@@ -1021,6 +1309,10 @@ export default PerformanceMonitor;
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
  ;
   return new Promise ( (resolve) => {
@@ -1038,6 +1330,15 @@ if ( {) {
 
 '
 //Don't render anything in production return (<AnimatePresence> {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {}
+  `w-4 h-4 $ {'
+  isLoading ? 'animate-spin': ''`
+}`"
+=======
+>>>>>>> origin/resolved-merge-conflicts
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2 > <button > <RefreshCw className= {}
 =======
 };
@@ -1049,6 +1350,10 @@ if ( {) {
   `w-4 h-4 $ {
   isLoading ? animate-spin': '`
 }`
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {}
   /* Expanded View */
 }<AnimatePresence> {}
@@ -1061,6 +1366,18 @@ if ( {) {
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Helper functions const getScoreLabel = (score: number) => {'
+  if (score >= 90) return 'Excellent';'
+if (score >= 70) return 'Good';'
+if (score >= 50) return 'Needs Improvement';'
+  if (score >= 90) return 'Excellent';'
+if (score >= 70) return 'Good';'
+if (score >= 50) return 'Needs Improvement';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 // Helper functions const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
 if (score >= 70) return Good';'
@@ -1069,6 +1386,10 @@ if (score >= 50) return Needs Improvement;'
 if (score >= 70) return 'Good';
 <<<<<<< HEAD
 if (score >= 50) return Needs Improvement';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 export default PerformanceMonitor;
@@ -1124,6 +1445,22 @@ if ( {) {}
 }
 });
 }, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+//Check for performance issues and add alerts const "new_alerts": string[] = [];
+// Check condition,
+if ( {) {
+  $2
+}
+
+const format_time = ("ms": number) : (string) => {
+  // Check condition
+}
+if (return 'N / A') {'
+  $2
+=======
+>>>>>>> origin/resolved-merge-conflicts
 //Check for performance issues and add alerts const new_alerts: string[] = [];
 // Check condition
 if ( {) {
@@ -1257,6 +1594,10 @@ const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetri
   return new Promise ( (resolve) => {// Check condition;
 }
 if ( {) {$2;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   //Wait for page to be fully loaded // Check condition;
 if ( {) {$2;
@@ -1660,6 +2001,307 @@ if (return 'Needs Improvement') {$2;}
 
 export default PerformanceMonitor;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => ;
+  return new Promise ( (resolve) => {// Check condition;
+}
+if ( {) {$2;
+}
+  //Wait for page to be fully loaded // Check condition;
+if ( {) {$2;
+}
+})}, [])//Check for performance issues and add alerts const "new_alerts": string[] = [];
+// Check condition;
+if ( {) {$2;
+}
+
+const format_time = ("ms": number) : (string) => {// Check condition;
+}
+if (return 'N / A') {$2;'
+}
+// Check condition;
+if (return `$ {) {$2;`;
+
+}
+
+export default PerformanceMonitor;
+;
+
+
+export default PerformanceMonitor;
+}
+  Math.round (ms)}ms`;}`//Get device icon const getDeviceIcon = ("device_type": string) =>: any {switch (device_type) {case 'mobile':;'
+  }
+  return Smartphone;
+case 'tablet': return Tablet;'
+"default": return Laptop;}
+
+const getPerformanceScore = () =>: any {let score = 0;
+}
+let total_metrics = 0;
+//FCP scoring (0 - 100) // Check condition;
+if ( {) {$2;
+}
+
+};
+
+
+
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;
+}
+else // Check condition;
+if (score += 75) {$2;
+}
+else // Check condition;
+if (score += 50) {$2;
+}
+else score += 25;
+}//LCP scoring (0 - 100) // Check condition;
+if ( {) {$2;
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;
+}
+else // Check condition;
+if (score += 75) {$2;
+}
+else // Check condition;
+if (score += 50) {$2;
+}
+else score += 25;
+}//FID scoring (0 - 100) // Check condition;
+if ( {) {$2;
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;
+}
+else // Check condition;
+if (score += 75) {$2;
+}
+else // Check condition;
+if (score += 50) {$2;
+}
+else score += 25;
+}//CLS scoring (0 - 100) // Check condition;
+if ( {) {$2;
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;
+}
+else // Check condition;
+if (score += 75) {$2;
+}
+else // Check condition;
+if (score += 50) {$2;
+}
+else score += 25;
+}
+//Don't render anything in production return (<AnimatePresence> {is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';'
+}`;`
+} /> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;"
+}<AnimatePresence> {is_expanded && (<motion.div </div>)}</div> </div> </div>) )}</div> </div>)}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
+// Helper functions const getScoreLabel = ("score": number) =>: any {// Check condition;
+}
+if (return 'Excellent') {$2;'
+}
+// Check condition;
+if (return 'Good') {$2;'
+}
+// Check condition;
+if (return 'Needs Improvement') {$2;'
+}
+}export default PerformanceMonitor;export default PerformanceMonitor;
+}}}
+
+
+
+
+
+
+};
+
+
+export default PerformanceMonitor;
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  // Check condition
+if ( {) {
+  $2
+}
+  //Wait for page to be fully loaded // Check condition
+if ( {) {
+  $2
+}
+});
+}, []);
+//Check for performance issues and add alerts const new_alerts: string[] = [];
+// Check condition
+if ( {) {
+  $2
+}
+  const format_time = (ms: number) : string => {
+  // Check condition
+if (return 'N / A') {
+  $2
+}
+// Check condition
+if (return `$ {) {
+  $2
+}
+  Math.round (ms);
+}ms`;
+;
+}
+//Get device icon const getDeviceIcon = (device_type: string) =>: any {
+  switch (device_type) {
+  case 'mobile': return Smartphone;
+case 'tablet': return Tablet;
+default: return Laptop;
+;
+}
+const getPerformanceScore = () =>: any {
+  let score = 0;
+let total_metrics = 0;
+//FCP scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}//LCP scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}//FID scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}//CLS scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}
+//Don't render anything in production return (<AnimatePresence> {
+  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {
+  `w - 4 h - 4 $ {
+  is_loading ? 'animate - spin': '';
+}`;
+}/> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {
+  /* Expanded View */;
+}<AnimatePresence> {
+  is_expanded && (<motion.div </div>);
+}</div> </div> </div>) );
+}</div> </div>);
+}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>);
+}{
+  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>);
+}</div> </div> </div> </motion.div>);
+}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>);
+}
+// Helper functions const getScoreLabel = (score: number) =>: any {
+  // Check condition
+if (return 'Excellent') {
+  $2
+}
+// Check condition
+if (return 'Good') {
+  $2
+}
+export default PerformanceMonitor;
+
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => ;
+  return new Promise ( (resolve) => {// Check condition;}
+if ( {) {$2;}
+}
+  //Wait for page to be fully loaded // Check condition;
+if ( {) {$2;}
+}
+})}, [])//Check for performance issues and add alerts const new_alerts: string[] = [];
+// Check condition;
+if ( {) {$2;}
+}
+
+const format_time = (ms: number) : string => {// Check condition;}
+if (return 'N / A') {$2;}
+}
+// Check condition;
+if (return `$ {) {$2;
+;
+export default PerformanceMonitor;
+;
+
+}
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default PerformanceMonitor;
 }}}
 "
@@ -1671,3 +2313,7 @@ export default PerformanceMonitor;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

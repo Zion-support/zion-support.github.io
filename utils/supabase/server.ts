@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
@@ -12,25 +14,46 @@ export function createServerClient() {
 }
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const supabaseUrl = $2;
 const serviceRoleKey = $2;
 let cachedClient: SupabaseClient | null = $2;
+<<<<<<< HEAD
+export function getServerSupabase(): SupabaseClient {
+  if (cachedClient) return cachedClient,
+  cachedClient = createClient($2);
+  return cachedClient
+}
+
+if (!supabaseServiceKey) {
+  throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY environment variable');
+}
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseServiceKey, {
+=======
 >>>>>>> merged-prs-20250907-203621
 export function getServerSupabase(): SupabaseClient {
   if (cachedClient) return cachedClient;
   cachedClient = createClient(supabaseUrl, supabaseServiceKey, {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     auth: {
       autoRefreshToken: false,
       persistSession: false
     }
   });
+<<<<<<< HEAD
+=======
   return cachedClient;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '');
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 const supabaseUrl ="
@@ -96,3 +119,4 @@ export function getServerSupabase() {;
 }
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import { ResumeBasicInfo  } from '@/types / resume';
+
+interface ResumeBasicInfoSectionProps {
+=======
+<<<<<<< HEAD
 
 import { ResumeBasicInfo } from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
@@ -14,16 +19,25 @@ interface ResumeBasicInfoSectionProps {
 import { ResumeBasicInfo  } from '@/types / resume';
 
 interface ResumeBasicInfoSectionProps {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   basic_info: ResumeBasicInfo;
 
 }
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {;
 
   basicInfo: ResumeBasicInfo;
+<<<<<<< HEAD
+
+}
+
+=======
 <<<<<<< HEAD
 =======
 }
@@ -63,10 +77,13 @@ function ResumeBasicInfoSection() {
 
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
   return (
     <div className="space-y-2 border-b pb-4 mb-6">
       <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { ResumeBasicInfo } from '@/types/resume';
 import {ResumeBasicInfo} from '@/types/resume';
@@ -110,11 +127,15 @@ export function ResumeBasicInfoSection({
   );
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   basicInfo,
 }: ResumeBasicInfoSectionProps) {}
   return ("
@@ -141,14 +162,19 @@ export function ResumeBasicInfoSection({
         {basicInfo.headline || basicInfo.title}
       </h1>
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>
-  )
+  );
 }
 ;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { ResumeBasicInfo } from '@/types/resume',;
 ;
@@ -179,6 +205,7 @@ export function ResumeBasicInfoSection({ basicInfo } ResumeBasicInfoSectionProps
 ;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { ResumeBasicInfo } from "@/types/resume";
 
 interface ResumeBasicInfoSectionProps {
@@ -215,9 +242,13 @@ export function ResumeBasicInfoSection({
     </div>
   );
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

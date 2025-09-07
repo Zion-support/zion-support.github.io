@@ -1,9 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react;
+import { useAuth } from @/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client;
+import { Job, JobStatus } from @/types/jobs';
+import { Button } from '@/components/ui/button;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { Job, JobStatus } from '@/types/jobs';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import {
   Card,
   CardContent,
@@ -18,13 +41,37 @@ import { format } from 'date-fns';
 import Link from 'next/link';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react,
+import { useAuth } from @/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client,
+import { Job, JobStatus } from @/types/jobs",
+import { Button } from "@/components/ui/button,
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'"
@@ -33,7 +80,6 @@ import { format } from "date-fns",
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
-  filter?: JobStatus,
   filter?: JobStatus;
 origin/cursor/automate-test-improve-and-merge-code-2533
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -45,6 +91,12 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {}
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const fetchJobs = async () => {
       if (!user) return,
 
@@ -143,8 +195,20 @@ if ( {) {$2;
         <p className="text-lg text-muted-foreground">
 
           {filter 
+<<<<<<< HEAD
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
+=======
+            ? `No jobs with status ${filter} found.` 
+            : "You havent posted any jobs yet."
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            : "You haven't posted any jobs yet."
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           }
 
         </p>"
@@ -162,8 +226,6 @@ if ( {) {$2;
 
     }
 
-
-    const fetchJobs = null;
   return (
 
     <div className="grid gap-6 md:grid-cols-2">
@@ -200,8 +262,20 @@ if ( {) {$2;
     },;
     fetchJobs();
 
+<<<<<<< HEAD
       <div className="flex justify-center items-center p-8">;
       </div>)}.order("created_at", { ascending: false }),if (isLoading) {return (<div className="flex justify-center items-center p-8">;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <div className="flex justify-center items-center p-8">;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      <div className=flex justify-center items-center p-8>;
+      </div>)}.order("created_at", { ascending: false }),if (isLoading) {return (<div className=flex justify-center items-center p-8>;
+>>>>>>> origin/resolved-merge-conflicts
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     )}
@@ -255,7 +329,18 @@ interface JobsListProps  {filter?: JobStatus;
         <p className="text-lg text-muted-foreground">;
           {filter ;
             ? `No jobs with status "${filter}" found.` ;
+<<<<<<< HEAD
             : "You haven't posted any jobs yet." }
+=======
+            : You havent posted any jobs yet. }
+=======
+      <div className="flex justify-center items-center p-8">;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -356,10 +441,20 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
                 <Link href={`/jobs/${job.id}/edit`}>"
                   <Edit className="h-4 w-4" />
                 </Link>
+<<<<<<< HEAD
               </Button>"
               <Button variant="outline" size="sm">"
                 <X className="h-4 w-4" />
+=======
               </Button>
+<<<<<<< HEAD
+            </div>
+=======
+              <Button variant="outline" size=sm>"
+                <X className="h-4 w-4 />
+>>>>>>> origin/resolved-merge-conflicts
+              </Button>
+<<<<<<< HEAD
             </div>;
           </CardContent>;
           <CardFooter className="flex justify-between p-4 pt-0 gap-2">;
@@ -391,6 +486,10 @@ return (<div className="grid gap-6 md:grid-cols-2" > {jobs.map ( (job) => (<Card
 }</p> + {job.skills.length - 3 ;
 }more </Badge>) ";
 }</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {;
+<<<<<<< HEAD
+=======
+}</div> <div className=mt-3 text-sm> <span className="font-medium">Budget:</span> $ {
+>>>>>>> origin/resolved-merge-conflicts
   job.budget.min ;
 }- $ {;
   job.budget.max ";
@@ -406,3 +505,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
             </div>
+=======
+            </div>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

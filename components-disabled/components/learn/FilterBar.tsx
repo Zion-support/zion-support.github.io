@@ -20,6 +20,15 @@ className='border rounded px-3 py-2 bg-white "dark":bg-black''
   "onChange": ("next": { "category": string, "level": string, "isFree": string }) => void
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
 }
 return (;
@@ -30,7 +39,16 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
 }
 return (;
     <div className="grid grid-cols-1 "sm":grid-cols-3 gap-3">;"
+<<<<<<< HEAD
 import React from 'react';'
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 type Props = {
   }
   "category": string;

@@ -37,6 +37,12 @@ class ErrorBoundary extends React.Component {
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 export default function OrgChartGovernancePage() {
@@ -54,6 +60,10 @@ const OrgChartPage = dynamic (
 );
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default /**
  * OrgChartGovernancePage - Function description
  */
@@ -73,6 +83,16 @@ export default /**
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { "ssr": false,'
+}),
+export default function OrgChartGovernancePage() {
+ ;
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false,}
 }),
 export default function OrgChartGovernancePage() {
@@ -83,6 +103,10 @@ export default function OrgChartGovernancePage() {
 =======
   return <OrgChartPage />
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return <OrgChartPage />;
 }
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
@@ -101,8 +125,16 @@ export default function OrgChartGovernancePage() { return null; }
 export default function OrgChartGovernancePage() { return null; }
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
+<<<<<<< HEAD
 }
 }
+=======
+<<<<<<< HEAD
+=======
+}
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 import dynamic from 'next / dynamic;
 const OrgChartPage = dynamic (
@@ -134,6 +166,14 @@ export default /**;
 export default function OrgChartGovernancePage() {;
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false ;}),;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -172,3 +212,7 @@ export default function OrgChartGovernancePage() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

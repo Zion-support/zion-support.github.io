@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import React from 'react',
@@ -14,11 +16,17 @@ import React from 'react',
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',
 
     theme: "dark",
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),;
 
+<<<<<<< HEAD
+  };
+};
+
+=======
 <<<<<<< HEAD
   };
 };
@@ -48,10 +56,37 @@ export const use_theme = () =>: any {
 >>>>>>> merged-prs-20250907-203621
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',;
 ;
 // This is a simplified version of the theme hook for offline development;
 export const useTheme = () => {;
+<<<<<<< HEAD
+
+    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+  }
+}
+
+  }
+}
+
+    theme: "dark",
+
+    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+  };`
+    setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
+  }
+},'
+import React from 'react',;
+// This is a simplified version of the theme hook for offline development;
+export const use_theme = () =>: any {}
+  return {"
+    theme: "dark",;`
+    set_theme: (theme: string) => console.log (`Theme would change to: ${theme}`);
+  }
+"
+    theme: "dark",
+=======
 <<<<<<< HEAD
 
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
@@ -123,3 +158,4 @@ export const use_theme = () =>: any {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

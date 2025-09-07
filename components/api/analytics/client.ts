@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { createServerClient } from '../../../utils/supabase/server';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const supabase = createServerClient();
+
+    const clientId = (req.query.clientId as string) || null;
+    
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,16 +70,50 @@ export default async function handler(
   try {;
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const [jobsR, quotesR] = await Promise.allSettled([
       supabase
         .from('jobs')
         .select('id, client_id, status, posted_at, hired_at')
+<<<<<<< HEAD
         .eq('client_id', clientId)
+=======
+<<<<<<< HEAD
+        .eq('client_id', clientId),
+=======
+        .eq('client_id', clientId)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       supabase
         .from('quotes')
         .select('id, job_id, status, created_at')
         .eq('client_id', clientId)
     ]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    const jobs = jobsR.status === 'fulfilled' && jobsR.value.data
+      ? (jobsR.value.data as any[])
+      : [];
+
+    const quotes = quotesR.status === 'fulfilled' && quotesR.value.data
+      ? (quotesR.value.data as any[])
+      : [];
+
+    const jobsData = jobs.length > 0
+      ? jobs
+      : [
+          {
+            id: 11,
+            client_id: 'c1',
+            status: 'posted',
+            posted_at: '2025-01-01'
+=======
+>>>>>>> origin/resolved-merge-conflicts
     const jobs =
       jobsR && jobsR.status === 'fulfilled' && jobsR && jobsR.value.data
         ? (jobsR && jobsR.value.data as any[])
@@ -251,18 +300,75 @@ function handler() {
             client_id: 'c1',
             status: 'posted',
             posted_at: '2025 - 01 - 01',
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           },
           {
             id: 12,
             client_id: 'c1',
             status: 'filled',
+<<<<<<< HEAD
             posted_at: '2025 - 01 - 02',
             hired_at: '2025 - 01 - 05',
+=======
+<<<<<<< HEAD
+            posted_at: '2025-01-02',
+            hired_at: '2025-01-05'
+=======
+            posted_at: '2025 - 01 - 02',
+            hired_at: '2025 - 01 - 05',
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           },
           {
             id: 13,
             client_id: 'c1',
             status: 'filled',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            posted_at: '2025-01-03',
+            hired_at: '2025-01-06'
+          }
+        ];
+
+    const quotesData = quotes.length > 0
+      ? quotes
+      : [
+          { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' },
+          { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
+        ];
+
+    const jobsPosted = jobsData.length;
+    const quotesReceived = quotesData.length;
+    const filled = jobsData.filter(j => j.status === 'filled');
+
+    const timeToHireDays = filled.length > 0
+      ? filled.reduce(
+          (acc, j) =>
+            acc +
+            (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) /
+              (1000 * 60 * 60 * 24),
+          0
+        ) / filled.length
+      : 0;
+
+    const talentViewed = 12; // Placeholder
+    const shortlisted = 5; // Placeholder
+
+    const funnel = [
+      { label: 'Post', value: jobsPosted },
+      { label: 'Invite', value: quotesReceived },
+      { label: 'Hire', value: filled.length }
+    ];
+
+    res.status(200).json({
+      jobsPosted,
+      quotesReceived,
+=======
+>>>>>>> origin/resolved-merge-conflicts
             posted_at: '2025 - 01 - 03',
             hired_at: '2025 - 01 - 06',
           },
@@ -561,9 +667,35 @@ const funnel = [;
 
         { label: 'Hire', value: 2 }]})
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       timeToHireDays,
       talentViewed,
       shortlisted,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      funnel,
+    });
+  } catch (e) {
+    res.status(200).json({
+      jobsPosted: 3,
+      quotesReceived: 2,
+      timeToHireDays: 3.5,
+      talent_viewed: 12,
+      shortlisted: 5,
+      funnel: [
+        { label: 'Post', value: 3 },
+        { label: 'Invite', value: 2 },
+        { label: 'Hire', value: 2 }
+      ]
+    });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -622,3 +754,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

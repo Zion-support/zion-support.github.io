@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 // If activating, deactivate all other models with the same purpose;
@@ -10,6 +16,12 @@ if ( {) {$2;
           .update({ active: false });
           .eq('purpose', purpose);
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
@@ -55,10 +67,29 @@ import { ModelConfig } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from lucide-react'
+import { supabase  } from '@/integrations/supabase/client;
+import { ModelConfig  } from @/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
@@ -71,6 +102,12 @@ interface ModelVersionData extends ModelConfig {
       // Refresh the model list;
       fetch_models ();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       // Update this model
       await supabase
@@ -79,6 +116,12 @@ interface ModelVersionData extends ModelConfig {
         .eq('id', modelId)
       // Refresh the model list
       fetchModels()
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
@@ -173,6 +216,7 @@ export function ZionGPTModelManager() {
   const fetchModels = null;
 
   return (
+<<<<<<< HEAD
         await supabase;.from('model_versions').update({ active: false }).eq('purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react';
 import { supabase   } from '@/integrations/supabase/client';
 import { ModelConfig   } from '@/utils/zion-gpt';
@@ -187,6 +231,26 @@ import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        await supabase;.from('model_versions).update({ active: false }).eq(purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react;
+import { supabase   } from @/integrations/supabase/client';
+import { ModelConfig   } from '@/utils/zion-gpt;
+import { logErrorToProduction } from @/utils/productionLogger';
+import { useState, useEffect  } from 'react;
+import { Button  } from @/components/ui/button';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card;
+import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/components/ui/table';
+import { Badge  } from '@/components/ui/badge;
+import { Loader2,RefreshCw,Play,CheckCircle,AlertCircle} from lucide-react';
+import { logErrorToProduction  } from '@/utils/productionLogger;
+interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'running | succeeded' | 'failed;
+>>>>>>> origin/resolved-merge-conflicts
   errorMessage?: string;
 }await supabase;
         .from ('model_versions').update ({ active: !current_active }).eq ('id', model_id),// Refresh the model list;
@@ -254,8 +318,21 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
 
+<<<<<<< HEAD
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
+=======
+    <Card className=w-full">
+      <CardHeader className="flex flex-row items-center justify-between>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <Card className="w-full">
+      <CardHeader className="flex flex-row items-center justify-between">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
         <div>
           <CardTitle>ZionGPT Models</CardTitle>
           <CardDescription>
@@ -313,10 +390,23 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
+<<<<<<< HEAD
                         {activeJobs[model && model.id] ? (<Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (<RefreshCw className="h-4 w-4" />;{model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (<Button;
                         variant="ghost";
                         size="sm";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                        {activeJobs[model && model.id] ? (<Loader2 className="h-4 w-4 animate-spin />;
+                        ) : (<RefreshCw className=h-4 w-4" />;{model.trainingStatus === queued' || model.trainingStatus === 'running ? (<Button;
+                        variant="ghost;
+                        size=sm";
+>>>>>>> origin/resolved-merge-conflicts
                       >;
                         {activeJobs[model.id] ? (<Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (<RefreshCw className="h-4 w-4" />;
@@ -325,10 +415,20 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                     ) : model && model.trainingStatus === 'succeeded' ? (<Button;
                         variant={model.active ? "outline" : "default"}
                         size="sm"
+<<<<<<< HEAD
+=======
+                        size=sm"
+>>>>>>> origin/resolved-merge-conflicts
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                       <Button
 
@@ -346,8 +446,6 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-                      </Button>
-                    ) : (
 
                       <Button
 
@@ -360,18 +458,30 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: 'queued' | 'run
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                   </TableCell>;
                 </TableRow>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               ))}
             </TableBody>;
           </Table>;
         )}
-      </CardContent>;
-    </Card>;
-  );
 }
 
 }
@@ -485,6 +595,13 @@ return (<Card className="w-full" > <CardHeader className="flex flex-row items-ce
 }</TableCell> </TableRow>) ) ;
 }</TableBody> </Table>) ;
 }</CardContent> </Card>) ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         size="sm";
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}>;
                         {model.active ? (<>;
@@ -592,3 +709,10 @@ return (<Card className="w-full" > <CardHeader className="flex flex-row items-ce
   model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) ";
 }</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1" /> Error </Button>)}</TableCell> </TableRow>) )}</TableBody> </Table>)}</CardContent> </Card>)}'";
 }'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

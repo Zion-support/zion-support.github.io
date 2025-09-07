@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+interface HelpArticleListProps {
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+
+=======
+<<<<<<< HEAD
 
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -94,6 +108,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   if (!category) {
     return <div>Category not found</div>
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -106,6 +121,11 @@ interface HelpArticleListProps {;
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
+<<<<<<< HEAD
+
+import React from "react";
+import {}
+=======
     return <div>Category not found</div>;
 <<<<<<< HEAD
   }
@@ -118,10 +138,55 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   
 import React from "react";
 import {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+<<<<<<< HEAD
+  CardTitle,";
+} from "@/components/ui/card";"
+import { HELP_CATEGORIES } from "./help-content";
+
+interface HelpArticleListProps {
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+
+  searchQuery: string;
+}
+
+import {
+  // TODO: Implement
+}
+  Card,
+  CardContent,
+  CardDescription,
+
+  CardHeader,
+  CardTitle,"
+} from "@/components/ui/card";""
+import { HELP_CATEGORIES } from "./help-content";"
+interface HelpArticleListProps {
+  // TODO: Implement
+  categoryId: string;,
+  onArticleSelect: (articleId: string) => void;,
+  searchQuery: string;
+
+}
+
+export function HelpArticleList({
+  categoryId,
+
+  onArticleSelect,
+  searchQuery,)
+=======
   CardTitle,
 } from "@/components/ui/card";
 import { HELP_CATEGORIES } from "./help-content";
@@ -135,11 +200,25 @@ export function HelpArticleList({
   categoryId,
   onArticleSelect,
   searchQuery,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
 
   if (!category) {
     return <div>Category not found</div>;
+<<<<<<< HEAD
+
+    <div>
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
+
+        <p className="text-zion-slate-light">{category.description}</p>
+      </div>
+
+      {filteredArticles.length === 0 ? ("
+        <div className="text-center py-8">"
+          <h3 className="text-lg font-medium mb-2">No articles found</h3>"
+=======
   }
 
   }
@@ -193,10 +272,23 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <p className="text-zion-slate-light">
             Try adjusting your search query or browse another category.
           </p>
         </div>
+<<<<<<< HEAD
+      ) : ("
+        <div className="space-y-4">
+          {filteredArticles.map((article) => (
+            <Card;
+              key={article.id}"
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+              onClick={() => onArticleSelect(article.id)}
+            >"
+              <CardHeader className="pb-2">"
+                <CardTitle className="text-lg">{article.title}</CardTitle>"
+=======
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
@@ -208,10 +300,13 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
             >
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg">{article.title}</CardTitle>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <CardDescription className="text-zion-slate-light text-sm">
                   Last updated: {formatDate(article.lastUpdated)}
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
+=======
               <CardContent>
                 <p className="text-sm text-zion-slate-light truncate">
                   {article.content.substring(0, 120)}...
@@ -331,6 +426,7 @@ export function HelpArticleList({
                   Last updated: {formatDate(article.lastUpdated)}
                 </CardDescription>
               </CardHeader>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <CardContent>"
                 <p className="text-sm text-zion-slate-light truncate">
                   {article.content.substring(0, 120)}...
@@ -361,10 +457,16 @@ export function HelpArticleList({
   );
 }
 
+<<<<<<< HEAD
+export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
+
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!category) {;
     return <div>Category not found</div>;
   }
@@ -376,12 +478,19 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
           article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
     : category && category.articles;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div>;"
       <div className="mb-6">;"
         <h2 className="text-2xl font-bold mb-2">{category && category.name}</h2>;"
         <p className="text-zion-slate-light">{category && category.description}</p>;
       </div>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -424,11 +533,15 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
         <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <p className="text-zion-slate-light">;
             Try adjusting your search query or browse another category.;
           </p>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
             >;"
@@ -443,6 +556,8 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
           ))}
         </div>;
       )}
+<<<<<<< HEAD
+=======
 =======
       ) :(;
         <div className="space-y-4">;
@@ -461,6 +576,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
               <CardContent>;
                 <p className="text-sm text-zion-slate-light truncate">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
@@ -573,17 +689,28 @@ function format_date (date: string): string {"
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function formatDate(): any (date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
     year: "numeric",;
     month: "long",;
     day: "numeric";
+<<<<<<< HEAD
+
+  });
+}
+
+=======
   });
 }
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from './react';
 import {
   Card,
@@ -718,6 +845,10 @@ function format_date (date: string): string {
     month: "long",
     day: "numeric",
   });
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
@@ -727,6 +858,8 @@ function format_date (date: string): string {
     </div>;
   ),;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   {article.content.substring(0, 120)}...;
                 </p>;
@@ -739,10 +872,13 @@ function format_date (date: string): string {
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   })
   })
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -784,6 +920,7 @@ year: "numeric"
   })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;
 function formatDate(date: string): string {;
@@ -799,9 +936,13 @@ function formatDate(date: string): string {;
 <<<<<<< HEAD
 ;
 =======
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

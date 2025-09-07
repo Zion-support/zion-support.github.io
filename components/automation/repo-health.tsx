@@ -45,6 +45,23 @@ return (;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <header className="space-y-1">;"
+        <h1 className="text-3xl font-bold">Repo Health</h1>;"
+        <p className="text-gray-600 "dark":text-gray-300">Automated activity and maintenance snapshot.</p>;"
+      </header>;
+      <div className="grid "sm":grid-cols-2 "lg":grid-cols-4 gap-4">;"
+        <div className="p-4 rounded-lg border border-gray-200 "dark": border-gray-800"><div className="text-xs text-gray-500">Commits (7d)</div><div className="text-2xl font-semibold">{report && report.commits.last7,"
+}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 "dark": border-gray-800"><div className="text-xs text-gray-500">Commits (30d)</div><div className="text-2xl font-semibold">{report && report.commits.last30,"
+}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 "dark": border-gray-800"><div className="text-xs text-gray-500">Changed Files (7d)</div><div className="text-2xl font-semibold">{report && report.changes.last7dFiles && last7dFiles.lengt,"
+}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 "dark": border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report && report.largestFiles[0]?.file || '—,'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
       <header className="space-y-1">;"
         <h1 className="text-3xl font-bold">Repo Health</h1>;"
         <p className="text-gray-600 "dark":text-gray-300">Automated activity and maintenance snapshot.</p>;"
@@ -298,10 +315,59 @@ if (return <div > No report yet. Check back soon.</div>) {}
         </ul>;
       </section>;
     </div>);
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</div></div>;
       </div>;
       <section>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {report && report.stalePages.map((p, i) => (;
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;"
+          ))}
+}
+;
+export default /**;
+ * RepoHealth - Function description;
+ */
+function RepoHealth() {}
+  // Check condition;
+if (return <div > No report yet. Check back soon.</div>) {}
+  $2;
+}
+  return (
+    <div className="space-y-6">;
+      <header className="space-y-1">;
+        <h1 className="text-3xl font-bold">Repo Health</h1>;
+        <p className="text - gray - 600 dark:text-gray-300">Automated activity and maintenance snapshot.</p>;
+      </header>;
+      <div className="grid sm:grid - cols - 2 lg:grid - cols-4 gap-4">;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Commits (7d)</div><div className="text-2xl font-semibold">{report.commits.last7d;}</div></div>;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Commits (30d)</div><div className="text-2xl font-semibold">{report.commits.last30d;}</div></div>;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Changed Files (7d)</div><div className="text-2xl font-semibold">{report.changes.last7dFiles.length;}</div></div>;
+        <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largest_files[0]?.file || '—';}</div></div>;
+      </div>;
+      <section>;
+        <h2 className="font-semibold mb-2">Largest Files</h2>;
+        <ul className="text-sm space-y-1">;
+          {report.largest_files.map ((f, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes / 1024).to_fixed (1)} KB</span></li>))}
+        </ul>;
+      </section>;
+      <section>;
+        <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;
+        <ul className="text-sm space-y-1">;
+          {report.stale_pages.map ((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date (p.lastCommitAt).toLocaleDateString ()}</span></li>))}
+        </ul>;
+      </section>;
+    </div>);
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>,
@@ -393,6 +459,10 @@ export default function RepoHealth({ report }: Props) {;
           {report.stalePages.map((p, i) => (
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date(p.lastCommitAt).toLocaleDateString()}</span></li>
           ))}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </ul>
       </section>
     </div>
@@ -448,6 +518,14 @@ export default function RepoHealth({ report }: Props) {;
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -465,3 +543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

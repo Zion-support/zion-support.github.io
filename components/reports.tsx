@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 import React from 'react','
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {"
 }
@@ -7,6 +11,56 @@ import React from 'react';'
 
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {"
 
+<<<<<<< HEAD
+=======
+=======
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+import React from 'react';
+
+ </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
+  index 
+}</span>) ) 
+}</div> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <Download className="w-5 h-5" /> <span>Download Full Report</span> </button> <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2" > <Eye className="w-5 h-5" /> <span>Preview Report</span> </button> </div> </motion.div>) ) 
+}</div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > All Reports </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our comprehensive research across different technology domains </p> </motion.div> {
+  /* Category Pills */ 
+}<motion.div > {
+  categories.map ( (category, index) => (<button key= {
+  index 
+}className= {
+  `px-6 py-3 rounded-full font-medium transition-all duration-200 $ {
+  category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' 
+}` 
+}> {
+  category.name 
+}({
+  category.count 
+}) </button>) ) 
+}</motion.div> > <div className= {
+  `w-16 h-16 bg-gradient-to-br $ {
+  report.color 
+}rounded-xl flex items-center justify-center text-white mb-6` 
+}> {
+  report.icon 
+}</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) ) 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
+}
+<<<<<<< HEAD
+export default ReportsPage
+import React from 'react',
+=======
+
+import React from 'react';,
+</Head> <QuickNavigation    /> > Research Reports </motion.h1> <motion.p     /> Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span    /> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"     /> Featured Report </h2> </motion.div> {
+import React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+ </Head> <QuickNavigation    /> > Research Reports </motion.h1> <motion.p     /> Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span    /> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"     /> Featured Report </h2> </motion.div> {
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {"
 
 }
@@ -41,6 +95,10 @@ import React from 'react';'
   `w-16 h-16 bg-gradient-to-br $ {`
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   report.color
 }rounded-xl flex items-center justify-center text-white mb-6``
 }> {
@@ -56,6 +114,25 @@ import React from 'react';
 export default ReportsPage;
 import Head from 'next/head';'
 import { motion } from 'framer-motion';'
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+=======
+</Head> <QuickNavigation    /> > Research Reports </motion.h1> <motion.p     /> Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span    /> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"     /> Featured Report </h2> </motion.div> {
+>>>>>>> origin/chore/fix-lint-and-merge
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from 'react;
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 ;
 import React from 'react',</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {import React from 'react';
@@ -73,8 +150,57 @@ import React from 'react',</Head> <QuickNavigation /> > Research Reports </motio
   report.color;
 }rounded-xl flex items-center justify-center text-white mb-6`;
 }> {report.icon;
+<<<<<<< HEAD
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>)}export default ReportsPage;import Head from 'next/head';
 import { motion  } from 'framer-motion';
+=======
+<<<<<<< HEAD
+}</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>)}export default ReportsPage;import Head from 'next/head';
+import { motion  } from 'framer-motion';
+=======
+}</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1 > <span>Download</span> <Download className=w-4 h-4" /> </button> </div> </motion.article>) )}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6 > Need Custom Research? </h2> <p className=text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact className=bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5 /> </a> <a href=/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>)}export default ReportsPage;import Head from 'next/head;
+import { motion  } from framer-motion';
+=======
+ </Head> <QuickNavigation    /> > Research Reports </motion.h1> <motion.p     /> Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span    /> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"     /> Featured Report </h2> </motion.div> {
+  reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {}
+  index}
+}</span    />) )
+}</div> </div> </div> <div className=\"flex flex-col sm: flex-row gap-4 justify-center\"     /> <button className=\"bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2\"     /> <Download className=\"w-5 h-5\"    /> <span    />Download Full Report</span> </button> <button className=\"border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2\"     /> <Eye className=\"w-5 h-5\"    /> <span    />Preview Report</span> </button> </div> </motion.div>) )
+}</div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"     /> All Reports </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"     /> Explore our comprehensive research across different technology domains </p> </motion.div> {}
+  /* Category Pills */,}
+}<motion.div     /> {
+  categories.map ( (category, index) => (<button key= {}
+  index}
+}className= {
+  `px-6 py-3 rounded-full font-medium transition-all duration-200 $ {}
+  category && category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50' }
+}` ,
+}    /> {;}
+  category && category.name ;}
+}({;}
+  category && category.count ;}
+}) </button>) ) ;
+}</motion && motion.div> > <divclassName= {
+  `w-16 h-16 bg-gradient-to-br $ {
+}
+  report.color}
+}rounded-xl flex items-center justify-center text-white mb-6`
+}    /> {}
+  report.icon }
+}</div> </span> <button className=\"text-cyan-400 hover: text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1\"     /> <span    />Download</span> <Download className=\"w-4 h-4\"    /> </button> </div> </motion.article>) ) 
+}</div> </div> </section> > <h2 className=\"text-4xl font-bold text-white mb-6\"     /> Need Custom Research? </h2> <p className=\"text-xl text-gray-300 mb-8\"     /> Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href=\"/contact\" className=\"bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2\"     /> <span    />Request Custom Research</span> <ArrowRight className=\"w-5 h-5\"    /> </a> <a href=\"/services\" className=\"border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200\"     /> View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) }
+
+export default ReportsPage;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { FileText;
   }
   Download;
@@ -107,12 +233,41 @@ const "ReportsPage": React.FC;
 
         <QuickNavigation />
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           {categories.map((category) => (
             <Link 
               key={category.name}
               href={category.href}
+<<<<<<< HEAD
               className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
+=======
+<<<<<<< HEAD
+              className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
+=======
+              className=group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
+=======
+            <motion.div 
+
+
+            <motion.div
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >
               Research Reports
             </motion.h1>
@@ -252,11 +407,24 @@ const "ReportsPage": React.FC;
 
             {/* Category Pills */}
             <motion.div 
+<<<<<<< HEAD
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={ opacity: 0, y: 30}
               whileInView={ opacity: 1, y: 0}
               transition={ duration: 0.8, delay: 0.2 }
               viewport={ once: true}
+=======
+<<<<<<< HEAD
+              className="flex flex-wrap justify-center gap-4 mb-12"
+=======
+<<<<<<< HEAD
+              className="flex flex-wrap justify-center gap-4 mb-12
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true}}
+>>>>>>> origin/resolved-merge-conflicts
             >
               {categories.map((category, index) => (
                 <button
@@ -264,7 +432,16 @@ const "ReportsPage": React.FC;
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                     category.active
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+<<<<<<< HEAD
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+=======
+<<<<<<< HEAD
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+=======
+<<<<<<< HEAD
+                      : bg-gray-800/50 text-gray-300 hover:bg-gray-700/50
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   }`}
                 >
                   {category.name} ({category.count})
@@ -287,8 +464,263 @@ const "ReportsPage": React.FC;
                     {report.icon}
                   </div>
                   
+<<<<<<< HEAD
                   <div className="flex items-center space-x-4 mb-4">
                     <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
+=======
+<<<<<<< HEAD
+                  <div className="flex items-center space-x-4 mb-4">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
+=======
+                  <div className=flex items-center space-x-4 mb-4">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium>
+=======
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                  }`}>;
+                  {category && category.name} ({category && category.count});
+                </button>;
+              ))}
+
+            </motion && motion.div>;
+
+
+
+
+
+<<<<<<< HEAD
+            </motion && motion.div>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            {/* Reports Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
+                <motion&& motion.article
+                  key={index}
+                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      </span>;
+                      <span className="text - gray - 400 text - sm flex items - center space - x-1">;
+                        <Calendar className="w - 4 h - 4" />;
+                        <span>{format_date (report.date)}</span>;
+                      </span>;
+                    </div>;
+                    <h3 className="text - 3xl font - bold text - white mb - 4">{report.title}</h3>;
+                    <p className="text - xl text - gray - 300 leading - relaxed mb - 6">{report.excerpt}</p>;
+                    <div className="flex flex - wrap items - center gap - 6 mb - 6">;
+                      <span className="text - gray - 400 text - sm flex items - center space - x-1">;
+                        <User className="w - 4 h - 4" />;
+                        <span>{report.author}</span>;
+                      </span>;
+                      <span className="text - gray - 400 text - sm flex items - center space - x-1">;
+                        <FileText className="w - 4 h - 4" />;
+                        <span>{report.pages} pages</span>;
+                      </span>;
+                      <span className="text - gray - 400 text - sm flex items - center space - x-1">;
+                        <Download className="w - 4 h - 4" />;
+                        <span>{format_number (report.downloads)} downloads</span>;
+                      </span>;
+                      <span className="text - gray - 400 text - sm flex items - center space - x-1">;
+                        <Eye className="w - 4 h - 4" />;
+                        <span>{format_number (report.views)} views</span>;
+                      </span>;
+                    </div>;
+                    <div className="flex flex - wrap gap - 2 mb - 6">;
+                      {report.tags.map ((tag, tag_index) => (
+                        <span key={tag_index} className="bg - gray - 800 / 50 text - gray - 300 px - 3 py - 1 rounded - full text - sm">;
+                          {tag}
+                        </span>))}
+                    </div>;
+                  </div>;
+                </div>;
+                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                  <button className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 inline - flex items - center space - x-2">;
+                    <Download className="w - 5 h - 5" />;
+                    <span > Download Full Report</span>;
+                  </button>;
+                  <button className="border border - cyan - 400 / 40 text - cyan - 400 hover:bg - cyan - 400 / 10 px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200 inline - flex items - center space - x-2">;
+                    <Eye className="w - 5 h - 5" />;
+                    <span > Preview Report</span>;
+                  </button>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </section>;
+        {/* Categories Filter */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - black / 20">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                All Reports;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Explore our comprehensive research across different technology domains;
+              </p>;
+            </motion.div>;
+            {/* Category Pills */}
+            <motion.div;
+              className="flex flex - wrap justify - center gap - 4 mb - 12";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >;
+              {categories.map ((category, index) => (
+                <button;
+                  key={index}
+                  className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 200 ${
+                    category.active;
+                      ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
+                  }`}
+                >;
+                  {category.name} ({category.count});
+                </button>))}
+            </motion.div>;
+            {/* Reports Grid */}
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {reports.filter (report => !report.featured).map ((report, index) => (
+                <motion.article;
+                  key={index}
+                  className="bg - black / 40 backdrop - blur - sm border border - cyan - 400 / 20 rounded - 2xl p - 8 hover:border - cyan - 400 / 40 transition - all duration - 300 hover:transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >;
+                  <div className={`w - 16 h - 16 bg - gradient - to - br ${report.color} rounded - xl flex items - center justify - center text - white mb - 6`}>;
+                    {report.icon}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  viewport={{ once: true }}>;
+                  <div className={`w-16 h-16 bg-gradient-to-br ${report && report.color} rounded-xl flex items-center justify-center text-white mb-6`}>;
+                    {report && report.icon}
+                  </div>;
+                  <div className="flex items-center space-x-4 mb-4">;
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">;
+                      {report && report.category}
+                    </span>;
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                      <Calendar className="w-4 h-4" />;
+                      <span>{formatDate(report && report.date)}</span>;
+                    </span>;
+                  </div>;
+                  <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report && report.title}</h3>;
+                  <p className="text-gray-300 mb-6 line-clamp-4">{report && report.excerpt}</p>;
+                  <div className="flex items-center justify-between mb-6">;
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                      <FileText className="w-4 h-4" />;
+                      <span>{report && report.pages} pages</span>;
+                    </span>;
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                      <Download className="w-4 h-4" />;
+                      <span>{formatNumber(report && report.downloads)}</span>;
+                    </span>;
+                  </div>;
+                  <div className="flex items-center justify-between">;
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                      <User className="w-4 h-4" />;
+                      <span>{report && report.author.split('&')[0].trim()}</span>;
+                    </span>;
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1">;
+                      <span>Download</span>;
+                      <Download className="w-4 h-4" />;
+                    </button>;
+                  </div>;
+                </motion && motion.article>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+<<<<<<< HEAD
+
+
+
+=======
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
+              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-4xl font-bold text-white mb-6">;
+                Need Custom Research?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">;
+                  <span>Request Custom Research</span>;
+                  <ArrowRight className="w-5 h-5" />;
+                </a>;
+                <a
+                  href="/services"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200">;
+                  View Research Services;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
+};
+<<<<<<< HEAD
+
+export default ReportsPage;
+=======
+
+
+export default ReportsPage;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </div>;
+                  <div className="flex items - center space - x-4 mb - 4">;
+                    <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       {report.category}
                     </span>
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
@@ -344,10 +776,261 @@ export default ReportsPage;const ReportsPage: React.FC;
               whileInView={ opacity: 1, y: 0}
               transition = $2;
 export default ReportsPage,
+<<<<<<< HEAD
               initial={ opacity: 0, y: 30 }
               whileInView={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
               viewport={ once: true }
+=======
+<<<<<<< HEAD
+=======
+=======
+  Clock;}
+  Award;}
+  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+=======
+;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default ReportsPage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+const ReportsPage: React.FC;
+
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+export default ReportsPage;
+
+<<<<<<< HEAD
+        </Head>
+
+        <QuickNavigation />
+
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          {categories.map((category) => (
+            <Link 
+              key={category.name}
+              href={category.href}
+              className=&quot;group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105&quot;
+            >
+              Research Reports
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
+            </motion.p>
+            <motion.div
+              className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <span className="flex items-center space-x-2">
+                <FileText className="w-5 h-5" />
+                <span>{reports.length} Reports Available</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <Eye className="w-5 h-5" />
+                <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
+              </span>
+            </motion.div>
+          </div>
+        </section>
+        {/* Featured Report */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Featured Report
+              </h2>
+            </motion.div>
+            {reports.filter(report => report.featured).map((report, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">
+                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>
+                    {report.icon}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
+                        {report.category}
+                      </span>
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{formatDate(report.date)}</span>
+                      </span>
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-4">{report.title}</h3>
+                    <p className="text-xl text-gray-300 leading-relaxed mb-6">{report.excerpt}</p>
+                    <div className="flex flex-wrap items-center gap-6 mb-6">
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                        <User className="w-4 h-4" />
+                        <span>{report.author}</span>
+                      </span>
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                        <FileText className="w-4 h-4" />
+                        <span>{report.pages} pages</span>
+                      </span>
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                        <Download className="w-4 h-4" />
+                        <span>{formatNumber(report.downloads)} downloads</span>
+                      </span>
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">
+                        <Eye className="w-4 h-4" />
+                        <span>{formatNumber(report.views)} views</span>
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {report.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
+                    <Download className="w-5 h-5" />
+                    <span>Download Full Report</span>
+                  </button>
+                  <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2">
+                    <Eye className="w-5 h-5" />
+                    <span>Preview Report</span>
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Categories Filter */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                All Reports
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive research across different technology domains
+              </p>
+            </motion.div>
+            {/* Category Pills */}
+            <motion.div
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4 mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                    category.active
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </motion.div>
+
+            {/* Reports Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {reports.filter(report => !report.featured).map((report, index) => (
+                <motion.article
+                  key={index}
+                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
+                    {report.icon}
+                  </div>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
+                      {report.category}
+                    </span>
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{formatDate(report.date)}</span>
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report.title}</h3>
+                  <p className="text-gray-300 mb-6 line-clamp-4">{report.excerpt}</p>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <FileText className="w-4 h-4" />
+                      <span>{report.pages} pages</span>
+                    </span>
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <Download className="w-4 h-4" />
+                      <span>{formatNumber(report.downloads)}</span>
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <User className="w-4 h-4" />
+                      <span>{report.author.split('&')[0].trim()}</span>
+                    </span>
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1">
+                      <span>Download</span>
+                      <Download className="w-4 h-4" />
+                    </button>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+>>>>>>> origin/resolved-merge-conflicts
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need Custom Research?
@@ -379,3 +1062,14 @@ export default ReportsPage,
   )
 }
 export default ReportsPage;
+<<<<<<< HEAD
+=======
+
+export default ReportsPage;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

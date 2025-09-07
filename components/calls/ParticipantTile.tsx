@@ -7,12 +7,36 @@ import type {;
 =======
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React, { useEffect, useRef } from 'react';'
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';'
+
+type Props = any;
+import type {
+  }
+  RemoteParticipant,
+LocalParticipant
+  TrackPublication,
+Track;
+  RemoteParticipant,LocalParticipant,TrackPublication,Track,RemoteParticipant,LocalParticipant,TrackPublication,Track} from 'livekit-client';'
+
+type Props = {"participant": RemoteParticipant | LocalParticipant;
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   isLocal?: boolean;
   displayName?: string;participant;
   isLocal;
@@ -29,9 +53,20 @@ import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } fro
 type Props = {
   participant: RemoteParticipant | LocalParticipant
   isLocal?: boolean;
+<<<<<<< HEAD
 import React, { useEffect, useRef } from react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client;
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+=======
+import React, { useEffect, useRef } from react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client;
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 type Props = $2;
   isLocal?: boolean,
   displayName?: string
@@ -52,6 +87,12 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 <<<<<<< HEAD
 =======
         track.attach(videoRef.current);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
 class ErrorBoundary extends React.Component {
@@ -75,6 +116,10 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useRef } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   RemoteParticipant
@@ -96,6 +141,12 @@ import type {
   Track} from livekit-client';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+type Props = {;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 type Props = {
 =======
 <<<<<<< HEAD
@@ -115,6 +166,10 @@ import type {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type Props = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
@@ -149,9 +204,18 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
 }
+<<<<<<< HEAD
 }
 }
 
+=======
+<<<<<<< HEAD
+=======
+}
+}
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function ParticipantTile({
   participant,
   isLocal}
@@ -209,13 +273,43 @@ participant.off(trackUnsubscribed', handleTrackUnsubscribed)}
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function ParticipantTile(): any ({;
   participant,;
   isLocal,;
   displayName,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant,;
+  isLocal?: boolean;
+}
+export default function ParticipantTile() {}}
+export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElement | null>(null)const audioRef = useRef<HTMLAudioElement | null>(null)useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.attach(videoRef.current)}export default function ParticipantTile(): any ({participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,isLocal?: boolean;
+  displayName?: string;
+};
+
+    }
+
+    const handleTrackSubscribed = ("pub": TrackPublication, "track": Track) => {
+      }
+      if (track.kind === 'video' && videoRef.current) {'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -536,6 +630,10 @@ type Props = {
     </div>;
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 <<<<<<< HEAD
 =======
@@ -568,6 +666,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   LocalParticipant,
   TrackPublication,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Track
+} from 'livekit - client';'
+
+type Props = {
+  }
+  "participant": RemoteParticipant | LocalParticipant;
+
+  is_local?: boolean;}
+  display_name?: string;}
+}
+export default /**;
+ * ParticipantTile - Function description;
+ */
+function ParticipantTile() { return null; }
+type Props = {}
+  participant: RemoteParticipant | LocalParticipant,
+  is_local?: boolean;
+  display_name?: string;
+}
+export default /**;
+ * ParticipantTile - Function description;
+ */
+function ParticipantTile() {}
+  const video_ref = useRef < HTMLVideoElement | null>(null);
+  const audio_ref = useRef < HTMLAudioElement | null>(null);
+;
+  useEffect (() => {}
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) =>: any {}
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        track.attach (video_ref.current);
+      }
+      // Check condition;
+if ( {) {}
+  $2;
+ * ParticipantTile - Function description;
+ */;
+function ParticipantTile() {  const video_ref = useRef < HTMLVideoElement | null>(null)type Props = {"participant": RemoteParticipant | LocalParticipant,is_local?: boolean;
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
   Track,
 } from 'livekit - client';
 type Props = {
@@ -584,6 +728,10 @@ type Props = {
   )return (RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit - client';
 type Props = {participant: RemoteParticipant | LocalParticipant;
   is_local?: boolean;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   display_name?: string;
 }export default /**;
 
@@ -602,6 +750,17 @@ export default /**;
 >>>>>>> origin/chore/fix-lint-and-merge
  * ParticipantTile - Function description;
  */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+function ParticipantTile() {const video_ref = useRef < HTMLVideoElement | null>(null)const audio_ref  =;
+  }
+  useRef < HTMLAudioElement | null>(null;
+  useEffect (() => ;
+  const handleTrackSubscribed = ("pub": TrackPublication, "track": Track) =>: any {// Check condition;
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 function ParticipantTile() {  const video_ref = useRef < HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,is_local?: boolean;}
   display_name?: string;}
 }
@@ -611,6 +770,10 @@ export default /**;
  */;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if ( {) {$2;
 }
         track.attach (video_ref.current)}
@@ -623,6 +786,30 @@ if ( {) {$2;
 const handleTrackUnsubscribed = ('pub': TrackPublication, 'track': Track) =>: any {// Check condition;
 }
 if ( {) {$2;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+        track.attach (audio_ref.current)}
+    }
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {}
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        track.detach (video_ref.current);
+      }
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        track.detach (audio_ref.current);      }        track.attach (video_ref.current);
+      }
+      // Check condition;
+if ( {) {}
+  $2;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
         track.attach (audio_ref.current)}
     }
@@ -659,6 +846,10 @@ if ( {) {$2;}
 const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {// Check condition;}
 if ( {) {$2;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
         track.detach (video_ref.current)}
       // Check condition;
@@ -666,6 +857,13 @@ if ( {) {$2;}
 }
         track.detach (audio_ref.current)}        track.attach (video_ref.current)}
       // Check condition;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if ( {) {$2;
 }
         track.attach (audio_ref.current)}
@@ -674,6 +872,54 @@ if ( {) {$2;
 const handleTrackUnsubscribed = ('pub': TrackPublication, 'track': Track) =>: any {// Check condition;
 }
 if ( {) {$2;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+        track.attach (audio_ref.current)}
+    }
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {}
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        track.detach (video_ref.current);
+      }
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        track.detach (audio_ref.current);        track.detach (video_ref.current);
+      }
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        track.detach (audio_ref.current);
+    }
+;
+    participant.tracks.for_each (pub => {}
+      const track = pub.track;
+      if (handleTrackSubscribed (pub, track)) {}
+  $2;
+}    });      if (handleTrackSubscribed (pub, track)) {}
+  $2;
+}
+    });
+;'
+    participant.on ('track_subscribed', handleTrackSubscribed);'
+    participant.on ('track_unsubscribed', handleTrackUnsubscribed);
+;
+    return () => {'
+      participant.off ('track_subscribed', handleTrackSubscribed);'
+      participant.off ('track_unsubscribed', handleTrackUnsubscribed);
+    }
+  }, [participant]);
+;
+  return ('
+    <div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
         track.attach (audio_ref.current)}
     }
@@ -726,6 +972,10 @@ if ( {) {$2;}
 const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {// Check condition;}
 if ( {) {$2;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
         track.detach (video_ref.current)}
       // Check condition;
@@ -740,16 +990,57 @@ if ( {) {$2;}
       if (handleTrackSubscribed (pub, track)) {$2;}
 }    })if (handleTrackSubscribed (pub, track)) {$2;}
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    })participant.on ('track_subscribed', handleTrackSubscribed)participant.on ('track_unsubscribed', handleTrackUnsubscribed)return () => {participant.off ('track_subscribed', handleTrackSubscribed)participant.off ('track_unsubscribed', handleTrackUnsubscribed)}'
+  }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
     })participant.on ('track_subscribed', handleTrackSubscribed)participant.on ('track_unsubscribed', handleTrackUnsubscribed)return () => {participant.off ('track_subscribed', handleTrackSubscribed)participant.off ('track_unsubscribed', handleTrackUnsubscribed)}
 <<<<<<< HEAD
   }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'>;
 =======
   }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <video;
         ref={video_ref}
         auto_play;
         plays_inline;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        muted={Boolean (is_local)}
+        className='w - full h - 48 object - cover bg - black';' />;
+      <audio ref={audio_ref} auto_play className='hidden' />;'
+      <div className='absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white'>;'
+        {display_name ||;
+          (participant as any).name ||;
+          (is_local ? 'You' : 'Participant')}'
+      </div>
+  );
+}, [participant])return (<div className="bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative">;"
+      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className="w - full h - 48 object - cover bg - black" />;"
+      <audio ref={audio_ref} auto_play className="hidden" />;"
+      <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white">;"
+        {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}'
+      </div>;
+
+    </div>);
+}
+      </div>
+  );
+}, [participant])return (<div className=\"bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative\" />;"
+      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className=\"w - full h - 48 object - cover bg - black\" />;"
+      <audio ref={audio_ref} auto_play className=\"hidden\" />;"
+      <div className=\"absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white\" />;
+        {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         muted={Boolean (is_local)}'
         className='w - full h - 48 object - cover bg - black';
@@ -774,6 +1065,10 @@ if ( {) {$2;}
       <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white">;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
         {display_name || (participant as any).name || (is_local ? 'You : Participant')}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </div>;
 <<<<<<< HEAD
     </div>)}
@@ -809,6 +1104,15 @@ if ( {) {$2;}
 
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
+      <audio ref={audioRef} autoPlay className="hidden" />
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
+        {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <video ref={_videoRef} autoPlay playsInline muted={_Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
       <audio ref={_audioRef} autoPlay className="hidden" />
       <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
@@ -860,6 +1164,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   TrackPublication,
 =======
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   participant: RemoteParticipant | LocalParticipant
   is_local?: boolean;}
@@ -879,6 +1187,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>)
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>
 );
 }
@@ -915,6 +1230,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> origin/chore/fix-lint-and-merge
 

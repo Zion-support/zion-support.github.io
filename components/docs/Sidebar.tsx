@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
 interface SidebarProps  {spec: ApiDocsSpec;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -27,6 +33,9 @@ interface SidebarProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function Sidebar() {
 }
 =======
@@ -47,6 +56,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               key={v}
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
@@ -188,6 +199,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <nav className="space-y-3">
         {spec.sections.map((section) => (
           <div key={section.id}>"
@@ -200,7 +212,11 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                   <li key={e.id}>
 <<<<<<< HEAD
 =======
+=======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (}
             <button;}
 key={v}
@@ -217,6 +233,8 @@ key={v}
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
@@ -227,6 +245,7 @@ key={v}
         </div>;
       </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div>;
 
 =======
@@ -250,6 +269,9 @@ key={v}
         </select>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <nav className='space-y-3'    />;
         {spec.sections.map(section => (<div key={section.id}    />;
             <div className='text-sm font-medium mb-1'    />{section.title}</div>;
@@ -263,6 +285,11 @@ key={v}
                 ).map(e => (<li key={e.id}    />;
                     <button;
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                      className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
+=======
 =======
       <nav className='space-y-3'>;
         {spec && spec.sections.map(section => (;
@@ -298,6 +325,7 @@ key={v}
                     <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       onClick={() =    /> onSelectEndpoint(e.id)}
                     >;
 <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'    />;
@@ -315,6 +343,8 @@ key={v}
                   </li>
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
                       onClick={() => onSelectEndpoint(e.id)}
                     >
@@ -329,11 +359,18 @@ key={v}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 ))}
             </ul>;
           </div>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD
 =======
 
@@ -348,6 +385,7 @@ key={v}
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;
@@ -485,6 +523,9 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
           </div>))}
       </nav>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </aside>)</nav>;
     </aside>;
 <<<<<<< HEAD
@@ -504,6 +545,8 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
         <select
           className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary text - sm'
           value={visibility_filter}
+<<<<<<< HEAD
+=======
 =======
     </aside>);
           ))}
@@ -571,6 +614,10 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
 =======
       </nav>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     </aside>;
   )}
@@ -595,12 +642,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,5 +1,39 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
+<<<<<<< HEAD
+=======
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { ImageIcon, AlertTriangle  } from 'lucide-react';
+import { cn   } from '@/lib/utils';
+import { imageOptimization   } from '@/utils/performance';
+import { logWarn  } from '@/utils/productionLogger';
+interface OptimizedImageProps  {import Image from 'next / image';
+import { motion, AnimatePresence  } from 'framer-motion';
+origin/cursor/automate-test-improve-and-merge-code-2533
+import { ImageIcon, AlertTriangle } from lucide-react'
+import { cn  } from '@/lib/utils;
+import { imageOptimization  } from @/utils/performance';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { ImageIcon, AlertTriangle } from 'lucide-react'
+import { cn  } from '@/lib/utils';
+import { imageOptimization  } from '@/utils/performance';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+import { logWarn } from '@/utils/productionLogger;
+interface OptimizedImageProps {
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence   } from 'framer-motion';
@@ -29,6 +63,12 @@ interface OptimizedImageProps {}
   width?: number;
   height?: number;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { cn  } from '@/lib / utils';
 import { image_optimization  } from '@/utils / performance';
 import { log_warn  } from '@/utils / production_logger';
@@ -63,6 +103,12 @@ if (return) {$2;
     observer_ref.current = new IntersectionObserver (
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       entries => {
 
         const [entry] = entries;        // Check condition
@@ -125,12 +171,19 @@ if ( {) {
                 size: `${(fileSize / 1024).toFixed(2)}KB``
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
+
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {}
     loadStartTime.current = performance.now ();
   }, [src]);
   // Monitor image performance;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     observer_ref.current = new IntersectionObserver (entries => {const [entry] = entries;        // Check condition;
 if ( {) {$2;
 }
@@ -166,6 +219,12 @@ if ( {) {$2;
 }
       const observer = new PerformanceObserver (list => {const entries = list.get_entries ()entries.for_each (entry => {          // Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   useEffect ((, ) => {}
     // Check condition;
 if ( {) {}
@@ -251,7 +310,6 @@ if ( {) {}
 }
       setCurrentSrc (fallback_src);
       set_retries (0);
-
 
     } else {
 
@@ -387,8 +445,26 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
     setHasError(false),;
     setLoadProgress(100),;
     onLoad?.();
+<<<<<<< HEAD
   },;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  },;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  },
+>>>>>>> origin/resolved-merge-conflicts
   const handle_load = () =>: any {setIsLoading (false)setHasError (false)setLoadProgress (100)on_load?.()}
+=======
+  },;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle image error with retry logic;
   const handleError = () => {;
     if (retries < retryCount) {;
@@ -452,6 +528,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
             transition={ duration: 0.3 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return (
 
   // Simulate loading progress for demo purposes;
@@ -509,7 +591,18 @@ if ( {) {$2;
 
 
 
+<<<<<<< HEAD
             className='absolute inset-0'
+=======
+            className="absolute inset-0
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            className="absolute inset-0"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           >
             {generatePlaceholder()}
 ;
@@ -520,7 +613,17 @@ if ( {) {$2;
 
                   className='h-full bg-blue-500'
 
+<<<<<<< HEAD
                   className='h-full bg-blue-500'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  className="h-full bg-blue-500"
+>>>>>>> origin/resolved-merge-conflicts
 
 
         {/* Placeholder */}{(isLoading |!isInView) && !hasError && (<motion.div;
@@ -532,8 +635,19 @@ if ( {) {$2;
             {generatePlaceholder()}{/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (<div className='absolute bottom-0 left-0 right-0 h-1 bg-gray-200'>;
                 <motion.div;
+<<<<<<< HEAD
                   className='h-full bg-blue-500';
                   initial={ width: 0 }
+=======
+                  className=h-full bg-blue-500;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  initial={{ width: 0 }}
+>>>>>>> origin/resolved-merge-conflicts
 
                   animate={ width: `${loadProgress}%` }
                   transition={ duration: 0.3 }
@@ -546,8 +660,13 @@ if ( {) {$2;
         {/* Error state */}
 
           <motion.div;
+<<<<<<< HEAD
             initial={ opacity: 0 }
             animate={ opacity: 1 }
+=======
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+>>>>>>> origin/resolved-merge-conflicts
 
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
 
@@ -559,7 +678,17 @@ if ( {) {$2;
 
               <span className='text-xs mt-1'>Retried {retries} times</span>
 
+<<<<<<< HEAD
             animate={ opacity: 1 }className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            animate={{ opacity: 1 }}className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400";
+>>>>>>> origin/resolved-merge-conflicts
           >;
             <AlertTriangle className='h-8 w-8 mb-2' />;
             <span className='text-sm'>Failed to load image</span>;
@@ -574,7 +703,17 @@ if ( {) {$2;
         {isInView && !hasError && (;
           <motion.img;
         {/* Actual image */}<motion.img;
+<<<<<<< HEAD
               <span className='text-xs mt-1'>Retried {retries} times</span>
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <span className="text-xs mt-1">Retried {retries} times</span>
+>>>>>>> origin/resolved-merge-conflicts
 
             )}
           </motion.div>;
@@ -632,6 +771,15 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   aspectRatio = '16/9',
   className,
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1)
+  },
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
   return (
@@ -671,6 +819,15 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
         {images.map((image, index) => (;
           <motion.div;
             key={index}
+=======
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1)
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return ('
     <div className={cn('space-y-4', className)}>'
@@ -691,12 +848,19 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
           <motion.div;
             key={index}
 
+<<<<<<< HEAD
             initial={ opacity: 0, y: 20 }
         {images.map((image, index) => (<motion.div;
             key={index}initial={ opacity: 0, y: 20 }
             animate={ opacity: 1, y: 0 }
             transition={ delay: index * 0.1 }'
             className='group cursor-pointer'
+=======
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="group cursor-pointer"
+>>>>>>> origin/resolved-merge-conflicts
             onClick={() => onImageClick?.(index)}
           >'
             <div className='relative'>
@@ -707,6 +871,12 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
                 alt={image.alt}
                 aspectRatio={aspectRatio}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 aspectRatio={aspectRatio}</div>;
                 className='rounded-lg group-hover:scale-105 transition-transform duration-300';
                 onLoad={handleImageLoad}
@@ -715,7 +885,18 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
               {image.caption && (<div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm'>{image.caption}</p>;
                 </div>;
+<<<<<<< HEAD
                 className='rounded-lg group-hover:scale-105 transition-transform duration-300'
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+                className=rounded-lg group-hover:scale-105 transition-transform duration-300"
+>>>>>>> origin/resolved-merge-conflicts
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images;
               />
@@ -753,15 +934,50 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
         <OptimizedImage
           src={src}
           alt={alt}
+<<<<<<< HEAD
           aspectRatio='1/1'
           objectFit='cover'
+=======
+<<<<<<< HEAD
+          aspectRatio=1/1'
+          objectFit='cover
+=======
+          aspectRatio='1/1'
+          objectFit='cover'
+
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder='color'
           placeholderColor='#f3f4f6'
           priority={true}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
           className='rounded-full'
+=======
+          className=rounded-full"
+=======
+=======
+=======
+<<<<<<< HEAD
+
+          className=rounded-full"
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          className="rounded-full"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
         />
       ) : ('
         <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
@@ -777,8 +993,19 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
+<<<<<<< HEAD
               />;{image && image.caption && (<div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm'>{image && image.caption}</p>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              />;{image && image.caption && (<div className=absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
+                  <p className='text-sm>{image && image.caption}</p>;
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;)}
             </div>;
           </motion.div>;
@@ -809,10 +1036,23 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
           {initials}</div>;
       )}}</div>;
   )}{(is_loading || !isInView) && !has_error && (<motion.div;
+<<<<<<< HEAD
             initial={ opacity: 1 }
             exit={ opacity: 0 }
             transition={ duration: 0.3 }'
             className='absolute inset - 0';
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}'
+            className=absolute inset - 0;
+>>>>>>> origin/resolved-merge-conflicts
           >;
             {generate_placeholder ()}
             {/* Loading progress */}
@@ -827,10 +1067,18 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
               </div>)}
           </motion.div>)}
         {/* Error state */}
+<<<<<<< HEAD
         {has_error && (<motion.div;
             initial={ opacity: 0 }
             animate={ opacity: 1 }'
             className='absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400';
+=======
+        {has_error && (
+          <motion.div;
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className=absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400';
+>>>>>>> origin/resolved-merge-conflicts
           >;'
             <AlertTriangle className='h - 8 w - 8 mb - 2' />;'
             <span className='text - sm'>Failed to load image</span>;
@@ -855,7 +1103,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
             transition={ duration: 0.3 }
           />)}
       </AnimatePresence>;
-    </div>)}
+    </div>);
+}
 //Container styles;
 }> <AnimatePresence> {}
   /* Placeholder */;
@@ -916,12 +1165,22 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({}
         style={}`
           gridTemplateColumns: `repeat (${columns}, 1fr)`,        }
       >;
+<<<<<<< HEAD
         {images.map ((image, index, ) => (<motion.div;
             key = {index }
             initial={ opacity: 0, coordinate_y: 20 }
             animate={ opacity: 1, coordinate_y: 0 }
             transition={ delay: index * 0.1 }'
             className='group cursor - pointer';
+=======
+        {images.map ((image, index, ) => (
+          <motion.div;
+            key = {index, }
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ delay: index * 0.1 }}'
+            className=group cursor - pointer;
+>>>>>>> origin/resolved-merge-conflicts
             on_click={() => onImageClick?.(index)}          >;'
             <div className='relative'>;
               <OptimizedImage;
@@ -985,8 +1244,11 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({}
     </div>);
 }
 },
+<<<<<<< HEAD
     </div>)}
 },className?: string;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   className?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
@@ -1018,6 +1280,24 @@ interface ImageMetrics {
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   wasOptimized: boolean;
 }export const OptimizedImage: React.FC<OptimizedImageProps> = ({)}
+<<<<<<< HEAD
 };
+=======
+}
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

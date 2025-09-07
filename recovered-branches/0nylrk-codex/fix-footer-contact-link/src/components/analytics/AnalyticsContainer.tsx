@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,11 +13,17 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -25,6 +34,7 @@ import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -37,6 +47,8 @@ interface AnalyticsContainerProps {};
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -54,10 +66,24 @@ interface AnalyticsContainerProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface AnalyticsContainerProps {
   children: React.ReactNode
 
 }
+<<<<<<< HEAD
+
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+
+  const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType)
+"
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";
+
+  // Check if user is admin (using either role or userType)
+  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
+
+=======
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
@@ -87,6 +113,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // If still loading auth status, show loading
   if (isLoading) {
 
@@ -97,6 +124,9 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       </div>
     )
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
   }
 <<<<<<< HEAD
@@ -110,11 +140,15 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={ from: '/analytics' } replace />
   }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
   
 
   
@@ -127,6 +161,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // If not admin, redirect
   if (!isAdmin) {
 
@@ -146,6 +181,42 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates;
           </p>
         </div>
+<<<<<<< HEAD
+
+  const { isAuthenticated, isLoading, user } = useAuth();
+
+  // Check if user is admin (using either role or userType);"
+
+  const isAdmin = user?.role === "admin" || user?.userType === "admin";
+
+  // If still loading auth status, show loading;
+  if (isLoading) {;
+
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;
+      </div>;
+    );
+  }
+
+  // If not authenticated, redirect;
+  if (!isAuthenticated) {;
+
+    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
+  }
+
+  // If not admin, redirect;
+  if (!isAdmin) {;
+
+import React from './react';
+import { Header  } from '@/components / Header';
+import { Footer  } from '@/components / Footer';
+import { SEO  } from '@/components / SEO';
+import { Navigate  } from './react-router-dom';
+
+import { use_auth  } from '@/hooks / use_auth';
+interface AnalyticsContainerProps {}
+  children: React.ReactNode;
+}
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -232,6 +303,7 @@ import { use_auth  } from '@/hooks / use_auth';
 interface AnalyticsContainerProps {}
   children: React.ReactNode;
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export /**;
  * AnalyticsContainer - Function description;
  */
@@ -253,6 +325,9 @@ if ( {) {}
       </div>);
   }
   // If not authenticated, redirect;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -288,12 +363,15 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             Track user behavior, page views, and conversion rates;
           </p>;
         </div>;
         {children}
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
 ;
@@ -362,6 +440,7 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 }
 ;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -369,6 +448,9 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useAuth } from "@/hooks/useAuth",;
 ;
 interface AnalyticsContainerProps {;
@@ -415,9 +497,13 @@ interface AnalyticsContainerProps {;
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

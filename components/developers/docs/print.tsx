@@ -1,6 +1,12 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import React, { useEffect } from 'react';
@@ -25,6 +31,10 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect } from 'react';'
 import type { GetStaticProps } from 'next';'
 import content from '../../../data/docs/content.json';'
@@ -34,6 +44,20 @@ export type Section = any;
 return (;
     <div className='p-8 max-w-4xl mx-auto'>;'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;'
+      <div className='space-y-8'>;'
+        {docs && docs.sections.map(s => (<section key={s && s.id}>;
+            <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;'
+            {s && s.html && <div dangerouslySetInnerHTML={{ "__html": s && s.html }} /
+}
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <h1 className='text-3xl font-bold mb-6' />{docs && docs.title}</h1>;
       <div className='space-y-8' />;
         {docs && docs.sections.map(s => (<section key={s && s.id} />;
@@ -170,6 +194,10 @@ import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export type Section = any;
 =======
 import content from '../../../data/docs/content ;
@@ -257,6 +285,18 @@ key = {i}
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code &&;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              }
+
+              s && s.code.map((c, i) => (;
+                <pre,
+key = {i}
+
+                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap''
+=======
+>>>>>>> origin/resolved-merge-conflicts
     <div className='p-8 max-w-4xl mx-auto'>
       <h1 className='text-3xl font-bold mb-6'>{docs.title}</h1>
       <div className='space-y-8'>
@@ -269,6 +309,10 @@ key = {i}
                 <pre
                   key={i}
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >
 =======
   return (
@@ -291,6 +335,13 @@ key = {i}
 >>>>>>> origin/chore/fix-lint-and-merge
                   {c.content}
                 </pre>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ))}
+ ;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               ))}          </section>  }, []);
 <<<<<<< HEAD
 
@@ -328,10 +379,99 @@ export default function PrintDocs({ docs }: PageProps) {
               ))}
  ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 return (;
     <div className='p-8 max-w-4xl mx-auto'>;'
 
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+export default /**;
+ * PrintDocs - Function description;
+ */
+function PrintDocs() {}
+  useEffect (() => {}
+    const id = set_timeout (() => window.print (), 500);
+    return () => clear_timeout (id);
+  }, []);
+;
+  return ('
+    <div className='p - 8 max - w-4xl mx - auto'>;'
+      <h1 className='text - 3xl font - bold mb - 6'>{docs.title}</h1>;'
+      <div className='space - y-8'>;
+        {docs.sections.map (string => (
+          <section key={s.id}>;'
+            <h2 className='text - 2xl font - semibold mb - 2'>{s.title}</h2>;
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code &&;
+              s.code.map ((c, i) => (
+                <pre;
+                  key={i}'
+                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap';
+                >;
+                  {c.content}
+                </pre>))}          </section>  }, []);
+;
+  return ("
+    <div className="p - 8 max - w-4xl mx - auto">;"
+      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;"
+      <div className="space - y-8">;
+        {docs.sections.map ((s) => (
+          <section key={s.id}>;"
+            <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code && s.code.map ((c, i) => ("
+              <pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap">{c.content}</pre>))}
+  return (
+    <div className=\"p-8 max-w-4xl mx-auto\" />;
+"
+      <h1 className=\"text-3xl font-bold mb-6\" />{docs && docs.title}</h1>;"
+      <div className=\"space-y-8\" />;
+        {docs && docs.sections.map((s) => (<section key={s && s.id} />;"
+            <h2 className=\"text-2xl font-semibold mb-2\" />{s && s.title}</h2>;
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html ;}} /
+}"
+            {s && s.code && s && s.code.map((c, i) = /> (<pre key={i} className=\"mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap\" />{c && c.content}</pre>;
+            ))}
+}
+export default /**;
+ * PrintDocs - Function description;
+ */;
+function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.print (), 500)return () => clear_timeout (id)}, [];
+  return (<div className='p - 8 max - w-4xl mx - auto'>;'
+      <h1 className='text - 3xl font - bold mb - 6'>{docs.title}</h1>;'
+      <div className='space - y-8'>;'
+        {docs.sections.map (string => (<section key={s.id}>;
+            <h2 className='text - 2xl font - semibold mb - 2'>{s.title}</h2>;'
+            {s.html && <div dangerouslySetInnerHTML={{ "__html": s.html }} /
+}
+            {s.code &&;
+              }
+              s.code.map ((c, i) => (<pre;
+                  key = {i}
+                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap'>'
+
+                  {c.content}
+                </pre>))}          </section>  }, [];
+  return (<div className="p - 8 max - w-4xl mx - auto">;"
+      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;"
+      <div className="space - y-8">;"
+        {docs.sections.map ((s) => (<section key={s.id}>;
+            <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;"
+            {s.html && <div dangerouslySetInnerHTML={{ "__html": s.html }} /
+}
+            {s.code && s.code.map ((c, i) => (<pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap">{c.content}</pre>))}"
+          </section>))}
+      </div>;
+    </div>)))}
+          </section>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 }
 export default /**;
@@ -339,6 +479,10 @@ export default /**;
 =======
 <<<<<<< HEAD
           </section>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ))}
 =======
 
@@ -552,6 +696,25 @@ export default function PrintDocs({ docs }: PageProps) {
   )
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+
+
+
+      </div>;
+  )})}
+      </div>
+  )
+}
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 "
   );
 }
@@ -577,3 +740,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

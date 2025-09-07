@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+interface TextAnalysisResult {
+  }
+export default async function handler(
+;
+  req: NextApiRequest;
+  res: NextApiResponse<TextAnalysisResult | { error: string }>
+) {}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 interface TextAnalysisResult {
@@ -124,6 +138,10 @@ try {
     trigrams: Array<{ phrase: string, count: number }>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
 
@@ -208,6 +226,72 @@ text: string;
 };
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"text": string;
+  "statistics": {"characters": number;
+    }
+    "charactersNoSpaces": number;
+    "words": number;
+    "sentences": number;
+    "paragraphs": number;
+    "syllables": number;
+    "readingTime": number;
+    "speakingTime": number;
+  },"readability": {"fleschReadingEase": number;
+    }
+    "fleschKincaidGrade": number;
+    "gunningFog": number;
+    "smog": number;
+    "colemanLiau": number;
+    "automatedReadability": number;
+    "averageGrade": number;
+  },"sentiment": {"score": number;
+    }
+    "label": 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';'
+    "positiveWords": string[];
+    "negativeWords": string[];
+  },"language": {"detectedLanguage": string;
+    }
+    "confidence": number;
+    "isEnglish": boolean;
+  },"keywords": {"topWords": Array<{ "word": string; "count": number; "frequency": number
+}>;
+    "bigrams": Array<{ "phrase": string; "count": number
+}>;
+    "trigrams": Array<{ "phrase": string; "count": number }>
+};
+
+
+export default async function handler() {
+  }
+  if (req.method !== 'POST') {'
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+  }
+
+  try {
+    }
+    const { text } = req.body;
+    if (!text || typeof text !== 'string') {'
+}
+return res.status(400).json({ "error": 'Text is required',;'
+});
+    }
+    if (text.length > 10000) {
+}
+return res;
+        .status(400)
+        .json({ "error": 'Text too long (max 10,000 characters)' });'
+    }
+
+    // Basic statistics,
+const words = text;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(
   req: NextApiRequest;
@@ -289,6 +373,10 @@ return res.status(405).json({ error: 'Method not allowed'}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const words = text
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -346,6 +434,130 @@ const paragraphs = text;
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (word.length <= 3) return 1,
+word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');'
+      word = word.replace(/^y/, '');'
+
+const matches = word.match(/[aeiouy]{1,2}/g);
+
+return matches ? matches.length : 1;
+};
+
+    // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
+    const readingTime = Math.ceil($2);
+    const speakingTime = Math.ceil($2);
+    // Readability scores
+      if (word.length <= 3) return 1'
+      word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');'
+      word = word.replace(/^y/, '');
+      const matches = word.match(/[aeiouy]{1,2}/g);
+return matches ? matches.length : 1;
+    };
+
+const syllables = text.split(/\s+/).reduce((total, word) => {
+     ;
+  }
+  return total + syllableCount(word);
+    }, 0);
+
+    // Reading and speaking time ("average": 200 words/min reading, 150 words/min speaking)
+    const readingTime = Math.ceil(words / 200);
+
+const speakingTime = Math.ceil(words / 150);
+    // Readability scores,
+const fleschReadingEase = Math.max(;
+      0,
+      Math.min(
+        100,
+206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+      )
+    );
+
+const fleschKincaidGrade = Math.max(;
+      0,
+0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59
+    );
+
+const gunningFog = Math.max(;
+      0,
+0.4 *
+        (words / sentences +
+          100 *
+            (text && text.split(/\s+/).filter(word => { return word && word.length > 6).length / words))
+    ); }
+            (30 / sentences)
+        ) +
+        3 && 3.1291
+    );
+
+const averageGrade = Math && Math.round(;
+      (fleschKincaidGrade +
+        gunningFog +
+        smog +
+        colemanLiau +
+        automatedReadability) /
+        5
+    );
+    // Sentiment analysis (simplified)
+const positiveWords = [;
+      'good''
+      'great''
+      'excellent''
+      'amazing''
+      'wonderful''
+      'fantastic''
+      'brilliant''
+      'outstanding''
+      'superb''
+      'marvelous''
+
+    ];
+
+const negativeWords = [;
+  'bad';'
+      'terrible';'
+      'awful';'
+      'horrible';'
+      'dreadful';'
+      'atrocious';'
+      'abysmal';'
+      'appalling';'
+      'dismal';'
+      'lousy''
+];
+
+    ).length;
+    const negativeCount = textWords && textWords.filter(word =>;
+      negativeWords && negativeWords.includes(word)).length;
+
+const sentimentScore = positiveCount - negativeCount;
+    let "sentimentLabel": TextAnalysisResult['sentiment']['label'];'
+    if (sentimentScore <= -3) sentimentLabel = 'very-negative';'
+    else if (sentimentScore <= -1) sentimentLabel = 'negative';'
+    else if (sentimentScore <= 1) sentimentLabel = 'neutral';'
+    else if (sentimentScore <= 3) sentimentLabel = 'positive';'
+    else sentimentLabel = 'very-positive';'
+
+    // Keyword analysis,
+const wordCounts = new Map<string, number>();
+
+text
+      .toLowerCase()
+      .split(/\s+/)
+      .forEach(word = > {
+       ;
+  }
+  const cleanWord = word.replace(/[^\w]/g, '');'
+        if (cleanWord.length > 2) {
+          }
+          wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1);
+        }
+      });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       if (word.length <= 3) return 1
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
@@ -432,6 +644,10 @@ return matches ? matches.length : 1;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Readability scores
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words)))),
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59),
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word = $2;
@@ -439,6 +655,45 @@ return matches ? matches.length : 1;
     const colemanLiau = Math.max(0, 0.0588 * (charactersNoSpaces / words * 100) - 0.296 * (sentences / words * 100) - 15.8),
     const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const topWords = Array.from(wordCounts.entries());
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([word, count]) => ({
+}
+word,
+        count,
+        "frequency": Math.round((count / words) * 1000) / 10
+      }));
+    // Bigrams and trigrams,
+const wordsArray = text && text.toLowerCase().split(/\s+/);
+
+        frequency: Math.round((count / words) * 1000) / 10
+      })),
+
+    // Bigrams and trigrams
+    const wordsArray = text.toLowerCase().split($2);
+    const bigramCounts = new Map<string, number>(),
+    const trigramCounts = new Map<string, number>(),
+
+
+for (let i = 0; i < wordsArray.length - 1; i++) {
+      }
+      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
+    }
+    for (let i = 0; i < wordsArray.length - 2; i++) {
+      }
+      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;`      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
+    }
+
+const bigrams = Array.from(bigramCounts.entries());
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([phrase, count]) => ({ phrase, count }));
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 =======
 
@@ -1355,6 +1610,10 @@ if ( {) {
     const result: TextAnalysisResult = {
       text,
       statistics: {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         characters,
         charactersNoSpaces,
@@ -1362,6 +1621,40 @@ if ( {) {
         sentences,
         paragraphs,
         syllables,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        readingTime,
+        speakingTime
+      },
+      "readability": {
+        }
+        "fleschReadingEase": Math.round(fleschReadingEase * 100) / 100,
+"fleschKincaidGrade": Math.round(fleschKincaidGrade * 100) / 100,
+"gunningFog": Math.round(gunningFog * 100) / 100,
+"smog": Math.round(smog * 100) / 100,
+"colemanLiau": Math.round(colemanLiau * 100) / 100,
+"automatedReadability": Math.round(automatedReadability * 100) / 100,
+averageGrade
+      }
+      "sentiment": {
+        }
+        "score": sentimentScore,
+"label": sentimentLabel,
+"positiveWords": textWords.filter(word => positiveWords.includes(word))
+        "negativeWords": textWords.filter(word => negativeWords.includes(word))
+      }
+      "language": {
+ 
+} catch (error) {
+
+    }
+
+    console.error('Text analysis "error":', error);'
+    res.status(500).json({ "error": 'Internal server error','
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
 reading_time,
         speaking_time,
       },
@@ -1521,6 +1814,10 @@ reading_time,
       keywords: {}
         top_words;
         bigrams;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
     res.status(500).json({ 'error': 'Internal server error' })'
   }
@@ -1538,6 +1835,12 @@ reading_time,
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 "
 =======
     console.error('Text analysis error:', error);}
@@ -1603,3 +1906,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

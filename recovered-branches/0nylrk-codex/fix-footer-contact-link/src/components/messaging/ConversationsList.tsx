@@ -3,6 +3,20 @@
 <<<<<<< HEAD
 export function ConversationsList({ ;
   conversations;
+<<<<<<< HEAD
+
+export function ConversationsList({ ;
+  conversations;
+
+import { ConversationItem } from './ConversationItem',;
+interface ConversationsListProps {;
+  conversations: Conversation[],;
+  activeConversation: Conversation | null,;
+  setActiveConversation: (conversation: Conversation) => void,;
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+
+=======
 =======
 
 
@@ -82,12 +96,19 @@ interface ConversationsListProps {;
 export function ConversationsList({ 
   conversations,
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   activeConversation, 
   setActiveConversation, 
   markAsRead 
   activeConversation, 
   setActiveConversation, 
   markAsRead 
+<<<<<<< HEAD
+
+  setActiveConversation, 
+  markAsRead 
+
+=======
 =======
 
   activeConversation, 
@@ -97,6 +118,7 @@ export function ConversationsList({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: ConversationsListProps) {
 
   return (
@@ -116,6 +138,12 @@ export function ConversationsList({
         <div>
 <<<<<<< HEAD
 
+              key={conversation.id}
+              conversation={conversation}
+              isActive={activeConversation?.id === conversation.id}
+=======
+<<<<<<< HEAD
+
 =======
           {conversations.map((conversation) => (
 <<<<<<< HEAD
@@ -126,12 +154,15 @@ export function ConversationsList({
               isActive={activeConversation?.id === conversation.id}
 <<<<<<< HEAD
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
 import { ConversationItem } from './ConversationItem',;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -141,6 +172,7 @@ import {Conversation} from '@/types/messaging';
 import {ConversationItem} from './ConversationItem';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ConversationsListProps {;
   conversations:Conversation[],;
   activeConversation:Conversation | null,;
@@ -156,11 +188,16 @@ export function ConversationsList({ ;
 } ConversationsListProps) {;
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <div className="p-3 border-b border-zion-purple/20">;
         <h3 className="font-medium text-white">Conversations</h3>;
       </div>;
 
+<<<<<<< HEAD
+=======
 =======
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">;
       <div className="p-3 border-b border-zion-purple/20">;
@@ -170,6 +207,7 @@ export function ConversationsList({ ;
       {conversations.length === 0 ? (;
         <div className="p-8 text-center text-zion-slate">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />;
           <p>No conversations yet</p>;"
           <p className="text-sm mt-1">;
@@ -179,7 +217,11 @@ export function ConversationsList({ ;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               isActive={activeConversation?.id === conversation.id}
 
               onClick={() => {;
@@ -187,8 +229,12 @@ export function ConversationsList({ ;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
                 markAsRead(conversation && conversation.id);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               }}
             />;
           ))}
@@ -196,6 +242,8 @@ export function ConversationsList({ ;
       )}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
     </div>;
   );
@@ -205,6 +253,7 @@ import {Conversation} from '@/types / messaging';
 import {ConversationItem} from './ConversationItem';
 interface ConversationsListProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   conversations: Conversation[],
   active_conversation: Conversation | null,
   setActiveConversation: (conversation: Conversation) => void,
@@ -225,6 +274,13 @@ interface ConversationsListProps {
 
                 setActiveConversation (conversation);
                 markAsRead (conversation.id);
+<<<<<<< HEAD
+              }}
+            />))}
+        </div>)}
+    </div>);
+}
+=======
               }}
             />))}
         </div>)}
@@ -281,3 +337,4 @@ interface ConversationsListProps {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

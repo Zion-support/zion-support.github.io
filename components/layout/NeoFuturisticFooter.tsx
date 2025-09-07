@@ -3,6 +3,12 @@
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
 export default function NeoFuturisticFooter() {
 
 
@@ -43,12 +49,33 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React from 'react';'
 import { motion  } from 'framer-motion';'
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';'
 
 const contactInfo = null;
 export default function NeoFuturisticFooter() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+return (;
+              Productized AI, IT and micro SaaS solutions with transparent;
+
+;
+import {Phone,Mail,MapPin,Globe,Github,Linkedin,ExternalLink,const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}export default function NeoFuturisticFooter() {return (  website: 'https://ziontechgroup && ziontechgroup.com';
+}export default function NeoFuturisticFooter() {import React from 'react';
+import { motion   } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink  } from 'lucide-react';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 <<<<<<< HEAD
@@ -152,6 +179,10 @@ import { motion  } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const contactInfo = null;
 
 export default function NeoFuturisticFooter() {
@@ -164,6 +195,42 @@ export default function NeoFuturisticFooter() {
           </div>;
 <<<<<<< HEAD
             <a;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              className='flex items-center gap-2 text-slate-300 "hover":text-cyan-300';'
+              href='/market-pricing'>;'
+              <ExternalLink className='w-4 h-4' /> Market Pricing;'
+            </a>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 "hover":text-cyan-300';'
+              href='/services'>;'
+              <ExternalLink className='w-4 h-4' /> Services;'
+            </a>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 "hover":text-cyan-300';'
+              href='/contact'>;'
+              <ExternalLink className='w-4 h-4' /> Contact;'
+            </a>;
+            <div className='flex items-center gap-3 pt-2'>;'
+              <a;
+                aria-label='GitHub';'
+                href='"https"://github && github.com/Zion-Holdings';'
+                className='text-slate-400 "hover":text-white'>;'
+                <Github className='w-5 h-5' />;'
+              </a>;
+
+              <a,
+aria-label='LinkedIn''
+
+                href='"https": //www.linkedin.com/company/zion-tech-group/''
+                className='text-slate-400 "hover":text-white''
+              >
+                <Linkedin className='w-5 h-5' />'
+              </a>
+            </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
               className='flex items-center gap-2 text-slate-300 hover:text-cyan-300';
               href='/market-pricing'    />;
               <ExternalLink className='w-4 h-4'    /> Market Pricing;
@@ -214,6 +281,10 @@ export default function NeoFuturisticFooter() {
 <<<<<<< HEAD
           </div>
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <div className='mt-8 flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>'
           <div className='text-xs text-slate-500'>'
@@ -228,6 +299,12 @@ export default function NeoFuturisticFooter() {
               Terms
             </a>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (
+=======
+>>>>>>> origin/resolved-merge-conflicts
         </div>
 >>>>>>> merged-prs-20250907-203621
   return (
@@ -239,10 +316,24 @@ export default function NeoFuturisticFooter() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
         <div className="absolute inset-0 bg-neural-dots opacity-20 animate-shimmer" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </div>
+
+              <a;
+                aria-label='LinkedIn';
+          </div>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       </div>
 
@@ -252,6 +343,10 @@ export default function NeoFuturisticFooter() {
                 aria-label='LinkedIn';
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="space-y-2 text-sm">;
             <div className="font-semibold text-slate-100 mb-2">Resources</div>;
             <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
@@ -261,6 +356,11 @@ export default function NeoFuturisticFooter() {
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
                 href='https://www && www.linkedin.com/company/zion-tech-group/';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 </div>
       <div className="relative container mx-auto px-4 py-12 text-slate-200">
@@ -353,11 +453,22 @@ export default function NeoFuturisticFooter() {
 }
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
               </a>            </div>;
           </div>;
+<<<<<<< HEAD
         </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="space-y-2 text-sm">;
             <div className="font-semibold text-slate-100 mb-2">Resources</div>;
             <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
@@ -367,6 +478,12 @@ export default function NeoFuturisticFooter() {
               <a aria-label="GitHub" href="https://github && github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
               <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>;<div className='space - y-2 text - sm'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         </div>;<div className='space - y-2 text - sm'>;
 =======
@@ -382,6 +499,10 @@ export default function NeoFuturisticFooter() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='space - y-2 text - sm'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
               <Phone className='w - 4 h - 4' />;
@@ -418,7 +539,14 @@ export default function NeoFuturisticFooter() {
                 ziontechgroup.com;
               </a>;
             </div>;
+<<<<<<< HEAD
           </div>;
+=======
+<<<<<<< HEAD
+=======
+          </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Resources</div>;
             <a;
@@ -455,7 +583,14 @@ export default function NeoFuturisticFooter() {
                 <Linkedin className='w - 5 h - 5' />;
               </a>            </div>;
           </div>;
+<<<<<<< HEAD
         </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="space-y-2 text-sm">;
             <div className="font - semibold text - slate-100 mb-2">Resources</div>;
             <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/market - pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
@@ -465,7 +600,14 @@ export default function NeoFuturisticFooter() {
               <a aria - label="GitHub" href="https://github.com / Zion - Holdings" className="text - slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
               <a aria - label="LinkedIn" href="https://www.linkedin.com / company / zion - tech - group/" className="text - slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
+<<<<<<< HEAD
         </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div className='mt - 8 flex flex - col md:flex - row items - start md:items - center justify - between gap - 4 border - t border - slate - 800 / 60 pt - 6'>;
           <div className='text - xs text - slate - 500'>;
             © {new Date ().getFullYear ()} Zion Tech Group. All rights reserved.;
@@ -482,15 +624,30 @@ export default function NeoFuturisticFooter() {
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>;
             <a href="/terms" className="hover:text-slate-300">Terms</a>;
         </div>;
+<<<<<<< HEAD
       </div>;
+=======
+<<<<<<< HEAD
+=======
+      </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </footer>)}export default function NeoFuturisticFooter() {return (href='https://www.linkedin.com/company/zion-tech-group/';
                 className='text-slate-400 hover:text-white';
               >;
                 <Linkedin className='w-5 h-5' />;
               </a>;
             </div>;
+<<<<<<< HEAD
           </div>;
         </div>;
+=======
+<<<<<<< HEAD
+=======
+          </div>;
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 <div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>;
           <div className='text-xs text-slate-500'>;
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.;
@@ -503,8 +660,16 @@ export default function NeoFuturisticFooter() {
               Terms;
             </a>;
           </div>;
+<<<<<<< HEAD
         </div>;
       </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+      </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </footer>;
     </footer>);
 }
@@ -513,7 +678,14 @@ export default function NeoFuturisticFooter() {
 export default function NeoFuturisticFooter() {
   return (
   )}
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <div className="relative container mx-auto px-4 py-12 text-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -542,7 +714,42 @@ export default function NeoFuturisticFooter() {
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+              <a
+                aria-label='LinkedIn'
+          </div>
+          <div className="space-y-2 text-sm">
+            <div className="font-semibold text-slate-100 mb-2">Resources</div>
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>
+            <div className="flex items-center gap-3 pt-2">
+              <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+                href='https://www && www.linkedin.com/company/zion-tech-group/'
+                className='text-slate-400 hover:text-white'>;
+                <Linkedin className='w-5 h-5' />;
+              </a>            </div>;
+          </div>;
+          <div className="space-y-2 text-sm">;
+            <div className="font-semibold text-slate-100 mb-2">Resources</div>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
+            <div className="flex items-center gap-3 pt-2">;
+              <a aria-label="GitHub" href="https://github && github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
+              <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
+          </div>;
+
+              <a;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}
                 className='hover:underline';
               >;
@@ -612,7 +819,14 @@ export default function NeoFuturisticFooter() {
                 <Linkedin className=w - 5 h - 5 />;
               </a>            </div>;
           </div>;
+<<<<<<< HEAD
         </div>;
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="space-y-2 text-sm">;
             <div className="font - semibold text - slate-100 mb-2">Resources</div>;
             <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/market - pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
@@ -643,6 +857,21 @@ export default function NeoFuturisticFooter() {
     </footer>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+aria-label='LinkedIn'
+
+export default function NeoFuturisticFooter() {
+  return (
+                href='https://www.linkedin.com/company/zion-tech-group/'
+                href='https: //www.linkedin.com/company/zion-tech-group/'
+                className='text-slate-400 hover:text-white'
+               />
+                <Linkedin className='w-5 h-5' />
+              </a>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 aria-label='LinkedIn'
 
@@ -828,10 +1057,24 @@ aria-label='LinkedIn'
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
+          <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
+          <div className="text-xs text-slate-500 flex gap-4">
+            <a href="/privacy" className="hover: text-slate-300">Privacy</a>
+            <a href="/terms" className="hover:text-slate-300">Terms</a>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6>
           <div className=text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
@@ -852,6 +1095,10 @@ aria-label='LinkedIn'
               Terms;
             </a>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </div>
         </div>
       </div>

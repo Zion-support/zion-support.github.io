@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     </EnhancedLayout>);
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
@@ -65,3 +68,4 @@ export default function GovernancePulsePage() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621:pages.disabled/api/sync/dao-toggle.ts
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

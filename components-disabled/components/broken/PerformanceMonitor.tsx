@@ -1,8 +1,24 @@
 
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+<<<<<<< HEAD
  }
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+ }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+ }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   }
 
@@ -122,7 +138,22 @@ case 'tablet': return Tablet;'
 ;
 
 const getPerformanceScore = () =>: any {
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+=======
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  // TODO: Implement
+>>>>>>> origin/resolved-merge-conflicts
   let score = 0;
 let total_metrics = 0;
 //FCP scoring (0 - 100) // Check condition,

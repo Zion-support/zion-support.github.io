@@ -1,35 +1,50 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+=======
 import { CandidateCard } from "./CandidateCard",
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface KanbanColumnProps {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-  id: string
-  title: string
-  description: string
+interface KanbanColumnProps {
+
+interface KanbanColumnProps {};
+  id: string;
+  title: string;
+  description: string;
   applications: JobApplication[]
 
-  count: number
+  count: number;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export function KanbanColumn({;
 =======
@@ -58,6 +73,7 @@ interface KanbanColumnProps {};
   count: number;
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {CandidateCard} from "./CandidateCard";
   count: number;
 "
@@ -70,17 +86,28 @@ interface KanbanColumnProps {;
 
 export function KanbanColumn(): any ({;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id;
   title;
   description;
   applications;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function KanbanColumn({
+
   id,
   title,
   description,
   applications,
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
   count
 }: KanbanColumnProps) {
@@ -101,6 +128,7 @@ export function KanbanColumn({
   applications,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -108,9 +136,13 @@ export function KanbanColumn({
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   count;
 }: KanbanColumnProps) {;
   // Add color based on column type;
@@ -119,7 +151,11 @@ export function KanbanColumn({
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Droppable } from './react - beautiful - dnd';
 
   id,
@@ -154,6 +190,10 @@ export /**;
 function KanbanColumn() {}
   // Add color based on column type;
 <<<<<<< HEAD
+
+      case "new": return "secondary",
+=======
+<<<<<<< HEAD
 =======
   const getBadgeVariant = (column_id: string) =>: any {
     switch (column_id) {
@@ -171,14 +211,100 @@ function KanbanColumn() {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "new": return "secondary",
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       case "shortlisted":
         return "outline",
       case "interview":
         return "default",
       case "hired":
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return "success",
+
+"
+      case "rejected":"
+        return "destructive"
+      default:"
+        return "outline"
+    }
+
+  },
+
+  const getColumnBgColor = (columnId: string) => {}
+    switch (columnId) {"
+      case "hired": return "bg-green-50",
+
+  const getColumnBgColor = (columnId: string) => {
+    switch (columnId) {
+      case "hired": return "bg-green-50",
+
       case "rejected":
+<<<<<<< HEAD
+
+        return "bg-red-50"
+      default:"
+        return "bg-muted/30"
+    }
+
+      case "rejected":;
+
+        return "destructive",;
+      default:;"
+        return "outline";
+    }
+  };
+
+      case "rejected":;
+
+        return "bg-red-50",;
+      default:;"
+        return "bg-muted/30";
+
+  return (
+    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;"
+      <CardHeader className="pb-2">;"
+        <div className="flex justify-between items-center">;"
+          <CardTitle className="text-base">{title}</CardTitle>;
+          <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>;
+        </div>;"
+        <p className="text-xs text-muted-foreground">{description}</p>;
+      </CardHeader>;"
+      <CardContent className="flex-grow p-3 overflow-y-auto">;
+        <Droppable droppableId={id}>;
+          {(provided) => (;
+
+  },
+
+}
+
+  },
+
+  return (
+    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-center">
+
+          <CardTitle className="text-base">{title}</CardTitle>
+          <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>
+        </div>"
+        <p className="text-xs text-muted-foreground">{description}</p>
+      </CardHeader>"
+      <CardContent className="flex-grow p-3 overflow-y-auto">
+        <Droppable droppableId={id}>
+          {(provided) => (
+
+              ref={provided.innerRef}
+              {...provided.droppableProps}"
+              className="min-h-full space-y-2"
+            >
+
+                <CandidateCard
+                <CandidateCard 
+
+=======
         return "destructive",
       default:
 =======
@@ -260,6 +386,7 @@ import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { CandidateCard } from "./CandidateCard",;
 ;
 interface KanbanColumnProps {;
@@ -384,7 +511,11 @@ interface KanbanColumnProps {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function KanbanColumn({;
   id,;
   title,;
@@ -402,6 +533,19 @@ export function KanbanColumn({;
         return "default",;
       case "hired":;
         return "success",;
+<<<<<<< HEAD
+
+      case "rejected":;
+        return "destructive",
+
+                  key={application.id}
+
+                  application={application}
+                  index={index}
+
+                />
+              ))}
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -464,8 +608,46 @@ export function KanbanColumn({;
   );
 }
                 />))}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {provided.placeholder}
+
+              {applications.length === 0 && ("
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">"
+                  <p className="text-center text-sm text-muted-foreground">
+                    Drag candidates here;
+                  </p>
+                </div>
+
+              {provided && provided.placeholder}
+
+              {applications && applications.length === 0 && (;"
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;"
+
               {applications.length === 0 && (
+<<<<<<< HEAD
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
+                  <p className="text-center text-sm text-muted-foreground">
+                    Drag candidates here
+                  </p>
+                </div>
+              {provided && provided.placeholder}
+
+              {applications && applications.length === 0 && (;
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;
+
+                  <p className="text-center text-sm text-muted-foreground">;
+                    Drag candidates here;
+                  </p>;
+                </div>;
+
+            </div>;
+          )}
+
+    }
+  },;
+  ;"
+      case "rejected":;"
+=======
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
                   <p className="text - center text - sm text - muted - foreground">;
                     Drag candidates here;
@@ -480,43 +662,44 @@ export function KanbanColumn({;
   ;
 >>>>>>> merged-prs-20250907-203621
       case "rejected":;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return "destructive",;
-      default:;
-        return "outline";
-      case "interview":
-        return "default";
-      case "hired":
-        return "success";
-      case "rejected":
+      default:;"
+        return "outline";"
+      case "interview":"
+        return "default";"
+      case "hired":"
+        return "success";"
+      case "rejected":"
         return "destructive",
-      default:
+      default:"
         return "outline"
     }
   },;
   const getColumnBgColor = (columnId: string) => {;
-    switch (columnId) {;
-      case "hired": return "bg-green-50",;
-      case "rejected":;
+    switch (columnId) {;"
+      case "hired": return "bg-green-50",;"
+      case "rejected":;"
         return "bg-red-50";
-      default:;
+      default:;"
         return "bg-muted/30";
     }
   };
-  return (;
-    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
-      <CardHeader className="pb-2">;
-        <div className="flex justify-between items-center">;
+  return (;`
+    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;"
+      <CardHeader className="pb-2">;"
+        <div className="flex justify-between items-center">;"
           <CardTitle className="text-base">{title}</CardTitle>;
           <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>;
-        </div>;
+        </div>;"
         <p className="text-xs text-muted-foreground">{description}</p>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className="flex-grow p-3 overflow-y-auto">;
         <Droppable droppableId={id}>;
           {(provided) => (;
             <div;
               ref={provided.innerRef}
-              {...provided.droppableProps}
+              {...provided.droppableProps}"
               className="min-h-full space-y-2";
             >;
               {applications.map((application, index) => (;
@@ -525,40 +708,40 @@ export function KanbanColumn({;
 ;
 
 };
-const getColumnBgColor = (columnId: string) => {
-  switch (columnId) {
+const getColumnBgColor = (columnId: string) => {}
+  switch (columnId) {"
   case "rejected": return "bg-red-50";
 default: 
 }
 };
-return (<Card className= {
-  `$ {
-  getColumnBgColor (id) 
-}flex flex-col h-[calc (100vh-300px) ] min-h-[500px]` 
-}> <CardHeader className="pb-2" > <div className="flex justify-between items-center" > <CardTitle className="text-base" > {
-  title 
-}</CardTitle> <Badge variant= {
-  getBadgeVariant (id) as any 
-}> {
-  count 
-}</Badge> </div> <p className="text-xs text-muted-foreground" > {
-  description 
-}</p> </CardHeader> <CardContent className="flex-grow p-3 overflow-y-auto" > <Droppable droppableId= {
-  id 
-}> {
-  (provided) => (<div ref= {
-  provided.innerRef 
-}{
-  ...provided.droppableProps 
-}className="min-h-full space-y-2" applications.map ( (application, index) => (<CandidateCard key= {
-  application.id 
-}application= {
-  application 
-}index= {
-  index 
+return (<Card className= {}`
+  `$ {}
+  getColumnBgColor (id) `
+}flex flex-col h-[calc (100vh-300px) ] min-h-[500px]` "
+}> <CardHeader className="pb-2" > <div className="flex justify-between items-center" > <CardTitle className="text-base" > {}
+  title;
+}</CardTitle> <Badge variant= {}
+  getBadgeVariant (id) as any;
+}> {}
+  count "
+}</Badge> </div> <p className="text-xs text-muted-foreground" > {}
+  description "
+}</p> </CardHeader> <CardContent className="flex-grow p-3 overflow-y-auto" > <Droppable droppableId= {}
+  id;
+}> {}
+  (provided) => (<div ref= {}
+  provided.innerRef;
+}{}
+  ...provided.droppableProps "
+}className="min-h-full space-y-2" applications.map ( (application, index) => (<CandidateCard key= {}
+  application.id;
+}application= {}
+  application;
+}index= {}
+  index;
 }/>) ) 
-}{
-  provided.placeholder 
+}{}
+  provided.placeholder;
 }Drag candidates here </p> </div>) 
 }</div>) 
 }</Droppable> </CardContent> </Card>) 
@@ -750,6 +933,8 @@ return (<Card className= {}`
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Droppable>;
       </CardContent>;
@@ -766,6 +951,7 @@ return (<Card className= {}`
                 <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
                   <p className="text - center text - sm text - muted - foreground">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     Drag candidates here;
                   </p>;
                 </div>)}
@@ -773,6 +959,9 @@ return (<Card className= {}`
         </Droppable>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 =======
@@ -784,3 +973,4 @@ return (<Card className= {}`
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
+
+import { Review } from "@/types/reviews";
+
+import { ReviewCard } from "./ReviewCard";
+interface ReviewsListProps {}
+  reviews: Review[];
+  isLoading: boolean;
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+}
+
+=======
+<<<<<<< HEAD
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
@@ -141,12 +155,16 @@ if ( {) {
     return (
       <div className="space - y-4">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {Array (3);
           .fill (0);
           .map ((_, i) => (
             <div;
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -162,10 +180,13 @@ if ( {) {
               </div>
             </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           ))}
       </div>
     )
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     return (
 
@@ -176,6 +197,8 @@ if ( {) {
             <div
               key={i}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -236,6 +259,7 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
     return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="space-y-4">;
         {Array(3).fill(0).map((_, i) => (;
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">;
@@ -256,10 +280,14 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className="border rounded-lg p-4 bg-card animate-pulse"
 
             >
@@ -283,17 +311,26 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
     );
   }
 
+=======
+<<<<<<< HEAD
+    );
+  }
+
 <<<<<<< HEAD
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (reviews.length === 0) {}
     return ("
       <div className="text-center py-8 border rounded-lg bg-muted/20">"
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>"
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <p className="text-muted-foreground">
           Once reviews are submitted and approved, they will appear here.
         </p>
@@ -301,6 +338,20 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
     );
   }
 
+<<<<<<< HEAD
+        <p className="text - muted - foreground">;
+          Once reviews are submitted and approved, they will appear here.;
+        </p>;
+      </div>);
+  }
+
+    <div className="space - y-4">;
+      {reviews.map ((review) => (
+        <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
+    </div>);
+}
+
+=======
 <<<<<<< HEAD
   return (
     <div className="space-y-4">
@@ -369,6 +420,7 @@ if ( {) {
 =======
     <div className="space-y-4">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {reviews.map((review) => (
         <ReviewCard key={review.id} review={review} onReport={onReportReview} />
       ))}
@@ -376,6 +428,9 @@ if ( {) {
   );
 
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -451,3 +506,4 @@ return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+title: string,
+=======
+<<<<<<< HEAD
 import React from 'react';
 import {
   Dialog,
@@ -30,10 +33,46 @@ interface AIEnhancementDialogProps {
   title: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   isOpen: boolean,
   onClose: () => void,
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
+<<<<<<< HEAD
+  initialContent?: string;
+
+}
+
+export function AIEnhancementDialog({;
+import React from 'react';
+
+import React from 'react',;
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;'
+  DialogTitle} from '@/components/ui/dialog',;'
+import { AIEnhancementPanel } from './AIEnhancementPanel',;'
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementDialogProps {;
+  title: string,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onApply: (content: string) => void,;
+  defaultOptions: AIEnhancementOptions,;
+  initialContent?: string;
+}
+
+  title: string;
+  isOpen: boolean;
+  onClose: () => void;
+  onApply: (content: string) => void;
+  defaultOptions: AIEnhancementOptions;
+  initialContent?: string;
+}
+export function AIEnhancementDialog({};
+=======
 <<<<<<< HEAD
   initialContent?: string
 }
@@ -47,11 +86,15 @@ export function AIEnhancementDialog({;
 import React from 'react';
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title;
   isOpen;
   onClose;
   onApply;
   defaultOptions;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -99,14 +142,33 @@ interface AIEnhancementDialogProps {;
 }
 export function AIEnhancementDialog({
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title,
   isOpen,
   onClose,
   onApply,
   defaultOptions,
-  initialContent
-}: AIEnhancementDialogProps) {
 
+<<<<<<< HEAD
+  initialContent;
+}: AIEnhancementDialogProps) {;
+  const handleApply = (content: string) => {;
+    onApply(content),;
+    onClose();
+  };
+
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;import React from 'react',;
+  defaultOptions;
+
+  },
+
+  return (
+
+=======
   const handleApply = (content: string) => {
 <<<<<<< HEAD
     onApply($2);
@@ -206,11 +268,55 @@ export function AIEnhancementDialog({;
 ;
   return (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
+<<<<<<< HEAD
+
+          title={title}
+
+          defaultOptions={defaultOptions}
+          onApply={handleApply}
+          initialContent={initialContent}
+
+'
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';'
+import {AIEnhancementPanel} from './AIEnhancementPanel';'
+import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
+interface AIEnhancementDialogProps {}
+
+  title: string,
+  is_open: boolean,
+  on_close: () => void,
+  on_apply: (content: string) => void,
+  default_options: AIEnhancementOptions,
+  initial_content?: string;
+}
+
+    on_apply (content),
+    on_close ();
+  }
+;
+  return (
+
+      <DialogContent className="max - w-3xl">;
+        <DialogHeader>;
+          <DialogTitle>{title}</DialogTitle>;
+        </DialogHeader>;
+        <AIEnhancementPanel;
+          title={title}
+
+          default_options={default_options}
+          on_apply={handle_apply}
+          initial_content={initial_content}
+        />;
+      </DialogContent>;
+    </Dialog>);
+}
+=======
 <<<<<<< HEAD
 
 =======
@@ -289,6 +395,7 @@ interface AIEnhancementDialogProps {}
     </Dialog>);
 }
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   ),;});
  <DialogHeader> <DialogTitle> {
@@ -307,6 +414,9 @@ pr-12325
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD
+}
+=======
 }
 =======
 <<<<<<< HEAD
@@ -336,3 +446,4 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

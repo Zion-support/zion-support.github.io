@@ -181,6 +181,17 @@ key={index}
             </div>
           ) : query && !isLoading ? (
             <div className="px-4 py-3 text-sm text-gray-500">"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SearchBar: React.FC<SearchBarProps> = ({
+    <div className={'relative ' + className}>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               No results found for &quot;{query}&quot;
             </div>
           ) : null}
@@ -236,6 +247,17 @@ const "SearchBar": React.FC<SearchBarProps> = ({
 
 return (;
     <div className={'relative ' + className}>'
+<<<<<<< HEAD
+=======
+=======
+const SearchBar: React.FC<SearchBarProps> = ({
+    <div className={'relative ' + className}>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <form onSubmit={handleSubmit} className="relative">"
         <div className="relative">"
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />"

@@ -125,7 +125,16 @@ return (;
 export default InteractiveNavigation;}
 ursor / automate - test - fix - improve - and - merge - code - 99d1, ";"
 ;
+<<<<<<< HEAD
 const "InteractiveNavigation": React."FC": = () => {";"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <nav className="bg - white shadow - lg">";";"
       <"div": className="container mx - auto px - 4">";";"
         <"div": className="flex justify - between items - center py - 4">";";"
@@ -136,6 +145,32 @@ const "InteractiveNavigation": React."FC": = () => {";"
             <"Link": href = "/about" className="text - gray - 600 "hover":text - gray - "900": transition - colors">About</Link>", ";"
             <"Link": href="/contact" className="text - gray - 600 "hover":text - gray - "900": transition - colors">Contact</Link>", ';'
 }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const InteractiveNavigation: React.FC: = () => {\';
+    <nav className=\'bg - white shadow - lg\'    />\';\';
+      <div: className=\'container mx - auto px - 4\'    />\';\';
+        <div: className=\'flex justify - between items - center py - 4\'    />\';\';
+          <div: className=\'text - xl font - bold text - gray - 800\'    />Interactive Nav</div>\';\';
+          <div: className=\"hidden md:flex: space - x-8\"    />\', \';
+            <Link: href=\"/\" className=\"text - gray - 600 hover:text - gray - 900: transition - colors\"    />Home</Link>\', \';
+            <Link: href=\"/services\" className=\"text - gray - 600 hover:text - gray - 900: transition - colors\"    />Services</Link>\", \",
+            <Link: href = \"/about\" className=\"text - gray - 600 hover:text - gray - 900: transition - colors\"    />About</Link>\', \';}
+            <Link: href=\"/contact\" className=\"text - gray - 600 hover:text - gray - 900: transition - colors\"    />Contact</Link>\", ';}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default Component}
 ;
 export default Component}

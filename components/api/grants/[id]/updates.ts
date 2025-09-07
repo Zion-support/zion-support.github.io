@@ -2,6 +2,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { v4 as uuidv4 } from 'uuid';
+
+import { GrantApplication } from '../../../../types/grants';
+
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import { v4 as uuidv4 } from 'uuid';
 import type { GrantApplication } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
@@ -24,19 +36,37 @@ function grantPath(id: string) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
+  return path.join(GRANTS_DIR, `${id}.json`);
 }
 
 function readGrant(id: string): GrantApplication | null {
 <<<<<<< HEAD
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+=======
+<<<<<<< HEAD
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const p = grantPath(id);
   if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 }
 
 function writeGrant(record: GrantApplication) {
+<<<<<<< HEAD
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
+}
+=======
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 =======
@@ -46,6 +76,7 @@ function writeGrant(record: GrantApplication) {
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants);
   return path && path.join(GRANTS_DIR, `${id}.json`);
@@ -68,9 +99,16 @@ import path from 'path';'
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
-  if (!id) return res.status(400).json({ error: 'Missing id' });
+  if (!id) {
+    return res.status(400).json({ error: 'Missing id' });
+  }
 
   const existing = readGrant(id);
+<<<<<<< HEAD
+  if (!existing) {
+    return res.status(404).json({ error: 'Not found' });
+  }
+=======
   if (!existing) return res.status(404).json({ error: 'Not found' });
 =======
 function grantPath() { return null; }
@@ -307,13 +345,19 @@ if ( {) {}
 }
     const { content } = req.body as { content?: string }
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   if (req.method === 'GET') {
+<<<<<<< HEAD
     return res.status(200).json({ updates: existing.updates || [] })
+=======
+    return res.status(200).json({ updates: existing.updates || [] });
+>>>>>>> origin/resolved-merge-conflicts
   }
 
   if (req.method === 'POST') {
     const { content } = req.body as { content?: string };
+<<<<<<< HEAD
     if (!content || !content.trim()) return res.status(400).json({ error: 'Missing content' });
     const update = { id: uuidv4(), createdAt: new Date().toISOString(), content: content.trim() };
     existing.updates = [...(existing.updates || []), update];
@@ -322,6 +366,29 @@ if ( {) {}
     return res.status(201).json({ update })
   }
 
+=======
+    if (!content || !content.trim()) {
+      return res.status(400).json({ error: 'Missing content' });
+    }
+
+    const update = {
+      id: uuidv4(),
+      createdAt: new Date().toISOString(),
+      content: content.trim()
+    };
+
+    existing.updates = [...(existing.updates || []), update];
+    existing.updatedAt = new Date().toISOString();
+    writeGrant(existing);
+    return res.status(201).json({ update });
+  }
+
+<<<<<<< HEAD
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
@@ -364,3 +431,7 @@ if ( {) {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

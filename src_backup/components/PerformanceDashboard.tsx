@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 
@@ -12,12 +20,45 @@ import { Card;
   CardHeader;
   CardTitle;
  } from '@/components/ui/card';
+<<<<<<< HEAD
 import { Badge  } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+=======
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Badge  } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import { Button } from @/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react
+>>>>>>> origin/resolved-merge-conflicts
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 import React, { useState } from 'react'
+=======
+import React, { useState } from react'
+=======
+=======
+=======
+<<<<<<< HEAD
+
+import React, { useState } from react'
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState } from 'react'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import {
   Card
   CardContent
@@ -41,6 +82,12 @@ interface PerformanceMetrics {
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   CheckCircle;
   AlertCircle;
   TrendingUp;
@@ -68,6 +115,12 @@ interface PerformanceMetrics  {buildSize: string;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';interface Improvement  {id: string;
   title: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   id: string;
   title: string,
@@ -75,6 +128,10 @@ interface PerformanceMetrics  {buildSize: string;
   status: 'completed' | 'in-progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
+<<<<<<< HEAD
+=======
+  category: 'performance | security' | 'ux | build'
+>>>>>>> origin/resolved-merge-conflicts
 
 import React, { useState } from 'react';
 import {
@@ -95,8 +152,19 @@ import { Button } from '@/components / ui / button';
 } from 'lucide-react';
 interface PerformanceMetrics {
   build_size: string;
+<<<<<<< HEAD
   category: 'performance' | 'security' | 'ux' | 'build';
 const PerformanceDashboard: React.FC = () => {const [metrics] = useState<PerformanceMetrics>({buildSize: '959 MB';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  category: performance' | 'security | ux' | 'build;
+const PerformanceDashboard: React.FC = () => {const [metrics] = useState<PerformanceMetrics>({buildSize: 959 MB';
+>>>>>>> origin/resolved-merge-conflicts
     pageCount: 166;
     loadTime: 1.2;
     healthStatus: 'healthy';
@@ -189,6 +257,12 @@ interface PerformanceMetrics  {build_size: string;
   load_time: number;
   health_status: 'healthy' | 'warning' | 'error';
 interface Improvement  {id: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   page_count: number;
   load_time: number;
   health_status: 'healthy' | 'warning' | 'error';
@@ -199,6 +273,12 @@ interface Improvement {
   status: 'completed' | 'in - progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
     buildSize: '959 MB'
@@ -470,9 +550,18 @@ interface Improvement {;
     {;
       id: '6',;
       title: 'Health Check Endpoint',;
+<<<<<<< HEAD
     },const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
           <CardHeader className='pb-2'>;
             <CardTitle className='text-sm font-medium text-gray-600'>;
+=======
+    }},const completedImprovements = improvements.filter(imp => imp.status === 'completed'),return (<Card>;
+          <CardHeader className='pb-2'>;
+            <CardTitle className='text-sm font-medium text-gray-600'>;
+    }},const completedImprovements = improvements.filter(imp => imp.status === completed'),return (<Card>;
+          <CardHeader className='pb-2>;
+            <CardTitle className=text-sm font-medium text-gray-600'>;
+>>>>>>> origin/resolved-merge-conflicts
               Page Count;
             </CardTitle>;
           </CardHeader>;
@@ -577,6 +666,10 @@ interface Improvement {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
+<<<<<<< HEAD
+=======
+        return <AlertCircle className='h-4 w-4 text-gray-500 />;
+>>>>>>> origin/resolved-merge-conflicts
 
       description: 'Created production monitoring endpoint for environment and service health',;
       status: 'completed',;
@@ -607,6 +700,12 @@ interface Improvement {;
       case 'low': return 'bg-green-100 text-green-800',;
       default: return 'bg-gray-100 text-gray-800';
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   },
 
@@ -710,10 +809,27 @@ interface Improvement {;
                   {getCategoryIcon(improvement.category)}
 
                 </div>
+<<<<<<< HEAD
                 <div className='flex-1 min-w-0'>
                   <div className='flex items-center justify-between'>
                     <h3 className='text-sm font-medium text-gray-900'>
         return <AlertCircle className='h-4 w-4 text-gray-500' />;{/* Completed Improvements */}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900">
+                      {improvement.title}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                <div className=flex-1 min-w-0">
+                  <div className="flex items-center justify-between>
+                    <h3 className=text-sm font-medium text-gray-900">
+        return <AlertCircle className=h-4 w-4 text-gray-500' />;{/* Completed Improvements */}
+>>>>>>> origin/resolved-merge-conflicts
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center space-x-2'>;
@@ -737,6 +853,28 @@ interface Improvement {;
                       <Badge className={getImpactColor(improvement.impact)}>;
                         {improvement.impact} impact;
                       </Badge>;
+=======
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900">
+                      {improvement.title}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <Badge className={getImpactColor(improvement.impact)}>
+                        {improvement.impact} impact
+                      </Badge>
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
@@ -752,6 +890,12 @@ interface Improvement {;
       case 'build': return <TrendingUp className='h-4 w-4' />,;
       default: return <CheckCircle className='h-4 w-4' />;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </div>;
                   </div>;
                   <p className='text-sm text-gray-600 mt-1'>;
@@ -837,10 +981,20 @@ interface Improvement {;
           <CardContent>;<div className='flex items - center space - x-2'>;
               <CheckCircle className='h - 5 w - 5 text - green - 500' />;
               <span className='text - sm font - semibold text - green - 600'>;
+<<<<<<< HEAD
+=======
+              <span className=text - sm font - semibold text - green - 600'>;
+>>>>>>> origin/resolved-merge-conflicts
 
                 Healthy;
               </span>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </div>;
 
@@ -849,7 +1003,19 @@ interface Improvement {;
       </div>;
 
       {/* Completed Improvements */}
+<<<<<<< HEAD
               <span className='text - sm font - semibold text - green - 600'>;Healthy;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <Card>;
+        <CardHeader>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <span className='text - sm font - semibold text - green - 600>;Healthy;
+>>>>>>> origin/resolved-merge-conflicts
               </span>;</div>;
           </CardContent>;
         </Card>;
@@ -863,9 +1029,25 @@ interface Improvement {;
                     <h3 className='text-sm font-medium text-gray-900'>;
                       {improvement.title}
                     </h3>;
+<<<<<<< HEAD
                     <div className='flex items-center space-x-2'>;
           <CardTitle className='flex items-center space-x-2'>;
             <CheckCircle className='h-5 w-5 text-green-500' />;
+=======
+                    <div className='flex items-center space-x-2>;
+          <CardTitle className=flex items-center space-x-2">;
+            <CheckCircle className="h-5 w-5 text-green-500 />;
+=======
+      <Card>;
+        <CardHeader>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <CardTitle className="flex items-center space-x-2">;
+            <CheckCircle className="h-5 w-5 text-green-500" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
             <span>Completed Improvements</span>;
           </CardTitle>;
           <CardDescription>;
@@ -898,10 +1080,6 @@ interface Improvement {;
           </div>;
         </CardContent>;
       </Card>;
-          </div>
-        </CardContent>
-      </Card>
-      {/* Action Buttons */}
       {/* Action Buttons */}
 
       <div className='flex space-x-4'>
@@ -921,7 +1099,20 @@ interface Improvement {;
 },
 
 export default PerformanceDashboard, 
+<<<<<<< HEAD
       <div className='flex space-x-4'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <div className="flex space-x-4">;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
+          <Shield className="h-4 w-4 mr-2" />;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      <div className="flex space-x-4>;
+>>>>>>> origin/resolved-merge-conflicts
                     </div>;
                   </div>;
                   <p className='text-sm text-gray-600 mt-1'>;
@@ -934,26 +1125,68 @@ export default PerformanceDashboard,
       </Card>;
       {/* Action Buttons */}</div>;
         </CardContent>;
+<<<<<<< HEAD
       </Card>;{/* Action Buttons */}<div className='flex space-x-4'>;
         <Button onClick={() => window.open('/api/health/environment_blank')} variant='outline'>;
           <Shield className='h-4 w-4 mr-2' />;
 
 
+=======
+      </Card>;{/* Action Buttons */}<div className=flex space-x-4">;
+        <Button onClick={() => window.open(/api/health/environment_blank')} variant="outline>;
+          <Shield className=h-4 w-4 mr-2" />;
+=======
+      <div className="flex space-x-4">;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
+          <Shield className="h-4 w-4 mr-2" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+};
+}
+>>>>>>> origin/resolved-merge-conflicts
 
 export default PerformanceDashboard;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
+<<<<<<< HEAD
   )variant='outline';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  )variant=outline';
+>>>>>>> origin/resolved-merge-conflicts
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;export default PerformanceDashboard;
 export default PerformanceDashboard,export default PerformanceDashboard;
@@ -969,6 +1202,12 @@ export default PerformanceDashboard,export default PerformanceDashboard;
     </div>;
   )}export default PerformanceDashboard;<div className='space - y-4'>;
             {completed_improvements.map (improvement => (<div;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 key={improvement.id}
                 className='flex items - start space - x-3 p - 3 border rounded - lg';
               >;
@@ -1017,7 +1256,4 @@ export default PerformanceDashboard;
   );
 };
 
-export default PerformanceDashboard,export default PerformanceDashboard,)}export default PerformanceDashboard;
-
-export default PerformanceDashboard,
 export default PerformanceDashboard;

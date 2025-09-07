@@ -1,26 +1,76 @@
 <<<<<<< HEAD
+const TalentRoutes = () => {
+
+const TalentRoutes = () => {;
+
+  return (
+    <Routes>;
+
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "../components/ProtectedRoute";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";
 import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
+<<<<<<< HEAD
+
+=======
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import TalentDirectory from "../pages/TalentDirectory",
 import TalentsPage from "../pages/TalentsPage",
 import TalentProfilePage from "../pages/TalentProfilePage",
 import SavedTalentsPage from "../pages/SavedTalentsPage",
+
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
+<<<<<<< HEAD
+const TalentRoutes = () => {
+const TalentRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Talent Routes */}
+      <Route path="/talent" element={<TalentDirectory />} />
+      <Route path="/talents" element={<TalentsPage />} />
+
+      <Route path="/talent/:id" element={<TalentProfilePage />} />
+      <Route"
+        path="/saved-talents"
+        element={}
+          <ProtectedRoute>
+            <SavedTalentsPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route"
+        path="/create-talent-profile"
+        element={}
+          <ProtectedRoute>
+            <CreateTalentProfile />
+          </ProtectedRoute>
+        }
+      />"
+      <Route path="/profile/:id" element={<ProfilePage />} />
+    </Routes>
+
+export default TalentRoutes;
+=======
 <<<<<<< HEAD
 const TalentRoutes = $2;
 export default TalentRoutes,
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import CreateTalentProfile from "../pages/CreateTalentProfile",
 import ProfilePage from "../pages/ProfilePage",
@@ -106,6 +156,9 @@ const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
+<<<<<<< HEAD
+
+=======
       <Route path="/talent" element={<TalentDirectory />} />
       <Route path="/talents" element={<TalentsPage />} />
 
@@ -214,6 +267,7 @@ const TalentRoutes = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -259,9 +313,13 @@ export default TalentRoutes;
 
 
 export default TalentRoutes;
+<<<<<<< HEAD
+
+=======
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ),;
 },;
 ;export default TalentRoutes,
@@ -285,9 +343,13 @@ export default TalentRoutes;
 <<<<<<< HEAD
 export default TalentRoutes;
 =======
+<<<<<<< HEAD
+export default TalentRoutes;
+=======
 export default TalentRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

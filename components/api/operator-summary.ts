@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -243,6 +250,10 @@ export default async /**
       metrics?.token?.find ((m: any) => m.key === 'tx_volume_daily)?.value || 0;
       metrics?.multiverse?.find ((m: any) => m.key === active_instances');
         ?.value || 0;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = await fetch($2);
@@ -265,6 +276,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary })
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 
   } catch (e) {
@@ -299,3 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

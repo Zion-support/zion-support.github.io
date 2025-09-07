@@ -47,7 +47,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!vendorId) return res.status(400).json({ error: vendorId required" });
   const items = listPipelineForVendor(vendorId);
   res.status(200).json({ items });
+<<<<<<< HEAD
   res.status(200).json({ items });
+=======
+<<<<<<< HEAD
+=======
+  res.status(200).json({ items });
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   const vendorId = String(req.query.vendorId || ');
   if (!vendorId) return res.status(400).json({ error: vendorId required' });

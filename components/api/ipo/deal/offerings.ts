@@ -2,6 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+import { readJsonFile } from '../../../../utils/api/storage';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;if (req && req.method === 'GET') {const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false })return res && res.status(200).json(offerings)}
     return res.status (200).json (offerings)}
@@ -219,6 +226,10 @@ return res.status (405).json ({ error: 'Method not allowed' });
 return res.status(405).json({ error: 'Method not allowed' })}
 >>>>>>> merged-prs-20250907-203621
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return,
@@ -226,6 +237,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const offerings = readJsonFile($2);
     return res.status(200).json(offerings)
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const offerings = readJsonFile('ipo-offerings.json', []);
+  return res.status(200).json(offerings);
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   if (req.method = $2;
     const offerings = { safe: !!body.safe, equity: !!body.equity, token: !!body.token },
@@ -271,3 +291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

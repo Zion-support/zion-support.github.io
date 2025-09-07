@@ -55,8 +55,44 @@ return (;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;'
   useEffect(() => {
 
+<<<<<<< HEAD
     }
 
+=======
+      <div className='flex items-center justify-between mb-6'>;
+</div>
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;
+        <div className='flex gap-2'>;
+          <Link href='/grants/apply'>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;
+          ;
+          <Link href='/incubator'>;
+
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+</a>
+
+<<<<<<< HEAD
+=======
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+
+  useEffect(() => {;
+=======
+
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;
+          ;
+          <Link href='/incubator'>;
+
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+</a>
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);'
     if (filters.status) params.set('status', filters.status);'
@@ -78,6 +114,33 @@ export default function GrantsPage() {;
     if (filters && filters.program) params && params.set('program', filters && filters.program);'
     fetch(`/api/grants?${params && params.toString()}`);`      .then(r => { return r && r.json()); }
       .then(d => { return setItems(d && d.items || [])); }
+<<<<<<< HEAD
+=======
+=======
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+
+  useEffect(() => {;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    const params = new URLSearchParams();
+    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
+    if (filters && filters.status) params && params.set('status', filters && filters.status);
+    if (filters && filters.region) params && params.set('region', filters && filters.region);
+    if (filters && filters.program) params && params.set('program', filters && filters.program);
+    fetch(`/api/grants?${params && params.toString()}`);
+      .then(r => r && r.json());
+      .then(d => setItems(d && d.items || []));
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       .catch(() => setItems([]));  }, [filters]);
 return (;
       .catch(() => setItems([]))

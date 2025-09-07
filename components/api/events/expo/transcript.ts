@@ -1,5 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { agendaItems } from '../../../../data/expo/agenda';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { id } = req.query as { id?: string };
+
+    const item = agendaItems.find(i => i.id === id);
+    if (!item) {
+      return res.status(404).send('Not found');
+    }
+
+    const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
+    res.setHeader('Content-Type', 'text/plain');
+    res.status(200).send(transcript);
+  } catch (e: any) {
+    res.status(500).json({ error: 'Failed to generate transcript' });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -331,3 +355,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

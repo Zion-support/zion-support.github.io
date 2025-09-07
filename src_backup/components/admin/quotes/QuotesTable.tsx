@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -78,6 +79,8 @@ interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
   isLoading: boolean,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
@@ -93,8 +96,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
   isLoading
   updateStatus
   toggleArchive
-:src/components/admin/quotes/QuotesTable.tsx
-  deleteQuote
 
   quotes,
   isArchived = false,
@@ -134,9 +135,16 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
             </TableRow>
           ) : (
             quotes.map(quote => (
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
               <TableRow
+<<<<<<< HEAD
                 key = {quote.id,}
+=======
+                key = {quote.id}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
                 className="border-zion-blue-light hover:bg-zion-blue"
 
@@ -200,6 +208,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                   {quote.requester_name}
 
                     {quote.project_summary}
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                   </div>
                 </TableCell>
@@ -227,6 +236,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <Button 
                       variant="ghost" 
@@ -237,16 +248,48 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                       <span className="sr-only">View Details</span>
                     </Button>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {isArchived ? (
 
                       <>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
                           variant="ghost"
+=======
+                          variant=ghost
+=======
+=======
+=======
+<<<<<<< HEAD
+
+                          variant=ghost
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          variant="ghost"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   quotes;
   isArchived = false;"
@@ -305,12 +348,19 @@ import { ;
                             <Archive className="h-4 w-4 mr-2" />
                             Archive;
                           </DropdownMenuItem>
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                           <DropdownMenuItem
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
+<<<<<<< HEAD
                               } }
+=======
+                              } }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
                           <DropdownMenuItem 
 
@@ -325,6 +375,7 @@ import { ;
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                     )}
                   </div>
@@ -337,7 +388,12 @@ import { ;
     </div>
   )
 }
+<<<<<<< HEAD
 '"
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from "react",;
 
@@ -369,10 +425,20 @@ interface QuotesTableProps {;
   deleteQuote: (id: string) => void,;
   onViewDetails: (quote: QuoteRequest) => void;
 }
+<<<<<<< HEAD
 ;
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+>>>>>>> origin/resolved-merge-conflicts
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus) => void,toggleArchive: (id: string, isArchived: boolean) => void,deleteQuote: (id: string) => void,onViewDetails: (quote: QuoteRequest) => void;
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({}
@@ -382,12 +448,32 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   updateStatus;
   toggleArchive;
   quotes,isArchived = false,isLoading,updateStatus,toggleArchive,deleteQuote,onViewDetails;
+<<<<<<< HEAD
 },) => {return (<div className="overflow-x-auto">;
+=======
+},) => {return (<div className=overflow-x-auto">;
+  quotes,
+  isArchived = false,
+  isLoading,
+  updateStatus,
+  toggleArchive,
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+;
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+>>>>>>> origin/resolved-merge-conflicts
   quotes,;
   isArchived = false,;
   isLoading,;
   updateStatus,;
   toggleArchive,;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   deleteQuote;
   onViewDetails;
 
@@ -437,6 +523,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                       <span className="sr-only">View Details</span>;
                     </Button>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
@@ -493,7 +585,17 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                             Mark as Closed;
                           </DropdownMenuItem>;
                           <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
+<<<<<<< HEAD
                           }
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          }}
+>>>>>>> origin/resolved-merge-conflicts
 
                           <span className="sr-only">Delete</span>;
                         </Button>;
@@ -517,6 +619,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     )}
                       </DropdownMenu>;)}
                   </div>;
@@ -525,7 +633,17 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
             )))})}'";</TableBody>;
       </Table>;
     </div>;
+<<<<<<< HEAD
   )}'";
+=======
+  )}";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       </DropdownMenu>;
 
                     )}
@@ -572,8 +690,14 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                           on_click = {(, ) => toggle_archive (quote.id, false), }
 
 }
+<<<<<<< HEAD
                               delete_quote (quote.id) }
                           }
+=======
+                              delete_quote (quote.id);
+                            , }
+                          }}
+>>>>>>> origin/resolved-merge-conflicts
 
                           </Button>;
                         </DropdownMenuTrigger>;"
@@ -613,6 +737,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
 
         </TableBody>;
       </Table>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}'";Table;
   TableBody;
   TableCell;
@@ -659,7 +789,17 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
+<<<<<<< HEAD
 '";
+=======
+';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'

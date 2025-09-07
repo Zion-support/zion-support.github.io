@@ -2,15 +2,106 @@ import React from 'react';
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { DisputeDashboard  } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
+<<<<<<< HEAD
+
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {DisputeDashboard} from '@/components/disputes';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { DisputeDashboard } from '@/components/disputes',
+
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { DisputeDashboard } from "@/components/disputes";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+
+  return (
+    <ProtectedRoute>
+      <>
+        <SEO"
+          title="Dispute Resolution Center | Zion AI Marketplace""
+          description="View and manage disputes between clients and talents"
+        />
+        <AppHeader />
+        <DisputeDashboard />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  );
+}
+
+        <SEO"
+          title="Dispute Resolution Center | Zion AI Marketplace"
+
+          description="View and manage disputes between clients and talents"
+import React from 'react';'
+import {SEO} from '@/components / SEO';'
+import {AppHeader} from '@/layout / AppHeader';'
+import {Footer} from '@/components / Footer';'
+import {DisputeDashboard} from '@/components / disputes';'
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+/**
+ * DisputesPage - Function description;
+ */
+function DisputesPage() {}
+  return (
+    <ProtectedRoute>;
+      <>;
+        <SEO;"
+          title="Dispute Resolution Center | Zion AI Marketplace";
+
+    </ProtectedRoute>);
+}
+
+export default DisputesPage;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;"
+export default DisputesPage,; <ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents" /> <AppHeader /> <DisputeDashboard /> <Footer /> </> </ProtectedRoute> export default DisputesPage;"
+          description="View and manage disputes between clients and talents"
+        />
+        <AppHeader />
+        <DisputeDashboard />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+
+export default DisputesPage;
+
+    </ProtectedRoute>);
+}
+
+;
+
+export default DisputesPage;
+
+;
+export default DisputesPage;
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -212,3 +303,4 @@ export default DisputesPage;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

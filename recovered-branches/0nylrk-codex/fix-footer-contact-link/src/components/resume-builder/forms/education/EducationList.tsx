@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+
+interface EducationListProps {
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void
+
+=======
+<<<<<<< HEAD
 import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
 interface EducationListProps {
@@ -56,6 +71,7 @@ interface EducationListProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -65,6 +81,8 @@ interface EducationListProps {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -72,6 +90,7 @@ interface EducationListProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export function EducationList({
   educationEntries
@@ -80,6 +99,9 @@ export function EducationList({
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Education } from "@/types/resume";
 
@@ -87,6 +109,8 @@ import { EducationItem } from "./EducationItem";
 interface EducationListProps {}
   educationEntries: Education[];
   onEdit: (education: Education) => void;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -97,6 +121,7 @@ interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onDelete: (id: string) => void;
 }
 
@@ -109,11 +134,16 @@ export function EducationList({}
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return ("
     <div className="space-y-4">"
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -140,6 +170,7 @@ import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   education_entries: Education[];
   on_edit: (education: Education) => void;
   on_delete: (id: string) => void;
@@ -161,6 +192,14 @@ if ( {) {
         <EducationItem;
           key={edu.id}
           education={edu}
+<<<<<<< HEAD
+
+  )
+
+}
+;
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -189,11 +228,14 @@ export function EducationList({
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
         <EducationItem
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           key={edu.id}
           education={edu}
           onEdit={onEdit}
           onDelete={onDelete}
         />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       ))}
@@ -307,12 +349,104 @@ export function EducationList({
           onEdit={onEdit}
           onDelete={onDelete}
         />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ))}
     </div>
   );
 }
 ;
 
+<<<<<<< HEAD
+interface EducationListProps {
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void
+
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+
+import { Education } from "@/types/resume";
+import { EducationItem } from "./EducationItem";
+
+interface EducationListProps {
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+import { Education } from "@/types/resume";
+import { EducationItem } from "./EducationItem";
+interface EducationListProps {
+  education_entries: Education[];
+  on_edit: (education: Education) => void;
+  on_delete: (id: string) => void;
+}
+export /**
+ * EducationList - Function description
+ */
+function EducationList() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
+  }
+  return (
+    <div className="space-y-4">;
+      <h3 className="text - md font-medium">Added Education</h3>;
+      {education_entries.map ((edu) => (
+        <EducationItem;          key={edu.id}
+
+import { Education } from "@/types/resume";""
+import { EducationItem } from "./EducationItem";"
+interface EducationListProps {
+  // TODO: Implement
+}
+  educationEntries: Education[];,
+  onEdit: (education: Education) => void;,
+  onDelete: (id: string) => void;
+
+}
+
+export function EducationList({
+  educationEntries,
+
+  onEdit,
+  onDelete,)
+
+}: EducationListProps) {
+  if (!educationEntries || educationEntries.length === 0) {
+    return null;
+  if (!educationEntries || educationEntries.length === 0) {}
+    return null;}
+  }
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
+        <EducationItem
+          key={edu.id}
+          education={edu}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
+  );
+}
+;
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
@@ -334,9 +468,12 @@ pr-12325
   );
 }
 ;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
@@ -357,6 +494,9 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
       <h3 className="text-md font-medium">Added Education</h3>;
       {educationEntries.map((edu) => (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 </EducationItem>
     </div>"
@@ -373,14 +513,19 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
     </div>"
     <div className="space-y-4">;"
       <h3 className="text-md font-medium">Added Education</h3>;"
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <EducationItem ;
           key={edu.id} ;
           education={edu} ;
           onEdit={onEdit} ;
           onDelete={onDelete} ;
         />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       ))}
@@ -402,11 +547,15 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 }
   )
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -416,3 +565,4 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

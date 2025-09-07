@@ -1,18 +1,27 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
 import { slugify } from "@/lib/slugify",
+<<<<<<< HEAD
+=======
 import { Link } from "react-router-dom",
 =======
 
@@ -53,12 +62,16 @@ import { slugify } from "@/lib/slugify",
 }
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   // Create a URL-friendly slug from the category title
 
   const slug = slugify(title);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Link;
       to={`/category/${slug}`}
@@ -80,6 +93,8 @@ import { Link } from "react-router-dom",;
 
 interface CategoryCardProps {;
   title: string,;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
   // Create a URL-friendly slug from the category title;
@@ -89,6 +104,7 @@ interface CategoryCardProps {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const slug = slugify(title);
   return (
@@ -96,6 +112,11 @@ interface CategoryCardProps {;
       to={`/category/${slug}`}
       className={cn(
 <<<<<<< HEAD
+
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+
+=======
+<<<<<<< HEAD
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
 
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
@@ -105,17 +126,28 @@ interface CategoryCardProps {;
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
 
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         className
       )}
     >
       <div
+<<<<<<< HEAD
+        className={cn(
+
+"mb-4 p-3 bg-zion-blue-dark rounded-full";
+
+          !color && "text-zion-cyan"
+=======
 <<<<<<< HEAD
         className = $2;
 =======
@@ -133,6 +165,7 @@ interface CategoryCardProps {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "mb-4 p-3 bg-zion-blue-dark rounded-full",
           !color && "text-zion-cyan"
 import React, { ReactNode } from "react",;
@@ -143,14 +176,20 @@ import { Link } from "react-router-dom",;
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface CategoryCardProps {;
   title: string,;
 
   description: string,;
   icon: ReactNode | string,;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -164,10 +203,14 @@ interface CategoryCardProps {;
   description:string,;
   icon:ReactNode | string,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   /**;
    * Optional color to use for the icon. If not provided the default cyan;
    * accent colour is used. Previously this prop was ignored which meant;
    * callers could not customise the icon colour as intended.;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -183,10 +226,25 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   color?: string;
   count?: number;
 
   className?: string;
+<<<<<<< HEAD
+export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+
+        )}
+        className={cn ("
+          "mb - 4 p - 3 bg - zion - blue - dark rounded - full";"
+
+          !color && "text - zion - cyan")}
+        style={color ? { color } : undefined}
+      >;
+        {icon}
+
+          "mb-4 p-3 bg-zion-blue-dark rounded-full"
+=======
 <<<<<<< HEAD
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
 =======
@@ -214,6 +272,7 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
 <<<<<<< HEAD
           "mb-4 p-3 bg-zion-blue-dark rounded-full"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           !color && "text-zion-cyan"
         )}
         style={color ? { color } : undefined}>;
@@ -228,6 +287,15 @@ export function CategoryCard({ title, description, icon, color, count, className
 ;
   return (;
     <Link ;
+<<<<<<< HEAD
+
+      to={`/category/${slug}`} ;
+      className={cn(;"
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",;"
+  color?: string,;
+  count?: number,;
+;)
+=======
       to={`/category/${slug}`} ;
       className={cn(;
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",;
@@ -236,10 +304,21 @@ export function CategoryCard({ title, description, icon, color, count, className
   className?: string;
 }
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {;
   // Create a URL-friendly slug from the category title;
   const slug = slugify(title),;
   return (;
+<<<<<<< HEAD
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group";"
+
+        className={cn(;)
+  ),; interface CategoryCardProps {
+  // TODO: Implement
+icon: ReactNode | string;`;
+`/category/$ {
+  slug;`;
+=======
     <Link;
       to={`/category/${slug}`} ;
       className={cn(;
@@ -255,14 +334,21 @@ description: string;
 icon: ReactNode | string;
 `/category/$ {
   slug 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }` 
 }) 
 }style= {
   color ? {
+<<<<<<< HEAD
+  color;
+}: undefined;
+}> {
+=======
   color 
 }: undefined 
 }> {
   icon 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</div>) 
 }</Link>) 
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
@@ -279,6 +365,9 @@ icon: ReactNode | string;
       )}
     </Link>
   )
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -412,4 +501,5 @@ icon: ReactNode | string;`;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

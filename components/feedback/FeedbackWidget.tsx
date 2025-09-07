@@ -1,6 +1,23 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+  render() {if (this.state.hasError) ;
+  }
+  return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useMemo, useState } from 'react';'
+
+import { v4 as uuidv4 } from 'uuid';'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
@@ -55,6 +72,10 @@ import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
 import React, { useMemo, useState } from react';
 import { v4 as uuidv4 } from 'uuid;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export type FeedbackWidgetProps = any;
 =======
 <<<<<<< HEAD
@@ -99,6 +120,15 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const [submitted, setSubmitted] = useState($2);
   const [error, setError] = useState<string | null>(null),
 
+<<<<<<< HEAD
+=======
+const [comment, setComment] = useState('');'
+
+<<<<<<< HEAD
+  const submit = async () => {
+    if (!rating) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 import { v4 as uuidv4  } from uuid';
   responseId;
@@ -230,6 +260,10 @@ export default function FeedbackWidget() {responseId,aiModel}: FeedbackWidgetPro
   const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]),
 
     if (!rating) {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       setError($2);
       return
     }
@@ -310,11 +344,25 @@ export default function FeedbackWidget() {responseId,aiModel}: FeedbackWidgetPro
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const effectiveResponseId = useMemo(;
+    () => responseId || uuidv4(),
+    [responseId]
+ ;
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     }
   }
   return (
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -351,6 +399,22 @@ const effectiveResponseId = useMemo(;
   );
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const submit = async () => {
+    }
+    if (!rating) {
+      }
+      setError('Please choose 👍 or 👎');'
+return;
+
+    }
+    setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {"method": 'POST';'
+        }
+        "headers": { 'Content-Type': 'application/json','
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
 const submit = async () => {
@@ -362,11 +426,40 @@ return;}
     setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {method: 'POST';}
         headers: { 'Content-Type': 'application/json'}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
         body: JSON.stringify({
           responseId: effectiveResponseId,
 rating,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "comment": comment.trim(),
+          "pagePath": typeof window !== 'undefined''
+              ? window.location.pathname
+              : undefined,
+aiModel
+        })
+     
+});
+      if (!res.ok) throw new Error('Failed to submit feedback');'
+      setSubmitted(true);
+    } catch ("e": any) {
+      }
+      setError(e?.message |'Something went wrong');'
+    } finally {
+      }
+      setSubmitting(false);
+    }
+return (;
+<div className='mt-6 rounded-lg border p-4 bg-white/60 "dark":bg-neutral-900/60'>'
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
         })
@@ -412,6 +505,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='text-sm text-emerald-700 dark:text-emerald-300'>;
 <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60' />
       <div className='text-sm font-medium mb-2' />Was this answer useful?</div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {submitted ? (
         <div className='text-sm text-emerald-700 dark:text-emerald-300'>
           Thanks for your feedback!
@@ -441,6 +538,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       ) : (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className='space-y-3'>'
+          <div className='flex items-center gap-2'>'
+
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;'
+      {submitted ? (<div className='text-sm text-emerald-700 "dark":text-emerald-300'>;'
+          }
+=======
+>>>>>>> origin/resolved-merge-conflicts
         <div className=space-y-3'>'
           <div className=flex items-center gap-2>'
       <div className='text-sm font-medium mb-2>Was this answer useful?</div>;
@@ -621,6 +729,10 @@ if ( {) {}
             <button;
               type='button';
               on_click={() => set_rating (rating === 'up' ? null : 'up')}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           Thanks for your feedback!;
         </div>;
       ) : (;'
@@ -629,6 +741,23 @@ if ( {) {}
 
               aria-pressed={rating === down}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              onClick={() => setRating(rating === 'up' ? null : 'up')}'
+              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}`              aria-pressed={rating === 'up'}'
+              onClick={() => setRating(rating === 'down' ? null : 'down')}'
+              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}`              aria-pressed={rating === 'down'}'
+            >;
+              <span>👎</span>;
+              <span>No</span>;
+            </button>;
+          </div>;
+          <textarea;
+            </button>;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </div>;
         </div>;
       )}export type FeedbackWidgetProps = {response_id?: string;
@@ -641,6 +770,41 @@ if ( {) {}
 if ( {) {$2;
 }
       set_error ('Please choose 👍 or 👎')return;      return;'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    set_error (null)set_submitting (true)try {const res = await fetch ('/api / feedback / submit', {"method": 'POST',"headers": { 'Content - Type': 'application / json','
+},"body": JSON.stringify ({"response_id": effectiveResponseId,rating,"comment": comment.trim (),"page_path":;
+            }
+            typeof window !== 'undefined';'
+              ? window.location.pathname;
+              : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;'
+}
+      set_submitted (true)} catch ("e": any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}'
+ 
+}return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 "dark":bg - neutral - 900 / 60'>;'
+      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>          "comment": comment.trim (),"page_path": typeof window !== 'undefined' ? window.location.pathname : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;'
+}
+      set_submitted (true)} catch ("e": any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}'
+ 
+}return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 "dark":bg - neutral - 900 / 60'>;'
+      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>;'
+      {submitted ? (<div className='text - sm text - emerald - 700 "dark":text - emerald - 300'>;'
+          }
+          Thanks for your feedback!;
+        </div>) : (<div className='space - y-3'>;'
+          <div className='flex items - center gap - 2'>;'
+            <button;
+              type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (<div className="text - sm text - emerald - 700 "dark":text-emerald-300">Thanks for your feedback!</div>) : (<div className="space-y-3">;"
+          <div className="flex items-center gap-2">;"
+            <button;
+              }
+              type="button";"
+              on_click={() => set_rating (rating === 'up' ? null : 'up')}'
+              className={`inline - flex items - center gap - 1 rounded - md border px - 2 py - 1 text - sm ${rating === 'up' ? 'bg - emerald - 600 text - white border - emerald - 600' : ''}`}`              aria - pressed={rating === 'up'}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
  */;
 function FeedbackWidget() {const [rating, set_rating] = useState < null | 'up' | 'down'>(null)const [comment, set_comment] = useState ('')const [submitting, set_submitting] = useState (false)const [submitted, set_submitted] = useState (false)const [error, set_error]  = useState < string | null>(null)const effectiveResponseId = useMemo (() => response_id || uuidv4 (),[response_id];
@@ -716,10 +880,24 @@ if ( {) {$2;}
               className={`inline - flex items - center gap - 1 rounded - md border px - 2 py - 1 text - sm ${rating === 'up' ? 'bg - emerald - 600 text - white border - emerald - 600' : ''}`}
 >>>>>>> origin/chore/fix-lint-and-merge
               aria - pressed={rating === 'up'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >;
               <span    />👍</span>;
               <span     /> Yes</span>;
             </button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <button;
+              type='button'              on_click={() => set_rating (rating === 'down' ? null : 'down')}              type="button";"
+              on_click={() => set_rating (rating === 'down' ? null : 'down')}'
+              className={`inline - flex items - center gap - 1 rounded - md border px - 2 py - 1 text - sm ${rating === 'down' ? 'bg - red - 600 text - white border - red - 600' : ''}`}`              aria - pressed={rating === 'down'}'
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
             <button;
               type='button'              on_click={() => set_rating (rating === 'down' ? null : 'down')}              type="button";
             <button;'"
@@ -733,12 +911,76 @@ if ( {) {$2;}
               on_click={() => set_rating (rating === 'down' ? null : 'down')}
               className={`inline - flex items - center gap - 1 rounded - md border px - 2 py - 1 text - sm ${rating === 'down' ? 'bg - red - 600 text - white border - red - 600' : ''}`}
               aria - pressed={rating === 'down'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >;
               <span    />👎</span>;
               <span     /> No</span>;
             </button>;
           </div>;
           <textarea;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            placeholder='Optional feedback (what worked, what didn’t)';'
+            value={comment}
+            on_change={e => { return set_comment (e.target.value.slice (0, 2000))}
+            className='w - full rounded - md border px - 3 py - 2 text - sm'; }'
+            rows={3}
+          />;
+          {error && <div className='text - xs text - red - 600'>{error}</div>}'
+          <div>;
+            <button;
+              on_click={submit}
+              disabled={submitting}
+              className='rounded - md bg - black text - white "dark":bg - white "dark":text - black px - 3 py - 1.5 text - sm';'
+            >              {submitting ? 'Submitting…' : 'Submit feedback'}            value={comment}'
+            on_change={(e) => set_comment (e.target.value.slice (0, 2000))}
+            className="w - full rounded - md border px - 3 py-2 text-sm";"
+            rows={3}
+          />;
+          {error && <div className="text - xs text-red-600">{error}</div>}"
+          <div>;
+            <button on_click={submit} disabled={submitting} className="rounded - md bg - black text - white "dark":bg - white "dark":text - black px - 3 py-1.5 text-sm">;"
+              {submitting ? 'Submitting…' : 'Submit feedback'}'
+            </button>;
+          </div>
+  );
+}
+    </div>)const _submit = async () => {if (!rating) {setError('Please choose 👍 or 👎');'
+  }
+  return;
+    }
+    setError(null),setSubmitting(true),try {const res = await fetch('/api/feedback/submit', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
+},"body": JSON.stringify({"responseId": effectiveResponseId,rating,"comment": comment.trim(),"pagePath": typeof window !== 'undefined' ? window.location.pathname : undefined,aiModel})}),if (!res.ok) throw new Error('Failed to submit feedback'),setSubmitted(true)} catch ("e": any) {setError(e?.message || 'Something went wrong')} finally {setSubmitting(false)}'
+ 
+};
+  return (<div className="mt-6 rounded-lg border p-4 bg-white/60 "dark":bg-neutral-900/60">;"
+      <div className="text-sm font-medium mb-2">Was this answer useful?</div>;"
+      {_submitted ? (<div className="text-sm text-emerald-700 "dark":text-emerald-300">Thanks for your feedback!</div>;"
+      ) : (_<div className="space-y-3">;"
+          <div className="flex items-center gap-2">;"
+            <button;
+              }
+              type=&quot;button&quot;
+              onClick={() => setRating(rating === 'up' ? null : 'up')}'
+              className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}`              aria-pressed={_rating === 'up'}'
+
+              aria - pressed={rating === 'up'}
+            >
+              <span    />👍</span>
+              <span     /> Yes</span>
+            </button>
+              aria - pressed={rating === 'down'}
+            >
+              <span    />👎</span>
+              <span     /> No</span>
+            </button>
+          </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
             placeholder='Optional feedback (what worked, what didn’t)';
             value={comment}
 <<<<<<< HEAD
@@ -902,6 +1144,10 @@ type='button'
             </button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <textarea
             placeholder='Optional feedback (what worked, what didn’t)'
             value={comment}
@@ -950,6 +1196,13 @@ type='button'
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}'
 
               aria-pressed={_rating === 'up'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="space-y-3">
+          <div className="flex items-center gap-2">
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
         <div className="space-y-3">
           <div className="flex items-center gap-2">
@@ -957,16 +1210,36 @@ type='button'
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <button
               type='button'
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >
               <span>👍</span>
               <span>Yes</span>
             </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <button,
+type='button''
+              onClick={() => setRating(rating === 'down' ? null : 'down')}'
+              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}`
+              aria-pressed={rating === 'down'}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <button
 <<<<<<< HEAD
               type="button"
@@ -984,11 +1257,26 @@ type='button'
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}'
 >>>>>>> merged-prs-20250907-203621
               aria-pressed={rating === 'down'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >
               <span>👎</span>
               <span>No</span>
             </button>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <textarea,
+placeholder='Optional feedback (what worked, what didn’t)''
+
+            value={comment}
+            onChange={e => { return setComment(e.target.value.slice(0, 2000))}
+            className='w-full rounded-md border px-3 py-2 text-sm'; }'
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <textarea
 <<<<<<< HEAD
 =======
@@ -1030,6 +1318,10 @@ placeholder='Optional feedback (what worked, what didn’t)'
             value={comment}
             onChange={e =    /> setComment(e.target.value.slice(0, 2000))}
             className='w-full rounded-md border px-3 py-2 text-sm';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             rows={3}
           />;
           {error && <div className='text-xs text-red-600'    />{error}</div>}
@@ -1037,9 +1329,21 @@ placeholder='Optional feedback (what worked, what didn’t)'
             <button;
               onClick={submit}
               disabled={submitting}
+<<<<<<< HEAD
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
             >;
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
+            >;
+=======
+<<<<<<< HEAD
+              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
+            >;
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             placeholder="Optional feedback (what worked, what didn’t)"
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
@@ -1049,6 +1353,18 @@ placeholder='Optional feedback (what worked, what didn’t)'
           {error && <div className='text-xs text-red-600'>{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {submitting ? 'Submitting…' : 'Submit feedback'}
+            </button>
+          </div>
+      )}
+              {submitting ? 'Submitting…' : 'Submit feedback'}
+            </button>
+          </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
             placeholder="Optional feedback (what worked, what didn’t)"
@@ -1358,12 +1674,33 @@ if ( {) {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       )}
     </div>
 <<<<<<< HEAD
 );
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+}
+
+  );
+    </div>;
+}
+})}
+    </div>
+  )
+}
+'"`
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
   );
 }
@@ -1376,3 +1713,7 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,11 +1,16 @@
 <<<<<<< HEAD
             }
+          })})}return (<div ref={container_ref} className=&quot;fixed inset - 0 w - full h - full pointer - events - none & quot    />
+=======
+<<<<<<< HEAD
+            }
           })})}return (<div ref={container_ref} className=&quot;fixed inset - 0 w - full h - full pointer - events - none & quot />
 =======
 <<<<<<< HEAD
             }
           })})}return (<div ref={container_ref} className=&quot;fixed inset - 0 w - full h - full pointer - events - none & quot    />
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <canvas;
         ref={canvas_ref}
@@ -13,11 +18,14 @@
 <<<<<<< HEAD
         style={{}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 useEffect ( () => {
   // Only run on client side if (typeof window === 'undefined) return
@@ -128,6 +136,8 @@ import React, { useEffect, useRef } from react';
 import { motion } from 'framer-motion;
 interface UltraFuturisticBackground2037Props {intensity?: low' | 'medium | high';
   theme?: 'quantum | neon' | 'holographic | cyberpunk' | 'quantum-neon;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -140,6 +150,7 @@ interface UltraFuturisticBackground2037Props {
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum - neon',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   children?: React.ReactNode;
 }
 export default function UltraFuturisticBackground2037({intensity = medium';
@@ -162,6 +173,9 @@ export default function UltraFuturisticBackground2037({intensity = medium';
     const getThemeColors = () => {
       switch (theme) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         case neon':;
           return {
             primary: ['#ff0080#00ffff#ffff00#ff00ff];
@@ -192,6 +206,8 @@ export default function UltraFuturisticBackground2037({intensity = medium';
             secondary: ['#ff0080#00ffff#ffff00#ff00ff];
             accent: [#f59e0b#ef4444#8000ff#00ff80'];
             glow: ['#7c3aed#0891b2#ff0066#00ffff];
+<<<<<<< HEAD
+=======
 =======
         case 'neon':;
 
@@ -251,12 +267,16 @@ glow: ['#7c3aed#0891b2#db2777#059669'];
             accent: ['#f59e0b#ef4444#8000ff#00ff80'],
 glow: ['#7c3aed#0891b2#ff0066#00ffff'];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }
       }
     }
     const colors = getThemeColors();
     // Enhanced particle system with quantum effects;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     let particles: Array<{x: number;
       y: number;
       vx: number;
@@ -274,6 +294,8 @@ glow: ['#7c3aed#0891b2#ff0066#00ffff'];
       neonIntensity: number;
       hologramOpacity: number;
     }> = [];
+<<<<<<< HEAD
+=======
 =======
     let particles: Array<{
       coordinate_x: number,
@@ -301,6 +323,7 @@ type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'quantum - neon',
       hologram_opacity: number;
     }> = [],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Initialize particles;
     const initParticles = () => {particles = [];
       const isSmallScreen = window.innerWidth < 768;
@@ -464,6 +487,13 @@ type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'quantum - neon',
 <<<<<<< HEAD
     const animate = () => {if (prefersReducedMotion) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles;
+      particles.forEach((particle, index) => {
+        // Update particle properties;
+=======
+<<<<<<< HEAD
+    const animate = () => {if (prefersReducedMotion) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 =======
     const animate = () =>: any {
       // Check condition
@@ -482,11 +512,14 @@ if (return, ) {
       particles.forEach((particle, index) => {
         // Update particle properties;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotationSpeed;
         particle.quantumState += 0.02;
         particle.life--;
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -496,6 +529,7 @@ if (return, ) {
         particle.quantum_state += 0.02,
         particle.life--,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Bounce off edges;
         if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
@@ -537,6 +571,9 @@ if (return, ) {
       });
       // Add quantum entanglement effects;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (theme === quantum-neon' |theme === 'quantum) {particles.forEach((particle1, i) => {
           particles.slice(i + 1).forEach((particle2) => {
             const distance = Math.sqrt(;
@@ -550,6 +587,8 @@ if (return, ) {
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
               ctx.stroke();
+<<<<<<< HEAD
+=======
 =======
       // Check condition
 if ( {) {
@@ -575,17 +614,25 @@ if ( {) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }
           });
         });
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       requestAnimationFrame(animate);
     }
     animate(0);
     const handleResize = () => {if (typeof window !== undefined') {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+<<<<<<< HEAD
+      }
+    }
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -626,6 +673,7 @@ if ( {) {
       }
     }
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (typeof window !== 'undefined) {window.addEventListener(resize', handleResize);
     }
     return () => {if (typeof window !== 'undefined) {
@@ -634,12 +682,15 @@ if ( {) {
       cancelAnimationFrame(animationFrameId);
     }
 }, [])
+<<<<<<< HEAD
+=======
 =======
 
 }, []),
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;>
       <canvas
@@ -647,6 +698,9 @@ if ( {) {
         className=&quot;w-full h-full&quot;
         style={{
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           background: 'transparent
           filter: theme === neon' ? 'brightness(1.2) contrast(1.1) : none'
         }}
@@ -658,10 +712,15 @@ if ( {) {
 export default UltraFuturisticBackground2037;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 =======
         style={{}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -958,3 +1017,4 @@ export default UltraFuturisticBackground2037;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

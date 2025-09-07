@@ -10,6 +10,8 @@ export type { AuthContextType } from '@/types / auth';
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -19,6 +21,7 @@ export type { AuthContextType } from '@/types / auth';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export { AuthContext } from './AuthContext',;
 export { AuthProvider } from './AuthProvider',;
 
@@ -26,15 +29,21 @@ export { AuthProvider } from './AuthProvider',;
 export type { AuthContextType } from '@/types/auth';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 export { AuthContext } from './AuthContext';
 export { AuthProvider } from './AuthProvider';
 // Re-export the context type for convenience
 export type { AuthContextType } from '@/types/auth';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export { AuthContext } from './AuthContext',;
 export { AuthProvider } from './AuthProvider',;
 // Re-export the context type for convenience;
+<<<<<<< HEAD
+export type { AuthContextType } from '@/types/auth';
+=======
 <<<<<<< HEAD
 export type { AuthContextType } from '@/types/auth';
 =======
@@ -45,3 +54,4 @@ export type { AuthContextType } from '@/types/auth';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

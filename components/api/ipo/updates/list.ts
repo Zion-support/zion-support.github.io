@@ -1,5 +1,20 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data);
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 const data = readJsonFile('updates.json', [] as any[]);
 
@@ -199,3 +214,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

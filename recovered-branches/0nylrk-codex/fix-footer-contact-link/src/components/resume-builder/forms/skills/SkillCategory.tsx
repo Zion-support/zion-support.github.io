@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { SkillCategoryProps } from "./types";
 import { SkillItem } from "./SkillItem";
 export const SkillCategory = ({
@@ -29,10 +31,14 @@ if (return null) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
   if (!skills || skills.length === 0) return null;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -41,10 +47,14 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { SkillCategoryProps } from './types',
 import { SkillItem } from './SkillItem',
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null,
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -57,6 +67,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div className="space - y-2">;
       <h4 className="text - sm font - medium text - muted - foreground">{category}</h4>;
@@ -67,9 +78,13 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
             skill={skill}
             category={category}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { SkillCategoryProps } from "./types";
 
 import { SkillItem } from "./SkillItem";
@@ -79,6 +94,9 @@ export const SkillCategory = ({}
   onDelete,
 }: SkillCategoryProps) => {};
   if (!skills || skills.length === 0) return null;
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {SkillCategoryProps} from './types';
@@ -90,6 +108,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div className="space-y-2">
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
@@ -97,6 +116,9 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
         {skills.map((skill) => (
           <SkillItem
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             key={skill.id}
             skill={skill}
             category={category}
@@ -106,6 +128,8 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
       </div>
     </div>
 
+<<<<<<< HEAD
+=======
 =======
             key={skill && skill.id} 
             skill={skill} 
@@ -142,14 +166,18 @@ export const SkillCategory = ({ category, skills, onDelete } SkillCategoryProps)
       </div>;
     </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 
   );
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 =======
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
             on_delete={on_delete}
           />))}
@@ -157,6 +185,8 @@ export const SkillCategory = ({ category, skills, onDelete } SkillCategoryProps)
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
   ),;
 },; <SkillItem key= {
   skill.id 
@@ -233,6 +263,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 }
 ;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="space-y-2">
@@ -260,9 +291,13 @@ pr-12325
 
   )
 
+<<<<<<< HEAD
+};
+=======
 };
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

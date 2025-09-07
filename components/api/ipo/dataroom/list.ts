@@ -1,5 +1,28 @@
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const section = String(req.query.section || 'General');
+  const dir = resolveDataPath(path.join('dataroom', section));
+  
+  if (!fs.existsSync(dir)) {
+    return res.status(200).json([]);
+  }
+
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+  appendAuditLog({ type: 'file_list', section });
+  res.status(200).json(files);
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -174,3 +197,7 @@ function handler() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

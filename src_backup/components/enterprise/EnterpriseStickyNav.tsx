@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/enterprise/EnterpriseStickyNav.tsx
 import { useState } from "react";
 import { Menu } from 'lucide-react'
@@ -6,9 +7,20 @@ import { Menu } from 'lucide-react'
 
 import Link from 'next/link'
   const [ open, setOpen ] = useState(false)
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
+=======
+import { useState } from react';
+import { Menu } from 'lucide-react;
+import Link from next/link';
+=======
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
   const [ open, setOpen ] = useState(false),;
 
@@ -127,9 +139,24 @@ export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
 
   return (
+<<<<<<< HEAD
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
         <div className="flex items-center justify-between h-12">;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <nav className="sticky top-16 z-40 bg-card border-b border-border">;
+      <div className="container mx-auto px-4 md:px-6">;
+        <div className="flex items-center justify-between h-12">;
+    <nav className=sticky top-16 z-40 bg-card border-b border-border">;
+      <div className="container mx-auto px-4 md:px-6>;
+        <div className=flex items-center justify-between h-12">;
+>>>>>>> origin/resolved-merge-conflicts
           <button
 
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -139,9 +166,24 @@ export function EnterpriseStickyNav() {
 
 
 
+<<<<<<< HEAD
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
+=======
+    <nav className="sticky top-16 z-40 bg-card border-b border-border>
+      <div className=container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-12>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <nav className="sticky top-16 z-40 bg-card border-b border-border">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-12">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           <button
 
           </button>
@@ -162,7 +204,10 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Menu  } from 'lucide-react';
 import Link from 'next/link';
@@ -170,6 +215,15 @@ import Link from 'next/link';
   const [ open, set_open ] = useState (false),return (<nav className='sticky top - 16 z - 40 bg - card border - b border - border'>;
       <div className='container mx - auto px - 4 md:px - 6'>;
         <div className='flex items - center justify - between h - 12'>;
+=======
+<<<<<<< HEAD
+import { useState  } from 'react;
+import { Menu  } from lucide-react';
+  const [ open, setOpen ]  = useState(false),import Link from next / link';
+  const [ open, set_open ] = useState (false),return (<nav className='sticky top - 16 z - 40 bg - card border - b border - border>;
+      <div className=container mx - auto px - 4 md:px - 6'>;
+        <div className='flex items - center justify - between h - 12>;
+>>>>>>> origin/resolved-merge-conflicts
           <button;
             className='md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary';
             on_click={() => set_open (!open)}
@@ -263,16 +317,28 @@ export function EnterpriseStickyNav() {const [open, setOpen]  = useState(false)i
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/enterprise/EnterpriseStickyNav.tsx
     </nav>;
   );
 };
 
+<<<<<<< HEAD
+=======
+import { useState } from "react,
+import Link from next/link",
+export function EnterpriseStickyNav() {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   return (;
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
@@ -280,8 +346,26 @@ export function EnterpriseStickyNav() {;
           <button;
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
+<<<<<<< HEAD
             aria-label="Toggle navigation";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            aria-label="Toggle navigation";
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            aria-label="Toggle navigation;
+>>>>>>> origin/resolved-merge-conflicts
             aria-expanded={open}
+=======
+            aria-label="Toggle navigation";
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </nav>
 
@@ -300,7 +384,17 @@ export function EnterpriseStickyNav() {;
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <Link href="#contact className=text-sm font-medium hover:text-primary">Contact Us</Link>;
+>>>>>>> origin/resolved-merge-conflicts
 
 
               <Link;
@@ -336,12 +430,31 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
             </li>;
             <li>;
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
+<<<<<<< HEAD
+=======
+              <Link href="#contact className=text - sm font - medium hover:text - primary">Contact Us</Link>;
+>>>>>>> origin/resolved-merge-conflicts
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </li>;
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
   );
@@ -351,10 +464,16 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
         </div>;
       </div>;)}
     </nav>)})}
+>>>>>>> merged-prs-20250907-203621
 
   );
 }
 :src/components/enterprise/EnterpriseStickyNav.tsx
 ;
+=======
+
+  );
+}
+>>>>>>> origin/chore/fix-lint-and-merge
     </nav>);
 }

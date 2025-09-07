@@ -2,14 +2,20 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 export function useResumeList() {
   const { user } = useAuth($2);
@@ -50,11 +56,15 @@ export function useResumeList() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -63,6 +73,7 @@ export function useResumeList() {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { user } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -77,6 +88,9 @@ export function useResumeList() {;
     setIsLoading(true);
     setError(null);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       // Fetch resume list with basic info for the current user;
       const { data: resumeData, error: resumeError } = await supabase'
@@ -97,6 +111,12 @@ export function useResumeList() {;
     }
   }
   return {}
+<<<<<<< HEAD
+    is_loading;
+    error;
+    resumes;
+
+=======
 =======
     try {
       // Fetch resume list with basic info for the current user
@@ -429,5 +449,6 @@ is active: resume.is active
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 }

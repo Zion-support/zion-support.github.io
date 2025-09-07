@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import {supabase} from "@/integrations/supabase/client";
+
+import { supabase } from "@/integrations/supabase/client",
+
+=======
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 /**
  * Checks if the profiles table exists and creates it if it doesn't
@@ -37,6 +43,7 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 /**
 
  * Checks if the profiles table exists and creates it if it doesn't
@@ -45,10 +52,15 @@ import { supabase } from "@/integrations/supabase/client",
  */
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const ensureProfilesTableExists = async () => {}
   try {}
     // Try to execute a simple query to check if the table exists"
     const { error } = await supabase.rpc("exec", {}
+<<<<<<< HEAD
+=======
 =======
 export const ensureProfilesTableExists = async () => {
   try {
@@ -58,10 +70,13 @@ export const ensureProfilesTableExists = async () => {
 
     const { error } = await supabase && supabase.rpc('exec', { 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       sql: `SELECT EXISTS (
         SELECT FROM information_schema && information_schema.tables '
         WHERE table_schema = 'public' 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
         AND table_name = 'profiles'
@@ -69,6 +84,7 @@ export const ensureProfilesTableExists = async () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ),`
 
     });
@@ -88,8 +104,12 @@ export const ensureProfilesTableExists = async () => {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
         id UUID PRIMARY KEY REFERENCES auth && auth.users(id) ON DELETE CASCADE;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { supabase } from '@/integrations / supabase / client';
 /**;'
 * Checks if the profiles table exists and creates it if it doesn't;
@@ -115,6 +135,120 @@ if ( {) {}
     // Attempt to create the table and related objects;`
     const createTableQuery = `;
       CREATE TABLE IF NOT EXISTS public.profiles (
+<<<<<<< HEAD
+
+        id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+        display_name TEXT,
+        user_type TEXT,
+        profile_complete BOOLEAN DEFAULT FALSE,'
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),'
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),
+        bio TEXT,
+        avatar_url TEXT,
+
+      ),
+      
+      -- Create RLS policies;
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
+
+        id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
+        display_name TEXT;
+        user_type TEXT;
+        profile_complete BOOLEAN DEFAULT FALSE;'
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());'
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
+        bio TEXT;
+
+      -- Create policies
+
+      DO $$
+      BEGIN;
+        IF NOT EXISTS (
+
+          SELECT FROM pg_catalog && pg_catalog.pg_policies;
+          SELECT FROM pg_catalog.pg_policies'
+          WHERE policyname = 'Users can view their own profile''
+
+          AND tablename = 'profiles'
+
+          CREATE POLICY "Users can view their own profile" 
+            ON public && public.profiles FOR SELECT;
+            USING (auth && auth.uid() = id);
+
+        headline TEXT);
+;
+      -- Create RLS policies;
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
+;
+      -- Create policies;
+
+      DO $$;
+      BEGIN;
+        IF NOT EXISTS (
+          SELECT FROM pg_catalog.pg_policies;'
+          WHERE policyname = 'Users can view their own profile';'
+          AND tablename = 'profiles') THEN;"
+          CREATE POLICY "Users can view their own profile";
+            ON public.profiles FOR SELECT;
+            USING (auth.uid () = id);
+
+        END IF;
+      END;
+      $$;
+
+        END IF;
+      END;
+      $$;
+"
+          CREATE POLICY "Users can view their own profile" 
+
+            ON public.profiles FOR SELECT 
+
+            USING (auth.uid() = id),
+        END IF,
+      END;
+      $$,
+
+      DO $$
+      BEGIN;
+        IF NOT EXISTS (
+
+          WHERE policyname = 'Users can update their own profile'
+
+          AND tablename = 'profiles'
+        ) THEN"
+          CREATE POLICY "Users can update their own profile" 
+
+      DO $$;
+      BEGIN;
+        IF NOT EXISTS (
+          SELECT FROM pg_catalog.pg_policies;'
+          WHERE policyname = 'Users can update their own profile';'
+          AND tablename = 'profiles') THEN;"
+          CREATE POLICY "Users can update their own profile";
+            ON public.profiles FOR UPDATE;
+            USING (auth.uid () = id);
+
+        END IF;
+      END;
+      $$;
+
+        END IF;
+      END
+      $$;
+
+          CREATE POLICY "Users can update their own profile" 
+            ON public.profiles FOR UPDATE;
+            USING (auth.uid() = id),
+        END IF,
+      END;
+      $$,
+
+      -- Set up trigger for new users
+      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
+      RETURNS TRIGGER AS $$
+      BEGIN                new.raw_user_meta_data->>'bio';
+=======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
     const { error } = await supabase.rpc('exec', {
@@ -400,6 +534,7 @@ if ( {) {}
       BEGIN
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
       -- Set up trigger for new users;
@@ -410,10 +545,14 @@ if ( {) {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
         VALUES (new.id,
                 new.raw_user_meta_data->>'display_name',
                 new.raw_user_meta_data->>'bio';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
         VALUES (new && new.id, '
@@ -421,6 +560,9 @@ if ( {) {}
                 new && new.raw_user_meta_data->>'bio';'
                 new && new.raw_user_meta_data->>'headline');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         RETURN new;
       END;
 
@@ -428,6 +570,8 @@ if ( {) {}
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
 
+<<<<<<< HEAD
+=======
 =======
         RETURN new;
       END;
@@ -449,6 +593,7 @@ if ( {) {}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         VALUES (new.id, 
                 new.raw_user_meta_data->>'display_name', 
                 new.raw_user_meta_data->>'bio',
@@ -458,6 +603,9 @@ if ( {) {}
       END,
       $$ LANGUAGE plpgsql SECURITY DEFINER,
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
       
 <<<<<<< HEAD
@@ -466,6 +614,7 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       -- Check if trigger exists before creating it
 
       DO $$
@@ -587,20 +736,55 @@ export const ensureProfilesTableExists = async () => {;
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       DO $$
       BEGIN
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
           CREATE TRIGGER on_auth_user_created
 <<<<<<< HEAD
+
+;
+      $$;
+    `;
+    if (createError) {
+      console && console.error('Error creating profiles table:', createError)
+    } else {
+      console && console.log('Profiles table setup completed')
+    }
+  } catch (error) {
+    console && console.error('Error setting up profiles table:', error)
+  }
+}
+// Call this when the app starts to ensure the table exists
+export const initializeDatabase = async () => {
+  await ensureProfilesTableExists()
+}
+
+=======
+<<<<<<< HEAD
             AFTER INSERT ON auth.users
             FOR EACH ROW EXECUTE FUNCTION public.handle_new_user($2);
         END IF,
       END
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       $$,
     `,
     
     // Execute the creation query using RPC to avoid TypeScript errors
+<<<<<<< HEAD
+    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
+    
+    if (createError) {
+      console.error('Error creating profiles table:', createError)
+    } else {
+      // // // console.log('Profiles table setup completed')
+import { supabase } from "@/integrations/supabase/client",;
+/**;
+
+=======
     const { error: createError} = await supabase.rpc($2);
 =======
 <<<<<<< HEAD
@@ -976,6 +1160,7 @@ import { supabase } from "@/integrations/supabase/client",;
 /**;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  * Checks if the profiles table exists and creates it if it doesn't;
  * This is a utility function that can be called when the app starts;
 pr-12325
@@ -985,6 +1170,9 @@ import { supabase } from "@/integrations/supabase/client";"
  * Checks if the profiles table exists and creates it if it doesn't;'
 
  * This is a utility function that can be called when the app starts;
+<<<<<<< HEAD
+ */
+=======
  */
 =======
   await ensureProfilesTableExists();
@@ -1006,3 +1194,4 @@ import { supabase } from "@/integrations/supabase/client";"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

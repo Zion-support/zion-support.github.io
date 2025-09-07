@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import {
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Bug,
+  Send,
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   Clipboard,;
 
@@ -31,12 +56,27 @@ interface ErrorBoundaryProps {;
 
     this.state;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
 
     this.state;
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
@@ -78,6 +118,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return null;
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error;
     }this.state;
   }
@@ -230,6 +276,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     };
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       showDetails: false;
     }
@@ -336,6 +388,12 @@ buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
         errorInfo: null,
         errorId: null,
         retryCount: this.state.retryCount + 1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return null;return null;}
   private getBuildInfo () {return {version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',environment: process.env.NODE_ENV,return 'This appears to be a temporary issue. Please try again.';
       build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}
@@ -521,9 +579,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
       if (response.ok) {
 
       })
+=======
+      if (response.ok) {})
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+      })
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
     }, retryDelay)
     this.retryTimeouts.push(timeout)
   };        showDetails: false
@@ -537,6 +607,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition
 if (return) {
   $2
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const timeout = set_timeout (() => {      this.set_state ({has_error: false,error: null,error_info: null,error_id: null,retry_count: this.state.retry_count + 1,show_details: false})}, retry_delay)this.retry_timeouts.push (timeout)}        show_details: false;
       })}, retry_delay)this.retry_timeouts.push (timeout)}const error_details = {error_id: this.state.error_id,message: this.state.error?.message,stack: this.state.error?.stack,component_stack: this.state.error_info?.component_stack,timestamp: new Date ().toISOString (),url: typeof window !== 'undefined' ? window.location.href : 'unknown',user_agent:;
         typeof window !== 'undefined' ? navigator.user_agent : 'unknown'}
@@ -573,6 +649,12 @@ if (return) {$2;
 if ( {) {$2;
 }
         // Show success message;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     try {
       // Report to your error reporting service;
@@ -606,9 +688,24 @@ if ( {) {
 
     this.setState({
       errorInfo,
+<<<<<<< HEAD
       errorId,
 
       }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      errorId,
+
+logErrorToProduction('Failed to report error:', { data: err });
+    }
+  };
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      errorId}
+>>>>>>> origin/resolved-merge-conflicts
     } catch (err) {
       logErrorToProduction ('Failed to report error:', { data: err });
     }    }
@@ -626,11 +723,22 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 logErrorToProduction('Failed to report error:', { data: err });
     }
   };
+=======
+logErrorToProduction(Failed to report error:', { data: err });
+=======
+      errorId,
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+logErrorToProduction('Failed to report error:', { data: err });
+>>>>>>> origin/chore/fix-lint-and-merge
+    }
+  }
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
+
   private goHome = () => {
 
     if (typeof window !== 'undefined') {
@@ -790,6 +898,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Show success message;}
     } catch (err) {logErrorToProduction ('Failed to report error:', { data: err })}    }
   }if (this.props.onError) {this.props.onError(error, errorInfo)})}componentWillUnmount() {// Clear any pending retry timeouts;
@@ -1008,10 +1122,41 @@ return this.props.fallback;
                     {this.state.showDetails ? 'Hide' : 'Show'} Details;
                   </Button>;
                 </div>;
+<<<<<<< HEAD
                   <Button onClick={this && this.goHome} variant='outline' className='flex items-center gap-2'>;
                     <Home className='h-4 w-4' />;
+=======
+                  <Button onClick={this && this.goHome} variant=outline" className="flex items-center gap-2>;
+                    <Home className=h-4 w-4" />;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  <Button onClick={this && this.goHome} variant="outline" className="flex items-center gap-2">;
+                    <Home className="h-4 w-4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                     Go Home;
-                  </Button>;<Button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  </Button>;
+
+                  <Button
+                    onClick={() => this && this.setState({ showDetails: !this && this.state.showDetails })}
+                    variant="ghost" ;
+                    size="sm";
+                    className="flex items-center gap-2";
+                  >;
+                    <Bug className="h-4 w-4" />;
+                    {this && this.state.showDetails ? 'Hide' : 'Show'} Details;
+                  </Button>;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  </Button>;
+
+                  <Button
                     onClick={() => this && this.setState({ showDetails: !this && this.state.showDetails })}
                     variant='ghost' ;
                     size='sm';
@@ -1020,16 +1165,28 @@ return this.props.fallback;
                     <Bug className='h-4 w-4' />;
                     {this && this.state.showDetails ? 'Hide' : 'Show'} Details;
                   </Button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;
 
                 {/* Error Details */}
-                </div>;{/* Error Details */}
                 <AnimatePresence>;
                   {this.state.showDetails && (;
                     <motion.div;
+<<<<<<< HEAD
                       initial={ opacity: 0, height: 0 }
                       animate={ opacity: 1, height: 'auto' }
                       exit={ opacity: 0, height: 0 }
+=======
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+>>>>>>> origin/resolved-merge-conflicts
 
                           <h4 className='font-semibold text-sm mb-2'>Error Message:</h4>
 
@@ -1051,8 +1208,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
                       exit={ opacity: 0, height: 0 }>;
                       <div className='space-y-4'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      exit={{ opacity: 0, height: 0 }}>;
+                      <div className=space-y-4'>;
+>>>>>>> origin/resolved-merge-conflicts
                         <div>;
                       className='border-t pt-4';
                     >;
@@ -1074,6 +1242,12 @@ className='border-t pt-4';
                         {process.env.NODE_ENV === 'development' &&;
   private go_home = () => {// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
       window.location.href = '/';
     }
@@ -1242,9 +1416,28 @@ if ( {) {
 
                           this.state.error.stack && (
                             <div>;
+<<<<<<< HEAD
                         {process.env.NODE_ENV === 'development' &&;{process.env.NODE_ENV === 'development' &&;
                           this.state.error.stack && (<div>;
                               <h4 className='font - semibold text - sm mb - 2'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                        {process.env.NODE_ENV === development' &&;{process.env.NODE_ENV === 'development &&;
+                          this.state.error.stack && (<div>;
+                              <h4 className=font - semibold text - sm mb - 2'>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                              <h4 className='font - semibold text - sm mb - 2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                                 Stack Trace:;
                               </h4>;
                               <pre className='p - 3 bg - gray - 50 dark:bg - gray - 800 rounded text - xs overflow - auto max - h-32'>;
@@ -1266,25 +1459,107 @@ if ( {) {
                           <code className='block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto'>;
                             {this && this.state.error && error.message}
                           </code>;
+<<<<<<< HEAD
                         </div>;{process && process.env.NODE_ENV === 'development' &&;
                           this && this.state.error && error.stack && (<div>;
                               <h4 className='font-semibold text-sm mb-2'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                        </div>;{process && process.env.NODE_ENV === development' &&;
+                          this && this.state.error && error.stack && (<div>;
+                              <h4 className='font-semibold text-sm mb-2>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                        </div>;
+
+                        {process && process.env.NODE_ENV === 'development' &&;
+                          this && this.state.error && error.stack && (;
+                            <div>;
+                              <h4 className='font-semibold text-sm mb-2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                                 Stack Trace:;
                               </h4>;
                               <pre className='p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32'>;
                                 {this && this.state.error && error.stack}
                               </pre>;
                             </div>;
+<<<<<<< HEAD
                           )}<div className='flex gap-2'>;
                           <Button;
                             onClick={this && this.copyErrorDetails}
                             variant='outline';
                             size='sm'>;
                             <Clipboard className='h-4 w-4 mr-2' />;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                          )}
+
+                        <div className='flex gap-2'>;
+                          <Button
+                            onClick={this && this.copyErrorDetails}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          )}<div className='flex gap-2>;
+                          <Button;
+                            onClick={this && this.copyErrorDetails}
+                            variant=outline';
+                            size='sm>;
+                            <Clipboard className=h-4 w-4 mr-2' />;
+=======
+                          )}
+
+                        <div className='flex gap-2'>;
+                          <Button
+                            onClick={this && this.copyErrorDetails}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                            variant='outline'
+
+                            size='sm'>;
+                            <Clipboard className='h-4 w-4 mr-2' />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                             Copy Details;
-                          </Button>;{this && this.props.showReportButton !== false && (<Button;
+                          </Button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+                          {this && this.props.showReportButton !== false && (;
+
+                            <Button
                               onClick={this && this.reportError}
                               variant='outline'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> merged-prs-20250907-203621
+
+                          {this && this.props.showReportButton !== false && (;
+
+                            <Button
+                              onClick={this && this.reportError}
+                              variant='outline'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                              variant='outline
+>>>>>>> origin/resolved-merge-conflicts
 
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
@@ -1315,10 +1590,23 @@ if ( {) {
 origin/cursor/automate-test-improve-and-merge-code-2533
                               Report Issue
                             </Button>
+<<<<<<< HEAD
                               variant='outline';
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (<div>;
                             <h4 className='font-semibold text-sm mb-2'>Stack Trace:</h4>;
                             <pre className='p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                              variant='outline;
+                        {process.env.NODE_ENV === development' && this.state.error.stack && (<div>;
+                            <h4 className="font-semibold text-sm mb-2>Stack Trace:</h4>;
+                            <pre className=p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">;
+>>>>>>> origin/resolved-merge-conflicts
                               {this.state.error.stack}
                             </pre>;
                           </div>;
@@ -1356,6 +1644,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </Button>;
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           )}
 
@@ -1434,6 +1728,13 @@ export const useErrorBoundary = () => {
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  return WrappedComponent;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             </Button>;)}
                         </div>;
                       </div>;
@@ -1458,6 +1759,18 @@ export const withErrorBoundary = <P extends object>(Component: React.ComponentTy
   return WrappedComponent;
 }export default GlobalErrorBoundary;export const useErrorBoundary = () => {)WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;return WrappedComponent;
 }export default GlobalErrorBoundary;
+<<<<<<< HEAD
 };
+=======
+}
+=======
+  return WrappedComponent;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+};
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 export default GlobalErrorBoundary;

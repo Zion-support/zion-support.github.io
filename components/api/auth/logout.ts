@@ -1,8 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
+=======
+import { clearSessionCookie } from '../../../utils/auth-utils';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+<<<<<<< HEAD
+  res.status(200).json({ ok: true });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const cookie = clearSessionCookie();
   res && res.setHeader('Set-Cookie', cookie);
@@ -181,3 +193,7 @@ const cookie = clearSessionCookie();}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

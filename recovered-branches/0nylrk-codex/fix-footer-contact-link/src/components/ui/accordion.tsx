@@ -2,16 +2,24 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {ChevronDown} from 'lucide-react';
 import {cn} from '@/lib/utils';
 const Accordion = AccordionPrimitive.Root;
 <<<<<<< HEAD
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
+=======
+<<<<<<< HEAD
 =======
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -20,6 +28,7 @@ import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 =======
@@ -40,6 +49,9 @@ import { cn } from "@/lib/utils"
 const Accordion = AccordionPrimitive.Root
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {ChevronDown} from 'lucide-react';
@@ -53,6 +65,8 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -60,6 +74,7 @@ import { cn } from "@/lib/utils"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
@@ -67,6 +82,8 @@ const AccordionItem = React.forwardRef<
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>
+<<<<<<< HEAD
+=======
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
@@ -75,13 +92,19 @@ const AccordionItem = React.forwardRef<
 <<<<<<< HEAD
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+
     ref={ref}
+
     className={cn('border-b', className)}
     {...props}
   />
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 ))
 AccordionItem.displayName = $2;
@@ -103,6 +126,7 @@ const AccordionTrigger = React.forwardRef<
   />
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ))
 
 AccordionItem.displayName = "AccordionItem"
@@ -112,6 +136,9 @@ const AccordionTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         className
 
@@ -127,6 +154,38 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(    </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
+<<<<<<< HEAD
+
+    ref={ref}
+    className={cn('border-b', className)}
+
+const AccordionTrigger = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+  <AccordionPrimitive.Header className="flex">"
+
+    <AccordionPrimitive.Trigger;
+      className={cn(
+
+    </AccordionPrimitive.Trigger>
+
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+))
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+const AccordionContent = React.forwardRef<
+
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+
+    ref={ref}
+
+=======
 
     ref={ref}
     className={cn('border-b', className)}
@@ -262,6 +321,7 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
     className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
@@ -277,6 +337,33 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
   </AccordionPrimitive.Content>
 ))
 
+<<<<<<< HEAD
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+
+AccordionItem.display_name = 'AccordionItem';
+;
+
+  React && React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive && AccordionPrimitive.Content>;
+  <AccordionPrimitive&& AccordionPrimitive.Content;
+
+    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down""
+  >"
+    <div className={cn("pb-4 pt-0", className)}>{children}</div>"
+  </AccordionPrimitive.Content>
+
+AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
+
+    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down
+    {...props}>;
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
+  </AccordionPrimitive && AccordionPrimitive.Content>;
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+
+  />));"
+AccordionItem.display_name = 'AccordionItem';
+=======
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
 <<<<<<< HEAD
@@ -313,6 +400,7 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
   />));"
 AccordionItem.display_name = 'AccordionItem';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 pr-12325
 const AccordionTrigger = React.forward_ref<;
   React.ElementRef < typeof AccordionPrimitive.Trigger>,
@@ -428,7 +516,10 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
@@ -438,9 +529,13 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 <<<<<<< HEAD
 ;
 =======
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
 
 import { Link } from "react-router-dom";
@@ -17,6 +20,8 @@ import { Link } from "react-router-dom",;"
 import { LoginForm } from "./LoginForm",;"
 import { SocialLogin } from "./SocialLogin";
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 export function LoginCard() {
@@ -64,6 +69,7 @@ export function LoginCard() {;
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="mx-auto w-full max-w-sm lg:w-96">;
 
       <div className="text-center mb-10">;
@@ -71,6 +77,9 @@ export function LoginCard() {;
           Welcome back;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -85,6 +94,7 @@ className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Link  } from './react-router-dom';
 import { LoginForm  } from './LoginForm';
 
@@ -112,6 +122,11 @@ export function LoginCard() {
 
 =======
 <<<<<<< HEAD
+export function LoginCard() {
+  return (    <div className="mx-auto w-full max-w-sm lg:w-96">;
+
+=======
+<<<<<<< HEAD
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin",;
@@ -120,11 +135,44 @@ export function LoginCard() {;
   return (;
     <div className="mx-auto w-full max-w-sm lg:w-96">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
           Welcome back;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
+<<<<<<< HEAD
+
+        </p>;
+
+  );
+
+      <div className="bg - zion - blue - dark rounded - lg p - 6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+
+        </p>;
+      </div>;
+
+    </div>
+
+    </div>;
+  );
+      <div className="bg - zion - blue - dark rounded - lg p - 6">;
+          Don't have an account?{" "}          </Link>;
+        </p>;
+      </div>;      <div className="bg - zion - blue - dark rounded - lg p-6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+    </div>);
+}
+
+    </div>);
+}
+;
+=======
 <<<<<<< HEAD
 
         </p>;
@@ -184,6 +232,7 @@ export function LoginCard() {;
     </div>);
 }
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="bg-zion-blue-dark rounded-lg p-6">;
 
       </div>;)
@@ -202,6 +251,9 @@ pr-12325
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -209,3 +261,4 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

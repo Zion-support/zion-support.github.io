@@ -4,12 +4,34 @@ import React, { useEffect, useRef } from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function UltraFuturisticBackground2035() {
+  }
+  const canvasRef = null;
+              "ease": 'easeInOut''
+    const ctx = canvas.getContext('2d');'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
   const canvasRef = $2;
   useEffect(() => {
@@ -149,6 +171,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
     const ctx = canvas.getContext(2d');
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
@@ -156,6 +182,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    let "animationFrameId": number;
+    let "particles": Array<{;
+      }
+      "x": number;
+      "y": number;
+canvas.width = window.inner_width * (window.devicePixelRatio || 1);
+canvas.height = window.inner_height * (window.devicePixelRatio || 1);
+// Check condition,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 =======
 
@@ -191,6 +231,10 @@ canvas.width = window.inner_width * (window.devicePixelRatio || 1);
 canvas.height = window.inner_height * (window.devicePixelRatio || 1);
 <<<<<<< HEAD
 // Check condition
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if ( {) {
   $2
 }
@@ -205,6 +249,13 @@ interface UltraFuturisticBackground2035Props {
   'children': React.ReactNode;
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default /**
+ * UltraFuturisticBackground2035 - Function description
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 export default /**
  * UltraFuturisticBackground2035 - Function description
@@ -227,10 +278,29 @@ interface UltraFuturisticBackground2035Props {
 export default /**
  * UltraFuturisticBackground2035 - Function description;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
  */
 function UltraFuturisticBackground2035() {
   useEffect (() => {
     const canvas = canvas_ref.current;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Check condition,
+if (return) {
+  $2
+}
+
+const prefersReducedMotion = window.match_media (;
+      '(prefers - reduced - "motion": reduce)').matches;'
+
+const prefersReducedMotion = window.match_media ('(prefers - reduced - "motion": reduce)').matches,;'
+   ;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     // Check condition
 if (return) {
@@ -248,6 +318,10 @@ const prefersReducedMotion = window.match_media (
 const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,
    ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const ctx = canvas.get_context ('2d');'
     // Check condition,
 if (return) {
@@ -258,6 +332,28 @@ if (return) {
     // Check condition,
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Check condition;
+if (return) {}
+  $2;
+}
+    const prefersReducedMotion = window.match_media ('
+      '(prefers - reduced - motion: reduce)').matches;    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,'
+    const ctx = canvas.get_context ('2d');
+    // Check condition;
+if (return) {}
+  $2;
+}
+    canvas.width = window.inner_width * (window.devicePixelRatio || 1);
+    canvas.height = window.inner_height * (window.devicePixelRatio || 1);
+    // Check condition;
+if ( {) {}
+  $2;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
       ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
 ;
@@ -266,6 +362,48 @@ if ( {) {
   }
   useEffect, useRef } from 'react';'
 import { motion  } from 'framer-motion';'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+interface UltraFuturisticBackground2035Props  {"children": React && React.ReactNode;
+}useEffect(() => {
+}
+const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;import React, { useEffect, useRef } from 'react';'
+
+interface UltraFuturisticBackground2035Props {
+  }
+  "children": React.ReactNode;
+
+}
+export default function UltraFuturisticBackground2035() {const canvasRef = null;
+              }
+              "ease": 'easeInOut';'
+
+const ctx = canvas.getContext('2d')if (!ctx);'
+  return;
+    canvas.width = window.innerWidth * (window.devicePixelRatio |1)canvas.height = window.innerHeight * (window.devicePixelRatio |1)if (ctx) {ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)}let "animationFrameId": number;
+    let "particles": Array<{"x": number;
+      }
+      "y": number;
+canvas.width = window.inner_width * (window.devicePixelRatio || 1)canvas.height = window.inner_height * (window.devicePixelRatio || 1)// Check condition;
+if ( {) {$2;
+}
+export default /**;
+ * UltraFuturisticBackground2035 - Function description;
+ */;
+function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null)import React, {;
+  }
+  useEffect, useRef } from 'react';'
+
+interface UltraFuturisticBackground2035Props {
+  }
+  "children": React.ReactNode;
+
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
   const ctx = canvas.get_context ('2d');
     // Check condition;
@@ -320,10 +458,53 @@ interface UltraFuturisticBackground2035Props {
 }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default /**;
  * UltraFuturisticBackground2035 - Function description;
  */;
 function UltraFuturisticBackground2035() {useEffect (() => {const canvas = canvas_ref.current;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Check condition;
+}
+if (return) {$2;
+}
+
+const prefersReducedMotion = window.match_media ('(prefers - reduced - "motion": reduce)').matches;'
+
+const prefersReducedMotion = window.match_media ('(prefers - reduced - "motion": reduce)').matches;'
+  const ctx = canvas.get_context ('2d')// Check condition;'
+if (return) {$2;
+}
+    canvas.width = window.inner_width * (window.devicePixelRatio || 1)canvas.height = window.inner_height * (window.devicePixelRatio || 1)// Check condition;
+if ( {) {$2;
+}
+      ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1)let "animationFrameId": number;
+    let "particles": Array<{"coordinate_x": number;
+      }
+      "coordinate_y": number;
+      "vx": number;
+      "vy": number;
+      "size": number;
+      "opacity": number;
+      "color": string;
+      "type": 'quantum' | 'hologram' | 'neon' | 'energy';'
+
+      "life": number;
+
+      "maxLife": number;
+    }> = [];
+
+    // Initialize particles with enhanced types,
+const isSmallScreen = window.innerWidth < 768;
+
+const particleCount = prefersReducedMotion;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     // Check condition;}
 if (return) {$2;}
 }
@@ -393,10 +574,60 @@ const isSmallScreen = window.innerWidth < 768;
 
 const particleCount = prefersReducedMotion;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ? 15;
         : isSmallScreen;
           ? 60;
           : 150;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      for (let i = 0; i < particleCount; i++) {const type = ['quantum', 'hologram', 'neon', 'energy'][;'
+          }
+          Math.floor(Math.random() * 4)] as any;
+
+const maxLife = Math.random() * 200 + 100;
+
+        particles.push({
+          }
+          "x": (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
+          "y": (Math.random() * canvas.height) / (window.devicePixelRatio || 1),
+          "vx": prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
+          "vy": prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
+          "size": Math.random() * (isSmallScreen ? 2 : 3) + 1,
+          "opacity": Math.random() * 0.5 + 0.1,
+          "color": getColorForType(type),
+type,
+          "life": maxLife,
+          maxLife
+        });
+      }
+    },
+
+    // Get color based on particle type,
+const getColorForType = ("type": string) => {
+      }
+      switch (type) {
+        }
+        case 'quantum':;'
+return ['#8b5cf6', '#06b6d4', '#ec4899'][;'
+            Math.floor(Math.random() * 3)
+origin/cursor/automate-test-improve-and-merge-code-2533
+          ];
+
+        case 'hologram':;'
+          return ['#10b981', '#f59e0b', '#ef4444'][;'
+            Math && Math.floor(Math && Math.random() * 3)];
+        case 'neon':;'
+          return ['#f97316', '#eab308', '#a855f7'][;'
+            Math && Math.floor(Math && Math.random() * 3)];
+        case 'energy':;'
+          return ['#dc2626', '#7c3aed', '#059669'][;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
   const canvasRef = $2;
@@ -672,11 +903,23 @@ const getColorForType = (
         case 'energy':;
           return ['#dc2626', '#7c3aed', '#059669'][;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             Math && Math.floor(Math && Math.random() * 3)
 ];
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "default":
+
+          return '#8b5cf6';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 =======
@@ -686,6 +929,10 @@ const getColorForType = (
   return $3;}
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     }
     // Update and draw particles with enhanced effects;
@@ -715,6 +962,11 @@ const maxDistance = prefersReducedMotion;
           ? 0;
           : window.innerWidth < 768;
             ? 120;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             Math && Math.floor(Math && Math.random() * 3);
           ];
@@ -875,6 +1127,10 @@ const drawParticle = (ctx: CanvasRenderingContext2D,particle: any,opacity: numbe
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             : 180;
         if (maxDistance > 0) {;
           drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
@@ -896,6 +1152,99 @@ const drawParticle = (ctx: CanvasRenderingContext2D,particle: any,opacity: numbe
           drawConnections(ctx, particles, index, maxDistance, currentOpacity);
         }
       });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (!prefersReducedMotion) {
+animationFrameId = requestAnimationFrame(updateParticles);
+      }
+    // Enhanced particle drawing with different types;
+const drawParticle = (;
+      "ctx": CanvasRenderingContext2D,
+      "particle": any,
+      "opacity": number
+    ) => {
+      }
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      switch (particle.type) {
+        }
+        case 'quantum':'
+          drawQuantumParticle(ctx, particle);
+          break;
+
+        case 'hologram':;'
+          drawHologramParticle(ctx, particle)break;
+        case 'neon':;'
+          drawNeonParticle(ctx, particle)break;
+        case 'energy':;'
+
+          drawEnergyParticle(ctx, particle);
+
+break;
+
+      }
+      ctx.restore()}
+    // Quantum particle with wave-like effects;
+
+const drawQuantumParticle = ("ctx": CanvasRenderingContext2D;
+      "particle": any;
+    ) => {const time = Date.now() * 0.001;
+
+}
+
+const wave = Math.sin(time + particle.x * 0.01) * 0.5;
+      ctx.beginPath()ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+      ctx.fill()// Add quantum glow effect;
+      ctx.shadowColor = particle.color;
+      ctx.shadowBlur = 10;
+      ctx.beginPath()ctx.arc(particle.x,particle.y + wave,particle.size * 0.5,0,Math.PI * 2;
+      )ctx.fill()ctx.shadowBlur = 0;
+    }
+    // Hologram particle with transparency and distortion;
+
+const drawHologramParticle = ("ctx": CanvasRenderingContext2D;
+      "particle": any;
+    ) => {const time = Date.now() * 0.002;
+
+}
+
+const distortion = Math.sin(time + particle.y * 0.02) * 2;
+      ctx.globalAlpha *= 0.7;
+      ctx.beginPath();
+      ctx.arc(
+        particle.x + distortion
+        particle.y
+        particle.size
+        0
+        Math.PI * 2
+      );
+      ctx.fillStyle = particle.color;
+      ctx.fill();
+      // Add holographic effect
+      ctx.globalAlpha *= 0.5;
+      ctx.beginPath()ctx.arc(particle.x + distortion,particle.y,particle.size * 1.5,0,Math.PI * 2;
+      )ctx.strokeStyle = particle.color;
+      ctx.lineWidth = 1;
+      ctx.stroke()}// Neon particle with bright glow;
+
+const drawNeonParticle = ("ctx": CanvasRenderingContext2D, "particle": any) => {// Bright core;
+      }
+      ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = '#ffffff';'
+      ctx.fill()// Neon glow;
+      ctx.shadowColor = particle.color;
+      ctx.shadowBlur = 15;
+      ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+      ctx.fill()ctx.shadowBlur = 0;
+    }// Energy particle with pulsing effect;
+
+const drawEnergyParticle = ("ctx": CanvasRenderingContext2D;
+      "particle": any;
+    ) => {const time = Date.now() * 0.003;
+
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 
@@ -1108,6 +1457,10 @@ const drawNeonParticle = (// Bright core;
     }// Energy particle with pulsing effect;
 
 const drawEnergyParticle = (time = Date.now() * 0.003;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const pulse = Math.sin(time) * 0.3 + 0.7;
 
@@ -1115,12 +1468,24 @@ const size = particle.size * pulse;
       ctx.beginPath()ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
       ctx.fill()// Energy field effect;
       ctx.globalAlpha *= 0.3;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ctx.beginPath()ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+ctx.fill()}// Enhanced connection drawing with different effects;
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
       ctx.beginPath()ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2)ctx.fillStyle = particle.color;) => {
   return $3;}
 }
 ctx.fill()}// Enhanced connection drawing with different effects;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const drawConnections = ("ctx": CanvasRenderingContext2D;
       "particles": any[];
       "currentIndex": number;
@@ -1129,6 +1494,11 @@ const drawConnections = ("ctx": CanvasRenderingContext2D;
     ) => {particles.forEach((otherParticle, otherIndex) => {if (currentIndex !== otherIndex) {const dx = particles[currentIndex].x - otherParticle.x;
           const dy = particles[currentIndex].y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy)if (distance < maxDistance) {const connectionOpacity =;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 const drawConnections = (particles.forEach((otherParticle, otherIndex) => {if (currentIndex !== otherIndex) {const dx = particles[currentIndex].x - otherParticle.x;
 
@@ -1137,6 +1507,10 @@ const dy = particles[currentIndex].y - otherParticle.y;
 const distance = Math.sqrt(dx * dx + dy * dy)if (distance < maxDistance) ;
   const connectionOpacity =;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               ((maxDistance - distance) / maxDistance) * 0.15 * opacity;
             // Different connection styles based on particle types;
             if (particles[currentIndex].type === otherParticle.type) {// Same type - stronger connection;
@@ -1144,12 +1518,23 @@ const distance = Math.sqrt(dx * dx + dy * dy)if (distance < maxDistance) ;
               ctx.strokeStyle = particles[currentIndex].color;
 <<<<<<< HEAD
 ctx.lineWidth = 2;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            } else {// Different types - weaker connection;
+              }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 ctx.lineWidth = 2;) => {
   return $3;}
 }
 >>>>>>> origin/chore/fix-lint-and-merge
             } else {// Different types - weaker connection;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               ctx.globalAlpha = connectionOpacity * 0.7;
               ctx.strokeStyle = '#ffffff';}
 ctx.lineWidth = 1;}
@@ -1160,7 +1545,14 @@ ctx.lineWidth = 1;}
             ctx.lineTo(otherParticle.x, otherParticle.y);
 ctx.stroke();
           }
+<<<<<<< HEAD
         }
+=======
+<<<<<<< HEAD
+=======
+        }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         if (maxDistance > 0) {;
           drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
       });
@@ -1168,9 +1560,18 @@ ctx.stroke();
         case 'quantum':;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           drawQuantumParticle(ctx, particle);
           break;
         case 'hologram':;
@@ -1181,6 +1582,16 @@ ctx.stroke();
           break;
         case 'energy':;
           drawEnergyParticle(ctx, particle);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          }
+      })
+};            ctx && ctx.stroke();
+          }
+          style={{ filter: 'blur(0.5px)' }}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2326,6 +2737,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Floating neon orbs *,}
           style={{ filter: blur(0.5px) }}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         />
 
 
@@ -2333,8 +2748,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
         <motion.div;
+<<<<<<< HEAD
         {/* Floating neon orbs */}
         <motion.div
+=======
+<<<<<<< HEAD
+=======
+        {/* Floating neon orbs */}
+        <motion.div
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {/* Floating neon orbs */}
           animate={{}
             rotate: [0, 180, 360]}}
@@ -2353,6 +2776,71 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             scale: [1, 1 && 1.3, 1]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
             rotate: [360, 180, 0]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          }}
+          transition={{}
+            duration: 8;
+            repeat: Infinity;
+'
+            ease: 'easeInOut',            ease: 'easeInOut'
+        <motion.div
+className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
+          animate={{
+            rotate: [0, 180, 360],          }}
+          transition={{
+          animate={{
+            scale: [1, 1 && 1.2, 1]
+            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
+            rotate: [0, 180, 360]
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
+        {/* Canvas for animated particles */}
+        <canvas;
+          ref={canvasRef}
+
+className='absolute inset-0 w-full h-full''
+          style={{ "filter": 'blur(0.5px)' }}' />
+
+        {/* Floating neon orbs *
+}
+
+        <motion.div,
+className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20''
+          animate={{
+            }
+            "scale": [1, 1.2, 1],
+            "opacity": [0.2, 0.4, 0.2],
+            "rotate": [0, 180, 360]
+          }}
+          transition={{
+            }
+            "duration": 6,
+            "repeat": Infinity,
+"ease": 'easeInOut','
+          }} />
+
+        <motion.div,
+className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20''
+          animate={{
+            }
+            "scale": [1, 1.3, 1],
+            "opacity": [0.2, 0.5, 0.2],
+            "rotate": [360, 180, 0]
+          }}
+          transition={{
+            }
+            "duration": 8,
+            "repeat": Infinity,
+"ease": 'easeInOut','
+          }} />;
+
+        {/* Quantum energy waves */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
@@ -2766,6 +3254,10 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
         {/* Quantum energy waves */}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div'
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent
@@ -2834,6 +3326,29 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             }}
             transition={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              }
+              "duration": 4,
+              "repeat": Infinity,
+"ease": 'easeInOut','
+            }} />
+          <motion.div,
+className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent''
+            animate={{
+              }
+              "y": [100, -100, 100],
+              "opacity": [0, 0.3, 0]
+            }}
+            transition={{
+              }
+              "duration": 6,
+              "repeat": Infinity,
+"ease": 'easeInOut','
+            }} />
+=======
+>>>>>>> origin/resolved-merge-conflicts
               duration: 4,
               repeat: Infinity,
 <<<<<<< HEAD
@@ -2915,6 +3430,10 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
               ease: 'easeInOut'
             }}
           />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>
       </div>
 className=absolute inset-0 w-full h-full;

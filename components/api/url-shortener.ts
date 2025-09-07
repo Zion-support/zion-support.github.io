@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+interface ShortUrl {
+  for (let i = 0, i < length, i++) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
@@ -24,6 +33,10 @@ function generateShortCode(length: number = 6): string {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   for (let i = 0, i < length, i++) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
 }
@@ -32,16 +45,37 @@ const url_storage = new Map < string, ShortUrl>();
 // Generate a random short code;
 function generateShortCode (length: number = 6): string {
   const chars =;
+<<<<<<< HEAD
 id: string;
 
+=======
+<<<<<<< HEAD
+interface ShortUrl {
+  id: string;
+=======
+id: string;
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: string;
   clicks: number;
+<<<<<<< HEAD
   isActive: boolean;
 }interface UrlShortenerRequest  {originalUrl: string;
   customCode?: string;
+=======
+<<<<<<< HEAD
+  isActive: boolean
+
+=======
+  isActive: boolean;
+}interface UrlShortenerRequest  {originalUrl: string;
+  customCode?: string;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 interface UrlShortenerResponse  {"success": boolean;
@@ -101,13 +135,30 @@ id: string;
 >>>>>>> merged-prs-20250907-203621
 interface UrlShortenerRequest {
   originalUrl: string;
+<<<<<<< HEAD
   customCode?: string;
+=======
+<<<<<<< HEAD
+  customCode?: string
+}
+=======
+  customCode?: string;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
   error?: string
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// In-memory storage (in production, use a database)
+const urlStorage = new Map<string, ShortUrl>();
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 // In-memory storage (in production, use a database)
 <<<<<<< HEAD
@@ -154,6 +205,10 @@ interface UrlShortenerResponse  {success: boolean;
 >>>>>>> merged-prs-20250907-203621
 const urlStorage = new Map<string, ShortUrl>();
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 // Generate a random short code
 function generateShortCode(length: number = 6): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -166,6 +221,12 @@ function generateShortCode(length: number = 6): string {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   let result = '';
   for (let index = 0; i < length; i++) {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
@@ -177,6 +238,16 @@ function generateShortCode(length: number = 6): string {
   return result;
   return result;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Validate URL format,
+function isValidUrl("url": string): boolean {
+  }
+  try {
+    }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -185,10 +256,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     new URL(url);
     return true
   } catch {
     return false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   }
 }
@@ -585,6 +665,10 @@ if ( {) {
     try {
       const { originalUrl, customCode }: UrlShortenerRequest = req.body;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 
 export default async function handler() {
@@ -750,7 +834,14 @@ data: shortUrl,}
         success: false,}
 error: 'Internal server error',}
       });
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
   } else if (req.method = == 'GET') {
     // Get all URLs (for demo purposes)
@@ -761,6 +852,19 @@ error: 'Internal server error',}
       success: true;
     });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  params,
+}: {;
+  params: { shortCode: string };
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl |!shortUrl.isActive) {
+  params: { shortCode: string };
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default async function handler(
   req: NextApiRequest
 // Validate URL format;
@@ -806,6 +910,10 @@ export default async function handler(;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   params: { shortCode: string };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
@@ -814,20 +922,76 @@ export default async function handler(;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       data: urls as any
     })
   } else {
     res.status(405).json({
+<<<<<<< HEAD
       success: false;
 <<<<<<< HEAD
       error: 'Method not allowed'
+=======
+<<<<<<< HEAD
+      }
+      "success": false,
+"error": 'Method not allowed''
+   
+});
+  }
+// Handle redirects for short URLs,
+export async function getServerSideProps() {
+  }
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl |!shortUrl.isActive) {
+  }
+  "params": { "shortCode": string
+};
+}) {  const shortCode = params && params.shortCode;
+
+}
+
+export async function getServerSideProps() {
+  }
+  const shortUrl = urlStorage && urlStorage.get(shortCode);
+
+      "data": urls as any
+    })
+ 
+} else {
+    }
+    res.status(405).json({
+      }
+      "success": false,
+      "error": 'Method not allowed''
+=======
+      success: false;
+<<<<<<< HEAD
+      error: 'Method not allowed'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     })
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+"notFound": true
+    };
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
   params: { shortCode: string };
@@ -932,6 +1096,10 @@ const shortUrl = urlStorage.get(shortCode);
 }
    ,}
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 
 <<<<<<< HEAD
@@ -1047,12 +1215,30 @@ shortUrl.clicks++;
 return {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    }
+    "redirect": {
+      }
+      "destination": shortUrl.originalUrl,
+"permanent": false
+    }
+  };
+      "permanent": false
+    }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
     redirect: {
 <<<<<<< HEAD
       destination: shortUrl.originalUrl,}
 permanent: false,}
     }}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
       destination: shortUrl.originalUrl,
       permanent: false,

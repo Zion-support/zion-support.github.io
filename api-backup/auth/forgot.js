@@ -76,6 +76,12 @@ function ForgotPassword() {}
 import React from 'react';
 
 function ForgotPassword() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/main
 <<<<<<< HEAD
 =======
@@ -96,18 +102,28 @@ function ForgotPassword() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
 =======
 import React from 'react';
 
 function ForgotPassword() {
   return (
 >>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <div>
       <h1>Forgot Password</h1>
       <p>Password reset functionality would go here.</p>
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 export default ForgotPassword;

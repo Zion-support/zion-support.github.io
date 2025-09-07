@@ -2,14 +2,20 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 export function useFraudPreventionSignup() {
   const [isCheckingFraud, setIsCheckingFraud] = useState($2);
@@ -21,11 +27,16 @@ export function useFraudPreventionSignup() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
+<<<<<<< HEAD
+
+  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
+=======
 <<<<<<< HEAD
 =======
 
@@ -36,10 +47,75 @@ export function useFraudPreventionSignup() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Get the user's IP address (in a real app, you'd do this server-side)
 
   const getIP = async (): Promise<string | undefined> => {
     try {
+<<<<<<< HEAD
+
+    } catch (error) {
+
+      console && console.error('Error getting IP:', error);
+      return undefined;
+    }
+
+import { useState, useCallback } from 'react',;
+import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
+import { supabase } from '@/integrations/supabase/client',;
+
+import { toast } from '@/hooks/use-toast',;
+export function useFraudPreventionSignup() { return null; }
+    } catch (error) {;'
+      console.error('Error getting IP:', error),;
+      return undefined;
+    }
+  },
+
+  // Check if the signup attempt might be fraudulent
+  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
+
+    setIsCheckingFraud(true);
+    try {}
+      const ipAddress = await getIP()
+
+      if (fraudCheck && fraudCheck.isSuspicious) {
+        console && console.log('Suspicious signup detected:', fraudCheck && fraudCheck.reasons);
+
+          user_email: email;
+
+export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
+  // Get the user's IP address (in a real app, you'd do this server-side)
+
+  const getIP = async (): Promise<string | undefined> => {
+
+          content_type: 'signup'
+          content_id: email, // Using email as content ID for signup attempts;
+          content_excerpt: `Signup attempt for ${email}`;'
+          severity: 'suspicious';
+
+          ip_address: ipAddress;
+          timestamp: new Date().toISOString()'
+          status: 'pending'
+
+          status: 'pending'
+        }),
+
+        if (error) {
+
+          console && console.error('Error creating fraud flag:', error)
+
+        }
+
+      }
+      // No suspicious patterns found;
+      return true;
+    } catch (error) {'
+      console.error('Error in fraud check:', error);
+      // On error, allow the signup but log the error;
+      return true;
+    } finally {}
+=======
 <<<<<<< HEAD
       const response = await fetch($2);
       const data = await response.json($2);
@@ -252,6 +328,7 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
       // On error, allow the signup but log the error
       return true
     } finally {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       setIsCheckingFraud(false)
     }
 <<<<<<< HEAD
@@ -261,11 +338,17 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
     isCheckingFraud,
 =======
   }, []);
+<<<<<<< HEAD
+
+            variant: "destructive"}),
+          return false;
+=======
   return {
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"}),
           return false
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },;
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {;
@@ -274,6 +357,23 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
       const ipAddress = await getIP(),;
       // Check for suspicious patterns;
       const fraudCheck = await checkSignupPatterns(email, ipAddress),;
+<<<<<<< HEAD
+      if (fraudCheck.isSuspicious) {;'
+        // // // console.log('Suspicious signup detected:', fraudCheck.reasons),;
+        // Create a fraud flag for admin review;'
+        const { error } = await supabase.from('fraud_flags').insert({;
+          user_email: email,;'
+          content_type: 'signup',;
+          content_id: email, // Using email as content ID for signup attempts;`
+          content_excerpt: `Signup attempt for ${email}`,;'
+          severity: 'suspicious',;
+          reason: fraudCheck.reasons.join(),;
+          ip_address: ipAddress,;
+          timestamp: new Date().toISOString(),;'
+          status: 'pending';
+        }),;
+        if (error) {;'
+=======
       if (fraudCheck.isSuspicious) {;
         // // // console.log('Suspicious signup detected:', fraudCheck.reasons),;
         // Create a fraud flag for admin review;
@@ -289,11 +389,18 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
           status: 'pending';
         }),;
         if (error) {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           console.error('Error creating fraud flag:', error);
         }
 ;
         // Depending on how strict we want to be, we could block the signup;
         // If the check is very suspicious, block the signup;
+<<<<<<< HEAD
+        if (fraudCheck.reasons.some(r =>;'
+          r.includes('Multiple accounts') ||;'
+          r.includes('suspicious email domain');
+        )) {;
+=======
         if (fraudCheck.reasons.some(r =>;
           r.includes('Multiple accounts') ||;
           r.includes('suspicious email domain');
@@ -385,6 +492,7 @@ function useFraudPreventionSignup() {
           r.includes('Multiple accounts') ||;'
           r.includes('suspicious email domain');
         )) {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             variant: "destructive"});
       // Check condition;
@@ -428,6 +536,22 @@ if (||) {
             title: "Signup blocked";","
   description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."")"
             variant: "destructive"});"
+          return false;
+        }
+
+=======
+<<<<<<< HEAD
+        // Check condition;
+
+if (||) {
+  $2;
+}'
+          r.includes ('suspicious email domain'))) {'
+          toast ({
+'
+            title: "Signup blocked";","
+  description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."")"
+            variant: "destructive"});"
 =======
         // Check condition
 if (||) {
@@ -441,6 +565,7 @@ if (||) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           return false;
         }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Otherwise, allow but flag for review;
         return true;
       }
@@ -451,12 +576,18 @@ if (||) {
       // On error, allow the signup but log the error;
       return true;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           return false;
         }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } finally {
 
       setIsCheckingFraud (false);
@@ -469,6 +600,9 @@ if (||) {
   return {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return {}
     isCheckingFraud;
 
@@ -479,6 +613,13 @@ if (||) {
 `;
 pr-12325
 
+<<<<<<< HEAD
+    checkFraudBeforeSignup}
+}    isCheckingFraud;
+    checkFraudBeforeSignup}
+
+}
+=======
     checkFraudBeforeSignup}
 }    isCheckingFraud;
     checkFraudBeforeSignup}
@@ -615,3 +756,4 @@ status: 'pending'
     checkFraudBeforeSignup}
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -29,6 +35,7 @@ function handler() {
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
   res && res.status(200).json({ ok: true })
@@ -72,6 +79,9 @@ export default /**
  */
 
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
   res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
   res && res.status(200).json({ ok: true })
@@ -87,6 +97,7 @@ import { clearSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  */
 function handler() {}
   clearSessionCookie (res);
@@ -96,6 +107,19 @@ function handler() {}
 function handler() {}
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
+<<<<<<< HEAD
+}
+
+'
+import { clearSessionCookie } from '../../../utils/adminAuth';
+export default function handler() { return null; }
+  res.status(200).json({ ok: true });export default function handler() { return null; }
+  res.status(200).json({ ok: true })
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+}
+
+=======
 
 }
 <<<<<<< HEAD
@@ -109,10 +133,13 @@ export default function handler() { return null; }
 }
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 
@@ -137,3 +164,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

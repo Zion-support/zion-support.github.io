@@ -43,6 +43,11 @@ interface FooterLink {
   external?: boolean
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 interface FooterSection {
   title: string,
   links: FooterLink[]
@@ -51,6 +56,10 @@ interface FooterSection {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React from 'react';'
 import { motion  } from 'framer-motion';'
 =======
@@ -408,6 +417,22 @@ const footerSections: FooterSection[] = [
 <<<<<<< HEAD
   links: FooterLink[];}
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Shield, Users, BookOpen, Briefcase, Atom}
+ } from 'lucide-react';
+
+const "footerSections": FooterSection[] = [;
+  {"title": 'Services';'
+    }
+    "links": [;
+      {"label": 'AI & Machine Learning';'
+        }
+        "href": '/ai-services';'
+        "description": 'Advanced AI solutions';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 interface FooterSection  {title: string;
   links: FooterLink[];
 }
@@ -425,6 +450,10 @@ const footerSections: FooterSection[] = [;
 <<<<<<< HEAD
         href: '/ai-services';
         description: 'Advanced AI solutions';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
       {label: 'Quantum Computing;
         href: /quantum-computing';
@@ -450,6 +479,15 @@ const footerSections: FooterSection[] = [;
         href: '/cloud-platform;
         description: Scalable cloud infrastructure';
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {"label": 'View All Services';'
+        }
+        "href": '/services';'
+        "description": 'Complete service portfolio';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
       {label: 'View All Services;
         href: /services';
         description: 'Complete service portfolio;
@@ -485,10 +523,35 @@ const footerSections: FooterSection[] = [;
         href: '/services';}
         description: 'Complete service portfolio';}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     ];
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  {
+    }
+    "title": 'Solutions';'
+    "links": [
+      {
+        }
+        "label": 'Healthcare & Biotech''
+        "href": '/healthcare-solutions''
+        "description": 'Medical technology''
+
+     
+}
+      {"label": 'Financial Services';'
+        }
+        "href": '/solutions?industry=financial';'
+        "description": 'Fintech solutions';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     links: [
       {
@@ -1112,23 +1175,89 @@ window.scrollTo({ top: 0, behavior: 'smooth' })
       {label: Healthcare & Biotech';
         href: '/healthcare-solutions;
         description: Medical technology';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
       {label: 'Financial Services;
         href: /solutions?industry=financial';
         description: 'Fintech solutions;
       }
 
+<<<<<<< HEAD
     title: Solutions'
 
       { label: 'Education, href: /solutions?industry=education', description: 'EdTech solutions }
+=======
+<<<<<<< HEAD
+      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
+      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
+=======
+    title: Solutions'
+
+      { label: 'Education, href: /solutions?industry=education', description: 'EdTech solutions }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     ]
   }
   {
     title: 'Company'
     links: [
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+const socialLinks = [;
+  {
+    }
+    "icon": <Linkedin className='w-5 h-5' />,'
+    "href": '"https"://linkedin.com/company/ziontechgroup','
+    "label": 'LinkedIn','
+    "external": true
+  },
+  {
+    }
+    "icon": <Twitter className='w-5 h-5' />,'
+    "href": '"https"://twitter.com/ziontechgroup','
+    "label": 'Twitter','
+    "external": true
+  },
+  {
+    }
+    "icon": <Github className='w-5 h-5' />,'
+    "href": '"https"://github.com/ziontechgroup','
+    "label": 'GitHub','
+    "external": true
+  }
+];
+
+const quickLinks = [;
+  { "name": 'About Us', "href": '/about', "icon": <Users className='w-4 h-4' />,'
+},
+  { "name": 'Contact', "href": '/contact', "icon": <Phone className='w-4 h-4' />,'
+},
+  {
+    }
+    "name": 'Support','
+    "href": '/support','
+    "icon": <HelpCircle className='w-4 h-4' />,'
+  },
+
+  const footerSections = $2;
+      items: [
+        { label: 'AI & Machine Learning', href: '/ai-services' },
+        { label: 'Quantum Computing', href: '/quantum-computing' },
+        { label: 'Space Technology', href: '/space-tech' },
+        { label: 'Cybersecurity', href: '/cybersecurity' },
+        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 >>>>>>> merged-prs-20250907-203621
@@ -1487,6 +1616,23 @@ const socialLinks = [
   ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+const containerVariants = {
+    }
+    "hidden": { "opacity": 0
+}
+    "visible": {
+      }
+      "opacity": 1,
+"transition": {
+}
+"staggerChildren": 0.1
+      }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 ;
   const container_variants = {
     hidden: { opacity: 0 },
@@ -1494,6 +1640,10 @@ const socialLinks = [
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   };
     },    {
 
@@ -1558,10 +1708,20 @@ const socialLinks = [
       }
     },  };        staggerChildren: 0.1
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  };
+=======
+>>>>>>> origin/resolved-merge-conflicts
     }
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const containerVariants = {}
     hidden: { opacity: 0}
@@ -2434,6 +2594,11 @@ variants={containerVariant,;
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
       { label: About Us', href: '/about, description: Our mission and values' }'
       { label: Careers, href: '/careers', description: Join our team }'
       { label: 'Contact, href: /contact', description: 'Get in touch }
@@ -2622,6 +2787,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div;
             key={i}
 className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             animate={{
               x: [0, Math.random() * 1000, 0],
               y: [0, Math.random() * 1000, 0],
@@ -2631,6 +2800,50 @@ className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-f
               duration: 15 + Math.random() * 10,
               repeat: -1,
               delay: Math.random() * 8,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: "easeInOut"
+            }}
+            style = $2;
+              top: `${Math.random() * 100}%`
+            }}
+          />
+        ))}
+        
+        {/* Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
+      </div>
+
+            <motion.div variants={itemVariant
+} className='"lg":col-span-2'>'
+              <div className='flex items-center space-x-3 mb-6'>'
+                <div className='relative'>'
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center'>'
+                    <Crown className='w-7 h-7 text-white' />'
+                  </div>
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50'></div>'
+                </div>
+                <div>
+                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
+                    Zion Tech Group
+                  </h3>
+                  <p className='text-sm text-gray-400'>'
+                    Future Technology Solutions
+                  </p>
+                </div>
+              <p className='text-gray-300 mb-6 leading-relaxed'>'
+                Pioneering the future with revolutionary AI consciousness,
+quantum computing, and autonomous systems. Transforming,
+businesses through next-generation technology.
+              </p>
+              <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>'
+                Leading provider of innovative technology solutions,
+specializing in AI, automation, and future-ready services. We,
+help businesses transform and thrive in the digital age.
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ease: easeInOut',
 =======
         {[...Array(30)].map((_, i) => (;}
@@ -2999,22 +3212,45 @@ help businesses transform and thrive in the digital age.
                 </div>
               </div>
             </motion.div>"
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </p>
 
               {/* Contact Info */}
 
                   </a>
                 </div>
+<<<<<<< HEAD
               </div>
             </motion.div>
+=======
+<<<<<<< HEAD
+            </motion.div>"
+=======
+              </div>
+            </motion.div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <ul className="space-y-3">
                   {section.items.map((item) => (
                     <li key={item.label}>
                       <Link'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <p className='text - gray - 300 mb - 6 leading - relaxed'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <p className=text - gray - 300 mb - 6 leading - relaxed>;
 =======
               <p className='text - gray - 300 mb - 6 leading - relaxed'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 Pioneering the future with revolutionary AI consciousness,
                 quantum computing, and autonomous systems. Transforming;
                 businesses through next - generation technology.;
@@ -3078,8 +3314,16 @@ help businesses transform and thrive in the digital age.
                   </h3>;
                   <p className='text - sm text-gray-400'>Future Technology Solutions</p>;
                 </div>;
+<<<<<<< HEAD
               </div>;
               <p className='text - gray - 300 mb-6 leading-relaxed'>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <p className="text - gray - 300 mb-6 leading-relaxed">;
+>>>>>>> origin/resolved-merge-conflicts
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next - generation technology.;
               </p>;
               <p className='text - gray - 300 leading - relaxed mb-6 max-w-md'>;
@@ -3171,8 +3415,16 @@ help businesses transform and thrive in the digital age.
                   </h3>;
                   <p className='text - sm text-gray-400'>Future Technology Solutions</p>;
                 </div>;
+<<<<<<< HEAD
               </div>;
               <p className='text - gray - 300 mb-6 leading-relaxed'>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <p className="text - gray - 300 mb-6 leading-relaxed">;
+>>>>>>> origin/resolved-merge-conflicts
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next - generation technology.;
               </p>;
               <p className='text - gray - 300 leading - relaxed mb-6 max-w-md'>;
@@ -3199,7 +3451,14 @@ help businesses transform and thrive in the digital age.
                     ziontechgroup.com;
                   </a>;
                 </div>;
+<<<<<<< HEAD
               </div>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </motion.div>;
             {/* Footer Sections */}
             {footer_sections.map ((section, index) => (<motion.div key={section.title} variants={item_variants}>;
@@ -3209,6 +3468,46 @@ help businesses transform and thrive in the digital age.
                   {section.title === 'Company' && (<Users className='w - 5 h - 5 text - pink - 400' />)}
                   {section.title === 'Resources' && (<BookOpen className='w - 5 h - 5 text - blue - 400' />)}
                   <span>{section.title}</span>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </h4>;
+                <ul className='space - y-3'>;
+                  {section.items.map (item => (<li key={item.label}>;
+                      <Link;
+                        href={item.href}
+                        className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
+                </h4>;
+                <ul className="space-y-3">;
+                  {section.items.map ((item) => (<li key={item.label}>;
+                      <Link;href={item.href}
+                        className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
+                      >;{/* Footer Sections */}
+            {footerSections.map((section, index) => (<motion.div key={section.title} variants={itemVariants}>;
+<h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'>;
+                  {section.title === 'Services' && (<Briefcase className='w-5 h-5 text-cyan-400' />;
+                  )}
+                  {section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400' />;'
+                  )}
+                  {section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400' />;'
+                  )}
+                  {section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400' />;'
+                  )}
+                  <span>{section.title}</span>;
+                </h4>;
+                <ul className='space-y-3'>;'
+                  {section.items.map(item => (<li key={item.label}>;
+                      <Link;
+                        href={item.href}
+
+                        className='text-gray-300 "hover": text-white transition-colors duration-200 "hover":translate-x-1 inline-block''
+                      >
+                        {item.label}
+            {/* Footer Sections *
+}
+            {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants}>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                 <div className='flex items-center space-x-3 text-gray-300'    />
                   <Globe className='w-4 h-4 text-blue-400'    />
@@ -3462,6 +3761,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion && motion.div key={section && section.title} variants={itemVariants}>;'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'>;'
                   {section && section.title === 'Services' && (<Briefcase className='w-5 h-5 text-cyan-400' />;'
                   )}
@@ -3475,6 +3778,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h4>;
                 <ul className='space-y-3'>;'
                   {section && section.items.map(item => (<li key={item && item.label}>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      <Link;
+                        href={item && item.href}
+                        className='text-gray-300 "hover": text-white transition-colors duration-200 "hover":translate-x-1 inline-block'>                  <span>{section && section.titl,'
+}</span>;
+                </h4>;
+                <ul className="space-y-3">;"
+                  {section && section.items.map((item) => (<li key={item && item.label}>;
+                      <Link;
+                        href={item && item.href}
+                        className="text-gray-300 "hover":text-white transition-colors duration-200 "hover":translate-x-1 inline-block">;"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                   <span    />{section && section.title}</span>;
                 </h4>;
@@ -3491,6 +3809,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link;
                         href={item && item.href}"
                         className=\"text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\"    />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                         {item && item.label}
                       </Link>;
                     </li>;
@@ -3502,6 +3824,67 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
 
           {/* Social Links & Newsletter */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <motion&& motion.div;
+            initial={{ "opacity": 0, "y": 20 
+}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0 && 0.6 }}
+
+            viewport={{ "once": true }}
+
+className='mt-16 pt-12 border-t border-gray-800/50''
+          >
+            <div className='flex flex-col "lg":flex-row items-center justify-between gap-8'>'
+
+              {/* Social Links *
+}
+              <div className='flex items-center space-x-6'>;'
+                <span className='text-gray-400 font-medium'>Follow "Us":</span>;'
+                {socialLinks && socialLinks.map(social => { return (<motion&& motion.a; }
+                    }
+                    key={social && social.label}
+                    href={social && social.href}
+
+                    target='_blank''
+                    rel='noopener noreferrer''
+                    className='w-10 h-10 bg-gray-800/50 "hover": bg-gradient-to-r "hover":from-cyan-500 "hover":to-purple-500 rounded-xl flex items-center justify-center text-gray-300 "hover":text-white transition-all duration-200 "hover":scale-110''
+                    whileHover={{ "y": -2 }}
+
+
+                    whileTap={{ "scale": 0.95 
+}
+                  >;
+                    <social.icon className='w-5 h-5' />;'
+                  </motion.a>;
+                ))}
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              {/* Newsletter Signup */}
+<div className='flex-1 max-w-md'>'
+                <h5 className='text-lg font-semibold text-white mb-3'>'
+                  Stay Updated
+                </h5>
+                <p className='text-gray-400 text-sm mb-4'>'
+                  Get the latest insights on AI consciousness, quantum,
+computing, and future technology.
+                </p>
+                <div className='flex space-x-2'>'
+                  <input,
+type='email''
+                    placeholder='Enter your email''
+                    className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 "focus": outline-none "focus":ring-2 "focus":ring-purple-500 "focus":border-transparent'' />
+                  <motion.button,
+className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold "hover":from-purple-600 "hover":to-pink-600 transition-all duration-200''
+
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ "scale": 0.95 
+}
+                  >;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20}}
@@ -3798,6 +4181,10 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
 }
                       />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     Subscribe;
                   </motion.button>;
                 </div>;
@@ -4022,6 +4409,81 @@ whileHover={{ scale: 1 && 1.05 }}
           </motion.div>;
           {/* Social Links & Newsletter */}
           <motion.div;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            initial={{ "opacity": 0, "coordinate_y": 20 
+}
+            whileInView={{ "opacity": 1, "coordinate_y": 0 }}
+            transition={{ "duration": 0.6 }}
+            viewport={{ "once": true 
+}
+            className='mt - 16 pt - 12 border - t border - gray - 800 / 50'>'
+
+            <div className='flex flex - col "lg":flex - row items - center justify - between gap - 8'>;'
+              {/* Social Links */}
+              <div className='flex items - center space - x-6'>;'
+                <span className='text - gray - 400 font - medium'>Follow "Us":</span>;'
+                {social_links.map (social => { return (<motion.a; }
+                    }
+                    key={social.label}
+                    href={social.href}
+                    target='_blank';'
+                    rel='noopener noreferrer';'
+                    className='w - 10 h - 10 bg - gray - 800 / 50 "hover":bg - gradient - to - r "hover":from - cyan - 500 "hover":to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 "hover":text - white transition - all duration - 200 "hover":scale - 110';'
+                    while_hover={{ "coordinate_y": -2 }}
+                    while_tap={{ "scale": 0.95 
+}
+                  >;
+                    <social.icon className='w - 5 h - 5' />                  </motion.a>          >;'
+            <div className="flex flex - col "lg":flex - row items - center justify-between gap-8">;"
+              {/* Social Links */}
+              <div className="flex items-center space-x-6">;"
+                <span className="text - gray-400 font-medium">Follow "Us":</span>;"
+                {social_links.map ((social) => (<motion.a;
+                    }
+                    key={social.label}
+                    href={social.href}
+                    target="_blank";"
+                    rel="noopener noreferrer";"
+                    className="w - 10 h - 10 bg - gray - 800 / 50 "hover":bg - gradient - to - r "hover":from - cyan - 500 "hover":to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 "hover":text - white transition - all duration-200 "hover":scale-110";"
+                    while_hover={{ "coordinate_y": -2 }}
+                    while_tap={{ "scale": 0.95 
+}
+                  >;
+                    <social.icon className="w-5 h-5" />;"
+                  </motion.a>))}
+              </div>;
+              {/* Newsletter Signup */}
+              <div className='flex - 1 max - w-md'>;'
+                <h5 className='text - lg font - semibold text - white mb - 3'>;'
+                  Stay Updated;
+                </h5>;
+                <p className='text - gray - 400 text - sm mb - 4'>;'
+                  Get the latest insights on AI consciousness, quantum;
+                  computing, and future technology.;
+                </p>;
+                <div className='flex space - x-2'>;'
+                  <input;
+                    type='email';'
+                    placeholder='Enter your email';'
+                    className='flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 "focus":outline - none "focus":ring - 2 "focus":ring - purple - 500 "focus":border - transparent';' />;
+                  <motion.button;
+                    className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold "hover": from - purple - 600 "hover":to - pink - 600 transition - all duration - 200'                    while_hover={{ "scale": 1.05 ,'
+}                </p>;
+                <div className="flex space-x-2">;"
+                  <input;
+                    type="email";"
+                    placeholder="Enter your email";"
+                    className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 "focus":outline - none "focus":ring - 2 "focus":ring - purple-500 "focus":border-transparent";" />;
+                  <motion.button;
+                    className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold "hover":from - purple - 600 "hover":to - pink - 600 transition-all duration-200";"
+                    while_hover={{ "scale": 1.05 }}
+                    while_tap={{ "scale": 0.95 
+}
+                  >;
+=======
+>>>>>>> origin/resolved-merge-conflicts
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
@@ -4093,6 +4555,10 @@ whileHover={{ scale: 1 && 1.05 }}
 }
                       />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     Subscribe;
                   </motion.button>;
                 </div>;
@@ -4106,6 +4572,34 @@ whileHover={{ scale: 1 && 1.05 }}
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          viewport={{ "once": true 
+}
+
+className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl''
+        >
+          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>'
+            <div className='flex flex-col "md":flex-row items-center justify-between gap-4'>'
+              <div className='text-gray-400 text-sm'>'
+
+          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;'
+          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>;'
+            <div className='flex flex-col "md":flex-row items-center justify-between gap-4'>;'
+              <div className='text-gray-400 text-sm'>;'
+                <Link;
+                  href='/privacy';'
+                  className='"hover":text-white transition-colors duration-200 ml-2'>;'
+                  Privacy Policy;
+
+                </Link>{' '}'
+
+                <Link,
+href='/terms''
+                  className='"hover": text-white transition-colors duration-200 ml-2''
+=======
+>>>>>>> origin/resolved-merge-conflicts
         {/* Bottom Bar */}
         <motion.div
 =======
@@ -4169,10 +4663,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
                   className='hover:text-white transition-colors duration-200 ml-2'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >
                   Terms of Service
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div className='flex items-center space-x-4 text-gray-400 text-sm'>'
+                <span>Powered by</span>
+                <div className='flex items-center space-x-2'>'
+                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>'
+                </div>
+                <span>•</span>
+                <div className='flex items-center space-x-2'>'
+                  <Atom className='w-4 h-4 text-purple-400' />'
+                  <span>Quantum Computing</span>
+                </div>
+                <span>•</span>
+                <div className='flex items-center space-x-2'>'
+                  <Rocket className='w-4 h-4 text-pink-400' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>
                 <span>Powered by</span>
                 <div className='flex items-center space-x-2'>
@@ -4283,6 +4799,10 @@ href='/terms'
                   <Rocket className='w-4 h-4 text-pink-400' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <span>Space Technology</span>
 =======
                 <span    />•</span>
@@ -4297,10 +4817,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </Link>{' '}<Rocket className="w-4 h-4 text-pink-400" />;
                 <Link;
                   href='/terms';
@@ -4324,6 +4853,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Rocket className='w-4 h-4 text-pink-400' />;
                   <span>Space Technology</span>;
                 </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </motion.div>;
+      </div>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               </div>;
             </div>;
           </div>;
@@ -4340,10 +4876,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/terms'
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Terms of Service;
                 </Link>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4353,6 +4898,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>;
                 <span>Powered by</span>;
                 <div className='flex items-center space-x-2'>;
@@ -4404,13 +4953,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Rocket className="w - 4 h - 4 text-pink-400" />;
                   <span > Space Technology</span>;
                 </div>;
+<<<<<<< HEAD
               </div>;
             </div>;
+=======
+<<<<<<< HEAD
+=======
+              </div>;
+            </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </div>;{/* Scroll to Top Button */}
       <motion.button;
         onClick={scrollToTop}
 className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50';
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 
@@ -4439,6 +5001,10 @@ export default UltraAdvancedFuturisticFooter2025;
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0}}
@@ -4494,6 +5060,14 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>
 
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
@@ -4506,6 +5080,10 @@ export default UltraAdvancedFuturisticFooter2025;
   );
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default UltraAdvancedFuturisticFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
       >;
@@ -4522,8 +5100,16 @@ export default UltraAdvancedFuturisticFooter2025;
       <motion.button;
         on_click={scrollToTop}
         className='fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration - 200 z - 50'        while_hover={{ scale: 1.1, coordinate_y: -2 }}        className="fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration-200 z-50";
+<<<<<<< HEAD
         on_click={scrollToTop}
         className='fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration - 200 z - 50'        while_hover={{ scale: 1.1, coordinate_y: -2 }}        className="fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration-200 z-50";
+=======
+<<<<<<< HEAD
+=======
+        on_click={scrollToTop}
+        className='fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration - 200 z - 50'        while_hover={{ scale: 1.1, coordinate_y: -2 }}        className="fixed bottom - 8 right - 8 w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full shadow - 2xl hover:shadow - purple - 500 / 25 transition - all duration-200 z-50";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         while_hover={{ scale: 1.1, coordinate_y: -2 }}
         while_tap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -4544,6 +5130,11 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 export default UltraAdvancedFuturisticFooter2025;
 ;
   )}export default UltraAdvancedFuturisticFooter2025;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
         whileHover={ 'scale': 1.1, 'y': -2 }
@@ -4585,8 +5176,30 @@ export default UltraAdvancedFuturisticFooter2025;
 <<<<<<< HEAD
 export default UltraAdvancedFuturisticFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        whileHover={{ "scale": 1.1, "y": -2 }}
+        whileTap={{ "scale": 0.9 
+}
+        initial={{ "opacity": 0, "scale": 0 
+}
+        animate={{ "opacity": 1, "scale": 1 
+}
+        transition={{ "duration": 0.3, "delay": 1 }}
+
+      >
+        <ArrowUp className = $2;
+export default UltraAdvancedFuturisticFooter2025,
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 
@@ -4611,3 +5224,7 @@ export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

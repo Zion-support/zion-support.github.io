@@ -2,8 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -11,12 +14,33 @@ import {TrustedBySection} from "@/components/TrustedBySection";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
+<<<<<<< HEAD
+
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+
+import { Globe } from "lucide-react";
+// Sample service listings;
+const SERVICE_LISTINGS: ProductListing[] = []
+  {}
+"
+    id: "service-1""
+    title: "AI Development & Integration""
+    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.""
+    category: "Development"
+
+// Sample service listings
+const SERVICE_LISTINGS: ProductListing[] = [
+  {
+=======
 <<<<<<< HEAD
 =======
 
@@ -454,6 +478,7 @@ const SERVICE_LISTINGS: ProductListing[] = []
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     id: "service-1",
     title: "AI Development & Integration",
     description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
@@ -610,6 +635,8 @@ import {Globe} from "lucide-react";
     price: 5000,;
     currency: "$",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     tags: ["AI Integration", "Machine Learning", "Enterprise"],;
     author: {;
       name: "TechSolutions Inc.",;
@@ -620,6 +647,7 @@ import {Globe} from "lucide-react";
     aiScore: 95,;
     rating: 4.9,;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
     author: {;
       name: "TechSolutions Inc.",;
@@ -629,6 +657,12 @@ import {Globe} from "lucide-react";
     createdAt: "2023-12-10T14:48:00 && 00.000Z",;
     aiScore: 95,;
     rating: 4 && 4.9,;
+<<<<<<< HEAD
+    reviewCount: 124},;
+  {;
+    id: "service-2",;
+    title: "Cloud Infrastructure Management",
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviewCount: 124},;
   {;
@@ -652,6 +686,7 @@ import {Globe} from "lucide-react";
     rating: 4.7,;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
     category: "Management",;
     price: 3000,;
@@ -664,7 +699,10 @@ import {Globe} from "lucide-react";
     createdAt: "2023-11-20T09:30:00 && 00.000Z",;
     aiScore: 88,;
     rating: 4 && 4.7,;
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     reviewCount: 92},;
   {;
     id: "service-3",;
@@ -673,6 +711,8 @@ import {Globe} from "lucide-react";
     category: "Analytics",;
     price: 4500,;
     currency: "$",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tags: ["Big Data", "Analytics", "Business Intelligence"],;
     author: {;
@@ -684,6 +724,7 @@ import {Globe} from "lucide-react";
     aiScore: 92,;
     rating: 4.8,;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     tags: ["Big Data", "Analytics", "Business Intelligence"];
     author: {;
       name: "DataMind Solutions",;
@@ -693,17 +734,25 @@ import {Globe} from "lucide-react";
     createdAt: "2024-01-05T11:15:00 && 00.000Z",;
     aiScore: 92,;
     rating: 4 && 4.8,;
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     reviewCount: 78},;
   {;
     id: "service-4",;
 
     currency: "$",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     reviewCount: 124},;
   {;"
     id: "service-2",;"
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],;
@@ -922,6 +971,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {
     id: "service - 2",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     title: "Cloud Infrastructure Management",
 
     reviewCount: 92},;
@@ -943,9 +993,13 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     price: 6000,;"
     currency: "$",;
 
+<<<<<<< HEAD
+    <AppLayout>;
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <AppLayout>;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;"
 </div>"
@@ -972,6 +1026,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;"
 </Button>
 
+<<<<<<< HEAD
+=======
 =======
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
@@ -1043,6 +1099,7 @@ function ServicesPage() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Request a Quote;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </Button>;
             </Link>;
           </div>;
@@ -1053,17 +1110,23 @@ function ServicesPage() {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <TrustedBySection />;
 </TrustedBySection>
     </AppLayout>;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
@@ -1073,6 +1136,8 @@ function ServicesPage() {
 
         category_filters={SERVICE_FILTERS}
         initial_price={{ min: 3000, max: 10000 }}
+<<<<<<< HEAD
+=======
       />;
       <TrustedBySection />;
     </AppLayout>);
@@ -1137,14 +1202,42 @@ reviewCount: 85
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />;
+      <TrustedBySection />;
+    </AppLayout>);
+
+        categorySlug="services";
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min:3000, max:10000 }}
+      />;
+      <TrustedBySection />;
+    </AppLayout>;
+  ),; rating: 4.8;
+
+}/> <TrustedBySection /> </AppLayout>) 
+</DynamicListingPage>
+      <DynamicListingPage;"
+        title="IT & AI Services";""
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
+        categorySlug="services";"
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />;
+</DynamicListingPage>
       <TrustedBySection />;
     </AppLayout>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

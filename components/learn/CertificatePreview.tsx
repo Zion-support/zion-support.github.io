@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 export default function CertificatePreview({ courseId, userId;
 export default function CertificatePreview({
   courseId
   userId = "demo-user"
 }: {
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -67,12 +72,16 @@ export default function CertificatePreview(): any ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   courseId: string;
   userId?: string;
 }) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -81,11 +90,17 @@ export default function CertificatePreview(): any ({;
           <div className="text-xl font-semibold">Certificate of Completion</div>
           <div className="text-xs opacity-80">Preview</div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>
       </div>
       <a
         href={url}
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+  const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;"
+=======
 
 =======
         </div>
@@ -105,6 +120,7 @@ import React from 'react';
 export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF;
@@ -132,6 +148,9 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
 <<<<<<< HEAD
 `
 =======
+<<<<<<< HEAD
+`
+=======
 
 <<<<<<< HEAD
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">;
@@ -145,6 +164,7 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return ("
     <div className="border rounded p-4">;"
@@ -166,6 +186,8 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
@@ -178,6 +200,7 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from './react';
 ;
 export default /**;
@@ -237,12 +260,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </a>;
     </div>);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
   courseId: string;}
   userId?: string;}
 }) {;}
 }
 const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
+<<<<<<< HEAD
+=======
 =======
   return (
     <div className=&quot;border rounded p-4&quot;>
@@ -281,6 +309,7 @@ export default function CertificatePreview({
 }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="border rounded p-4">
@@ -290,6 +319,9 @@ export default function CertificatePreview({
           <div className="text-xl font-semibold">Certificate of Completion</div>
           <div className="text-xs opacity-80">Preview</div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="border rounded p-4">
@@ -298,8 +330,11 @@ export default function CertificatePreview({
         <div className=text-center>
           <div className="text-xl font-semibold">Certificate of Completion</div>
           <div className=text-xs opacity-80>Preview</div>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>
       </div>
       <a
@@ -307,14 +342,23 @@ export default function CertificatePreview({
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF
       </a>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 "
@@ -340,6 +384,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
@@ -379,6 +424,8 @@ href={url}"
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 );
   );
@@ -410,3 +457,4 @@ href={url}"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

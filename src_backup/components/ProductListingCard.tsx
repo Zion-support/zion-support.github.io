@@ -63,11 +63,25 @@ const ProductListingCardComponent = ({
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       log_debug ('[ProductCard] Navigating to:', {
         path: `${detailBasePath}/${listing.id}`,
       });
       log_debug ('[ProductCard] Listing ID:', { id: listing.id });
       log_debug ('[ProductCard] Listing Title:', { title: listing.title });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      log_debug ('[ProductCard] Navigating to:, {
+        path: `${detailBasePath}/${listing.id}`});
+      log_debug ([ProductCard] Listing ID:', { id: listing.id });
+      log_debug ('[ProductCard] Listing Title:, { title: listing.title });
+>>>>>>> origin/resolved-merge-conflicts
     }
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react',import { logDebug, logErrorToProduction } from '@/utils/productionLogger',import { useRouter } from 'next/router',import { Badge } from '@/components/ui/badge',import { Button } from '@/components/ui/button',import { ProductListing } from '@/types/listings',import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch  } from 'react-redux';
@@ -146,6 +160,13 @@ if ( {) {$2;
       onKeyDown={e => {
 
   detailBasePath?: string;
+=======
+    }
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   const handleViewListing = () => {
     // Debug logging for development
@@ -202,12 +223,21 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
       onKeyDown={e => {detailBasePath?: string;const ProductListingCardComponent = ({listing,view = 'grid',onRequestQuote,detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) => {const isGrid = view === 'grid',const router = useRouter(),const [loading, setLoading] = useState(false),const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0 && listing.images[0];
+=======
+<<<<<<< HEAD
+  listing,
+  view = grid',
+  onRequestQuote,
+      onKeyDown={e => {detailBasePath?: string;const ProductListingCardComponent = ({listing,view = 'grid,onRequestQuote,detailBasePath = /marketplace/listing';
+}: ProductListingCardProps) => {const isGrid = view === 'grid,const router = useRouter(),const [loading, setLoading] = useState(false),const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0 && listing.images[0];
+>>>>>>> origin/resolved-merge-conflicts
     ? listing.images[0];
     : '/placeholder.svg';
   ),const [imageError, setImageError] = useState(false),const stockStatus =;
@@ -259,6 +289,22 @@ const ProductListingCardComponent = ({;
     }router && router.push(`${detailBasePath}/${listing && listing.id}`)}const dispatch  = useDispatch<AppDispatch>()const addToCart = () => {setLoading(true)dispatch(addItem({id: listing && listing.id,title: listing && listing.title,price: listing && listing.price ?? 0}))toast && toast.success(`1× ${listing && listing.title} added`, {action: {label: 'View Cart',onClick: () => router && router.push('/cart')})setLoading(false)}const handleRequestQuote = (e: React && React.MouseEvent) => {e && e.preventDefault()e && e.stopPropagation()if (onRequestQuote) {onRequestQuote(listing && listing.id)} else {router && router.push(`/request-quote?listing=${listing && listing.id}`)}
   }const imageContainerClasses  = isGrid ? 'h-48' : 'h-32 w-48';onKeyDown={e => {if (e && e.key === 'Enter' || e && e.key === ' ') {e && e.preventDefault()handleViewListing()}      }
     >;
+<<<<<<< HEAD
+=======
+=======
+const ProductListingCardComponent = ({;
+  listing,;
+  view = 'grid',;
+  onRequestQuote,;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
@@ -279,8 +325,27 @@ const ProductListingCardComponent = ({;
   },
 
     <div
+<<<<<<< HEAD
       data-testid= 'equipment-link''`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      data-testid= equipment-link"'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? flex-col : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+=======
+=======
+=======
+<<<<<<< HEAD
+      data-testid= equipment-link"'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? flex-col : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      data-testid="equipment-link"
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
       onClick={handleViewListing}
       tabIndex={0}
       role='button'
@@ -297,6 +362,12 @@ const ProductListingCardComponent = ({;
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Image */}<div;
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}onClick={handleViewListing} // Keep existing onClick for navigation;
         role='button';
@@ -378,14 +449,31 @@ if ( {) {$2;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
 
+<<<<<<< HEAD
           {/* Ensure this container has dimensions */}onKeyDown={(e) => {if (e.key === 'Enter' || e.key === ' ') {e.preventDefault()handleViewListing()}
         }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          {/* Ensure this container has dimensions */}onKeyDown={(e) => {if (e.key === Enter || e.key === ' ') {e.preventDefault()handleViewListing()}
+        }}
+>>>>>>> origin/resolved-merge-conflicts
       >;
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image;
@@ -502,6 +590,12 @@ if ( {) {$2;
           <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0 && 0.875rem,2vw,1rem)]'>;
             {listing && listing.description}
           </p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' : '192px'} // 192px is w-48
           />
@@ -520,7 +614,6 @@ if ( {) {$2;
 
             <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
 
-
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className='flex flex-wrap gap-1 mb-4'>;
@@ -528,10 +621,26 @@ if ( {) {$2;
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
+<<<<<<< HEAD
           <div onClick={handleViewListing} className='block'>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <div onClick={handleViewListing} className=block>
+>>>>>>> origin/resolved-merge-conflicts
             {listing.uspHeadline && (
               <p className='text-primary font-semibold text-sm mb-1'>
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
 
@@ -550,6 +659,12 @@ if ( {) {$2;
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'
                 >
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </p>;{/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (<div className='flex flex-wrap gap-1 mb-4'>;
               {listing && listing.tags.map((tag, idx) => (<span;
@@ -633,6 +748,12 @@ if ( {) {$2;
 
 
             {listing.price !== null ? (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {tag}
                 </span>;
               ))}
@@ -648,8 +769,23 @@ if ( {) {$2;
                 {getPrice()}
               </div>
 
+<<<<<<< HEAD
               <span className='text-foreground/80'>
               ) : ('Add to Cart';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <span className="text-foreground/80">
+                {getPrice()}
+              </span>;
+            )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <span className=text-foreground/80>
+              ) : (Add to Cart;
+>>>>>>> origin/resolved-merge-conflicts
               )}</Button>;<Button;
               size='sm';
               variant='default';
@@ -692,7 +828,51 @@ if ( {) {$2;
                   </svg>;
                   Loading...;
                 </>;
+<<<<<<< HEAD
               ) : ('Add to Cart';
+=======
+              ) : (Add to Cart;
+=======
+              <span className="text-foreground/80">
+                {getPrice()}
+              </span>;
+            )}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          </div>
+          
+          <div className="flex gap-2">
+            <Button
+              size="sm"
+              className="bg-primary hover: bg-primary/80 text-primary-foreground"
+              onClick={(e) => {
+                e.stopPropagation(), // Prevent card click event
+                addToCart()
+              }}
+              disabled={loading}
+
+            >
+              {loading ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Loading...
+                </>
+              ) : (
+                "Add to Cart"
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               )}
             </Button>
 
@@ -731,7 +911,6 @@ if ( {) {$2;
 
             {onRequestQuote && (;
 
-
               <Button
 
                 size='sm'
@@ -744,6 +923,13 @@ if ( {) {$2;
               </Button>;
             )}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </p>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Request Quote;
             </Button>;
             <Button;
@@ -769,9 +955,18 @@ if ( {) {$2;
               >;className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'>;Request Quote;
               </Button>;
             )}</p>;
+=======
+          </p>;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (<div className='flex flex - wrap gap - 1 mb - 4'>;
-              {listing.tags.map ((tag, idx) => (<span;
+          {listing.tags && listing.tags.length > 0 && (
+            <div className='flex flex - wrap gap - 1 mb - 4'>;
+              {listing.tags.map ((tag, idx) => (
+                <span;
                   key={idx}
                   className='text - xs text - foreground / 70 bg - background / 50 px - 2 py - 1 rounded - full'                >;
                   {tag}
@@ -780,9 +975,31 @@ if ( {) {$2;
         </div>;
         {/* Footer with price and button */}
         <div className='flex items - center justify - between mt - auto pt - 3 border - t border - primary / 10 sm:border - primary / 20'>;
+<<<<<<< HEAD
           <div className='text - sm font - medium'>;
             {listing.price !== null ? (<div className='flex items - center text - primary'>;
                 <DollarSign className='h - 4 w - 4 mr - 1' />;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <div className=text - sm font - medium>;
+            {listing.price !== null ? (<div className='flex items - center text - primary'>;
+                <DollarSign className=h - 4 w - 4 mr - 1 />;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <div className='text - sm font - medium'>;
+            {listing.price !== null ? (
+              <div className='flex items - center text - primary'>;
+                <DollarSign className='h - 4 w - 4 mr - 1' />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                 {get_price ()}
               </div>) : (
               <span className='text - foreground / 80'>{get_price ()}</span>)}
@@ -888,9 +1105,27 @@ if ( {) {$2;
             </Button>;
             {onRequestQuote && (;
               <Button;
+<<<<<<< HEAD
               </Button>) }export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = 'ProductListingCard';{onRequestQuote && (<Button;
                 size='sm';
                 variant='outline';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              </Button>) }export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard;{onRequestQuote && (<Button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+              </Button>) }export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard;{onRequestQuote && (<Button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                size="sm";
+                variant=outline;
+>>>>>>> origin/resolved-merge-conflicts
                 onClick={handleRequestQuote}
                 className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground';
               >;
@@ -899,7 +1134,17 @@ if ( {) {$2;
             )}
 
           </div>;
+<<<<<<< HEAD
           <div className='flex gap-2'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <div className=flex gap-2>;
+>>>>>>> origin/resolved-merge-conflicts
             <Button;
               size='sm';
               className='bg-primary hover: bg-primary/80 text-primary-foreground';
@@ -938,6 +1183,12 @@ if ( {) {$2;
               </Button>;
             )}</div>;
           </div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </div>;
       </div>;
@@ -945,11 +1196,27 @@ if ( {) {$2;
   );
 
           </div>;
+<<<<<<< HEAD
   )},export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = 'ProductListingCard';</div>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  )},export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard;</div>;
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       </div>;
     </div>) }
 export default React.memo (ProductListingCard)export default ProductListingCard;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </div>;
     </div>) }
@@ -961,8 +1228,25 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
+<<<<<<< HEAD
 ''`;export const ProductListingCard = React.memo (ProductListingCardComponent)ProductListingCard.display_name = 'ProductListingCard';
 },export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = 'ProductListingCard';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+'"`;export const ProductListingCard = React.memo (ProductListingCardComponent)ProductListingCard.display_name = 'ProductListingCard;
+},export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default ProductListingCard;
 ''`;
 

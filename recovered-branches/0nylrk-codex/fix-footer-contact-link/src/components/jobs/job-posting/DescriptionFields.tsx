@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+FormItem
+=======
+<<<<<<< HEAD
 import React from "react";
 import { Control } from "react-hook-form";
 import {
@@ -7,10 +10,13 @@ import {
 =======
 FormItem
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   FormLabel
   FormControl
   FormDescription
   FormMessage
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 } from "@/components/ui/form";
 
@@ -23,6 +29,7 @@ interface DescriptionFieldsProps {
 
 export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   FormField;
   FormItem;
@@ -330,6 +337,136 @@ import {}
   FormItem,
   FormLabel,
   FormControl,
+
+  FormDescription,
+<<<<<<< HEAD
+  FormMessage,;
+
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+
+import { JobSchemaType } from "./validation";
+interface DescriptionFieldsProps {;
+
+  control: Control<JobSchemaType>;
+  handleEditorChange: (content: string) => void;
+  editorContent: string;
+}
+
+export function DescriptionFields(): any ({;
+  control,;
+  handleEditorChange,;
+  editorContent,;
+}: DescriptionFieldsProps) {;
+
+  return (
+    <>;
+
+        control={control}
+        name="description"
+control={control}
+        name="description"
+
+        control={control}
+        name="description"        render={({ field }) => (;
+=======
+
+  control: Control < JobSchemaType>;
+  handleEditorChange: (content: string) => void;
+  editor_content: string;
+}
+
+        name="description";
+        render={({ field }) => (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <FormItem>;
+            <FormLabel > Job Description</FormLabel>;
+            <FormControl>;
+<<<<<<< HEAD
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+;
+interface DescriptionFieldsProps {;
+  control:Control<JobSchemaType>,;
+  handleEditorChange:(content:string) => void,;
+  editorContent:string;
+}
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent } DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={control}
+        name="description";
+
+        control={control}
+        name="description"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Job Description</FormLabel>;
+            <FormControl>;
+
+              <Textarea
+
+export function DescriptionFields({
+  control
+  handleEditorChange
+  editorContent
+}: DescriptionFieldsProps) {
+  return (
+    <>
+      <FormField
+        control;
+                  field.onChange(e.target.value)
+
+import React from 'react',
+import { Control } from 'react-hook-form',
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+
+import { JobSchemaType } from './validation',
+interface DescriptionFieldsProps {}
+  control: Control<JobSchemaType>,
+  handleEditorChange: (content: string) => void,
+  editorContent: string';
+import React from 'react',;'
+import { Control } from 'react-hook-form',;"
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;"
+import { Textarea } from "@/components/ui/textarea",;'
+import { JobSchemaType } from './validation',;
+interface DescriptionFieldsProps {;
+  control: Control<JobSchemaType>,;
+  handleEditorChange: (content: string) => void,;
+  editorContent: string;
+}
+;
+
+        name="description"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Description</FormLabel>
+
+              <Textarea
+              <Textarea 
+
+                }}
+
+                className="min-h-[200px]";
+'
+import React from './react';'
+import { Control  } from './react - hook - form';
+import {}
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
   FormDescription,
 
   control: Control < JobSchemaType>;
@@ -342,6 +479,44 @@ import {}
           <FormItem>;
             <FormLabel > Job Description</FormLabel>;
             <FormControl>;
+              <Textarea;
+                value={editor_content}
+
+              <Textarea ;
+
+                value={editorContent}
+                onChange={(e) => {;
+                  handleEditorChange(e.target.value),;
+                  field.onChange(e.target.value),;
+                }}
+                className="min-h-[200px]";
+
+                placeholder="Enter a detailed description of the job role";
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Detailed description of the job role.;
+            </FormDescription>;
+            <FormMessage />;
+
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Responsibilities (Optional)</FormLabel>;
+            <FormControl>;
+
+                {...field}
+              />;
+            </FormControl>;
+            <FormDescription>;
+              List the main responsibilities of this job.;
+            </FormDescription>;
+            <FormMessage />;
+
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}"
+=======
               <Textarea;
                 value={editor_content}
 
@@ -571,11 +746,16 @@ import {}
       <FormField;
         control={control}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         name="application_instructions";
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Application Instructions (Optional)</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
+
+  );});
+=======
 <<<<<<< HEAD
 
   );});
@@ -741,3 +921,4 @@ editorContent: string
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

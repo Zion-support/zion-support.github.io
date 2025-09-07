@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -29,8 +37,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method !== 'GET') {'
     res && res.setHeader('Allow', 'GET');'
     return res && res.status(405).json({ error: 'Method Not Allowed' });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -295,6 +315,10 @@ const _CERTS_FILE  = path.join(process.cwd(), "data", "certifications", "certifi
 }
 =======
   if (req.method !== 'GET') {;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -302,6 +326,14 @@ const _CERTS_FILE  = path.join(process.cwd(), "data", "certifications", "certifi
     const certifications = null;
     return res.status(200).json({ certifications })
   } catch (e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return res.status(500).json({ error: 'Failed to load certifications' });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     return res.status(500).json({ error: Failed to load certifications" })
 }
   }
@@ -381,3 +413,7 @@ const _CERTS_FILE = path.join(process.cwd(), \"data\", \"certifications\", \"cer
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

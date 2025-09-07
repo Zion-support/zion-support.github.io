@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useMemo } from 'react',;
+import { User } from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useMemo } from 'react';
+import { User } from 'lucide-react';
+import React, { useMemo } from 'react;
+import { User } from lucide-react';
+>>>>>>> origin/resolved-merge-conflicts
 
 import { Conversation } from '@/types/messaging',;
 import { ConversationItem } from './ConversationItem',;
@@ -16,6 +31,50 @@ import React, { useMemo } from 'react',import { User  } from 'lucide-react';
 import { Conversation } from '@/types/messaging',import { ConversationItem } from './ConversationItem',import { FixedSizeList as List, ListChildComponentProps } from 'react-window',interface ConversationsListProps  {conversations: Conversation[],activeConversation: Conversation | null,setActiveConversation: (conversation: Conversation) => void,markAsRead: (conversationId: string) => Promise<void>;
 }export function ConversationsList() {const itemSize = 80,const listHeight = useMemo(() => {return Math.min(conversations.length * itemSize, 600)}, [conversations.length]),const Row = ({ index, style }: ListChildComponentProps) => {const conversation = conversations[index],if (!conversation) {return <div style={style} />;
     }return (<div style={style}>;
+=======
+import React, { useMemo } from 'react',;
+import { User } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Conversation } from '@/types/messaging',;
+import { ConversationItem } from './ConversationItem',;
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window',;
+interface ConversationsListProps {;
+  conversations: Conversation[],;
+  activeConversation: Conversation | null,;
+  setActiveConversation: (conversation: Conversation) => void,;
+  markAsRead: (conversationId: string) => Promise<void>;
+
+}
+;
+export function ConversationsList({;
+  conversations,;
+  activeConversation,;
+  setActiveConversation,;
+  markAsRead;
+}: ConversationsListProps) {;
+  const itemSize = 80,;
+  const listHeight = useMemo(() => {;
+    return Math.min(conversations.length * itemSize, 600);
+  }, [conversations.length]),;
+  const Row = ({ index, style }: ListChildComponentProps) => {;
+    const conversation = conversations[index],;
+    if (!conversation) {;
+      return <div style={style} />;
+    }
+;
+    return (;
+      <div style={style}>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <ConversationItem;
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
@@ -53,6 +112,7 @@ export function ConversationsList({
   const itemSize = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
+<<<<<<< HEAD
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
   markAsRead: (conversationId: string) => Promise<void>;
 export function ConversationsList() {const itemSize  = null;return (<div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
@@ -60,20 +120,72 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
         <h3 className='font-medium text-white'>Conversations</h3>;
       </div>;{conversations && conversations.length === 0 ? (<div className='p-8 text-center text-zion-slate'>;
           <User className='h-10 w-10 mx-auto mb-2 text-zion-purple/40' />;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto>;
+  markAsRead: (conversationId: string) => Promise<void>;
+export function ConversationsList() {const itemSize  = null;return (<div className=w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
+      <div className='p-3 border-b border-zion-purple/20>;
+        <h3 className=font-medium text-white'>Conversations</h3>;
+      </div>;{conversations && conversations.length === 0 ? (<div className='p-8 text-center text-zion-slate>;
+          <User className=h-10 w-10 mx-auto mb-2 text-zion-purple/40' />;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
+      <div className='p-3 border-b border-zion-purple/20'>;
+        <h3 className='font-medium text-white'>Conversations</h3>;
+      </div>;
+
+      {conversations && conversations.length === 0 ? (;
+        <div className='p-8 text-center text-zion-slate'>;
+          <User className='h-10 w-10 mx-auto mb-2 text-zion-purple/40' />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           <p>No conversations yet</p>;
           <p className='text-sm mt-1'>;
             Start a conversation from a job or talent profile.;
           </p>;
         </div>;
-      ) : (<List;
+      ) : (;
+
+        <List
           height={listHeight}
           itemCount={conversations && conversations.length}
           itemSize={itemSize}
+<<<<<<< HEAD
           width='100%';
-        >;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          width="100%"
+        >
           {Row}
-        </List>;
+        </List>
       )}
+    </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          width="100%;
+>>>>>>> origin/resolved-merge-conflicts
+        >;
+=======
+          width="100%"
+        >
+>>>>>>> origin/chore/fix-lint-and-merge
+          {Row}
+        </List>
+      )}
+<<<<<<< HEAD
     </div>;
   )}<div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
       <div className='p - 3 border - b border - zion - purple / 20'>;
@@ -149,3 +261,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )})
     </div>
+=======
+    </div>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

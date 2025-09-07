@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+name: string;
+
+  // TODO: Implement
+}
+  name: string;,
+  title: string;
+  avatarUrl: string;
+
+}
+
+=======
+<<<<<<< HEAD
 export interface BlogAuthor {
   name: string,
   title: string,
@@ -61,6 +73,7 @@ name: string;
 
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title: string,
   avatar_url: string;
 
@@ -70,6 +83,47 @@ export interface BlogAuthor {
 }export interface BlogAuthor {
   name: string;
 }
+<<<<<<< HEAD
+
+  id: string;
+
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: BlogAuthor;
+
+  published_date: string;
+  read_time: string;
+  category: string;
+  tags: string[];
+  featuredImage: string;
+  isFeatured?: boolean;
+  isPublished?: boolean;
+  createdBy?: string;
+  updatedAt?: string;
+}
+
+  featured_image: string;
+  is_featured?: boolean;
+  is_published?: boolean;
+  created_by?: string,
+  updated_at?: string;
+}
+// Type for generated blog content;
+
+  meta_description: string;
+  body: string;
+  tags: string[];
+  tweetSummary?: string;
+  imagePrompt?: string;
+
+}
+
+  tweet_summary?: string,
+  image_prompt?: string;
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -100,6 +154,7 @@ export interface BlogPost {;
 
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   publishedDate: string;
   readTime: string;
   category: string;
@@ -108,6 +163,18 @@ export interface BlogPost {;
   isFeatured?: boolean;
   isPublished?: boolean;
 
+<<<<<<< HEAD
+export interface GeneratedBlogContent {;
+  title: string;
+  metaDescription: string;
+  body: string;
+  tags: string[];
+
+  subject: string;
+  previewText: string;
+
+}
+=======
   createdBy?: string
 
   updatedAt?: string
@@ -223,6 +290,7 @@ export interface GeneratedNewsletterContent {
   previewText: string;
 
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface BlogAuthor {;
 
@@ -240,9 +308,13 @@ export interface GeneratedNewsletterContent {;
 <<<<<<< HEAD
 ;
 =======
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

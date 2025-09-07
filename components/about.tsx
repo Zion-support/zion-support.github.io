@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
+
+=======
+<<<<<<< HEAD
+]
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
  ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
 
@@ -644,3 +657,16 @@ export default function AboutPage() {const contactInfo = {mobile: '+1 302 464 09
       </section>;)}
   )
 }
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

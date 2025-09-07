@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 export interface ListingCategory {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   id: string,
   name: string,
   description: string,
   icon: string}
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
 
 }
@@ -17,6 +20,37 @@ export interface ListingCategory {
   description: string;
 
   icon: string;
+<<<<<<< HEAD
+}
+
+}
+  description: string,
+  icon: string;
+
+export interface ProductListing {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+  description: string;
+
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
+
+category: string,
+  subcategory?: string, // Adding optional subcategory field;
+  description: string;,
+
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
+export interface ListingCategory {
+
+export interface ListingCategory {;
+
+  id: string;
+  // TODO: Implement
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 }
@@ -34,6 +68,13 @@ export interface ProductListing {
 <<<<<<< HEAD
 export interface ListingCategory {
 export interface ListingCategory {;
+<<<<<<< HEAD
+
+  id: string;,
+  name: string;
+
+}
+=======
   id: string;
   name: string;
 
@@ -114,20 +155,27 @@ export interface ListingCategory {;
   name: string;
 
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   id: string;
   title: string,
   description: string;
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   price: number | null;
   currency: string;
   tags: string[];
   author: {}
     name: string;
     id: string;
+<<<<<<< HEAD
+
+=======
     avatar_url?: string,
     email?: string, // Added optional email property;
   }
@@ -146,6 +194,7 @@ export interface ListingItem {
   category: string;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;
 export interface ProductListing {;
@@ -161,6 +210,8 @@ export interface ProductListing {;
     name: string,;
     id: string,;
     avatarUrl?: string,;
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
     avatarUrl?: string
@@ -184,6 +235,7 @@ export interface ListingItem {;
 =======
     avatar_url?: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     email?: string, // Added optional email property;
 
   featured?: boolean,
@@ -195,13 +247,19 @@ export interface ListingItem {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 export interface ListingItem {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   title: string;
   category: string;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   image?: string
   description?: string
@@ -209,6 +267,7 @@ export interface ListingItem {
 export type ListingView = 'grid' | 'list';
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   image?: string
   description?: string
 }
@@ -217,13 +276,21 @@ export type ListingView = 'grid' | 'list';
 export interface ListingCategory {;
   id: string,;
   name: string,;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string,;
   icon: string;
 }
 ;
 export interface ProductListing {;
   id: string,;
+<<<<<<< HEAD
+  title: string,,
+=======
   title: string,;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string,;
   category: string,;
   subcategory?: string, // Adding optional subcategory field;
@@ -254,6 +321,8 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   image?: string,
@@ -304,6 +373,7 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   image?: string,
 
@@ -311,6 +381,17 @@ export interface ListingItem {;
   ai_score?: number, // Added ai_score as optional property;
   location?: string, // Adding location property to fix TypeScript errors;
   availability?: string, // Adding availability property to fix TypeScript errors;
+<<<<<<< HEAD
+
+  id: string;
+  title: string;
+  category: string;
+
+  image?: string;
+
+  description?: string;
+}
+=======
 
   id: string;
   title: string;
@@ -389,3 +470,4 @@ export type ListingView = 'grid' | 'list';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

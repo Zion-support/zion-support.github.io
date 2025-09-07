@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+loading: boolean,
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 loading: boolean,
@@ -23,13 +26,17 @@ interface NotificationListProps {
   loading: boolean,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   error: string | null,
   notifications: Notification[],
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   onRetry: () => void
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onRetry: () => void;
 
 }
@@ -41,6 +48,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
   onMarkAsRead;
 <<<<<<< HEAD
 =======
@@ -48,6 +58,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',;
 
 import { Notification } from '@/context/notifications',;
@@ -58,6 +69,12 @@ interface NotificationListProps {;
   onMarkAsRead: (id: string) => Promise<void>,;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
+<<<<<<< HEAD
+}
+
+  loading: boolean;
+  error: string | null;
+=======
 >>>>>>> merged-prs-20250907-203621
 }
 
@@ -70,6 +87,7 @@ interface NotificationListProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   loading: boolean
   error: string | null
@@ -79,6 +97,9 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {ScrollArea} from '@/components/ui/scroll-area';
 import {Skeleton} from '@/components/ui/skeleton';
 import {Button} from '@/components/ui/button';
@@ -90,6 +111,17 @@ interface NotificationListProps {;
   notifications: Notification[],;
   onMarkAsRead: (id: string) => Promise<void>,;
   onDismiss: (id: string) => Promise<void>,;
+<<<<<<< HEAD
+
+  onRetry: () => void;
+}
+export const NotificationList: React.FC<NotificationListProps> = ({}
+';
+import {ScrollArea} from '@/components / ui / scroll - area';'
+import {Skeleton} from '@/components / ui / skeleton';'
+import {Button} from '@/components / ui / button';'
+import {NotificationItem} from './NotificationItem';'
+=======
 
   onRetry: () => void;
 }
@@ -112,6 +144,7 @@ import {Skeleton} from '@/components / ui / skeleton';
 import {Button} from '@/components / ui / button';
 import {NotificationItem} from './NotificationItem';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Notification} from '@/context / notifications';
 interface NotificationListProps {}
 
@@ -139,6 +172,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   on_dismiss: (id: string) => Promise < void>,
   on_retry: () => void;
 }
+<<<<<<< HEAD
+
+  error;
+  notifications;
+
+  on_retry;
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -180,20 +221,28 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }) => {
 
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onDismiss,;
   onRetry;
 }) => {;
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
       {error ? (;"
@@ -249,10 +298,13 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   onRetry;
 }) => {;
   return (
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -280,20 +332,29 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
   return (;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
       {error ? (;
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Button
             variant="outline" 
             size="sm" 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
@@ -304,8 +365,12 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 <Button ;
 =======
 <<<<<<< HEAD
+<Button ;
+=======
+<<<<<<< HEAD
           <Button ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             variant="outline" ;
             size="sm" ;
             className="mt-2";
@@ -317,14 +382,19 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
       ) :loading ? (;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="p-4 space-y-4">;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       ) :notifications.length === 0 ? (;
         <div className="p-8 text-center text-zion-slate-light">;
@@ -335,6 +405,7 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
           <NotificationItem;
             key={notification.id}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ) : notifications && notifications.length === 0 ? (;
         <div className="p-8 text-center text-zion-slate-light">;
           <p>No notifications yet</p>;
@@ -344,6 +415,9 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
           <NotificationItem
             key={notification && notification.id}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ) :notifications.length === 0 ? (;
         <div className="p-8 text-center text-zion-slate-light">;
           <p>No notifications yet</p>;
@@ -381,9 +455,12 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
         </div>;
           <NotificationItem;
             key={notification && notification.id}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
@@ -392,6 +469,8 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
     </ScrollArea>;
   );
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -465,6 +544,7 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </ScrollArea>;
   );
 
@@ -498,6 +578,9 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </ScrollArea>;
   ),;
 },; {
@@ -538,9 +621,13 @@ pr-12325
   );
     </ScrollArea>;
   );
+<<<<<<< HEAD
+};
+=======
 };
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

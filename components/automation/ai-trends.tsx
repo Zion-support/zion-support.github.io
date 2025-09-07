@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
 
 import fs from 'fs';'
@@ -24,10 +28,17 @@ export async function getServerSideProps() {;
 </div> </div>) ) 
 }</div> </div>) 
 }
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
 return { "props": { items } },;
+=======
+=======
+<<<<<<< HEAD
+</div> </div>) ) 
+}</div> </div>) 
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 }</div> </div>) import fs from 'fs';
@@ -120,3 +131,11 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

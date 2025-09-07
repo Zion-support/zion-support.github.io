@@ -73,6 +73,24 @@ import React from "react";"
 import SEO from "../components/SEO";"
 import { Check, ExternalLink } from "lucide-react";"
 export default function ApiPerformanceTestingPage() {
+<<<<<<< HEAD
+=======
+  const features = [
+    \"k6/Gatling-compatible test runner\"
+    \"SLO-aware latency reports\"
+    \"Regression baselines per endpoint\"
+    \"CI checks and PR annotations\"
+    \"Synthetic traffic for staging\"
+  ];
+  return (
+export default function ApiPerformanceTestingPage() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 const features = [;
     "k6/Gatling-compatible test runner""
@@ -90,6 +108,28 @@ const features = [;
     "Regression baselines per endpoint","
     "CI checks and PR annotations","
     "Synthetic traffic for staging""
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const features = [
+    \"k6/Gatling-compatible test runner\",
+    \"SLO-aware latency reports\",
+    \"Regression baselines per endpoint\",
+    \"CI checks and PR annotations\",
+    \"Synthetic traffic for staging\"
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ];
 ;
 return (;
@@ -326,8 +366,28 @@ key={
       </main>;</>)}</>)}ursor/fix-website-loading-errors-and-merge-6662;
     </>)}
 
+<<<<<<< HEAD
 const features = [;
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+  'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
+=======
+const features = [
+  'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ];
 
 const features  = null;return (<>;
@@ -380,8 +440,28 @@ const features  = null;return (<>;
     </>);
 }
 
+<<<<<<< HEAD
 const features = [;
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
+=======
+const features = [
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 	];
 return (;
 		<>

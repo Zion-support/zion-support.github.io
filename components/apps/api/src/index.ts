@@ -25,6 +25,32 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Fastify from 'fastify','
+import cors from '@fastify/cors','
+import rateLimit from '@fastify/rate-limit','
+import dotenv from 'dotenv';'
+import { createOpenAIClient, generateJobPost  } from './openai.js';'
+import { getPool, withUser } from './pg.js';'
+dotenv.config();
+
+const allowed = (process.env.CORS_ORIGINS || '');'
+      .split(',')'
+      .map(s => { return s.trim()); }
+    if (!origin |allowed.includes('*') |allowed.includes(origin)) {'
+      }
+      cb(null, true);
+      return;
+    }
+    cb(new Error('Not allowed'), false);'
+
+      cb(null, true);
+dotenv.config($2);
+const app = Fastify($2);
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import dotenv from 'dotenv';
 
 import { createOpenAIClient, generateJobPost } from './openai ;
@@ -81,10 +107,19 @@ await app.register(cors, {
 dotenv.config($2);
 const app = Fastify($2);
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 await app.register(cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
   },
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
@@ -92,6 +127,10 @@ await app.register(cors, {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       cb(null, true);
       return
     }
@@ -99,6 +138,11 @@ await app.register(cors, {
   };
   methods: ['GETPOSTOPTIONS']
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
@@ -110,6 +154,10 @@ function getUserId(req: any): string | null {
   );  return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 
@@ -121,13 +169,35 @@ function getUserId(req: any): string | null {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
+  return { text: completion.output_text }
+});
+
+app.post('/jobs/generate', async (req, reply) => {
+  const body = (req.body as any) || {};
+  const role = (body.role as string) || 'Engineer';
+      cb(null, true);
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     input: prompt,
   });
@@ -289,6 +359,10 @@ await app.register (cors, {
 }
       cb (null, true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       return;
     }'
     cb(new Error('Not allowed'), false)
@@ -310,6 +384,17 @@ return (;
     null
   );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+app.post('/ai/ask', async (req, reply) => {'
+  }
+  const body = (req.body as any) |{}
+;
+  const prompt = body.prompt as string;
+  if (!prompt) return reply.code(400).send({ "error": 'prompt required','
+=======
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) |{}
@@ -335,12 +420,39 @@ app.post('/ai/ask', async (req, reply) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 });
 
 const completion = await openai.responses.create({
     }
     "model": 'gpt-4o-mini','
     "input": prompt
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  });
+return { "text": completion.output_text,;
+};
+});
+app.post('/jobs/generate', async (req, reply) => {'
+  }
+  const body = (req.body as any) |{}
+;
+  const role = (body.role as string) |'Engineer';'
+
+const userId = getUserId(req);
+
+const description = await generateJobPost(openai, role, body);
+  if (!userId) return { description };
+await withUser(userId, async (client) => {
+    }
+    await client.query(
+      `INSERT INTO job_post (user_id, title, description, location, tags, status)`       VALUES ($1, $2, $3, $4, $5, 'draft')``      [userId, role, description, body.location |null, body.tags |null]
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost  } from './openai.js';
@@ -827,6 +939,10 @@ app.listen({ port, host: '0.0.0.0' }).catch((err) => {
 });
 =======
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     );
     );
     return res && res.rows;
@@ -844,6 +960,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const userId = getUserId(req);
 
   if (!userId) return reply.code(401).send({ "error": 'unauthorized','
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 });
     );
     );
@@ -861,6 +982,10 @@ const project = await withUser(userId, async client => {
     );
     return res && res.rows;
   return { items }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 });
 });'
 app.get ('/talent / search, async (req, reply) => {}
@@ -891,8 +1016,17 @@ app.get ('/talent / search, async (req, reply) => {}
   return { results: rows }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
     );
     );
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    );
+    );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     );
 return res.rows;

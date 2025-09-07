@@ -1,4 +1,49 @@
 <<<<<<< HEAD
+import { formatDate } from '../formatters';
+export function addWorkExperienceSection(';
+import {jsPDF} from 'jspdf';'
+import {WorkExperience} from '@/types / resume';'
+import {PdfThemeColors} from '../theme_config';'
+import {format_date} from '../formatters';
+export function addWorkExperienceSection (
+
+import { jsPDF  } from 'jspdf';
+import { WorkExperience  } from '@/types/resume';
+import { PdfThemeColors  } from '../themeConfig';
+import { formatDate } from '../formatters';
+
+import {jsPDF} from 'jspdf';
+import {WorkExperience} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+
+import {formatDate} from '../formatters';
+
+  doc: jsPDF;
+  workExperience: WorkExperience[];
+  colors: PdfThemeColors;
+  startY: number
+): number {
+
+  doc && doc.setFontSize(16);
+  doc && doc.setTextColor(colors && colors.heading);'
+  doc && doc.text('Professional Experience', 20, yPos);
+  yPos += 8;
+
+  doc: jsPDF;
+  workExperience: WorkExperience[];
+  colors: PdfThemeColors;
+  startY: number;
+): number {}
+
+  doc: jsPDF;
+  work_experience: WorkExperience[];
+  colors: PdfThemeColors;
+  let yPos = startY;
+
+    // Check if we need to add a new page
+    if (yPos > 260) {
+=======
+<<<<<<< HEAD
 
 import { jsPDF } from 'jspdf';
 import { WorkExperience } from '@/types/resume';
@@ -227,6 +272,7 @@ import {formatDate} from '../formatters';
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       doc && doc.addPage();
       yPos = 20
     }
@@ -250,7 +296,10 @@ import {formatDate} from '../formatters';
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
     
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
@@ -293,6 +342,9 @@ import {formatDate} from '../formatters';
       yPos += 20
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } else {
       yPos += 20
 
@@ -322,10 +374,13 @@ import {formatDate} from '../formatters';
     } else {
       yPos += 20
 
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -423,6 +478,11 @@ pr-12325
   }
 
 =======
+<<<<<<< HEAD
+    }
+  }
+
+=======
 
 <<<<<<< HEAD
     }
@@ -441,6 +501,7 @@ pr-12325
 if (return start_y) {
   $2
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
   let y_pos = start_y;
@@ -528,6 +589,10 @@ pr-12325
 }
     }
   }
+<<<<<<< HEAD
+  return yPos + 5;
+}
+=======
 <<<<<<< HEAD
   return yPos + 5;
 }
@@ -643,3 +708,4 @@ doc.text (dateText, 20, yPos + 10);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

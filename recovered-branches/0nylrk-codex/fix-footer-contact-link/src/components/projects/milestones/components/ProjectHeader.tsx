@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 
+=======
+<<<<<<< HEAD
+import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
+
 <<<<<<< HEAD
 import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader';
 // Re-export the existing ProjectHeader component
 export { OriginalProjectHeader as ProjectHeader },
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { ProjectHeader, as, OriginalProjectHeader } from "../ProjectHeader";
 // Re-export the existing ProjectHeader component;
 export { OriginalProjectHeader as ProjectHeader };
@@ -16,6 +21,9 @@ export { OriginalProjectHeader as ProjectHeader }
 
 import { ProjectHeader, as, OriginalProjectHeader } from "../ProjectHeader";
 // Re-export the existing ProjectHeader component
+<<<<<<< HEAD
+export { OriginalProjectHeader as ProjectHeader };
+=======
 export { OriginalProjectHeader as ProjectHeader };
 =======
 <<<<<<< HEAD
@@ -70,3 +78,4 @@ export { OriginalProjectHeader as ProjectHeader }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

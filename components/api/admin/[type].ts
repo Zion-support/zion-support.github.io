@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types';
 import { v4 as uuidv4 } from 'uuid';
@@ -38,6 +44,10 @@ function toCsv(rows: any[]): string {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     format: (format as any) || undefined}
 }
@@ -50,6 +60,55 @@ function toCsv(rows: any[]): string {
     return ' + s.replace(/"/g, '") + '
   }
   const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const "filters": Record<string, any> = {};
+  Object.keys(rest).forEach((k) => {
+    }
+    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]'
+  });
+  return {
+    }
+    search;
+return (;
+    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    process.env.NEXT_PUBLIC_SUPABASE_URL !== '"https"://placeholder.supabase.co''
+  );
+
+function parseListParams("req": NextApiRequest): ListParams & { format?: 'csv','
+} {
+  }
+  const { search, sort, order, page, pageSize, format, ...rest } =
+    req.query as Record<string, string>;
+
+const "filters": Record<string, any> = {};
+  Object.keys(rest).forEach((k) => {
+    }
+    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];'
+  });
+  return {
+    }
+    search,
+    sort,
+    "order": (order as any) || 'desc','
+    "page": page ? Number(page) : 0,
+    "pageSize": pageSize ? Number(pageSize) : 20,
+    filters,
+    "format": (format as any) || undefined
+  };
+
+    sort;
+    "order": (order as any) |'desc';'
+    "page": page ? Number(page) : 0;
+    "pageSize": pageSize ? Number(pageSize) : 20;
+
+    filters;
+
+    "format": (format as any) || undefined}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
@@ -96,6 +155,10 @@ import { supabase as client  } from '../../../utils/supabase/client';
 import { MOCK_DATA } from '../../../utils/admin/mockData';
 function isSupabaseConfigured() {}
   return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv'}
@@ -279,6 +342,24 @@ export default async function handler(
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const type = (req.query.type as AdminType) || '';
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { type } = req.query as { type: AdminType };
+
+  if (req && req.method = == 'GET') {'
+   ;
+  }
+  const params = parseListParams(req);
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 
 export default async function handler(
@@ -337,8 +418,51 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const useSupabase = isSupabaseConfigured();
   if (req && req.method === 'GET') {
     const params = parseListParams(req);
+<<<<<<< HEAD
     if (useSupabase) {
       const table = type;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    if (useSupabase) {
+      const table = type;
+<<<<<<< HEAD
+let query = client && client.from(table).select('*', { "count": 'exact',;'
+});
+      if (params && params.search) {
+        // "heuristic": search name/title/email
+}
+query = query.or(
+          'name.ilike.%' +'
+            params.search +
+            '%,title.ilike.%' +'
+            params.search +
+            '%,email.ilike.%' +'
+            params.search +
+            '%''
+        );
+
+      }
+      if (params.sort)query = query.order(params.sort, { "ascending": params.order === 'asc','
+};
+  const from = params.page * params.pageSize;
+
+const to = from + params.pageSize - 1;
+
+const { data, error, count } = await query.range(from, to);
+      if (error) return res.status(500).json({ "error": error.message
+});
+      if (params.format === 'csv') {'
+}
+res.setHeader('Content-Type', 'text/csv');'
+        res.setHeader(
+          'Content-Disposition''
+          `attachment; filename="${type}.csv"``        );
+        return res.status(200).send(toCsv(data || []));
+      }
+return res.status(200).json({ "items": data |[], "total": count |0,;
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
 =======
@@ -415,6 +539,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).send(toCsv(data || []))
       }
       return res.status(200).json({ items: data || [], total: count || 0 })
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     } else {
       // fallback
       const all = (MOCK_DATA[type] || []).slice();
@@ -629,6 +757,91 @@ filtered = filtered.filter(r =>
           );}
 >>>>>>> merged-prs-20250907-203621
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (params.sort) {
+        }
+        filtered.sort(("a": any, "b": any) => {
+      }
+      // Check condition,
+if ( {) {
+  $2
+}
+        filtered.sort (("array": any, "boolean": any) => {
+          }
+          const av = (a as any)[params.sort!];
+          const bv = (b as any)[params.sort!];
+          return (
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
+
+const bv = (b as any)[params.sort!];
+
+return (;
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)'
+          );
+        });
+      }
+
+const total = filtered.length;
+
+const start = params.page * params.pageSize;
+
+const end = start + params.pageSize;
+
+const pageItems = filtered.slice(start, end);
+      if (params.format === 'csv') {'
+}
+res.setHeader('Content-Type', 'text/csv');'
+        res.setHeader(
+          'Content-Disposition''
+          `attachment; filename="${type}.csv"``
+        );
+        return res.status(200).send(toCsv(pageItems));
+      return res.status(200).json({ "items": pageItems, total });
+    }
+
+      "id": string;
+
+      "updates": Record<string, any>;
+    }
+    if (!id) return res.status(400).json({ "error": 'Missing id','
+})return res.status(200).json({ "items": pageItems, total })}
+  }if (req.method = == 'PATCH') ;'
+  const { id, updates } = req.body as {"id": string;
+      }
+      "updates": Record<string, any>
+};
+
+    if (!id) return res && res.status(400).json({ "error": 'Missing id','
+});
+    if (useSupabase) {
+}
+const { data, error } = await client;
+        .from(type)
+        .update({ ...updates, "updated_at": new Date().toISOString()
+})
+        .eq('id', id)'
+        .select('*')'
+        .single();
+      if (error) return res && res.status(500).json({ "error": error && error.message
+});
+return res && res.status(200).json({ "item": data,;
+});
+    } else {
+      }
+      const updated = {
+        ...list[idx],
+        ...updates
+        }
+        "updated_at": new Date().toISOString()
+      };
+      list[idx] = updated as any;
+
+return res.status(200).json({ "item": updated,;
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
       }
 <<<<<<< HEAD
       if (params.sort) {
@@ -649,9 +862,28 @@ filtered = filtered.filter(r =>
         return res.status(200).send(toCsv(pageItems))
       }
       return res.status(200).json({ items: pageItems, total })
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }
+return res.status(200).json({ "item": updated,;
+});    }
+
+<<<<<<< HEAD
+    }
+
+  if (req.method = == 'DELETE') {'
+   ;
+>>>>>>> origin/resolved-merge-conflicts
   }
 
+<<<<<<< HEAD
+=======
+return res.status(200).json({ "ok": true,;
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as { id: string, updates: Record<string, any> };
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -659,6 +891,10 @@ filtered = filtered.filter(r =>
       const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single();
       if (error) return res.status(500).json({ error: error.message });
       return res.status(200).json({ item: data })
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     } else {
 =======
 <<<<<<< HEAD
@@ -1044,6 +1280,16 @@ return res.status(200).json({ ok: true}
       list[idx] = updated as any;
       return res.status(200).json({ item: updated })
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const idx = list.findIndex(("r": any) => r.id === id);
+      if (idx = == -1);
+return res.status(404).json({ "error": 'Not found',;'
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
 <<<<<<< HEAD
 
@@ -1059,6 +1305,10 @@ return res.status(200).json({ ok: true}
       const list = MOCK_DATA[type] || [];
       const idx = list.findIndex((r: any) => r.id === id);
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       list.splice(idx, 1);
       return res.status(200).json({ ok: true })
     }
@@ -1105,22 +1355,46 @@ const idx = list.findIndex((r: any) => r.id === id);
       return res.status(200).json({ ok: true}
 });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+return res.status(405).json({ "error": 'Method not allowed',;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
 
 <<<<<<< HEAD
 
 =======
   return res.status(405).json({ error: 'Method not allowed'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 });
 }return res.status (200) .send (toCsv (data || []) );
 }return res.status (200) .send (toCsv (pageItems) );
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+}return res.status (200) .send (toCsv (data |[]) );
+}return res.status (200) .send (toCsv (pageItems) );
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
 return res.status(405).json({ error: 'Method not allowed'}
 });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 <<<<<<< HEAD

@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -12,10 +14,52 @@
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+<<<<<<< HEAD
+
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+
+export function LanguageSelector() {;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+import React from 'react',
+import { useTranslation } from 'react-i18next',
+import { Button } from '@/components/ui/button',
+
+import { Globe } from 'lucide-react',
+import {}
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,'
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu','
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
+
+export function LanguageSelector() {};
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+
+=======
 <<<<<<< HEAD
 import {
   DropdownMenu
@@ -122,6 +166,7 @@ export function LanguageSelector() {};
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
@@ -137,6 +182,87 @@ export function LanguageSelector() {};
         align="end"
         className="bg-zion-blue-dark border border-zion-purple/20">;
         {supportedLanguages && supportedLanguages.map((lang) => (;
+<<<<<<< HEAD
+          <DropdownMenuItem
+            key={lang && lang.code}
+            className={`cursor-pointer ${
+              currentLanguage === lang && lang.code
+                ? "bg-zion-purple/20 text-zion-cyan"
+                : "text-white hover:bg-zion-purple/10"
+            }`}
+            onClick={() => changeLanguage(lang && lang.code)}
+          >;
+            <div className="flex items-center gap-2">;
+              <span className="text-lg">{lang && lang.flag}</span>;
+              <span>{t(`language.${lang && lang.code}`)}</span>;
+
+            </div>;
+
+          </DropdownMenuItem>;
+        ))}
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+
+      >;
+        {supported_languages.map ((lang) => (
+</DropdownMenu>
+      <DropdownMenuTrigger asChild>;
+</DropdownMenuTrigger>
+        <Button;'
+          variant="ghost"""
+          size="icon"""
+          className="text-white hover:bg-zion-purple/10">;"
+</Button>"
+          <Globe className="h-5 w-5" />;"
+</Globe>)"
+          <span className="sr-only">{t("general && general.select_language")}</span>;"
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent;"
+        align="end"""
+        className="bg-zion-blue-dark border border-zion-purple/20">;"
+</DropdownMenuContent>
+          <DropdownMenuItem;
+            key={lang && lang.code}
+            className={`cursor-pointer ${
+              currentLanguage === lang && lang.code;"
+                ? "bg-zion-purple/20 text-zion-cyan"""
+                : "text-white hover:bg-zion-purple/10""
+            }`}
+            onClick={() => changeLanguage(lang && lang.code)}
+</DropdownMenuItem>"
+            <div className="flex items-center gap-2">;"
+</div>"
+              <span className="text-lg">{lang && lang.flag}</span>;"
+              <span>{t(`language.${lang && lang.code}`)}</span>;
+            </div>;
+          </DropdownMenuItem>;
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+    <DropdownMenu>;
+</DropdownMenu>
+      <DropdownMenuTrigger as_child>;
+</DropdownMenuTrigger>
+        <Button;"
+          variant="ghost";""
+          size="icon";""
+          className="text - white hover:bg - zion - purple / 10";"
+        >;
+</Button>"
+          <Globe className="h - 5 w - 5" />;"
+</Globe>"
+          <span className="sr - only">{t ("general.select_language")}</span>;"
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent;"
+        align="end";""
+        className="bg - zion - blue - dark border border - zion - purple / 20";"
+      >;
+</DropdownMenuContent>
+          <DropdownMenuItem;
+            key={lang.code}
+
+=======
           <DropdownMenuItem
             key={lang && lang.code}
             className={`cursor-pointer ${
@@ -338,11 +464,21 @@ const { t } = useTranslation();
             className={`cursor-pointer ${;
               currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }`}
             onClick={() => changeLanguage(lang.code)}
           >"
             <div className="flex items-center gap-2">"
               <span className="text-lg">{lang.flag}</span>`
+<<<<<<< HEAD
+              <span>{t(`language.${lang.code}`)}</span>
+            </div>
+          </DropdownMenuItem>
+        ))});
+}
+});
+}
+=======
 >>>>>>> merged-prs-20250907-203621
               <span>{t(`language.${lang.code}`)}</span>
             </div>
@@ -367,6 +503,7 @@ const { t } = useTranslation();
 }
     </DropdownMenu>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   ),;}
  return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
@@ -386,6 +523,9 @@ const { t } = useTranslation();
 =======
 
   );
+<<<<<<< HEAD
+}
+=======
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -399,3 +539,4 @@ const { t } = useTranslation();
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

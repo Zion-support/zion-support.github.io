@@ -2,15 +2,21 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 interface AIEnhancementButtonProps {
   currentContent: string,
@@ -32,10 +38,14 @@ interface AIEnhancementButtonProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -44,12 +54,58 @@ import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface AIEnhancementButtonProps {
 
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 
+<<<<<<< HEAD
+import {useState} from 'react';
+
+import {Button} from '@/components / ui / button';
+export function AIEnhancementButton({;
+
+  buttonText?: string;
+
+  className?: string;
+export function AIEnhancementButton({
+
+  currentContent;
+pr-12325
+
+}
+export function AIEnhancementButton({
+export function AIEnhancementButton({;
+  enhancementType;
+  context;
+  onEnhanced;
+
+  const { enhanceContent, isEnhancing } = useResumeEnhancer();
+  const [error, setError] = useState<string | null>(null);'
+      setError('Please enter at least some basic content before enhancing');
+      return;
+    }
+    setError(null);
+      currentContent;
+      enhancementType;
+      context;
+    );
+
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
+  };
+
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',;
+  context?: string,;
+  onEnhanced: (enhancedContent: string) => void,;
+  buttonText?: string,;
+  className?: string;
+}
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -197,10 +253,13 @@ export function AIEnhancementButton({
   onEnhanced,
   buttonText = "Enhance with AI",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   
   const handleEnhance = async () => {
@@ -224,10 +283,13 @@ export function AIEnhancementButton({
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       setError('Please enter at least some basic content before enhancing'),
       return;
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     
     setError(null);
@@ -257,6 +319,7 @@ export function AIEnhancementButton({
   
   
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     setError(null);
     const enhancedContent = await enhanceContent(
@@ -283,11 +346,14 @@ export function AIEnhancementButton({
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Button
 
@@ -297,12 +363,17 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <span className="text-xs">{buttonText}</span>;
     </Button>;
 
 }
 
+<<<<<<< HEAD
+=======
 =======
       onClick={handleEnhance}
 <<<<<<< HEAD
@@ -374,6 +445,7 @@ export function AIEnhancementButton({;
 
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 
   enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
@@ -389,6 +461,9 @@ function AIEnhancementButton() {}
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
   const handle_enhance = async () => {
     // Check condition
@@ -412,6 +487,7 @@ if ( {) {
     }
   }
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Button;
       type="button";
@@ -434,7 +510,10 @@ context);
 ) : (<Sparkles className="h-3 w-3" />) 
 }</Button>) 
 }
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       disabled={isEnhancing}
     >
       {isEnhancing ? (
@@ -447,6 +526,9 @@ context);
   )
 }
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 
@@ -491,3 +573,4 @@ context);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

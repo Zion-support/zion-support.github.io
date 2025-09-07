@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useRouter  } from 'next/router';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { useState, useEffect  } from 'react;
+import { useRouter  } from next/router';
+import { useAuth  } from '@/hooks/useAuth;
+import { Button  } from @/components/ui/button';
+>>>>>>> origin/resolved-merge-conflicts
 import { Card;
   CardContent;
   CardFooter;
@@ -14,9 +27,26 @@ import { Card;
   Calendar;
   Eye;
   MessageSquare;
+<<<<<<< HEAD
 } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+} from lucide-react';
+import { cn  } from '@/lib/utils;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from @/components/ui/card';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { useState, useEffect  } from 'react';
+import { useRouter  } from 'next/router';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -36,9 +66,24 @@ import {};
   Calendar;
   Eye;
   MessageSquare'
+<<<<<<< HEAD
 } from 'lucide-react''
 import { cn } from '@/lib/utils''
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+} from 'lucide-react''
+import { cn } from '@/lib/utils''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+} from 'lucide-react
+import { cn } from '@/lib/utils'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from @/components/ui/card'
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
@@ -64,6 +109,15 @@ interface WizardStep  {title: string;
 
 interface OnboardingWizardProps {;
 
+=======
+} from 'lucide-react''
+import { cn } from '@/lib/utils''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { cn } from '@/lib/utils';
 
@@ -258,6 +312,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     <Card className={cn('border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md', className)}>
 
       <CardHeader>
+<<<<<<< HEAD
         <CardTitle className='text-center text-white'>
           {type === 'client' ? 
             'Ready to find top IT talent?' : 
@@ -266,6 +321,43 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardHeader>
       <CardContent>
         <div className='flex items-center mb-6'>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <CardTitle className=text-center text-white>
+          {type === client' ? 
+            "Ready to find top IT talent?" : 
+            Let's build your professional profile}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="flex items-center mb-6">
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           {/* Step dots */}
 
           <div className='flex items-center justify-center flex-1'>
@@ -279,10 +371,23 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 origin/cursor/automate-test-improve-and-merge-code-2533
                   index === currentStep
 
+<<<<<<< HEAD
                     ? 'bg-zion-purple scale-125'
                     : index < currentStep'
                     ? 'bg-zion-cyan''
                     : 'bg-zion-blue-light'
+=======
+                    ? bg-zion-purple scale-125
+                    : index < currentStep"
+                    ? "bg-zion-cyan
+                    : "bg-zion-blue-light"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 interface OnboardingWizardProps  {url: string;
   }skipText?: string;interface OnboardingWizardProps  {type: 'client' | 'talent';
   onComplete: () => void;
@@ -352,8 +457,19 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
                   'h-2 w-2 rounded-full mx-1'}export function OnboardingWizard() {const [currentStep, setCurrentStep] = useState(0)const router  = null;index === currentStep;
                     ? 'bg-zion-purple scale-125';
                     : index < currentStep;
+<<<<<<< HEAD
                     ? 'bg-zion-cyan';
                     : 'bg-zion-blue-light';
+=======
+                    ? "bg-zion-cyan";
+                    : bg-zion-blue-light;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 )}
               />;
             ))}
@@ -371,17 +487,38 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
 
         {steps[currentStep]?.skipText && (;
 
-
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
 
+<<<<<<< HEAD
           className='w-full bg-zion-purple hover:bg-zion-purple-light'
         </Button>;{steps[currentStep]?.skipText && (<Button;
             variant='ghost';
             className='text-zion-slate-light hover:text-white';
             onClick={handleSkip}>;className='w-full bg-zion-purple hover:bg-zion-purple-light';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          className=w-full bg-zion-purple hover:bg-zion-purple-light
+        </Button>;{steps[currentStep]?.skipText && (<Button;
+            variant=ghost';
+            className='text-zion-slate-light hover:text-white;
+            onClick={handleSkip}>;className="w-full bg-zion-purple hover:bg-zion-purple-light";
+=======
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           onClick={handleAction}
         >;
           {steps[currentStep]?.action.text}
@@ -397,16 +534,38 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
             {steps[currentStep]?.skipText}
           </Button>
         )}
+<<<<<<< HEAD
 
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;{steps[currentStep]?.skipText}
           </Button>;
         )}</CardFooter>;
@@ -503,3 +662,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   )
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

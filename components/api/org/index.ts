@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { readOrgData, filterOrgData } from '../../../utils/org-data';
 =======
 <<<<<<< HEAD
@@ -80,6 +84,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const parseArray = (v: string | string[] | undefined) => {
+    if (!v) return undefined;
+    return Array.isArray(v)
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
   }}const data  = readOrgData()const data = readOrgData()const parseArray = (v?: string | string[]) => {if (!v) return undefined;
@@ -196,11 +208,16 @@ if (return undefined) {
   const filters: OrgFilters = {
 return Array.isArray(v)
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ? v
       : v
           .split(',')
           .map(s => s.trim())
           .filter(Boolean);
+<<<<<<< HEAD
   }
   const filters: OrgFilters = {}
   const filters: OrgFilters = {'
@@ -212,6 +229,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     regions: parseArray(req && req.query.regions);
     countries: parseArray(req && req.query.countries);
 
+=======
+<<<<<<< HEAD
+  };
+
+  const filters: OrgFilters = {
+    view: (req.query.view as OrgFilters['view']) || 'all',
+=======
+  }
+  const filters: OrgFilters = {}
+  const filters: OrgFilters = {'
+    view: (req && req.query.view as OrgFilters[view]) || 'all';
+    roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
+    departments: parseArray(req && req.query.departments);
+    categories: parseArray(req && req.query.categories);
+    zones: parseArray(req && req.query.zones);
+    regions: parseArray(req && req.query.regions);
+    countries: parseArray(req && req.query.countries);
+
+>>>>>>> origin/resolved-merge-conflicts
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }'
@@ -319,13 +355,23 @@ const filters: OrgFilters = {view: (req.query.view as OrgFilters['view']) |'all'
   const filtered = filterOrgData(data, filters)return res.status(200).json(filtered)
 >>>>>>> merged-prs-20250907-203621
   const filters: OrgFilters = $2;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined,
-    departments: parseArray($2);
-    categories: parseArray($2);
-    zones: parseArray($2);
-    regions: parseArray($2);
-    countries: parseArray($2);
+    departments: parseArray(req.query.departments),
+    categories: parseArray(req.query.categories),
+    zones: parseArray(req.query.zones),
+    regions: parseArray(req.query.regions),
+    countries: parseArray(req.query.countries),
     search: (req.query.search as string) || undefined,
+<<<<<<< HEAD
+    teamOnly: req.query.teamOnly === 'true' ? true : undefined,
+  };
+
+  const data = readOrgData();
+  const filtered = filterOrgData(data, filters);
+  return res.status(200).json(filtered);
+}
+=======
     teamOnly: req.query.teamOnly = $2;
   const filtered = filterOrgData($2);
   return res.status(200).json(filtered)
@@ -375,3 +421,7 @@ teamOnly: req.query.teamOnly === 'true' ? true : undefined }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

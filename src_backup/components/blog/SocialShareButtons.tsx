@@ -45,6 +45,12 @@ function SocialShareButtons() {}
 if (return) {
   $2
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 export function SocialShareButtons() {const shareUrl =;
   const shareToTwitter = () => {const shareToTwitter = () => {window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`;
@@ -83,6 +89,12 @@ if (return) {$2;
           variant='outline';
           size='sm';
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     navigator.clipboard;
       .write_text (window.location.href);'
@@ -186,15 +198,34 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     <div className='mt - 12 flex flex - wrap gap - 2'>;
       {buttons.map (btn => (
         <Button;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ))}</div>;
   )}}icon: <Twitter className='h - 4 w - 4' />,label: 'Twitter',on_click: shareToTwitter},{icon: <Facebook className='h - 4 w - 4' />,label: 'Facebook',on_click: shareToFacebook},{icon: <Linkedin className='h - 4 w - 4' />,label: 'LinkedIn',on_click: shareToLinkedIn},{icon: <LinkIcon className='h - 4 w - 4' />,label: 'Copy Link',on_click: copy_link}];
   return (<div className='mt - 12 flex flex - wrap gap - 2'>;
       {buttons.map (btn => (<Button;
           key={btn.label}
           variant='outline';
+<<<<<<< HEAD
           key={btn.label}'
           variant='outline';'
           size='sm';
+=======
+          size=sm';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          key={btn.label}'
+          variant='outline';'
+          size='sm';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           on_click={btn.on_click}
           aria - label={btn.label}
         >          {btn.icon}
@@ -325,6 +356,12 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
           <span>{btn.label}</span>;
         </Button>;
       ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 },const shareToFacebook = () => {window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')},const shareToLinkedIn = () => {window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')},const copyLink = () => {if (typeof window === 'undefined') return,navigator.clipboard;
       .writeText(window.location.href).then(() => toast.success('Link copied to clipboard')).catch(() => toast.error('Failed to copy link'))</div>;
@@ -346,6 +383,12 @@ export function SocialShareButtons() {const shareUrl  = null;return (<div classN
       ))}</div>;
   )}</div>;
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 

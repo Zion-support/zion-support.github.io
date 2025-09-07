@@ -1,11 +1,14 @@
 export interface ResumeBasicInfo {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   id?: string,
   title: string,
   headline?: string,
   summary?: string
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   id?: string;
   title: string;
@@ -15,6 +18,9 @@ export interface ResumeBasicInfo {
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -24,6 +30,8 @@ export interface ResumeBasicInfo {;
 
 }
 
+<<<<<<< HEAD
+=======
 =======
 export interface WorkExperience {
 <<<<<<< HEAD
@@ -56,6 +64,7 @@ export interface WorkExperience {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id?: string;
   company_name: string;
   role_title: string;
@@ -78,6 +87,45 @@ export interface WorkExperience {;
   location?: string;
 }
 
+<<<<<<< HEAD
+  company_logo_url?: string,
+  location?: string;
+
+}
+export interface Education {
+export interface Education {
+  company_logo_url?: string
+
+  location?: string
+}
+export interface Education {
+
+export interface Education {;
+  id?: string;
+  institution: string;
+  degree: string;
+  field_of_study?: string;
+
+export interface WorkExperience {
+  // TODO: Implement
+  // TODO: Implement
+export interface ResumeBasicInfo {;
+
+  // TODO: Implement
+export interface WorkExperience {;
+  company_name: string;,
+  role_title: string;
+pr-12325
+  start_date: Date | string;
+  end_date?: Date | string;
+  is_current: boolean;
+  description?: string;
+
+}
+
+  id?: string;
+
+=======
 <<<<<<< HEAD
 export interface Education {
 >>>>>>> merged-prs-20250907-203621
@@ -239,12 +287,16 @@ export interface PortfolioProject {;
 export interface PortfolioProject {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id?: string;
   title: string;
   description?: string;
   technologies?: string[];
   image_url?: string;
   github_url?: string;
+<<<<<<< HEAD
+  demo_url?: string;
+=======
 <<<<<<< HEAD
   demo_url?: string;
 =======
@@ -273,11 +325,14 @@ export interface Resume {;
 =======
   demo_url?: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   pdf_url?: string;
 }
 
   id?: string;
 
+<<<<<<< HEAD
+=======
   title: string,;
   headline?: string,;
   summary?: string;
@@ -393,13 +448,22 @@ export interface Resume {
 }
 export interface ResumeBasicInfo {;
   id?: string,;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title: string,;
   headline?: string,;
   summary?: string;
+
 }
 ;
 export interface WorkExperience {;
   id?: string,;
+  portfolio_projects?: PortfolioProject[]
+
+  id?: string,;
+  title: string,;
+  headline?: string,;
+;
+pr-12325
   company_name: string,;
   role_title: string,;
   start_date: Date | string,;
@@ -434,6 +498,17 @@ export interface Skill {;
 export interface Certification {;
   id?: string,;
   name: string,;
+export interface Education {;
+  institution: string,;
+  degree: string,;
+  field_of_study?: string,;
+  institution_logo_url?: string,;
+export interface Skill {;
+  name: string,;
+  proficiency?: number,;
+  category?: string,;
+export interface Certification {;
+pr-12325
   issuing_organization: string,;
   issue_date?: Date | string,;
   expiration_date?: Date | string,;
@@ -445,6 +520,8 @@ export interface PortfolioProject {;
   id?: string,;
   title: string,;
   description?: string,;
+export interface PortfolioProject {;
+pr-12325
   technologies?: string[],;
   image_url?: string,;
   github_url?: string,;
@@ -454,6 +531,8 @@ export interface PortfolioProject {;
 ;
 export interface Resume {;
   id?: string,;
+export interface Resume {;
+pr-12325
   user_id?: string,;
   basic_info: ResumeBasicInfo,;
   work_experience: WorkExperience[],;
@@ -461,6 +540,13 @@ export interface Resume {;
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
+<<<<<<< HEAD
+
+  is_active: boolean;
+
+}
+;
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   portfolio_projects?: PortfolioProject[],
@@ -480,3 +566,4 @@ export interface ResumeBasicInfo {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

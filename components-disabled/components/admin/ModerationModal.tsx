@@ -407,9 +407,28 @@ export default function ModerationModal() {
   onAction}
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 }
 
 const [adminNotes, setAdminNotes] = useState('');'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const [adminNotes, setAdminNotes] = useState('');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+
+=======
+const [adminNotes, setAdminNotes] = useState('');
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   if (!flag) return null;
 
 return (;

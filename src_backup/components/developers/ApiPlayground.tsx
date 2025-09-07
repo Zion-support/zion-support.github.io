@@ -20,12 +20,51 @@ method
   $2
 
 }
-        try {const json_data = await res.json ()response_text = JSON.stringify (json_data, null, 2)} catch {response_text = await res.text ()}
-      } else {response_text = await res.text ()}// Format the response with status information;
+        try {
+          const json_data = await res.json ();
+          response_text = JSON.stringify (json_data, null, 2);
+        } catch {
+          response_text = await res.text ();
+        }
+      } else {
+        response_text = await res.text ();
+      }
+
+      // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
+<<<<<<< HEAD
       set_response (status_info + response_text)} catch (err: any) {let error_message = 'Request failed';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      set_response (status_info + response_text)} catch (err: any) {let error_message = Request failed';
+>>>>>>> origin/resolved-merge-conflicts
       // Check condition;
 if ( {) {$2;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      set_response (status_info + response_text);
+
+    } catch (err: any) {
+      let error_message = 'Request failed';
+      // Check condition
+if ( {) {
+  $2
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 import { useState } from 'react';
@@ -34,11 +73,25 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
+<<<<<<< HEAD
       } else {import { useState  } from 'react';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
 import { Button  } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      } else {import { useState  } from react';
+import { Input  } from '@/components/ui/input;
+import { Textarea  } from @/components/ui/textarea';
+import { Button  } from '@/components/ui/button;
+import CodeBlock from ./CodeBlock';
+>>>>>>> origin/resolved-merge-conflicts
   name: string;
 type: string;
 required?: boolean;
@@ -78,6 +131,11 @@ required?: boolean ;
           'Network error - check CORS configuration or API endpoint';
       } else {;
         errorMessage = err && err.message || 'Unknown error occurred';
+<<<<<<< HEAD
+=======
+      } else {
+        errorMessage = err && err.message || Unknown error occurred';
+>>>>>>> origin/resolved-merge-conflicts
       }
 
       setResponse(;
@@ -91,6 +149,12 @@ required?: boolean ;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   name: string;
 type: string;
 required?: boolean ;
@@ -140,7 +204,17 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
           value={paramValues[p.name] || ''}
 
+<<<<<<< HEAD
       } else {errorMessage = err && err.message || 'Unknown error occurred';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      } else {errorMessage = err && err.message || 'Unknown error occurred;
+>>>>>>> origin/resolved-merge-conflicts
       }setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;
       )} finally {setLoading(false)},return (<div className='space-y-4'>;
       <Input;
@@ -219,29 +293,83 @@ if (contentType?.includes ('application/json') ) {try {/> {params && params.map 
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
       ))}
+<<<<<<< HEAD
       {method !== 'GET' && method !== 'DELETE' && (<Textarea;
+=======
+      {method !== GET" && method !== "DELETE && (<Textarea;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
 
         <Textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
+<<<<<<< HEAD
           className='font-mono';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          className=font-mono";
+>>>>>>> origin/resolved-merge-conflicts
         />;
       )}
       <Button onClick={sendRequest} disabled={loading}>;
         {loading ? 'Sending...' : 'Send Request'}
       </Button>;
+<<<<<<< HEAD
       {response && <CodeBlock code={response} language='json' />}
     </div>
   )
 }
 
 ;
-export default ApiPlayground;
+=======
+=======
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      {response && <CodeBlock code={response} language="json" />}
+    </div>
+  )
+}
+<<<<<<< HEAD
+=======
 
-    </div>;
-  )}export default ApiPlayground;interface Param  {
+;
+
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default ApiPlayground;
 
 interface Param {

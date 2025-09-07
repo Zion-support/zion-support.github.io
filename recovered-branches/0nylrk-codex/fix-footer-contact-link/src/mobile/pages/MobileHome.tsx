@@ -1,10 +1,32 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { ClientDashboard } from "../components/dashboard/ClientDashboard";
 
+<<<<<<< HEAD
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {
+  const { user } = useAuth();
+
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";
+
+import React from "react",
+
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {};
+=======
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
@@ -44,12 +66,19 @@ export function MobileHome() {
   const { user } = useAuth($2);
   const isClient = $2;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { user } = useAuth();
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
 
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
+
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+
+  return (
+
+=======
 export function MobileHome() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
@@ -64,11 +93,16 @@ export function MobileHome() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="min-h-screen">
       <MobileHeader
         title={isClient ? "Client Dashboard" : "Talent Dashboard"}
         showNotifications
         showSettings
+<<<<<<< HEAD
+
+      <main className="py-4">
+=======
 <<<<<<< HEAD
 
 =======
@@ -81,6 +115,7 @@ export function MobileHome() {
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <main className="py-4">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -93,8 +128,22 @@ export function MobileHome() {;
   return (;
 
 <<<<<<< HEAD
+        show_notifications;
+        show_settings;
+      />;
+      <main className="py - 4">;"
+        {is_client ? <ClientDashboard /> : <TalentDashboard />}
+
+      </main>;
+      <BottomNavigation />;
+    </div>);
+}
+
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -110,11 +159,21 @@ export function MobileHome() {;
     <div className="min-h-screen">;
       <MobileHeader ;
         title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;
+<<<<<<< HEAD
+)
+    </div>);"
+    <div className="min-h-screen">;"
+      <MobileHeader ;"
+        title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;"
+        showNotifications ;
+      <main className="py-4">;"
+=======
         showNotifications ;
         showSettings;
       />;
       ;
       <main className="py-4">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {isClient ? <ClientDashboard /> :<TalentDashboard />}
       </main>;
       ;
@@ -140,6 +199,9 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
       <BottomNavigation />
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 }
 <<<<<<< HEAD
 =======
@@ -248,3 +310,4 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

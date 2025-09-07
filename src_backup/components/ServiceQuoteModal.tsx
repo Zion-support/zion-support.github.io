@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 :src/components/ServiceQuoteModal.tsx
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+import { useState  } from 'react;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 ...formData;            startDate: startDate?.toISOString(),
 
             endDate: endDate?.toISOString()}
@@ -8,7 +15,6 @@ import { useState  } from 'react';
 
 }
 }
-:src/components/ServiceQuoteModal.tsx
 
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
@@ -17,7 +23,29 @@ import { useState  } from 'react';
 }
 }
 
+<<<<<<< HEAD
 
+=======
+;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from 'react',
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+import { useState } from react',
+import { useState } from 'react,
+=======
+import { useState } from 'react',
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 ;
@@ -240,9 +268,24 @@ const TIMELINE_OPTIONS = [;"
             ...formData,;
             startDate: startDate?.toISOString(),;
             endDate: endDate?.toISOString()}
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 ...formData;            startDate: startDate?.toISOString(),endDate: endDate?.toISOString()}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+...formData;            startDate: startDate?.toISOString(),endDate: endDate?.toISOString()}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
       }),;
       if (error) throw error,;
@@ -487,13 +530,18 @@ const TIMELINE_OPTIONS = [;"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
-:src/components/ServiceQuoteModal.tsx
 
             </div>
           </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </Button>;
               )}</div>;
           </DialogFooter>;
@@ -541,8 +589,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </form>;
       </DialogContent>;
     </Dialog>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/ServiceQuoteModal.tsx
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 
 });

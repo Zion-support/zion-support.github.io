@@ -1,5 +1,66 @@
 export interface Wallet {
 <<<<<<< HEAD
+export interface Wallet {;
+
+  user_id: string;
+
+  balance: number,
+
+  user_id: string;
+
+  balance: number
+  updated_at: string
+}
+export type TransactionType = 'earn' | 'burn';
+  balance: number,  updated_at: string;
+
+}
+
+  id: string;
+  user_id: string;
+  amount: number;
+  transaction_type: TransactionType;
+
+  user_id: string,;
+  balance: number,;
+  updated_at: string;
+}
+;
+export type TransactionType = 'earn' | 'burn',;
+export interface TokenTransaction {;
+  id: string,;
+  user_id: string,;
+  amount: number,;
+
+  reason: string | null;
+  created_at: string;
+
+}
+;
+
+}
+;
+export type TransactionType = 'earn' | 'burn',;
+export interface TokenTransaction {;
+  id: string,;
+  user_id: string,;
+  amount: number,;
+  transaction_type: TransactionType,;  created_at: string;
+}
+;
+}
+
+  // TODO: Implement
+}
+  user_id: string;,
+  balance: number;
+  updated_at: string;
+
+export type TransactionType = "earn" | "burn";"
+
+export interface TokenTransaction {
+=======
+<<<<<<< HEAD
   user_id: string,
   balance: number,
   updated_at: string}
@@ -106,6 +167,7 @@ export interface TokenTransaction {;
 export type TransactionType = "earn" | "burn";"
 
 export interface TokenTransaction {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement
   id: string;,
   user_id: string;
@@ -116,6 +178,9 @@ export interface TokenTransaction {
   created_at: string;
 ;
 
+<<<<<<< HEAD
+export interface Wallet {;
+=======
 export interface Wallet {;
 =======
 <<<<<<< HEAD
@@ -126,3 +191,4 @@ export interface Wallet {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -30,6 +32,7 @@ import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -39,12 +42,15 @@ interface ProfileHeroProps {
 
   name: string
   title: string
+<<<<<<< HEAD
+=======
 =======
 interface ProfileHeroProps {;
   name: string,;
   title: string,;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   avatarUrl?: string;
 
@@ -57,15 +63,24 @@ interface ProfileHeroProps {;
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   profileType: 'service' | 'talent';
 }
 
 interface ProfileHeroProps {
 
+<<<<<<< HEAD
+export function ProfileHero(): any ({;
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ProfileHero(): any ({;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   name;
   title;
   avatarUrl;
@@ -74,6 +89,8 @@ export function ProfileHero(): any ({;
   rating;
   reviewCount;
   aiScore;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   profileType;
@@ -189,6 +206,7 @@ export function ProfileHero({
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   profileType
 }: ProfileHeroProps) {
@@ -216,7 +234,10 @@ export function ProfileHero({
               ) : ("
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
@@ -256,6 +277,9 @@ export function ProfileHero() { return null; }
 
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -265,6 +289,7 @@ export function ProfileHero() { return null; }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {name.substring(0, 2).toUpperCase()}
 
                 </AvatarFallback>
@@ -275,6 +300,9 @@ export function ProfileHero() { return null; }
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge"
                   variant="outline"
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -385,10 +413,44 @@ export function ProfileHero({;
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}
-                >
+                  )}>;'
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
+<<<<<<< HEAD
+
+"
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+"
+                    "ml-2 border-zion-purple/50 text-zion-cyan";
+"
+                    "ml-2 border-zion-purple/50 text-zion-cyan","
+                    "ml-2 border-zion-purple/50 text-zion-cyan",'"
+                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                  )}>;'
+                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+
+                </Badge>;
+
+              </div>;
+
+              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
+
+              <div className="flex flex-wrap items-center gap-3 mt-2">;
+                {location && (;"
+                  <span className="text-sm text-zion-slate-light">{location}</span>;
+
+                )}
+
+                )}
+
+                {aiScore && (;
+
+                  <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
+                    AI Match: {aiScore}%;
+                  </div>;
+
+=======
                 </Badge>
               </div>
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
@@ -494,6 +556,7 @@ import { Star } from './lucide-react';
 import { cn } from '@/lib / utils';
 interface ProfileHeroProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   name: string,
   title: string,
   avatar_url?: string;
@@ -506,6 +569,9 @@ interface ProfileHeroProps {
                     AI Match: {ai_score}%;
                   </div>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 )}
                 )}
@@ -530,6 +596,8 @@ interface ProfileHeroProps {
                   </div>)}
     </div>);"`;
 pr-12325
+<<<<<<< HEAD
+=======
 =======
                 ;
                 {aiScore && (;
@@ -538,12 +606,18 @@ pr-12325
                   </div>;
                 )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>;
 
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+    </div>);
+}
+=======
 <<<<<<< HEAD
 
     </div>);
@@ -608,3 +682,4 @@ profileType
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

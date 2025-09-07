@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 ;
 import React, { useState, useEffect } from 'react',import { useRouter } from 'next/router',import { useDisputes } from '@/hooks/useDisputes',import {logErrorToProduction} from '@/utils/productionLogger',import {Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
@@ -79,10 +88,27 @@ export function DisputeDetail() {const router = useRouter()const { disputeId } =
     if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status);
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router',
 import { useDisputes } from '@/hooks/useDisputes',
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import React, { useState, useEffect } from react",
+import { useRouter } from 'next/router,
+import { useDisputes } from "@/hooks/useDisputes,
+import {logErrorToProduction} from @/utils/productionLogger',
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { useDisputes } from "@/hooks/useDisputes",
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import {
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
 } from '@/types/disputes',
@@ -262,7 +288,6 @@ export function DisputeDetail() {;
     } finally {;
       setIsSending(false);
     }
-  },
 
   if (isLoading) {
     return (
@@ -282,7 +307,17 @@ export function DisputeDetail() {;
       </div>
     )
   }
+<<<<<<< HEAD
         setDispute(disputeData)const messagesData = await getDisputeMessages(disputeId)setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error })toast && toast.error('Failed to load dispute')} finally {setIsLoading(false)}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        setDispute(disputeData)const messagesData = await getDisputeMessages(disputeId)setMessages(messagesData)} catch (error) {logErrorToProduction(Error loading dispute data:, { data: error })toast && toast.error('Failed to load dispute')} finally {setIsLoading(false)}
+>>>>>>> origin/resolved-merge-conflicts
     }loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router])const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return;
     const success  = await updateDisputeStatus(disputeId, status)if (success) {// Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status })} else {toast && toast.error('Failed to update dispute status')}
@@ -310,6 +345,12 @@ export function DisputeDetail() {;
       </div>;
     )}case 'open':;
           onClick={() => router && router.push('/dashboard/disputes')}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           onClick={() => router && router.push('/dashboard/disputes')}
 
@@ -317,7 +358,23 @@ export function DisputeDetail() {;
         >          Back to Disputes;
         </Button>;
       </div>;
+<<<<<<< HEAD
       case 'open':
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      case open:
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+      case open:
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     );
   }
 
@@ -343,7 +400,17 @@ if ( {) {}
         return 'secondary';
       case 'resolved':;
 
+<<<<<<< HEAD
         return 'outline'; // Changed from './success'; to 'outline';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        return 'outline; // Changed from ./success'; to outline";
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -364,6 +431,11 @@ if ( {) {}
           </Button>;
           {isAdmin && dispute?.status === 'open' && (;
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
+<<<<<<< HEAD
+=======
+          {isAdmin && dispute?.status === 'open && (;
+            <Button onClick={() => handleStatusChange(under_review')}>              Start Review;
+>>>>>>> origin/resolved-merge-conflicts
             </Button>;
 
 
@@ -375,7 +447,18 @@ if ( {) {}
           <div className='flex items-center gap-2'>
             <h1 className='text-2xl font-bold'>Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
+<<<<<<< HEAD
       case 'closed':;
+=======
+      case 'closed:;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      case 'closed':;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
         return 'outline';
       default:;'
@@ -411,10 +494,24 @@ if ( {) {}
             </Badge>
           </div>
 
+<<<<<<< HEAD
           <p className='text-muted-foreground'>
           {isAdmin && dispute?.status === 'open' && (<Button onClick={() => handleStatusChange('under_review')}>              Start Review;
             </Button>;case 'open': return 'default',case 'under_review': return 'secondary',case 'resolved': return 'outline', // Changed from 'success' to 'outline';
       case 'closed': return 'outline',default: return 'default';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          <p className="text-muted-foreground">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <p className="text-muted-foreground>
+          {isAdmin && dispute?.status === 'open && (<Button onClick={() => handleStatusChange(under_review')}>              Start Review;
+            </Button>;case open": return "default,case under_review": return "secondary,case resolved": return "outline, // Changed from success" to "outline;
+      case closed": return "outline,default: return default";
+>>>>>>> origin/resolved-merge-conflicts
     }
   },case 'open': return 'default',case 'under_review': return 'secondary',case 'resolved': return 'outline', // Changed from 'success' to 'outline';
       case 'closed': return 'outline',default: return 'default';
@@ -476,6 +573,13 @@ if ( {) {}
       default: return 'default'
     }
   },
+=======
+          <p className="text-muted-foreground">
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ''), { addSuffix: true })}
           </p>
@@ -501,6 +605,12 @@ if ( {) {}
           <Check className='h-4 w-4' />
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </div>;
           <AlertDescription>;
@@ -510,6 +620,12 @@ if ( {) {}
       </div>;
     )}if (!dispute) {return (<div className='p-8 text-center'>;
         <p>Dispute not found</p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -529,6 +645,12 @@ if ( {) {}
           Back to Disputes;
         </Button>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>
           )}
         </div>
@@ -543,6 +665,10 @@ if ( {) {}
                 <CardContent className='space-y-4'>
                   <div>
                     <h3 className='font-medium'>Reason</h3>
+<<<<<<< HEAD
+=======
+                    <h3 className='font-medium>Reason</h3>
+>>>>>>> origin/resolved-merge-conflicts
                     <p>
                       {disputeReasonLabels[dispute.reason_code] ??
             </TabsList>;
@@ -655,6 +781,12 @@ if ( {) {}
                       ] ?? dispute.reason_code
                     }</p>
                   
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     );
   }
 ;
@@ -733,6 +865,12 @@ if ( {) {}
                     <p className='text-sm text-muted-foreground'>{dispute.project?.scope_summary}</p>
                   </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   
 
@@ -789,6 +927,12 @@ if ( {) {}
                       <li className='flex gap-2 items-center'>;<Badge;
                           variant='outline';
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {dispute.milestone_id && (
                     <div>
                       <h3 className='font-medium'>Related Milestone</h3>
@@ -871,7 +1015,17 @@ if ( {) {}
                           <Badge variant='outline' className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>
                             {dispute.status !== 'open' ? '3' : '2'}
                           </Badge>
+<<<<<<< HEAD
                           <span>Resolved on{' '}{format(new Date(dispute && dispute.resolved_at),'MMM d, yyyy 'at' h:mm a';)}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          <span>Resolved on{ '}{format(new Date(dispute && dispute.resolved_at),"MMM d, yyyy 'at h:mm a;)}
+>>>>>>> origin/resolved-merge-conflicts
                           </span>;
                         </li>;<div>;
                     <h3 className='font-medium'>Timeline</h3>;
@@ -938,6 +1092,12 @@ if ( {) {}
                   </div>
                 </CardContent>
               </Card>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           <span>Resolved on {format(new Date(dispute.resolved_at), 'MMM d, yyyy 'at' h:mm a')}</span>
 
@@ -997,6 +1157,14 @@ if ( {) {}
                   </CardHeader>
                   <CardContent>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     <p className='whitespace-pre-wrap'>{dispute.resolution_summary}</p>
 
@@ -1025,6 +1193,14 @@ if ( {) {}
                       </div>;Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;)}
+=======
+                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <Badge>
 
                           Resolution: {dispute.resolution_type.replace('_ ')}
@@ -1037,12 +1213,20 @@ if ( {) {}
 
             <TabsContent value='messages' className='space-y-6'>
 
-              <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
 
                       </div>
                     ) : (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                      messages;
+                        .filter(msg => !msg.is_admin_note)
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
             </TabsContent>;
@@ -1066,11 +1250,31 @@ if ( {) {}
                         .filter(msg => !msg.is_admin_note)
 
 
+=======
+                      messages;
+                        .filter(msg => !msg.is_admin_note)
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
+<<<<<<< HEAD
                                     : 'bg-muted'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                    : 'bg-muted'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                                    : bg-muted
+>>>>>>> origin/resolved-merge-conflicts
                     ) : (messages;
                         .filter(msg => !msg.is_admin_note)</TabsContent>;<TabsContent value='messages' className='space-y-6'>;
               <Card>;
@@ -1090,7 +1294,18 @@ if ( {) {}
                                                       >;<div;
                                 className={`max-w-[80%] ${isCurrentUser;
                                     ? 'bg-primary text-primary-foreground';
+<<<<<<< HEAD
                                     : 'bg-muted';
+=======
+                                    : bg-muted;
+=======
+                                    : 'bg-muted'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                                 } p-4 rounded-lg`}>;
                                 <div className='flex items-center gap-2 mb-2'>;
 
@@ -1108,6 +1323,12 @@ if ( {) {}
 
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                                       alt={msg && msg.user_profile?.display_name ||;
                                         'User avatar';
                                       }
@@ -1121,8 +1342,19 @@ if ( {) {}
                                     : 'bg-muted';
                                 } p-4 rounded-lg`}
                               >;
+<<<<<<< HEAD
                                 <div className='flex items-center gap-2 mb-2'>;
                                   <Avatar className='h-6 w-6'>;
+=======
+                                <div className="flex items-center gap-2 mb-2">;
+                                  <Avatar className="h-6 w-6">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             <div;
                               key={msg.id}'`
                               className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
@@ -1133,12 +1365,20 @@ if ( {) {}
                                     ? 'bg-primary text-primary-foreground';'
                                     : 'bg-muted';`
                                 } p-4 rounded-lg`}
+<<<<<<< HEAD
                               >;'
                                 <div className='flex items-center gap-2 mb-2'>;'
                                   <Avatar className='h-6 w-6'>;'
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || 'User avatar'} />;
 
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || 'User avatar'} />;<AvatarFallback>{msg && msg.user_profile?.display_name?.[0] ||;
+=======
+                              >;"
+                                <div className="flex items-center gap-2 mb-2">;"
+                                  <Avatar className="h-6 w-6">;"
+                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;
+
+>>>>>>> origin/resolved-merge-conflicts
                                     <AvatarFallback>;
 
                                         '?'}
@@ -1160,6 +1400,17 @@ if ( {) {}
                             </div>;
                           );
                         });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                    )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
                     )}
@@ -1183,6 +1434,14 @@ if ( {) {}
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? 'Sending...' : 'Send Message'}
 
+=======
+
+                    )}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </div>
                 </CardContent>
                 <CardFooter>
@@ -1208,6 +1467,13 @@ if ( {) {}
               </Card>
             </TabsContent>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <TabsContent value='admin' className='space - y-6'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             
             <TabsContent value='attachments'>
@@ -1378,11 +1644,26 @@ if ( {) {}
 
 
             {is_admin && (
+<<<<<<< HEAD
               <TabsContent value='admin' className='space - y-6'>;
             </TabsContent>;{is_admin && (<TabsContent value='admin' className='space - y-6'>;
+=======
+              <TabsContent value='admin className=space - y-6'>;
+            </TabsContent>;{is_admin && (<TabsContent value='admin className=space - y-6'>;
+=======
+              <TabsContent value='admin' className='space - y-6'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <Card>;
                   <CardHeader>;
-                    <CardTitle > Admin Actions</CardTitle>;<CardDescription>Handle this dispute as an administrator;
+                    <CardTitle > Admin Actions</CardTitle>;
+
+                    <CardDescription>;
+                      Handle this dispute as an administrator;
                     </CardDescription>;
                   </CardHeader>;
 
@@ -1394,10 +1675,17 @@ if ( {) {}
                         >
                           Mark as Open;
                         </Button>
+<<<<<<< HEAD
                         <Button '
                           variant='outline' '
                           onClick={() => handleStatusChange('under_review')}'
                           disabled={dispute.status === 'under_review'}
+=======
+                        <Button "
+                          variant="outline" "
+                          onClick={() => handleStatusChange("under_review")}"
+                          disabled={dispute.status === "under_review"}
+>>>>>>> origin/resolved-merge-conflicts
                         >
                           Mark as Under Review;
                         </Button>
@@ -1407,12 +1695,22 @@ if ( {) {}
                           disabled={dispute.status === 'closed'}
 
                         >
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           Mark as Open
                         </Button>
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
                           disabled={dispute && dispute.status === 'under_review'}
+<<<<<<< HEAD
+=======
+                          disabled={dispute && dispute.status === 'under_review}
+>>>>>>> origin/resolved-merge-conflicts
                         >;
                           Mark as Under Review;
                         </Button>;
@@ -1438,6 +1736,12 @@ if ( {) {}
                           variant='outline';
                           on_click={() => handleStatusChange ('open')}
                         >
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           disabled={dispute && dispute.status === 'under_review'}
                         >;
@@ -1535,10 +1839,24 @@ if ( {) {}
                             }'
                             className='min-h-[100px]'                          />;
 '
+<<<<<<< HEAD
                           <div className='grid grid-cols-2 gap-4'>;
                             value={resolution.summary}{dispute.status !== 'resolved' && (<div>;
                         <h3 className='font-medium mb-2'>Resolve Dispute</h3>;
                         <div className='space-y-4'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                          <div className='grid grid-cols-2 gap-4'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          <div className='grid grid-cols-2 gap-4>;
+                            value={resolution.summary}{dispute.status !== resolved && (<div>;
+                        <h3 className="font-medium mb-2">Resolve Dispute</h3>;
+                        <div className=space-y-4>;
+>>>>>>> origin/resolved-merge-conflicts
                           <Textarea;
                             placeholder='Enter resolution summary...';
                             value={resolution.summary}
@@ -1593,7 +1911,18 @@ if ( {) {}
                                   setResolution({...resolution,resolution_type: e && e.target;
                                       .value as ResolutionType,on_change={e =>;
                               set_resolution ({...resolution,summary: e.target.value})}
+<<<<<<< HEAD
                             className='min - h-[100px]'                          />;
+=======
+                            className=min - h-[100px]'                          />;
+=======
+                          <div className='grid grid-cols-2 gap-4'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             <div>;'
                               <label className='text-sm font-medium mb-1 block'>;
                                 Resolution Type;
@@ -1641,12 +1970,27 @@ if ( {) {}
                             </div>;
                           </div>;
 
+<<<<<<< HEAD
                           </div>;.map((msg) => (<div key={msg.id} className='bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900'>;
                             <div className='flex items-center justify-between mb-2'>;
                               <div className='flex items-center gap-2'>;
                                 <Avatar className='h-6 w-6'>;
                                   <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || 'Admin avatar'} />;
                                   <AvatarFallback>{msg.user_profile?.display_name?.[0] || 'A'}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          </div>;.map((msg) => (<div key={msg.id} className=bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900>;
+                            <div className="flex items-center justify-between mb-2">;
+                              <div className=flex items-center gap-2>;
+                                <Avatar className="h-6 w-6">;
+                                  <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || Admin avatar} />;
+                                  <AvatarFallback>{msg.user_profile?.display_name?.[0] || 'A}
+>>>>>>> origin/resolved-merge-conflicts
                                   </AvatarFallback>;
                                 </Avatar>;
                                 <span className='text-sm font-medium'>;
@@ -1658,6 +2002,12 @@ if ( {) {}
                               </p>
                             </div>
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               </div>
                               <span className='text-xs opacity-70'>
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
@@ -1675,6 +2025,12 @@ if ( {) {}
                           <p className='text-sm text-muted-foreground italic'>
                             No admin notes yet;
                           </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               </p>;
                             </div>;
                             <p className='whitespace-pre-wrap text-sm'>{msg.message}</p>;
@@ -1715,10 +2071,17 @@ if ( {) {}
 
 
                       
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                         )}
                       </div>
 
+<<<<<<< HEAD
                       <Separator className='my-4' />
                       '
                       <div className='space-y-4'>
@@ -1728,6 +2091,29 @@ if ( {) {}
                       <div className='space-y-4'>;
                         <Textarea;
                           placeholder='Add an admin note (only visible to administrators)...';
+=======
+                      <Separator className=my-4 />
+                      "
+                      <div className="space-y-4>
+                        <Textarea
+                          placeholder="Add an admin note (only visible to administrators)..."
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          onChange={e => setAdminNote(e && e.target.value)}                        />;<Separator className=my-4 />;
+                      <div className="space-y-4">;
+                        <Textarea;
+                          placeholder=Add an admin note (only visible to administrators)...;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
@@ -1746,10 +2132,13 @@ if ( {) {}
                                 );'
                                 setAdminNote('');
                               });                            }
+<<<<<<< HEAD
                         <Button
                           variant='outline'
                           onClick={() => {
                             if (adminNote.trim()) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
 
@@ -1759,6 +2148,12 @@ if ( {) {}
                               })
                             }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -1844,12 +2239,29 @@ export function DisputeDetail() {const router = null;
           </Tabs>
         </div>
 
+<<<<<<< HEAD
         <div className='space-y-6'>
+=======
+        <div className=space-y-6>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <div className="space-y-6">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </TabsContent>;
             )}
           </Tabs>;
@@ -1880,6 +2292,12 @@ export function DisputeDetail() {const router = null;
                 <Avatar className='h-10 w-10'>;<AvatarImage;
                     src={dispute && dispute.client_profile?.avatar_url}
                     alt={dispute && dispute.client_profile?.display_name || 'Client avatar';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           </Tabs>;
         </div>;
@@ -1902,10 +2320,27 @@ export function DisputeDetail() {const router = null;
                   />;
                   <AvatarFallback>C</AvatarFallback>;
                 </Avatar>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </Avatar>
                 <div>
+<<<<<<< HEAD
                   <p className='font-medium'>Talent</p>
                   <p className='text-sm text-muted-foreground'>
+=======
+                  <p className=font-medium>Talent</p>
+                  <p className="text-sm text-muted-foreground">
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <div>;'
                   <p className='font-medium'>Client</p>;'
                   <p className='text-sm text-muted-foreground'>;'
@@ -1942,6 +2377,12 @@ export function DisputeDetail() {const router = null;
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           
 
@@ -2004,6 +2445,12 @@ export function DisputeDetail() {const router = null;
                       ? 'Talent';
                       : 'Unknown'}
                 </span>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -2014,6 +2461,15 @@ export function DisputeDetail() {const router = null;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </span>;
               </div>;
             </CardContent>;
@@ -2254,6 +2710,7 @@ container mx-auto p-4 space-y-6' > <div className='flex flex-wrap items-center j
 }</div> </CardContent> <CardFooter> <div className='w-full space-y-4' > <Textarea className='min-h-[100px]' disabled= {isSending ';
 }/> </Button> </div> </div> </CardFooter> </Card> </TabsContent> <TabsContent value='attachments'> <Card> <CardHeader> <CardTitle>Attachments</CardTitle> <CardDescription>Files related to this dispute</CardDescription> </CardHeader> <CardContent> <div className='text-center py-12'> <Download className='mx-auto h-12 w-12 text-muted-foreground mb-2' /> <p className='text-muted-foreground' >No attachments available</p> </div> </CardContent> </Card> </TabsContent> <Card> <CardHeader> <CardTitle>Admin Actions</CardTitle> <CardDescription>Handle this dispute as an administrator</CardDescription> </CardHeader> <CardContent className='space-y-6'> <div> <h3 className='font-medium mb-2'>Change Status</h3> <div className='flex gap-2' > <Button > Mark as Open </Button> <Button > Mark as Under Review </Button> <Button > Close Dispute </Button> </div> </div> <h3 className='font-medium mb-2'>Resolve Dispute</h3> <div className='space-y-4' > <Textarea placeholder='Enter resolution summary...' value= {resolution.summary ;
 }onChange= {(e) => setResolution ({...resolution, summary: e.target.value ;
+<<<<<<< HEAD
 }) '';
 }className='min-h-[100px]' /> <div className='grid grid-cols-2 gap-4'> <div> <label className='text-sm font-medium mb-1 block'>Resolution Type</label> <select > <option value='client favor' >In Client's Favor</option> <option value='talent favor' >In Talent's Favor</option> <option value='compromise' >Compromise</option> <option value='dismissed' >Dismissed</option> </select> </div> </div> <Button onClick={handleResolveDispute ;
 }>Resolve Dispute</Button> </div> </div>)}<div> <AvatarFallback> {';
@@ -2273,6 +2730,43 @@ container mx-auto p-4 space-y-6' > <div className='flex flex-wrap items-center j
 origin/cursor/automate-test-improve-and-merge-code-2533
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className='font-medium'>Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className='space-y-4 text-sm'> <div className='flex justify-between'> <span className='font-medium'>Case ID:</span> <span className='font-mono'> {dispute.id ';
 }</span> </div> <div className='flex justify-between'> </div> </CardContent> </Card> </div> </div> </div>)}'';
+=======
+}) ;
+}className=min-h-[100px]" /> <div className="grid grid-cols-2 gap-4> <div> <label className=text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor >In Client's Favor</option> <option value=talent favor" >In Talent's Favor</option> <option value="compromise >Compromise</option> <option value=dismissed" >Dismissed</option> </select> </div> </div> <Button onClick={handleResolveDispute ;
+}>Resolve Dispute</Button> </div> </div>)}<div> <AvatarFallback> {;
+  msg.user profile?.display name?.[0] || A' ;
+}</AvatarFallback> </Avatar>) ";
+}</div> <Separator className=my-4 /> <div className="space-y-4" > <Textarea ;}> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) ;
+}</Tabs> </div> <div className=space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6> <div className=flex items-start gap-4"> <Avatar className="h-10 w-10> <AvatarImage src= {dispute.client profile?.avatar url ;
+}alt= {;
+  dispute.client profile?.display name || "Client avatar" ;
+}/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className=font-medium">Client</p> </p> </div> </div> <div className="flex justify-center> <ArrowDown className=h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4> <Avatar className=h-10 w-10"> <AvatarImage src= {dispute.talent profile?.avatar url ;
+}alt= {";
+  dispute.client profile?.display name || "Client avatar" ";
+}/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className="font-medium">Client</p> </p> </div> </div> <div className="flex justify-center"> <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {dispute.talent profile?.avatar url ;
+}alt= {";
+  dispute.talent profile?.display name || "Talent avatar" ";
+}/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm"> <div className="flex justify-between"> <span className="font-medium">Case ID:</span> <span className="font-mono"> {;
+  dispute.id ";
+}</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
+}'"
+}/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium>Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className=space-y-4 text-sm"> <div className="flex justify-between> <span className=font-medium">Case ID:</span> <span className="font-mono> {
+  dispute.id ;
+}</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
+}'
+origin/cursor/automate-test-improve-and-merge-code-2533
+}/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className=font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm> <div className=flex justify-between"> <span className="font-medium>Case ID:</span> <span className=font-mono"> {dispute.id ";
+}</span> </div> <div className=flex justify-between> </div> </CardContent> </Card> </div> </div> </div>)}";
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+}
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 ;
 

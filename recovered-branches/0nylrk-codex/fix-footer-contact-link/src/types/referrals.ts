@@ -1,13 +1,24 @@
 <<<<<<< HEAD
+export interface ReferralCode {
+export type ReferralStatus = 'pending' | 'completed' | 'expired';
+
+export interface ReferralCode {;
+=======
+<<<<<<< HEAD
 
 export type ReferralStatus = $2;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface ReferralCode {
-  id: string,
-  user_id: string,
-  code: string,
-  created_at: string,
-  updated_at: string}
+  id: string;
+  user_id: string;
+  code: string;
+  created_at: string;
+  updated_at: string;
 
+<<<<<<< HEAD
+}
+
+=======
 export interface Referral {
   id: string,
   referrer_id: string,
@@ -45,6 +56,7 @@ export interface ReferralCode {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
 
@@ -58,12 +70,15 @@ export interface ReferralCode {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   created_at: string,
   updated_at: string;
 
 }
 export interface Referral {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   id: string;
   user_id: string;
@@ -73,6 +88,8 @@ export interface Referral {
 
 }export interface Referral {
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 export interface Referral {;
@@ -85,6 +102,7 @@ export interface Referral {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -99,10 +117,15 @@ export interface Referral {;
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface ReferralReward {;
 
   reward_issued: boolean
+<<<<<<< HEAD
+=======
   reward_issued_at: string | null
 }
 
@@ -120,15 +143,21 @@ export interface ReferralReward {;
 <<<<<<< HEAD
   reward_issued: boolean
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   reward_issued_at: string | null
 }
+
 export interface ReferralReward {
 
 export interface ReferralReward {;
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   user_id: string;
   referral_id: string;"
@@ -137,6 +166,16 @@ export interface ReferralReward {;
 
 export interface ReferralStats {;
 
+<<<<<<< HEAD
+  totalReferrals: number;
+  pendingReferrals: number;
+
+  created_at: string,
+
+  expires_at: string | null;
+
+}
+=======
 <<<<<<< HEAD
 =======
 
@@ -199,16 +238,20 @@ export interface ReferralReward {;
   expires_at: string | null;
 
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   expires_at: string | null;
   totalRewards: number  expires_at: string | null;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   expires_at: string | null;
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 export interface ReferralStats {;
   totalReferrals: number,;
@@ -221,6 +264,9 @@ export interface ReferralStats {;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 }}
 
@@ -285,6 +331,9 @@ export interface ReferralStats {;
   completedReferrals: number;,
   totalRewards: number;
 
+<<<<<<< HEAD
+}
+=======
 }
 =======
 <<<<<<< HEAD
@@ -293,3 +342,4 @@ export interface ReferralStats {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

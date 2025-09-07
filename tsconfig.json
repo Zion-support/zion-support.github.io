@@ -11,16 +11,13 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "moduleResolution": "bundler",
-    "maxNodeModuleJsDepth": 0,
-    "skipDefaultLibCheck": true,
-    "esModuleInterop": true,
+    "incremental": true,
     "module": "ESNext",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "plugins": [
@@ -30,51 +27,49 @@
     ],
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ],
       "@/components/*": [
-        "./components/*"
+        "./src/components/*"
       ],
       "@/pages/*": [
-        "./pages/*"
+        "./src/pages/*"
       ],
       "@/utils/*": [
-        "./utils/*"
+        "./src/utils/*"
       ],
       "@/hooks/*": [
-        "./hooks/*"
+        "./src/hooks/*"
       ],
       "@/types/*": [
-        "./types/*"
+        "./src/types/*"
       ],
       "@/styles/*": [
         "./styles/*"
       ],
       "@/assets/*": [
-        "./assets/*"
+        "./src/assets/*"
+      ],
+      "@/app/*": [
+        "./app/*"
+      ],
+      "@/public/*": [
+        "./public/*"
       ]
     },
-    "strictNullChecks": true,
-    "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
-    "allowImportingTsExtensions": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    ".next",
+    "out",
+    "dist",
     "apps/**",
     "apps.backup/**",
     "api-backup/**",

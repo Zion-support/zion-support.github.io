@@ -29,7 +29,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -51,11 +60,28 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react
+import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card'
+import { Badge } from '@/components/ui/badge
+import { Button } from @/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import {
   AlertTriangle
   CheckCircle
@@ -75,9 +101,6 @@ import {}
   Activity,';
 } from 'lucide-react';
 
-
-
-
 interface HealthData {
 
   status: 'healthy' | 'warning' | 'critical';
@@ -85,9 +108,6 @@ interface HealthData {
   uptime: number;
   version: string;
   environment: string;
-
-
-  metrics: {
 
     error_rate: number;
     critical_errors: number;
@@ -107,6 +127,12 @@ interface HealthData {
       high: number;
       medium: number;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       low: number;
     };
@@ -114,6 +140,12 @@ interface HealthData {
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       patternId: string;
       description: string;
 
@@ -124,6 +156,12 @@ interface HealthData {
     byCategory: { [category: string]: number }
 
       low: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -174,6 +212,12 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
       solution?: string;
     }>;
     byCategory: { [category: string]: number }low: number;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     top_errors: Array<{}
       pattern_id: string;
@@ -183,7 +227,19 @@ interface HealthData  {status: 'healthy' | 'warning' | 'critical';
       solution?: string;
     }>;
     by_category: { [category: string]: number }
+<<<<<<< HEAD
   }import React, { useState, useEffect } from 'react',import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',import { Badge } from '@/components/ui/badge',import { Button } from '@/components/ui/button',import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',interface HealthData  {status: 'healthy' | 'warning' | 'critical',timestamp: string,uptime: number,version: string,environment: string,metrics: {errorRate: number,criticalErrors: number,responseTime: number,memoryUsage: number;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  }import React, { useState, useEffect } from 'react',import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card,import { Badge } from '@/components/ui/badge',import { Button } from @/components/ui/button,import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',interface HealthData  {status: healthy | 'warning' | critical,timestamp: string,uptime: number,version: string,environment: string,metrics: {errorRate: number,criticalErrors: number,responseTime: number,memoryUsage: number;
+>>>>>>> origin/resolved-merge-conflicts
   },health: {status: string,score: number,issues: string[],recommendations: string[];
   },errors: {summary: {total: number,critical: number,high: number,medium: number,low: number;
     },topErrors: Array<{patternId: string,description: string,occurrences: number,severity: string,solution?: string;
@@ -253,6 +309,27 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
+=======
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from lucide-react;
+interface HealthData {'
+  status: 'healthy | warning' | 'critical,
+  timestamp: string,
+  uptime: number,
+  version: string,
+  environment: string,
+  metrics: {
+    errorRate: number,
+    criticalErrors: number,
+    responseTime: number,
+=======
+  }
+
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
 interface HealthData {;'
   status: 'healthy' | 'warning' | 'critical',;
@@ -264,6 +341,10 @@ interface HealthData {;'
     errorRate: number,;
     criticalErrors: number,;
     responseTime: number,;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
     memoryUsage: number;
   },;
   health: {;
@@ -372,11 +453,30 @@ const HealthDashboard: React.FC = () => {;
         </div>'
         <div className='flex items-center space-x-2'>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!healthData) return null
   if (!healthData) return null,
 
+<<<<<<< HEAD
             variant='outline'
             size='sm'
+=======
+            variant=outline"
+            size="sm
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            variant="outline"
+            size="sm"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
 
@@ -429,13 +529,29 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value='recommendations'>Recommendations</TabsTrigger>
         </TabsList>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
+<<<<<<< HEAD
         <TabsContent value='overview' className='space-y-4'>
+=======
+        <TabsContent value="overview" className=space-y-4>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <TabsContent value="overview" className="space-y-4">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
-            <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
               </CardHeader>
@@ -492,8 +608,21 @@ const HealthDashboard: React.FC = () => {;
         return <Activity className='w-5 h-5 text-gray-500' />;
 
     }
+<<<<<<< HEAD
   },;
   const getStatusBadge = (status: string) => {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  },;
+  const getStatusBadge = (status: string) => {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  },
+  const getStatusBadge = (status: string) => {
+>>>>>>> origin/resolved-merge-conflicts
       </Badge>;
     )},const formatUptime = (seconds: number) => {const hours = Math.floor(seconds / 3600),const minutes = Math.floor((seconds % 3600) / 60),return `${hours}h ${minutes}m`;
   },const formatBytes = (bytes: number) => {return `${bytes.toFixed(1)} MB`;
@@ -508,6 +637,14 @@ const HealthDashboard: React.FC = () => {;
             <span>Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
+=======
+  },;
+  const getStatusBadge = (status: string) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </Badge>;
 
@@ -526,6 +663,12 @@ const HealthDashboard: React.FC = () => {;
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Button;
             variant='outline';
             size='sm';
@@ -598,6 +741,12 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-2xl font-bold'>;
                   {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
                 </p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     );
   }
 
@@ -640,12 +789,24 @@ const HealthDashboard: React.FC = () => {;
                   </div>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       </li>
                     ))}
                   </ul>
                 ) : (
                   <p className='text-green-600 text-sm'>No issues detected</p>
                 )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Card>;
             <Card>;
 
@@ -669,6 +830,12 @@ const HealthDashboard: React.FC = () => {;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 ) : (<p className='text-green-600 text-sm'>No issues detected</p>;
                 )}<TabsContent value='errors' className='space-y-4'>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
@@ -771,8 +938,13 @@ const HealthDashboard: React.FC = () => {;
                       .map((error, index) => (;
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <div
-                      .slice(0, 5).map((error, index) => (<div;
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
 
@@ -787,6 +959,7 @@ const HealthDashboard: React.FC = () => {;
                 ) : (;'
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
+<<<<<<< HEAD
                   <div className='space-y-2'>
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => ('
                       <div key={index} className='border-l-4 border-red-400 pl-3 py-1'>'
@@ -796,6 +969,32 @@ const HealthDashboard: React.FC = () => {;
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (<div key={index} className='border-l-4 border-red-400 pl-3 py-1'>;
                         <p className='text-sm font-medium'>{error.description}</p>;
                         <p className='text-xs text-gray-600'>;
+=======
+<<<<<<< HEAD
+                  <div className="space-y-2>
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
+                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
+                        <p className=text-sm font-medium">{error.description}</p>"
+                        <p className=text-xs text-gray-600>
+                ) : (<p className=text-gray-600 text-sm>No recurring errors</p>;<div className="space-y-2">;
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => (<div key={index} className=border-l-4 border-red-400 pl-3 py-1>;
+                        <p className="text-sm font-medium">{error.description}</p>;
+                        <p className=text-xs text-gray-600>;
+=======
+                  <div className="space-y-2">
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => ("
+                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">"
+                        <p className="text-sm font-medium">{error.description}</p>"
+                        <p className="text-xs text-gray-600">
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                           {error.occurrences} occurrences • {error.severity}
                         </p>;
                       </div>;
@@ -873,7 +1072,18 @@ const HealthDashboard: React.FC = () => {;
                 <CardTitle className='text-sm'>Critical Errors</CardTitle>
               </CardHeader>
               <CardContent>'
+<<<<<<< HEAD
                 <p className='text-2xl font-bold text-red-600'>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <p className='text-2xl font-bold text-red-600'>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                <p className='text-2xl font-bold text-red-600>
+>>>>>>> origin/resolved-merge-conflicts
                   </div>;
                 ) : (<p className='text-gray-600 text-sm'>No recurring errors</p>;
                 )}<TabsContent value='metrics' className='space-y-4'>;
@@ -894,7 +1104,18 @@ const HealthDashboard: React.FC = () => {;
                 <CardTitle className='text-sm'>Critical Errors</CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
                 <p className='text-2xl font-bold text-red-600'>;
+=======
+                <p className=text-2xl font-bold text-red-600'>;
+=======
+                <p className='text-2xl font-bold text-red-600'>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   {healthData.metrics.criticalErrors}
                 </p>'
                 <p className='text-xs text-gray-600'>In last hour</p>
@@ -926,9 +1147,21 @@ const HealthDashboard: React.FC = () => {;
           </div>
         </TabsContent>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 ) : (
                   <p className='text-gray-600 text-sm'>No recurring errors</p>
                 )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Card>
 
             <CardHeader>
@@ -936,6 +1169,12 @@ const HealthDashboard: React.FC = () => {;
             </CardHeader>
             <CardContent>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 </p>;
                 <p className='text-xs text-gray-600'>JavaScript heap</p>;
@@ -949,7 +1188,60 @@ const HealthDashboard: React.FC = () => {;
                 <CardTitle className='text-sm'>Error Rate</CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
                 <p className='text-2xl font-bold'>{healthData.metrics.errorRate.toFixed(2)}%</p>;
+=======
+                <p className=text-2xl font-bold>{healthData.metrics.errorRate.toFixed(2)}%</p>;
+                <p className="text-xs text-gray-600">Errors per request</p>;
+              </CardContent>;
+            </Card>;
+            <Card>;
+              <CardHeader className=pb-2>;
+                <CardTitle className="text-sm">Critical Errors</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <p className=text-2xl font-bold text-red-600>{healthData.metrics.criticalErrors}</p>;
+                <p className="text-xs text-gray-600">In last hour</p>;
+              </CardContent>;
+            </Card>;
+            <Card>;
+              <CardHeader className=pb-2>;
+                <CardTitle className="text-sm">Avg Response</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <p className=text-2xl font-bold>{healthData.metrics.responseTime.toFixed(0)}ms</p>;
+                <p className="text-xs text-gray-600">API response time</p>;
+              </CardContent>;
+            </Card>;
+            <Card>;
+              <CardHeader className=pb-2>;
+                <CardTitle className="text-sm">Memory Usage</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <p className=text-2xl font-bold>{formatBytes(healthData.metrics.memoryUsage)}</p>;
+                <p className="text-xs text-gray-600">JavaScript heap</p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              </CardContent>;
+            </Card>;
+          </div>;
+        </TabsContent>;
+
+        <TabsContent value=metrics' className='space-y-4>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
+            <Card>;
+              <CardHeader className=pb-2'>;'
+                <CardTitle className=text-sm>Error Rate</CardTitle>;
+              </CardHeader>;
+              <CardContent>;'
+                <p className='text-2xl font-bold>;
+                  {healthData && healthData.metrics.errorRate && errorRate.toFixed(2)}%;
+                </p>;
+>>>>>>> origin/resolved-merge-conflicts
                 <p className='text-xs text-gray-600'>Errors per request</p>;
               </CardContent>;
             </Card>;
@@ -1041,6 +1333,12 @@ const HealthDashboard: React.FC = () => {;
               <CardTitle>Improvement Recommendations</CardTitle>;
             </CardHeader>;
             <CardContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   ))}
                       <span className='text-sm'>{rec}</span>                    </li>;))}
                 </ul>;
@@ -1048,7 +1346,18 @@ const HealthDashboard: React.FC = () => {;
                   No specific recommendations at this time;
                 </p>;
               )}
+<<<<<<< HEAD
               {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;'
+=======
+              {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                 <ul className='space-y-3'>;
                   {healthData && healthData.health.recommendations && recommendations.map((rec, index) => (;'
                     <li key={index} className='flex items-start'>;'
@@ -1077,11 +1386,23 @@ export default HealthDashboard;
     } finally {}
       set_loading (false);
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               )}export default HealthDashboard,export default HealthDashboard;
 }const response = await fetch ('/api / admin / health')// Check condition;
 if ( {) {$2;
 }throw new Error (`HTTP ${response.status}`)}
       const data = await response.json ()setHealthData (data)set_error (null)} catch (err) {set_error (err instanceof Error ? err.message : 'Failed to fetch health data')} finally {set_loading (false)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   useEffect (() => {}
     fetchHealthData ();
@@ -1089,8 +1410,9 @@ if ( {) {$2;
 if ( {) {}
   $2;
 }
-      const interval = set_interval (fetchHealthData, 30000)// Refresh every 30 seconds;
-      return () => clear_interval (interval)}
+      const interval = set_interval (fetchHealthData, 30000); // Refresh every 30 seconds;
+      return () => clear_interval (interval);
+    }
     return undefined;
   }, [auto_refresh]);
   const getStatusIcon = (status: string, ) =>: any {}
@@ -1114,8 +1436,7 @@ if ( {) {}
           : 'destructive'; return ('
       <Badge variant={variant} className='ml - 2'>;
         {status.toUpperCase ()}
-      </Badge>)}
-  const format_uptime = (seconds: number) =>: any {const hours = Math.floor (seconds / 3600)const minutes = Math.floor ((seconds % 3600) / 60)return `${hours}h ${minutes}m`;
+      </Badge>);
   }
   const format_uptime = (seconds: number) =>: any {}
     const hours = Math.floor (seconds / 3600);
@@ -1276,10 +1597,31 @@ if (return null) {}
               </CardContent>;
             </Card>;
             <Card>;
+<<<<<<< HEAD
               <CardHeader>;'
                 <CardTitle className='flex items - center'>;'
                   <AlertTriangle className='w - 4 h - 4 mr - 2' />;
+=======
+<<<<<<< HEAD
+              <CardHeader>;
+                <CardTitle className='flex items - center'>;
+                  <AlertTriangle className=w - 4 h - 4 mr - 2' />;
+>>>>>>> origin/resolved-merge-conflicts
                   Current Issues ({health_data.health.issues.length})</CardTitle>;
+=======
+              <CardHeader>;'
+                <CardTitle className='flex items - center'>;'
+                  <AlertTriangle className='w - 4 h - 4 mr - 2' />;
+                  Current Issues ({health_data.health.issues.length});
+                </CardTitle>;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </CardHeader>;
               <CardContent>;
                 {health_data.health.issues.length > 0 ? ('
@@ -1433,6 +1775,12 @@ if (return null) {}
 export default HealthDashboard;
 export default HealthDashboard,
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default HealthDashboard;
 
   }
@@ -1448,6 +1796,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default HealthDashboard;
 export default HealthDashboard,export default HealthDashboard}
   )}export default HealthDashboard;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   });
 };
 

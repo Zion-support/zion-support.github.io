@@ -1,6 +1,14 @@
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';'
+import {
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 =======
@@ -80,6 +88,10 @@ import {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   Mail,
   Phone,
   MapPin,
@@ -117,6 +129,37 @@ const ContactForm: React.FC = () => {;
   CheckCircle,
   AlertCircle,
   CheckCircle,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  AlertCircle,'
+} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+
+const ContactForm: React.FC = () => {;
+  const [formData, setFormData] = useState({;'
+    name: '',;'
+    email: '',;'
+    company: '',;'
+    phone: '',;'
+    service: '',;'
+    message: '',;
+  AlertCircle,;
+} from 'lucide-react';'
+
+const "ContactForm": React.FC = () => {
+ ;
+  }
+  const [formData, setFormData] = useState({
+    }
+    "name": '','
+    "email": '','
+    "company": '','
+    "phone": '','
+    "service": '','
+"message": '','
+  });
+=======
+>>>>>>> origin/resolved-merge-conflicts
   AlertCircle,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -179,10 +222,71 @@ const ContactForm: React.FC = () => {
   >('idle');
 <<<<<<< HEAD
 'use client',
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [submitStatus, setSubmitStatus] = useState<;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    'idle' | 'success' | 'error';'
+  >('idle');'
+
+const handleChange = (;
+    "e": React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    }
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+};
+
+
+const handleSubmit = async ("e": React.FormEvent) => {
+    }
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate API call,
+try {
+      }
+      await new Promise(resolve => { return setTimeout(resolve, 2000)); }
+      setSubmitStatus('success');'
+      setFormData({
+        }
+        "name": '','
+        "email": '','
+        "company": '','
+        "phone": '','
+        "service": '','
+"message": '','
+      });
+    } catch (error) {;
+      }
+      setSubmitStatus('error');'
+
+    } finally {
+      }
+      setIsSubmitting(false);
+origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+  const services = [
+'AI Development',
+    'Cloud Architecture',
+    'Digital Transformation',
+    'IoT Platforms',
+    'Blockchain Solutions',
+    'Data Analytics',
+    'Other',
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -427,6 +531,10 @@ const handleSubmit = async (e: React.FormEvent) => {
     'Blockchain Solutions'
     'Data Analytics'
     'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ];
   const contactInfo = [
     {
@@ -469,6 +577,41 @@ const handleSubmit = async (e: React.FormEvent) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const contact_info = [;
+    {}
+      icon: Mail'
+      title: 'Email Us''
+      content: 'contact@ziontechgroup.com''
+      href: 'mailto:contact@ziontechgroup.com'
+
+const contact_info = [;
+  {
+
+      }
+
+      "icon": Mail,
+      "title": 'Email Us','
+      "content": 'contact@ziontechgroup.com','
+"href": '"mailto":contact@ziontechgroup.com','
+    },
+    {
+      }
+      "icon": Phone,
+      "title": 'Call Us','
+      "content": '+1 (555) 123-4567','
+"href": '"tel":+15551234567','
+    },
+    {
+      }
+      "icon": MapPin,
+      "title": 'Visit Us','
+      "content": '123 Tech Street, Innovation City, IC 12345','
+"href": '#','
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import {Mail,Phone,MapPin,Send,CheckCircle,AlertCircle,'use client';
 import React, { useState  } from 'react';
 import { motion  } from 'framer-motion';
@@ -504,6 +647,10 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
   },
 <<<<<<< HEAD
@@ -1194,7 +1341,14 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                     </p>;
                   </div>;
                 </motion && motion.a>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               ))}
             {/* Additional Info */}
             <motion&& motion.div;
@@ -1313,6 +1467,11 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
 <<<<<<< HEAD
                 <li className='flex items-center space-x-2'>'
                   <CheckCircle className='w-5 h-5 text-green-400' />'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: ','
@@ -1466,6 +1625,10 @@ href: '#'}];
             {/* Additional Info */}
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <span>Competitive pricing and flexible solutions</span>
 =======
                 <li className='flex items-center space-x-2'    />
@@ -1475,6 +1638,80 @@ href: '#'}];
                 </li>
               </ul>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+              viewport={{ once: true }}
+              className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+              viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+              <h4 className='text-lg font-semibold text-white mb-3'>;
+                Why Choose Zion Tech?;
+              </h4>;
+              <ul className='space-y-2 text-gray-300'>            >;
+              <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>;
+              <ul className="space-y-2 text-gray-300">;
+                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>Expert team with 10+ years experience</span>;
+                </li>;
+                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>Proven track record of successful projects</span>;
+                </li>;
+                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>24/7 support and maintenance</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Expert team with 10+ years experience</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Proven track record of successful projects</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>24/7 support and maintenance</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>Competitive pricing and flexible solutions</span>                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>Competitive pricing and flexible solutions</span>;
+                </li>;
+              </ul>;
+            </motion && motion.div>;
+          </motion && motion.div>;className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6';
+            >;
+              <h4 className='text-lg font-semibold text-white mb-3'>;
+                Why Choose Zion Tech?;
+              </h4>;
+              <ul className='space-y-2 text-gray-300'>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Expert team with 10+ years experience</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Proven track record of successful projects</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>24/7 support and maintenance</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Competitive pricing and flexible solutions</span>;
+                </li>;
+              </ul>;
+            </motion.div>;
+          </motion && motion.div>;
+
+          {/* Contact Form *
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
           </motion.div>
 
           {/* Contact Form */}
@@ -1499,6 +1736,10 @@ href: '#'}];
           {/* Contact Form *}
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <motion&& motion.div;
             initial={{ opacity: 0, x: 30 }
 }
@@ -1507,6 +1748,33 @@ href: '#'}];
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8''
+          >
+            {submitStatus === 'success' ? ('
+              <motion.div
+}
+initial={{ "opacity": 0, "scale": 0.8 
+}
+                animate={{ "opacity": 1, "scale": 1 }}
+
+className='text-center py-12''
+              >
+                <CheckCircle className='w-20 h-20 text-green-400 mx-auto mb-6' />'
+                <h3 className='text-2xl font-bold text-white mb-4'>'
+                  Message Sent Successfully!
+                </h3>
+                <p className='text-gray-300 mb-6'>'
+                  Thank you for reaching out. Our team will get back to you,
+within 24 hours.
+                </p>
+                <button,
+onClick={() => setSubmitStatus('idle')}'
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Form */}
@@ -1617,11 +1885,69 @@ onClick={() =    /> setSubmitStatus('idle')}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >
                   Send Another Message;
                 </button>
               </motion.div>
             ) : (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<form onSubmit={handleSubmit} className='space-y-6'>'
+                <div className='grid grid-cols-1 "md":grid-cols-2 gap-6'>'
+                  <div>
+                    <label,
+htmlFor='name''
+                      className='block text-white font-medium mb-2''
+                    >
+                      Full Name *
+                    </label>
+                    <input,
+type='text''
+                      id='name''
+                      name='name''
+                    <input,
+type='email''
+                      id='email''
+                      name='email''
+
+                      value={formData.email}
+
+                      onChange={handleChang
+}
+                      required;
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors';'
+                      placeholder='Enter your email';' />;
+                  </div>;
+<div className='grid grid-cols-1 "md":grid-cols-2 gap-6'>;'
+                  <div>;
+                    <label;
+                      htmlFor='company';'
+                      className='block text-white font-medium mb-2'>'
+
+                      Company;
+                    </label>;
+                    <input;
+                      type='text';'
+                      id='company';'
+                      name='company';'
+                      value={formData.company}
+                      onChange={handleChange}
+                    <label
+                      htmlFor='phone'
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors';
+                      placeholder='Enter company name'                    />;
+                  </div>;
+                  <div>;
+                    <label;
+                      htmlFor='phone';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1677,6 +2003,10 @@ type='email'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <form onSubmit={handleSubmit} className='space-y-6'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label
@@ -1932,6 +2262,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>'"
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
                       placeholder="Enter your email"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6>
                   <div>
@@ -1953,12 +2288,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
                       placeholder=Enter your email"
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     />
                   </div>
                 </div>"
                       placeholder=Enter your email;
                     />;
                   </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
+                      placeholder='Enter your email'
+                    />
+                  </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;
                       value={formData.email}
 =======
@@ -1993,8 +2344,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <div>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      className='block text-white font-medium mb-2'>;'
+                      Phone Number;
+                    </label>;
+                    <input;
+                      type='tel';'
+                      id='phone';'
+                      name='phone';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
                     <label
                       htmlFor='company'
                       className='block text-white font-medium mb-2'>;
@@ -2038,10 +2405,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       type='tel
                       id='phone'
                       name=phone'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       value={formData && formData.phone}
                       onChange={handleChange}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      placeholder='Enter phone number'' />
+                  </div>
+                <div>
+<label,
+htmlFor='service''
+                    className='block text-white font-medium mb-2''
+                  >
+                    Service of Interest
+                  </label>
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 <div>
                   <label htmlFor="service" className="block text-white font-medium mb-2">
                     Service of Interest
@@ -2248,6 +2633,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   <select
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <select,
 id='service''
                     name='service''
@@ -2270,6 +2659,22 @@ id='service''
                   </select>
                 </div>
                 <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<label,
+htmlFor='message''
+                    className='block text-white font-medium mb-2'>;'
+                    Message *;
+                  </label>;
+                  <textarea,
+id='message''
+
+                    name='message''
+
+                    value={formData.message}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <label
 origin/cursor/automate-test-improve-and-merge-code-2533
                     htmlFor='message'
@@ -2279,6 +2684,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <textarea'
                     id='message''
                     name='message'                    value={formData && formData.message}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     onChange={handleChange}
                     required;
                     rows={5}'
@@ -2292,6 +2701,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors resize-none''
+                    placeholder='Tell us about your project or inquiry...'' />
+                </div>
+                {submitStatus === 'error' && ('
+                  <motion.div />;
+                </div>;
+                {submitStatus === 'error' && (<motion.div;' />;
+                </div>;{submitStatus === 'error' && (<motion&& motion.div;'
+                    }
+                    initial={{ "opacity": 0, "y": -10 
+}
+
+                    animate={{ "opacity": 1, "y": 0 }}
+
+className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                     placeholder='Tell us about your project or inquiry...'                  />                  <label htmlFor="message" className="block text-white font-medium mb-2" htmlFor="input-
                     Message *
@@ -2332,6 +2761,10 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   >
                     <AlertCircle className='w-5 h-5' />'
                     <span>Something went wrong. Please try again.</span>
@@ -2363,6 +2796,12 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
 }
                 <button;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg "hover": from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl transform "hover":-translate-y-1 "disabled":opacity-50 "disabled":cursor-not-allowed "disabled":transform-none flex items-center justify-center space-x-2''
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 )}
                 <button
 <<<<<<< HEAD
@@ -2375,6 +2814,10 @@ type='submit'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   disabled={isSubmitting}
                   className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >
                   {isSubmitting ? (
                     <>
@@ -2384,7 +2827,16 @@ type='submit'
                   ) : (
                     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<Send className='w-5 h-5' />'
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       <span>Send Message</span>
                     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2414,6 +2866,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2';
@@ -2430,6 +2888,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>;
               </form>;
             )}export default ContactForm;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 };
 export default ContactForm;  );
@@ -2440,6 +2903,10 @@ export default ContactForm;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <div>;
                   <label;
                     html_for='service';
@@ -2447,6 +2914,22 @@ export default ContactForm;
                   >;
                     Service of Interest;
                   </label>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <select;
+                    id='service';
+                    name='service';
+                    value={form_data.service}
+                    on_change={handle_change}
+                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors';
+                  >;
+                    <option value=''>Select a service</option>;
+                    {services.map (service => (<option;
+                        key={service}
+                        value={service}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                       className='block text-white font-medium mb-2'    />;
                       Phone Number;
@@ -2486,6 +2969,10 @@ id='service'
                         key={service}
                         value={service}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                         className='bg - gray - 800 text - white';
                       >                        {service}                    Service of Interest;
                   </label>;
@@ -2596,6 +3083,21 @@ id='service'
                       <span > Sending...</span>;
                     </>) : (
                     <>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
+                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
+                >;
+                  {is_submitting ? (
+                    <>;
+                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
+                      <span > Sending...</span>;
+                    </>) : (
+                    <>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
                       <span > Send Message</span>;
                     </>)}
@@ -2603,11 +3105,23 @@ id='service'
               </form>)}
           </motion.div>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
+export default ContactForm;export default ContactForm;</motion.div>;
+        </div>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
       </div>;
     </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
 export default ContactForm;export default ContactForm;</motion.div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </section>;
     </section>);
 }
@@ -2615,6 +3129,13 @@ export default ContactForm);
 }
 export default ContactForm;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 export default ContactForm;  )
 }
@@ -2631,6 +3152,29 @@ export default ContactForm;  )
 }
 export default ContactForm;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <div>
+                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    placeholder="Tell us about your project or inquiry..."
+                  />
+                </div>
+
+                {submitStatus === 'error' && (
+                  <motion.div
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -2681,10 +3225,19 @@ id='message'
                   <motion.div
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0}}
                     className = $2;
 export default ContactForm,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
                     placeholder='Tell us about your project or inquiry...'
@@ -2813,6 +3366,10 @@ export default ContactForm
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </motion.div>
         </div>
       </div>
@@ -2820,6 +3377,11 @@ export default ContactForm
   );
 }
 export default ContactForm;  )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 export default ContactForm;
 
@@ -2827,10 +3389,19 @@ export default ContactForm;
 <<<<<<< HEAD
 =======
 );
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 )
 };
@@ -2851,3 +3422,7 @@ export default ContactForm;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

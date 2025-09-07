@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+
+const EPISODES_PATH = path.join(;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -19,6 +29,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   process.cwd()
   'data''
   'podcast''
@@ -27,10 +41,26 @@ const EPISODES_PATH = path.join(
 function ensureStorage() {
   }
   const dir = path.dirname(EPISODES_PATH);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+});
+if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');'
+
+export default function handler() {
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 function ensureStorage() {
@@ -39,6 +69,11 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> merged-prs-20250907-203621
 
@@ -164,8 +199,32 @@ function handler() {
     summary: e.best_quote || '',
     audio: e.audio || {},
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  ensureStorage($2);
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const simplified = $2;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+const simplified = episodes.map(e => ({
+    }
+    "id": e.id,
+    "title": e.title,
+    "inviteeName": e.invitee?.name || 'Guest','
+    "createdAt": e.createdAt,
+    "summary": e.bestQuote || '','
+    "audio": e.audio || 
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
@@ -255,6 +314,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({}
     id: e.id;
@@ -266,6 +329,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     summary: e.bestQuote || ',
     audio: e.audio || {}}));
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return res.status(200).json({ "episodes": simplified
+});
+  return res.status(200).json({ "episodes": simplified })
+}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return res.status(200).json({ episodes: simplified })
 }'
     invitee_name: e.invitee?.name || 'Guest';
@@ -324,3 +397,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,4 +1,46 @@
 <<<<<<< HEAD
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
+import { Badge } from "@/types/community";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+
+  badges: Badge[];
+}
+const icon_map = {}
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+
+  MessageSquare;
+};
+
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
+
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
+import { Badge } from "@/types/community";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";""
+import {Badge} from "@/types/community";""
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";"
+pr-12325
+interface UserBadgesProps {;
+  badges: Badge[];
+
+=======
+<<<<<<< HEAD
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -8,12 +50,17 @@ import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 const iconMap = {;
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
 import { Badge } from '@/types / community';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 
+<<<<<<< HEAD
+  badges: Badge[];
+}
+=======
 
 interface UserBadgesProps {
   badges: Badge[];
@@ -126,6 +173,7 @@ interface UserBadgesProps {;
 
   badges: Badge[];
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const icon_map = {}
   Trophy;
   Award;
@@ -138,11 +186,14 @@ const icon_map = {}
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -170,6 +221,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       })}
     </div>
@@ -181,6 +234,7 @@ export default UserBadges;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
 import { Badge } from "@/types/community",;
 
@@ -199,6 +253,12 @@ const iconMap = {;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
+<<<<<<< HEAD
+
+export default UserBadges;
+
+export default UserBadges;
+=======
 <<<<<<< HEAD
   if (!badges?.length) return null;
   return (
@@ -301,6 +361,7 @@ export default UserBadges;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   MessageSquare;
 
 }
@@ -333,8 +394,12 @@ export default UserBadges;
 ),;
 =======
 <<<<<<< HEAD
+),;
+=======
+<<<<<<< HEAD
         ),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       })}
     </div>;
   ),;
@@ -363,6 +428,11 @@ badge.id
 };
 export default UserBadges;
 export default UserBadges;
+<<<<<<< HEAD
+export default UserBadges;
+
+export default UserBadges;
+=======
 export default UserBadges;
 <<<<<<< HEAD
 
@@ -373,3 +443,4 @@ export default UserBadges;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

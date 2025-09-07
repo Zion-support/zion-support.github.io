@@ -13,6 +13,8 @@ import { MobileConversationList } from "../components/messaging/MobileConversati
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -32,6 +34,7 @@ import { MobileChatView } from "../components/messaging/MobileChatView",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Mock data for demonstration
 
 const mockConversations = [
@@ -89,10 +92,21 @@ const mockMessages: Message[] = []
     isMe: false"
     status: "read"}
 <<<<<<< HEAD
+
+import React, { useState } from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileConversationList} from "../components/messaging/MobileConversationList";
+import {MobileChatView} from "../components/messaging/MobileChatView";
+
+=======
+<<<<<<< HEAD
 =======
   {
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     id: "4"
+
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
     timestamp: "10:40 AM"
     isMe: true
@@ -103,6 +117,39 @@ const mockMessages: Message[] = []
     isMe: true,
     status: "read"},
   {
+<<<<<<< HEAD
+
+    id: "5"
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
+
+    timestamp: "10:45 AM"
+    isMe: false"
+    status: "read"}]"
+    id: "5",'"
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?","
+    timestamp: "10:45 AM",
+    isMe: false,"
+    status: "read"}],
+
+  {}
+export function MobileMessages() {}
+  const handleSelectConversation = (id: string) => {}
+    setActiveConversation(id)
+  },
+  
+  const handleBack = () => {}
+    setActiveConversation(null)
+  },
+  
+  const handleSendMessage = (content: string) => {}
+    const newMessage: Message = {}
+      id: `${Date.now()}`,
+      content,"
+      timestamp: "Just now",
+      isMe: true,"
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     id: "5"
     content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
     timestamp: "10:45 AM"
@@ -114,6 +161,18 @@ const mockMessages: Message[] = []
     isMe: false,
     status: "read"}],
 
+<<<<<<< HEAD
+  {
+
+export function MobileMessages() {
+
+  const handleSelectConversation = (id: string) => {
+    setActiveConversation(id)
+  },
+  const handleBack = () => {
+    setActiveConversation(null)
+  },
+=======
 export function MobileMessages() {;
   const [activeConversation, setActiveConversation] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>(mockMessages);
@@ -147,15 +206,21 @@ export function MobileMessages() {
     setActiveConversation(null)
   },
   
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleSendMessage = (content: string) => {
     const newMessage: Message = {
       id: `${Date.now()}`,
       content,
       timestamp: "Just now",
       isMe: true,
+
       status: "sent"},
     setMessages([...messages, newMessage])
   },
+<<<<<<< HEAD
+  const currentContact = mockConversations.find(c => c.id === activeConversation),
+
+=======
   
   const currentContact = mockConversations.find(c => c.id === activeConversation),
   
@@ -199,29 +264,31 @@ import {MobileChatView} from "../components/messaging/MobileChatView";
 >>>>>>> merged-prs-20250907-203621
 // Mock data for demonstration;
 const mockConversations = [;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   {;
     id: "1",;
     name: "Sarah Johnson",;
     lastMessage: "Looking forward to discussing the project tomorrow!",;
+
     timestamp: "10:45 AM",;
     unreadCount: 2},;
-  {;
-    id: "2",;
-    name: "TechCorp Inc.",;
-    lastMessage: "We'd like to schedule an interview for the React Developer position",;
+  {;"
+    id: "2",;"
+    name: "TechCorp Inc.",;'"
+    lastMessage: "We'd like to schedule an interview for the React Developer position",;"
     timestamp: "Yesterday",;
     unreadCount: 0},;
-  {;
-    id: "3",;
-    name: "David Wilson",;
-    lastMessage: "Can you share your portfolio link again?",;
+  {;"
+    id: "3",;"
+    name: "David Wilson",;"
+    lastMessage: "Can you share your portfolio link again?",;"
     timestamp: "Wed",;
     unreadCount: 0,;
     isTyping: true},;
-  {;
-    id: "4",;
-    name: "Creative Studios",;
-    lastMessage: "Your application has been received. We'll review it shortly.",;
+  {;"
+    id: "4",;"
+    name: "Creative Studios",;'"
+    lastMessage: "Your application has been received. We'll review it shortly.",;"
     timestamp: "Mon",;
     unreadCount: 0}],;
 <<<<<<< HEAD
@@ -233,9 +300,12 @@ interface Message {;
   id: string,;
   content: string,;
   timestamp: string,;
-  isMe: boolean,;
+  isMe: boolean,;"
   status: "read" | "sent" | "delivered";
 }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -244,25 +314,74 @@ interface Message {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const mockMessages: Message[] = [;
-  {;
-    id: "1",;
-    content: "Hi there! I noticed your profile and think you'd be perfect for our project.",;
+  {;"
+    id: "1",;'"
+    content: "Hi there! I noticed your profile and think you'd be perfect for our project.",;"
     timestamp: "10:30 AM",;
-    isMe: false,;
+    isMe: false,;"
     status: "read"},;
-  {;
-    id: "2",;
-    content: "Thanks for reaching out! I'd be interested in learning more about it.",;
+  {;"
+    id: "2",;'"
+    content: "Thanks for reaching out! I'd be interested in learning more about it.",;"
     timestamp: "10:32 AM",;
-    isMe: true,;
+    isMe: true,;"
     status: "read"},;
-  {;
-    id: "3",;
-    content: "Great! It's a web application for a fintech company. We need someone with React and TypeScript experience. The project would last about 3 months. Are you available?",;
+  {;"
+    id: "3",;'"
+    content: "Great! It's a web application for a fintech company. We need someone with React and TypeScript experience. The project would last about 3 months. Are you available?",;"
     timestamp: "10:35 AM",;
-    isMe: false,;
+    isMe: false,;"
     status: "read"},;
+<<<<<<< HEAD
+
+    <div className="min-h-screen flex flex-col">;
+      {activeConversation ? (;
+        <MobileChatView;
+          contact={{;"
+            id: currentContact?.id || "";"
+            name: currentContact?.name || "";"
+            status: "Online";
+
+"
+    id: "4",'"
+    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?","
+    timestamp: "10:40 AM",
+    isMe: true,"
+    status: "read"},
+
+  {}
+"
+    id: "5",'"
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?","
+    timestamp: "10:45 AM",
+    isMe: false,"
+    status: "read"}],
+
+  return (
+
+    <div className="min-h-screen flex flex-col">
+      {activeConversation ? (
+        <MobileChatView;
+          contact={{}
+"
+            id: currentContact?.id || "","
+            name: currentContact?.name || "","
+
+            status: "Online"
+
+          }}
+          messages={messages}
+          on_back={handle_back}
+          onSendMessage={handleSendMessage}
+
+              onSelectConversation={handleSelectConversation}
+            />;
+          </main>;
+
+        />) : (
+=======
   {;
     id: "4",;
 <<<<<<< HEAD
@@ -727,9 +846,12 @@ export function MobileMessages() {;
 =======
         />;
       ) :(;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <>;
-          <MobileHeader;
+          <MobileHeader;"
             title="Messages";
+<<<<<<< HEAD
+=======
           />;
           ;
           <main className="flex-1 overflow-y-auto">;
@@ -748,6 +870,7 @@ export function MobileMessages() {;
         <>;
           <MobileHeader;"
             title="Messages";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <MobileConversationList;
               conversations={mock_conversations}
@@ -762,7 +885,11 @@ export function MobileMessages() {;
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ),;}
    id: string;
 content: string;
@@ -795,6 +922,9 @@ isMe: true;
             name: currentContact?.name || "";
             status: "Online";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   isMe: boolean,;"
   status: "read" | "sent" | "delivered";"
 
@@ -832,6 +962,8 @@ export function MobileMessages() {;
             id: currentContact?.id || "",""
             name: currentContact?.name || "",""
             status: "Online""
+<<<<<<< HEAD
+=======
           }}
           messages={messages}
           on_back={handle_back}
@@ -855,29 +987,33 @@ export function MobileMessages() {;
 }
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }}
           messages={messages}
-          onBack={handleBack}
+          on_back={handle_back}
           onSendMessage={handleSendMessage}
-        />
-      ) : (
-        <>
-          <MobileHeader
-            title="Messages"
-          />
-          <main className="flex-1 overflow-y-auto">
-            <MobileConversationList
+
+          />;
+
+          <main className="flex-1 overflow-y-auto">;"
+</main>
+            <MobileConversationList;
               conversations={mockConversations}
               onSelectConversation={handleSelectConversation}
-            />
-          </main>
-          <BottomNavigation />
-        </>
+
+          </main>;
+          <BottomNavigation />;
+
+        </>;)
       )}
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

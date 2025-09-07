@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -7,12 +9,23 @@
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
+<<<<<<< HEAD
+
+interface ApplicationsTableProps {;
+  applications: JobApplication[],;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -35,19 +48,29 @@ import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmatio
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import {};
+
+=======
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD
+=======
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -130,6 +153,7 @@ import {};
   TableCell;
   TableHead;
   TableHeader;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
@@ -138,16 +162,21 @@ interface ApplicationsTableProps {;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
   onViewScore: (application: JobApplication) => void;
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function ApplicationsTable({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   applications
   processingId
   onViewApplication
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -165,20 +194,25 @@ export function ApplicationsTable({
   onViewApplication, 
   onStatusChange,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function ApplicationsTable(): any ({ ;
   applications, ;
   processingId, ;
   onViewApplication, ;
+
   onStatusChange;
   onViewScore;
 }: ApplicationsTableProps) {;
@@ -194,6 +228,10 @@ export function ApplicationsTable({
     setSelectedApplication(application)
     setHireModalOpen(true)
 
+<<<<<<< HEAD
+  },
+
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   },
@@ -208,6 +246,7 @@ export function ApplicationsTable({
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
@@ -257,6 +296,10 @@ function ApplicationsTable() {
 ;
 
 <<<<<<< HEAD
+  },
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   },
@@ -273,6 +316,7 @@ function ApplicationsTable() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <>;"
       <div className="rounded - md border">;
@@ -287,6 +331,9 @@ function ApplicationsTable() {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -377,6 +424,7 @@ function ApplicationsTable() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <ClickableBadge
                       variant="outline"
 
@@ -399,12 +447,17 @@ function ApplicationsTable() {
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <ApplicationActions;
 "
 import { format } from "date-fns",;"
 import { JobApplication } from "@/types/jobs",;"
 import { Avatar } from "@/components/ui/avatar",;"
 import { Badge } from "@/components/ui/badge",;"
+<<<<<<< HEAD
+=======
 =======
                     <ApplicationActions
 <<<<<<< HEAD
@@ -416,6 +469,7 @@ import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import {;
   Table,;
@@ -441,6 +495,11 @@ interface ApplicationsTableProps {;
 ;
 <<<<<<< HEAD
 export function ApplicationsTable() { return null; }
+  };
+
+=======
+<<<<<<< HEAD
+export function ApplicationsTable() { return null; }
 =======
 export function ApplicationsTable({;
   applications,;
@@ -460,6 +519,7 @@ export function ApplicationsTable({;
     setHireModalOpen(true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   };
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleHireConfirmed = () => {;
     // This will be called after the hire confirmation is completed;
     toast({;"
@@ -467,6 +527,10 @@ export function ApplicationsTable({;
       description: "Offer has been sent to the talent.";
     });
   };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <>;"
       <div className="rounded-md border">;
@@ -480,6 +544,9 @@ export function ApplicationsTable({;
               <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -517,6 +584,7 @@ export function ApplicationsTable({;
                 <TableCell className="hidden lg:table-cell">;
                   {application && application.match_score !== undefined && application && application.match_score !== null ? (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <ClickableBadge
                       variant="outline"
 
@@ -529,6 +597,9 @@ export function ApplicationsTable({;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -540,16 +611,21 @@ export function ApplicationsTable({;
                     <ClickableBadge
                       variant="outline" 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >;"
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
                     <ApplicationActions
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <img;
                           src={application.talent_profile.profile_picture_url}"
                           alt={application.talent_profile.full_name || "Candidate"}
@@ -564,6 +640,17 @@ export function ApplicationsTable({;
                         {application.talent_profile?.professional_title || "Applicant"}
                       </div>;
                     </div>;
+<<<<<<< HEAD
+                  </div>;
+                </TableCell>;
+
+                      application={application}
+                      processing_id={processing_id}
+                      onViewApplication={onViewApplication}
+                      onStatusChange={onStatusChange}
+                    />;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </div>;
                 </TableCell>;
 <<<<<<< HEAD
@@ -598,6 +685,8 @@ export function ApplicationsTable({;
                     <ApplicationActions;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+=======
                       application={application}
                       processing_id={processing_id}
 
@@ -686,6 +775,7 @@ export function ApplicationsTable({ ;
                         <img;
                           src={application.talent_profile.profile_picture_url} ;
                           alt={application.talent_profile.full_name || "Candidate"} ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         />;
                       ) : (;
                         <User className="h-4 w-4" />;
@@ -693,14 +783,22 @@ export function ApplicationsTable({ ;
                     </Avatar>;
                     <div>;
                       <div className="font-medium">;
+<<<<<<< HEAD
+
+=======
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>;
                       <div className="text-xs text-muted-foreground mt-0.5">;
                         {application.talent_profile?.professional_title || "Applicant"}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
+                <TableCell className="hidden md:table-cell">;
+
+=======
 <<<<<<< HEAD
 
                         />;
@@ -722,6 +820,7 @@ export function ApplicationsTable({ ;
                     <ClickableBadge;
                       variant="outline";
                       className="cursor-pointer";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       onClick={() => onViewScore(application)}
                     >;
                       {application.match_score}%;
@@ -729,16 +828,22 @@ export function ApplicationsTable({ ;
                   ) : (;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
+<<<<<<< HEAD
+
+=======
                 </TableCell>;
                 <TableCell className="text-right">;
                   <div className="flex items-center justify-end gap-2">;
                     <ClickableBadge;
                       variant="outline";
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       onClick={() => handleHireClick(application)}
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
+<<<<<<< HEAD
+=======
                     <ApplicationActions;
               </TableRow>;
             ))}
@@ -749,6 +854,7 @@ export function ApplicationsTable({ ;
       ;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                       </div>;
                     </div>;
@@ -774,12 +880,19 @@ export function ApplicationsTable({ ;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -790,6 +903,7 @@ export function ApplicationsTable({ ;
     </>;
               </TableRow>))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </TableBody>;
         </Table>;
       </div>;
@@ -802,6 +916,9 @@ export function ApplicationsTable({ ;
       />;
     </>);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   ),;}
 };
@@ -821,6 +938,8 @@ export function ApplicationsTable({ ;
   () => setHireModalOpen (false) 
 
 }/> </>) 
+<<<<<<< HEAD
+=======
                       processingId={processingId}
                     />
 
@@ -864,26 +983,16 @@ pr-12325
 }
 >>>>>>> merged-prs-20250907-203621
                       application={application}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       processingId={processingId}
-                      onViewApplication={onViewApplication}
-                      onStatusChange={onStatusChange}
                     />
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-      {/* Hire Confirmation Modal */}
-      <HireConfirmationModal
-        isOpen={hireModalOpen}
-        onClose={() => setHireModalOpen(false)}
-        application={selectedApplication |undefined}
-        onConfirm={handleHireConfirmed}
-      />
+
     </>
   )
+<<<<<<< HEAD
+pr-12325
+}
+=======
 }
 <<<<<<< HEAD
 =======
@@ -892,3 +1001,4 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

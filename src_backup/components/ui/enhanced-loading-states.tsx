@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -16,11 +22,36 @@ import {Loader2;
   Clock;
   Zap;
 } from 'lucide-react'; import { Button  } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { Card, CardContent  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { cn  } from '@/lib/utils';
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from react'
+import { motion, AnimatePresence } from 'framer-motion
+>>>>>>> origin/resolved-merge-conflicts
 import {
   Loader2
   AlertTriangle
@@ -176,8 +207,19 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
       {showProgress && ('
         <div className='w-full bg-muted rounded-full h-2'>
 
+<<<<<<< HEAD
             initial={ opacity: 0, x: -20 }
   showText?: boolean;text?: string;export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md',variant = 'default',className,showText = false,text = 'Loading...'}) => {  const sizeClasses = {sm: 'h-4 w-4',md: 'h-6 w-6',lg: 'h-8 w-8',xl: 'h-12 w-12'}const variantClasses = {default: 'text-muted-foreground',primary: 'text-primary',success: 'text-green-500',warning: 'text-yellow-500',error: 'text-red-500'}variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
+=======
+            initial={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  showText?: boolean;text?: string;export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = md,variant = 'default',className,showText = false,text = Loading...}) => {  const sizeClasses = {sm: 'h-4 w-4',md: h-6 w-6,lg: 'h-8 w-8',xl: h-12 w-12}const variantClasses = {default: 'text-muted-foreground',primary: text-primary,success: 'text-green-500',warning: text-yellow-500,error: 'text-red-500'}variant?: default | 'primary' | success | 'warning' | error;
+>>>>>>> origin/resolved-merge-conflicts
   className?: string;
   showText?: boolean;
   text?: string;
@@ -267,9 +309,21 @@ interface ProgressiveLoadingProps  {steps: Array<{ id: string, label: string, du
             ) : (<div className='h-4 w-4 rounded-full border-2 border-muted' />;
             <span className='text-sm font-medium'>{step && step.label}</span>;
           </motion && motion.div>;
+<<<<<<< HEAD
         ))}initial={ opacity: 0, x: -20 }
             animate={ opacity: index <= activeStep ? 1 : 0.5, x: 0 }
             transition={ delay: index * 0.1 }
+=======
+        ))}initial={{ opacity: 0, x: -20 }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+>>>>>>> origin/resolved-merge-conflicts
           >
             {index < activeStep ? ('
               <div className='h-4 w-4 rounded-full bg-green-500 flex items-center justify-center'>'
@@ -442,6 +496,12 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 
         }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 // Enhanced skeleton loader;
 interface SkeletonProps  {</div>;
@@ -467,8 +527,19 @@ interface SkeletonProps  {</div>;
   )}const config = getErrorConfig(),const Icon = config.icon,const canRetry = showRetry && onRetry && retryCount < maxRetries,return (<Card className={cn('border-destructive/20', className)}>;
       <CardContent className='p-8 text-center'>;
         <motion.div;
+<<<<<<< HEAD
           initial={ scale: 0.8, opacity: 0 }
           animate={ scale: 1, opacity: 1 }
+=======
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -512,11 +583,42 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           initial={ scale: 0.8, opacity: 0 }
           animate={ scale: 1, opacity: 1 }
 
+<<<<<<< HEAD
           transition={ duration: 0.3 }
         >;
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />;
           <h3 className='text-lg font-semibold mb-2'>{config.title}</h3>;
           <p className='text-muted-foreground mb-6 max-w-md mx-auto'>;
+=======
+          transition={{ duration: 0.3 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        >;
+          <Icon className={cn('mx-auto mb-4 h-12 w-12, config.color)} />;
+          <h3 className="text-lg font-semibold mb-2>{config.title}</h3>;
+          <p className=text-muted-foreground mb-6 max-w-md mx-auto">;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        >
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
+          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {config.description}
           </p>
 
@@ -525,9 +627,21 @@ export const Skeleton: React.FC<SkeletonProps> = ({
                 Error Details (Development)
               </summary>
 
+<<<<<<< HEAD
           {error && process.env.NODE_ENV === 'development' && (class_name?: string;
   variant?: 'text' | 'circular' | 'rectangular' | 'card';
   animation?: 'pulse' | 'wave' | 'none';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          {error && process.env.NODE_ENV === development' && (class_name?: string;
+  variant?: 'text | circular' | 'rectangular | card';
+  animation?: 'pulse | wave' | 'none;
+>>>>>>> origin/resolved-merge-conflicts
   lines?: number;
 export const Skeleton: React.FC < SkeletonProps> = ({class_name,variant = 'rectangular',animation = 'pulse',lines = 1}) => {const base_classes = 'bg - muted rounded';
   const variant_classes = {text: 'h - 4 w - full',circular: 'h - 12 w - 12 rounded - full',rectangular: 'h - 6 w - full',card: 'h - 48 w - full'}
@@ -624,7 +738,22 @@ interface SkeletonProps  {className?: string,variant?: 'text' | 'circular' | 're
           </p>;{error && process && process.env.NODE_ENV === 'development' && (<details className='mb-4 text-left'>;
               <summary className='text-sm text-muted-foreground cursor-pointer'>;
                 Error Details (Development)</summary>;
+<<<<<<< HEAD
               <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>;
+=======
+              <pre className=mt-2 p-2 bg-muted rounded text-xs overflow-auto'>;
+                {typeof error === 'string ? error : error.message}
+
+              <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto>
+
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {typeof error === 'string' ? error : error.message}
 
               <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>
@@ -664,7 +793,17 @@ interface SkeletonProps  {className?: string,variant?: 'text' | 'circular' | 're
               </Button>
             )}
 
+<<<<<<< HEAD
           )}<div className='flex flex-col sm:flex-row gap-2 justify-center'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          )}<div className=flex flex-col sm:flex-row gap-2 justify-center>;
+>>>>>>> origin/resolved-merge-conflicts
             {canRetry && (<Button onClick={onRetry} variant='default'>;
                 <RefreshCw className='h-4 w-4 mr-2' />;<div className='flex flex-col sm:flex-row gap-2 justify-center'>;
             {canRetry && (Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
@@ -700,6 +839,12 @@ interface SkeletonProps  {className?: string,variant?: 'text' | 'circular' | 're
 
 
             {secondaryAction && (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {action && (;
 
               <Button;
@@ -722,6 +867,12 @@ interface SkeletonProps  {className?: string,variant?: 'text' | 'circular' | 're
             {secondaryAction && ('
               <Button onClick={secondaryAction.onClick} variant='ghost'>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </Button>;
             )}{action.label}
               </Button>;
@@ -739,7 +890,17 @@ interface SkeletonProps  {className?: string,variant?: 'text' | 'circular' | 're
                 {secondaryAction && secondaryAction.label}
               </Button>;
             )}
+<<<<<<< HEAD
           </div>;{!isOnline && (<div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+=======
+          </div>;{!isOnline && (<div className=mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {secondaryAction.label}
               </Button>;
             )}
@@ -778,13 +939,41 @@ interface SkeletonProps  {className?: string,variant?: 'text' | 'circular' | 're
               </div>;
             )}
 '
+<<<<<<< HEAD
             {variant === 'table' && (;'
               <div className='flex items-center gap-4'>;'
                 <Skeleton variant='text' className='h-4 w-1/4' />;'
                 <Skeleton variant='text' className='h-4 w-1/3' />;'
                 <Skeleton variant='text' className='h-4 w-1/6' />;'
                 <Skeleton variant='text' className='h-4 w-1/4' />;
+=======
+<<<<<<< HEAD
+            {variant === 'table && (;
+              <div className='flex items-center gap-4'>;
+                <Skeleton variant=text' className='h-4 w-1/4 />;
+                <Skeleton variant='text' className=h-4 w-1/3 />;'
+                <Skeleton variant='text className=h-4 w-1/6' />;'
+                <Skeleton variant=text className='h-4 w-1/4' />;
+>>>>>>> origin/resolved-merge-conflicts
               </div>;)}
+=======
+            {variant === 'table' && (;'
+              <div className='flex items-center gap-4'>;'
+                <Skeleton variant='text' className='h-4 w-1/4' />;'
+                <Skeleton variant='text' className='h-4 w-1/3' />;'
+                <Skeleton variant='text' className='h-4 w-1/6' />;'
+                <Skeleton variant='text' className='h-4 w-1/4' />;
+              </div>;
+
+            )}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </CardContent>;
         </Card>;
       ))}
@@ -889,6 +1078,15 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
             )}
 
           </CardContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </Card>;
+      ))}
+    </div>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>)}export const LoadingGrid: React.FC<LoadingGridProps> = ({count = 8,columns = 4,variant = 'card'},// Loading state for lists/grids;
 interface LoadingGridProps  {count?: number,columns?: number,variant?: 'card' | 'list' | 'table',className?: string;
 }</CardContent>;
@@ -946,7 +1144,35 @@ interface PerformanceIndicatorProps  {isLoading?: boolean,loadTime?: number,item
           <Zap className='h-3 w-3 mr-1' />;
           {loadTime}ms;
         </Badge>;
+<<<<<<< HEAD
       )}
+=======
+      )}}
+=======
+        </Card>;
+      ))}
+    </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  );
+},;
+// Performance indicator;
+interface PerformanceIndicatorProps {;
+  isLoading?: boolean,;
+  loadTime?: number,;
+  itemCount?: number,;
+  className?: string;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
   isLoading = false,
@@ -985,9 +1211,13 @@ interface PerformanceIndicatorProps  {isLoading?: boolean,loadTime?: number,item
 
 }
 }
+<<<<<<< HEAD
 }
       {itemCount && (<span>{itemCount} items loaded</span>;
       )}
     </div>;
   )}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({)}
 }
+=======
+}
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,9 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import fs from 'fs';
 type RouteInfo = any;
     generatedAt = json.generatedAt || '';
 type RouteInfo = any;
+<<<<<<< HEAD
 =======
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
@@ -26,6 +33,33 @@ export async function getServerSideProps() {;
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
 
+=======
+<<<<<<< HEAD
+
+=======
+=======
+
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string }
+export async function getServerSideProps() {
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string },
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datasite-map.json');
+  let routes: RouteInfo[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    routes = json.routes |[];
+    generatedAt = json.generatedAt |''
+
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
@@ -68,6 +102,10 @@ import fs from 'fs';
 import path from 'path';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     generatedAt = json.generatedAt || ''
 origin/cursor/automate-test-improve-and-merge-code-2533
 type RouteInfo = any;
@@ -154,6 +192,7 @@ export async function getServerSideProps() {
 <<<<<<< HEAD
   );
 =======
+<<<<<<< HEAD
 =======
 
 
@@ -216,6 +255,79 @@ function getServerSideProps() {
 }
 
 
+=======
+<<<<<<< HEAD
+
+);
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+
+
+"
+=======
+=======
+
+
+
+export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string }
+export async function getServerSideProps() {
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string },
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datasite-map.json');
+  let routes: RouteInfo[] = [];  let generatedAt = '';
+  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    const json = JSON && JSON.parse(raw);
+    routes = json && json.routes || [];
+    generatedAt = json && json.generatedAt || '';
+type RouteInfo = { path: string, last_modified: string },
+export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {
+  const file = path.join (process.cwd (), 'datasite - map.json');
+  let routes: RouteInfo[] = [];  let generated_at = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    routes = json.routes |[];
+    generatedAt = json.generatedAt |''
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  } catch {}
+  return { props: { routes, generated_at } }
+}
+
+
+>>>>>>> origin/resolved-merge-conflicts
     </div>;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -309,3 +421,7 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

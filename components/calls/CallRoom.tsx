@@ -6,6 +6,42 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+
+import React, { useCallback, useEffect, useMemo, useState } from 'react';'
+import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';'
+import ParticipantTile from './ParticipantTile';'
+import Controls from './Controls';'
+
+export type StartMode = any;
+import {
+  }
+  Room,
+RoomEvent
+  RemoteParticipant,
+LocalParticipant
+  createLocalTracks,
+VideoPresets;
+  Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets} from 'livekit-client';'
+
+export type StartMode = 'video' | 'audio';'
+  "projectId": string;
+  "userId": string;
+  "displayName": string;
+  "roomName": string;
+  "serverUrl": string;
+  "token": string;
+  "startMode": StartMode;
+
+  onLeave?: ("durationSec": number) => void
+};
+export default function CallRoom(): any ({;
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {;
   Room,;
   RoomEvent,;
@@ -176,12 +212,39 @@ export type StartMode = 'video' | 'audio';
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default function CallRoom(): any ({;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   projectId,;
   userId,;
   displayName,;
   roomName,;
   serverUrl,;
   token,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  startMode,;
+  onLeave,;
+}: Props) {;
+
+  }
+
+  projectId,
+userId
+  displayName,
+roomName
+  serverUrl,
+token
+  startMode,
+onLeave
+}: Props) {
+
+  }
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   startMode,;}
   onLeave,;}
 }: Props) {;
@@ -240,6 +303,10 @@ export default function CallRoom({
 const [room, setRoom] = useState<Room | null    />(null);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   projectId,
   userId,
   displayName,
@@ -249,6 +316,27 @@ const [room, setRoom] = useState<Room | null    />(null);
   startMode,
   onLeave
 }: Props) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  }
+
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave
+}: Props) {;
+
+}
+
+const [room, setRoom] = useState<Room | null>(null);
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -271,10 +359,26 @@ export type StartMode = 'video' | 'audio';
 }
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>
   >([]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const [connectedAt, setConnectedAt] = useState<number | null>(null);
+
+const connect = useCallback(async () => {
+   ;
+  }
+  const r = new Room();
+=======
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
@@ -291,11 +395,23 @@ const connect = useCallback(async () => {
   const r = new Room();
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     r.on(RoomEvent.ParticipantConnected, () => rebuild());
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // create local tracks per start mode,
+let "localTracks": any[] = [];
+    if (startMode === 'video') {'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -311,8 +427,31 @@ const connect = useCallback(async () => {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+localTracks = await createLocalTracks({
+        }
+        "audio": true,
+        "video": VideoPresets.h720
+      });
+    } else {;
+      }
+      localTracks = await createLocalTracks({ "audio": true, "video": false
+});
+    }
+
+    await r.connect(serverUrl, token, {
+      autoSubscribe: true}),
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -455,10 +594,19 @@ localTracks = await createLocalTracks({
     await r.connect(serverUrl, token, {
       autoSubscribe: true})
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     // publish local tracks
     for (const t of localTracks) {
       await r.localParticipant.publishTrack(t)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
     setRoom(r);
@@ -579,16 +727,34 @@ room.disconnect();}
       }
     };
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }, [connect]);
 
 const handleLeave = (
     if (room) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 room.disconnect();
 origin/cursor/automate-test-improve-and-merge-code-2533
   const handleLeave = () => {}
     if (room) {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 
@@ -598,6 +764,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       room.disconnect()
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
   }, [connect]);
 
@@ -629,6 +799,13 @@ const handleLeave = (;
 const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
   displayName;
@@ -650,7 +827,14 @@ export type StartMode = 'video' | 'audio';}export default function CallRoom() {c
     await r && r.connect(serverUrl, token, {autoSubscribe: true}),// publish local tracks;
     for (const t of localTracks) {await r && r.localParticipant.publishTrack(t)}
       }
+<<<<<<< HEAD
     }
+=======
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }, [connect])const handleLeave = () => {if (room) {await r.connect(serverUrl, token, {autoSubscribe: true;
     })// publish local tracks;
     setRoom(r)setConnectedAt(Date.now())rebuild(r)// eslint-disable-next-line react-hooks/exhaustive-deps;
@@ -663,6 +847,26 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
   }, [connect])const handleLeave = () => {if (room) {room && room.disconnect()}
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000): 0;onLeave?.(durationSec)}room && room.disconnect()}onLeave?.(durationSec)}const gridCols = useMemo(() => {const count = participants.length |1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        room.disconnect()
+      }
+  }, [connect]);
+
+  const handleLeave = () => {
+    if (room) {
+      room.disconnect()
+    }
+    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)
+  };
+
+const gridCols = useMemo(() => {
+   ;
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
         room.disconnect()
       }
@@ -683,11 +887,44 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
 =======
 const gridCols = useMemo(() => {
    ;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const count = participants.length |1;
 
 const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)const gridCols = useMemo(() => ;
   const count = participants && participants.length || 1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (count <= 1) return 'grid-cols-1';'
+
+    if (count = == 2);
+  return 'grid-cols-2';'
+
+if (count <= 4) return 'grid-cols-2 "md":grid-cols-2';'
+    if (count <= 6) return 'grid-cols-2 "md":grid-cols-3';'
+    return 'grid-cols-2 "md":grid-cols-3 "lg":grid-cols-4';'
+  }, [participants.length]);
+return (;
+    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'>'
+      <div className='p-4 flex items-center justify-between border-b border-gray-800'>'
+        <div>
+          <h2 className='text-lg font-semibold'>Project "Room": {projectId}</h2>'
+          <p className='text-xs text-gray-400'>Room {roomName}</p>'
+        </div>
+        <Controls room={room} onLeave={handleLeave} accent='cyan' />'
+      </div>
+      <div className={`flex-1 p-4 grid gap-4 ${gridCols},`
+}>
+        {participants.map((p, idx) => (
+<ParticipantTile
+}
+key={String((p as any).sid || (p as any).identity) + idx}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     if (count <= 1) return 'grid-cols-1';
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
@@ -1007,11 +1244,24 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
         {participants.map ((p, idx) => (
           <ParticipantTile;
             key={String ((p as any).sid || (p as any).identity) + idx}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             participant={p}
             is_local={p instanceof LocalParticipant}
             display_name={}
               (p as any).name ||;'
               (p instanceof LocalParticipant ? 'You' : undefined);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            display_name={
+              (p as any).name ||;
+              (p instanceof LocalParticipant ? 'You' : undefined);'
+            } />
+=======
+>>>>>>> origin/resolved-merge-conflicts
               (p as any).name ||;
               (p instanceof LocalParticipant ? 'You' : undefined);
             }
@@ -1167,6 +1417,10 @@ key={String((p as any).sid || (p as any).identity) + idx}
              />
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ))}
       </div>
     </div>

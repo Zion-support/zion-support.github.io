@@ -1,4 +1,37 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+import { Pool, PoolClient } from 'pg';'
+let "pool": Pool | null;
+throw err;
+export async function withUser<T>(
+  "userId": string,
+"fn": ("client": PoolClient) => Promise<T>
+): Promise<T> {
+  }
+  const client = await getPool().connect();
+  try {
+
+    }
+
+    await client.query('BEGIN');'
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [`
+      userId
+    ]);
+
+const result = await fn(client);
+    await client.query('COMMIT');'
+    return result;
+  } catch (err) {
+    }
+    await client.query('ROLLBACK');'
+    throw err;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null = $2;
 export function getPool(): Pool {
@@ -43,6 +76,10 @@ export async function withUser<T>(userId: string;
   } finally {
   try {}
   } finally {}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   } finally {
     }
     client.release ();
@@ -66,6 +103,13 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
   } finally {
     client.release()
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+    await client.query('ROLLBACK');}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -93,6 +137,10 @@ const result = await fn(client);
   } catch (err) {
     await client.query('ROLLBACK');}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     throw err;}
   } finally {}
     client.release ();}

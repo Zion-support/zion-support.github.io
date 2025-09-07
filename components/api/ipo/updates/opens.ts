@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -183,30 +188,27 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
   if (!requireSuperadminApi(req, res)) return;
-
-  const id = String(req.query.id |"");
-  const updates = readJsonFile("updates.json", [] as any[]);
-  const u = updates.find((x: any) => x.id === id);
-  if (!u) return res.status(404).json({ error: "Not found" });
-  res.status(200).json({ opens: u.opens |0 });
-  res.status(200).json({ opens: u.opens |0 });
-}
-
-  if (!u) return res.status(404).json({ error: 'Not found' });
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-}
 
   const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
+<<<<<<< HEAD
+  const u = updates.find((x: any) => x.id === id);
+  
+  if (!u) {
+    return res.status(404).json({ error: 'Not found' });
+  }
+
+  res.status(200).json({ opens: u.opens || 0 });
+}
+=======
   const u = updates.find((x: any) => x.id === id),
   if (!u) return res.status(404).json({ error: 'Not found' });
 }
@@ -272,3 +274,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

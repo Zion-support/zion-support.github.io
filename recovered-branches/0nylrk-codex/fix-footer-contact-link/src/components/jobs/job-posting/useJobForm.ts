@@ -1,10 +1,18 @@
 import {useState, useEffect} from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format  } from 'date-fns';
 import { toast } from "sonner";
+<<<<<<< HEAD
+import { useNavigate  } from 'react-router-dom';
+import { jobSchema, JobSchemaType  } from './validation';
+
+=======
 <<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import { jobSchema, JobSchemaType } from './validation';
@@ -38,6 +46,7 @@ import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -58,6 +67,8 @@ export interface JobPostingProps {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -67,6 +78,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect } from 'react',
 
 import { useForm } from 'react-hook-form',
@@ -87,6 +99,193 @@ import { useAuth } from '@/hooks/useAuth',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export interface JobPostingProps {
 
+<<<<<<< HEAD
+  job_id?: string;
+  on_success?: () => void;
+}
+
+  const [startDate, setStartDate] = useState<Date | undefined>(undefined),
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined),
+  const [isRemote, setIsRemote] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
+  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
+
+      title: '';
+
+      company: '';
+      location: '';
+      job_type: '';
+      salary_range: '',
+
+      expiry_date: '',
+      is_remote: false,'
+      category: '','
+      status: '','
+      external_apply_link: ''},"
+    mode: "onChange"}),
+
+  // Function to create/update jobs that will be implemented by parent component;
+  const submitJob = async (values: JobSchemaType) => {}
+    if (!user) {"
+      toast.error("You must be logged in to post a job"),"
+      navigate("/login"),
+
+import { useAuth } from "@/hooks/useAuth",;
+export interface JobPostingProps {;
+  jobId?: string,;
+  onSuccess?: () => void;
+}
+;
+export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
+  const { user } = useAuth(),;
+  const navigate = useNavigate(),;
+  const [startDate, setStartDate] = useState<Date | undefined>(undefined),;
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined),;
+  const [isRemote, setIsRemote] = useState(false),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),;
+  const form = useForm<JobSchemaType>({;
+    resolver: zodResolver(jobSchema),;
+    defaultValues: {;'
+      title: '',;'
+      company: '',;'
+      location: '',;'
+      job_type: '',;'
+      salary_range: '',;'
+      description: '',;'
+      responsibilities: '',;'
+      qualifications: '',;'
+      benefits: '',;'
+      application_instructions: '',;'
+      contact_email: '',;'
+      published_date: '',;'
+      expiry_date: '',;
+      is_remote: false,;'
+      category: '',;'
+      status: '',;'
+      external_apply_link: ''},;"
+    mode: "onChange"}),;
+  // Function to create/update jobs that will be implemented by parent component;
+  const submitJob = async (values: JobSchemaType) => {;
+    if (!user) {;"
+      toast.error("You must be logged in to post a job"),;"
+      navigate("/login"),;
+      return;
+    }
+;
+    setIsLoading(true),;
+    try {;'
+      const publishedDate = startDate ? startDate.toString() : '',;'
+      const expiryDate = endDate ? endDate.toString() : '',;
+      const jobData = {;
+        ...values,;
+        published_date: publishedDate,;
+        expiry_date: expiryDate,;
+        is_remote: isRemote,;
+        user_id: user.id},;
+      if (onSuccess) {;
+        onSuccess();
+
+      responsibilities: '';
+      qualifications: '';
+      benefits: '';
+      application_instructions: '';
+      contact_email: '';
+      published_date: '';
+      expiry_date: '';
+      is_remote: false;
+      category: '';
+
+      toast && toast.error("You must be logged in to post a job");
+      navigate("/login"),
+
+      return
+    }
+    setIsLoading(true);
+    try {
+
+      const publishedDate = startDate ? startDate && startDate.toString() : '';
+      const expiryDate = endDate ? endDate && endDate.toString() : '';
+
+      const jobData = {
+        ...values;
+        published_date: publishedDate;
+        expiry_date: expiryDate;
+
+        is_remote: isRemote,
+        user_id: user && user.id};
+
+      if (onSuccess) {
+        onSuccess()
+      }
+      return jobData
+    } catch (error: any) {
+
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { format } from 'date-fns',;
+import { toast } from "sonner",;
+import { useNavigate } from 'react-router-dom',;
+import { jobSchema, JobSchemaType } from './validation',;
+import { useAuth } from "@/hooks/useAuth",;
+export interface JobPostingProps {;
+  jobId?: string,;
+  onSuccess?: () => void;
+}
+;
+export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
+  const { user } = useAuth(),;
+  const navigate = useNavigate(),;
+  const [startDate, setStartDate] = useState<Date | undefined>(undefined),;
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined),;
+  const [isRemote, setIsRemote] = useState(false),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),;
+  const form = useForm<JobSchemaType>({;
+    resolver: zodResolver(jobSchema),;
+    defaultValues: {;
+      title: '',;
+      company: '',;
+      location: '',;
+      job_type: '',;
+      salary_range: '',;
+      description: '',;
+      responsibilities: '',;
+      qualifications: '',;
+      benefits: '',;
+      application_instructions: '',;
+      contact_email: '',;
+      published_date: '',;
+      expiry_date: '',;
+      is_remote: false,;
+      category: '',;
+      status: '',;
+      external_apply_link: ''},;
+    mode: "onChange"}),;
+  // Function to create/update jobs that will be implemented by parent component;
+  const submitJob = async (values: JobSchemaType) => {;
+    if (!user) {;
+      toast.error("You must be logged in to post a job"),;
+      navigate("/login"),;
+      return;
+    }
+;
+    setIsLoading(true),;
+    try {;
+      const publishedDate = startDate ? startDate.toString() : '',;
+      const expiryDate = endDate ? endDate.toString() : '',;
+      const jobData = {;
+        ...values,;
+        published_date: publishedDate,;
+        expiry_date: expiryDate,;
+        is_remote: isRemote,;
+        user_id: user.id},;
+      if (onSuccess) {;
+        onSuccess();
+
+export interface JobPostingProps {
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   job_id?: string;
   on_success?: () => void;
 }
@@ -180,22 +379,33 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       toast && toast.error("You must be logged in to post a job");
       navigate("/login"),
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return
     }
     setIsLoading(true);
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '';
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       const publishedDate = startDate ? startDate && startDate.toString() : '';
       const expiryDate = endDate ? endDate && endDate.toString() : '';
 
+<<<<<<< HEAD
+      const jobData = {
+      navigate("/login"),      const jobData = {
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const jobData = {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
@@ -206,6 +416,8 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 
         is_remote: isRemote,
         user_id: user && user.id};
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -504,10 +716,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 
         is_remote: isRemote,
         user_id: user && user.id};
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       if (onSuccess) {
         onSuccess()
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       return jobData
@@ -617,6 +832,7 @@ export interface JobPostingProps {
       if (onSuccess) {
         onSuccess()
       }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return jobData
     } catch (error: any) {
 
@@ -627,7 +843,11 @@ export interface JobPostingProps {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       status: '',
       external_apply_link: ''}
 
@@ -653,6 +873,9 @@ if ( {) {}
         is_remote: is_remote,
         user_id: user.id}
 ;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -693,6 +916,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       return job_data;
 
@@ -704,6 +928,24 @@ if ( {) {
 =======
 <<<<<<< HEAD
     } finally {
+<<<<<<< HEAD
+
+      setIsLoading (false);
+    }
+  }
+
+    form;
+    is_loading;
+    start_date;
+    setStartDate;
+    setEndDate;
+    is_remote;
+    setIsRemote;
+    initial_values;
+
+;
+
+=======
       }
 >>>>>>> merged-prs-20250907-203621
       
@@ -746,10 +988,17 @@ if ( {) {
     setInitialValues;
     submitJob
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return jobData;
+<<<<<<< HEAD
     } catch (error: any) {;
       console.error('Error in job form submission:', error),;
       toast.error(error.message || 'Failed to process form'),;
+=======
+    } catch (error: any) {;"
+      console.error("Error in job form submission:", error),;"
+      toast.error(error.message || "Failed to process form"),;
+>>>>>>> origin/resolved-merge-conflicts
       throw error;
     } finally {;
       setIsLoading(false);
@@ -767,6 +1016,8 @@ if ( {) {
     initialValues,;
     setInitialValues;
     submitJob;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -810,6 +1061,7 @@ if ( {) {
     setInitialValues;
 <<<<<<< HEAD
     submitJob;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
 };
@@ -828,6 +1080,9 @@ if ( {) {
   }
 };
   }
+<<<<<<< HEAD
+};
+=======
 };
 =======
 <<<<<<< HEAD
@@ -839,3 +1094,4 @@ if ( {) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

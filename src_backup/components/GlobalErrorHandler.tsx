@@ -1,22 +1,61 @@
 reportError: (error: Error, context?: any) => void;
 
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 
 ;
 reportError: (error: Error, context?: any) => void;import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { toast   } from '@/hooks/use-toast';
 import { Button   } from '@/components/ui/button';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react;
+reportError: (error: Error, context?: any) => void;import React, { createContext, useContext, useState, useCallback, ReactNode } from react';
+import { toast   } from '@/hooks/use-toast;
+import { Button   } from @/components/ui/button';
+>>>>>>> origin/resolved-merge-conflicts
 import React, {createContext;
   useContext;
   useState;
   useCallback;
   ReactNode;
 } from 'react';
+<<<<<<< HEAD
 import { toast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield  } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { toast  } from '@/hooks/use-toast';
+import { Button  } from '@/components/ui/button';
+import React, {
+  createContext
+  useContext
+  useState
+  useCallback
+  ReactNode
+} from 'react'
+import { toast } from '@/hooks/use-toast'
+import { Button } from '@/components/ui/button'
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from @/utils/productionLogger';
+>>>>>>> origin/resolved-merge-conflicts
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
 
@@ -29,7 +68,17 @@ interface ErrorContextType {
   useState,
   useCallback,
   ReactNode,
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { logErrorToProduction } from '@/utils/productionLogger;
+>>>>>>> origin/resolved-merge-conflicts
 interface ErrorContextType  {reportError: (error: Error, context?: any) => void;showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
@@ -71,11 +120,27 @@ import { Button  } from '@/components / ui / button';
 import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction  } from '@/utils / production_logger';
 interface ErrorContextType  {report_error: (error: Error, context?: any) => void;
+<<<<<<< HEAD
+=======
+} from 'react;
+import { toast } from '@/hooks / use - toast';
+import { Button } from @/components / ui / button';'
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from lucide-react;'
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 } from 'react';'
 import { toast } from '@/hooks / use - toast';'
 import { Button } from '@/components / ui / button';'
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';'
 import * as Sentry from '@sentry / nextjs';'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import { logErrorToProduction } from '@/utils / production_logger';
 interface ErrorContextType {}
   report_error: (error: Error, context?: any) => void;
@@ -501,7 +566,10 @@ export function useErrorHandler() { return null; }
   };    reportError;
     handleApiError;
     handleAsyncOperation}
-}handleApiError (error, options?.retry_action)}
+} ;
+
+          handleApiError (error, options?.retry_action);
+        }
         return null;
       }
     },
@@ -631,6 +699,13 @@ export function useGlobalErrorHandler(): ErrorContextType {;
 }
 
 // Helper function to convert technical errors to user-friendly messages
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+function getErrorMessage(error: Error): string {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: undefined})}, [])const clearAllErrors = useCallback(() => {setRetryCount({})// Clear any active toasts would go here if the toast system supports it;
   }, [])import * as Sentry from '@sentry/nextjs',import {logErrorToProduction} from '@/utils/productionLogger',interface ErrorContextType  {reportError: (error: Error, context?: any) => void,showRetryableError: (error: Error, retryAction?: () => void) => void,showNetworkError: (retryAction?: () => void) => void,showAuthError: (loginAction?: () => void) => void,clearAllErrors: () => void;
 }const ErrorContext = createContext<ErrorContextType | null>(null),interface GlobalErrorHandlerProps  {children: ReactNode;
@@ -669,4 +744,14 @@ export function useErrorHandler() {const { reportError, showRetryableError, show
     handleAsyncOperation}
 }const message = error.message.toLowerCase(),reportError,handleApiError,handleAsyncOperation}handleAsyncOperation}
 }
+<<<<<<< HEAD
 function getErrorMessage(error: Error): string {
+=======
+=======
+function getErrorMessage(error: Error): string {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

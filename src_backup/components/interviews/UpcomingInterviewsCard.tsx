@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -20,6 +25,10 @@ export function UpcomingInterviewsCard() {
         const interviews = await fetchInterviews()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 // Filter for confirmed interviews in the future
 
         const upcoming = interviews
@@ -29,6 +38,7 @@ export function UpcomingInterviewsCard() {
               !isPast(parseISO(interview.scheduled_date))
           )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -42,6 +52,23 @@ import { Avatar } from "@/components/ui/avatar",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export function UpcomingInterviewsCard() {
 
+=======
+
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import Link from "next/link",
+import { Calendar, Clock, Video } from 'lucide-react'
+import { Avatar } from "@/components/ui/avatar",
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function UpcomingInterviewsCard() {
+
+>>>>>>> origin/resolved-merge-conflicts
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -65,15 +92,31 @@ export function UpcomingInterviewsCard() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -99,11 +142,25 @@ export function UpcomingInterviewsCard() {
   }, []),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light>
@@ -124,7 +181,16 @@ export function UpcomingInterviewsCard() {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
+=======
+
+
+=======
+<<<<<<< HEAD
+  }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -132,6 +198,11 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -139,6 +210,10 @@ import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
 import { format, is_past, parseISO } from 'date - fns';
 import Link from 'next / link';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components/ui/ avatar';
 import { logErrorToProduction } from '@/utils/ production_logger';
@@ -173,7 +248,14 @@ function UpcomingInterviewsCard() {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import React, { useEffect, useState } from 'react;
 import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card';
@@ -186,8 +268,16 @@ import { Calendar, Clock, Video } from lucide-react';
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -202,10 +292,24 @@ export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   useEffect((,) => {;
     const loadInterviews = async () => {      setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(;
@@ -218,6 +322,13 @@ export function UpcomingInterviewsCard() {;
               parseISO(a && a.scheduled_date).getTime() -;
               parseISO(b && b.scheduled_date).getTime()          );
           .slice(0, 3); // Take only the next 3 interviews;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         setUpcomingInterviews(upcoming);
       } catch (error) {;
         logErrorToProduction('Error loading upcoming interviews:', {;
@@ -227,8 +338,20 @@ export function UpcomingInterviewsCard() {;
         setIsLoading(false);
       }
     };
+<<<<<<< HEAD
     loadInterviews();
   }, []);
+=======
+<<<<<<< HEAD
+
+    loadInterviews();
+  }, []);
+
+=======
+    loadInterviews();
+  }, []);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   if (isLoading) {;
     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
@@ -247,6 +370,11 @@ if ( {) {
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 =======
             ))}
@@ -305,10 +433,25 @@ export function UpcomingInterviewsCard() {;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -344,10 +487,31 @@ function UpcomingInterviewsCard() {
       }
     }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
   }
+<<<<<<< HEAD
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+  if (upcomingInterviews.length === 0) {
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+    return (
+      <Card className='bg-zion-blue-dark/40 border-zion-blue-light>
+=======
+<<<<<<< HEAD
+      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+=======
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -359,6 +523,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <CardHeader>
           <CardTitle className=text-lg flex items-center'>
             <Video className='h-5 w-5 mr-2 text-zion-purple />
@@ -383,6 +549,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
@@ -481,13 +652,22 @@ if ( {) {
   return (
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
+<<<<<<< HEAD
         <CardTitle className='text-lg flex items-center'>
           <Video className='h-5 w-5 mr-2 text-zion-purple' />
+=======
+        <CardTitle className="text-lg flex items-center">
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+>>>>>>> origin/resolved-merge-conflicts
           Upcoming Interviews
         </CardTitle>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className='space-y-4'>
+=======
+        <div className="space-y-4">
+>>>>>>> origin/resolved-merge-conflicts
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date)
             const formattedDate = format(interviewDate, 'EEE, MMM d')
@@ -538,6 +718,10 @@ if ( {) {
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
     return (
@@ -563,7 +747,14 @@ if ( {) {
     );
   }
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -579,12 +770,27 @@ if ( {) {
               interviewDate.getTime() > now.getTime(),
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 
 
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+
+
+
+=======
+<<<<<<< HEAD
+            
+=======
+
+
+
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
@@ -596,20 +802,41 @@ export function UpcomingInterviewsCard() {
   useEffect(() => {
     const loadInterviews = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             return (
               <div key={interview.id} className="flex items-center gap-3>
                 <Avatar className=h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
+<<<<<<< HEAD
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+                      alt={interview.client_name || interview.talent_name}<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium>;
+                      {(interview.client_name || interview.talent_name || U").charAt(0)}
+                    </div>;
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
                       alt={interview.client_name || interview.talent_name}<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium>;
                       {(interview.client_name || interview.talent_name || U").charAt(0)}
                     </div>;
 =======
+>>>>>>> origin/resolved-merge-conflicts
                       alt={interview.client_name || interview.talent_name}
 <<<<<<< HEAD
                       loading="lazy"
@@ -651,6 +878,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   )}
                 </Avatar>
                 <div className="flex-1">
@@ -660,6 +891,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                     </p>
                     {isStartingSoon && (
@@ -679,10 +915,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button asChild size='sm' variant='outline' className='w-full'>
             <Link href='/interviews'>View All Interviews</Link>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     {isStartingSoon && (
                       <span className=text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+    <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
+      <CardHeader>;
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+        <CardTitle className=text-lg flex items-center'>;
+          <Video className='h-5 w-5 mr-2 text-zion-purple />;
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
@@ -690,6 +943,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardTitle className=text-lg flex items-center'>;
           <Video className='h-5 w-5 mr-2 text-zion-purple />;
 =======
+>>>>>>> origin/resolved-merge-conflicts
         <CardTitle className='text-lg flex items-center'>;
           <Video className='h-5 w-5 mr-2 text-zion-purple' />;
     ),;
@@ -701,11 +955,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardTitle className="text-lg flex items-center">;
           <Video className="h-5 w-5 mr-2 text-zion-purple" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           Upcoming Interviews;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div className=space-y-4'>;
           {upcomingInterviews && upcomingInterviews.map(interview => {const interviewDate = parseISO(interview && interview.scheduled_date)const formattedDate = format(interviewDate, 'EEE, MMM d)const formattedTime  = format(interviewDate, h:mm a')// Determine if interview is happening soon (within 30 minutes)            const now = new Date()const isStartingSoon =;
               interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
@@ -745,6 +1010,65 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     )}</div>;
                   <div className=flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1 />;
+<<<<<<< HEAD
+=======
+        <div className="space-y-4">;
+          {upcomingInterviews.map(interview => {;
+            const interviewDate = parseISO(interview.scheduled_date),;
+            const formattedDate = format(interviewDate, 'EEE, MMM d'),;
+            const formattedTime = format(interviewDate, 'h:mm a'),;
+            ;
+            // Determine if interview is happening soon (within 30 minutes);
+            const now = new Date(),;
+            const isStartingSoon = ;
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
+              interviewDate.getTime() > now.getTime(),;
+            ;
+            return (;
+              <div key={interview.id} className="flex items-center gap-3">;
+                <Avatar className="h-10 w-10 bg-zion-purple/10">;
+                  {interview.client_avatar || interview.talent_avatar ? (;
+                    <img;
+                      src={interview.client_avatar || interview.talent_avatar}
+                      alt={interview.client_name || interview.talent_name}
+                      loading="lazy";
+                    />;
+                  ) :(;
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
+                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    </div>;
+                  )}
+                </Avatar>;
+                <div className="flex-1">;
+                  <div className="flex justify-between items-start">;
+                    <p className="font-medium line-clamp-1">;
+                      {interview.title || "Interview"}
+                    </p>;
+                    {isStartingSoon && (;
+                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
+                        Soon;
+                      </span>;
+                    )}
+<<<<<<< HEAD
+=======
+
+                  </div>
+
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-3 w-3 mr-1" />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+                    {formattedDate} at {formattedTime}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </div>;
+<<<<<<< HEAD
+                  <div className="flex items-center text-sm text-muted-foreground">;
+                    <Clock className="h-3 w-3 mr-1" />;
+                    {formattedDate} at {formattedTime}
+=======
+=======
 =======
         <div className="space-y-4">;
           {upcomingInterviews.map(interview => {;
@@ -797,6 +1121,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1" />;
                     {formattedDate} at {formattedTime}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>;
               </div>;
             );
@@ -818,7 +1144,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             )})}
         </div>;<div className='mt-4 pt-3 border-t border-zion-blue-light/40>;
           <Button asChild size=sm' variant='outline className=w-full'>;
@@ -837,10 +1170,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {$2;
 }
     return (<Card className='bg - zion - blue - dark / 40 border - zion - blue - light>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     return (
       <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <CardHeader>;
           <CardTitle className=text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple />;
@@ -913,6 +1255,11 @@ if ( {) {$2;
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
             ),;
           })}
         </div>;
@@ -971,6 +1318,10 @@ return (Soon </span>) ;
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 
@@ -980,7 +1331,14 @@ return (Soon </span>) ;
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/components/interviews/UpcomingInterviewsCard.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ;
 
   );
@@ -989,6 +1347,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 ;
@@ -996,3 +1359,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/interviews/UpcomingInterviewsCard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

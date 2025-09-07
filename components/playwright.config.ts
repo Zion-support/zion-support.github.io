@@ -17,6 +17,23 @@ export const Playwright.config = () => {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"trace": on-first-retry' ,'
+};
+"reporter": [ ['list'], ['json', {'
+
+  }
+
+  "outputFile": playwright-logs/test-results && results.json' '
+
+}], ['html', {'
+  }
+  "outputFolder": playwright-logs/html-report', "open": never''
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 }], [html', {
   outputFolder: playwright-logs/html-report', open: never
 =======
@@ -92,11 +109,48 @@ reporter: [ ['list'], ['json', {
 ,}
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }]];
 // Configure the web server to be started by Playwright webServer: {// Optional: Define projects for different browsers // projects: [ // {// name: chromium, // use: {...devices['Desktop Chrome'];
 }, //;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// {// "name": firefox', // "use": {...devices['Desktop Firefox'];'
+}, //;
+}
+// {// name: webkit', // use: {timeout: 120 * 1000, // 2 minutes timeout for server to start;
+    stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
+  // Optional: Define projects for different browsers;
+  // projects: [;
+  //   {//     name: chromium',  //     use: { ...devices['Desktop Chrome'] },  //   }
+  //   {//     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
+  //   {//     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }// ];
+})//     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
+    timeout: 120 * 1000, // 2 minutes timeout for server to start
+    stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
+  // Optional: Define projects for different browsers
+  // projects: [
+  //   {
+  //     name: chromium',  //     use: { ...devices['Desktop Chrome'] },  //   }
+  //   {
+  //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
+  //   {
+  // ];
+import { defineConfig } from @playwright/test';
+default defineConfig($2);
+
+// {
+  // "name": webkit', // "use": {'
+
+  //     "name": webkit',  //     "use": { ...devices['Desktop Safari'],'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 // {// name: firefox, // use: {...devices[Desktop Firefox'];
 }, //;
 }
@@ -180,6 +234,10 @@ default defineConfig($2);
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
 }
   //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },  //   };
   // ]
 });

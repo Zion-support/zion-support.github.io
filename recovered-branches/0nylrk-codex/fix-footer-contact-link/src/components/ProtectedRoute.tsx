@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 
   adminOnly?: boolean;
@@ -51,6 +54,25 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+import React from 'react',
+import { Navigate } from 'react-router-dom',
+import { useAuth } from '@/hooks/useAuth',
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
+
+import { useWhitelabel } from '@/context/WhitelabelContext',
+
+  children: React.ReactNode,
+  adminOnly?: boolean,
+  tenantAdminAllowed?: boolean,"
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
+}
+
+  tenantAdminAllowed = false,
+
+  requiredUserType
+}) => {
+=======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 import React from 'react';
@@ -127,6 +149,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   requiredUserType
 }) => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const { user, isLoading } = useAuth(),
   const { tenant } = useWhitelabel(),
@@ -166,18 +189,24 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   return <>{children}</>
 }
 export default ProtectedRoute;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
@@ -192,6 +221,9 @@ export interface ProtectedRouteProps {;
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 import React from 'react';
 import {Navigate} from 'react-router-dom';
@@ -245,6 +277,7 @@ export default ProtectedRoute;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_auth} from '@/hooks / use_auth';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
 
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -305,8 +338,11 @@ export default ProtectedRoute;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
@@ -361,8 +397,12 @@ export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
 <<<<<<< HEAD
 export default ProtectedRoute;
 =======
+<<<<<<< HEAD
+export default ProtectedRoute;
+=======
 export default ProtectedRoute;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

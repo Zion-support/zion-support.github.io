@@ -1,4 +1,68 @@
 <<<<<<< HEAD
+{
+    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
+    author: "Sarah Chen"
+
+    role: "CTO, DataMind Solutions";
+"
+    avatar: "https://i.pravatar.cc / 150?img = 32","
+    company: "DataMind"},
+  {"
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24 / 7 support is unmatched in the industry.","
+    author: "Michael Rodriguez","
+    role: "IT Director, GlobalTech";"
+    avatar: "https://i.pravatar.cc / 150?img = 12","
+    company: "GlobalTech"},
+  {"
+    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game - changer.";"
+    author: "Aanya Patel","
+    role: "Independent AI Consultant","
+    avatar: "https://i.pravatar.cc / 150?img = 28","
+    company: "AI Systems"},
+
+  {
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
+    author: "Thomas Klein"
+    role: "Operations Manager, EcoTech Systems";
+
+import {
+
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,"
+  CarouselPrevious} from "@/components/ui/carousel","
+import { Card, CardContent } from "@/components/ui/card","
+import { Avatar } from "@/components/ui/avatar","
+import { Quote } from "lucide-react",
+
+const testimonials = [
+  {
+    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
+    author: "Sarah Chen",
+    role: "CTO, DataMind Solutions",
+    avatar: "https://i.pravatar.cc/150?img=32",
+
+    company: "DataMind"},
+  {"
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.","
+    author: "Michael Rodriguez","
+    role: "IT Director, GlobalTech","
+    avatar: "https://i.pravatar.cc/150?img=12","
+    company: "GlobalTech"},
+  {"
+    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.","
+    author: "Aanya Patel","
+    role: "Independent AI Consultant","
+    avatar: "https://i.pravatar.cc/150?img=28","
+    company: "AI Systems"},
+  {"
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.","
+    author: "Thomas Klein","
+    role: "Operations Manager, EcoTech Systems","
+    avatar: "https://i.pravatar.cc/150?img=67","
+=======
+<<<<<<< HEAD
 
 import {
   Carousel,
@@ -31,10 +95,13 @@ const testimonials = $2;
     author: "Thomas Klein",
     role: "Operations Manager, EcoTech Systems",
     avatar: "https://i.pravatar.cc/150?img = $2;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     company: "EcoTech"}],
 
 export function TestimonialCarousel() {
   return (
+<<<<<<< HEAD
+=======
     <section className = $2;
               loop: true}}
             className="w-full"
@@ -219,6 +286,7 @@ const testimonials = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export function TestimonialCarousel() {
   return (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -233,10 +301,14 @@ export function TestimonialCarousel() {
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const testimonials = [;
   {;"
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;"
@@ -263,6 +335,9 @@ const testimonials = [;
     avatar: "https://i && i.pravatar.cc/150?img=67",;"
     company: "EcoTech"}],;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 "
     <section className="py-20 bg-zion-blue-dark">;"
@@ -270,6 +345,8 @@ const testimonials = [;
         <div className="text-center mb-12">;"
           <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>;"
 
+<<<<<<< HEAD
+=======
 =======
 export function TestimonialCarousel() {;
   return (
@@ -317,10 +394,14 @@ export function TestimonialCarousel() {;
         <div className="text-center mb-12">;
           <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
             Discover how Zion is transforming the tech and AI marketplace ecosystem;
           </p>;
         </div>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -348,10 +429,13 @@ function TestimonialCarousel() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             opts={{
               align: "start"
 
               loop: true}}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             className="w-full"
           >
@@ -394,6 +478,7 @@ function TestimonialCarousel() {
 }
 };
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               loop: true}}
 
@@ -424,9 +509,12 @@ function TestimonialCarousel() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {;
   Carousel,;
   CarouselContent,;
@@ -537,6 +625,9 @@ export function TestimonialCarousel() { return null; }
                 </CarouselItem>;
               ))}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -593,6 +684,7 @@ export function TestimonialCarousel() { return null; }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;
           </Carousel>;
         </div>;
@@ -606,6 +698,12 @@ export function TestimonialCarousel() { return null; }
         </div>;
       </div>;
 
+<<<<<<< HEAD
+    </section>);
+}
+;
+;
+=======
 =======
 <<<<<<< HEAD
 
@@ -658,3 +756,4 @@ company: "AI Systems"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

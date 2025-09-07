@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { useState  } from 'react;
+import { logDebug, logErrorToProduction  } from @/utils/productionLogger';
+>>>>>>> origin/resolved-merge-conflicts
 
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter   } from 'next/router';
 import { Logo   } from '@/components/header/Logo';
@@ -20,6 +32,44 @@ import { slugify   } from '@/lib/slugify';
 import { ResponsiveNavigation   } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu   } from '@/components/header/MobileMenu';
 import { MobileBottomNav   } from '@/components/header/MobileBottomNav';
+=======
+import Link from 'next/link;
+import { useRouter   } from next/router';
+import { Logo   } from '@/components/header/Logo;
+import { PointsBadge   } from @/components/loyalty/PointsBadge';
+import { UserMenu   } from '@/components/header/UserMenu;
+import { LanguageSelector   } from @/components/header/LanguageSelector';
+import { ModeToggle   } from '@/components/ModeToggle;
+import { useAuth   } from @/hooks/useAuth';
+import { useIsMobile   } from '@/hooks/use-mobile;
+import { useMessaging   } from @/context/MessagingContext';
+import { EnhancedSearchInput   } from '@/components/search/EnhancedSearchInput;
+import { generateSearchSuggestions   } from @/data/marketplaceData';
+import { slugify   } from '@/lib/slugify;
+import { ResponsiveNavigation   } from @/components/navigation/ResponsiveNavigation';
+import { MobileMenu   } from '@/components/header/MobileMenu;
+import { MobileBottomNav   } from @/components/header/MobileBottomNav';
+import { useRouter  } from 'next/router;
+import { Logo  } from @/components/header/Logo';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge;
+import { UserMenu  } from @/components/header/UserMenu';
+import { LanguageSelector  } from '@/components/header/LanguageSelector;
+import { ModeToggle  } from @/components/ModeToggle';
+import { useAuth  } from '@/hooks/useAuth;
+import { useIsMobile  } from @/hooks/use-mobile';
+import { useMessaging  } from '@/context/MessagingContext;
+import { EnhancedSearchInput  } from @/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions  } from '@/data/marketplaceData;
+import { slugify  } from @/lib/slugify';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation;
+import { MobileMenu  } from @/components/header/MobileMenu';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import Link from 'next/link';
+>>>>>>> origin/resolved-merge-conflicts
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
 import { PointsBadge  } from '@/components/loyalty/PointsBadge';
@@ -34,6 +84,10 @@ import { generateSearchSuggestions  } from '@/data/marketplaceData';
 import { slugify  } from '@/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu  } from '@/components/header/MobileMenu';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
 '
@@ -61,6 +115,7 @@ import { useTranslation  } from 'react-i18next';'
 import { CartDrawer  } from '@/components/cart/CartDrawer';'
 import { LoginModal } from '@/components/auth/LoginModal';
 
+<<<<<<< HEAD
 import { Menu, X  } from 'lucide-react';
 import { useTranslation   } from 'react-i18next';
 import { CartDrawer   } from '@/components/cart/CartDrawer';
@@ -85,6 +140,38 @@ import { MobileBottomNav  } from '@/components / header / MobileBottomNav';
 import { use_translation  } from 'react - i18next';
 import { CartDrawer  } from '@/components / cart / CartDrawer';
 import { LoginModal  } from '@/components / auth / LoginModal';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Menu, X  } from 'lucide-react;
+import { useTranslation   } from react-i18next';
+import { CartDrawer   } from '@/components/cart/CartDrawer;
+import { LoginModal  } from @/components/auth/LoginModal';
+import { log_debug, logErrorToProduction  } from '@/utils / production_logger;
+import Link from next / link';
+import { use_router  } from 'next / router;
+import { Logo  } from @/components / header / Logo';
+import { PointsBadge  } from '@/components / loyalty / PointsBadge;
+import { UserMenu  } from @/components / header / UserMenu';
+import { LanguageSelector  } from '@/components / header / LanguageSelector;
+import { ModeToggle  } from @/components / ModeToggle';
+import { use_auth  } from '@/hooks / use_auth;
+import { useIsMobile  } from @/hooks / use - mobile';
+import { use_messaging  } from '@/context / MessagingContext;
+import { EnhancedSearchInput  } from @/components / search / EnhancedSearchInput';
+import { generateSearchSuggestions  } from '@/data / marketplace_data;
+import { slugify  } from @/lib / slugify';
+import { ResponsiveNavigation  } from '@/components / navigation / ResponsiveNavigation;
+import { MobileMenu  } from @/components / header / MobileMenu';
+import { MobileBottomNav  } from '@/components / header / MobileBottomNav;
+import { use_translation  } from react - i18next';
+import { CartDrawer  } from '@/components / cart / CartDrawer;
+import { LoginModal  } from @/components / auth / LoginModal';
+>>>>>>> origin/resolved-merge-conflicts
 export /**;
  * PrimaryNav - Function description;
  */;
@@ -107,8 +194,20 @@ if ( {) {$2;
 export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const { user } = useAuth(),const isLoggedIn = !!user;
             component: 'PrimaryNav';
           })) }
+<<<<<<< HEAD
 export function PrimaryNav() {;
 import { LoginModal } from '@/components / auth / LoginModal';
+=======
+export function PrimaryNav() {
+import { LoginModal } from '@/components / auth / LoginModal;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { LoginModal } from '@/components / auth / LoginModal';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 export /**;
  * PrimaryNav - Function description;
  */
@@ -178,6 +277,7 @@ if ( {) {}
   } catch {;
     // context not available;
   }
+<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const { user } = useAuth(),;
@@ -190,6 +290,17 @@ if ( {) {}
   let unreadCount = 0,;
   try {;
     const messaging = useMessaging(),;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const router = useRouter(),
+  const [query, setQuery] = useState(''),
+  try {
+>>>>>>> origin/resolved-merge-conflicts
     unreadCount = messaging.unreadCount;
   } catch {;
     // context not available;
@@ -229,12 +340,34 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />;
           </div>;
           {/* Actions container with responsive layout */}
+<<<<<<< HEAD
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>
+=======
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0>
+>>>>>>> origin/resolved-merge-conflicts
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className='flex-shrink-0' style={ width: 'clamp(12rem, 20vw, 16rem)' }>
 
+<<<<<<< HEAD
     if (trimmed) {;'
       logDebug('PrimaryNav search submit:', { query: trimmed }),;
+=======
+    if (trimmed) {
+      logDebug(PrimaryNav search submit:', { query: trimmed }),
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    const trimmed = query.trim(),;
+    if (trimmed) {;'
+      logDebug('PrimaryNav search submit:', { query: trimmed }),;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
       router;`
         .push(`/search?q=${encodeURIComponent(trimmed)}`);'
         .then(() => setQuery(''));'
@@ -272,7 +405,17 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
           </div>
 
           {/* Actions container with responsive layout */}
+<<<<<<< HEAD
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0>;
+>>>>>>> origin/resolved-merge-conflicts
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className='flex-shrink-0' style={ width: 'clamp(12rem, 20vw, 16rem)' }>;
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
@@ -371,7 +514,17 @@ if ( {) {$2;
                     // Default: search results page with query parameter;
                     router && router.push(`/search?q=${encodeURIComponent(sugg && sugg.text)}`);
                   }
+<<<<<<< HEAD
                   setQuery('');
+=======
+                  setQuery(');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
                     // Documentation suggestions navigate directly to their path;
@@ -396,7 +549,18 @@ if ( {) {$2;
                   // // // // // console && console.log('PrimaryNav search suggestion selected:',;
   sugg);
                   // Handle different suggestion types with proper navigation;
+<<<<<<< HEAD
                   if(sugg && sugg.id) {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  if(sugg && sugg.id) {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  if(sugg && sugg.id) {
+>>>>>>> origin/resolved-merge-conflicts
                     router.push (`/blog/${sugg.slug}`)} else {// Default: search results page with query parameter;
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)}onSelectSuggestion={sugg => {logDebug('PrimaryNav search suggestion selected:', {suggestion: sugg})// Handle different suggestion types with proper navigation;
                   if (sugg && sugg.id) {onSelectSuggestion={(sugg) => {logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),// Handle different suggestion types with proper navigation;
@@ -420,8 +584,20 @@ if ( {) {$2;
 }`)} else if(sugg && sugg.type = == 'doc' && sugg && sugg.slug && sugg && sugg.slug.startsWith('/')) {// Documentation suggestions navigate directly to their path';
                     router && router.push(sugg && sugg.slug)} else if(sugg && sugg.type === 'blog' && sugg && sugg.slug) {// Blog posts navigate to blog detail page`;
                     router && router.push(`/blog/${sugg && sugg.slug}`)} else {// Default: search results page with slug;`;
+<<<<<<< HEAD
                     router && router.push(`/search/${sugg && sugg.slug || slugify(sugg && sugg.text)}`)}setQuery('')// Track analytics event';
                   if(typeof window !== 'null' && window && window.gtag) {window && window.gtag('event',search_suggestion_click', {search_term: sugg && sugg.text,suggestion_type: sugg && sugg.type,suggestion_id: sugg && sugg.id || sugg && sugg.slug;
+=======
+                    router && router.push(`/search/${sugg && sugg.slug || slugify(sugg && sugg.text)}`)}setQuery()// Track analytics event';
+                  if(typeof window !== 'null && window && window.gtag) {window && window.gtag(event',search_suggestion_click', {search_term: sugg && sugg.text,suggestion_type: sugg && sugg.type,suggestion_id: sugg && sugg.id || sugg && sugg.slug;
+=======
+                  if(sugg && sugg.id) {;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 `
                     // Product listings with IDs go to product detail page`;`
                     router && router.push(`/marketplace/listing/${sugg && sugg.id;'`
@@ -446,9 +622,14 @@ if ( {) {$2;
                       suggestion_type: sugg && sugg.type,;
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug;
 })}
+<<<<<<< HEAD
                 }
                 searchSuggestions = {suggestions}
                 searchSuggestions = {suggestions}
+=======
+                }}
+                searchSuggestions = {suggestions,}
+>>>>>>> origin/resolved-merge-conflicts
               />;
             </form>;
 
@@ -544,6 +725,12 @@ if ( {) {}
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Link;
                     href='/signup';
                     href='/signup'
@@ -551,8 +738,14 @@ if ( {) {}
                     {t('auth && auth.signup')}
                   </Link>;
                 </>;
+<<<<<<< HEAD
                     href='/signup';
                     className='text-sm hover:text-primary whitespace-nowrap';
+=======
+                    href="/signup";
+                    href=/signup;
+                    className="text-sm hover:text-primary whitespace-nowrap";
+>>>>>>> origin/resolved-merge-conflicts
                   >;
                     {t('auth.signup')}
                   </Link>;
@@ -563,8 +756,19 @@ if ( {) {}
             <ModeToggle />;
             <LanguageSelector />;
             {!isLoggedIn && (<Link;
+<<<<<<< HEAD
                 href='/auth/login';
                 className='text-sm hover:text-primary';
+=======
+                href="/auth/login";
+                className=text-sm hover:text-primary;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {/* Auth links - flex wrap for very small screens */}
 
                     data-testid='login-link';
@@ -609,11 +813,30 @@ if ( {) {}
             <ModeToggle />;
             <LanguageSelector />;
             {!isLoggedIn && (;
+<<<<<<< HEAD
               <Link;'
                 href='/auth/login';'
                 className='text-sm hover:text-primary';'
                 data-testid='login-link';
                 onClick={(e) => {e.preventDefault(),setLoginOpen(true)<div className='hidden md: flex lg:hidden items-center gap-2 order-2'>;
+=======
+              <Link;"
+                href=/auth/login;"
+                className="text-sm hover:text-primary;
+                data-testid="login-link";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                onClick={(e) => {;
+                  e.preventDefault();
+                  setLoginOpen(true);
+                }}
+              >;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                onClick={(e) => {e.preventDefault(),setLoginOpen(true)<div className=hidden md: flex lg:hidden items-center gap-2 order-2>;
+>>>>>>> origin/resolved-merge-conflicts
             <ModeToggle />;
             <LanguageSelector />;
             {!isLoggedIn && (<Link;
@@ -625,6 +848,17 @@ if ( {) {}
                   setLoginOpen(true)}
               >;
 
+=======
+                onClick={(e) => {;
+                  e.preventDefault();
+                  setLoginOpen(true);
+                }}
+              >;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -634,7 +868,17 @@ export function PrimaryNav() {
                   setLoginOpen(true)
                 }
               >
+<<<<<<< HEAD
                 {t('auth.login')}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                {t(auth.login')}
+>>>>>>> origin/resolved-merge-conflicts
               </Link>;
             )}
             {isLoggedIn && <UserMenu />}onClick={e => {e && e.preventDefault()setLoginOpen(true)}
@@ -651,6 +895,12 @@ export function PrimaryNav() {
                     data - testid='login - link';
                     on_click={e => {e.prevent_default ()setLoginOpen (true) }
                   >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 {t('auth.login')}
 
@@ -699,10 +949,9 @@ export function PrimaryNav() {
               </Link>)}
             {isLoggedIn && <UserMenu />}
           </div>;
-              {isLoggedIn && <UserMenu />}
+              {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
-          {/* Mobile menu button */}</div>;
           {/* Mobile menu button */}
 
           </div>;
@@ -713,6 +962,12 @@ export function PrimaryNav() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}'
             aria-label={t('general.toggle_mobile_menu')}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </button>;
         </div>;
       </header>;
@@ -779,9 +1034,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</Link> </>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
+<<<<<<< HEAD
 }</div> </div> <ModeToggle /> <LanguageSelector /> {';
   !isLoggedIn && (<Link href='/auth/login' className='text-sm hover:text-primary' data-testid='login-link' onClick={;
   (e) => {;
+=======
+}</div> </div> <ModeToggle /> <LanguageSelector /> {";
+  !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={;
+  (e) => {;
+  !isLoggedIn && (<Link href="/auth/login" className=text-sm hover:text-primary data-testid="login-link" onClick={
+  (e) => {
+>>>>>>> origin/resolved-merge-conflicts
   e.preventDefault ();
 setLoginOpen (true) ;
 }';
@@ -796,12 +1059,24 @@ setLoginOpen (true) ;
 }</Link>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
+<<<<<<< HEAD
 }</div> {;
   /* Mobile menu button */ ';
 }<button) : (<Menu className='h-6 w-6' />) ';
 }</button> </div> </header> <div className='absolute inset-0 bg-black/50 backdrop-blur-sm' onClick={;
   () => setMobileMenuOpen (false) ';
 }aria-hidden='true' /> <div className='relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto' > <MobileMenu unreadCount= {;
+=======
+}</div> {
+  /* Mobile menu button */ ";
+}<button) : (<Menu className="h-6 w-6" />) ";
+}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;
+  () => setMobileMenuOpen (false) ";
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
+  () => setMobileMenuOpen (false) ;
+}aria-hidden=true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto > <MobileMenu unreadCount= {
+>>>>>>> origin/resolved-merge-conflicts
   unreadCount ;
 }onClose= {;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -820,6 +1095,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   unreadCount ;
   isMobile && <MobileBottomNavunreadCount= {
   unreadCount 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >
 
               <X className='h-6 w-6' />
@@ -835,6 +1116,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onOpenChange= {;
   setLoginOpen ;
 }/> </>) ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   )}return (<> <header className='sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md' role='navigation' aria-label='Primary' data-testid='header' > <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap' > <Logo /> ;
@@ -914,8 +1202,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </nav>;
     </header>;
   )}
+<<<<<<< HEAD
 ''`;}return (<> <header className='sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md' role='navigation' aria-label='Primary' data-testid='header' > <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap' > <Logo />;
 }setQuery ('')//Track analytics event;
+=======
+'"`;}return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />;
+}setQuery ('')//Track analytics event;
+'"`;}return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md role=navigation" aria-label="Primary data-testid=header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap > <Logo />;
+}setQuery ()//Track analytics event;
+>>>>>>> origin/resolved-merge-conflicts
 }searchSuggestions= {suggestions;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={(e) => {> {';
   t ('auth.login') ';
@@ -1094,13 +1389,28 @@ return (<> <header className='sticky top - 0 z - 70 w - full border - b border -
         </AnimatePresence>;
       </nav>;
     </header>)}
+<<<<<<< HEAD
 ''`;
+=======
+'"`;
+>>>>>>> origin/resolved-merge-conflicts
 }isMobile && <MobileBottomNav unreadCount= {unreadCount ;
 }/> ;
 }<LoginModal isOpen= {loginOpen ;
 }onOpenChange= {setLoginOpen ;
 }/> </>)}'';
 }
+<<<<<<< HEAD
 
 ;
 }''
+=======
+}'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

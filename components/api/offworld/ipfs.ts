@@ -1,4 +1,24 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+
+  try {
+    if (req.method === 'POST' && action === 'json') {
+      const { cid, provider } = await addJSON(body);
+      if (!cid) {
+        return res.status(503).json({ error: 'IPFS unavailable' });
+      }
+      return res.status(200).json({ cid, provider });
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -182,9 +202,28 @@ const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 >>>>>>> origin/chore/fix-lint-and-merge
 });
 return res.status(200).json({ cid, provider });
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    if (req.method === 'POST' && action === 'broadcast') {
+      const ok = await publishManifesto(OFFWORLD_TOPICS.manifesto, body?.message || '');
+      return res.status(200).json({ ok });
+    }
+
+    return res.status(400).json({ error: 'Unsupported action' });
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     if (req && req.method = == 'POST' && action === 'broadcast') {
      ;
@@ -465,3 +504,7 @@ const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

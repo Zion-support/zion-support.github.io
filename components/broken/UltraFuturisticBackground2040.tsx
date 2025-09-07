@@ -1,6 +1,28 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+
+const "UltraFuturisticBackground2040": React.FC;
+    let time = 0;
+    // Particle system,
+const "particles": Array<{
+}
+"x": number;
+      "y": number;
+
+const canvas_ref = useRef < HTMLCanvasElement>(null);
+;
+  useEffect (() => {
+    }
+    const canvas = canvas_ref.current;
+    // Check condition,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC = $2;
@@ -103,6 +125,10 @@ import { motion } from 'framer-motion';
     const canvas = canvas_ref.current;
 <<<<<<< HEAD
     // Check condition
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if (return) {
   $2
 
@@ -113,6 +139,31 @@ const UltraFuturisticBackground2040: React.FC;
     // Particle system;
     const particles: Array<{x: number;y: number;
   const canvas_ref  = useRef < HTMLCanvasElement>(null)useEffect (() => {const canvas = canvas_ref.current;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Check condition;
+if (return) {$2;
+}
+
+const ctx = canvas.get_context ('2d')// Check condition;'
+if (return) {$2;
+}
+    canvas.width = window.inner_width;
+    canvas.height = window.inner_height,let "animationFrameId": number;    let "animationFrameId": number,let time  = 0;// Particle system;
+
+const "particles": Array<{"coordinate_x": number;
+      }
+      "coordinate_y": number;
+      "vx": number;
+      "vy": number;
+      "size": number;
+      "color": string;
+      "opacity": number;
+
+    }> = [];
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
     // Check condition;
@@ -192,12 +243,48 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       vx: number,
       vy: number,
       size: number,
       color: string,
       opacity: number}> = [],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Initialize particles,
+for (let i = 0; i < 100; i++) {
+      }
+      particles.push({
+        }
+        "x": Math.random() * canvas.width,
+        "y": Math.random() * canvas.height,
+        "vx": (Math.random() - 0.5) * 0.5,
+        "vy": (Math.random() - 0.5) * 0.5,
+        "size": Math.random() * 2 + 1,
+"color": ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899']['
+          Math.floor(Math.random() * 4)
+        ],
+        "opacity": Math.random() * 0.5 + 0.1
+      });
+origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+
+const animate = () => {
+      }
+      time += 0.01;
+
+      // Clear canvas with fade effect,
+ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
+      particles.forEach((particle, index) => {particle.x += particle.vx;
+        }
+=======
+>>>>>>> origin/resolved-merge-conflicts
     // Initialize particles
     for (let i = 0, i < 100, i++) {
 <<<<<<< HEAD
@@ -339,12 +426,36 @@ const animate = (
 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.x += particle.vx;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         particle.y += particle.vy;
         // Wrap around edges;
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        ctx.restore()
+      });
+      // Draw connecting lines between nearby particles
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      ctx.lineWidth = 0.5;
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+            ctx.stroke();          }
+
+        // Draw particle with glow effect,
+ctx.save();
+        ctx.globalAlpha = particle.opacity;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -511,13 +622,72 @@ ctx.stroke();}
             ctx.lineTo(particles[j].x, particles[j].y);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ctx.stroke()
+<<<<<<< HEAD
 
           }
         }
       }
 <<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+// Glow effect,
+ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+ctx.restore();
+origin/cursor/automate-test-improve-and-merge-code-2533
+      });
+      // Draw connecting lines between nearby particles,
+ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';'
+      ctx.lineWidth = 0.5;
+      for (let i = 0, i < particles.length, i++) {}
+        for (let j = i + 1, j < particles.length, j++) {}
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+            ctx.stroke();          }
+
+for (let i = 0; i < particles.length; i++) {
+        }
+<<<<<<< HEAD
+        for (let j = i + 1; j < particles.length; j++) {
+          }
+          const dy = particles[i].y - particles[j].y;
+=======
+      }
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      // Draw animated grid,
+ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';'
+      ctx.lineWidth = 0.5;
+
+const gridSize = 50;
+
+const offset = (time * 20) % gridSize;
+      for (let x = offset; x < canvas.width; x += gridSize) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, canvas.height)ctx.stroke()}
+      for (let y = offset; y < canvas.height; y += gridSize) {ctx.beginPath()ctx.moveTo(0, y)ctx.lineTo(canvas.width, y)ctx.stroke()}// Draw floating geometric shapes;
+
+const shapes = [;
+  {"x": canvas.width * 0.2,"y": canvas.height * 0.3,"size": 60,"rotation": time * 0.5},{"x": canvas.width * 0.8;
+          }
+          "y": canvas.height * 0.7;
+          "size": 40;
+          "rotation": time * -0.3;
+        }
+        { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
+          }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 =======
 
@@ -1190,6 +1360,10 @@ canvas.height = window.innerHeight;
 >>>>>>> merged-prs-20250907-203621
           }
         }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ctx.stroke()
       }
 
@@ -1203,6 +1377,19 @@ canvas.height = window.innerHeight;
       cancelAnimationFrame(animationFrameId)
     }
   }, []),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    animate();
+
+const handleResize = () => {
+      }
+      canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 }
 const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;}
@@ -2017,6 +2204,10 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
         />
         
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -2047,6 +2238,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
             ease: 'linear'}}
         />;
 
+<<<<<<< HEAD
             ease: linear}}
           />
         </div>
@@ -2055,6 +2247,83 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
         <motion.div
 
           }}
+=======
+<<<<<<< HEAD
+          <div,
+className='absolute top-0 left-0 w-full h-full''
+            style={{
+              }
+              "backgroundImage": ``            `,`              "background_size": '50px 50px','
+              "animation": 'grid_move 20s linear infinite','
+            }} />
+=======
+            ease: linear}}
+          />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        </div>
+        
+        {/* Floating Geometric Elements */}
+        <motion.div,
+className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg''
+          animate={{
+            }
+            "rotate": [0, 360],
+            "scale": [1, 1.1, 1],
+            "opacity": [0.2, 0.4, 0.2]
+          }}
+<<<<<<< HEAD
+          transition={{
+            }
+            "duration": 8,
+            "repeat": Infinity,
+"ease": 'linear','
+          }} />
+        <motion.div,
+className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full''
+          animate={{
+            }
+            "rotate": [360, 0],
+            "scale": [1, 1.2, 1],
+            "opacity": [0.2, 0.5, 0.2]
+          }}
+          transition={{
+            }
+            "duration": 10,
+            "repeat": Infinity,
+"ease": 'linear','
+          }} />
+        <motion.div,
+className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45''
+          animate={{
+            }
+            "rotate": [45, 405],
+            "scale": [1, 1.15, 1],
+            "opacity": [0.2, 0.3, 0.2]
+          }}
+          transition={{
+            }
+            "duration": 12,
+            "repeat": Infinity,
+"ease": 'linear','
+          }} />
+        {/* Additional Floating Elements */}
+        <motion.div,
+className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12''
+          animate={{
+            rotate: [12, 372]
+            scale: [1, 1.1, 1]
+            opacity: [0.15, 0.25, 0.15],          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear',          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+          animate={{
+=======
+>>>>>>> origin/resolved-merge-conflicts
           transition = $2;
             repeat: Infinity,
           />;
@@ -2122,6 +2391,10 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             rotate: [12, 372];
             scale: [1, 1.1, 1];
             opacity: [0.15, 0.25, 0.15]
@@ -2130,6 +2403,12 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rotate: [360, 0];
             scale: [1, 1.2, 1];
@@ -2227,11 +2506,30 @@ ease: "linear"
             duration: 12
             repeat: Infinity
             ease: 'linear'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           }}
 
         />;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <style jsx>{``        @keyframes gridMove {
+          }
+          0% {
+}
+"transform": translate(0, 0);
+          }
+          100% {;
+            }
+            "transform": translate(50px, 50px);
+          }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Additional Floating Elements */}
@@ -3029,10 +3327,24 @@ ease: "easeInOut",
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         @keyframes pulse {
           }
           0%
           100% {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            }
+            "opacity": 0.2;
+      
+      {/* CSS Animations */}
+      <style jsx>{``        @keyframes gridMove {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             }
             "opacity": 0.2;
@@ -3061,8 +3373,39 @@ ease: "easeInOut",
           100% {
             transform: translate(50px, 50px)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+`
+      `}</style>;
+    </div>);
+}export default UltraFuturisticBackground2040;            opacity: 0.5;
+          }
+        }`
+      `}</style>;
+    </div>);
+}  );
+}
+;
+export default UltraFuturisticBackground2040;
+;
+          50% {
+            }
+            "opacity": 0.5;
+          }
+      `}</style>`
+    </div>
+)
+};
+export default UltraFuturisticBackground2040;
+=======
+>>>>>>> origin/resolved-merge-conflicts
         
 =======
 <<<<<<< HEAD
@@ -3214,3 +3557,7 @@ export default UltraFuturisticBackground2040;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

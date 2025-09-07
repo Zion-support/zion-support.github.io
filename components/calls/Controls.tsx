@@ -2,6 +2,21 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';'
+import type { Room } from 'livekit-client';'
+
+type Props = any;
+
+export default function Controls() {'
+ ;
+  }
+  const [micEnabled, setMicEnabled] = React.useState(true);
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import React from 'react';
 import type { Room } from 'livekit-client';
 type Props = $2;
@@ -22,6 +37,10 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 =======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const toggleCam = $2;
     const enabled = await room.localParticipant.setCameraEnabled($2);
     setCamEnabled(enabled)
@@ -58,6 +77,12 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 =======
 const [sharing, setSharing] = React.useState(false);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 =======
@@ -104,11 +129,24 @@ const [sharing, setSharing] = React.useState(false);
 
 const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const toggleMic = async () => {
     if (!room);
   return;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const enabled =;
+      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled)
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 =======
@@ -118,6 +156,10 @@ const enabled =
 };
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const toggleCam = async () => {
     if (!room);
@@ -132,6 +174,55 @@ const toggleScreenShare = async () => {
     if (!room);
   return;
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+const enabled =;
+        await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {
+      }
+      console.warn('Screen share failed', e);'
+    }
+  };
+
+return (;
+<div className = 'flex items-center gap-3'>'
+ ;
+return (;
+    <div className='flex items-center gap-3'>'
+      <button,
+onClick={toggleMic}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}>`
+      </button>;
+      <button;
+        onClick={toggleCam}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}>`
+
+        {camEnabled ? 'Stop Video' : 'Start Video'}'
+      </button>;
+      <button;
+        onClick={toggleScreenShare}
+        className='px-4 py-2 rounded bg-gray-700 text-white'>'
+
+        {sharing ? 'Stop Share' : 'Share Screen'}'
+      </button>;
+      <button;
+        onClick={onLeave}
+        className='px-4 py-2 rounded bg-red-600 text-white';
+      >;
+);
+}
+
+        className='px-4 py-2 rounded bg-red-600 text-white''
+      >
+
+        Leave
+      </button>
+    </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -587,6 +678,10 @@ if (return) {$2;
         Leave
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 

@@ -1,6 +1,18 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+
+import React, { useEffect } from 'react';'
+import Head from 'next/head';'
+
+interface SEOProps {
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -10,19 +22,40 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   title?: string;
   description?: string;
   keywords?: string | string[],image?: string;
   url?: string;
+<<<<<<< HEAD
   type?: 'website' | 'article' | 'product',publishedTime?: string;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+  type?: 'website' | 'article' | 'product',publishedTime?: string;'
+=======
+  type?: 'website' | 'article' | 'product',publishedTime?: string;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   modifiedTime?: string;
   author?: string;
   section?: string;
   tags?: string[],structuredData?: any;
   noindex?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -39,6 +72,41 @@ interface SEOProps {
   tags?: string[];
   structuredData?: any;
   noindex?: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  nofollow?: boolean
+}
+
+const "SEO": React.FC<SEOProps> = ({
+  }
+  title;
+}{
+  }
+  noindex && <meta name="robots" content="noindex" />"
+}{
+  }
+  nofollow && <meta name="robots" content="nofollow" />"
+}{
+  !noindex && !nofollow && <meta name="robots" content="index, follow" />"
+}{
+  /* Open Graph Meta Tags */
+}<meta property=""og": title" content= {"
+  }
+  fullTitle
+} /> <meta property=""og":description" content= {"
+  }
+  description
+} /> <meta property=""og":type" content= {"
+  }
+  type
+} /> <meta property=""og":url" content= {"
+  }
+  fullUrl
+} /> <meta property=""og":image" content= {"
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   nofollow?: boolean}
 }
@@ -82,6 +150,10 @@ const SEO: React.FC<SEOProps> = ({
 }/> <meta name="twitter:description" content= {}
   description"
 }/> <meta name="twitter:image" content= {}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   fullImage
 }/> <meta property=og:site name" content="Zion Tech Group /> <meta property=og:locale" content="en US /> {}
   /* Twitter Card Meta Tags */
@@ -112,6 +184,18 @@ const SEO: React.FC<SEOProps> = ({
   author && <meta property=''article':author' content= {'
   }
   author
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} />
+}{
+  }
+  section && <meta property=""article":section" content= {"
+  }
+  section
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }/>
 }{"
   section && <meta property=\"article:section\" content= {
@@ -271,6 +355,10 @@ interface SEOProps  {title?: string;
 }{author && <meta property="article:author" content= {author;
 }/>;
 }{section && <meta property="article:section" content= {section;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 import React from 'react';'
  {/* Robots Meta */ ;
@@ -338,6 +426,20 @@ const fullImage = image && image.startsWith('http')? image;'
 }</>)}{/* Structured Data */ ;
 }<script;
 }];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const "SEO": React.FC<SEOProps> = ({ title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';'
+  }
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';'
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';'
+  image = '/images/zion-tech-group-og-image.jpg';'
+  url = '"https"://ziontechgroup.com';'
+
+type = 'website';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -381,6 +483,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }{}
   type === 'article' && (<> {"
   publishedTime && <meta property="article:published time" content= {}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   publishedTime;
 }/>
 }{
@@ -775,6 +881,13 @@ const SEO: React.FC<SEOProps> = ({'
   section;
   tags = [];
   structuredData;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  noindex = false;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   noindex = false;
 =======
 <<<<<<< HEAD
@@ -878,11 +991,22 @@ const SEO: React.FC < SEOProps> = ({
   structured_data;
   noindex = false,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          }}
+        />
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1822,6 +1946,10 @@ export default SEO;  )
           type='application/ld+json';
           dangerouslySetInnerHTML={__html: JSON && JSON.stringify(structuredData),          }
         />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       )}
     </Head>;
   )}export default SEO;            __html: JSON && JSON.stringify(structuredData)__html: JSON.stringify(structuredData),}
@@ -1840,6 +1968,13 @@ export default SEO;  );
     </Head>
 
 export default SEO;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'"`
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
     </Head>
     </Head>
@@ -2127,3 +2262,7 @@ export default SEO;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

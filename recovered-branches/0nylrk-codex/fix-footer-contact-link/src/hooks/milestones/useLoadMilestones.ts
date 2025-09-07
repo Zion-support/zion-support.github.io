@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
@@ -61,11 +63,17 @@ export const useLoadMilestones = (projectId?: string) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
+
+        activitiesMap[milestone && milestone.id] = activitiesData || []
+
+=======
 <<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
@@ -115,10 +123,13 @@ export const useLoadMilestones = (projectId?: string) => {;
         activitiesMap[milestone.id] = activitiesData |[]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
 
       setActivities(activitiesMap),
       setError(null)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     } catch (err: any) {
@@ -128,12 +139,16 @@ export const useLoadMilestones = (projectId?: string) => {;
       toast && toast.error("Failed to fetch milestones")
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const useLoadMilestones = (project_id?: string) =>: any {
 
   const { user } = use_auth ();
@@ -159,10 +174,13 @@ export const useLoadMilestones = (projectId?: string) => {;
     if (!projectId) {;
       setIsLoading(false),;
 
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -176,6 +194,11 @@ if ( {) {
   $2
 }
       setIsLoading (false);
+<<<<<<< HEAD
+
+      return;
+    }
+=======
 <<<<<<< HEAD
 
 =======
@@ -256,6 +279,7 @@ export const useLoadMilestones = (projectId?: string) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return;
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       setIsLoading (true);
 ;
@@ -284,6 +308,8 @@ if (throw milestones_error) {}
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .eq('milestone_id', milestone.id);
           .order('created_at', { ascending: false }),;
@@ -291,10 +317,13 @@ if (throw milestones_error) {}
         activitiesMap[milestone.id] = activitiesData || [];
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       
       setActivities(activitiesMap),
       setError(null)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     } catch (err: any) {
@@ -330,6 +359,7 @@ if (throw milestones_error) {}
   }, [projectId]);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       }
       set_activities (activities_map);
@@ -392,6 +422,11 @@ if ( {) {}
     }
   }, [project_id]);
 ;
+<<<<<<< HEAD
+
+    milestones;
+    activities;
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     milestones;
@@ -453,12 +488,16 @@ if ( {) {
     activities;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     is_loading;
     error;
 
     refetch: fetch_milestones;
       setIsLoading(false)
 
+<<<<<<< HEAD
+  }
+=======
 <<<<<<< HEAD
   }
 =======
@@ -582,3 +621,4 @@ refetch: fetchMilestones
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

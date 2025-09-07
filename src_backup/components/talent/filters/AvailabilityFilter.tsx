@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+import { Checkbox } from "@/components/ui/checkbox;
+import { AvailabilityFilterProps } from @/types/filters";
+>>>>>>> origin/resolved-merge-conflicts
 
 return (<div className='mb-6 border-b border-zion-blue-light pb-6'>;import { Checkbox  } from '@/components/ui/checkbox';
 import { AvailabilityFilterProps  } from '@/types/filters';
@@ -19,6 +32,12 @@ export function AvailabilityFilter({
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
 
@@ -103,11 +122,25 @@ import { AvailabilityFilterProps } from "@/types/filters";
 
   { id: "project", label: "Project-based" }
 
+<<<<<<< HEAD
         {expanded ? (<ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (<ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;{expanded && (<div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (<div key={option.id} className='flex items - center'>              <Checkbox;
                 id={`availability-${option.id}`}</button>;{ id: "full_time", label: "Full-time" },{ id: "part_time", label: "Part-time" },{expanded && (<div className='mt-4 space-y-2'>;
           {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (<div key={option && option.id} className='flex items-center'>              <Checkbox;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        {expanded ? (<ChevronUp className=h - 4 w - 4 text - zion - slate - light' />) : (<ChevronDown className='h - 4 w - 4 text - zion - slate - light />)}
+      </button>;{expanded && (<div className=mt - 4 space - y-2'>;
+          {AVAILABILITY_OPTIONS.map (option => (<div key={option.id} className='flex items - center>              <Checkbox;
+                id={`availability-${option.id}`}</button>;{ id: full_time, label: "Full-time" },{ id: part_time, label: "Part-time" },{expanded && (<div className=mt-4 space-y-2'>;
+          {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (<div key={option && option.id} className='flex items-center>              <Checkbox;
+>>>>>>> origin/resolved-merge-conflicts
                 id={`availability-${option && option.id}`}
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
                 onCheckedChange={() => toggleAvailability(option && option.id)}
@@ -206,6 +239,10 @@ const AVAILABILITY_OPTIONS = [;
 ]
 
         <div className='mt-4 space-y-2'>
+<<<<<<< HEAD
+=======
+        <div className='mt-4 space-y-2>
+>>>>>>> origin/resolved-merge-conflicts
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className='flex items-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -240,10 +277,22 @@ export function AvailabilityFilter() {return (<div className="mb-6 border-b bord
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+<<<<<<< HEAD
               />
               <label
                 htmlFor={`availability-${option.id}`}
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+=======
+              />
+              <label
+                htmlFor={`availability-${option.id}`}
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple
+              />
+              <label
+                htmlFor={`availability-${option.id}`}
+                className=ml-2 text-sm text-zion-slate-light cursor-pointer'
+>>>>>>> origin/resolved-merge-conflicts
               >
                 {option.label}
               </label>
@@ -289,6 +338,12 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
 }</label> </div>) )}</div>)}</div>)}";
 
   option.label 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 htmlFor={`availability-${option.id}`}
 
   option.label;

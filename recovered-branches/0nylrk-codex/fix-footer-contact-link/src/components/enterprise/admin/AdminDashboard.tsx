@@ -1,7 +1,21 @@
 <<<<<<< HEAD
+import React from "react",
+import { AdminHeader } from "./AdminHeader",
+import { TeamManagement } from "./TeamManagement",
+import { UsageStats } from "./UsageStats",
+
+import { RoleManagement } from "./RoleManagement";
+import { TeamActivity } from "./TeamActivity";
+
+import { AdminHeader } from "./AdminHeader";
+import { TeamManagement } from "./TeamManagement";
+import { UsageStats } from "./UsageStats";
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 <<<<<<< HEAD
@@ -11,6 +25,81 @@ import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
+<<<<<<< HEAD
+import { RoleManagement } from "./RoleManagement",
+
+import { TeamActivity } from "./TeamActivity",
+import {}
+  Tabs,
+  TabsContent,
+  TabsList,"
+  TabsTrigger} from "@/components/ui/tabs",
+
+      <Tabs defaultValue="team" className="mt-8">
+        <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsTrigger value="team">Team Management</TabsTrigger>
+          <TabsTrigger value="roles">Role Assignment</TabsTrigger>
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>
+
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>
+
+        <TabsContent value="team" className="space-y-8">
+          <TeamManagement />
+        </TabsContent>"
+        <TabsContent value="roles" className="space-y-8">
+          <RoleManagement />
+        </TabsContent>"
+        <TabsContent value="usage" className="space-y-8">
+          <UsageStats />
+        </TabsContent>
+
+        <TabsContent value="activity" className="space-y-8">
+          <TeamActivity />
+        </TabsContent>
+      </Tabs>
+
+    </div>;
+  );
+}
+    </div>
+  )"
+import React from "react",;"
+import { AdminHeader } from "./AdminHeader",;"
+import { TeamManagement } from "./TeamManagement",;"
+import { UsageStats } from "./UsageStats",;"
+import { RoleManagement } from "./RoleManagement",;"
+import { TeamActivity } from "./TeamActivity",;
+import {;
+  Tabs,;
+  TabsContent,;
+  TabsList,;"
+  TabsTrigger} from "@/components/ui/tabs";
+
+          <TabsTrigger value="team">Team Management</TabsTrigger>;
+          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
+
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>;
+        </TabsList>;
+
+        <TabsContent value="team" className="space - y-8">;
+          <TeamManagement />;
+        </TabsContent>;
+        <TabsContent value="roles" className="space - y-8">;
+          <RoleManagement />;
+        </TabsContent>;
+        <TabsContent value="usage" className="space - y-8">;
+          <UsageStats />;
+        </TabsContent>;
+        <TabsContent value="activity" className="space - y-8">;
+          <TeamActivity />;
+        </TabsContent>;
+      </Tabs>;
+    </div>);
+
+}
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -61,6 +150,7 @@ import {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -68,8 +158,21 @@ import {}
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>
 <<<<<<< HEAD
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
+<<<<<<< HEAD
+        </TabsList>        
+        <TabsContent value="team" className="space-y-8">
+          <TeamManagement />
+        </TabsContent>
+        <TabsContent value="roles" className="space-y-8">
+          <RoleManagement />
+        </TabsContent>
+        <TabsContent value="usage" className="space-y-8">
+          <UsageStats />
+        </TabsContent>
+=======
         </TabsList>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
 
@@ -117,6 +220,13 @@ import {}
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
+<<<<<<< HEAD
+      </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>;
+        </TabsList>;
+}
+=======
       </Tabs>
 <<<<<<< HEAD
 
@@ -219,30 +329,36 @@ function AdminDashboard() {
 
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
         ;
+
         <TabsContent value="team" className="space-y-8">;
           <TeamManagement />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="roles" className="space-y-8">;
           <RoleManagement />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="usage" className="space-y-8">;
           <UsageStats />;
         </TabsContent>;
+<<<<<<< HEAD
+        ;"
+=======
         ;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <TabsContent value="team" className="space-y-8">;
           <TeamManagement />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="roles" className="space-y-8">;
           <RoleManagement />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="usage" className="space-y-8">;
           <UsageStats />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="activity" className="space-y-8">;
           <TeamActivity />;
         </TabsContent>;
@@ -250,6 +366,9 @@ function AdminDashboard() {
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -335,3 +454,4 @@ function AdminDashboard() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

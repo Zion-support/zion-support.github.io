@@ -5,9 +5,14 @@ import { Sparkles, RefreshCcw } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+<<<<<<< HEAD
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Sparkles, RefreshCcw } from 'lucide-react'
+=======
+<<<<<<< HEAD
+import { Sparkles, RefreshCcw } from lucide-react'
+>>>>>>> origin/resolved-merge-conflicts
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
   isProcessing: boolean,
@@ -23,17 +28,50 @@ import { Button  } from '@/components/ui/button';
 import { Sparkles, RefreshCcw  } from 'lucide-react';
 export interface EmptyMatchesCardProps  {onRefresh: () => void;
   isProcessing: boolean;
+<<<<<<< HEAD
 export function EmptyMatchesCard() {return (<Card className='p-6 text-center border-dashed border-2 bg-muted/30'>;
       <div className='mb-4 flex justify-center'>;
         <Sparkles className='h-12 w-12 text-muted-foreground' />;
+=======
+export function EmptyMatchesCard() {return (<Card className=p-6 text-center border-dashed border-2 bg-muted/30'>;
+      <div className='mb-4 flex justify-center>;
+        <Sparkles className=h-12 w-12 text-muted-foreground' />;
+=======
+import { Sparkles, RefreshCcw } from 'lucide-react'
+export interface EmptyMatchesCardProps {
+  onRefresh: () => void;
+  isProcessing: boolean
+export function EmptyMatchesCard({
+  onRefresh
+  isProcessing
+}: EmptyMatchesCardProps) {
+
+  return (
+    <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
+      <div className='mb-4 flex justify-center'>
+        <Sparkles className='h-12 w-12 text-muted-foreground' />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
       </div>;
       <h3 className='text-lg font-medium mb-2'>No talent matches yet</h3>;
       <p className='text-muted-foreground mb-6'>;
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
+<<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
         onClick = {onRefresh,}
         disabled = {isProcessing,}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto>      <Button 
+        onClick = {onRefresh}
+        disabled = {isProcessing}
+>>>>>>> origin/resolved-merge-conflicts
   return (
 import { Card } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
@@ -45,6 +83,12 @@ export interface EmptyMatchesCardProps {
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
 
@@ -52,9 +96,20 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       <div className='mb-4 flex justify-center'>
         <Sparkles className='h-12 w-12 text-muted-foreground' />
       </div>
+<<<<<<< HEAD
       <h3 className='text-lg font-medium mb-2'>No talent matches yet</h3>
       <p className='text-muted-foreground mb-6'>
+=======
+<<<<<<< HEAD
+      <h3 className=text-lg font-medium mb-2">No talent matches yet</h3>
+      <p className="text-muted-foreground mb-6>
+>>>>>>> origin/resolved-merge-conflicts
         Run AI matching to find talents that match this job&apos,s requirements.
+=======
+      <h3 className="text-lg font-medium mb-2">No talent matches yet</h3>
+      <p className="text-muted-foreground mb-6">
+        Run AI matching to find talents that match this job's requirements.
+>>>>>>> origin/chore/fix-lint-and-merge
       </p>
       <Button 
         onClick={onRefresh} 
@@ -65,6 +120,12 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         {isProcessing ? (
           <>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>
         {isProcessing ? (
@@ -79,6 +140,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { Card } from '@/components/ui/ card';
 import { Button } from '@/components/ui/ button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { Card } from '@/components/ui/ card;
+import { Button } from @/components/ui/ button';
+>>>>>>> origin/resolved-merge-conflicts
 export interface EmptyMatchesCardProps {
   on_refresh: () => void;
         Run AI matching to find talents that match this job&apos;s requirements.;
@@ -145,6 +211,12 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
 }
 ;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </>
         ) : (
           <>
@@ -169,12 +241,15 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
         )}
       </Button>
     </Card>
+<<<<<<< HEAD
+  );
+}
+=======
+<<<<<<< HEAD
   )
 }
-    </Card>)}<Sparkles className='mr-2 h-4 w-4' />;
-            Find AI Matches;
-          </>;
-        )}
-      </Button>;
-    </Card>;
-  )}
+=======
+  );
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

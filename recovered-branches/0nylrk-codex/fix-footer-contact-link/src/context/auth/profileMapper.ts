@@ -1,10 +1,17 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import type { UserProfile } from "@/types/auth";
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 
+<<<<<<< HEAD
+// in this file.
+
+=======
 <<<<<<< HEAD
 // in this file.
 =======
@@ -24,10 +31,24 @@ import type { UserProfile } from "@/types/auth",
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 // in this file.
+<<<<<<< HEAD
+export interface SupabaseUser {
+
+  id: string,
+  email?: string | null;
+}
+/**;
+* Maps Supabase profile data to our app's user model;
+*/;
+export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
+
+  return {
+=======
 <<<<<<< HEAD
 export interface SupabaseUser {
   id: string,
@@ -39,12 +60,14 @@ export interface SupabaseUser {
 <<<<<<< HEAD
 export interface SupabaseUser {
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-  id: string
-
-  email?: string | null
-}
 /**
+<<<<<<< HEAD
+ * Maps Supabase profile data to our app's user model;
+ */
+
+=======
  * Maps Supabase profile data to our app's user model
  */
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
@@ -90,6 +113,7 @@ export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile
  * Maps Supabase profile data to our app's user model;
  */
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return {;
     id: user.id;
 
@@ -97,6 +121,8 @@ import type { UserProfile } from "@/types/auth",;
 ;
   return {;
     id: user.id;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: user && user.id;
@@ -117,6 +143,7 @@ import type { UserProfile } from "@/types/auth",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     email: user.email || "";
     displayName: profile.display_name || "";
     userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null;
@@ -127,6 +154,9 @@ import type { UserProfile } from "@/types/auth",;
     headline: profile.headline || undefined;
     avatar_url: profile.avatar_url || undefined,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }

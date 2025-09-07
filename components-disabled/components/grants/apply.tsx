@@ -14,6 +14,22 @@ const 'categories': GrantCategory[] = [;
 ];const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],'
 export default function ApplyGrantPage() {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState  } from 'react';
+  'Ecosystem Tools
+  'Talent Development
+  'Regional Expansion
+  'Research Grants]
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+export default function ApplyGrantPage() {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 import { useState  } from 'react';'
@@ -34,6 +50,35 @@ const 'categories': GrantCategory[] = [;
 ];const 'categories': GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
 export default function ApplyGrantPage() {;
   }
+<<<<<<< HEAD
+=======
+=======
+import { useState  } from 'react';
+  'Ecosystem Tools
+  'Talent Development
+  'Regional Expansion
+  'Research Grants]
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+export default function ApplyGrantPage() {
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',;
+  'Talent Development',;
+  'Regional Expansion',;
+  'Research Grants',;']
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');'
   const [projectName, setProjectName] = useState('');'
@@ -49,6 +94,15 @@ export default function ApplyGrantPage() {;
   const [sector, setSector] = useState<string>('');'
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout';'
 import {use_router} from 'next / router';'
@@ -71,6 +125,27 @@ function ApplyGrantPage() {
   const [team_info, setTeamInfo] = useState ('');'
   const [proposal_summary, setProposalSummary] = useState ('');'
   const [timeline, set_timeline] = useState ('');'
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const [program, set_program] = useState<'grant' | 'incubator'>('grant');
+  const [project_name, setProjectName] = useState ();
+  const [team_info, setTeamInfo] = useState ();
+  const [proposal_summary, setProposalSummary] = useState ();
+  const [timeline, set_timeline] = useState ();
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const [budget_amount, setBudgetAmount] = useState < number>(0);
 const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(;'
     'USDC');  const [supporting_links, setSupportingLinks] = useState < string>('');  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');'
@@ -181,13 +256,31 @@ router.push (`/grants/${data.id}`);`
 
           'sector': (sector as any) || undefined,;
           submit})});
+<<<<<<< HEAD
       const data = await resp && resp.json();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
       router && router.push(`/grants/${data && data.id}`);`    } catch ('e': any) {;
       }
       setError(e && e.message);
     } finally {;
       }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       setLoading(false);
 
           <textarea,
@@ -238,7 +331,25 @@ disabled={loading}
           <label className='text-sm'>Program'
             <select className='mt-1 w-full border rounded p-2' value={program} onChange={(e) => setProgram(e.target.value as any)}>'
 
+<<<<<<< HEAD
   const _save = async ('_submit': boolean) => {
+=======
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">"
+</div>"
+        <div className="grid md:grid-cols-2 gap-3">"
+          <label className="text-sm">Program;"
+</label>"
+            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+  const _save = async ("_submit": boolean) => {
+>>>>>>> origin/resolved-merge-conflicts
     }
     try {
       }
@@ -335,6 +446,30 @@ return (;
             Program
             <select,
 className='mt-1 w-full border rounded p-2''
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+</select>
+"
+      <h1 className='text-2xl font-semibold mb-4'>
+</h1>
+      <div className='grid gap-4 max-w-3xl'>
+        <div className='grid md:grid-cols-2 gap-3'>
+          <label className='text-sm'>
+            <select;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               value={program}
               onChange={e => setProgram(e.target.value as any)}
             >

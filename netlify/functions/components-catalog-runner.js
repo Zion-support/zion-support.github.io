@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+function runNode(relPath, args = []) {
+
+=======
+<<<<<<< HEAD
 const path = require($2);
 const { spawnSync } = require($2);
 function runNode(relPath, args = []) {
@@ -14,6 +18,7 @@ function runNode(relPath, args = []) {
 function runNode(relPath, args = []) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');
@@ -27,16 +32,26 @@ function run_node() { return null; }
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+exports.config = {
+
+  schedule: '*/30 * * * *'
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exports.config = {
 
   schedule: '*/30 * * * *'
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }'
   const abs = path && path.resolve(__dirname, '..', '..', relPath);'
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
 exports && exports.config = {'
+<<<<<<< HEAD
+  schedule: '*/30 * * * *',
+
+=======
 =======
 }
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
@@ -48,6 +63,7 @@ exports && exports.config = {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (res && res.stdout) logs && logs.push(res && res.stdout);
 
     if (res && res.stderr) logs && logs.push(res && res.stderr);
@@ -55,6 +71,9 @@ exports && exports.config = {
     return res && res.status || 0;
   }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -62,6 +81,7 @@ exports && exports.config = {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
   }'
@@ -69,6 +89,9 @@ exports && exports.config = {
     runNode('automation/components-catalog && catalog.cjs')
   );
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 =======
@@ -80,6 +103,7 @@ exports && exports.config = {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') }
@@ -89,15 +113,21 @@ exports && exports.config = {
 },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;
 exports.handler = async () => {}
@@ -127,7 +157,12 @@ function step() {}`
 <<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '....', relPath);
+=======
+<<<<<<< HEAD
+
+  const abs = path.resolve(__dirname, '....', relPath);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 }
 
@@ -137,6 +172,12 @@ exports.config = {
 exports.handler = async () => {
   const logs = [];
   function step(name, fn) {
+<<<<<<< HEAD
+    logs.push(`\n=== ${name} ===`);
+    const res = fn();
+    if (res.stdout) logs.push(res.stdout);
+    if (res.stderr) logs.push(res.stderr);
+=======
 <<<<<<< HEAD
     logs.push($2);
     const res = fn($2);
@@ -162,3 +203,4 @@ exports.handler = async () => {
 },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

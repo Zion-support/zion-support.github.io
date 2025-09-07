@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+<<<<<<< HEAD
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
@@ -27,6 +28,12 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Transform your business with cutting-edge AI, cloud, and technology solutions.',
   },
+=======
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading Technology Solutions',
+  description: 'Leading technology solutions provider specializing in AI, web development, mobile applications, cloud services, and digital transformation.',
+>>>>>>> origin/resolved-merge-conflicts
 };
 
 export default function RootLayout({
@@ -36,6 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
         <div className="min-h-screen bg-white">
           {children}
@@ -44,3 +52,11 @@ export default function RootLayout({
     </html>
   );
 }
+=======
+      <body className="antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}
+>>>>>>> origin/resolved-merge-conflicts

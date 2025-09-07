@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -27,6 +29,7 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -37,9 +40,13 @@ import { useState } from './react';
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 ;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
 import { useQuery } from "@tanstack/react-query","
 import { supabase } from "@/integrations/supabase/client","
@@ -50,6 +57,8 @@ import { useState } from "react",'
 
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
@@ -73,12 +82,21 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
+<<<<<<< HEAD
+
+  // Format path names for better display
+  const formatPathName = (path: string) => {
+    if (path === '/') return 'Home Page'
+    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
+
+=======
 <<<<<<< HEAD
 },
 
@@ -145,6 +163,7 @@ export function PageViewsTable() {
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,
   
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader className="pb-2">
@@ -181,6 +200,70 @@ export function PageViewsTable() {
             ))
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
+<<<<<<< HEAD
+
+              return (
+                <div key={index} className="flex items-center justify-between">
+                  <div className="text-zion-slate-light font-medium">
+
+                    {formatPathName(page.path)}
+                  </div>"
+                  <div className="flex items-center gap-3">"
+                    <span className="text-white font-medium">{page.count}</span>"
+                    <div className="w-32 flex items-center gap-2">"
+                      <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">
+                        <div"
+                          className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+
+import {useQuery} from "@tanstack/react-query";""
+import {supabase} from "@/integrations/supabase/client";""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+import {Skeleton} from "@/components/ui/skeleton";""
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
+import {useState} from "react";""
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';''
+import { use_query } from '@tanstack / react - query';''
+import { supabase } from '@/integrations / supabase / client';''
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';''
+import { Skeleton } from '@/components / ui / skeleton';''
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';''
+import { useState } from './react';''
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';'
+;
+'
+import { useQuery } from "@tanstack/react-query",""
+import { supabase } from "@/integrations/supabase/client",""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Skeleton } from "@/components/ui/skeleton",""
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
+import { useState } from "react",""
+type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d','
+const timeRangeToInterval = {'
+  '1d': { days: 1, interval: 'hour' }''
+  '7d': { days: 7, interval: 'day' }''
+  '30d': { days: 30, interval: 'day' }''
+  '90d': { days: 90, interval: 'week' }''
+  '365d': { days: 365, interval: 'month' }'
+                    {formatPathName(page.path)}
+                  </div>'
+                  <div className="flex items-center gap-3">"
+</div>"
+                    <span className="text-white font-medium">{page.count}</span>""
+                    <div className="w-32 flex items-center gap-2">"
+</div>"
+                      <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">"
+</div>
+                        <div;"
+                          className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
+
+                          style={{ width: `${percentage}%` }}
+
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+=======
 <<<<<<< HEAD
               const percentage = $2;
 =======
@@ -485,10 +568,14 @@ export function PageViewsTable() {;
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
           )}
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
@@ -510,6 +597,7 @@ export function PageViewsTable() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;}
 ;
@@ -636,11 +724,20 @@ if (return 'Home Page', ) {'
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>);'
   ),; type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
   data, error '
 }= await supabase .from ('analytics events') .select ('path, count') .eq ('event typepage view') .gte ('created at', new Date (Date.now () - days * 24 * 60 * 60 * 1000) .toISOString () ) if (error) throw error;
 return data || [] 
+<<<<<<< HEAD
+}
+
+}
+;
+=======
 }
 
 }
@@ -676,3 +773,4 @@ return data || []
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,7 +1,21 @@
 <<<<<<< HEAD
+import React from "react",
+import { BillingHeader } from "./BillingHeader",
+import { CurrentSubscription } from "./CurrentSubscription",
+import { PaymentMethods } from "./PaymentMethods",
+
+import { InvoiceHistory } from "./InvoiceHistory";
+import { UsageOverview } from "./UsageOverview";
+
+import { BillingHeader } from "./BillingHeader";
+import { CurrentSubscription } from "./CurrentSubscription";
+import { PaymentMethods } from "./PaymentMethods";
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 <<<<<<< HEAD
@@ -11,6 +25,81 @@ import React from "react",
 import { BillingHeader } from "./BillingHeader",
 import { CurrentSubscription } from "./CurrentSubscription",
 import { PaymentMethods } from "./PaymentMethods",
+<<<<<<< HEAD
+import { InvoiceHistory } from "./InvoiceHistory",
+
+import { UsageOverview } from "./UsageOverview",
+import {}
+  Tabs,
+  TabsContent,
+  TabsList,"
+  TabsTrigger} from "@/components/ui/tabs",
+
+      <Tabs defaultValue="subscription" className="mt-8">
+        <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsTrigger value="subscription">Subscription</TabsTrigger>
+          <TabsTrigger value="payment">Payment Methods</TabsTrigger>
+          <TabsTrigger value="invoices">Invoice History</TabsTrigger>
+
+          <TabsTrigger value="usage">Usage Overview</TabsTrigger>
+
+        <TabsContent value="subscription" className="space-y-8">
+          <CurrentSubscription />
+        </TabsContent>"
+        <TabsContent value="payment" className="space-y-8">
+          <PaymentMethods />
+        </TabsContent>"
+        <TabsContent value="invoices" className="space-y-8">
+          <InvoiceHistory />
+        </TabsContent>
+
+        <TabsContent value="usage" className="space-y-8">
+          <UsageOverview />
+        </TabsContent>
+      </Tabs>
+
+    </div>;
+  );
+}
+    </div>
+  )"
+import React from "react",;"
+import { BillingHeader } from "./BillingHeader",;"
+import { CurrentSubscription } from "./CurrentSubscription",;"
+import { PaymentMethods } from "./PaymentMethods",;"
+import { InvoiceHistory } from "./InvoiceHistory",;"
+import { UsageOverview } from "./UsageOverview",;
+import {;
+  Tabs,;
+  TabsContent,;
+  TabsList,;"
+  TabsTrigger} from "@/components/ui/tabs";
+
+          <TabsTrigger value="subscription">Subscription</TabsTrigger>;
+          <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
+
+          <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
+        </TabsList>;
+
+        <TabsContent value="subscription" className="space - y-8">;
+          <CurrentSubscription />;
+        </TabsContent>;
+        <TabsContent value="payment" className="space - y-8">;
+          <PaymentMethods />;
+        </TabsContent>;
+        <TabsContent value="invoices" className="space - y-8">;
+          <InvoiceHistory />;
+        </TabsContent>;
+        <TabsContent value="usage" className="space - y-8">;
+          <UsageOverview />;
+        </TabsContent>;
+      </Tabs>;
+    </div>);
+
+}
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -61,6 +150,7 @@ import {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -68,8 +158,21 @@ import {}
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>
 <<<<<<< HEAD
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>
+<<<<<<< HEAD
+        </TabsList>        
+        <TabsContent value="subscription" className="space-y-8">
+          <CurrentSubscription />
+        </TabsContent>
+        <TabsContent value="payment" className="space-y-8">
+          <PaymentMethods />
+        </TabsContent>
+        <TabsContent value="invoices" className="space-y-8">
+          <InvoiceHistory />
+        </TabsContent>
+=======
         </TabsList>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>
 
@@ -117,6 +220,13 @@ import {}
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
+<<<<<<< HEAD
+      </Tabs>          <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
+          <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
+        </TabsList>;
+}
+=======
       </Tabs>
 <<<<<<< HEAD
 
@@ -219,30 +329,36 @@ function BillingDashboard() {
 
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
         ;
+
         <TabsContent value="subscription" className="space-y-8">;
           <CurrentSubscription />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="payment" className="space-y-8">;
           <PaymentMethods />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="invoices" className="space-y-8">;
           <InvoiceHistory />;
         </TabsContent>;
+<<<<<<< HEAD
+        ;"
+=======
         ;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <TabsContent value="subscription" className="space-y-8">;
           <CurrentSubscription />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="payment" className="space-y-8">;
           <PaymentMethods />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="invoices" className="space-y-8">;
           <InvoiceHistory />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="usage" className="space-y-8">;
           <UsageOverview />;
         </TabsContent>;
@@ -250,6 +366,9 @@ function BillingDashboard() {
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -335,3 +454,4 @@ function BillingDashboard() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

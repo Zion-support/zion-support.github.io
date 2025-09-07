@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 export * from './use_logout';
 ;
@@ -9,6 +11,7 @@ export * from './use_logout';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Index utility
 export const Index = () => {
   // Implementation here
@@ -17,6 +20,8 @@ export const Index = () => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -24,10 +29,16 @@ export const Index = () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export * from './useEmailAuth',;
 export * from './useProfileManagement',;
 export * from './useSocialAuth',;
 
+<<<<<<< HEAD
+export * from './useEmailAuth',;
+export * from './useProfileManagement',;
+export * from './useSocialAuth',;
+=======
 <<<<<<< HEAD
 export * from './useEmailAuth',;
 export * from './useProfileManagement',;
@@ -49,3 +60,4 @@ export * from './useLogout';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

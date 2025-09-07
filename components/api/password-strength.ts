@@ -19,6 +19,18 @@ interface PasswordStrengthResult {
 
 password.toLowerCase () .includes (pattern) );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+if (score < 30) strength = 'very-weak';'
+else if (score < 50) strength = 'weak';'
+else if (score < 70) strength = 'medium';'
+else if (score < 90) strength = 'strong';'
+else strength = 'very-strong';'
+// Generate feedback const "feedback": string[] = [];
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 
@@ -176,6 +188,10 @@ else if (score < 70) strength = 'medium';'
 else if (score < 90) strength = 'strong';'
 else strength = 'very-strong';
 // Generate feedback const feedback: string[] = [];'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ');'
 if (!hasUppercase) feedback.push ('Add uppercase letters');'
 if (!hasLowercase) feedback.push ('Add lowercase letters');'
@@ -183,6 +199,14 @@ if (!hasNumbers) feedback.push ('Add numbers');'
 if (!hasSymbols) feedback.push ('Add special characters');'
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');'
 if (entropy < 30) feedback.push ('Password is too predictable');'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    "hasCommonPatterns": boolean;
+    "entropy": number
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -405,12 +429,23 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 return res.status(405).json({ error: 'Method not allowed'}
 >>>>>>> origin/chore/fix-lint-and-merge
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
  
 }
 
 }
 export default async function handler(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  req: NextApiRequest,
+  res: NextApiResponse<PasswordStrengthResult | { error: string}>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 export default async function handler(
@@ -418,6 +453,10 @@ export default async function handler(
   req: NextApiRequest
 
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: Method not allowed });  }    return res.status(405).json({ error: 'Method not allowed' })
@@ -432,6 +471,28 @@ export default async function handler(
     }
     // Password analysis
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Check for common patterns,
+const commonPatterns = [;
+      '123''
+      'abc''
+      'qwe''
+      'password''
+      'admin''
+      'user''
+      'test''
+      '123456''
+      'password123''
+      'admin123''
+      'qwerty''
+      'asdf''
+
+    ];
+    const hasCommonPatterns = commonPatterns.some(pattern =>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     const length = password.length;
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
@@ -466,16 +527,29 @@ const commonPatterns = [
     ];
 
 const hasCommonPatterns = commonPatterns.some(pattern =>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       password.toLowerCase().includes(pattern))// Calculate entropy (simplified)const charsetSize =;
       (hasUppercase ? 26 : 0) +;
       (hasLowercase ? 26 : 0) +;
       (hasNumbers ? 10 : 0) +;
       (hasSymbols ? 32 : 0)const entropy =;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed });  }    return res.status(405).json({ error: Method not allowed' })
   }
   try {}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
     );
@@ -512,6 +586,33 @@ const charsetSize =
     score += hasLowercase ? 10 : 0;
     score += hasNumbers ? 10 : 0;
     score += hasSymbols ? 15 : 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+score += entropy > 50 ? 15 : 0; // High entropy bonus;
+    score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns;
+    // Determine strength level;
+    let "strength": PasswordStrengthResult['strength'];'
+    if (score < 30) strength = 'very-weak';'
+    else if (score < 50) strength = 'weak';'
+    else if (score < 70) strength = 'medium';'
+    else if (score < 90) strength = 'strong';'
+    else strength = 'very-strong';'
+    // Generate feedback;
+
+const "feedback": string[] = [];
+    if (length < 8)feedback.push('Password is too short (minimum 8 characters)')if (!hasUppercase) feedback.push('Add uppercase letters')if (!hasLowercase) feedback.push('Add lowercase letters')if (!hasNumbers) feedback.push('Add numbers')if (!hasSymbols) feedback.push('Add special characters')if (hasCommonPatterns) feedback.push('Avoid common patterns and words')if (entropy < 30) feedback.push('Password is too predictable')// Generate suggestions;'
+
+const "suggestions": string[] = [];
+    if (score < 50) {suggestions.push('Use a mix of uppercase, lowercase, numbers, and symbols';'
+      )suggestions.push('Make it at least 12 characters long')suggestions.push('Avoid personal information and common words')}'
+    if (hasCommonPatterns) {suggestions.push('Replace common patterns with random characters')suggestions.push('Consider using a passphrase instead')}'
+    if (entropy < 40) {suggestions.push('Increase randomness by using more character types')suggestions.push('Consider using a password generator')}'
+
+const "result": PasswordStrengthResult = {password;
+      }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 score += entropy > 50 ? 15 : 0; // High entropy bonus
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
     // Determine strength level
@@ -576,6 +677,10 @@ const suggestions: string[] = [];
 
 const result: PasswordStrengthResult = {password;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       strength;
       score: Math.max(0, Math.min(100, score))feedback;
       details: {length;
@@ -1240,9 +1345,110 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
 
+<<<<<<< HEAD
     res.status(500).json({ error: 'Internal server error' })
+=======
+<<<<<<< HEAD
+    res.status(200).json(result);
+  } catch (error) {
+    }
+    console.error('Password strength check "error":', error);'
+    res.status(500).json({ "error": 'Internal server error','
+});
+
+=======
+    res.status(500).json({ error: 'Internal server error' })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const length = $2;
+    const hasUppercase = /[A-Z]/.test($2);
+    const hasLowercase = /[a-z]/.test($2);
+    const hasNumbers = /\d/.test($2);
+    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test($2);
+    // Check for common patterns
+    const commonPatterns = $2;
+    const hasCommonPatterns = $2;
+    // Calculate entropy (simplified)
+    const charsetSize = $2;
+    const entropy = charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0,
+
+    // Calculate score
+    let score = $2;
+    score += Math.min(length * 2, 20), // Length contribution (max 20)
+    score += hasUppercase ? 10 : 0,
+    score += hasLowercase ? 10 : 0,
+    score += hasNumbers ? 10 : 0,
+    score += hasSymbols ? 15 : 0,
+    score += entropy > 50 ? 15 : 0, // High entropy bonus
+    score -= hasCommonPatterns ? 20 : 0, // Penalty for common patterns
+
+    // Determine strength level
+    let strength: PasswordStrengthResult['strength'],
+    if (score < 30) strength = $2;
+    else if (score < 50) strength = $2;
+    else if (score < 70) strength = $2;
+    else if (score < 90) strength = $2;
+    else strength = $2;
+    // Generate feedback
+    const feedback: string[] = [],
+    if (length < 8) feedback.push('Password is too short (minimum 8 characters)'),
+    if (!hasUppercase) feedback.push($2);
+    if (!hasLowercase) feedback.push($2);
+    if (!hasNumbers) feedback.push($2);
+    if (!hasSymbols) feedback.push($2);
+    if (hasCommonPatterns) feedback.push($2);
+    if (entropy < 30) feedback.push($2);
+    // Generate suggestions
+    const suggestions: string[] = [],
+    if (score < 50) {
+      suggestions.push($2);
+      suggestions.push('Avoid personal information and common words')
+    }
+    if (hasCommonPatterns) {
+      suggestions.push($2);
+      suggestions.push('Consider using a passphrase instead')
+    }
+    if (entropy < 40) {
+      suggestions.push($2);
+      suggestions.push('Consider using a password generator')
+    }
+
+    const result: PasswordStrengthResult = $2;
+      strength,
+      score: Math.max(0, Math.min(100, score)),
+      feedback,
+      details: {
+        length,
+        hasUppercase,
+        hasLowercase,
+        hasNumbers,
+        hasSymbols,
+        hasCommonPatterns,
+        entropy: Math.round(entropy * 100) / 100},
+      suggestions},
+
+    res.status(200).json(result)
+  } catch (error) {
+    console.error($2);
+    res.status(500).json({ error: 'Internal server error' })
+  }
+    res.status(200).json(result);
+  } catch (error) {'
+    console.error('Password strength check error:', error);'
+    res.status(500).json({ error: 'Internal server error' });
+  }
+    res.status(500).json({ error: 'Internal server error' })
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1272,3 +1478,7 @@ export default async function handler(
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

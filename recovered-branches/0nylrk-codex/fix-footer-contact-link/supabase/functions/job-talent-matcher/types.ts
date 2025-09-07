@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export interface JobData {
   id: string,
   title: string,
@@ -10,12 +12,15 @@ export interface JobData {
     max: number},
   deadline: string}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 id: string;
   title: string,
   description: string;
   skills: string[];
   category: string;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export interface JobData {
 export interface JobData {;
@@ -34,6 +39,7 @@ export interface JobData {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     min: number,
     max: number;
 
@@ -48,6 +54,72 @@ export interface JobData {;
 }
 
 }
+<<<<<<< HEAD
+
+  id: string;
+  full_name: string;
+  professional_title: string;
+  bio?: string;
+  skills: string[];
+  years_experience: number;
+
+  talent_id: string;
+  job_id: string;
+  match_score: number;}
+
+export interface TalentMatch {
+
+  talent_id: string;
+  job_id: string;
+  match_score: number;
+
+}
+
+export interface MatchResult {};
+  talentId: string;
+
+  score: number;
+
+}
+  id: string;,
+  title: string;
+  description: string;,
+  skills: string[];
+  category: string;,
+  budget: {
+    min: number;,
+  max: number;
+  };
+  deadline: string;
+
+export interface TalentProfile {
+  // TODO: Implement
+  full_name: string;
+  professional_title: string;
+  bio?: string;
+  skills: string[];,
+  years_experience: number;
+  hourly_rate?: number;
+  availability_type?: string;
+
+  hourly_rate?: number,
+
+export interface TalentMatch {
+  // TODO: Implement
+  talent_id: string;,
+  job_id: string;
+  match_score: number;,
+  matched_skills: string[];
+  created_at: string;
+
+export interface MatchResult {
+  // TODO: Implement
+  talentId: string;,
+  score: number;
+  matchedSkills: string[];
+  reason?: string;
+}
+=======
 <<<<<<< HEAD
 
 =======
@@ -95,6 +167,7 @@ export interface TalentMatch {
   availability_type?: string
 }
 export interface TalentMatch {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface TalentMatch {;
 =======
@@ -122,6 +195,9 @@ export interface MatchResult {};
 <<<<<<< HEAD
   matched_skills: string[]
 
+<<<<<<< HEAD
+  created_at: string;
+=======
   created_at: string
 }
 export interface MatchResult {
@@ -130,8 +206,20 @@ export interface MatchResult {
   score: number,
   matchedSkills: string[],
   reason?: string
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
+
+  id: string,;
+  title: string,;
+  description: string,;
+  skills: string[],;
+  category: string,;
+  budget: {;,
+  min: number,;
+  },;
 ;
+<<<<<<< HEAD
+=======
 =======
 
 export interface MatchResult {;
@@ -247,6 +335,7 @@ export interface MatchResult {
   min: number,;
   },;
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface TalentProfile {;
   full_name: string,;
   professional_title: string,;
@@ -264,6 +353,9 @@ export interface TalentMatch {;
 
 ;
 
+<<<<<<< HEAD
+export interface JobData {;
+=======
 export interface JobData {;
 =======
 <<<<<<< HEAD
@@ -275,3 +367,4 @@ export interface JobData {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

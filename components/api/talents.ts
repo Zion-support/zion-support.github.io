@@ -6,6 +6,68 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 import { v4 as uuidv4 } from "uuid";
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json"),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs-extra";"
+import path from "path";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";"
+import { v4 as uuidv4 } from "uuid";"
+
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");"
+
+export default async function handler() {
+  }
+  const started = null;
+return res.status(201).json({ "id": record.id }),;
+}
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs - extra';'
+import path from 'path';'
+import {
+} from '../../utils/api/partnerAuth';'
+import { v4 as uuidv4 } from 'uuid';'
+
+
+;
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs-extra';'
+import path from 'path';'
+import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth';'
+import { v4 as uuidv4  } from 'uuid';'
+
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")export default async function handler() ;"
+  const started = null;
+return res.status(201).json({ "id": record.id },;
+}import fs from 'fs - extra';'
+import {} from '../../utils/api/partnerAuth';'
+
+const TALENTS_FILE = path.join(process.cwd()'data';'
+  'talents';'
+  'talents.json';'
+)export default async function handler() {try {const auth = await authenticateRequest(req)if (!auth) {return res && res.status(401).json({ "error": 'Unauthorized' },'
+}
+  if (!(await enforceRateLimit(auth && auth.apiKey))) {await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429)return res && res.status(429).json({ "error": 'Rate limit exceeded' },'
+}
+  if (req && req.method !== 'POST') {res && res.setHeader('Allow', 'POST')await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405;'
+}
+return res && res.status(405).json({ "error": 'Method Not Allowed' },;'
+}
+;
+  const { name, email, skills, programTrack, certificationStatus } =;
+  }
+  await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE))const records = (await fs && fs.pathExists(TALENTS_FILE))? await fs && fs.readJSON(TALENTS_FILE)authenticate_request,enforceRateLimit,record_request} from '../../utils / api / partner_auth';'
+
+const TALENTS_FILE = path.join (process.cwd (),'data','talents','talents.json')export default async /**;'
+ * handler - Function description;
+ */;
+function handler() {const auth = await authenticate_request (req)// Check condition;
+}
+if ( {) {$2;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from \"next\";"
@@ -61,11 +123,52 @@ import { v4 as uuidv4 } from 'uuid';
 =======
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {;
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: 'Unauthorized' });
+ 
+}
+return res.status (401).json ({ "error": 'Unauthorized' },;'
+}
+  if ()) {) {$2;
+}
+    await record_request (req, res, auth.partner, auth.api_key, started, 429)return res.status (429).json ({ "error": 'Rate limit exceeded' },'
+}
+  // Check condition;
+if ( {) {$2;
+}
+    res.set_header ('Allow', 'POST')await record_request (req, res, auth.partner, auth.api_key, started, 405)return res.status (405).json ({ "error": 'Method Not Allowed' },'
+}
+
+const { name, email, skills, program_track, certification_status } =;
+    req.body || {}
+  // Check condition;
+if ( {) {$2;
+}
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json"),
+
+    await record_request (req, res, auth.partner, auth.api_key, started, 400);
+return res.status (400).json ({ "error": 'Missing required fields',;'
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 =======
@@ -83,6 +186,10 @@ export default async function handler(
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   if (!(await enforceRateLimit(auth && auth.apiKey))) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
@@ -256,6 +363,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     name,
     email,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "skills": skills || [],
+    "programTrack": programTrack || null,
+    "certificationStatus": certificationStatus || 'pending','
+
+    "partnerId": auth.partner.id
+
+  };
+  records && records.push(record);
+  await fs && fs.writeJSON(TALENTS_FILE, records, { "spaces": 2
+});
+  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
+return res && res.status(201).json({ "id": record && record.id,;
+});  return res && res.status(201).json({ "id": record && record.id })
+}
+import type { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs-extra";"
+import path from "path";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";"
+import { v4 as uuidv4 } from "uuid";"
+
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");"
+
+export default async function handler() {
+  }
+  const started = Date.now();
+
+const auth = await authenticateRequest(req);
+  if (!auth) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
     skills: skills || [],
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || "pending",
@@ -274,6 +414,10 @@ const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 
 <<<<<<< HEAD
   return res.status(201).json({ id: record.id })
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
 
@@ -622,6 +766,17 @@ const auth = await authenticateRequest(req);
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const { name, email, skills, programTrack, certificationStatus } = req.body || {};
+  if (!name || !email) {
+    }
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+return res.status(400).json({ "error": "Missing required fields" });"
+ 
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
 const { name, email, skills, programTrack, certificationStatus } = req.body || {};
@@ -630,6 +785,10 @@ const { name, email, skills, programTrack, certificationStatus } = req.body || {
     return res.status(400).json({ error: \"Missing required fields\" })
  
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   await fs.ensureDir(path.dirname(TALENTS_FILE));
 
@@ -641,6 +800,15 @@ const record = {
     id: uuidv4(), name,
     email;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "skills": skills || [], "programTrack": programTrack || null,
+    "certificationStatus": certificationStatus || "pending", "partnerId": auth.partner.id,"
+    "createdAt": no
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
     skills: skills || [], programTrack: programTrack || null,"
@@ -648,6 +816,10 @@ const record = {
     createdAt: no}
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2}
 });
@@ -670,7 +842,14 @@ created_at: now}
 }
   return res.status(201).json({ id: record.id });
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   return res.status(201).json({ id: record.id}
 });

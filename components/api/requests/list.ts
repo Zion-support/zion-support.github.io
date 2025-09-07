@@ -4,6 +4,22 @@ import fs from 'fs';
 import path from 'path';
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');'
+
+export default async function handler() {
+  }
+  try {
+    }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const raw = fs.readFileSync($2);
@@ -28,10 +44,35 @@ res: NextApiResponse;
 origin/cursor/automate-test-improve-and-merge-code-2533
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const raw = null;
 
 }
     res.status(200).json({ items })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  } catch {
+    }
+    const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");"
+
+const items = JSON && JSON.parse(raw);
+    res && res.status(200).json({ items });
+  } catch {}
+  } catch {
+    }
+    res.status (200).json ({ "items": []
+});
+  }
+  try {
+    }
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");"
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   } catch {}
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
@@ -123,6 +164,10 @@ function handler() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const items = JSON.parse(raw);
     res.status(200).json({ items });
 
@@ -144,6 +189,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 "
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
     const raw = null;
@@ -157,3 +207,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

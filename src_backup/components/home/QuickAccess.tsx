@@ -1,5 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
   const quickLinks = [
+<<<<<<< HEAD
 const quickLinks = [
+=======
+=======
+=======
+=======
+<<<<<<< HEAD
+  const quickLinks = [
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const quickLinks = [
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
     {
       title: t('home.tool_ai_matcher'),
       description: t('home.tool_ai_matcher_desc'),
@@ -100,8 +115,35 @@ function QuickAccess() {}
       link: '/mobile-launch'
     }
   ],
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  return (
+    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            {t('home.quick_access_titleQuick Access')}
+          </h2>;
+          <p className="text-zion-slate-light text-lg">;
+            {t('home.quick_access_subtitleJump directly to our most popular features')}
+    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            {t('home.quick_access_title', 'Quick Access')}
+          </h2>
+          <p className="text-zion-slate-light text-lg">
+            {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const quickLinks = [;
     {title: t('home.tool_ai_matcher'),description: t('home.tool_ai_matcher_desc'),icon: <Search className='h-6 w-6 text-zion-cyan' />,link: '/marketplace';
     },{title: t('home.tool_talent'),description: t('home.tool_talent_desc'),icon: <Users className='h-6 w-6 text-zion-purple' />,link: '/talent';
@@ -124,7 +166,11 @@ function QuickAccess() {}
           <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>;
             {t('home.quick_access_title', 'Quick Access')}
           </h2>;
+<<<<<<< HEAD
           <p className='text-zion-slate-light text-lg'>;
+=======
+          <p className="text-zion-slate-light text-lg">;
+>>>>>>> origin/resolved-merge-conflicts
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>;
         </div>;
@@ -156,6 +202,30 @@ function QuickAccess() {const { t } = use_translation ()const quick_links = [;
           {quick_links.map ((link, index) => (
             <Link;
 
+=======
+
+  return (
+    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            {t('home.quick_access_titleQuick Access')}
+          </h2>;
+          <p className="text-zion-slate-light text-lg">;
+            {t('home.quick_access_subtitleJump directly to our most popular features')}
+    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            {t('home.quick_access_title', 'Quick Access')}
+          </h2>
+          <p className="text-zion-slate-light text-lg">
+            {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </p>
         </div>
           {quickLinks.map((link, index) => (
@@ -215,6 +285,12 @@ function QuickAccess() {const { t } = use_translation ()const quick_links = [;
 
               href={link.link}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {quick_links.map ((link, index) => (<Link;key={index}
               href={link.link}</p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
@@ -227,6 +303,7 @@ import { motion   } from 'framer-motion';
 export default /**;
  * Page - Function description;
  */;
+<<<<<<< HEAD
 function Page() {';
     { name: 'Consulting', count: 6, color: 'from - yellow - 500 to - orange - 500' }, ';
     { name: 'Innovation', count: 10, color: 'from - green - 500 to - teal - 500' }, ';
@@ -236,10 +313,34 @@ function Page() {';
     { name: 'Business', count: 14, color: 'from-indigo-500 to-purple-500' }scale: 1,transition: {duration: 0.5, ';
         ease: 'ease_out'}}
   const hover_variants = {hover: {coordinate_y: -8,      scale: 1.02,transition: {duration: 0.3, '  ease: 'ease_out';
+=======
+function Page() {";
+    { name: Consulting, count: 6, color: "from - yellow - 500 to - orange - 500" }, ;
+    { name: Innovation", count: 10, color: "from - green - 500 to - teal - 500 }, ;
+    { name: "Business", count: 14, color: from - indigo - 500 to - purple - 500 }      scale: 1,export default function Page() {";
+    { name: "Consulting, count: 6, color: from-yellow-500 to-orange-500" },";
+    { name: Innovation, count: 10, color: "from-green-500 to-teal-500" },;
+    { name: Business", count: 14, color: "from-indigo-500 to-purple-500 }scale: 1,transition: {duration: 0.5, ;
+        ease: "ease_out"}}}
+  const hover_variants = {hover: {coordinate_y: -8,      scale: 1.02,transition: {duration: 0.3,   ease: ease_out";
+              </p>;
+              <div className=flex items - center text - zion - cyan text - xs mt - auto'>;'
+                <span>{t (general.explore)}</span>;'
+                <ArrowRight className='ml - 1 h - 3 w - 3 transition - transform group - hover:translate - x-1 />;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </p>;'
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;'
                 <span>{t ('general.explore')}</span>;'
                 <ArrowRight className='ml - 1 h - 3 w - 3 transition - transform group - hover:translate - x-1' />;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
               </div>;
             </Link>;'
 import React, { useState } from 'react';'
@@ -506,12 +607,35 @@ export default function Page() { return null; }
 
               </div>
 
+<<<<<<< HEAD
               className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'
             >'
               <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>
             </motion && motion.div>;export default QuickAccess;className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20';
             >;
               <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>;
+=======
+              className=group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20
+            >"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110>
+            </motion && motion.div>;export default QuickAccess;className=group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20";
+            >;
+              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110>;
+=======
+              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {link.icon}
 
                 <ArrowRight className='ml-1 h-3 w-3 transition-transform group-hover:translate-x-1' />
@@ -530,12 +654,37 @@ export default function Page() { return null; }
       </div>;
     </section>);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link',
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
+=======
+import React from "react,
+import Link from next/link",
+import { useTranslation } from "react-i18next;
+import { cn } from @/lib/utils";
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from lucide-react
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from "react",
+import Link from "next/link",
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from 'react'
 import Link from 'next/link'
@@ -556,7 +705,18 @@ interface QuickAccessProps {
 export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 
+<<<<<<< HEAD
     </section>)export default QuickAccess }export default QuickAccess;import React from 'react',import Link from 'next/link',import { useTranslation  } from 'react-i18next';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default QuickAccess;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    </section>)export default QuickAccess }export default QuickAccess;import React from "react,import Link from next/link",import { useTranslation  } from react-i18next;
+>>>>>>> origin/resolved-merge-conflicts
 import { cn  } from '@/lib/utils';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone  } from 'lucide-react';
 import Link from 'next/link';
@@ -572,3 +732,10 @@ interface QuickAccessProps  {className?: string;
   style?: React.CSSProperties;
 export function QuickAccess() {)export default QuickAccess;
 export default QuickAccess;
+=======
+export default QuickAccess;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

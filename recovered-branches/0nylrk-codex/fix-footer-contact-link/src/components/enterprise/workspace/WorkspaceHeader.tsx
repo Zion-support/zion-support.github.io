@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 import React from "react";
@@ -16,10 +18,21 @@ interface WorkspaceHeaderProps {
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
+<<<<<<< HEAD
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { type Company } from "./CompanyDashboard",
+import { Bell, Users, Settings } from "lucide-react",
+
+interface WorkspaceHeaderProps {
+  company: Company
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -387,13 +400,165 @@ interface WorkspaceHeaderProps {;
 }Plan · {
   company.teamSize 
 }team members flex items-center gap-2"> <Button variant=" outline"size=" icon"> <Bell className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Users className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Settings className=" h-4 w-4"/> </Button> </div> </div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Candidate Applications</div> <div className=" text-2xl font-medium">47</div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Interviews Scheduled</div> <div className=" text-2xl font-medium" >12</div> </div> </div> </div>) 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
-  );
+
+interface WorkspaceHeaderProps {
+  company: Company
+}
+
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
+
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
+import { Bell, Users, Settings } from "lucide-react";
+interface WorkspaceHeaderProps {;
+  company: Company;
 }
 ;
+<<<<<<< HEAD
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
+  return (;
+
+interface WorkspaceHeaderProps {
+  company: Company
+import React from \"react\",;
+import { Button } from \"@/components/ui/button\",;
+import { type Company } from \"./CompanyDashboard\",;
+import { Bell, Users, Settings } from \"lucide-react\",;
+interface WorkspaceHeaderProps {}
+  company: Company}
+}
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+  return (
+    <div className=\"space-y-6\" />
+      <div className=\"flex items-center justify-between\" />
+        <div className=\"flex items-center gap-4\" />
+          <div className=\"h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border\" />}
+            <img;}
+src={company.logoUrl |\"/placeholder.svg\"}
+              alt={company.name}
+              className="max - h-10 max - w-10";
+            />;
+          </div>;
+          <div>;
+            <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;
+            <p className="text - muted - foreground">;
+              {company.plan} Plan · {company.team_size} team members;
+            </p>;
+          </div>;
+        </div>;
+        <div className="flex items - center gap - 2">;
+          <Button variant="outline" size="icon">;
+            <Bell className="h - 4 w - 4" />;
+          </Button>;
+          <Button variant="outline" size="icon">;
+            <Users className="h - 4 w - 4" />;
+          </Button>;
+          <Button variant="outline" size="icon">;
+            <Settings className="h - 4 w - 4" />;
+          </Button>;
+        </div>;
+      </div>;
+      <div className="grid grid - cols - 1 sm: grid - cols - 3 gap - 4">;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Active Job Listings</div>;
+          <div className="text - 2xl font - medium">8</div>;
+        </div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Candidate Applications</div>;
+          <div className="text - 2xl font - medium">47</div>;
+        </div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;
+          <div className="text - 2xl font - medium">12</div>;
+        </div>;
+      </div>;
+    </div>);
+}
+
+;
+
+;
+              className=\"max-h-10 max-w-10\"
+
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
+import { Bell, Users, Settings } from "lucide-react";
+interface WorkspaceHeaderProps {;
+  company: Company
+};
+
+import { Bell, Users, Settings } from "lucide-react";
+interface WorkspaceHeaderProps {;
+  company: Company;
+}
+"
+    <div className="space-y-6">;"
+      <div className="flex items-center justify-between">;"
+        <div className="flex items-center gap-4">;"
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+
+        <div className="flex items-center gap-2">;
+
+          <Button variant="outline" size="icon">;
+            <Bell className="h - 4 w - 4" />;
+          </Button>;
+          <Button variant="outline" size="icon">;
+            <Users className="h - 4 w - 4" />;
+          </Button>;
+          <Button variant="outline" size="icon">;
+            <Settings className="h - 4 w - 4" />;
+          </Button>;
+        </div>;
+      </div>;
+
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Active Job Listings</div>;
+          <div className="text-2xl font-medium">8</div>;
+
+        </div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Candidate Applications</div>;
+          <div className="text - 2xl font - medium">47</div>;
+        </div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;
+          <div className="text - 2xl font - medium">12</div>;
+
+        </div>;
+      </div>;
+
+;
+
+  );}
+ interface WorkspaceHeaderProps {}
+  company: Company;
+}export function WorkspaceHeader() { return null; }
+}alt= {}
+  company.name "
+}className="max-h-10 max-w-10" /> </div> <div> <h1 className="text-3xl font-bold tracking-tight" > {}
+  company.name "
+}Workspace</h1> <p className="text-muted-foreground" > {}
+  company.plan;
+}Plan · {}
+  company.teamSize "
+}team members flex items-center gap-2"> <Button variant=" outline"size=" icon"> <Bell className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Users className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Settings className=" h-4 w-4"/> </Button> </div> </div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Candidate Applications</div> <div className=" text-2xl font-medium">47</div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Interviews Scheduled</div> <div className=" text-2xl font-medium" >12</div> </div> </div> </div>) 
+});
+}
+;
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

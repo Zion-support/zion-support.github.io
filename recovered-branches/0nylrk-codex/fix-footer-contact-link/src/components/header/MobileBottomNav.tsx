@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
@@ -15,11 +17,15 @@ interface MobileBottomNavProps {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 import React from "react",
@@ -28,10 +34,33 @@ import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from 
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface MobileBottomNavProps {
   unreadCount?: number
 }
 
+<<<<<<< HEAD
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+
+      name: "Community"
+      href: "/community"
+      icon: MessageCircle
+      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
+    }
+
+=======
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation($2);
   const { user } = useAuth($2);
@@ -124,6 +153,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     },
     {
       name: "Browse",
@@ -138,6 +168,9 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -145,6 +178,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     {
       name: "Messages"
 
@@ -154,6 +188,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
       authRequired: true
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -169,6 +205,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     {
 
       name: "Dashboard"
@@ -184,13 +221,19 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   ];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Filter items based on auth status
   const visibleItems = navItems.filter(item =>
     !item.authRequired |(item.authRequired && isAuthenticated)
   );
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -198,6 +241,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ],
 
   // Filter items based on auth status;
@@ -205,6 +249,85 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     !item.authRequired || (item.authRequired && isAuthenticated)
   ),
 
+<<<<<<< HEAD
+  return ("
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">"
+      <div className="flex justify-around items-center h-16">
+        {visibleItems.map(item => (
+          <Link;
+
+            key={item.name}
+            to={item.href}
+            className={cn(
+
+              item.matches(location.pathname)
+                ? "text-zion-cyan"
+
+                : "text-white/70 hover:text-white"
+            )}
+          >"
+            <div className="relative">"
+              <item.icon className="h-5 w-5 mb-1" />
+              {item.badge && item.badge > 0 && ("
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+
+import React from "react",;
+import { Link, useLocation } from "react-router-dom",;
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+
+import { useAuth } from "@/hooks/useAuth",;
+interface MobileBottomNavProps {;
+  unreadCount?: number;
+}
+;
+
+  const navItems = [;
+    {;"
+      name: "Home",;"
+      href: "/",;
+
+  );
+
+  return (
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
+      <div className="flex justify-around items-center h-16">;
+
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1"
+              item && item.matches(location && location.pathname)
+
+        {visibleItems && visibleItems.map(item => (;
+          <Link;
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
+
+                ? "text-zion-cyan"
+
+                : "text-white/70 hover:text-white"
+            )}>;"
+            <div className="relative">;"
+              <item && item.icon className="h-5 w-5 mb-1" />;
+              {item && item.badge && item && item.badge > 0 && (;"
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+                  {item && item.badge > 9 ? '9+' : item && item.badge}
+                </span>;
+
+        {visibleItems.map(item => (;
+          <Link;
+            key={item.name}
+            to={item.href}
+            className={cn(;"
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1";
+              item.matches(location.pathname);"
+                ? "text-zion-cyan";"
+                : "text-white/70 hover:text-white";
+            )}
+          >;"
+            <div className="relative">;"
+              <item.icon className="h-5 w-5 mb-1" />;
+
+=======
 <<<<<<< HEAD
   return ("
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">"
@@ -690,16 +813,106 @@ pr-12325
 }</div> </nav>) 
 }
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
-            </div>
-            <span className="text-xs font-medium">{item.name}</span>
-          </Link>
+            </div>;"
+            <span className="text-xs font-medium">{item && item.name}</span>;
+          </Link>;
         ))}
+
+        {visibleItems.map(item => (;
+          <Link;
+            key={item.name}
+            to={item.href}
+            className={cn(;
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1",;
+              item.matches(location.pathname);
+                ? "text-zion-cyan";
+                :"text-white/70 hover:text-white";
+            )}
+          >;
+            <div className="relative">;
+              <item.icon className="h-5 w-5 mb-1" />;
+              {item.badge && item.badge > 0 && (;
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+
+      </div>;
+    </nav>;"
+    <nav className="md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - zion - blue - dark / 95 backdrop - blur - md border - t border - zion - purple / 20">;"
+      <div className="flex justify - around items - center h - 16">;"
+            className={cn ("
+              "flex flex - col items - center justify - center w - full h - full px - 1 py - 1";")
+              item.matches (location.pathname);"
+                ? "text - zion - cyan";""
+                : "text - white / 70 hover:text - white")}"
+              <item.icon className="h - 5 w - 5 mb - 1" />;"
+                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;"
+                </span>)}
+            <span className="text - xs font - medium">{item.name}</span>;"
+          ))}
+    </nav>);
+}
+
+  ),;}
+ interface MobileBottomNavProps {
+  unreadCount?: number 
+}export function MobileBottomNav ({
+  unreadCount = 0 
+}: MobileBottomNavProps) {
+  const location = useLocation ();
+const {
+  user 
+}= useAuth ();
+const isAuthenticated = !!user;
+const navItems = [ {
+  name: "Home";
+href: "/";
+icon: Home;
+matches: (path: string) => path === "/" 
+};
+{
+  name: "Browse";
+href: "/talent";
+icon: Search;
+matches: (path: string) => path.startsWith ("/talent") || path.startsWith ("/categories") || path.startsWith ("/marketplace") 
+};
+{
+  name: "Community";
+href: "/community";
+icon: MessageCircle;
+matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
+};
+{
+  name: "Messages";
+href: "/messages";
+icon: MessageSquare;
+matches: (path: string) => path.startsWith ("/messages") || path.startsWith ("/inbox");
+badge: unreadCount;
+authRequired: true 
+};
+{
+  name: "Dashboard";
+href: "/dashboard";
+icon: User;
+matches: (path: string) => path.startsWith ("/dashboard");
+authRequired: true 
+}];
+return ({
+  item.badge > 9 ? '9+' : item.badge 
+}</span>) 
+}</div> ) ) 
+}</div> </nav>) 
+            <span className="text-xs font-medium">{item.name}</span>"
+pr-12325
+          </Link>
       </div>
     </nav>
   )
+<<<<<<< HEAD
+}
+=======
 }
 <<<<<<< HEAD
 =======
@@ -708,3 +921,4 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

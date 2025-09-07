@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';'
+
+;
+const MainSidebar.dynamic = () => {
+;
+const MainSidebar.dynamic = () => {}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import React from 'react';
 
 ;
@@ -20,10 +31,22 @@ import React from 'react';
 >>>>>>> origin/chore/fix-lint-and-merge
 const MainSidebar.dynamic = () => {}
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <div data - testid="mainsidebar.dynamic>;
       <h1 > MainSidebar.dynamic</h1>;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const MainSidebar.dynamic = () => ;
+  return (<div data - testid="mainsidebar.dynamic">;"
+      <h1 > MainSidebar.dynamic</h1>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 }
 ;
@@ -38,6 +61,10 @@ const MainSidebar.dynamic = () => ;
   return (<div data - testid=\"mainsidebar.dynamic\"    />;
       <h1     /> MainSidebar.dynamic</h1>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </div>
   );
 }

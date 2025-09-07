@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+
+const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -68,8 +83,25 @@ res: NextApiResponse;
     return res && res.status(405).json({ error: 'Method Not Allowed'}
 >>>>>>> origin/chore/fix-lint-and-merge
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const jobs = (await fs.pathExists(JOBS_FILE))
+      ? await fs.readJSON(JOBS_FILE)
+      : [];
+    return res.status(200).json({ jobs });
+  } catch (e) {
+    return res.status(500).json({ error: 'Failed to load jobs' });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     const jobs = (await fs && fs.pathExists(JOBS_FILE))
       ? await fs && fs.readJSON(JOBS_FILE)}
       : [];}
@@ -304,3 +336,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

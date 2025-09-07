@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const fs = require($2);
+const path = require($2);
+const { upsertFile } = require($2);
+exports.handler = $2;
+    const resp = await fetch($2);
+    const data = await resp.json($2);
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
+    const content = fs.readFileSync($2);
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
@@ -40,7 +80,56 @@ const resp = await fetch(`${baseUrl}/api/dao/metrics`)const data = await resp.js
 }
 ;
   const resp = await fetch(`${baseUrl}/api/dao/metrics`);`
+<<<<<<< HEAD
 const data = await resp && resp.json();
+=======
+=======
+const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const owner = process && process.env.GITHUB_OWNER;
+    const repo = process && process.env.GITHUB_REPO;
+    const token = process && process.env.GITHUB_TOKEN;
+    const cachePath = path && path.join(process && process.cwd(), 'data', 'dao', 'metrics && metrics.json');
+    const content = fs && fs.readFileSync(cachePath, 'utf-8');
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/dao/metrics && metrics.json',
+const fs = require ('fs');
+const path = require ('path');
+const { upsert_file } = require ('./_lib / github');
+;
+exports.handler = async function () {
+  try {
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '';
+    const resp = await fetch (`${base_url}/api / dao / metrics`);
+    const data = await resp.json ();
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    const cache_path = path.join (process.cwd (), 'data', 'dao', 'metrics.json');
+    const content = fs.readFileSync (cache_path, 'utf - 8');
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / dao / metrics.json',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         content,
         "message": 'chore (automation): weekly DAO metrics update','
@@ -76,6 +165,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, updated_at: data.updated_at })
+    }
+
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+
+  }
+
+=======
+=======
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
+    const content = fs.readFileSync(cachePath, 'utf-8'),
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/resolved-merge-conflicts
     }
     return {}
     return {}
@@ -90,6 +204,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }  try {const base_url = process.env.URL || process.env.DEPLOY_URL || '',const resp = await fetch (`${base_url}/api / dao / metrics`),const data = await resp.json (),const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,const cache_path = path.join (process.cwd (), 'datadaometrics.json');'  const content = fs.readFileSync (cache_path, 'utf - 8'),// Check condition;'
 if ( {) {$2;
 }
+<<<<<<< HEAD
       await upsert_file ({ owner, repo, "path": 'data / dao / metrics.json', content, "message": 'chore (automation): weekly DAO metrics update', token })}'
     return { "status_code": 200, "body": JSON.stringify ({ "ok": true, "updated_at": data.updated_at }) }
  
@@ -102,7 +217,76 @@ if ( {) {$2;
   const content = fs && fs.readFileSync(cachePath, 'utf-8'),if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/dao/metrics && metrics.json', content, "message": 'chore(automation): weekly DAO metrics update', token })}return { "statusCode": 200, "body": JSON && JSON.stringify({ "ok": true, "updatedAt": data && data.updatedAt }) ,'
 } catch (e) ;
   return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
+=======
+      await upsert_file ({ owner, repo, path: 'data / dao / metrics.json', content, message: 'chore (automation): weekly DAO metrics update', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, updated_at: data.updated_at }) }
+  } catch (e) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+
+  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      statusCode: 200,
+      body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+  }
+};  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`),
+    const data = await resp && resp.json(),
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+    const cachePath = path && path.join(process && process.cwd(), 'datadaometrics && datadaometrics.json'),
+    const content = fs && fs.readFileSync(cachePath, 'utf-8'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+    }
+
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+>>>>>>> origin/resolved-merge-conflicts
   }
 }}
 }
 },
+<<<<<<< HEAD
+=======
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+
+},
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+},
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

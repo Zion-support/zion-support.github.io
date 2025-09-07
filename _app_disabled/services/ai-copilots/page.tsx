@@ -9,10 +9,19 @@ export const metadata: Metadata = {
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Ai Copilots
+          </h1>
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Copilots</h1>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional ai copilots services for your business needs.
           </p>
@@ -36,7 +45,6 @@ export default function ServicePage() {
             <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
             <p className="text-gray-300">Grow with your business with our flexible and scalable platform.</p>
           </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -47,7 +55,17 @@ export default function ServicePage() {
             Contact Sales
           </button>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
+=======
+<<<<<<< HEAD
+  )
+=======
+      </div>
+    </div>
+  );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }

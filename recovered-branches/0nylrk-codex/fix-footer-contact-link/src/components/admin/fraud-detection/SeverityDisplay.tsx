@@ -1,4 +1,34 @@
 <<<<<<< HEAD
+severity: string;
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity,
+
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    />
+  );
+}
+
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    />;
+);
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+=======
+<<<<<<< HEAD
 import React from "react";
 import { SeverityIndicator } from "@/components/ui/severity-indicator";
 interface SeverityDisplayProps {
@@ -105,12 +135,15 @@ interface SeverityDisplayProps {;
 export const SeverityDisplay:React.FC<SeverityDisplayProps> = ({ severity }) => {;
   return (;
     <SeverityIndicator ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       severity={severity as "safe" | "suspicious" | "dangerous"} ;
       showIcon={true}
       showText={true}
     />;
   );
 
+<<<<<<< HEAD
+=======
 };
   ),;
 },; interface SeverityDisplayProps {
@@ -157,6 +190,7 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />;
   );
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }) => {
 
   return (
@@ -215,6 +249,9 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
 }
 
 };
+<<<<<<< HEAD
+};
+=======
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -229,3 +266,4 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

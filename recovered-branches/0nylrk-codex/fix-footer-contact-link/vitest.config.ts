@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+'@': path ;
+
+=======
+<<<<<<< HEAD
 import { defineConfig } from 'vitest/config';
 import path from 'node: path';
 export default defineConfig({
@@ -20,6 +24,7 @@ export default defineConfig({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       '@': path ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   test: {
     environment: 'jsdom';
 
@@ -27,9 +32,12 @@ export default defineConfig({
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     globals: true}});
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {define_config} from 'vitest / config';
 import path from 'node: path',
 export default define_config ({
@@ -38,6 +46,9 @@ export default define_config ({
       '@': path.resolve (__dirname, './src')}}
   test: {
     environment: 'jsdom';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -74,11 +85,17 @@ export default define_config ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { defineConfig } from 'vitest/config',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;
     alias: {;'
       '@': path.resolve(__dirname, './src')}},;
+<<<<<<< HEAD
+  test: {;'
+    environment: 'jsdom',;'
+    setupFiles: './tests/setup.ts';
+=======
 <<<<<<< HEAD
   test: {;'
     environment: 'jsdom',;'
@@ -98,3 +115,4 @@ export default defineConfig({;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

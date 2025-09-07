@@ -1,6 +1,64 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const "localeLabelKey": Record<string, string> = {
+
+
+  }
+
+
+  "en": 'lang.english';'
+  "pt": 'lang.portuguese';'
+  "es": 'lang.spanish';'
+  "ar": 'lang.arabic,'
+},export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null>(null),useEffect(() => {
+}
+const key = null;
+
+export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null>(null)useEffect(() => {
+}
+const key = 'langPromptShown';'
+
+const preferred = localStorage.getItem('preferredLanguage')if (preferred);'
+  return; // user has chosen;
+    if (localStorage.getItem(key)) return; // already prompted;
+
+const detected =;
+      i18n.language |i18n.resolvedLanguage |navigator.language |"en";"
+
+const normalized = detected.split("-")[0];"
+
+const suggestion =;
+      supportedLocales.includes(normalized as any) && normalized !== "en";"
+        ? normalized;
+        : null;
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+
+const accept = async () => {
+    }
+    await i18n.changeLanguage(suggested!);
+    localStorage.setItem('preferredLanguage', suggested!);'
+localStorage.setItem('langPromptShown', '1');'
+    document.documentElement.setAttribute(
+      "dir""
+      isRtl(suggested!) ? "rtl" : "ltr""
+    );
+    document && document.documentElement.setAttribute("lang", suggested!);"
+    setSuggested(null);
+  }
+
+const decline = () => {
+    }
+    localStorage.setItem("langPromptShown1", "true");"
+    setSuggested(null)
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const localeLabelKey: Record<string, string /> = {
 
   en: 'lang.english';
@@ -386,6 +444,10 @@ localStorage.setItem('langPromptShown', '1');
     setSuggested(null);}
     setSuggested(null);}
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const decline = ("
     localStorage.setItem(\"langPromptShown1\", \"true\");
@@ -400,7 +462,16 @@ const decline = ("
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className=bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200>
+=======
+<<<<<<< HEAD
+    <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
+=======
+<<<<<<< HEAD
+    <div className=bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
         <div>
           {t(lang.switch_prompt', { language: t(localeLabelKey[suggested]) })}
@@ -413,6 +484,11 @@ const decline = ("
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   const [suggested, setSuggested] = useState<string | null>(null),
 
@@ -430,14 +506,27 @@ export default function LanguageSwitchPrompt() {
   pt: lang.portuguese,
   es: "lang.spanish",
   ar: "lang.arabic",
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 };
 export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {;
+<<<<<<< HEAD
 }
 export default function LanguageSwitchPrompt() {
   useEffect(() => {
+=======
+<<<<<<< HEAD
+=======
+}
+export default function LanguageSwitchPrompt() {
+  useEffect(() => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const key = "langPromptShown";
     if (suggestion) setSuggested(suggestion);
   }, []);
@@ -445,7 +534,14 @@ export default function LanguageSwitchPrompt() {
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
+<<<<<<< HEAD
     setSuggested(null);
+=======
+<<<<<<< HEAD
+=======
+    setSuggested(null);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   const decline = () => {
     localStorage.setItem("langPromptShown1", "true");
@@ -458,6 +554,19 @@ return (;
         <div>
           {t('lang.switch_prompt', { "language": t(localeLabelKey[suggested]) })}'
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className='flex items-center gap-2'>'
+          <button,
+className='px-3 py-1 rounded bg-amber-600 text-white''
+
+            onClick={accep
+}
+          >;
+            {t('lang.switch_accept')}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
         <div className='flex items-center gap-2'>
           <button
             className='px-3 py-1 rounded bg-amber-600 text-white'
@@ -517,10 +626,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="px-3 py-1 rounded bg-amber-600 text-white
             onClick={accept}>;
             {t("lang && lang.switch_accept")}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </button>;
 
             onClick={decline}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">;"
+        <div>{t("lang && lang.switch_prompt", { "language": t(localeLabelKey[suggested]) },"
+}
+        </div>;
+        <div className="flex items-center gap-2">;"
+          <button;
+            className="px-3 py-1 rounded bg-amber-600 text-white";"
+            onClick={accept}>;
+            {t("lang && lang.switch_accept")}"
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <div className=bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200>;
           >;
@@ -534,10 +661,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="px-3 py-1 rounded bg-amber-600 text-white";"
             onClick={accept}>;
             {t("lang && lang.switch_accept")}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </button>;
           <button;
             className="px-3 py-1 rounded border border-amber-300 "dark":border-amber-700";"
             onClick={decline}>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {t("lang && lang.switch_decline")}"
+=======
+>>>>>>> origin/resolved-merge-conflicts
             {t("lang && lang.switch_decline")}
           </button>;
         </div>;
@@ -555,16 +692,39 @@ import React, { useEffect, useState } from './react';
 import { use_translation   } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from '../../utils / i18n';
 const localeLabelKey: Record < string, string> = {en: "lang.english",pt: "lang.portuguese",es: "lang.spanish",ar: "lang.arabic";
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </button>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}'
+import React, { useEffect, useState } from './react';'
+import { use_translation  } from './react - i18next';"
+    </div>;)}
+  )}
+import React, { useEffect, useState } from './react';
+import { use_translation   } from './react - i18next';
+import i18n, { supported_locales, is_rtl } from '../../utils / i18n';
+const localeLabelKey: Record < string, string> = {en: "lang.english",pt: "lang.portuguese",es: "lang.spanish",ar: "lang.arabic";
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>;)}
   )}
 import React, { useEffect, useState } from './react;
 import { use_translation   } from ./react - i18next';
 import i18n, { supported_locales, is_rtl } from '../../utils / i18n;
 const localeLabelKey: Record < string, string> = {en: "lang.english",pt: lang.portuguese,es: "lang.spanish",ar: lang.arabic;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   ar: "lang.arabic";
 }
 export default /**;
@@ -598,6 +758,14 @@ if (return null) {$2;
     <div className="bg - amber - 50 dark:bg - amber - 900 / 20 border - b border - amber - 200 dark:border - amber - 800 text - amber - 900 dark:text-amber-200">;
       <div className=container mx - auto px - 4 py - 2 flex items - center justify - between gap-4 text-sm>;
         <div>{t ("lang.switch_prompt", { language: t (localeLabelKey[suggested]) })}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from './react';
+import { use_translation  } from './react - i18next';
+import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -609,6 +777,10 @@ import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
 import i18n, { supported_locales, is_rtl } from ../../utils / i18n;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const localeLabelKey: Record < string, string> = {"
   en: "lang.english,
   pt: "lang.portuguese",
@@ -683,6 +855,14 @@ if (return null) {}
             on_click={decline}
           >;"
             {t ("lang.switch_decline")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </button>;
+        </div>;
+    </div>)
+=======
+>>>>>>> origin/resolved-merge-conflicts
           </button>;
         </div>;
       </div>;
@@ -692,6 +872,10 @@ if (return null) {}
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </div>);
 <<<<<<< HEAD
 =======

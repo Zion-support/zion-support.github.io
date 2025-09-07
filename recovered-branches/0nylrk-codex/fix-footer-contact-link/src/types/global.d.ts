@@ -4,14 +4,20 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {ReactNode} from 'react';
 
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -32,6 +38,7 @@ declare module '@/components/FeatureCard' {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {ReactNode} from 'react';
 
 // Extend FeatureCardProps to include key for mapping
@@ -39,10 +46,15 @@ declare module "@/components/FeatureCard" {
 
   export interface FeatureCardProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     title: string,
   description: string;
     icon: ReactNode;
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: string;
@@ -63,6 +75,7 @@ declare module '@/components/ListingScoreCard' {
     key?: number | string;
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     title: string;,
   description: string;
@@ -77,6 +90,9 @@ declare module '@/components / ListingScoreCard' {
 declare module "@/components/ListingScoreCard" {
   export interface ListingScoreCardProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface ListingScoreCardProps {
 
 import { ReactNode } from 'react';
@@ -84,9 +100,12 @@ import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     title: string;
     description: string;
 
@@ -94,6 +113,31 @@ declare module '@/components/FeatureCard' {
     image?: string;
     tags?: string[];
     author?: string;
+<<<<<<< HEAD
+
+    review_count?: number;
+    key?: string | number,
+
+    variant?: string;
+
+  }
+}
+
+    key?: string | number;
+
+  }
+}
+
+    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+  }
+}    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+  }
+}
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -258,3 +302,4 @@ declare module '@/components/ProductListingCard' {;
   }
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export type Json =
   | string
   | number
@@ -12,6 +14,7 @@ export type Database = $2;
             foreignKeyName: "api_logs_user_id_fkey"
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type Database = {}
   public: {}
     Tables: {}
@@ -21,15 +24,23 @@ export type Database = {}
         Insert: {};
 
   | Json[];
+<<<<<<< HEAD
+
 =======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type Json =;
   | string;
   | number;
   | boolean;
   | null;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type Json =
   | string
   | number
@@ -37,6 +48,8 @@ export type Json =
   | null
   | { [key: string]: Json | undefined }
   | Json[]
+<<<<<<< HEAD
+=======
 =======
 export type Json =;
   | string;
@@ -55,11 +68,14 @@ export type Json =
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type Database = {
   public: {
     Tables: {
       ai_chats: {
         Row: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       api_logs: {;
@@ -779,6 +795,7 @@ export type Database = {
       api_logs: {;
         Row: {;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           created_at: string;
           id: string;
           message: string;
@@ -1038,7 +1055,10 @@ created_at: string
       api_logs: {;
         Row: {;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           api_key_id: string | null;
 
           created_at: string;
@@ -1051,6 +1071,9 @@ created_at: string
           user_agent: string | null;
           user_id: string | null;
         }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -1076,6 +1099,7 @@ created_at: string
         Update: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -1087,6 +1111,8 @@ created_at: string
           user_agent?: string | null;
           user_id?: string | null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         }
         Relationships: [
           {
@@ -1095,6 +1121,7 @@ created_at: string
             isOneToOne: false
             referencedRelation: "api_keys"
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         }
         Relationships: [;
@@ -1104,14 +1131,25 @@ created_at: string
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             foreignKeyName: "api_logs_api_key_id_fkey"
 
             columns: ["api_key_id"]
             isOneToOne: false"
             referencedRelation: "api_keys"
+<<<<<<< HEAD
+
+          }
+"
+            referencedColumns: ["id"]
+
+=======
 =======
             foreignKeyName: "api_logs_api_key_id_fkey";
             columns: ["api_key_id"];
@@ -1131,6 +1169,7 @@ created_at: string
             referencedColumns: ["id"]
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
             referencedColumns: ["id"];
           };"
@@ -1142,6 +1181,8 @@ created_at: string
           {}
           }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1149,6 +1190,7 @@ created_at: string
           {
             foreignKeyName: "api_logs_user_id_fkey";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             columns: ["user_id"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
@@ -1981,8 +2023,12 @@ referencedColumns: ["id"]
 referencedColumns: ["id"];
 =======
 <<<<<<< HEAD
+referencedColumns: ["id"];
+=======
+<<<<<<< HEAD
             referencedColumns: ["id"];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           };
             referencedColumns: ["id"]
           }
@@ -2285,9 +2331,12 @@ referencedColumns: ["id"];
             referencedColumns: ["user_id"]
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             foreignKeyName: "fraud_flags_reviewed_by_fkey";
             columns: ["reviewed_by"];
@@ -2295,11 +2344,14 @@ referencedColumns: ["id"];
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           }
 
           },
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           }
 },
@@ -2309,10 +2361,13 @@ referencedColumns: ["id"];
           },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
             columns: ["user_id"];
@@ -2507,8 +2562,12 @@ referencedColumns: ["id"];
 }
 =======
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
           }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           },
           {
             foreignKeyName: "fraud_flags_user_id_fkey"
@@ -2689,11 +2748,16 @@ referencedColumns: ["id"];
             referencedRelation: "jobs"
             referencedColumns: ["id"]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           },
 
           }
           },
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -2708,6 +2772,7 @@ referencedColumns: ["id"];
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
@@ -2715,9 +2780,13 @@ referencedColumns: ["id"];
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           },
 
           {"
@@ -2742,14 +2811,19 @@ referencedColumns: ["id"];
             referenced_columns: ["id"];"
           }
 foreignKeyName: "job_applications_job_id_fkey";
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             foreignKeyName: "job_applications_job_id_fkey";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             columns: ["job_id"];
             isOneToOne: false;
             referenced_relation: "jobs";
             referenced_columns: ["id"];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
           }
@@ -2758,6 +2832,7 @@ foreignKeyName: "job_applications_job_id_fkey";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           },
 
@@ -2772,10 +2847,14 @@ foreignKeyName: "job_applications_job_id_fkey";
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }
           {"
             foreignKeyName: "job_applications_talent_id_fkey";"
@@ -2894,6 +2973,19 @@ foreignKeyName: "job_applications_job_id_fkey";
           user_id?: string;}
         }
         Relationships: [;
+<<<<<<< HEAD
+
+            foreignKeyName: "milestone_activities_milestone_id_fkey";
+            columns: ["milestone_id"];
+            isOneToOne: false;
+            referenced_relation: "project_milestones";
+            referenced_columns: ["id"];
+
+          }
+},
+
+          }
+=======
 <<<<<<< HEAD
 =======
           {
@@ -3015,6 +3107,7 @@ foreignKeyName: "job_applications_job_id_fkey";
 },
 
           }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }          }
 
           },
@@ -3022,9 +3115,13 @@ foreignKeyName: "job_applications_job_id_fkey";
 <<<<<<< HEAD
           },
 =======
+<<<<<<< HEAD
+          },
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -3423,8 +3520,12 @@ foreignKeyName: "job_applications_job_id_fkey";
 }
 =======
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
           }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           },
           {
             foreignKeyName: "milestone_activities_user_id_fkey"
@@ -3771,9 +3872,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             referencedColumns: ["user_id"]
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             foreignKeyName: "profiles_id_fkey";
             columns: ["id"];
@@ -3781,11 +3885,14 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           }
 
           },
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           }
 },
@@ -3795,10 +3902,13 @@ foreignKeyName: "job_applications_job_id_fkey";
           },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "profiles_tenant_id_fkey";
             columns: ["tenant_id"];
@@ -3870,8 +3980,12 @@ foreignKeyName: "job_applications_job_id_fkey";
 }
 =======
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
           }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           },
           {
             foreignKeyName: "profiles_tenant_id_fkey"
@@ -3930,9 +4044,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             referencedColumns: ["user_id"]
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             foreignKeyName: "project_milestones_created_by_fkey";
             columns: ["created_by"];
@@ -3940,17 +4057,23 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           }
 
           },
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           }
 
           },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }
 
           },
@@ -3969,10 +4092,13 @@ foreignKeyName: "job_applications_job_id_fkey";
           }
 
           },
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -4017,6 +4143,8 @@ foreignKeyName: "job_applications_job_id_fkey";
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           }
           },
           {
@@ -4052,6 +4180,7 @@ foreignKeyName: "job_applications_job_id_fkey";
         Relationships: [
           {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             foreignKeyName: "project_notes_project_id_fkey"
             columns: ["project_id"]
             isOneToOne: false
@@ -4059,9 +4188,12 @@ foreignKeyName: "job_applications_job_id_fkey";
             referencedColumns: ["id"]
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             foreignKeyName: "project_notes_project_id_fkey";
             columns: ["project_id"];
@@ -4069,11 +4201,14 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "projects";
             referenced_columns: ["id"];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           }
 
           },
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           }
 },
@@ -4083,10 +4218,13 @@ foreignKeyName: "job_applications_job_id_fkey";
           },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -4166,8 +4304,12 @@ foreignKeyName: "job_applications_job_id_fkey";
 }
 =======
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
           }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           },
           {
             foreignKeyName: "project_notes_user_id_fkey"
@@ -4225,11 +4367,16 @@ foreignKeyName: "job_applications_job_id_fkey";
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           },
 
           }
           },
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -4244,6 +4391,7 @@ foreignKeyName: "job_applications_job_id_fkey";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
@@ -4251,14 +4399,20 @@ foreignKeyName: "job_applications_job_id_fkey";
             referencedRelation: "jobs"
             referencedColumns: ["id"]
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             foreignKeyName: "projects_client_id_fkey";
             columns: ["client_id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
           }
@@ -4267,6 +4421,7 @@ foreignKeyName: "job_applications_job_id_fkey";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           },
 
@@ -4296,11 +4451,16 @@ foreignKeyName: "job_applications_job_id_fkey";
 
           {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             foreignKeyName: "milestone_activities_user_id_fkey";
 
             columns: ["user_id"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
+<<<<<<< HEAD
+=======
 =======
             foreignKeyName: "projects_job_id_fkey";
             columns: ["job_id"];
@@ -4318,6 +4478,7 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;
             referenced_relation: "user_metrics";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             referenced_columns: ["user_id"];
           }];
       }
@@ -4726,6 +4887,26 @@ foreignKeyName: "job_applications_job_id_fkey";
         Relationships: [
           {
 <<<<<<< HEAD
+            foreignKeyName: "quote_requests_requester_id_fkey"
+            columns: ["requester_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+
+            foreignKeyName: "quote_requests_requester_id_fkey";
+
+            columns: ["requester_id"];
+            isOneToOne: false;"
+            referenced_relation: "profiles";"
+            referenced_columns: ["id"];
+
+          }
+
+          },
+
+          {
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           }
@@ -4839,6 +5020,7 @@ foreignKeyName: "job_applications_job_id_fkey";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             foreignKeyName: "quote_requests_talent_id_fkey";
 
             columns: ["talent_id"];
@@ -4851,6 +5033,9 @@ foreignKeyName: "job_applications_job_id_fkey";
         Row: {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
         Relationships: [;
 
@@ -4863,6 +5048,46 @@ foreignKeyName: "job_applications_job_id_fkey";
       referral_rewards: {}
         Row: {}
           amount: number | null;
+<<<<<<< HEAD
+          created_at: string;
+          expires_at: string | null;
+          id: string;
+          partner_id: string | null;
+          referral_id: string;
+          reward_type: string;
+          user_id: string;
+
+"
+            foreignKeyName: "quote_requests_requester_id_fkey";",]"
+  columns: ["requester_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "profiles";""
+            referenced_columns: ["id"];"
+          }
+
+          },
+
+          {"
+            foreignKeyName: "quote_requests_talent_id_fkey";","
+  columns: ["talent_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "profiles";""
+            referenced_columns: ["id"];"
+          }];
+      }
+
+      referral_codes: {;,
+  Row: {;
+
+          code: string;,
+  created_at: string;
+          id: string;,
+  updated_at: string;
+          user_id: string;
+        }
+        Insert: {,
+  Insert: {
+=======
 =======
 <<<<<<< HEAD
           }
@@ -4948,6 +5173,7 @@ foreignKeyName: "job_applications_job_id_fkey";
         Insert: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           code: string;
           created_at?: string;
           id?: string;
@@ -4955,15 +5181,21 @@ foreignKeyName: "job_applications_job_id_fkey";
           user_id: string;
         }
 <<<<<<< HEAD
+        Update: {
+=======
+<<<<<<< HEAD
         Update: {;
 =======
         Update: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         }
         Relationships: [
@@ -5014,6 +5246,7 @@ foreignKeyName: "job_applications_job_id_fkey";
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         }
         Relationships: [;
@@ -5062,6 +5295,120 @@ foreignKeyName: "job_applications_job_id_fkey";
           user_id?: string;}
         }
         Relationships: [;
+<<<<<<< HEAD
+
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+
+          },
+
+},
+
+          {
+            foreignKeyName: "referrals_referred_id_fkey"
+            columns: ["referred_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+
+            foreignKeyName: "referrals_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }
+
+          },
+
+          {
+            foreignKeyName: "referrals_referral_code_fkey";
+            columns: ["referral_code"];
+            isOneToOne: false;
+            referenced_relation: "referral_codes";
+            referenced_columns: ["code"];
+          }
+          {
+            foreignKeyName: "referrals_referred_id_fkey";
+            columns: ["referred_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+
+          }
+          },
+
+          {
+            foreignKeyName: "referral_rewards_referral_id_fkey"
+
+            columns: ["referral_id"]
+            isOneToOne: false"
+            referencedRelation: "referrals""
+            referencedColumns: ["id"]
+
+            foreignKeyName: "referral_rewards_partner_id_fkey";
+
+            columns: ["partner_id"];
+            isOneToOne: false;"
+            referenced_relation: "partner_profiles";"
+            referenced_columns: ["id"];
+          }
+
+          },
+
+          {"
+            foreignKeyName: "referral_rewards_referral_id_fkey";"
+            columns: ["referral_id"];
+            isOneToOne: false;"
+            referenced_relation: "referrals";"
+            referenced_columns: ["id"];
+
+          }
+          {"
+            foreignKeyName: "referral_rewards_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+
+          },
+
+          {
+            foreignKeyName: "referrals_referral_code_fkey"
+
+            columns: ["referral_code"]
+            isOneToOne: false"
+            referencedRelation: "referral_codes""
+            referencedColumns: ["code"]
+
+          {
+            foreignKeyName: "referrals_referred_id_fkey"
+
+            columns: ["referred_id"]
+            isOneToOne: false"
+            referencedRelation: "user_metrics""
+            referencedColumns: ["user_id"]
+
+            foreignKeyName: "referrals_partner_id_fkey";
+
+            columns: ["partner_id"];
+            isOneToOne: false;"
+            referenced_relation: "partner_profiles";"
+            referenced_columns: ["id"];
+          }
+
+          },
+
+          {"
+            foreignKeyName: "referrals_referral_code_fkey";"
+            columns: ["referral_code"];
+            isOneToOne: false;"
+            referenced_relation: "referral_codes";"
+            referenced_columns: ["code"];
+          }
+=======
 <<<<<<< HEAD
 
 =======
@@ -5394,6 +5741,7 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "referral_codes";"
             referenced_columns: ["code"];
           }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {"
             foreignKeyName: "referrals_referred_id_fkey";"
             columns: ["referred_id"];
@@ -5410,6 +5758,8 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_columns: ["user_id"];
           }];
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -5486,6 +5836,7 @@ foreignKeyName: "job_applications_job_id_fkey";
         Update: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -5495,6 +5846,9 @@ foreignKeyName: "job_applications_job_id_fkey";
           sent_at?: string | null;
           user_id?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         }
         Relationships: [;
@@ -5722,6 +6076,8 @@ foreignKeyName: "job_applications_job_id_fkey";
         Relationships: [
           {
             foreignKeyName: "reminder_logs_user_id_fkey"
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
             columns: ["user_id"]
             isOneToOne: false
@@ -6715,6 +7071,7 @@ foreignKeyName: "job_applications_job_id_fkey";
         Relationships: [
           {
             foreignKeyName: "reminder_logs_user_id_fkey"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
@@ -6788,7 +7145,10 @@ foreignKeyName: "job_applications_job_id_fkey";
         }
         Relationships: [
           {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             foreignKeyName: "review_reports_reporter_id_fkey"
             columns: ["reporter_id"]
             isOneToOne: false
@@ -6801,10 +7161,28 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }
 
           },
 
+<<<<<<< HEAD
+          {
+            foreignKeyName: "review_reports_review_id_fkey";
+
+            columns: ["review_id"];
+            isOneToOne: false;"
+            referenced_relation: "reviews";"
+            referenced_columns: ["id"];
+          }];
+      }
+      reviews: {}
+        Row: {}
+
+=======
 <<<<<<< HEAD
 =======
           {
@@ -6817,6 +7195,7 @@ foreignKeyName: "job_applications_job_id_fkey";
       }
       reviews: {
         Row: {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           communication_rating: number | null;
           created_at: string;
           id: string;
@@ -6834,7 +7213,11 @@ foreignKeyName: "job_applications_job_id_fkey";
           updated_at: string;
           would_work_again: boolean | null;
         }
+<<<<<<< HEAD
+
+=======
         Insert: {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           communication_rating?: number | null;
           created_at?: string;
           id?: string;
@@ -6852,7 +7235,11 @@ foreignKeyName: "job_applications_job_id_fkey";
           updated_at?: string;
           would_work_again?: boolean | null;
         }
+<<<<<<< HEAD
+
+=======
         Update: {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           communication_rating?: number | null;
           created_at?: string;
           id?: string;
@@ -6871,6 +7258,98 @@ foreignKeyName: "job_applications_job_id_fkey";
           would_work_again?: boolean | null;
         }
         Relationships: [;
+<<<<<<< HEAD
+
+          },
+          {
+            foreignKeyName: "review_reports_review_id_fkey"
+            columns: ["review_id"]
+            isOneToOne: false
+            referencedRelation: "reviews"
+            referencedColumns: ["id"]
+          }]
+      }
+      reviews: {
+        Row: {
+          communication_rating: number | null
+          created_at: string
+          id: string
+          is_anonymous: boolean
+          is_visible: boolean
+          project_id: string
+          quality_rating: number | null
+          rating: number
+          report_count: number
+          review_text: string
+          reviewee_id: string
+          reviewer_id: string
+          status: string
+          timeliness_rating: number | null
+          updated_at: string
+          would_work_again: boolean | null
+        }
+        Insert: {
+          communication_rating?: number | null
+          created_at?: string
+          id?: string
+          is_anonymous?: boolean
+          is_visible?: boolean
+          project_id: string
+          quality_rating?: number | null
+          rating: number
+          report_count?: number
+          review_text: string
+          reviewee_id: string
+          reviewer_id: string
+          status?: string
+          timeliness_rating?: number | null
+          updated_at?: string
+          would_work_again?: boolean | null
+        }
+        Update: {
+          communication_rating?: number | null
+          created_at?: string
+          id?: string
+          is_anonymous?: boolean
+          is_visible?: boolean
+          project_id?: string
+          quality_rating?: number | null
+          rating?: number
+          report_count?: number
+          review_text?: string
+          reviewee_id?: string
+          reviewer_id?: string
+          status?: string
+          timeliness_rating?: number | null
+          updated_at?: string
+          would_work_again?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+
+          },
+
+          {
+            foreignKeyName: "reviews_reviewee_id_fkey"
+
+            columns: ["reviewee_id"]
+            isOneToOne: false"
+            referencedRelation: "user_metrics""
+            referencedColumns: ["user_id"]
+
+            foreignKeyName: "reviews_project_id_fkey";
+
+            columns: ["project_id"];
+            isOneToOne: false;"
+            referenced_relation: "projects";"
+            referenced_columns: ["id"];
+          }
+=======
           {
           }
           },
@@ -7114,6 +7593,7 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "projects";"
             referenced_columns: ["id"];
           }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           },
 
@@ -7132,6 +7612,437 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
           }];
+<<<<<<< HEAD
+      }
+      scheduled_jobs: {}
+        Row: {}
+          completed_at: string | null;
+          created_at: string;
+          id: string;
+          job_type: string;
+          payload: Json | null;
+          scheduled_for: string;
+          status: string;
+          updated_at: string;
+        }
+        Insert: {}
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type: string;
+          payload?: Json | null;
+          scheduled_for: string;
+          status: string;
+          updated_at?: string;
+        }
+        Update: {}
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type?: string;
+          payload?: Json | null;
+          scheduled_for?: string;
+          status?: string;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      subscriptions: {}
+        Row: {}
+          created_at: string;
+          current_period_end: string | null;
+          current_period_start: string | null;
+          id: string;
+          plan_type: string;
+          status: string;
+          stripe_customer_id: string | null;
+          stripe_subscription_id: string | null;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type: string;
+          status: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type?: string;
+          status?: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "subscriptions_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      talent_resumes: {}
+        Row: {}
+          created_at: string;
+          headline: string | null;
+          id: string;
+          is_active: boolean;
+          summary: string | null;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "talent_resumes_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      tenant_administrators: {}
+        Row: {}
+          created_at: string | null;
+          id: string;
+          tenant_id: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string | null;
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string | null;
+          id?: string;
+          tenant_id?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+
+            foreignKeyName: "tenant_administrators_tenant_id_fkey";
+
+            columns: ["tenant_id"];
+            isOneToOne: false;"
+            referenced_relation: "whitelabel_tenants";"
+
+            referenced_columns: ["id"];
+
+          }
+
+          },
+
+          {
+            foreignKeyName: "tenant_administrators_user_id_fkey";
+
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      user_onboarding: {}
+        Row: {}
+
+          application_sent: boolean | null;
+          application_sent_at: string | null;
+          availability_set: boolean | null;
+          availability_set_at: string | null;
+          created_at: string;
+          id: string;
+          job_posted: boolean | null;
+          job_posted_at: string | null;
+          last_reminder_sent: string | null;
+          match_received: boolean | null;
+          match_received_at: string | null;
+          match_viewed: boolean | null;
+          match_viewed_at: string | null;
+          profile_completed: boolean | null;
+          profile_completed_at: string | null;
+          quote_received: boolean | null;
+          quote_received_at: string | null;
+          reminder_count: number | null;
+          role: string;
+          skills_added: boolean | null;
+          skills_added_at: string | null;
+          talent_invited: boolean | null;
+          talent_invited_at: string | null;
+          updated_at: string;
+          user_id: string | null;
+        }
+
+          application_sent?: boolean | null;
+          application_sent_at?: string | null;
+          availability_set?: boolean | null;
+          availability_set_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_posted?: boolean | null;
+          job_posted_at?: string | null;
+          last_reminder_sent?: string | null;
+          match_received?: boolean | null;
+          match_received_at?: string | null;
+          match_viewed?: boolean | null;
+          match_viewed_at?: string | null;
+          profile_completed?: boolean | null;
+          profile_completed_at?: string | null;
+          quote_received?: boolean | null;
+          quote_received_at?: string | null;
+          reminder_count?: number | null;
+          role: string;
+          skills_added?: boolean | null;
+          skills_added_at?: string | null;
+          talent_invited?: boolean | null;
+          talent_invited_at?: string | null;
+          updated_at?: string;
+          user_id?: string | null;
+        }
+
+          application_sent?: boolean | null;
+          application_sent_at?: string | null;
+          availability_set?: boolean | null;
+          availability_set_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_posted?: boolean | null;
+          job_posted_at?: string | null;
+          last_reminder_sent?: string | null;
+          match_received?: boolean | null;
+          match_received_at?: string | null;
+          match_viewed?: boolean | null;
+          match_viewed_at?: string | null;
+          profile_completed?: boolean | null;
+          profile_completed_at?: string | null;
+          quote_received?: boolean | null;
+          quote_received_at?: string | null;
+          reminder_count?: number | null;
+          role?: string;
+          skills_added?: boolean | null;
+          skills_added_at?: string | null;
+          talent_invited?: boolean | null;
+          talent_invited_at?: string | null;
+          updated_at?: string;
+          user_id?: string | null;
+        }
+        Relationships: [;
+
+          activity_monitoring_enabled: boolean | null;
+          ai_analysis_enabled: boolean | null;
+          id: string;
+          message_scanning_enabled: boolean | null;
+          updated_at: string | null;
+        }
+
+          activity_monitoring_enabled?: boolean | null;
+          ai_analysis_enabled?: boolean | null;
+          id: string;
+          message_scanning_enabled?: boolean | null;
+          updated_at?: string | null;
+        }
+
+          activity_monitoring_enabled?: boolean | null;
+          ai_analysis_enabled?: boolean | null;
+          id?: string;
+          message_scanning_enabled?: boolean | null;
+          updated_at?: string | null;
+        }
+        Relationships: [;
+
+          created_at: string;
+          event_types: string[];
+          id: string;
+          is_active: boolean;
+          last_triggered_at: string | null;
+          name: string;
+          secret: string | null;
+          updated_at: string;
+          url: string;
+          user_id: string;
+        }
+
+          created_at?: string;
+          event_types: string[];
+          id?: string;
+          is_active?: boolean;
+          last_triggered_at?: string | null;
+          name: string;
+          secret?: string | null;
+          updated_at?: string;
+          url: string;
+          user_id: string;
+        }
+
+          created_at?: string;
+          event_types?: string[];
+          id?: string;
+          is_active?: boolean;
+          last_triggered_at?: string | null;
+          name?: string;
+          secret?: string | null;
+          updated_at?: string;
+          url?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+
+          account_manager_id: string | null;
+          brand_name: string;
+          created_at: string | null;
+          custom_domain: string | null;
+          dns_verified: boolean;
+          email_template_override: Json | null;
+          id: string;
+          is_active: boolean;
+          landing_page_copy: Json | null;
+          logo_url: string | null;
+          primary_color: string;
+          subdomain: string;
+          theme_preset: string;
+          updated_at: string | null;
+        }
+
+          account_manager_id?: string | null;
+          brand_name: string;
+          created_at?: string | null;
+          custom_domain?: string | null;
+          dns_verified?: boolean;
+          email_template_override?: Json | null;
+          id?: string;
+          is_active?: boolean;
+          landing_page_copy?: Json | null;
+          logo_url?: string | null;
+          primary_color?: string;
+          subdomain: string;
+          theme_preset?: string;
+          updated_at?: string | null;
+        }
+
+          account_manager_id?: string | null;
+          brand_name?: string;
+          created_at?: string | null;
+          custom_domain?: string | null;
+          dns_verified?: boolean;
+          email_template_override?: Json | null;
+          id?: string;
+          is_active?: boolean;
+          landing_page_copy?: Json | null;
+          logo_url?: string | null;
+          primary_color?: string;
+          subdomain?: string;
+          theme_preset?: string;
+          updated_at?: string | null;
+        }
+        Relationships: [;
+
+          company_logo_url: string | null;
+          company_name: string;
+          created_at: string;
+          description: string | null;
+          end_date: string | null;
+          id: string;
+          is_current: boolean;
+          location: string | null;
+          resume_id: string;
+          role_title: string;
+          start_date: string;
+          updated_at: string;
+        }
+
+          company_logo_url?: string | null;
+          company_name: string;
+          created_at?: string;
+          description?: string | null;
+          end_date?: string | null;
+          id?: string;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id: string;
+          role_title: string;
+          start_date: string;
+          updated_at?: string;
+        }
+
+          company_logo_url?: string | null;
+          company_name?: string;
+          created_at?: string;
+          description?: string | null;
+          end_date?: string | null;
+          id?: string;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id?: string;
+          role_title?: string;
+          start_date?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+
+          date: string | null;
+          path: string | null;
+          view_count: number | null;
+        }
+        Relationships: [];
+      }
+
+          job_applications: number | null;
+          profile_views: number | null;
+          quote_invites: number | null;
+          success_rate: number | null;
+          user_id: string | null;
+        }
+
+          job_applications?: never;
+          profile_views?: never;
+          quote_invites?: never;
+          success_rate?: never;
+          user_id?: string | null;
+        }
+
+          job_applications?: never;
+          profile_views?: never;
+          quote_invites?: never;
+          success_rate?: never;
+          user_id?: string | null;
+        }
+        Relationships: [];
+      }
+    }
+
+=======
       }
       scheduled_jobs: {}
         Row: {}
@@ -9281,6 +10192,7 @@ export const Constants = {
 
 >>>>>>> merged-prs-20250907-203621
           conversion_count: number | null
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           conversion_rate: number | null
           conversion_type: string | null
           date: string | null
@@ -9334,6 +10246,9 @@ export const Constants = {
           days_since_login: number
           onboarding_status: Json
         }[]
+<<<<<<< HEAD
+
+=======
 =======
           conversion_count: number | null;
           conversion_rate: number | null;
@@ -9381,15 +10296,20 @@ export const Constants = {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           user_id: string;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           email: string;
           display_name: string;
           user_type: string;
@@ -9399,13 +10319,183 @@ export const Constants = {
           onboarding_status: Json;
         }[];
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
+
       complete_referral: {
+<<<<<<< HEAD
+
+      }
+      complete_referral: {}
+
+        Args: { _referred_id: string, _user_type: string }
+        Returns: undefined;
+      }
+      create_notification: {}
+        Args: {}
+          _user_id: string;
+          _title: string;
+          _message: string;
+          _type: string;
+          _related_id?: string;
+        }
+        Returns: string;
+      }
+
+      create_scheduled_reminders: {;
+        Args: Record<PropertyKey never>;
+
+        Returns: undefined;
+
+      }
+      flag_suspicious_content: {}
+        Args: {}
+          p_user_id: string;
+          p_user_email: string;
+          p_content_type: string;
+          p_content_id: string;
+          p_content_excerpt: string;
+          p_severity: string;
+          p_reason: string;
+          p_ip_address: string;
+        }
+        Returns: string;
+      }
+      generate_api_key: {}
+        Args: { prefix: string }
+        Returns: string;
+      }
+      generate_fraud_report: {}
+        Args: { year: number, month: number }
+        Returns: string;
+      }
+      generate_referral_code: {}
+        Args: { user_id: string }
+        Returns: string;
+      }
+      get_api_key_user_id: {}
+        Args: { key_prefix: string, provided_key: string }
+        Returns: string;
+      }
+
+        Args: Record < PropertyKey, never>;
+
+      }
+      get_event_distribution: {}
+        Args: { days_back?: number }
+        Returns: {}
+      }
+      hash_api_key: {}
+
+        Args: { api_key: string }
+        Returns: string;
+      }
+
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+
+        Args: Record < PropertyKey, never>;
+
+        Returns: number;
+
+      }
+      trigger_resume_scoring: {}
+        Args: { application_id: string }
+        Returns: undefined;
+      }
+      update_onboarding_milestone: {}
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined;
+      }
+      verify_api_key: {}
+
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+        Args: Record < PropertyKey, never>;
+        Returns: number;
+      }
+      trigger_resume_scoring: {
+        Args: { application_id: string }
+        Returns: undefined;
+      }
+      update_onboarding_milestone: {
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined;
+      }
+      verify_api_key: {
+
+        Args: { provided_key: string, stored_hash: string }
+        Returns: boolean;
+      }
+    }
+
+      api_key_scope:;
+
+        }[]
+      }
+      hash_api_key: {}
+        Args: { api_key: string }
+        Returns: string;
+      }
+      schedule_email_reminders: {}
+        Args: Record<PropertyKey, never>
+        Returns: number;
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+        Returns: number;
+      }
+      trigger_resume_scoring: {}
+        Args: { application_id: string }
+        Returns: undefined;
+      }
+      update_onboarding_milestone: {}
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined;
+      }
+      verify_api_key: {}
+        Args: { provided_key: string, stored_hash: string }
+        Returns: boolean;
+      }
+    }
+    Enums: {}
+      api_key_scope:"
+        | "jobs:read""
+        | "jobs:write""
+        | "talent:read""
+        | "quotes:write""
+        | "webhooks:manage""
+      fraud_severity: "safe" | "suspicious" | "dangerous"
+      quote_request_status:"
+        | "new""
+        | "in_review""
+        | "accepted""
+        | "responded""
+        | "closed""
+        | "archived""
+      referral_status: "pending" | "completed" | "expired"
+    }
+    CompositeTypes: {}
+      [_ in never]: never;
+    }
+  }
+}
+"
+type DefaultSchema = Database[Extract<keyof Database, "public">]
+export type Tables<
+
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database };"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+
+=======
         Args: { _referred_id: string, _user_type: string }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         Returns: undefined;
@@ -12129,10 +13219,29 @@ export type Tables<
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
+<<<<<<< HEAD
+
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {}
+      Row: infer R;
+    }
+    ? R;
+    : never"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &"
+        DefaultSchema["Views"])"
+    ? (DefaultSchema["Tables"] &"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {}
+        Row: infer R;
+      }
+
+=======
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
 <<<<<<< HEAD
     : never = $2;
@@ -12159,10 +13268,178 @@ export type Tables<
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ? R
       : never
     : never
 export type TablesInsert<
+<<<<<<< HEAD
+
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;
+
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Insert: infer I;
+      }
+
+"
+    | keyof DefaultSchema["Tables"]
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Insert: infer I;
+    }
+    ? I;
+    : never"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Insert: infer I;
+      }
+
+      ? I
+      : never
+    : never
+export type TablesUpdate<
+  DefaultSchemaTableNameOrOptions extends
+
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Update: infer U;
+      }
+
+"
+    | keyof DefaultSchema["Tables"]
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Update: infer U;
+    }
+    ? U;
+    : never"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Update: infer U;
+      }
+
+      ? U
+      : never
+    : never
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends
+
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]"
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]"
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never;
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends";
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database };"
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }"
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]"
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]"
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never;
+export const Constants = {}
+  public: {}
+    Enums: {};
+      api_key_scope: [;"
+        "jobs:read";"
+        "jobs:write";"
+        "talent:read";"
+        "quotes:write";
+      api_key_scope: ["
+        "jobs:read";"
+        "jobs:write";"
+        "talent:read";"
+        "quotes:write";"
+        "webhooks:manage"]"
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: ["
+        "new";"
+        "in_review";"
+        "accepted";"
+        "responded";"
+        "closed";"
+        "archived"]
+
+type DefaultSchema = Database[Extract<keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+=======
   DefaultSchemaTableNameOrOptions extends
 <<<<<<< HEAD
     | keyof DefaultSchema["Tables"];
@@ -12828,26 +14105,1301 @@ export type CompositeTypes<;
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];"
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;"
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
+      Row: infer R;
+    }
+    ? R;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;"
+        DefaultSchema["Views"]);"
+    ? (DefaultSchema["Tables"] &;"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
+        Row: infer R;
+      }
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Update: infer U;
+      }
+
+      ? U;
+      : never;
+    : never;
+export type Enums<;
+  DefaultSchemaEnumNameOrOptions extends;"
+    | keyof DefaultSchema["Enums"];
+
+    | { schema: keyof Database }
+
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
+    : never = never;
+
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
+
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
+    : never;
+export type CompositeTypes<;
+  PublicCompositeTypeNameOrOptions extends;"
+    | keyof DefaultSchema["CompositeTypes"];
+
+    | { schema: keyof Database }
+
+    schema: keyof Database;
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
+    : never = never;
+> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+
+    | keyof DefaultSchema["CompositeTypes"]
+
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+| { schema: keyof Database },;
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {;
     schema: keyof Database;
   }
+    schema: keyof Database  }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
+
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     : never;
+<<<<<<< HEAD
+
+export const Constants = {}
+  public: {}
+    Enums: {};
+      api_key_scope: [;"
+        "jobs:read";"
+        "jobs:write";"
+        "talent:read";"
+        "quotes:write";"
+        "webhooks:manage"]"
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: [;"
+        "new";"
+        "in_review";"
+        "accepted";"
+        "responded";"
+        "closed";
+
+;
+;
+
+;
+;
+;
+export const Constants = {
+  public: {
+    Enums: {
+
+      api_key_scope: [
+
+"archived"],
+;        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+;
+      referral_status:"pending" | "completed" | "expired";
+
+"
+            foreignKeyName: "review_reports_reporter_id_fkey";",]"
+  columns: ["reporter_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }
+          }
+
+          },
+
+          {"
+            foreignKeyName: "review_reports_review_id_fkey";","
+  columns: ["review_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "reviews";""
+            referenced_columns: ["id"];"
+          }];
+      }
+      reviews: {,
+  Row: {
+          communication_rating: number | null;,
+  created_at: string;
+          id: string;,
+  is_anonymous: boolean;
+          is_visible: boolean;,
+  project_id: string;
+          quality_rating: number | null;,
+  rating: number;
+          report_count: number;,
+  review_text: string;
+          reviewee_id: string;,
+  reviewer_id: string;
+          status: string;,
+  timeliness_rating: number | null;
+          updated_at: string;,
+  would_work_again: boolean | null;
+        }
+        Insert: {
+          communication_rating?: number | null;
+          created_at?: string;
+          id?: string;
+          is_anonymous?: boolean;
+          is_visible?: boolean;
+          project_id: string;
+          quality_rating?: number | null;
+          rating: number;
+          report_count?: number;
+          review_text: string;,
+  reviewee_id: string;
+          reviewer_id: string;
+          status?: string;
+          timeliness_rating?: number | null;
+          updated_at?: string;
+          would_work_again?: boolean | null;
+        }
+        Update: {
+          communication_rating?: number | null;
+          created_at?: string;
+          id?: string;
+          is_anonymous?: boolean;
+          is_visible?: boolean;
+          project_id?: string;
+          quality_rating?: number | null;
+          rating?: number;
+          report_count?: number;
+          review_text?: string;
+          reviewee_id?: string;
+          reviewer_id?: string;
+          status?: string;
+          timeliness_rating?: number | null;
+          updated_at?: string;
+          would_work_again?: boolean | null;
+        }
+        Relationships: [;
+          {
+
+          },
+
+          {"
+            foreignKeyName: "reviews_reviewee_id_fkey"",]"
+  columns: ["reviewee_id"]"
+            isOneToOne: false;,"
+  referencedRelation: "user_metrics"""
+            referencedColumns: ["user_id"]","
+  foreignKeyName: "reviews_project_id_fkey";""
+            columns: ["project_id"];",
+  isOneToOne: false;"
+            referenced_relation: "projects";","
+  referenced_columns: ["id"];"
+          }
+
+          },
+
+          {"
+            foreignKeyName: "reviews_reviewee_id_fkey";","
+  columns: ["reviewee_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }
+          {"
+            foreignKeyName: "reviews_reviewer_id_fkey";","
+  columns: ["reviewer_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      scheduled_jobs: {,
+  Row: {
+          completed_at: string | null;,
+  created_at: string;
+          id: string;,
+  job_type: string;
+          payload: Json | null;,
+  scheduled_for: string;
+          status: string;,
+  updated_at: string;
+        }
+        Insert: {
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type: string;
+          payload?: Json | null;
+          scheduled_for: string;,
+  status: string;
+          updated_at?: string;
+        }
+        Update: {
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type?: string;
+          payload?: Json | null;
+          scheduled_for?: string;
+          status?: string;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      subscriptions: {,
+  Row: {
+          created_at: string;,
+  current_period_end: string | null;
+          current_period_start: string | null;,
+  id: string;
+          plan_type: string;,
+  status: string;
+          stripe_customer_id: string | null;,
+  stripe_subscription_id: string | null;
+          updated_at: string;,
+  user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type: string;,
+  status: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type?: string;
+          status?: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "subscriptions_user_id_fkey";",]"
+  columns: ["user_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      talent_resumes: {,
+  Row: {
+          created_at: string;,
+  headline: string | null;
+          id: string;,
+  is_active: boolean;
+          summary: string | null;,
+  title: string;
+          updated_at: string;,
+  user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "talent_resumes_user_id_fkey";",]"
+  columns: ["user_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      tenant_administrators: {,
+  Row: {
+          created_at: string | null;,
+  id: string;
+          tenant_id: string;,
+  user_id: string;
+        }
+        Insert: {
+          created_at?: string | null;
+          id?: string;
+          tenant_id: string;,
+  user_id: string;
+        }
+        Update: {
+          created_at?: string | null;
+          id?: string;
+          tenant_id?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+"
+            foreignKeyName: "tenant_administrators_tenant_id_fkey";",]"
+  columns: ["tenant_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "whitelabel_tenants";""
+            referenced_columns: ["id"];"
+          }
+
+          },
+
+          {"
+            foreignKeyName: "tenant_administrators_user_id_fkey";","
+  columns: ["user_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      user_onboarding: {,
+  Row: {
+          application_sent: boolean | null;,
+  application_sent_at: string | null;
+          availability_set: boolean | null;,
+  availability_set_at: string | null;
+          created_at: string;,
+  id: string;
+          job_posted: boolean | null;,
+  job_posted_at: string | null;
+          last_reminder_sent: string | null;,
+  match_received: boolean | null;
+          match_received_at: string | null;,
+  match_viewed: boolean | null;
+          match_viewed_at: string | null;,
+  profile_completed: boolean | null;
+          profile_completed_at: string | null;,
+  quote_received: boolean | null;
+          quote_received_at: string | null;,
+  reminder_count: number | null;
+          role: string;,
+  skills_added: boolean | null;
+          skills_added_at: string | null;,
+  talent_invited: boolean | null;
+          talent_invited_at: string | null;,
+  updated_at: string;
+          user_id: string | null;
+        }
+        Insert: {
+          application_sent?: boolean | null;
+          application_sent_at?: string | null;
+          availability_set?: boolean | null;
+          availability_set_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_posted?: boolean | null;
+          job_posted_at?: string | null;
+          last_reminder_sent?: string | null;
+          match_received?: boolean | null;
+          match_received_at?: string | null;
+          match_viewed?: boolean | null;
+          match_viewed_at?: string | null;
+          profile_completed?: boolean | null;
+          profile_completed_at?: string | null;
+          quote_received?: boolean | null;
+          quote_received_at?: string | null;
+          reminder_count?: number | null;
+          role: string;
+          skills_added?: boolean | null;
+          skills_added_at?: string | null;
+          talent_invited?: boolean | null;
+          talent_invited_at?: string | null;
+          updated_at?: string;
+          user_id?: string | null;
+        }
+        Update: {
+          application_sent?: boolean | null;
+          application_sent_at?: string | null;
+          availability_set?: boolean | null;
+          availability_set_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_posted?: boolean | null;
+          job_posted_at?: string | null;
+          last_reminder_sent?: string | null;
+          match_received?: boolean | null;
+          match_received_at?: string | null;
+          match_viewed?: boolean | null;
+          match_viewed_at?: string | null;
+          profile_completed?: boolean | null;
+          profile_completed_at?: string | null;
+          quote_received?: boolean | null;
+          quote_received_at?: string | null;
+          reminder_count?: number | null;
+          role?: string;
+          skills_added?: boolean | null;
+          skills_added_at?: string | null;
+          talent_invited?: boolean | null;
+          talent_invited_at?: string | null;
+          updated_at?: string;
+          user_id?: string | null;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "user_onboarding_user_id_fkey";",]"
+  columns: ["user_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      user_privacy_settings: {,
+  Row: {
+          activity_monitoring_enabled: boolean | null;,
+  ai_analysis_enabled: boolean | null;
+          id: string;,
+  message_scanning_enabled: boolean | null;
+          updated_at: string | null;
+        }
+        Insert: {
+          activity_monitoring_enabled?: boolean | null;
+          ai_analysis_enabled?: boolean | null;
+          id: string;
+          message_scanning_enabled?: boolean | null;
+          updated_at?: string | null;
+        }
+        Update: {
+          activity_monitoring_enabled?: boolean | null;
+          ai_analysis_enabled?: boolean | null;
+          id?: string;
+          message_scanning_enabled?: boolean | null;
+          updated_at?: string | null;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "user_privacy_settings_id_fkey";",]"
+  columns: ["id"];"
+            isOneToOne: true;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      webhook_configs: {,
+  Row: {
+          created_at: string;,
+  event_types: string[];
+          id: string;,
+  is_active: boolean;
+          last_triggered_at: string | null;,
+  name: string;
+          secret: string | null;,
+  updated_at: string;
+          url: string;,
+  user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          event_types: string[];
+          id?: string;
+          is_active?: boolean;
+          last_triggered_at?: string | null;
+          name: string;
+          secret?: string | null;
+          updated_at?: string;
+          url: string;,
+  user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          event_types?: string[];
+          id?: string;
+          is_active?: boolean;
+          last_triggered_at?: string | null;
+          name?: string;
+          secret?: string | null;
+          updated_at?: string;
+          url?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "webhook_configs_user_id_fkey";",]"
+  columns: ["user_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      whitelabel_tenants: {,
+  Row: {
+          account_manager_id: string | null;,
+  brand_name: string;
+          created_at: string | null;,
+  custom_domain: string | null;
+          dns_verified: boolean;,
+  email_template_override: Json | null;
+          id: string;,
+  is_active: boolean;
+          landing_page_copy: Json | null;,
+  logo_url: string | null;
+          primary_color: string;,
+  subdomain: string;
+          theme_preset: string;,
+  updated_at: string | null;
+        }
+        Insert: {
+          account_manager_id?: string | null;
+          brand_name: string;
+          created_at?: string | null;
+          custom_domain?: string | null;
+          dns_verified?: boolean;
+          email_template_override?: Json | null;
+          id?: string;
+          is_active?: boolean;
+          landing_page_copy?: Json | null;
+          logo_url?: string | null;
+          primary_color?: string;
+          subdomain: string;
+          theme_preset?: string;
+          updated_at?: string | null;
+        }
+        Update: {
+          account_manager_id?: string | null;
+          brand_name?: string;
+          created_at?: string | null;
+          custom_domain?: string | null;
+          dns_verified?: boolean;
+          email_template_override?: Json | null;
+          id?: string;
+          is_active?: boolean;
+          landing_page_copy?: Json | null;
+          logo_url?: string | null;
+          primary_color?: string;
+          subdomain?: string;
+          theme_preset?: string;
+          updated_at?: string | null;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey";",]"
+  columns: ["account_manager_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "user_metrics";""
+            referenced_columns: ["user_id"];"
+          }];
+      }
+      work_history: {,
+  Row: {
+          company_logo_url: string | null;,
+  company_name: string;
+          created_at: string;,
+  description: string | null;
+          end_date: string | null;,
+  id: string;
+          is_current: boolean;,
+  location: string | null;
+          resume_id: string;,
+  role_title: string;
+          start_date: string;,
+  updated_at: string;
+        }
+        Insert: {
+          company_logo_url?: string | null;
+          company_name: string;
+          created_at?: string;
+          description?: string | null;
+          end_date?: string | null;
+          id?: string;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id: string;,
+  role_title: string;
+          start_date: string;
+          updated_at?: string;
+        }
+        Update: {
+          company_logo_url?: string | null;
+          company_name?: string;
+          created_at?: string;
+          description?: string | null;
+          end_date?: string | null;
+          id?: string;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id?: string;
+          role_title?: string;
+          start_date?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "work_history_resume_id_fkey";",]"
+  columns: ["resume_id"];"
+            isOneToOne: false;,"
+  referenced_relation: "talent_resumes";""
+            referenced_columns: ["id"];"
+          }];
+      }
+    }
+    Views: {,
+  conversion_rates: {
+        Row: {,
+  conversion_count: number | null;
+          conversion_rate: number | null;,
+  conversion_type: string | null;
+          date: string | null;,
+  view_count: number | null;
+        }
+        Relationships: [];
+      }
+      daily_page_views: {,
+  Row: {
+          date: string | null;,
+  path: string | null;
+          view_count: number | null;
+        }
+        Relationships: [];
+      }
+      user_metrics: {,
+  Row: {
+          job_applications: number | null;,
+  profile_views: number | null;
+          quote_invites: number | null;,
+  success_rate: number | null;
+          user_id: string | null;
+        }
+        Insert: {
+          job_applications?: never;
+          profile_views?: never;
+          quote_invites?: never;
+          success_rate?: never;
+          user_id?: string | null;
+        }
+        Update: {
+          job_applications?: never;
+          profile_views?: never;
+          quote_invites?: never;
+          success_rate?: never;
+          user_id?: string | null;
+        }
+        Relationships: [];
+      }
+    }
+
+    Functions: {;,
+  check_users_needing_reminders: {;
+        Args: Record<PropertyKey never>;
+</PropertyKey>
+        Args: Record<PropertyKey never>;
+</PropertyKey>
+        Args: Record < PropertyKey, never>;
+        Returns: undefined;
+      }
+      flag_suspicious_content: {,
+  Args: {
+          p_user_id: string;,
+  p_user_email: string;
+          p_content_type: string;,
+  p_content_id: string;
+          p_content_excerpt: string;,
+  p_severity: string;
+          p_reason: string;,
+  p_ip_address: string;
+        }
+        Returns: string;
+      }
+      generate_api_key: {,
+  Args: { prefix: string }
+        Returns: string;
+      }
+      generate_fraud_report: {,
+  Args: { year: number, month: number }
+        Returns: string;
+      }
+      generate_referral_code: {,
+  Args: { user_id: string }
+        Returns: string;
+      }
+      get_api_key_user_id: {,
+  Args: { key_prefix: string, provided_key: string }
+        Returns: string;
+      }
+      get_current_tenant_id: {,
+  Args: Record < PropertyKey, never>;
+        Returns: string;,
+  get_current_tenant_id: {;
+        Args: Record<PropertyKey never>;
+</PropertyKey>
+        Args: Record<PropertyKey never>;
+</PropertyKey>
+        Args: Record < PropertyKey, never>;
+
+        Returns: number;
+schedule_email_reminders: {;
+        Args: Record<PropertyKey never />;}
+        Returns: number;}
+      }
+
+      trigger_resume_scoring: {,
+  Args: { application_id: string }
+        Returns: undefined;
+      }
+      update_onboarding_milestone: {,
+  Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined;
+      }
+      verify_api_key: {,
+  Args: { provided_key: string, stored_hash: string }
+        Returns: boolean;
+      }
+    }
+    Enums: {,
+  api_key_scope:;"
+        | "jobs:read";""
+        | "jobs:write";""
+        | "talent:read";""
+        | "quotes:write";""
+        | "webhooks: manage";","
+  fraud_severity: "safe" | "suspicious" | "dangerous";""
+      fraud_severity: "safe" | "suspicious" | "dangerous";",
+  quote_request_status:;"
+        | "new";""
+        | "in_review";""
+        | "accepted";""
+        | "responded";""
+        | "closed";""
+        | "archived";""
+      referral_status: "pending" | "completed" | "expired";"
+    }
+    CompositeTypes: {
+      [_ in never]: never;
+    }
+  }
+}
+"
+type DefaultSchema = Database[Extract < keyof Database, "public">];"
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);"
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;")"
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);"
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;")"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {"
+  // TODO: Implement
+}
+      Row: infer R;
+    }
+    ? R;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;")"
+        DefaultSchema["Views"]);""
+    ? (DefaultSchema["Tables"] &;")"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {"
+  // TODO: Implement
+}
+        Row: infer R;
+      }
+
+          date: string;,
+  event_type: string;
+          count: number;
+        }[]
+      }
+      hash_api_key: {,
+  Args: { api_key: string }
+        Returns: string;
+      }
+      schedule_email_reminders: {,
+  Args: Record<PropertyKey, never>
+</PropertyKey>
+        Args: Record<PropertyKey never>;
+</PropertyKey>"
+type DefaultSchema = Database[Extract<keyof Database, "public">]"
+</keyof>
+export type Tables<
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);"
+    | { schema: keyof Database };"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])"
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &")"
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])"
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &")"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {"
+  // TODO: Implement
+}
+      Row: infer R;
+    }
+    ? R;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &")"
+        DefaultSchema["Views"])""
+    ? (DefaultSchema["Tables"] &")"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {"
+  // TODO: Implement
+}
+        Row: infer R;
+      }
+
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<
+
+  DefaultSchemaTableNameOrOptions extends;
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];"
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];"
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {"
+  // TODO: Implement
+}
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {"
+  // TODO: Implement
+}
+        Insert: infer I;
+      }
+
+"
+    | keyof DefaultSchema["Tables"]"
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]"
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {"
+  // TODO: Implement
+}
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]""
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {"
+  // TODO: Implement
+}
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<
+  DefaultSchemaTableNameOrOptions extends;
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];"
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];"
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {"
+  // TODO: Implement
+}
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {"
+  // TODO: Implement
+}
+        Update: infer U;
+      }
+
+"
+    | keyof DefaultSchema["Tables"]"
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]"
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {"
+  // TODO: Implement
+}
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]""
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {"
+  // TODO: Implement
+}
+        Update: infer U;
+      }
+      ? U;
+      : never;
+    : never;
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends;
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]"
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]""
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]""
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]"
+    : never;
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends;"
+    | keyof DefaultSchema["CompositeTypes"];"
+    | { schema: keyof Database };"
+    | keyof DefaultSchema["CompositeTypes"]"
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]"
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }"
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]""
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]""
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]"
+    : never;
+export const Constants = {
+  public: {,
+  Enums: {
+      api_key_scope: [;"
+        "jobs:read";""
+        "jobs:write";""
+        "talent:read";""
+        "quotes: write";",
+  api_key_scope: ["
+        "jobs:read";""
+        "jobs:write";""
+        "talent:read";""
+        "quotes:write";"]"
+        "webhooks: manage"]","
+  fraud_severity: ["safe", "suspicious", "dangerous"];"
+      quote_request_status: ["
+        "new";""
+        "in_review";""
+        "accepted";""
+        "responded";""
+        "closed";"]"
+        "archived"]""
+      referral_status: ["pending", "completed", "expired"]}}} as const;"
+;"
+        "jobs:read",""
+        "jobs:write",""
+        "talent:read",""
+        "quotes:write",""
+        "webhooks:manage"],""
+      fraud_severity: ["safe", "suspicious", "dangerous"],"
+      quote_request_status: ["
+        "new";""
+        "in_review";""
+        "accepted";""
+        "responded";""
+        "closed";"]"
+        "archived"],""
+      referral_status: ["pending", "completed", "expired"]}}} as const;"
+;"
+        "new",""
+        "in_review",""
+        "accepted",""
+        "responded",""
+        "closed",""
+        "archived"],""
+      referral_status: ["pending", "completed", "expired"]}}} as const;"
+;"
+type DefaultSchema = Database[Extract<keyof Database, "public">];"
+</keyof>
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);"
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;")"
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);"
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;")"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;"
+      Row: infer R;
+    }
+    ? R;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;")"
+        DefaultSchema["Views"]);""
+    ? (DefaultSchema["Tables"] &;")"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;"
+        Row: infer R;
+      }
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];"
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];"
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;"
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];"
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];"
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;"
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
+        Update: infer U;
+      }
+
+      ? U;
+      : never;
+    : never;
+export type Enums<;
+  DefaultSchemaEnumNameOrOptions extends;"
+    | keyof DefaultSchema["Enums"];"
+    | { schema: keyof Database }
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];"
+    : never = never;
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+
+"
+    | keyof DefaultSchema["Enums"]"
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];"
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]""
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]""
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]"
+    : never;
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends;"
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];""
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];""
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];"
+    : never;
+export type CompositeTypes<;
+  PublicCompositeTypeNameOrOptions extends;"
+    | keyof DefaultSchema["CompositeTypes"];"
+    | { schema: keyof Database }
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];"
+    : never = never;
+> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+
+"
+    | keyof DefaultSchema["CompositeTypes"]"
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  // TODO: Implement
+}
+    schema: keyof Database;
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];"
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }"
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]""
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]""
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]"
+    : never;"
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];""
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];""
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];"
+    : never;
+
+export const Constants = {
+  public: {,
+  Enums: {
+      api_key_scope: [;"
+        "jobs:read";""
+        "jobs:write";""
+        "talent:read";""
+        "quotes:write";"]"
+        "webhooks: manage"]","
+  fraud_severity: ["safe", "suspicious", "dangerous"];"
+      quote_request_status: [;"
+        "new";""
+        "in_review";""
+        "accepted";""
+        "responded";""
+        "closed";"]"
+        "archived"],""
+      referral_status: ["pending", "completed", "expired"]}}} as const;"
+
+;
+;
+export const Constants = {
+
+  public: {,
+  Enums: {
+
+      api_key_scope: [
+]"
+        "archived"],""
+      referral_status: ["pending", "completed", "expired"]}}} as const;"
+;"
+      referral_status:"pending" | "completed" | "expired";"
+
+    }
+    CompositeTypes:{;}
+      [_ in never]:never;}
+=======
 <<<<<<< HEAD
 export const Constants = {;
 =======
@@ -12930,6 +15482,7 @@ export const Constants = {
     CompositeTypes:{;
       [_ in never]:never;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   }
 }
@@ -12957,6 +15510,9 @@ export type Tables<;
     ? (DefaultSchema["Tables"] &;
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;"
 type DefaultSchema = Database[Extract<keyof Database, "public">];"
@@ -12983,9 +15539,12 @@ export type Tables<;
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;"
         Row:infer R;
 
+<<<<<<< HEAD
+=======
 =======
         Row:infer R;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       ? R;
       :never;
@@ -13008,6 +15567,9 @@ export type TablesInsert<;
   :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   DefaultSchemaTableNameOrOptions extends;"
     | keyof DefaultSchema["Tables"];"
@@ -13026,9 +15588,12 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
         Insert:infer I;
 
+<<<<<<< HEAD
+=======
 =======
         Insert:infer I;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       ? I;
       :never;
@@ -13051,6 +15616,9 @@ export type TablesUpdate<;
   :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   DefaultSchemaTableNameOrOptions extends;"
     | keyof DefaultSchema["Tables"];"
@@ -13069,9 +15637,12 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
         Update:infer U;
 
+<<<<<<< HEAD
+=======
 =======
         Update:infer U;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       ? U;
       :never;
@@ -13110,7 +15681,10 @@ export const Constants = {;
     Enums:{;
       api_key_scope:[;
 export const Constants = {;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   public: {;
     Enums: {;
       api_key_scope: [;
@@ -13133,9 +15707,13 @@ export const Constants = {;
 <<<<<<< HEAD
       referral_status: ["pending", "completed", "expired"]}}} as const;
 =======
+<<<<<<< HEAD
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+=======
       referral_status: ["pending", "completed", "expired"]}}} as const;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,41 @@
 <<<<<<< HEAD
+import { createContext, useContext, useEffect, useState } from &quot;react&quot;
+type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
+import { createContext, useContext, useEffect, useState } from &quot;react&quot;
+type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
+
+type Theme = "dark" | "light" | "system"
+
+type ThemeProviderProps = {
+  children: React.ReactNode
+  defaultTheme?: Theme
+}
+
+;
+type ThemeProviderState = {;
+  theme: Theme;
+
+  setTheme: (theme: Theme) => void;
+}
+
+  )
+  useEffect(() => {
+    const root = window.document.documentElement
+
+      root.classList.add(systemTheme)
+
+;
+
+  return (;
+
+  return (;
+import { create_context, useContext, useEffect, useState } from &quot;react & quot;
+;
+type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
+;
+
+=======
+<<<<<<< HEAD
 
 import { createContext, useContext, useEffect, useState } from "react"
 
@@ -171,6 +208,7 @@ import { create_context, useContext, useEffect, useState } from &quot;react & qu
 type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
 ;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 type ThemeProviderProps = {
   children: React.ReactNode;
   defaultTheme?: Theme;
@@ -236,6 +274,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
 import { createContext, useContext, useEffect, useState } from "react";"
 ;"
@@ -249,6 +290,8 @@ const initialState: ThemeProviderState = {;,"
   setTheme:() => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
+<<<<<<< HEAD
+=======
 =======
 type ThemeProviderProps = {;
   children:React.ReactNode;
@@ -270,6 +313,7 @@ export function ThemeProvider({;
   children,;
   defaultTheme = "system"} ThemeProviderProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [theme, setTheme] = useState<Theme>(;
     () => (localStorage.getItem("theme") as Theme) || defaultTheme;
   );
@@ -302,7 +346,11 @@ export function ThemeProvider({;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <ThemeProviderContext.Provider value={value}>;
     </ThemeProviderContext.Provider>);
 
@@ -318,8 +366,11 @@ if ()
 }use_theme must be used within a ThemeProvider & quot);
   return context;
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;
 export const useTheme = () => {;
@@ -365,6 +416,19 @@ export const useTheme = () => {
 }
 ;
 =======
+<<<<<<< HEAD
+  if (context === undefined)
+
+}
+  if (context === undefined)
+
+export const useTheme = () => {
+
+  const context = useContext(ThemeProviderContext)
+
+}
+;
+=======
 }
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
@@ -390,3 +454,4 @@ export const useTheme = () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

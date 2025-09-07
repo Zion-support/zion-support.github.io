@@ -39,11 +39,16 @@ export interface Milestone {;
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface MilestoneActivity {;
 
   created_by: string
 
+<<<<<<< HEAD
+=======
   deliverables?: any[]
 }
 
@@ -60,15 +65,21 @@ export interface MilestoneActivity {;
 
 <<<<<<< HEAD
   created_by: string
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   deliverables?: any[]
 }
+
 export interface MilestoneActivity {
 
 export interface MilestoneActivity {;
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   milestone_id: string;
   user_id: string;
@@ -77,6 +88,12 @@ export interface MilestoneActivity {;
   new_status: string;
   comment?: string;
   created_at: string;
+<<<<<<< HEAD
+
+  }
+}
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -128,6 +145,7 @@ export interface MilestoneActivity {;
 }
 >>>>>>> merged-prs-20250907-203621
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     display_name: string;
     avatar_url?: string;
   };

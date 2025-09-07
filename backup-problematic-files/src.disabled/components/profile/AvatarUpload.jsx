@@ -1,0 +1,45 @@
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+:src.disabled/components/profile/AvatarUpload.jsx
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+:temp_exclude/src.disabled/components/profile/AvatarUpload.jsx
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+import React from 'react';'
+const AvatarUpload = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AvatarUpload</h1>
+      <p>This component is under development.</p>
+    </div>
+<<<<<<< HEAD
+  )
+};
+=======
+<<<<<<< HEAD
+  )
+};
+=======
+  );
+};
+
+<<<<<<< HEAD
+export default AvatarUpload;
+=======
+export default AvatarUpload;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

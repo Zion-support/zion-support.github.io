@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { supabase as supabaseClient  } from '@/utils/supabase/client';'
+import { TALENT_PROFILES as LOCAL  } from '@/data/talent';'
+
+import type { TalentProfile } from '@/utils/types/talent';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
@@ -24,6 +36,10 @@ import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 
 import type { TalentProfile } from '@/utils/types/talent';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const hasSupabase =;
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
@@ -50,6 +66,39 @@ const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+return res.status(500).json({ "error": e.message,;
+});
+    }
+  if (req.method = == 'POST') {try ;'
+  }
+  const payload = req.body as Partial<TalentProfile>;
+
+const slug =;
+        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;'
+        '-' +;'
+        uuid().slice(0, 6)...payload;
+        "id": uuid()slug;
+        "verified": false;
+        "rating": 0;
+        "reviewsCount": 0;
+        "createdAt": new Date().toISOString()"summary": payload.summary |'';'
+        "skills": payload.skills |[];
+        "name": payload.name |'Unnamed';'
+        "title": payload.title |'Professional';'
+        "location": payload.location |'Remote';'
+        "availability": (payload.availability as any) |'Open';'
+      } as TalentProfile;
+      // Auto-translate;
+      const originalLang =;
+        payload.originalLanguage |;
+        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const "translations": TalentProfile['translations'] = {}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default async function handler(
@@ -495,6 +544,10 @@ const originalLang =;
 =======
         detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const translations: TalentProfile['translations'] = {}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         translations.summary = translations.summary |{}
         translations.bio = translations.bio |,
 }
@@ -517,6 +570,43 @@ const originalLang =;
       item.originalLanguage = originalLang;
       item.translations = translations;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      return res && res.status(500).json({ error: e && e.message });
+    }  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === 'GET') {
+    try {
+        } as any);
+        // Check condition
+if (throw error) {
+  $2
+}
+        return res.status (201).json ({ slug: item.slug });
+      }
+      // Fallback: return the slug as if saved;
+      return res.status (201).json ({ slug: item.slug });
+      return res.status(500).json({ error: e.message })
+    }
+
+  if (req.method = $2;
+      const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice($2);
+      const item: TalentProfile = $2;
+        id: uuid($2);
+        slug,
+        verified: false,
+        rating: 0,
+        reviewsCount: 0,
+        createdAt: new Date().toISOString($2);
+        summary: payload.summary || '',
+        skills: payload.skills || [],
+        name: payload.name || 'Unnamed',
+        title: payload.title || 'Professional',
+        location: payload.location || 'Remote',
+        availability: (payload.availability as any) || 'Open'} as TalentProfile,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 
@@ -568,6 +658,10 @@ request_quote: item.request_quote ?? null,
           created_at: item.createdAt,
 <<<<<<< HEAD
           // i18n
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
       // Auto-translate
       const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n')),
@@ -584,6 +678,60 @@ request_quote: item.request_quote ?? null,
           translations.category = $2;
           translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      item.originalLanguage = $2;
+      item.translations = $2;
+      if (hasSupabase) {
+        }
+        const { error } = await supabaseClient.from('talent_profiles').insert({'
+}
+"id": item.id,
+          "slug": item.slug,
+          "name": item.name,
+          "title": item.title,
+          "category": item.category,
+          "location": item.location,
+          "timezone": item.timezone,
+          "region": item.region,
+          "skills": item.skills,
+          "summary": item.summary,
+          "bio": item.bio,
+          "hourly_rate_usd": item.hourlyRateUsd ?? null,
+          "request_quote": item.requestQuote ?? null,
+          "availability": item.availability,
+          "profile_image_url": item.profileImageUrl ?? null,
+          "video_url": item.videoUrl ?? null,
+          "portfolio": item.portfolio ?? null,
+          "verified": item.verified ?? null,
+          "rating": item.rating ?? null,
+          "reviews_count": item.reviewsCount ?? null,
+          "created_at": item.createdAt,
+          // i18n,
+"original_language": item.originalLanguage,
+          "translations": item.translations as any
+        } as any);
+        if (error) throw error;
+return res.status(201).json({ "slug": item.slug,;
+});
+      }
+      // "Fallback": return the slug as if saved;
+return res.status (201).json ({ "slug": item.slug,;
+});
+    } catch ("e": any) {
+}
+return res.status (500).json ({ "error": e.message,;
+});
+    }
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
+
+  }
+return res;
+    .setHeader('Allow', 'GET, POST')'
+=======
+>>>>>>> origin/resolved-merge-conflicts
       }
       item.originalLanguage = $2;
       item.translations = $2;
@@ -886,6 +1034,10 @@ original_language: item.originalLanguage,}
 return res;
     .setHeader('Allow', 'GET, POST')
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     .status(405)
     .end('Method Not Allowed');
 

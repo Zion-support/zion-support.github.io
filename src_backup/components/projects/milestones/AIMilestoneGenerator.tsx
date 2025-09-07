@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 interface AIMilestoneGeneratorProps  {import React, { useState } from 'react';
 import { Button   } from '@/components/ui/button';
@@ -21,6 +30,14 @@ import { Badge } from '@/components/ui/badge';
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+<<<<<<< HEAD
+=======
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from @/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge;
+import React, { useState } from react'
+import { Button } from '@/components/ui/button
+import { Card, CardContent } from @/components/ui/card'
+>>>>>>> origin/resolved-merge-conflicts
 import {
   Accordion
   AccordionContent
@@ -36,7 +53,18 @@ import { format, parseISO } from 'date-fns'
 import { Badge } from '@/components/ui/badge'
 interface AIMilestoneGeneratorProps {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 interface AIMilestoneGeneratorProps {;
+=======
+interface AIMilestoneGeneratorProps {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+interface AIMilestoneGeneratorProps {;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -72,14 +100,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     if (!scope || !startDate || !projectType) {
 
       return;
-
 
     }
     const input: MilestoneInput = {}
@@ -105,6 +147,12 @@ import { format, parseISO } from 'date - fns';
 import { Badge } from '@/components / ui / badge';
 interface AIMilestoneGeneratorProps {}
   scope: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   MilestoneInput;
   GeneratedMilestone;
   useMilestoneGenerator;
@@ -125,6 +173,12 @@ import { format, parseISO  } from 'date - fns';
   MilestoneInput,GeneratedMilestone,useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import { Badge  } from '@/components / ui / badge';
 interface AIMilestoneGeneratorProps  {scope: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   start_date: string;
   end_date: string | null;
   project_type: string;
@@ -191,10 +245,29 @@ if ( {) {}
     }
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
+=======
+import React, { useState } from react',
+import { Button } from '@/components/ui/button,
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import { Card, CardContent } from '@/components/ui/card',;
 import {;
@@ -213,7 +286,14 @@ interface AIMilestoneGeneratorProps {;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
+<<<<<<< HEAD
 ;
 export function AIMilestoneGenerator({;
   scope,;
@@ -221,6 +301,20 @@ export function AIMilestoneGenerator({;
   endDate,;
   projectType,;
   onAddMilestones,;
+=======
+export function AIMilestoneGenerator({
+  scope,
+  startDate,
+  endDate,
+  projectType,
+  onAddMilestones,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
@@ -284,12 +378,35 @@ export function AIMilestoneGenerator({;
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
+<<<<<<< HEAD
           variant='outline'
   }import React, { useState } from 'react',import { Button } from '@/components/ui/button',import { Card, CardContent } from '@/components/ui/card',import {Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components/ui/accordion',import { format, parseISO } from 'date-fns',import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',import { Badge } from '@/components/ui/badge',interface AIMilestoneGeneratorProps  {scope: string,startDate: string,endDate: string | null,projectType: string,onAddMilestones: (milestones: GeneratedMilestone[]) => void,onAddMilestone: (milestone: GeneratedMilestone) => void;scope,startDate,endDate,projectType,onAddMilestones,const handleGenerateMilestones = async () => {if (!scope || !startDate || !projectType) {return;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          variant="outline"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          variant="outline
+  }import React, { useState } from react,import { Button } from '@/components/ui/button',import { Card, CardContent } from @/components/ui/card,import {Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components/ui/accordion',import { format, parseISO } from date-fns,import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',import { Badge } from @/components/ui/badge,interface AIMilestoneGeneratorProps  {scope: string,startDate: string,endDate: string | null,projectType: string,onAddMilestones: (milestones: GeneratedMilestone[]) => void,onAddMilestone: (milestone: GeneratedMilestone) => void;scope,startDate,endDate,projectType,onAddMilestones,const handleGenerateMilestones = async () => {if (!scope || !startDate || !projectType) {return;
+>>>>>>> origin/resolved-merge-conflicts
     }const input: MilestoneInput = {scope,startDate,endDate,try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
     },return (<Button;
           disabled={isGenerating || !scope || !startDate || !projectType}        >;
+<<<<<<< HEAD
           variant='outline';
+=======
+          variant=outline";
+=======
+          variant="outline"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
@@ -364,9 +481,21 @@ export function AIMilestoneGenerator({
   const handleGenerateMilestones = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
                         handleAddSingleMilestone(milestone)
+<<<<<<< HEAD
                       }'
                       className='mr-2'
                         className='mr-2 w-4 h-4 rounded text-primary';
+=======
+                      }}
+                      className="mr-2"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                        className=mr-2 w-4 h-4 rounded text-primary;
+>>>>>>> origin/resolved-merge-conflicts
                       />;
                       <AccordionTrigger className='hover:no-underline flex-1 text-left'>;
                         <div className='flex items-center'>;
@@ -425,6 +554,12 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                   </AccordionContent>;
                 </AccordionItem>;))}
               ))}</Accordion>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                       </div>
                     </div>
@@ -436,6 +571,18 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    </div>;
+  );
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </div>
 
     </div>;
@@ -443,8 +590,22 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
       )}</div>;
   )}<Button;
                       variant='ghost';
+<<<<<<< HEAD
                       size='sm';
                       on_click={e => {e.stop_propagation ()handleAddSingleMilestone (milestone) }
+=======
+                      size=sm;
+                      on_click={e => {e.stop_propagation ()handleAddSingleMilestone (milestone) }}
+=======
+
+    </div>;
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
                     <Button;'
@@ -474,6 +635,4 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
             </Accordion>;
           </CardContent>;
         </Card>)}
-    </div>);
-}
     </div>);

@@ -1,4 +1,28 @@
 <<<<<<< HEAD
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+interface NotificationHeaderProps {;
+  unreadCount: number,;
+
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+
+  unreadCount
+  onMarkAllAsRead
+
+import React from "react";
+
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {}
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>;
+}
+
+  unreadCount,
+  onMarkAllAsRead,
+=======
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -88,6 +112,7 @@ interface NotificationHeaderProps {}
 
   unreadCount,
   onMarkAllAsRead,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }) => {}
   return ("
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">"
@@ -107,6 +132,8 @@ interface NotificationHeaderProps {}
   )
 };
 import React from './react';'
+<<<<<<< HEAD
+=======
 =======
 }) => {
   return (
@@ -176,6 +203,7 @@ export const NotificationHeader:React.FC<NotificationHeaderProps> = ({;
 =======
 import React from './react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button  } from '@/components / ui / button';
 interface NotificationHeaderProps {}
   unread_count: number;
@@ -219,6 +247,9 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({}
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
         >;

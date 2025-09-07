@@ -1,4 +1,24 @@
 <<<<<<< HEAD
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+
+import { 
+
+  Card;
+  CardContent;
+  CardHeader;
+
+type QuoteRequestCardProps = {
+  quote: QuoteRequest,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded?: (id: string) => void,
+
+=======
+<<<<<<< HEAD
 
 import React from "react";
 import { format } from "date-fns";
@@ -23,6 +43,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
   onViewDetails,
   onMarkAsResponded,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onToggleArchive
 }) => {
   // Format date for display
@@ -32,6 +53,50 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => onViewDetails(quote)}
+
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => onMarkAsResponded(quote.id)}
+                className="flex items-center gap-1"
+              >
+                <MessageSquare className="h-4 w-4" />
+                Mark Responded
+              </Button>
+            )}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
+              className="flex items-center gap-1"
+            >
+              {quote.is_archived ? (
+                <RefreshCw className="h-4 w-4" />
+              ) : (
+                <ArchiveIcon className="h-4 w-4" />
+
+}
+
+import React from "react",;
+import { format } from "date-fns",;
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription;
+} from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",;
+import type { QuoteRequest } from "@/types/quotes",;
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -110,11 +175,16 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
     try {
       return format (new Date (date_string), 'PP');
     } catch (e) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 type QuoteRequestCardProps = {;
   quote: QuoteRequest,;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded?: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
+<<<<<<< HEAD
+},;
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+=======
 };
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   quote;
@@ -142,12 +212,17 @@ type QuoteRequestCardProps = {;
 },;
 ;
 export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   quote,;
   onViewDetails,;
   onMarkAsResponded,;
   onToggleArchive;
 }) => {;
   // Format date for display;
+<<<<<<< HEAD
+  const formatDate = (dateString: string) => {;
+    try {;
+=======
 
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
@@ -412,6 +487,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   // Format date for display;
   const formatDate = (dateString: string) => {;
     try {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return format(new Date(dateString), 'PP');
     } catch (e) {;
       return dateString;
@@ -443,6 +519,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
           <Button
             variant="outline"
             size="sm"
@@ -458,21 +537,28 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
         </div>;
         ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex justify-between items-center mt-4">;
           <Button;
             variant="outline";
             size="sm";
             onClick={() => onViewDetails(quote)}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
             onClick={() => onViewDetails(quote)}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
             View Details;
           </Button>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           ;
           <div className="flex items-center">;
@@ -482,12 +568,16 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 size="sm";
                 onClick={() => onMarkAsResponded(quote.id)}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => onMarkAsResponded(quote && quote.id)}
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 className="flex items-center gap-1";
               >;
                 <MessageSquare className="h-4 w-4" />;
@@ -496,12 +586,17 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             )}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -627,6 +722,7 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 
       </CardContent>
@@ -636,8 +732,12 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive
 <<<<<<< HEAD
 ;
 =======
+<<<<<<< HEAD
+;
+=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

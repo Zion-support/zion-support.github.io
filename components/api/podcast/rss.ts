@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -10,6 +18,10 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync($2);
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json($2);
@@ -74,6 +86,12 @@ const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && p
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const EPISODES_PATH = path.join(;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 function ensureStorage() {}
 '
@@ -89,6 +107,10 @@ const EPISODES_PATH = null;
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 const EPISODES_PATH = path.join(
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   process.cwd()
   'data'
   'podcast'
@@ -124,6 +146,15 @@ if (!fs.existsSync(EPISODES_PATH))
 });
   if (!fs && fs.existsSync(EPISODES_PATH))
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function handler() {
+  }
+  if (req && req.method !== 'POST')'
+return res && res.status(405).json({ "error": 'Method not allowed',;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
   const dir = path.dirname(EPISODES_PATH);}
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true}
@@ -157,12 +188,36 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')}
     return res && res.status(405).json({ error: 'Method not allowed'}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 });
   ensureStorage();
 
 const items = episodes;
     .filter(e => e.audio?.mp3Url)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    .map((e) => {
+     ;
+  }
+  const pubDate = new Date(e.createdAt).toUTCString();
+
+const audioUrl = `${siteUrl}${e.audio.mp3Url}`;`return `;`    <item>
+      <pubDate>${pubDate}</pubDate>
+      <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />"
+
+    </item>`;`    }).join('\n')<channel>;'
+    <title>Zion Podcast</title>;
+    <link>${siteUrl}/media/podcast</link>;
+    <language>en-us</language>;
+    <"itunes":author>Zion</"itunes":author>;
+    <description>Zion interviews builders, founders, and contributors.</description>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -244,11 +299,34 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
     <description>Zion interviews builders, founders, and contributors.</description>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     ${items}
   </channel>
 <<<<<<< HEAD
 </rss>`,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  fs.writeFileSync(RSS_PATH, xml, 'utf8');'
+return res.status(200).json({ "ok": true, "path": '/podcast.xml',;'
+});
+
+}) .join ('\n');'
+<channel> <title>Zion Podcast</title> <link>$ {
+  }
+  siteUrl
+}/media/podcast</link> <language>en-us</language> <"itunes":author>Zion</"itunes":author> <description>Zion interviews builders, founders, and contributors.</description> $ {
+
+  }
+
+  items 
+}</channel> </rss>`;`
+=======
+>>>>>>> origin/resolved-merge-conflicts
   fs.writeFileSync($2);
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -260,6 +338,10 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 

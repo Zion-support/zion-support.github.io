@@ -2,6 +2,9 @@
 =======
 export interface PartnerProfile {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface PartnerProfile {;
 
@@ -13,6 +16,8 @@ export interface PartnerProfile {export interface PartnerProfile {
 export interface PartnerProfile {;
 export interface PartnerProfile {
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -26,6 +31,7 @@ export interface PartnerProfile {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   // TODO: Implement
 }
@@ -52,6 +58,10 @@ pr-12325
     [key: string]: string | undefined
 =======
 <<<<<<< HEAD
+    linkedin?: string;
+    [key: string]: string | undefined
+=======
+<<<<<<< HEAD
     linkedin?: string
     [key: string]: string | undefined
 =======
@@ -60,6 +70,7 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   niche: string;
   audience_size: string;
@@ -69,10 +80,69 @@ pr-12325
   created_at: string;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 export interface PartnerReferralLink {;
 
+<<<<<<< HEAD
+export interface PartnerSettings {
+
+export interface PartnerSettings {;
+export interface PartnerSettings {
+  id: string;
+  commission_rate: number;
+
+}
+
+export interface PartnerSettings {;
+
+  id: string;
+  id: string;,
+
+  commission_rate: number;
+  fraud_threshold: number;,
+  is_payouts_enabled: boolean;
+
+export interface PartnerReferralLink {
+
+export interface PartnerReferralLink {;
+
+}
+
+export interface PartnerReferralLink {;
+
+export interface PartnerSettings {
+
+export interface PartnerSettings {};
+export interface PartnerSettings {;
+export interface PartnerSettings {};
+  id: string;
+  commission_rate: number;
+}
+export interface PartnerReferralLink {};
+export interface PartnerReferralLink {;
+
+export interface PartnerReferralLink {;
+
+updated_at: string
+export interface PartnerReferralLink {;
+
+  updated_at: string;
+  commission_rate?: number;
+}
+export interface PartnerSettings {
+  // TODO: Implement
+}
+export interface PartnerSettings {;
+export interface PartnerSettings {
+  // TODO: Implement
+}
+  id: string;,
+  commission_rate: number;
+=======
 export interface PartnerSettings {
 
 export interface PartnerSettings {;
@@ -99,12 +169,51 @@ export interface PartnerSettings {;
   fraud_threshold: number,
   is_payouts_enabled: boolean;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export interface PartnerReferralLink {
+  // TODO: Implement
 }
 
 
 export interface PartnerReferralLink {;
+<<<<<<< HEAD
+export interface PartnerReferralLink {
+
+  id: string;
+  // TODO: Implement
+}
+  id: string;,
+
+  name: string;
+  url: string;
+  campaign?: string;
+  source?: string;
+  clicks: number;
+
+export interface PartnerPayout {
+
+export interface PartnerPayout {;
+export interface PartnerPayout {  conversions: number
+
+  created_at: string
+
+}
+
+}
+
+export interface PartnerPayout {;
+
+export interface PartnerPayout {};
+export interface PartnerPayout {;
+
+  id: string;
+  partner_id: string;
+  amount: number;"
+  status: "pending" | "processing" | "completed" | "failed";
+  method: string;
+
+=======
 >>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
@@ -247,6 +356,7 @@ export interface PartnerPayout {;
   method: string;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   created_at: string
 
   completed_at?: string
@@ -254,6 +364,9 @@ export interface PartnerPayout {;
 
   created_at: string;
   completed_at?: string;
+<<<<<<< HEAD
+}
+=======
 }
 =======
 <<<<<<< HEAD
@@ -322,3 +435,4 @@ export interface PartnerPayout {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

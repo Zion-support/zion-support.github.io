@@ -1,6 +1,34 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+
+import { motion } from 'framer-motion';
+}
+export default function UltraFuturisticBackground2029() {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
+import React, { useEffect, useRef } from 'react';
+
+interface Particle {
+  }
+  "x": number;
+
+  "y": number;
+  "vx": number;
+  "vy": number;
+  "size": number;
+  "opacity": number;
+  "color": string;
+  "type": 'quantum' | 'holographic' | 'neural' | 'cyberpunk';'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
@@ -128,9 +156,21 @@ interface Particle {
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';}
 >>>>>>> origin/chore/fix-lint-and-merge
 }
+<<<<<<< HEAD
 }
 
 export default function UltraFuturisticBackground2029() {const canvasRef = null;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+
+export default function UltraFuturisticBackground2029() {const canvasRef = null;
+<<<<<<< HEAD
+              }
+              "delay": i * 0.3;
+resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Initialize particles;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
               delay: i * 0.3;
 resizeCanvas ()window.addEventListener (resize, resizeCanvas)// Initialize particles;
@@ -138,6 +178,10 @@ resizeCanvas ()window.addEventListener (resize, resizeCanvas)// Initialize parti
               delay: i * 0.3;}
 resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Initialize particles;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }particlesRef.current = particles;
 }
 initParticles ()// Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {// Update position particle.x += particle.vx;
@@ -164,6 +208,15 @@ export default function UltraFuturisticBackground2029() {;
   const animationRef = useRef<number | undefined>(undefined);
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const ctx = canvas.getContext('2d')if (!ctx);'
+  return;
+
+const resizeCanvas = () => {canvas.width = window.innerWidth;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const ctx = canvas.getContext('2d')if (!ctx);
   return;
 
@@ -171,12 +224,108 @@ const resizeCanvas = (canvas.width = window.innerWidth;
 canvas.height = window.innerHeight) => {
   return $3;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 };
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     resizeCanvas();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    window.addEventListener('resize', resizeCanvas);'
+    // Initialize particles,
+const initParticles = () => {
+     ;
+  }
+  const "particles": Particle[] = [];
+
+const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
+
+
+for (let i = 0; i < particleCount; i++) {
+}
+const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;'
+          Math.floor(Math.random() * 4)
+        ] as Particle['type'];'
+
+const colors = {
+          }
+          "quantum": ['#00ffff', '#0080ff', '#0040ff'],'
+          "holographic": ['#8b5cf6', '#a855f7', '#c084fc'],'
+          "neural": ['#10b981', '#059669', '#047857'],'
+          "cyberpunk": ['#ec4899', '#f97316', '#f59e0b'],'
+        };
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface Particle {
+  x: number,
+  y: number,
+  vx: number,
+  vy: number,
+  size: number,
+  opacity: number,
+  color: string,
+  type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'
+}
+
+export default function UltraFuturisticBackground2029() {
+  const canvasRef = $2;
+  const particlesRef = $2;
+  const animationRef = $2;
+  useEffect(() => {
+    const canvas = $2;
+    if (!canvas) return,
+
+    const ctx = canvas.getContext($2);
+    if (!ctx) return,
+
+    const resizeCanvas = $2;
+      canvas.height = $2;
+    resizeCanvas($2);
+    window.addEventListener($2);
+    // Initialize particles
+    const initParticles = $2;
+      const particleCount = $2;
+      for (let i = 0, i < particleCount, i++) {
+        const type = $2;
+        const colors = $2;
+          holographic: ['#8b5cf6#a855f7#c084fc'],
+          neural: ['#10b981#059669#047857'],
+          cyberpunk: ['#ec4899#f97316#f59e0b']
+        },
+
+        particles.push({
+          }
+          "x": Math.random() * canvas.width,
+          "y": Math.random() * canvas.height,
+          "vx": (Math.random() - 0.5) * 0.5,
+          "vy": (Math.random() - 0.5) * 0.5,
+          "size": Math.random() * 3 + 1,
+          "opacity": Math.random() * 0.8 + 0.2,
+          "color": colors[type][Math.floor(Math.random() * colors[type].length)],
+type
+        });
+      }
+
+      particlesRef.current = particles;
+};
+
+    initParticles();
+    // Animation loop,
+const animate = () => {
+      }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Create gradient background,
+const gradient = ctx.createRadialGradient(;
+
+canvas.width / 2,
+=======
+>>>>>>> origin/resolved-merge-conflicts
     window.addEventListener('resize', resizeCanvas);
 <<<<<<< HEAD
     // Initialize particles
@@ -235,11 +384,20 @@ const colors = {
       ctx.clearRect($2);
       // Create gradient background
       const gradient = $2;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         canvas.height / 2,
         0,
         canvas.width / 2,
         canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
       ),
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),
       gradient.addColorStop(0.3, 'rgba(6, 182, 212, 0.1)'),
@@ -404,11 +562,20 @@ canvas.width / 2,
         canvas.height / 2,
 <<<<<<< HEAD
         Math.max(canvas.width, canvas.height) / 2
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight
 };      canvas && canvas.height = window && window.innerHeight
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
@@ -429,6 +596,10 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     // Initialize particles;
     const initParticles = () => {;
       const particles: Particle[] = [];
@@ -458,6 +629,11 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
       }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
       particlesRef && particlesRef.current = particles;    };          type;
         });
       }
@@ -467,6 +643,10 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
     const animate = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       // Create gradient background;
       const gradient = ctx && ctx.createRadialGradient(;
         canvas && canvas.width / 2,;
@@ -486,11 +666,20 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -525,6 +714,13 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
       )gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)')gradient.addColorStop(0.3, 'rgba(6, 182, 212, 0.1)')gradient.addColorStop(0.6, 'rgba(139, 92, 246, 0.05)')gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)')ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particlesRef.current.forEach((particle, index) => {// Update position;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+                if (distance < 100) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
         particle.x += particle.vx;
 =======
         Math.max(canvas.width, canvas.height) / 2;
@@ -573,6 +769,10 @@ particle.x += particle.vx;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             ctx.fillStyle = particle.color;
@@ -580,6 +780,23 @@ particle.x += particle.vx;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Quantum entanglement lines,
+if (index % 10 = == 0) {
+             ;
+}
+const partner =;
+                particlesRef.current[
+                  (index + 50) % particlesRef.current.length
+                ];
+              if (partner && partner.type = == 'quantum') {'
+               ;
+}
+const distance = Math.sqrt(;
+=======
+>>>>>>> origin/resolved-merge-conflicts
       gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.8)');
       gradient && gradient.addColorStop(0 && 0.3, 'rgba(6, 182, 212, 0 && 0.1)');
       gradient && gradient.addColorStop(0 && 0.6, 'rgba(139, 92, 246, 0 && 0.05)');
@@ -653,6 +870,10 @@ particle.x += particle.vx;
                 ];
               if (partner && partner.type === 'quantum') {
                 const distance = Math.sqrt(
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   Math.pow(particle.x - partner.x, 2) +
                     Math.pow(particle.y - partner.y, 2)                );            // Quantum entanglement lines
             if (index % 10 === 0) {
@@ -703,10 +924,23 @@ if (index % 10 = == 0) {
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
+                }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 ctx.stroke();
                 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
             ctx.fill()];
               if (partner && partner.type === 'quantum') {const distance = Math && Math.sqrt(Math && Math.pow(particle && particle.x - partner && partner.x, 2) +;
@@ -724,6 +958,49 @@ ctx.stroke();
                     Math.pow(particle.y - partner.y, 2))if (distance < 100) {ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
                   ctx.lineWidth = 1;
                   ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(partner.x, partner.y)ctx.stroke()}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              }
+            break;
+
+const hue = (time * 50 + index * 10) % 360;
+            ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;`            ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;`            ctx && ctx.shadowBlur = 15;
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = $2;
+        if (particle.x > canvas.width) particle.x = $2;
+        if (particle.y < 0) particle.y = $2;
+        if (particle.y > canvas.height) particle.y = $2;
+        // Draw particle
+        ctx.save($2);
+        ctx.globalAlpha = $2;
+        // Different effects for different particle types
+        switch (particle.type) {
+          case 'quantum':
+            // Quantum particles with glow effect
+            ctx.shadowColor = $2;
+            ctx.shadowBlur = $2;
+            ctx.beginPath($2);
+            ctx.arc($2);
+            ctx.fillStyle = $2;
+            ctx.fill($2);
+            // Quantum entanglement lines
+            if (index % 10 = $2;
+              if (partner && partner.type === 'quantum') {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - partner.x, 2) + Math.pow(particle.y - partner.y, 2)
+                ),
+                if (distance < 100) {
+                  ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`,
+                  ctx.lineWidth = $2;
+                  ctx.beginPath($2);
+                  ctx.moveTo($2);
+                  ctx.lineTo($2);
+                  ctx.stroke()
+                }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -1154,10 +1431,27 @@ ctx.stroke();
                 }
               }
             }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             break,
 
           case 'holographic':
             // Holographic particles with rainbow effect
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            const time = $2;
+            const hue = $2;
+            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`,
+            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`,
+            ctx.shadowBlur = $2;
+            ctx.beginPath($2);
+            ctx.arc($2);
+            ctx.fill($2);
+=======
+>>>>>>> origin/resolved-merge-conflicts
             const time = Date.now() * 0.001
             const hue = (time * 50 + index * 10) % 360
             ctx.fillStyle = `hsl(${hue}, 70%, 60%)`,
@@ -1166,10 +1460,32 @@ ctx.stroke();
             ctx.beginPath(),
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
             ctx.fill(),
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             break,
 
           case 'neural':
             // Neural particles with network connections
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ctx.fillStyle = $2;
+            ctx.shadowColor = $2;
+            ctx.shadowBlur = $2;
+            ctx.beginPath($2);
+            ctx.arc($2);
+            ctx.fill($2);
+            // Neural network connections
+            if (index % 15 === 0) {
+
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+              const connections = particlesRef.current.filter(p => 
+=======
+>>>>>>> origin/resolved-merge-conflicts
             ctx.fillStyle = particle.color,
             ctx.shadowColor = particle.color,
             ctx.shadowBlur = 10,
@@ -1179,12 +1495,41 @@ ctx.stroke();
             
             // Neural network connections
             if (index % 15 === 0) {_const _connections = particlesRef.current.filter(p => 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 p.type === 'neural' && 
                 Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
               ),
               connections.forEach(connection => {
                 const distance = Math.sqrt(
                   Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ctx && ctx.beginPath()ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2)ctx && ctx.fill()break;if (index % 15 === 0) {const connections = particlesRef.current.filter(p =>;
+                p.type === 'neural' &&;
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80;
+              )connections.forEach(connection => {const distance = Math.sqrt(Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)case 'neural':;
+            // Neural particles with network connections;
+            ctx.fillStyle = particle.color;
+            ctx.shadowColor = particle.color;
+            ctx.shadowBlur = 10;
+            ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fill()// Neural network connections;
+            if (index % 15 === 0) {const connections = particlesRef.current.filter(p =>;
+                  p.type === 'neural' &&;
+                  Math.sqrt(Math.pow(particle.x - p.x, 2) +;
+                      Math.pow(particle.y - p.y, 2)) < 80;
+              )connections.forEach(connection => {const distance = Math.sqrt(Math.pow(particle.x - connection.x, 2) +;
+                    Math.pow(particle.y - connection.y, 2))ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`;
+                ctx.lineWidth = 0.5;
+                ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(connection.x, connection.y)return (<div className='fixed inset-0 -z-10 overflow-hidden'>;ctx.stroke()})}
+            break;
+          case 'cyberpunk':;'
+            // Cyberpunk particles with electric effect;
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 ),
                 ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`,
                 ctx.lineWidth = 0.5,
@@ -1285,10 +1630,33 @@ ctx.stroke();
             break;
           case 'cyberpunk':
             // Cyberpunk particles with electric effect
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ctx.strokeStyle = particle.color;
             ctx.lineWidth = 2;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 25;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ctx.beginPath()ctx.moveTo(particle.x - particle.size, particle.y - particle.size)ctx.lineTo(particle.x + particle.size, particle.y + particle.size)ctx.moveTo(particle.x + particle.size, particle.y - particle.size)ctx.lineTo(particle.x - particle.size, particle.y + particle.size)ctx.stroke()break;
+        }ctx.restore()})// Draw floating geometric shapes;
+      drawGeometricShapes(ctx, canvas.width, canvas.height)// Draw energy waves;
+      drawEnergyWaves(ctx, canvas.width, canvas.height)animationRef.current = requestAnimationFrame(animate)}animate(;
+  return () => {window.removeEventListener('resize', resizeCanvas)if (animationRef.current) {cancelAnimationFrame(animationRef.current)}'
+    }
+  }, [];
+  const drawGeometricShapes = ("ctx": CanvasRenderingContext2D;
+    "width": number;
+    "height": number;
+  ) => {const time = Date.now() * 0.0005;
+    // Floating hexagons;
+    }
+    for (let i = 0; i < 5; i++) {const x = width * 0.2 + Math.sin(time + i) * 100;
+=======
+>>>>>>> origin/resolved-merge-conflicts
             ctx.beginPath();
             ctx.moveTo(particle.x - particle.size, particle.y - particle.size);
             ctx.lineTo(particle.x + particle.size, particle.y + particle.size);
@@ -1633,9 +2001,18 @@ if ( {) {
               });
             }
             break;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 ctx.stroke();
               });
             }
@@ -1659,10 +2036,26 @@ ctx.stroke();
     // Floating hexagons;
     for (let i = 0; i < 5; i++) {const x = width * 0.2 + Math.sin(time + i) * 100;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const y = height * 0.3 + Math.cos(time + i * 0.7) * 80;
 
 const size = 20 + Math.sin(time * 2 + i) * 10;
       ctx.save()ctx.globalAlpha = 0.1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ctx.strokeStyle = '#00ffff';'
+      ctx.lineWidth = 1;
+      ctx.beginPath()for (let j = 0; j < 6; j++) {const angle = (j * Math.PI) / 3 + time;
+
+}
+
+const py = y + size * Math.sin(angle)if (j === 0) ctx.moveTo(px, py)else ctx.lineTo(px, py)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 1;
       ctx.beginPath()for (let j = 0; j < 6; j++) {const angle = (j * Math.PI) / 3 + time;
@@ -1671,22 +2064,80 @@ const px = x + size * Math.cos(angle;) => {
   return $3;}
 }
   const py = y + size * Math.sin(angle)if (j === 0) ctx.moveTo(px, py)else ctx.lineTo(px, py)}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ctx.closePath()ctx.stroke()ctx.restore()}
     // Floating triangles;
     for (let i = 0; i < 3; i++) {const x = width * 0.8 + Math.sin(time * 0.8 + i) * 120;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const y = height * 0.7 + Math.cos(time * 1.2 + i) * 100;
 
 const size = 15 + Math.sin(time * 1.5 + i) * 8;
       ctx.save()ctx.globalAlpha = 0.08;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ctx.strokeStyle = '#8b5cf6';'
+      ctx.lineWidth = 1;
+      ctx.beginPath()for (let j = 0; j < 3; j++) {const angle = (j * Math.PI * 2) / 3 + time;
+
+}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
       ctx.strokeStyle = '#8b5cf6';
       ctx.lineWidth = 1;
       ctx.beginPath()for (let j = 0; j < 3; j++) {const angle = (j * Math.PI * 2) / 3 + time;}
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const px = x + size * Math.cos(angle)const py = y + size * Math.sin(angle)if (j === 0) ctx.moveTo(px, py)else ctx.lineTo(px, py)}
       ctx.closePath()ctx.stroke()ctx.restore()}
   }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const drawEnergyWaves = ("ctx": CanvasRenderingContext2D;
+    "width": number;
+    "height": number;
+  ) => {const time = Date.now() * 0.001;
+    // Horizontal energy waves;
+    }
+    for (let i = 0; i < 3; i++) {ctx.save()ctx.globalAlpha = 0.05;
+      }
+      ctx.strokeStyle = `hsl(${180 + i * 60}, 70%, 60%)`;`      ctx.lineWidth = 2;
+      ctx.beginPath()for (let x = 0; x < width; x += 5) {const y =;
+          }
+          height * 0.5 +;
+          Math.sin(x * 0.01 + time + i) * 50 +;
+          Math.sin(x * 0.02 + time * 2 + i) * 25;
+        if (x === 0) ctx.moveTo(x, y)else ctx.lineTo(x, y)}
+      ctx.stroke()ctx.restore()}
+    // Vertical energy waves;
+    for (let i = 0; i < 2; i++) {ctx.save()ctx.globalAlpha = 0.04;
+      }
+      ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`;`      ctx.lineWidth = 2;
+      ctx.beginPath()for (let y = 0; y < height; y += 5) {const x =;
+          }
+          width * 0.5 +;
+          Math.sin(y * 0.01 + time + i) * 60 +;
+          Math.sin(y * 0.015 + time * 1.5 + i) * 30;
+        if (y === 0) ctx.moveTo(x, y)else ctx.lineTo(x, y)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   const drawEnergyWaves = (time = Date.now() * 0.001;
     // Horizontal energy waves;
     for (let i = 0; i < 3; i++) {ctx.save()ctx.globalAlpha = 0.05;) => {
@@ -1729,10 +2180,180 @@ const px = x + size * Math.cos(angle)const py = y + size * Math.sin(angle)if (j 
           Math.sin(y * 0.01 + time + i) * 60 +;}
           Math.sin(y * 0.015 + time * 1.5 + i) * 30;}
         if (y = == 0) ctx.moveTo(x, y)else ctx.lineTo(x, y)}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ctx.stroke()ctx.restore()}
   }
 
  ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+return (;
+<div className='fixed inset-0 -z-10 overflow-hidden'>'
+      {/* Animated gradient overlay */}
+      <motion&& motion.div,
+className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30''
+        animate={{
+          }
+          "background": [
+
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)','
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)','
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)','
+          ]
+        }}
+        transition={{
+          }
+          "duration": 8,
+"repeat": Infinity,
+"ease": 'easeInOut''
+
+          case 'cyberpunk':
+            // Cyberpunk particles with electric effect
+            ctx.strokeStyle = $2;
+            ctx.lineWidth = $2;
+            ctx.shadowColor = $2;
+            ctx.shadowBlur = $2;
+            ctx.beginPath($2);
+            ctx.moveTo($2);
+            ctx.lineTo($2);
+            ctx.moveTo($2);
+            ctx.lineTo($2);
+            ctx.stroke($2);
+            break
+        }
+
+        ctx.restore()
+      }),
+
+      // Draw floating geometric shapes
+      drawGeometricShapes($2);
+      // Draw energy waves
+      drawEnergyWaves($2);
+      animationRef.current = $2;
+    animate($2);
+    return () => {
+      window.removeEventListener($2);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+  }, []),
+
+  const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+    const time = $2;
+    // Floating hexagons
+    for (let i = 0, i < 5, i++) {
+      const x = $2;
+      const y = $2;
+      const size = $2;
+      ctx.save($2);
+      ctx.globalAlpha = $2;
+      ctx.strokeStyle = $2;
+      ctx.lineWidth = $2;
+      ctx.beginPath($2);
+      for (let j = 0, j < 6, j++) {
+        const angle = $2;
+        const px = x + size * Math.cos($2);
+        const py = y + size * Math.sin($2);
+        if (j === 0) ctx.moveTo($2);
+        else ctx.lineTo(px, py)
+      }
+      ctx.closePath($2);
+      ctx.stroke($2);
+      ctx.restore()
+    }
+
+    // Floating triangles
+    for (let i = 0, i < 3, i++) {
+      const x = $2;
+      const y = $2;
+      const size = $2;
+      ctx.save($2);
+      ctx.globalAlpha = $2;
+      ctx.strokeStyle = $2;
+      ctx.lineWidth = $2;
+      ctx.beginPath($2);
+      for (let j = 0, j < 3, j++) {
+        const angle = $2;
+        const px = x + size * Math.cos($2);
+        const py = y + size * Math.sin($2);
+        if (j === 0) ctx.moveTo($2);
+        else ctx.lineTo(px, py)
+      }
+      ctx.closePath($2);
+      ctx.stroke($2);
+      ctx.restore()
+    }
+  },
+
+  const drawEnergyWaves = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+    const time = $2;
+    // Horizontal energy waves
+    for (let i = 0, i < 3, i++) {
+      ctx.save($2);
+      ctx.globalAlpha = $2;
+      ctx.strokeStyle = `hsl(${180 + i * 60}, 70%, 60%)`,
+      ctx.lineWidth = $2;
+      ctx.beginPath($2);
+      for (let x = 0, x < width, x += 5) {
+        const y = $2;
+        if (x === 0) ctx.moveTo($2);
+        else ctx.lineTo(x, y)
+      }
+      
+      ctx.stroke($2);
+      ctx.restore()
+    }
+
+    // Vertical energy waves
+    for (let i = 0, i < 2, i++) {
+      ctx.save($2);
+      ctx.globalAlpha = $2;
+      ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`,
+      ctx.lineWidth = $2;
+      ctx.beginPath($2);
+      for (let y = 0, y < height, y += 5) {
+        const x = $2;
+        if (y === 0) ctx.moveTo($2);
+        else ctx.lineTo(x, y)
+      }
+      
+      ctx.stroke($2);
+      ctx.restore()
+    }
+  },
+
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Animated gradient overlay */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
+        animate={{
+          background: [
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)'
+          ]
+        }}
+      {/* Canvas for particle effects *
+}
+      <canvas;
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full';'
+          transition={{"duration": 4;
+            }
+            "repeat": Infinity;
+            "ease": 'easeInOut',      {/* Canvas for particle effects */}'
+      <canvas;
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full";"
+        style={{ "filter": 'blur(0.5px)' ,'
+} />;
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">;"
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return (
 <<<<<<< HEAD
 <div className='fixed inset-0 -z-10 overflow-hidden'    />
@@ -2482,8 +3103,49 @@ ease: 'easeInOut'}
       />
       {/* Additional visual layers */}"
       <div className="absolute inset-0>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {/* Quantum field ripples */}
         <motion.div
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.3, 0.1, 0.3]
+          }}
+          transition = $2;
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+        />
+        
+        {/* Neural network nodes */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition = $2;
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+        />
+      </div>
+      
+      {/* Floating orbs with glow effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key = $2;
+              top: `${30 + (i * 8)}%`,
+              filter: 'blur(1px)',
+=======
+>>>>>>> origin/resolved-merge-conflicts
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
 '
         style={{ filter: 'blur(0 && 0.5px) }}
@@ -2494,6 +3156,10 @@ ease: 'easeInOut'}
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20
       <canvas;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
           }
@@ -2510,6 +3176,27 @@ ease: 'easeInOut'}
         />
         />;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            className='absolute w-2 h-2 rounded-full bg-cyan-400''
+            style={{
+              }
+              "left": `${20 + i * 10}%``              "top": `${30 + i * ,`}%``
+              "filter": 'blur(1px)''
+              "boxShadow": '0 0 20px rgba(0, 255, 255, 0.6)''
+            }}
+            animate={{
+              }
+              "y": [0, -20, 0],
+              "opacity": [0.3, 0.8, 0.3],
+              "scale": [1, 1.2, 1]
+            }}
+
+            "duration": 4,
+            "repeat": Infinity,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         {/* Holographic matrix */}
         <motion&& motion.div"
@@ -2587,8 +3274,24 @@ ease: 'easeInOut'}
         />;
       </div>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              }
+
+              "duration": 3 + i * 0.5,
+              "repeat": Infinity,
+              "ease": 'easeInOut','
+"delay": i * 0.3
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Floating orbs with glow effects */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -2999,6 +3702,42 @@ ease: 'easeInOut',
           />
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            }}
+            animate={{"y": [0, -20, 0],"opacity": [0.3, 0.8, 0.3],"scale": [1, 1.2, 1]}}"duration": 4,"repeat": Infinity,transition={{"delay": i * 0.3;
+              }
+              "duration": 3 + i * 0.5,"repeat": Infinity,"ease": 'easeInOut',"delay": i * 0.3}}' />;
+
+        ))}
+}
+  )
+}
+        ))}}
+  )}
+              delay: i * 0.3,            }}              delay: i * 0.3;
+            }}
+          />))}
+      </div>;
+    </div>));
+}
+
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+    </div>))})</div>;
+    </div>;
+)
+              scale: [1, 1.2, 1]
+            }}
+            transition = $2;
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.3
+            }}
+          />
+>>>>>>> origin/resolved-merge-conflicts
             }}
             animate={{y: [0;, -20, 0],opacity: [0.3;, 0.8, 0.3],scale: [1;, 1.2, 1]}}duration: 4;,repeat: Infinity;,transition={{delay: i * 0.3;}
               duration: 3 + i * 0.5;,repeat: Infinity;,ease: easeInOut';,
@@ -3017,11 +3756,25 @@ ease: 'easeInOut',
 
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </div>
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        ))}
+      </div>
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
         ))}
       </div>
@@ -3058,3 +3811,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

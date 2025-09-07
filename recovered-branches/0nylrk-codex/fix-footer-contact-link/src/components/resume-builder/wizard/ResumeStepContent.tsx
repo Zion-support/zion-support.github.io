@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+return (
+    <>
+      <TabsContent value="basic-info">
+        <BasicInfoForm;
+          resumeId={resume?.id!}
+
+"
+import {TabsContent} from "@/components/ui/tabs";"
+
+=======
+<<<<<<< HEAD
 import { TabsContent } from "@/components/ui/tabs",
 import { Resume } from "@/types/resume";
 import { BasicInfoForm  } from '../forms/basic-info';
@@ -63,6 +74,7 @@ import {TabsContent} from "@/components/ui/tabs";"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {TabsContent} from "@/components/ui/tabs";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';'
 import {WorkExperienceForm} from '../forms/WorkExperienceForm';'
@@ -71,6 +83,9 @@ import {SkillsForm} from '../forms/SkillsForm';'
 import {CertificationsForm} from '../forms/CertificationsForm';'
 import {PreviewResume} from '../PreviewResume';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface ResumeStepContentProps {
 
@@ -79,6 +94,18 @@ interface ResumeStepContentProps {}
   resume: Resume;
   onNextStep: () => void;
   onPrevStep: () => void;
+<<<<<<< HEAD
+}
+
+  return (
+    <>"
+      <TabsContent value="basic-info">
+        <BasicInfoForm;
+          resumeId={resume?.id!}
+          initialData={resume?.basic_info}
+          onSave={(data) => {}
+            // Here you would typically save the data to your backend"
+=======
 }
 
   return (
@@ -146,10 +173,16 @@ export const ResumeStepContent = ({
           onComplete = $2;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             // // // console.log("Saving basic info:", data)
           }}
           onComplete={onNextStep}
         />
+<<<<<<< HEAD
+      </TabsContent>"
+      <TabsContent value="work-experience">
+
+=======
 <<<<<<< HEAD
       </TabsContent>"
       <TabsContent value="work-experience">
@@ -171,12 +204,15 @@ import { PreviewResume } from '../PreviewResume',;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
   onNextStep: () => void,;
   onPrevStep: () => void;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 export const ResumeStepContent = ({;
@@ -252,6 +288,7 @@ export const ResumeStepContent = ({;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export const ResumeStepContent = ({ ;
   activeTab;
@@ -286,6 +323,9 @@ export const ResumeStepContent = ({;
 <<<<<<< HEAD
         <WorkExperienceForm ;
 =======
+<<<<<<< HEAD
+        <WorkExperienceForm ;
+=======
 
         <WorkExperienceForm
 =======
@@ -295,11 +335,14 @@ export const ResumeStepContent = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}
 
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         />
       </TabsContent>
@@ -307,6 +350,7 @@ export const ResumeStepContent = ({;
         <EducationForm
         <EducationForm 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         />;
       </TabsContent>;
@@ -359,13 +403,19 @@ export const ResumeStepContent = ({;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         />
       </TabsContent>
@@ -381,11 +431,19 @@ export const ResumeStepContent = ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <SkillsForm
 
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
+<<<<<<< HEAD
+
+          resumeId={resume?.id!}
+          certifications={resume?.certifications |[]}
+          onComplete={onNextStep}
+          onBack={onPrevStep}
+=======
 <<<<<<< HEAD
 
 =======
@@ -397,10 +455,14 @@ export const ResumeStepContent = ({;
         <CertificationsForm
         <CertificationsForm 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         />;
       </TabsContent>;
 
+<<<<<<< HEAD
+      <TabsContent value="preview">;
+=======
       <TabsContent value="certifications">;
 
         <CertificationsForm
@@ -434,6 +496,7 @@ export const ResumeStepContent = ({;
       ;
       <TabsContent value="preview">;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <PreviewResume
           resume={resume as Resume} 
 
@@ -449,14 +512,22 @@ export const ResumeStepContent = ({;
         <PreviewResume ;
           resume={resume as Resume} ;
 
+<<<<<<< HEAD
+=======
 =======
         <PreviewResume ;
           resume={resume as Resume} ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onBack={onPrevStep}
         />;
       </TabsContent>;
     </>;
+<<<<<<< HEAD
+
+};
+
+=======
 <<<<<<< HEAD
 
 };
@@ -481,6 +552,7 @@ import {CertificationsForm} from '../forms / CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
 interface ResumeStepContentProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   active_tab: string,
   resume: Resume,
   onNextStep: () => void,
@@ -547,9 +619,13 @@ interface ResumeStepContentProps {
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
   ),;
 },; interface ResumeStepContentProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   activeTab: string;
 resume: Resume;
 onNextStep: () => void;
@@ -609,6 +685,9 @@ onPrevStep
 }/> </TabsContent> </>) 
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -620,6 +699,9 @@ onPrevStep
       </TabsContent>;
     </>;
 
+<<<<<<< HEAD
+};
+=======
 };
 =======
 }
@@ -637,3 +719,4 @@ onPrevStep
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

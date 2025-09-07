@@ -1,6 +1,124 @@
 
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from 'react';'
+
+import {useState} from 'react';'
+
+import EnhancedLayout from '../../components/layout/EnhancedLayout';'
+import { useRouter   } from 'next/router';'
+import type { GrantCategory } from '../../types/grants';'
+
+const "categories": GrantCategory[] = [;
+  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants''
+];
+
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';'
+  'Research Grants''
+];
+
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants''
+];
+
+
+}
+
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;'
+
+}
+
+const "categories": GrantCategory[] = [;
+  'Ecosystem Tools';'
+  'Talent Development';'
+  'Regional Expansion';'
+  'Research Grants''
+];
+
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+
+export default function ApplyGrantPage() {const router  = null;
+
+}
+
+export default function ApplyGrantPage() {const "categories": GrantCategory[] = [;
+  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];'
+
+}
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {const router = useRouter()const [program, setProgram] = useState<'grant' | 'incubator'>('grant')const [projectName, setProjectName] =;'
+  }
+  useState('');'
+  const [teamInfo, setTeamInfo] = useState('');'
+  const [proposalSummary, setProposalSummary] = useState('');'
+  const [timeline, setTimeline] = useState('');'
+  const [budgetAmount, setBudgetAmount]  = useState<number>(0;
+  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC';'
+  )const [supportingLinks, setSupportingLinks] = useState<string>('')const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC';'
+  )const [supportingLinks, setSupportingLinks] = useState<string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState('');'
+  const [region, setRegion] = useState('');'
+  const [sector, setSector] = useState<string>('')const [loading, setLoading] = useState(false);'
+  const [error, setError]  = useState<string | null>(null)import EnhancedLayout from '../../components / layout / EnhancedLayout';'
+import { use_router } from 'next / router';'
+import type { GrantCategory } from '../../types / grants';'
+
+const "categories": GrantCategory[] = [;
+  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants''
+];
+
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;'
+ * ApplyGrantPage - Function description;
+ */;
+function ApplyGrantPage() {const router = use_router ()const [program, set_program] = useState<'grant' | 'incubator'>('grant')const [project_name, setProjectName] = useState ('')const [team_info, setTeamInfo] = useState ('')const [proposal_summary, setProposalSummary] = useState ('')const [timeline, set_timeline] = useState ('')const [budget_amount, setBudgetAmount] = useState < number>(0)const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState ('')const [region, set_region] = useState ('')const [sector, set_sector] = useState < string>('')const [loading, set_loading] = useState (false)const [error, set_error]  =;'
+  }
+  useState < string | null>(null)const save = async ("submit": boolean) => {try {set_loading (true)set_error (null);
+}
+const resp = await fetch ('/api / grants', {"method": 'POST',"headers": { 'Content - Type': 'application / json',;'
+},"body": JSON.stringify ({program,project_name,team_info,proposal_summary,timeline,"budget_amount": Number (budget_amount || 0),budget_currency,"supporting_links": supporting_links;
+            .split ('\n').map (string => { return s.trim ()).filter (Boolean),pitchDeckUrl,region,"sector": (sector as any) || undefined,submit; }'
+        })})const data = await resp.json ()if (throw new Error (data?.error || 'Failed')) {$2;'
+}
+      router.push (`/grants/${data.id}`)} catch ("e": any) {set_error (e.message)} finally {} catch ("e": any) {set_error (e.message,`} finally {const save = async ("submit": boolean) => {try {setLoading(true)setError(null);
+}
+const resp = await fetch('/api/grants', {"method": 'POST',"headers": { 'Content-Type': 'application/json',;'
+},"body": JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,"budgetAmount": Number(budgetAmount || 0),budgetCurrency,"supportingLinks": supportingLinks;
+            .split('\n').map(s = > s && s.trim()).filter(Boolean),pitchDeckUrl,region,"sector": (sector as any) || undefined,submit})};'
+  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch ("e": any) {setError(e && e.message)} finally {setLoading(false,`}          "budgetAmount": Number(budgetAmount || 0),program;
+
+const "categories": GrantCategory[] = [;
+  'Ecosystem Tools','
+  'Talent Development','
+  'Regional Expansion','
+  'Research Grants''
+];
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+export default function ApplyGrantPage() {;
+
+}
+
+import { useState  } from 'react';'
+import { useRouter  } from 'next/router';'
+
+const "categories": GrantCategory[] = [;
+  'Ecosystem Tools''
+  'Talent Development''
+  'Regional Expansion''
+  'Research Grants''
+];
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import { useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -312,12 +430,26 @@ pr-12243
 ];
 
 const categories: GrantCategory[] = [Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools,
   Talent Development',
   'Regional Expansion,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+
+export default function ApplyGrantPage() {;
+pr-12243
+=======
+>>>>>>> origin/resolved-merge-conflicts
 pr-12243
   const router = useRouter();
   const [program, setProgram] = useState<grant' | 'incubator>(grant');
@@ -349,6 +481,10 @@ pr-12243
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const [program, setProgram] = useState<'grant' | 'incubator'>('grant');'
 
@@ -358,6 +494,31 @@ const [teamInfo, setTeamInfo] = useState('');'
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+  const [supportingLinks, setSupportingLinks] = useState<string>('');
+  const [pitchDeckUrl, setPitchDeckUrl] = useState('');
+  const [region, setRegion] = useState('');
+  const [sector, setSector] = useState<string>('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const save = async (submit: boolean) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const resp = await fetch('/api/grants', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -512,6 +673,10 @@ const save = async (submit: boolean) => {
           sector: (sector as any) || undefined}
           submit}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         })
       });
 
@@ -536,6 +701,15 @@ const data = await resp.json ();
     try {;
       setLoading(true);
       setError(null),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const resp = await fetch('/api/grants', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
       const resp = await fetch('/api/grants', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
@@ -544,6 +718,10 @@ const data = await resp.json ();
         headers: { 'Content-Type': 'application/json' },;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const resp = await fetch('/api/grants', {;
         method: 'POST',;}
@@ -569,6 +747,16 @@ const resp = await fetch('/api/grants', {;
         }),;
       });
       const data = await resp && resp.json();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          sector: (sector as any) || undefined;,;}
+          submit,;}
+        }),;
+      });
+      const data = await resp && resp.json();'
+=======
+>>>>>>> origin/resolved-merge-conflicts
       const data = await resp && resp.json();'
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
       router && router.push(`/grants/${data && data.id}`);
@@ -618,10 +806,21 @@ const resp = await fetch('/api/grants', {;
     } finally {
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 program;
     } catch (e: any) {}
       setError(e && e.message);}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    } finally {;}
+      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0);,;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     } finally {}
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0);,
 =======
@@ -638,12 +837,34 @@ const data = await resp && resp.json();
     } finally {;}
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "budgetAmount": Number(budgetAmount || 0),budgetCurrency;
+          "budgetAmount": Number(budgetAmount || 0),
+          budgetCurrency;
+          "supportingLinks": supportingLinks;
+            .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          "budget_amount": Number (budget_amount || 0),budget_currency;'
+          "supporting_links": supporting_links;
+            .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;'
+          region;"sector": (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch ("e": any) {setError(e && e.message)} finally {setLoading(false)}}`    }
+ 
+}<textarea;
+            className='mt-1 w-full border rounded p-2';'
+            .split ('\n');'
+            .map ((s) => s.trim ());
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           budgetAmount: Number(budgetAmount || 0),
           budgetCurrency;
@@ -694,12 +915,22 @@ pr-12243
             .split ('\n');
             .map ((s) =    /> s.trim ());
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             .filter (Boolean);
           pitchDeckUrl;
           region;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "sector": (sector as any) || undefined,;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
@@ -729,13 +960,26 @@ const data = await resp && resp.json();
     }
 pr-12243
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           submit})});
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
       setLoading(false);
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
   }
 
@@ -770,6 +1014,32 @@ pr-12243
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <textarea,
+className='mt-1 w-full border rounded p-2''
+            rows={3}
+            value={teamInfo}
+          <textarea;
+            className='mt-1 w-full border rounded p-2';'
+            rows={6}
+            value={proposalSummary}
+            <input;
+              type='number';'
+              className='mt-1 w-full border rounded p-2';'
+              value={budgetAmount}
+          <textarea;
+            className='mt-1 w-full border rounded p-2';'
+            rows={3}
+            value={supportingLinks}{error && <div className='text-sm text-red-600'>{error}</div>}'
+        <div className='flex gap-3'>;'
+            onChange={e => { return setSupportingLinks(e && e.target.value)}
+          />; }
+        </label>;
+        <label className='text-sm'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <textarea;
 className='mt-1 w-full border rounded p-2'
             rows={3}
@@ -796,11 +1066,20 @@ className='mt-1 w-full border rounded p-2'
           />;
         </label>;'
         <label className='text-sm'>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           Pitch Deck URL;
           <input'
             className='mt-1 w-full border rounded p-2'
             value={pitchDeckUrl}
           <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
     }
@@ -813,10 +1092,29 @@ className='mt-1 w-full border rounded p-2'
         <div className='flex gap-3'>;
           <button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             disabled={loading}
             onClick={() => save(false)}'
             className='px-4 py-2 border rounded disabled:opacity-50';
           >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </label>;
+        <label className='text-sm' />;
+          Pitch Deck URL;
+          <input;
+            className='mt-1 w-full border rounded p-2';'
+            value={pitchDeckUrl}
+          <button;
+            disabled={loading}
+            onClick={() => save(false)}
+            className='px-4 py-2 border rounded "disabled":opacity-50'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
             value={supportingLinks}{error && <div className='text-sm text-red-600'    />{error}</div>}
         <div className='flex gap-3'    />;
@@ -833,6 +1131,10 @@ className='mt-1 w-full border rounded p-2'
             onClick={() =    /> save(false)}
             className='px-4 py-2 border rounded disabled:opacity-50'>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             Save Draft;
           </button>;
@@ -840,6 +1142,12 @@ className='mt-1 w-full border rounded p-2'
             disabled={loading}
 <<<<<<< HEAD
             onClick={() => save(true)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            className='px-4 py-2 bg-blue-600 text-white rounded "disabled":opacity-50'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
           >;
             Submit for Review;
@@ -935,6 +1243,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() =    /> save(true)}
 >>>>>>> origin/chore/fix-lint-and-merge
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             Submit for Review;
           </button>        </div>;
@@ -963,6 +1275,12 @@ const _save = async (_submit: boolean) => {try {setLoading(true);,setError(null)
 
 }
   return (<EnhancedLayout />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<h1 className='text-2xl font-semibold mb-4' />;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <h1 className='text-2xl font-semibold mb-4 />;
 =======
   )<EnhancedLayout    />;
@@ -991,6 +1309,10 @@ const _save = async (_submit: boolean) => {try {setLoading(true),setError(null);
   return (<EnhancedLayout    />;
 <h1 className='text-2xl font-semibold mb-4'    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         body: JSON.stringify({
           program;
 projectName,
@@ -1015,15 +1337,31 @@ const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed);
       router.push(`/grants/${data.id}`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    } catch (e: any) {;}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     } catch (e: any) {}
 =======
     } catch (e) {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       setError(e.message);}
     } finally {}
       setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
           budgetCurrency;
           supportingLinks: supportingLinks;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            .split('\n')
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
             .split('\n')
             .split(\n')
@@ -1033,6 +1371,10 @@ const data = await resp.json();
           supportingLinks: supportingLinks
             .split('\n')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             .map((s) => s.trim())
             .filter(Boolean);
           pitchDeckUrl;
@@ -1043,21 +1385,39 @@ const data = await resp.json();
           submit})});
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Failed');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           sector: (sector as any) |undefined
           submit})});
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       router.push(`/grants/${data.id}`)
     } catch (e: any) {
       setError(e.message)
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
     }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
   }
 
@@ -1117,10 +1477,23 @@ proposalSummary
             .split('\n')'
             .map(s => { return s.trim())
             .filter(Boolean)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          pitchDeckUrl,
+region
+          "sector": (sector as any) |undefined,
+submit
+=======
+>>>>>>> origin/resolved-merge-conflicts
           pitchDeckUrl
           region
           sector: (sector as any) |undefined
           submit
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         })
      
 }); }
@@ -1131,7 +1504,16 @@ const data = await resp.json();
       }
       setError(e.message);
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
+=======
+<<<<<<< HEAD
+      }
+      setLoading(false);    }          "budgetAmount": Number(budgetAmount |0)
+=======
+      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           budgetCurrency;
           'supportingLinks': supportingLinks
             .split('\n')'
@@ -1158,6 +1540,14 @@ const data = await resp.json();
       setLoading(false)}
 >>>>>>> origin/chore/fix-lint-and-merge
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+ 
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
 =======
   }
@@ -1401,6 +1791,10 @@ const data = await resp.json();
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   return (
     <EnhancedLayout>
@@ -1414,6 +1808,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <select;
               className=mt-1 w-full border rounded p-2';
               value={program}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              onChange={e => { return setProgram(e.target.value as any)}
+            >; }
+              <option value='grant'>Grant</option>;'
+              <option value='incubator'>Incubator</option>;'
+            </select>;
+          </label>;"
+          <label className="text-sm">Region;"
+            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;
+          </label>;
+        </div>;"
+        <label className="text-sm">Supporting Links (one per line);"
+          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
+        </label>;"
+        <label className="text-sm">Pitch Deck URL;"
+          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               onChange={e => setProgram(e.target.value as any)}
 pr-12243
 
@@ -1652,6 +2066,10 @@ pr-12243
   );
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 }
 
@@ -1757,6 +2175,32 @@ disabled={loading}
             onClick={() => save(true)}
             className='px-4 py-2 bg-blue-600 text-white rounded 'disabled':opacity-50'>'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            Submit for Review;
+          </button>        </div>;
+      </div>;
+    </EnhancedLayout>;
+  )</button>;
+        </div>;
+    </EnhancedLayout>;
+  )<option value="USDC">USDC</option>;"
+            className='px-4 py-2 bg-blue-600 text-white rounded "disabled":opacity-50''
+          >
+            Submit for Review
+          </button>        </div>
+      </div>
+    </EnhancedLayout>
+  );
+
+
+              <option value="USDC">USDC</option>;"
+              <option value="ZION$">ZION$</option>;"
+            </select>;
+          </label>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
     }
 
@@ -1855,12 +2299,30 @@ disabled={loading}
             <input className=\"mt-1 w-full border rounded p-2\" value={region} onChange={(e) =    /> setRegion(e && e.target.value)} placeholder=\"e && e.g., LATAM, EU, Global\" />;
           </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <label className="text-sm">Region;"
             <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;"
           </label>;
         </div>;
         <label className='text-sm'>Supporting Links (one per line)<textarea className='mt-1 w-full border rounded p-2' rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;'
         </label>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <label className="text-sm">Pitch Deck URL;"
+          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;"
+        </label>;))ursor/fix-website-loading-errors-and-merge-6662;
+  )}            </select>;
+          </label>;
+          <label className="text-sm">Sector;"
+            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>;"
+              <option value="">Select sector</option>;"
+        </label>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
         <label className="text-sm">Pitch Deck URL;
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
 =======
@@ -1940,6 +2402,10 @@ disabled={loading}
 
 
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   return (
     <EnhancedLayout>
@@ -1993,15 +2459,32 @@ disabled={loading}
         </label>
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 
 );
 }
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 }
@@ -2023,6 +2506,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
   );
 }
@@ -2042,10 +2533,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 "
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   );
 }
 "
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2053,3 +2553,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

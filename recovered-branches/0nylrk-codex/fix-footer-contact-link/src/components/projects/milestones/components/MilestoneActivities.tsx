@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+import React from "react";
+interface MilestoneActivitiesProps {}
+  projectId: string;
+}
+export /**;
+ * MilestoneActivities - Function description;
+ */
+function MilestoneActivities() {}
+  return <div > Activity will be shown here</div>;
+}
+
+=======
+<<<<<<< HEAD
 
 import React from 'react';
 interface MilestoneActivitiesProps {
@@ -30,10 +43,13 @@ interface MilestoneActivitiesProps {;
   projectId: string;
 
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
 
+<<<<<<< HEAD
+=======
 }
 ;
 
@@ -79,6 +95,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   projectId: string;
 interface MilestoneActivitiesProps {;
 }
@@ -94,6 +111,15 @@ export /**
  */
 function MilestoneActivities() {
   return <div > Activity will be shown here</div>;
+<<<<<<< HEAD
+  return <div>Activity will be shown here</div>;
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+
+}
+;
+=======
   return <div>Activity will be shown here</div>;
 =======
 =======
@@ -111,6 +137,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 }
 ;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   projectId: string
 
 interface MilestoneActivitiesProps {;
@@ -131,6 +158,9 @@ interface MilestoneActivitiesProps {;
   return <div>Activity will be shown here</div>;
 
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 <<<<<<< HEAD
@@ -139,3 +169,4 @@ interface MilestoneActivitiesProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -5,15 +5,24 @@ import { useAuth } from "@/hooks/useAuth",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 interface PaymentButtonProps {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 interface PaymentButtonProps {
 
+<<<<<<< HEAD
+  amount: number
+  serviceId: string
+  providerId: string
+
+=======
 <<<<<<< HEAD
   amount: number
   serviceId: string
@@ -42,6 +51,7 @@ interface PaymentButtonProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
@@ -49,16 +59,22 @@ interface PaymentButtonProps {;
   redirectUrl?: string;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   serviceId;
   providerId;
 "
+<<<<<<< HEAD
+=======
 =======
 export function PaymentButton(): any ({;
   amount;
   serviceId;
   providerId;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   buttonText = "Purchase";
   className;
   onPaymentInitiated;
@@ -67,6 +83,9 @@ export function PaymentButton(): any ({;
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   amount: number;
   serviceId: string;
@@ -75,6 +94,8 @@ export function PaymentButton(): any ({;
       return;
     }
 
+<<<<<<< HEAD
+=======
 =======
   const handlePaymentClick = async () => {;
     if (!isAuthenticated) {;
@@ -108,12 +129,15 @@ import { useNavigate } from "react-router-dom",
 interface PaymentButtonProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   amount: number,
   serviceId: string,
   providerId: string,
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   redirectUrl?: string
 }
@@ -266,6 +290,7 @@ export function PaymentButton({;
 
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function PaymentButton({;
   amount;
@@ -310,7 +335,10 @@ export function PaymentButton() { return null; }
       if (onPaymentInitiated) {;
         onPaymentInitiated();
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
 
           amount,
@@ -319,6 +347,11 @@ export function PaymentButton() { return null; }
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
+<<<<<<< HEAD
+
+      if (error) {
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -333,10 +366,81 @@ export function PaymentButton() { return null; }
       if (error) {
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
+<<<<<<< HEAD
+
+import { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { cn } from '@/lib / utils';
+import { use_auth } from '@/hooks / use_auth';
+import { toast } from '@/hooks / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { Loader2 } from './lucide-react';
+
+import { use_navigate } from './react-router-dom';
+interface PaymentButtonProps {}
+
+  amount: number,
+  service_id: string,
+  provider_id: string,
+  button_text?: string;
+  class_name?: string;
+  onPaymentInitiated?: () => void;
+  redirect_url?: string;
+}
+
+  const [is_processing, setIsProcessing] = useState (false);
+  const { is_authenticated, user } = use_auth ();
+  const navigate = use_navigate ();
+;
+
+        state: { from: window.location.pathname }
+      });
+      return;
+    }
+
+          amount;
+          service_id;
+          provider_id,
+          user_id: user?.id,
+          success_url: redirect_url || window.location.href,
+          cancel_url: window.location.href}}),
+
+        throw new Error ("No checkout URL returned");
+      }
+    } catch (error) {}
+"
+      console.error ("Payment error:", error);
+      toast ({"
+        title: "Payment error","
+        description: "There was a problem initiating your payment. Please try again.","
+        variant: "destructive"});
+
+    try {;
+      setIsProcessing(true);
+
+      if (onPaymentInitiated) {;
+        onPaymentInitiated();
+      }
+
+      // Reset button state after a short delay
+
+      setTimeout(() => {
+
+        setIsProcessing(false)
+      }, 1500)
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn("
+        "relative min-w-[120px]";
+
+;
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -472,6 +576,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Call the create-checkout edge function;"
       const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;
         body: {;
@@ -481,6 +586,27 @@ if ( {) {
           userId: user?.id,;
           successUrl: redirectUrl || window && window.location.href,;
           cancelUrl: window && window.location.href}}),;
+<<<<<<< HEAD
+
+        variant: "destructive"});
+    } finally {;
+
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn("
+        "relative min-w-[120px]",
+
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]",
+
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+
+        "relative min-w-[120px]"
+
+=======
 <<<<<<< HEAD
       if (error) {;
         throw error;
@@ -507,11 +633,16 @@ if ( {) {
       console && console.error("Payment error:", error);
     }
   }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
+<<<<<<< HEAD
+        "relative min-w-[120px]"
+
+=======
         "relative min-w-[120px]";
 
 ;
@@ -615,8 +746,23 @@ if ( {) {
         buttonText;
       )}
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         className
+
+      )}>;
+      {isProcessing ? (;
+        <>;"
+
+          <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+          Processing...;
+        </>;
+      ) : (;
+        buttonText;
       )}
+
+    </Button>;
+  );
+
     >
       {isProcessing ? (
         <>
@@ -627,6 +773,46 @@ if ( {) {
         buttonText
       )}
 
+<<<<<<< HEAD
+}
+
+;
+
+    </Button>;
+  );
+
+    </Button>;
+  );
+
+}
+}
+
+    </Button>;
+  );
+
+    </Button>;
+  );
+
+"
+import { useState } from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { cn } from "@/lib/utils",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { toast } from "@/hooks/use-toast",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { Loader2 } from "lucide-react",;"
+
+import { useNavigate } from "react-router-dom",;
+;
+interface PaymentButtonProps {;
+  amount:number,;
+  serviceId:string,;
+  providerId:string,;
+  buttonText?:string,;
+  className?:string,;
+  onPaymentInitiated?:() => void,;
+  redirectUrl?:string;
+=======
     </Button>;
   );
 
@@ -705,9 +891,13 @@ interface PaymentButtonProps {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
+
+=======
 =======
 ;
   return (
@@ -756,6 +946,7 @@ export function PaymentButton({;
   redirectUrl} PaymentButtonProps) {;
   const [isProcessing, setIsProcessing] = useState(false),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { isAuthenticated, user } = useAuth(),;
   const navigate = useNavigate(),;
   ;
@@ -764,11 +955,15 @@ export function PaymentButton({;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
       toast({;
         title:"Authentication required",;
         description:"Please sign in to make a purchase."}),;
       ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       navigate("/login", { ;
         state:{ from:window.location.pathname } ;
       }),;
@@ -785,13 +980,20 @@ export function PaymentButton({;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
       // Call the create-checkout edge function;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const { data, error } = await supabase.functions.invoke("create-checkout", {;
         body:{;
           amount,;
           serviceId,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           providerId,;
           userId: user?.id,;
@@ -815,6 +1017,8 @@ export function PaymentButton({;
   return (;
     <Button;
 
+<<<<<<< HEAD
+=======
 =======
           providerId,;
           userId:user?.id,;
@@ -852,12 +1056,16 @@ export function PaymentButton({;
       disabled={isProcessing}
       className={cn(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "relative min-w-[120px]",;
         className;
       )}
     >;
       {isProcessing ? (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
           Processing...;
@@ -869,6 +1077,8 @@ export function PaymentButton({;
 
     </Button>;
 
+<<<<<<< HEAD
+=======
 =======
         <>;
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
@@ -880,12 +1090,16 @@ export function PaymentButton({;
     </Button>;
   ),; interface PaymentButtonProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   amount: number;
 serviceId: string;
 providerId: string;
 buttonText?: string;
 className?: string;
 onPaymentInitiated?: () => void;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -921,11 +1135,15 @@ if (onPaymentInitiated) {
 }= await supabase.functions.invoke ("create-checkout", {
   body: {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   amount;
 serviceId;
 providerId;
 userId: user?.id;
 successUrl: redirectUrl || window.location.href;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -941,17 +1159,23 @@ if (error) {
 }finally {
   //Reset button state after a short delay setTimeout ( () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setIsProcessing (false) 
 }, 1500) 
 }
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 return (<Button) 
 
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) 
 
 }</Button>) 
+<<<<<<< HEAD
+=======
 =======
 return (<Button) 
 }> {
@@ -959,11 +1183,15 @@ return (<Button)
 }</Button>) 
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Button>;
   );
     </Button>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -973,3 +1201,4 @@ return (<Button)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

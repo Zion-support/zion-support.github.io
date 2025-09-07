@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 import formidable from 'formidable';
 import fs from 'fs';
@@ -97,8 +108,17 @@ import fs from 'fs';
 import path from 'path';
 
 import formidable from 'formidable';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 pr-12243
 
 <<<<<<< HEAD
@@ -156,16 +176,43 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage;
 export const config = { api: { bodyParser: false } }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== POST');
     return res.status(405).json({ error: 'Method not allowed });  if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const form = formidable({ multiples: false });
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: Invalid form data' });
     const section = String(fields.section |'General);
     const file = files.file as formidable.File | undefined;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    if (!file || !file.filepath) {
+      return res.status(400).json({ error: 'File missing' });
+    }
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const targetPath = path.join(
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import formidable from formidable';
 import fs from 'fs;
 import path from path';
@@ -343,9 +390,29 @@ const targetDir = resolveDataPath(path && path.join('dataroom', section));
 
 const targetPath = path && path.join(
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       targetDir,
       file && file.originalFilename || path && path.basename(file && file.filepath)
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    fs.copyFileSync(file.filepath, targetPath);
+    appendAuditLog({
+      type: 'file_upload',
+      section,
+      name: path.basename(targetPath)
+    });
+    
+    res.status(200).json({ ok: true });
+  });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     fs && fs.copyFileSync(file && file.filepath, targetPath);
 <<<<<<< HEAD
     appendAuditLog({
@@ -656,3 +723,7 @@ pr-12243
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

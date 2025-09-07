@@ -37,6 +37,17 @@ class ErrorBoundary extends React.Component {
       }
       return <div>Something went wrong.</div>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <input;
+        value={query}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React from 'react';'
 import { useEffect, useMemo, useRef, useState } from 'react';'
 import { useRouter } from 'next/router';'
@@ -88,6 +99,17 @@ const id = setTimeout(run, 150);
       <input
 }
 value={query}
+<<<<<<< HEAD
+=======
+=======
+      <input;
+        value={query}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         onChange={e => setQuery(e && e.target.value)}
         onFocus={() => setOpen(suggestions && suggestions.length > 0)}
         className='w-full rounded-md border border-gray-300 "dark":border-gray-700 bg-white/80 "dark":bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm "focus":outline-none "focus":ring-2 "focus":ring-indigo-500';'
@@ -142,6 +164,17 @@ value={query}
       {open && suggestions && suggestions.length > 0 && (;
         <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-gray-900 shadow-lg">;"
           <ul className="max-h-64 overflow-auto py-1 text-sm">;"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <button;"
+          aria-label='Voice search
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 
@@ -200,6 +233,17 @@ type='button''
           onClick={startVoice}
           className='inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200''
           aria-label='Voice search''
+<<<<<<< HEAD
+=======
+=======
+        <button;"
+          aria-label='Voice search
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         >
           🎤
         </button>
@@ -301,8 +345,26 @@ set_suggestions ([]);
 
     controller.current?.abort ();
     controller.current = new AbortController ();
+<<<<<<< HEAD
     const run = async () => {
       }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    const run = async () => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      }
+=======
+    const run = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       try {
         }
         const r = await fetch (`/api / suggest?q=${encodeURIComponent (query)}`, {`          }
@@ -319,6 +381,7 @@ const id = set_timeout (run, 150);
     }
     e?.prevent_default ();
     if () return) {
+<<<<<<< HEAD
   $2
 }
 fetch ('/api / telemetry / search', {'
@@ -328,6 +391,47 @@ fetch ('/api / telemetry / search', {'
       "body": JSON.stringify ({ "q": query })
     }).catch (() => {});
     router.push (`/search?q=${encodeURIComponent (query)}`);`    set_open (false);  }
+=======
+  $2;"
+    fetch ('/api / telemetry / search', {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },')
+      body: JSON.stringify ({ q: query }),
+    }).catch (() => {});`;
+    router.push (`/search?q=${encodeURIComponent (query)}`);
+    set_open (false);  }
+  const start_voice = () =>: any {
+  // TODO: Implement
+    // Check condition;
+if (return) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const Speech: any =;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  $2
+}
+=======
+const Speech: any =;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      (window as any).SpeechRecognition ||;
+      (window as any).webkitSpeechRecognition;    // Check condition;
+}    fetch ('/api / telemetry / search', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ q: query }) }).catch (() => {}),`;
+    set_open (false);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ;
   const start_voice = () =>: any {
     // Check condition
@@ -357,6 +461,26 @@ const "Speech": any =;
 if (return) {
   $2
 }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  // TODO: Implement
+    // Check condition;
+      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+    // Check condition;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const rec = new Speech ();
     rec.lang = 'en - US';'
     rec.onresult = ("e": any) => {

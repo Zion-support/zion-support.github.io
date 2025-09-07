@@ -35,11 +35,20 @@ export interface ContractTemplate {
 
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
 export interface ContractTemplate {;
+<<<<<<< HEAD
+
+  id: string;
+  title: string;
+  template_data: ContractFormValues;
+  is_default: boolean;
+
+=======
 export interface ContractTemplate {  id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   created_at: string,
   updated_at: string;
 
@@ -53,6 +62,34 @@ export interface ContractTemplate {  id: string;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
+<<<<<<< HEAD
+
+export interface ContractTemplate {
+
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export interface ContractTemplate {;
+export interface ContractTemplate {  id: string;
+  title: string;
+  template_data: ContractFormValues;
+  is_default: boolean;
+
+  created_at: string,
+  updated_at: string;
+
+}
+  created_at: string,
+  updated_at: string
+
+export interface ContractTemplate {
+  id: string,
+  title: string,
+  template_data: ContractFormValues,
+  is_default: boolean,
+  created_at: string,
+  updated_at: string
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
+export interface ContractTemplate {;
+=======
   created_at: string,
   updated_at: string
 <<<<<<< HEAD
@@ -77,6 +114,7 @@ export interface ContractTemplate {
   updated_at: string
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
 export interface ContractTemplate {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string,;
   title: string,;
   template_data: ContractFormValues,;
@@ -86,6 +124,9 @@ export interface ContractTemplate {;
   updated_at: string;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;
 }
@@ -99,6 +140,9 @@ export interface ContractTemplate {;
 ;
 }
 
+<<<<<<< HEAD
+"
+=======
 "
 =======
 <<<<<<< HEAD
@@ -116,3 +160,4 @@ export interface ContractTemplate {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

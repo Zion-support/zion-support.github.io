@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+import axios from 'axios';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -13,6 +22,10 @@ import axios from 'axios';
 >>>>>>> merged-prs-20250907-203621
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 const PUBLIC_DIR = path.join(process.cwd(), 'publicpodcast');
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
@@ -22,6 +35,15 @@ function ensureStorage() {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+
+  const { episodeId } = req.body || {};
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 <<<<<<< HEAD
@@ -117,6 +139,10 @@ export default async function handler() { return null; }
   ensureStorage();
 <<<<<<< HEAD
   const { episodeId } = req.body |{}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex(e => e.id === episodeId);  const idx = episodes.findIndex((e) => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: Episode not found });
@@ -124,12 +150,50 @@ export default async function handler() { return null; }
   const text = episode.transcript as string;
   const elevenKey = process.env.ELEVENLABS_API_KEY;
   const playhtKey = process.env.PLAYHT_API_KEY;
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const baseFilename = `${episode.id}-${Date.now()}`;
   const mp3Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
   const wavPath = path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const { episodeId } = req.body |{}
+
+const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];'
+
+const idx = episodes.findIndex(e => { return e.id === episodeId); }
+  if (idx = == -1);
+return res.status(404).json({ "error": 'Episode not found',;'
+});
+
+const episode = episodes[idx];
+
+const text = episode && episode.transcript as string;
+
+const elevenKey = process && process.env.ELEVENLABS_API_KEY;
+
+const playhtKey = process && process.env.PLAYHT_API_KEY;
+
+const baseFilename = `${episode && episode.id}-${Date && Date.now()}`;`
+const mp3Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp3`);`
+const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`);`
+const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);`
+  let mp3Created = false;
+
+  let mp3Created = false;
+  try {
+=======
+>>>>>>> origin/resolved-merge-conflicts
   let mp3Created = false;
 
 =======
@@ -401,8 +465,79 @@ if ( {) {
       // Stub silent mp3 if no provider configured
       fs.writeFileSync(mp3Path, Buffer.alloc(0));
       mp3Created = true
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+
+      const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';'
+
+const resp = await axios.post(;
+`"https": //api.elevenlabs.io/v1/text-to-speech/${voiceI,`}`,`        {
+          }
+          text,
+          "model_id": process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2','
+        },
+        {
+          }
+          "responseType": 'arraybuffer''
+          "headers": {
+            }
+            "Authorization": `Bearer ${playhtKey}``
+            'Content-Type': 'application/json''
+
+          }
+       
+}
+      )fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data))mp3Created = true;
+    } else {// Stub silent mp3 if no provider configured;
+      }
+      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))mp3Created = true;
+    }
+  if (req.method !== 'POST') return res.status(405).json($2);
+  ensureStorage($2);
+  const { episodeId } = req.body || {},
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const idx = $2;
+  if (idx === -1) return res.status(404).json($2);
+  const episode = $2;
+  const text = $2;
+  const elevenKey = $2;
+  const playhtKey = $2;
+  const baseFilename = $2;
+  const mp3Path = path.join($2);
+  const wavPath = path.join($2);
+  const mp4Path = path.join($2);
+  let mp3Created = $2;
+  try {
+    if (elevenKey) {
+      const voiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';
+      const resp = await axios.post(
+        `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
+        { text, model_id: process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2' };
+        { responseType: 'arraybuffer', headers: { 'xi-api-key': elevenKey, 'Content-Type': 'application/json' } }
+      );
+      fs.writeFileSync(mp3Path, Buffer.from(resp.data));
+      mp3Created = true
+    } else if (playhtKey) {
+      const resp = await axios.post(
+        'https://api.play.ht/api/v2/tts';
+        { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' };
+        { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }
+      );
+      fs.writeFileSync(mp3Path, Buffer.from(resp.data));
+      mp3Created = true
+    } else {
+          model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
+        },
+=======
+>>>>>>> origin/resolved-merge-conflicts
     if (mp3Created) {
       // Simple placeholders for WAV/MP4, real conversion would use ffmpeg
       fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
@@ -485,6 +620,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
         },
           model_id: process && process.env.ELEVENLABS_MODEL || eleven_multilingual_v2'},
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {}
         {'
           responseType: arraybuffer
@@ -509,6 +648,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
       fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+
+    const publicBase = '/podcast/' + baseFilename;
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
+    episode.audio = {
+}
+"mp3Url": publicBase + '.mp3','
+      "wavUrl": publicBase + '.wav','
+      "mp4Url": publicBase + '.mp4','
+    };
+
+    episodes[idx] = episode;
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');'
+
+
+    const publicBase = '/podcast/' + baseFilename;
+    episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
+    }
+
+    const publicBase = '/podcast/' + baseFilename;
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
+  } catch ("error": any) {
+    }
+=======
+>>>>>>> origin/resolved-merge-conflicts
     }
 =======
     if (mp3Created) {
@@ -753,10 +922,22 @@ if ( {) {$2;
     // Check condition;
 if ( {) {$2;
       .json({ error: error?.message || 'Synthesis failed' });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     console.error(error);
 return res;
       .status(500)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      .json({ "error": error?.message || 'Synthesis failed','
+});
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     return res.status(200).json({ episode })
   } catch (error: any) {
@@ -796,3 +977,7 @@ return res.status(200).json({ episode });
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

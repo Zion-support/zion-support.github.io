@@ -6,6 +6,8 @@ import type { SafeRef } from &quot;../sidebar.types&quot;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -18,6 +20,7 @@ import type { SafeRef } from &quot;../sidebar.types&quot;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
@@ -38,6 +41,9 @@ export const SidebarInput = React.forwardRef<
 
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -79,6 +85,7 @@ export const SidebarInput = React.forwardRef<
         "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         props.className
 
       )}
@@ -86,6 +93,31 @@ export const SidebarInput = React.forwardRef<
     />
   )
 })
+<<<<<<< HEAD
+
+      data - sidebar=&quot;input & quot;
+      className={cn (
+        &quot;h - 8 w - full bg - background shadow - none focus - visible:ring - 2 focus - visible:ring - sidebar - ring & quot;,
+        props.class_name)}
+      {...props}
+    />);
+});
+SidebarInput.display_name = &quot;SidebarInput & quot;
+;
+export const SidebarHeader = React.forward_ref<;
+  HTMLDivElement,
+  React.ComponentProps<&quot;div & quot;>;
+
+SidebarInput.displayName = "SidebarInput"
+
+export const SidebarHeader = React.forwardRef<
+
+>((props, ref) => {
+  return (
+
+    <Input;
+      ref={ref}
+=======
 <<<<<<< HEAD
 SidebarInput.displayName = $2;
 =======
@@ -111,8 +143,10 @@ export const SidebarHeader = React.forward_ref<;
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >((props, ref) => {
+
   return (
 
     <Input;
@@ -157,7 +191,11 @@ export const SidebarSeparator = React.forwardRef<
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     />);
 });
 SidebarFooter.display_name = &quot;SidebarFooter & quot;
@@ -167,9 +205,13 @@ export const SidebarSeparator = React.forward_ref<;
 <<<<<<< HEAD
 >((props, ref) => {}
 =======
+<<<<<<< HEAD
+>((props, ref) => {}
+=======
   React.ComponentProps < typeof Separator>;
 >((props, ref) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 SidebarInput.displayName = &quot;SidebarInput&quot;
 export const SidebarHeader = React.forwardRef<
@@ -178,6 +220,9 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >((props, ref) => {}
   return (
     <Separator;
@@ -189,6 +234,20 @@ SidebarInput.displayName = "SidebarInput"
 "
 
     <div;
+<<<<<<< HEAD
+
+>((props, ref) => {
+  return (
+    <div
+      ref={ref}
+      data-sidebar="content"
+      className={cn(
+
+        props.className
+
+"
+
+=======
 =======
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement,;
@@ -321,6 +380,7 @@ SidebarContent.displayName = "SidebarContent"
 export const SidebarGroup = React.forwardRef<
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >((props, ref) => {
 
   return (
@@ -331,6 +391,8 @@ export const SidebarGroup = React.forwardRef<
       className={cn (&quot;relative flex w - full min - w-0 flex - col p - 2&quot;, props.class_name)}
       {...props}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   React.ComponentProps<"div">
 >((props, ref) => {}
@@ -484,17 +546,27 @@ export const SidebarGroup = React.forwardRef<
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   React.ComponentProps<"div">
->((props, ref) => {
+>((props, ref) => {}
   return (
+<<<<<<< HEAD
+    <div;
+      ref={ref}"
+      data-sidebar="group""
+=======
     <div
       ref={ref}
       data-sidebar="group"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       className={cn("relative flex w-full min-w-0 flex-col p-2", props.className)}
       {...props}
     />
   )
+<<<<<<< HEAD
+})
+=======
 <<<<<<< HEAD
 })
 =======
@@ -509,3 +581,4 @@ SidebarGroup.displayName = "SidebarGroup"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

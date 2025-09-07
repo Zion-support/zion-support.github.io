@@ -1,4 +1,35 @@
 <<<<<<< HEAD
+import React from "react",
+import { Star } from "lucide-react",
+
+import React from "react",
+import { Star } from "lucide-react",
+
+import React from "react";
+import { Star } from "lucide-react";
+
+import React from "react",
+import { Star } from "lucide-react",
+
+export const CommunityTrust: React.FC = () => {
+  // Stats display with social proof
+  const stats = [
+    { value: "4.8", label: "App Store Rating" }
+    { value: "50K+", label: "Downloads" }
+    { value: "96%", label: "User Satisfaction" }
+
+import {Star} from "lucide-react";
+import React from "react",
+import { Star } from "lucide-react",
+
+export const CommunityTrust: React.FC = () => {
+  // Stats display with social proof
+  const stats = [
+    { value: "4.8", label: "App Store Rating" },
+    { value: "50K+", label: "Downloads" },
+    { value: "96%", label: "User Satisfaction" },
+=======
+<<<<<<< HEAD
 import React from "react";
 import { Star } from "lucide-react";
 =======
@@ -112,6 +143,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     { value: "12M+", label: "Matches Made" },
   ];
 
@@ -127,6 +159,23 @@ export const CommunityTrust: React.FC = () => {
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
             Join thousands of professionals who are already using the Zion;
             mobile app to connect, hire, and work;
+<<<<<<< HEAD
+          </p>
+        </div>
+
+        {/* Stats Grid */}"
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+          {stats.map((stat, index) => (
+            <div;
+              key={index}"
+              className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center"
+            >"
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
+                {stat.value}
+              </div>"
+              <div className="text-zion-slate-light">{stat.label}</div>
+            </div>
+=======
           </p>
         </div>
 
@@ -194,6 +243,7 @@ export const CommunityTrust: React.FC = () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -227,6 +277,16 @@ export const CommunityTrust: React.FC = () => {;
 
           ))}
         </div>
+
+        {/* Rating display */}"
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">"
+          <div className="flex justify-center mb-4">
+            {[1, 2, 3, 4, 5].map((star) => (
+=======
+<<<<<<< HEAD
+
+          ))}
+        </div>
 <<<<<<< HEAD
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
@@ -239,6 +299,7 @@ export const CommunityTrust: React.FC = () => {;
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">"
           <div className="flex justify-center mb-4">
             {[1, 2, 3, 4, 5].map((star) => (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Star;
                 key={star}"
                 className="w-6 h-6 text-zion-cyan""
@@ -252,6 +313,8 @@ export const CommunityTrust: React.FC = () => {;
           </blockquote>"
           <div className="text-center">"
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>"
+<<<<<<< HEAD
+=======
 =======
           ))}
         </div>
@@ -346,6 +409,7 @@ export const CommunityTrust:React.FC = () => {;
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
           </div>
         </div>
@@ -355,6 +419,8 @@ export const CommunityTrust:React.FC = () => {;
   );
 };
 
+<<<<<<< HEAD
+=======
 =======
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
@@ -368,6 +434,7 @@ export const CommunityTrust:React.FC = () => {;
       </div>;
     </section>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 className="w - 6 h - 6 text - zion - cyan";
 
               </div>;
@@ -402,6 +469,9 @@ export const CommunityTrust:React.FC = () => {;
 "
 =======
 <<<<<<< HEAD
+"
+=======
+<<<<<<< HEAD
   ),;
 },; ];
 }</div>) ) 
@@ -422,3 +492,4 @@ export const CommunityTrust:React.FC = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

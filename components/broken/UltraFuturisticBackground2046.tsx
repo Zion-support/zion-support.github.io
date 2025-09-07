@@ -1,6 +1,33 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+
+const "UltraFuturisticBackground2046": React.FC;
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);'
+    // Particle class,
+class Particle {
+}
+"x": number;
+      "y": number;
+
+const canvas_ref = useRef < HTMLCanvasElement>(null);
+
+const particles_ref = useRef < any[]>([]);
+
+const animation_ref = useRef < number>();
+;
+  useEffect (() => {
+    }
+    const canvas = canvas_ref.current;
+    // Check condition,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2046: React.FC = $2;
@@ -128,6 +155,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const canvas = canvas_ref.current;
 <<<<<<< HEAD
     // Check condition
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 if (return) {
   $2
 
@@ -137,6 +168,39 @@ const UltraFuturisticBackground2046: React.FC;
     resizeCanvas()window.addEventListener('resize', resizeCanvas)// Particle class;
     class Particle {x: number;y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null)const particles_ref = useRef < any[]>([])const animation_ref  = useRef < number>()useEffect (() => {const canvas = canvas_ref.current;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Check condition;
+if (return) {$2;
+}
+
+const ctx = canvas.get_context ('2d')// Check condition;'
+if (return) {$2;
+}
+    // Set canvas size;
+
+const resize_canvas = () =>: any {canvas.width = window.inner_width;
+      }
+      canvas.height = window.inner_height;      canvas.height = window.inner_height;
+    }resize_canvas ()window.addEventListener ('resize', resize_canvas)// Particle class;'
+    class Particle {"coordinate_x": number;
+      }
+      "coordinate_y": number;
+      "vx": number;
+      "vy": number;
+      "size": number;
+      "color": string;
+
+      "life": number;
+
+      "maxLife": number;
+
+      "type": 'quantum' | 'neural' | 'data' | 'energy';'
+      constructor() {this.x = Math.random() * canvas.width;
+        }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
     // Check condition;
@@ -185,6 +249,10 @@ const resize_canvas = () =>: any {canvas.width = window.inner_width;}
       type: 'quantum' | 'neural' | 'data' | 'energy';
       constructor() {this.x = Math.random() * canvas.width;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
         this.vy = (Math.random() - 0.5) * 2;
@@ -192,6 +260,16 @@ const resize_canvas = () =>: any {canvas.width = window.inner_width;}
         this.life = Math.random() * 100;
         this.maxLife = 100;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const types = ['quantum', 'neural', 'data', 'energy'];'
+        this.type = types[Math.floor(Math.random() * types.length)] as any;
+      life: number;
+      x: number,
+      y: number,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const types = ['quantum', 'neural', 'data', 'energy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
       life: number;
@@ -208,11 +286,22 @@ max_life: number;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       vx: number,
       vy: number,
       size: number,
       color: string,
       life: number,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        switch (this.type) {case 'quantum':;
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;break;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       maxLife: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
@@ -652,6 +741,10 @@ break;}}update() {this.x += this.vx;
         this.x += this.vx;
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         this.y += this.vy;
         this.life--;
         // Bounce off edges;
@@ -659,13 +752,31 @@ break;}}update() {this.x += this.vx;
         if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        // Add some quantum randomness,
+if (Math.random() < 0.01) {
+          }
+          this.vx += (Math.random() - 0.5) * 0.5;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 this.vy += (Math.random() - 0.5) * 0.5;
         }
 
         // Limit velocity,
 this.vx = Math.max(-3, Math.min(3, this.vx));
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         // Bounce off edges
         if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1,
@@ -673,6 +784,12 @@ this.vx = Math.max(-3, Math.min(3, this.vx));
 
         // Add some quantum randomness
         if (Math.random() < 0.01) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          this.vx += (Math.random() - 0.5) * 0.5,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           this.vx += (Math.random() - 0.5) * 0.5,
 =======
@@ -700,12 +817,21 @@ this.vx = Math.max(-3, Math.min(3, this.vx));
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           this.vy += (Math.random() - 0.5) * 0.5
         }
 
         // Limit velocity
         this.vx = Math.max(-3, Math.min(3, this.vx)),
         this.vy = Math.max(-3, Math.min(3, this.vy))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
           this.vy += (Math.random() - 0.5) * 0.5
@@ -718,6 +844,10 @@ if (Math.random() < 0.01) {
 }
 this.vy += (Math.random() - 0.5) * 0.5;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
 
         // Limit velocity;
@@ -755,6 +885,14 @@ this.vy = Math.max(-3, Math.min(3, this.vy));
 =======
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      draw() {
+            // Wave function rings
+            for (let i = 1, i <= 3, i++) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
         
         const alpha = this.life / this.maxLife;
         ctx.save();
@@ -1181,6 +1319,10 @@ ctx.stroke();}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 }
               }
             });
@@ -1191,6 +1333,22 @@ ctx.stroke();}
             ctx.beginPath();
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+case 'data':'
+            // Data streams,
+ctx.fillStyle = this.color;
+            ctx.fillRect(
+              this.x - this.size / 2,
+this.y - this.size / 2,
+this.size,
+this.size
+            );
+            // Data flow lines,
+ctx.beginPath();
+=======
+>>>>>>> origin/resolved-merge-conflicts
 case 'data':
             // Data streams;
 ctx.fillStyle = this.color;
@@ -1203,12 +1361,24 @@ this.size;
             // Data flow lines;
 ctx.beginPath();
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 1;
             ctx.stroke();
             break;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          case 'energy':'
+            // Energy particles with glow effect,
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
           case 'energy':
 <<<<<<< HEAD
@@ -1260,11 +1430,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return this.life <= 0
 =======
             // Energy particles with glow effect;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Glow effect,
+const gradient = ctx.createRadialGradient(;
+              this.x,
+this.y,
+0
+              this.x,
+this.y,
+this.size * 3
+            );
+origin/cursor/automate-test-improve-and-merge-code-2533
+            gradient.addColorStop(0, this.color);
+            gradient.addColorStop(1, 'transparent');'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 // Glow effect;
 const gradient = ctx.createRadialGradient(
               this.x;
@@ -1290,11 +1481,26 @@ break;
         return this.life <= 0;
       }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ctx.fillStyle = gradient;
             ctx.fill();
         ctx.restore()
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      // Clear canvas with fade effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particlesRef.current.forEach((particle, index) => {
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
     // Initialize particles,
 const initParticles = () => {
@@ -1303,6 +1509,21 @@ const initParticles = () => {
         return this.life <= 0;}
 >>>>>>> origin/chore/fix-lint-and-merge
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Animation loop,
+const animate = () => {
+
+      }
+
+      if (!ctx || !canvas);
+  return;
+
+      // Clear canvas with fade effect,
+ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
     }
     // Initialize particles;
 const initParticles = (
@@ -1322,6 +1543,10 @@ for (let i = 0; i < 150; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
       particlesRef.current.forEach((particle, index) => {}
@@ -1355,6 +1580,36 @@ particlesRef.current.forEach((particle, index) => {
         particle.update();
         particle.draw();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Remove dead particles and add new ones,
+if (particle.isDead()) {
+          }
+          particlesRef.current[index] = new Particle();
+        }
+      });
+      // Draw quantum field lines,
+drawQuantumField(ctx, canvas.width, canvas.height);
+// Draw neural network grid,
+drawNeuralGrid(ctx, canvas.width, canvas.height);
+      animationRef.current = requestAnimationFrame(animate);
+    }
+    // Quantum field lines,
+const drawQuantumField = (;
+      "ctx": CanvasRenderingContext2D,
+"width": number,
+"height": number
+    ) => {
+     ;
+  }
+  const time = Date.now() * 0.001;
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';'
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 20; i++) {
+        }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 // Remove dead particles and add new ones;
 if (particle.isDead()) {
           particlesRef.current[index] = new Particle();) => {
@@ -1380,6 +1635,10 @@ const drawQuantumField = (
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ctx.beginPath();
 
 const x = (i / 20) * width;
@@ -1387,6 +1646,25 @@ const x = (i / 20) * width;
 const y = Math.sin(time + i * 0.5) * 50 + height / 2;
         ctx.moveTo(x, 0);
         ctx.lineTo(x, height);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        // Add wave interference,
+for (let j = 0; j < height; j += 10) {
+          }
+          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j);
+        }
+
+        ctx.stroke();
+      }
+    // Neural network grid;
+
+const drawNeuralGrid = ("ctx": CanvasRenderingContext2D,"width": number,"height": number;
+    ) => {ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';'
+      }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         // Add wave interference
         // Add some quantum randomness;
@@ -1576,10 +1854,24 @@ for (let j = 0; j < height; j += 10) {
     // Neural network grid;
 
 const drawNeuralGrid = (ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       ctx.lineWidth = 0.5;
 
 const gridSize = 50;
       for (let x = 0; x < width; x += gridSize) {for (let y = 0; y < height; y += gridSize) {const offset =;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            }
+            Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+          ctx.beginPath();
+origin/cursor/automate-test-improve-and-merge-code-2533
+    // Neural network grid;
+=======
+>>>>>>> origin/resolved-merge-conflicts
             Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
 
           ctx.beginPath();
@@ -1587,11 +1879,30 @@ const gridSize = 50;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
           ctx.moveTo(x, y + offset);
           ctx.lineTo(x, y + gridSize + offset);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ctx.stroke();
+        }
+    // Start animation,
+initParticles();
+    animate();
+    // Cleanup,
+return () => {
+      }
+      window.removeEventListener('resize', resizeCanvas);'
+      if (animationRef.current) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 ctx.stroke();
 =======
@@ -1606,10 +1917,51 @@ ctx.stroke();) => {
 initParticles();
     animate();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 cancelAnimationFrame(animationRef.current);
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    };
+  }, []);
+return (;
+    <div className='fixed inset-0 pointer-events-none z-0'>;'
+
+      {/* Animated gradient background */}
+      <motion&& motion.div;
+        className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black';'
+        animate={{"background": [;
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)';'
+            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)';'
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)''
+];
+}
+case 'data':;'
+            // Data streams;
+            ctx.fill_style = this.color;
+            ctx.fill_rect (this.x - this.size / 2,this.y - this.size / 2,this.size,this.size)case 'data':;'
+            // Data streams;
+            ctx.fill_style = this.color;
+            ctx.fill_rect (this.x - this.size / 2, this.y - this.size / 2, this.size, this.size)ctx.begin_path ()ctx.move_to (this.x, this.y)ctx.line_to (this.x + this.vx * 10, this.y + this.vy * 10)ctx.stroke_style = this.color;
+            ctx.line_width = 1;
+            ctx.stroke ()break;case 'energy':;'
+            // Energy particles with glow effect;
+            ctx.begin_path ()ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2)ctx.fill_style = this.color;
+            ctx.fill ()// Glow effect;
+
+const gradient = ctx.createRadialGradient (this.x,this.y,0,this.x,this.y,this.size * 3)gradient.addColorStop (0, this.color)gradient.addColorStop (1, 'transparent')ctx.fill_style = gradient;'
+            ctx.fill ()break;// Glow effect;
+
+const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size * 3)gradient.addColorStop (0, this.color)gradient.addColorStop (1, 'transparent')ctx.fill_style = gradient;'
+            ctx.fill ()break;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     }
     // Start animation;
     initParticles()animate()// Cleanup;
@@ -1657,6 +2009,10 @@ cancelAnimationFrame(animationRef.current);
             ctx.fillStyle = $2;
             ctx.fill($2);
             break
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
         
         ctx.restore()
@@ -1665,7 +2021,14 @@ cancelAnimationFrame(animationRef.current);
       isDead() {
         return this.life <= 0
       }
+<<<<<<< HEAD
     }
+=======
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     // Initialize particles
     const initParticles = $2;
@@ -1731,7 +2094,14 @@ cancelAnimationFrame(animationRef.current);
           ctx.lineTo($2);
           ctx.stroke()
         }
+<<<<<<< HEAD
       }
+=======
+<<<<<<< HEAD
+=======
+      }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     },
 
     // Start animation
@@ -1743,7 +2113,14 @@ cancelAnimationFrame(animationRef.current);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
+<<<<<<< HEAD
     }
+=======
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }, []),
 
   return (
@@ -1768,6 +2145,12 @@ cancelAnimationFrame(animationRef.current);
       />
       
       {/* Floating geometric shapes */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className="absolute inset-0 overflow-hidden">
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       <div className='absolute inset-0 overflow-hidden'    />
         {[...Array(8)].map((_, i) => (<motion&& motion.div;}
@@ -1806,6 +2189,10 @@ cancelAnimationFrame(animationRef.current);
               duration: Math.random() * 6 + 4,
 =======
       <div className=absolute inset-0 overflow-hidden">
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {[...Array(8)].map((_, i) => (
           <motion.div
             key = $2;
@@ -1869,6 +2256,16 @@ cancelAnimationFrame(animationRef.current);
           />
         ))}
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+},
+
+            transition={{))}
+      </div>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>
   )
 },
@@ -1883,11 +2280,23 @@ export default UltraFuturisticBackground2046;
             transition={{))}
       </div>;
     </div>;
+<<<<<<< HEAD
   )}export default UltraFuturisticBackground2046;              ease: 'easeInOut',delay: i * 0 && 0.8}
           />;
         ))}
       </div>;
     </div>;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  )}export default UltraFuturisticBackground2046;              ease: "easeInOut",delay: i * 0 && 0.8}}
+          />;
+        ))}
+      </div>;
+<<<<<<< HEAD
+=======
+    </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   )export default UltraFuturisticBackground2046;</div>;
     </div>;
               duration: Math.random () * 6 + 4,repeat: Infinity,ease: 'easeInOut',delay: i * 0.8,}          />))}
@@ -1899,6 +2308,18 @@ export default UltraFuturisticBackground2046;
           />;
         ))}
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            transition={{
+        ))}
+      </div>;
+  )
+};
+  }, []);
+  return ('
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>;
             transition={
         ))}
@@ -2194,6 +2615,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <div className='fixed inset-0 pointer-events-none z-0'>;
       {/* Animated gradient background */}
       <motion&& motion.div
@@ -2307,6 +2732,28 @@ const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, th
 <<<<<<< HEAD
 const init_particles = () =>: any {particles_ref.current = [];
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      for (let index = 0; i < 150; i++) {particles_ref.current.push (new Particle ())}      for (let index = 0, i < 150, i++) {particles_ref.current.push (new Particle ())}
+    }// Animation loop;
+
+const animate = () =>: any {// Check condition;
+}
+if (return) {$2;
+}
+      // Clear canvas with fade effect;
+      ctx.fill_style = 'rgba (0, 0, 0, 0.1)';'
+      ctx.fill_rect (0, 0, canvas.width, canvas.height)// Update and draw particles;
+      particles_ref.current.for_each ((particle, index) => {particle.update ()particle.draw ()// Remove dead particles and add new ones;
+        }
+        if () {) {$2;
+}
+          particles_ref.current[index] = new Particle ()}
+        // Remove dead particles and add new ones;
+        if () {) {$2;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 const init_particles = () =    />: any {particles_ref.current = [];}
       for (let index = 0; i < 150; i++) {particles_ref.current.push (new Particle ())}      for (let index = 0, i < 150, i++) {particles_ref.current.push (new Particle ())}
@@ -2325,11 +2772,30 @@ if (return) {$2;}
           particles_ref.current[index] = new Particle ()}
         // Remove dead particles and add new ones;
         if () {) {$2;}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
           particles_ref.current[index] = new Particle ()})// Draw quantum field lines;
       drawQuantumField (ctx, canvas.width, canvas.height)// Draw neural network grid;
       drawNeuralGrid (ctx, canvas.width, canvas.height)animation_ref.current = requestAnimationFrame (animate)}// Quantum field lines;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const drawQuantumField = ("ctx": CanvasRenderingContext2D,"width": number,"height": number) =>: any ;
+  const time = Date.now () * 0.001;
+      ctx.stroke_style = 'rgba (0, 255, 255, 0.1)';'
+      ctx.line_width = 1;for (let index = 0; i < 20; i++) {ctx.begin_path ()const coordinate_x = (i / 20) * width;
+
+}
+
+const coordinate_y  = Math.sin (time + i * 0.5) * 50 + height / 2;ctx.move_to (x, 0)ctx.line_to (x, height)// Add wave interference;
+        for (let inner_index = 0; j < height; j += 10) {const wave_y = y + Math.sin (time * 2 + i * 0.3) * 30;
+          }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const drawQuantumField = (ctx: CanvasRenderingContext2D,width: number,height: number) =>: any ;
   const time = Date.now () * 0.001;
       ctx.stroke_style = 'rgba (0, 255, 255, 0.1)';
@@ -2337,11 +2803,28 @@ const drawQuantumField = (ctx: CanvasRenderingContext2D,width: number,height: nu
 
 const coordinate_y  = Math.sin (time + i * 0.5) * 50 + height / 2;ctx.move_to (x, 0)ctx.line_to (x, height)// Add wave interference;}
         for (let inner_index = 0; j < height; j += 10) {const wave_y = y + Math.sin (time * 2 + i * 0.3) * 30;}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           ctx.line_to (x + Math.sin (time + j * 0.01) * 20, j)}
         ctx.stroke ()}
     }// Neural network grid      // Draw neural network grid;
       drawNeuralGrid (ctx, canvas.width, canvas.height)animation_ref.current = requestAnimationFrame (animate)}// Quantum field lines;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const drawQuantumField = ("ctx": CanvasRenderingContext2D, "width": number, "height": number) =>: any ;
+  const time = Date.now () * 0.001;
+      ctx.stroke_style = 'rgba (0, 255, 255, 0.1)';'
+      ctx.line_width = 1;for (let index = 0, i < 20, i++) {ctx.begin_path (;
+  }
+  const coordinate_y  = Math.sin (time + i * 0.5) * 50 + height / 2;ctx.move_to (x, 0)ctx.line_to (x, height)// Add wave interference;
+        for (let inner_index = 0, j < height, j += 10) ;
+  const wave_y = y + Math.sin (time * 2 + i * 0.3) * 30;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: number) =>: any ;
   const time = Date.now () * 0.001;
       ctx.stroke_style = 'rgba (0, 255, 255, 0.1)';
@@ -2351,20 +2834,111 @@ const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: 
 const coordinate_y  = Math.sin (time + i * 0.5) * 50 + height / 2;ctx.move_to (x, 0)ctx.line_to (x, height)// Add wave interference;
         for (let inner_index = 0, j < height, j += 10) ;}
   const wave_y = y + Math.sin (time * 2 + i * 0.3) * 30;}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           ctx.line_to (x + Math.sin (time + j * 0.01) * 20, j)}
         ctx.stroke ()}
     }// Neural network grid;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const drawNeuralGrid = ("ctx": CanvasRenderingContext2D,"width": number,"height": number) =>: any {ctx.stroke_style = 'rgba (255, 0, 255, 0.05)';'
+      }
+      ctx.line_width = 0.5;
+
+const grid_size = 50;
+      for (let coordinate_x = 0; x < width; x += grid_size) {for (let coordinate_y = 0; y < height; y += grid_size) {const offset =;
+            }
+            Math.sin (time + x * 0.01) * Math.cos (time + y * 0.01) * 10;      for (let coordinate_x = 0, x < width, x += grid_size) {for (let coordinate_y = 0, y < height, y += grid_size) ;
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const drawNeuralGrid = (ctx: CanvasRenderingContext2D,width: number,height: number) =>: any {ctx.stroke_style = 'rgba (255, 0, 255, 0.05)';
       ctx.line_width = 0.5;
 
 const grid_size = 50;
       for (let coordinate_x = 0; x < width; x += grid_size) {for (let coordinate_y = 0; y < height; y += grid_size) {const offset =;}
             Math.sin (time + x * 0.01) * Math.cos (time + y * 0.01) * 10;      for (let coordinate_x = 0, x < width, x += grid_size) {for (let coordinate_y = 0, y < height, y += grid_size) ;}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const offset  = Math.sin (time + x * 0.01) * Math.cos (time + y * 0.01) * 10;ctx.move_to (x + offset, y)ctx.line_to (x + grid_size + offset, y)ctx.move_to (x, y + offset)ctx.line_to (x, y + grid_size + offset)ctx.stroke ()}          ctx.stroke ()}
       }
     }// Start animation;
     init_particles ()animate ()// Cleanup;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return () => {window.removeEventListener ('resize', resize_canvas)// Check condition;'
+}
+if ( {) {$2;
+}
+        cancelAnimationFrame (animation_ref.current)}
+  }, [])return (<div className='fixed inset - 0 pointer - events - none z - 0'>;'
+      {/* Animated gradient background */}
+      <motion.div;
+        className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 30 to - black';'
+        animate={{"background": [;
+            'linear - gradient (to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)','linear - gradient (to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)','linear - gradient (to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}'
+        transition={{}}
+      {/* Quantum particle canvas */}
+      <canvas;
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full';'
+      {/* Floating geometric shapes */}
+      <div className='absolute inset-0 overflow-hidden'>;'
+        {[...Array(8)].map((_, i) => (<motion&& motion.div; />;
+      {/* Quantum particle canvas */}
+      <canvas;
+        ref={canvas_ref}
+        className='absolute inset - 0 w - full h - full';'
+        style={{ "filter": 'blur (0.5px)' ,'
+} />;
+      {/* Floating geometric shapes */}
+      <div className='absolute inset - 0 overflow - hidden'>;'
+        {[...Array (8)].map ((_, i) => (<motion.div;
+            }
+            key={i}
+            }}
+            animate={{"rotate": [0, 360],"scale": [0 && 0.5, 1, 0 && 0.5],"opacity": [0 && 0.1, 0 && 0.3, 0 && 0.1]}}
+            transition={{"repeat": Infinity,"ease": 'linear',"delay": i * 0 && 0.5}}'
+            }}
+            animate={{"rotate": [45, 405],"scale": [0 && 0.3, 0 && 0.8, 0 && 0.3],"opacity": [0 && 0.1, 0 && 0.2, 0 && 0.1]}}
+            transition={{"repeat": Infinity,"ease": 'linear',"delay": i * 0 && 0.7}}'
+      {/* Energy waves */}
+      <div className='absolute bottom-0 left-0 right-0 h-32'>;'
+        <motion&& motion.div;
+          className='absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent';' />))}
+      </div>;
+      {/* Energy waves */}
+      <div className='absolute bottom - 0 left - 0 right - 0 h - 32'>;'
+        <motion.div;
+          className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';'
+          animate={{"height": ['32px', '48px', '32px'];'
+          }}
+          transition={{"duration": 4;
+            }
+            "repeat": Infinity;
+            "ease": 'easeInOut';'
+          }} />;
+          animate={{"height": ['24px', '40px', '24px'];'
+          }}
+          transition={{}}
+      {/* Quantum interference patterns */}
+      <div className='absolute inset-0'>;'
+        {[...Array(5)].map((_, i) => (<motion&& motion.div; />;
+      </div>;
+      {/* Quantum interference patterns */}
+      <div className='absolute inset - 0'>;'
+        {[...Array (5)].map ((_, i) => (<motion.div;
+            }
+            key={`interference-${i}`}`
+=======
+>>>>>>> origin/resolved-merge-conflicts
     return () => {window.removeEventListener ('resize', resize_canvas)// Check condition;}
 if ( {) {$2;}
 }
@@ -2463,6 +3037,10 @@ if ( {) {$2;}
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             }}
             animate={{rotate: [0, 360],scale: [0 && 0.5, 1, 0 && 0.5],opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],}}
             transition={{repeat: Infinity,ease: 'linear',}
@@ -3027,6 +3605,18 @@ export default UltraFuturisticBackground2046;  );
 
 export default UltraFuturisticBackground2046;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              }
+
+              "duration": Math.random() * 6 + 4,
+              "repeat": Infinity,
+              "ease": 'easeInOut','
+              "delay": i * 0.8
+            }} />
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>
     </div>
 =======
@@ -3083,10 +3673,21 @@ export default UltraFuturisticBackground2046,
               delay: i * 0.8,
             }}
           />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         ))}
       </div>
     </div>
 );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+export default UltraFuturisticBackground2046;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 export default UltraFuturisticBackground2046;
 =======
@@ -3096,3 +3697,7 @@ export default UltraFuturisticBackground2046;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

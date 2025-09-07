@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
@@ -6,6 +15,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -34,6 +49,7 @@ import React from 'react';
 
 };
 
+<<<<<<< HEAD
 interface FraudFiltersProps {;
   searchQuery: string,;
   setSearchQuery: (value: string,) => void,;
@@ -43,6 +59,23 @@ interface FraudFiltersProps {;
   setSeverityFilter: (value: string | null,) => void,;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null,) => void,;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+interface FraudFiltersProps {
+  searchQuery: string,
+  setSearchQuery: (value: string,) => void,
+  statusFilter: string | null,
+  setStatusFilter: (value: string | null,) => void,
+  severityFilter: string | null,
+  setSeverityFilter: (value: string | null,) => void,
+  contentTypeFilter: string | null,
+  setContentTypeFilter: (value: string | null,) => void,
+>>>>>>> origin/resolved-merge-conflicts
   resetFilters: () => void;
 
 }
@@ -63,7 +96,17 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
   setContentTypeFilter;
   resetFilters}) => {  return (
 
+<<<<<<< HEAD
     <div className="flex flex-col md: flex-row gap-4 mb-6">
+=======
+    <div className="flex flex-col md: flex-row gap-4 mb-6>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery,
   setSearchQuery,
@@ -77,7 +120,23 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   return ("
     <div className="flex flex-col md:flex-row gap-4 mb-6">
 
+<<<<<<< HEAD
       <div className="relative flex-1">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className=relative flex-1>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+      <div className=relative flex-1>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input"
           placeholder="Search by user or content..."
@@ -117,6 +176,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       
 
@@ -166,6 +231,41 @@ import React from 'react';
   severityFilter;
   setSeverityFilter;
   contentTypeFilter;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Search, Filter } from 'lucide-react';
+interface FraudFiltersProps {;
+  searchQuery: string,;
+  setSearchQuery: (value: string) => void,;
+  statusFilter: string | null,;
+  setStatusFilter: (value: string | null) => void,;
+  severityFilter: string | null,;
+  setSeverityFilter: (value: string | null) => void,;
+  contentTypeFilter: string | null,;
+  setContentTypeFilter: (value: string | null) => void,;
+  resetFilters: () => void;
+
+;
+
+export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+  searchQuery,;
+  setSearchQuery,;
+  statusFilter,;
+  setStatusFilter,;
+  severityFilter,;
+  setSeverityFilter,;
+  contentTypeFilter,;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setContentTypeFilter;
   resetFilters}) => {;
   return (;"
@@ -179,8 +279,23 @@ import React from 'react';
           className="pl-10";
         />;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
@@ -200,13 +315,61 @@ import React from 'react';
 
         <SelectTrigger className="w-[180px]">;
 
+<<<<<<< HEAD
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
         <SelectContent>;"
+=======
+          <SelectValue placeholder="Severity />;
+        </SelectTrigger>;
+        <SelectContent>;
+          <SelectItem value="">All Severities</SelectItem>;
+          <SelectItem value=safe">Safe</SelectItem>;"
+          <SelectItem value=suspicious>Suspicious</SelectItem>;"
+          <SelectItem value="dangerous>Dangerous</SelectItem>;
+        </SelectContent>;
+      </Select>;
+
+
+
+      <Select value={contentTypeFilter || "} onValueChange={value => setContentTypeFilter(value || null)}>;
+        <SelectTrigger className="w-[180px]>;
+
+          <SelectValue placeholder=Content Type" />;
+        </SelectTrigger>;
+        <SelectContent>;"
+<<<<<<< HEAD
+          <SelectItem value=>All Types</SelectItem>;"
+          <SelectItem value="signup>Signups</SelectItem>;
+          <SelectItem value="job">Jobs</SelectItem>;
+          <SelectItem value=message">Messages</SelectItem>;"
+          <SelectItem value=quote>Quotes</SelectItem>;"
+          <SelectItem value="review>Reviews</SelectItem>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <SelectItem value="">All Severities</SelectItem>;"
           <SelectItem value="safe">Safe</SelectItem>;"
           <SelectItem value="suspicious">Suspicious</SelectItem>;"
           <SelectItem value="dangerous">Dangerous</SelectItem>;
+<<<<<<< HEAD
+=======
+        </SelectContent>;
+      </Select>;
+
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
+        <SelectTrigger className="w-[180px]">;
+
+          <SelectValue placeholder="Content Type" />;
+        </SelectTrigger>;
+        <SelectContent>;"
+          <SelectItem value="">All Types</SelectItem>;"
+          <SelectItem value="signup">Signups</SelectItem>;"
+          <SelectItem value="job">Jobs</SelectItem>;"
+          <SelectItem value="message">Messages</SelectItem>;"
+          <SelectItem value="quote">Quotes</SelectItem>;"
+          <SelectItem value="review">Reviews</SelectItem>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
         </SelectContent>;
       </Select>;
 
@@ -295,10 +458,28 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({};
 
       </Button>;
     </div>);
+<<<<<<< HEAD
 }'"
 '"},
 '"},
 ;
+=======
+<<<<<<< HEAD
+}"
+'},
+'},
+=======
+}'"
+'"},
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import React from 'react';
 import { Input } from '@/components/ui/input';
@@ -314,6 +495,12 @@ import { Search, Filter } from 'lucide-react';
 
 interface FraudFiltersProps {
   searchQuery: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 '"}
 '"},;
@@ -321,6 +508,12 @@ interface FraudFiltersProps {
 import { Button  } from '@/components/ui/button';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 interface FraudFiltersProps  {searchQuery: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setSearchQuery: (value: string) => void;
   statusFilter: string | null;
   setStatusFilter: (value: string | null) => void;
@@ -328,10 +521,30 @@ interface FraudFiltersProps  {searchQuery: string;
   setSeverityFilter: (value: string | null) => void;
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
-  resetFilters: () => void;
+  resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   );
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+>>>>>>> origin/resolved-merge-conflicts
 export const FraudFilters: React.FC<FraudFiltersProps> = ({)}'";
 '"
+=======
+};
+'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

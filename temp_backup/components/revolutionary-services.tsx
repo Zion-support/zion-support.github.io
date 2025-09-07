@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return {hasError: true }
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
+>>>>>>> origin/resolved-merge-conflicts
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
@@ -143,7 +147,11 @@ const enhanced_categories = [
         'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy'}
   description:;}
         'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600',},  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
+<<<<<<< HEAD
   icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
+=======
+  icon: <LeafIcon className="w - 6 h - 6" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
+>>>>>>> origin/resolved-merge-conflicts
     }
 
 const container_variants = {}
@@ -237,12 +245,21 @@ rel='canonical'
   {
   scale: 0.95 
 }
+<<<<<<< HEAD
                 animate={ opacity: 1, y: 0 }
                 transition={duration: 0.8 }
 }
 }> <UltraFuturisticCard </div>) ) 
 }</div> <div className=' text-center'> <Button > Learn More <ExternalLink className=' ml-2 w-4 h-4'/> </Button> </div> </UltraFuturisticCard> </motion.div>) ) 
 }</motion.div> </div> </section> > <div className=' flex flex-col lg:flex-row gap-6 items-center justify-between'> <div className=' flex flex-wrap gap-4'> <select) ) 
+=======
+                animate={{ opacity: 1, y: 0 }}
+                transition={{duration: 0.8 }
+}
+}> <UltraFuturisticCard </div>) ) 
+}</div> <div className=" text-center"> <Button > Learn More <ExternalLink className=" ml-2 w-4 h-4"/> </Button> </div> </UltraFuturisticCard> </motion.div>) ) 
+}</motion.div> </div> </section> > <div className=" flex flex-col lg:flex-row gap-6 items-center justify-between"> <div className=" flex flex-wrap gap-4"> <select) ) 
+>>>>>>> origin/resolved-merge-conflicts
 }</select> <select > {
   priceRanges.map (range => (<option key= {
   range.value 
@@ -259,19 +276,31 @@ rel='canonical'
 }> {
   option.label 
 }</option>) ) 
+<<<<<<< HEAD
 }</select> </div> <div className=' flex items-center gap-4'> <div className=' relative'> <Search className=' absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400'/> <input /> </div> <div className=' flex border border-gray-600 rounded-lg overflow-hidden'> <button onClick= {
+=======
+}</select> </div> <div className=" flex items-center gap-4"> <div className=" relative"> <Search className=" absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/> <input /> </div> <div className=" flex border border-gray-600 rounded-lg overflow-hidden"> <button onClick= {
+>>>>>>> origin/resolved-merge-conflicts
   () => setViewMode ('grid') 
 }className= {
   `px-3 py-2 $ {
   viewMode === 'grid'? 'bg-cyan-500 text-white': 'bg-slate-800 text-gray-400' 
 }` 
+<<<<<<< HEAD
 }> <Grid className=' w-4 h-4'/> </button> <button onClick= {
+=======
+}> <Grid className=" w-4 h-4"/> </button> <button onClick= {
+>>>>>>> origin/resolved-merge-conflicts
   () => setViewMode ('list') 
 }className= {
   `px-3 py-2 $ {
   viewMode === 'list'? 'bg-cyan-500 text-white': 'bg-slate-800 text-gray-400' 
 }` 
+<<<<<<< HEAD
 }> <List className=' w-4 h-4'/> </button> </div> </div> </div> </motion.div> {
+=======
+}> <List className=" w-4 h-4"/> </button> </div> </div> </div> </motion.div> {
+>>>>>>> origin/resolved-merge-conflicts
   /* Services Display */ 
 }<motion.div > {
   filteredServices.map ( (service, index) => (<motion.div key= {
@@ -397,14 +426,23 @@ variant='futuristic'
               initial='hidden'
               whileInView='visible'
 
+<<<<<<< HEAD
               viewport={once: true }
+=======
+              viewport={{once: true }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />;
               {enhancedCategories.map((category, index) => (<motion.div;}
                   key={category.name}
                   variants={itemVariants}
+<<<<<<< HEAD
                   whileHover={ scale: 1 && 1.05 }
                   whileTap={scale: 0 && 0.95 }
+=======
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{scale: 0 && 0.95 }
+>>>>>>> origin/resolved-merge-conflicts
 } />;
 
                   <UltraFuturisticCard;
@@ -471,13 +509,21 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 }
               initial='hidden';
               whileInView='visible';
+<<<<<<< HEAD
               viewport={once: true }
+=======
+              viewport={{once: true }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />;
               {popularServices.slice(0, 6).map((service, index) => (<motion.div;}
                   key={service.id}
                   variants={itemVariants}
+<<<<<<< HEAD
                   whileHover={y: -10 }
+=======
+                  whileHover={{y: -10 }
+>>>>>>> origin/resolved-merge-conflicts
 }
                  />;
                   <UltraFuturisticCard;
@@ -595,14 +641,22 @@ type='text'
 
               initial='hidden'
               whileInView='visible'
+<<<<<<< HEAD
               viewport={once: true }
+=======
+              viewport={{once: true }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
                   variants={itemVariants}
+<<<<<<< HEAD
                   whileHover={y: -5 }
+=======
+                  whileHover={{y: -5 }
+>>>>>>> origin/resolved-merge-conflicts
 } />;
                   <UltraFuturisticCard;
                     variant={service && service.variant as any}
@@ -748,9 +802,15 @@ key={service.id}
 <motion.div;
 className='text-center py-16'}
 }
+<<<<<<< HEAD
                 initial={ opacity: 0 }
                 animate={ opacity: 1 }
                 transition={duration: 0.6 }
+=======
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{duration: 0.6 }
+>>>>>>> origin/resolved-merge-conflicts
 }
                />;
 <div className='text-6xl mb-4' />🔍</div>;
@@ -997,9 +1057,15 @@ variant='futuristic'
 className='max-w-4xl mx-auto'
               initial={ opacity: 0, y: 20 ,}
 }
+<<<<<<< HEAD
               whileInView={ opacity: 1, y: 0 }
               viewport={ once: true }
               transition={duration: 0.8 }
+=======
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{duration: 0.8 }
+>>>>>>> origin/resolved-merge-conflicts
 }
              />
 

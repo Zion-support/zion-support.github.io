@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export type JobStatus = $2;
 export type JobCategory = $2;
@@ -54,6 +56,7 @@ export interface JobMatch {
     location?: string,
     category?: string,
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -68,6 +71,9 @@ export type JobCategory =;
 export interface JobBudget {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type JobCategory =
   | "development"
   | "design"
@@ -76,6 +82,11 @@ export type JobCategory =
   | "data"
   | "business"
   | "other";
+<<<<<<< HEAD
+
+export interface JobBudget {;
+
+=======
 =======
 }
 export interface Job {
@@ -111,6 +122,7 @@ export interface JobBudget {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   min: number;
 
 export type JobCategory =
@@ -127,6 +139,9 @@ export interface Job {
 export interface Job {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   max: number;
   currency: string;
 
@@ -147,6 +162,8 @@ export interface Job {;
   updated_at: string;}
 }
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 export interface Job {
@@ -156,6 +173,7 @@ export interface Job {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   client_id: string;
   title: string;
@@ -170,6 +188,11 @@ export interface Job {;
   updated_at: string;
 
 }
+<<<<<<< HEAD
+
+export interface JobFormData {;
+
+=======
 <<<<<<< HEAD
 
 export interface JobFormData {;
@@ -192,15 +215,21 @@ export interface JobFormData {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   budgetMin: number;
   budgetMax: number;
   deadline: Date;
 }
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
   budgetMin: number;
@@ -211,6 +240,7 @@ export interface JobFormData {;
 export interface JobMatch {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   budget_min: number;
   budget_max: number,
@@ -219,6 +249,9 @@ export interface JobMatch {;
 // Add JobMatch interface to be shared across components;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface JobMatch {};
   budgetMin: number;
   budgetMax: number;
@@ -227,10 +260,13 @@ export interface JobMatch {};
 // Add JobMatch interface to be shared across components;
 export interface JobMatch {;
 
+<<<<<<< HEAD
+=======
 =======
 export interface JobMatch {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   job_id: string;
   talent_id: string;
@@ -252,6 +288,9 @@ export interface JobMatch {
     key_projects: any[];
     skills: string[];
     location?: string;
+<<<<<<< HEAD
+    category?: string;
+=======
 <<<<<<< HEAD
     category?: string;
 =======
@@ -328,16 +367,22 @@ export interface ResumeAttachment {;
 =======
     category?: string,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     company_name?: string;
   };
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string;
   category: JobCategory;
   skills: string;
   budgetMin: number;
   budgetMax: number;
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -482,6 +527,7 @@ export interface JobFormData {;
   budgetMin: number,;
   budgetMax: number,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   deadline: Date;
 }
 
@@ -582,6 +628,8 @@ export interface JobBudget {;
   resume_id?: string,;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 }
@@ -603,6 +651,7 @@ export interface JobBudget {;
 }
 ;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       missing: string[];
     };
     experience_match?: {}
@@ -644,8 +693,12 @@ export interface JobBudget {;
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+}
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

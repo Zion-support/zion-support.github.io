@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -30,6 +32,7 @@ import { EmptyResumeProps } from "./types",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -53,6 +56,10 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
 
 =======
 <<<<<<< HEAD
+  );
+
+=======
+<<<<<<< HEAD
 };
 
   );
@@ -67,6 +74,7 @@ import {EmptyResumeProps} from "./types";
 
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )
 },"
 import { Card, CardContent } from "@/components/ui/card",;"
@@ -74,6 +82,10 @@ import { Button } from "@/components/ui/button",;"
 import { FilePlus } from "lucide-react",;"
 import { EmptyResumeProps } from "./types",;
 
+<<<<<<< HEAD
+};            Create Resume;
+
+=======
 <<<<<<< HEAD
 };            Create Resume;
 
@@ -99,6 +111,7 @@ export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
           >;
             <FilePlus className="h-4 w-4" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             Create Resume;
 
           </Button>;
@@ -106,10 +119,16 @@ export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
       </CardContent>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>);
 }
 ;
 
+<<<<<<< HEAD
+'"
+=======
 '"
 =======
 export default EmptyResumeState;
@@ -134,3 +153,4 @@ export default EmptyResumeState;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

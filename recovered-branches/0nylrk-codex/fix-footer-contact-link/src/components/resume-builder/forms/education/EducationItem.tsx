@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
@@ -10,6 +12,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 =======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +20,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Education } from "@/types/resume";
 import { EducationItemProps } from "./types";
 export function EducationItem({
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -182,6 +188,7 @@ education
   onDelete
 }: EducationItemProps) {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { format  } from './date - fns';
 import { Edit, Trash2  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -193,13 +200,19 @@ export /**
  */
 function EducationItem() {
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   education,
   onEdit,
   onDelete,
 }: EducationItemProps) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <Card className="bg-muted / 40">;
@@ -240,12 +253,15 @@ function EducationItem() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -253,6 +269,9 @@ import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -261,12 +280,15 @@ import {EducationItemProps} from './types';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
 >>>>>>> merged-prs-20250907-203621
@@ -328,6 +350,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
           </div>
           <div className="flex gap-2">
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               {education.institution}
             </p>;
@@ -355,6 +378,9 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
           </div>;"
           <div className="flex gap-2">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Button"
               variant="ghost""
               size="icon"
@@ -401,6 +427,8 @@ export function EducationItem({}
           </div>;"
           <div className="flex gap-2">;
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
@@ -440,6 +468,7 @@ export function EducationItem({}
               onClick={() => onDelete(education && education.id!)}
             >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Trash2 className="h-4 w-4" />;
             </Button>;
           </div>;
@@ -539,11 +568,30 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
                   : ""}
             </p>
             {education.location && ("
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <p className="text-xs text-muted-foreground">
                 {education.location}
               </p>
             )}
+<<<<<<< HEAD
+          </div>"
+          <div className="flex gap-2">
+            <Button"
+              variant="ghost""
+              size="icon"
+              onClick={() => onEdit(education)}
+            >"
+              <Edit className="h-4 w-4" />
+            </Button>
+            <Button"
+              variant="ghost""
+              size="icon"
+              onClick={() => onDelete(education.id!)}
+            >"
+=======
 <<<<<<< HEAD
           </div>
           <div className="flex gap-2">
@@ -575,10 +623,16 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
               onClick={() => onDelete(education.id!)}
             >"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Trash2 className="h-4 w-4" />
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
+        {education.description && ("
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+        )}
+=======
 <<<<<<< HEAD
         {education.description && (
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
@@ -589,22 +643,33 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         {education.description && ("
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )
 }
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 ;
 
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

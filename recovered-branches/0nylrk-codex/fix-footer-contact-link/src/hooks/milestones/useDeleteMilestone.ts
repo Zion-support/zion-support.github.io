@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -23,12 +29,15 @@ import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {toast} from 'sonner';
 
 export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -49,6 +58,7 @@ export const useDeleteMilestone = () => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -57,6 +67,11 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {}
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
+
+  const deleteMilestone = async (milestoneId: string) => {}
+    if (!user) return false,
+=======
 <<<<<<< HEAD
 =======
 
@@ -100,6 +115,7 @@ export const useDeleteMilestone = () => {}
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     try {
 
@@ -161,10 +177,13 @@ export const useDeleteMilestone = () => {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -178,6 +197,8 @@ export const useDeleteMilestone = () => {;
       return false;
     } finally {}
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
   };
@@ -271,6 +292,7 @@ if (throw error) {
       setIsSubmitting(false)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
 ;
@@ -279,6 +301,10 @@ if (throw error) {
     is_submitting;
   }
 }
+<<<<<<< HEAD
+
+};
+=======
 <<<<<<< HEAD
 
 };
@@ -293,3 +319,4 @@ if (throw error) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

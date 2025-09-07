@@ -1,4 +1,151 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+import React, { useState, useEffect } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  }
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+  Cpu, Zap, Atom, Database, Cloud, Lock, Code;
+  } from 'lucide-react';'
+import Link from 'next/link';'
+
+const "UltraAdvancedNavigation": React.FC;
+
+
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,
+  Code,
+} from 'lucide-react';
+
+import Link from 'next/link';import { ;
+
+
+  Lock,
+  Code,
+} from 'lucide-react';
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package,
+  Bot, Car, Building2, DollarSign, Monitor, Users,
+  Cpu, Zap, Atom, Database, Cloud, Lock, Code
+} from 'lucide-react',
+import Link from 'next/link';
+const UltraAdvancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+
+  useEffect(() => {
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []),
+
+    }
+
+    const handleScroll = () => {
+}
+setIsScrolled(window.scrollY > 50)
+};
+
+
+    window.addEventListener('scroll', handleScroll);'
+    return () => window.removeEventListener('scroll', handleScroll);'
+  }, []);
+
+const navigationItems = [;
+    {
+      }
+      "name": 'Home','
+      "href": '/','
+"icon": null
+    },
+origin/cursor/automate-test-improve-and-merge-code-2533
+    {
+      }
+      "name": 'AI Services''
+      "href": '#''
+      "icon": Brain,
+"description": 'Cutting-edge AI solutions''
+      "dropdown": [
+
+        {
+          }
+          "name": 'AI Agent Orchestrator','
+          "href": '/ai-agents','
+          "icon": Bot,
+          "description": 'Multi-agent workflow automation','
+"price": '$2,999/month','
+        },
+        {
+          }
+          "name": 'AI Cybersecurity','
+          "href": '/security','
+          "icon": Shield,
+          "description": 'AI-powered threat detection','
+"price": '$4,999/month','
+        },
+        {
+          }
+          "name": 'AI Healthcare Analytics','
+          "href": '/ai-data-analytics','
+          "icon": Dna,
+          "description": 'Patient outcome prediction','
+"price": '$3,999/month','
+        },
+        {
+          }
+          "name": 'AI Supply Chain','
+          "href": '/quantum-logistics','
+          "icon": Package,
+          "description": 'End-to-end optimization','
+"price": '$2,499/month','
+        },
+        {
+          }
+          "name": 'AI Financial Risk','
+          "href": '/ai-financial-risk','
+          "icon": DollarSign,
+          "description": 'Advanced risk management','
+"price": '$5,999/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -1126,10 +1273,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           icon: Wifi,
           description: 'Quantum-secured IoT',
           price: '$4,999/month'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
       ]
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+      "name": 'Quantum Computing','
+      "href": '#','
+      "icon": Atom,
+      "description": 'Quantum-powered solutions','
+      "dropdown": [
+        {
+          }
+          "name": 'Quantum AI Supercomputer','
+          "href": '/quantum-ai-cognitive','
+          "icon": Cpu,
+          "description": 'Enterprise quantum computing','
+"price": '$15,999/month','
+        },
+        {
+          }
+          "name": 'Quantum Internet Security','
+          "href": '/quantum-internet-security-platform','
+          "icon": Lock,
+          "description": 'Future-proof encryption','
+"price": '$8,999/month','
+        },
+        {
+          }
+          "name": 'Quantum Drug Discovery','
+          "href": '/biotech-ai','
+          "icon": Dna,
+          "description": 'Accelerated drug development','
+"price": '$12,999/month','
+        },
+        {
+          }
+          "name": 'Quantum Financial Trading','
+          "href": '/quantum-financial-trading','
+          "icon": DollarSign,
+          "description": 'Nanosecond precision trading','
+"price": '$19,999/month','
+        },
+        {
+          }
+          "name": 'Quantum IoT Platform','
+          "href": '/quantum-iot','
+          "icon": Wifi,
+          "description": 'Quantum-secured IoT','
+"price": '$4,999/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
       name: 'Space Technology',
       href: '#',
       icon: Rocket,
@@ -1148,10 +1349,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           icon: Package,
           description: 'AI-powered debris removal',
           price: '$35,999/month'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
       ]
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+      "name": 'Space Technology','
+      "href": '#','
+      "icon": Rocket,
+      "description": 'Space mission management','
+      "dropdown": [
+        {
+          }
+          "name": 'Space Mission Control','
+          "href": '/space-technology','
+          "icon": Rocket,
+          "description": 'Complete mission management','
+"price": '$25,999/month','
+        },
+        {
+          }
+          "name": 'Space Debris Cleanup','
+          "href": '/space-technology','
+          "icon": Package,
+          "description": 'AI-powered debris removal','
+"price": '$35,999/month','
+=======
+>>>>>>> origin/resolved-merge-conflicts
       name: 'Enterprise IT',
       href: '#',
       icon: Building2,
@@ -1205,10 +1436,152 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           icon: Wifi,
           description: 'AI-powered device management',
           price: '$7,999/month'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
       ]
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+      "name": 'Enterprise IT','
+      "href": '#','
+      "icon": Building2,
+      "description": 'Enterprise solutions','
+      "dropdown": [
+        {
+          }
+          "name": 'Cloud Migration','
+          "href": '/cloud-platform','
+          "icon": Cloud,
+          "description": 'Zero-downtime migration','
+"price": '$8,999/month','
+        },
+        {
+          }
+          "name": 'DevOps Automation','
+          "href": '/automation','
+          "icon": Code,
+          "description": 'AI-powered automation','
+"price": '$5,999/month','
+        },
+        {
+          }
+          "name": 'Data Analytics','
+          "href": '/ai-data-analytics','
+          "icon": Database,
+          "description": 'AI-powered insights','
+"price": '$6,999/month','
+        },
+        {
+          }
+          "name": 'Security Operations','
+          "href": '/security','
+          "icon": Shield,
+          "description": '24/7 security monitoring','
+"price": '$12,999/month','
+        },
+        {
+          }
+          "name": 'API Management','
+          "href": '/api-observability','
+          "icon": Code,
+          "description": 'Complete lifecycle management','
+"price": '$4,999/month','
+        },
+        {
+          }
+          "name": 'Digital Transformation','
+          "href": '/solutions','
+          "icon": Zap,
+          "description": 'AI-powered transformation','
+"price": '$15,999/month','
+        },
+        {
+          }
+          "name": 'IoT Management','
+          "href": '/it-asset-discovery-agent','
+          "icon": Wifi,
+          "description": 'AI-powered device management','
+"price": '$7,999/month','
+        }
+      ]
+    },
+origin/cursor/automate-test-improve-and-merge-code-2533
+    {
+      }
+      "name": 'Micro SaaS','
+      "href": '/services','
+      "icon": Monitor,
+"description": '300+ micro SaaS services','
+    },
+    {
+
+      }
+
+      "name": 'Market Pricing','
+      "href": '/market-pricing','
+      "icon": DollarSign,
+"description": 'Benchmarks & vendor references','
+    },
+origin/cursor/automate-test-improve-and-merge-code-2533
+    {
+      }
+      "name": 'About','
+      "href": '/about','
+      "icon": null
+    },
+    {
+
+      }
+
+      "name": 'Contact','
+      "href": '/contact','
+      "icon": null
+    }
+  ];
+
+const contactInfo = {
+    }
+    "mobile": '+1 302 464 0950','
+    "email": 'kleber@ziontechgroup.com','
+"address": '364 E Main St STE 1008 Middletown DE 19709','
+  };
+
+  
+    >
+      <div className='max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8'>'
+        <div className='flex justify-between items-center h-20'>'
+
+          {/* Logo *
+}
+          <motion.div;
+            initial={{ "opacity": 0, "x": -20 
+}
+            animate={{ "opacity": 1, "x": 0 }}
+            transition={{ "duration": 0.5 }}
+
+className='flex items-center''
+          >
+            <Link href='/' className='flex items-center space-x-3 group'>'
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300'>'
+                <Zap className='w-6 h-6 text-white' />'
+              </div>
+              <div className='hidden "sm":block'>'
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>'
+                  Zion Tech Group
+                </div>
+                <div className='text-xs text-gray-400'>'
+                  Revolutionary Technology
+className='flex items-center';
+          >;
+            <Link href='/' className='flex items-center space-x-3 group'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
       name: 'Micro SaaS',
       href: '/services',
       icon: Monitor,
@@ -1842,6 +2215,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.5 }}
             className='flex items-center'>;
             <Link href=/' className='flex items-center space-x-3 group>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
                 <Zap className=w-6 h-6 text-white' />;
               </div>;'
@@ -1869,6 +2246,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {item.dropdown ? (
+                  <button
+}
+onClick={() =>
+                      }
+                      setActiveDropdown(
+                        activeDropdown === item.name ? null : item.name
+                      )
+                    }
+                    className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-300 py-2''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
               />
             <Link href='/' className='flex items-center space-x-3 group'    />
@@ -1904,6 +2296,10 @@ onClick={() =    />
 =======
                     className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-300 py-2'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   >
 
                     {item.icon && <item.icon className='w-4 h-4'    />}
@@ -1941,7 +2337,14 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
           <motion&& motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             className="flex items-center"
           >
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -1951,6 +2354,15 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
               <div className='hidden sm:block'>
                 <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
                   Zion Tech Group
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <span>{item.name}</span>;
+                  </Link>;
+                )})}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
                 <div className='text-xs text-gray-400'>Revolutionary Technology</div>
               </div>
@@ -1962,6 +2374,11 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>
                 {item.dropdown ? (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           {/* Desktop Navigation */}
 <<<<<<< HEAD
@@ -2104,6 +2521,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                 </div>
                                 <div className="text-sm font-semibold text-cyan-400">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                     className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
@@ -2125,12 +2546,21 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
                   </Link>
                 )}
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   </Link>
                 )}
 
@@ -2142,6 +2572,11 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
 <<<<<<< HEAD
                         animate={{ opacity: 1, y: 0, scale: 1}}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
@@ -2169,6 +2604,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 =======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-300 py-2'    />
 
                     {item.icon && <item.icon className='w-4 h-4'    />}
@@ -2179,6 +2618,93 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
 
                 )}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {/* Dropdown Menu *
+}
+                {item && item.dropdown && (<AnimatePresence>;
+                    {activeDropdown === item && item.name && (<motion&& motion.div;
+                        }
+                        initial={{ "opacity": 0, "y": 10, "scale": 0 && 0.95 
+}
+                        animate={{ "opacity": 1, "y": 0, "scale": 1 
+}>;
+                        <div className="p-4">;"
+                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>;"
+                          <div className="space-y-2">;"
+                            {item.dropdown.map((dropdownItem) => (<Link;
+                  </Link>;
+                )}{/* Dropdown Menu */}
+                {item.dropdown && (<AnimatePresence>;
+                    {activeDropdown === item.name && (<motion.div;
+                        }
+                        initial={{ "opacity": 0, "y": 10, "scale": 0.95 
+}
+                        animate={{ "opacity": 1, "y": 0, "scale": 1 
+}
+                        exit={{ "opacity": 0, "y": 10, "scale": 0.95 }}
+
+                        transition={{ "duration": 0.2 }}
+
+className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden''
+                      >
+                        <div className='p-4'>'
+                          <div className='text-sm text-gray-400 mb-3'>'
+
+                            {item.descriptio
+}
+                          </div>;
+                          <div className='space-y-2'>;'
+                            {item.dropdown.map(dropdownItem => { return (<Link; }
+                                }
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className='flex items-center space-x-3 p-3 rounded-xl "hover":bg-gray-800/50 transition-colors duration-200 group'>'
+
+                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-"hover":scale-110 transition-transform duration-200'>;'
+                                  <dropdownItem.icon className='w-5 h-5 text-cyan-400' />;'
+                                </div>;
+                                <div className='flex-1'>;'
+                                  <div className='text-white font-medium group-"hover":text-cyan-400 transition-colors duration-200'>;'
+                                    {dropdownItem.name}
+                                  </div>;
+                                  <div className='text-sm text-gray-400'>;'
+                                    {dropdownItem.description}                                  </div>;
+                                </div>;
+                                <div className='text-sm font-semibold text-cyan-400'>;'
+                                  {dropdownItem.price}
+                                </div>;
+                              </Link>;
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
+                      >
+                        <div className="p-4">
+                          <div className="text-sm text-gray-400 mb-3">{item.description}</div>
+                          <div className="space-y-2">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
+                              >
+                                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                                  <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
+                                    {dropdownItem.name}
+                                  </div>
+                                  <div className="text-sm text-gray-400">{dropdownItem.description}</div>
+                                </div>
+                                <div className="text-sm font-semibold text-cyan-400">
+                                  {dropdownItem.price}
+                                </div>
+                              </Link>
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 {/* Dropdown Menu *}
 <<<<<<< HEAD
 
@@ -2259,6 +2785,10 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       >"
                         <div className="p-4">"
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>"
@@ -2284,6 +2814,12 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                           <div className='text-sm text-gray-400 mb-3>
                             {item.description}
                           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                          <div className='space-y-2'>
+=======
+>>>>>>> origin/resolved-merge-conflicts
                           <div className=space-y-2'>
 =======
                         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -2298,12 +2834,25 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                           </div>
                           <div className='space-y-2'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             {item.dropdown.map(dropdownItem => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group
+=======
+<<<<<<< HEAD
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
+=======
+<<<<<<< HEAD
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                               >
                                 <div className=w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
                                   <dropdownItem.icon className='w-5 h-5 text-cyan-400 />
@@ -2320,6 +2869,14 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                                 </div>
                               </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            ))}
+                          </div>
+                      </motion.div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -2351,11 +2908,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;
                         </div>;
                       </motion && motion.div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     )}
                   </AnimatePresence>;
                 )}
               </div>;
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {/* Contact Info & CTA */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2386,6 +2953,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
               </a>
               <a
@@ -2480,6 +3051,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <button
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+          {/* Contact Info & CTA */}<div className='hidden lg:flex items-center space-x-6'>;
+            <div className='flex items-center space-x-4 text-sm text-gray-300'>;<div className='hidden lg:flex items-center space-x-6'>;
+            <div className='flex items-center space-x-4 text-sm text-gray-300'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
           {/* Contact Info & CTA */}<div className=hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300>;<div className=hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300>;
@@ -2490,6 +3069,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='hidden lg: flex items-center space-x-6'    />
             <div className='flex items-center space-x-4 text-sm text-gray-300'    />
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <a;
               </a    />
               <a;
@@ -2533,6 +3116,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => setIsOpen(!isOpen)}
               className=text-gray-300 hover:text-white transition-colors duration-200;
             >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
           {/* Contact Info & CTA */}'
           <div className='hidden lg:flex items-center space-x-6'>;'
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -2540,6 +3128,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </a>
               <a;
           </div>
@@ -2551,6 +3143,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className=w-4 h-4 />"
                 <span className="hidden xl:inline>{contactInfo.mobile}</span>
               </a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+"`
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">"
+                <Mail className="w-4 h-4" />"
+                <span className="hidden xl:inline">{contactInfo.email}</span>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 `
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
                 <Mail className=w-4 h-4" />"
@@ -2565,6 +3166,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className=\"w-4 h-4\"    />"
                 <span className=\"hidden xl:inline\"    />{contactInfo.mobile}</span>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </a>
 
             </div>
@@ -2580,6 +3185,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started;
             </motion.a>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {/* Mobile Menu Button */}
+
+<div className='"lg":hidden'>'
+            <button,
+onClick={() => setIsOpen(!isOpen
+}
+              className='text-gray-300 "hover":text-white transition-colors duration-200'>'
+
+              {isOpen ? (<X className='w-6 h-6' />;'
+              ) : (<Menu className='w-6 h-6' />;'
+              )}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </div>;
+
+<div className='lg:hidden'>
+=======
+>>>>>>> origin/resolved-merge-conflicts
           {/* Mobile Menu Button */}"
           <div className="lg:hidden">
             <button;
@@ -2654,6 +3284,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Menu className='w-6 h-6' />;
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-200'
@@ -2662,6 +3296,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              )}
+=======
+>>>>>>> origin/resolved-merge-conflicts
               )}            </button>            <button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
@@ -2685,12 +3325,22 @@ href='/contact'
           {/* Mobile Menu Button */}
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </button>
           </div>
         </div>
       </div>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Mobile Menu */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -2733,10 +3383,19 @@ onClick={() =    /> setIsOpen(!isOpen}
             exit={{ opacity: 0, height: 0 }}
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0}}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
@@ -2974,6 +3633,10 @@ className='block py-2 text-gray-400 hover: text-white transition-colors duration
                             </Link>;
                           ))}
                         </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       )}
                     </div>
                   ) : (
@@ -2982,8 +3645,19 @@ className='block py-2 text-gray-400 hover: text-white transition-colors duration
                             </Link>
 
 
+<<<<<<< HEAD
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
 
+=======
+<<<<<<< HEAD
+className='flex items-center space-x-3 text-gray-300 "hover": text-white transition-colors duration-200 py-3''
+                    >
+                      {item.icon && <item.icon className='w-5 h-5' />}'
+=======
+                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       <span>{item.name}</span>
 <<<<<<< HEAD
 =======
@@ -3083,6 +3757,18 @@ href='/contact'
 {/* Mobile Contact Info *}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div className='pt-6 border-t border-gray-800/50'>;'
+                <div className='space-y-3 text-sm text-gray-400'>;'
+                  <a;
+                    href={`"tel": ${contactInfo.mobile},`}
+                    className='flex items-center space-x-3 "hover":text-cyan-400 transition-colors duration-200'>'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                     <span>{contactInfo.mobile}</span>;
 =======
@@ -3100,6 +3786,77 @@ href='/contact'
                   <a;
                     href={`mailto: ${contactInfo.email}`}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    className='flex items-center space-x-3 "hover":text-cyan-400 transition-colors duration-200''
+                  >
+                    <Mail className='w-4 h-4' />'
+                    <span>{contactInfo.email}</span>
+                  </a>
+                  <div className='flex items-start space-x-3'>'
+                    <MapPin className='w-4 h-4 mt-0.5' />'
+                    <span>{contactInfo.address}</span>
+                  </div>
+                <motion.a,
+href='/contact''
+
+                  whileHover={{ "scale": 1.05 }}
+                  whileTap={{ "scale": 0.95 
+}
+                  className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold "hover":shadow-lg "hover":shadow-cyan-500/25 transition-all duration-300'>'
+
+export default UltraAdvancedNavigation;
+      {/* Mobile Menu */}
+      <AnimatePresence>;
+        {is_open && (
+          <motion.div;
+            initial={{ opacity: 0, height: 0 }}'
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}'
+            className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 800 / 50 overflow - hidden';
+          >;'
+            <div className='px - 4 py - 6 space - y-4'>;
+              {navigation_items.map (item => (                <div key={item.name}>;
+                  {item.dropdown ? (
+                    <div>;"
+                      <button            className="lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 800 / 50 overflow - hidden";
+          >;"
+            <div className="px - 4 py - 6 space - y-4">;
+              {navigation_items.map ((item) => (
+                  {item.dropdown ? (
+                    <div>;
+                      <button;
+                        on_click={() =>;
+                          setActiveDropdown (
+                            active_dropdown === item.name ? null : item.name);
+                        }'
+                        className='flex items - center justify - between w - full text - left text - gray - 300 hover:text - white transition - colors duration - 200 py - 3';'
+                        <div className='flex items - center space - x-3'>;'
+                          {item.icon && <item.icon className='w - 5 h - 5' />}
+                          <span>{item.name}</span>;
+                        </div>;
+                        <ChevronDown;`
+                          className={`w - 4 h - 4 transition - transform duration - 200 ${'
+                            active_dropdown === item.name ? 'rotate - 180' : '';`
+                          }`}
+                        />;
+                      </button>;
+                      {active_dropdown === item.name && ('
+                        <div className='ml - 8 mt - 2 space - y-2'>;
+                          {item.dropdown.map (dropdown_item => (                            <Link;
+                              key={dropdown_item.name}
+                              href={dropdown_item.href}
+                              on_click={() => setIsOpen (false)}'"
+                              className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                            >                        <div className="ml - 8 mt - 2 space - y-2">;
+                          {item.dropdown.map ((dropdown_item) => (
+                            <Link;
+                              key={dropdown_item.name}
+                              href={dropdown_item.href}
+                              on_click={() => setIsOpen (false)}'"
+=======
+>>>>>>> origin/resolved-merge-conflicts
                     className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200'
                       />
                     <Mail className='w-4 h-4'    />
@@ -3292,6 +4049,10 @@ export default UltraAdvancedNavigation;
                               key={dropdown_item.name}
                               href={dropdown_item.href}
                               on_click={() => setIsOpen (false)}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                               className='block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200'                              className="block py - 2 text - gray - 400 hover:text - white transition - colors duration - 200";
                             >;
                               {dropdown_item.name}
@@ -3329,7 +4090,14 @@ export default UltraAdvancedNavigation;
                     <MapPin className='w - 4 h - 4 mt - 0.5' />;
                     <span>{contact_info.address}</span>;
                   </div>;
+<<<<<<< HEAD
                 </div>;
+=======
+<<<<<<< HEAD
+=======
+                </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <motion.a;
                   href='/contact';
                   while_hover={ scale: 1.05 }
@@ -3349,7 +4117,14 @@ export default UltraAdvancedNavigation;
                     <MapPin className="w - 4 h - 4 mt - 0.5" />;
                     <span>{contact_info.address}</span>;
                   </div>;
+<<<<<<< HEAD
                 </div>;
+=======
+<<<<<<< HEAD
+=======
+                </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <motion.a;
                   href='/contact';
                   while_hover={ scale: 1.05 }
@@ -3359,7 +4134,14 @@ export default UltraAdvancedNavigation;
                   Get Started;
                 </motion.a>;
               </div>;
+<<<<<<< HEAD
             </div>;
+=======
+<<<<<<< HEAD
+=======
+            </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </motion.div>)}
       </AnimatePresence>;
     </nav>)}export default UltraAdvancedNavigation)}export default UltraAdvancedNavigation;export default UltraAdvancedNavigation;
@@ -3368,6 +4150,16 @@ export default UltraAdvancedNavigation;
                   whileTap={ scale: 0.95 }
                   className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300';
                 >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  Get Started;
+                </motion.a>;
+              </div>;
+          </motion.div>;
+        )}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                 <motion.a;
 href='/contact'
@@ -3385,6 +4177,10 @@ href='/contact'
           </motion.div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </AnimatePresence>;
     </nav>;
 )}export default UltraAdvancedNavigation;
@@ -3393,6 +4189,13 @@ href='/contact'
 export default UltraAdvancedNavigation);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default UltraAdvancedNavigation;
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default UltraAdvancedNavigation;
 <<<<<<< HEAD
 
@@ -3412,17 +4215,45 @@ export default UltraAdvancedNavigation;
 
 "
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default UltraAdvancedNavigation;
   );
 
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   href='/contact'
                   whileHover={ scale: 1.05 }
                   whileTap={ scale: 0.95 }
                   className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
                 >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  Get Started
+                </motion.a>
+              </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+);
+};
+
+export default UltraAdvancedNavigation;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
                   Get Started
                 </motion.a>
@@ -3479,3 +4310,7 @@ export default UltraAdvancedNavigation;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

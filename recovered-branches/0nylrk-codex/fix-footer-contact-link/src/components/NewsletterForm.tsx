@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+import React from 'react';
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+export function NewsletterForm() {
+=======
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -25,6 +33,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 export function NewsletterForm() {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,6 +41,8 @@ export function NewsletterForm() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 import React from 'react';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from "@/components/ui/button";
@@ -51,6 +62,7 @@ import { useState } from "react";
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -62,11 +74,17 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
+<<<<<<< HEAD
+
+=======
 =======
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -81,11 +99,20 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
 
+<<<<<<< HEAD
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -112,11 +139,14 @@ export function NewsletterForm() {
     setTimeout(() => {
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Simulate API call
     setTimeout(() => {
 
   return (
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
@@ -157,10 +187,62 @@ e.preventDefault();
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+<<<<<<< HEAD
+            value={email}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
+            required
+          />
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+          >
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+          </Button>
+        </form>
+
+          <Input
+
+            type="email"
+            placeholder="Enter your email"
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            value={email}
+
+            onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setEmail(e && e.target.value)}
+            required;
+          />;
+
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+          </Button>;
+        </form>;
+      )}
+
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
+            value={email}
+    </div>;"
+            type="email";""
+            placeholder="Enter your email";""
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";"
+            onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+
+            {isSubmitting ? "Subscribing..." :"Subscribe"}
+
+          </Button>;
+        </form>;
+    </div>;
+
+      )}
+    </div>
+  );
+}
+=======
 <<<<<<< HEAD
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -334,3 +416,4 @@ setIsSubmitting (true);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,5 +1,47 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+;
+}}}}}import React, { useState, useEffect } from 'react';'
+import { motion, AnimatePresence   } from 'framer-motion';'
+import { innovative2035MicroSaasServices;
+  } from '../data/innovative-2035-micro-saas-services';'
+import { innovative2035AIServices;
+  } from '../data/innovative-2035-ai-services';'
+import { innovative2035ITServices;
+  } from '../data/innovative-2035-it-services';'
+import { innovativeRealMicroSaasServices2025;
+  } from '../data/2025-innovative-real-micro-saas-services';'
+import { innovativeAIServicesEnhanced2025;
+  } from '../data/2025-innovative-ai-services-enhanced';'
+import { innovativeITServicesEnhanced2025;
+  } from '../data/2025-innovative-it-services-enhanced';'
+import { emergingTechServicesEnhanced2025;
+  } from '../data/2025-emerging-tech-services-enhanced';'
+import { advancedAIAutomationServices   } from '../data/2026-advanced-ai-automation-services';'
+import { quantumCybersecurityServices   } from '../data/2026-quantum-cybersecurity-services';'
+import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035',import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';'
+import { motion   } from 'framer-motion';'
+import { real2036InnovativeServices   } from '../data/real-2036-innovative-services';'
+import { real2036ITServices   } from '../data/real-2036-it-services';'
+import { real2036AIServices  } from '../data/real-2036-ai-services';'
+
+interface Homepage2025Props {
+  }
+  showInternalNav?: boolean 
+}
+
+const "Homepage2025": React.FC<Homepage2025Props>  = ({ showInternalNav;
+
+}
+
+const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
+};
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 ;
@@ -48,6 +90,10 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 };
 
 
@@ -88,8 +134,16 @@ pr-12243
  
  
 };
+<<<<<<< HEAD
 };
 };
+=======
+<<<<<<< HEAD
+=======
+};
+};
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -117,6 +171,16 @@ import { motion  } from 'framer-motion';
 import { real2036InnovativeServices  } from '../data/real-2036-innovative-services';
 import { real2036ITServices  } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface Homepage2025Props { showInternalNav?: boolean }
+
+const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+=======
+>>>>>>> origin/resolved-merge-conflicts
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav;
@@ -144,11 +208,22 @@ interface Homepage2025Props { showInternalNav?: boolean }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 }
 
 };
+<<<<<<< HEAD
+=======
+
+};
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 
@@ -166,6 +241,10 @@ interface Homepage2025Props { showInternalNav?: boolean }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
 ...innovative2035ITServices;
@@ -176,6 +255,11 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 ...advancedAIAutomationServices;
 <<<<<<< HEAD
 ...quantumCybersecurityServices ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 ...quantumCybersecurityServices ];<> {/* Navigation */ ;}
 }<nav className=\"fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10\"     /> <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\"     /> <div className=\"flex justify-between items-center h-16\"     /> <motion && motion.div     /> Zion Tech Group </motion && motion.h1> <motion && motion.p     /> Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation </motion && motion.p> <motion && motion.div     /> <button className=\"px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25\"     /> Get Started Today </button> <button className=\"px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105\"     /> Explore Services </button> </motion && motion.div> {/* Contact Information */ ;}"
@@ -220,6 +304,10 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service && service.id 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 <> {
   /* Navigation */
 }<nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10 > <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" > <div className="flex justify-between items-center h-16 > <motion.div > Zion Tech Group </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation </motion.p> <motion.div > <button className=px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Get Started Today </button> <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 > Explore Services </button> </motion.div> {
@@ -227,6 +315,26 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }<motion.div > <div className=flex items-center gap-2" > <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse ></span> <span>Mobile: +1 302 464 0950</span> </div> <div className=flex items-center gap-2" > <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse ></span> <span>Email: kleber@ziontechgroup.com</span> </div> <div className=flex items-center gap-2" > <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse ></span> <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span> </div> </motion.div> </div> </section> > <h2 className=text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services Portfolio </h2> <motion.div key= {
   service.id
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<> {;
+  /* Navigation */ ;
+}<nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" > <div className="flex justify-between items-center h-16" > <motion && motion.div > Zion Tech Group </motion && motion.h1> <motion && motion.p > Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation </motion && motion.p> <motion && motion.div > <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Get Started Today </button> <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Explore Services </button> </motion && motion.div> {;
+  /* Contact Information */ ;
+}<motion && motion.div > <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" ></span> <span>Mobile: +1 302 464 0950</span> </div> <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" ></span> <span>Email: kleber@ziontechgroup && ziontechgroup.com</span> </div> <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" ></span> <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span> </div> </motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services Portfolio </h2> <motion&& motion.div key= {
+  service && service.id 
+
+<> {
+  /* Navigation */
+}<nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" > <div className="flex justify-between items-center h-16" > <motion.div > Zion Tech Group </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation </motion.p> <motion.div > <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Get Started Today </button> <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Explore Services </button> </motion.div> {
+  /* Contact Information */
+}<motion.div > <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" ></span> <span>Mobile: +1 302 464 0950</span> </div> <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" ></span> <span>Email: kleber@ziontechgroup.com</span> </div> <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" ></span> <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span> </div> </motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services Portfolio </h2> <motion.div key= {
+  service.id
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -252,6 +360,10 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }initial= {
   {
@@ -265,6 +377,15 @@ pr-12243
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+pr-12243
+
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
@@ -378,6 +499,10 @@ pr-12243
 
 
   "duration": 0 && 0.8, "delay": index * 0 && 0.1 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }viewport= {
   {
@@ -522,15 +647,42 @@ ursor/fix-website-loading-errors-and-merge-6662
 "duration": 0.8, "delay": index * 0.1
 }viewport= {
   {
+<<<<<<< HEAD
   once: true
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
   once: true 
+=======
+<<<<<<< HEAD
+  }
+  "once": true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+  "once": true 
+=======
+  once: true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+  once: true 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   service.id
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}initial= {
+  {
+  }
+  "opacity": 0, "y": 50,
+"opacity": 0, "y": 50 
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
   once: true }
 }
 }    /> <UltraFuturisticServiceCard2026    /> </motion.div>) ) 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 ,"
 }</div> </div> </section> > <h2 className=\"text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6\"     /> <span className=\"bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent\"     /> Advanced AI Automation </span> </h2> <p className=\"text-xl text-gray-300 max-w-4xl mx-auto\"     /> Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion.div> <motion.div key= {}
@@ -701,8 +853,49 @@ duration: 0 && 0.8, delay: index * 0 && 0.1;
   {
 
 
+<<<<<<< HEAD
   duration: 0 && 0.8, delay: index * 0 && 0.1 }
 }
+=======
+<<<<<<< HEAD
+  }
+
+
+  "duration": 0 && 0.8, "delay": index * 0 && 0.1 
+
+}viewport= {
+  {
+  }
+  "once": true 
+
+}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl "md": text-5xl "lg":text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" > Emerging Technologies </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary technologies that define the future of human civilization and business. </p> </motion && motion.div> <motion&& motion.div key= {"
+  }
+  service && service.id 
+
+
+}initial= {
+  {
+  }
+  "opacity": 0, "y": 50
+}whileInView= {
+  {
+  }
+  "opacity": 1, "y": 0
+}transition= {
+  {
+
+
+  }
+
+
+  "duration": 0 && 0.8, "delay": index * 0 && 0.1 
+
+=======
+  duration: 0 && 0.8, delay: index * 0 && 0.1 }
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }viewport= {
   {
 <<<<<<< HEAD
@@ -814,6 +1007,12 @@ duration: 0 && 0.8, delay: index * 0 && 0.1;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 pr-12243
   duration: 0.8, delay: index * 0.1
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
@@ -847,6 +1046,11 @@ pr-12243
 pr-12243
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -976,6 +1180,10 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }initial= {
   {
   opacity: 0, y: 50
@@ -984,6 +1192,22 @@ origin/cursor/automate-test-improve-and-merge-code-382a
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  duration: 0.8, delay: index * 0.1
+}viewport= {
+  {
+  once: true
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion.div> <motion.div key= {
+  service.id
+  once: true 
+
+}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion && motion.div> <motion&& motion.div key= {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
@@ -993,6 +1217,10 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 }> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion && motion.div> <motion&& motion.div key= {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   service && service.id 
 
 }initial= {
@@ -1003,10 +1231,23 @@ origin/cursor/automate-test-improve-and-merge-code-382a
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}initial= {
+  {
+
+}transition= {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   {
   once: true 
 
@@ -1059,6 +1300,14 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} /> <h2 className=\"text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6\"  /> <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\"  /> Ready to Transform Your Business? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8 mb-12\"  /> <div className=\"bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6\"  /> <div className=\"text-3xl mb-4\"  />📱</div> <h3 className=\"text-xl font-semibold text-white mb-2\"  />Phone</h3> <a href=\"tel:+13024640950\" className=\"text-cyan-400 hover:text-cyan-300 transition-colors\"  /> +1 302 464 0950 </a> </div> <div className=\"bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6\"  /> <div className=\"text-3xl mb-4\"  />✉️</div> <h3 className=\"text-xl font-semibold text-white mb-2\"  />Email</h3> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"text-cyan-400 hover:text-cyan-300 transition-colors\"  /> kleber@ziontechgroup.com </a> </div> <div className=\"bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6\"  /> <div className=\"text-3xl mb-4\"  />📍</div> <h3 className=\"text-xl font-semibold text-white mb-2\"  />Address</h3> <p className=\"text-gray-300 text-sm\"  /> 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\"  /> <a href=\"https://ziontechgroup.com\" className=\"bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105\"  /> Visit Our Website </a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105\"  /> Get Started Today </a> </div> </motion.div> </div> </section> <div /> <h3 className=\"text-white font-bold text-lg mb-4\"  />ZionTech Group</h3> <p className=\"text-gray-400 text-sm leading-relaxed\"  /> Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div /> <h4 className=\"text-white font-semibold mb-4\"  />Services</h4> <ul className=\"text-gray-400 text-sm space-y-2\"  /> <li /><a href=\"#services\" className=\"hover:text-cyan-400 transition-colors\"  />Micro SAAS</a></li> <li /><a href=\"#ai\" className=\"hover:text-cyan-400 transition-colors\"  />AI Services</a></li> <li /><a href=\"#automation\" className=\"hover:text-cyan-400 transition-colors\"  />AI Automation</a></li> <li /><a href=\"#quantum\" className=\"hover:text-cyan-400 transition-colors\"  />Quantum Security</a></li> <li /><a href=\"#it\" className=\"hover:text-cyan-400 transition-colors\"  />IT Solutions</a></li> <li /><a href=\"#emerging\" className=\"hover:text-cyan-400 transition-colors\"  />Emerging Tech</a></li> </ul> </div> <div /> <h4 className=\"text-white font-semibold mb-4\"  />Company</h4> <ul className=\"text-gray-400 text-sm space-y-2\"  /> <li /><a href=\"https://ziontechgroup.com\" className=\"hover:text-cyan-400 transition-colors\"  />About Us</a></li> <li /><a href=\"#contact\" className=\"hover:text-cyan-400 transition-colors\"  />Contact</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\"hover:text-cyan-400 transition-colors\"  />Careers</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\"hover:text-cyan-400 transition-colors\"  />Blog</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\"hover:text-cyan-400 transition-colors\"  />News</a></li> </ul> </div> <div /> <h4 className=\"text-white font-semibold mb-4\"  />Connect</h4> <ul className=\"text-gray-400 text-sm space-y-2\"  /> <li /><a href=\"tel:+13024640950\" className=\"hover:text-cyan-400 transition-colors\"  />+1 302 464 0950</a></li> <li /><a href=\"mailto:kleber@ziontechgroup.com\" className=\"hover:text-cyan-400 transition-colors\"  />kleber@ziontechgroup.com</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\"hover:text-cyan-400 transition-colors\"  />Website</a></li> <li /><a href=\"https://www.linkedin.com/company/zion-tech-group\" className=\"hover:text-cyan-400 transition-colors\"  />LinkedIn</a></li> <li /><a href=\"https://x.com/ziontechgroup\" className=\"hover:text-cyan-400 transition-colors\"  />Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className=\"text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\"  /> Why Choose Zion Tech Group? </h2> <p className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto\"  /> We're not just another technology company - we're pioneers shaping the future of business and technology </p> </motion.div> {
+  title: 'Innovation First'}
+  description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀'}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 } /> <h2 className=\text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6\  /> <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\"  /> Ready to Transform Your Business? </span> </h2> <p className=\text-xl text-gray-300 mb-8\  /> Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8 mb-12\"  /> <div className=\bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6\  /> <div className=\"text-3xl mb-4\"  />📱</div> <h3 className=\text-xl font-semibold text-white mb-2\  />Phone</h3> <a href=\"tel:+13024640950\" className=\text-cyan-400 hover:text-cyan-300 transition-colors\  /> +1 302 464 0950 </a> </div> <div className=\"bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6\"  /> <div className=\text-3xl mb-4\  />✉️</div> <h3 className=\"text-xl font-semibold text-white mb-2\"  />Email</h3> <a href=\mailto:kleber@ziontechgroup.com\ className=\"text-cyan-400 hover:text-cyan-300 transition-colors\"  /> kleber@ziontechgroup.com </a> </div> <div className=\bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6\  /> <div className=\"text-3xl mb-4\"  />📍</div> <h3 className=\text-xl font-semibold text-white mb-2\  />Address</h3> <p className=\"text-gray-300 text-sm\"  /> 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className=\flex flex-col sm:flex-row gap-4 justify-center\  /> <a href=\"https://ziontechgroup.com\" className=\bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105\  /> Visit Our Website </a> <a href=\"mailto:kleber@ziontechgroup.com\" className=\border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105\  /> Get Started Today </a> </div> </motion.div> </div> </section> <div /> <h3 className=\"text-white font-bold text-lg mb-4\"  />ZionTech Group</h3> <p className=\text-gray-400 text-sm leading-relaxed\  /> Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div /> <h4 className=\"text-white font-semibold mb-4\"  />Services</h4> <ul className=\text-gray-400 text-sm space-y-2\  /> <li /><a href=\"#services\" className=\hover:text-cyan-400 transition-colors\  />Micro SAAS</a></li> <li /><a href=\"#ai\" className=\hover:text-cyan-400 transition-colors\  />AI Services</a></li> <li /><a href=\"#automation\" className=\hover:text-cyan-400 transition-colors\  />AI Automation</a></li> <li /><a href=\"#quantum\" className=\hover:text-cyan-400 transition-colors\  />Quantum Security</a></li> <li /><a href=\"#it\" className=\hover:text-cyan-400 transition-colors\  />IT Solutions</a></li> <li /><a href=\"#emerging\" className=\hover:text-cyan-400 transition-colors\  />Emerging Tech</a></li> </ul> </div> <div /> <h4 className=\"text-white font-semibold mb-4\"  />Company</h4> <ul className=\text-gray-400 text-sm space-y-2\  /> <li /><a href=\"https://ziontechgroup.com\" className=\hover:text-cyan-400 transition-colors\  />About Us</a></li> <li /><a href=\"#contact\" className=\hover:text-cyan-400 transition-colors\  />Contact</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\hover:text-cyan-400 transition-colors\  />Careers</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\hover:text-cyan-400 transition-colors\  />Blog</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\hover:text-cyan-400 transition-colors\  />News</a></li> </ul> </div> <div /> <h4 className=\"text-white font-semibold mb-4\"  />Connect</h4> <ul className=\text-gray-400 text-sm space-y-2\  /> <li /><a href=\"tel:+13024640950\" className=\hover:text-cyan-400 transition-colors\  />+1 302 464 0950</a></li> <li /><a href=\"mailto:kleber@ziontechgroup.com\" className=\hover:text-cyan-400 transition-colors\  />kleber@ziontechgroup.com</a></li> <li /><a href=\"https://ziontechgroup.com\" className=\hover:text-cyan-400 transition-colors\  />Website</a></li> <li /><a href=\"https://www.linkedin.com/company/zion-tech-group\" className=\hover:text-cyan-400 transition-colors\  />LinkedIn</a></li> <li /><a href=\"https://x.com/ziontechgroup\" className=\hover:text-cyan-400 transition-colors\  />Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className=\"text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\"  /> Why Choose Zion Tech Group? </h2> <p className=\text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto\  /> Were not just another technology company - we're pioneers shaping the future of business and technology </p> </motion.div> {
   title: 'Innovation First}
   description: We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: 🚀}
@@ -1068,6 +1317,10 @@ origin/cursor/automate-test-improve-and-merge-code-382a
   title: 'Innovation First'}
   description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀'}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 {
   title: 'Proven Results'}
@@ -1088,7 +1341,16 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 {
   title: 'Scalable Solutions'}
 <<<<<<< HEAD
+<<<<<<< HEAD
   description: From startups to enterprises, our solutions scale with your business and grow with your ambitions., icon: '📊'}
+=======
+<<<<<<< HEAD
+  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊'}
+=======
+<<<<<<< HEAD
+  description: From startups to enterprises, our solutions scale with your business and grow with your ambitions., icon: '📊'}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }].map ( (feature, index) => (<motion.div </p /> </motion.div>) )
 =======
   description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊'}
@@ -1115,12 +1377,32 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  opacity: 0, y: 50 
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   duration: 0.8, delay: index * 0.1
 }viewport= {
   {
   once: true
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
   once: true 
 
@@ -1152,6 +1434,10 @@ pr-12243
 }viewport= {
   {
   once: true
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion && motion.div> <motion&& motion.div key= {}
   service && service.id;
   opacity: 0, y: 50;
@@ -1252,6 +1538,18 @@ pr-12243
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion.div> <motion.div key= {
   service.id
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}initial= {
+  {
+  opacity: 0, y: 50
+
+  opacity: 0, y: 50 
+
+pr-12243
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 }initial= {
   {
   opacity: 0, y: 50
@@ -1262,6 +1560,10 @@ pr-12243
 pr-12243
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1273,7 +1575,14 @@ pr-12243
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 pr-12243
 
+<<<<<<< HEAD
   duration: 0.8, delay: index * 0.1 
+=======
+<<<<<<< HEAD
+=======
+  duration: 0.8, delay: index * 0.1 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   duration: 0.8, delay: index * 0.1 
   duration: 0.8, delay: index * 0.1
 }viewport= {
@@ -1283,10 +1592,19 @@ pr-12243
   duration: 0.8, delay: index * 0.1 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 pr-12243
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }viewport= {
   {
@@ -1303,6 +1621,11 @@ pr-12243
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className=bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id
 pr-12243
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -1315,6 +1638,10 @@ pr-12243
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }initial= {
   {
   opacity: 0, y: 50
@@ -1347,6 +1674,12 @@ pr-12243
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 pr-12243
   duration: 0.8, delay: index * 0.1
 }viewport= {
@@ -1358,9 +1691,18 @@ pr-12243
 pr-12243
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }initial= {
   {
   opacity: 0, y: 50
@@ -1393,6 +1735,12 @@ pr-12243
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 pr-12243
   duration: 0.8, delay: index * 0.1
 }viewport= {
@@ -1404,9 +1752,18 @@ pr-12243
 pr-12243
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }initial= {
   {
   opacity: 0, y: 50
@@ -1437,6 +1794,12 @@ pr-12243
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 pr-12243
   duration: 0.8, delay: index * 0.1
 >>>>>>> merged-prs-20250907-203621
@@ -1445,6 +1808,14 @@ pr-12243
   once: true
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+pr-12243
+
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 =======
@@ -1455,10 +1826,21 @@ pr-12243
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   {
   opacity: 0, y: 30
 }whileInView= {
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+pr-12243
+  opacity: 1, y: 0
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 =======
@@ -1470,6 +1852,10 @@ pr-12243
   opacity: 1, y: 0
 >>>>>>> merged-prs-20250907-203621
   opacity: 1, y: 0 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }transition= {
   {
@@ -1483,9 +1869,18 @@ pr-12243
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
   opacity: 1, y: 0 
@@ -1500,6 +1895,17 @@ pr-12243
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  once: true
+
+pr-12243
+}> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" > <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📱</div> <h3 className="text-xl font-semibold text-white mb-2" >Phone</h3> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors" > +1 302 464 0950 </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >✉️</div> <h3 className="text-xl font-semibold text-white mb-2" >Email</h3> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors" > kleber@ziontechgroup.com </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📍</div> <h3 className="text-xl font-semibold text-white mb-2" >Address</h3> <p className="text-gray-300 text-sm" > 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="https://ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Visit Our Website </a> <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Get Started Today </a> </div> </motion.div> </div> </section> <div> <h3 className="text-white font-bold text-lg mb-4" >ZionTech Group</h3> <p className="text-gray-400 text-sm leading-relaxed" > Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div> <h4 className="text-white font-semibold mb-4" >Services</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="#services" className="hover:text-cyan-400 transition-colors" >Micro SAAS</a></li> <li><a href="#ai" className="hover:text-cyan-400 transition-colors" >AI Services</a></li> <li><a href="#automation" className="hover:text-cyan-400 transition-colors" >AI Automation</a></li> <li><a href="#quantum" className="hover:text-cyan-400 transition-colors" >Quantum Security</a></li> <li><a href="#it" className="hover:text-cyan-400 transition-colors" >IT Solutions</a></li> <li><a href="#emerging" className="hover:text-cyan-400 transition-colors" >Emerging Tech</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Company</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >About Us</a></li> <li><a href="#contact" className="hover:text-cyan-400 transition-colors" >Contact</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Careers</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Blog</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >News</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Connect</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors" >+1 302 464 0950</a></li> <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >kleber@ziontechgroup.com</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Website</a></li> <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors" >LinkedIn</a></li> <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors" >Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto" > We're not just another technology company - we're pioneers shaping the future of business and technology </p> </motion.div> {
+  title: 'Innovation First', description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀'
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   once: true
   once: true 
 
@@ -1541,6 +1947,10 @@ export default Homepage2025;
   duration: 0 && 0.8;
 }> <h2 className=text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </span> </h2> <p className=text-xl text-gray-300 mb-8 > Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" > <div className=bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 > <div className="text-3xl mb-4" >📱</div> <h3 className=text-xl font-semibold text-white mb-2 >Phone</h3> <a href="tel:+13024640950" className=text-cyan-400 hover:text-cyan-300 transition-colors > +1 302 464 0950 </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className=text-3xl mb-4 >✉️</div> <h3 className="text-xl font-semibold text-white mb-2" >Email</h3> <a href=mailto:kleber@ziontechgroup.com className="text-cyan-400 hover:text-cyan-300 transition-colors" > kleber@ziontechgroup.com </a> </div> <div className=bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 > <div className="text-3xl mb-4" >📍</div> <h3 className=text-xl font-semibold text-white mb-2 >Address</h3> <p className="text-gray-300 text-sm" > 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className=flex flex-col sm:flex-row gap-4 justify-center > <a href="https://ziontechgroup.com" className=bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 > Visit Our Website </a> <a href="mailto:kleber@ziontechgroup.com" className=border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 > Get Started Today </a> </div> </motion.div> </div> </section> <div> <h3 className="text-white font-bold text-lg mb-4" >ZionTech Group</h3> <p className=text-gray-400 text-sm leading-relaxed > Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div> <h4 className="text-white font-semibold mb-4" >Services</h4> <ul className=text-gray-400 text-sm space-y-2 > <li><a href="#services" className=hover:text-cyan-400 transition-colors >Micro SAAS</a></li> <li><a href="#ai" className=hover:text-cyan-400 transition-colors >AI Services</a></li> <li><a href="#automation" className=hover:text-cyan-400 transition-colors >AI Automation</a></li> <li><a href="#quantum" className=hover:text-cyan-400 transition-colors >Quantum Security</a></li> <li><a href="#it" className=hover:text-cyan-400 transition-colors >IT Solutions</a></li> <li><a href="#emerging" className=hover:text-cyan-400 transition-colors >Emerging Tech</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Company</h4> <ul className=text-gray-400 text-sm space-y-2 > <li><a href="https://ziontechgroup.com" className=hover:text-cyan-400 transition-colors >About Us</a></li> <li><a href="#contact" className=hover:text-cyan-400 transition-colors >Contact</a></li> <li><a href="https://ziontechgroup.com" className=hover:text-cyan-400 transition-colors >Careers</a></li> <li><a href="https://ziontechgroup.com" className=hover:text-cyan-400 transition-colors >Blog</a></li> <li><a href="https://ziontechgroup.com" className=hover:text-cyan-400 transition-colors >News</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Connect</h4> <ul className=text-gray-400 text-sm space-y-2 > <li><a href="tel:+13024640950" className=hover:text-cyan-400 transition-colors >+1 302 464 0950</a></li> <li><a href="mailto:kleber@ziontechgroup.com" className=hover:text-cyan-400 transition-colors >kleber@ziontechgroup.com</a></li> <li><a href="https://ziontechgroup.com" className=hover:text-cyan-400 transition-colors >Website</a></li> <li><a href="https://www.linkedin.com/company/zion-tech-group" className=hover:text-cyan-400 transition-colors >LinkedIn</a></li> <li><a href="https://x.com/ziontechgroup" className=hover:text-cyan-400 transition-colors >Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className=text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto > Were not just another technology company - were pioneers shaping the future of business and technology </p> </motion.div> {
   title: 'Innovation First', description: We don\t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
   title: Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions., icon: 📊'
@@ -1601,6 +2011,14 @@ export default Homepage2025;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}> <h2 className="text-4xl "md":text-5xl "lg":text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className="grid grid-cols-1 "md":grid-cols-3 gap-8 mb-12" > <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📱</div> <h3 className="text-xl font-semibold text-white mb-2" >Phone</h3> <a href=""tel":+13024640950" className="text-cyan-400 "hover":text-cyan-300 transition-colors" > +1 302 464 0950 </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >✉️</div> <h3 className="text-xl font-semibold text-white mb-2" >Email</h3> <a href=""mailto":kleber@ziontechgroup.com" className="text-cyan-400 "hover":text-cyan-300 transition-colors" > kleber@ziontechgroup.com </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📍</div> <h3 className="text-xl font-semibold text-white mb-2" >Address</h3> <p className="text-gray-300 text-sm" > 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className="flex flex-col "sm":flex-row gap-4 justify-center" > <a href=""https"://ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-300 transform "hover":scale-105" > Visit Our Website </a> <a href=""mailto":kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold "hover":bg-cyan-400 "hover":text-black transition-all duration-300 transform "hover":scale-105" > Get Started Today </a> </div> </motion.div> </div> </section> <div> <h3 className="text-white font-bold text-lg mb-4" >ZionTech Group</h3> <p className="text-gray-400 text-sm leading-relaxed" > Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div> <h4 className="text-white font-semibold mb-4" >Services</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="#services" className=""hover":text-cyan-400 transition-colors" >Micro SAAS</a></li> <li><a href="#ai" className=""hover":text-cyan-400 transition-colors" >AI Services</a></li> <li><a href="#automation" className=""hover":text-cyan-400 transition-colors" >AI Automation</a></li> <li><a href="#quantum" className=""hover":text-cyan-400 transition-colors" >Quantum Security</a></li> <li><a href="#it" className=""hover":text-cyan-400 transition-colors" >IT Solutions</a></li> <li><a href="#emerging" className=""hover":text-cyan-400 transition-colors" >Emerging Tech</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Company</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href=""https"://ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >About Us</a></li> <li><a href="#contact" className=""hover":text-cyan-400 transition-colors" >Contact</a></li> <li><a href=""https"://ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >Careers</a></li> <li><a href=""https"://ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >Blog</a></li> <li><a href=""https"://ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >News</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Connect</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href=""tel":+13024640950" className=""hover":text-cyan-400 transition-colors" >+1 302 464 0950</a></li> <li><a href=""mailto":kleber@ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >kleber@ziontechgroup.com</a></li> <li><a href=""https"://ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >Website</a></li> <li><a href=""https"://www.linkedin.com/company/zion-tech-group" className=""hover":text-cyan-400 transition-colors" >LinkedIn</a></li> <li><a href=""https"://x.com/ziontechgroup" className=""hover":text-cyan-400 transition-colors" >Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className="text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto" > We're not just another technology company - we're pioneers shaping the future of business and technology </p> </motion.div> {'
+  }
+  "title": 'Innovation First', "description": 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', "icon": '🚀','
+=======
+>>>>>>> origin/resolved-merge-conflicts
   once: true
   once: true 
 
@@ -1622,13 +2040,26 @@ export default Homepage2025;
 }
 {
   title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: '📈'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 {
   }
   "title": 'Proven Results', "description": 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', "icon": '📈','
 }
 {
+<<<<<<< HEAD
   title: 'Expert Team', description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: '👥'
+=======
+<<<<<<< HEAD
+  }
+  "title": 'Future-Proof Technology', "description": 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', "icon": '🔮','
+=======
+  title: 'Expert Team', description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: '👥'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 {
   }
@@ -1644,6 +2075,47 @@ export default Homepage2025;
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) )
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>)
   "duration": 0 && 0.8 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}viewport= {
+  {
+  }
+  "once": true 
+
+}> <h2 className="text-4xl "md":text-5xl "lg":text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className="grid grid-cols-1 "md":grid-cols-3 gap-8 mb-12" > <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📱</div> <h3 className="text-xl font-semibold text-white mb-2" >Phone</h3> <a href=""tel":+13024640950" className="text-cyan-400 "hover":text-cyan-300 transition-colors" > +1 302 464 0950 </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >✉️</div> <h3 className="text-xl font-semibold text-white mb-2" >Email</h3> <a href=""mailto":kleber@ziontechgroup && ziontechgroup.com" className="text-cyan-400 "hover":text-cyan-300 transition-colors" > kleber@ziontechgroup && ziontechgroup.com </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📍</div> <h3 className="text-xl font-semibold text-white mb-2" >Address</h3> <p className="text-gray-300 text-sm" > 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className="flex flex-col "sm":flex-row gap-4 justify-center" > <a href=""https"://ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-300 transform "hover":scale-105" > Visit Our Website </a> <a href=""mailto":kleber@ziontechgroup && ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold "hover":bg-cyan-400 "hover":text-black transition-all duration-300 transform "hover":scale-105" > Get Started Today </a> </div> </motion && motion.div> </div> </section> <div> <h3 className="text-white font-bold text-lg mb-4" >ZionTech Group</h3> <p className="text-gray-400 text-sm leading-relaxed" > Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div> <h4 className="text-white font-semibold mb-4" >Services</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="#services" className=""hover":text-cyan-400 transition-colors" >Micro SAAS</a></li> <li><a href="#ai" className=""hover":text-cyan-400 transition-colors" >AI Services</a></li> <li><a href="#automation" className=""hover":text-cyan-400 transition-colors" >AI Automation</a></li> <li><a href="#quantum" className=""hover":text-cyan-400 transition-colors" >Quantum Security</a></li> <li><a href="#it" className=""hover":text-cyan-400 transition-colors" >IT Solutions</a></li> <li><a href="#emerging" className=""hover":text-cyan-400 transition-colors" >Emerging Tech</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Company</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href=""https"://ziontechgroup && ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >About Us</a></li> <li><a href="#contact" className=""hover":text-cyan-400 transition-colors" >Contact</a></li> <li><a href=""https"://ziontechgroup && ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >Careers</a></li> <li><a href=""https"://ziontechgroup && ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >Blog</a></li> <li><a href=""https"://ziontechgroup && ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >News</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Connect</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href=""tel":+13024640950" className=""hover":text-cyan-400 transition-colors" >+1 302 464 0950</a></li> <li><a href=""mailto":kleber@ziontechgroup && ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >kleber@ziontechgroup && ziontechgroup.com</a></li> <li><a href=""https"://ziontechgroup && ziontechgroup.com" className=""hover":text-cyan-400 transition-colors" >Website</a></li> <li><a href=""https"://www && www.linkedin.com/company/zion-tech-group" className=""hover":text-cyan-400 transition-colors" >LinkedIn</a></li> <li><a href=""https"://x && x.com/ziontechgroup" className=""hover":text-cyan-400 transition-colors" >Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className="text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto" > We're not just another technology company - we're pioneers shaping the future of business and technology </p> </motion && motion.div> {;'
+  }
+  "title": 'Innovation First', "description": 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', "icon": '🚀' ,'
+};
+{;
+  }
+  "title": 'Proven Results', "description": 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', "icon": '📈' ,'
+};
+{;
+  }
+  "title": 'Future-Proof Technology', "description": 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', "icon": '🔮' ,'
+};
+{;
+  }
+  "title": 'Expert Team', "description": 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', "icon": '👥' ,'
+};
+{;
+  }
+  "title": '24/7 Support', "description": 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.', "icon": '🛡️' ,'
+};
+{;
+  }
+  "title": 'Scalable Solutions', "description": 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', "icon": '📊' ;'
+}].map ( (feature, index) => (<motion && motion.div </p> </motion && motion.div>) ) ;
+}</div> </div> </div> </footer> </UltraFuturisticBackground2035>) ;
+}
+export default Homepage2025;
+
+}
+export default Homepage2025;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
 
 }viewport= {
@@ -2130,11 +2602,34 @@ export default Homepage2025;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) );
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+}
+export default Homepage2025;
+;
+}
+{"title": 'Scalable Solutions', "description": 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', "icon": '📊';'
+}].map ( (feature, index) => (<motion.div </p> </motion.div>) )}</div> </div> </div> </footer> </UltraFuturisticBackground2035>)}
+
+export default Homepage2025;
+
+export default Homepage2025;"title": 'Scalable Solutions', "description": 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', "icon": '📊';'
+}].map ( (feature, index) => (<motion.div </p> </motion.div>) )}</div> </div> </div> </footer> </UltraFuturisticBackground2035>)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 }
 }
@@ -2177,10 +2672,21 @@ export default Homepage2025;
 export default Homepage2025;title: 'Scalable Solutions',
   description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
 }].map ( (feature, index) => (<motion.div </p    /> </motion.div>) )}</div> </div> </div> </footer> </UltraFuturisticBackground2035>)}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 export default Homepage2025;
 }
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  "title": 'Scalable Solutions', "description": 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', "icon": '📊';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: '📈' 
 }
@@ -2215,10 +2721,19 @@ pr-12243
 }
 {
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) );
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 
@@ -2267,3 +2782,7 @@ export default Homepage2025;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

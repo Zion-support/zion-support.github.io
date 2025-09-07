@@ -701,6 +701,8 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
       </div>;
       {/* CTA section */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -724,6 +726,7 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
       </div>
     </div>
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             Ready to get started?;
           </h2>;
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">;"

@@ -23,6 +23,8 @@ export function HireNowCTA("props": "any) {;
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
         e.preventDefault();
         if (onHire) {;
@@ -103,6 +105,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
@@ -113,6 +116,8 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         startDate: '','
         message: ''
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
@@ -127,6 +132,7 @@ import { DollarSign, MessageSquare } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -134,6 +140,8 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -156,6 +164,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         e.preventDefault();
 
         if (onHire) {
@@ -167,6 +176,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             projectDescription: '','
             budget: '','
             startDate: '',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 ursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/profile/HireNowCTA.jsx
@@ -184,6 +195,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     );
         setIsFormOpen(false)};
@@ -194,10 +206,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
     const handleChange = (e) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
@@ -269,6 +284,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
     </Card>);
 =======
+<<<<<<< HEAD
+    </Card>);
+=======
     </Card>);
 <<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 }
@@ -284,3 +302,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

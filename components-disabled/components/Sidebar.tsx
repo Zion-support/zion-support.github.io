@@ -122,12 +122,30 @@ if (isOpen) {document.body.style.overflow = 'hidden';'
   return (<AnimatePresence>;
       {isOpen && (<>;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';'
 import { useRouter } from 'next/router';'
 import {
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   X,
   ChevronDown,
   ChevronRight,
@@ -284,8 +302,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
 
         <>
 
+<<<<<<< HEAD
 const quickLinks = [;
     { "name": 'Free Consultation', "href": '/consultation','
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quickLinks = [
+    { name: 'Free Consultation';,}
+  href: '/consultation';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    { "name": 'Free Consultation', "href": '/consultation','
+=======
+const quickLinks = [
+    { name: 'Free Consultation';,}
+  href: '/consultation';,}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
 
     { "name": 'Get Quote', "href": '/quote','
@@ -302,6 +342,17 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen;, onClose    }) => {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const [openDropdowns, setOpenDropdowns] = useState<string[] />([]);
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 
 
@@ -315,6 +366,28 @@ const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 const navigation = {
     'Services': ['
         { "name": 'AI Services', "href": '/ai-services','
+<<<<<<< HEAD
+=======
+=======
+  const [openDropdowns, setOpenDropdowns] = useState<string[] />([]);
+
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const navigation = {
+    'Services': [
+        { name: 'AI Services';,}
+  href: '/ai-services';,}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
 
         { "name": 'IT Services', "href": '/it-services','
@@ -345,8 +418,30 @@ const navigation = {
  
 };
 
+<<<<<<< HEAD
 const quickLinks = [;
       { "name": 'About Us', "href": '/about','
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quickLinks = [
+      { name: 'About Us';,}
+  href: '/about';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      { "name": 'About Us', "href": '/about','
+=======
+const quickLinks = [
+      { name: 'About Us';,}
+  href: '/about';,}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
 
       { "name": 'Contact', "href": '/contact','
@@ -624,12 +719,48 @@ const [open_dropdowns, setOpenDropdowns]  = useState < string[]>([])const handle
       }
       prev.includes (title)? prev.filter (item = > item !== title): [...prev, title])}
 ;
+<<<<<<< HEAD
   const navigation = {'Services': [;'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
 },{ "name": 'Mobile Development', "href": '/services / mobile - development', "icon": Smartphone,'
 },{ "name": 'Cloud Solutions', "href": '/services / cloud - solutions', "icon": Cloud,'
 },{ "name": 'Cybersecurity', "href": '/services / cybersecurity', "icon": Shield,'
 },{ "name": 'Performance Optimization', "href": '/services / performance', "icon": Zap,'
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const navigation = {'Services': [;
+      { name: 'Web Development';,}
+  href: '/services / web - development';, icon: Code;,}
+},{ name: 'Mobile Development';,}
+  href: '/services / mobile - development';, icon: Smartphone;,}
+},{ name: 'Cloud Solutions';,}
+  href: '/services / cloud - solutions';, icon: Cloud;,}
+},{ name: 'Cybersecurity';,}
+  href: '/services / cybersecurity';, icon: Shield;,}
+},{ name: 'Performance Optimization';,}
+  href: '/services / performance';, icon: Zap;,}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
     ],'Solutions': [;'
       { "name": 'Enterprise Solutions', "href": '/solutions / enterprise', "icon": Building2,'
@@ -746,8 +877,30 @@ export default Sidebar;ursor/expand-services-advertise-and-build-project-c52f;
   X,ChevronDown,Home,Users,Briefcase,Phone,Mail,MapPin,Building2,User,LogOut,Search;
 } from 'lucide-react';'
 
+<<<<<<< HEAD
 const navigation = {'Services': [;'
       { "name": 'AI Services', "href": '/ai-services','
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const navigation = {'Services': [;
+      { name: 'AI Services';,}
+  href: '/ai-services';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      { "name": 'AI Services', "href": '/ai-services','
+=======
+const navigation = {'Services': [;
+      { name: 'AI Services';,}
+  href: '/ai-services';,}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
   { "name": 'IT Services', "href": '/it-services','
 },
@@ -915,9 +1068,28 @@ href = "/contact""
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg "hover":bg-blue-700 transition-colors";"
 }
 
+<<<<<<< HEAD
 const "Sidebar": React.FC < SidebarProps> = ({ is_open, on_close    }) => {
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const Sidebar: React.FC < SidebarProps /> = ({ is_open;, on_close    }) => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+=======
+const Sidebar: React.FC < SidebarProps /> = ({ is_open;, on_close    }) => {
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
  ;
   }
@@ -932,9 +1104,37 @@ const handleDropdownToggle = ("title": string) =>: any {
         : [...prev, title])
 };
 
+<<<<<<< HEAD
 const navigation = {
     'Services': [;'
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Services': [;'
+      { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
+=======
+=======
+=======
+<<<<<<< HEAD
+    'Services': [;'
+      { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const navigation = {
+    'Services': [;
+      { name: 'Web Development';,}
+  href: '/services / web - development';, icon: Code;,}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
       { "name": 'Mobile Development', "href": '/services / mobile - development', "icon": Smartphone,'
 },
@@ -970,8 +1170,30 @@ const navigation = {
 }
 ;
 
+<<<<<<< HEAD
 const quick_links = [;
     { "name": 'About Us', "href": '/about','
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quick_links = [
+    { name: 'About Us';,}
+  href: '/about';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    { "name": 'About Us', "href": '/about','
+=======
+const quick_links = [
+    { name: 'About Us';,}
+  href: '/about';,}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
 
       { "name": 'Our Team', "href": '/team','
@@ -1079,11 +1301,27 @@ return (;
 export default Sidebar;
 ;
   X, 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';'
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { 
   }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   X, 
   ChevronDown, 
   Home, 
@@ -1098,9 +1336,37 @@ import {
   Search
 } from 'lucide-react';'
 
+<<<<<<< HEAD
 const navigation = {
   'Services': ['
       { "name": 'AI Services', "href": '/ai-services','
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  'Services': ['
+      { "name": 'AI Services', "href": '/ai-services','
+=======
+=======
+=======
+<<<<<<< HEAD
+  'Services': ['
+      { "name": 'AI Services', "href": '/ai-services','
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const navigation = {
+  'Services': [
+      { name: 'AI Services';,}
+  href: '/ai-services';,}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
 
       { "name": 'IT Services', "href": '/it-services','

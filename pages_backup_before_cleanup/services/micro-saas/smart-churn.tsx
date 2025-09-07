@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function SmartChurn() {return (<Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[; \'Real-time churn scoring using product usage + billing + support\',\'Sends save offers and playbooks to Intercom,Zendesk,or email\',\'Cohort analysis and revenue-at-risk dashboards\',\'Export to BigQuery/Snowflake; webhooks and REST API\'; ]} links = { \"website\": \'"https": /> ,'
 }function Article() {return (<main style={ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }> <h1 style={ \"marginTop\": \'0\' }>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (<li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> )}module.exports = default function SmartChurn() ;"
 return (<Article; title="Smart Churn Predictor"; subtitle="ML-based churn scoring with prescriptive save plays"; price="from $299/mo"; bullets={[; "Real-time churn scoring using product usage + billing + support","Sends save offers and playbooks to Intercom,Zendesk,or email","Cohort analysis and revenue-at-risk dashboards","Export to BigQuery/Snowflake; webhooks and REST API"; ]} links = { "website": ""https": /> ,;"
@@ -7,11 +8,142 @@ return (<Article; title="Smart Churn Predictor"; subtitle="ML-based churn scorin
 import React from 'react';'
 
 interface SmartchurnProps  {// Add props here as needed;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake; webhooks and REST API\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function SmartChurn() {; return (; <Article; title="Smart Churn Predictor"; subtitle="ML-based churn scoring with prescriptive save plays"; price="from $299/mo"; bullets={[; "Real-time churn scoring using product usage + billing + support",; "Sends save offers and playbooks to Intercom,Zendesk,or email",; "Cohort analysis and revenue-at-risk dashboards",; "Export to BigQuery/Snowflake; webhooks and REST API"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+import React from 'react';
+interface SmartchurnProps {
+  // Add props here as needed
+}
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+export default function Smartchurn({ }: SmartchurnProps) {
+  return (
+    <div>
+      <h1>Smartchurn</h1>
+      <p>This component is currently under development.</p>
+    </div>
+<<<<<<< HEAD
+  );
+=======
+  );
+<<<<<<< HEAD
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+
+>>>>>>> merged-prs-20250907-203621
+
+export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake; webhooks and REST API\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function SmartChurn() {; return (; <Article; title="Smart Churn Predictor"; subtitle="ML-based churn scoring with prescriptive save plays"; price="from $299/mo"; bullets={[; "Real-time churn scoring using product usage + billing + support",; "Sends save offers and playbooks to Intercom,Zendesk,or email",; "Cohort analysis and revenue-at-risk dashboards",; "Export to BigQuery/Snowflake; webhooks and REST API"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+import React from 'react';
+interface SmartchurnProps {
+  // Add props here as needed
+}
+export default function Smartchurn({ }: SmartchurnProps) {
+  return (
+    <div>
+      <h1>Smartchurn</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+
+
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+
+export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake; webhooks and REST API\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function SmartChurn() {; return (; <Article; title="Smart Churn Predictor"; subtitle="ML-based churn scoring with prescriptive save plays"; price="from $299/mo"; bullets={[; "Real-time churn scoring using product usage + billing + support",; "Sends save offers and playbooks to Intercom,Zendesk,or email",; "Cohort analysis and revenue-at-risk dashboards",; "Export to BigQuery/Snowflake; webhooks and REST API"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+import React from 'react';
+interface SmartchurnProps {
+  // Add props here as needed
+}
+export default function Smartchurn({ }: SmartchurnProps) {
+  return (
+    <div>
+      <h1>Smartchurn</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
 export default function Smartchurn() {return (<div>;
       <h1>Smartchurn</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   )
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

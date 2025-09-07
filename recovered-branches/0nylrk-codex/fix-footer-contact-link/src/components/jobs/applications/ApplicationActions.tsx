@@ -1,4 +1,52 @@
 <<<<<<< HEAD
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+
+"
+import { useState } from "react","
+import { Link } from "react-router-dom",
+"
+import { useState } from "react","
+import { Link } from "react-router-dom","
+import { useState } from "react","
+import { Link } from "react-router-dom",
+
+"
+import { useState } from "react","
+import { Link } from "react-router-dom",
+
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { useState } from "react",
+import { Link } from "react-router-dom",
+
+import { 
+
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+
+import { Button } from "@/components/ui/button",;
+
+import { Eye, ChevronDown, Loader2 } from "lucide-react",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+
+interface ApplicationActionsProps {
+
+  application: JobApplication
+  processingId: string | null
+
+  onViewApplication: (applicationId: string) => Promise<void>
+
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+}
+
+=======
+<<<<<<< HEAD
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -36,11 +84,27 @@ import { Link } from "react-router-dom";
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
+<<<<<<< HEAD
+
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+
+interface ApplicationActionsProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+}
+
+export function ApplicationActions(): any ({;
+
+export function ApplicationActions({;
+=======
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 <<<<<<< HEAD
 import { useState } from "react",
@@ -113,10 +177,156 @@ interface ApplicationActionsProps {
 <<<<<<< HEAD
 export function ApplicationActions({;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   application;
   processingId;
   onViewApplication;
+
 export function ApplicationActions({
+<<<<<<< HEAD
+
+  application,
+  processingId,
+
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange;
+}: ApplicationActionsProps) {;
+
+  onStatusChange
+}: ApplicationActionsProps) {
+
+    <div className="flex items-center justify-end gap-2">;
+      <Button"
+        variant="outline" "
+        size="sm" 
+        onClick={() => onViewApplication(application && application.id)}
+        disabled={!!application && application.viewed_at}
+      >;"
+
+        <Eye className="h-4 w-4" />;
+      </Button>;
+
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+
+import { useState } from "react",;
+import { Link } from "react-router-dom",;
+import { ;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",;
+import { Button } from "@/components/ui/button",;
+import { Eye, ChevronDown, Loader2 } from "lucide-react",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+;
+interface ApplicationActionsProps {;
+  application:JobApplication,;
+  processingId:string | null,;
+  onViewApplication:(applicationId:string) => Promise<void>,;
+  onStatusChange:(applicationId:string, newStatus:ApplicationStatus) => Promise<void>;
+}
+;
+export function ApplicationActions({;
+  application,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange;
+} ApplicationActionsProps) {;
+  return (;
+    <div className="flex items-center justify-end gap-2">;
+      <Button ;
+        variant="outline" ;
+        size="sm" ;
+        onClick={() => onViewApplication(application.id)}
+        disabled={!!application.viewed_at}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+      ;
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button ;
+            variant="outline" ;
+            size="sm";
+            disabled={processingId === application.id}
+          >;
+            {processingId === application.id ? (;
+              <Loader2 className="h-4 w-4 animate-spin" />;
+            ) :(;
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
+    <div className="flex items-center justify-end gap-2">
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => onViewApplication(application.id)}
+        disabled={!!application.viewed_at}
+      >
+        <Eye className="h-4 w-4" />
+      </Button>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="outline"
+            size="sm"
+            disabled={processingId === application.id}
+          >
+            {processingId === application.id ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+            )}
+
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "shortlisted")}
+          >
+            Shortlist
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "interview")}
+          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "hired")}
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600"
+          >
+            Reject
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      <Button "
+        variant="default" 
+
+        size="sm"
+        asChild;
+      >
+        <Link to={`/messages?talentId=${application.talent_id}`}>
+          Contact;
+        </Link>
+      </Button>
+    </div>
+
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align="end">;
+=======
   application,
   processingId,
   onViewApplication,
@@ -490,6 +700,7 @@ export function ApplicationActions({;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <DropdownMenuItem
             onClick={() => onStatusChange(application && application.id, "shortlisted")}
           >;
@@ -508,6 +719,9 @@ export function ApplicationActions({;
           <DropdownMenuItem
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
@@ -515,6 +729,7 @@ export function ApplicationActions({;
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",;
 
 import { Link } from "react-router-dom",;
@@ -532,6 +747,9 @@ interface ApplicationActionsProps {;
   processingId: string | null,;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 }
 ;
@@ -594,10 +812,14 @@ function ApplicationActions() {
               <>Status <ChevronDown className="h - 4 w - 4 ml - 1" /></>)}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </Button>;
         </DropdownMenuTrigger>;"
         <DropdownMenuContent align="end">;
           <DropdownMenuItem;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -608,10 +830,14 @@ function ApplicationActions() {
             on_click={() => onStatusChange (application.id, "shortlisted")}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -621,10 +847,14 @@ function ApplicationActions() {
             on_click={() => onStatusChange (application.id, "interview")}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -634,10 +864,14 @@ function ApplicationActions() {
             on_click={() => onStatusChange (application.id, "hired")}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -650,11 +884,26 @@ function ApplicationActions() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
+
+;
+
+      ;
+      <Button ;"
+        variant="default" ;"
+        size="sm";
+      <Button;"
+        variant="default";"
+        size="sm";
+        asChild;
+      >;`
+=======
 <<<<<<< HEAD
 ;
 
@@ -667,6 +916,7 @@ function ApplicationActions() {
         size="sm";
         asChild;
       >;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <Link to={`/messages?talentId=${application.talent_id}`}>;
           Contact;
         </Link>;

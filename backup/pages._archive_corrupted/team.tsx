@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+
+}
+=======
 
 }
 <<<<<<< HEAD
@@ -33,6 +37,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }}
 }
 }
+}
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -63,3 +68,7 @@ export default function Team({}: TeamProps) {
 }
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

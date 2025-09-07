@@ -2,6 +2,24 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
+import React from 'react',
+import { Card, CardContent } from "@/components/ui/card","
+import { Badge } from "@/components/ui/badge",";
+import { Button } from "@/components/ui/button";'
+import { Download  } from 'lucide-react';"
+import { Resume } from "@/types/resume";
+interface ResumePreviewCardProps {}
+  resume: Resume;
+  onDownload: () => void;
+
+}
+
+=======
+<<<<<<< HEAD
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 =======
 <<<<<<< HEAD
 import React from "react";
@@ -57,6 +75,7 @@ interface ResumePreviewCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ResumePreviewCardProps {
 
   resume: Resume,
@@ -65,6 +84,9 @@ interface ResumePreviewCardProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 "
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;"
@@ -198,6 +220,8 @@ export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePrevie
   return (;
   return (
 
+<<<<<<< HEAD
+=======
 =======
 export function ResumePreviewCard(): any ({;
   resume,;
@@ -227,14 +251,54 @@ export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePrevie
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;
         <div className="flex justify-between items-start mb-2">;
           <div>;
 <<<<<<< HEAD
 
+            <h4 className="font-medium text-white">;
+              {resume && resume.basic_info.title}
+            </h4>;
+            {resume && resume.basic_info.headline && (;
+              <p className="text-sm text-zion-cyan">;
+                {resume && resume.basic_info.headline}
+  return ("
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;"
+      <CardContent className="p-4">;"
+        <div className="flex justify-between items-start mb-2">;"
+</div>
+          <div>;
+</div>"
+            <h4 className="font-medium text-white">;"
+</h4>
+            </h4>;"
+              <p className="text-sm text-zion-cyan">;"
+</p>
+              </p>;
+          </div>;
+          <Button;"
+            variant="ghost"""
+            size="sm""
+            onClick={onDownload}
+            disabled={isLoading}
+import React from './react';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { Download  } from './lucide-react';
+import { Resume  } from '@/types / resume';
+  // TODO: Implement
+  resume: Resume;,)
+  on_download: () => void;
+  is_loading: boolean;
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
@@ -259,6 +323,8 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <h4 className="font-medium text-white">;
@@ -320,6 +386,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
 import React from 'react',;
@@ -388,6 +455,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         )}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">"
 </p>"
@@ -405,8 +475,11 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
 import React from 'react',;
@@ -419,6 +492,19 @@ interface ResumePreviewCardProps {;
   resume: Resume,;
   onDownload: () => void;
   isLoading: boolean;
+<<<<<<< HEAD
+
+}
+export /**
+ * ResumePreviewCard - Function description
+ */
+function ResumePreviewCard() {
+  return (
+    <Card className="mt - 3 bg - zion - blue - dark / 30 border - zion - purple / 20">;
+      <CardContent className="p - 4">;
+        <div className="flex justify - between items - start mb - 2">;
+          <div>;
+=======
 <<<<<<< HEAD
 }
 ;
@@ -550,6 +636,7 @@ function ResumePreviewCard() {
       <CardContent className="p - 4">;
         <div className="flex justify - between items - start mb - 2">;
           <div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <h4 className="font - medium text - white">;
               {resume.basic_info.title}
             </h4>;
@@ -575,6 +662,10 @@ function ResumePreviewCard() {
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className="h-8 w-8 p-0">;
             <Download className="h-4 w-4 text-zion-cyan" />;
             <span className="sr-only">Download Resume</span>;
@@ -582,11 +673,17 @@ function ResumePreviewCard() {
         </div>;
 <<<<<<< HEAD
 
+        {resume && resume.basic_info.summary && (;
+          <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
+=======
+<<<<<<< HEAD
+
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {resume && resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </CardContent>
     </Card>
       </CardContent>;
@@ -594,6 +691,15 @@ function ResumePreviewCard() {
             {resume && resume.basic_info.summary}
           </p>;
         )}
+<<<<<<< HEAD
+
+        {resume && resume.skills && resume && resume.skills.length > 0 && (;
+          <div className="flex flex-wrap gap-1 mt-2">;
+            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+        {resume.basic_info.summary && (
+          <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
+            {resume.basic_info.summary}
+=======
         {resume && resume.skills && resume && resume.skills.length > 0 && (;
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
@@ -603,6 +709,7 @@ function ResumePreviewCard() {
             {resume.basic_info.summary}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Badge
                 key={index}
                 variant="outline"
@@ -620,8 +727,12 @@ function ResumePreviewCard() {
 <<<<<<< HEAD
 <h4 className="font-medium text-white">{resume.basic_info.title}</h4>;
 =======
+<<<<<<< HEAD
+<h4 className="font-medium text-white">{resume.basic_info.title}</h4>;
+=======
             <h4 className="font-medium text-white">{resume.basic_info.title}</h4>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {resume.basic_info.headline && (;
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>;
             )}
@@ -666,6 +777,9 @@ function ResumePreviewCard() {
         )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </CardContent>;
     </Card>;
 
@@ -689,6 +803,11 @@ function ResumePreviewCard() {
                 +{resume.skills.length - 5} more;
               </Badge>)}
           </div>)}
+<<<<<<< HEAD
+      </CardContent>;
+    </Card>);
+}
+=======
 =======
 
 
@@ -745,3 +864,4 @@ isLoading: boolean
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

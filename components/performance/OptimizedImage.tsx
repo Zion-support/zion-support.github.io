@@ -1,6 +1,23 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+interface OptimizedImageProps {
+  src: string,
+  alt: string,
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
+  sizes?: string;
+}
+
+import React from "react";
+import Image from "next/image";
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 import React from 'react';
@@ -33,8 +50,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 
+<<<<<<< HEAD
+
+import React from "react";
+import Image from "next/image";
+import React from "react";
+import Image from "next/image";
+
+=======
 
 interface OptimizedImageProps {;
   src: string, alt: string,;
@@ -54,6 +80,7 @@ export default OptimizedImage;
 import Image from 'next / image';
 ;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from \"react\";"
 import Image from \"next/image\";
 
@@ -68,6 +95,13 @@ export default OptimizedImage;
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
+<<<<<<< HEAD
+  }
+  "src": string;
+  "alt": string;
+  "width": number;
+  "height": number;
+=======
   src: string, alt: string,
   width?: number;
   height?: number;
@@ -126,6 +160,12 @@ export default OptimizedImage
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   }
@@ -168,6 +208,7 @@ interface OptimizedImageProps {
   alt: string;
   width: number;
   height: number;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   className?: string;
 interface OptimizedImageProps {}
   width?: number;
@@ -177,6 +218,9 @@ interface OptimizedImageProps {}
   quality?: number;
   sizes?: string;
 }
+<<<<<<< HEAD
+
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,6 +233,7 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
@@ -214,6 +259,14 @@ class_name = '',
   sizes = "100vw","
 }) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  // Check condition
+if ( {) {
+  $2
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -223,6 +276,11 @@ class_name = '',
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   priority = false,'
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -233,7 +291,10 @@ if ( {) {
 if ( {) {}
   $2;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 =======
 }
@@ -311,6 +372,8 @@ src={src}
       width={width}
       height={height}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       className={className}
 <<<<<<< HEAD
 =======
@@ -325,10 +388,19 @@ src={src}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       priority={priority}
       className={className}
       sizes={sizes}
       quality={85}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       sizes={sizes}
 <<<<<<< HEAD
@@ -358,6 +430,10 @@ export default OptimizedImage;
 "
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default OptimizedImage;
 '
   )

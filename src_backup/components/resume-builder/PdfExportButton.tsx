@@ -257,6 +257,9 @@ const PdfExportButton = () => {
 <<<<<<< HEAD
   );
 =======
+<<<<<<< HEAD
+  );
+=======
 <<<<<<< HEAD:src_backup/components/resume-builder/PdfExportButton.tsx
   );
 =======
@@ -270,3 +273,4 @@ export default PdfExportButton;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/PdfExportButton.tsx
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

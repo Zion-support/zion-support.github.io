@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -18,6 +21,8 @@ import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -40,6 +45,7 @@ import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -56,6 +62,8 @@ import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
@@ -65,10 +73,17 @@ const mockPost: ForumPost = $2;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
+<<<<<<< HEAD
+
+// Mock data for a forum post
+const mockPost: ForumPost = {
+  id: "1",
+=======
 <<<<<<< HEAD
 
 =======
@@ -82,10 +97,13 @@ import { useToast } from "@/hooks/use-toast",
 const mockPost: ForumPost = {
   id: "1",
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title: "Best practices for AI model fine-tuning",
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
   authorId: "user1",
   authorName: "Alex Johnson",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   authorAvatar: "https://i.pravatar.cc/150?img = $2;
   authorRole: "Verified Talent",
@@ -94,6 +112,7 @@ const mockPost: ForumPost = {
   createdAt: "2025-04-01T12: 00: 00Z",
   updatedAt: "2025-04-01T12: 00: 00Z",
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
@@ -101,11 +120,235 @@ const mockPost: ForumPost = {
   createdAt: "2025-04-01T12:00:00Z",
 
   updatedAt: "2025-04-01T12:00:00Z",
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   upvotes: 48,
   downvotes: 2,
   replyCount: 4,
   isAnswered: true,
+<<<<<<< HEAD
+
+const mockPost: ForumPost = {
+
+    id: "reply2"
+    postId: "1"
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."
+    authorId: "user3"
+    authorName: "Michael Wong"
+    authorRole: "AI Engineer"
+    createdAt: "2025-04-01T16:15:00Z"
+    updatedAt: "2025-04-01T16:15:00Z"
+    upvotes: 8
+    downvotes: 0
+  }
+  {
+    id: "reply3"
+    postId: "1"
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
+    authorId: "user4"
+    authorName: "Emma Davis"
+    authorRole: "ML Research Lead"
+    createdAt: "2025-04-02T09:45:00Z"
+    updatedAt: "2025-04-02T09:45:00Z"
+    upvotes: 15
+    downvotes: 0
+
+  },
+  {
+    id: "reply2",
+    postId: "1",
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",
+    authorId: "user3",
+    authorName: "Michael Wong",
+    authorRole: "AI Engineer",
+    createdAt: "2025-04-01T16:15:00Z",
+    updatedAt: "2025-04-01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0
+  },
+  {
+    id: "reply3",
+    postId: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+    authorId: "user4",
+    authorName: "Emma Davis",
+    authorRole: "ML Research Lead",
+    createdAt: "2025-04-02T09:45:00Z",
+    updatedAt: "2025-04-02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    isAnswer: true
+  },
+
+  {
+    id: "reply4"
+    postId: "1"
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?"
+    authorId: "user5"
+    authorName: "David Lin"
+    createdAt: "2025-04-02T11:20:00Z"
+    updatedAt: "2025-04-02T11:20:00Z"
+    upvotes: 4
+    downvotes: 0
+  }
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import {useState} from "react";
+import {useParams, Link} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent} from "@/components/ui/card";
+import {Separator} from "@/components/ui/separator";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle} from "lucide-react";
+import {formatDistanceToNow, format} from "date-fns";
+import {ForumPost, ForumReply} from "@/types/community";
+import {useAuth} from "@/hooks/useAuth";
+import ReplyCard from "@/components/community/ReplyCard";
+import ReplyForm from "@/components/community/ReplyForm";
+import {useToast} from "@/hooks/use-toast";
+// Mock data for a forum post;
+const mockPost: ForumPost = {;
+  id: "1",;
+  title: "Best practices for AI model fine-tuning",
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
+  authorId: "user1",;
+  authorName: "Alex Johnson",;
+  authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
+  authorRole: "Verified Talent",;
+  categoryId: "ai-tools",;
+  tags: ["machine-learning", "fine-tuning", "gpt"];
+  createdAt: "2025-04-01T12:00:00Z",;
+  updatedAt: "2025-04-01T12:00:00Z",;
+  upvotes: 48,;
+  downvotes: 2,;
+  replyCount: 4,;
+  isAnswered: true,;
+
+  isFeatured: true;
+}
+// Mock data for replies;
+const mockReplies: ForumReply[] = []
+  {"
+    id: "reply1""
+    postId: "1"'"
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.""
+    authorId: "user2""
+    authorName: "Sarah Chen""
+    authorAvatar: "https://i.pravatar.cc/150?img=5""
+    createdAt: "2025-04-01T14:30:00Z""
+    updatedAt: "2025-04-01T14:30:00Z"
+    upvotes: 12;
+    downvotes: 0;
+  {"
+    id: "reply2""
+    postId: "1"'"
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.""
+    authorId: "user3""
+    authorName: "Michael Wong""
+    authorRole: "AI Engineer""
+    createdAt: "2025-04-01T16:15:00Z""
+    updatedAt: "2025-04-01T16:15:00Z"
+    upvotes: 8;
+    downvotes: 0;
+  }
+  {"
+    id: "reply3""
+    postId: "1"'"
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";"
+    authorId: "user4""
+    authorName: "Emma Davis""
+    authorRole: "ML Research Lead""
+    createdAt: "2025-04-02T09:45:00Z""
+    updatedAt: "2025-04-02T09:45:00Z"
+    upvotes: 15;
+    downvotes: 0;
+    isAnswer: true;
+  {"
+    id: "reply4""
+    postId: "1""
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?""
+    authorId: "user5""
+    authorName: "David Lin""
+    createdAt: "2025-04-02T11:20:00Z""
+    updatedAt: "2025-04-02T11:20:00Z"
+    upvotes: 4;
+    downvotes: 0;
+  }
+
+export default function ForumPostPage() { return null; }
+
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [post, setPost] = useState(mockPost);
+  const [replies, setReplies] = useState(mockReplies);
+
+  // Cast the result instead to provide the expected shape.;
+  const { postId } = useParams() as { postId?: string };
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [post, setPost] = useState(mockPost);
+  const [replies, setReplies] = useState(mockReplies);
+  // Cast the result instead to provide the expected shape.
+  const { postId } = useParams() as { postId?: string }
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [post, setPost] = useState(mockPost);
+
+  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin';
+  const { postId } = useParams() as { postId?: string },
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const [post, setPost] = useState(mockPost),
+  const [replies, setReplies] = useState(mockReplies),
+
+    return (
+      <AppLayout>
+        <div className="container py-8">
+          <h1>Post not found</h1>
+          <Button asChild className="mt-4">
+            <Link to="/community">Back to Community</Link>
+          </Button>
+        </div>
+      </AppLayout>
+    )
+  }
+  const handleUpvote = () => {
+    if (!user) {
+      toast({
+        title: "Authentication required"
+        description: "Please sign in to vote on posts"})
+      return
+    }
+=======
 <<<<<<< HEAD
   isFeatured: true},
 
@@ -643,6 +886,7 @@ export default function ForumPostPage() {
         description: "Please sign in to vote on posts"})
       return
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setPost({ ...post, upvotes: post.upvotes + 1 })
     toast({
       title: "Vote recorded"
@@ -654,6 +898,18 @@ export default function ForumPostPage() {
   const [post, setPost] = useState(mockPost),;
   const [replies, setReplies] = useState(mockReplies),;
   ;
+<<<<<<< HEAD
+
+  // Check if this is the user's own post;
+  const isAuthor = user?.id === post?.authorId;
+
+  // Check if user is admin/mod;
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+
+  // For this demo, we'll assume the post is found;
+  if (!post) {;
+
+=======
 =======
   // For this demo, we'll assume the post is found
   if (!post) {
@@ -686,6 +942,7 @@ export default function ForumPostPage() {
     return (;
       <AppLayout>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="container py-8">;
           <h1>Post not found</h1>;"
           <Button asChild className="mt-4">;"
@@ -693,6 +950,9 @@ export default function ForumPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -709,6 +969,7 @@ export default function ForumPostPage() {
       toast({
         title: "Authentication required"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         description: "Please sign in to vote on posts"})
       return;
     }
@@ -716,6 +977,8 @@ export default function ForumPostPage() {
 
       description: "You downvoted this post"})
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -730,6 +993,7 @@ export default function ForumPostPage() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -740,11 +1004,17 @@ export default function ForumPostPage() {
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       downvotes: 0
 
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
+<<<<<<< HEAD
+      id: `reply${Date.now()}`,
+=======
 =======
 <<<<<<< HEAD
       id: `reply${Date.now()}`
@@ -766,11 +1036,14 @@ export default function ForumPostPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       id: `reply${Date.now()}`,
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       postId: post.id,
       content,
       authorId: user.id || 'unknown',
       authorName: user.displayName || 'Anonymous',
       authorAvatar: user.avatarUrl,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       createdAt: new Date().toISOString($2);
       updatedAt: new Date().toISOString($2);
@@ -865,6 +1138,7 @@ export default function ForumPostPage() {
               </div>
               <div className="flex items-center text-sm text-muted-foreground">
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       upvotes: 0,
@@ -873,6 +1147,8 @@ export default function ForumPostPage() {
     
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     
@@ -885,6 +1161,7 @@ export default function ForumPostPage() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     toast({
       title: "Reply posted"
@@ -896,7 +1173,10 @@ export default function ForumPostPage() {
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -908,9 +1188,12 @@ export default function ForumPostPage() {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const handleUpvote = () => {;
     if (!user) {;
@@ -920,26 +1203,46 @@ export default function ForumPostPage() {
         description: "Please sign in to vote on posts"}),;
       return;
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setPost({ ...post, upvotes: post && post.upvotes + 1 }),;
 
       description: "You upvoted this post"});
   };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleDownvote = () => {;
     if (!user) {;
 
         description: "Please sign in to vote on posts"}),;
       return;
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setPost({ ...post, downvotes: post && post.downvotes + 1 }),;
 
       description: "You downvoted this post"});
   };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleSubmitReply = async (content: string) => {;
     if (!user) {;
 
         description: "Please sign in to reply"}),;
       return;
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Create a new reply;
 
       authorName: user && user.displayName || 'Anonymous',;
@@ -949,6 +1252,18 @@ export default function ForumPostPage() {
       upvotes: 0,;
       downvotes: 0;
     };
+<<<<<<< HEAD
+
+    setReplies([...replies, newReply]);
+    setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
+
+      description: "Your reply has been added to the discussion"});
+  };
+
+  const handleMarkAsAnswer = (replyId: string) => {;
+    // Only post author or admin can mark an answer;
+    if (!isAuthor && !isAdminOrMod) {;
+=======
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
 <<<<<<< HEAD
@@ -963,6 +1278,7 @@ export default function ForumPostPage() {
     // Only post author or admin can mark an answer;
     if (!isAuthor && !isAdminOrMod) {;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       });
       return;
@@ -973,6 +1289,9 @@ export default function ForumPostPage() {
     }));
 
       ...reply,
+<<<<<<< HEAD
+
+=======
 =======
       toast({;
         title: "Permission denied",;
@@ -996,15 +1315,21 @@ export default function ForumPostPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     })),
 
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       description: "The reply has been marked as the accepted answer"})
 
   },
+<<<<<<< HEAD
+=======
 =======
     
 <<<<<<< HEAD
@@ -1016,6 +1341,7 @@ export default function ForumPostPage() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     toast({
       title: "Answer marked"
@@ -1024,7 +1350,10 @@ export default function ForumPostPage() {
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -1037,12 +1366,15 @@ export default function ForumPostPage() {
       description: "A moderator will review this content"})
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isPinned: !post.isPinned })
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
 
   const handlePinPost = () => {}
@@ -1050,6 +1382,8 @@ export default function ForumPostPage() {
     if (!isAdminOrMod) return,
     
     setPost({ ...post, isPinned: !post.isPinned }),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     
@@ -1070,11 +1404,14 @@ export default function ForumPostPage() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
     
     setPost({ ...post, isLocked: !post.isLocked }),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     
@@ -1087,6 +1424,7 @@ export default function ForumPostPage() {
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
@@ -1099,14 +1437,22 @@ export default function ForumPostPage() {
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
 =======
+<<<<<<< HEAD
+  }
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
   
 <<<<<<< HEAD
@@ -1115,6 +1461,7 @@ export default function ForumPostPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <AppLayout>
       <SEO;`
@@ -1144,6 +1491,9 @@ export default function ForumPostPage() {
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
                 </Avatar>
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
                 <div>
                   <div className="font-medium text-lg">{post.authorName}</div>
@@ -1155,6 +1505,7 @@ export default function ForumPostPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -1319,6 +1670,9 @@ const mockReplies: ForumReply[] = [;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
                 <div>;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
@@ -1330,6 +1684,7 @@ const mockReplies: ForumReply[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {post.authorRole}
 
                     </Badge>
@@ -1337,12 +1692,17 @@ const mockReplies: ForumReply[] = [;
                 </div>
               </div>"
               <div className="flex items-center text-sm text-muted-foreground">"
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Calendar className="h-4 w-4 mr-1" />
                 <time dateTime={post.createdAt} title={formattedDate}>
                   {timeAgo}
                 </time>
               </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             </div>
             <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
@@ -1351,18 +1711,24 @@ const mockReplies: ForumReply[] = [;
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                   {tag}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>"
             <h1 className="text-2xl font-bold mb-2">{post.title}</h1>"
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => ("
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
     toast({;"
       title: "Answer marked","
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 
@@ -1376,17 +1742,24 @@ const mockReplies: ForumReply[] = [;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     toast({;
       title: "Answer marked",
 
       description: "The reply has been marked as the accepted answer"});
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleReportPost = () => {;
     if (!user) {;
 
@@ -1394,6 +1767,1387 @@ const mockReplies: ForumReply[] = [;
   };
   return (
     <AppLayout>;
+<<<<<<< HEAD
+
+        <Card>;
+
+                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+
+                  {tag}
+                </Badge>;
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleUpvote}
+                  className="flex items-center gap-2">;
+                  <ThumbsUp className="h-4 w-4" />;
+                  <span>{post && post.upvotes}</span>;
+                </Button>;
+className="flex items-center gap-2"
+                >
+                  <ThumbsUp className="h-4 w-4" />
+                  <span>{post.upvotes}</span>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleDownvote}
+
+                  className="flex items-center gap-2">;
+                  <ThumbsDown className="h-4 w-4" />;
+                  <span>{post && post.downvotes}</span>;
+                </Button>;
+              </div>;
+
+              <div className="flex items-center gap-2">;
+                {(isAuthor || isAdminOrMod) && (;
+                  <Button variant="ghost" size="sm" asChild>;
+                    <Link to={`/community/edit/${post && post.id}`}>;
+;
+            <div className="prose dark:prose-invert max-w-none mb-6">;
+              {post.content.split('\n\n').map((paragraph, i) => (;
+                <p key={i}>{paragraph}</p>;
+              ))}
+            </div>;
+            ;
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
+              <div className="flex items-center gap-4">;
+                <Button;
+                  variant="outline";
+                  size="sm";
+                  onClick={handleUpvote}
+                  className="flex items-center gap-2";
+                >;
+                  <ThumbsUp className="h-4 w-4" />;
+                  <span>{post.upvotes}</span>;
+                </Button>;
+                <Button;
+                  variant="outline";
+                  size="sm";
+                  onClick={handleDownvote}
+                  className="flex items-center gap-2";
+                >;
+                  <ThumbsDown className="h-4 w-4" />;
+                  <span>{post.downvotes}</span>;
+                </Button>;
+              </div>;
+              ;
+              <div className="flex items-center gap-2">;
+                {(isAuthor || isAdminOrMod) && (;
+                  <Button variant="ghost" size="sm" asChild>;
+                    <Link to={`/community/edit/${post.id}`}>;
+                      <Edit className="h-4 w-4 mr-1" />;
+                      Edit;
+                    </Link>;
+                  </Button>;
+                )}
+
+                {isAdminOrMod && (;
+                  <>;
+
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handlePinPost}>;
+                      <Pin className="h-4 w-4 mr-1" />;
+                      {post && post.isPinned ? "Unpin" : "Pin"}
+                    </Button>;
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleLockPost}>;
+                      <Lock className="h-4 w-4 mr-1" />;
+                      {post && post.isLocked ? "Unlock" : "Lock"}
+                    </Button>;
+                  </>;
+                )}
+
+className="flex items-center gap-2"
+                >
+                  <ThumbsDown className="h-4 w-4" />
+                  <span>{post.downvotes}</span>
+                </Button>
+              </div>
+              <div className="flex items-center gap-2">
+                {(isAuthor |isAdminOrMod) && (
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link to={`/community/edit/${post.id}`}>
+                      <Edit className="h-4 w-4 mr-1" />
+                      Edit
+                    </Link>
+                  </Button>
+                )}
+                {isAdminOrMod && (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handlePinPost}
+                    >
+                      <Pin className="h-4 w-4 mr-1" />
+                      {post.isPinned ? "Unpin" : "Pin"}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleLockPost}
+                    >
+                      <Lock className="h-4 w-4 mr-1" />
+                      {post.isLocked ? "Unlock" : "Lock"}
+                    </Button>
+                  </>
+                )}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleReportPost}
+                >
+                  <Flag className="h-4 w-4 mr-1" />
+                  Report
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <div className="mt-8">
+          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
+          {post.isAnswered && (
+            <div className="mb-6">
+              <h3 className="flex items-center text-green-600 font-medium mb-2">
+                <CheckCircle className="h-4 w-4 mr-2" />
+                Accepted Answer
+              </h3>
+              {replies.filter(reply => reply.isAnswer).map(reply => (
+                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />
+              ))}
+            </div>
+          )}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleReportPost}>;
+                  <Flag className="h-4 w-4 mr-1" />;
+import { useState } from './react';
+import { use_params, Link } from './react-router-dom';
+import { AppLayout } from '@/layout / AppLayout';
+import { SEO } from '@/components / SEO';
+import { Button } from '@/components / ui / button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Card, CardContent } from '@/components / ui / card';
+import { Separator } from '@/components / ui / separator';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from './lucide-react';
+import { formatDistanceToNow, format } from './date - fns';
+import { ForumPost, ForumReply } from '@/types / community';
+import { use_auth } from '@/hooks / use_auth';
+import ReplyCard from "@/components / community / ReplyCard";
+import ReplyForm from "@/components / community / ReplyForm";
+import { use_toast } from '@/hooks / use - toast';
+// Mock data for a forum post;
+const mock_post: ForumPost = {
+  id: "1",
+  title: "Best practices for AI model fine - tuning",
+  content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\n_first, it's important to carefully prepare your training data. Clean, well - structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine - tuning process.\n\n_second, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm - up period tends to yield more stable results.\n\n_third, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\n_finally, evaluating your fine - tuned model requires looking beyond standard metrics. I always test with diverse real - world examples to ensure the model generalizes well.\n\n_what has been your experience with fine - tuning? Any techniques you've found particularly effective?";
+  author_id: "user1",
+  author_name: "Alex Johnson",
+  author_avatar: "https://i.pravatar.cc / 150?img = 3",
+  author_role: "Verified Talent",
+  category_id: "ai - tools",
+  tags: ["machine - learning", "fine - tuning", "gpt"];
+  created_at: "2025 - 04 - 01T12:00:00Z",
+  updated_at: "2025 - 04 - 01T12:00:00Z",
+  upvotes: 48,
+  downvotes: 2,
+  reply_count: 4,
+  is_answered: true,
+  is_featured: true;
+}
+;
+// Mock data for replies;
+const mock_replies: ForumReply[] = [;
+  {
+    id: "reply1",
+    post_id: "1",
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
+    author_id: "user2",
+    author_name: "Sarah Chen",
+    author_avatar: "https://i.pravatar.cc / 150?img = 5",
+    created_at: "2025 - 04 - 01T14:30:00Z",
+    updated_at: "2025 - 04 - 01T14:30:00Z",
+    upvotes: 12,
+    downvotes: 0;
+  }
+  {
+    id: "reply2",
+    post_id: "1",
+    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good performance.",
+    author_id: "user3",
+    author_name: "Michael Wong",
+    author_role: "AI Engineer",
+    created_at: "2025 - 04 - 01T16:15:00Z",
+    updated_at: "2025 - 04 - 01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0;
+  }
+  {
+    id: "reply3",
+    post_id: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine - tuning process.\n\n_also, when fine - tuning language models, I've found that carefully crafting your prompts / templates for training can make a huge difference in the quality of the outputs.";
+    author_id: "user4",
+    author_name: "Emma Davis",
+    author_role: "ML Research Lead",
+    created_at: "2025 - 04 - 02T09:45:00Z",
+    updated_at: "2025 - 04 - 02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    is_answer: true;
+  }
+  {
+    id: "reply4",
+    post_id: "1",
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
+    author_id: "user5",
+    author_name: "David Lin",
+    created_at: "2025 - 04 - 02T11:20:00Z",
+    updated_at: "2025 - 04 - 02T11:20:00Z",
+    upvotes: 4,
+    downvotes: 0;
+  }
+];
+;
+export default /**
+ * ForumPostPage - Function description
+ */
+function ForumPostPage() {
+  // Using `use_params` without type arguments avoids issues when TypeScript;
+  // can't determine the generic type for the helper from React Router.;
+  // Cast the result instead to provide the expected shape.;
+  const { post_id } = use_params () as { post_id?: string }
+  const { user } = use_auth ();
+  const { toast } = use_toast ();
+  const [post, set_post] = useState (mock_post);
+  const [replies, set_replies] = useState (mock_replies);
+;
+  // Check if this is the user's own post;
+  const is_author = user?.id === post?.author_id;
+;
+  // Check if user is admin / mod;
+  const isAdminOrMod = user?.user_type === 'admin' || user?.role === 'admin';
+;
+  // For this demo, we'll assume the post is found;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <AppLayout>;
+        <div className="container py - 8">;
+          <h1 > Post not found</h1>;
+          <Button as_child className="mt - 4">;
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>);
+  }
+  const handle_upvote = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
+      return;
+    }
+    set_post ({ ...post, upvotes: post.upvotes + 1 }),
+    toast ({
+      title: "Vote recorded",
+      description: "You upvoted this post"});
+  }
+;
+  const handle_downvote = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
+      return;
+    }
+    set_post ({ ...post, downvotes: post.downvotes + 1 }),
+    toast ({
+      title: "Vote recorded",
+      description: "You downvoted this post"});
+  }
+;
+  const handleSubmitReply = async (content: string) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required",
+        description: "Please sign in to reply"}),
+      return;
+    }
+    // Create a new reply;
+    const new_reply: ForumReply = {
+      id: `reply${Date.now ()}`,
+      post_id: post.id,
+      content;
+      author_id: user.id || 'unknown',
+      author_name: user.display_name || 'Anonymous',
+      author_avatar: user.avatar_url,
+      created_at: new Date ().toISOString (),
+      updated_at: new Date ().toISOString (),
+      upvotes: 0,
+      downvotes: 0;
+    }
+;
+    set_replies ([...replies, new_reply]);
+    set_post ({ ...post, reply_count: post.reply_count + 1 }),
+    toast ({
+      title: "Reply posted",
+      description: "Your reply has been added to the discussion"});
+  }
+;
+  const handleMarkAsAnswer = (reply_id: string) =>: any {
+    // Only post author or admin can mark an answer;
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Permission denied",
+        description: "Only the original poster or moderators can mark answers",
+        variant: "destructive";
+      });
+      return;
+    }
+    // Update the replies;
+    const updated_replies = replies.map (reply => ({
+      ...reply;
+      is_answer: reply.id === reply_id;
+    }));
+;
+    set_replies (updated_replies);
+    set_post ({ ...post, is_answered: true }),
+    toast ({
+      title: "Answer marked",
+      description: "The reply has been marked as the accepted answer"});
+  }
+;
+  const handleReportPost = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required",
+        description: "Please sign in to report content"}),
+      return;
+    }
+    toast ({
+      title: "Report submitted",
+      description: "A moderator will review this content"});
+  }
+;
+  const handlePinPost = () =>: any {
+    // Check condition
+if (return) {
+  $2
+}
+    set_post ({ ...post, is_pinned: !post.is_pinned }),
+    toast ({
+      title: post.is_pinned ? "Post unpinned" : "Post pinned",
+      description: post.is_pinned ? "The post has been unpinned" : "The post has been pinned to the top"});
+  }
+;
+  const handleLockPost = () =>: any {
+    // Check condition
+if (return) {
+  $2
+}
+    set_post ({ ...post, is_locked: !post.is_locked }),
+    toast ({
+      title: post.is_locked ? "Post unlocked" : "Post locked",
+      description: post.is_locked ? "Comments are now allowed" : "Comments are now disabled"});
+  }
+;
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
+  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
+  return (
+    <AppLayout>;
+      <SEO;
+        title={`${post.title} | Community Forum | Zion AI Marketplace`}
+        description={post.content.substring (0, 160)}
+        keywords={`community, forum, discussion, ${post.tags.join ()}`}
+      />;
+      <div className="container py - 8">;
+        <div className="flex items - center gap - 3 mb - 6">;
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
+            Forum;
+          </Link>;
+          <span className="text - muted - foreground">/</span>;
+          <Link to={`/community / category/${post.category_id}`} className="text - sm text - muted - foreground hover:text - foreground">;
+            {post.category_id.split ('-').map (word => word.char_at (0).toUpperCase () + word.slice (1)).join (' ')}
+          </Link>;
+          <span className="text - muted - foreground">/</span>;
+          <span className="text - sm font - medium truncate max - w-[200px]">{post.title}</span>;
+        </div>;
+        <Card>;
+          <CardContent className="p - 6">;
+            <div className="flex justify - between items - start mb - 6">;
+              <div className="flex items - center gap - 4">;
+                <Avatar className="h - 12 w - 12">;
+                  <AvatarImage src={post.author_avatar} />;
+                  <AvatarFallback>{post.author_name.char_at (0)}</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <div className="font - medium text - lg">{post.author_name}</div>;
+                  {post.author_role && (
+                    <Badge variant="outline" className="mt - 1">;
+                      {post.author_role}
+                    </Badge>)}
+                </div>;
+              </div>;
+              <div className="flex items - center text - sm text - muted - foreground">;
+                <Calendar className="h - 4 w - 4 mr - 1" />;
+                <time date_time={post.created_at} title={formatted_date}>;
+                  {time_ago}
+                </time>;
+              </div>;
+            </div>;
+            <h1 className="text - 2xl font - bold mb - 2">{post.title}</h1>;
+            <div className="flex flex - wrap gap - 2 mb - 6">;
+              {post.tags.map (tag => (
+                <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;
+                  {tag}
+                </Badge>))}
+            </div>;
+            <div className="prose dark:prose - invert max - w-none mb - 6">;
+              {post.content.split ('\n\n').map ((paragraph, i) => (
+                <p key={i}>{paragraph}</p>))}
+            </div>;
+            <div className="flex flex - wrap items - center justify - between gap - 4 mt - 6">;
+              <div className="flex items - center gap - 4">;
+                <Button;
+                  variant="outline";
+                  size="sm";
+                  on_click={handle_upvote}
+                  className="flex items - center gap - 2";
+                >;
+                  <ThumbsUp className="h - 4 w - 4" />;
+                  <span>{post.upvotes}</span>;
+                </Button>;
+                <Button;
+                  variant="outline";
+                  size="sm";
+                  on_click={handle_downvote}
+                  className="flex items - center gap - 2";
+                >;
+                  <ThumbsDown className="h - 4 w - 4" />;
+                  <span>{post.downvotes}</span>;
+                </Button>;
+              </div>;
+              <div className="flex items - center gap - 2">;
+                {(is_author || isAdminOrMod) && (
+                  <Button variant="ghost" size="sm" as_child>;
+                    <Link to={`/community / edit/${post.id}`}>;
+                      <Edit className="h - 4 w - 4 mr - 1" />;
+                      Edit;
+                    </Link>;
+                  </Button>)}
+                {isAdminOrMod && (
+                  <>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      on_click={handlePinPost}
+                    >;
+                      <Pin className="h - 4 w - 4 mr - 1" />;
+                      {post.is_pinned ? "Unpin" : "Pin"}
+                    </Button>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      on_click={handleLockPost}
+                    >;
+                      <Lock className="h - 4 w - 4 mr - 1" />;
+                      {post.is_locked ? "Unlock" : "Lock"}
+                    </Button>;
+                  </>)}
+                <Button;
+                  variant="ghost";
+                  size="sm";
+                  on_click={handleReportPost}
+                >;
+                  <Flag className="h - 4 w - 4 mr - 1" />;
+
+;
+                {isAdminOrMod && (;
+                  <>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      onClick={handlePinPost}
+                    >;
+                      <Pin className="h-4 w-4 mr-1" />;
+                      {post.isPinned ? "Unpin" :"Pin"}
+                    </Button>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      onClick={handleLockPost}
+                    >;
+                      <Lock className="h-4 w-4 mr-1" />;
+                      {post.isLocked ? "Unlock" :"Lock"}
+                    </Button>;
+                  </>;
+                )}
+                ;
+                <Button;
+                  variant="ghost";
+                  size="sm";
+                  onClick={handleReportPost}
+                >;
+                  <Flag className="h-4 w-4 mr-1" />;
+                  Report;
+                </Button>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+
+          {!post.isLocked && (
+            <div className="mb-8">
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>
+              {user ? (
+                <ReplyForm onSubmit={handleSubmitReply} />
+              ) : (
+                <Alert>
+                  <AlertDescription>
+                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
+                  </AlertDescription>
+                </Alert>
+{!post && post.isLocked && (;
+
+          {!post && post.isLocked && (;
+        ;
+        <div className="mt-8">;
+          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>;
+          ;
+          {post.isAnswered && (;
+            <div className="mb-6">;
+              <h3 className="flex items-center text-green-600 font-medium mb-2">;
+                <CheckCircle className="h-4 w-4 mr-2" />;
+                Accepted Answer;
+              </h3>;
+              {replies.filter(reply => reply.isAnswer).map(reply => (;
+                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />;
+              ))}
+            </div>;
+          )}
+          ;
+          {!post.isLocked && (;
+            <div className="mb-8">;
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>;
+              {user ? (;
+                <ReplyForm onSubmit={handleSubmitReply} />;
+              ) : (;
+) :(;
+                <Alert>;
+                  <AlertDescription>;
+                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
+                  </AlertDescription>;
+                </Alert>;
+              )}
+            </div>
+          )}
+
+              )}
+            </div>
+          )}
+
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleReportPost}>;
+
+                  <Flag className="h-4 w-4 mr-1" />;
+'
+import { useState } from './react';'
+import { use_params, Link } from './react-router-dom';'
+import { AppLayout } from '@/layout / AppLayout';'
+import { SEO } from '@/components / SEO';'
+import { Button } from '@/components / ui / button';'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';'
+import { Badge } from '@/components / ui / badge';'
+import { Card, CardContent } from '@/components / ui / card';'
+import { Separator } from '@/components / ui / separator';'
+import { Alert, AlertDescription } from '@/components / ui / alert';'
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from './lucide-react';'
+import { formatDistanceToNow, format } from './date - fns';'
+import { ForumPost, ForumReply } from '@/types / community';'
+import { use_auth } from '@/hooks / use_auth';"
+import ReplyCard from "@/components / community / ReplyCard";"
+import ReplyForm from "@/components / community / ReplyForm";'
+import { use_toast } from '@/hooks / use - toast';
+// Mock data for a forum post;
+const mock_post: ForumPost = {"
+  id: "1","
+  title: "Best practices for AI model fine - tuning",'"
+  content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\n_first, it's important to carefully prepare your training data. Clean, well - structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine - tuning process.\n\n_second, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm - up period tends to yield more stable results.\n\n_third, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\n_finally, evaluating your fine - tuned model requires looking beyond standard metrics. I always test with diverse real - world examples to ensure the model generalizes well.\n\n_what has been your experience with fine - tuning? Any techniques you've found particularly effective?";"
+  author_id: "user1","
+  author_name: "Alex Johnson","
+  author_avatar: "https://i.pravatar.cc / 150?img = 3","
+  author_role: "Verified Talent","
+  category_id: "ai - tools","
+  tags: ["machine - learning", "fine - tuning", "gpt"];"
+  created_at: "2025 - 04 - 01T12:00:00Z","
+  updated_at: "2025 - 04 - 01T12:00:00Z",
+  upvotes: 48,
+  downvotes: 2,
+  reply_count: 4,
+  is_answered: true,
+  is_featured: true;
+}
+;
+// Mock data for replies;
+const mock_replies: ForumReply[] = [;
+  {"
+    id: "reply1","
+    post_id: "1",'"
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.","
+    author_id: "user2","
+    author_name: "Sarah Chen","
+    author_avatar: "https://i.pravatar.cc / 150?img = 5","
+    created_at: "2025 - 04 - 01T14:30:00Z","
+    updated_at: "2025 - 04 - 01T14:30:00Z",
+    upvotes: 12,
+    downvotes: 0;
+  }
+  {"
+    id: "reply2","
+    post_id: "1",'"
+    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good performance.","
+    author_id: "user3","
+    author_name: "Michael Wong","
+    author_role: "AI Engineer","
+    created_at: "2025 - 04 - 01T16:15:00Z","
+    updated_at: "2025 - 04 - 01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0;
+  }
+  {"
+    id: "reply3","
+    post_id: "1",'"
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine - tuning process.\n\n_also, when fine - tuning language models, I've found that carefully crafting your prompts / templates for training can make a huge difference in the quality of the outputs.";"
+    author_id: "user4","
+    author_name: "Emma Davis","
+    author_role: "ML Research Lead","
+    created_at: "2025 - 04 - 02T09:45:00Z","
+    updated_at: "2025 - 04 - 02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    is_answer: true;
+  }
+  {"
+    id: "reply4","
+    post_id: "1","
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?","
+    author_id: "user5","
+    author_name: "David Lin","
+    created_at: "2025 - 04 - 02T11:20:00Z","
+    updated_at: "2025 - 04 - 02T11:20:00Z",
+    upvotes: 4,
+    downvotes: 0;
+  }
+];
+;
+export default /**;
+ * ForumPostPage - Function description;
+ */
+function ForumPostPage() {}`
+  // Using `use_params` without type arguments avoids issues when TypeScript;'
+  // can't determine the generic type for the helper from React Router.;
+  // Cast the result instead to provide the expected shape.;
+  const { post_id } = use_params () as { post_id?: string }
+  const { user } = use_auth ();
+  const { toast } = use_toast ();
+  const [post, set_post] = useState (mock_post);
+  const [replies, set_replies] = useState (mock_replies);
+;'
+  // Check if this is the user's own post;
+  const is_author = user?.id === post?.author_id;
+;
+  // Check if user is admin / mod;'
+  const isAdminOrMod = user?.user_type === 'admin' || user?.role === 'admin';
+;'
+  // For this demo, we'll assume the post is found;
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    return (
+      <AppLayout>;"
+        <div className="container py - 8">;
+          <h1 > Post not found</h1>;"
+          <Button as_child className="mt - 4">;"
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>);
+  }
+  const handle_upvote = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      toast ({"
+        title: "Authentication required","
+        description: "Please sign in to vote on posts"}),
+      return;
+    }
+    set_post ({ ...post, upvotes: post.upvotes + 1 }),
+    toast ({"
+      title: "Vote recorded","
+      description: "You upvoted this post"});
+  }
+;
+  const handle_downvote = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      toast ({"
+        title: "Authentication required","
+        description: "Please sign in to vote on posts"}),
+      return;
+    }
+    set_post ({ ...post, downvotes: post.downvotes + 1 }),
+    toast ({"
+      title: "Vote recorded","
+      description: "You downvoted this post"});
+  }
+;
+  const handleSubmitReply = async (content: string) => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      toast ({"
+        title: "Authentication required","
+        description: "Please sign in to reply"}),
+      return;
+    }
+    // Create a new reply;
+    const new_reply: ForumReply = {}`
+      id: `reply${Date.now ()}`,
+      post_id: post.id,
+      content;'
+      author_id: user.id || 'unknown','
+      author_name: user.display_name || 'Anonymous',
+      author_avatar: user.avatar_url,
+      created_at: new Date ().toISOString (),
+      updated_at: new Date ().toISOString (),
+      upvotes: 0,
+      downvotes: 0;
+    }
+;
+    set_replies ([...replies, new_reply]);
+    set_post ({ ...post, reply_count: post.reply_count + 1 }),
+    toast ({"
+      title: "Reply posted","
+      description: "Your reply has been added to the discussion"});
+  }
+;
+  const handleMarkAsAnswer = (reply_id: string) =>: any {}
+    // Only post author or admin can mark an answer;
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      toast ({"
+        title: "Permission denied","
+        description: "Only the original poster or moderators can mark answers","
+        variant: "destructive";
+      });
+      return;
+    }
+    // Update the replies;
+    const updated_replies = replies.map (reply => ({}
+      ...reply;
+      is_answer: reply.id === reply_id;
+    }));
+;
+    set_replies (updated_replies);
+    set_post ({ ...post, is_answered: true }),
+    toast ({"
+      title: "Answer marked","
+      description: "The reply has been marked as the accepted answer"});
+  }
+;
+  const handleReportPost = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      toast ({"
+        title: "Authentication required","
+        description: "Please sign in to report content"}),
+      return;
+    }
+    toast ({"
+      title: "Report submitted","
+      description: "A moderator will review this content"});
+  }
+;
+  const handlePinPost = () =>: any {}
+    // Check condition;
+if (return) {}
+  $2;
+}
+    set_post ({ ...post, is_pinned: !post.is_pinned }),
+    toast ({"
+      title: post.is_pinned ? "Post unpinned" : "Post pinned","
+      description: post.is_pinned ? "The post has been unpinned" : "The post has been pinned to the top"});
+  }
+;
+  const handleLockPost = () =>: any {}
+    // Check condition;
+if (return) {}
+  $2;
+}
+    set_post ({ ...post, is_locked: !post.is_locked }),
+    toast ({"
+      title: post.is_locked ? "Post unlocked" : "Post locked","
+      description: post.is_locked ? "Comments are now allowed" : "Comments are now disabled"});
+  }
+;
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),'"
+  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
+  return (
+    <AppLayout>;
+      <SEO;`
+        title={`${post.title} | Community Forum | Zion AI Marketplace`}
+        description={post.content.substring (0, 160)}`
+        keywords={`community, forum, discussion, ${post.tags.join ()}`}
+      />;"
+      <div className="container py - 8">;"
+        <div className="flex items - center gap - 3 mb - 6">;"
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
+            Forum;
+          </Link>;"
+          <span className="text - muted - foreground">/</span>;"`
+          <Link to={`/community / category/${post.category_id}`} className="text - sm text - muted - foreground hover:text - foreground">;'
+            {post.category_id.split ('-').map (word => word.char_at (0).toUpperCase () + word.slice (1)).join (' ')}
+          </Link>;"
+          <span className="text - muted - foreground">/</span>;"
+          <span className="text - sm font - medium truncate max - w-[200px]">{post.title}</span>;
+        </div>;
+        <Card>;"
+          <CardContent className="p - 6">;"
+            <div className="flex justify - between items - start mb - 6">;"
+              <div className="flex items - center gap - 4">;"
+                <Avatar className="h - 12 w - 12">;
+                  <AvatarImage src={post.author_avatar} />;
+                  <AvatarFallback>{post.author_name.char_at (0)}</AvatarFallback>;
+                </Avatar>;
+                <div>;"
+                  <div className="font - medium text - lg">{post.author_name}</div>;
+                  {post.author_role && ("
+                    <Badge variant="outline" className="mt - 1">;
+                      {post.author_role}
+                    </Badge>)}
+                </div>;
+              </div>;"
+              <div className="flex items - center text - sm text - muted - foreground">;"
+                <Calendar className="h - 4 w - 4 mr - 1" />;
+                <time date_time={post.created_at} title={formatted_date}>;
+                  {time_ago}
+                </time>;
+              </div>;
+            </div>;"
+            <h1 className="text - 2xl font - bold mb - 2">{post.title}</h1>;"
+            <div className="flex flex - wrap gap - 2 mb - 6">;
+              {post.tags.map (tag => ("
+                <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;
+                  {tag}
+                </Badge>))}
+            </div>;"
+            <div className="prose dark:prose - invert max - w-none mb - 6">;'
+              {post.content.split ('\n\n').map ((paragraph, i) => (
+                <p key={i}>{paragraph}</p>))}
+            </div>;"
+            <div className="flex flex - wrap items - center justify - between gap - 4 mt - 6">;"
+              <div className="flex items - center gap - 4">;
+                <Button;"
+                  variant="outline";"
+                  size="sm";
+                  on_click={handle_upvote}"
+                  className="flex items - center gap - 2";
+                >;"
+                  <ThumbsUp className="h - 4 w - 4" />;
+                  <span>{post.upvotes}</span>;
+                </Button>;
+                <Button;"
+                  variant="outline";"
+                  size="sm";
+                  on_click={handle_downvote}"
+                  className="flex items - center gap - 2";
+                >;"
+                  <ThumbsDown className="h - 4 w - 4" />;
+                  <span>{post.downvotes}</span>;
+                </Button>;
+              </div>;"
+              <div className="flex items - center gap - 2">;
+                {(is_author || isAdminOrMod) && ("
+                  <Button variant="ghost" size="sm" as_child>;`
+                    <Link to={`/community / edit/${post.id}`}>;"
+                      <Edit className="h - 4 w - 4 mr - 1" />;
+                      Edit;
+                    </Link>;
+                  </Button>)}
+                {isAdminOrMod && (
+                  <>;
+                    <Button;"
+                      variant="ghost";"
+                      size="sm";
+                      on_click={handlePinPost}
+                    >;"
+                      <Pin className="h - 4 w - 4 mr - 1" />;"
+                      {post.is_pinned ? "Unpin" : "Pin"}
+                    </Button>;
+                    <Button;"
+                      variant="ghost";"
+                      size="sm";
+                      on_click={handleLockPost}
+                    >;"
+                      <Lock className="h - 4 w - 4 mr - 1" />;"
+                      {post.is_locked ? "Unlock" : "Lock"}
+                    </Button>;
+                  </>)}
+                <Button;"
+                  variant="ghost";"
+                  size="sm";
+                  on_click={handleReportPost}
+                >;"
+                  <Flag className="h - 4 w - 4 mr - 1" />;
+
+                  Report;
+                </Button>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+
+          {!post.isLocked && (
+            <div className="mb-8">
+
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>
+              {user ? (
+                <ReplyForm onSubmit={handleSubmitReply} />
+              ) : (
+                <Alert>
+                  <AlertDescription>"
+                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
+                  </AlertDescription>
+                </Alert>
+"
+            <div className="mb-8">;"
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>;
+              {user ? (;
+                <ReplyForm onSubmit={handleSubmitReply} />;
+
+                <Alert>;
+                  <AlertDescription>;"
+                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
+                  </AlertDescription>;
+
+              )}
+            </div>
+          )}
+
+          {post.isLocked && (
+            <Alert className="mb-8">
+              <AlertDescription className="flex items-center">
+
+                <Lock className="h-4 w-4 mr-2" />
+                This thread has been locked and is no longer open for responses.
+              </AlertDescription>
+            </Alert>
+          )}"
+          <div className="space-y-6">
+            {replies;
+              .filter(reply => !reply.isAnswer)
+              .map(reply => (
+
+                <ReplyCard
+
+                  key={reply.id}
+                  reply={reply}                <ReplyCard
+
+import { useState } from "react",""
+import { useParams, Link } from "react-router-dom",""
+import { AppLayout } from "@/layout/AppLayout",""
+import { SEO } from "@/components/SEO",""
+import { Button } from "@/components/ui/button",""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
+import { Badge } from "@/components/ui/badge",""
+import { Card, CardContent } from "@/components/ui/card",""
+import { Separator } from "@/components/ui/separator",""
+import { Alert, AlertDescription } from "@/components/ui/alert",""
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",""
+import { formatDistanceToNow, format } from "date-fns",""
+import { ForumPost, ForumReply } from "@/types/community",""
+import { useAuth } from "@/hooks/useAuth",""
+import ReplyCard from "@/components/community/ReplyCard",""
+import ReplyForm from "@/components/community/ReplyForm";""
+import { useToast } from "@/hooks/use-toast";"
+// Mock data for a forum post;"
+import ReplyForm from "@/components/community/ReplyForm",""
+import { useToast } from "@/hooks/use-toast","
+// Mock data for a forum post;
+const mockPost: ForumPost = {,"
+  id: "1",""
+  title: "Best practices for AI model fine-tuning",""
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",""
+  authorId: "user1",""
+  authorName: "Alex Johnson",""
+  authorAvatar: "https://i.pravatar.cc/150?img=3",""
+  authorRole: "Verified Talent",""
+  categoryId: "ai-tools",""
+  tags: ["machine-learning", "fine-tuning", "gpt"],""
+  createdAt: "2025-04-01T12:00:00Z",""
+  updatedAt: "2025-04-01T12:00:00Z","
+  upvotes: 48,
+  downvotes: 2,
+  replyCount: 4,
+  isAnswered: true,
+  isFeatured: true;
+},
+
+  id: "1"""
+  title: "Best practices for AI model fine-tuning"","
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";""
+  authorId: "user1"","
+  authorName: "Alex Johnson"""
+  authorAvatar: "https://i.pravatar.cc/150?img=3"","
+  authorRole: "Verified Talent"""
+  categoryId: "ai-tools"","
+  tags: ["machine-learning", "fine-tuning", "gpt"];""
+  createdAt: "2025-04-01T12:00:00Z"","
+  updatedAt: "2025-04-01T12: 00:00Z"",
+  upvotes: 48;
+  downvotes: 2;,
+  replyCount: 4;
+  isAnswered: true;,
+}
+// Mock data for replies;
+const mockReplies: ForumReply[] = [
+  {"
+    id: "reply1"","
+  postId: "1"""
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples."","
+  authorId: "user2"""
+    authorName: "Sarah Chen"","
+  authorAvatar: "https: //i.pravatar.cc/150?img=5"","
+  createdAt: "2025-04-01T14: 30:00Z"","
+  updatedAt: "2025-04-01T14: 30:00Z"",
+  upvotes: 12;
+    downvotes: 0;
+    id: "reply2"","
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."","
+  authorId: "user3"""
+    authorName: "Michael Wong"","
+  authorRole: "AI Engineer"""
+    createdAt: "2025-04-01T16:15:00Z"","
+  updatedAt: "2025-04-01T16: 15:00Z"",
+  upvotes: 8;
+    id: "reply3"","
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";""
+    authorId: "user4"","
+  authorName: "Emma Davis"""
+    authorRole: "ML Research Lead"","
+  createdAt: "2025-04-02T09: 45:00Z"","
+  updatedAt: "2025-04-02T09: 45:00Z"",
+  upvotes: 15;
+    downvotes: 0;,
+  isAnswer: true;
+    id: "reply2",""
+    postId: "1",""
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",""
+    authorId: "user3",""
+    authorName: "Michael Wong",""
+    authorRole: "AI Engineer",""
+    createdAt: "2025-04-01T16:15:00Z",""
+    updatedAt: "2025-04-01T16:15:00Z","
+    upvotes: 8,
+    id: "reply3",""
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",""
+    authorId: "user4",""
+    authorName: "Emma Davis",""
+    authorRole: "ML Research Lead",""
+    createdAt: "2025-04-02T09:45:00Z",""
+    updatedAt: "2025-04-02T09:45:00Z","
+    upvotes: 15,
+    downvotes: 0,
+
+    id: "reply4"","
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?"","
+  authorId: "user5"""
+    authorName: "David Lin"","
+  createdAt: "2025-04-02T11: 20:00Z"","
+  updatedAt: "2025-04-02T11: 20:00Z"",
+  upvotes: 4;
+
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  componentDidCatch(error, errorInfo) {"
+    console.error('Error caught by boundary:', error, errorInfo);
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+      <AppLayout>
+
+        <div className="container py-8">"
+</div>
+          <h1>Post not found</h1>"
+          <Button asChild className="mt-4">"
+"
+            <Link to="/community">Back to Community"
+      <AppLayout>;
+        <div className="container py-8">;"
+          <h1>Post not found</h1>;"
+          <Button asChild className="mt-4">;"
+            <Link to="/community">Back to Community;"
+          ;
+        </div>;
+
+      <SEO;
+        title={`${post.title} | Community Forum | Zion AI Marketplace`}
+        description={post.content.substring(0, 160)}`;
+        keywords={`community, forum, discussion, ${post.tags.join()}`}
+      />
+</div>"
+        <div className="flex items-center gap-3 mb-6">"
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">"
+
+          <span className="text-muted-foreground">/</span>""`;
+          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">"
+
+          <span className="text-muted-foreground">/</span>"]"
+          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>"
+        <Card>
+          <CardContent className="p-6">"
+            <div className="flex justify-between items-start mb-6">"
+              <div className="flex items-center gap-4">"
+                <Avatar className="h-12 w-12">"
+
+                  <AvatarImage src={post.authorAvatar} />
+
+                  <AvatarFallback>{post.authorName.charAt(0)}
+                <div>
+                  <div className="font-medium text-lg">{post.authorName}</div>""
+                    <Badge variant="outline" className="mt-1">"
+
+      <SEO;`;
+      />;
+        <div className="flex items-center gap-3 mb-6">;"
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;"
+
+          ;"
+          <span className="text-muted-foreground">/</span>;""`;
+          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;"
+
+          <span className="text-muted-foreground">/</span>;""
+          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>;"
+        <Card>;
+          <CardContent className="p-6">;"
+            <div className="flex justify-between items-start mb-6">;"
+              <div className="flex items-center gap-4">;"
+                <Avatar className="h-12 w-12">;"
+
+                  <AvatarImage src={post.authorAvatar} />;
+
+                  <AvatarFallback>{post.authorName.charAt(0)};
+                <div>;
+                  <div className="font-medium text-lg">{post.authorName}</div>;""
+                    <Badge variant="outline" className="mt-1">;"
+
+</Badge>
+
+                    </Badge>
+                </div>
+
+              </div>"
+              <div className="flex items-center text-sm text-muted-foreground">"
+                <Calendar className="h-4 w-4 mr-1" />"
+
+                <time dateTime={post.createdAt} title={formattedDate}>
+</time>
+            <h1 className="text-2xl font-bold mb-2">{post.title}</h1>""
+            <div className="flex flex-wrap gap-2 mb-6">"
+                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">"
+
+        title={`${post && post.title} | Community Forum | Zion AI Marketplace`}
+        description={post && post.content.substring(0, 160)}`;
+        keywords={`community, forum, discussion, ${post && post.tags.join()}`}
+
+          <Link to={`/community/category/${post && post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;"
+
+          <span className="text-sm font-medium truncate max-w-[200px]">{post && post.title}</span>;"
+
+                  <AvatarImage src={post && post.authorAvatar} />;
+
+                  <AvatarFallback>{post && post.authorName.charAt(0)};
+                  <div className="font-medium text-lg">{post && post.authorName}</div>;""
+
+              </div>;"
+              <div className="flex items-center text-sm text-muted-foreground">;"
+                <Calendar className="h-4 w-4 mr-1" />;"
+
+                <time dateTime={post && post.createdAt} title={formattedDate}>;
+                </time>;
+            <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;""
+            <div className="flex flex-wrap gap-2 mb-6">;"
+                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;"
+
+            <div className="prose dark:prose-invert max-w-none mb-6">;"
+                <p key={i}>{paragraph}</p>;
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;"
+                <Button;"
+                  variant="outline"""
+                  size="sm""
+                  onClick={handleUpvote}"
+                  className="flex items-center gap-2">;"
+                  <ThumbsUp className="h-4 w-4" />;"
+
+                  <span>{post && post.upvotes}</span>;
+                  onClick={handleDownvote}
+                  <ThumbsDown className="h-4 w-4" />;"
+
+                  <span>{post && post.downvotes}</span>;
+              <div className="flex items-center gap-2">;"
+                  <Button variant="ghost" size="sm" asChild>;"
+`;
+                    <Link to={`/community/edit/${post && post.id}`}>;
+                      <Edit className="h-4 w-4 mr-1" />;"
+
+                  <>;
+
+                      variant="ghost"""
+                      onClick={handlePinPost}>;
+                      <Pin className="h-4 w-4 mr-1" />;"
+
+                      onClick={handleLockPost}>;
+                      <Lock className="h-4 w-4 mr-1" />;"
+
+                  </>;
+                )}
+
+                  onClick={handleReportPost}>;
+                  <Flag className="h-4 w-4 mr-1" />;"
+
+        <div className="container py - 8">;"
+          <h1 > Post not found</h1>;"
+          <Button as_child className="mt - 4">;"
+      );
+
+        description={post.content.substring (0, 160)}`;
+        keywords={`community, forum, discussion, ${post.tags.join ()}`}
+        <div className="flex items - center gap - 3 mb - 6">;"
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;"
+
+          <span className="text - muted - foreground">/</span>;""`;
+          <Link to={`/community / category/${post.category_id}`} className="text - sm text - muted - foreground hover:text - foreground">;"
+
+          <span className="text - muted - foreground">/</span>;""
+          <span className="text - sm font - medium truncate max - w-[200px]">{post.title}</span>;"
+          <CardContent className="p - 6">;"
+            <div className="flex justify - between items - start mb - 6">;"
+              <div className="flex items - center gap - 4">;"
+                <Avatar className="h - 12 w - 12">;"
+
+                  <AvatarImage src={post.author_avatar} />;
+
+                  <AvatarFallback>{post.author_name.char_at (0)};
+                  <div className="font - medium text - lg">{post.author_name}</div>;""
+                    <Badge variant="outline" className="mt - 1">;"
+
+              <div className="flex items - center text - sm text - muted - foreground">;"
+                <Calendar className="h - 4 w - 4 mr - 1" />;"
+
+                <time date_time={post.created_at} title={formatted_date}>;
+            <h1 className="text - 2xl font - bold mb - 2">{post.title}</h1>;""
+            <div className="flex flex - wrap gap - 2 mb - 6">;"
+                <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;"
+
+                ))}
+            <div className="prose dark:prose - invert max - w-none mb - 6">;"
+                <p key={i}>{paragraph}</p>))}
+            <div className="flex flex - wrap items - center justify - between gap - 4 mt - 6">;"
+                  variant="outline";""
+                  size="sm";"
+                  on_click={handle_upvote}"
+                  className="flex items - center gap - 2";"
+                >;
+                  <ThumbsUp className="h - 4 w - 4" />;"
+
+                  <span>{post.upvotes}</span>;
+                  on_click={handle_downvote}"
+                  <ThumbsDown className="h - 4 w - 4" />;"
+
+                  <span>{post.downvotes}</span>;
+              <div className="flex items - center gap - 2">;"
+                  <Button variant="ghost" size="sm" as_child>;"
+                    <Link to={`/community / edit/${post.id}`}>;
+                      <Edit className="h - 4 w - 4 mr - 1" />;"
+
+                      variant="ghost";""
+                      on_click={handlePinPost}
+                      <Pin className="h - 4 w - 4 mr - 1" />;"
+
+                      on_click={handleLockPost}
+                      <Lock className="h - 4 w - 4 mr - 1" />;"
+
+                  </>)}
+                  on_click={handleReportPost}
+                  <Flag className="h - 4 w - 4 mr - 1" />;"
+
+            <div className="mb-8">"
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>"
+                <ReplyForm onSubmit={handleSubmitReply} />
+
+                <Alert>
+
+                  <AlertDescription>
+                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in to join the discussion."
+            <div className="mb-8">;"
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>;"
+                <ReplyForm onSubmit={handleSubmitReply} />;
+
+                <Alert>;
+
+                  <AlertDescription>;
+                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in to join the discussion.;"
+            <Alert className="mb-8">"
+              <AlertDescription className="flex items-center">"
+                <Lock className="h-4 w-4 mr-2" />"
+
+          <div className="space-y-6">"
+                <ReplyCard;
+pr-12325
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -2875,12 +4629,19 @@ if (return) {}
 =======
 <<<<<<< HEAD
                 <ReplyCard
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />
+
+canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
+=======
           {post && post.isLocked && (;
                 </Alert>;              )}
             </div>;
@@ -3294,6 +5055,7 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
 >>>>>>> merged-prs-20250907-203621
                   canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 />
               ))}
           </div>
@@ -3309,9 +5071,15 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
 
 =======
+<<<<<<< HEAD
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               ))}
           </div>;
         </div>;
@@ -3320,9 +5088,13 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
   );
 }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -3396,8 +5168,12 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
           ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="space-y-6">;
             {replies;
               .filter(reply => !reply.isAnswer);
@@ -3413,6 +5189,9 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
         </div>;
       </div>;
     </AppLayout>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -3447,10 +5226,15 @@ downvotes: 0
   if (!user) {
   toast ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return;
 }
 ;
 
+<<<<<<< HEAD
+};
+
+=======
 <<<<<<< HEAD
 };
 
@@ -3473,11 +5257,15 @@ postId: post.id;
 content;
 authorId: user.id || 'unknown';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 authorName: user.displayName || 'Anonymous';
 authorAvatar: user.avatarUrl;
 createdAt: new Date () .toISOString ();
 updatedAt: new Date () .toISOString ();
 upvotes: 0;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -3523,10 +5311,14 @@ downvotes: 0
   () => handleMarkAsAnswer (reply.id) 
 }canMarkAnswer= {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   !post.isAnswered && (isAuthor || isAdminOrMod) 
 }/>) ) 
 }</div> </div> </div> </AppLayout>) 
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -3535,3 +5327,4 @@ downvotes: 0
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

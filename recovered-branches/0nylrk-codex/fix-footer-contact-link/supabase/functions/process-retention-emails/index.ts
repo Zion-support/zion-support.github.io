@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {serve} from ""https": //deno && deno.land/std@0 && 0.190.0/http/server && server.ts","
 import {createClient} from ""https": //esm && esm.sh/@supabase/supabase-js@2 ;// Initialize Supabase client"
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;"
@@ -25,12 +26,126 @@ throw new Error(`Failed to fetch pending "jobs": ${jobsError && jobsError.messag
     const processedJobs = [];
       .limit(50),
 
+=======
+<<<<<<< HEAD
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*";"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+
+// Initialize Supabase client
+
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*","
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {};
+    // Call the database function to schedule retention emails;
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    // Call the database function to schedule retention emails
+    const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
+      "schedule_retention_emails"
+
+    ),
+
+    console && console.log(`Scheduled ${scheduledCount} retention emails`);
+
+    // Fetch pending retention email jobs
+
+    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
+
+);
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError && scheduleError.message}`)
+    }
+    console && console.log(`Scheduled ${scheduledCount} retention emails`);
+    const { data: scheduledCount, error: scheduleError } = await supabase.rpc(
+      "schedule_retention_emails"
+    );
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
+    }
+    console.log(`Scheduled ${scheduledCount} retention emails`);
+    ),
+
+=======
+<<<<<<< HEAD
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+// Initialize Supabase client
+const supabaseUrl = $2;
+const supabaseServiceKey = $2;
+const supabase = createClient($2);
+const corsHeaders = $2;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders})
+  }
+  try {
+    // Call the database function to schedule retention emails
+    const { data: scheduledCount, error: scheduleError} = await supabase.rpc($2);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
+    }
+
+<<<<<<< HEAD
+    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
+    // Fetch pending retention email jobs
+
+    const { data: pendingJobs, error: jobsError } = await supabase
+=======
+    console.log($2);
+    // Fetch pending retention email jobs
+    const { data: pendingJobs, error: jobsError} = await supabase
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      .from("scheduled_jobs")
+      .select("id, payload")
+      .eq("job_type", "send_retention_email")
+      .eq("status", "pending")
+<<<<<<< HEAD
+
+    if (jobsError) {
+=======
+>>>>>>> origin/resolved-merge-conflicts
       .limit($2);
     if (jobsError) {
 }
 throw new Error(`Failed to fetch pending "jobs": ${jobsError.message}`);`    }
 const processedJobs = [],;
     if (pendingJobs && pendingJobs.length > 0) {
+<<<<<<< HEAD
       }
       for (const job of pendingJobs) {          // Call the send - retention - email function for each job;
 }
@@ -41,17 +156,586 @@ const reminder_response = await fetch (;
               "headers": {
                 "Content-Type": "application/json","
                 "Authorization": `Bearer ${supabaseServiceKey}`};`              "body": JSON && JSON.stringify(job)}
+=======
+      for (const job of pendingJobs) {
+        try {
+          // Call the send-retention-email function for each job
+          const reminderResponse = $2;
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+                "Authorization": `Bearer ${supabaseServiceKey}`}
+              body: JSON.stringify(job)}
+          ),
+
+          if (!reminderResponse.ok) {
+            const errorText = await reminderResponse.text($2);
+            console.error($2);
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+// Initialize Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*";"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
+
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+
+// Initialize Supabase client
+
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+
+=======
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Initialize Supabase client
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*","
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+
+<<<<<<< HEAD
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {};
+    // Call the database function to schedule retention emails;
+
+=======
+<<<<<<< HEAD
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === "OPTIONS") {
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    // Call the database function to schedule retention emails
+<<<<<<< HEAD
+
+=======
+    const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
+      "schedule_retention_emails"
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    ),
+
+    console && console.log(`Scheduled ${scheduledCount} retention emails`);
+
+    // Fetch pending retention email jobs
+
+    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
+
+);
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError && scheduleError.message}`)
+    }
+    console && console.log(`Scheduled ${scheduledCount} retention emails`);
+    const { data: scheduledCount, error: scheduleError } = await supabase.rpc(
+      "schedule_retention_emails"
+    );
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
+    }
+    console.log(`Scheduled ${scheduledCount} retention emails`);
+    ),
+
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
+    }
+
+<<<<<<< HEAD
+    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
+=======
+<<<<<<< HEAD
+    );
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError && scheduleError.message}`)
+    }
+    console && console.log(`Scheduled ${scheduledCount} retention emails`);
+    const { data: scheduledCount, error: scheduleError } = await supabase.rpc(
+      "schedule_retention_emails"
+    );
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
+    }
+    console.log(`Scheduled ${scheduledCount} retention emails`);
+    ),
+
+    if (scheduleError) {
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
+    }
+
+    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    // Fetch pending retention email jobs
+
+    const { data: pendingJobs, error: jobsError } = await supabase
+      .from("scheduled_jobs")
+      .select("id, payload")
+      .eq("job_type", "send_retention_email")
+      .eq("status", "pending")
+<<<<<<< HEAD
+      .limit(50);
+    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
+    }
+    const processedJobs = [];
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      .limit(50),
+
+    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
+    }
+
+    const processedJobs = [],
+
+<<<<<<< HEAD
+    if (pendingJobs && pendingJobs.length > 0) {
+      for (const job of pendingJobs) {
+        try {
+          // Call the send-retention-email function for each job
+          const reminderResponse = await fetch(
+            `${supabaseUrl}/functions/v1/send-retention-email`,
+            {
+              method: "POST",
+              headers: {
+
+    if (jobsError) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }    if (jobsError) {
+
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }
+
+            {
+              method: "POST",
+              headers: {
+
+          const reminder_response = await fetch (
+
+            `${supabase_url}/functions / v1 / send - retention - email`;
+            {"
+              method: "POST";
+
+                "Authorization": `Bearer ${supabaseServiceKey}`};
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;"
+// Initialize Supabase client;"
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;""
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,"
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*";""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0","
+// Initialize Supabase client;"
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,""
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,"
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+serve(async (req) => {
+  // Handle CORS preflight requests;"
+  if (req && req.method === "OPTIONS") {"
+  // Handle CORS preflight requests;"
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {"
+  // Handle CORS preflight requests;"
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+  // TODO: Implement
+    // Call the database function to schedule retention emails;
+    const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc("
+      "schedule_retention_emails"")
+    ),
+
+    console && console.log(`Scheduled ${scheduledCount} retention emails`);
+
+`;
+    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
+
+    // Fetch pending retention email jobs;
+    const { data: pendingJobs, error: jobsError } = await supabase;"
+      .from("scheduled_jobs")""
+      .select("id, payload")""
+      .eq("job_type", "send_retention_email")""
+      .eq("status", "pending")"
+    if (jobsError) {`;
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    const processedJobs = [];
+      .limit(50),
+
+      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
+
+    const processedJobs = [],
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    if (pendingJobs && pendingJobs.length > 0) {
+    if (jobsError) {
+
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }
+    const processedJobs = [];
+      .limit(50),
+    if (jobsError) {}
+      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
+    }
+    const processedJobs = [],
+    if (pendingJobs && pendingJobs.length > 0) {
+
+      for (const job of pendingJobs) {"
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+    if (pendingJobs && pendingJobs.length > 0) {
+      for (const job of pendingJobs) {
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
+// Initialize Supabase client;
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;""
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,"
+const supabase = create_client (supabase_url, supabaseServiceKey);
+;
+const cors_headers = {"
+  "Access - Control - Allow - Origin": "*";""
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition;
+if ( {) {
+  $2;
+    return new Response (null, { headers: cors_headers });
+  // TODO: Implement
+    // Call the database function to schedule retention emails;
+    const { data: scheduled_count, error: schedule_error } = await supabase.rpc ()"
+      "schedule_retention_emails");"
+    // Check condition;
+}`;
+      throw new Error (`Failed to schedule retention emails: ${schedule_error.message}`);
+    console.log (`Scheduled ${scheduled_count} retention emails`);
+    // Fetch pending retention email jobs;
+    const { data: pending_jobs, error: jobs_error } = await supabase;"
+      .from ("scheduled_jobs");""
+      .select ("id, payload");""
+      .eq ("job_type", "send_retention_email");""
+      .eq ("status", "pending");"
+      .limit (50);
+    // Check condition;
+      throw new Error (`Failed to fetch pending jobs: ${jobs_error.message}`);
+    const processed_jobs = [];
+    // Check condition;
+      for (const job of pending_jobs) {
+<<<<<<< HEAD
+  // TODO: Implement
+      for (const job of pendingJobs) {
+  // TODO: Implement
+=======
+<<<<<<< HEAD
+  // TODO: Implement
+      for (const job of pendingJobs) {
+  // TODO: Implement
+=======
+        try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          // Call the send - retention - email function for each job;
+          const reminder_response = await fetch (`;
+            `${supabase_url}/functions / v1 / send - retention - email`;
+            {"
+              method: "POST";",
+  headers: {
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+"
+                "Content-Type": "application/json",""`;
+                "Authorization": `Bearer ${supabaseServiceKey}`};")
+pr-12325
+
+              body: JSON && JSON.stringify(job)});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+                "Content-Type": "application/json"
+
+                "Authorization": `Bearer ${supabaseServiceKey}`}
+              body: JSON.stringify(job)});
+          if (!reminderResponse.ok) {
+            const errorText = await reminderResponse.text();
+            console.error(`Failed to process job ${job.id}: ${errorText}`);
+                "Content-Type": "application/json",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                "Authorization": `Bearer ${supabaseServiceKey}`},
+              body: JSON.stringify(job)}
+          ),
+=======
+                "Authorization": `Bearer ${supabaseServiceKey}`};
+              body: JSON && JSON.stringify(job)}
+>>>>>>> origin/resolved-merge-conflicts
           );
 
           if (!reminderResponse && reminderResponse.ok) {
             }
             const errorText = await reminderResponse && reminderResponse.text();
+<<<<<<< HEAD
             console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);`            // Update job status to failed,
 await supabase
               .from("scheduled_jobs")"
               .update({
                 }
                 "status": "failed"})          // Update job status to failed"
+=======
+            console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);
+                "Content-Type": "application/json"
+                "Authorization": `Bearer ${supabaseServiceKey}`}
+              body: JSON.stringify(job)}
+          );
+          if (!reminderResponse.ok) {
+            const errorText = await reminderResponse.text();
+            console.error(`Failed to process job ${job.id}: ${errorText}`);
+                "Content-Type": "application/json",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                "Authorization": `Bearer ${supabaseServiceKey}`},
+              body: JSON.stringify(job)}
+          ),
+
+          if (!reminderResponse.ok) {
+            const errorText = await reminderResponse.text(),
+            console.error(`Failed to process job ${job.id}: ${errorText}`),
+<<<<<<< HEAD
+
+=======
+            
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+          if (!reminderResponse.ok) {
+            const errorText = await reminderResponse.text(),
+            console.error(`Failed to process job ${job.id}: ${errorText}`),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            // Update job status to failed
+            await supabase
+              .from("scheduled_jobs")
+              .update({
+<<<<<<< HEAD
+
+                status: "failed"})
+
+          } else {}
+            processedJobs && processedJobs.push(job && job.id)
+          }
+
+console && console.error(`Error processing job ${job && job.id}:`, error);
+          console.error(`Error processing job ${job.id}:`, error),
+
+          console && console.error(`Error processing job ${job && job.id}:`, error);
+
+=======
+<<<<<<< HEAD
+                status: "failed"})
+=======
+
+                status: "failed"})
+<<<<<<< HEAD
+
+          } else {}
+=======
+<<<<<<< HEAD
+          console && console.error(`Error processing job ${job && job.id}:`, error);
+          
+
+
+          console.error(`Error processing job ${job.id}:`, error),
+          
+
+          console && console.error(`Error processing job ${job && job.id}:`, error);
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              .eq("id", job.id)
+          } else {
+            processedJobs.push(job.id)
+          }
+        } catch (error) {
+<<<<<<< HEAD
+          console.error(`Error processing job ${job.id}:`, error);
+          console.error(`Error processing job ${job.id}:`, error),
+
+          // Update job status to failed
+
+          await supabase
+
+            .from("scheduled_jobs")
+            .update({"
+              status: "failed"})
+
+        }
+      }
+    }
+
+        message: "Retention emails processed successfully",
+
+      {
+        status: 200
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
+    console.error("Error in process-retention-emails function:", error),
+
+    return new Response(
+      JSON.stringify({"
+        error: "Internal server error"
+
+    console && console.error("Error in process-retention-emails function:", error);
+
+    return new Response(
+      JSON && JSON.stringify({ "
+        error: "Internal server error", 
+
+      });
+
+      });
+
+      {}
+        status: 500"
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
+    return new Response(
+      JSON.stringify({
+        error: "Internal server error"
+        details: error.message
+    console && console.error("Error in process-retention-emails function:", error);
+
+    return new Response(
+      JSON && JSON.stringify({ 
+        error: "Internal server error", 
+        details: error && error.message
+      });
+}),
+      });
+      {
+        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
+}
+});
+  } catch (error) {      });        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+
+                "Content - Type": "application / json",
+                "Authorization": `Bearer ${supabaseServiceKey}`}
+              body: JSON.stringify (job)});
+
+}
+});
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+// Initialize Supabase client;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          console.error($2);
+          // Update job status to failed
+>>>>>>> origin/resolved-merge-conflicts
           await supabase
             .from("scheduled_jobs")"
             .update({
@@ -86,10 +770,38 @@ import { createClient } from ""https"://esm.sh/@supabase/supabase-js@2.45.0",;"
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;"
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;"
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
+=======
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
+const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+>>>>>>> origin/chore/fix-lint-and-merge
 const corsHeaders = {;
+<<<<<<< HEAD
   "Access-Control-Allow-Origin":"*",;"
   "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
+=======
+<<<<<<< HEAD
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            const error_text = await reminder_response.text ();
+            console.error (`Failed to process job ${job.id}: ${error_text}`);
+=======
+  "Access-Control-Allow-Origin":"*",;
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
+>>>>>>> origin/resolved-merge-conflicts
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
@@ -105,7 +817,9 @@ serve(async (req) => {;
     const { "data":scheduledCount, "error":scheduleError } = await supabase.rpc(;
       "schedule_retention_emails";"
     ),;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
+<<<<<<< HEAD
     if (scheduleError) {;
       }
       throw new Error(`Failed to schedule retention "emails":${scheduleError.message}`),;`    }
@@ -207,5 +921,19 @@ serve(async (req) => {;
     );
   }
 });
+<<<<<<< HEAD
   }
 }),
+=======
+=======
+<<<<<<< HEAD
+});
+=======
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -40,7 +40,11 @@ href={href
       {bullets.length > 0 && (
         <ul className="space-y-2">"
           {bullets.map((bullet, index) => (
+<<<<<<< HEAD
             <li key={index} className="flex items-start group-"hover":translate-x-1 transition-transform duration-300" style={ "transitionDelay": `${index * 50}`ms` }>`
+=======
+            <li key={index} className="flex items-start group-"hover":translate-x-1 transition-transform duration-300" style={{ "transitionDelay": `${index * 50}`ms` }}>`
+>>>>>>> origin/resolved-merge-conflicts
               <span className="text-green-500 mr-3 mt-0.5 group-"hover":text-green-600 transition-colors duration-300">✓</span>"
               <span className="text-sm text-gray-600 group-"hover":text-gray-700 transition-colors duration-300">{bullet}</span>"
             </li>

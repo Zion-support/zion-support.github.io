@@ -1,6 +1,12 @@
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = $2;
 type RoleContextValue = $2;
@@ -19,14 +25,34 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
 =======
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 export type UserRole = any;
   return ctx;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export type UserRole = 'client' | 'talent';'
+
+type RoleContextValue = {"role": UserRole;
+  }
+  "setRole": ("role": UserRole) => void
+};
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent';
 type RoleContextValue = {role: UserRole;
   setRole: (role: UserRole) => void;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
@@ -82,6 +108,47 @@ import React, {}
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const "RoleProvider": React.FC<{ "children": React.ReactNode
+}> = ({ children
+   }) => {
+
+
+
+  }
+
+
+
+  const [role, setRole] = useState<UserRole>('client');'
+  useEffect(() => {
+
+    }
+
+    try {
+}
+const saved =;
+        typeof window !== 'undefined''
+          ? window.localStorage.getItem('zion_user_role')'
+          : null;
+      if (saved === 'client' |saved === 'talent') {
+        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
+      if (saved === 'client' |saved === 'talent') {
+        setRole(saved)
+  children
+}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+export type UserRole = $2;
+type RoleContextValue = $2;
+  setRole: (role: UserRole) => void
+},
+
+      if (saved === 'client' || saved === 'talent') {'
+        }
+        setRole(saved);
+=======
+>>>>>>> origin/resolved-merge-conflicts
   children,;
 
 
@@ -271,11 +338,23 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     } catch {}
   }, []),
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+    }
+    try {;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     try {
       if (typeof window !== 'undefined') {
@@ -293,6 +372,10 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
       if (saved === 'client' || saved === 'talent') {
         setRole(saved);
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
       if (typeof window !== 'undefined') {;'
         }
@@ -318,14 +401,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         window.localStorage.setItem('zion_user_role', role)
       }
     } catch {}
   }, [role]),
+<<<<<<< HEAD
 
   const value = useMemo(() => ({ role, setRole }), [role]),
 
+=======
+<<<<<<< HEAD
+
+  const value = useMemo(() => ({ role, setRole }), [role]),
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+  const value = useMemo(() => ({ role, setRole }), [role]),
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   return <RoleContext.Provider value = $2;
 export function useRole(): RoleContextValue {
@@ -333,11 +436,27 @@ const ctx = useContext(RoleContext);
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
 };
 export function useRole(): RoleContextValue {
   }
   const ctx = useContext(RoleContext);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (!ctx) throw new Error('useRole must be used within RoleProvider');'
+return ctx;
+
+  if (!ctx) throw new Error('useRole must be used within RoleProvider');
+  return ctx;  return ctx;
+}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx
 }
@@ -370,6 +489,10 @@ export function useRole(): any (): RoleContextValue {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return ctx
 }
   const [role, set_role] = useState < UserRole>('client');
@@ -390,6 +513,25 @@ if ( {) {
   $2
 }
         set_role (saved);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+    } catch {}
+  }, []);
+;
+  useEffect (() => {
+    try {
+      // Check condition
+if ( {) {
+  $2
+}
+        window.local_storage.set_item ('zion_user_role', role);      }        window.local_storage.set_item ('zion_user_role', role);
+      }
+    } catch {}
+  }, [role]);
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
       if (saved === 'client' || saved === 'talent') {}
         setRole(saved);}
@@ -413,6 +555,10 @@ window.localStorage.setItem('zion_user_role', role);}
     } catch {}
   }, [role]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ;
   const value = useMemo (() => ({ role, set_role }), [role]);
 ;
@@ -427,11 +573,26 @@ const ctx = useContext (RoleContext);
   return ctx;  return ctx;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }export function useRole(): RoleContextValue {const ctx = useContext(RoleContext)if (!ctx) throw new Error('useRole must be used within RoleProvider')return ctx;
   const ctx = useContext($2);
   if (!ctx) throw new Error($2);
   return ctx
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+return ctx;
+origin/cursor/automate-test-improve-and-merge-code-2533
+'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 return ctx;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -581,3 +742,7 @@ const ctx = useContext(RoleContext);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

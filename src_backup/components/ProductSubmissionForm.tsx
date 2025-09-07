@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 try {
       // Create the product listing;
       const product_data = {
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {
 
   Form
@@ -129,8 +144,17 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         category: values.category,
 
       let imagePublicUrl: string | undefined;
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { Form;
   FormControl;
   FormDescription;
@@ -185,8 +209,19 @@ import {logErrorToProduction} from '@/utils/productionLogger',// Initialize the 
     setIsSubmitting(true)title: 'Authentication Required',description: 'You must be logged in to publish products',variant: 'destructive'}),return;
     }setIsSubmitting(true),try {// Create the product listing;
       const productData = {try {// Create the product listing;
+<<<<<<< HEAD
       const product_data = {title: values.title,description: values.description,price: parse_float (values.price),category: values.category,currency: 'USD', // Default currency;
         tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],author: {let imagePublicUrl: string | undefined;
+=======
+      const product_data = {title: values.title,description: values.description,price: parse_float (values.price),category: values.category,currency: 'USD, // Default currency;
+        tags: values.tags ? values.tags.split (, ').map (tag => tag.trim ()) : [],author: {let imagePublicUrl: string | undefined;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       // If we have an image, upload it;
       // Check condition;
 if ( {) {}
@@ -200,7 +235,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (upload_error.message)}
+          throw new Error (upload_error.message);
+        }
         // Get the public URL for the image;
         const { data: publicUrlData } = supabase.storage;'
           .from ('products');
@@ -217,7 +253,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (update_error.message)}
+          throw new Error (update_error.message);
+        }
       }
       // Upload video if provided;
       // Check condition;
@@ -245,7 +282,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (update_error.message)}
+          throw new Error (update_error.message);
+        }
       }
       // Upload model if provided;
       // Check condition;
@@ -273,7 +311,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (update_error.message)}
+          throw new Error (update_error.message);
+        }
       }
       // Send listing to moderation service;
 
@@ -292,8 +331,25 @@ if ( {) {}
         logErrorToProduction ('Error invoking moderation:', { data: err });
       }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from react;
+=======
+=======
+=======
+<<<<<<< HEAD
+
+import React from react;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import z from 'zod';
@@ -301,8 +357,24 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 import Image from 'next/image'; // Import next/image;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import Image from next/image; // Import next/image;
+>>>>>>> origin/resolved-merge-conflicts
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       const { data: productRecord, error: productError } = await supabase
 
@@ -314,6 +386,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
       if (productError) {}
         throw new Error(productError.message)
+<<<<<<< HEAD
 import React from 'react',;'
 import { useForm, ControllerRenderProps } from 'react-hook-form',;'
 import { zodResolver } from '@hookform/resolvers/zod',;'
@@ -322,6 +395,16 @@ import { supabase } from '@/integrations/supabase/client',;'
 import { useAuth } from '@/hooks/useAuth',;'
 import { useToast } from '@/hooks/use-toast',;'
 import { useRouter } from 'next/router',;'
+=======
+import React from "react",;"
+import { useForm, ControllerRenderProps } from "react-hook-form",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import z from "zod",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { useToast } from "@/hooks/use-toast",;"
+import { useRouter } from "next/router",;'
+>>>>>>> origin/resolved-merge-conflicts
 import Image from 'next/image', // Import next/image;'
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
@@ -332,6 +415,7 @@ import {;
   FormItem,;
   FormLabel,;
 
+<<<<<<< HEAD
 import { Sparkles } from 'lucide-react';
       // Send listing to moderation service;try {await supabase.functions.invoke ('moderate - listing', {body: {listing_id: product_record.id,listing_type: 'product',description: values.description,images: imagePublicUrl ? [imagePublicUrl] : [],seller_id: user.id})} catch (err) {logErrorToProduction ('Error invoking moderation:', { data: err })}import React from 'react';
 import { useForm, ControllerRenderProps  } from 'react-hook-form';
@@ -345,6 +429,35 @@ import Image from 'next/image'; // Import next/image;
 import { logErrorToProduction  } from '@/utils/productionLogger';
           name: user.displayName || 'Anonymous Creator',id: user.id},createdAt: new Date().toISOString()},const { data: productRecord, error: productError } = await supabase;
         .from('product_listings').insert([productData]).select('id').single(),if (productError) {throw new Error(productError.message)import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Sparkles } from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { Sparkles } from 'lucide-react;
+      // Send listing to moderation service;try {await supabase.functions.invoke (moderate - listing', {body: {listing_id: product_record.id,listing_type: 'product,description: values.description,images: imagePublicUrl ? [imagePublicUrl] : [],seller_id: user.id}})} catch (err) {logErrorToProduction (Error invoking moderation:', { data: err })}import React from 'react;
+import { useForm, ControllerRenderProps  } from react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod;
+import z from zod';
+import { supabase  } from '@/integrations/supabase/client;
+import { useAuth  } from @/hooks/useAuth';
+import { useToast  } from '@/hooks/use-toast;
+import { useRouter  } from next/router';
+import Image from 'next/image; // Import next/image;
+import { logErrorToProduction  } from @/utils/productionLogger';
+          name: user.displayName || "Anonymous Creator",id: user.id},createdAt: new Date().toISOString()},const { data: productRecord, error: productError } = await supabase;
+        .from('product_listings).insert([productData]).select(id').single(),if (productError) {throw new Error(productError.message)import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form;
+=======
+import { Sparkles } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 // Define the form schema with zod;
 
   description: z && z.string().min(10, 'Description must be at least 10 characters'),;
@@ -352,7 +465,22 @@ import { logErrorToProduction  } from '@/utils/productionLogger';
   price: z;
     .string();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -399,6 +527,12 @@ import { logErrorToProduction  } from '@/utils/productionLogger';
         }
       }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ? z && z.any().optional(): z && z.instanceof(File).optional(),tags: z && z.string().optional()})// Type for our form values;
 type ProductFormValues = z && z.infer<typeof productSchema>;export function ProductSubmissionForm() {const { user } = useAuth()const { toast } = useToast()const router = useRouter()const [isSubmitting, setIsSubmitting] = React && React.useState(false)const [imagePreview, setImagePreview] = React && React.useState(null as string | null)const [activeTab, setActiveTab]  = React && React.useState('manual')// Initialize the form;
   const form = useForm<ProductFormValues>({resolver: zodResolver(productSchema),defaultValues: {title: '',description: '',price: '',category: '',video: undefined,model: undefined,tags: ''})// Handle image upload preview;
@@ -431,6 +565,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
           .update({;
             images: [imagePublicUrl],;
           });
+<<<<<<< HEAD
+=======
+            images: [imagePublicUrl]});
+>>>>>>> origin/resolved-merge-conflicts
           .eq('id', productRecord && productRecord.id);
 
         if (updateError) {;
@@ -455,6 +593,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
         const { error: uploadError } = await supabase && supabase.storage;
           .from('products');
           .upload(modelPath, values && values.model);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Upload video if provided;
       if (values && values.video) {;`
         const videoPath = `product_videos/${productRecord && productRecord.id}/${values && values.video.name}`;
@@ -534,10 +678,25 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         title: 'Publication Failed',
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
@@ -554,6 +713,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
     }
   },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           .from('products').upload(modelPath, values && values.model)if (uploadError) {throw new Error(uploadError && uploadError.message)}const { data: publicUrlData } = supabase && supabase.storage;
           .from('products').getPublicUrl(modelPath)const { error: updateError } = await supabase;
           .from('product_listings').update({ model_url: publicUrlData && publicUrlData.publicUrl }).eq('id', productRecord && productRecord.id)if (updateError) {throw new Error(updateError && updateError.message)}
@@ -638,9 +803,21 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 const { onChange, onBlur, value, ref } = field,
                 return (
 
+<<<<<<< HEAD
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>
       <TabsList className='grid grid-cols-2 mb-6'>
         <TabsTrigger value='manual' className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+      <TabsList className=grid grid-cols-2 mb-6>
+        <TabsTrigger value="manual" className=data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple>
+>>>>>>> origin/resolved-merge-conflicts
           Manual Creation
         </TabsTrigger>
         <TabsTrigger value='ai' className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>
@@ -711,9 +888,21 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
+<<<<<<< HEAD
               name='title';render={({field;
               }: {control={form.control}name='title';
               render={({ field }: { field: ControllerRenderProps<ProductFormValues 'title'> }) => {const { onChange, onBlur, value, ref } = field,return (<FormItem>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              name=title';render={({field;
+              }: {control={form.control}name=title";
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues "title> }) => {const { onChange, onBlur, value, ref } = field,return (<FormItem>;
+>>>>>>> origin/resolved-merge-conflicts
                     <FormLabel>Product Title</FormLabel>;
                     <FormControl>;
                       <Input;
@@ -753,6 +942,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       <Input
                         ref={ref}
                       />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                         ref={ref}
 
@@ -760,9 +955,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormControl>;
                     <FormDescription>;
                       Create a compelling title that describes your product;
-                        value={value}ref={ref}
-                      />;</FormControl>;
-                    <FormDescription>Create a compelling title that describes your product;
                     </FormDescription>;
                     <FormMessage />;
                   </FormItem>;
@@ -785,9 +977,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 <FormItem>;
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
-
-
-
 
                       {...field}
                     />;
@@ -815,8 +1004,19 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormMessage />
                   </FormItem>
 
+<<<<<<< HEAD
               name='description';
               render={({ field }: { field: ControllerRenderProps<ProductFormValues 'description'> }) => (<FormItem>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              name="description";
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues description> }) => (<FormItem>;
+>>>>>>> origin/resolved-merge-conflicts
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
                     <Textarea;
@@ -843,13 +1043,30 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
               <FormField;
                 control={form.control}
+<<<<<<< HEAD
                 name='price';
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues 'price'> }) => (;
+=======
+                name="price";
+                render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
+                render={({ field }: { field: ControllerRenderProps<ProductFormValues price> }) => (;
+>>>>>>> origin/resolved-merge-conflicts
 
                   <FormItem>;
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues 'price'> }) => (<FormItem>;
                     <FormLabel > Product Title</FormLabel>;
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
+=======
+            <div className=grid grid-cols-1 md:grid-cols-2 gap-6>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
               <FormField;
                 control={form.control}'
                 name='price';'
@@ -864,7 +1081,29 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
+<<<<<<< HEAD
                     <FormMessage />;field: ControllerRenderProps<ProductFormValues, 'description'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    <FormMessage />;
+
+                field: ControllerRenderProps<ProductFormValues, 'description'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                    <FormMessage />;field: ControllerRenderProps<ProductFormValues, 'description>;
+=======
+                    <FormMessage />;
+
+                field: ControllerRenderProps<ProductFormValues, 'description'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               }) => (                <FormItem>;
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
@@ -921,9 +1160,25 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormMessage />;
                   </FormItem>;
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 )}/>;<FormField;
                 control={form && form.control}
+<<<<<<< HEAD
                 name='category';
+=======
+                name=category';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
               />;
 
@@ -984,6 +1239,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 render={({field;
                 }: {field: ControllerRenderProps<ProductFormValues, 'category'>;
                 }) => (                  <FormItem></FormItem>;
@@ -1042,7 +1303,17 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormMessage />;/>;
             </div>;<FormField;
               control={form && form.control}
+<<<<<<< HEAD
               name='tags';
+=======
+              name=tags';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                 name='category';
 
@@ -1067,6 +1338,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
             </div>;
             <FormField;
 
+<<<<<<< HEAD
 
               name='tags'
 
@@ -1075,7 +1347,27 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               name='tags''
               render={({ field }: { field: ControllerRenderProps<ProductFormValues 'tags'> }) => (
                 <FormItem>
+=======
+              control={form.control}
+<<<<<<< HEAD
+"
+              name="tags""
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
+                <FormItem>
+=======
 
+              name=tags""
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (
+                <FormItem>
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -1085,8 +1377,19 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD
               control={form.control}name='tags';
               render={({ field }: { field: ControllerRenderProps<ProductFormValues 'tags'> }) => (<FormItem>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              control={form.control}name="tags";
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (<FormItem>;
+>>>>>>> origin/resolved-merge-conflicts
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input;
@@ -1095,8 +1398,19 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
               name='tags';
               render={({ field }: { field: ControllerRenderProps<ProductFormValues 'tags'> }) => (<FormItem>;
+=======
+              name="tags";
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (<FormItem>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
               }) => (                <FormItem>;
@@ -1108,8 +1422,25 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
+<<<<<<< HEAD
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
+<<<<<<< HEAD
                     Add relevant tags to help users find your product (e && e.g., ai,;
+=======
+                    Add relevant tags to help users find your product (e && e.g., ai,
+=======
+=======
+=======
+<<<<<<< HEAD
+                    Add relevant tags to help users find your product (e.g., ai, productivity, design);
+                    Add relevant tags to help users find your product (e && e.g., ai,
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                    Add relevant tags to help users find your product (e && e.g., ai,;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                     productivity, design);
 
                   </FormDescription>;
@@ -1118,6 +1449,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               )}
             />;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <FormDescription>Add relevant tags to help users find your product (e && e.g., ai,productivity, design)</FormDescription>;
                   <FormMessage />;
                 </FormItem>;
@@ -1141,8 +1478,19 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       type='file';
                       accept='image/*';
                       onChange={handleImageChange}<Input;
+<<<<<<< HEAD
                       type='file';
                       accept='image/*';
+=======
+                      type="file";
+                      accept=image/*;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <FormField;
               control={form && form.control}'
               name='image'
@@ -1160,15 +1508,42 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
                 </FormItem>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <Input
                       type='file'
                       accept='image/*'
                       onChange={handleImageChange}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     <Input 
 
@@ -1187,6 +1562,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   </FormDescription>
                   <FormMessage />
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3/2}>
@@ -1194,7 +1575,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                           src={imagePreview}
 
 
+<<<<<<< HEAD
                           alt='Product image preview'
+=======
+                          alt="Product image preview"
+                          alt="Product image preview
+>>>>>>> origin/resolved-merge-conflicts
                           width={600} // Example width, adjust as needed
 
 
@@ -1208,6 +1594,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       </AspectRatio>;
                     </div>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           src={imagePreview}
 
                           alt='Product image preview'
@@ -1221,7 +1613,17 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                           // For local object URLs, optimization via loader won't occur.
                         />
                       </AspectRatio>
+<<<<<<< HEAD
                       className='cursor-pointer';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      className=cursor-pointer";
+>>>>>>> origin/resolved-merge-conflicts
                     />;
                   </FormControl>;
                   <FormDescription>Upload a high-quality image of your product (recommended;
@@ -1266,7 +1668,17 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       type='file';
                       accept='video/mp4';
                       onChange={handleVideoChange}
+<<<<<<< HEAD
                       className='cursor-pointer';
+=======
+                      className=cursor-pointer';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                           alt='Product image preview'
                           width={600} // Example width, adjust as needed;
@@ -1303,14 +1715,18 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       {...field}
                     />;
                   </FormControl>;
-                  <FormDescription>Add relevant tags to help users find your product (e.g., ai,productivity, design)</FormDescription>;
+                  <FormDescription>;
+                    Add relevant tags to help users find your product (e.g., ai,
+                    productivity, design);
+                  </FormDescription>;
                   <FormMessage />;
                 </FormItem>)}
             />;
             <FormField;
               control={form.control}'
               name='image';
-              render={() => (<FormItem>;
+              render={() => (
+                <FormItem>;
                   <FormLabel > Product Image</FormLabel>;
                   <FormControl>;
                     <Input;'
@@ -1319,8 +1735,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       on_change={handleImageChange}'
                       className='cursor - pointer'                    />;
                   </FormControl>;
-                  <FormDescription>Upload a high - quality image of your product (recommended;
-                    size: 1200x800px)</FormDescription>;
+                  <FormDescription>;
+                    Upload a high - quality image of your product (recommended;
+                    size: 1200x800px);
+                  </FormDescription>;
                   <FormMessage />;
                   {image_preview && ('
                     <div className='mt - 2 w - full max - w-md border rounded overflow - hidden'>;
@@ -1352,7 +1770,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       className='cursor - pointer';
                     />;
                   </FormControl>;
-                  <FormDescription>Optional video demonstrating your product;
+                  <FormDescription>;
+                    Optional video demonstrating your product;
                   </FormDescription>;
                   <FormMessage />;
 
@@ -1382,7 +1801,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       className='cursor - pointer';
                     />;
                   </FormControl>;
-                  <FormDescription>Upload a 3D model for interactive viewing;
+                  <FormDescription>;
+                    Upload a 3D model for interactive viewing;
                   </FormDescription>;
                   <FormMessage />;
 
@@ -1414,7 +1834,23 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               )}
 
             />;
+<<<<<<< HEAD
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}/>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                {isSubmitting ? Publishing...' : 'Publish Product}/>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+                {isSubmitting ? Publishing...' : 'Publish Product}/>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <FormField;
               control={form.control}'
               name='model'
@@ -1432,18 +1868,44 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               )}
             />
 
+<<<<<<< HEAD
             <div className='flex justify-end'>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <div className=flex justify-end">
+>>>>>>> origin/resolved-merge-conflicts
               <Button 
                 type='submit' 
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
               >
+<<<<<<< HEAD
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
+=======
+                {isSubmitting ? "Publishing... : Publish Product"}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />;
             <div className='flex justify-end'>;
               <Button;
@@ -1511,8 +1973,14 @@ if (file) {reader && reader.onloadend = () => {setImagePreview (reader && reader
   FormLabel;
   FormMessage} from '@/components/ui/form',import { Input } from '@/components/ui/input',import { Button } from '@/components/ui/button',import { Textarea } from '@/components/ui/textarea',import { AspectRatio } from '@/components/ui/aspect-ratio',// Define the form schema with zod;
 const productSchema = null;
+<<<<<<< HEAD
             category: form.getValues('category')
           }
+=======
+            category: form.getValues("category")
+            category: form.getValues("category)
+          }}
+>>>>>>> origin/resolved-merge-conflicts
         />
       </TabsContent>
     </Tabs>
@@ -1526,9 +1994,21 @@ if (file) {;
 reader.readAsDataURL (file) ;
 origin/cursor/automate-test-improve-and-merge-code-2533
         <AIListingGenerator
+<<<<<<< HEAD
           onApplyGenerated={handleApplyGenerated}          initialValues={
             title: form.getValues('title')
             category: form.getValues('category')
+=======
+          onApplyGenerated={handleApplyGenerated}          initialValues={{
+            title: form.getValues('title)
+            category: form.getValues(category')
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                 </FormItem>)}
             />;'
@@ -1549,6 +2029,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             title: form.get_values ('title'),'
             category: form.get_values ('category'),
 
+<<<<<<< HEAD
 const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
   const file = e && e.target.files?.[0];
 if (file) {;
@@ -1562,6 +2043,23 @@ if (file) {;
 }setIsSubmitting (true);
 author: {';
   name: user.displayName || 'Anonymous Creator';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
+if (file) {}
+//Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {
+  if (!user) {
+  toast ({
+  return;
+}setIsSubmitting (true);
+author: {";
+  name: user.displayName || "Anonymous Creator";
+>>>>>>> origin/resolved-merge-conflicts
 id: user.id ;
 origin/cursor/automate-test-improve-and-merge-code-2533
   name: user && user.displayName || 'Anonymous Creator';
@@ -1574,6 +2072,11 @@ data: productRecord, error: productError ';
 let imagePublicUrl: string | undefined;';
 //If we have an image, upload it .from ('products') .upload (imagePath, values.image);
 //Get the public window.URL for the image const {;
+<<<<<<< HEAD
+=======
+//If we have an image, upload it .from (products) .upload (imagePath, values.image);
+//Get the public window.URL for the image const {
+>>>>>>> origin/resolved-merge-conflicts
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (imagePath);
 imagePublicUrl = publicUrlData.publicUrl;
@@ -1614,6 +2117,12 @@ const {;
   await supabase.functions.invoke ('moderate-listing', {;
   body: {;
   //Redirect to product page router.push (`/marketplace/listing/$ {;
+<<<<<<< HEAD
+=======
+  await supabase.functions.invoke ('moderate-listing', {
+  body: {
+  //Redirect to product page router.push (`/marketplace/listing/$ {
+>>>>>>> origin/resolved-merge-conflicts
   productRecord.id ;
 }`) ;
 }catch (error) {;
@@ -1625,10 +2134,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   //Redirect to product page router && router.push (`/marketplace/listing/$ {;
   productRecord && productRecord.id ;
 }`) ;
+<<<<<<< HEAD
 }catch (error) {;
   toast ({;
 
           }
+=======
+}catch (error) {
+  toast ({}}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          }}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
         />;
       </TabsContent>;
     </Tabs>);
@@ -1666,7 +2187,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 };
 
+<<<<<<< HEAD
             category: form.getValues('category')}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            category: form.getValues("category")}}
+>>>>>>> origin/resolved-merge-conflicts
         />;
       </TabsContent>;
     </Tabs>;
@@ -1694,6 +2225,7 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 }= await supabase .from ('product listings')}//Send listing to moderation service try {';await supabase && supabase.functions.invoke ('moderate-listing', {body: {//Redirect to product page router && router.push (`/marketplace/listing/$ {productRecord && productRecord.id ;
 }`)}catch (error) {toast ({await supabase.functions.invoke ('moderate-listing', {body: {//Redirect to product page router.push (`/marketplace/listing/$ {productRecord.id ;
 }`)}catch (error) {toast ({;
+<<<<<<< HEAD
 }finally {setIsSubmitting (false)}className='w-full'> <TabsList className='grid grid-cols-2 mb-6' > <TabsTrigger value='manual' className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple' > ai'className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'> <Sparkles className='h-4 w-4 mr-2'/> AI-Powered Creation </TabsTrigger> </TabsList> ;
 }';}/> <FormFieldDescribe your product in detail...' className='min-h-32' {...field ';
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ';
@@ -1705,6 +2237,20 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 }/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type='file' accept='image/*' on_change= {
   handleImageChange ';
 }className='cursor - pointer' /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
+=======
+}finally {setIsSubmitting (false)}}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
+}";}/> <FormFieldDescribe your product in detail..." className="min-h-32" {...field ';
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Inputtype="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field;
+}/> ";
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Inputplaceholder="Enter tags separated by commas" {...field;
+}/> ";
+}/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" on_change= {
+}/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type="file" accept=image/* on_change= {
+  handleImageChange ";
+}className="cursor - pointer /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;;
+>>>>>>> origin/resolved-merge-conflicts
 //but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>);
 }</FormItem>) ';
 }/> <FormField <FormItem> <FormLabel > Product Video (MP4) </FormLabel> <FormControl> <Input type='file' accept='video / mp4' on_change= {
@@ -1727,6 +2273,7 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
   handleImageChange '
 }className='cursor-pointer' /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
 //but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) ;
+<<<<<<< HEAD
 }</FormItem>) ';
 }/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Inputtype='file' accept='video/mp4' onChange= {
   handleVideoChange '
@@ -1734,6 +2281,22 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ';
 }/> <div className='flex justify-end' > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value='ai' > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }''  );
+=======
+}</FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Inputtype="file" accept=video/mp4 onChange= {
+  handleVideoChange "
+}className="cursor-pointer /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=ai > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}"  );
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}'"  );
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 
@@ -1848,6 +2411,7 @@ const {'
 }/> <FormField >Select a category</option> <option value='digital product' >Digital Product</option> <option value='service' >Service</option> <option value='ai tool' >AI Tool</option> <option value='course' >Course</option> <option value='template' >Template</option> <option value='other' >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ';
 }/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder='Enter tags separated by commas' {;
   ...field ;
+<<<<<<< HEAD
 }/> ';
 }/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type='file' accept='image/*' onChange= {;
   handleImageChange ';
@@ -1865,6 +2429,38 @@ const {'
 }/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Inputtype='file' accept='video/mp4' onChange= {handleVideoChange ';
 }className='cursor-pointer' /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ';
 }/> <div className='flex justify-end' > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value='ai' > <AIListingGenerator /> </TabsContent> </Tabs>)}''  )}reader.readAsDataURL (file)setImagePreview (reader.result as string)}
+=======
+}/> ;
+}/> <FormField >Select a category</option> <option value=digital product" >Digital Product</option> <option value="service >Service</option> <option value=ai tool" >AI Tool</option> <option value="course >Course</option> <option value=template" >Template</option> <option value="other >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ;
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
+  ...field ;
+}/> ;
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type=file" accept="image/* onChange= {
+  handleImageChange ;
+}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader wont occur. /> </AspectRatio> </div>) ;
+}</FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type=file" accept="video/mp4 onChange= {
+  handleVideoChange ;
+}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <div className=flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Inputtype=file" accept="image/* onChange= {handleImageChange ;
+}className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;;
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>)}</FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Inputtype=file" accept="video/mp4 onChange= {handleVideoChange ;
+}className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <div className=flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai > <AIListingGenerator /> </TabsContent> </Tabs>)}'  )}reader.readAsDataURL (file)setImagePreview (reader.result as string)}
+>>>>>>> origin/resolved-merge-conflicts
 reader.readAsDataURL (file)}
 }
 const handleModelChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {const file = e.target.files?.[0];
@@ -1899,6 +2495,7 @@ data: product_record, error: product_error ';
         />;
       </TabsContent>;
     </Tabs>;
+<<<<<<< HEAD
   )}className='w - full'> <TabsList className='grid grid - cols - 2 mb - 6' > <TabsTrigger value='manual' className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple' > ai'className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple'> <Sparkles className='h - 4 w - 4 mr - 2'/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }';
 }/> <FormField Describe your product in detail...' className='min - h-32' {...field ';
@@ -1927,3 +2524,42 @@ data: product_record, error: product_error ';
 }className='cursor-pointer' /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ';
 }/> <div className='flex justify-end' > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value='ai' > <AIListingGenerator /> </TabsContent> </Tabs>)}'';
 }''
+=======
+  )}}className="w - full> <TabsList className=grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual className=data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className=data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
+};
+}/> <FormField Describe your product in detail... className="min - h-32" {...field ;
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <div className=grid grid - cols - 1 md:grid - cols - 2 gap - 6" > <FormField <FormItem> <FormLabel > Price (USD) </FormLabel> <FormControl> <Input type="number min=0" step="0.01 placeholder=0.00" {...field;
+}/> ";
+}/> <FormField >Select a category</option> <option value=digital product >Digital Product</option> <option value="service" >Service</option> <option value=ai tool >AI Tool</option> <option value="course" >Course</option> <option value=template >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ;
+}/> </div> <FormField <FormItem> <FormLabel > Tags</FormLabel> <FormControl> <Input placeholder=Enter tags separated by commas" {...field;
+}/> ";
+}/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type=file accept="image/*" on_change= {handleImageChange ;
+}className=cursor - pointer" /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader wont occur. /> </AspectRatio> </div>)}</FormItem>) ";
+}/> <FormField <FormItem> <FormLabel > Product Video (MP4) </FormLabel> <FormControl> <Input type=file accept="video / mp4" on_change= {handleVideoChange ;
+}className=cursor - pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className=flex justify - end > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)}  )}}/> <FormField Describe your product in detail... className="min-h-32" {...field ';
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ;
+}/> <div className=grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number min=0" step="0.01 placeholder=0.00" {...field ;
+}/> ";
+}/> <FormField >Select a category</option> <option value=digital product >Digital Product</option> <option value="service" >Service</option> <option value=ai tool >AI Tool</option> <option value="course" >Course</option> <option value=template >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ;
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder=Enter tags separated by commas" {...field ;
+}/> ";
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type=file accept="image/*" onChange= {handleImageChange ;
+}className=cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;;
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader wont occur. /> </AspectRatio> </div>)}</FormItem>) ";
+}/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type=file accept="video/mp4" onChange= {handleVideoChange ;
+}className=cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className=flex justify-end > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)}'";
+}'"
+=======
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

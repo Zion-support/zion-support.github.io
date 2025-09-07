@@ -3,7 +3,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
 import {Card, CardContent} from "@/components/ui/card";
@@ -15,6 +18,9 @@ import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
 import {format} from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 import React from "react",
@@ -38,6 +44,7 @@ import type { QuoteStatus } from "@/types/quotes",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -49,6 +56,8 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface QuotesFilterProps {
   searchQuery: string,
@@ -75,6 +84,7 @@ interface QuotesFilterProps {
 }
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 
@@ -82,10 +92,13 @@ import type { QuoteStatus } from "@/types/quotes",
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -99,6 +112,11 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
+<<<<<<< HEAD
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+=======
 <<<<<<< HEAD
 =======
 
@@ -157,6 +175,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setSearchQuery;
   statusFilter;
   setStatusFilter;
@@ -321,6 +340,9 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({};
   return (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
   setSearchQuery;
@@ -337,6 +359,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({};
   archiveFilter;
   setArchiveFilter;
   dateRange;
+<<<<<<< HEAD
+
+=======
 =======
               onChange={(e) => setSearchQuery(e && e.target.value)}
 =======
@@ -379,6 +404,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   mode="range"
 import React from "react",;
 import { Calendar, RefreshCw } from "@/components/icons",;
@@ -400,6 +426,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 ;
 interface QuotesFilterProps {;
   searchQuery:string,;
@@ -415,6 +444,7 @@ interface QuotesFilterProps {;
 ;
 export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   searchQuery,;
   setSearchQuery,;
   statusFilter,;
@@ -423,6 +453,9 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
   setArchiveFilter,;
   dateRange,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
   date_range: DateRange | undefined,
@@ -462,6 +495,9 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
       <CardContent className="p-6">;"
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">;"
           <div className="relative">;
+<<<<<<< HEAD
+
+=======
 
 =======
   setDateRange,;
@@ -524,6 +560,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
@@ -534,6 +571,9 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
           ;
           <div>;
@@ -560,6 +600,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <SelectItem value="active">Active Only</SelectItem>;
 
                 <SelectItem value="archived">Archived Only</SelectItem>;
@@ -567,6 +608,8 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
           </div>;
@@ -599,6 +642,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                   initialFocus
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
@@ -629,14 +673,20 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
                 />
               </PopoverContent>
@@ -657,6 +707,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
   )
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {date_range?.from ? (
                     date_range.to ? (
                       <>;"
@@ -701,6 +752,14 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                 <CalendarComponent
                   initialFocus
                   mode="range"
+<<<<<<< HEAD
+                  defaultMonth={dateRange?.from}
+                  selected={dateRange}
+                  onSelect={setDateRange}
+
+                  numberOfMonths={2}
+
+=======
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
@@ -749,10 +808,14 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                   onSelect={setDateRange}
                   numberOfMonths={2}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 />;
               </PopoverContent>;
             </Popover>;
           </div>;
+<<<<<<< HEAD
+        </div>;
+=======
 <<<<<<< HEAD
         </div>;
 =======
@@ -808,3 +871,4 @@ onReset
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

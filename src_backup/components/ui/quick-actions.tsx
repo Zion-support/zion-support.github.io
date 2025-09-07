@@ -29,6 +29,12 @@ import {
 } from 'lucide-react'
 
   id: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -59,12 +65,22 @@ interface QuickAction  {id: string;
 
 
 ;
+<<<<<<< HEAD
+=======
+  category: 'performance' | development | 'maintenance';
+>>>>>>> origin/resolved-merge-conflicts
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
   const executeAction = async (actionId: string, action: () => void) => {;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   label: string,
   description: string;
   icon: React.ReactNode;
@@ -77,11 +93,35 @@ interface QuickAction  {id: string;
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState } from 'react;
+import { use_auth } from @/hooks / use_auth';
+import { Button } from '@/components / ui / button;
+import { Card, CardContent, CardHeader, CardTitle } from @/components / ui / card';
+import { Badge } from '@/components / ui / badge;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 import { logErrorToProduction } from '@/utils / production_logger';
 import {}
@@ -93,10 +133,24 @@ import {}
   Activity,
   Package,
   Monitor,';
+<<<<<<< HEAD
 } from 'lucide-react';
   category: 'performance' | 'development' | 'maintenance';dangerous?: boolean;
 export function QuickActions() {const { user } = useAuth()const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+} from lucide-react;
+  category: 'performance' | development | 'maintenance';dangerous?: boolean;
+export function QuickActions() {const { user } = useAuth()const isAdmin = user?.userType === admin |user?.role === 'admin';
+  const isAllowed = process.env.NODE_ENV !== production |isAdmin;
+>>>>>>> origin/resolved-merge-conflicts
   if (!isAllowed) {return null;
   }const [isVisible, setIsVisible] = useState(false)const [isProcessing, setIsProcessing] = useState<string | null>(null)const executeAction  = async (actionId: string, action: () => void) => {setIsProcessing(actionId)try {await action()} catch (error) {logErrorToProduction(`Failed to execute action ${actionId}:`, {data: error;
       })import { use_auth  } from '@/hooks / use_auth';
@@ -111,9 +165,20 @@ interface QuickAction  {id: string;
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
+=======
+  category: 'performance' | development | 'maintenance';
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
+=======
+} from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   id: string;
   label: string,
@@ -233,9 +298,6 @@ export function QuickActions() { return null; }
           link.href = font,
           document.head.appendChild(link)
         }),
-
-  dangerous?: boolean;
-
 
         // Preload critical images
         const criticalImages = [
@@ -386,11 +448,6 @@ export function QuickActions() { return null; }
 
   if (!isVisible) {;
 
-  dangerous?: boolean
-export function QuickActions() {
-  const { user } = useAuth();
-  const isAdmin = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isVisible) {
 
     return (
@@ -409,7 +466,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       </div>
     )
+<<<<<<< HEAD
   category: 'performance' | 'development' | 'maintenance';dangerous?: boolean;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  category: 'performance' | development | 'maintenance';dangerous?: boolean;
+>>>>>>> origin/resolved-merge-conflicts
 export /**;
  * QuickActions - Function description;
  */;
@@ -459,6 +526,12 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
         </Button>;
       </div>;
     )className='bg-background/80 backdrop-blur-sm'        >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -489,7 +562,17 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                 <Badge className={categoryColors[category as keyof typeof categoryColors]} variant='outline'>
                   {category}
                 </Badge>
+<<<<<<< HEAD
               className='h-6 w-6 p-0';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              className=h-6 w-6 p-0;
+>>>>>>> origin/resolved-merge-conflicts
             >;
               ✕;
             </Button>;
@@ -517,9 +600,21 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                           ) : (action.icon;
                           )}
                         </div>;
+<<<<<<< HEAD
                         <div className='flex-1 text-left'>;
                           <div className='font-medium text-sm'>{action.label}</div>;
                           <div className='text-xs opacity-70 mt-1'>;
+=======
+                        <div className="flex-1 text-left">;
+                          <div className=font-medium text-sm>{action.label}</div>;
+                          <div className="text-xs opacity-70 mt-1">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
               <div className='space-y-2'>
                 {categoryActions.map((action) => ('
@@ -549,8 +644,9 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                     </Button>;
                   </div>;
                 ))}
-              </div>;</div>;
-          ))}</CardContent>;
+              </div>;
+
+        </CardContent>;
       </Card>;
     </div>;
   );
@@ -560,6 +656,7 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
     </div>)}
 }))}
         </CardContent>;
@@ -567,3 +664,6 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
     </div>;
   )
   );
+=======
+  );
+>>>>>>> origin/resolved-merge-conflicts

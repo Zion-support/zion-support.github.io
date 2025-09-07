@@ -1,4 +1,36 @@
 <<<<<<< HEAD
+import {useState} from 'react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
+import {Resume} from '@/types/resume';
+
+import { useState } from "react";
+import {}
+
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+
+  DropdownMenuSeparator,
+
+  Dialog,
+  DialogContent,
+  DialogFooter,
+
+  DialogHeader,
+
+  currentResume: Resume;
+
+  onResumeChange: (resumeId: string) => void;
+
+}
+
+export function ResumeVersionSelector({
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -136,11 +168,18 @@ export function ResumeVersionSelector({
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   currentResume,
   onResumeChange,
 }: ResumeVersionSelectorProps) {
 
+<<<<<<< HEAD
+  const { createResume, fetchResume } = useResume();
+
+        setNewResumeTitle("");
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { createResume, fetchResume } = useResume();
 <<<<<<< HEAD
@@ -179,16 +218,22 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle("");
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       setIsLoading(false);
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         setNewResumeTitle('')
 
         setNewResumeTitle('')
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 
@@ -204,6 +249,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 
 import {;
@@ -237,6 +283,23 @@ export function ResumeVersionSelector() { return null; }
       if (resumeId) {;
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
+<<<<<<< HEAD
+
+      }
+      setIsLoading(false);
+    }
+
+"
+
+        setNewResumeTitle("");
+      }
+      setIsLoading(false);
+    }
+  };
+  },
+
+            >
+=======
 <<<<<<< HEAD
 
 =======
@@ -367,11 +430,15 @@ onClick={handleCreateNewVersion}
               className="gap-2"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             >
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
 
               <Save className="h-4 w-4" />
               Save;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -382,6 +449,15 @@ onClick={handleCreateNewVersion}
 }
 =======
 <<<<<<< HEAD
+  );
+}
+
+}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
+});
+}
+}
+;
+
   );
 }
 

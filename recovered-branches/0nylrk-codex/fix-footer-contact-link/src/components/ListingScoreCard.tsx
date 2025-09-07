@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -11,10 +13,14 @@
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 import { cn } from "@/lib/utils",
@@ -79,10 +85,37 @@ export function ListingScoreCard(): any ({ ;
   author, ;
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
+<<<<<<< HEAD
+
+interface ListingScoreCardProps {
+
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+
+  tags?: string[];
+
+  author?: string;
+  author_image?: string;
+  ai_score?: number;
+  rating?: number;
+
+interface ListingScoreCardProps {
+
+  title: string,
+  description: string,
+
+export function ListingScoreCard(): any ({ ;
+  title;
+
+  return (
+
+=======
 interface ListingScoreCardProps {
 <<<<<<< HEAD
 =======
@@ -197,6 +230,7 @@ export function ListingScoreCard({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       className
 
     )}>
@@ -206,6 +240,13 @@ export function ListingScoreCard({
 
             src={image}
             alt={title}
+<<<<<<< HEAD
+
+  className ;
+}: ListingScoreCardProps) {;
+  return (
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -271,6 +312,7 @@ export function ListingScoreCard({ ;
             alt={title} ;
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />;
         </div>;
       )}"
@@ -286,9 +328,13 @@ export function ListingScoreCard({ ;
             </div>;
           )}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -305,6 +351,24 @@ export function ListingScoreCard({ ;
               <span>{aiScore}%</span>
             </div>
           )}
+<<<<<<< HEAD
+
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+
+                      : "text-zion-slate-light"
+                    "h-4 w-4", 
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+
+import { cn } from "@/lib/utils",;
+
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -344,6 +408,7 @@ export function ListingScoreCard({ ;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { StarIcon } from "lucide-react",;
 interface ListingScoreCardProps {;
   title: string,;
@@ -359,6 +424,21 @@ interface ListingScoreCardProps {;
   className?: string;
 }
 ;
+<<<<<<< HEAD
+export function ListingScoreCard() { return null; }
+    )}>;
+      {image && (;"
+        <div className="h-48 w-full overflow-hidden">;
+          <img;
+            src={image} ;
+            alt={title} ;"
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
+          />;
+
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+=======
 export function ListingScoreCard({;
   title,;
   description,;
@@ -402,10 +482,14 @@ export function ListingScoreCard({;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
 <<<<<<< HEAD
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ;
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
@@ -455,22 +539,33 @@ export function ListingScoreCard() { return null; }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {/* Rating */}
         {rating > 0 && (;
           <div className="flex items-center gap-1 mb-4">;
             <div className="flex">;
               {[1, 2, 3, 4, 5].map((star) => (;
 <<<<<<< HEAD
+                <StarIcon
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
                 <StarIcon;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   key={star}
+                <StarIcon
+                  key={star}
+
                   className={cn(;
                     "h-4 w-4";
                     star <= Math.round(rating);
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
+<<<<<<< HEAD
+
+=======
 =======
                 <StarIcon
                   key={star}
@@ -487,6 +582,7 @@ export function ListingScoreCard() { return null; }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className={cn(
 
                     "h-4 w-4", 
@@ -497,11 +593,14 @@ export function ListingScoreCard() { return null; }
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
                       : "text-zion-slate-light"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     "h-4 w-4", 
                     star <= Math.round(rating) "
                       ? "text-zion-cyan fill-zion-cyan" "
@@ -517,14 +616,22 @@ export function ListingScoreCard() { return null; }
 =======
 <<<<<<< HEAD
                       : "text-zion-slate-light"
+<StarIcon ;
+=======
+<<<<<<< HEAD
+                      : "text-zion-slate-light"
                 <StarIcon ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   key={star}
                   className={cn(;
                     "h-4 w-4", ;
                     star <= Math.round(rating) ;
                       ? "text-zion-cyan fill-zion-cyan" ;
                       :"text-zion-slate-light";
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -565,29 +672,44 @@ export function ListingScoreCard() { return null; }
               </Badge>;
             ))}
           </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   )}
-                />
+                />;
               ))}
-            </div>
-            <span className="text-sm text-zion-slate-light ml-1">
-              ({reviewCount})
-            </span>
-          </div>
-        )}
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
-                {tag}
+            </div>;"
+            <span className="text-sm text-zion-slate-light ml-1">;
+              ({reviewCount});
+            </span>;
+          </div>;
+
               </Badge>
             ))}
           </div>
+
+        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+          Request Quote;
+        </Button>;
+
+              </Badge>;
+            ))}
+          </div>;
+
+        {author && (;"
+          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">;
+            {authorImage ? (;"
+              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
+
+            )}
+
         )}
+<<<<<<< HEAD
+=======
               </Badge>;
             ))}
           </div>;
         )}
         
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
@@ -599,6 +721,16 @@ export function ListingScoreCard() { return null; }
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
                 {author.charAt(0)}
               </div>
+<<<<<<< HEAD
+
+        )}
+
+        )}
+
+        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+          Request Quote;
+        </Button>;
+=======
 <<<<<<< HEAD
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>
@@ -657,12 +789,16 @@ export function ListingScoreCard() { return null; }
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
           Request Quote;
         </Button>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
           Request Quote;
         </Button>;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ;
         {tags && tags.length > 0 && (;
           <div className="flex flex-wrap gap-2 mb-4">;
@@ -681,16 +817,26 @@ export function ListingScoreCard() { return null; }
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">;
             {authorImage ? (;
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
+<<<<<<< HEAD
+            ) : (;
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;
+                {author && author.charAt(0)}
+              </div>;
+=======
             ) :(;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;                {author.charAt(0)}
               </div>;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ) :(;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;                {author.charAt(0)}
               </div>;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}
 
             <span className="text-sm text-zion-slate-light">{author}</span>;
@@ -699,9 +845,13 @@ export function ListingScoreCard() { return null; }
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
       </div>;
     </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   review_count?: number;
 
             <div className="flex">;
@@ -715,6 +865,13 @@ export function ListingScoreCard() { return null; }
                       : "text - zion - slate - light")}
                 />))}
 
+<<<<<<< HEAD
+          </div>)}
+      </div>;
+    </div>);
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>)}
       </div>;
     </div>);
@@ -728,7 +885,11 @@ export function ListingScoreCard() { return null; }
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ),;}
  interface ListingScoreCardProps {
   title: string;
@@ -755,6 +916,9 @@ rating = 0;
 reviewCount = 0;
 className 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   className;)
 }: ListingScoreCardProps) {
@@ -913,6 +1077,9 @@ pr-12325
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 }
 =======
 }: ListingScoreCardProps) {
@@ -950,3 +1117,4 @@ className)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

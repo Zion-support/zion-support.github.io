@@ -4,6 +4,24 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
+  static getDerivedStateFromError(error) {return { "hasError": true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}static getDerivedStateFromError(error) {return { "hasError": true ,'
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
+  }
+  return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useState } from 'react';'
+
+
+import { Milestone } from '../../utils/types/milestones';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -86,15 +104,93 @@ import { Milestone } from ../../utils/types/milestones';
 
 import { Milestone } from '../../utils/types/milestones';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 type Props = any;
 
 type Props = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  "milestone": Milestone;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   ) => Promise<void> | void;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const statusSteps = [;
+  'Pending';'
+  'In Progress';'
+  'Submitted';'
+  'Approved';'
+  'Paid';'
+] as const;
+
+export default function MilestoneCard() {"milestone": Milestone;
+  }
+  "project_id": string;
+  "role": 'client' | 'talent' | 'admin';'
+    milestone.status === 'In Progress';'
+
+const canClientApprove =;
+    role !== 'talent' && milestone.status === 'Submitted';'
+
+const canClientMarkPaid =;
+    role !== 'talent' && milestone.status === 'Approved';'
+  return (<div className='border rounded-lg p-4 bg-white shadow-sm'>;'
+      <div className='flex items-start justify-between'>;'
+        <div>;
+          <h3 className='text-lg font-semibold'>{milestone && milestone.title}</h3>;'
+          <p className='text-sm text-gray-600'>;'
+            "Due": {new Date(milestone && milestone.dueDate).toLocaleDateString(
+}
+const statusSteps = ['
+  'Pending''
+  'In Progress''
+  'Submitted''
+  'Approved''
+  'Paid'
+] as const;
+export default function MilestoneCard({};
+  milestone;
+  projectId;
+  role;
+  onAction;
+}: Props) {}
+  milestone: Milestone;
+  project_id: string;'
+  role: 'client' | 'talent' | 'admin';'
+    milestone.status === 'In Progress';
+  const canClientApprove =;'
+    role !== 'talent' && milestone.status === 'Submitted';
+  const canClientMarkPaid =;'
+    role !== 'talent' && milestone.status === 'Approved';
+  return ('
+    <div className='border rounded-lg p-4 bg-white shadow-sm'>;'
+      <div className='flex items-start justify-between'>;
+        <div>;'
+          <h3 className='text-lg font-semibold'>{milestone && milestone.title}</h3>;'
+          <p className='text-sm text-gray-600'>;
+            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
+          </p>;
+        </div>;
+
+        <button,
+className='text-sm text-blue-600''
+          onClick={() => setExpanded(v => !v)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 import { Milestone } from '../../utils / types / milestones';
 =======
@@ -265,6 +361,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >          {expanded ? 'Hide : Details'}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           {expanded ? 'Hide : Details'}
         </button>;
@@ -288,6 +388,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';'
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';'
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
         <button;
@@ -831,6 +936,10 @@ const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';
           {status_steps.map ((step, idx) => (<div key={step} className='flex items - center'    />;
               <div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                   (idx <= current_index ? bg - green - 600 : 'bg - gray - 300')                }
                 title={step}
@@ -844,6 +953,21 @@ const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div
+}
+className={
+                    'h - 0.5 w - 8 ' +;'
+                    (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');'
+                  } />
+
+              )}
+            </div>;
+          ))}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
                 className={
@@ -867,6 +991,10 @@ className={
             </div>;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
                   'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')}
                 title={step}
@@ -898,11 +1026,20 @@ className={
               />
               {idx < statusSteps.length - 1 && (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
 =======
                 />
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               )}
             </div>
           ))}
@@ -910,6 +1047,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='mt-2 text-xs text-gray-700'>'
+
+          "Status": {milestone.statu
+}
+        </div>;
+      {expanded && (<div className='mt-4 space-y-2 text-sm text-gray-800'>;'
+          {milestone.description && <p>{milestone.description}</p>}
+
+          <div>"Amount": ${milestone.amountUsd.toFixed(2)}</div>
+          {milestone.attachments && milestone.attachments.length > 0 && (
+            <div>
+<div className='font-medium'>Attachments</div>'
+              <ul className='list-disc ml-5'>'
+                {milestone.attachments.map(a => (
+                  <li key={a.id}>
+                    <a,
+className='text-blue-600 underline''
+                      href={a && a.url}
+                      target='_blank''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       {expanded && (
         <div className="mt-4 space-y-2 text-sm text-gray-800">
@@ -1094,10 +1255,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <div className=mt-2 text-xs text-gray-700>Status: {milestone.status}</div>
       </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
                       rel=noreferrer'
                      />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      {a.label || a.url}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    </a>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           <div    />Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
@@ -1116,12 +1289,26 @@ className='text-blue-600 underline'
 >>>>>>> origin/chore/fix-lint-and-merge
                       {a.label || a.url}
                     </a>
+<<<<<<< HEAD
                   </li>''
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className='font-medium'>Attachments</div>;'
               <ul className='list-disc ml-5'>;
                 {milestone && milestone.attachments.map((a) => (;
                   <li key={a && a.id}>;'
                     <a className='text-blue-600 underline' href={a && a.url} target='_blank' rel='noreferrer'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  </li>'"
+                      rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;"
+              <ul className="list-disc ml-5">;
+                {milestone && milestone.attachments.map((a) => (;
+                  <li key={a && a.id}>;"
+                    <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   </li>
 
                       rel='noreferrer'>                      {a && a.label || a && a.ur}"
@@ -1130,6 +1317,10 @@ className='text-blue-600 underline'
                 {milestone && milestone.attachments.map((a) => (<li key={a && a.id}    />;"
                     <a className=\"text-blue-600 underline\" href={a && a.url} target=\"_blank\" rel=\"noreferrer\"    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     </a>;
                   </li>;
 =======
@@ -1147,6 +1338,17 @@ className='text-blue-600 underline'
         </div>;
       )}
           <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white "hover":bg-indigo-700";"
+      <div className='mt-4 flex flex-wrap gap-2'>;'
+        {canClientMarkInProgress && (<button;
+            }
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white "hover":bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;'
+                  </li>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           <button"
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
@@ -1169,10 +1371,21 @@ className='text-blue-600 underline'
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() =    /> onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;
                   </li>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 ))}
               </ul>;
             </div>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                      className='text-blue-600 underline'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -1180,6 +1393,10 @@ className='text-blue-600 underline'
 
 <<<<<<< HEAD
                       className='text-blue-600 underline
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <div className=mt-4 flex flex-wrap gap-2' />
         {canClientMarkInProgress && (
@@ -1197,6 +1414,11 @@ className='text-blue-600 underline'
         </div>
       )}'"
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 =======
@@ -1204,6 +1426,10 @@ className='text-blue-600 underline'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="mt-4 flex flex-wrap gap-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {canClientMarkInProgress && (
           <button"
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'
@@ -1226,6 +1452,17 @@ className='text-blue-600 underline'
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='mt-4 flex flex-wrap gap-2'>'
+        {canClientMarkInProgress && (
+          <button
+}
+className='px-3 py-1 text-sm rounded bg-indigo-600 text-white "hover":bg-indigo-700''
+            onClick={() => onAction('in_progress', milestone.id)}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 <<<<<<< HEAD
@@ -1262,10 +1499,44 @@ className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-70
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           >
             Mark In Progress;
           </button>
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {canTalentSubmit && (;
+          <button
+}
+className='px-3 py-1 text-sm rounded bg-amber-600 text-white "hover":bg-amber-700''
+            onClick={() => onAction('submitted', milestone.id)}'
+          >
+            Submit Work
+          </button>
+        )}
+        {canClientApprove && (
+          <button
+}
+className='px-3 py-1 text-sm rounded bg-green-600 text-white "hover":bg-green-700''
+            onClick={() => onAction('approved', milestone.id)}'
+          >
+            Approve
+          </button>
+        )}
+        {canClientMarkPaid && (
+          <button
+}
+className='px-3 py-1 text-sm rounded bg-slate-700 text-white "hover":bg-slate-800''
+            onClick={() => onAction('paid', milestone.id)}'
+          >
+            Mark as Paid
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1314,22 +1585,58 @@ className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
             onClick={() => onAction('approved', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             Approve;
           </button>
         )}
         {canClientMarkPaid && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <button;'"
+            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";'
+            on_click={() => on_action ('paid', milestone.id)}
+          >;
+            Mark as Paid;
+          </button>)}
+      </div>;
+    </div>);
+}
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <button
 className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
             onClick={() => onAction('paid', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Mark as Paid;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </button>
         )}
       </div>
     </div>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        )}
+      </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         )}
       </div>
@@ -1503,6 +1810,10 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 }
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className='mt-4 flex flex-wrap gap-2'>;
         {canClientMarkInProgress && (<button;
@@ -1540,6 +1851,14 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
           </button>;
         )}
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        )}
+      </div>;
+  )}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>;
         )}
       </div>;
@@ -1555,6 +1874,10 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
       {expanded && (<div className='mt - 4 space - y-2 text - sm text - gray - 800'>;
@@ -1576,7 +1899,14 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
                   </li>))}
               </ul>;
             </div>)}
+<<<<<<< HEAD
         </div>)}
+=======
+<<<<<<< HEAD
+=======
+        </div>)}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <div className='mt - 4 flex flex - wrap gap - 2'>;
         {canClientMarkInProgress && (<button;
             className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700'            on_click={() => on_action ('in_progress', milestone.id)}      <div className='mt - 4 flex flex - wrap gap - 2'>;
@@ -1605,6 +1935,15 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
           </button>)}
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+    </div>)})}
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 );
   );
 }
@@ -1632,3 +1971,7 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

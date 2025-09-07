@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const fs = require($2);
+const path = require($2);
+const { upsertFile } = require($2);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -73,6 +86,40 @@ const token = process.env.GITHUB_TOKEN;
 const content = JSON.stringify(summary, null, 2)if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/learn/insights-weekly.json', content, "message": 'chore(automation): weekly learning insights', token })}'
 ;
   return { "statusCode": 200, "body": JSON.stringify({ "ok": true, summary }) }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+exports && exports.handler = async function () {
+  try {
+
+=======
+=======
+>>>>>>> merged-prs-20250907-203621
+exports.handler = async function() {
+  try {
+    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
+<<<<<<< HEAD
+
+=======
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
+    const summary = {
+      updatedAt: Date.now()
+      totals: {
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> origin/resolved-merge-conflicts
 exports && exports.handler = async function () {
   }
   try {
@@ -80,8 +127,16 @@ exports && exports.handler = async function () {
   }
   const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');'
 
+<<<<<<< HEAD
 const coursesPath = path && path.join(;
       process && process.cwd(),
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
+    const coursesPath = path && path.join(
+      process && process.cwd(),'
+>>>>>>> origin/resolved-merge-conflicts
       'data','
       'learn','
       'courses && courses.json''
@@ -107,11 +162,102 @@ const courses = JSON && JSON.parse(fs && fs.readFileSync(coursesPath, 'utf-8')),
           0;
         ),
       },
+<<<<<<< HEAD
       "topBadges": Object && Object.values(users).reduce((map, u) => {
         (u && u.badges || []).forEach((b) => {;
+=======
+<<<<<<< HEAD
+
+const { upsert_file } = require ('./_lib / github');
+;
+
+    const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
+    const coursesPath = path.join(
+      process.cwd()
+      'data'
+      'learn'
+      'courses.json'
+    );
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+      topBadges: Object && Object.values(users).reduce((map, u) => {
+        (u && u.badges || []).forEach(b => {
+const fs = require ('fs');
+const path = require ('path');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+const { upsert_file } = require ('./_lib / github');
+;
+
+    const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
+    const coursesPath = path.join(
+      process.cwd()
+      'data'
+      'learn'
+      'courses.json'
+    );
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+<<<<<<< HEAD
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
+    const summary = {
+      updatedAt: Date.now($2);
+      totals: {
+        users: Object.keys(users).length,
+
+        courses: courses.length,
+completions: Object.values(users).reduce(
+          (acc, u) => acc + (u.certifications?.length || 0),
+
+        });
+        return map;
+      }, {}),
+
+        content,
+
+        message: 'chore (automation): weekly learning insights',
+        token,
+      });
+    }
+
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+        return map
+      }, {})
+    },
+
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    const content = JSON.stringify($2);
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+>>>>>>> origin/resolved-merge-conflicts
   }
   const fs = require ('fs');'
 
+<<<<<<< HEAD
 const path = require ('path');'
 
 const { upsert_file } = require ('./_lib / github');'
@@ -130,6 +276,19 @@ const courses_path = path.join (;
       'courses.json');'
 
 const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8'));'
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    const summary = {
+      updatedAt: Date.now();
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
+    const summary = {
+      updatedAt: Date.now()
+      totals: {
+        users: Object.keys(users).length,
+>>>>>>> origin/resolved-merge-conflicts
 
 const courses = JSON.parse (fs.readFileSync (courses_path, 'utf - 8'));'
 
@@ -147,7 +306,73 @@ const courses = JSON.parse (fs.readFileSync (courses_path, 'utf - 8')),;'
         "courses": courses.length,
         "completions": Object.values (users).reduce (
           (acc, u) => acc + (u.certifications?.length || 0),
+<<<<<<< HEAD
           0)
+=======
+<<<<<<< HEAD
+
+        });
+        return map;
+      }, {}),
+
+        content,
+
+        message: 'chore (automation): weekly learning insights',
+        token,
+      });
+    }
+
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+        return map
+
+      }, {})
+    },
+      updated_at: Date.now (),
+  users: Object.keys (users).length,
+        courses: courses.length,
+        completions: Object.values (users).reduce ()
+          (acc, u) => acc + (u.certifications?.length || 0),
+          0),
+      top_badges: Object.values (users).reduce ((map, u) => {
+        (u.badges || []).for_each (boolean => {)
+          map[b] = (map[b] || 0) + 1;
+        });
+        return map;
+      }, {}),
+        content,
+        message: 'chore (automation): weekly learning insights',
+        token,
+
+      });
+    }
+        return map;
+      }, {})
+pr-12325
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+
+    const content = JSON && JSON.stringify(summary, null, 2),
+    if (owner && repo && token) {'
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+=======
+<<<<<<< HEAD
+
+=======
+          0),
+>>>>>>> origin/resolved-merge-conflicts
       },
       "top_badges": Object.values (users).reduce ((map, u) => {
         (u.badges || []).for_each ((boolean) => {
@@ -185,6 +410,11 @@ const token = process && process.env.GITHUB_TOKEN,;
   }
   return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
   }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 };      }
       "topBadges": Object.values(users).reduce((map, u) => {
@@ -192,6 +422,20 @@ const token = process && process.env.GITHUB_TOKEN,;
 return map;
       }, {})
     }
+<<<<<<< HEAD
+=======
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+    const content = JSON.stringify(summary, null, 2)
+    if (owner && repo && token) {'
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const owner = process.env.GITHUB_OWNER;
 const repo = process.env.GITHUB_REPO;
@@ -240,6 +484,23 @@ if ( {) {
 await upsert_file ({ owner, repo, "path": 'data / learn / insights - weekly.json', content, "message": 'chore (automation): weekly learning insights', token });'
     }
     return { "status_code": 200, "body": JSON.stringify ({ "ok": true, summary }) }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+},
+=======
+<<<<<<< HEAD
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   } catch (e) {
     }
     return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
@@ -255,3 +516,55 @@ await upsert_file ({ owner, repo, "path": 'data / learn / insights - weekly.json
     return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
  
 }
+<<<<<<< HEAD
+=======
+},
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {}
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+
+},
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+};
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+},
+},
+
+},
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

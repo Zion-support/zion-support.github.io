@@ -2,16 +2,37 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
+<<<<<<< HEAD
+
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Label} from '@/components/ui/label';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
+import {Skill} from '@/types/resume';
+import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+
+interface AddSkillFormProps {
+
+interface AddSkillFormProps {}
+  resumeId: string;
+  onAddSkill: (skill: Skill) => Promise<boolean>
+}
+
+=======
 <<<<<<< HEAD
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 interface AddSkillFormProps {
@@ -105,6 +126,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [skillName, setSkillName] = useState('');
 
   const [skillCategory, setSkillCategory] = useState('');
@@ -116,6 +138,9 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()'
       category: skillCategory |'Other'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {}
@@ -156,6 +181,8 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     setSkillCategory(enhancedCategory);
   };
   return (
+<<<<<<< HEAD
+=======
 =======
       proficiency: proficiency}
 <<<<<<< HEAD
@@ -273,6 +300,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -313,12 +341,19 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
   },;
   ;
   return (;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
           <Label htmlFor="skill-name">Skill Name</Label>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
 
@@ -334,6 +369,11 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
 "
         <div className="w-full md:w-44">;"
           <div className="flex justify-between items-center">;"
+<<<<<<< HEAD
+            <Label htmlFor="skill-category">Category</Label>;
+            {skillName && (;
+
+=======
 =======
             onChange={(e) => setSkillName(e && e.target.value)}
             placeholder="Enter a skill (e && e.g., React)";
@@ -372,11 +412,15 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
           <Select;
             value={skillCategory} 
             onValueChange={setSkillCategory}>;"
             <SelectTrigger id="skill-category">;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -386,6 +430,7 @@ import {Label} from '@/components / ui / label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components / ui / select';
 import {Skill} from '@/types / resume';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {AIEnhancementButton} from '@/components / resume - builder / forms / AIEnhancementButton';
 interface AddSkillFormProps {}
   resume_id: string,
@@ -450,6 +495,9 @@ if ( {) {}
           >;"
             <SelectTrigger id="skill - category">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 currentContent={skillName}"
                 enhancementType="general";
@@ -463,6 +511,8 @@ if ( {) {}
       </div>
     </form>
   )
+<<<<<<< HEAD
+=======
 =======
                 buttonText="Suggest";
                 className="h-4";
@@ -489,11 +539,14 @@ if ( {) {}
           </Select>;
         </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 },
 };
 },
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -573,11 +626,15 @@ if ( {) {}
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />;
 
             <Button type="submit">Add</Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
+      </div>;
+=======
 <<<<<<< HEAD
       </div>;
 =======
@@ -603,3 +660,4 @@ const newSkill: Skill = {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

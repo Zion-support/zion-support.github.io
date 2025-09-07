@@ -1,5 +1,21 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React from 'react','
+import Link from 'next/link';'
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';'
+
+export type OnboardingStep = any;
+  "label": string;
+  "completed": boolean
+};
+
+export type OnboardingStep = {"id": string;import React from 'react',import Link from 'next/link';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
@@ -35,6 +51,10 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 import React from 'react';
 
@@ -128,12 +148,21 @@ export type OnboardingProgressCardProps = {"title": string;
   }
   'steps': OnboardingStep[];
   highlightColorClass?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 export type OnboardingProgressCardProps = {title: string;
   steps: OnboardingStep[];}
   highlightColorClass?: string}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 };
 
 }
@@ -144,14 +173,34 @@ export type OnboardingProgressCardProps = {title: string;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+function computePercentage("steps": OnboardingStep[]): number {
+
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 function computePercentage(steps: OnboardingStep[]): number {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   if (!steps || steps.length = == 0);
   return 0;
 
 const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  title,
+steps
+  highlightColorClass = 'from-neon-green to-neon-blue''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   title,
   steps}
@@ -198,10 +247,21 @@ function computePercentage(steps: OnboardingStep[]): number {
 steps}
 highlightColorClass = 'from-neon-green to-neon-blue'}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }: OnboardingProgressCardProps) {
   title,
 <<<<<<< HEAD
   steps,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  highlightColorClass = 'from-neon-green to-neon-blue','
+}: OnboardingProgressCardProps) {;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -256,6 +316,10 @@ function computePercentage(steps: OnboardingStep[]): number {}
       </div>
       {/* Progress Bar */}'
       <div className=mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 
@@ -291,6 +355,33 @@ export default function OnboardingProgressCard(): any ({
         <div;`
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={ width: `${percentage}%` }
       {/* Progress Bar */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 "dark":bg-gray-800 overflow-hidden'>'
+        <div,
+className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass},`}
+ ;
+return (;
+    <div className="rounded-xl border border-gray-200 "dark": border-gray-800 bg-white/70 "dark":bg-black/40 p-5 shadow-sm">"
+      <div className="flex items-center justify-between">"
+        <h3 className="text-lg font-semibold">{title}</h3>"
+        <div className="text-sm opacity-75">{percentage}% complete</div>"
+      </div>
+
+      {/* Progress Bar *
+}
+      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 "dark":bg-gray-800 overflow-hidden">;"
+        <div;
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`;`          }
+          style={{ "width": `${percentage}%` }}` />
+      </div>
+      {allDone ? (
+<div className='mt-4 flex items-center gap-2 text-green-600 "dark":text-green-400'>'
+          <PartyPopper size={18} />
+          <span className='text-sm'>All steps completed — great job!</span>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
@@ -819,12 +910,31 @@ export default function OnboardingProgressCard() {const percentage = computePerc
   cta_href?: string;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>
       ) : null}'
       <ul className='mt-4 space-y-2'>
       {/* Checklist */}
 <ul className='mt-4 space-y-2'>'
         {steps.map(step => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <li key={step.id} className='flex items-center justify-between'>'
+            <div className='flex items-center gap-2'>'
+                <CheckCircle2,
+className='text-green-600 "dark":text-green-400''
+
+                  size={1
+} />;
+              ) : (<Circle className='text-gray-400' size={18} />;'
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <li key={step.id} className='flex items-center justify-between'>
         {steps.map(step => ('
           <li key={step.id} className='flex items-center justify-between'>'
@@ -876,6 +986,10 @@ className='text-green-600 dark:text-green-400'
               )}
               <span className={step.completed ? 'line-through opacity-70' : ''}    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {step.label}
 
               </span>
@@ -884,6 +998,15 @@ className='text-green-600 dark:text-green-400'
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>'"
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 "dark": border-gray-700 "hover":bg-gray-50 "dark":"hover":bg-gray-900 transition'>'
+
+                  {step.ctaLabe
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
             {!step.completed && step.ctaHref && step.ctaLabel ? (}
@@ -897,6 +1020,10 @@ className='text-green-600 dark:text-green-400'
 =======
                   {step.ctaLabe}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
                 </a>;
               </Link>;
@@ -905,6 +1032,13 @@ className='text-green-600 dark:text-green-400'
         ))}
       </ul>;
       {/* Primary CTA for next step */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {!allDone && firstIncomplete ? (<div className='mt-5'>;
           <Link href={firstIncomplete && firstIncomplete.ctaHref!}>;
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>              {firstIncomplete && firstIncomplete.ctaLabel}        <div className='mt-5'>;
@@ -918,6 +1052,11 @@ className='text-green-600 dark:text-green-400'
           <Link href={firstIncomplete.ctaHref!}>;
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>;
               {firstIncomplete.ctaLabel}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
       {!allDone && firstIncomplete ? ("
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>"
@@ -950,6 +1089,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {firstIncomplete.ctaLabe}
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </a>;
           </Link>;
         </div>;
@@ -1033,11 +1176,52 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           <span className='text-sm'>All steps completed — great job!</span>
         </div>
       ) : null}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <ul className='mt-4 space-y-2'>
+        {steps.map(step => (
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
+                <CheckCircle2
+                  className='text-green-600 dark:text-green-400'
+        />;
+      </div>;
+      {allDone ? (<div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>;
+          <PartyPopper size={18} />;
+          <span className='text-sm'>All steps completed — great job!</span>;
+        </div>;
+      ) : null}<ul className='mt-4 space-y-2'>;
+      {/* Checklist */}
+<ul className='mt-4 space-y-2'>;
+        {steps.map(step => (<li key={step.id} className='flex items-center justify-between'>;
+            <div className='flex items-center gap-2'>;
+                <CheckCircle2;
+                  className='text-green-600 dark:text-green-400';
+                  size={18}
+                />;
+              ) : (<Circle className='text-gray-400' size={18} />;
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>;
+                {step.label}
+              </span>;
+            </div>;
+            {!step.completed && step.ctaHref && step.ctaLabel ? (<Link href={step.ctaHref}>;
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">;
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>;
+
+      {/* Checklist */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
       {/* Checklist */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       <ul className="mt-4 space-y-2">
         {steps.map((step) => (
           <li key={step.id} className='flex items-center justify-between'>
@@ -1052,6 +1236,12 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark: hover: bg-gray-900 transition">
                   {step.ctaLabel}
                 </a>
@@ -1067,8 +1257,18 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 
       {/* Primary CTA for next step */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {!allDone && firstIncomplete ? (<div className=mt-5>;
+=======
+<<<<<<< HEAD
+      {!allDone && firstIncomplete ? (<div className="mt-5">;
+=======
+<<<<<<< HEAD
+=======
+      {!allDone && firstIncomplete ? (<div className=mt-5>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <Link href={firstIncomplete.ctaHref!}>;
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">;
 <div className=mt-5>;
@@ -1090,6 +1290,15 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 
 
       {/* Primary CTA for next step */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {!allDone && firstIncomplete ? (
+        <div className="mt-5">
+          <Link href={firstIncomplete.ctaHref!}>
+            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
       ) : null}
@@ -1111,6 +1320,10 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
@@ -1358,7 +1571,28 @@ function computePercentage(steps: OnboardingStep[]): number {
   )
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  );
+}
+  )}
+  )})}
+    </div>;
+}
+  )}
+  )})}
+    </div>
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

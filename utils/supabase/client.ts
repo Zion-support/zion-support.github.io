@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 
@@ -77,8 +79,12 @@ export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, 
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { createClient } from "@supabase/supabase-js";
 const supabaseUrl = $2;
 const supabaseAnonKey = $2;
 export const supabase = createClient($2);
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

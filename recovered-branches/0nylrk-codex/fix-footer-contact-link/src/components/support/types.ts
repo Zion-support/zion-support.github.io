@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import { ReactNode  } from './react';
+
+export interface HelpArticle {
+=======
+<<<<<<< HEAD
 import { ReactNode } from "react";
 export interface HelpArticle {
 =======
@@ -9,10 +14,14 @@ import { ReactNode } from "react";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface HelpArticle {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -27,12 +36,16 @@ export interface HelpCategory {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
   title: string;
   content: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   tags: string[];
 
@@ -42,6 +55,8 @@ export interface HelpCategory {;
 
   lastUpdated: string;
   tags: string[];
+<<<<<<< HEAD
+=======
 =======
   lastUpdated: string,
   tags: string[]
@@ -55,15 +70,19 @@ export interface HelpCategory {
 export interface HelpCategory {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 export interface HelpCategory {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   title: string;
   content: string;
@@ -92,6 +111,14 @@ export interface HelpCategory {;
   lastUpdated: string;,
 
   name: string;
+<<<<<<< HEAD
+
+  articles: HelpArticle[];
+}
+
+import { ReactNode } from "react",
+export interface HelpArticle {
+=======
 <<<<<<< HEAD
 
   articles: HelpArticle[];
@@ -127,6 +154,7 @@ export interface SupportTicket {;
 import { ReactNode } from "react",
 export interface HelpArticle {
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string,
   title: string,
   content: string,
@@ -141,13 +169,24 @@ export interface HelpArticle {;
   tags: string[];
 }
 <<<<<<< HEAD
+;
+export interface HelpCategory {;
+  id: string,;
+  name: string,;
+  description: string,;
+  icon: ReactNode,;
+  articles: HelpArticle[];
+=======
+<<<<<<< HEAD
 export interface HelpCategory {
   id: string,
   name: string,
   description: string,
   icon: ReactNode,
   articles: HelpArticle[]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
+
 export interface SupportTicket {
   id: string,
   userId: string,
@@ -156,6 +195,8 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed",
   priority: "low" | "medium" | "high",
   createdAt: string,
+<<<<<<< HEAD
+=======
   updatedAt: string}
 =======
 ;
@@ -175,6 +216,7 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed",
   priority: "low" | "medium" | "high",
   createdAt: string,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   updatedAt: string
 ;
 export interface SupportTicket {;
@@ -184,6 +226,10 @@ export interface SupportTicket {;
   message: string,;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
+<<<<<<< HEAD
+
+  createdAt: string;
+=======
 <<<<<<< HEAD
 
   createdAt: string;
@@ -217,3 +263,4 @@ updatedAt: string;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

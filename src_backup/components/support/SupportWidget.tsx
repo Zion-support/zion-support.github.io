@@ -61,9 +61,18 @@ const [isOpen, setIsOpen] = useState(false)
       {isOpen && (
         <div
           className={cn(
+<<<<<<< HEAD
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <>
       {/* Fixed button in the bottom right */}
@@ -101,6 +110,24 @@ export function SupportWidget() {
               ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            'fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col'
+            theme === 'dark'
+              ? 'bg-zion-blue-dark border border-zion-blue-light'
+              : 'bg-white border border-gray-200'
+
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}
           style={ height: '600px', maxHeight: '80vh' }        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -108,14 +135,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <MessageSquare className='h-5 w-5 text-zion-cyan mr-2' />
               <h3
                 className={cn(
+<<<<<<< HEAD
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  'font-semibold'
+                  theme === 'dark' ? 'text-white' : 'text-gray-800'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  'font-semibold
+                  theme === dark' ? 'text-white : text-gray-800'
+>>>>>>> origin/resolved-merge-conflicts
 
 main
+=======
+                  'font-semibold'
+                  theme === 'dark' ? 'text-white' : 'text-gray-800'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 )}
               >
-:src/components/support/SupportWidget.tsx
-                Zion Support
 "
 import React, { useState } from "react","
 import { useRouter } from "next/router","
@@ -154,8 +200,18 @@ export function SupportWidget() { return null; }
           <MessageSquare className="h-6 w-6" />
         </Button>
       )}
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ursor/automate-test-improve-and-merge-code-646c;
 const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = useRouter()import React, { useState } from 'react';
 import { useRouter  } from 'next/router';
@@ -175,6 +231,13 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Support panel */}
       {isOpen && (
         <div;
@@ -196,6 +259,7 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
             <div className="flex items-center gap-2">
 
               <Button
+<<<<<<< HEAD
 :src/components/support/SupportWidget.tsx
                 variant='ghost'
                 size='icon'
@@ -225,10 +289,20 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
       )}
     </>;
   );
+<<<<<<< HEAD
 };
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+=======
+<<<<<<< HEAD
+};
+=======
+}
+                variant=ghost"
+                size="icon
+                className=h-8 w-8 rounded-full"
+>>>>>>> origin/resolved-merge-conflicts
         >;
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
             <div className="flex items-center">;
@@ -241,10 +315,27 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
 ursor/automate-test-improve-and-merge-code-646c;
               <Button;
               <Button;
+<<<<<<< HEAD
                 variant="ghost";
                 size="icon";
                 className="h-8 w-8 rounded-full";
                 onClick={() => router.push("/help")}
+=======
+                variant="ghost;
+                size=icon";
+                className="h-8 w-8 rounded-full;
+                onClick={() => router.push(/help")}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"
+                onClick={() => router.push("/help")}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
                 aria-label="Help center"
               >"
@@ -266,8 +357,14 @@ ursor/automate-test-improve-and-merge-code-646c;
         </div>
       )}
     </>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <Button
 ;
               <Button
@@ -280,3 +377,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button;
 ursor/automate-test-improve-and-merge-code-646c;
 }<Button;
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -7,6 +9,7 @@
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -18,9 +21,12 @@ interface ApplicationRowProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -35,7 +41,11 @@ import {ApplicationActions} from "./ApplicationActions";
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -45,6 +55,9 @@ import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -63,12 +76,15 @@ import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
 
+<<<<<<< HEAD
+=======
 =======
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -81,9 +97,12 @@ interface ApplicationRowProps {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 export function ApplicationRow({;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplicationRowProps {;
   application: JobApplication,;
   processingId: string | null,;
@@ -96,6 +115,9 @@ interface ApplicationRowProps {;
 export function ApplicationRow(): any ({;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -110,6 +132,8 @@ import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
 interface ApplicationRowProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   application: JobApplication,
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
@@ -118,6 +142,7 @@ interface ApplicationRowProps {
 }
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   application: JobApplication
   processingId: string | null
@@ -127,15 +152,78 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
+
+=======
+<<<<<<< HEAD
+
+  onViewScore: (application: JobApplication) => void
+}
 export function ApplicationRow({
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
+
+}
+
+export function ApplicationRow({
+  application,
+  processingId,
+  onViewApplication,
+
+  onStatusChange,}
+
+import { ApplicationActions } from "./ApplicationActions",;
+  // TODO: Implement
+}
+  application: JobApplication;,
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>
+</void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+</void>
+  onViewApplication: (applicationId: string) => Promise<void>,;
+</void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+</void>
+    <TableRow key={application && application.id}>;
+</TableRow>
+    <TableRow key={application && application.id}>;
+</TableRow>
+    <TableRow key={application.id}>
+</TableRow>
+      <TableCell>
+</TableCell>
+        <div className="flex items-center gap-3">"
+</div>"
+          <Avatar className="h-9 w-9">"
+</Avatar>
+              <img;
+                src={application.talent_profile.profile_picture_url}
+                alt={application.talent_profile.full_name}
+              />
+</img>"
+              <User className="h-5 w-5 text-gray-400" />"
+</User>
+          </Avatar>
+          <div>
+</div>"
+            <div className="font-medium">"
+</div>
+            </div>"
+            <div className="text-xs text-muted-foreground">"
+</div>
+=======
   onStatusChange,
   onViewScore
 }: ApplicationRowProps) {
@@ -159,11 +247,14 @@ export function ApplicationRow({
             </div>
             <div className="text-xs text-muted-foreground">
               {application.talent_profile?.professional_title |"Talent"}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
+=======
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true})}</span>
@@ -367,6 +458,7 @@ import { ApplicationActions } from "./ApplicationActions",;
         </div>
       </TableCell>
       <TableCell>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 </TableCell>"
         <div className="flex items-center gap-1">"
 </div>"
@@ -431,6 +523,17 @@ interface ApplicationRowProps {;
 export function ApplicationRow() { return null; }
     <TableRow key={application.id}>;
 
+<<<<<<< HEAD
+import { ApplicationActions } from './ApplicationActions';
+interface ApplicationRowProps {}
+  application: JobApplication,
+  processing_id: string | null,
+  onViewApplication: (application_id: string) => Promise < void>,
+</Button>"
+          <BarChart className="h-4 w-4 mr-1" />;"
+</BarChart>
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -528,10 +631,23 @@ export function ApplicationRow({;
           className="flex items-center gap-1";
         >;
           <BarChart className="h-4 w-4 mr-1" />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <ScoreBadge application={application} />;
+</ScoreBadge>
         </Button>;
       </TableCell>;
+
       <TableCell>;
+<<<<<<< HEAD
+</TableCell>"
+          <Button variant="ghost" size="sm" asChild>;"
+</Button>"
+            <a href={application && application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;"
+</a>"
+              <FileText className="h-4 w-4 mr-1" /> View;"
+</FileText>
+            </a>;
+=======
         {application.resume ? (;
           <Button variant="ghost" size="sm" asChild>;
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
@@ -581,6 +697,7 @@ interface ApplicationRowProps {}
               <FileText className="h-4 w-4 mr-1" /> View;"
 </FileText>
             </a>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </Button>;"
           <span className="text-muted-foreground text-sm">No resume</span>;"
       </TableCell>;"
@@ -649,6 +766,14 @@ interface ApplicationRowProps {
           </div>;
         </div>;
       </TableCell>;
+<<<<<<< HEAD
+
+      <TableCell>;
+
+          application={application}
+          processing_id={processing_id}
+
+=======
 <<<<<<< HEAD
 
       <TableCell>;
@@ -780,8 +905,15 @@ onViewScore: (application: JobApplication) => void
 >>>>>>> merged-prs-20250907-203621
           application={application}
           processingId={processingId}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onViewApplication={onViewApplication}
+
           onStatusChange={onStatusChange}
+<<<<<<< HEAD
+
+/>;
+      </TableCell>;
+=======
         />
       </TableCell>
     </TableRow>
@@ -794,3 +926,4 @@ onViewScore: (application: JobApplication) => void
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

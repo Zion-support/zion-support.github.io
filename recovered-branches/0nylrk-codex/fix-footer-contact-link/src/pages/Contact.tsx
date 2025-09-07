@@ -49,6 +49,11 @@ pr-12325
 import {useState} from "react";
 
 =======
+<<<<<<< HEAD
+
+import {useState} from "react";
+
+=======
 import React from 'react';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
@@ -68,6 +73,7 @@ import {AppLayout} from "@/layout/AppLayout";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -82,6 +88,8 @@ import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export default function Contact() {
   const [formData, setFormData] = useState($2);
@@ -110,6 +118,7 @@ export default function Contact() {
         setIsSubmitting($2);
         toast($2);
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
 export default function Contact() {
@@ -117,11 +126,14 @@ export default function Contact() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     name: ""
     email: ""
     subject: ""
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function Contact() {;
   const [formData, setFormData] = useState({;
     name: "",;
@@ -135,11 +147,14 @@ export default function Contact() {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -149,17 +164,24 @@ export default function Contact() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     message: "";
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -221,6 +243,10 @@ export default function Contact() {
 }
   },
 =======
+<<<<<<< HEAD
+}
+  },
+=======
 
 <<<<<<< HEAD
   }
@@ -230,10 +256,25 @@ export default function Contact() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
+<<<<<<< HEAD
+
+          "Content-Type": "application/json"},
+        body: JSON.stringify({ "
+          messages: [{ role: "user", content: message }] 
+        })}),
+
+      if (!response.ok) {
+        throw new Error("Failed to get response from AI assistant")
+      }
+      return Promise.resolve()
+    } catch (error) {
+      console.error("Error in AI chat:", error);
+=======
 <<<<<<< HEAD
 =======
       const schema = z.object({
@@ -393,12 +434,15 @@ export default function Contact() {
 =======
       console.error("Error in AI chat:", error);
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       console.error("Error in AI chat:", error),
 console.error("Error in AI chat:", error),
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
@@ -413,10 +457,28 @@ console.error("Error in AI chat:", error),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+<<<<<<< HEAD
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+
+    try {;
+      // Basic validation with Zod;
+
+      schema && schema.parse(formData);
+
+      // Simulate form submission;
+      setIsSubmitting(true);
+
+      setTimeout(() => {;
+        setIsSubmitting(false);
+
+=======
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
     try {;
@@ -448,6 +510,7 @@ console.error("Error in AI chat:", error),
           email: "",;
           subject: "",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           message: "";
         });
       }, 1500);
@@ -455,6 +518,21 @@ console.error("Error in AI chat:", error),
       if (error instanceof z && z.ZodError) {;
 
   };
+<<<<<<< HEAD
+
+  // Handle sending messages to the AI chat assistant;
+  const handleSendMessage = async (message: string): Promise<void> => {;
+
+        throw new Error("Failed to get response from AI assistant");
+      }
+
+      return Promise && Promise.resolve();
+
+      });
+      return Promise && Promise.resolve();
+    }
+
+=======
   // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {;
 <<<<<<< HEAD
@@ -486,6 +564,7 @@ console.error("Error in AI chat:", error),
       });
       return Promise && Promise.resolve();
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -546,12 +625,21 @@ function Contact() {}
 ;
   const offices = [;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       address: "123 Tech Avenue, San Francisco, CA 94105";
 
 {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
+<<<<<<< HEAD
+  };
+
+  const offices = [;
+
+=======
 =======
     {
       name: "Headquarters"
@@ -604,10 +692,20 @@ function Contact() {}
       address: "456 Innovation Street, New York, NY 10001",
       phone: "+1 302 464 0950", 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       email: "commercial@ziontechgroup.com"
     }
   ],
 
+<<<<<<< HEAD
+    <AppLayout>;
+
+  return (
+
+}
+  ];
+  return (
+=======
 <<<<<<< HEAD
     <AppLayout>;
 =======
@@ -627,6 +725,7 @@ function Contact() {}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <AppLayout>;
 
       <SEO
@@ -637,7 +736,10 @@ function Contact() {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -767,9 +869,12 @@ export default function Contact() {;
         canonical="https://app.ziontechgroup.com/contact";
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />;
         canonical="https://app && app.ziontechgroup.com/contact"      />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
@@ -781,6 +886,10 @@ export default function Contact() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+
+;
+=======
+<<<<<<< HEAD
           ;
 =======
 
@@ -789,6 +898,7 @@ export default function Contact() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>;
@@ -796,6 +906,10 @@ export default function Contact() {;
                 Whether you have a question about our platform, pricing, or anything else, ;
                 our team is ready to answer all your questions.;
               </p>;
+<<<<<<< HEAD
+
+;
+=======
 <<<<<<< HEAD
               ;
 =======
@@ -805,10 +919,13 @@ export default function Contact() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
                   <div>;
                     <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
   return (
@@ -845,6 +962,7 @@ export default function Contact() {;
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 return (
                     <Input
@@ -852,6 +970,9 @@ return (
                       name="name"
                       value={formData && formData.name}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <AppLayout>
       <SEO
@@ -883,14 +1004,20 @@ return (
                       id="name"
                       name="name"
                       value={formData.name}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="John Doe"
                       required
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -905,6 +1032,7 @@ return (
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <Input ;
                       id="name";
                       name="name";
@@ -913,13 +1041,19 @@ return (
                       className="bg-zion-blue-dark border-zion-blue-light text-white";
                       placeholder="John Doe";
                       required;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     />;
                   </div>;
                   <div>;
                     <label htmlFor="email" className="block text-white mb-2">Email Address</label>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
                     />
@@ -931,18 +1065,24 @@ return (
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-white mb-2">Email Address</label>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <Input
                       id="email"
                       name="email"
                       type="email"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       value={formData.email}
 =======
@@ -953,6 +1093,7 @@ return (
                 <div>;
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       value={formData && formData.email}
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
@@ -967,14 +1108,20 @@ return (
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 />;
                   </div>;
                 </div>;
                 <div>;
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Input
                     id="subject"
                     name="subject"
@@ -983,9 +1130,13 @@ return (
 value={formData.email}
 =======
 <<<<<<< HEAD
+value={formData.email}
+=======
+<<<<<<< HEAD
                       value={formData.email}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example.com"
@@ -1003,14 +1154,19 @@ value={formData.email}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     onChange={handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white"
                     placeholder="How can we help you?"
                     required
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   />
 =======
@@ -1020,6 +1176,7 @@ value={formData.email}
                 <div>;
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   />;
                 </div>;
@@ -1028,13 +1185,19 @@ value={formData.email}
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 />;
                 </div>;
                 <div>;
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Textarea
                     id="message"
                     name="message"
@@ -1043,9 +1206,13 @@ value={formData.email}
 />
 =======
 <<<<<<< HEAD
+/>
+=======
+<<<<<<< HEAD
                   />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-white mb-2">Message</label>
@@ -1057,20 +1224,30 @@ value={formData.email}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     onChange={handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
                     required
+<<<<<<< HEAD
+
+                  />;
+                </div>;
+
+=======
 <<<<<<< HEAD
 =======
 
                   />;
                 </div>;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Button
                   type="submit" 
 
@@ -1080,6 +1257,8 @@ value={formData.email}
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
                   />
                 </div>
@@ -1202,6 +1381,7 @@ value={formData.email}
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 />;
                 </div>;
@@ -1216,8 +1396,14 @@ value={formData.email}
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 =======
+<<<<<<< HEAD
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1381,6 +1567,8 @@ export default function Contact() {;
                 >;
                   {isSubmitting ? "Sending..." : "Send Message"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -1486,6 +1674,7 @@ export default function Contact() {;
                 ></iframe>;
               </div>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <Button 
                   type="submit" 
@@ -1496,6 +1685,9 @@ export default function Contact() {;
                   {isSubmitting ? "Sending..." : "Send Message"}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   />;
                 </div>;
                 <Button"
@@ -1571,6 +1763,8 @@ export default function Contact() { return null; }
           variant: "destructive";
         });
       }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="mt-8">;
@@ -1599,6 +1793,7 @@ export default function Contact() { return null; }
       phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   },;
   // Handle sending messages to the AI chat assistant;
@@ -1972,6 +2167,9 @@ export default function Contact() { return null; }
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <Button;
 </Button>
                   <Button;
@@ -1983,10 +2181,13 @@ export default function Contact() { return null; }
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   >;
                     Chat With Our AI Assistant;
 </Button>
@@ -1996,6 +2197,8 @@ export default function Contact() { return null; }
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
@@ -2010,6 +2213,7 @@ export default function Contact() { return null; }
               >;
                 <MessageSquare className="mr-2 h-5 w-5" />;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               Our customer support team is available 24 / 7 to help you with any questions.;
             </p>;
@@ -2018,6 +2222,18 @@ export default function Contact() { return null; }
                 on_click={() => setIsChatOpen (true)}
                 className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
               >;
+<<<<<<< HEAD
+
+              </Button>;
+              <Button;"
+                variant="outline";
+
+className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
+                asChild;
+              >;
+                <a href="mailto:support@ziontechgroup.com">;
+                  <Mail className="mr-2 h-5 w-5" />;
+=======
 <<<<<<< HEAD
 
 =======
@@ -2051,6 +2267,7 @@ className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   Email Support;
                 </a>;
               </Button>;
@@ -2060,16 +2277,29 @@ className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
       </main>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
 <<<<<<< HEAD
+
+    </AppLayout>;
+  );
+}
+
+=======
+<<<<<<< HEAD
     </AppLayout>;
   );
 }
@@ -2083,6 +2313,7 @@ className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Chat Assistant Modal */}
       {isChatOpen && (
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -2414,6 +2645,9 @@ if ( {) {
 
     </AppLayout>);
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ;
@@ -2478,6 +2712,7 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             role: 'Support Bot'
           }}
           onSendMessage={handleSendMessage}
@@ -2488,6 +2723,12 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 }
     </AppLayout>;
   );
+<<<<<<< HEAD
+}
+;
+    </AppLayout>
+    </AppLayout>;"
+=======
 <<<<<<< HEAD
 =======
 }
@@ -2504,3 +2745,4 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -2,15 +2,28 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
+<<<<<<< HEAD
+
+import {Certification} from '@/types/resume';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Edit, Trash2} from 'lucide-react';
+import {format} from 'date-fns';
+
+interface CertificationsListProps {
+=======
 <<<<<<< HEAD
 interface CertificationsListProps {
   certifications: Certification[],
@@ -46,10 +59,14 @@ import { format } from 'date-fns';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface CertificationsListProps {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -58,6 +75,7 @@ interface CertificationsListProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -70,6 +88,8 @@ interface CertificationsListProps {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -77,6 +97,7 @@ interface CertificationsListProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export function CertificationsList({
   certifications
@@ -84,6 +105,9 @@ export function CertificationsList({
   onDelete
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: CertificationsListProps) {
   if (certifications.length === 0) {
 
@@ -132,6 +156,9 @@ export function CertificationsList({
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -160,6 +187,44 @@ export function CertificationsList({
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
                   )}
+<<<<<<< HEAD
+
+                </p>;
+              </div>;"
+              <div className="flex gap-2">;
+
+                </Button>;
+"
+                      {typeof cert.expiration_date === "string";
+                        ? cert.expiration_date;"
+                        : format (cert.expiration_date, "MMM yyyy")}
+                    </>)}
+                </p>;
+              </div>;"
+              <div className="flex gap - 2">;
+                <Button;"
+                  variant="ghost";"
+                  size="icon";
+                  on_click={() => on_edit (cert)}
+                >;"
+                  <Edit className="h - 4 w - 4" />;
+
+                </Button>;
+                <Button;"
+                  variant="ghost";"
+                  size="icon";
+                  on_click={() => on_delete (cert.id!)}
+
+                </Button>;
+              </div>;
+            </div>;
+
+  )
+
+}
+;
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -593,6 +658,7 @@ export function CertificationsList({
 ;
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
 }{
@@ -604,8 +670,12 @@ export function CertificationsList({
 }target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) 
 }</CardContent> </Card>) ) 
 }</div>) 
+<<<<<<< HEAD
+});
+=======
 }
   );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 }
 ;

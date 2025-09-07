@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export { NotificationProvider } from './notifications/NotificationContext';
 export { NotificationProvider } from './notifications/NotificationContext';
 
@@ -13,6 +16,9 @@ export { MessagingProvider } from './MessagingContext',;
 export { AuthProvider } from './auth',;
 export { MessagingProvider } from './MessagingContext',;
 export { AuthProvider } from './auth',;
+<<<<<<< HEAD
+export { MessagingProvider } from './MessagingContext',;
+=======
 export { MessagingProvider } from './MessagingContext',;
 =======
 
@@ -42,3 +48,4 @@ export { NotificationProvider } from './notifications/NotificationContext';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,6 +1,15 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+
+import React, { useState, useEffect, useCallback } from 'react';'
+import { motion, AnimatePresence  } from 'framer-motion';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -14,6 +23,10 @@ import {
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { Activity;
   AlertTriangle;
 >>>>>>> merged-prs-20250907-203621
@@ -272,6 +285,99 @@ import {
   X;
   RefreshCw;
   BarChart3;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Gauge;
+  } from 'lucide-react';'
+
+interface PerformanceMetrics  {"fcp": number;
+  }
+  "lcp": number;
+  "fid": number;
+  "cls": number;
+  "ttfb": number;
+  "domLoad": number;
+  "windowLoad": number;
+  memoryUsage?: {"usedJSHeapSize": number;
+    }
+    "totalJSHeapSize": number;
+    "jsHeapSizeLimit": number;
+  },networkInfo?: {"effectiveType": string;
+    }
+    "downlink": number;
+    "rtt": number;
+  }
+
+interface PerformanceRecommendation {
+  }
+  "id": string;
+  "title": string;
+  "description": string;
+  "priority": 'high' | 'medium' | 'low';'
+  "impact": string;
+  "solution": string;
+
+  "category": 'performance' | 'accessibility' | 'seo' | 'user-experience''
+
+}
+
+const "EnhancedPerformanceMonitor": React.FC;
+//FCP recommendations if (metrics.fcp > 2000) {
+  }
+  recs.push ({
+  recs.push ({}
+}return recs;
+}, []);
+//Wait for page to be fully loaded if (document.readyState !== 'complete') {'
+  }
+  await new Promise ((resolve) => {
+}//Wait a bit more for any async operations await new Promise (resolve => { return setTimeout (resolve, 1000) ); }
+if (metrics.fcp > 2000) score -= 20;
+  category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
+}const EnhancedPerformanceMonitor: React.FC;
+//FCP recommendations if (metrics.fcp > 2000) {recs.push ({}return recs;
+}, [])//Wait for page to be fully loaded if (document.readyState !== 'complete') {await new Promise (resolve => {}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )if (metrics.fcp > 2000) score -= 20;
+if (metrics.lcp > 2500) score -= 25;
+if (metrics.cls > 0.1) score -= 15;
+if (metrics.ttfb > 600) score -= 20;
+if (!performanceData) {}> <div className = "animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)//FCP recommendations if (metrics && metrics.fcp > 2000) {recs && recs.push ({;"
+  }
+  return recs;
+}, [])//Wait for page to be fully loaded if (document && document.readyState !== 'complete') {await new Promise ((resolve) => {}//Wait a bit more for any async operations await new Promise (resolve => { return setTimeout (resolve, 1000) )if (metrics && metrics.fcp > 2000) score -= 20; }'
+if (metrics && metrics.lcp > 2500) score -= 25;
+if (metrics && metrics.cls > 0 && 0.1) score -= 15;
+if (metrics && metrics.ttfb > 600) score -= 20;
+if (!performanceData) {}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)}"
+}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {`w-4 h-4 $ {//FCP recommendations // Check condition;`}
+if ( {) {$2;
+}
+//FCP recommendations if (metrics.fcp > 2000) {//FCP recommendations if (metrics.fcp > 2000) {recs.push ({}return recs;
+}, [])//Wait for page to be fully loaded // Check condition;
+if ( {) {$2;
+}
+  await new Promise (resolve => {}//Wait a bit more for any async operations await new Promise (resolve => set_timeout (resolve, 1000) )// Check condition;
+if (score -= 20) {$2;
+}
+// Check condition;
+if (score -= 25) {$2;
+}
+// Check condition;
+if (score -= 15) {$2;
+}
+// Check condition;
+if (score -= 20) {$2;
+}
+// Check condition;
+if ( {) {$2;
+}
+}> <div className="animate-pulse" > <div className="h - 4 bg - gray - 700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h - 3 bg-gray-700 rounded" ></div> <div className="h - 3 bg - gray-700 rounded w-5/6" ></div> <div className="h - 3 bg - gray-700 rounded w-4/6" ></div> </div> </div> </div>)}
+}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin' : '';
+}`;
+}/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performance_data.overall_score >= 70 ? 'Good': 'Needs Improvement';
+}</p> </div> <span className= {`font - mono $ {metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
+=======
+>>>>>>> origin/resolved-merge-conflicts
   Gauge
 } from 'lucide-react';
 interface PerformanceMetrics {
@@ -1198,9 +1304,36 @@ if (!performanceData) {
 =======
   `font - mono $ {
   metrics.fcp > 2000 ? text - red - 400': 'text - green - 400;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }`;
 }> {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {"
+  `w-4 h-4 $ {`
+  }
+
+  isLoading ? 'animate-spin' : '''
+}``} /> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement''
+}</p> </div> <span className= {
+  `font-mono $ {`  }
+  metrics.fcp > 2000 ? 'text-red-400': 'text-green-400''
+}``}> {
+  }
+  metrics.fcp.toFixed (0)
+}ms </span> </div> </span> </div> </div> </div>)
+}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div "width": `$ {`  (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100
+}%``} /> </div> </div> </div>)
+}</span> </div> </div> </div>)
+}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400''
+}``
+=======
+>>>>>>> origin/resolved-merge-conflicts
 if (!performanceData) {}> <div className=animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4 ></div> <div className=space-y-3" > <div className="h-3 bg-gray-700 rounded ></div> <div className=h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6 ></div> </div> </div> </div>)
 }
 <<<<<<< HEAD
@@ -1232,6 +1365,10 @@ if (!performanceData) {}> <div className=animate-pulse" > <div className="h-4 bg
 }rec.priority === high'? 'bg-red-500/20 text-red-400: rec.priority === medium'? 'bg-yellow-500/20 text-yellow-400: bg-green-500/20 text-green-400'
 >>>>>>> merged-prs-20250907-203621
 }`
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }> {
   rec.priority
 }</span> </div> </div>) )
@@ -1239,6 +1376,13 @@ if (!performanceData) {}> <div className=animate-pulse" > <div className="h-4 bg
 }) : (<BarChart3 className=\"w-4 h-4\" />)
 }<span /> {}
   isMonitoring ? 'Measuring...': 'Measure Performance' }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };
@@ -1261,6 +1405,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</div> </div>)
 }) : (<BarChart3 className=w-4 h-4" />)
 }<span> {
@@ -1319,6 +1467,11 @@ export default EnhancedPerformanceMonitor;
 }</AnimatePresence> </>)
 }
 export default EnhancedPerformanceMonitor;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 export default EnhancedPerformanceMonitor;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -1327,3 +1480,7 @@ export default EnhancedPerformanceMonitor;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

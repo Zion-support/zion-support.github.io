@@ -1,4 +1,48 @@
 <<<<<<< HEAD
+import {useAuth} from './useAuth';
+
+import {getAccessibleRoutes} from '@/config/sitemap';
+'
+import type { SitemapItem } from '@/config/sitemap';
+
+  const { user, isAuthenticated } = useAuth();
+
+  // Get routes that the current user can access
+  // Cast userType to UserType or pass undefined if not valid
+  const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path
+
+    return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
+  };
+
+'
+import {useAuth} from './useAuth';'
+import {getAccessibleRoutes} from '@/config/sitemap';'
+import type { SitemapItem } from '@/config/sitemap';
+
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
+
+  // Get routes that the current user can access
+  // Cast userType to UserType or pass undefined if not valid
+  const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path
+
+  const findRouteByPath = (path: string): SitemapItem | undefined => {    }
+    return true
+  }  function isValidUserType(type: string): boolean {
+
+    return ['employerbuyerjobSeekercreatoradmin'].includes(type)
+  }
+  return {}
+    accessibleRoutes;
+    findRouteByPath;
+
+=======
+<<<<<<< HEAD
 import { useAuth  } from './useAuth';
 import { getAccessibleRoutes  } from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';
@@ -189,6 +233,7 @@ export function useSitemap() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {use_auth} from './use_auth';
 
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
@@ -271,6 +316,17 @@ if (!route) return false;
 // If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;'
 // If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {}
   return true;
+=======
+<<<<<<< HEAD
+
+    findRouteByPath,;
+    canAccessRoute;
+  },;'
+} // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+if (!route) return false;
+// If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;'
+// If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {}
+  return true;
 };
 // Helper function to check if userType is valid;
 }
@@ -288,10 +344,17 @@ if (!route) return false;
 // If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
 // If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {
   return true 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
-// Helper function to check if userType is valid 
+// Helper function to check if userType is valid;
 }
 
+<<<<<<< HEAD
+import type { SitemapItem } from '@/config/sitemap',;
+// Define the allowed user types;'
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;
+
+=======
     canAccessRoute
 import { useAuth } from './useAuth',;
 import { getAccessibleRoutes } from '@/config/sitemap',;
@@ -300,6 +363,7 @@ import type { SitemapItem } from '@/config/sitemap',;
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;
 export function useSitemap() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { user, isAuthenticated } = useAuth(),;
   // Get routes that the current user can access;
   // Cast userType to UserType or pass undefined if not valid;
@@ -307,26 +371,40 @@ export function useSitemap() {;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;
   // Helper function to find a route by path;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const findRouteByPath = (path: string): SitemapItem | undefined => {;}
     return accessibleRoutes.find(route => route.path === path);}
   },;
 pr-12325
+<<<<<<< HEAD
+=======
 =======
   const findRouteByPath = (path: string): SitemapItem | undefined => {;
     return accessibleRoutes.find(route => route.path === path);
   },;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Helper function to check if a user can access a specific path;
   const canAccessRoute = (path: string): boolean => {;
     const route = findRouteByPath(path),;
     if (!route) return false,;
     // If route requires authentication and user is not authenticated;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (route.requiredAuth && !isAuthenticated) return false,;'
     // If route requires specific roles and user doesn't have one;
     if (route.requiredAuth && !isAuthenticated) return false,;'
     // If route requires specific roles and user doesn't have one;'
     if (route.requiredRoles && route.requiredRoles.length > 0) {;
+<<<<<<< HEAD
+      if (!user || !user.userType) return false,;
+      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,;}
+      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false;}
+=======
       if (!user || !user.userType) return false,;
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,;}
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false;}
@@ -338,18 +416,33 @@ pr-12325
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,;
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 ;
     return true;
   },;
   // Helper function to check if userType is valid;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   function isValidUserType(type: string): boolean {;'
     return ['employerbuyerjobSeekercreatoradmin'].includes(type);
 
   function isValidUserType(type: string): boolean {;'
     return ['employerbuyerjobSeekercreatoradmin'].includes(type);'
 
+<<<<<<< HEAD
+  }
+;
+  return {;
+    accessibleRoutes;
+    findRouteByPath;}
+    canAccessRoute;}
+  }
+
+}
+=======
 =======
   function isValidUserType(type: string): boolean {;
     return ['employerbuyerjobSeekercreatoradmin'].includes(type);
@@ -376,3 +469,4 @@ pr-12325
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

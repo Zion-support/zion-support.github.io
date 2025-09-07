@@ -17,6 +17,8 @@ export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {;
 
+<<<<<<< HEAD
+=======
 =======
 
 export interface Review {;
@@ -26,6 +28,7 @@ export interface Review {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -45,6 +48,24 @@ export interface Review {;
   reviewer_profile?: {}
     display_name: string;
 
+<<<<<<< HEAD
+    avatar_url?: string
+};
+
+}
+
+export interface ReviewReport {;
+
+  id: string;
+  review_id: string;
+  reporter_id: string;
+  reason: string;
+
+  status: "pending" | "resolved" | "dismissed";
+  created_at: string;
+  resolved_at?: string;
+}
+=======
 <<<<<<< HEAD
     avatar_url?: string
 };
@@ -139,3 +160,4 @@ export interface ReviewReport {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

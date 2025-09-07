@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { role = 'guest', talent } = req.query as { role?: string, talent?: string },
 
@@ -14,6 +15,41 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (talent) {
     set('talentSlug', talent)
   }
+=======
+
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+import { createSessionCookie } from '../../../utils/auth-utils';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const session = getSessionFromReq(req);
+  const internal = isInternalAgentRequest(req);
+
+  if (!session && !internal) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+<<<<<<< HEAD
+
+  const { role } = req.body || {};
+
+  if (!role) {
+    return res.status(400).json({ error: 'Role required' });
+  }
+
+  const cookie = createSessionCookie({
+    email: session?.email || 'admin',
+    role,
+    twofaVerified: true,
+  });
+
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   set($2);
   headers['Set-Cookie'] = cookies.join($2);
   res.writeHead($2);
@@ -201,3 +237,7 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

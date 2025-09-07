@@ -1,18 +1,104 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, ReactNode } from 'react';'
 
 interface AccessibilityContextType {
   }
   'announceToScreenReader': ('message': string) => void;
   'setFocus': ('elementId': string) => void;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined
 >(undefined);
+<<<<<<< HEAD
 
 interface AccessibilityProviderProps {
   }
   'children': ReactNode;
+=======
+=======
+
+interface AccessibilityContextType {;
+
+<<<<<<< HEAD
+
+
+
+interface AccessibilityContextType {
+interface AccessibilityContextType {;
+import React, { createContext, useContext, useState, ReactNode } from "react";
+
+interface AccessibilityContextType {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, ReactNode } from 'react';
+
+interface AccessibilityContextType {
+<<<<<<< HEAD
+  announceToScreenReader: (message: string) => void;
+  setFocus: (elementId: string) => void;
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+import React, { create_context, useContext, useState, ReactNode } from './react';
+;
+interface AccessibilityContextType {
+  high_contrast: boolean;
+  large_text: boolean;
+  reduced_motion: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  toggleHighContrast: () => void;
+  toggleLargeText: () => void;
+  toggleReducedMotion: () => void;
+}
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/chore/fix-lint-and-merge
+interface AccessibilityProviderProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+  children: ReactNode;
+=======
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+<<<<<<< HEAD
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: 'small' | 'medium' | 'large') => void;
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 export const 'AccessibilityProvider': React.FC<AccessibilityProviderProps> = ({
@@ -73,6 +159,19 @@ export function useAccessibility() {
   }
   return context
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
+interface AccessibilityProviderProps {
+  }
+  "children": ReactNode;
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
 interface AccessibilityProviderProps {
   }
@@ -241,3 +340,39 @@ export const useAccessibility = () => {
 export default AccessibilityProvider;
   );
 }
+<<<<<<< HEAD
+=======
+  );
+=======
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+};
+
+export default AccessibilityProvider;
+}
+export default AccessibilityProvider;
+};
+
+export default AccessibilityProvider;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+  return (
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+      {children}
+    </AccessibilityContext.Provider>
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

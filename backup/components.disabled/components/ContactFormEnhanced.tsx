@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components.disabled/components/ContactFormEnhanced.tsx
+origin/main
+export {};
+
+origin/main
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 export {};
 
 origin/main
@@ -9,11 +19,29 @@ export {};
 origin/main
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 // Auto-generated module
 export {};
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components.disabled/components/ContactFormEnhanced.tsx
+
+
+
+
+
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -30,6 +58,10 @@ import { motion } from 'framer-motion';
 
 import React, { useState } from 'react;
 import { motion } from framer-motion';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import {
   Send,
   CheckCircle,
@@ -39,6 +71,23 @@ import {
   MessageSquare} from 'lucide-react';
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </form>;
+      </motion.div>;
+    </div>;
+  )}export default ContactFormEnhanced;// Auto-generated module;
+export {}
+// Auto-generated module
+export {};
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+// Auto-generated module
+export {};
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 <<<<<<< HEAD
@@ -391,9 +440,19 @@ const ContactFormEnhanced: React.FC = () => {const [formData, setFormData] = use
               <span>Failed to send message. Please try again.</span>;
             </motion.div>;
           )}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 // Auto-generated module
 export {}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components.disabled/components/ContactFormEnhanced.tsx
+=======
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module
 export {};
@@ -403,3 +462,7 @@ export {};
 // Auto-generated module
 export {};
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

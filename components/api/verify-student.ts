@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from \"next\";"
+import fs from \"fs-extra\";"
+import path from \"path\";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";
+
+;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -39,6 +50,10 @@ import fs from \"fs-extra\";
 import path from \path\";"
 import { authenticateRequest, enforceRateLimit, recordRequest } from \../../utils/api/partnerAuth\;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 
@@ -105,9 +120,46 @@ const TALENTS_FILE = null;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs-extra';'
+import path from 'path';'
+
+import {
+} from '../../utils/api/partnerAuth';'
+
+const TALENTS_FILE = path.join(;
+  process.cwd()
+  'data''
+  'talents''
+  'talents.json''
+);
+
+export default async function handler() {
+}
+return res.status(401).json({ "error": 'Unauthorized',;'
+});
+  }
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    }
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
+return res.status(429).json({ "error": 'Rate limit exceeded',;'
+});
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  }
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+<<<<<<< HEAD
+  try {};
+=======
+>>>>>>> origin/resolved-merge-conflicts
   try {}
 =======
   if (!(await enforceRateLimit(auth && auth.apiKey))) {
@@ -132,6 +184,10 @@ const TALENTS_FILE = path && path.join(process && process.cwd(), "data", "talent
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const started = Date && Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {}
@@ -146,6 +202,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);"
     return res && res.status(405).json({ error: Method Not Allowed })
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
   if (req && req.method !== "POST") {
@@ -179,10 +241,51 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== 'POST') {'
+    }
+    res.setHeader('Allow', 'POST');'
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
+return res.status(405).json({ "error": 'Method Not Allowed',;'
+});
+  }
+  const { email, programTrack } = req.body |{}
+  if (!email) {
+    }
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+return res.status(400).json({ "error": 'email required',;'
+});
+  }
+
+const talents = (await fs.pathExists(TALENTS_FILE));
+    ? await fs.readJSON(TALENTS_FILE)
+    : [];
+
+const match = talents.find(;
+    ("t": any) =>
+      t.email === email && (!programTrack |t.programTrack === programTrack)
+  );
+
+const verified = Boolean(match && match.certificationStatus === 'completed');'
+  await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
+  return res.status(200).json({ verified });
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -560,3 +663,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

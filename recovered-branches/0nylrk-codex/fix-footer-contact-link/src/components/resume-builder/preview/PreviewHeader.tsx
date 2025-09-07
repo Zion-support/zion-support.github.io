@@ -2,18 +2,47 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+<<<<<<< HEAD
+
+import {Button} from '@/components/ui/button';
+import {ArrowLeft, FileText, Link} from 'lucide-react';
+import {PdfExportButton} from '../PdfExportButton';
+import {Resume} from '@/types/resume';
+import {useState} from 'react';
+
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, FileText, Link } from "lucide-react";
+import { PdfExportButton } from "../PdfExportButton";
+import { Resume } from "@/types/resume";
+import { useState } from "react";
+
+import { useIsMobile } from "@/hooks/use-mobile";
+interface PreviewHeaderProps {}
+  resume: Resume;
+  onBack: () => void;
+}
+
+  resume: Resume;
+  onBack: () => void;
+}
+
+  const handleBrowserPrint = () => {
+=======
 <<<<<<< HEAD
 interface PreviewHeaderProps {
   resume: Resume,
@@ -132,6 +161,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 }
 
   const handleBrowserPrint = () => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     setIsPrinting(true);
     // Inject print-specific CSS only for the duration of printing"
@@ -153,6 +183,13 @@ interface PreviewHeaderProps {;
 ;
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+<<<<<<< HEAD
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true);
+
+          visibility: hidden;
+
+=======
 <<<<<<< HEAD
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
@@ -194,19 +231,26 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
         .print-section, .print-section * {
           visibility: visible
         }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .print-section {
           position: absolute
           left: 0
           top: 0
           width: 100%
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -219,6 +263,7 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .print-section {;
           position: absolute,;
           left: 0,;
@@ -227,7 +272,11 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
         .no-print {;
 import { Button  } from '@/components / ui / button';
@@ -270,12 +319,17 @@ function PreviewHeader() {
           width: 100%;
         }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .no - print {}
           display: none !important;
 
     `,
     document.head.appendChild(style),
 
+<<<<<<< HEAD
+=======
 =======
         .no - print {
           display: none !important;
@@ -313,6 +367,7 @@ function PreviewHeader() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Trigger print dialog
     window.print(),
     
@@ -323,6 +378,9 @@ function PreviewHeader() {
     }, 1000)
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     // Trigger print dialog
     window.print();
@@ -333,6 +391,8 @@ function PreviewHeader() {
       setIsPrinting(false);
     }, 1000);
   };
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -341,6 +401,7 @@ function PreviewHeader() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div
@@ -351,6 +412,9 @@ function PreviewHeader() {
         Back
       </Button>
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -360,6 +424,7 @@ function PreviewHeader() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
@@ -370,12 +435,27 @@ function PreviewHeader() {
       >
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
 
           onClick={handleBrowserPrint}           disabled={isPrinting}
 
+<<<<<<< HEAD
+        Back;
+      </Button>;
+      <div;"`
+        className={`flex ${is_mobile ? "flex - col" : "flex - row"} space-${is_mobile ? "y - 2" : "x - 2"} no - print`}
+      >;
+        <PdfExportButton resume={resume} />;
+        <Button;"
+          variant="outline";
+          on_click={handleBrowserPrint}
+
+=======
         Back;
       </Button>;
       <div;"`
@@ -591,10 +671,14 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
         </Button>;
         <Button variant="outline" className="gap - 2">;
           <Link className="h - 4 w - 4" />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           Add to Profile;
         </Button>;
       </div>;
     </div>);
+<<<<<<< HEAD
+}
+=======
 }
   ),;}
  
@@ -632,3 +716,4 @@ document.head.appendChild (style);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

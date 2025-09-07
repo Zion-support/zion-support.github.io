@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -100,10 +105,26 @@ function handler() {
     return res.status (500).json ({ error: e.message });
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from @/utils/offworld/identity;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const { address } = req.query as { address?: string };
+    const profile = await buildIdentityProfile(address);
+    return res.status(200).json(profile);
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     const { address } = req.query as { address?: string }
 <<<<<<< HEAD
 =======
@@ -255,3 +276,7 @@ try {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

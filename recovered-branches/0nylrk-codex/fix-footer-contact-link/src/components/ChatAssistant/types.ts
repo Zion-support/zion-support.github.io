@@ -1,5 +1,46 @@
 <<<<<<< HEAD
 export interface Message {;
+
+export interface Message {;
+
+export interface Message {
+export interface Message {;
+
+  id: string;
+
+}
+
+export interface Recipient {
+  id: string;
+  name: string;
+
+export interface Recipient {;
+  id: string;
+  name: string;
+  avatarUrl?: string;
+  role?: string;
+}
+
+export interface Message {;
+  id: string,;'
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface Recipient {;
+  id: string,;
+
+  avatarUrl?: string;
+
+  role?: string;
+}
+
+  role?: string;
+=======
+<<<<<<< HEAD
+export interface Message {;
 =======
 
 <<<<<<< HEAD
@@ -12,14 +53,14 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
-export interface Recipient {
-  id: string,
-  name: string,
-  avatarUrl?: string,
-  role?: string
+  avatar_url?: string;
+  role?: string;
 }
+<<<<<<< HEAD
+=======
 =======
 
 export interface Message {
@@ -107,11 +148,15 @@ export interface Recipient {;
   avatar_url?: string;
   role?: string;
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 ;
 export interface Recipient {
@@ -119,6 +164,9 @@ export interface Recipient {
 name: string;
 export interface Recipient {
   id: string;
+<<<<<<< HEAD
+  name: string;
+=======
   name: string;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -126,3 +174,4 @@ export interface Recipient {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

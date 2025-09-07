@@ -1,5 +1,29 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+
+import React, { useEffect, useRef, useState } from 'react';'
+import { motion } from 'framer-motion';'
+
+const "UltraFuturisticBackground2047": React.FC;
+  }, []);
+
+  if (!isClient) {;
+}
+return (;
+
+<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />'
+    );
+
+  if (!isClient) {
+    return (
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+    )
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -94,11 +118,24 @@ if ( {) {
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Animated Hexagons */}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   if (!isClient) {;
     return (
 <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
     );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+return (;
+    <>
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 <<<<<<< HEAD
@@ -120,11 +157,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black />
   return (
     <>;
       {/* Background Gradient */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;'
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
         {/* Animated Hexagons */}
@@ -263,6 +312,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
 
       <div className=fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {/* Animated Hexagons */}
         <motion&& motion.div'
           className=absolute top-20 left-20 w-32 h-32 opacity-20'
@@ -270,6 +323,40 @@ const UltraFuturisticBackground2047: React.FC = () => {
 
       <div className=fixed inset - 0 pointer - events - none z - 0 overflow - hidden'>;
         {/* Animated Hexagons */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <motion.div;
+          className='absolute top - 20 left - 20 w - 32 h - 32 opacity - 20';'
+          animate={{animate={{"rotate": [360, 0];
+            }
+            "scale": [1, 0.8, 1];
+          }}
+          transition={{"duration": 15;
+            }
+            "repeat": Infinity as any;
+            "ease": 'linear';'
+          }}
+        >;
+          <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>;
+        >
+
+          <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />'
+        </motion.div>
+
+        {/* Floating Circles */}
+        <motion.div;
+className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';'
+          animate={{"y": [0, -30, 0];
+            }
+            "x": [0, 20, 0];
+          }}
+          transition={{"duration": 8;
+            }
+            "repeat": Infinity as any;
+            "ease": 'easeInOut';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
         <motion.div;'
           className=absolute top - 20 left - 20 w - 32 h - 32 opacity - 20;
 
@@ -386,6 +473,10 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';
           transition={{duration: 8;
             repeat: Infinity as any;
             ease: 'easeInOut';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           }}
         </motion && motion.div>;
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
@@ -402,6 +493,11 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';
         {/* Floating Circles */}
         <motion.div
 className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           className="absolute top - 40 right - 32 w - 24 h - 24 opacity - 15";
           animate={{
@@ -508,6 +604,10 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'
         <motion.div
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           animate={{
             y: [0, -30, 0]
             x: [0, 20, 0]
@@ -520,16 +620,52 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'
         >
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />'
         </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <motion.div,
+className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15''
+          animate={{
+            }
+            "y": [0, 40, 0]
+            "x": [0, -30, 0]
+=======
+>>>>>>> origin/resolved-merge-conflicts
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
           animate={{}
             y: [0, 40, 0]
             x: [0, -30, 0]
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           }}
           transition={{
 <<<<<<< HEAD
         {/* Animated Grid Lines */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <pattern,
+id='grid''
+                width='100''
+                height='100''
+                <path,
+d='M 100 0 L 0 0 0 100''
+                  fill='none''
+                  stroke='cyan''
+
+                  strokeWidth='0.5''
+                  opacity='0.3'' />
+              </pattern>
+            </defs>
+            <rect width='100%' height='100%' fill='url(#grid)' />'
+          </svg>
+        </div>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -796,9 +932,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </svg>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
         {/* Floating Data Streams */}
         <motion.div
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          className="absolute top-20 left-20 w-32 h-32 opacity-20"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1]}}
+=======
+>>>>>>> origin/resolved-merge-conflicts
           className="absolute top-0 left-0 w-full h-full opacity-20"
           animate={{
             y: [0, -100]}}
@@ -877,11 +1026,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             y: [0, -100]}}
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           transition = $2;
             repeat: Infinity as any,
             ease: "linear"
           }}
         >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className='flex space-x-8 justify-center'>'
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+}
+key={i}
+                className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent''
+                animate={{
+                  }
+                  "height": [32, 64, 32],
+
+                  "opacity": [0.3, 1, 0.3]
+                }}
+                transition={{
+                  }
+                  "duration": 3,
+                  "repeat": Infinity as any,
+                  "delay": i * 0.1,
+
+"ease": 'easeInOut','
+                }}
+
+                }} />
+              />;
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <div className="flex space-x-8 justify-center">
             {[...Array(20)].map((_, i) => (
               <motion.div
@@ -1211,12 +1392,22 @@ ease: 'easeInOut',}
               />;
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             ))}
           </div>
         </motion.div>
 
         {/* Neon Glow Effects */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
 <<<<<<< HEAD
@@ -1269,8 +1460,64 @@ ease: 'easeInOut',}
         </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
+          <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
+        </div>
+
+        >;
+          <div className='flex space-x-8 justify-center'>;
+            {[...Array(20)].map((_, i) => (<motion.div;
+                key={i}
+                className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent';
+                animate={{height: [32, 64, 32],opacity: [0 && 0.3, 1, 0 && 0.3],}}                transition={{duration: 3,repeat: Infinity as any,delay: i * 0 && 0.1,ease: 'easeInOut',                }}          animate={{ease: 'easeInOut',                }}opacity: [0.3, 1, 0.3],}}transition={{duration: 3,repeat: Infinity as any,delay: i * 0.1,ease: 'easeInOut',                  ease: "easeInOut";
+ease: 'easeInOut',}}}}/>;
+              />;
+            ))}
+          </div>;
+        </motion.div>;
+        {/* Neon Glow Effects */}</div>;
+        </motion && motion.div>;{/* Neon Glow Effects */}
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />;
+        </div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">;
+          <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />;
+        </div>;
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">;
+          <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />;
+        </div>;
+        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;{/* Scanning Lines */}
+        {/* Scanning Lines */}
+        <motion&& motion.div;
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';
+          animate={{y: [0, 1000]}}
+          transition={{duration: 8;
+            repeat: Infinity as any;
+            ease: 'linear',          }}
+          transition={{duration: 8;
+            repeat: Infinity as any;
+            ease: 'linear',          }}
+        {/* Pulse Rings */}
+        <motion.div;
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30";
+          animate={{y: [0, 1000]}}
+          transition={{{/* Pulse Rings */}
+        <motion.div;
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30";
+          animate={{y: [0, 1000]}}
+                  delay: i * 0.1,ease: 'easeInOut',                  ease: "easeInOut";
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Scanning Lines */}
         <motion&& motion.div
@@ -1314,6 +1561,10 @@ ease: 'easeInOut',}
             y: [0, 1000]}}
                   delay: i * 0.1,
                   ease: 'easeInOut',                  ease: "easeInOut";
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 }}
               />))}
           </div>;
@@ -1321,6 +1572,16 @@ ease: 'easeInOut',}
         {/* Neon Glow Effects */}
         <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5'>;
           <div className='w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl' />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>;
+        <div className='absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5'>;
+          <div className='w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl' />        </div>;
+        {/* Scanning Lines */}
+        <motion.div;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         </div>;
         {/* Scanning Lines */}
@@ -1387,6 +1648,10 @@ ease: 'easeInOut',}
         {/* Scanning Lines */}
         <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
           animate={coordinate_y: [0, 1000],        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h-96 opacity-5'>;
           <div className='w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded-full blur-3xl' />;
@@ -1413,6 +1678,46 @@ ease: 'easeInOut',}
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';'
           animate={{"y": [0, 1000]}}
           transition={{"duration": 8,"repeat": Infinity as any,"ease": 'linear'}}' />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Pulse Rings */}
+
+        <motion.div,
+className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4''
+          animate={{
+            }
+            "scale": [1, 20]
+            "opacity": [1, 0]
+
+          }}
+          transition={{className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4';'
+          }
+          animate={{"scale": [1, 15];
+            }
+            "opacity": [1, 0];
+          }}
+          transition={{className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4';'
+          }
+          animate={{"scale": [1, 10];
+            }
+            "opacity": [1, 0];
+          }}
+          transition={{
+
+            }
+
+            "duration": 4,
+"repeat": Infinity as any,
+"ease": 'easeOut''
+            "delay": 2
+
+          
+}
+        >;
+          <div className='w-full h-full border-2 border-purple-400 rounded-full' />;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';
           animate={{y: [0, 1000],}}
@@ -1696,6 +2001,10 @@ ease: "ease_out";
           }}
         >;'
           <div className='w - full h - full border - 2 border - cyan - 400 rounded - full' />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </motion.div>;
         <motion.div;'
           className=absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4;
@@ -1710,6 +2019,17 @@ ease: "ease_out";
         >;
           <div className='w - full h - full border - 2 border - blue - 400 rounded - full' />;
         </motion.div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <motion.div;'
+          className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
+          animate={{}
+            scale: [1, 10],
+            opacity: [1, 0],
+          }}
+=======
+>>>>>>> origin/resolved-merge-conflicts
         <motion.div;
 <<<<<<< HEAD
           className=absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
@@ -1721,6 +2041,10 @@ ease: "ease_out";
             scale: [1, 10]
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             opacity: [1, 0]}}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           transition={{}
             duration: 4,
             repeat: Infinity as any,'
@@ -1732,9 +2056,20 @@ ease: "ease_out";
             opacity: [1, 0]}
           transition={}
             duration: 4,
+<<<<<<< HEAD
             repeat: Infinity as any,
             ease: ease_out";
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+            repeat: Infinity as any,"
+            ease: "ease_out";
+=======
+            repeat: Infinity as any,
+            ease: ease_out";
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           }}
         >
           <div className="w-full h-full border-2 border-cyan-400 rounded-full" />
@@ -1850,18 +2185,46 @@ export default UltraFuturisticBackground2047;
         </motion.div>;
       </div>;
       {/* CSS for hexagon clip */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <style jsx>{`
+        .clip-hexagon {
+
+      <style jsx>{``        .clip-hexagon {
+}
+clip-"path": polygon(
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
       <style jsx    />{`
         .clip-hexagon {
 clip-path: polygon(
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             50% 0%,
             100% 25%,
             100% 75%,
             50% 100%,
             0% 75%,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            0% 25%
+origin/cursor/automate-test-improve-and-merge-code-2533
+          );
+        }
+      `}</style>;`
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </>;
   );
 export default UltraFuturisticBackground2047;
@@ -1892,6 +2255,13 @@ export default UltraFuturisticBackground2047;export default UltraFuturisticBackg
 }
 export default UltraFuturisticBackground2047;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+export default UltraFuturisticBackground2047;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 }
@@ -1946,3 +2316,7 @@ export default UltraFuturisticBackground2047;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

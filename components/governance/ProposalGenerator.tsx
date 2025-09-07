@@ -1,4 +1,24 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
+  render() {if (this.state.hasError) ;
+  }
+  return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useState } from 'react';'
+
+
+import EnhancedLayout from '../layout/EnhancedLayout';'
+
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
@@ -65,17 +85,47 @@ import EnhancedLayout from '../layout/EnhancedLayout';
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
 export type ProposalForm = any;
 
 export type ProposalType =;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export type ProposalForm = any;
+
+export type ProposalType =;
+<<<<<<< HEAD
+  | 'Workforce Dev';'
+  | 'AI Ethics';'
+  | 'Digital ID';'
+  | 'Education';'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   | Workforce Dev';
   | 'AI Ethics;
   | Digital ID';
   | 'Education;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export type ProposalForm = {
   targetInstitution: string;
 export type ProposalForm = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  "target_institution": string;
+
+  "type": ProposalType;
+  "regionalScope": string;
+  "budgetOrGoals": string;
+  "supportingMultiverses": string;
+=======
+>>>>>>> origin/resolved-merge-conflicts
   target_institution: string;
 export type ProposalForm = {targetInstitution: string;export type ProposalForm = {target_institution: string;
 }'
@@ -168,6 +218,10 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   language?: string;targetInstitution: string,type: ProposalType,regionalScope: string,budgetOrGoals: string,supportingMultiverses: string,language?: string;
   customPrompt?: string;
@@ -247,6 +301,34 @@ export default function ProposalGenerator() {
     } finally {
 =======
   language?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  targetInstitution: string,
+  type: ProposalType,
+  regionalScope: string,
+  budgetOrGoals: string,
+  supportingMultiverses: string,;
+  language?: string;
+  customPrompt?: string
+}
+  customPrompt?: string}
+};
+export default function ProposalGenerator() {
+  }
+  const [form, setForm] = useState<ProposalForm>({
+    }
+    "targetInstitution": 'UNDP''
+    "type": 'Workforce Dev''
+    "regionalScope": 'Global''
+    "budgetOrGoals": '''
+    "supportingMultiverses": '''
+    "language": 'English''
+    "customPrompt":
+
+'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.','
+=======
+>>>>>>> origin/resolved-merge-conflicts
   customPrompt?: string;
 }'
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
@@ -297,6 +379,10 @@ export default function ProposalGenerator() {;
 <<<<<<< HEAD
 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   });
 
 const [isGenerating, setIsGenerating] = useState(false);
@@ -304,6 +390,11 @@ const [isGenerating, setIsGenerating] = useState(false);
 const [draftMarkdown, setDraftMarkdown] = useState('');'
 
 const [draftJson, setDraftJson] = useState<any>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
@@ -569,6 +660,10 @@ async function handleExport() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       setStatusMessage('Export failed');    }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
@@ -691,6 +786,25 @@ const data = await res.json();
   }
 
   async function handleExport() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    setStatusMessage($2);
+    try {
+      const res = await fetch('/api/proposals/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          markdown: draftMarkdown,
+          json: draftJson,
+    }
+
+  async function handleExport() {;
+    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+    try {;
+      const res = await fetch('/api/proposals/export', {;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
       const res = await fetch('/api/proposals/export', {
@@ -900,6 +1014,10 @@ const data = await res && res.json();
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {;
       const res = await fetch('/api/proposals/submit', {;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({;
@@ -909,6 +1027,15 @@ const data = await res && res.json();
         }),;
       });
       const data = await res && res.json();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setExportLinks({;
+        pdfUrl: data && data.pdfUrl,;
+        jsonUrl: data && data.jsonUrl,;
+        mdUrl: data && data.mdUrl,;
+=======
+>>>>>>> origin/resolved-merge-conflicts
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
 <<<<<<< HEAD
@@ -1478,6 +1605,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <label className='block text-sm font-medium'>Type</label>
             <select
               className='w-full border rounded px-3 py-2'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               value={form.type}
               onChange={e =>
                 handleChange('type', e.target.value as ProposalType)
@@ -1530,6 +1661,72 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </select>
           </div>
           <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<label className='block text-sm font-medium'>Regional scope</label>'
+            <input,
+className='w-full border rounded px-3 py-2''
+
+              value={form && form.regionalScope}
+              onChange={e => { return handleChange('regionalScope', e && e.target.value)}'
+              placeholder='Global / Africa / LATAM / APAC / EU / ...'; }'
+            />;
+          </div>;
+          <div>;
+            <label className='block text-sm font-medium'>;'
+              Budget / Resolution goals;
+            </label>;
+            <textarea;
+              className='w-full border rounded px-3 py-2 min-h-[80px]';'
+              value={form && form.budgetOrGoals}
+              onChange={e => { return handleChange('budgetOrGoals', e && e.target.value)}'
+              placeholder='$5M for pilot; } "goals": 10k workers onboarded, 70% female youth, etc.';'
+            />;
+          </div>;
+          <div>;
+            <label className='block text-sm font-medium'>;'
+              Supporting multiverse(s)</label>;
+            <input;
+              className='w-full border rounded px-3 py-2';'
+              value={form && form.supportingMultiverses}
+              onChange={e =>;
+                }
+                handleChange('supportingMultiverses', e && e.target.value)}'
+              placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work';'
+            />;
+          </div>;
+          <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
+            <div>;
+              <label className='block text-sm font-medium'>Language</label>;'
+              <input;
+                className='w-full border rounded px-3 py-2';'
+                value={form && form.language}
+                onChange={e => { return handleChange('language', e && e.target.value)}'
+                placeholder='English / French / Spanish / Arabic / ...'; }'
+              />;
+            </div>;
+            <div>;
+              <label className='block text-sm font-medium'>;'
+                GPT Prompt Assist;
+              </label>;
+              <textarea;
+                className='w-full border rounded px-3 py-2 min-h-[80px]';'
+                value={form && form.customPrompt}
+                onChange={e => { return handleChange('customPrompt', e && e.target.value)}'
+              />; }
+            </div>;
+          <div className='flex gap-2'>;'
+
+            <button,
+className='px-4 py-2 bg-blue-600 text-white rounded "disabled": opacity-50''
+
+              onClick={handleGenerate}
+              disabled={isGeneratin
+}>;
+              {isGenerating ? 'Generating...' : 'Generate Draft'}'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             <label className="block text-sm font-medium">Regional scope</label>
             <input
@@ -2041,6 +2238,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={handleGenerate}
 
               {isGenerating ? Generating...' : 'Generate Draft}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </button>;
             <button
 className='px-4 py-2 bg-emerald-600 text-white rounded'
@@ -2069,6 +2270,13 @@ className='px-4 py-2 bg-emerald-600 text-white rounded'
             </button>;
             <button
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <button,
+className='px-4 py-2 bg-emerald-600 text-white rounded''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 className=px-4 py-2 bg-emerald-600 text-white rounded'
 
@@ -2082,10 +2290,21 @@ className=px-4 py-2 bg-emerald-600 text-white rounded'
               {isGenerating ? Generating... : 'Generate Draft'}
             </button>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <button,
+className='px-4 py-2 bg-purple-600 text-white rounded''
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <button
 
               disabled={!draftMarkdown}>;
@@ -2095,6 +2314,10 @@ className=px-4 py-2 bg-emerald-600 text-white rounded'
           {statusMessage && (;'
             <p className='text-sm text-gray-600'>{statusMessage}</p>;
 className='px-4 py-2 bg-purple-600 text-white rounded'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
@@ -2107,6 +2330,11 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
               onClick={handleGenerate}
@@ -2170,11 +2398,20 @@ className='px-4 py-2 bg-purple-600 text-white rounded'
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           {exportLinks && (;'
             <div className='text-sm space-y-1'>;
@@ -2256,14 +2493,37 @@ className='text-blue-600 underline'}
                     Markdown;
                   </a>
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
               )}
               {exportLinks.jsonUrl && (
 <<<<<<< HEAD
                 <div>
+<<<<<<< HEAD
                   <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<a
+}
+className='text-blue-600 underline''
+                    href={exportLinks && exportLinks.jsonUrl}
+                    target='_blank''
+
+                    rel='noreferrer''
+                  >
+                    JSON
+                  </a>
+=======
+                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
               )}
             </div>
@@ -2336,6 +2596,15 @@ className='text-blue-600 underline'}
               )}
             </div>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>;'
+        <div className='space-y-2'>;'
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
+          <textarea'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 =======
@@ -2346,6 +2615,10 @@ className='text-blue-600 underline'}
           <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <textarea
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
             onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea
@@ -2367,6 +2640,12 @@ className='text-blue-600 underline'}
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            onChange={(e) => setDraftMarkdown(e.target.value)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
       </div>;
     </div>;
 <<<<<<< HEAD
@@ -2762,6 +3041,10 @@ function handleSubmitBridge() {
             onChange={(e) => setDraftMarkdown(e.target.value)}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>
 
             value={draftMarkdown}
@@ -2795,6 +3078,12 @@ className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
 >>>>>>> merged-prs-20250907-203621
           />
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ); }
+=======
+>>>>>>> origin/resolved-merge-conflicts
       </div>
     </div>
 <<<<<<< HEAD
@@ -2805,6 +3094,10 @@ className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   );
 

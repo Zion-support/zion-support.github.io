@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 interface FeatureCTAsProps  {className?: string;
@@ -41,13 +47,25 @@ interface FeatureCTAsProps  {className?: string;
   style?: React.CSSProperties;
 export function FeatureCTAs() {const { t } = useTranslation()const features = null;
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />;
+<<<<<<< HEAD
       ),      icon: <Calendar className='h-10 w-10 p-2 rounded-md bg-red-100 text-red-700' />;
+=======
+      ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />;
+>>>>>>> origin/resolved-merge-conflicts
       link: '/project-milestones';
     };
     {;
       key: 'zion_hire_ai',;
       descriptionKey: 'zion_hire_ai_desc',;
       detailsKey: 'zion_hire_ai_details',;
+<<<<<<< HEAD
+=======
+    }
+    {
+      key: 'zion_hire_ai,
+      descriptionKey: zion_hire_ai_desc',
+      detailsKey: 'zion_hire_ai_details,
+>>>>>>> origin/resolved-merge-conflicts
       icon: (;
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />;
       ),;
@@ -60,7 +78,18 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
   const features = [
     {
 
+<<<<<<< HEAD
 interface FeatureCTAsProps {;
+=======
+interface FeatureCTAsProps {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+interface FeatureCTAsProps {;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   className?: string;
   style?: React && React.CSSProperties;
 
@@ -212,11 +241,31 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
   ];
 
+<<<<<<< HEAD
     }{key: 'zion_hire_ai',descriptionKey: 'zion_hire_ai_desc',detailsKey: 'zion_hire_ai_details',icon: <Clock className = 'h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />,link: '/zion-hire-ai',badge: 'premium';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }{key: 'zion_hire_ai',descriptionKey: zion_hire_ai_desc,detailsKey: 'zion_hire_ai_details',icon: <Clock className = h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700 />,link: /zion-hire-ai,badge: 'premium';
+>>>>>>> origin/resolved-merge-conflicts
     }];>;
       <div className='container mx-auto px-4'>;
         <div className='mb-12 text-center'>;
+<<<<<<< HEAD
           <h2 className='text-3xl font-bold tracking-tight mb-3'>;
+=======
+          <h2 className=text-3xl font-bold tracking-tight mb-3>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       >;'
       <div className='container mx-auto px-4'>;'
         <div className='mb-12 text-center'>;'
@@ -257,6 +306,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>;'
             {t('home && home.features_subheading')}
           </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {feature && feature.badge && (<Badge;
                       variant='secondary';
                       className='bg-primary/20 text-primary'>                      {t(`badges.${feature && feature.badge}`)}
@@ -309,6 +364,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {feature.descriptionKey && (
                   <CardDescription className='line-clamp-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
@@ -362,9 +423,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
+<<<<<<< HEAD
                   {feature && feature.badge && (<Badge variant='secondary' className='bg-primary/20 text-primary'>;<CardTitle className='mt-4'>{t(`features.${feature.key}`)}</CardTitle>;
                 {feature.descriptionKey && (<CardDescription className='line-clamp-2'>;
 <CardTitle className='mt-4'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  {feature && feature.badge && (<Badge variant="secondary className=bg-primary/20 text-primary">;<CardTitle className="mt-4>{t(`features.${feature.key}`)}</CardTitle>;
+                {feature.descriptionKey && (<CardDescription className=line-clamp-2">;
+<CardTitle className='mt-4>;
+>>>>>>> origin/resolved-merge-conflicts
                   {t(`features.${feature.key}`)}
                 </CardTitle>;
                 {feature.descriptionKey && (<CardDescription className='line-clamp-2'>;
@@ -405,6 +478,15 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from 
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import Link from 'next / link';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       </div>;
     </section>;
@@ -440,10 +522,22 @@ import { use_translation } from 'react - i18next';
 import { cn } from '@/lib / utils';
 interface FeatureCTAsProps {}
   class_name?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { use_translation  } from 'react - i18next';
   ArrowRight,Users,Zap,Settings,Search,MessageSquare,Smartphone,Calendar,BookOpen,Code,Building,Clock} from 'lucide-react';
 import { cn  } from '@/lib / utils';
 interface FeatureCTAsProps  {class_name?: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   style?: React.CSSProperties;
 export /**;
  * FeatureCTAs - Function description;
@@ -607,8 +701,4 @@ export /**;
         </div>
       </div>
     </section>
-    </section>))}</div>;
-      </div>;
-    </section>;
-)
 );

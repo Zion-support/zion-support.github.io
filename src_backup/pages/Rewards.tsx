@@ -15,6 +15,7 @@ return (
 
 import { Gift } from 'lucide-react'
 
+<<<<<<< HEAD
 :src/pages/Rewards.tsx
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 }
@@ -46,6 +47,8 @@ const REWARDS = [
     </div>
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
@@ -88,6 +91,4 @@ import { Gift } from 'lucide-react'
     </div>
   );
 }
-:src/pages/Rewards.tsx
-;
 origin/cursor/automate-test-improve-and-merge-code-2533

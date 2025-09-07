@@ -1,15 +1,41 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json($2);
   const { address, signature } = req.body || {},
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 });
   // In "production": verify signature, mint or issue POAP,
 console.log(
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { address, signature } = req.body || {};
+  if (!address || !signature) {
+    return res.status(400).json({ error: 'Missing address or signature' });
+  }
+
+  // In production: verify signature, mint or issue POAP
+  console.log(
+    '[NFT Claim] address:',
+    address,
+    'signature:',
+    signature.slice(0, 18) + '…'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47,10 +73,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     "signature:"
     signature.slice(0, 18) + "…"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 return res.status(200).json({ "ok": true,;
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return res.status(200).json({ ok: true });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 export default async function handler() {import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { address, signature } = req.body || {},if (!address || !signature) return res.status(400).json({ error: 'Missing address or signature' })// In production: verify signature, mint or issue POAP;
@@ -209,3 +246,7 @@ export default async /**;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

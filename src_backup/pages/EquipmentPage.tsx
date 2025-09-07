@@ -65,6 +65,11 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     id: "nvidia-a100-server";
     title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -77,6 +82,10 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD:src_backup/pages/EquipmentPage.tsx
 =======
@@ -252,10 +261,19 @@ const EquipmentFilterControls = ({
 ),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD:src_backup/pages/EquipmentPage.tsx
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/EquipmentPage.tsx
 // Equipment card
@@ -263,6 +281,11 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
   const { formatPrice } = useCurrency(),
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
@@ -451,6 +474,10 @@ function EquipmentPageContent() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD:src_backup/pages/EquipmentPage.tsx
 =======
@@ -476,6 +503,11 @@ function EquipmentPageContent() {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 }
 // Main export with error boundary
 export default function EquipmentPage() {
@@ -490,6 +522,10 @@ export default function EquipmentPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -609,6 +645,8 @@ export default function EquipmentPage() {
       </motion.div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD:src_backup/pages/EquipmentPage.tsx
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
@@ -648,6 +686,47 @@ export default function EquipmentPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/resolved-merge-conflicts
+
+<<<<<<< HEAD:src_backup/pages/EquipmentPage.tsx
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {equipment.map((item, index) => (
+            <motion.div
+              key={item.id} 
+              ref={index === equipment.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} ;
+              animate={{ opacity: 1, scale: 1 }} ;
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: Math.min(index * 0.03, 0.5) }} ;
+              whileHover={{ scale: 1.02 }}
+            >;
+              <EquipmentCard;
+                equipment={item}
+                onViewDetails={() => {;
+                  if (typeof window !== 'undefined') {;
+                    try {;
+                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item));
+                    } catch {;
+                      // ignore storage errors;
+                    }
+                  }
+                  router.push(`/equipment/${item.id}`);
+                }}
+              />;
+            </motion.div>;
+          ))}
+        </AnimatePresence>;
+      </motion.div>;
+      {(isFetching || loading) && equipment.length > 0 && (;
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <EquipmentLoadingGrid count={4} />;
+        </motion.div>;
+      )}
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={ opacity: 0 } animate={ opacity: 1 } transition={ delay: 0.4 }>
         <AnimatePresence mode="popLayout">
@@ -684,6 +763,8 @@ export default function EquipmentPage() {
         </motion.div>;
       )}
 
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/EquipmentPage.tsx
       {hasMore && !loading && (
         <div className="text-center mt-8">
@@ -912,6 +993,12 @@ export default function EquipmentPage() {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
     <EquipmentErrorBoundary>;
@@ -925,3 +1012,7 @@ export default function EquipmentPage() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/EquipmentPage.tsx
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

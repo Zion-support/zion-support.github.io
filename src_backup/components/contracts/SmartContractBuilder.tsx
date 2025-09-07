@@ -3,6 +3,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
+<<<<<<< HEAD
   DialogTitle,;
 } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -31,11 +32,64 @@ import { DeploymentOptions, SmartContractInfo  } from '@/types/smart-contracts';
 import { useSmartContracts  } from '@/hooks/useSmartContracts';
 import { toast  } from 'sonner';
 import { logErrorToProduction  } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+  DialogTitle} from @/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs;
+import { Button } from @/components/ui/button';
+import { Save } from 'lucide-react;
+import { TalentProfile } from @/types/talent';
+import { ContractForm, ContractFormValues } from './components/ContractForm;
+import { ContractPreview } from ./components/ContractPreview';
+import { TemplateManager } from './templates/TemplateManager;
+import { DeploymentOptions, SmartContractInfo } from @/types/smart-contracts';
+import { useSmartContracts } from '@/hooks/useSmartContracts;
+import { toast } from sonner';
+import { logErrorToProduction } from '@/utils/productionLogger;
+import { useState  } from react';
+import { Dialog,DialogContent,DialogHeader,DialogTitle} from '@/components/ui/dialog;
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from @/components/ui/tabs';
+import { Button  } from '@/components/ui/button;
+import { Save  } from lucide-react';
+import { TalentProfile  } from '@/types/talent;
+import { ContractForm, ContractFormValues  } from ./components/ContractForm';
+import { ContractPreview  } from './components/ContractPreview;
+import { TemplateManager  } from ./templates/TemplateManager';
+import { DeploymentOptions, SmartContractInfo  } from '@/types/smart-contracts;
+import { useSmartContracts  } from @/hooks/useSmartContracts';
+import { toast  } from 'sonner;
+import { logErrorToProduction  } from @/utils/productionLogger';
+>>>>>>> origin/resolved-merge-conflicts
 interface SmartContractBuilderProps  {isOpen: boolean;
+=======
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Save } from 'lucide-react';
+import { TalentProfile } from '@/types/talent';
+import { ContractForm, ContractFormValues } from './components/ContractForm';
+import { ContractPreview } from './components/ContractPreview';
+import { TemplateManager } from './templates/TemplateManager';
+import { DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';
+import { useSmartContracts } from '@/hooks/useSmartContracts';
+import { toast } from 'sonner';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface SmartContractBuilderProps {
+  isOpen: boolean;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
-  onContractGenerated?: (contractContent: string) => void;
+  onContractGenerated?: (contractContent: string) => void
 }
 export function SmartContractBuilder({
   isOpen;
@@ -50,8 +104,19 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+<<<<<<< HEAD
 export function SmartContractBuilder() {const [activeTab, setActiveTab] = useState<string>("form"),const [generatedContract, setGeneratedContract] = useState<string | null>(null),const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;
   ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({network: 'ethereum';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export function SmartContractBuilder() {const [activeTab, setActiveTab] = useState<string>(form"),const [generatedContract, setGeneratedContract] = useState<string | null>(null),const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;
+  ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({network: 'ethereum;
+>>>>>>> origin/resolved-merge-conflicts
     useEscrow: true;
     deployToChain: false;
   })const [deployStatus, setDeployStatus] = useState<string>('')const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null)const { deploySmartContract } = useSmartContracts()const handleLoadTemplate = (templateData: ContractFormValues,) => {setFormValues(templateData)}
@@ -227,6 +292,12 @@ if ( {) {$2;
         setActiveTab ("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast.success ("Legal draft generated successfully!")} else {
         throw new Error ("No content received from draft generator.")}
+<<<<<<< HEAD
+=======
+        setActiveTab (preview_markdown"); // Switch to a new tab for Markdown preview;
+        toast.success ("Legal draft generated successfully!)} else {
+        throw new Error (No content received from draft generator.")}
+>>>>>>> origin/resolved-merge-conflicts
     } catch (err: any) {
       console.error ("Error generating legal draft:", err);
       setLegalDraftError (err.message || "Failed to generate legal draft.");
@@ -291,8 +362,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
 
+<<<<<<< HEAD
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast && toast.success("Legal draft generated successfully!")} else {;
+=======
+        setActiveTab(preview_markdown"); // Switch to a new tab for Markdown preview;
+        toast && toast.success("Legal draft generated successfully!)} else {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   return () => {
     // Cleanup function
@@ -375,11 +457,25 @@ import {logErrorToProduction} from '@/utils/productionLogger',
       setPopulatedSolidityCode(data && data.solidityCode); // This is actually bytecode if Supabase func compiles;'
       // For now, assuming data && data.solidityCode IS the bytecode && bytecode.This is a placeholder.// In reality, the Supabase function should return bytecode and ABI.// Or, if it returns Solidity, we'd compile it client-side(not recommended for production).setContractAbi(currentAbi);'
       setOnChainDeploymentStatus('deploying');"
+<<<<<<< HEAD
       toast && toast.info("Deploying contract... This may take a moment && moment.Please confirm in MetaMask.");'
       // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source && source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode && bytecode.let contract;
     setOnChainDeploymentStatus('connecting')setDeploymentError(null)setTransactionHash(null)setDeployedContractAddress(null)setPopulatedSolidityCode(null)try {if(!window.ethereum) {throw new Error("MetaMask is not installed.Please install it to continue.")}
       await window.ethereum.request({ method: 'eth_requestAccounts' })const targetChainId = selectedNetwork === 'ethereum' ? '0x1' : '0x89'; // 1 for Ethereum Mainnet, 137 for Polygon;
       if(currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {try {await window.ethereum.request({method: 'wallet_switchEthereumChain';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      toast && toast.info(Deploying contract... This may take a moment && moment.Please confirm in MetaMask.);
+      // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current generate-smart-contract' returns Solidity source && source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode && bytecode.let contract;
+    setOnChainDeploymentStatus('connecting)setDeploymentError(null)setTransactionHash(null)setDeployedContractAddress(null)setPopulatedSolidityCode(null)try {if(!window.ethereum) {throw new Error("MetaMask is not installed.Please install it to continue.")}
+      await window.ethereum.request({ method: eth_requestAccounts' })const targetChainId = selectedNetwork === 'ethereum ? 0x1' : '0x89; // 1 for Ethereum Mainnet, 137 for Polygon;
+      if(currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {try {await window.ethereum.request({method: wallet_switchEthereumChain';
+>>>>>>> origin/resolved-merge-conflicts
             params: [{ chainId: targetChainId }]})// Re-initialize provider and signer after network switch;
           //;
           // signer = await newProvider.getSigner()} catch(switchError: any) {if(switchError.code === 4902) { // Chain not added;
@@ -403,8 +499,23 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     handleGenerateSolidity()// Then generate Solidity.}
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
 
+<<<<<<< HEAD
       // Adjust constructor arguments based on contractTypeToDeploy;'
       if(contractTypeToDeploy === 'simple') {;
+=======
+      // Adjust constructor arguments based on contractTypeToDeploy;
+      if(contractTypeToDeploy === simple') {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      toast && toast.info("Deploying contract... This may take a moment && moment.Please confirm in MetaMask.");'
+      // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source && source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode && bytecode.let contract;
+      // Adjust constructor arguments based on contractTypeToDeploy;'
+      if(contractTypeToDeploy === 'simple') {;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
         contract = await factory && factory.deploy(formValues && formValues.clientWalletAddress, formValues && formValues.talentWalletAddress, projectDetailsIPFSHash)} else { // escrow;
         // EscrowAgreement constructor: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client);'`
         // The Ownable(_client) is handled by OpenZeppelin's constructor if `initialOwner` is the first arg to Ownable's constructor.// Or, if our EscrowAgreement's constructor directly calls Ownable(_client), then that's fine.// Based on EscrowAgreement && EscrowAgreement.sol: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client);
@@ -432,8 +543,19 @@ import {logErrorToProduction} from '@/utils/productionLogger',
             Create, customize, and deploy your smart contract or generate a legal draft.</DialogDescription>;
 
               <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
+<<<<<<< HEAD
             <TabsList className="grid grid-cols-3"> {/* Added new tab */}<TabsTrigger value="form">1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            <TabsList className=grid grid-cols-3> {/* Added new tab */}<TabsTrigger value="form">1.Details</TabsTrigger>;
+              <TabsTrigger value=preview_markdown disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
+>>>>>>> origin/resolved-merge-conflicts
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
             </TabsList>;
             <div className="flex gap-2">;
@@ -443,8 +565,20 @@ import {logErrorToProduction} from '@/utils/productionLogger',
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
+<<<<<<< HEAD
                 <Save className="h-4 w-4" />;<TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
+=======
+                <Save className=h-4 w-4 />;<TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
+              <TabsTrigger value=preview_markdown disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3 && 3.On-Chain Contract</TabsTrigger>;
             </TabsList>;
@@ -566,8 +700,21 @@ if ( { // Chain not added) {}
                   talent = {talent,}
                   onClose = {onClose,}
 
+<<<<<<< HEAD
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      onClick = {handleDeployContract}
+                      disabled = {deployStatus === 'deploying'}
+>>>>>>> origin/resolved-merge-conflicts
                 <Save className="h - 4 w - 4" />;Templates;
               </Button>;
             </div>;
@@ -588,7 +735,19 @@ if ( { // Chain not added) {}
                   onClose = {onClose}
                   deploymentInfo = {deploymentInfo}/>;{!deploymentInfo && deployOptions && deployOptions.deployToChain && (<div className="mt-6 flex justify-center">;<Button;
                       onClick = {handleDeployContract}
+<<<<<<< HEAD
                       disabled = {deployStatus === 'deploying'}
+=======
+                      disabled = {deployStatus === deploying}
+=======
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
 
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
@@ -604,6 +763,12 @@ if ( { // Chain not added) {}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}</TabsContent>;
         </Tabs>;<TemplateManager;
           isOpen = {templateManagerOpen}
@@ -643,6 +808,12 @@ setActiveTab ("preview")}";
 
             {/* {generatedSolidityContract && !deployOptions && deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </TabsContent>;
 
         </Tabs>;
@@ -652,6 +823,12 @@ setActiveTab ("preview")}";
               <div>
                 <ContractPreview 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</Button> </div>)}</div>)}</TabsContent> </Tabs> <TemplateManagerisOpen= {templateManagerOpen;
 }onClose= {() => setTemplateManagerOpen (false)}onSelectTemplate= {handleLoadTemplate ;
 }currentValues= {formValues ;
@@ -663,14 +840,43 @@ setActiveTab ("preview")}";
                 <ContractPreview />;
                 {!deploymentInfo && deployOptions.deployToChain && (<div className="mt-6 flex justify-center">;
                     <Button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
                       onClick={handleDeployContract}
+<<<<<<< HEAD
                       disabled={deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700";
                     >;
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      disabled={deployStatus === 'deploying}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700";
+                    >;
+                      {deployStatus === deploying' ? 'Deploying... : Deploy to Blockchain'}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                      disabled={deployStatus === 'deploying'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                    >
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
                     </Button>;
                   </div>;
@@ -695,6 +901,7 @@ setActiveTab ("preview")}";
 
 };
 //Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
+<<<<<<< HEAD
   //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
   setGeneratedContract (contract);";
 setActiveTab ("preview");
@@ -705,15 +912,49 @@ setActiveTab ("preview");
   )}//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
   //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {setGeneratedContract (contract)";
 setActiveTab ("preview")}";
+=======
+<<<<<<< HEAD
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, well implement the simplest solution that works if (onContractGenerated) {
+  setGeneratedContract (contract);;
+setActiveTab (preview");
+}";
+    </Dialog>)}/>;
+      </DialogContent>;
+    </Dialog>;
+  )}//Modified to match the expected interface const handleFormSubmit = (contract: string) => {;
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {setGeneratedContract (contract);
+setActiveTab (preview")}";
+=======
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
+  setGeneratedContract (contract);";
+setActiveTab ("preview");
+};";
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   talent ;
-}clientName= {clientName ;
-}initialValues= {formValues ;
-}onFormValuesChange= {setFormValues ;
-}onContractGenerated= {handleFormSubmit ;
-}/> </TabsContent> <div> <ContractPreview generatedContract= {generatedContract ;
-}talent= {talent ;
-}onClose= {onClose ;
-}deploymentInfo= {deploymentInfo ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleFormSubmit ;
+}/> </TabsContent> <div> <ContractPreview generatedContract= {;
+  generatedContract ;
+}talent= {;
+  talent ;
+}onClose= {;
+  onClose ;
+}deploymentInfo= {;
+  deploymentInfo ;
 }/> > {';
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
 }</Button> </div>) ;
@@ -727,8 +968,4 @@ setActiveTab ("preview")}";
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-}</Button> </div>)}</div>)}</TabsContent> </Tabs> <TemplateManager isOpen= {templateManagerOpen ;
-}onClose= {() => setTemplateManagerOpen (false)}onSelectTemplate= {handleLoadTemplate ;
-}currentValues= {formValues ;
-}/> </DialogContent> </Dialog>)}'";
 }'"

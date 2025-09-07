@@ -5,6 +5,11 @@ import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
 <<<<<<< HEAD
+
+interface GeneratedContent {
+
+=======
+<<<<<<< HEAD
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 interface GeneratedContent {
@@ -13,6 +18,7 @@ interface GeneratedContent {
 interface GeneratedContent {
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string,
   tags: string[],
   suggestedPrice: {}
@@ -29,6 +35,8 @@ interface GeneratedContent {
   suggestedPrice: {,
   min: number,
     max: number;
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -158,6 +166,7 @@ interface GeneratedContent {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   };
   keyPoints: string[];
 }
@@ -166,7 +175,10 @@ interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent) => void,;
   initialValues?: {;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -174,9 +186,13 @@ interface AIListingGeneratorProps {;
   }
 }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string,;
   tags: string[],;
   suggestedPrice: {;
@@ -188,18 +204,25 @@ interface AIListingGeneratorProps {;
   }
 }
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> merged-prs-20250907-203621
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -207,6 +230,73 @@ import { Sparkles } from './lucide-react';
 import { supabase } from '@/integrations / supabase / client';
 import { AIListingForm } from './AIListingForm';
 import { GeneratedContentDisplay } from './GeneratedContentDisplay';
+<<<<<<< HEAD
+
+import { LoadingContentSkeleton } from './LoadingContentSkeleton';
+interface GeneratedContent {}
+  description: string,
+  tags: string[],
+  suggested_price: {}
+
+    min: number,
+    max: number;
+  }
+  key_points: string[];
+}
+
+    title?: string;
+    category?: string;
+    key_features?: string;
+    target_audience?: string;
+  }
+}
+
+  const { toast } = use_toast ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
+;
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null),;
+  const handleGenerate = async ({;
+    title,;
+    category,;
+    keyFeatures,;
+    targetAudience;
+  }: {;
+    title: string,;
+    category: string,;
+    keyFeatures: string,;
+    targetAudience: string;
+  }) => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
+        body: { title, category, keyFeatures, targetAudience }
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+
+        description: "AI has created optimized listing content for you."
+      })
+    } catch (error) {"
+      console.error("Error generating content:", error);
+      toast({"
+        title: "Generation Failed""
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.""
+        variant: "destructive"
+
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent);
+      toast({
+=======
 
 import { LoadingContentSkeleton } from './LoadingContentSkeleton';
 interface GeneratedContent {}
@@ -371,10 +461,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       onApplyGenerated(generatedContent);
 >>>>>>> merged-prs-20250907-203621
       toast({
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   },
 =======
@@ -382,6 +475,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="space-y-6">
@@ -396,6 +490,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </p>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
           <AIListingForm
             onSubmit={handleGenerate}
@@ -423,6 +520,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
       // Check condition;
 if ( {) {}
@@ -439,11 +537,16 @@ if ( {) {}
       }
       setGeneratedContent (data.generated);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       setIsLoading (false);
     }
   }
 
+<<<<<<< HEAD
+=======
 =======
       toast ({
         title: "Content Generated",
@@ -461,6 +564,7 @@ if ( {) {}
     }
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleGenerate = async ({;
     title;
     category;
@@ -473,6 +577,23 @@ if ( {) {}
     targetAudience: string;
   }) => {;
     setIsLoading(true);
+<<<<<<< HEAD
+
+      const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
+        body: { title, category, keyFeatures, targetAudience }
+      });
+
+      if (error) {;
+        throw new Error(error && error.message);
+      }
+
+      if (data && data.error) {;
+        throw new Error(data && data.error);
+      }
+
+      setGeneratedContent(data && data.generated);
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -503,17 +624,21 @@ if ( {) {}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       toast({;
         title: "Content Generated",
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       console.error("Error generating content:", error),;
       toast({;
         title: "Generation Failed",;
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       console && console.error("Error generating content:", error);
       toast({;
         title: "Generation Failed",
@@ -521,8 +646,12 @@ if ( {) {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         variant: "destructive";
       });
     } finally {;
@@ -532,8 +661,11 @@ if ( {) {}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
@@ -548,14 +680,21 @@ if ( {) {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 
   },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-6">;
 
   return (
@@ -563,6 +702,8 @@ if ( {) {}
 }
   }
   return (
+<<<<<<< HEAD
+=======
 =======
 
   return (
@@ -574,6 +715,7 @@ if ( {) {}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-6">;
 
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
@@ -592,12 +734,15 @@ if ( {) {}
             isLoading={isLoading} 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             initialValues={initialValues}
           />;
@@ -606,6 +751,9 @@ if ( {) {}
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
+<<<<<<< HEAD
+      )}
+=======
 <<<<<<< HEAD
       )}
 =======
@@ -781,3 +929,4 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 
@@ -14,10 +20,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 export default function handler() {const session = null;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (!session && !internal) {
+    res.status(401).json({ error: 'Unauthorized' });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 =======
@@ -133,10 +150,21 @@ res.status(200).json({ 'message': 'OK','
 }
     res.status (401).json ({ 'error': 'Unauthorized','
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     return;
 
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  res.status(200).json({ message: 'OK' });
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 });
 return;
   }
@@ -221,3 +249,7 @@ res.status(200).json({ message: 'OK' });    return
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

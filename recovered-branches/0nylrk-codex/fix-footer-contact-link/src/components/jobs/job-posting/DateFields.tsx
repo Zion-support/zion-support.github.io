@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
@@ -14,6 +16,7 @@ import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 interface DateFieldsProps {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {;
   Popover,;
   PopoverContent,;
@@ -28,14 +31,20 @@ import {;
   PopoverTrigger,;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Calendar } from "@/components/ui/calendar";
 "
 import { FormControl } from "@/components/ui/form";"
 import { cn } from "@/lib/utils";
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
@@ -43,10 +52,13 @@ import { cn } from "@/lib/utils";
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
@@ -60,14 +72,19 @@ import {
   PopoverTrigger,;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 import { cn } from "@/lib/utils";
@@ -86,6 +103,7 @@ export function DateFields({
 }: DateFieldsProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface DateFieldsProps {
 
@@ -96,15 +114,21 @@ interface DateFieldsProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function DateFields({
   startDate
   setStartDate
   endDate
   setEndDate
 }: DateFieldsProps) {
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from 'react',
 import { format } from 'date-fns',
@@ -116,6 +140,10 @@ import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
 
 <<<<<<< HEAD
+interface DateFieldsProps {
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -126,10 +154,16 @@ import { cn } from "@/lib/utils",
 interface DateFieldsProps {
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
+<<<<<<< HEAD
+
+}
+
+=======
 <<<<<<< HEAD
 }
 
@@ -149,6 +183,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -161,12 +196,15 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 variant={"outline"}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
                 className={cn(
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function DateFields(): any ({;
   startDate,;
@@ -175,6 +213,11 @@ export function DateFields(): any ({;
   setEndDate,;
 }: DateFieldsProps) {;
   return (
+<<<<<<< HEAD
+
+              >
+                {startDate ? ("
+=======
 <<<<<<< HEAD
 
 =======
@@ -195,12 +238,15 @@ export function DateFields(): any ({;
 =======
                 {startDate ? ("
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   format(startDate, "PPP")
                 ) : (
                   <span>Pick a date</span>
                 )}
               </Button>
             </FormControl>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           </PopoverTrigger>
           <PopoverContent className = $2;
@@ -209,10 +255,23 @@ export function DateFields(): any ({;
               >
                 {endDate ? (
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </PopoverTrigger>"
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar"
               mode="single"
+<<<<<<< HEAD
+
+import { format } from 'date-fns',;
+import { Label } from "@/components/ui/label",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { FormControl } from "@/components/ui/form",;
+import { cn } from "@/lib/utils",;
+              selected={startDate}
+              onSelect={setStartDate}
+=======
 <<<<<<< HEAD
               selected={startDate}
               onSelect={setStartDate}
@@ -233,12 +292,17 @@ import { FormControl } from "@/components/ui/form",;
 import { cn } from "@/lib/utils",;
               selected={startDate}
               onSelect={setStartDate}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface DateFieldsProps {;
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
   setEndDate: (date: Date | undefined) => void;
+<<<<<<< HEAD
+}
+
+=======
 }
 <<<<<<< HEAD
 =======
@@ -260,12 +324,16 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;"
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
         <Popover>;
           <PopoverTrigger asChild>;
             <FormControl>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -302,12 +370,21 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 )}
 
               </Button>;
             </FormControl>;
           </PopoverTrigger>;"
           <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
+
+            <Calendar"
+
+              mode="single"
+              selected={startDate}
+              onSelect={setStartDate}
+=======
 <<<<<<< HEAD
 
             <Calendar"
@@ -324,6 +401,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 date > new Date();
               }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               disabled={(date) =>;
                 date > new Date();
@@ -331,10 +409,13 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               initialFocus
 
             />
@@ -348,6 +429,9 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
             <FormControl>
               <Button"
                 variant={"outline"}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
                 className={cn(
@@ -365,18 +449,37 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   !endDate && "text-muted-foreground"
 
                 )}
               >
                 {endDate ? ("
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   format(endDate, "PPP")
                 ) : (
                   <span>Pick a date</span>
                 )}
               </Button>
             </FormControl>
+<<<<<<< HEAD
+          </PopoverTrigger>"
+          <PopoverContent className="w-auto p-0" align="start">
+              disabled={(date) => date > new Date()}"
+                {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;"
+          <PopoverContent className="w-auto p-0" align="start">;
+            <Calendar"
+              mode="single"
+              selected={endDate}
+              onSelect={setEndDate}
+
+=======
 <<<<<<< HEAD
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0" align="start">
@@ -413,11 +516,14 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
               disabled={(date) =>;
                 date > new Date();
               }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               initialFocus;
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
+=======
 ;
       <div>;
         <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;
@@ -483,6 +589,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
   );
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           </PopoverContent>;
         </Popover>;
@@ -528,8 +635,14 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
             <Calendar;
               mode="single";
 =======
+<<<<<<< HEAD
+}
+            <Calendar;
+              mode="single";
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> merged-prs-20250907-203621
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

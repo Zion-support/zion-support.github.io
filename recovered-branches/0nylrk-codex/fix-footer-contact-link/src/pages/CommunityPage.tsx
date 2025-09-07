@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
 
@@ -12,6 +15,8 @@ import { AppLayout } from "@/layout/AppLayout",
 import ForumCategories from "@/components/community/ForumCategories",
 import PostCard from "@/components/community/PostCard",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 import {useState} from "react";
@@ -142,6 +147,7 @@ const featuredPosts: ForumPost[] = [;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     tags: ["machine-learning", "fine-tuning", "gpt"];
 
     createdAt: "2025-04-01T12:00:00Z",;
@@ -172,6 +178,8 @@ const featuredPosts: ForumPost[] = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock data for featured posts
@@ -188,6 +196,7 @@ const featuredPosts: ForumPost[] = [
     tags: ["machine-learning", "fine-tuning", "gpt"],
     createdAt: "2025-04-01T12:00:00Z",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     updatedAt: "2025-04-01T12:00:00Z",
     upvotes: 48,
     downvotes: 2,
@@ -212,14 +221,63 @@ const featuredPosts: ForumPost[] = [
     isPinned: true,
     isFeatured: true
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
 ],
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-// Mock data for recent posts
-const recentPosts: ForumPost[] = [
-  {
-    id: "3",
+  }
+];
+
+// Mock data for recent posts;
+const recentPosts: ForumPost[] = [;
+  {;
+    id: "3",;
     title: "Looking for feedback on my automated testing approach",
+<<<<<<< HEAD
+    content: "I've set up a CI/CD pipeline with the following testing strategy...",;
+    authorId: "user3",;
+    authorName: "Michael Wong",;
+    categoryId: "project-help",;
+    tags: ["testing", "automation", "ci-cd"];
+    createdAt: "2025-04-10T14:30:00Z",;
+    updatedAt: "2025-04-10T14:30:00Z",;
+    upvotes: 5,;
+    downvotes: 0,;
+    replyCount: 2;
+  };
+  {;
+    id: "4",;
+    title: "Feature request: Team collaboration tools",
+    content: "It would be really helpful if we could have built-in tools for team collaboration...",;
+    authorId: "user4",;
+    authorName: "Emma Davis",;
+    categoryId: "feedback",;
+    tags: ["feature-request", "teams", "collaboration"];
+    createdAt: "2025-04-09T18:45:00Z",;
+    updatedAt: "2025-04-09T18:45:00Z",;
+    upvotes: 12,;
+    downvotes: 1,;
+    replyCount: 3;
+  };
+  {;
+    id: "5",;
+    title: "How to handle client scope creep?",
+    content: "I'm working on a project where the client keeps adding requirements...",;
+    authorId: "user5",;
+    authorName: "David Lin",;
+    categoryId: "project-help",;
+    tags: ["client-management", "scope", "projects"];
+    createdAt: "2025-04-08T10:20:00Z",;
+    updatedAt: "2025-04-08T10:20:00Z",;
+    upvotes: 24,;
+    downvotes: 0,;
+    replyCount: 7,;
+    isAnswered: true;
+  }
+];
+=======
     content: "I've set up a CI/CD pipeline with the following testing strategy...",
     authorId: "user3",
     authorName: "Michael Wong",
@@ -261,6 +319,7 @@ const recentPosts: ForumPost[] = [
     isAnswered: true
   }
 ],
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default function CommunityPage() {;
   const { user } = useAuth();
@@ -271,6 +330,16 @@ export default function CommunityPage() {
 export default function CommunityPage() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
+<<<<<<< HEAD
+  return (
+    <AppLayout>;
+
+export default function CommunityPage() {
+  const { user } = useAuth(),
+
+  const [activeTab, setActiveTab] = useState("categories"),
+
+=======
   return (
     <AppLayout>;
 export default function CommunityPage() {
@@ -353,6 +422,7 @@ export default function CommunityPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
@@ -389,6 +459,8 @@ export default function CommunityPage() {
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
 
+<<<<<<< HEAD
+=======
 
 
               ))}
@@ -445,6 +517,7 @@ export default function CommunityPage() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -549,6 +622,11 @@ export default function CommunityPage() { return null; }
         title="Community Forum | Zion AI Marketplace";"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals.";"
         keywords="community, forum, discussion, AI marketplace, questions, answers";
+<<<<<<< HEAD
+
+"
+      <div className="container py-8">;"
+=======
 <<<<<<< HEAD
       />;
 
@@ -673,6 +751,7 @@ export default function CommunityPage() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="container py-8">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;"
             <h1 className="text-3xl font-bold">Community Forum</h1>;"
@@ -681,18 +760,24 @@ export default function CommunityPage() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           ;
           <Button asChild>;
             <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           ;
           <Button asChild>;"
             <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
           <Button asChild>;"
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -820,10 +905,14 @@ function CommunityPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Create New Post;
             </Link>;
           </Button>;
         </div>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         ;
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
@@ -833,12 +922,15 @@ function CommunityPage() {
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
             <TabsTrigger value="categories">Categories</TabsTrigger>;"
             <TabsTrigger value="featured">Featured</TabsTrigger>;"
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
 "
+<<<<<<< HEAD
+=======
 =======
         <Tabs default_value="categories" value={active_tab} onValueChange={setActiveTab} className="mb - 8">;
           <TabsList className="mb - 6">;
@@ -853,10 +945,14 @@ function CommunityPage() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <TabsContent value="categories">;
             <ForumCategories />;
           </TabsContent>;"
           <TabsContent value="featured">;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -890,6 +986,7 @@ function CommunityPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;
           </TabsContent>;
         </Tabs>;
@@ -957,6 +1054,12 @@ export default function CommunityPage() {;
           <TabsContent value="recent">;"
 
 <<<<<<< HEAD
+}
+;
+    </AppLayout>);
+}
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -990,3 +1093,4 @@ export default function CommunityPage() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

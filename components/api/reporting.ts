@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+
+
+import { authenticateRequest  } from '@/utils/auth';'
+import { readJsonFile, updateJsonFile } from '@/utils/fileDb';'
+
+interface ReportingData {
+  }
+  "byTenant": Record<string, {
+    }
+    "funnel": { "stage": string, "count": number
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
@@ -45,6 +61,10 @@ interface ReportingData {
     {
   byTenant: Record<string, {}
     funnel: { stage: string, count: number,}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }[];
     "timeToHireDays": number;
     costPerHireUsd?: number;
@@ -55,8 +75,20 @@ interface ReportingData {
 const FILE = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
+<<<<<<< HEAD
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
+=======
+<<<<<<< HEAD
+      }
+      "funnel": { "stage": string; "count": number
+}[];
+      "timeToHireDays": number;
+=======
+      funnel: { stage: string; count: number }[];
+      timeToHireDays: number;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       costPerHireUsd?: number;
       "updated_at": string;
     }
@@ -64,6 +96,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     timeToHireDays: number;
     costPerHireUsd?: number;
     updatedAt: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }>
+}
+  >;
+=======
+>>>>>>> origin/resolved-merge-conflicts
     updatedAt: string
   }>
 =======
@@ -93,8 +133,44 @@ const FILE = null;
 =======
 <<<<<<< HEAD
   const method = (req.method || 'GET').toUpperCase(),;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const "FALLBACK": ReportingData = { "byTenant": ,;
+};
+}
+
+export default function handler() {
+
+ ;
+  }
+  const method = (req.method || 'GET').toUpperCase(),;'
+
+const method = (req.method |'GET').toUpperCase();'
+ ;
+  const auth = authenticateRequest(req, method === 'GET');'
+  if (!auth.ok) return res.status(401).json({ "error": auth.error
+});
+
+const tenantId = auth.tenantId!;
+  if (method = == 'GET') {'
+   ;
+  }
+  const data = readJsonFile<ReportingData>(FILE, FALLBACK);
+
+const entry = data.byTenant[tenantId] || {
+      }
+      "funnel": [],
+      "timeToHireDays": 0,
+      "updatedAt": new Date().toISOString()
+=======
+>>>>>>> origin/resolved-merge-conflicts
   byTenant: Record<string, {
   >;  by_tenant: Record < string, {
     funnel: { stage: string, count: number }[];
@@ -232,10 +308,28 @@ const entry = data.byTenant[tenantId] || {
       funnel: [],
       timeToHireDays: 0,}
       updatedAt: new Date().toISOString(),}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     };
     return res.status(200).json(entry);
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (method = == 'POST') {'
+   ;
+  }
+  const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+
+const updated = updateJsonFile<ReportingData>(;
+      FILE,
+      (curr) => {
+        }
+=======
+>>>>>>> origin/resolved-merge-conflicts
   if (method = == 'POST') {}
    ;}
   const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
@@ -260,6 +354,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         next[tenantId] = {
       FILE;
       curr => {}
@@ -338,6 +436,16 @@ return res.status(405).json({ "error": 'Method not allowed',;'
       return { byTenant: next}
     }, FALLBACK),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      FALLBACK;
+    );
+    return res && res.status(200).json(updated && updated.byTenant[tenantId]);
+  }
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
     return res.status(200).json(updated.byTenant[tenantId])
   }
 
@@ -345,6 +453,10 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 }
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return res.status(405).json({ error: 'Method not allowed',}
 });
     return res.status(200).json(updated.byTenant[tenantId])
@@ -361,6 +473,11 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 <<<<<<< HEAD
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
@@ -406,6 +523,10 @@ if ( {) {
     return res.status (200).json (entry);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 return res.status(405).json({ error: 'Method not allowed',}
 });
 }

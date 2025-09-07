@@ -6,6 +6,8 @@ import { useSidebar } from &quot;./sidebar-context&quot;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -18,6 +20,7 @@ import { useSidebar } from &quot;./sidebar-context&quot;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { PanelLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -43,6 +46,9 @@ export const SidebarTrigger = React.forwardRef<
   React.ComponentProps<typeof Button>
 >((props, ref) => {
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
   const { toggleSidebar } = useSidebar()
 <<<<<<< HEAD
@@ -50,6 +56,7 @@ export const SidebarTrigger = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from &quot;react & quot;
 import { PanelLeft } from &quot;lucide-react & quot;
 import { Button } from &quot;@/components / ui / button & quot;
@@ -73,10 +80,14 @@ export const SidebarTrigger = React.forward_ref<;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >((props, ref) => {
   const { toggle_sidebar } = use_sidebar ();
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Button;
       ref={ref}
       data - sidebar=&quot;trigger & quot;
@@ -88,7 +99,11 @@ export const SidebarTrigger = React.forward_ref<;
         toggle_sidebar ();
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Button
 =======
@@ -102,16 +117,24 @@ export const SidebarTrigger = React.forward_ref<;
       size=&quot;icon&quot;
       className={cn(&quot;h-7 w-7&quot;, props.className)}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ref={ref}
 
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
+<<<<<<< HEAD
+
+      className={cn("h-7 w-7", props.className)}
+=======
 <<<<<<< HEAD
 
       className={cn("h-7 w-7", props.className)}
@@ -187,3 +210,4 @@ SidebarTrigger.displayName = "SidebarTrigger"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

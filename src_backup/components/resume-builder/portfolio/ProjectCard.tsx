@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Card, CardContent, CardFooter  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PortfolioProject  } from '@/types/resume';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import { useState  } from 'react;
+import { Card, CardContent, CardFooter  } from @/components/ui/card';
+import { Button  } from '@/components/ui/button;
+import { Badge  } from @/components/ui/badge';
+import Image from 'next/image;
+import { PortfolioProject  } from @/types/resume';
+>>>>>>> origin/resolved-merge-conflicts
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;onDelete: (projectId: string) => void; import Image from 'next/image';
 interface ProjectCardProps  {project: PortfolioProject;
@@ -33,10 +48,26 @@ interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+<<<<<<< HEAD
+=======
+import { useState } from 'react;
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from @/components/ui/button';'
+import { Badge } from @/components/ui/badge;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { useState } from 'react';'
 import { Card, CardContent, CardFooter } from '@/components/ui/card';'
 import { Button } from '@/components/ui/button';'
 import { Badge } from '@/components/ui/badge';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 }
 
@@ -44,6 +75,12 @@ import { Badge } from '@/components/ui/badge';
 
 interface ProjectCardProps {;
   project: PortfolioProject;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onDelete: (projectId: string) => void;
 }interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
@@ -139,12 +176,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             loading='lazy'
           />
 
+<<<<<<< HEAD
+=======
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void;import Image from next/image';'
+import { PortfolioProject } from @/types/resume;
+interface ProjectCardProps {
+  project: PortfolioProject,
+  onEdit: (project: PortfolioProject,) => void,
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   onEdit: (project: PortfolioProject) => void;'
   onDelete: (projectId: string) => void;import Image from 'next/image';'
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {;
   project: PortfolioProject,;
   onEdit: (project: PortfolioProject,) => void,;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   onDelete: (projectId: string,) => void;
 }
 
@@ -296,12 +351,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         </div>
       </CardContent>
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className='flex gap-2'>
           {project.github_url && (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </div>
       </CardContent>
@@ -331,6 +401,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </Link>
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           {project.demo_url && (
             <a
             alt={project.title}className='object-cover';
@@ -416,6 +495,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 <div className='flex gap-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </div>;
 '
@@ -439,14 +524,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             variant='ghost'
 
+<<<<<<< HEAD
             size='icon'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            size='icon'
+            onClick={() => onEdit(project)}'
+            aria-label='Edit project';
+          >;'
+            <Edit className='h-4 w-4' />;
+          <Button'
+            variant='ghost''
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            size=icon'
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
 <div className='flex gap-2'>;
           <Button;
             variant='ghost';
             size='icon';
             onClick={() => onEdit(project)}
+<<<<<<< HEAD
             onClick={() => onEdit(project)}'
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            size='icon'
+            onClick={() => onEdit(project)}'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
             aria-label='Edit project';
           >;'
             <Edit className='h-4 w-4' />;
@@ -474,6 +587,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 Are you sure you want to delete this project? This action cannot
               be undone.
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -506,12 +629,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
             <AlertDialogDescription>;
+<<<<<<< HEAD
             aria-label='Delete project';
           >;'
+=======
+            aria-label='Delete project;
+          >;
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            aria-label='Delete project';
+          >;'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
             <Trash2 className='h-4 w-4' />;
           </Button>;
         </div>;
-      </CardFooter>;<AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
+      </CardFooter>;
+
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
@@ -578,7 +717,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Project</AlertDialogTitle>;<AlertDialogDescription>Are you sure you want to delete this project? This action cannot;
+            <AlertDialogTitle > Delete Project</AlertDialogTitle>;
+
+            <AlertDialogDescription>;
+              Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
@@ -590,6 +732,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               onClick={handleDelete}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               className='bg-destructive text-destructive-foreground';
             >;
               Delete;
@@ -598,6 +749,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AlertDialogContent>;
       </AlertDialog>;
     </Card>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </AlertDialogDescription>
           </AlertDialogHeader>
@@ -637,6 +794,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     </Card>)})}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+    </Card>)})}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     </Card>);

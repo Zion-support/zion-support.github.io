@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { readPosts, writePosts } from '@/utils/data/blogStore';
+import { requireAdmin } from '@/utils/api/auth';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
@@ -31,9 +40,25 @@ if (typeof id !== 'string')
 >>>>>>> origin/chore/fix-lint-and-merge
     if (!requireAdmin(req, res));
   return;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const posts = readPosts();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (typeof id !== 'string') {
+    return res.status(400).json({ error: 'Invalid id' });
+  }
+
+  if (req.method === 'PUT') {
+    if (!requireAdmin(req, res)) {
+      return;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -158,6 +183,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       posts[idx] = updated;
       writePosts(posts);
       return res.status(200).json(updated);
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +199,15 @@ return res && res.status(405).end();
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (idx < 0) {
+      return res.status(404).json({ error: 'Not found' });
+    }
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -289,10 +327,24 @@ if ( {) {
     const posts = readPosts();
 
     if (idx < 0) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     const updated = { ...posts[idx], ...req.body, id };
     posts[idx] = updated;
     writePosts(posts);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return res.status(200).json(updated);
+  }
+
+  return res.status(405).end();
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -338,3 +390,7 @@ function handler() {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

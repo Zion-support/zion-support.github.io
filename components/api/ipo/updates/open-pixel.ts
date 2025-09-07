@@ -1,7 +1,19 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  const id = String(req.query.id || '');
+  const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==', 'base64');
+  res.setHeader('Content-Type', 'image/png');
+  res.status(200).send(pixel);
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   const id = String($2);
   if (id) {
     const updates = readJsonFile($2);
@@ -170,3 +182,7 @@ res.status (200).send (pixel);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,5 +1,14 @@
 <<<<<<< HEAD
 applications, ;
+    isLoading, ;
+    error, ;
+    updateApplicationStatus, ;
+
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
+=======
+<<<<<<< HEAD
+applications, ;
 =======
 
 
@@ -78,6 +87,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
 interface JobApplicationsTableProps {
@@ -95,6 +105,30 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     isLoading
     error
     updateApplicationStatus
+<<<<<<< HEAD
+  const { 
+
+    applications, 
+    isLoading, 
+    error, 
+    updateApplicationStatus, ;
+
+    markApplicationAsViewed;
+
+  } = useJobApplications(jobId);
+  const [processingId, setProcessingId] = useState<string | null>(null);
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+  const [showScoreDialog, setShowScoreDialog] = useState(false);
+
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
+    setProcessingId(applicationId),;
+    try {;
+
+      const application = applications && applications.find(app => app && app.id === applicationId);
+      if (application && !application && application.viewed_at) {;
+        await markApplicationAsViewed(applicationId);
+
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -185,10 +219,13 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
     } finally {;
       setProcessingId(null);
     }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -242,6 +279,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
     }
   }
   };
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -273,6 +311,8 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   };
 
   };
@@ -282,11 +322,20 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleViewScore = (application: JobApplication) => {;
     setSelectedApplication(application),;
     setShowScoreDialog(true);
   };
 
+<<<<<<< HEAD
+  const handleViewApplication = async (applicationId: string) => {;
+    await markApplicationAsViewed(applicationId);
+  };
+
+  const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+
+=======
 <<<<<<< HEAD
   if (isLoading) {
     return <LoadingState />
@@ -303,6 +352,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   };
   if (isLoading) {;
     return <LoadingState />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   if (error) {
     return <ErrorState error={error} />
@@ -310,6 +360,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   if (applications.length === 0) {
     return <EmptyState />
   }
+<<<<<<< HEAD
+
+  }
+
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+
+  if (applications && applications.length === 0) {;
+    return <EmptyState />;
+=======
 =======
   const handleViewApplication = async (applicationId: string) => {;
     await markApplicationAsViewed(applicationId);
@@ -344,12 +405,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   if (applications && applications.length === 0) {;
     return <EmptyState />;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   if (isLoading) {;
     return <LoadingState />;
 
   }
 
+<<<<<<< HEAD
+=======
 =======
   }
   }
@@ -373,6 +437,7 @@ export /**
 function JobApplicationsTable() {
   const {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     applications,
     is_loading,
     error,
@@ -385,6 +450,9 @@ function JobApplicationsTable() {
   const [selected_application, setSelectedApplication] = useState < JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState (false);
 ;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -609,21 +677,84 @@ return (<> <ApplicationsTable applications= {
   return (
     <>
       <ApplicationsTable
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         applications={applications}
-        processingId={processingId}
+        processing_id={processing_id}
         onViewApplication={handleViewApplication}
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
-      />
+
+      />;
+
       <ScoreDialog
+
+      <ScoreDialog;
+
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
+<<<<<<< HEAD
+        application={selected_application}
+        onScoreUpdated={handleScoreUpdated}
+
+/>;
+    </>);
+}
+      />;
+    </>;
+  );
+
+    </>);
+  ),;}
+
+  ApplicationsTable;
+EmptyState;
+ErrorState;
+LoadingState;
+
+  applications;
+isLoading;
+error;
+updateApplicationStatus;
+markApplicationAsViewed;
+
+}= useJobApplications (jobId);
+const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
+
+return (<> <ApplicationsTable applications= {
+}processingId= {
+  processingId;
+}onViewApplication= {
+  handleViewApplication;
+}onStatusChange= {
+  handleStatusChange;
+}onViewScore= {
+  handleViewScore;
+}/> <ScoreDialog open= {
+
+}/> </>) 
+
+  return (
+    <>
+
+        applications={applications}
+
+        processingId={processingId}
+      />
+
+        open={showScoreDialog}
+        onOpenChange={setShowScoreDialog}
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         application={selectedApplication}
         onScoreUpdated={handleScoreUpdated}
       />
     </>
   )
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -635,3 +766,4 @@ return (<> <ApplicationsTable applications= {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

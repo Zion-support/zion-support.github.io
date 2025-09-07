@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 return (<div className='flex items-center justify-end gap-2'>;import Link from 'next/link';
@@ -75,6 +81,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='text-red-600'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <div className='flex items-center justify-end gap-2'>;
 
@@ -150,6 +162,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;
             Shortlist;
           </DropdownMenuItem>;
@@ -191,12 +209,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "interview")}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "hired")}>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            onClick={() => onStatusChange(application.id, "hired)}>;
+>>>>>>> origin/resolved-merge-conflicts
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
@@ -221,12 +255,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             onClick = {() => onStatusChange(application && application.id, "hired")}
+=======
+            onClick = {() => onStatusChange(application && application.id, "hired)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             onClick={() => onStatusChange(application && application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
           >;
@@ -279,20 +329,46 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
+<<<<<<< HEAD
+=======
+            className="text - red - 600;
+>>>>>>> origin/resolved-merge-conflicts
 
 
           >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
 
+<<<<<<< HEAD
             className="text - red - 600";>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            className=text - red - 600";>;
+>>>>>>> origin/resolved-merge-conflicts
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
@@ -313,7 +389,18 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
       </Button>
     </div>
   );
+<<<<<<< HEAD
     </div>)}<Button variant='default' size='sm' asChild>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    </div>)}<Button variant=default size='sm' asChild>;
+>>>>>>> origin/resolved-merge-conflicts
         <Link href={`/messages?talentId=${application.talent_id}`}>;
           Contact;
         </Link>;
@@ -321,3 +408,10 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
     </div>;
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

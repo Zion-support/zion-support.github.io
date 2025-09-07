@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+name: \"\";"
+    entityType: \"\";"
+    pocName: \"\";"
+    pocEmail: \"\";"
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -40,6 +49,10 @@ export default function Partners() {
     pocName: \'\';"
     pocEmail: \'\';"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     useCaseType: \"Education Partnership
 });
 
@@ -118,6 +131,11 @@ export default function Partners() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 const [result, setResult] = useState<any />(null),
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
   async function submit(e: React.FormEvent) {}
     e.preventDefault();
     setLoading(true);
@@ -133,9 +151,75 @@ class ErrorBoundary extends React.Component {}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
+<<<<<<< HEAD
+=======
+      <Head>;
+        <title />Zion Partners</title>;
+      </Head>;
+      <div className='max-w-4xl mx-auto py-12 px-4'>;'
+        <h1 className='text-3xl font-semibold mb-2'>Integrate Zion</h1>;'
+        <p className='text-gray-600 mb-8'>;'
+          Trusted institutions can embed Zion into platforms, programs, or;
+          marketplaces.;
+        </p>;
+        <div className='grid "md":grid-cols-2 gap-8'>;'
+          <form onSubmit={submit} className='bg-white p-6 rounded-lg shadow'>;'
+            <h2 className='text-xl font-medium mb-4'>Partner Registration</h2>;'
+            <label className='block text-sm mb-2'>Name</label>;'
+            <input;
+              className='w-full border rounded px-3 py-2 mb-4';'
+              value={form && form.name}
+              onChange={e => setForm({ ...form, "name": e && e.target.value }
+}
+              required;
+            />;
+            <label className='block text-sm mb-2'>Entity Type</label>;'
+            <input;
+              className='w-full border rounded px-3 py-2 mb-4';'
+              value={form && form.entityType}
+              onChange={e => setForm({ ...form, "entityType": e && e.target.value }
+}
+              required;
+            />;
+            <label className='block text-sm mb-2'>Point of Contact</label>;'
+            <div className='grid grid-cols-2 gap-3 mb-4'>;'
+              <input;
+                placeholder='Name';'
+                className='border rounded px-3 py-2';'
+                value={form && form.pocName}
+                onChange={e => setForm({ ...form, "pocName": e && e.target.value }
+}
+                required;
+              />;
+              <input;
+                placeholder='Email';'
+                type='email';'
+                className='border rounded px-3 py-2';'
+                value={form && form.pocEmail}
+                onChange={e => setForm({ ...form, "pocEmail": e && e.target.value }
+}
+                required;
+              />;
+            </div>;
+            <label className='block text-sm mb-2'>Use Case</label>;'
+
+            <select,
+className='w-full border rounded px-3 py-2 mb-6''
+
+            <select;
+className='w-full border rounded px-3 py-2 mb-6'
+
+<<<<<<< HEAD
+              value={form.useCaseType}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -277,6 +361,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     setResult(data);
 
@@ -534,6 +622,36 @@ className='w-full border rounded px-3 py-2 mb-6'
             >;
 <<<<<<< HEAD
     setResult(data)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (<div className="min-h-screen bg-gray-50 text-gray-900">;"
+      <Head>;
+        <title>Zion Partners</title>;
+      </Head>;
+      <div className="max-w-4xl mx-auto py-12 px-4">;"
+        <h1 className="text-3xl font-semibold mb-2">Integrate Zion</h1>;"
+        <p className="text-gray-600 mb-8">Trusted institutions can embed Zion into platforms, programs, or marketplaces.</p>;"
+        <div className="grid "md":grid-cols-2 gap-8">;"
+          <form onSubmit={submit} className="bg-white p-6 rounded-lg shadow">;"
+            <h2 className="text-xl font-medium mb-4">Partner Registration</h2>;"
+            <label className="block text-sm mb-2" htmlFor="input-Name">Name</label>;"
+            <input className="w-full border rounded px-3 py-2 mb-4" value={form.name} onChange={(e) => setForm({ ...form, "name": e.target.value },"
+} required />;
+            <label className="block text-sm mb-2" htmlFor="input-Entity Type">Entity Type</label>;"
+            <input className="w-full border rounded px-3 py-2 mb-4" value={form.entityType} onChange={(e) => setForm({ ...form, "entityType": e.target.value },"
+} required />;
+            <label className="block text-sm mb-2" htmlFor="input-Point of Contact">Point of Contact</label>;"
+            <div className="grid grid-cols-2 gap-3 mb-4">;"
+              <input placeholder="Name" className="border rounded px-3 py-2" value={form.pocName} onChange={(e) => setForm({ ...form, "pocName": e.target.value },"
+} required />;
+              <input placeholder="Email" type="email" className="border rounded px-3 py-2" value={form.pocEmail} onChange={(e) => setForm({ ...form, "pocEmail": e.target.value },"
+} required />;
+            </div>;
+            <label className="block text-sm mb-2" htmlFor="input-Use Case">Use Case</label>;"
+            <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...form, "useCaseType": e.target.value },"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
     setResult(data)}"
@@ -563,6 +681,10 @@ className='w-full border rounded px-3 py-2 mb-6'
             <label className=\"block text-sm mb-2\" htmlFor=\"input-Use Case\"    />Use Case</label>;"
             <select className=\"w-full border rounded px-3 py-2 mb-6\" value={form.useCaseType} onChange={(e) =    /> setForm({ ...form, useCaseType: e.target.value }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }>;
               <option    />Education Partnership</option>;
               <option    />Workforce Development</option>;
@@ -571,6 +693,23 @@ className='w-full border rounded px-3 py-2 mb-6'
             </select>;
 <button;
               disabled={loading}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              className='bg-black text-white px-4 py-2 rounded "disabled": opacity-50'>'
+
+              {loading ? 'Submitting...' : 'Register,'
+}
+
+            </button>
+          </form>
+          <div className='bg-white p-6 rounded-lg shadow'>'
+            <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>'
+            <ul className='list-disc ml-6 space-y-1 text-sm'>'
+              <li>POST /talents</li>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 
 >>>>>>> merged-prs-20250907-203621
@@ -626,10 +765,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <li>GET /jobs</li>
               <li>GET /certifications</li>
               <li>POST /verify-student</li>
               <li>POST /redeem-grant</li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                href='/api/partners/sdk?type=rest'>;
+                Download REST SDK;
+              </a>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             </ul>
             <div className="mt-6">
@@ -674,6 +825,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/api/partners/sdk?type=rest'>;
                 Download REST SDK;
               </a>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <a'
                 className='text-blue-600 underline'"
             <div className="mt-6 text-sm text-gray-600">
@@ -683,6 +839,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
             </ul>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='mt-6'>'
+              <a,
+className='text-blue-600 underline mr-4''
+                href='/api/partners/sdk?type=rest'>;'
+                Download REST SDK;
+              </a>;
+              <a,
+className='text-blue-600 underline''
+
+                href='/api/partners/sdk?type=graphql''
+              >
+                Download GraphQL SDK
+              </a>
+            </div>
+            <div className='mt-6 text-sm text-gray-600'>'
+              <p>"Badges": </p>
+              <div className='flex gap-2 mt-2'>'
+                <span className='inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded'>'
+                  Verified Partner
+                </span>
+                <span className='inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded'>'
+                  Government API Active
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
               <a
                 className='text-blue-600 underline'
@@ -747,12 +930,37 @@ className='text-blue-600 underline'
               <div className='flex gap-2 mt-2'    />
                 <span className='inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded'    />
                   Verified Partner;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </span>
                 <span className='inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded'    />
                   Government API Active;
                 </span>
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              </div>
+            </button>;
+          </form>;
+          <div className='bg-white p-6 rounded-lg shadow'>;
+            <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>;
+            <ul className='list-disc ml-6 space-y-1 text-sm'>;
+              <li>POST /talents</li>;
+              <li>GET /jobs</li>;
+              <li>GET /certifications</li>;
+              <li>POST /verify-student</li>;
+              <li>POST /redeem-grant</li>;
+            </ul>;
+<div className='mt-6'>;
+              <a;
+                className='text-blue-600 underline mr-4';
+                href='/api/partners/sdk?type=rest'>;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
@@ -794,6 +1002,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 href='/api / partners / sdk?type = rest;
               >;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 Download REST SDK;
               </a>;
 
@@ -801,6 +1013,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 Download GraphQL SDK;
               </a>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </div>;
+            <div className='mt-6 text-sm text-gray-600'>;
+              <p>Badges:</p>;
+              <div className='flex gap-2 mt-2'>;
+                <span className='inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded'>;
+                  Verified Partner;
+                </span>;
+                <span className='inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded'>;
+                  Government API Active;
+                </span>;
+              </div>;
+        {result && (<a;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
                 </span>              </div>            </div>;
             <div className=mt - 6 text - sm text-gray-600>;
@@ -828,6 +1057,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <a
               href={result && result.dashboardUrl}
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
@@ -838,6 +1071,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="mt-8 bg-white p-6 rounded-lg shadow">;
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>;
             <p className="text-sm">Your API Key:</p>;
@@ -846,10 +1085,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })}</div>;
     </div>;
   )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
         )}
   )}
             <a;
               href={result && result.dashboardUrl}'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
               Go to Dashboard;"
             </a>          </div>          <div className="mt-8 bg-white p-6 rounded-lg shadow">;"
@@ -861,6 +1109,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>"
             <p className="text-sm">Your API Key:</p>"
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -1064,6 +1318,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   );
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 
@@ -1071,11 +1329,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className=text-lg font-medium mb-2>
               Registration Successful
             </h3>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <p className='text-sm'>Your API "Key":</p>'
+            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'>'
+
+              {result.apiKe
+}
+            </pre>;
+            <a;
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <p className='text-sm'>Your API Key:</p>
             <pre className=bg-gray-100 p-3 rounded text-xs overflow-auto>
               {result.apiKey}
             </pre>
             <a
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               href={result.dashboardUrl}
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'    />
 
@@ -1105,6 +1379,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>
 );
 }
@@ -1153,3 +1437,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

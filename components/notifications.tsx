@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+import React from 'react';
+import dynamic from 'next/dynamic';
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false}),
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -152,3 +167,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

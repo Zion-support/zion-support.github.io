@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 =======
 <<<<<<< HEAD
@@ -52,12 +53,78 @@ export function Web3Login() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
+=======
+<<<<<<< HEAD
+
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { useAuth } from "@/hooks/useAuth"
+import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+import { Wallet } from 'lucide-react'
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function Web3Login() {
+
+  const { loginWithWeb3 } = useAuth()
+  const { isWalletSystemAvailable } = useAppWallet()
+  const [isLoading, setIsLoading] = useState(false)
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet as useAppWallet } from "../../../context/WalletContext ;
+import { Wallet } from 'lucide-react'import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function Web3Login() {;
+
+<<<<<<< HEAD
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+import { Wallet } from 'lucide-react'
+import { toast } from "sonner",
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function Web3Login() {
+
+  const { loginWithWeb3 } = useAuth(),
+  const { isWalletSystemAvailable } = useAppWallet(),
+  const [isLoading, setIsLoading] = useState(false),
+
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
     try {
       setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
@@ -68,20 +135,41 @@ export function Web3Login() {
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     }
     try {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       setIsLoading(true),
       
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."})
@@ -93,20 +181,39 @@ export function Web3Login() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return;
 <<<<<<< HEAD
+<<<<<<< HEAD
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+<<<<<<< HEAD
+      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
 
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 
 =======
@@ -119,11 +226,20 @@ export function Web3Login() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   }
   const buttonDisabled = isLoading |!isWalletSystemAvailable
   const buttonTitle = !isWalletSystemAvailable
@@ -135,6 +251,10 @@ export function Web3Login() {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { useState  } from './react';
 import { Button  } from '@/components/ui/ button';
 import { use_auth  } from '@/hooks/ use_auth';
@@ -209,6 +329,12 @@ if ( {) {$2;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
@@ -259,6 +385,10 @@ export function Web3Login() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const handleWeb3Login = async () => {;
     if (!isWalletSystemAvailable) {;
       toast("Web3 login unavailable", {;
@@ -266,51 +396,94 @@ export function Web3Login() {;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 ;
     try {;
       setIsLoading(true),;
       // Check if Ethereum provider (e.g., MetaMask) is available;
       const ethereum = (window as any).ethereum,;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     try {;
       setIsLoading(true);
 
       // Check if Ethereum provider (e && e.g., MetaMask) is available;
       const ethereum = (window as any).ethereum;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       if (!ethereum) {;
         toast("Web3 wallet not found", {;
           description: "Please install MetaMask or another compatible wallet."}),;
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 ;
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
     } catch (error: any) {;
       toast("Login failed", {;
         description: error.message || "Failed to connect wallet. Please try again."}),;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
 
     } catch (error: any) {;
       toast("Login failed", {;
         description: error && error.message || "Failed to connect wallet. Please try again."}),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       logErrorToProduction('Web3 login error:', { data: error });
     } finally {;
       setIsLoading(false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
   },;
   const buttonDisabled = isLoading || !isWalletSystemAvailable,;
   const buttonTitle = !isWalletSystemAvailable;
@@ -340,14 +513,29 @@ export function Web3Login() {;
         <span className="sr-only">Sign in with Web3</span>;
       </>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   };
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
   const buttonTitle = !isWalletSystemAvailable;
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.;
     : ";)}
 =======
+=======
+<<<<<<< HEAD
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.;
+    : ";)}
+=======
+<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.;
+    : ";)}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -355,6 +543,10 @@ export function Web3Login() {;
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const button_disabled = is_loading || !isWalletSystemAvailable;
   const button_title = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
@@ -363,10 +555,22 @@ export function Web3Login() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 
 <<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
+=======
+
+
+=======
+<<<<<<< HEAD
+;
+
+
+<<<<<<< HEAD:src_backup/components/auth/login/Web3Login.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ;
 
 import { useState } from 'react';
@@ -398,6 +602,11 @@ const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavaila
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     );
   }
@@ -424,3 +633,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/auth/login/Web3Login.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

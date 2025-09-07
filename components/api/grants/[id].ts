@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+import { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
+
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -54,10 +70,77 @@ function ensureDir() {
     fs.mkdirSync(GRANTS_DIR, { recursive: true})
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
 
 function grantPath(id: string) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+  const file = grantPath(id);
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
+}
+
+function writeGrant(record: GrantApplication) {
+  ensureDir();
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id: string };
+  if (!id) {
+    res.status(400).json({ error: 'Missing id' });
+    return;
+  }
+
+  if (req.method === 'GET') {
+    const g = readGrant(id);
+    if (!g) {
+      res.status(404).json({ error: 'Not found' });
+      return;
+    }
+    res.status(200).json({ record: g });
+    return;
+  }
+
+  if (req.method === 'PUT') {
+    const existing = readGrant(id);
+    if (!existing) {
+      res.status(404).json({ error: 'Not found' });
+      return;
+    }
+
+    const payload = req.body as UpdateGrantPayload;
+    const next: GrantApplication = {
+      ...existing,
+      ...payload,
+      status: payload.submit ? 'Submitted' : existing.status,
+      updatedAt: new Date().toISOString(),
+    } as GrantApplication;
+    writeGrant(next);
+    res.status(200).json({ record: next });
+    return;
+  }
+
+  res.setHeader('Allow', 'GET, PUT');
+  res.status(405).end('Method Not Allowed');
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   return path.join(GRANTS_DIR, `${id}.json`)
 }
 
@@ -836,3 +919,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

@@ -249,6 +249,15 @@ href="/contact""
             </Link>
           </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           {/* Mobile Menu Button */}
           <div className=""lg":hidden">"
             <button,
@@ -381,6 +390,35 @@ return (;
   ];
 return (;
     <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${`      }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            
+          <div className="lg:hidden">"
+            <button;
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+</button>`;
+    <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled;"
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50
+        : 'bg-transparent
+      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
+  const isActive = (path: string) => location && location.pathname === path;
+</headerclassName>`;
+    <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       is_scrolled ;
         ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;'
         : 'bg - transparent';'
@@ -536,6 +574,21 @@ key={item.name}
             <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
 </svg>
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</path>
+    </header>`;
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${"
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent`;
+    }`}>
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </svg>
           </button>
         </div>
@@ -716,6 +769,33 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ;`        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' ;'
         : 'bg-transparent';'
 }`}>;`      <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">;"
+<<<<<<< HEAD
+=======
+=======
+</path>
+    </header>`;
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${"
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent`;
+    }`}>
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+</string>`;
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ;"
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' ;
+        : 'bg-transparent';`;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         <div className="flex items-center justify-between h-16">;"
           {/* Logo */}
           <div className="flex-shrink-0">"
@@ -786,7 +866,32 @@ key={item.name}
   ChevronDown
 } from 'lucide-react';'
 
+<<<<<<< HEAD
 const Header = () => {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+            
+
+                    href={item.href}`;
+
+                  
+
+                            
+                  
+
+                            
+                  
+
+            
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -999,6 +1104,7 @@ onClick={() => setIsMenuOpen(!isMenuOpen)}
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Menu */}
         {/* Mobile Navigation */}
         {/* Mobile Menu */}
@@ -1011,6 +1117,19 @@ initial={ "opacity": 0, "height": 0 }
               exit={ "opacity": 0, "height": 0 }
               className=""lg":hidden border-t border-gray-200""
             >
+=======
+                            
+                  
+
+            
+
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+              className="lg:hidden border-t border-gray-200""
+>>>>>>> origin/resolved-merge-conflicts
               <div className="py-4 space-y-4">"
                 {navigation.map((item) => (
                   <div key={item.name}>

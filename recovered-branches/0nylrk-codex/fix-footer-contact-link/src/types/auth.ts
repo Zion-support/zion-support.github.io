@@ -1,6 +1,73 @@
 <<<<<<< HEAD
 export interface UserDetails {
 <<<<<<< HEAD
+
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+  permissions?: string[];
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+  permissions?: string[];
+  company_id?: string;
+
+export interface UserDetails {
+
+export interface UserDetails {;
+
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+  created_at?: string;
+  updated_at?: string;
+}
+
+  id?: string;
+  display_name?: string;
+  email: string;
+  user_type: string;
+  profile_complete: boolean;
+  created_at: string;
+  updated_at: string;
+  avatar_url?: string;
+  bio?: string;
+  avatar_url?: string;
+  headline?: string;
+  role?: string;
+
+}
+
+  permissions?: string[],
+
+  permissions?: string[],
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+=======
+<<<<<<< HEAD
   id?: string,
   name?: string,
   email?: string,
@@ -97,6 +164,7 @@ export interface UserDetails {;
   updatedAt?: string
 }
 export interface UserProfile {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export interface UserProfile {;
   id?: string;
@@ -114,8 +182,28 @@ export interface UserProfile {;
 
   permissions?: string[]
 
-  companyId?: string
+export interface AuthContextType {;
+  user: UserDetails | null;
+  isLoading: boolean;
+
+  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
+  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
+  logout: () => Promise<void>
+  resetPassword: (email: string) => Promise<{ error?: any }>;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>
+  signIn?: (email: string, password: string) => Promise<{ error: any }>;
+  signOut?: () => Promise<void>;
+
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+
 }
+<<<<<<< HEAD
+
+=======
 // Update AuthContextType definition to match implementation
 <<<<<<< HEAD
 export interface AuthContextType {
@@ -265,6 +353,7 @@ export interface AuthContextType {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface UserDetails {;
 
   id?: string,;
@@ -284,6 +373,9 @@ export interface UserDetails {;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface UserProfile {;
   id?: string,;
   displayName?: string,;
@@ -377,11 +469,14 @@ export interface AuthContextType {;
 export interface UserDetails {;
 
 pr-12325
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 }
 export interface UserDetails {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id?:string,;
   name?:string,;
   email?:string,;
@@ -403,7 +498,11 @@ export interface UserProfile {;
 <<<<<<< HEAD
 pr-12325
 =======
+<<<<<<< HEAD
+pr-12325
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   email:string,;
   userType:string,;
   profileComplete:boolean,;
@@ -425,7 +524,13 @@ export interface AuthContextType {;
 // Update AuthContextType definition to match implementation;
 pr-12325
 =======
+<<<<<<< HEAD
+  companyId?:string;
+// Update AuthContextType definition to match implementation;
+pr-12325
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   user:UserDetails | null,;
   isLoading:boolean,;
   isAuthenticated:boolean,;
@@ -438,7 +543,12 @@ pr-12325
 
 pr-12325
 =======
+<<<<<<< HEAD
+
+pr-12325
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   loginWithGoogle:() => Promise<void>,;
   loginWithFacebook:() => Promise<void>,;
   loginWithTwitter:() => Promise<void>,;
@@ -448,10 +558,16 @@ pr-12325
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 }
 ;
+<<<<<<< HEAD
+}
+=======
 }
 =======
 }
@@ -465,3 +581,4 @@ pr-12325
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

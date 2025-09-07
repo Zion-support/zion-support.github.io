@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+<li>Inclusive hiring practices and diverse panels</li> <li>Equal opportunities and career development</li> <li>Respectful, safe, and collaborative culture</li> </ul> </div> </div>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<li>Inclusive hiring practices and diverse panels</li> <li>Equal opportunities and career development</li> <li>Respectful, safe, and collaborative culture</li> </ul> </div> </div>
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
@@ -98,16 +109,141 @@ function DiversityInclusionPage() {return (<div className="min - h-screen pt - 2
 
     </div>)}
 export default function DiversityInclusionPage() {
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div    />Something went wrong.</div>;}
+    }return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div    />Something went wrong.</div>;}
+    }return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export default function DiversityInclusionPage() {return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\"    />;
+      <Head    />;
+        <title    />Diversity & Inclusion | Zion Tech Group</title>;
+        <meta;
+          name=\'description\';
+          content=\'Our commitment to diversity, equity, and inclusion.\';
+           />;
+        <link;
+          rel=\'canonical\';
+          href=\'https://ziontechgroup && ziontechgroup.com/diversity-inclusion\';
+           />;
+<<<<<<< HEAD
+=======
+=======
+
+export default function DiversityInclusionPage() {
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from "react";
+import Head from "next/head";
+export default function DiversityInclusionPage() {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+      <Head>;
+        <title>Diversity & Inclusion | Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Our commitment to diversity, equity, and inclusion."
+        />;
+        <link
+          rel="canonical"
+          href="https://ziontechgroup && ziontechgroup.com/diversity-inclusion"
+        />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      </Head>;
+      <div className=\"max-w-4xl mx-auto space-y-6\"    />;
+        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
+          Diversity & Inclusion;
+        </h1>;
+        <p className=\"text-slate-300\"    />;
+          We believe diverse teams build better products. We foster inclusive;
+          hiring, growth, and a respectful workplace.;
+        </p>;
+        <ul className=\"list-disc list-inside text-slate-300 space-y-1\"    />;
+          <li    />Inclusive hiring practices and diverse panels</li>;
+          <li    />Equal opportunities and career development</li>;
+          <li    />Respectful, safe, and collaborative culture</li>;
+        </ul>;
+      </div>;
+    </div>;
+
+  );
+
+}
+<<<<<<< HEAD
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/resolved-merge-conflicts
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Diversity & Inclusion | Zion Tech Group</title>
+<<<<<<< HEAD
 				<meta name="description" content="Our commitment to diversity, equity, and inclusion." />
+=======
+<meta name="description" content="Our commitment to diversity, equity, and inclusion." />
+>>>>>>> origin/resolved-merge-conflicts
 				<link rel="canonical" href="https://ziontechgroup.com/diversity-inclusion" />
 			</Head>
 			<div className="max-w-4xl mx-auto space-y-6">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Diversity & Inclusion</h1>
+<<<<<<< HEAD
 				<p className="text-slate-300">We believe diverse teams build better products. We foster inclusive hiring, growth, and a respectful workplace.</p>
+=======
+<p className="text-slate-300">We believe diverse teams build better products. We foster inclusive hiring, growth, and a respectful workplace.</p>
+>>>>>>> origin/resolved-merge-conflicts
 				<ul className="list-disc list-inside text-slate-300 space-y-1">
 					<li>Inclusive hiring practices and diverse panels</li>
 					<li>Equal opportunities and career development</li>
@@ -115,5 +251,164 @@ export default function DiversityInclusionPage() {
 				</ul>
 			</div>
 		</div>
+<<<<<<< HEAD
 	)
 }
+=======
+	);
+
+}
+import React from './react';
+import Head from './next / head';
+export default /**
+ * DiversityInclusionPage - Function description
+ */
+function DiversityInclusionPage() {
+  return (
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+      <Head>;
+        <title > Diversity & Inclusion | Zion Tech Group</title>;
+        <meta;
+          name="description";
+          content="Our commitment to diversity, equity, and inclusion.";
+        />;
+        <link;
+          rel="canonical";
+          href="https://ziontechgroup.com / diversity - inclusion";
+        />;
+      </Head>;
+      <div className="max - w-4xl mx - auto space - y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+          Diversity & Inclusion;
+        </h1>;
+        <p className="text - slate - 300">;
+          We believe diverse teams build better products. We foster inclusive;
+          hiring, growth, and a respectful workplace.;
+        </p>;
+        <ul className="list - disc list - inside text - slate - 300 space - y-1">;
+          <li > Inclusive hiring practices and diverse panels</li>;
+          <li > Equal opportunities and career development</li>;
+          <li > Respectful, safe, and collaborative culture</li>;
+        </ul>;
+      </div>;
+    </div>);
+  return (
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+      <Head>;
+        <title > Diversity & Inclusion | Zion Tech Group</title>;
+        <meta;
+          name="description";
+          content="Our commitment to diversity, equity, and inclusion.";
+        />;
+        <link;
+          rel="canonical";
+          href="https://ziontechgroup.com / diversity - inclusion";
+        />;
+      </Head>;
+      <div className="max - w-4xl mx - auto space - y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+          Diversity & Inclusion;
+        </h1>;
+        <p className="text - slate - 300">;
+          We believe diverse teams build better products. We foster inclusive;
+          hiring, growth, and a respectful workplace.;
+        </p>;
+        <ul className="list - disc list - inside text - slate - 300 space - y-1">;
+          <li > Inclusive hiring practices and diverse panels</li>;
+          <li > Equal opportunities and career development</li>;
+          <li > Respectful, safe, and collaborative culture</li>;
+        </ul>;
+      </div>;
+    </div>);
+}
+<<<<<<< HEAD
+
+}
+
+					<li>Inclusive hiring practices and diverse panels</li>
+					<li>Equal opportunities and career development</li>
+					<li>Respectful, _safe, _and collaborative culture</li>
+				</ul>
+			</div>
+		</div>
+	)
+}
+
+import React from 'react';
+import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
+
+export default function DiversityInclusionPage() {
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <Head>
+        <title>Diversity & Inclusion | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Our commitment to diversity, equity, and inclusion."
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/diversity-inclusion"
+        />
+      </Head>
+      <div className="max-w-4xl mx-auto space-y-6">
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          Diversity & Inclusion
+        </h1>
+        <p className="text-slate-300">
+          We believe diverse teams build better products. We foster inclusive
+          hiring, growth, and a respectful workplace.
+        </p>
+        <ul className="list-disc list-inside text-slate-300 space-y-1">
+          <li>Inclusive hiring practices and diverse panels</li>
+          <li>Equal opportunities and career development</li>
+          <li>Respectful, safe, and collaborative culture</li>
+        </ul>
+      </div>
+    </div>;
+  );
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <Head>
+        <title>Diversity & Inclusion | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Our commitment to diversity, equity, and inclusion."
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/diversity-inclusion"
+        />
+      </Head>
+      <div className="max-w-4xl mx-auto space-y-6">
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          Diversity & Inclusion
+        </h1>
+        <p className="text-slate-300">
+          We believe diverse teams build better products. We foster inclusive
+          hiring, growth, and a respectful workplace.
+        </p>
+        <ul className="list-disc list-inside text-slate-300 space-y-1">
+          <li>Inclusive hiring practices and diverse panels</li>
+          <li>Equal opportunities and career development</li>
+          <li>Respectful, safe, and collaborative culture</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

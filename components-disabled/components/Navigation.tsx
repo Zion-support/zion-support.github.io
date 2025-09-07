@@ -39,8 +39,30 @@ const navigation = [;
 ];
   ];return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;"
 
+<<<<<<< HEAD
 const navigation = [;
     { "name": 'Home', "href": '/','
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const navigation = [
+    { name: 'Home';,}
+  href: '/';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    { "name": 'Home', "href": '/','
+=======
+const navigation = [
+    { name: 'Home';,}
+  href: '/';,}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 },
   { "name": 'About', "href": '/about','
 },
@@ -54,6 +76,26 @@ const navigation = [;
 }
 ]
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+return (<nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className=\"flex justify-between items-center h-16\" />;
+  Menu, }
+  X }
+} from 'lucide-react';
+
+const Navigation = (
+ ;
+  const [isOpen, setIsOpen] = useState(false);
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;"
       <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">;"
         <div className="flex justify-between items-center h-16">;"
@@ -79,6 +121,38 @@ return (;
         <div className="flex justify-between items-center h-16">"
           {/* Logo */}
           {/* Logo *
+<<<<<<< HEAD
+=======
+=======
+return (<nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className=\"flex justify-between items-center h-16\" />;
+  Menu, }
+  X }
+} from 'lucide-react';
+
+const Navigation = (
+ ;
+  const [isOpen, setIsOpen] = useState(false);
+
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  return (
+    <nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />
+      <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />
+        <div className=\"flex justify-between items-center h-16\" />) => {
+  return $3;}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
           <Link href="/" className="flex items-center space-x-2">;"
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">;"
@@ -547,6 +621,15 @@ export default function Navigation() {export default function Navigation() {expo
 };
 
 export default Navigation;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from "react";"
 import Link from "next/link";"
 import { motion, AnimatePresence } from "framer-motion";"
@@ -557,6 +640,29 @@ import { motion, AnimatePresence } from "framer-motion";"
 import {
     { "name": "News", "href": "/news", "description": "Industry news and updates" }"
     { "name": "News", "href": "/news", "description": "Industry news and updates","
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React, { useState } from \"react\";
+import Link from \"next/link\";
+import { motion, AnimatePresence } from \"framer-motion\";
+origin/automation-improvements-final;
+import {}
+    { name: \"News\";, href: \"/news\";, description: \"Industry news and updates\" ;}
+    { name: \"News\";, href: \"/news\";, description: \"Industry news and updates\";,}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   Menu,
 X
@@ -735,17 +841,59 @@ initial={ "opacity": 0, "y": 10
                       <div className="grid grid-cols-2 gap-4 px-6">;"
                 className="text - gray - 700 "hover":text - blue - 600 font - medium transition - colors">"
 
+<<<<<<< HEAD
                 className="text - gray - 700 "hover":text - blue - 600 font - medium transition - colors";"
                         {services && services.map((service, index) => {;
                           }
                           const IconComponent = service && service.icon;
+=======
+                className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\";
+                        {services && services.map((service, index) => {;}
+                          const IconComponent = service && service.icon;}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            {/* Desktop Navigation */}
+            <div className=\"hidden lg:flex items-center space-x-8\" />;
+              <Link;
+                href=\"/\";
+                className=\"text - gray - 700 hover:text - blue - 600 font-medium transition-colors\";
+               />;
+                className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\">
+
+<<<<<<< HEAD
+                className="text - gray - 700 "hover":text - blue - 600 font - medium transition - colors";"
+                        {services && services.map((service, index) => {;
+                          }
+=======
+                className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\";
+                        {services && services.map((service, index) => {;}
+                          const IconComponent = service && service.icon;}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {/* Desktop Navigation */}
             <div className="hidden "lg":flex items-center space-x-8">;"
               <Link;
+<<<<<<< HEAD
                 href="/";"
                 className="text - gray - 700 "hover":text - blue - 600 font-medium transition-colors";"
               >;
                 className="text - gray - 700 "hover":text - blue - 600 font - medium transition - colors">"
+=======
+                href=\"/\";
+                className=\"text - gray - 700 hover:text - blue - 600 font-medium transition-colors\";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+               />;
+                className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\">
+>>>>>>> origin/resolved-merge-conflicts
 
                 className="text - gray - 700 "hover":text - blue - 600 font - medium transition - colors";"
                         {services && services.map((service, index) => {;
@@ -754,8 +902,16 @@ initial={ "opacity": 0, "y": 10
             {/* Desktop Navigation */}
             <div className="hidden "lg":flex items-center space-x-8">;"
               <Link;
+<<<<<<< HEAD
                 href="/";"
                 className="text - gray - 700 "hover":text - blue - 600 font-medium transition-colors";"
+=======
+                href=\"/\";
+                className=\"text - gray - 700 hover:text - blue - 600 font-medium transition-colors\";
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 Home;
               </Link />;
               {/* Services Dropdown */}
@@ -874,10 +1030,34 @@ const IconComponent = solution && solution.icon;
                           className="flex items - center text - blue - 600 "hover":text - blue - 700 font - medium">"
 
                           View All Services;
+<<<<<<< HEAD
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;"
                         {solutions && solutions.map((solution, index) => {;
                           }
                           const IconComponent = solution && solution.icon;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                          <ArrowRight className=\"w - 4 h - 4 ml - 2\" />;
+                        {solutions && solutions.map((solution, index) => {;}
+                          const IconComponent = solution && solution.icon;}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                          <ArrowRight className="w - 4 h - 4 ml - 2" />;"
+                        {solutions && solutions.map((solution, index) => {;
+                          }
+=======
+                          <ArrowRight className=\"w - 4 h - 4 ml - 2\" />;
+                        {solutions && solutions.map((solution, index) => {;}
+                          const IconComponent = solution && solution.icon;}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                               href={service.href}
                               className="p - 3 rounded - lg "hover":bg - blue-50 transition-colors group";"
                             >;
@@ -1969,10 +2149,31 @@ export default Navigation;
 
 const Navigation = (
  ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const [isOpen, setIsOpen] = useState(false);
+
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
 const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ];
 
 

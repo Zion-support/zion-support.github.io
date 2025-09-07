@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -41,17 +46,24 @@ import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function UsageOverview() {
   // Mock usage data
 
@@ -62,9 +74,12 @@ export function UsageOverview() {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       used: 32,
       total: 100,
 
@@ -76,6 +91,8 @@ export function UsageOverview() {
       percentage: 32;
     };
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -92,6 +109,7 @@ export function UsageOverview() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     interviews: {
       used: 45
       total: 150
@@ -100,6 +118,8 @@ export function UsageOverview() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     },
 
 
@@ -112,11 +132,17 @@ export function UsageOverview() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     messaging: {
       used: 1250
       total: 5000
       percentage: 25
 <<<<<<< HEAD
+
+    },
+
+=======
+<<<<<<< HEAD
     }
     },
 =======
@@ -135,10 +161,13 @@ export function UsageOverview() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     storage: {
       used: 2.4
       total: 10
       percentage: 24
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
   }
@@ -216,6 +245,7 @@ export function UsageOverview() {
 ;
 =======
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function UsageOverview() {;
   // Mock usage data;
@@ -242,6 +272,38 @@ export function UsageOverview() {;
       used: 2.4;
       total: 10;
       percentage: 24;
+<<<<<<< HEAD
+export function UsageOverview() { return null; }
+    },;
+    interviews: {;
+      used: 45,;
+      total: 150,;
+      percentage: 30;
+    },;
+    messaging: {;
+      used: 1250,;
+      total: 5000,;
+      percentage: 25;
+    },;
+    storage: {;
+      used: 2.4,;
+      total: 10;
+      percentage: 24;
+
+  return (
+
+      used: 32,
+      total: 100,
+
+used: 32
+      total: 100
+      used: 32,
+      total: 100,
+      percentage: 32;
+    };
+      percentage: 32
+    }
+=======
 <<<<<<< HEAD
 export function UsageOverview() { return null; }
 =======
@@ -308,6 +370,7 @@ used: 32
     };
       percentage: 32
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
@@ -408,6 +471,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
   // Mock usage data;
   return (;
 <<<<<<< HEAD
+
+    <Card>;
+
+      <CardHeader>;
+
+=======
+<<<<<<< HEAD
 ;
 export function UsageOverview() {;
   // Mock usage data;
@@ -461,11 +531,20 @@ export function UsageOverview() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <TabsContent value="current" className="space-y-6">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
                   <p className="text-sm font-medium">Job Posts</p>;
                   <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+                    {usage && usage.jobPosts.used} / {usage && usage.jobPosts.total}
+
+                  </p>;
+                </div>;"
+                <Progress value={usage && usage.jobPosts.percentage} className="h-2" />;"
+
+=======
 <<<<<<< HEAD
                     {usage.jobPosts.used} / {usage.jobPosts.total}
                   </p>;
@@ -496,6 +575,7 @@ export function UsageOverview() {;
                 <Progress value={usage && usage.jobPosts.percentage} className="h-2" />;"
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <p className="text-sm font-medium">Interviews Conducted</p>;""
                 <Progress value={usage && usage.interviews.percentage} className="h-2" />;"
 
@@ -506,6 +586,11 @@ export function UsageOverview() {;
                   <p className="text-sm font-medium">Storage (GB)</p>;""
                 <Progress value={usage && usage.storage.percentage} className="h-2" />;"
 
+<<<<<<< HEAD
+              <p className="mt-1">Usage resets at the beginning of each billing period.</p>;
+            </div>;
+          </TabsContent>;
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="space-y-2">;
@@ -556,6 +641,7 @@ export function UsageOverview() {;
           <TabsContent value="historical">;
             <div className="py-10 text-center text-muted-foreground">;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
 
@@ -613,9 +699,15 @@ export function UsageOverview() {;
             <div className="py-10 text-center text-muted-foreground">;
 
 =======
+<<<<<<< HEAD
+
+            <div className="py-10 text-center text-muted-foreground">;
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Historical usage data will be available after your first full billing cycle.;
             <div className="pt-4 text-sm text-muted-foreground">;"
 </div>
@@ -666,6 +758,8 @@ pr-12325
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -688,6 +782,7 @@ pr-12325
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 </Card>);
 }
@@ -702,15 +797,22 @@ pr-12325
   return (<Card> <CardHeader> <CardTitle>Usage Overview</CardTitle> <CardDescription>Track your team's resource usage across the platform</CardDescription> </CardHeader> <CardContent> <Tabs defaultValue="current" > <TabsList className="mb-4" > <TabsTrigger value="current" >Current Period</TabsTrigger> <TabsTrigger value="historical" >Historical</TabsTrigger> </TabsList> </div> </div> <div className="pt-4 text-sm text-muted-foreground" > <p>Current billing period: May 1, 2025 - May 31, 2025</p> <p className="mt-1" >Usage resets at the beginning of each billing period.</p> </div> </TabsContent> <TabsContent value="historical" > <div className="py-10 text-center text-muted-foreground" > Historical usage data will be available after your first full billing cycle. </div> </TabsContent> </Tabs> </CardContent> </Card>) 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>;
   );
 
 }
 ;
     </Card>);
+<<<<<<< HEAD
+}
+=======
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

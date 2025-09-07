@@ -4,9 +4,12 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -18,12 +21,26 @@ import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, Di
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 <<<<<<< HEAD
+
+export function PartnerReferralLinks() {;
+
+export function PartnerReferralLinks() {;
+  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
+
+  const [customParam, setCustomParam] = useState<string>("");
+
+=======
+<<<<<<< HEAD
 export function PartnerReferralLinks() {;
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -35,18 +52,30 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function PartnerReferralLinks() {
+<<<<<<< HEAD
+=======
 =======
 
 export function PartnerReferralLinks() {;
 
 <<<<<<< HEAD
 export function PartnerReferralLinks() {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
+<<<<<<< HEAD
+  const [customParam, setCustomParam] = useState<string>("");
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([])
+  // Get the base referral link
+  const baseLink = getReferralLink();
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+=======
 
   const [customParam, setCustomParam] = useState<string>("");
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -56,12 +85,16 @@ import { Copy, Download, Link, Plus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 import { useReferrals } from "@/hooks/useReferrals",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+<<<<<<< HEAD
+
+=======
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function PartnerReferralLinks() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -70,7 +103,10 @@ export function PartnerReferralLinks() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([])
   // Get the base referral link
   const baseLink = getReferralLink();
@@ -78,12 +114,21 @@ import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
+<<<<<<< HEAD
+
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
+
+  // Get the base referral link
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
@@ -116,10 +161,14 @@ export function PartnerReferralLinks() {
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
 
   // Get the base referral link
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const baseLink = getReferralLink(),
 
   const handleCopyLink = (link: string) => {
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     navigator.clipboard.writeText($2);
     toast({
@@ -128,10 +177,13 @@ export function PartnerReferralLinks() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   // Get the base referral link
   const baseLink = getReferralLink(),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -140,12 +192,29 @@ export function PartnerReferralLinks() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleCopyLink = (link: string) => {
 
     navigator.clipboard.writeText(link)
     toast({"
       title: "Link copied!""
       description: "The referral link has been copied to your clipboard""
+<<<<<<< HEAD
+      variant: "default"
+    })
+
+  const handleGenerateLink = () => {
+    if (baseLink) {
+      const url = new URL(baseLink);
+
+  },
+  
+  const handleGenerateLink = () => {}
+    if (baseLink) {}
+
+      const url = new URL(baseLink),
+
+=======
 >>>>>>> merged-prs-20250907-203621
       variant: "default"
     })
@@ -207,6 +276,7 @@ export function PartnerReferralLinks() {
       const url = new URL(baseLink),
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
 
@@ -457,12 +527,21 @@ export function PartnerReferralLinks() { return null; }
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`"
         link: url.toString()
 <<<<<<< HEAD
+
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
+
+  // Get the base referral link;
+  const baseLink = getReferralLink();
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
   // Get the base referral link;
   const baseLink = getReferralLink();
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleCopyLink = (link: string) => {;
     navigator && navigator.clipboard.writeText(link),;
     toast({;"
@@ -471,20 +550,30 @@ export function PartnerReferralLinks() { return null; }
       variant: "default";")
     });
   };
+<<<<<<< HEAD
+
+  const handleGenerateLink = () => {;
+    if (baseLink) {;
+      const url = new URL(baseLink);
+=======
   const handleGenerateLink = () => {;
     if (baseLink) {;
       const url = new URL(baseLink);
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       // Add custom campaign parameter if selected;"
       if (selectedCampaign !== "default") {;""
         url && url.searchParams.append("campaign", selectedCampaign);"
 
+<<<<<<< HEAD
+=======
 =======
       // Add custom campaign parameter if selected;
       if (selectedCampaign !== "default") {;
         url && url.searchParams.append("campaign", selectedCampaign);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       // Add custom parameter if provided;
 
@@ -492,22 +581,31 @@ export function PartnerReferralLinks() { return null; }
         url && url.searchParams.append("source", customParam);"
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       const newLink = {;"
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;"
         link: url && url.toString();
       };
 
+<<<<<<< HEAD
+=======
 =======
       const newLink = {;
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
         link: url && url.toString();
       };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);"
       setCustomParam("");"
     }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
       }
       setGeneratedLinks(prev => [...prev, newLink]);
@@ -522,12 +620,22 @@ export function PartnerReferralLinks() { return null; }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       },
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),"
       setCustomParam("")"
     }
   },
+<<<<<<< HEAD
+
+  const handleDownloadLinks = () => {
+    const allLinks = ["
+      { name: "Default", link: baseLink }"
+      ...generatedLinks;
+  };
+
+=======
 <<<<<<< HEAD
 =======
   
@@ -554,11 +662,14 @@ export function PartnerReferralLinks() { return null; }
   };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleDownloadLinks = () => {;
     const allLinks = [;"
       { name: "Default", link: baseLink },;"
       ...generatedLinks;]
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const csvContent = [;
     ];
@@ -593,6 +704,7 @@ export function PartnerReferralLinks() { return null; }
     document.body.removeChild(link)
   }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     const csvContent = [;
 "
@@ -605,6 +717,9 @@ export function PartnerReferralLinks() { return null; }
       "Name,Link","
       ...allLinks.map(l => `${l.name},${l.link}`)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ]"
     ].join("\n"),""
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),'
@@ -613,6 +728,8 @@ export function PartnerReferralLinks() { return null; }
     link.setAttribute("href", url),""
     link.setAttribute("download", "zion_referral_links.csv"),""
     link.style.visibility = 'hidden','
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -625,14 +742,19 @@ export function PartnerReferralLinks() { return null; }
     link.setAttribute("download", "zion_referral_links.csv"),
     link.style.visibility = 'hidden',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     document.body.appendChild(link),
     link.click(),
     document.body.removeChild(link)
   },
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return ('
     <div className="space-y-6">"
 </div>"
@@ -712,6 +834,8 @@ export function PartnerReferralLinks() { return null; }
 </div>"
       <Card className="bg-zion-blue-dark border-zion-blue-light">;"
 </Card>
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -915,12 +1039,16 @@ export function PartnerReferralLinks() {;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <CardHeader>;
 </CardHeader>"
           <CardTitle className="flex items-center justify-between">;"
 </CardTitle>
             <span>Your Referral Link</span>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Button;"
               variant="outline"""
               size="sm""
@@ -945,6 +1073,8 @@ export function PartnerReferralLinks() {;
 </Button>"
               <Download className="h-4 w-4" />;"
 </Download>
+<<<<<<< HEAD
+=======
 =======
             <Button
               variant="outline" 
@@ -979,12 +1109,16 @@ export function PartnerReferralLinks() {;
               <Download className="h-4 w-4" />;
               Export Links;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>;
           </CardTitle>;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;"
           <div className="flex space-x-2">;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -1013,6 +1147,7 @@ export function PartnerReferralLinks() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Input
               value={baseLink}
               readOnly
@@ -1022,6 +1157,9 @@ export function PartnerReferralLinks() {;
               readOnly"
               className="font-mono text-sm"
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
             <Input;
               value={baseLink}
               readOnly;
@@ -1029,21 +1167,28 @@ export function PartnerReferralLinks() {;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />;"
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;"
               <Copy className="h-4 w-4" />;"
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;
               <Copy className="h-4 w-4" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <span className="sr-only">Copy</span>;
             </Button>;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -1058,12 +1203,16 @@ export function PartnerReferralLinks() {;
             </Button>;
           </DialogTrigger>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light">;
             <DialogHeader>;
               <DialogTitle>Create Custom Campaign Link</DialogTitle>;
               <DialogDescription>;
                 Generate a trackable link for specific marketing campaigns;
               </DialogDescription>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -1075,6 +1224,7 @@ export function PartnerReferralLinks() {;
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useRef, useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -1157,6 +1307,10 @@ function PartnerReferralLinks() {}
                   value={selected_campaign}
                   onValueChange={setSelectedCampaign}
                 >;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <SelectTrigger id="campaign">;
 
                     <SelectValue placeholder="Select campaign type" />;
@@ -1172,6 +1326,9 @@ function PartnerReferralLinks() {}
                 </Select>;
               </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <Label html_for="custom">Custom Parameter (Optional)</Label>;
                 <Input;
@@ -1181,9 +1338,12 @@ function PartnerReferralLinks() {}
                   on_change={(e) => setCustomParam (e.target.value)}
 
 <div className="grid gap-2">;
+<<<<<<< HEAD
+=======
 =======
               <div className="grid gap-2">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>;
                 <Input ;
                   id="custom" ;
@@ -1194,6 +1354,21 @@ function PartnerReferralLinks() {}
               </div>;
             </div>;
             <DialogFooter>;
+<<<<<<< HEAD
+
+              <Button;
+                type="button";
+                variant="secondary";
+                on_click={() => setIsDialogOpen (false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button;
+                type="button";
+                on_click={handleGenerateLink}
+                className="bg - zion - purple hover:bg - zion - purple - dark";
+              >;
+=======
               <Button ;
                 type="button" ;
                 variant="secondary" ;
@@ -1207,6 +1382,7 @@ function PartnerReferralLinks() {}
                 className="bg-zion-purple hover:bg-zion-purple-dark";
               >;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <Button ;
                 type="button" ;
@@ -1220,14 +1396,22 @@ function PartnerReferralLinks() {}
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark";
               >;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Generate Link;
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
+
+                  />;
+                  <Button
+=======
 >>>>>>> merged-prs-20250907-203621
             />
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
@@ -1325,6 +1509,7 @@ function PartnerReferralLinks() {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     variant="outline" 
                     size="sm" 
                     onClick={() => handleCopyLink(item && item.link)}
@@ -1421,9 +1606,12 @@ function PartnerReferralLinks() {}
                     className="font-mono text-xs"
                   />
                   <Button
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     variant="outline"
                     size="sm"
                     onClick={() => handleCopyLink(item.link)}
@@ -1442,6 +1630,8 @@ function PartnerReferralLinks() {}
                 Create custom campaign links to track different marketing efforts
               </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <Button
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
@@ -1457,6 +1647,7 @@ function PartnerReferralLinks() {}
     </div>
   )
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
       <div className="grid gap-4">;
         {generatedLinks.length > 0 ? (;
@@ -1493,8 +1684,13 @@ function PartnerReferralLinks() {}
         ) : (;
 ) :(;
 =======
+<<<<<<< HEAD
+        ) : (;
+) :(;
+=======
         ) :(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">;
             <CardContent className="flex flex-col items-center justify-center p-6">;
               <p className="text-zion-slate-light text-center mb-4">;
@@ -1502,6 +1698,9 @@ function PartnerReferralLinks() {}
               </p>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Button
 
               <Button 
@@ -1509,6 +1708,9 @@ function PartnerReferralLinks() {}
                 variant="outline"
 <Button ;
                 variant="outline";
+<<<<<<< HEAD
+                variant="outline"
+=======
 =======
               <Button 
 
@@ -1516,6 +1718,7 @@ function PartnerReferralLinks() {}
                 variant="outline"
               <Button ;
                 variant="outline";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
                   on_change={(e) => setCustomParam (e.target.value)}                variant="outline"                className="flex items-center gap-2";
@@ -1528,6 +1731,8 @@ function PartnerReferralLinks() {}
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   ),; export function PartnerReferralLinks () {
   const {
@@ -1582,6 +1787,7 @@ document.body.removeChild (link);
     </div>
   )
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 <div className="grid gap - 4">;
         {generated_links.length > 0 ? (
@@ -1939,6 +2145,9 @@ if ( {) {
       </div>;
     </div>);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   ),; export function PartnerReferralLinks () {
 
@@ -2002,9 +2211,12 @@ pr-12325
     </div>
   )
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

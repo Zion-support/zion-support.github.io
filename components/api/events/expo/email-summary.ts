@@ -1,10 +1,23 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json($2);
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+>>>>>>> origin/resolved-merge-conflicts
   try {
-    const provider = $2;
+    const provider = process.env.MAIL_PROVIDER || 'none';
     if (provider === 'none') {
+<<<<<<< HEAD
+      console.log('[EmailSummary] Stub: no provider configured');
+      return res.status(200).json({ status: 'queued', provider: 'stub' });
+=======
       console.log($2);
       return res.status(200).json({ status: 'queued', provider: 'stub' })
 =======
@@ -34,7 +47,11 @@ return res
 <<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   }
+<<<<<<< HEAD
   if (req.method !== 'POST') return res.status(405).json({ 'error': 'Method not allowed','
+=======
+  if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed','
+>>>>>>> origin/resolved-merge-conflicts
 });
   try {
     }
@@ -85,10 +102,15 @@ return res;
       .status (500);
       .json ({ error: e.message || 'Failed to queue emails' });
   }    return res.status (500).json ({ error: e.message || 'Failed to queue emails' });
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
+
     // TODO: Integrate with actual provider
-    return res.status(200).json({ status: 'queued', provider })
+    return res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
+<<<<<<< HEAD
+    return res.status(500).json({ error: 'Failed to queue email' });
+=======
     return res.status(500).json({ error: e.message || 'Failed to queue emails' })
 
 
@@ -111,6 +133,7 @@ return res
       .status(500)
       .json({ error: e.message |'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message |'Failed to queue emails' })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 }
 <<<<<<< HEAD

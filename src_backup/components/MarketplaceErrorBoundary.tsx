@@ -16,6 +16,12 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   return (
     <ErrorBoundary 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
@@ -29,6 +35,12 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   return (
     <ErrorBoundary 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   }
   return (
@@ -48,6 +60,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
           <Button
             onClick={() => window.location.reload()}
+<<<<<<< HEAD
             variant='outline'
             className='w-full'          >
             Reload Page
@@ -56,6 +69,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='w-full'
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            variant='outline'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            variant='outline
+            className=w-full'          >
+            Reload Page
+          </Button>
+        </div>            variant="outline
+            className=w-full"
+import {ErrorBoundary, FallbackProps} from 'react-error-boundary;
+=======
+            variant='outline'
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
@@ -69,9 +105,26 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
       // Re-call SWR mutate('*') to refresh all cached data;
       await mutate(() => true, undefined, { revalidate: true }),;
       resetErrorBoundary();
+<<<<<<< HEAD
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
     }
+=======
+<<<<<<< HEAD
+    } catch (retryError) {
+      logErrorToProduction(Error during retry:', { data: retryError })}
+=======
+    } catch (retryError) {;
+      logErrorToProduction('Error during retry:', { data: retryError }),;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     <div className='flex items-center justify-center min-h-[400px] p-6'>
       <div className='max-w-md w-full space-y-4'>
@@ -116,6 +169,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             href='mailto: support@example.com' 
             className='text-primary hover:underline'
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
@@ -280,8 +339,14 @@ interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional pr
         </div>            variant='outline';
             className='w - full';
             on_click={() => window.location.reload ()}
+<<<<<<< HEAD
             variant='outline';
             className='w - full';)interface MarketplaceErrorBoundaryProps  {children: React.ReactNode;
+=======
+            variant="outline";
+            className="w - full";)interface MarketplaceErrorBoundaryProps  {children: React.ReactNode;
+            className=w - full";)interface MarketplaceErrorBoundaryProps  {children: React.ReactNode;
+>>>>>>> origin/resolved-merge-conflicts
 export function MarketplaceErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo.componentStack;
     })Sentry.withScope(scope => {scope.setTag('errorBoundary', 'marketplace')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack |undefined;
@@ -325,7 +390,17 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
     <ErrorBoundary 
 
 
+<<<<<<< HEAD
             className='w - full';
+=======
+            className=w - full";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -343,19 +418,55 @@ export function MarketplaceErrorBoundary({
   },;
 
   return (;
+<<<<<<< HEAD
     <div className='flex items-center justify-center min-h-[400px] p-6'>;
   )<ErrorBoundary;
   },return (<div className='flex items-center justify-center min-h-[400px] p-6'>;
       <div className='max-w-md w-full space-y-4'>;
         <Alert variant='destructive'>;
           <AlertCircle className='h-4 w-4' />;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className="flex items-center justify-center min-h-[400px] p-6>;
+  )<ErrorBoundary;
+  },return (<div className=flex items-center justify-center min-h-[400px] p-6">;
+      <div className="max-w-md w-full space-y-4>;
+        <Alert variant=destructive">;
+          <AlertCircle className="h-4 w-4 />;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <div className="flex items-center justify-center min-h-[400px] p-6">;
+      <div className="max-w-md w-full space-y-4">;
+        <Alert variant="destructive">;
+          <AlertCircle className="h-4 w-4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
           <AlertDescription className='mt-2'>;
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>;
         </Alert>;
+<<<<<<< HEAD
         </Alert>;<div className='flex flex-col space-y-2'>;
         <div className='flex flex-col space-y-2'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        </Alert>;<div className="flex flex-col space-y-2>;
+        <div className=flex flex-col space-y-2">;
+>>>>>>> origin/resolved-merge-conflicts
           <Button;
             onClick={handleRetry}
             className='w-full';
@@ -368,6 +479,12 @@ export function MarketplaceErrorBoundary({
             onClick={() => window.location.reload()}<div className='flex flex-col space-y-2'>;
           <Button onClick={handleRetry} className='w-full' variant='default'>;
             <RefreshCcw className='mr-2 h-4 w-4' />;
+<<<<<<< HEAD
+=======
+            onClick={() => window.location.reload()}<div className=flex flex-col space-y-2'>;
+          <Button onClick={handleRetry} className='w-full variant=default'>;
+            <RefreshCcw className='mr-2 h-4 w-4 />;
+>>>>>>> origin/resolved-merge-conflicts
             Retry;
           </Button>;<Button;
             onClick={() => window && window.location.reload()}
@@ -375,6 +492,7 @@ export function MarketplaceErrorBoundary({
             className='w-full'          >;
             Reload Page;
           </Button>;
+<<<<<<< HEAD
         </div>            variant='outline';
             className='w-full';
             onClick={() => window && window.location.reload()}
@@ -382,6 +500,21 @@ export function MarketplaceErrorBoundary({
             onClick={() => window.location.reload()}
             variant='outline';
             onClick={() => window && window.location.reload()}variant='outline';
+=======
+        </div>            variant="outline";
+            className="w-full";
+            onClick={() => window && window.location.reload()}
+
+            onClick={() => window.location.reload()}
+            variant=outline";
+            onClick={() => window && window.location.reload()}variant="outline;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
             variant='outline';
 
@@ -390,20 +523,47 @@ export function MarketplaceErrorBoundary({
             Reload Page;
           </Button>;
         </div>;
+<<<<<<< HEAD
         </div>;<div className='text-center text-sm text-muted-foreground'>;
         <div className='text-center text-sm text-muted-foreground'>;
           If the problem persists, please{' '}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        </div>;<div className=text-center text-sm text-muted-foreground">;
+        <div className="text-center text-sm text-muted-foreground>;
+          If the problem persists, please{ '}
+>>>>>>> origin/resolved-merge-conflicts
           <a;
             href='mailto: support@example.com';
             className='text-primary hover:underline';
           >;
             contact support;<div className='text-center text-sm text-muted-foreground'>;
           If the problem persists, please{' '}
+<<<<<<< HEAD
           <a;
             href='mailto:support@example && example.com';
             className='text-primary hover:underline'>        ;
         <div className='text-center text-sm text-muted-foreground'>;
           If the problem persists, please{' '}
+=======
+          <a;
+            href='mailto:support@example && example.com';
+            className='text-primary hover:underline'>        ;
+        <div className="text-center text-sm text-muted-foreground">;
+          If the problem persists, please{' '}
+            contact support;<div className='text-center text-sm text-muted-foreground>;
+          If the problem persists, please{ '}
+          <a;
+            href='mailto:support@example && example.com;
+            className=text-primary hover:underline'>        ;
+        <div className=text-center text-sm text-muted-foreground">;
+          If the problem persists, please{' }
+>>>>>>> origin/resolved-merge-conflicts
           <a
             href='mailto: support@example && example.com' 
             className='text-primary hover:underline'
@@ -414,6 +574,12 @@ export function MarketplaceErrorBoundary({
             className='text-primary hover:underline';
             contact support;
             contact support;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           </a>;
 
@@ -463,6 +629,12 @@ export function MarketplaceErrorBoundary(): any ({;
   );
 } 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )}interface MarketplaceErrorBoundaryProps  {children: React && React.ReactNode;export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStack})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary', 'marketplace')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}>;{children}
     </ErrorBoundary>;
@@ -493,7 +665,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}</ErrorBoundary>)}</ErrorBoundary>;
   )}
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}

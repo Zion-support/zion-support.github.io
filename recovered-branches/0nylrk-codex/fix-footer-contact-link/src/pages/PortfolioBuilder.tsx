@@ -13,6 +13,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume');
@@ -20,6 +23,7 @@ function PortfolioBuilderContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -29,6 +33,9 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -36,6 +43,7 @@ import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builde
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
@@ -53,6 +61,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";
 import {}
   PortfolioBuilder,
@@ -60,6 +71,8 @@ import {}
   PortfolioSection,";
 } from "@/components/resume-builder/portfolio/PortfolioBuilder";
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 function PortfolioBuilderContent() {
@@ -78,6 +91,7 @@ function PortfolioBuilderContent() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <>
       <SEO
         title="Portfolio Builder | Zion AI Marketplace"
@@ -119,6 +133,29 @@ function PortfolioBuilderContent() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
+  );
+}
+
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {;
+  const [activeTab, setActiveTab] = useState('resume');
+
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  );
+}
+
+=======
 <<<<<<< HEAD
   )
 =======
@@ -212,6 +249,7 @@ import {ProtectedRoute} from '@/components / ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {ResumeWizard} from '@/components / resume - builder / ResumeWizard';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {PortfolioBuilder, as, PortfolioSection} from '@/components / resume - builder / portfolio / PortfolioBuilder';
 /**
  * PortfolioBuilderContent - Function description;
@@ -235,15 +273,23 @@ function PortfolioBuilder() {}
 }
 <<<<<<< HEAD
 
+  ),;
+=======
+<<<<<<< HEAD
+
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ),;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export default function PortfolioBuilder() {
   return (
     <ProtectedRoute>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
       <PortfolioBuilderContent />
@@ -251,11 +297,19 @@ export default function PortfolioBuilder() {
     <ProtectedRoute>;
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <PortfolioBuilderContent />
-    </ProtectedRoute>
-  )
+
+    <ProtectedRoute>;
+
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
 }
 ;
+<<<<<<< HEAD
+;
+=======
 export default function PortfolioBuilder() {;
   return (;
     <ProtectedRoute>;
@@ -273,3 +327,4 @@ export default function PortfolioBuilder() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

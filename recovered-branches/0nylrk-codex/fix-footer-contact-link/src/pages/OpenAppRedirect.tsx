@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -8,6 +10,7 @@
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
@@ -15,8 +18,11 @@ const OpenAppRedirect: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -25,7 +31,11 @@ import {Link} from "react-router-dom";
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -37,6 +47,9 @@ import { Link } from "react-router-dom",
 
 const OpenAppRedirect: React.FC = () => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const navigate = useNavigate()
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
@@ -44,6 +57,8 @@ const OpenAppRedirect: React.FC = () => {
     const attemptAppOpen = async () => {}
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
+<<<<<<< HEAD
+=======
 =======
   const navigate = useNavigate()
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
@@ -58,6 +73,7 @@ const OpenAppRedirect: React.FC = () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const navigate = useNavigate(),
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting'),
   
@@ -72,6 +88,9 @@ const OpenAppRedirect: React.FC = () => {
       const androidAppUrl = "market://details?id=app.zion.marketplace",
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -79,6 +98,7 @@ const OpenAppRedirect: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
       // Try to open the app
@@ -86,10 +106,13 @@ const OpenAppRedirect: React.FC = () => {
         // Set a timeout to redirect to app store if the app doesn't open
         timeout = window.setTimeout(() => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           setStatus($2);
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 "
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page;
@@ -107,6 +130,34 @@ import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+
+import { Button } from "@/components/ui/button",;
+
+import { Link } from "react-router-dom",;
+// This component handles deep linking to the mobile app;
+const OpenAppRedirect: React.FC = () => {;
+  const navigate = useNavigate(),;'
+
+        setStatus('failed');
+        setTimeout(() => {;
+          navigate(fallbackUrl);
+        }, 1500);
+
+      }
+
+          clearTimeout(timeout)
+        }
+      })
+    }
+    attemptAppOpen()
+  }, [navigate]);
+
+  return ("
+=======
 <<<<<<< HEAD
 =======
   useEffect(() => {;
@@ -274,6 +325,7 @@ const OpenAppRedirect: React.FC = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO"
         title="Opening Zion App""
@@ -312,6 +364,10 @@ const OpenAppRedirect: React.FC = () => {;
           </>
         )}
 <<<<<<< HEAD
+
+      // Clear timeout if page visibility changes (meaning app opened successfully);"
+=======
+<<<<<<< HEAD
         
         {status = $2;
 export default OpenAppRedirect,
@@ -327,12 +383,20 @@ export default OpenAppRedirect,
       }
       // Clear timeout if page visibility changes (meaning app opened successfully);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       document && document.addEventListener("visibilitychange", () => {;
         if (document && document.hidden && timeout) {;
           clearTimeout(timeout);
         }
       });
     };
+<<<<<<< HEAD
+
+    attemptAppOpen();
+  }, [navigate]);
+
+  return ("
+=======
     attemptAppOpen();
   }, [navigate]);
 <<<<<<< HEAD
@@ -341,11 +405,14 @@ export default OpenAppRedirect,
 =======
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">;
       <SEO"
         title="Opening Zion App" "
         description="Redirecting to the Zion AI Marketplace mobile app"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 import React, { useEffect, useState } from "react",;
@@ -411,12 +478,17 @@ const OpenAppRedirect:React.FC = () => {;
         title="Opening Zion App" ;
         description="Redirecting to the Zion AI Marketplace mobile app";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         noindex={true}
 
       />;
       <div className="text-center p-8">;
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
+<<<<<<< HEAD
+
+=======
         ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {status === 'redirecting' && (;
           <>;"
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>;"
@@ -425,7 +497,11 @@ const OpenAppRedirect:React.FC = () => {;
             </p>;
           </>;
         )}
+<<<<<<< HEAD
+
+=======
         ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {status === 'timeout' && (;
           <>;"
             <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>;"
@@ -434,7 +510,11 @@ const OpenAppRedirect:React.FC = () => {;
             </p>;
           </>;
         )}
+<<<<<<< HEAD
+
+=======
         ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {status === 'failed' && (;
           <>;"
             <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>;"
@@ -453,6 +533,8 @@ const OpenAppRedirect:React.FC = () => {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       </div>
     </div>
   )
@@ -466,6 +548,7 @@ export default OpenAppRedirect;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>;
   );
 },;
@@ -475,6 +558,9 @@ export default OpenAppRedirect;
 
   ),;
 },;
+<<<<<<< HEAD
+;
+=======
 ;
 export default OpenAppRedirect,;   //Set a timeout to redirect to app store if the app doesn't open attemptAppOpen () 
 }, [navigate]);
@@ -603,6 +689,7 @@ export default OpenAppRedirect;
   ),;
 },;
 ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default OpenAppRedirect,;   //Set a timeout to redirect to app store if the app doesn't open attemptAppOpen () 
 }, [navigate]);
 return (<div className="min-h-screen flex items-center justify-center bg-zion-blue" > <SEO /> <div className="text-center p-8" > <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6" ></div> {
@@ -615,9 +702,13 @@ return (<div className="min-h-screen flex items-center justify-center bg-zion-bl
 };
 export default OpenAppRedirect;
 export default OpenAppRedirect;
+<<<<<<< HEAD
+export default OpenAppRedirect;
+=======
 export default OpenAppRedirect;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

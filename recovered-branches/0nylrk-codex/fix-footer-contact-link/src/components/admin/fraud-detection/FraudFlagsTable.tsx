@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -8,6 +11,8 @@ import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -20,11 +25,48 @@ import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { FraudFlag } from "@/types/fraud",
 import { SeverityDisplay } from "./SeverityDisplay",
+<<<<<<< HEAD
+import { ActionButtons } from "./ActionButtons";
+import { EmptyFraudState } from "./EmptyFraudState";
+import { ActionButtons } from "./ActionButtons",
+
+interface FraudFlagsTableProps {
+
+interface FraudFlagsTableProps {}
+  flags: FraudFlag[];
+  isLoading: boolean;
+  hasFilters: boolean;
+  resetFilters: () => void;
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+
+  flags,
+  isLoading,
+  hasFilters,
+  resetFilters,
+
+  onAction
+}) => {
+
+  if (isLoading) {
+    return (
+
+  onAction;
+}) => {}
+  if (isLoading) {}
+    return (
+"
+      <div className="flex justify-center items-center h-64">"
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
+      </div>
+
+=======
 <<<<<<< HEAD
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
@@ -134,6 +176,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
 
 <<<<<<< HEAD
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -142,7 +185,10 @@ import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
@@ -151,6 +197,9 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 import { EmptyFraudState } from "./EmptyFraudState",;
 <<<<<<< HEAD
@@ -158,11 +207,14 @@ import { EmptyFraudState } from "./EmptyFraudState",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface FraudFlagsTableProps {;
   flags: FraudFlag[],;
   isLoading: boolean,;
   hasFilters: boolean,;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -193,10 +245,14 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   hasFilters;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   resetFilters,;
   onAction;
 }) => {;
   if (isLoading) {;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -216,6 +272,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex justify-center items-center h-64">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
@@ -224,15 +281,25 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   if (flags.length === 0) {}
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
+<<<<<<< HEAD
+
+  return (
+
+              {flag.gpt_explanation || ("
+                <span className="text-muted-foreground text-xs">Not analyzed</span>
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -283,12 +350,31 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
               {flag.gpt_explanation || ("
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <Table>;
 
   }
   return (
 
+<<<<<<< HEAD
+              )}
+            </TableCell>;
+            <TableCell>;
+
+              {new Date(flag && flag.timestamp).toLocaleDateString()} {new Date(flag && flag.timestamp).toLocaleTimeString()}
+            </TableCell>;
+            <TableCell>;
+              <Badgevariant={'
+                flag && flag.status === 'pending''
+                  ? 'secondary''
+                  : flag && flag.status === 'actioned''
+                  ? 'destructive''
+                  : flag && flag.status === 'ignored''
+                  ? 'outline''
+                  : 'default'
+
+=======
               )}
             </TableCell>;
             <TableCell>;
@@ -360,6 +446,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             <TableCell>;
               }>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {flag && flag.status}
               </Badge>;
             </TableCell>;
@@ -367,6 +454,9 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
               <ActionButtons;
                 flagId={flag && flag.id} 
                 status={flag && flag.status} 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -392,6 +482,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                 status={flag.status} ;
                 onAction={onAction} ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               />;
             </TableCell>;
           </TableRow>;
@@ -399,6 +490,8 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
       </TableBody>;
     </Table>;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -436,6 +529,7 @@ interface FraudFlagsTableProps {
 }
 export const FraudFlagsTable: React.FC < FraudFlagsTableProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   flags;
   is_loading;
   has_filters;
@@ -490,11 +584,15 @@ export const FraudFlagsTable: React.FC < FraudFlagsTableProps> = ({
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
     </Table>);
 }
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ),;
 },; interface FraudFlagsTableProps {
   flags: FraudFlag[];
@@ -548,7 +646,11 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               }>
                 {flag.status}
               </Badge>
@@ -557,7 +659,11 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <ActionButtons
                 flagId={flag.id}
                 status={flag.status}
@@ -568,15 +674,21 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
         ))}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       </TableBody>
     </Table>
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </TableBody>;
     </Table>;
   );
+<<<<<<< HEAD
+};
+=======
 <<<<<<< HEAD
 };
 =======
@@ -586,3 +698,4 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 name: string;
   role?: string;
@@ -17,6 +23,12 @@ export interface Testimonial  {name: string;role?: string;
   text: string;
   avatar?: string;
 }interface ServiceLandingTemplateProps  {title: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 role?: string;
   text: string;
   avatar?: string;
@@ -40,8 +52,6 @@ export interface Benefit {}
 import React from 'react';
 export interface Benefit {};
   title: string;
-export interface Benefit  {title: string,description: string,icon?: React.ReactNode;
-export interface Benefit  {title: string;
   description: string;
   icon?: React.ReactNode;
 }
@@ -81,10 +91,25 @@ export interface Benefit {};
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({}
   title,
   subtitle,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   heroImage,
   heroImage,
 
 main
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   description,
   benefits,
@@ -107,17 +132,44 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   testimonials,
   ctaText,
 
+<<<<<<< HEAD
   return ("
     <div className="bg-background text-white">"
       <section className="bg-zion-blue py-16 px-4 text-center">"
         <div className="container mx-auto">"
           <GradientHeading level="h1" className="mb-4">
+=======
+<<<<<<< HEAD
+  return (
+    <div className=bg-background text-white">"
+      <section className=bg-zion-blue py-16 px-4 text-center>"
+        <div className="container mx-auto>
+          <GradientHeading level="h1" className=mb-4>
+>>>>>>> origin/resolved-merge-conflicts
   icon?: React.ReactNode;
 }export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,heroImage,heroImage,description,benefits,export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({title,subtitle,description,benefits,features = [],stats = [],ctaText,ctaLink}) => {return (</p>;
   testimonials,ctaText,return (<div className="bg-background text-white">;
       <section className="bg-zion-blue py-16 px-4 text-center">;
         <div className="container mx-auto">;
+<<<<<<< HEAD
           <GradientHeading level="h1" className="mb-4">;
+=======
+          <GradientHeading level=h1 className="mb-4">;
+=======
+  return ("
+    <div className="bg-background text-white">"
+      <section className="bg-zion-blue py-16 px-4 text-center">"
+        <div className="container mx-auto">"
+          <GradientHeading level="h1" className="mb-4">
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {title}
           </GradientHeading>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -151,11 +203,30 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </h1>;"
           <p className="text - xl text - gray - 600 max - w-3xl mx - auto mb - 8">;
             {subtitle}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {benefits.length > 0 && (ursor/automate-test-improve-and-merge-code-646c;
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
+<<<<<<< HEAD
           </p>;"
           <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+=======
+          </p>;
+          <p className=text - lg text - gray - 600 max - w-3xl mx - auto">;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          </p>;"
+          <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
             {description}
           </p>;
@@ -212,6 +283,16 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                       {benefit && benefit.icon}
                     </div>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  )}
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </p>;
         </div>;
       </section>;
@@ -307,10 +388,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>;
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
+=======
+                  )}
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 main
       )}
@@ -321,8 +418,19 @@ main
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       )}{features && features.length > 0 && (<section className="py-16 px-4 bg-gray-50">;
           <div className="max-w-7xl mx-auto">;
+=======
+      )}{features && features.length > 0 && (<section className="py-16 px-4 bg-gray-50>;
+          <div className=max-w-7xl mx-auto">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       )}
 
       {features && features.length > 0 && (;"
@@ -339,6 +447,12 @@ main
                 </div>;
 
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>;))}
             </div>;
           </div>;
@@ -367,7 +481,17 @@ main
           </div>;
         </section>;
       )}</div>)}
+<<<<<<< HEAD
                   <h3 className="text - xl font - semibold mb - 3">{benefit.title}</h3>;
+=======
+                  <h3 className=text - xl font - semibold mb - 3>{benefit.title}</h3>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             </div>
           </div>
         </section>
@@ -396,15 +520,42 @@ main
           </div>;
         </section>)}
 
+<<<<<<< HEAD
         </section>)}{stats.length > 0 && (<section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
               {stats.map ((stat, index) => (<div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        </section>)}{stats.length > 0 && (<section className=py - 16 px - 4">;
+          <div className="max - w-7xl mx - auto>;
+            <div className=grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
+              {stats.map ((stat, index) => (<div key={index}>;
+                  <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       {stats.length > 0 && ("
         <section className="py - 16 px - 4">;"
           <div className="max - w-7xl mx - auto">;"
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
+<<<<<<< HEAD
+=======
+      {stats.length > 0 && (
+        <section className="py - 16 px - 4">;
+          <div className=max - w-7xl mx - auto">;"
+            <div className=grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center>;
+>>>>>>> origin/resolved-merge-conflicts
               {stats.map ((stat, index) => (
                 <div key={index}>;"
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
@@ -413,16 +564,37 @@ main
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               {stats.map((stat, index) => (
                 <div key={index}>
+<<<<<<< HEAD
                   <div className="text-4xl font-bold text-blue-600 mb-2">
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  <div className="text-4xl font-bold text-blue-600 mb-2>
+        <section className=py-16 px-4">;
+          <div className="max-w-7xl mx-auto>;
+            <div className=grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+>>>>>>> origin/resolved-merge-conflicts
               {stats.map((stat, index) => (<div key={index}>;
                   <div className="text-4xl font-bold text-blue-600 mb-2">;
                     {stat.value}{stats && stats.length > 0 && (<section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
               {stats && stats.map((stat, index) => (<div key={index}>;
+=======
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {stat.value}
 
       {stats && stats.length > 0 && (;"
@@ -438,6 +610,12 @@ main
                 </div>;
 
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>;))}
             </div>;
           </div>;
@@ -468,6 +646,12 @@ main
         </section>;
       )}<section className="py-16 px-4 bg-blue-600">;
         <div className="max-w-4xl mx-auto text-center">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>
           </div>
         </section>
@@ -481,15 +665,37 @@ main
           </h2>;"
           <p className="text-xl text-blue-100 mb-8">;
             Contact us today to learn more about our services.;
+<<<<<<< HEAD
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+            className=bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block
+>>>>>>> origin/resolved-merge-conflicts
           >
 
 main
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </p>;
 
             {ctaText}
 
           </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block";
           >;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
@@ -497,14 +703,15 @@ main
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block";
           >;
             {ctaText}</a>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </section>;
     </div>;
-                  </div>
-                  </div>;
-                  </div>;
-
-main
   );
 
 "
@@ -538,6 +745,12 @@ main
           </h2>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, idx) => (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </div>;
                   </div>;
                   </div>;</div>;
@@ -576,6 +789,12 @@ main
                       />;
                     )}
                     <div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Card;
                 key={idx}"
                 className="bg-zion-blue-dark border-zion-purple/30"
@@ -600,14 +819,46 @@ main
                       {t.role && ("
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     </div>
                   </div>
                 </CardFooter>
               </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     </div>;
                   </div>;
@@ -625,17 +876,18 @@ main
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild;
         >
-          <a href={ctaLink}>{ctaText}</a>
-          <a href={ctaLink}>{ctaText}</Link>
-          <a href={ctaLink}>{ctaText}</Link>
-
-main
 
         </Button>
       </section>
     </div>
   )
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <div>;
                       <p className="font-semibold text-white">{t.name}</p>;
                       {t.role && (<p className="text-sm text-gray-400">{t.role}</p>;
@@ -670,7 +922,18 @@ main
       </section>;
     </div>;
   )</div>;
+<<<<<<< HEAD
                   </div>;"
+=======
+                  </div>;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+                  </div>;"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
                   <div className="text - gray - 600">{stat.label}</div>;
                 </div>))}
             </div>;
@@ -693,8 +956,20 @@ main
         </div>;
       </section>;
     </div>);
+<<<<<<< HEAD
     </div>)}}
 },<section className='py-12 bg-zion-blue-dark text-center'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    </div>)}}}
+},<section className=py-12 bg-zion-blue-dark text-center'>;
+>>>>>>> origin/resolved-merge-conflicts
         <Button;
           size='lg';
           className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white';
@@ -706,3 +981,10 @@ main
     </div>;
 )}";
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,38 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export type EmailValidationResult = {
+  email: string;
+  isValid: boolean;
+  score: number;
+  suggestions: string[];
+  details: {
+    hasValidFormat: boolean;
+    hasValidDomain: boolean;
+    hasValidMX: boolean;
+    isDisposable: boolean;
+    isRoleBased: boolean;
+    isFreeProvider: boolean;
+  };
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<EmailValidationResult | { error: string }>
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    const { email } = req.body;
+    if (!email || typeof email !== 'string') {
+      return res.status(400).json({ error: 'Email is required' });
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface EmailValidationResult {
   email: string,
@@ -90,9 +124,75 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         is_disposable;
         isRoleBased;
         isFreeProvider}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
     res.status (200).json (result);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const hasValidFormat = emailRegex.test(email);
+    
+    const domain = email.split('@')[1];
+    const hasValidDomain = domain && domain.length > 0;
+
+    // Check for disposable email domains
+    const disposableDomains = [
+      'tempmail.org',
+      'guerrillamail.com',
+      'mailinator.com',
+      '10minutemail.com',
+      'temp-mail.org',
+      'sharklasers.com',
+      'getairmail.com',
+      'mailnesia.com',
+    ];
+
+    const isDisposable = disposableDomains.some(d => domain?.includes(d));
+
+    // Check for role-based emails
+    const roleBasedPatterns = [
+      'admin@',
+      'info@',
+      'support@',
+      'contact@',
+      'sales@',
+      'help@',
+      'noreply@',
+      'no-reply@',
+      'donotreply@',
+      'do-not-reply@',
+    ];
+
+    const isRoleBased = roleBasedPatterns.some(pattern =>
+      email.startsWith(pattern)
+    );
+
+    // Check for free email providers
+    const freeProviders = [
+      'gmail.com',
+      'yahoo.com',
+      'hotmail.com',
+      'outlook.com',
+      'aol.com',
+      'icloud.com',
+      'protonmail.com',
+      'mail.com',
+      'yandex.com',
+    ];
+
+    const isFreeProvider = freeProviders.some(provider => domain === provider);
+
+    // Calculate score (0-100)
+    let score = 100;
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
     res.status(500).json({ error: Internal server error' })
   }
 interface EmailValidationResult {
@@ -381,11 +481,25 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Calculate score (0-100)
     let score = 100;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    // Generate suggestions
+    const suggestions: string[] = [];
+    if (!hasValidFormat) {
+      suggestions.push('Check email format (should be user@domain.com)');
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
     // Generate suggestions
@@ -459,6 +573,10 @@ const "suggestions": string[] = [];
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       suggestions.push('Check email format (should be user@domain.com)')
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
     if (isDisposable) {
       suggestions.push('Consider using a permanent email address);
@@ -467,6 +585,12 @@ const "suggestions": string[] = [];
       suggestions.push(Role-based emails may have delivery issues');
     }
     if (score < 50) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      suggestions.push('This email may not be suitable for business use');
+=======
+>>>>>>> origin/resolved-merge-conflicts
       suggestions.push('This email may not be suitable for business use')
     }
 <<<<<<< HEAD
@@ -624,14 +748,29 @@ suggestions.push('Check email format (should be user@domain.com)');
     if (score < 50) {
       }
       suggestions.push('This email may not be suitable for business use');'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
 
 const 'result': EmailValidationResult = {
       }
       email,
+<<<<<<< HEAD
 "isValid": score >= 70,
 "score": Math.max(0, score)
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+      isValid: score >= 70,
+      score: Math.max(0, score),
+=======
+"isValid": score >= 70,
+"score": Math.max(0, score)
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       suggestions,
       details: {
         hasValidFormat,
@@ -639,6 +778,12 @@ const 'result': EmailValidationResult = {
         hasValidMX: true, // Simplified for demo
         isDisposable,
         isRoleBased,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        isFreeProvider
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         isFreeProvider}
     },
@@ -651,12 +796,23 @@ const 'result': EmailValidationResult = {
 }
 =======
 isFreeProvider
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       }
     }
     res.status(200).json(result);
   } catch (error) {
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 export default async function handler(
@@ -688,3 +844,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

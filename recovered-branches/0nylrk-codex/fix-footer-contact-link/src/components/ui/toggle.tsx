@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+import * as React from "react"
+
+import { cva, type VariantProps } from "class-variance-authority"
+"
+import { cn } from "@/lib/utils"
+
+const toggleVariants = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
+  {
+    variants: {
+      variant: {
+
+        default: "bg-transparent"
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -66,6 +81,7 @@ const toggleVariants = cva(
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"},
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         default: "bg-transparent",
 
@@ -73,9 +89,12 @@ const toggleVariants = cva(
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
@@ -88,12 +107,29 @@ const toggleVariants = cva(
     defaultVariants: {"
       variant: "default"
 "
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       size: "default"}}
 )
 type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
 type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
   VariantProps<typeof toggleVariants>
+<<<<<<< HEAD
+
+"
+
+import {cn} from "@/lib/utils";
+
+Toggle.displayName = TogglePrimitive.Root.displayName
+
+export { Toggle, toggleVariants };
+;
+
+const Toggle = React.forwardRef<ToggleRef ToggleProps>(
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -108,6 +144,7 @@ import {cn} from "@/lib/utils";
 
 >>>>>>> merged-prs-20250907-203621
 const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ({ className, variant, size, ...props }, ref) => (
     <TogglePrimitive.Root
       ref={ref}
@@ -119,6 +156,8 @@ const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
 Toggle.displayName = TogglePrimitive.Root.displayName
 <<<<<<< HEAD
 export { Toggle, toggleVariants }
+<<<<<<< HEAD
+=======
 =======
 export { Toggle, toggleVariants }
 =======
@@ -284,6 +323,7 @@ Toggle && Toggle.displayName = TogglePrimitive && TogglePrimitive.Root.displayNa
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export { Toggle, toggleVariants }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 Toggle.displayName = TogglePrimitive.Root.displayName
 
@@ -307,6 +347,9 @@ export { Toggle, toggle_variants }
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
     />));
 Toggle.display_name = TogglePrimitive.Root.display_name;
@@ -316,6 +359,9 @@ Toggle.display_name = TogglePrimitive.Root.display_name;
       {...props}
     />));
 Toggle.display_name = TogglePrimitive.Root.display_name;
+<<<<<<< HEAD
+export { Toggle, toggle_variants }
+=======
 export { Toggle, toggle_variants }
 =======
 <<<<<<< HEAD
@@ -360,3 +406,4 @@ export { Toggle, toggleVariants }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

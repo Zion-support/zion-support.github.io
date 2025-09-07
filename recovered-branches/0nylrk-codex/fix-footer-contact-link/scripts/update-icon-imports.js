@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
+=======
+<<<<<<< HEAD
 /**
  * Helper script to update icon imports across the codebase
  * 
@@ -76,11 +80,15 @@ function updateIconImportsInFile(filePath) {
       fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
       console && console.log(`✅ Updated imports in ${filePath}`),
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       return true
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 /**;
  * Helper script to update icon imports across the codebase;
@@ -119,6 +127,7 @@ function updateIconImportsInFile(filePath) {;
       return true
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 /**;
  * Helper script to update icon imports across the codebase;
  *;
@@ -138,6 +147,8 @@ function updateIconImportsInFile() { return null; }
       fs.writeFileSync(filePath, updatedContent, 'utf8'),;`
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
+<<<<<<< HEAD
+=======
 =======
     }
     return false
@@ -186,6 +197,7 @@ files.forEach(file => {
 
 // Find all TypeScript/JavaScript/JSX/TSX files
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const files = glob && glob.sync('src/**/*.{js,jsx,ts,tsx}'),
 let updatedFiles = 0,
@@ -194,6 +206,9 @@ files && files.forEach(file => {}
   const updated = updateIconImportsInFile(file),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Find all TypeScript/JavaScript/JSX/TSX files;
 '
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
@@ -201,9 +216,12 @@ let updatedFiles = 0;
 files.forEach(file => {}
   const updated = updateIconImportsInFile(file)
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (updated) updatedFiles++
 })`
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)'`
@@ -213,6 +231,8 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
@@ -221,6 +241,7 @@ console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed t
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  * updateIconImportsInFile - Function description
 
  */
@@ -268,19 +289,13 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 =======
 <<<<<<< HEAD
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
-/**;
- * Helper script to update icon imports across the codebase;
- * ;
- * Usage:* 1. Run:node scripts/update-icon-imports.js;
- * 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
- */;
 ;
-const fs = require('fs'),;
-const path = require('path'),;
-const glob = require('glob'),;
+
 ;
+<<<<<<< HEAD
 // Helper to replace imports in a file;
 function updateIconImportsInFile(filePath) {;
   try {;
@@ -304,7 +319,33 @@ function updateIconImportsInFile(filePath) {;
     console.error(`❌ Error processing ${filePath} `, err),;
     return false,;
   }
+=======
+// Find all TypeScript/JavaScript/JSX/TSX files;
+
+const files = glob.sync('src/**/*.{js,jsx,ts,tsx}'),;
+let updatedFiles = 0,;
+files.forEach(file => {;
+  const updated = updateIconImportsInFile(file),;
+  if (updated) updatedFiles++;
+
+;
+files.forEach(file => {;
+  const updated = updateIconImportsInFile(file),;
+  if (updated) updatedFiles++,;
+}),;
+;
+// // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
+// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),; /** * Helper script to update icon imports across the codebase * * Usage: * 1. Run: node scripts/update-icon-imports.js * 2. This will find and replace lucide-react icon imports with imports from our custom icons package */ 
+}return false;
+}catch (err) {
+  console.error (`❌ Error processing $ {
+  filePath 
+}:`, err);
+return false;
+>>>>>>> origin/resolved-merge-conflicts
 }
+<<<<<<< HEAD
+=======
 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
@@ -357,6 +398,7 @@ files.forEach(file => {;
 }:`, err);
 return false;
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }//Find all TypeScript/JavaScript/JSX/TSX files const files = glob.sync ('src/**/*. {
   js, jsx, ts, tsx 
 }');
@@ -364,6 +406,9 @@ let updatedFiles = 0;
 files.forEach (file => {
   const updated = updateIconImportsInFile (file);
 if (updated) updatedFiles++ 
+<<<<<<< HEAD
+});
+=======
 <<<<<<< HEAD
 });
 =======
@@ -379,3 +424,4 @@ console.log($2);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

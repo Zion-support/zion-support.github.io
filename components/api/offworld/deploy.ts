@@ -2,6 +2,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+import { execSync } from 'child_process';
+import path from 'path';
+import fs from 'fs';
+
+import { addDirectory } from '@/utils/offworld/ipfs';
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { execSync  } from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -63,12 +75,29 @@ import path from 'path;
 import fs from fs';
 
 import { addDirectory } from '@/utils/offworld/ipfs;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed });
   try {
     // Ensure export
     const outDir = path.resolve(process.cwd(), out');
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      execSync('npm run export', { stdio: 'inherit' });
+    } catch (e) {
+      // attempt minimal static export
+      try {
+        execSync('next build && next export', { stdio: 'inherit' });
+      } catch (e2) {
+        // ignore
+      }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       execSync('npm run export', { stdio: 'inherit' })
 =======
@@ -105,6 +134,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       try {
         execSync('next build && next export', { stdio: 'inherit' })
       } catch (e2) {}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }
 
     if (!fs.existsSync(outDir)) {
@@ -155,6 +188,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true });
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (!fs.existsSync(outDir)) {
+      return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 import { execSync  } from 'child_process';
 
@@ -311,6 +353,7 @@ function handler() {
       // attempt minimal static export;
       try {
         exec_sync ('next build && next export, { stdio: inherit' });      } catch (e2) {}
+<<<<<<< HEAD
     }
     if () {) {
   $2
@@ -336,6 +379,23 @@ function handler() {
 }
     return res.status (200).json ({ cid, provider });
   } catch (error: any) {
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }
+
+    const { cid, provider } = await addDirectory(outDir);
+    if (!cid) {
+      return res.status(500).json({ error: 'IPFS upload failed' });
+    }
+
+    return res.status(200).json({ cid, provider });
+  } catch (error: any) {
+<<<<<<< HEAD
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     return res.status (500).json ({ error: error?.message || 'Unknown error });
   }    return res.status (200).json ({ cid, provider });
   } catch (error: any) {
@@ -381,3 +441,7 @@ function handler() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

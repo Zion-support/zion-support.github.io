@@ -3,7 +3,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,14 +18,35 @@ import { Separator } from "@/components/ui/separator";
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
+
+import React, { useState } from './react';
+
+import { MessageCircle  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+
+interface DiscussionPost {
+
+interface DiscussionPost {
+
+=======
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -54,6 +78,7 @@ interface DiscussionPost {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: number;
   author: string;
   avatar?: string;
@@ -63,24 +88,35 @@ interface DiscussionPost {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 "
 import { Card, CardContent } from "@/components/ui/card","
 import { Separator } from "@/components/ui/separator",
 
+<<<<<<< HEAD
+interface DiscussionPost {
+
+=======
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 interface DiscussionPost {
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: number,
   author: string,
   avatar?: string,
   time: string,
   title: string,
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
   body: string}
 
@@ -104,12 +140,16 @@ const initialPosts: DiscussionPost[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const initial_posts: DiscussionPost[] = [;
   {}
     id: 1,"
     author: "Anna Zhou","
     time: "2h ago","
     title: "What AI trends are you most excited for in 2025?",
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -168,6 +208,7 @@ export const CommunityDiscussion: React.FC = () => {
 
 const initialPosts: DiscussionPost[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   {;
     id: 1,;"
     author: "Anna Zhou",;"
@@ -181,10 +222,13 @@ const initialPosts: DiscussionPost[] = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAddPost = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
       {;
@@ -195,6 +239,9 @@ const initialPosts: DiscussionPost[] = [;
         body: newBody,;
       },;
       ...posts,;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 const [posts, setPosts] = useState(initialPosts);
 export const CommunityDiscussion: React.FC = () => {;
@@ -221,11 +268,15 @@ export const CommunityDiscussion: React.FC = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
   }
+<<<<<<< HEAD
+  return (
+=======
 <<<<<<< HEAD
 
   const [posts, setPosts] = useState(initialPosts),
@@ -277,11 +328,32 @@ export const CommunityDiscussion: React.FC = () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
         <MessageCircle size={28} className="text-zion-cyan" />
+<<<<<<< HEAD
+
+        <span className="font-bold text-2xl text-white tracking-tight">
+          Community Discussion;
+        </span>"
+        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
+          {posts.length} posts;
+        </span>
+      </div>"
+      <Separator className="mb-6" />"
+      <div className="mb-4 flex justify-end">
+        <Button"
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale""
+          size="sm"
+          onClick={() => setShowNew((v) => !v)}
+        >"
+          {showNew ? "Cancel" : "New Post"}
+        </Button>
+      </div>
+=======
 <<<<<<< HEAD
         <span className="font-bold text-2xl text-white tracking-tight">
           Community Discussion
@@ -324,17 +396,25 @@ export const CommunityDiscussion: React.FC = () => {
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {showNew && ("
         <Card className="mb-6 animate-scale-in">"
           <CardContent className="py-5">
             <Input"
               placeholder="Title (e.g., Share an AI tool, Ask for help...)""
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
             />
+<<<<<<< HEAD
+
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
+=======
 <<<<<<< HEAD
             <Textarea
               placeholder="What's on your mind?"
@@ -343,6 +423,7 @@ export const CommunityDiscussion: React.FC = () => {
 
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
 import React, { useState } from "react",;"
 import { MessageCircle } from "lucide-react",;"
@@ -359,12 +440,16 @@ import { Separator } from "@/components/ui/separator",;
   const [newBody, setNewBody] = useState(""),;
 
 ;
+<<<<<<< HEAD
+
+=======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -372,6 +457,9 @@ import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState } from "react",""
 import { MessageCircle } from "lucide-react",""
@@ -401,6 +489,8 @@ interface DiscussionPost {
   // TODO: Implement
 }
 
+<<<<<<< HEAD
+=======
 =======
 import { Card, CardContent } from "@/components/ui/card",;
 import { Separator } from "@/components/ui/separator",;
@@ -475,11 +565,31 @@ export const CommunityDiscussion: React.FC = () => {;
         body:newBody},;
       ...posts]),;
     setNewTitle(""),;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setNewBody(""),;
     setShowNew(false),;
   },;
 ;
   return (;
+<<<<<<< HEAD
+
+            <Input
+              placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
+              className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
+              value={newTitle}
+              onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
+                setNewTitle(e && e.target.value);
+              }
+              maxLength={80}
+            />;
+            <Textarea
+              placeholder="What's on your mind?"
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
+              value={newBody}
+              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
+                setNewBody(e && e.target.value);
+
+=======
 =======
         id: Date.now(),;
         author: "You",;
@@ -538,10 +648,13 @@ export const CommunityDiscussion: React.FC = () => {;
           <CardContent className="py-5">;
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
               rows={3}
+<<<<<<< HEAD
+=======
             />
             <div className="flex gap-3 justify-end">
               <Button
@@ -587,10 +700,13 @@ export const CommunityDiscussion: React.FC = () => {;
             />;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -604,6 +720,7 @@ disabled={!newTitle.trim() |!newBody.trim()}
               >
                 Post
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </Button>
             </div>
           </CardContent>
@@ -612,7 +729,11 @@ disabled={!newTitle.trim() |!newBody.trim()}
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       )}
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
@@ -627,13 +748,19 @@ disabled={!newTitle.trim() |!newBody.trim()}
                     .toUpperCase()
                     .slice(0, 2)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 </AvatarFallback>
               </Avatar>
               <div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <div className = $2;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div className="flex gap-2 items-center">
                   <span className="font-semibold text-white">
                     {post.author}
@@ -656,6 +783,8 @@ disabled={!newTitle.trim() |!newBody.trim()}
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
         🚀 Stay engaged! Top contributors are regularly featured on the
         homepage.
+<<<<<<< HEAD
+=======
       </div>
     </div>
 
@@ -894,9 +1023,134 @@ setShowNew (false);
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
         🚀 Stay engaged! Top contributors are regularly featured on the
         homepage.
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>
     </div>
+
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
+            <div className="flex gap - 3 justify - end">;
+
+              <Button;
+                variant="secondary";
+                size="sm";
+                className="bg - zion - blue text - white hover:bg - zion - blue - dark";
+                on_click={() => setShowNew (false)}
+
+              >;
+                Cancel;
+              </Button>;
+              <Button;"
+                size="sm";
+
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}
+
+              >;
+              }
+              max_length={400}
+              rows={3}
+            />;
+
+                Post;
+              </Button>;
+            </div>;
+          </CardContent>;
+
+                </AvatarFallback>;
+              </Avatar>;
+              <div>;"
+                <div className="flex gap-2 items-center">;"
+                  <span className="font-semibold text-white">;
+                    {post && post.author}
+                  </span>;"
+                  <span className="text-xs text-zion-slate-light">;
+                    {post && post.time}
+                  </span>;
+                </div>;"
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">;
+                  {post && post.title}
+                </h3>;"
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">;
+                  {post && post.body}
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+      </div>;"
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
+        🚀 Stay engaged! Top contributors are regularly featured on the;
+        homepage.;
+      </div>;
+    </div>;
   );
+<<<<<<< HEAD
+
+        </Card>)}
+      <div className="flex flex - col gap - 6">;
+        {posts.map ((post) => (
+          <Card;
+            key={post.id}
+            className="bg - zion - blue border - zion - slate - dark shadow - lg";
+          >;
+            <CardContent className="py - 4 flex gap - 4">;
+              <Avatar>;
+                <AvatarFallback>;
+                  {post.author;
+                    .split (" ");
+                    .map ((s) => s[0]);
+                    .join ("");
+                    .toUpperCase ();
+                    .slice (0, 2)}
+                </AvatarFallback>;
+              </Avatar>;
+              <div>;
+                <div className="flex gap - 2 items - center">;
+                  <span className="font - semibold text - white">;
+                    {post.author}
+                  </span>;
+                  <span className="text - xs text - zion - slate - light">;
+                    {post.time}
+                  </span>;
+                </div>;
+                <h3 className="text - lg font - bold text - zion - cyan mt - 1">;
+                  {post.title}
+                </h3>;
+                <p className="text - zion - slate - light mt - 1 whitespace - pre - line">;
+                  {post.body}
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>))}
+      </div>;
+      <div className="mt - 8 text - xs text - zion - slate - dark text - center">;
+        🚀 Stay engaged! Top contributors are regularly featured on the;
+        homepage.;
+      </div>;
+    </div>);
+
+}
+  id: number,
+  author: string,
+  avatar?: string,
+  time: string,
+  title: string,
+  body: string
+}  body: string
+
+}
+
+body: string
+  body: string
+}
+const initial_posts: DiscussionPost[] = [;
+  {
+
+};
+=======
 }
 
 );
@@ -927,3 +1181,4 @@ setShowNew (false);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -26,6 +31,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest($2);
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import type { NextApiRequest, NextApiResponse } from \"next\,
 import fs from \"fs-extra\";
 import path from \path\";"
@@ -178,6 +187,11 @@ const REDEMPTIONS_FILE = path.join(
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 const REDEMPTIONS_FILE = path && path.join(
@@ -186,6 +200,10 @@ const REDEMPTIONS_FILE = path && path.join(
   'partners',
   'grant-redemptions && redemptions.json'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 );
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -198,6 +216,14 @@ res: NextApiResponse;
     return res && res.status(401).json({ error: 'Unauthorized'}
 });
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (!auth) {}
+    return res && res.status(401).json({ error: 'Unauthorized'}
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   try {
@@ -210,6 +236,10 @@ res: NextApiResponse;
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   if (!(await enforceRateLimit(auth && auth.apiKey))) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);}
@@ -226,6 +256,12 @@ res: NextApiResponse;
 const { studentEmail, grantCode, courseId } = req && req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);}
     return res && res.status(400).json({ error: 'Missing required fields'}
 });
@@ -242,6 +278,11 @@ const { studentEmail, grantCode, courseId } = req && req.body || {};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now($2);
   const auth = await authenticateRequest($2);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
@@ -265,6 +306,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const started = Date.now();
   const auth = await authenticateRequest(req);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" })
   }
@@ -358,6 +403,12 @@ if ( {) {$2;
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: Missing required fields" })
@@ -560,8 +611,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id, redeemedAt: now})
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
 =======
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return res.status(201).json({ id: record.id;, redeemedAt: now ;})
 }
 
@@ -577,6 +635,12 @@ return res.status(400).json({ error: 'Missing required fields'}
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const records = (await fs.pathExists(REDEMPTIONS_FILE))
     ? await fs.readJSON(REDEMPTIONS_FILE)
 "
@@ -612,6 +676,11 @@ const record = {
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -710,3 +779,7 @@ redeemedAt: now
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

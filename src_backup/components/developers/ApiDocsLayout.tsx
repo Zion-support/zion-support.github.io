@@ -18,9 +18,18 @@ class ErrorBoundary extends React.Component {}
     }
     
     return this.props.children;
+<<<<<<< HEAD
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     }return this.props.children;
   }
 }
@@ -47,6 +56,16 @@ import { cn   } from '@/lib / utils';
 import { getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
+<<<<<<< HEAD
+=======
+} from @/data / docsSearchData';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }'
 import React from 'react';
@@ -75,9 +94,6 @@ import { cn } from "@/lib/utils",
 import {
  getDocsSearchPath,
  docsSearchSuggestions
-interface ApiDocsLayoutProps {
-  children: React.ReactNode
-}
 
 } from "@/data/docsSearchData",
 
@@ -126,11 +142,34 @@ interface ApiDocsLayoutProps {;
     { title: "Webhooks", path: "/developers/docs/webhooks" },;
     { title: "Sample Code", path: "/docs/sample-code" },;
 
+<<<<<<< HEAD
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
     const path = getDocsSearchPath(suggestion.text);    if (path) {
       router.push(path)
       setSearchValue("")
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    { title: Error Codes & Rate Limits", path: "/developers/docs/errors }],
+    const path = getDocsSearchPath(suggestion.text);    if (path) {
+      router.push(path)
+      setSearchValue(")
+=======
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
     const path = getDocsSearchPath(suggestion.text),;
     if (path) {;
@@ -152,6 +191,12 @@ interface ApiDocsLayoutProps {;
      {/* Sidebar */}"
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  } from '@/data / docsSearchData';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",import { cn } from "@/lib/utils",import {getDocsSearchPath,docsSearchSuggestions;
 interface ApiDocsLayoutProps  {children: React.ReactNode;
@@ -212,6 +257,12 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
           currentPath === item && item.path
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <span className="text-white font-bold">Z</span>;
        </div>;"
        <span className="font-bold text-white">API Docs</span>;
@@ -252,6 +303,17 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+       ))}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
        ))}
@@ -281,6 +343,14 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
      </div>
      {/* Main content */}
      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
+=======
+
+       ))}
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </nav>;
      </div>;
@@ -300,6 +370,12 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {}
   children;
 }</div> </div>)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )}
 }
 /* Sidebar */ ";
@@ -331,8 +407,19 @@ if ( {) {$2;
   return (<div className="flex min - h-screen bg - zinc - 950">;
     {/* Sidebar */}
       <div className="hidden md: block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto">;
+<<<<<<< HEAD
       <Link href="/developers / docs" className="flex items - center mb - 8">;
       <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center">;
+=======
+      <Link href=/developers / docs className="flex items - center mb - 8">;
+      <div className=bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 }<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>) ;
 }> {;
@@ -399,9 +486,28 @@ if ( {) {}
           placeholder="Search documentation";
         />;
       </form>;
+<<<<<<< HEAD
       </div>;"
       <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;
+=======
+<<<<<<< HEAD
+      </div>;
+      <nav role="navigation" aria - label=Main className="flex flex - col space - y-1">;
+>>>>>>> origin/resolved-merge-conflicts
       {navigation_items.map ((item, ) => (<Link;
+=======
+      </div>;"
+      <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;
+      {navigation_items.map ((item, ) => (
+        <Link;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         key={item.path}
           href={item.path}
           className={cn ("
@@ -443,9 +549,22 @@ if ( {) {}
     </div>;
   );
 }
+<<<<<<< HEAD
 }<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>)}> {item.title;
 }</Link>) )}</nav> </div> {/* Main content */ ";
 }<div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {children;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href=/developers / docsclassName="flex items - center mb - 8"> <div className=bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center> <span className="text - white font - bold">Z</span> </div> <span className=font - bold text - white>API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>)}> {item.title;
+}</Link>) )}</nav> </div> {/* Main content */ ;
+}<div className=flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {children;
+>>>>>>> origin/resolved-merge-conflicts
 }</div> </div>)}export default ApiDocsLayout;
 "export default ApiDocsLayout;children;
 }</div> </div>)}export default ApiDocsLayout;
@@ -453,4 +572,14 @@ if ( {) {}
     </div>;
   )}export default ApiDocsLayout;export default ApiDocsLayout;}
 export function ApiDocsLayout() {const router  = null;
+<<<<<<< HEAD
 ;
+=======
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

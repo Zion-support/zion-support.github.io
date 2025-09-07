@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Link from 'next/link';'
+
+import { motion, AnimatePresence } from 'framer-motion';'
+
+import { Menu, X, ChevronDown, Phone, Mail, MapPin;
+  }
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Briefcase;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import Link from 'next/link';
 =======
 <<<<<<< HEAD
@@ -197,6 +212,10 @@ import {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -204,7 +223,16 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
@@ -224,6 +252,11 @@ const serviceCategories = $2;
     color: 'from-purple-600 to-pink-600',
     description: 'Beyond human consciousness simulation',
     services: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 =======
@@ -252,6 +285,10 @@ const serviceCategories = [
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     services: [;
       {
         name: 'Mars Colonization Automation Platform',
@@ -266,11 +303,23 @@ const serviceCategories = [
         price: '$75, 999 / month',
       },
       {
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness in AI systems', price: '$12,999/month' },
       { name: 'Autonomous AI Corporation Platform', href: '/autonomous-ai-corporation-platform', description: 'AI systems that run entire corporations', price: '$45,999/month' },
       { name: 'AI Reality Augmentation Platform', href: '/ai-reality-augmentation-platform', description: 'Real-time AI reality enhancement', price: '$18,999/month' }
     ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
       {'
@@ -1383,6 +1432,10 @@ const mainNavItems = [
   const [isOpen, setIsOpen] = useState(false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 ];
 
 const mainNavItems = []
@@ -1498,6 +1551,18 @@ const mainNavItems = []
       { name: 'Corporate Intelligence Platform', href: /corporate-intelligence-platform, description: 'AI-powered business intelligence', price: $7,999/month }
     ];
   }'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  { name: 'Home', href: '/', icon: Home },'
+  { name: 'Services', href: '/services', icon: Briefcase },'
+  { name: 'Solutions', href: '/solutions', icon: Target },'
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },'
+  { name: 'Resources', href: '/resources', icon: BookOpen },'
+  { name: 'News', href: '/news', icon: TrendingUp },'
+  { name: 'Support', href: '/support', icon: MessageCircle },
+=======
+>>>>>>> origin/resolved-merge-conflicts
   { name: 'Home, href: /', icon: Home },'
   { name: Services, href: '/services', icon: Briefcase },
   { name: Solutions', href: '/solutions, icon: Target },
@@ -1511,6 +1576,10 @@ export default function UltraFuturisticNavigation2029() {
 
 export default function UltraFuturisticNavigation2029() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -1529,6 +1598,20 @@ const mainNavItems = [;
 ];
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const handleScroll = () => {
+
+}
+
+setScrolled(window.scrollY > 50)
+};
+
+    window.addEventListener('scroll', handleScroll);'
+    return () => window.removeEventListener('scroll', handleScroll);'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -1550,6 +1633,10 @@ setScrolled(window.scrollY > 50)) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }, []);
 
 <<<<<<< HEAD
@@ -1640,6 +1727,36 @@ export default function UltraFuturisticNavigation2029() {;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;'
           <div className='flex items-center space-x-6'>;'
             <a;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              href={`"tel": ${contactInfo.mobile}`}`              className='flex items-center space-x-2 "hover":text-cyan-300 transition-colors'>'
+
+              <Phone size={1
+} />;
+              <span>{contactInfo.mobile}</span>;
+              href={`tel: ${contactInfo.mobile;}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors' />
+
+              <Phone size={1}
+} />;
+              <span />{contactInfo.mobile}</span>;
+            </a>;
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;'
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;'
+          <div className='flex items-center space-x-6'>;'
+            <a;
+              href={`"tel": ${contactInfo.mobile}`}`              className='flex items-center space-x-2 "hover":text-cyan-300 transition-colors'>'
+
+              <Phone size={1
+} />;
+              <span>{contactInfo.mobile}</span>;
+            </a>;
+            <a;
+              href={`"mailto": ${contactInfo.email}`}`
+              className='flex items-center space-x-2 "hover":text-cyan-300 transition-colors''
+=======
+>>>>>>> origin/resolved-merge-conflicts
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
             >;
@@ -1830,10 +1947,37 @@ export default function UltraFuturisticNavigation2029() {
             <a
               href={`mailto:${contactInfo.email}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >
               <Mail size={14} />
               <span>{contactInfo.email}</span>
             </a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='flex items-center space-x-2'>'
+              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+<div className='flex items-center space-x-4'>
+            <a
+              href={contactInfo.website}
+
+<div className='flex items-center space-x-4'>'
+            <a,
+href={contactInfo.websit
+}
+              className='"hover":text-cyan-300 transition-colors''
+            >
+              {contactInfo.website.replace('"https"://', '')}'
+            </a>
+          </div>
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <div className='flex items-center space-x-2'>              <MapPin size={14} />
               <span>{contactInfo.address}</span>
             </div>
@@ -1975,6 +2119,10 @@ function UltraFuturisticNavigation2029() {
               href={`mailto:${contact_info.email}`}
               className='flex items - center space - x-2 hover:text - cyan - 300 transition - colors';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             >;
               <Mail size={14} />;
               <span>{contactInfo.email}</span>;
@@ -1983,15 +2131,31 @@ function UltraFuturisticNavigation2029() {
               <MapPin size={14} />;
               <span>{contactInfo.address}</span>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className='flex items-center space-x-4'>;
+            <a;
+=======
+>>>>>>> origin/resolved-merge-conflicts
           </div>;
 <div className='flex items-center space-x-4'>;
             <a;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               href={contactInfo.website}
               className='hover:text-cyan-300 transition-colors';
             >;
               {contactInfo.website.replace('https://', '')}</a>;
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
         </div>;
       </div>;
 =======
@@ -2094,6 +2258,10 @@ className="flex items-center space-x-3"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3";
@@ -2107,8 +2275,16 @@ className="flex items-center space-x-3"
               <div className='flex flex-col'>;
                 <span className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
                   Zion Tech Group;
+<<<<<<< HEAD
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}"
+=======
+<<<<<<< HEAD
+=======
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               className="flex items-center space-x-3"
             >"
               <div className="relative">"
@@ -2120,6 +2296,19 @@ className="flex items-center space-x-3"
               <div className="flex flex-col">"
                 <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Zion Tech Group
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                href={service.href}
+                                className='block p-2 rounded bg-black/30 "hover":bg-cyan-500/20 transition-all duration-200 group'>'
+
+                                <div className='flex items-center justify-between'>;'
+                                  <span className='text-sm text-gray-300 group-"hover":text-white transition-colors'>;'
+                                    {service.name}
+                                  </span>;
+                                  <span className='text-xs text-cyan-400 font-mono'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -2621,6 +2810,10 @@ key={service.name}
                                   </span>;
                                   <span className='text-xs text-cyan-400 font-mono'    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                                     {service.price}
                                   </span>;
                                 </div>;
@@ -2630,6 +2823,12 @@ key={service.name}
 
 <<<<<<< HEAD
               {/* Services Dropdown */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div className="relative group">
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <div className=relative group>
 =======
 <<<<<<< HEAD
@@ -2639,6 +2838,10 @@ key={service.name}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="relative group">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                   <Briefcase size={16} className=group-hover:text-cyan-400 transition-colors />
                   <span>All Services</span>
@@ -2757,7 +2960,16 @@ key={service.name}
                         animate={{ opacity: 1, y: 0}}
                         transition={{ delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className=group
+=======
+<<<<<<< HEAD
+                        className="group"
+=======
+<<<<<<< HEAD
+                        className=group
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       >
                         <div className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
                           <div className="flex items-center space-x-3 mb-3">
@@ -2802,6 +3014,11 @@ key={service.name}
                                 </div>
                                 <p className=text-xs text-gray-500 mt-1>{service.description}</p>
                               </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                                 </p>
                               </Link>
@@ -2859,11 +3076,20 @@ key={service.name}
                     ))}
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             ))}
                           </div>
                         </div>
                       </motion.div>
                     ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   </div>
                 </div>
               </div>
@@ -3613,6 +3839,10 @@ className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all dur
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                                 </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
                             >"
                               <div className="flex items-center justify-between">"
@@ -3633,18 +3863,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
                             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                                 </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
                               className=block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200
 >>>>>>> merged-prs-20250907-203621
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+<<<<<<< HEAD
+                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
+<<<<<<< HEAD
+                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
+=======
+                              className=block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                             >
                               <div className="flex items-center justify-between">
                                 <span className=text-sm text-gray-300>{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                               </div>
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                              </div>
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                                 </span>;
                                 <span className='text-xs text-cyan-400 font-mono'>;
                                   {service.price}</span>                              </div>                              className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200';
@@ -3701,6 +3955,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <div className="flex items-center justify-between">;"
                                 <span className="text-sm text-gray-300">{service && service.name}</span>;"
                                 <span className="text-xs text-cyan-400 font-mono">{service && service.price}</span>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            </Link>
+                          ))}
+                        </div>
+                    ))}
+                {/* Mobile CTA */}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
                                 <span className='text-xs text-cyan-400 font-mono'>;
                                   {service && service.price}
                                 </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200";
@@ -3825,6 +4090,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 {/* Mobile CTA */}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 <div className='mt-8'>'
                   <motion.button,
 whileHover={ 'scale': 1.02 }
@@ -3832,6 +4101,12 @@ whileHover={ 'scale': 1.02 }
                     className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300''
                   >
                     Get Started
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 {/* Mobile CTA */}'
                 <div className='mt-8'>;
                   <motion&& motion.button;
@@ -3844,6 +4119,10 @@ whileHover={ 'scale': 1.02 }
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
 
                     className=w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     Get Started;
                   </motion && motion.button>;
                 </div>;
@@ -3857,6 +4136,20 @@ whileHover={ 'scale': 1.02 }
                   <motion.button;
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+<div className='mt-8'>
+                  <motion.button
+                    whileHover={{ scale: 1.02 ;}}
+                    whileTap={{ scale: 0.98 ;}}
+                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  >
+                    Get Started;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                   >
@@ -3893,6 +4186,10 @@ whileHover={{ scale: 1.02 }}
                     Get Started
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   </motion.button>
                 </div>
               </div>
@@ -3900,6 +4197,15 @@ whileHover={{ scale: 1.02 }}
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Spacer for fixed navigation *
+}
+
+<div className='h-20' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
@@ -4187,10 +4493,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <div className='h-20' />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 "
 =======
@@ -4227,3 +4543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

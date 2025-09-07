@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 loadTime: number;
 =======
+<<<<<<< HEAD
+loadTime: number;
+=======
 interface PerformanceMetrics {;
 =======
 
@@ -11,25 +14,38 @@ interface PerformanceMetrics {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   loadTime: number;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState, useEffect } from './react';
 ;
 interface PerformanceMetrics {}
   load_time: number;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
   loadTime: number;
 import React, { useState, useEffect } from './react';
 
 interface PerformanceMetrics  {load_time: number;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;}
   timeToInteractive: number;}
 }
+<<<<<<< HEAD
+    return \'text-red-600\';
+  }
+<<<<<<< HEAD
+  if (!metrics) return null;
+=======
 <<<<<<< HEAD
     return \'text-red-600\';
 =======
@@ -91,6 +107,7 @@ const PerformanceDashboard: React.FC = () => {;
   }
   if (!metrics) return null;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div className="fixed bottom-4 right-4 z-50">;"
 =======
   if (!metrics) return null;"
@@ -100,6 +117,8 @@ const PerformanceDashboard: React.FC = () => {;
         onClick={() =    /> setIsVisible(!isVisible)}
                 <span;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
   return (
     <div className="fixed bottom-4 right-4 z-50">;
@@ -126,6 +145,7 @@ const PerformanceDashboard: React.FC = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.loadTime.toFixed(0)}ms;
                 </span>;
@@ -135,6 +155,9 @@ const PerformanceDashboard: React.FC = () => {;
                 <span;`
 =======
 <<<<<<< HEAD
+                <span;`
+=======
+<<<<<<< HEAD
             {metrics && metrics.firstContentfulPaint && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">FCP:</span>;
@@ -148,6 +171,7 @@ const PerformanceDashboard: React.FC = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>;
                   {metrics && metrics.firstContentfulPaint.toFixed(0)}ms;
                 </span>;
@@ -157,6 +181,9 @@ const PerformanceDashboard: React.FC = () => {;
                 <span;`
 =======
 <<<<<<< HEAD
+                <span;`
+=======
+<<<<<<< HEAD
             {metrics && metrics.largestContentfulPaint && (;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">LCP:</span>;
@@ -170,11 +197,15 @@ const PerformanceDashboard: React.FC = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.largestContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
+                <span;`
+=======
 <<<<<<< HEAD
                 <span;`
 =======
@@ -192,12 +223,16 @@ const PerformanceDashboard: React.FC = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}>;
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>;
               </div>;
             )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}    />
 
@@ -231,6 +266,8 @@ const PerformanceDashboard: React.FC = () => {;
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -248,6 +285,7 @@ const PerformanceDashboard: React.FC = () => {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       )}
     </div>;
   )}
@@ -257,8 +295,15 @@ export default PerformanceDashboard;
 <<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {}
 =======
+<<<<<<< HEAD
+const PerformanceDashboard: React.FC = () => {}
+=======
 const PerformanceDashboard: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
   const [is_visible, setIsVisible] = useState (false);
 ;
@@ -279,6 +324,10 @@ if ( {) {}
             // Check condition;
 if ( {) {}
   $2;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 const PerformanceDashboard: React.FC = () => {const [metrics, set_metrics] =;
   useState < PerformanceMetrics | null>(null;
@@ -298,6 +347,10 @@ if ( {) {$2;}
               new_metrics.firstContentfulPaint = entry.start_time;
             }
           } else // Check condition;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 if ( {) {}
   $2;
 }
@@ -305,6 +358,10 @@ if ( {) {}
           } else // Check condition;
 if ( {) {}
   $2;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/resolved-merge-conflicts
 if ( {) {$2;}
 }
             new_metrics.largestContentfulPaint = entry.start_time;
@@ -315,6 +372,10 @@ if ( {) {$2;}
             new_metrics.cumulativeLayoutShift =;
               (new_metrics.cumulativeLayoutShift || 0) + (entry as any).value;
           }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
         });
 ;
         // Check condition;
@@ -381,6 +442,10 @@ if (return null) {$2;}
         className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
 
         📊 Performance;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
       </button>;
       {is_visible && (<div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;"
           <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;"
@@ -518,14 +583,25 @@ if (return null) {$2;}
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 ;
 export default PerformanceDashboard;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '"`
+=======
     </div>)}
 
 export default PerformanceDashboard;"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

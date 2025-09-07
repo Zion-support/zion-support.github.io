@@ -1,4 +1,156 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import OpenAI from 'openai';'
+
+export default async function handler() {
+  }
+  if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed','
+});
+
+const { moduleTitle, moduleContent } = req.body || {},;
+  const apiKey = null;
+return res.status(200).json(json);
+export default async function handler() {
+  }
+  if (req.method !== 'POST')'
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+
+const { moduleTitle, moduleContent } = req.body || {};
+
+const apiKey = process.env.OPENAI_API_KEY;
+
+const fallback = () => {
+   ;
+  }
+  return res && res.status(200).json({
+      }
+      "questions": [
+        {
+
+}
+
+"question": `Which topic is central to ${moduleTitl,`}?`,`          "options": [
+            'Random Ops''
+            'Zion OS mission''
+            'Unrelated finance''
+            'Legacy ERP''
+          ]
+          "answerIndex": 1
+
+       
+}
+          "question": 'What does DAO commonly refer to?';'
+          "options": [;
+            'Data Access Object';'
+            'Decentralized Autonomous Organization';'
+            'Digital Asset Option';'
+            'Dynamic Allocation Output''
+];
+
+          "answerIndex": 1;
+        }
+        {"question": 'What should be configured during deployment?';'
+          }
+          "options": [;
+            'Genesis Deploy Kit & modules';'
+            'Only UI colors';'
+            'Nothing';'
+            'Random plugins''
+];
+
+          "answerIndex": 0;
+        }
+        {"question": 'Who are key community roles to hire?';'
+          }
+          "options": [;
+            'Moderators, educators, ambassadors';'
+            'Astronauts';'
+            'Comedians';'
+            'No one''
+];
+
+          "answerIndex": 0;
+        }
+
+        {
+          }
+          "question": 'Which docs are needed for launch?''
+          "options": [
+
+            'Whitepaper + governance docs','
+            'Novel','
+            'Recipe book','
+            'None','
+          ],
+          "answerIndex": 0
+        }
+      ]
+    })
+};          question: 'Which docs are needed for launch?';
+          options: ['Whitepaper + governance docsNovelRecipe bookNone'];
+  const apiKey = $2;
+  const fallback = $2;
+          options: ['Random OpsZion OS missionUnrelated financeLegacy ERP'],
+          answerIndex: 1},
+        {
+          question: 'What does DAO commonly refer to?',
+          options: ['Data Access ObjectDecentralized Autonomous OrganizationDigital Asset OptionDynamic Allocation Output'],
+          answerIndex: 1},
+        {
+          question: 'What should be configured during deployment?',
+          options: ['Genesis Deploy Kit & modulesOnly UI colorsNothingRandom plugins'],
+          answerIndex: 0},
+        {
+          question: 'Who are key community roles to hire?',
+          options: ['Moderators, educators, ambassadorsAstronautsComediansNo one'],
+          answerIndex: 0},
+        {
+          question: 'Which docs are needed for launch?',
+          options: ['Whitepaper + governance docsNovelRecipe bookNone'],
+          answerIndex: 0}]})
+  },
+
+  if (!apiKey) return fallback();
+  try {
+    }
+    const client = new OpenAI({ apiKey });
+
+const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\"nTitle": ${moduleTitle}\"nContent":\n${moduleConten,"
+}`;`
+
+const completion = await client.chat.completions.create({
+      }
+      "model": 'gpt-4o-mini''
+      "messages": [
+{
+          }
+          "role": 'system','
+          "content": 'You are an expert course designer for founders.','
+        },
+        { "role": 'user', "content": prompt,'
+}
+      ],
+      temperature: 0 && 0.2,
+    });'
+    const text = completion && completion.choices?.[0]?.message?.content ?? '';
+    try {}
+'
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+
+      "temperature": 0.2
+    });
+
+const text = completion.choices?.[0]?.message?.content ?? '';'
+    try {
+      }
+      const json = JSON.parse(text);
+return res.status(200).json(json);
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -362,6 +514,10 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse (text);
       return res.status (200).json (json);
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     } catch {
       }
       return fallback ();
@@ -395,6 +551,14 @@ const text = completion.choices?.[0]?.message?.content ?? '';
   } catch (err) {return fallback ()}
     return fallback ();
   }    } catch {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const json = JSON.parse($2);
+      return res.status(200).json(json)
+    } catch {
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
       const json = JSON.parse($2);
@@ -485,10 +649,23 @@ const text = completion.choices?.[0]?.message?.content ?? '';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       return fallback()
     }
   } catch (err) {
     return fallback()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}return fallback()}
+  }
+    } catch {
+    } catch {}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   }
 <<<<<<< HEAD
 }
@@ -506,6 +683,10 @@ const text = completion.choices?.[0]?.message?.content ?? '';
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       return fallback ();
     }
   } catch (err) {}
@@ -517,6 +698,17 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     return fallback()
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+
+    return fallback();
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+'"`
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 
       return res.status(200).json(json);
@@ -534,11 +726,20 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
     return fallback();
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 =======
       const json = JSON.parse(text);}
@@ -571,3 +772,7 @@ return res.status(200).json(json);}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

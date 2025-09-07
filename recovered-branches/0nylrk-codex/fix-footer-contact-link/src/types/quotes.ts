@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -13,11 +15,16 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;"
 export type TimelineType = "fixed" | "flexible";"
 export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface ListingItem {
   id: string;
   title: string;
@@ -27,6 +34,45 @@ export interface ListingItem {
 export interface ContactInfo {
 
 export interface ListingItem {;
+<<<<<<< HEAD
+
+  id: string;
+  title: string;
+  category: string;
+  image?: string;
+
+}
+
+export interface ContactInfo {;
+
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+}
+
+  phone: string,
+  company: string;
+}
+
+export interface Budget {;
+
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
+
+export interface Budget {
+
+export interface Budget {;
+
+  amount: number;
+  maxAmount?: number;
+  type: BudgetType;
+}
+
+=======
   id: string;
   title: string;
   category: string,
@@ -125,12 +171,15 @@ export interface QuoteFormData {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
   projectName: string;
   projectDescription: string;
   startDate?: Date;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   endDate?: Date;
@@ -142,6 +191,7 @@ export interface QuoteRequest {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   timeline: TimelineType;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   timeline: TimelineType;
   budget: Budget;
@@ -158,6 +208,11 @@ export type QuoteStatus =
   | "archived";
 
 export interface QuoteRequest {
+<<<<<<< HEAD
+
+export interface QuoteRequest {;
+
+=======
 <<<<<<< HEAD
 
 export interface QuoteRequest {;
@@ -182,6 +237,7 @@ export interface QuoteRequest {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
 
   talent_id: string;
@@ -212,6 +268,10 @@ export type TimelineType = "fixed" | "flexible",
 export type BudgetType = "fixed" | "hourly" | "range",
 >>>>>>> merged-prs-20250907-203621
 
+<<<<<<< HEAD
+  updated_at: string
+}
+=======
 export interface ListingItem {
   id: string,
   title: string,
@@ -293,3 +353,4 @@ export interface QuoteRequest {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

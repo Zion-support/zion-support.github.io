@@ -9,6 +9,12 @@ const svgPath = resolve(root, '../assets/zion.svg'),
 const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const sizes = [16, 32, 48, 128],
 
 =======
@@ -19,12 +25,41 @@ const sharp = require('sharp');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 #!/usr/bin/env node,
 import { mkdirSync, existsSync  } from ''node': fs';'
 import { resolve  } from ''node': path';'
 import sharp from 'sharp','
 const root = new URL('.';'
 import.meta.url).pathname;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const svgPath = resolve(root, '../assets/zion.svg');'
+
+const outDir = resolve(root, '../public/icons');'
+if (!existsSync(outDir)) mkdirSync(outDir, { "recursive": true
+});
+
+const sizes = [16, 32, 48, 128];
+for (const size of sizes) {
+  }
+  const out = resolve(outDir, `icon-${size}.png`);`
+  await sharp(svgPath).resize(size, size).png().toFile(out);
+  // eslint-disable-next-line no-console,
+console.log('generated', out)'
+}
+  const out = resolve(outDir, `icon-${size}.png`);
+  await sharp(svgPath).resize(size, size).png().toFile(out);
+  // eslint-disable-next-line no-console;
+console.log('generated', out)
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const svgPath = resolve(root, '../assets/zion.svg');
 const outDir = resolve(root, '../public/icons');
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
@@ -142,3 +177,7 @@ const sizes = [16, 32, 48, 128];
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

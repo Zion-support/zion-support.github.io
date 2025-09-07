@@ -30,6 +30,12 @@ const supabaseKey =
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const supabaseKey =;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =;
@@ -38,11 +44,27 @@ import { createClient } from "@supabase/supabase-js";"
 import OpenAI from "openai";
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   process.env.SUPABASE_SERVICE_ROLE_KEY |
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const supabase =;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+const openai = openaiApiKey ? new OpenAI({ "apiKey": openaiApiKey,;
+}) : null;
+
+const supabaseKey =;
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -54,10 +76,32 @@ const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const supabase =;
+  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+const openai = openaiApiKey ? new OpenAI({ "apiKey": openaiApiKey,;
+}) : null;
+
+export default async function handler() {
+
+  }
+
+  if (req.method !== 'POST')'
+return res.status(405).json({ "message": 'Method not allowed',;'
+});
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 const openai = openaiApiKey ? new OpenAI({ "apiKey": openaiApiKey,;
 }) : null;
@@ -370,6 +414,10 @@ if (throw error) {}
 <<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ message: 'Method not allowed' });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   export default async function handler(
     req: NextApiRequest
@@ -389,12 +437,71 @@ if (throw error) {}
               .filter(Boolean)
           : [];
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const supabaseUrl = $2;
+const supabaseKey = $2;
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
 const supabaseUrl = $2;
 const supabaseKey = $2;
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { service, description, timeline, budgetRange, email } = req.body || {};
+  if (!service || !description || !email) {
+}
+return res.status(400).json({ "message": 'Missing required fields',;'
+});
+  }
+
+  try {
+}
+let "aiSummary": string | null = null;
+    let "aiTags": string[] = [];
+
+    if (openai) {
+}
+const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\"nService": ${service}\"nEmail": ${email}\"nBudget": ${budgetRange || 'N/A'}\"nTimeline": ${timeline?.start || 'N/A'} to ${timeline?.end || 'N/A'}\"nDescription": ${descriptio,;'}`;`
+
+const resp = await openai.responses.create({
+        }
+        "model": 'gpt-4.1-mini','
+"input": prompt
+      });
+
+const text = resp.output_text?.trim() || '';'
+
+      aiSummary = text.split('\n')[0] || text;'
+
+const tagsLine = (text.split('\n').find(l => { return l.toLowerCase().includes('tags')) || ''; }'
+      ).replace(/tags?:/i, '').trim()aiTags = tagsLine;'
+        ? tagsLine;
+            .split(',').map(t => { return t.trim()).filter(Boolean): []; }'
+    }let "saved": any = null;
+    if (supabase) {const { data, error } = await supabase;
+        .from('quote_requests').insert({service,description,"timeline_start": timeline?.start || null,"timeline_end": timeline?.end || null,"budget_range": budgetRange || null,email,"ai_summary": aiSummary,"ai_tags": aiTags,"status": 'new'}).select('*').single()if (error) throw error;'
+      saved = data;
+        .status (200);
+        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id });
+    } catch (e: any) {
+      console.error ("quote - request error", e);
+      return res.status (500).json ({ message: "Server error" });
+    }
+    return res.status (500).json ({ message: "Server error" });
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
     return res
@@ -604,11 +711,21 @@ let "aiSummary": string | null = null;
     console.error('quote-request error', e);'
 return res.status(500).json({ "message": 'Server error',;'
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
   }
 }
@@ -653,3 +770,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

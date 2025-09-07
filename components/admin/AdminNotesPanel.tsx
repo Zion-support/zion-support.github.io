@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 export type AdminNotesPanelProps = {
@@ -7,6 +9,7 @@ export type AdminNotesPanelProps = {
 }
 type Note = {
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 
@@ -39,6 +42,8 @@ type Note = {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,6 +65,7 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useMemo, useState } from 'react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
@@ -67,8 +73,12 @@ export type AdminNotesPanelProps = {;
 <<<<<<< HEAD
 type Note = {;'
 =======
+<<<<<<< HEAD
+type Note = {;'
+=======
 type Note = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;'
 import React, { useEffect, useMemo, useState } from 'react';'
@@ -81,8 +91,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 type Note = {}
 =======
+<<<<<<< HEAD
+type Note = {}
+=======
 type Note = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   targetType: string; // e.g., 'user' | 'listing';
 export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
@@ -97,11 +111,16 @@ export type AdminNotesPanelProps = any;targetId: string; // unique identifier fo
   targetId: string;
   text: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 =======
   id: string;
+<<<<<<< HEAD
+=======
 =======
 
 export type AdminNotesPanelProps = {
@@ -162,6 +181,7 @@ type Note = {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   target_type: string;}
   target_id: string;}
@@ -174,6 +194,9 @@ type Note = {id: string;
   text: string;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
   authorId: string;}
@@ -187,6 +210,8 @@ export default function AdminNotesPanel({
   targetId,
 }: AdminNotesPanelProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 };
@@ -201,6 +226,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -208,6 +234,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async function fetchNotes() {
     try {
       setLoading(true);
@@ -226,6 +255,10 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
 
 export default function AdminNotesPanel() {authorId: string;}
   createdAt: number;}
+<<<<<<< HEAD
+}
+
+=======
 >>>>>>> merged-prs-20250907-203621
 }
 export default function AdminNotesPanel({
@@ -245,6 +278,7 @@ type Note = {id: string
   text: string
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function AdminNotesPanel({
   targetType}
   targetId}
@@ -277,6 +311,17 @@ const res = await fetch(}
   return;}
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+  const [isAdmin, setIsAdmin] = useState($2);
+  const [adminId, setAdminId] = useState($2);
+  const [notes, setNotes] = useState<Note[]>([]),
+  const [loading, setLoading] = useState($2);
+  const [adding, setAdding] = useState($2);
+  const [text, setText] = useState($2);
+  async function fetchNotes() {
+    try {
+=======
 >>>>>>> merged-prs-20250907-203621
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
   const [isAdmin, setIsAdmin] = useState(true);
@@ -300,6 +345,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         return;
       }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       setLoading($2);
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
         headers: { 'X-Admin': isAdmin ? 'true' : 'false' }),
@@ -316,6 +362,9 @@ const res = await fetch(
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
         {
           headers: { 'X-Admin': isAdmin ? true : 'false' }
+<<<<<<< HEAD
+
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -334,6 +383,10 @@ const res = await fetch(
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
       );
       if (!res && res.ok) {
@@ -341,10 +394,28 @@ const res = await fetch(
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 '
         method: 'POST','
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const data = await res.json();
+      setNotes(data.notes |[]);
+    } finally {
+      }
+      setLoading(false);
+    }
+  }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
       const data = await res.json();
       setNotes(data.notes |[]);
@@ -380,6 +451,10 @@ const res = await fetch(
       setAdding(false);    }
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
         method: POST','
@@ -448,6 +523,8 @@ headers: {
       if (!res.ok) {
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -587,6 +664,7 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         alert('Failed to add note');
         return;
       }'
@@ -595,6 +673,15 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      await fetchNotes()
+    } finally {
+      }
+      setAdding(false)
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
       await fetchNotes()
     } finally {
@@ -609,6 +696,7 @@ if ( {) {
           <input'
             id='isAdminToggle''
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         alert('Failed to add note');}
@@ -617,6 +705,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setText('');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       await fetchNotes();
     } finally {
       setAdding(false);}
@@ -624,6 +715,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {}
       setAdding(false)}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -641,6 +734,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   }
 
@@ -650,7 +744,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 =======
 <<<<<<< HEAD
+    }
+  }
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   if (!isAdmin) {
     return (
@@ -730,6 +829,9 @@ if ( {) {$2;}
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <input'
             id='isAdminToggle''
             type='checkbox'
@@ -982,7 +1084,10 @@ if ( {) {$2;}
     </div>
   )
 }
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
@@ -992,9 +1097,19 @@ if ( {) {$2;}
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 
+=======
+  }
+
+=======
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/resolved-merge-conflicts
 =======
       await fetchNotes();
     } finally {
@@ -1040,6 +1155,10 @@ if ( {) {$2;}
         <div className='flex items-center gap-3 text-sm'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <label className='inline-flex items-center gap-2'>
             <input
               type=checkbox'
@@ -1054,13 +1173,28 @@ if ( {) {$2;}
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+        <textarea'
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
         <textarea'
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           className='w-full border rounded-md px-3 py-2'
           rows={3}
           placeholder=Write a private note (abuse, spam, special support)'
           value={text}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
         >'
@@ -1082,6 +1216,7 @@ if ( {) {$2;}
                 <div className='opacity-60 text-xs mb-1'>
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50
         >
@@ -1102,7 +1237,10 @@ if ( {) {$2;}
               <li key={n.id} className='rounded border p-2 text-sm'>
                 <div className=opacity-60 text-xs mb-1'>
 
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </li>
             ))}
           </ul>
@@ -1110,12 +1248,15 @@ if ( {) {$2;}
       </div>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 }
 );
 }
 }
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -1429,6 +1570,18 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
             <input'
               type='checkbox
               checked={isAdmin}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              onChange={e => setIsAdmin(e && e.target.checked)}
+            />;
+            <span>Admin</span>;
+          </label>;
+          <input
+            className='border rounded px-2 py-1'
+            value={adminId}
+=======
+>>>>>>> origin/resolved-merge-conflicts
               onChange={e => setIsAdmin(e.target.checked)}
             />
             <span>Admin</span>
@@ -1457,11 +1610,16 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <textarea
           className=w-full border rounded-md px-3 py-2'
           rows={3}'
           placeholder=Write a private note (abuse, spam, special support)
           value={text}
+<<<<<<< HEAD
+          onChange={e => setText(e && e.target.value)}
+        />;
+=======
 <<<<<<< HEAD
           disabled={!text && text.trim() || adding}
           onClick={addNote}
@@ -1510,6 +1668,7 @@ return (
           onChange={e => setText(e && e.target.value)}
         />;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <button;
           onClick={addNote}'
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50>;
@@ -1528,6 +1687,8 @@ return (
       </div>;
       <div className='border-t pt-3'    />;
         <div className='text-sm opacity-70 mb-2'    />;
+<<<<<<< HEAD
+=======
 =======
         <button
 
@@ -1544,6 +1705,7 @@ return (
       <div className='border-t pt-3'>;
         <div className='text-sm opacity-70 mb-2'>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           Notes are private, time-stamped, and include author ID.;
         </div>;
         {loading ? (<div className='text-sm'    />Loading…</div>;
@@ -1558,6 +1720,8 @@ return (
               </li>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
             ))}
@@ -1567,10 +1731,15 @@ return (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             ))}
           </ul>;
         )}
 
+<<<<<<< HEAD
+      </div>
+    </div>
+=======
 <<<<<<< HEAD
       </div>
     </div>
@@ -1580,16 +1749,22 @@ return (
     </div>;
   );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   useEffect (() => {}
     if (fetch_notes ()) {}
   $2;
 }    if (fetch_notes ()) {}
   $2;
+<<<<<<< HEAD
+=======
 =======
 
 }
@@ -1601,6 +1776,7 @@ return (
 }    if (fetch_notes ()) {
   $2
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   }, [is_admin, target_type, target_id]);
   async /**
@@ -1716,6 +1892,12 @@ if ( {) {}
           </ul>)}
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
         </div>
         <div className=&quot;text-xs opacity-60 mt-2&quot;>Admin-only notes hidden.</div>
       </div>
@@ -1798,6 +1980,11 @@ if ( {) {}
   )
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1807,8 +1994,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

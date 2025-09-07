@@ -1,6 +1,75 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
 <<<<<<< HEAD
+
+import { TooltipProvider } from "@/components/ui/tooltip""
+import { useIsMobile } from "@/hooks/use-mobile""
+import { cn } from "@/lib/utils""
+
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
+
+const SIDEBAR_KEYBOARD_SHORTCUT = "b"
+const SidebarContext = React.createContext<SidebarContextType | null>(null)
+export function useSidebar(): SidebarContextType {}
+  const context = React.useContext(SidebarContext)
+  if (!context) {"
+    throw new Error("useSidebar must be used within a SidebarProvider.")
+
+import * as React from './react';
+import type { CSSProperties } from './react';
+import { TooltipProvider } from '@/components / ui / tooltip';
+import { useIsMobile } from '@/hooks / use - mobile';
+import { cn } from '@/lib / utils';
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+;
+
+const SIDEBAR_COOKIE_NAME = "sidebar:state";
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;"
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+
+}
+
+export interface SidebarProviderProps extends React.ComponentProps<"div"> {
+
+  default_open?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+export const SidebarProvider = React.forwardRef<;
+  HTMLDivElement;
+export const SidebarProvider = React.forwardRef<
+  HTMLDivElement,
+
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+const SidebarContext = React && React.createContext<SidebarContextType | null>(null);
+export function useSidebar(): any (): SidebarContextType {;
+  const context = React && React.useContext(SidebarContext);
+
+export interface SidebarProviderProps extends React && React.ComponentProps<"div"> {;
+  defaultOpen?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+  SidebarProviderProps;
+>(;
+  (;
+    {;
+
+  return context as SidebarContextType
+}
+
+export interface SidebarProviderProps extends React.ComponentProps<"div"> {
+  defaultOpen?: boolean
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+}
+
+=======
+<<<<<<< HEAD
 import {TooltipProvider} from "@/components/ui/tooltip"
 import {useIsMobile} from "@/hooks/use-mobile"
 import {cn} from "@/lib/utils"
@@ -175,10 +244,14 @@ export const SidebarProvider = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   SidebarProviderProps
 >(
   (
     {
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
       defaultOpen = true;
       open: openProp
@@ -191,12 +264,16 @@ export const SidebarProvider = React.forwardRef<
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
       className,
       style,
       children,
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
       ...props
@@ -207,6 +284,7 @@ export const SidebarProvider = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ref
   ) => {
 
@@ -220,15 +298,36 @@ export const SidebarProvider = React.forwardRef<
 <<<<<<< HEAD
 
       (value: boolean | ((value: boolean) => boolean)) => {"
+        const open_state = typeof value === "function" ? value (open) : value;
+        // Check condition;
+if ( {) {}
+  $2;
+}
+          setOpenProp (open_state);
+        } else {}
+          _setOpen (open_state);
+        }
+
 =======
 <<<<<<< HEAD
+
+      (value: boolean | ((value: boolean) => boolean)) => {"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value
         if (setOpenProp) {
+
           setOpenProp(openState)
-        } else {
+        } else {}
           _setOpen(openState)
         }
+<<<<<<< HEAD
+
+;
+
+=======
 
 
 =======
@@ -316,6 +415,7 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // This sets the cookie to keep the sidebar state.;
 
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -337,6 +437,12 @@ if ( {) {}
         ) {;
           event.preventDefault();
           toggleSidebar();
+<<<<<<< HEAD
+
+        }
+      }
+
+=======
 
 <<<<<<< HEAD
         }
@@ -348,6 +454,7 @@ if ( {) {}
       }
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
       }
 
@@ -367,8 +474,11 @@ if ( {) {}
 
       return () => window.removeEventListener("keydown", handleKeyDown)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }, [toggleSidebar])
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }, [toggleSidebar])"
     // We add a state so that we can do data-state="expanded" or "collapsed".
     // This makes it easier to style the sidebar with Tailwind classes."
@@ -378,10 +488,14 @@ if ( {) {}
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // This sets the cookie to keep the sidebar state.;
 
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -415,8 +529,12 @@ if (
 <<<<<<< HEAD
       (): SidebarContextType => ({}
 =======
+<<<<<<< HEAD
+      (): SidebarContextType => ({}
+=======
       (): SidebarContextType => ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       open: openProp,;
       onOpenChange: setOpenProp,;
       className;
@@ -438,8 +556,12 @@ if (
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
       defaultOpen = true,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       open:openProp,;
       onOpenChange:setOpenProp,;
       className,;
@@ -466,15 +588,22 @@ if (
 =======
     const open = openProp ?? _open;
     const setOpen = React.useCallback(;
-      (value:boolean | ((value:boolean) => boolean)) => {;
+      (value:boolean | ((value:boolean) => boolean)) => {;"
         const openState = typeof value === "function" ? value(open) :value;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (setOpenProp) {;
           setOpenProp(openState);
         } else {;
           _setOpen(openState);
         }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         // This sets the cookie to keep the sidebar state.;
         document && document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -519,6 +648,11 @@ if (
         open_mobile;
         setOpenMobile;
 
+<<<<<<< HEAD
+    return (
+      <SidebarContext && SidebarContext.Provider value={contextValue}>;
+        <TooltipProvider delayDuration={0}>;
+=======
 =======
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
     );
@@ -527,10 +661,13 @@ if (
       <SidebarContext && SidebarContext.Provider value={contextValue}>;
         <TooltipProvider delayDuration={0}>;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               }
             className={cn(
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -540,6 +677,7 @@ if (
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className
 
             )}
@@ -554,10 +692,13 @@ if (
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 );
 SidebarProvider && SidebarProvider.displayName = "SidebarProvider";
 export { SidebarContext }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
     return (
@@ -642,15 +783,21 @@ SidebarProviderProps > ( ({
     )
     return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <SidebarContext.Provider value = $2;
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <SidebarContext.Provider value={contextValue}>
         <TooltipProvider delayDuration={0}>
           <div
               style={
               {
                 "--sidebar-width": "16rem",
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 "--sidebar-width-icon": "3rem",
                 ...style} as CSSProperties
               }
@@ -659,6 +806,8 @@ SidebarProviderProps > ( ({
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
 
+<<<<<<< HEAD
+=======
               className
             )}
             ref={ref}
@@ -819,10 +968,12 @@ SidebarProviderProps > ( ({
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className
             )}
             ref={ref}
             {...props}
+
           >
             {children}
           </div>
@@ -830,16 +981,22 @@ SidebarProviderProps > ( ({
       </SidebarContext.Provider>
     )
   }
-)
+)"
 SidebarProvider.displayName = "SidebarProvider"
 <<<<<<< HEAD
 export { SidebarContext }
+<<<<<<< HEAD
+=======
 =======
 export { SidebarContext }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export { SidebarContext };
 ;
 export { SidebarContext }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -847,3 +1004,4 @@ export { SidebarContext }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

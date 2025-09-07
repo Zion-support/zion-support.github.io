@@ -4,6 +4,20 @@ service;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'use client','
+
+import { useState, useEffect  } from 'react';'
+
+import Link from 'next/link';'
+import { motion, AnimatePresence  } from 'framer-motion';'
+import { Menu, ChevronDown;
+  }
+  Brain, Rocket, Shield;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 'use client',
 
 import { useState, useEffect } from 'react';
@@ -101,11 +115,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown;
   Brain, Rocket, Shield, 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   Zap;
   Target, Atom;
   BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
+  } from 'lucide-react';
+const navigationItems  = null;
+    </>);
+}
+const navigationItems  = null;
+                            exit={{ opacity: 0, height: 0}}
+                            transition = $2;
+export default EnhancedNavigation2025,
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+=======
+>>>>>>> origin/resolved-merge-conflicts
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
 } from 'lucide-react';
 const navigationItems = [
@@ -721,6 +755,10 @@ export default function EnhancedNavigation2025() {
                     }`} />;
                   </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 
 

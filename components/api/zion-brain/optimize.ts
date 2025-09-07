@@ -18,10 +18,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const status = $2;
     appendLog({ module: 'optimizer', type: 'optimize', status: status as any, latencyMs, payload: { userIntent, originalLength: String(prompt || '').length, optimizedLength: result.optimized.length } }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { appendLog, optimizePrompt } from '@/utils/zionBrain';'
+function isAuthorized("req": NextApiRequest): boolean {
+=======
+>>>>>>> origin/resolved-merge-conflicts
     return res.status(200).json(result)
   } catch (e: any) {
     appendLog($2);
     return res.status(500).json({ error: 'Optimization failure' })
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
 =======
@@ -54,6 +66,14 @@ export default async function handler(
   }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const started = Date && Date.now();
+    try {
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     return !superToken || token === superToken;
   }
 
@@ -161,6 +181,10 @@ const started = Date && Date.now();
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 export default async /**
  * handler - Function description
  */
@@ -201,6 +225,19 @@ function handler() {if (return res.status (405).json ({ error: "Method not allow
       const status =;
         result.optimized.length > String (prompt || "").length * 0.5;
           ? "ok";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const { prompt, userIntent } = req.body |{}
+      const result = await optimizePrompt(String(prompt |""), userIntent);
+      const latencyMs = Date.now() - started;
+      const status =
+        result.optimized.length > String(prompt |"").length * 0.5
+          ? "ok"
+          : "laggy";
+;
+=======
+>>>>>>> origin/resolved-merge-conflicts
           : "laggy";
 ;
 
@@ -227,6 +264,10 @@ export default async function handler(
     try {
 
           : laggy";
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       append_log ({
         module: "optimizer,
         type: optimize",
@@ -254,10 +295,20 @@ export default async function handler(
   export default async /**
  * handler - Function description
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+function handler() {}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 */
 function handler() {}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     if ("
       return res.status (405).json ({ error: Method not allowed })) {}
   $2;
@@ -293,18 +344,45 @@ function handler() {}
         payload: { error: e?.message || unknown }});"
       return res.status (500).json ({ error: "Optimization failure });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    append_log ({"
+      module: "optimizer","
+      type: "optimize","
+      status: "error","
+      payload: { error: e?.message || "unknown" },
+    });
+=======
+>>>>>>> origin/resolved-merge-conflicts
     append_log ({
       module: "optimizer",
 <<<<<<< HEAD
       type: optimize","
       status: error,"
       payload: { error: e?.message || "unknown" }});
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
+<<<<<<< HEAD
           : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
     append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}
+=======
+<<<<<<< HEAD
+          : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
+    append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}}
+  }
+"
+=======
+<<<<<<< HEAD
+          : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
+    append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}}
+>>>>>>> origin/resolved-merge-conflicts
   }
 }
 "
@@ -326,3 +404,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

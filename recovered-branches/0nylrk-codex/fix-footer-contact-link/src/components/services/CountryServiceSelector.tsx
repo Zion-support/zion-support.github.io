@@ -7,6 +7,11 @@ import { CountrySelector } from "./CountrySelector";
 <<<<<<< HEAD
 import { PaymentSection } from "./PaymentSection";
 import { ServiceDetails } from "./ServiceDetails";
+
+=======
+<<<<<<< HEAD
+import { PaymentSection } from "./PaymentSection";
+import { ServiceDetails } from "./ServiceDetails";
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -23,6 +28,7 @@ import { ServiceDetails } from "./ServiceDetails";
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
@@ -33,6 +39,8 @@ import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -65,6 +73,7 @@ import { ServiceDetails } from "./ServiceDetails",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -73,6 +82,9 @@ export function CountryServiceSelector({
   onCountryChange
   selectedCountry: initialCountry
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {
 
@@ -116,6 +128,21 @@ export function CountryServiceSelector({}
   );
 }
 ;
+<<<<<<< HEAD
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountrySelector } from "./CountrySelector",;
+import { PaymentSection } from "./PaymentSection",;
+
+import { ServiceDetails } from "./ServiceDetails",;
+;
+interface CountryServiceSelectorProps {;
+  onCountryChange?:(country:CountryPricing | null) => void,;
+  selectedCountry?:CountryPricing | null;
+}
+;
+export function CountryServiceSelector() { return null; }
+=======
 =======
 <<<<<<< HEAD
 
@@ -214,11 +241,15 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
         <CountrySelector
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
+        ;
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>;
+<<<<<<< HEAD
+=======
       {initialCountry && <ServiceDetails country={initialCountry && initialCountry.country} />}
     </div>;
   );
@@ -286,6 +317,7 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry:initia
         ;
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ;
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
 <<<<<<< HEAD
@@ -296,6 +328,9 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry:initia
     </div>;
   ),;}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  interface CountryServiceSelectorProps {}
   onCountryChange?: (country: CountryPricing | null) => void;
 
@@ -312,6 +347,8 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry:initia
 }/> 
 }</div>) 
 });
+<<<<<<< HEAD
+=======
 =======
  interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
@@ -336,6 +373,7 @@ selectedCountry?: CountryPricing | null
 }
 );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 }
 ;

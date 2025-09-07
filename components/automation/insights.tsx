@@ -8,6 +8,17 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 =======
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { useEffect, useState  } from 'react';'
+import Head from 'next/head','
+export default function AutomationInsightsPage() {
+  }
+  const [intel, setIntel] = useState<any>(null);
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
@@ -71,6 +82,10 @@ export default function AutomationInsightsPage() {;
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null),
   const [talentMd, setTalentMd] = useState<string>('),
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 const [talentMd, setTalentMd] = useState<string>('');'
   useEffect(() => {
@@ -79,6 +94,36 @@ const [talentMd, setTalentMd] = useState<string>('');'
 <<<<<<< HEAD
 
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});'
+    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})'
+return (<div> <Head><title > Automation Insights — Zion</title></Head>) );
+}</ul> </div> </div>);
+}</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 "dark":bg - gray - 900 p - 3 rounded border border - gray - 200 "dark":border - gray - 800" > {"
+  }
+  talent_md;
+}</pre>);
+}</section> </div>) import { useEffect, useState } from 'react';'
+
+import Head from 'next / head';'
+
+export default /**;
+ * AutomationInsightsPage - Function description;
+ */;
+function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(null)const [talent_md, setTalentMd]  = useState < string>('')useEffect (() => {fetch ('/data / automation / market - intel.json').then ((r) => r.json ()).then (set_intel).catch (() => {})fetch ('/data / automation / talent - highlights.md').then ((r) => r.text ()).then (setTalentMd).catch (() => {})}, [])return (<div>;'
+      <Head><title > Automation Insights — Zion</title></Head>;
+      <h1 className="text - 2xl font - semibold mb - 4">Automation Insights</h1>;"
+      <section className="mb - 8">;"
+        <h2 className="font - medium">Market Intelligence</h2>;"
+
+
+
+import { useEffect, useState  } from 'react';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});'
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})'
@@ -174,6 +219,10 @@ import { useEffect, useState  } from 'react';
     fetch('/data/automation/talent-highlights.md).then((r) => r.text()).then(setTalentMd).catch(() => {})
 
 import { useEffect, useState  } from react';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -251,7 +300,14 @@ export default /**
     fetch (/data / automation / market - intel.json).then ((r) => r.json ()).then (set_intel).catch (() => {});'
     fetch ('/data / automation / talent - highlights.md').then ((r) => r.text ()).then (setTalentMd).catch (() => {})
   }, [])
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   return (
     <div>
       <Head><title>Automation Insights — Zion</title></Head>
@@ -259,6 +315,19 @@ export default /**
       <section className=mb-8">
         <h2 className="font-medium>Market Intelligence</h2>
         {!intel ? (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          <div className="text-sm text-gray-500">Loading…</div>"
+        ) : (
+          <div className="mt-3 text-sm">"
+            <div className="text-xs text-gray-500">Generated at {intel.generatedAt}</div>"
+            <div className="mt-3">"
+              <h3 className="font-medium">Top Keywords</h3>"
+              <ul className="list-disc list-inside">"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
           <div className="text-sm text-gray-500">Loading…</div>
         ) : (
@@ -298,6 +367,10 @@ export default /**
             <div className="mt-3">
               <h3 className=font-medium>Top Keywords</h3>
               <ul className="list-disc list-inside">
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>
         {!intel ? (<div className="text - sm text - gray - 500">Loading…</div>) : (<div className="mt - 3 text - sm">;
@@ -322,6 +395,41 @@ export default /**
             </div>;
           </div>)}
       </section>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <section id="talent" className="mb-8">;"
+        <h2 className="font-medium">Talent Highlights</h2>;"
+        {!talentMd ? (<div className="text-sm text-gray-500">Loading…</div>;"
+        ) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 "dark": bg-gray-900 p-3 rounded border border-gray-200 "dark":border-gray-800">{talentM,"
+}</pre>;
+        )}
+
+                ))}
+              </ul>
+            </div>;"
+            <div className=\"mt-4\"    />;"
+              <h3 className=\"font-medium\"    />Top Languages</h3>;"
+              <ul className=\"list-disc list-inside\"    />
+                {intel.insights.topLanguages.map((l: any) => (<li key={l.lang}    />{l.lang}: {l.coun}
+}</li>
+                ))}
+              </ul>
+            </div>
+        )}
+      </section>;"
+      <section id=\"talent\" className=\"mb-8\"    />;"
+        <h2 className=\"font-medium\"    />Talent Highlights</h2>;"
+        {!talentMd ? (<div className=\"text-sm text-gray-500\"    />Loading…</div>;}"
+        ) : (<pre className=\"mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800\"    />{talentM}
+}</pre>
+        )}
+      </section>
+
+      <section id="talent" className="mb-8">
+        <h2 className="font-medium">Talent Highlights</h2>
+=======
+>>>>>>> origin/resolved-merge-conflicts
       <section id="talent" className="mb - 8">;
         <h2 className="font - medium">Talent Highlights</h2>;
       </section>;
@@ -490,6 +598,10 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
 <<<<<<< HEAD
       <section id="talent className=mb-8">
         <h2 className="font-medium>Talent Highlights</h2>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {!talentMd ? (
           <div className=text-sm text-gray-500">Loading…</div>
         ) : (
@@ -501,6 +613,14 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -518,3 +638,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

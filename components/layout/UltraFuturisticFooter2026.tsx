@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Link from 'next/link';'
+
+import { motion } from 'framer-motion';'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -302,6 +311,10 @@ const serviceCategories = []
       { name: Quantum Genomic Analysis', href: '/quantum-genomic-analysis }
       { name: 'AI Autonomous Clinical Trials', href: /ai-autonomous-clinical-trials }
     ]
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import {}
 =======
 import {
@@ -355,6 +368,13 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
 import Link from 'next/link';
 =======
@@ -364,6 +384,10 @@ import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   Instagram,;
   Youtube,;'
   Github,;} from 'lucide-react';import {};
@@ -378,6 +402,19 @@ const contact_info = {
 {
   name: 'AI Predictive Enterprise Analytics', href: /ai - predictive - enterprise - analytics;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
+  }
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
+ } from 'lucide-react';'
+
+const contactInfo = null;
+                and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 <<<<<<< HEAD
@@ -389,6 +426,11 @@ import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
 
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import {
   Phone
   Mail
@@ -411,9 +453,18 @@ import {
   Youtube
   Github;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -423,6 +474,23 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 }
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  "name": 'AI Predictive Enterprise Analytics', "href": '/ai-predictive-enterprise-analytics''
+
+}
+{"name": 'AI Autonomous Customer Success', "href": '/ai-autonomous-customer-success';'
+}
+{"name": 'AI Autonomous Marketing Orchestrator', "href": '/ai-autonomous-marketing-orchestrator';'
+}
+{"name": 'AI Autonomous Sales Intelligence', "href": '/ai-autonomous-sales-intelligence';'
+}];
+}
+{"title": 'Cybersecurity & Quantum', "services": [ {"name": 'Quantum Encryption Platform', "href": '/quantum-encryption-platform';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
   name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics'
 }
 {
@@ -659,6 +727,10 @@ export default function UltraFuturisticFooter2026() {
 {
   title: 'Cybersecurity & Quantum', services: [ {
   name: Quantum Encryption Platform', href: '/quantum - encryption - platform;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 {
   name: 'AI Autonomous Threat Hunter', href: /ai - autonomous - threat - hunter;
@@ -706,6 +778,35 @@ export default function UltraFuturisticFooter2026() {
 {
   name: AI Autonomous Clinical Trials', href: '/ai - autonomous - clinical - trials;
 }];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{/* Background Effects */;
+}<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {{"title": 'AI & Automation';'
+    }
+    "services": [;
+      {"name": 'AI Autonomous Business Processor';'
+        }
+        "href": '/ai-autonomous-business-processor';'
+      }
+      {"name": 'AI Predictive Enterprise Analytics';'
+        }
+        "href": '/ai-predictive-enterprise-analytics';'
+      }
+      {"name": 'AI Autonomous Customer Success';'
+        }
+        "href": '/ai-autonomous-customer-success';'
+      }
+      {"name": 'AI Autonomous Marketing Orchestrator';'
+        }
+        "href": '/ai-autonomous-marketing-orchestrator';'
+      }
+      {"name": 'AI Autonomous Sales Intelligence';'
+        }
+        "href": '/ai-autonomous-sales-intelligence';'
+      }
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }];
 {}
   /* Background Effects */;"
@@ -915,8 +1016,52 @@ const service_categories = [;
       { name: 'AI Autonomous Customer Success', href: /ai - autonomous - customer - success },'
       { name: 'AI Autonomous Marketing Orchestrator, href: /ai - autonomous - marketing - orchestrator' },'
       { name: AI Autonomous Sales Intelligence, href: '/ai - autonomous - sales - intelligence' }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+
+        }
+
+        "name": 'AI Autonomous Clinical Trials','
+        "href": '/ai-autonomous-clinical-trials','
+      }
+    ]
+  }
+];
+
+const companyLinks = [;
+    { "name": 'About Us', "href": '/about','
+},
+
+    { "name": 'Leadership Team', "href": '/leadership','
+},
+
+    { "name": 'Careers', "href": '/careers','
+},
+
+    { "name": 'News & Press', "href": '/news','
+},
+
+    { "name": 'Partners', "href": '/partners','
+},
+
+    { "name": 'Investors', "href": '/investors','
+},
+
+    { "name": 'Contact Us', "href": '/contact','
+},
+
+
+  { "name": 'Locations', "href": '/locations','
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
   { name: Contact Us, href: '/contact' },
 const resourceLinks = [
@@ -1696,10 +1841,87 @@ const resourceLinks = [
 
   { name: 'Developer Resources'}
   href: '/developer-resources'}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
 
 ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const resourceLinks = [;
+    { "name": 'Documentation', "href": '/docs','
+},
+
+    { "name": 'API Reference', "href": '/api-documentation','
+},
+
+    { "name": 'Case Studies', "href": '/case-studies','
+},
+
+    { "name": 'Blog & News', "href": '/blog','
+},
+
+    { "name": 'Support Center', "href": '/support','
+},
+
+    { "name": 'Training & Certification', "href": '/training','
+},
+
+    { "name": 'Community Forum', "href": '/community','
+},
+
+  { "name": 'Developer Resources', "href": '/developer-resources','
+}
+
+];
+
+const socialLinks = [;
+  { "name": 'Facebook', "href": '#', "icon": Facebook,'
+},
+  { "name": 'Twitter', "href": '#', "icon": Twitter,'
+},
+  { "name": 'LinkedIn', "href": '#', "icon": Linkedin,'
+},
+  { "name": 'Instagram', "href": '#', "icon": Instagram,'
+},
+  { "name": 'YouTube', "href": '#', "icon": Youtube,'
+},
+{ "name": 'GitHub', "href": '#', "icon": Github,'
+}
+];
+
+export default function UltraFuturisticFooter2026() {
+}
+return (;
+<footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>'
+      {/* Background Effects */}
+      <div className='absolute inset-0 overflow-hidden'>'
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>'
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>'
+      </div>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 py-16'>'
+        {/* Main Footer Content *
+}
+        <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-6 gap-8 mb-12">;"
+          {/* Company Info */}
+
+          <div className='"lg":col-span-2'>'
+            <motion.div,
+initial={{ "opacity": 0, "y": 20 
+}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.6 
+}
+            >
+<div className='flex items-center mb-6'>'
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>'
+                  <Zap className='w-6 h-6 text-white' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 const socialLinks = [
   { name: 'Facebook'}
   href: '#', icon: Facebook}
@@ -1842,17 +2064,47 @@ initial={{ opacity: 0, y: 20 }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
               <p className='text-gray-300 mb-6 leading-relaxed'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
                 <h3 className=text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h3>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <p className='text-gray-300 mb-6 leading-relaxed'>'
+                Leading provider of revolutionary AI automation, quantum,
+cybersecurity, fintech blockchain, and healthcare biotech,
+solutions. Transforming businesses with cutting-edge technology.
+              </p>
+              {/* Contact Info */}'
+              <div className='space-y-3'>'
+                <div className='flex items-center text-gray-300'>'
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
+                </div>'
+                <div className='flex items-center text-gray-300'>'
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.email}</span>
+                </div>'
+                <div className='flex items-center text-gray-300'>'
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.address}</span>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
               <p className=text-gray-300 mb-6 leading-relaxed'>
                 Leading provider of revolutionary AI automation, quantum
                 cybersecurity, fintech blockchain, and healthcare biotech
                 solutions. Transforming businesses with cutting-edge technology.
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />
@@ -1869,6 +2121,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {/* Contact Info */}
+              <div className='space-y-3'>;'
+                <div className='flex items-center text-gray-300'>;'
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>;'
+                </div>;
+                <div className='flex items-center text-gray-300'>;'
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />;'
+                  <span>{contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;'
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;'
+                  <span>{contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;'
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />;'
+                  <span>{contactInfo.website}</span>;
+                </div>;
+            </motion.div>;
+          </div>;
+              </p>;
+              {/* Contact Info */}
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;"
+                  <span>{contactInfo.website}</span>;
+                </div>;
+            </motion.div>;
+          </div>;
+              <div className='space-y-3'>;'
+                <div className='flex items-center text-gray-300'>;'
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.mobile}</span>;'
+                </div>;
+                <div className='flex items-center text-gray-300'>;'
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />;'
+                  <span>{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;'
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;'
+                  <span>{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300'>;'
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300">;"
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;"
+=======
+>>>>>>> origin/resolved-merge-conflicts
           <div className="lg:col-span-2">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1887,6 +2185,10 @@ export default function UltraFuturisticFooter2026() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                   <span>{contactInfo && contactInfo.website}</span>;
                 </div>;
               </div>;
@@ -1895,6 +2197,12 @@ export default function UltraFuturisticFooter2026() {
           {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
               }
               key={index}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              initial={{ "opacity": 0, "y": 20 
+=======
+>>>>>>> origin/resolved-merge-conflicts
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
                       href={service.href}"
@@ -2266,13 +2574,40 @@ function UltraFuturisticFooter2026() {
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
                 {category.title === 'AI & Automation' && (
                   <Brain className='w-5 h-5 mr-2 text-cyan-400' />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
                 }
 }
+<<<<<<< HEAD
                 {category.title === 'Cybersecurity & Quantum' && (<Shield className='w-5 h-5 mr-2 text-red-400' />;}
+=======
+<<<<<<< HEAD
+
+              transition={{ "duration": 0.6, "delay": index * 0.1 }}
+            >
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
+                {category.title === 'AI & Automation' && ('
+                  <Brain className='w-5 h-5 mr-2 text-cyan-400' />'
+
+                
+}
+                {category.title === 'Cybersecurity & Quantum' && (<Shield className='w-5 h-5 mr-2 text-red-400' />;'
+=======
+                {category.title === 'Cybersecurity & Quantum' && (<Shield className='w-5 h-5 mr-2 text-red-400' />;}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 )}
                 {category.title === 'Cybersecurity & Quantum' && (<Shield className=w-5 h-5 mr-2 text-red-400 />;
                 )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {category.title === 'Healthcare & Biotech' && (<Dna className='w-5 h-5 mr-2 text-blue-400' />;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 {category.title === 'Fintech & Blockchain' && (<DollarSign className=w-5 h-5 mr-2 text-green-400 />;
                 )}
                 {category.title === 'Healthcare & Biotech' && (<Dna className=w-5 h-5 mr-2 text-blue-400 />;
@@ -2357,6 +2692,10 @@ solutions. Transforming businesses with cutting-edge technology.
                 )}
                 {category.title === 'Healthcare & Biotech' && (<Dna className='w-5 h-5 mr-2 text-blue-400'    />;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 )}
                 {category.title}
               </h4>;
@@ -2364,18 +2703,41 @@ solutions. Transforming businesses with cutting-edge technology.
                 {category.services.map((service, serviceIndex) => (<li key={serviceIndex}    />;
                     <Link;
                       href={service.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group';
                     >;
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />;
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       href={service.href}
                       className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group';
                     >;
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               initial={{ opacity: 0, y: 20}}
               whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -2396,6 +2758,12 @@ solutions. Transforming businesses with cutting-edge technology.
                     >
                       <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                       {service.name}
                     </Link>
                   </li>
@@ -2426,6 +2794,13 @@ solutions. Transforming businesses with cutting-edge technology.
               </ul>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Additional Links */}<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
+        {/* Additional Links */}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
         {/* Additional Links */}<div className=grid grid-cols-1 md:grid-cols-3 gap-8 mb-12>;
 =======
@@ -2460,8 +2835,18 @@ solutions. Transforming businesses with cutting-edge technology.
 
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+<<<<<<< HEAD
+          {/* Company Links *
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 =======
 =======
@@ -2594,6 +2979,10 @@ solutions. Transforming businesses with cutting-edge technology.
                 <li key={index}>
                   <Link;
             </h4>"
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <motion&& motion.div;
             initial={ opacity: 0;, y: 20 ;}
 }
@@ -2602,6 +2991,72 @@ solutions. Transforming businesses with cutting-edge technology.
             transition={{ duration: 0.6;, delay: 0.2 ;}
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          {/* Company Links */}
+
+          <motion.div;
+          {/* Company Links */}
+          <motion&& motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
+              <Users className='w-5 h-5 mr-2 text-purple-400' />'
+              Company
+            </h4>
+            <ul className='space-y-2'>'
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link,
+href={link.href}
+                    className='text-gray-400 "hover": text-cyan-400 transition-colors duration-300 text-sm''
+                  >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    {link.name}
+          {/* Resources *
+}
+          <motion&& motion.div;
+            initial={{ "opacity": 0, "y": 20 
+}
+
+            whileInView={{ "opacity": 1, "y": 0 
+}
+
+            transition={{ "duration": 0.6, "delay": 0.3 
+}
+          >
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
+              <Award className='w-5 h-5 mr-2 text-yellow-400' />'
+              Resources
+            </h4>
+            <ul className='space-y-2'>'
+              {resourceLinks.map((link, index) => (
+                <li key={index}>
+                  <Link,
+href={link.href}
+                    className='text-gray-400 "hover": text-cyan-400 transition-colors duration-300 text-sm''
+                  >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    {link.name}
+          {/* Social Media *
+}
+          <motion&& motion.div;
+            initial={{ "opacity": 0, "y": 20 
+}
+
+            whileInView={{ "opacity": 1, "y": 0 
+}
+
+            transition={{ "duration": 0.6, "delay": 0.4 
+}
+          >
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
+              <Rocket className='w-5 h-5 mr-2 text-pink-400' />'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
@@ -2953,6 +3408,10 @@ href={link.href}
           >
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               Follow Us
             </h4>
             <div className='grid grid-cols-3 gap-4'>              {socialLinks.map((social, index) => (
@@ -2969,6 +3428,12 @@ href={link.href}
                 <Link
                   key={index}
                   href={social.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+className='w-12 h-12 bg-gray-800 "hover": bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group''
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 
 
@@ -2991,6 +3456,10 @@ href={link.href}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
                   className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
                 >
@@ -3045,6 +3514,27 @@ href={link.href}
             </div>;
           </motion.div>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </motion && motion.div>;
+        </div>;))}
+        {/* Newsletter Signup */}
+        <motion&& motion.div;
+          initial={{ "opacity": 0, "y": 20 
+}
+
+          whileInView={{ "opacity": 1, "y": 0 
+}
+
+          transition={{ "duration": 0.6, "delay": 0.5 
+}
+className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12''
+        >
+          <div className='text-center'>'
+            <h3 className='text-2xl font-bold text-white mb-4'>'
+=======
+>>>>>>> origin/resolved-merge-conflicts
         {/* Newsletter Signup */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }}
@@ -3055,6 +3545,10 @@ href={link.href}
         >
           <div className='text-center'>
             <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               Stay Updated with Latest Innovations
             </h3>
             <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
@@ -3062,6 +3556,21 @@ href={link.href}
               emerging technology insights. Be the first to know about
               breakthrough solutions and industry trends.
             </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='flex flex-col "sm":flex-row gap-4 max-w-md mx-auto'>'
+              <input,
+type='email''
+                placeholder='Enter your email''
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 "focus":outline-none "focus":border-cyan-500 "focus":ring-2 "focus":ring-cyan-500/20'' />
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl "hover":shadow-2xl "hover":shadow-cyan-500/25 transition-all duration-300'>'
+                Subscribe
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
+              <input;
+type='email'
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
 
 
@@ -3276,6 +3785,10 @@ type='email'
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
               <input;
 type=email
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 placeholder='Enter your email'
                 className=flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.5 }}
@@ -3303,8 +3816,17 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights.;
               Be the first to know about breakthrough solutions and industry trends.;
             </p>;
+<<<<<<< HEAD
             <div className=flex flex-col sm:flex-row gap-4 max-w-md mx-auto>;
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+=======
+            <div className=flex flex-col sm:flex-row gap-4 max-w-md mx-auto>;
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="text-center">
             <h3 className=text-2xl font-bold text-white mb-4>
               Stay Updated with Latest Innovations
@@ -3335,13 +3857,28 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
                 Subscribe;
               </button>;
             </div>;
+<<<<<<< HEAD
           </div>;
         </motion.div>;
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+        </motion.div>;
+=======
+          </div>;
+        </motion.div>;
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights. 
               Be the first to know about breakthrough solutions and industry trends.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 <<<<<<< HEAD
 =======
@@ -3350,6 +3887,10 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -3357,6 +3898,11 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>
                 Subscribe
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 =======
@@ -3371,6 +3917,10 @@ type='email'
                 Subscribe;
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </button>
             </div>
           </div>
@@ -3410,6 +3960,35 @@ type='email'
                 Subscribe;
               </button>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Bottom Bar */}
+        <motion&& motion.div;
+        </motion.div>;
+        {/* Bottom Bar */}
+        <motion.div;
+          initial={{ "opacity": 0 }}
+
+          whileInView={{ "opacity": 1 
+}
+
+          transition={{ "duration": 0.6, "delay": 0.6 
+}
+className='border-t border-gray-800 pt-8''
+        >
+          <div className='flex flex-col "md":flex-row justify-between items-center'>'
+            <div className='text-gray-400 text-sm mb-4 "md":mb-0'>'
+              © 2026 Zion Tech Group. All rights reserved.
+              <Link,
+href='/privacy''
+
+                className='"hover":text-cyan-400 transition-colors duration-300 ml-2'>;'
+                Privacy Policy;
+              </Link>;
+              <span className='mx-2'>|</span>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
           </div>;
 <<<<<<< HEAD
         {/* Bottom Bar */}
@@ -3578,6 +4157,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 99.9% Uptime
 =======
                 className='hover:text-cyan-400 transition-colors duration-300'
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                 className=hover:text-cyan-400 transition-colors duration-300'
                />
@@ -3614,6 +4197,22 @@ href='/terms'
                 Terms of Service;
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='flex items-center space-x-2'>'
+              <div className='flex items-center text-gray-400 text-sm'>'
+                <Star className='w-4 h-4 text-yellow-400 mr-1' />'
+                Trusted by 2500+ Companies
+              </div>
+              <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>'
+              <div className='text-cyan-400 text-sm font-semibold'>'
+                99.9% Uptime
+              <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' /></div>
+              <div className='text-cyan-400 text-sm font-semibold' />
+                99.9% Uptime;
+=======
+>>>>>>> origin/resolved-merge-conflicts
             <div className='flex items-center space-x-2'    />
               <div className='flex items-center text-gray-400 text-sm'    />
                 <Star className='w-4 h-4 text-yellow-400 mr-1'    />
@@ -3639,11 +4238,38 @@ href='/terms'
 >>>>>>> origin/chore/fix-lint-and-merge
                 99.9% Uptime;
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               </div>
             </div>
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </footer>;
+  );
+}
+'
+          className='border - t border - gray - 800 pt - 8';
+        >;'
+          <div className='flex flex - col md:flex - row justify - between items - center'>;'
+            <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link;'
+                href='/privacy';'
+                className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2';
+              >;
+                Privacy Policy;
+              </Link>;'
+              <span className='mx - 2'>|</span>;
+              <Link;'
+                href='/terms';'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     </footer>
   )
@@ -3752,10 +4378,91 @@ href='/terms'
               <span className='mx - 2'>|</span>;
               <Link;
                 href='/terms';
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 className='hover:text - cyan - 400 transition - colors duration - 300';
               >;
                 Terms of Service;
               </Link>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </div>;'
+            <div className='flex items - center space - x-2'>;'
+              <div className='flex items - center text - gray - 400 text - sm'>;'
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
+                Trusted by 2500+ Companies;
+              </div>;'
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
+              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;"
+          <div className="flex flex - col md: flex - row justify - between items - center">;"
+            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">;
+              © 2026 Zion Tech Group. All rights reserved. |;"
+              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2">;
+                Privacy Policy;
+              </Link>;"
+              <span className="mx - 2">|</span>;"
+              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">;
+                Terms of Service;
+              </Link>;
+            </div>;"
+            <div className="flex items - center space - x-2">;"
+              <div className="flex items - center text - gray - 400 text - sm">;"
+                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
+                Trusted by 2500+ Companies;
+              </div>;"
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
+              <div className="text - cyan - 400 text - sm font - semibold">;
+
+    </footer>;
+  )}className='border - t border - gray - 800 pt - 8'>'
+
+          <div className='flex flex - col "md":flex - row justify - between items - center'>;'
+            <div className='text - gray - 400 text - sm mb - 4 "md":mb - 0'>;'
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link;
+                href='/privacy';'
+                className='"hover":text - cyan - 400 transition - colors duration - 300 ml - 2'>'
+
+                Privacy Policy;
+              </Link>;
+              <span className='mx - 2'>|</span>;'
+              <Link;
+                href='/terms';'
+                className='"hover":text - cyan - 400 transition - colors duration - 300'>'
+
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className='flex items - center space - x-2'>;'
+              <div className='flex items - center text - gray - 400 text - sm'>;'
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;'
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
+              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;'
+          <div className="flex flex - col "md": flex - row justify - between items - center">;"
+            <div className="text - gray - 400 text - sm mb - 4 "md":mb - 0">;"
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link href="/privacy" className=""hover":text - cyan - 400 transition - colors duration - 300 ml - 2">;"
+                Privacy Policy;
+              </Link>;
+              <span className="mx - 2">|</span>;"
+              <Link href="/terms" className=""hover":text - cyan - 400 transition - colors duration - 300">;"
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className="flex items - center space - x-2">;"
+              <div className="flex items - center text - gray - 400 text - sm">;"
+                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;"
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
+              <div className="text - cyan - 400 text - sm font - semibold">;"
+=======
+>>>>>>> origin/resolved-merge-conflicts
             </div>;
             <div className='flex items - center space - x-2'>;
               <div className='flex items - center text - gray - 400 text - sm'>;
@@ -3783,6 +4490,10 @@ href='/terms'
               <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;
               <div className="text - cyan - 400 text - sm font - semibold">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 99.9% Uptime;
               </div>;
             </div>;

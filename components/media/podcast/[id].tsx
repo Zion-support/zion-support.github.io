@@ -3,6 +3,26 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+import React, { useEffect, useState } from 'react';'
+import { useRouter  } from 'next/router';'
+
+const router = null;
+
+  }, [id]);
+  if (!episode) return <div>Loading…</div>;
+return (;
+<div className='space-y-4'>'
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>'
+      <p className='text-sm text-gray-600'>'
+
+        "Guest": {episode.invitee?.name} ·{' '}'
+        {new Date(episode.createdAt).toLocaleString(
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
 export default function EpisodePage() {
 
 =======
@@ -229,6 +249,10 @@ export default function EpisodePage() {
 
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString(,}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
     <div className='space-y-4>
       <h1 className=text-2xl font-bold'>{episode.title}</h1>
@@ -239,6 +263,19 @@ export default function EpisodePage() {
       <p className=text-sm text-gray-600'>;
         Guest: {episode.invitee?.name} ·{' }
         {new Date(episode.createdAt).toLocaleString()}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </p>;
+      {episode.audio?.mp3Url && (<audio controls className='w-full'>;'
+          <source src={episode.audio.mp3Url} type='audio/mpeg' />;'
+        </audio>;
+      )}
+      <div>;
+        <h2 className='text-xl font-semibold'>Transcript</h2>;'
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
 
 import React, { useEffect, useState } from 'react';
@@ -270,6 +307,10 @@ const router = null;
         <h2 className='text-xl font-semibold'    />Transcript</h2>;
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'    />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           {episode.transcript}
 
   );
@@ -277,9 +318,24 @@ const router = null;
       </div>;
     </div>;
   )
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
 import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from react';
+=======
+<<<<<<< HEAD
+
+  );
+        </pre>;
+      </div>;
+  )
+import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> merged-prs-20250907-203621
+import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from react';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
   const router = useRouter($2);
@@ -310,6 +366,13 @@ export default function EpisodePage() {
         <h2 className=text-xl font-semibold">Transcript</h2>
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>
   )
 }
@@ -337,6 +400,10 @@ export default function EpisodePage() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   );
 

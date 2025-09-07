@@ -28,7 +28,10 @@ import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -37,6 +40,21 @@ export function useJobDetails(jobId: string | undefined) {;
 
       setIsLoading(false);
       return;
+<<<<<<< HEAD
+    }
+    try {}
+      setIsLoading(true);
+      const { data, error } = await supabase'
+        .from('jobs')'
+        .select('*')'
+
+        .eq('id', jobId)
+        .single();
+      if (error) throw error;
+      setJob(data);
+      setError(null)
+
+=======
     }
     try {}
       setIsLoading(true);
@@ -116,10 +134,21 @@ if (throw error) {
 
       console.error('Error loading job details:', err);
       setError(err.message)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } finally {
-      setIsLoading(false)
+
+      setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+
+  // Load job details when component mounts or job_id changes;
+
+    loadJobDetails ();
+  }, [job_id]);
+;
+
+=======
   // Load job details when component mounts or jobId changes
   useEffect(() => {
     loadJobDetails()
@@ -135,10 +164,14 @@ if (throw error) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     isLoading;
     error;
     loadJobDetails;
   }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -153,6 +186,7 @@ export default useJobDetails;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect } from 'react',;
 
 import { supabase } from '@/integrations/supabase/client',;
@@ -191,6 +225,17 @@ export default useJobDetails;
   return {;
     job,;
     isLoading,;
+<<<<<<< HEAD
+    error,;
+    loadJobDetails;
+  },;
+}
+
+export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
+}export default useJobDetails;
+;
+export default useJobDetails;
+=======
 <<<<<<< HEAD
     error,;
 =======
@@ -282,3 +327,4 @@ export default useJobDetails;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

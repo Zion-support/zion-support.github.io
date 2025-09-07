@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -7,11 +9,17 @@ import { Button } from "@/components/ui/button";
 import {
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
 import React, { useState } from "react","
 import { useForm } from "react-hook-form","
 import { zodResolver } from "@hookform/resolvers/zod","
 import { z } from "zod","
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import {}
+
+=======
 =======
 
 
@@ -44,10 +52,29 @@ import { Button } from "@/components/ui/button",
 import {}
 
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
+
+import { FileText } from "lucide-react",
+
+const formSchema = z.object({
+
+  reason_code: z.string()
+
+    .min(1, { message: "Please select a reason for the dispute" })
+  description: z.string()"
+    .min(20, { message: "Description must be at least 20 characters" })
+  attachments: z.array(z.any()).optional()})
+
+projectId: string
+  milestoneId?: string;
+  onDisputeCreated?: (disputeId: string) => void
+  onCancel?: () => void
+=======
 <<<<<<< HEAD
   FormLabel,
   FormMessage} from "@/components/ui/form",
@@ -184,6 +211,7 @@ projectId: string
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void
   onCancel?: () => void
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export function DisputeForm({
   projectId
@@ -196,9 +224,12 @@ export function DisputeForm({
   const [files, setFiles] = useState<File[]>([]);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
@@ -264,6 +295,9 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 }: DisputeFormProps) {;
   const { createDispute } = useDisputes();
@@ -406,12 +440,16 @@ export function DisputeForm(): any ({ ;
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       setIsSubmitting(true)
       const dispute = await createDispute({}
         project_id: projectId;
         milestone_id: milestoneId;
         reason_code: values.reason_code;
         description: values.description})
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 =======
       if (dispute && dispute.id) {
@@ -443,6 +481,7 @@ export function DisputeForm(): any ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
@@ -453,12 +492,19 @@ export function DisputeForm(): any ({ ;
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
+
+=======
+<<<<<<< HEAD
+      toast.error("Failed to submit dispute. Please try again.")
+    } finally {
+      setIsSubmitting(false)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       console.error("Error submitting dispute:", error),
 
 "
@@ -476,6 +522,13 @@ export function DisputeForm(): any ({ ;
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+  };
+
+  const removeFile = (index: number) => {;
+    const newFiles = [...files],;
+    newFiles && newFiles.splice(index, 1);
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -503,6 +556,7 @@ export function DisputeForm(): any ({ ;
       setIsSubmitting(true),;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
@@ -515,6 +569,11 @@ export function DisputeForm(): any ({ ;
 <<<<<<< HEAD
         reason_code: values && values.reason_code,,
   description: values && values.description}),;
+
+=======
+<<<<<<< HEAD
+        reason_code: values && values.reason_code,,
+  description: values && values.description}),;
 =======
         reason_code: values && values.reason_code,;
         description: values && values.description}),;
@@ -523,12 +582,18 @@ export function DisputeForm(): any ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
         if (files && files.length > 0) {;
           console && console.log(`Would upload ${files && files.length} files for dispute ${dispute.id}`);
         }
+<<<<<<< HEAD
+"
+        toast && toast.success("Your dispute has been submitted");
+
+=======
 <<<<<<< HEAD
 "
 =======
@@ -672,17 +737,79 @@ type DisputeFormProps = {;
         }
 ;
         toast.success("Your dispute has been submitted");
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (onDisputeCreated) {;
           onDisputeCreated(dispute.id);
         }
       }
+<<<<<<< HEAD
+    } catch (error) {;"
+      console && console.error("Error submitting dispute:", error);"
+      toast && toast.error("Failed to submit dispute. Please try again.");
+=======
     } catch (error) {;
       console.error("Error submitting dispute:", error);
       toast.error("Failed to submit dispute. Please try again.");
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } finally {;
       setIsSubmitting(false);
+
     }
   }
+<<<<<<< HEAD
+
+          <FormField
+            control={form.control}
+
+            name="reason_code"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Reason for dispute</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+
+                      <SelectValue placeholder="Select a reason" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {Object.entries(disputeReasonLabels).map(([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>
+
+import { Button } from "@/components/ui/button",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+
+    .min(20, { message: "Description must be at least 20 characters" }),;
+  attachments: z.array(z.any()).optional()}),;
+type DisputeFormProps = {;
+  projectId: string,;
+  milestoneId?: string,;
+  onDisputeCreated?: (disputeId: string) => void,;
+  onCancel?: () => void;
+},;
+
+  const { createDispute } = useDisputes(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [files, setFiles] = useState<File[]>([]),;
+  const form = useForm<z.infer<typeof formSchema>>({;
+    resolver: zodResolver(formSchema),;
+
+      description: "",;
+      attachments: []}}),;
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    if (e.target.files) {;
+      const newFiles = Array.from(e.target.files),;
+
+=======
 ;
   return (;
 <<<<<<< HEAD
@@ -776,6 +903,7 @@ type DisputeFormProps = {;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <FormField
 
             name="reason_code"
@@ -967,6 +1095,9 @@ if ( {) {}
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           />;
 
@@ -984,11 +1115,14 @@ if ( {) {}
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
 
+<<<<<<< HEAD
+=======
 =======
                 <Select onValueChange={field.on_change} default_value={field.value}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <FormControl>;
                     <SelectTrigger>;"
 
@@ -997,12 +1131,26 @@ if ( {) {}
                   </FormControl>;
                   <SelectContent>;
 <<<<<<< HEAD
+
+                    ))}
+                  </SelectContent>;
+
+          <FormField
+            control={form && form.control}
+            name="description"
+{Object.entries(disputeReasonLabels).map(([value, label]) => (;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
           />;
           ;
           <FormField;
             control={form.control}
             name="description";
+<<<<<<< HEAD
+            render={({ field }) => (;
+=======
 =======
 
                     ))}
@@ -1050,22 +1198,67 @@ if ( {) {}
             control={form.control}
             name="description";
             render={({ field }) => (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <FormItem>;
-                <FormLabel > Describe the issue in detail</FormLabel>;
+                <FormLabel>Describe the issue in detail</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
+                  <Textarea
+                    placeholder="Please provide specific details about the issue..."
+
+                    className="min-h-[150px]"
+
+=======
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
                     className="min - h-[150px]";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
 <<<<<<< HEAD
+
+                />;
+
+                {files && files.length > 0 && (;"
+                  <div className="space-y-2">;"
+                    <p className="text-sm font-medium">Selected files:</p>;"
+                    <ul className="space-y-1">;
+                      {files && files.map((file, index) => (;"
+                        <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">;
+                          <span>{file && file.name} ({(file && file.size / 1024).toFixed(1)} KB)</span>;
+                          <Button"
+                            type="button" "
+                            variant="ghost" "
+                            size="sm" 
+
+                          <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>;
+                          <Button ;
+                            type="button" ;
+                            variant="ghost" ;
+                            size="sm" ;
+
+                            onClick={() => removeFile(index)}
+                          >;
+                            Remove;
+                          </Button>;
+
+                        </li>;
+                      ))}
+                    </ul>;
+                  </div>;
+                )}
+
+              </FormItem>)}
+=======
+<<<<<<< HEAD
               </FormItem>;
             )}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />;
           ;
 =======
@@ -1081,6 +1274,8 @@ if ( {) {}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <FormItem>;
+<<<<<<< HEAD
+=======
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
               <div className="space-y-4">;
@@ -1211,6 +1406,7 @@ if ( {) {}
               </FormItem>)}
           />;
           <FormItem>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <FormLabel > Attachments (optional)</FormLabel>;
 
                             size="sm";
@@ -1221,14 +1417,21 @@ if ( {) {}
                         </li>))}
                     </ul>;
                   </div>)}
+<<<<<<< HEAD
+
+=======
                         </li>;                      ))}
                     </ul>;
                   </div>;
                 )}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -1275,12 +1478,36 @@ if ( {) {}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>
           </div>
         </form>
       </Form>
     </div>
   )
+<<<<<<< HEAD
+
+  ),; import {
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormLabel;
+import {
+  Select;
+SelectContent;
+SelectItem;
+SelectTrigger;
+const formSchema = z.object ({
+  reason code: z.string () .min (1, {
+  message: "Please select a reason for the dispute" 
+});
+description: z.string () attachments: z.array (z.any () ) .optional () 
+});
+}
+};
+const removeFile = (index: number) => {
+=======
 <<<<<<< HEAD
 }
 =======
@@ -1311,6 +1538,7 @@ description: z.string () attachments: z.array (z.any () ) .optional ()
 };
 const removeFile = (index: number) => {
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="flex justify-end space-x-2">"
               <Button type="button" variant="outline" onClick={onCancel}>"
 
@@ -1346,6 +1574,9 @@ pr-12325
 };
 }
 
+<<<<<<< HEAD
+}
+=======
 }
 =======
   async function onSubmit (values: z.infer<typeof formSchema>) {
@@ -1388,3 +1619,4 @@ description: values.description
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+
+interface ProfileBadgeProps {
+  type: BadgeType
+  className?: string
+
+}
+=======
+<<<<<<< HEAD
 import React from "react";
 import { BadgeCheck, Star, Clock, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -55,6 +64,7 @@ interface ProfileBadgeProps {
   className?: string
 
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
   const badgeConfig = {}
     verified: {}
@@ -66,11 +76,23 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
       text: "Featured""
       colors: "bg-yellow-500/20 text-yellow-400"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors,
+<<<<<<< HEAD
+
+  const { icon: Icon, text, colors } = badgeConfig[type],
+
+  return (
+    <div className={cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
+      colors,
+=======
 =======
 >>>>>>> merged-prs-20250907-203621
     new: {
@@ -92,10 +114,35 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
       colors;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
+<<<<<<< HEAD
+
+      className
+    )}>
+
+      <Icon className="w-3 h-3" />
+      <span>{text}</span>
+    </div>
+
+import React from "react",;
+import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
+
+interface ProfileBadgeProps {;
+  type: BadgeType,;
+  className?: string;
+
+}
+
+export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
+
+=======
 ;
   const { icon: Icon, text, colors } = badgeConfig[type];
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -170,6 +217,7 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const badgeConfig = {;
     verified: {;
       icon: BadgeCheck,;"
@@ -189,11 +237,17 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       colors: "bg-purple-500/20 text-purple-400"}},;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <divclassName={cn("
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
       colors;
@@ -205,6 +259,8 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 
   );
 
+<<<<<<< HEAD
+=======
 }
 
 =======
@@ -338,8 +394,41 @@ className)
 }</span> 
 <<<<<<< HEAD
 });
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+
+      colors: "bg - purple - 500 / 20 text - purple - 400"}},
+  const { icon: Icon, text, colors } = badge_config[type];
+;
+<<<<<<< HEAD
+  return (
+
+      <Icon className="w - 3 h - 3" />;
+      <span>{text}</span>;
+
+    </div>);
+}
+
+  ),;}
+ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+  type, className 
+}: ProfileBadgeProps) {
+  const badgeConfig = {
+  verified: {
+  const {
+  icon: Icon, text, colors 
+}= badgeConfig[type];
+return (<div className= {
+  cn ("flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
+colors;
+className) 
+}> <Icon className="w-3 h-3" /> <span> {
+  text 
+}</span> 
+});
 }
 ;
+=======
 =======
 }
   );
@@ -350,3 +439,4 @@ className)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

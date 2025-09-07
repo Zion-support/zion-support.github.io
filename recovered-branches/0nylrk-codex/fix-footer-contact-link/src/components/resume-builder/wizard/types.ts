@@ -1,4 +1,70 @@
 <<<<<<< HEAD
+import {Resume} from "@/types/resume";
+export interface StepProps {
+  id: string;
+  label: string
+
+import { Resume } from "@/types/resume";
+export interface StepProps {};
+  id: string;
+  label: string;
+
+}
+export interface NavigationButtonsProps {};
+export interface NavigationButtonsProps {;
+
+  on_back?: () => void;
+  on_next?: () => void;
+"
+import { Resume } from "@/types/resume",
+";
+import {Resume} from "@/types/resume";
+
+export interface StepProps {
+
+  id: string;
+  label: string
+
+export interface NavigationButtonsProps {;
+
+  onBack?: () => void;
+  onNext?: () => void;
+  isNextDisabled?: boolean;
+
+}
+
+export interface ResumeProgressProps {
+  resume: Resume | null;
+
+  progress: number;
+}
+
+export interface CreateResumeFormProps {;
+  onCreateResume: (title: string) => Promise<void>;
+
+;
+export interface NavigationButtonsProps {;
+  onBack?: () => void,;
+  onNext?: () => void,;
+  isNextDisabled?: boolean,;
+  backLabel?: string,;
+  nextLabel?: string,;
+  isLoading?: boolean;
+
+}
+export interface ResumeProgressProps {
+  resume: Resume | null;
+
+  progress: number;
+
+export interface CreateResumeFormProps {;
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void;
+
+}
+
+=======
+<<<<<<< HEAD
 import { Resume } from "@/types/resume";
 export interface StepProps {
   id: string,
@@ -157,15 +223,32 @@ export interface NavigationButtonsProps {;
   nextLabel?: string,;
   isLoading?: boolean;
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
   progress: number
+<<<<<<< HEAD
+}
+
+export interface CreateResumeFormProps {
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void;
+  isLoading: boolean
+;
+
+}
+
+  progress: number
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export interface CreateResumeFormProps {
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean
+<<<<<<< HEAD
+=======
 =======
 
 <<<<<<< HEAD
@@ -205,15 +288,21 @@ export interface CreateResumeFormProps {
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 export interface ResumeProgressProps {;
   resume: Resume | null,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   progress: number
 
 };
 
+<<<<<<< HEAD
+=======
 =======
   progress: number;
 }
@@ -233,6 +322,7 @@ export interface CreateResumeFormProps {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
@@ -244,7 +334,13 @@ export interface CreateResumeFormProps {;
   isLoading: boolean;
 =======
 <<<<<<< HEAD
+  onCancel: () => void;
+
+  isLoading: boolean;
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 }
@@ -255,12 +351,26 @@ export interface EmptyResumeProps {};
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export interface EmptyResumeProps {};
   onCreateClick: () => void;
 }
 }
 ;
 
+<<<<<<< HEAD
+}
+export interface EmptyResumeProps {
+
+  onCreateClick: () => void;
+}
+;
+</void>
+</void>"
+pr-12325
+=======
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -295,3 +405,4 @@ export interface EmptyResumeProps {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

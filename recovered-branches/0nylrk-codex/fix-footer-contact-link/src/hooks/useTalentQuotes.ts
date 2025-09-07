@@ -2,14 +2,20 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/hooks/use-toast';
@@ -77,10 +83,14 @@ export const useTalentQuotes = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
@@ -140,6 +150,7 @@ queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -166,8 +177,11 @@ export const useTalentQuotes = () => {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -181,6 +195,9 @@ export const useTalentQuotes = () => {;
       quoteRequestService && quoteRequestService.updateStatus(id, status);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     // Archive filter'
     if (archiveFilter === 'active' && quote && quote.is_archived) {}
@@ -193,6 +210,8 @@ export const useTalentQuotes = () => {;
     return true;
   });
 
+<<<<<<< HEAD
+=======
 =======
 
 <<<<<<< HEAD
@@ -214,6 +233,7 @@ export const useTalentQuotes = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return true
   }),
 
@@ -222,6 +242,9 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     return true
   });
   // Mark as viewed/responded mutation
@@ -231,6 +254,7 @@ export const useTalentQuotes = () => {;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return true
   });
   // Mark as viewed/responded mutation
@@ -238,15 +262,20 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables && variables.status === 'responded') {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     onSuccess: (_, variables) => {
       let message = "Status updated",
@@ -255,6 +284,7 @@ export const useTalentQuotes = () => {;
       } else if (variables.status === 'responded') {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         message = "Quote marked as responded"
       }
       toast({
@@ -264,14 +294,22 @@ export const useTalentQuotes = () => {;
         description: "The quote request status has been updated"
 '
 =======
+<<<<<<< HEAD
+        description: "The quote request status has been updated"
+'
+=======
       });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
     onError: (error: Error) => {}
       toast({"
         title: "Error";"
         description: "Failed to update status: " + error && error.message,
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
@@ -283,11 +321,14 @@ export const useTalentQuotes = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         variant: "destructive"
 
       })
     }
   });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   // Archive/Unarchive mutation
@@ -297,11 +338,15 @@ export const useTalentQuotes = () => {;
       quoteRequestService.toggleArchive(id, isArchived);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     },
     onError: (error: Error) => {}
       toast({"
@@ -316,6 +361,9 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -323,12 +371,15 @@ export const useTalentQuotes = () => {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     onSuccess: (_, variables) => {
 
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
           : "The quote request has been moved back to active quotes"
@@ -345,16 +396,22 @@ export const useTalentQuotes = () => {;
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           : "The quote request has been moved back to active quotes"
 
     };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     onError: (error: Error) => {
       toast({
         title: "Error";
 
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -367,6 +424,7 @@ export const useTalentQuotes = () => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
@@ -382,6 +440,9 @@ export const useTalentQuotes = () => {;
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -391,10 +452,14 @@ export const useTalentQuotes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         variant: "destructive"
       })
     }
   });
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -416,6 +481,7 @@ export const useTalentQuotes = () => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -526,8 +592,13 @@ if ( {) {}
 
   return {}
 =======
+<<<<<<< HEAD
+
+  return {}
+=======
   return {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     quotes: filtered_quotes;
     unread_count;
     is_loading;
@@ -535,11 +606,18 @@ if ( {) {}
     status_filter;
     setStatusFilter;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return {}
     toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
 
+<<<<<<< HEAD
+    toggleArchive: (id: string, isArchived: boolean) => 
+
+=======
 =======
     toggleArchive: (id: string, isArchived: boolean) =>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -553,6 +631,7 @@ if ( {) {}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -627,6 +706,18 @@ if ( {) {}
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
@@ -656,7 +747,11 @@ if ( {) {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     archive_filter;
     setArchiveFilter,
     markAsViewed: (id: string) =>;'
@@ -666,6 +761,9 @@ if ( {) {}
     toggle_archive: (id: string, is_archived: boolean) =>;
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 ;
 =======
@@ -806,3 +904,4 @@ export const useTalentQuotes = () => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

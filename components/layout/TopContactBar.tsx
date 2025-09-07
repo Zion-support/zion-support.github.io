@@ -1,6 +1,31 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+
+import { Phone, Mail, MapPin, Globe;
+  }
+  Clock, ChevronDown, ChevronUp;
+  MessageCircle, Calendar, Star;
+  } from 'lucide-react';'
+
+const contactInfo = null;
+export default function TopContactBar() {
+  }
+  const [isExpanded, setIsExpanded] = useState(false);
+return (;
+<div className='relative z-40'>'
+
+      {/* Main Contact Bar */}
+      <div className='bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30'>;'
+        <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
+          <div className='flex items-center justify-between h-12'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -89,10 +114,43 @@ export default function TopContactBar() {;
       <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {/* Left Side - Contact Info */}
 <<<<<<< HEAD
             <div className="hidden md:flex items-center space-x-6 text-sm">
               {/* Phone */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div className='flex items-center space-x-2 text-gray-300 "hover":text-cyan-400 transition-colors duration-200 group'>;'
+                <Phone className='w-4 h-4 text-cyan-400 group-"hover":shadow-lg "hover":shadow-cyan-400/40 transition-transform duration-200' />;'
+
+                <a,
+href={`"tel": ${contactInfo.mobile}`}`                  className='"hover":text-cyan-400 transition-colors duration-200'>'
+
+                  {contactInfo.mobil
+}
+                </a>;
+              </div>;
+              {/* Email */}
+<div className='flex items-center space-x-2 text-gray-300 "hover":text-cyan-400 transition-colors duration-200 group'>;'
+                <Mail className='w-4 h-4 text-cyan-400 group-"hover":shadow-lg "hover":shadow-cyan-400/40 transition-transform duration-200' />;'
+                <a;
+                  href={`"mailto": ${contactInfo.email}`}`
+                  className='"hover":text-cyan-400 transition-colors duration-200''
+                >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                 />
+                  {contactInfo.email}
+                </a>
+              </div>
+              {/* Address */}"
+                <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
             <div className="hidden md:flex items-center space-x-6 text-sm">;
               {/* Phone */}
@@ -130,6 +188,10 @@ export default function TopContactBar() {;
                 <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
                 <span className="hover:text-cyan-400 transition-colors duration-200">;
                   {contactInfo && contactInfo.address}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 </span>;
               </div>;
               {/* Website */}
@@ -444,6 +506,22 @@ export default function TopContactBar() {;
                   {contactInfo.mobile}
                 </a>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                  target='_blank''
+                  rel='noopener noreferrer''
+                  className='"hover":text-cyan-400 transition-colors duration-200''
+                >
+                  {contactInfo.website.replace('"https"://', '')}'
+                </a>
+              </div>
+                  target='_blank';
+                  rel='noopener noreferrer';
+                  className='hover:text-cyan-400 transition-colors duration-200';
+=======
+>>>>>>> origin/resolved-merge-conflicts
               {/* Email */}
               <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>
                 <Mail className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />
@@ -549,10 +627,22 @@ export default function TopContactBar() {;
                 <a href={`mailto:${contactInfo.email}`} className=hover:text-cyan-400 transition-colors duration-200">;
                   href={`tel:${contactInfo.mobile}`}
                   className='hover:text-cyan-400 transition-colors duration-200;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 >;
                   {contactInfo.mobile}
                 </a>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {/* Rating */}
+              <div className='flex items-center space-x-2 text-gray-300'>;
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />                <span>{contactInfo && contactInfo.rating}</span>            <div className="hidden lg:flex items-center space-x-6 text-sm">;
+=======
+>>>>>>> origin/resolved-merge-conflicts
               {/* Email */}
 <div className=flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>;
                 <Mail className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200 />;
@@ -741,6 +831,10 @@ export default function TopContactBar() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <Star className=w-4 h-4 text-yellow-400 fill-current' />                <span>{contactInfo && contactInfo.rating}</span>            <div className=hidden lg:flex items-center space-x-6 text-sm">;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
               {/* Business Hours */}"
                 <Star className=w-4 h-4 text-yellow-400 fill-current />
 
@@ -762,6 +856,11 @@ export default function TopContactBar() {;
                     key={action.name}
                     href={action.href}
             {/* Right Side - Quick Actions & Expand Button */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
                     className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30                  >
 
 
@@ -950,6 +1049,10 @@ function TopContactBar() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             {/* Right Side - Quick Actions & Expand Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'                  >
 
 <div className=flex items-center space-x-4>
@@ -972,6 +1075,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={action.name}
                     href={action.href}
                     className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
@@ -1038,6 +1148,10 @@ className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 "hover"
                 className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
 origin/cursor/automate-test-improve-and-merge-code-2533
               <button;
@@ -1047,6 +1161,14 @@ onClick={() = /> setIsExpanded(!isExpanded)}
 onClick={() =    /> setIsExpanded(!isExpanded)}
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
+              >
+                <span>More Info</span>
+=======
+>>>>>>> origin/resolved-merge-conflicts
 className=flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30
 >>>>>>> merged-prs-20250907-203621
               >
@@ -1057,6 +1179,10 @@ className=flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: t
                 ) : (
                   <ChevronDown className="w-4 h-4" />
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {isExpanded ? ('
                   <ChevronUp className='w-4 h-4' />
                 ) : (
@@ -1065,6 +1191,11 @@ className=flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: t
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
                   <ChevronDown className='w-4 h-4' />}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
                 <span    />More Info</span>
                 {isExpanded ? (
@@ -1074,6 +1205,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ChevronDown className='w-4 h-4'    />}
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 )}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -1143,6 +1278,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               {/* Expand / Collapse Button */}
               <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                on_click={() => setIsExpanded (!is_expanded)}
+                className='flex items - center space - x-1 px - 3 py - 1.5 text - xs text - gray - 300 "hover":text - white bg - gray - 800 / 50 "hover":bg - cyan - 500 / 20 border border - gray - 700 / 50 "hover":border - cyan - 500 / 50 rounded - lg transition - all duration - 200 "hover":shadow - xl "hover":shadow - cyan - 500 / 30'>'
+
+                <span>More Info</span>;
+                {isExpanded ? (<ChevronUp className='w-4 h-4' />;'
+                ) : (<ChevronDown className='w-4 h-4' />                )}              >;'
+                <span>More Info</span>;
+                {isExpanded ? (<ChevronUp className="w-4 h-4" />;"
+                ) : (<ChevronDown className="w-4 h-4" />;"
+=======
+<<<<<<< HEAD
+>>>>>>> origin/resolved-merge-conflicts
                 on_click={() => setIsExpanded (!is_expanded)}
                 className='flex items - center space - x-1 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30';
               >;
@@ -1177,12 +1327,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {isExpanded ? (<ChevronUp className=\"w-4 h-4\"    />;}"
                 ) : (<ChevronDown className=\"w-4 h-4\"    />;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               </button>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Expanded Information Panel */}
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0}}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+
+          >
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            exit={{ opacity: 0, height: 0 }}transition={{ duration: 0.3 }}
+className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden';
+          >;
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+            exit={{ opacity: 0, height: 0}}
+            transition={{ duration: 0.3 }}
+            className="bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden"
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Contact Details */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+=======
+>>>>>>> origin/resolved-merge-conflicts
           </div>;
         </div>;
       </div>;
@@ -1323,6 +1507,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     <Phone className="w-5 h-5 text-cyan-400" />
                     <span>Contact Details</span>
                   </h3>
@@ -1357,6 +1545,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='hover:text-cyan-400 transition-colors duration-200'
                       >
                         {contactInfo.mobile}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
                       </a>
                     </div>'
                     <div className='flex items-center space-x-3 text-gray-300'>'
@@ -1443,6 +1636,10 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
 >>>>>>> origin/chore/fix-lint-and-merge
 
                         {contactInfo.mobile}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                       </a>
                     </div>
@@ -1456,6 +1653,14 @@ href={`mailto:${contactInfo.email}`}
 }
                       </a>;
                     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <div className='flex items-start space-x-3 text-gray-300'>;'
+                      <MapPin className='w-4 h-4 text-cyan-400 mt-1' />;'
+                      <span className='text-sm'>{contactInfo.address}</span>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                     <div className='flex items-center space-x-3 text-gray-300'>;
                       <Mail className='w-4 h-4 text-cyan-400' />;
@@ -1535,6 +1740,10 @@ href={`mailto:${contactInfo.email}`}
                     <div className='flex items-start space-x-3 text-gray-300'>;
                       <MapPin className='w-4 h-4 text-cyan-400 mt-1' />;
                       <span className='text-sm'>{contactInfo.address}</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     </div>;
                   </div>;
                 </div>;
@@ -1561,6 +1770,38 @@ href={`mailto:${contactInfo.email}`}
                       <MapPin className='w-4 h-4 text-cyan-400 mt-1 />
                       <span className=text-sm'>{contactInfo.address}</span>
                     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {/* Business Information */}
+<div className='space-y-4'>;'
+                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>;'
+                    <Clock className='w-5 h-5 text-cyan-400' />;'
+                    <span>Business Info</span>;
+                  </h3>;
+                  <div className='space-y-3'>;'
+                    <div className='flex items-center space-x-3 text-gray-300'>;'
+                      <Clock className='w-4 h-4 text-cyan-400' />;'
+                      <span>{contactInfo.hours}</span>;
+                    </div>;
+                    <div className='flex items-center space-x-3 text-gray-300'>;'
+                      <Star className='w-4 h-4 text-yellow-400 fill-current' />;'
+                      <span>{contactInfo.rating}</span>;
+                    </div>;
+                    <div className='flex items-center space-x-3 text-gray-300'>;'
+                      <Globe className='w-4 h-4 text-cyan-400' />;'
+                      <a;
+                        href={contactInfo.website}
+                        className='hover: text-cyan-400 transition-colors duration-200'
+                       />
+                        Visit Website;
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-3 text-gray-300">
+                      <Mail className="w-4 h-4 text-cyan-400" />
+                      <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   </div>
                 </div>
 =======
@@ -1612,6 +1853,10 @@ href={`mailto:${contactInfo.email}`}
                     <div className="flex items-center space-x-3 text-gray-300>
                       <Mail className=w-4 h-4 text-cyan-400" />
                       <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200>
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                         {contactInfo.email}
                       </a>
                     </div>
@@ -1619,6 +1864,33 @@ href={`mailto:${contactInfo.email}`}
                       <MapPin className="w-4 h-4 text-cyan-400 mt-1 />
                       <span className=text-sm">{contactInfo.address}</span>
                     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        Visit Website;
+                      </a>;
+                    </div>;
+                {/* Quick Actions */}
+<div className='space-y-4'>'
+                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>'
+                    <MessageCircle className='w-5 h-5 text-cyan-400' />'
+                    <span>Quick Actions</span>
+                  </h3>
+                  <div className='space-y-3'>'
+                    {quickActions.map(action => (
+                      <a
+}
+key={action.name}
+                        href={action.hre
+}
+                        className="flex items - center space - x-3 p - 3 text - gray - 300 "hover":text - white bg - gray - 800 / 30 "hover":bg - cyan - 500 / 20 border border - gray - 700 / 30 "hover":border - cyan - 500 / 50 rounded - lg transition - all duration - 200 "hover":shadow - xl "hover":shadow-cyan-500 / 30 group">"
+
+                        <div className="text - cyan - 400 group - "hover":shadow - lg "hover":shadow - cyan - 400 / 40 transition-transform duration-200">;"
+
+                          {action.icon}
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
                   </div>
                 </div>
 <<<<<<< HEAD
@@ -1642,6 +1914,10 @@ href={`mailto:${contactInfo.email}`}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
@@ -1828,6 +2104,11 @@ href={`mailto:${contactInfo.email}`}
 
 >>>>>>> origin/chore/fix-lint-and-merge
                 {/* Quick Actions */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <div className='space-y-4'    />
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'    />
                     <MessageCircle className='w-5 h-5 text-cyan-400'    />
@@ -1866,10 +2147,34 @@ key={action.name}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Quick Actions */}
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <MessageCircle className="w-5 h-5 text-cyan-400" />
                     <span>Quick Actions</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        className='flex items-center space-x-3 p-3 text-gray-300 hover:text-white bg-gray-800/30 hover:bg-cyan-500/20 border border-gray-700/30 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30 group'
+                      >
+                        <div className='text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200'>
+                          {action.icon}
+                        </div>
+                        <span className='font-medium'>{action.name}</span>'
+                      </a>
+                    ))}
+                  </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                {/* Company Highlights */}
+<div className='space-y-4'>'
+                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>'
+                    <Star className='w-5 h-5 text-cyan-400' />'
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                   </h3>
                   <div className="space-y-3">
@@ -2028,11 +2333,20 @@ key={action.name}
                     <Star className='w-5 h-5 text-cyan-400' />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                 {/* Company Highlights */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Star className="w-5 h-5 text-cyan-400" />
                     <span>Why Choose Us</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
                   </h3>
                   <div className="space-y-3">
@@ -2048,13 +2362,24 @@ key={action.name}
                       <div className="text-sm font-medium text-white mb-1">24/7 Support</div>
                       <div className="text-xs text-gray-400">Round-the-clock technical assistance</div>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     ))}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
 <div className='space-y-4' />
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2' />
                     <Star className='w-5 h-5 text-cyan-400' />
+<<<<<<< HEAD
                     <Star className=w-5 h-5 text-cyan-400' />
+=======
+<<<<<<< HEAD
+=======
+                    <Star className=w-5 h-5 text-cyan-400' />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
                 {/* Company Highlights */}
 
@@ -2078,6 +2403,55 @@ key={action.name}
                     <div className='p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg'>'
                       <div className='text-sm font-medium text-white mb-1'>'
                         15+ Years Experience
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      </div>
+                      <div className='text-xs text-gray-400'>'
+                        Industry expertise and proven track record
+                      </div>
+                    <div className='p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg'>'
+                      <div className='text-sm font-medium text-white mb-1'>'
+                        500+ Services Delivered
+                      </div>
+                      <div className='text-xs text-gray-400'>'
+                        Successful implementations worldwide
+                      </div>
+                    <div className='p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg'>'
+                      <div className='text-sm font-medium text-white mb-1'>'
+                        24/7 Support
+                      </div>
+                      <div className='text-xs text-gray-400'>'
+                        Round-the-clock technical assistance
+                      </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    </div>
+                      View All Services;
+                    </a>;
+                  </div>;
+              {/* Call to Action */}
+<div className='mt-6 pt-6 border-t border-cyan-500/30'>'
+                <div className='text-center'>'
+                  <h3 className='text-lg font-semibold text-white mb-3'>'
+                    Ready to Transform Your Business?
+                  </h3>
+                  <p className='text-gray-400 mb-4 max-w-2xl mx-auto'>'
+                    Get in touch with our team of experts to discuss how our,
+cutting-edge technology solutions can drive your business,
+forward.
+                  </p>
+                  <div className='flex flex-col "sm": flex-row items-center justify-center space-y-3 "sm":space-y-0 "sm":space-x-4'>'
+                    <a,
+href='/contact''
+                      className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg "hover":shadow-xl "hover":shadow-cyan-500/30 transition-all duration-300 "hover":shadow-lg "hover":shadow-cyan-500/25''
+                    >
+                      Get Started Today
+                    </a>
+                    <a,
+href='/comprehensive-services-showcase-2025''
+                      className='px-6 py-3 text-cyan-400 "hover":text-white border border-cyan-500/50 "hover":border-cyan-400 rounded-lg transition-all duration-300 "hover":bg-cyan-500/10''
+=======
+>>>>>>> origin/resolved-merge-conflicts
                     <span />Why Choose Us</span>
 
 =======
@@ -2379,6 +2753,10 @@ key={action.name}
 <<<<<<< HEAD
                       href="/comprehensive-services-showcase-2025"
                       className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10"
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     >
                       View All Services
 =======
@@ -2435,6 +2813,13 @@ href='/comprehensive-services-showcase-2025'
     </div>;
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* Main Contact Bar */ 
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 /* Main Contact Bar */ 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -2484,6 +2869,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   /* Main Contact Bar */;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</a> </div> </div> > {
   action.icon
 }<span> {
@@ -2497,7 +2886,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </AnimatePresence>;
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </AnimatePresence>
     </div>
   )
@@ -2506,8 +2902,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Expand/Collapse Button */}"
 }<button) : (<ChevronDown className=\"w-4 h-4\" />)
 <<<<<<< HEAD
+<<<<<<< HEAD
 }</button> </div> </div> </div> </div> {
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}</button> </div> </div> </div> </div> {
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 /* Main Contact Bar */ 
 }</a> </div> </div> > {
@@ -2519,22 +2924,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</span> </a>) )
 }</div> {
   /* Expand/Collapse Button */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}<button) : (<ChevronDown className="w-4 h-4" />)"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</button> </div> </div> </div> </div> {
   /* Expanded Information Panel */
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
 }</div> </div> <span>Why Choose Us</span> </h3> <div className=space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg > <div className=text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400 >Industry expertise and proven track record</div> </div> <div className=p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1 >500+ Services Delivered</div> <div className=text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg > <div className=text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400 >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className=text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 > <a href=/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 > Get Started Today </a> <a href=/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10 > View All Services </a> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </div>) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }</AnimatePresence> </div>) }
 
 }</AnimatePresence> </div>)
 
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   /* Expanded Information Panel */ 
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) 
 }</div> </div> <span>Why Choose Us</span> </h3> <div className=space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg > <div className=text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400 >Industry expertise and proven track record</div> </div> <div className=p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1 >500+ Services Delivered</div> <div className=text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg > <div className=text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400 >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className=text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 > <a href=/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 > Get Started Today </a> <a href=/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10 > View All Services </a> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }
   /* Expanded Information Panel */ }
 }<AnimatePresence /> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) "
@@ -2542,12 +2971,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Expand/Collapse Button */"
 }<button) : (<ChevronDown className="w-4 h-4" />)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 }</button> </div> </div> </div> </div> {}
 
   /* Expanded Information Panel */
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )"
 =======
 }<button) : (<ChevronDown className="w-4 h-4 />)
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 }</button> </div> </div> </div> </div> {
                           {action.icon}</div>;
                         <span className=font-medium'>{action.name}</span>;
@@ -2652,10 +3090,32 @@ href='/comprehensive-services-showcase-2025;
 <<<<<<< HEAD
   /* Expanded Information Panel */
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
+}</AnimatePresence> </div>) }
+
+;
+}</AnimatePresence> </div>)
+
+;
+}<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)}</AnimatePresence> </div>)
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 >>>>>>> merged-prs-20250907-203621
 }</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </div>) }
 }</AnimatePresence> </div>) }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 =======
@@ -2677,6 +3137,12 @@ href='/comprehensive-services-showcase-2025;
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
 }</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3 > <div className=p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1 >15+ Years Experience</div> <div className=text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg > <div className=text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400 >Successful implementations worldwide</div> </div> <div className=p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1 >24/7 Support</div> <div className=text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className=flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact className=px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025 className=px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </div>) }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 =======
 "
@@ -2705,3 +3171,7 @@ href='/comprehensive-services-showcase-2025;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

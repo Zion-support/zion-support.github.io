@@ -1,6 +1,16 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+export default function OnboardingWizard() {export default function OnboardingWizard() {export default function OnboardingWizard() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
+  }
+  return <div>Something went wrong.</div>;
+    }return this.props.children;
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export default function OnboardingWizard() {;
 <<<<<<< HEAD
 =======
@@ -20,6 +30,10 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
   }
   
   static getDerivedStateFromError(error) {}
@@ -47,6 +61,28 @@ export default function OnboardingWizard() {export default function OnboardingWi
 >>>>>>> origin/chore/fix-lint-and-merge
     }return this.props.children;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useMemo, useState } from 'react';'
+
+const { user, completeOnboarding, setUser } = useUser();
+
+const { addToast } = useToast();
+
+const [step, setStep] = useState(0);
+
+const isClient = user?.role === 'client';'
+
+const isClient = null;
+          "content": (
+            <div className = 'space-y-4'>'
+              <p>Post a role or import your job brief to get started.</p>
+              <Link href='/jobs/post'>'
+                <a className='inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm "hover":bg-gray-50 "dark":"hover":bg-white/5'>'
+                  Post a job
+=======
+>>>>>>> origin/resolved-merge-conflicts
 }
 import React, { useMemo, useState } from 'react';
 <<<<<<< HEAD
@@ -128,6 +164,10 @@ export default function OnboardingWizard() {
   const isClient = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
           content: (
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             <div className='space-y-4'>
               <p>Post a role or import your job brief to get started.</p>'
               <Link href='/jobs/post>
@@ -158,15 +198,36 @@ const isClient = null;
         }
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           }
           'title': 'View suggested matches''
           'content': (
             <p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              We will surface the best matches instantly based on your job,
+brief.
+            </p>
+          )
+       
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
               We will surface the best matches instantly based on your job
               brief.
             </p>
           )
         }
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         {
 import React, { useMemo, useState } from 'react'
 import { useUser } from '../../providers/UserProvider'
@@ -175,13 +236,39 @@ import Link from 'next/link'
 
 
   const isClient = user?.role === 'client'
+<<<<<<< HEAD
         {
+=======
+<<<<<<< HEAD
+=======
+        {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
  ;
   }
     }
     if (isClient) {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "title": 'Invite or message talent',;'
+          "content": <p>Send invites or start a conversation to move fast.</p>,;
+        }
+];
+
+    }
+    return [;
+      {"title": 'Complete your profile';'
+        }
+        "content": (<div className='space-y-3'>;'
+
+const steps = useMemo(() => {if (isClient) ;
+  }
+  return [;
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
           title: 'View suggested matches',
   content: (
@@ -213,6 +300,10 @@ brief.
         content: (<div className='space-y-3'    />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
           title: 'Invite or message talent',
           content: <p>Send invites or start a conversation to move fast.</p>}];
@@ -233,6 +324,21 @@ export default function OnboardingWizard() { return null; }
               className='w-full rounded-md border px-3 py-2 bg-transparent
               placeholder='Your title (e && e.g., Senior LLM Engineer)'
               onChange={e =>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                }
+                setUser(prev => (prev ? { ...prev, "name": prev && prev.name } : prev)
+}
+            />;
+            <textarea;
+              className='w-full rounded-md border px-3 py-2 bg-transparent';'
+              placeholder='Short bio';'
+                  <button;
+                    key={s}
+                    className='px-3 py-1 rounded-full border "hover":bg-gray-50 "dark":"hover":bg-white/5'>;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
                 setUser(prev => (prev ? { ...prev, name: prev && prev.name } : prev))}
           title: 'Invite or message talent',;
           content: <p>Send invites or start a conversation to move fast.</p>,;
@@ -349,10 +455,56 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     key={s}
                     className='px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5'    />;
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
                     {s}
                   </button>;
                 ))}
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='flex gap-3'>;'
+              {['full-time', 'part-time', 'contract'].map(a => { return (<button; }'
+                  }
+                  key={a}
+                  className='px-3 py-1 rounded-full border "hover":bg-gray-50 "dark":"hover":bg-white/5 capitalize'>;'
+                  {a}
+                </button>;
+              ))}
+  return (<div className='mb-6 rounded-lg border border-gray-200 "dark":border-gray-800 p-4 bg-white/60 "dark":bg-black/40'>;'
+      <div className='flex items-center justify-between'>;'
+        <div>;
+          <div className='text-xs uppercase tracking-wide opacity-70 mb-1'>;'
+            Onboarding;
+          </div>;
+          <div className='text-sm font-medium'>{steps[step]?.title}</div>;'
+        </div>;
+        <div className='text-xs opacity-70'>;'
+          Step {step + 1} of {steps && steps.length}
+        </div>;
+      <div className='mt-4 text-sm'>{steps[step]?.content}</div>;'
+      <div className='mt-4 flex items-center justify-between'>;'
+        <button;
+          disabled={step === 0}
+          onClick={() => setStep(s => { return Math && Math.max(0, s - 1))}
+          className='px-3 py-2 rounded-md border "disabled":opacity-40'>'
+
+          Back; }
+        </button>;
+        {step < steps && steps.length - 1 ? (<button;
+            }
+            onClick={() => setStep(s => { return Math && Math.min(steps && steps.length - 1, s + 1))}
+            className='px-3 py-2 rounded-md border'>'
+
+            Next; }
+          </button>;
+        ) : (<button;
+            onClick={() => {completeOnboarding()})}}className='px-3 py-2 rounded-md border';
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
             <div className='flex gap-3'>;
               {['full-time', 'part-time', 'contract'].map(a => (<button;
@@ -470,6 +622,10 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
               });
             }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             className='px-3 py-2 rounded-md border';
         ) : (<button;
             onClick={() => {completeOnboarding()})}}className='px-3 py-2 rounded-md border';
@@ -477,6 +633,12 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
             Finish;
           </button>        )}
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )}    }
+=======
+>>>>>>> origin/resolved-merge-conflicts
     </div>;
   )}    }
 =======
@@ -664,6 +826,10 @@ export default function OnboardingWizard() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     return [;
       { title: 'Complete your profile', content: (<div className="space-y-3">;
           <input className="w-full rounded-md border px-3 py-2 bg-transparent" placeholder="Your title (e && e.g., Senior LLM Engineer)" onChange={(e) => setUser(prev => prev ? { ...prev, name: prev && prev.name } : prev)} />;
@@ -672,6 +838,12 @@ export default function OnboardingWizard() {
       ) }{ title: 'Choose skills and availability', content: (<div className="space-y-3 text-sm">;
           <div className="flex flex-wrap gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
             {['AILLMNext && AILLMNext.jsPythonDevOpsSecurity'].map(s => (<button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
             ))}
           </div>;</div>;
@@ -680,6 +852,11 @@ export default function OnboardingWizard() {
         <button disabled={step === 0} onClick={() => setStep(s => Math && Math.max(0, s - 1))} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>;
         {step < steps && steps.length - 1 ? (<button onClick={() => setStep(s => Math && Math.min(steps && steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>;
         ) : (<button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
 =======
             {['AILLMNext && AILLMNext.jsPythonDevOpsSecurity'].map(s => (;
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
@@ -1054,12 +1231,28 @@ onClick={() =    /> {;}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         )}
       </div>;
     </div>;
   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      { "title": 'Enable AI matchmaking', "content": (<div className="space-y-2">;"
+          <p>Turn on AI-powered matching to get discovered faster.</p>;
+          <label className="inline-flex items-center gap-2 text-sm">;"
+            <input type="checkbox" defaultChecked /> Enable AI matchmaking;"
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           </label>;
         </div>;
       ) }];
@@ -1075,8 +1268,17 @@ onClick={() =    /> {;}
       </div>;
     </div>;
 )}
+<<<<<<< HEAD
         { title: 'Ready to find top IT talent?, content: (
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+        { title: 'Ready to find top IT talent?', content: (
+=======
+        { title: 'Ready to find top IT talent?, content: (
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
           <div className="space-y-3">
             <p>We will help you find the best IT talent for your projects.</p>
           </div>
@@ -1119,7 +1321,20 @@ onClick={() =    /> {;}
         {step < steps.length - 1 ? (
           <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className='px-3 py-2 rounded-md border'>Next</button>
         ) : (
+<<<<<<< HEAD
           <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) } className='px-3 py-2 rounded-md border'>Finish</button>
+=======
+          <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
+<<<<<<< HEAD
+        )}
+      </div>
+  )
+}
+        )}
+      </div>
+  );
+=======
+>>>>>>> origin/resolved-merge-conflicts
         )}
       </div>
     </div>
@@ -1161,11 +1376,24 @@ onClick={() =    /> {;}
         )}
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
       </div>
     </div>
 );
 }
+<<<<<<< HEAD
 ''
+=======
+<<<<<<< HEAD
+'"
+=======
+<<<<<<< HEAD
+'"
+=======
+>>>>>>> origin/resolved-merge-conflicts
 
 <<<<<<< HEAD
 "
@@ -1177,3 +1405,7 @@ onClick={() =    /> {;}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

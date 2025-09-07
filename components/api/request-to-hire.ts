@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+
+export default async function handler() {
+  }
+  if (req.method !== 'POST') {'
+}
+return res.status(405).json({ "error": 'Method not allowed' });'
+ 
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -10,9 +26,58 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {}
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+const { talentSlug, requesterName, requesterEmail, projectInfo } =;
+    req.body |{};
+
+const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
+  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
+}
+return res.status(400).json({ "error": 'Missing required fields',;'
+});
+  }
+
+  try {
+    }
+    const timestamp = null;
+return res.status(500).json({ "error": 'Internal error' });'
+  }
+
+    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  }
+
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  }
+  try {}
+    const timestamp = null;}
+    return res.status(200).json({ ok: true });
+  }
+   
+});
+    // Persist to data/requests as a simple CMS-like log,
+const dir = path.join(process.cwd(), 'data', 'requests');'
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { "recursive": true
+});
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     return res.status(400).json({ error: 'Missing required fields' })
 =======
@@ -124,6 +189,10 @@ const dir = path.join(process.cwd(), 'data', 'requests');'
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { 'recursive': true
 });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
 
       }
@@ -198,12 +267,31 @@ requesterEmail
 ;
 const file = path.join(;
       dir
+<<<<<<< HEAD
 
 >>>>>>> merged-prs-20250907-203621
+=======
+<<<<<<< HEAD
+      `request-${timestamp.replace(/[:.]/g, '-')}.json``
+    );
+    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');'
+=======
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
 
     return res.status(200).json({ ok: true })
   } catch (err) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    console.error('Request-to-hire failed', err);'
+return res.status(500).json({ "error": 'Internal error',;'
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' })
@@ -212,6 +300,10 @@ const file = path.join(;
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 });
 =======
 

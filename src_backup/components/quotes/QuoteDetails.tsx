@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 ;
@@ -33,8 +39,20 @@ import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 import React from "react";
 import { 
+=======
+import React from "react;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+import React from "react";
+import { 
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
   Dialog;
   DialogContent;
   DialogHeader;
@@ -72,7 +90,6 @@ interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
-}export const QuoteDetails = null;
 }
 
       return format(new Date(dateString), 'PPP');
@@ -194,7 +211,8 @@ if (return 'Not specified') {}
             <span>{quote.project_name}</span>;
             <QuoteStatusBadge status={quote.status} />;
           </DialogTitle>;
-          <DialogDescription>Quote request submitted on {format_date (quote.created_at)}
+          <DialogDescription>;
+            Quote request submitted on {format_date (quote.created_at)}
           </DialogDescription>;
 
                   <span>{quote.requester_email}</span>;
@@ -221,13 +239,29 @@ if (return 'Not specified') {}
           <Button on_click={on_close}>Close</Button>;
         </div>;
       </DialogContent>;
+<<<<<<< HEAD
   quote.project description && (<> <h4 className="font - medium mt - 4" >Additional Details</h4> <p> {quote.project description;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  quote.project description && (<> <h4 className="font - medium mt - 4 >Additional Details</h4> <p> {quote.project description;
+>>>>>>> origin/resolved-merge-conflicts
 }</p> </>)}(quote.budget min && quote.budget max ? `$$ {quote.budget min;
 }- $$ {quote.budget max;
 }` : quote.budget min ? `$$ {quote.budget min ';
 }` : 'Not specified')}</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)}'";'";
 
 '";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Dialog>);
 }
 

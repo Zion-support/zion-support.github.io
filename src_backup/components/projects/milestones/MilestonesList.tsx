@@ -12,8 +12,14 @@
         title="No Milestones Yet"
 
         description={isClient ? 
+<<<<<<< HEAD
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
+=======
+<<<<<<< HEAD
+          "Break down the project into manageable milestones to track progress and payments. : 
+          No milestones have been created for this project yet."}
+>>>>>>> origin/resolved-merge-conflicts
         action={isClient ?;
           {text: "Create First Milestone",onClick: () => setShowAddForm(true)} : undefined;
         }if (milestones && milestones.length === 0 && !showAddForm) {return (<EmptyState;
@@ -23,7 +29,44 @@
           "Break down the project into manageable milestones to track progress and payments." : ;
           "No milestones have been created for this project yet."}
         action={isClient ? ;
+<<<<<<< HEAD
           {text: "Create First Milestone",onClick: (,) => setShowAddForm(true)} : undefined;
+=======
+          {text: Create First Milestone",onClick: (,) => setShowAddForm(true)} : undefined;
+=======
+          "Break down the project into manageable milestones to track progress and payments." : 
+          "No milestones have been created for this project yet."}
+        action={isClient ? 
+          {
+            text: "Create First Milestone",
+            onClick: () => setShowAddForm(true)
+          } : undefined
+        }
+
+  }
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon = {<span className="text-3xl">📊</span>,}
+        title="No Milestones Yet";
+        description = {isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet.",}
+        action={isClient ? ;
+          {;
+            text: "Create First Milestone",;
+            onClick: (,) => setShowAddForm(true);
+          } : undefined;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
 
   return (
@@ -76,19 +119,57 @@ if ( {) {
               <div className="h - 4 bg - muted rounded animate - pulse w-3/4"></div>;
             </CardContent>;
           </Card>))}
-      </div>)}
-  // Check condition;
-if ( {) {$2;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
 }
     return (
       <EmptyState;
         icon = {<span className="text-3xl">📊</span>, }
         title="No Milestones Yet";
         description = {is_client ?;
+<<<<<<< HEAD
           "Break down the project into manageable milestones to track progress and payments." :;
           "No milestones have been created for this project yet." }
         action={is_client ?;
           {text: "Create First Milestone",on_click: (, ) => setShowAddForm (true)} : undefined;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet.", }
+        action={is_client ?;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          "Break down the project into manageable milestones to track progress and payments. :;
+          No milestones have been created for this project yet." }
+        action={is_client ?;
+          {text: "Create First Milestone,on_click: (, ) => setShowAddForm (true)} : undefined;
+=======
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet.", }
+        action={is_client ?;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          {
+            text: "Create First Milestone",
+            on_click: (, ) => setShowAddForm (true);
+          } : undefined;
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
         }
       />);
   }
@@ -106,9 +187,9 @@ if ( {) {$2;
           <CardContent className="pt-6">;
             <h3 className="text - lg font - medium mb-4">Create New Milestone</h3>;
             <AddMilestoneForm;
-              on_submit = {handle_submit }
-              is_submitting = {is_submitting }
-              on_cancel = {(, ) => setShowAddForm (false) }
+              on_submit = {handle_submit, }
+              is_submitting = {is_submitting, }
+              on_cancel = {(, ) => setShowAddForm (false), }
             />;
           </CardContent>;
         </Card>)}
@@ -132,10 +213,27 @@ if ( {) {$2;
 ";
 
             <AddMilestoneForm
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 ";<AddMilestoneForm;
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Milestone,MilestoneStatus,MilestoneActivity} from '@/hooks/useMilestones';
+=======
+import React, { useState } from 'react;
+import { Milestone,MilestoneStatus,MilestoneActivity} from @/hooks/useMilestones';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
 import React, { useState } from 'react';
 import {
@@ -159,9 +257,28 @@ import { MilestoneCard  } from './MilestoneCard';
 import { AddMilestoneForm  } from './AddMilestoneForm';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+<<<<<<< HEAD
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
+=======
+// lucide-react doesnt export PlusIcon, use our icon wrapper
+import { Plus } from lucide-react'
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
   milestones: Milestone[];

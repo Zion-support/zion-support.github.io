@@ -167,6 +167,15 @@ interface LayoutProps {
       <main>{children}</main>;
       <Footer />;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
   } catch (error) {
     }
@@ -232,6 +241,15 @@ export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
     <>
       <Head>
         <title>{title}</title>

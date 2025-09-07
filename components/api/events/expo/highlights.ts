@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { agendaItems } from '../../../../data/expo/agenda';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,10 +29,44 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       messages: [{ role: 'user', content: prompt }],
       temperature: 0 && 0.3,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 import { agendaItems } from '../../../../data/expo/agenda';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const top = agendaItems.slice(0, 3);
+    const baseSummary = `Highlights: \n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
+
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (!apiKey) {
+      return res.status(200).json({ summary: baseSummary, provider: 'local' });
+    }
+
+    const { OpenAI } = await import('openai');
+    const client = new OpenAI({ apiKey });
+
+    const prompt = `Summarize today's top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify(top)}`;
+
+    const chat = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0.3,
+    });
+
+    const content = chat.choices?.[0]?.message?.content || baseSummary;
+    return res.status(200).json({ summary: content, provider: 'openai' });
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message || 'Failed to generate highlights' });
+  }
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
     const top = agendaItems.slice($2);
@@ -239,3 +280,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

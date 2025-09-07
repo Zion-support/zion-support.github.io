@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
 
 html, body {
@@ -29,3 +30,6 @@ html, body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+=======
+@tailwind utilities;
+>>>>>>> origin/resolved-merge-conflicts

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/SocialShareSection.tsx
 import { Button } from './ui/button'
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -90,8 +91,14 @@ export function SocialShareSection() {
       })
   },
 
+<<<<<<< HEAD
   const shareLinks = [
 const shareLinks = [
+=======
+=======
+const shareLinks = [
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
     {
       name: 'Twitter',
       icon: <Twitter className='h-5 w-5' aria-hidden='true' />, 
@@ -137,6 +144,7 @@ return (
             <h3 className='text-xl font-bold text-white mb-2'>Share Zion with Your Network</h3>
             <p className='text-zion-slate-light'>Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
 :src/components/SocialShareSection.tsx
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
@@ -166,6 +174,8 @@ return (
 }</div> </div> </div> </section>)
 }''
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 };
 }</div> </div> </div> </section>) ;
@@ -213,7 +223,68 @@ export function SocialShareSection() {;
           variant: 'destructive';
         });
       });
+<<<<<<< HEAD
   },;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  },;
+  const shareLinks = [;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  },
+  const shareLinks = [;
+    {name: Twitter",icon: <Twitter className="h-5 w-5 aria-hidden=true" />,color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80,onClick: shareToTwitter;
+    },{name: Facebook",icon: <Facebook className="h-5 w-5 aria-hidden=true" />,color: "bg-[#4267B2] hover:bg-[#4267B2]/80,onClick: shareToFacebook;
+    },{name: LinkedIn",icon: <Linkedin className="h-5 w-5 aria-hidden=true" />,color: "bg-[#0077B5] hover:bg-[#0077B5]/80,onClick: shareToLinkedIn;
+    },{name: Copy Link",icon: <Link className="h-5 w-5 aria-hidden=true" />,color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80,onClick: copyLinkToClipboard;
+    }],import { Button  } from './ui/button;
+import { Twitter, Facebook, Linkedin, Link  } from lucide-react';
+import { toast  } from './ui/use-toast;
+import { useTranslation  } from react-i18next';
+export function SocialShareSection() {const { t } = useTranslation()// Current URL is not available during SSR, guard with typeof check;
+  const shareUrl  = null;return (return (<section className=py-12 bg-zion-blue">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8>;
+        <div className=max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
+=======
+  },;
+  const shareLinks = [;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    {;
+      name: "Twitter",;
+      icon: <Twitter className="h-5 w-5" aria-hidden="true" />,;
+      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",;
+      onClick: shareToTwitter;
+    },;
+    {;
+      name: "Facebook",;
+      icon: <Facebook className="h-5 w-5" aria-hidden="true" />,;
+      color: "bg-[#4267B2] hover:bg-[#4267B2]/80",;
+      onClick: shareToFacebook;
+    },;
+    {;
+      name: "LinkedIn",;
+      icon: <Linkedin className="h-5 w-5" aria-hidden="true" />,;
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
+      onClick: shareToLinkedIn;
+    },;
+    {;
+      name: "Copy Link",;
+      icon: <Link className="h-5 w-5" aria-hidden="true" />,;
+      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80";
+      onClick: copyLinkToClipboard;
+    }];
+  return (;
+    <section className="py-12 bg-zion-blue">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
 ;
   const shareLinks = [;
@@ -300,9 +371,26 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
         <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
 
           <div>;
+<<<<<<< HEAD
             <h3 className='text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
 
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <h3 className=text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
+=======
+=======
+=======
+<<<<<<< HEAD
+            <h3 className=text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/resolved-merge-conflicts
 
               Share Zion with Your Network;
 
@@ -311,7 +399,17 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
+<<<<<<< HEAD
           </div>;<div className='flex flex-wrap gap-3'>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          </div>;<div className=flex flex-wrap gap-3'>;
+>>>>>>> origin/resolved-merge-conflicts
             {shareLinks && shareLinks.map((link, index) => (              <Button;
                 key = {index}
                 className={`${link && link.color} text-white`}
@@ -326,6 +424,12 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
             ))}<div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
                 key = {index }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
@@ -351,7 +455,28 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 });
 }
 }</div> </div> </div> </section>)
+<<<<<<< HEAD
 }''
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({title: t ('errors.failed to copy')})}</div> </div> </div> </section>)}'';
 }</div> </div> </div> </section>)}'';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+    </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({title: t ('errors.failed to copy')})}}</div> </div> </div> </section>)}'";
+}}</div> </div> </div> </section>)}'";
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
