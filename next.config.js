@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+=======
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
   images: {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,

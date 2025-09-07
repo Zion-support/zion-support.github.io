@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
+<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input",
@@ -9,10 +10,16 @@ import { useRouter } from "next/router",
 import { slugify } from "@/lib/slugify",
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
+=======
+import { Search, X } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { SearchSuggestion } from "@/types/search";
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
 
 interface EnhancedSearchInputProps {
   value: string;
   onChange: (value: string) => void;
+<<<<<<< HEAD
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
@@ -24,16 +31,23 @@ interface EnhancedSearchInputProps {
    * If provided, these will be shown when the input is empty.
    */
   searchSuggestions?: SearchSuggestion[]
+=======
+  onSelectSuggestion: (suggestion: SearchSuggestion) => void;
+  searchSuggestions: SearchSuggestion[];
+  placeholder?: string;
+  className?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
 }
 
 export function EnhancedSearchInput({
-
-  value
-  onChange
-  onSelectSuggestion
-  placeholder = "Search..."
-  searchSuggestions
+  value,
+  onChange,
+  onSelectSuggestion,
+  searchSuggestions,
+  placeholder = "Search...",
+  className = ""
 }: EnhancedSearchInputProps) {
+<<<<<<< HEAD
 
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
@@ -646,10 +660,74 @@ export function EnhancedSearchInput(): any ({;
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />;
 
+=======
+  const [isOpen, setIsOpen] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+
+  const filteredSuggestions = useMemo(() => {
+    if (!value.trim()) return searchSuggestions;
+    return searchSuggestions.filter(suggestion =>
+      suggestion.text.toLowerCase().includes(value.toLowerCase()) ||
+      suggestion.description?.toLowerCase().includes(value.toLowerCase())
+    );
+  }, [value, searchSuggestions]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!isOpen) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setHighlightedIndex(prev => 
+          prev < filteredSuggestions.length - 1 ? prev + 1 : 0
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setHighlightedIndex(prev => 
+          prev > 0 ? prev - 1 : filteredSuggestions.length - 1
+        );
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (highlightedIndex >= 0 && highlightedIndex < filteredSuggestions.length) {
+          onSelectSuggestion(filteredSuggestions[highlightedIndex]);
+          setIsOpen(false);
+        }
+        break;
+      case 'Escape':
+        setIsOpen(false);
+        break;
+    }
+  };
+
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    onSelectSuggestion(suggestion);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative" ref={inputRef}>
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
         <Input
-          ref={inputRef}
           type="text"
           value={value}
+<<<<<<< HEAD
 
           onChange={(e) => {;
             onChange(e && e.target.value);
@@ -665,13 +743,31 @@ export function EnhancedSearchInput(): any ({;
         />;
         {value && (;
 
+=======
+          onChange={(e) => {
+            onChange(e.target.value);
+            setIsOpen(true);
+            setHighlightedIndex(-1);
+          }}
+          onFocus={() => setIsOpen(true)}
+          onKeyDown={handleKeyDown}
+          placeholder={placeholder}
+          className={`pl-10 pr-10 ${className}`}
+        />
+        {value && (
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
+            type="button"
+            onClick={() => {
+              onChange('');
+              setIsOpen(false);
+            }}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 hover:text-gray-600"
           >
             <X className="h-4 w-4" />
           </button>
         )}
+<<<<<<< HEAD
 
       </div>;
 
@@ -792,4 +888,32 @@ break;
         list_id="autocomplete - suggestions - list";
       />;
     </div>);
+=======
+      </div>
+
+      {isOpen && filteredSuggestions.length > 0 && (
+        <ul
+          ref={listRef}
+          className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto"
+        >
+          {filteredSuggestions.map((suggestion, index) => (
+            <li
+              key={index}
+              onClick={() => handleSuggestionClick(suggestion)}
+              className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${index === highlightedIndex ? 'bg-gray-100' : ''}`}
+            >
+              <div className="font-medium text-gray-900">{suggestion.text}</div>
+              {suggestion.description && (
+                <div className="text-sm text-gray-500">{suggestion.description}</div>
+              )}
+              {suggestion.category && (
+                <div className="text-xs text-blue-600 mt-1">{suggestion.category}</div>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
 }

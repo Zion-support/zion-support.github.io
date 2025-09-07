@@ -218,7 +218,7 @@
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
     "automation:master": "node automation/master-orchestrator.cjs",
-    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:performance": "node automation/performance-monitor-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
     "automation:security": "node automation/security-scanner.cjs",
@@ -246,7 +246,7 @@
     "error:prevention:logs": "pm2 logs --lines 100",
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
-    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
+    "automation:enhanced": "node automation/enhanced-master-orchestrator.cjs",
     "optimize:images": "node scripts/optimize-images.js",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPatterns=accessibility",
@@ -260,9 +260,7 @@
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
-    "automation:enhanced": "node automation/enhanced-master-orchestrator.cjs",
     "automation:test": "node automation/intelligent-test-automation.cjs",
-    "automation:performance": "node automation/performance-monitor-optimizer.cjs",
     "automation:ultimate": "node automation/ultimate-automation-runner.cjs"
   },
   "pm2": {
@@ -380,7 +378,10 @@
     "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
+<<<<<<< HEAD
     "audit-ci": "^7.1.0",
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-formatter-junit": "^8.40.0",
@@ -396,7 +397,6 @@
     "lighthouse": "^12.8.2",
     "npm-audit-resolver": "^3.0.0-RC.0",
     "pm2": "^6.0.8",
-    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "rollup": "^4.50.0",
     "snyk": "^1.1299.0",
@@ -432,5 +432,15 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
+<<<<<<< HEAD
   "license": "MIT"
 }
+=======
+  "license": "MIT",
+  "nextConfig": {
+    "compress": true,
+    "poweredByHeader": false,
+    "generateEtags": false
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d

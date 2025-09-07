@@ -81,7 +81,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
