@@ -1,65 +1,77 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-console.log('⚡ Performance Optimizer Starting...');
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
-class PerformanceOptimizer {
-  constructor() {
-    this.optimizations = [];
-  }
 
-  async optimizeImages() {
-    try {
-      console.log('🖼️  Optimizing images...');
-      const publicDir = path.join(process.cwd(), 'public');
-      if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir, { recursive: true });
-        const imageFiles = files.filter(file => 
-          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        );
-        console.log(`Found ${imageFiles.length} images to optimize`);
-        this.optimizations.push({
-          type: 'images',
-          count: imageFiles.length,
-          status: 'completed'
-        });
-      }
-    } catch (error) {
-      console.error('❌ Image optimization failed:', error.message);
-    }
-  }
 
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      summary: {
-        totalOptimizations: this.optimizations.length,
-        completed: this.optimizations.filter(opt => opt.status === 'completed').length
-      }
-    };
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const { execSync } = require('child_process')
+<<<<<<< HEAD
+      "status"
+        "status"
+        "message"
+        "status"
+      return { "status"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      "status"
+        "stdio"
+            "status"
+      return { "status": 'success', "message"}
+      return { "status"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      "status"
+      return { "status": 'skipped', "message"}
+      return { "status": 'skipped', "message"}
+      "status"
+      "message"
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+          "missing"
+          "missing"
+      "status"
+    console.log('\n Performance Optimization "Summary")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-    const reportPath = path.join(process.cwd(), 'performance-reports', 'optimization-report.json');
-    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('📊 Optimization report generated:', reportPath);
-    return report;
-  }
+=======
+    console.error('Performance optimization "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    console.error('Performance optimization "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.error('Performance optimization "failed")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  async run() {
-    console.log('🚀 Starting performance optimization...');
-    await this.optimizeImages();
-    const report = await this.generateReport();
-    
-    console.log('\n⚡ Optimization Summary:');
-    console.log('  - Total Optimizations:', report.summary.totalOptimizations);
-    console.log('  - Completed:', report.summary.completed);
-    
-    return report;
-  }
-}
 
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

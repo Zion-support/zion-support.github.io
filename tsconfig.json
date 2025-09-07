@@ -4,23 +4,25 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": false,
+    "strict": true,
     "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "react",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "incremental": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -49,15 +51,28 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "pages/**/*.ts",
@@ -76,13 +91,28 @@
     "protocol/**/*.tsx",
     "App.tsx",
     "middleware.ts",
-    "jest.setup.ts"
+    "jest.setup.ts",
+    "vite.config.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    "dist",
+    "build",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
     "lib_backup*",
     "src_backup*",
-    "pages_backup*",
     "corrupted-files-backup*",
     "performance-reports*",
     "log-analysis-reports*",
@@ -92,12 +122,8 @@
     "pm2-automation*",
     "automation/logs*",
     "automation/backup*",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled",
-    "recovered-branches/**",
-    "temp_backup/**",
-    "api.disabled/**"
+    "api-backup",
+    "contracts",
+    "hardhat"
   ]
 }

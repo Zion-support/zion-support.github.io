@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/
 .next/
 dist/
@@ -162,3 +163,17 @@ app-enhancement-suite.cjs
 App.simple.tsx
 App.smoke.test.tsx
 >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+=======
+pages.broken/**
+pages.corrupted.*/**
+pages.disabled/**
+pages.disabled_auto/**
+pages.old/**
+pages_disabled/**
+pages_minimal/**
+pm2-automation/**
+services/**
+*.js
+*.cjs
+*.mjs
+>>>>>>> main

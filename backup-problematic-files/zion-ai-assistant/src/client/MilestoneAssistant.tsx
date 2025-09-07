@@ -1,204 +1,322 @@
-import React, { useMemo, useState } from \"react\",import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from \"../shared/types\",export interface MilestoneAssistantProps  {scopeOfWork:string,startDateIso:string,endDateIso:string,projectType:ProjectType,onAccept?:(milestones:SuggestedMilestoneItem[], autoAdd:boolean) => void;}
-}export function MilestoneAssistant() {const [loading, setLoading] = useState(false),const [error, setError] = useState<string | null />(null),const [autoAdd, setAutoAdd] = useState(true),const [items, setItems] = useState<SuggestedMilestoneItem[] />([]),const [expandedIdx, setExpandedIdx]  = useState<number | null />(0),const isDisabled = useMemo(() => {return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType,}, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]),async function generate() {setLoading(true),setError(null),try {const payload:MilestoneSuggestionInput = {scopeOfWork:props.scopeOfWork,startDateIso:props.startDateIso,endDateIso:props.endDateIso,projectType:props.projectType;}
-      },const res = await fetch(\"/api/ai/milestones\", {method:\"POST\",headers:{ \"Content-Type\":\"application/json\" },body:JSON.stringify(payload)}),if (!res.ok) {const t = await res.text(),throw new Error(t || \"Failed to generate\"),}
-      const data = await res.json(),setItems(Array.isArray(data?.milestones) ? data.milestones :[]),setExpandedIdx(0),} catch (e:any) {setError(e?.message || \"Unexpected error\")} finally {setLoading(false),}
-  }function updateItem() {setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } m))),}function removeItem() {setItems((prev) => prev.filter((_, i) => i !== idx)),}function accept() {props.onAccept?.(items, autoAdd),}return (<div className=\"milestone-assistant\" />;
-import React, { useMemo, useState } from \"react\";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from \"../shared/types\";
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React, { useMemo, useState } from "react",;
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
+=======
+import React, { useMemo, useState } from "react";""
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export interface MilestoneAssistantProps {;
-  scopeOfWork:string,;
-  startDateIso:string,;
-  endDateIso:string,;
-  projectType:ProjectType,;}
-  onAccept?:(milestones:SuggestedMilestoneItem[], autoAdd:boolean) => void;}
+  scopeOfWork: string;,;
+  startDateIso: string;,;
+  endDateIso: string;,;
+  projectType: ProjectType;,;
+  onAccept?:(milestones: SuggestedMilestoneItem[];, autoAdd:boolean) => void;
 }
-;
 export function MilestoneAssistant(props:MilestoneAssistantProps) {;
   const [loading, setLoading] = useState(false),;
-  const [error, setError] = useState<string | null />(null),;
-  const [autoAdd, setAutoAdd] = useState(true),;
-  const [items, setItems] = useState<SuggestedMilestoneItem[] />([]),;
-  const [expandedIdx, setExpandedIdx] = useState<number | null />(0),;
-;
-  const isDisabled = useMemo(() => {;}
-    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType,;}
-  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]),;
-;
-  async function generate() {;
-    setLoading(true),;
-    setError(null),;
-    try {;
-      const payload:MilestoneSuggestionInput = {;
-        scopeOfWork:props.scopeOfWork,;
-        startDateIso:props.startDateIso,;
-        endDateIso:props.endDateIso,;}
-        projectType:props.projectType;}
-      },;
-      const res = await fetch(\"/api/ai/milestones\", {;}
-        method:\"POST\",;}
-        headers:{ \"Content-Type\":\"application/json\" },;
-        body:JSON.stringify(payload);
-      }),;
-      if (!res.ok) {;
-        const t = await res.text(),;}
-        throw new Error(t || \"Failed to generate\"),;}
-      }
-      const data = await res.json(),;
-      setItems(Array.isArray(data?.milestones) ? data.milestones :[]),;
-      setExpandedIdx(0),;
-    } catch (e:any) {;}
-      setError(e?.message || \"Unexpected error\");}
-    } finally {;}
-      setLoading(false),;}
-    }
-  }
-;
-  function updateItem(idx:number, patch:Partial<SuggestedMilestoneItem />) {;}
-    setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } m))),;
-  }
-;
-  function removeItem(idx:number) {;}
-    setItems((prev) => prev.filter((_, i) => i !== idx)),;}
-  }
-;
-  function accept() {;}
-    props.onAccept?.(items, autoAdd),;}
-  }
-;
-  return (;
-    <div className=\"milestone-assistant\" />;
-      <div className=\"assistant-header\" style={{ display:\"flex\", gap:12, alignItems:\"center\" }} />;
-        <button onClick={generate} disabled={loading || isDisabled} />;
-          {loading ? \"Generating...\" :\" Generate AI Milestones\"}
-        </button>;
-        <label style={{ display:\"flex\", gap:6, alignItems:\"center\" }} />;
-          <input type=\"checkbox\" checked={autoAdd} onChange={(e) = /> setAutoAdd(e.target.checked)} />;
-          Auto-add to Milestone Tracker;
+  const [error, setError] = useState<string | null>(null),;
+</string>
+  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]),;
+
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(0),;
+</number>
+  function updateItem(idx: number;, patch:Partial<SuggestedMilestoneItem>) {;
+"
+    <div className="milestone-assistant">;"
+</div>"
+      <div className="assistant-header" style={{ display: "flex";, gap: 12;, alignItems: "center" ;}}>;"
+</div>
+        <button onClick={generate} disabled={loading || isDisabled}>;
+</button>
+        </button>;"
+        <label style={{ display: "flex";, gap: 6;, alignItems: "center" ;}}>;"
+</label>"
+          <input type="checkbox" checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />;"
+</input>
         </label>;
-      </div>;
-      {error && <div style={{ color:\"#b00\", marginTop:8 }} />{error}</div>}<div style={{ marginTop:12 }} />;
-        {items.length === 0 && !loading && (<div style={{ color:\"#666\" }} />No suggestions yet. Click \"Generate\" above.</div>;
-        )}
-        {items.map((item, idx) => (<div key={idx} className=\"milestone-item\" style={{ border:\"1px solid #ddd\", borderRadius:8, marginBottom:8 }} />;
-            <div;
-              className=\"milestone-summary\";
-              style={{ padding:12, cursor:\"pointer\", display:\"flex\", justifyContent:\"space-between\", alignItems:\"center\" }}
-              onClick={() = /> setExpandedIdx(expandedIdx === idx ? null :idx)}
-            >;
-              <div style={{ display:\"flex\", gap:8, alignItems:\"center\" }} />;
-                <span style={{ fontWeight:600 }} />{item.title || `Milestone ${idx + 1}`}</span>;
-                <span style={{ background:\"#eef7ff\", color:\"#1677ff\", padding:\"2px 6px\", borderRadius:4, fontSize:12 }} />;
-                  AI Suggested;
+      </div>;"
+      {error && <div style={{ color: "#b00";, marginTop: 8 ;}}>{error}</div>}"
+      <div style={{ marginTop: 12 ;}}>;
+          <div style={{ color: "#666" ;}}>No suggestions yet. Click "Generate" above.</div>;""
+          <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd";, borderRadius: 8;, marginBottom: 8 ;}}>;"
+            <div;"
+              className="milestone-summary";""
+              style={{ padding: 12;, cursor: "pointer";, display: "flex";, justifyContent: "space-between";, alignItems: "center" ;}}"
+              onClick={() => setExpandedIdx(expandedIdx === idx ? null :idx)}
+              <div style={{ display: "flex";, gap: 8;, alignItems: "center" ;}}>;"
+                <span style={{ fontWeight: 600 ;}}>{item.title || `Milestone ${idx + 1}`}</span>;"
+                <span style={{ background: "#eef7ff";, color: "#1677ff";, padding: "2px 6px";, borderRadius: 4;, fontSize: 12 ;}}>;"
+</span>
                 </span>;
+              <div style={{ fontSize: 12;, color: "#555" ;}}>;"
               </div>;
-              <div style={{ fontSize:12, color:\"#555\" }} />;
-                Due:{new Date(item.suggestedDueDateIso).toLocaleDateString()}  ~{item.estimatedEffortHours}h;
-              </div>;
-            </div>;
-            {expandedIdx === idx && (<div className=\"milestone-details\" style={{ padding:12, display:\"grid\", gap:8 }} />;
-                <div style={{ display:\"grid\", gap:6 }} />;
-                  <label />Title</label>;
+              <div className="milestone-details" style={{ padding: 12;, display: "grid";, gap: 8 ;}}>;"
+                <div style={{ display: "grid";, gap: 6 ;}}>;"
+                  <label>Title</label>;
                   <input;
                     value={item.title}
-                    onChange={(e) = /> updateItem(idx, { title:e.target.value })}
-                    placeholder=\"Title\";
-                  />;
-                </div>;
-                <div style={{ display:\"grid\", gap:6 }} />;
-                  <label />Description</label>;
+                    onChange={(e) => updateItem(idx, { title: e.target.value ;})}
+                  <label>Description</label>;
                   <textarea;
                     value={item.description}
-                    onChange={(e) = /> updateItem(idx, { description:e.target.value })}
+<<<<<<< HEAD
+                    onChange={(e) => updateItem(idx, { description:e.target.value })}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     rows={3}
-                    placeholder=\"Description\";
+                    placeholder="Description";
                   />;
                 </div>;
-                <div style={{ display:\"grid\", gap:6 }} />;
-                  <label />Suggested due date</label>;
-                  <input;
-                    type=\"date\";
+<<<<<<< HEAD
+
+=======
+                <div style={{ display:"grid", gap:6 }}>;
+=======
+                    onChange={(e) => updateItem(idx, { description: e.target.value ;})}
+</textarea>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                  <label>Suggested due date</label>;
+                  <input;"
+                    type="date";"
                     value={item.suggestedDueDateIso.slice(0, 10)}
-                    onChange={(e) = /> updateItem(idx, { suggestedDueDateIso:new Date(e.target.value).toISOString() })}
-                  />;
-                </div>;
-                <div style={{ display:\"grid\", gap:6 }} />;
-                  <label />Estimated effort (hours)</label>;
+                    onChange={(e) => updateItem(idx, { suggestedDueDateIso: new Date(e.target.value).toISOString() ;})}
+                  <label>Estimated effort (hours)</label>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <input;
-                    type=\"number\";
+                    type="number";
                     min={1}
                     value={item.estimatedEffortHours}
-                    onChange={(e) = /> updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || \"0\", 10)) })}
+<<<<<<< HEAD
+
+}
+}> <button onClick= {
+  generate
+}disabled= {
+  loading || isDisabled
+}> {
+  loading ? "Generating..." : "💡 Generate AI Milestones"
+}</button> <label style= {
+  {
+  display: "flex", gap: 6, alignItems: "center"
+}
+}> <input type="checkbox" checked= {
+  autoAdd
+}onChange= {
+  (e) => setAutoAdd (e.target.checked)
+}/> Auto-add to Milestone Tracker </label> </div> {
+  error && <div style= {
+  {
+  color: "#b00", marginTop: 8
+}
+}> {
+  error
+}</div>
+}<div style= {
+  {
+  marginTop: 12
+=======
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || "0", 10)) })}
                   />;
                 </div>;
-                <div style={{ display:\"flex\", justifyContent:\"space-between\", marginTop:8 }} />;
-                  <button onClick={() = /> removeItem(idx)} style={{ color:\"#b00\" }}>Remove</button>;
-                  <button onClick={accept} />Accept</button>;
-                </div>;
+                <div style={{ display:"flex", justifyContent:"space-between", marginTop:8 }}>;
+                  <button onClick={() => removeItem(idx)} style={{ color:"#b00" }}>Remove</button>;
+=======
+                    type="number";"
+                    min={1}
+                    value={item.estimatedEffortHours}"
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1;, parseInt(e.target.value || "0", 10)) })}"
+                <div style={{ display: "flex";, justifyContent: "space-between";, marginTop: 8 ;}}>;"
+                  <button onClick={() => removeItem(idx)} style={{ color: "#b00" ;}}>Remove</button>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                  <button onClick={accept}>Accept</button>;
               </div>;            )}
-          </div>;
-        ))}
-      </div>;
-    </div>;
-  ),}export default MilestoneAssistant,return (<div className=\"milestone-assistant\" /> <div className=\"assistant-header\" style= {{display: \"flex\", gap: 12, alignItems: \"center\";}
+ return (<div className="milestone-assistant"> <div className="assistant-header" style= {"
+}> <button onClick= {
+  generate;
+}disabled= {
+  loading || isDisabled;
+}> {
+}</button> <label style= {
+  {"
+  display: "flex";, gap: 6;, alignItems: "center"";
+}"
+}> <input type="checkbox" checked= {"
+</label>
+}/> Auto-add to Milestone Tracker </label> </div> {
+  error && <div style= {
+  color: "#b00";, marginTop: 8;"
+}</div> 
+}<div style= {
+  {
+<<<<<<< HEAD
+  marginTop: 12 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-} /> <button onClick= {generate;}
-}disabled= {loading || isDisabled;}
-} /> {loading ? \"Generating...\" : \" Generate AI Milestones\";}
-}</button> <label style= {{display: \"flex\", gap: 6, alignItems: \"center\";}
+}> {
+  items.length === 0 && !loading && (<div style= {
+  {
+<<<<<<< HEAD
+  color: "#666"
 }
-} /> <input type=\"checkbox\" checked= {autoAdd;}
-}onChange= {(e) = /> setAutoAdd (e.target.checked)}/> Auto-add to Milestone Tracker </label> </div> {error && <div style= {{color: \"#b00\", marginTop: 8;}
+}>No suggestions yet. Click "Generate" above.</div>)
+}{
+  items.map ( (item, idx) => (<div key= {
+  idx
+}className="milestone-item" style= {
+  {
+  border: "1px solid #ddd", borderRadius: 8, marginBottom: 8
 }
-} /> {error;}
-}</div>;
-}<div style= {{marginTop: 12;}
+}> <div className="milestone-summary" style= {
+  {
+  padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center"
 }
-} /> {items.length === 0 && !loading && (<div style= {{color: \"#666\";}
+}onClick= {
+  () => setExpandedIdx (expandedIdx === idx ? null : idx)
+}> <div style= {
+  {
+  display: "flex", gap: 8, alignItems: "center"
 }
-} />No suggestions yet. Click \"Generate\" above.</div>)}{items.map ( (item, idx) => (<div key= {idx;}
-}className=\"milestone-item\" style= {{border: \"1px solid #ddd\", borderRadius: 8, marginBottom: 8;}
+}> <span style= {
+  {
+  fontWeight: 600
 }
-} /> <div className=\"milestone-summary\" style= {{padding: 12, cursor: \"pointer\", display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\";}
+}> {
+  item.title || `Milestone $ {
+  idx + 1
+}`
+}</span> <span style= {
+  {
+  background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12
 }
-}onClick= {() = /> setExpandedIdx (expandedIdx === idx ? null : idx)}> <div style= {{display: \"flex\", gap: 8, alignItems: \"center\";}
+}> AI Suggested </span> </div> <div style= {
+  {
+  fontSize: 12, color: "#555"
 }
-} /> <span style= {{fontWeight: 600;}
+}> Due: {
+  new Date (item.suggestedDueDateIso) .toLocaleDateString ()
+}· ~ {
+  item.estimatedEffortHours
+}h </div> </div> {
+  expandedIdx === idx && (<div className="milestone-details" style= {
+  {
+  padding: 12, display: "grid", gap: 8
 }
-} /> {item.title || `Milestone $ {idx + 1;}
-}`;
-}</span> <span style= {{background: \"#eef7ff\", color: \"#1677ff\", padding: \"2px 6px\", borderRadius: 4, fontSize: 12;}
+}> <div style= {
+  {
+  display: "grid", gap: 6
 }
-} /> AI Suggested </span> </div> <div style= {{fontSize: 12, color: \"#555\";}
+}> <label>Title</label> <input value= {
+  item.title
+}onChange= {
+  (e) => updateItem (idx, {
+  title: e.target.value
+})
+}placeholder="Title" /> </div> <div style= {
+  {
+  display: "grid", gap: 6
 }
-} /> Due: {new Date (item.suggestedDueDateIso) .toLocaleDateString ()} ~ {item.estimatedEffortHours;}
-}h </div> </div> {expandedIdx === idx && (<div className=\"milestone-details\" style= {{padding: 12, display: \"grid\", gap: 8;}
+}> <label>Description</label> <textarea value= {
+  item.description
+}onChange= {
+  (e) => updateItem (idx, {
+  description: e.target.value
+})
+}rows= {
+  3
+}placeholder="Description" /> </div> <div style= {
+  {
+  display: "grid", gap: 6
 }
-} /> <div style= {{display: \"grid\", gap: 6;}
+}> <label>Suggested due date</label> <input type="date" value= {
+  item.suggestedDueDateIso.slice (0, 10)
+}onChange= {
+  (e) => updateItem (idx, {
+  suggestedDueDateIso: new Date (e.target.value) .toISOString ()
+})
+}/> </div> <div style= {
+  {
+  display: "grid", gap: 6
 }
-} /> <label />Title</label> <input value= {item.title;}
-}onChange= {(e) = /> updateItem (idx, {title: e.target.value;}
-})}placeholder=\"Title\" /> </div> <div style= {{display: \"grid\", gap: 6;}
+}> <label>Estimated effort (hours) </label> <input type="number" min= {
+  1
+}value= {
+  item.estimatedEffortHours
+}onChange= {
+  (e) => updateItem (idx, {
+  estimatedEffortHours: Math.max (1, parseInt (e.target.value || "0", 10) )
+})
+}/> </div> <div style= {
+  {
+  display: "flex", justifyContent: "space-between", marginTop: 8
 }
-} /> <label />Description</label> <textarea value= {item.description;}
-}onChange= {(e) = /> updateItem (idx, {description: e.target.value;}
-})}rows= {3;}
-}placeholder=\"Description\" /> </div> <div style= {{display: \"grid\", gap: 6;}
+}> <button onClick= {
+  () => removeItem (idx)
+}style= {
+  {
+  color: "#b00"
 }
-} /> <label />Suggested due date</label> <input type=\"date\" value= {item.suggestedDueDateIso.slice (0, 10)}onChange= {(e) = /> updateItem (idx, {suggestedDueDateIso: new Date (e.target.value) .toISOString ()})}/> </div> <div style= {{display: \"grid\", gap: 6;}
+}>Remove</button> <button onClick= {
+  accept
+}>Accept</button> </div> </div>)
+}</div>) )
+}</div> </div>)
+=======
+  color: "#666" 
 }
-} /> <label />Estimated effort (hours) </label> <input type=\"number\" min= {1;}
-}value= {item.estimatedEffortHours;}
-}onChange= {(e) = /> updateItem (idx, {estimatedEffortHours: Math.max (1, parseInt (e.target.value || \"0\", 10) )})}/> </div> <div style= {{display: \"flex\", justifyContent: \"space-between\", marginTop: 8;}
-}
-} /> <button onClick= {() = /> removeItem (idx)}style= {{color: \"#b00\";}
-}
-}>Remove</button> <button onClick= {accept;}
-} />Accept</button> </div> </div>)}</div>) )}</div> </div>)}export default MilestoneAssistant;
-}>Remove</button> <button onClick= {}
-  accept }
-} />Accept</button> </div> </div>) 
+}>No suggestions yet. Click "Generate" above.</div>) 
+}{
+=======
+  marginTop: 12;
+  items.length === 0 && !loading && (<div style= {
+  color: "#666"";
+})"
+}>No suggestions yet. Click "Generate" above.</div>)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  items.map ( (item, idx) => (<div key= {
+  idx;"
+}className="milestone-item" style= {"
+  border: "1px solid #ddd";, borderRadius: 8;, marginBottom: 8;"
+}> <div className="milestone-summary" style= {"
+}> <div style= {
+  display: "flex";, gap: 8;, alignItems: "center"";
+}> <span style= {
+}</span> <span style= {
+  background: "#eef7ff";, color: "#1677ff";, padding: "2px 6px";, borderRadius: 4;, fontSize: 12;"
+}> AI Suggested </span> </div> <div style= {
+  fontSize: 12;, color: "#555"";
+}> Due: {)
+  new Date (item.suggestedDueDateIso) .toLocaleDateString () 
+} ~ {
+  item.estimatedEffortHours;
+}h </div> </div> {"
+  expandedIdx === idx && (<div className="milestone-details" style= {"
+  padding: 12;, display: "grid";, gap: 8;"
+}> <label>Title</label> <input value= {
+  item.title;
+}onChange= {)
+  (e) => updateItem (idx, {
+  title: e.target.value;)
+}) "
+}placeholder="Title" /> </div> <div style= {"
+  display: "grid";, gap: 6;"
+}> <label>Description</label> <textarea value= {
+}placeholder="Description" /> </div> <div style= {"
+}> <label>Suggested due date</label> <input type="date" value= {"
+}/> </div> <div style= {
+}> <label>Estimated effort (hours) </label> <input type="number" min= {"
+  display: "flex";, justifyContent: "space-between";, marginTop: 8;"
+}>Remove</button> <button onClick= {
+  accept;
+}>Accept</button> </div> </div>) 
 }</div>) ) 
+<<<<<<< HEAD
 }</div> </div>) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }export default MilestoneAssistant;
-
+=======
+}</div> </div>) "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

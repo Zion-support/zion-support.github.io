@@ -1,7 +1,12 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+<<<<<<< HEAD
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}static getDerivedStateFromError(error) {return { hasError: true ;,}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     }return this.props.children;
   }
 }import React from 'react';
@@ -32,17 +37,36 @@ import React from 'react';,export default function SecretsRotationAutomationPage
 ];
 return (<>;
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {}
     super(props);}
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+    return { hasError: true;,}
 };
   }
   componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+    console.error('Error caught by boundary: ';, error, errorInfo);}
   }
   render() {
     if (this.state.hasError) {}
@@ -54,6 +78,33 @@ class ErrorBoundary extends React.Component {
   const features = [
   export default function SecretsRotationAutomationPage() {
 
+<<<<<<< HEAD
+=======
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   const features = [;
 
 import React from \"react\";}
@@ -65,9 +116,6 @@ export default function SecretsRotationAutomationPage() {
 
   const features = [;
 
-import React from \"react\";}
-import SEO from \"../components/SEO\";}
-import { Check, ExternalLink } from \"lucide-react\";
   const features = [
     \"Automated key and secret rotation\"
     \"JIT credentials with expirations\"
@@ -88,6 +136,49 @@ export default function SecretsRotationAutomationPage() {
   return (
     <>;
       <SEO;
+        title="Secrets Rotation Automation";""
+        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";"
+      />;
+"
+      <main id="main" className="container mx - auto px - 4 py - 24">;"
+</main>"
+        <section className="max - w-5xl mx - auto">;"
+</section>"
+          <h1 className="text - 4xl font - extrabold tracking - tight">;"
+</h1>
+          </h1>;"
+          <p className="mt - 4 text - lg text - gray - 300">;"
+</p>
+          </p>;"
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;"
+</div>
+              <div;
+                key={f}"
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";"
+              >;
+</div>"
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;"
+                <p className="text - gray - 200">{f}</p>;"
+              </div>))}
+          </div>;"
+          <div className="mt - 8 flex flex - wrap items - center gap - 4">;"
+            <a;"
+              href="/contact";""
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200";"
+</a>
+            </a>;
+              href="/pricing";""
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";"
+              href="https://developer.hashicorp.com / vault";""
+              target="_blank";""
+              rel="noreferrer";""
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";"
+</a>"
+              <ExternalLink className="w - 4 h - 4" /> HashiCorp Vault Docs;"
+
+              href="https://cloud.google.com / kms";""
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;"
+
         title=\"Secrets Rotation Automation\";
         description=\"Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.\";
       />;
@@ -131,16 +222,32 @@ export default function SecretsRotationAutomationPage() {
               <ExternalLink className=\"w - 4 h - 4\" /> HashiCorp Vault Docs;
             </a>;
             <a;
+<<<<<<< HEAD
+              href="https://cloud.google.com / kms";
+              target="_blank";
+              rel="noreferrer";
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+<<<<<<< HEAD
+=======
               href=\"https://cloud.google.com / kms\";
               target=\"_blank\";
               rel=\"noreferrer\";
               className=\"inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300\" />
 
               <ExternalLink className=\"w - 4 h - 4\" /> Google Cloud KMS;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   return (return (return (</a>;
           </div>;
         </section>;
       </main>;</>)return (<>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
             </a>;
           </div>;
@@ -149,6 +256,41 @@ export default function SecretsRotationAutomationPage() {
 
     </>);
   return (
+      <SEO;"
+    <>
+        title="Secrets Rotation Automation"""
+        description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs.""
+      />
+      <main id="main" className="container mx-auto px-4 py-24">"
+        <section className="max-w-5xl mx-auto">"
+          <h1 className="text-4xl font-extrabold tracking-tight">"
+          </h1>"
+          <p className="mt-4 text-lg text-gray-300">"
+          </p>"
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">"
+                <p className="text - gray - 200">{f}</p>;")
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover: bg - gray - 200";"
+
+
+
+const features = ["
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support]
+	];
+			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />"
+					<h1 className="text-4xl font-extrabold tracking-tight">Secrets Rotation Automation</h1>""
+					<p className="mt-4 text-lg text-gray-300">Keep credentials short-lived and compliant. Automate rotations across providers with full auditability.</p>""
+							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">"
+								<Check className="w-5 h-5 text-cyan-400 mt-1" />"
+<p className="text-gray-200">{f}</p>"
+					<div className="mt-8 flex flex-wrap items-center gap-4">"
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $199/mo</a>""
+						<a href="/pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Pricing</a>""
+						<a href="https://developer.hashicorp.com/vault" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+							<ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs;"
+
+<a href="https://cloud.google.com/kms" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+							<ExternalLink className="w-4 h-4" /> Google Cloud KMS;"
+
     <>;
       <SEO;
         title=\"Secrets Rotation Automation\";
@@ -338,13 +480,32 @@ const features = [
 			</main>
 		</>
 );
+
+
 }
     </>);
 }
   return (
 
-  return (
 
+                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10""
+              >
+              href="/contact"""
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200""
+              href="/pricing"""
+              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10""
+              href="https://developer.hashicorp.com/vault"""
+              target="_blank"""
+              rel="noreferrer"""
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300""
+
+              href="https://cloud.google.com/kms"""
+
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200""
+
+
+
+      </main>;"
 return (
   return (
     <>
@@ -519,6 +680,10 @@ href=\"https://cloud.google.com/kms\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </>;
   )return (<>;
       <SEO;
@@ -585,4 +750,10 @@ href=\"https://cloud.google.com/kms\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+=======
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

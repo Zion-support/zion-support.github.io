@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -62,12 +70,17 @@ async log(message, type = "INFO")
     const files = await this.findFiles("src", [".ts", ".tsx")]
   const content = await readFile(file, "utf8")
           this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }
+=======
+
+          this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });await this.log("Fixed types in ${file}")
       } catch (error) {  await this.log("Error fixing types in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing component errors...")
     const componentFixes = ["]
-  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", ""replacement": (match", "componentName) => {return "}
+  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
   )}"
+<<<<<<< HEAD
           this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
 });await this.log("Added default export to ${file}")
       } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", "ERROR")
@@ -99,5 +112,26 @@ async log(message, type = "INFO")
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, "ERROR"`)
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
   console.error(""Error": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(""Error": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(""Error": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -110,7 +110,7 @@ export default function MarketResearchPage() {
 
 'Microservices architecture growth',
         'API-first development',
-        'Rate limiting importance',
+        'Rate limiting importance',;
         'Developer experience focus',
       ],
       topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],

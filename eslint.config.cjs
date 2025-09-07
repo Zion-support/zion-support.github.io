@@ -5,6 +5,7 @@ const tsparser = require('@typescript-eslint/parser');
 module.exports = [
   {
     ignores: [
+<<<<<<< HEAD
       'node_modules/**/*',
       'app-optimizer.js',
       'zion-os/**/*',
@@ -63,6 +64,9 @@ module.exports = [
       '!next.config.*',
       '!tailwind.config.*',
       '!postcss.config.*',
+=======
+      'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs,]
+>>>>>>> main
     ],
   },
   js.configs.recommended,

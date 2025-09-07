@@ -1,45 +1,70 @@
 import React from 'react';
+import { Metadata } from 'next';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Analytics Platform | Zion Tech Group',
-  description: 'Professional AI analytics platform services for your business needs.',
-  keywords: 'ai-analytics-platform, services, business, technology'
+  description: 'Comprehensive AI-powered analytics platform for advanced data processing and business intelligence.',
+  keywords: 'AI analytics platform, data processing, business intelligence, machine learning',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI Analytics Platform | Zion Tech Group',
+    description: 'Comprehensive AI-powered analytics platform for advanced data processing.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Analytics Platform | Zion Tech Group',
+    description: 'Comprehensive AI-powered analytics platform for advanced data processing.',
+  },
 };
 
-export default function ServicePage() {
+export default function AIAnalyticsPlatformPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Platform
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional AI analytics platform services for your business needs.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Analytics Platform</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI-powered analytics platform for advanced data processing and business intelligence.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored AI analytics platform solutions designed for your specific business requirements.
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Processing</h3>
+            <p className="text-gray-600 mb-4">
+              Advanced data processing capabilities with AI-powered insights.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Real-time data streaming</li>
+              <li>• Data cleansing and validation</li>
+              <li>• Multi-source data integration</li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning</h3>
+            <p className="text-gray-600 mb-4">
+              Built-in ML models for predictive analytics and pattern recognition.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Predictive modeling</li>
+              <li>• Anomaly detection</li>
+              <li>• Pattern recognition</li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your AI analytics platform solutions run smoothly.
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Visualization</h3>
+            <p className="text-gray-600 mb-4">
+              Interactive dashboards and customizable data visualizations.
             </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Interactive charts</li>
+              <li>• Custom dashboards</li>
+              <li>• Real-time monitoring</li>
+            </ul>
           </div>
         </div>
       </div>

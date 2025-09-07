@@ -1,39 +1,44 @@
+<<<<<<< HEAD
+import React from 'react';
+interface LoginContentProps {
+  // Add props here as needed
+}
+export default function LoginContent({ }: LoginContentProps) {
+  return (
+    <div>
+      <h1>LoginContent</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+=======
 class ErrorBoundary extends React.Component {
-  constructor(props) {}
-    super(props);}
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {}
+  static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   render() {
-    if (this.state.hasError) {}
-      return <div />Something went wrong.</div>;}
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-const LoginContent = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />LoginContent</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const LoginContent = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />LoginContent</h1>
-      <p />This component is under development.</p>
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;'
+    <div className={className || ''}>'
+</div>
+      <h1>LoginContent</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

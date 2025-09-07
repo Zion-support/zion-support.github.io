@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 export default function AppMinimal() {
   return (
@@ -8,3 +9,14 @@ export default function AppMinimal() {
     </main>
   );
 }
+=======
+export default function AppMinimal(): React.JSX.Element {
+  // TODO: Implement
+}
+  return (
+    <main>
+</main>
+      <h1>Zion Tech Group - Minimal App</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>)
+>>>>>>> main

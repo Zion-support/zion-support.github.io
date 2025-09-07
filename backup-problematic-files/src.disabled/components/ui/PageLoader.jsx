@@ -1,21 +1,33 @@
-import React from 'react';
-const PageLoader = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />PageLoader</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return() <div\''; className={cn(\'';\"flex\": flex-col items-center justify-center min-h-screen\',className )} > <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
+const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return() <div""; className={cn("";flex: flex-col items-center justify-center min-h-screen",className )} > <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
 
-const PageLoader = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />PageLoader</h1>
-      <p />This component is under development.</p>
+
+
+
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return () <div\'' className={cn(\''\"flex\": flex-col items-center justify-center min-h-screen\',className )}> <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
+const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return () <div"" className={cn(""flex: flex-col items-center justify-center min-h-screen",className )}> <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return() <div\''; className={cn(\'';\"flex\": flex-col items-center justify-center min-h-screen\',className )} > <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
+const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return() <div""; className={cn("";flex: flex-col items-center justify-center min-h-screen",className )} > <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+import React from 'react';'
+const PageLoader = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>PageLoader</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
 
+    </div>)'
+pr-12325

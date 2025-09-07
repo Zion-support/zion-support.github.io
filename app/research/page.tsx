@@ -1,69 +1,70 @@
 import React from 'react';
+import { Metadata } from 'next';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: "Research | Zion Tech Group",
-  description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
+export const metadata: Metadata = {
+  title: 'Research | Zion Tech Group',
+  description: 'Explore our cutting-edge research in AI, machine learning, and emerging technologies.',
+  keywords: 'research, AI research, machine learning, technology innovation, R&D',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Research | Zion Tech Group',
+    description: 'Explore our cutting-edge research in AI, machine learning, and emerging technologies.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Research | Zion Tech Group',
+    description: 'Explore our cutting-edge research in AI, machine learning, and emerging technologies.',
+  },
 };
 
 export default function ResearchPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Research & Innovation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Driving the future of technology through cutting-edge research in AI, quantum computing, and autonomous systems.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Research & Development</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Advancing the frontiers of technology through innovative research and development.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">AI Research</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced machine learning algorithms and neural network architectures.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">AI & Machine Learning</h3>
+            <p className="text-gray-600 mb-4">
+              Research in advanced AI algorithms, neural networks, and machine learning applications.
             </p>
-            <div className="text-blue-400 font-semibold">25+ Patents Filed</div>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Deep Learning Models</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+            </ul>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
-            <p className="text-gray-300 mb-4">
-              Breakthrough research in quantum algorithms and quantum machine learning.
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
+            <p className="text-gray-600 mb-4">
+              Exploring quantum algorithms and their applications in solving complex problems.
             </p>
-            <div className="text-blue-400 font-semibold">15+ Publications</div>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Quantum Algorithms</li>
+              <li>• Quantum Cryptography</li>
+              <li>• Quantum Machine Learning</li>
+            </ul>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Autonomous Systems</h3>
-            <p className="text-gray-300 mb-4">
-              Self-learning systems and autonomous decision-making frameworks.
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Blockchain Technology</h3>
+            <p className="text-gray-600 mb-4">
+              Research in distributed ledger technology and decentralized applications.
             </p>
-            <div className="text-blue-400 font-semibold">10+ Active Projects</div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Research Partnerships</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            We collaborate with leading universities and research institutions worldwide to advance the frontiers of technology.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">Stanford University</h3>
-              <p className="text-gray-300">AI & Machine Learning</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">MIT</h3>
-              <p className="text-gray-300">Quantum Computing & AI</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">University of Oxford</h3>
-              <p className="text-gray-300">AI Ethics & Governance</p>
-            </div>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Smart Contracts</li>
+              <li>• DeFi Protocols</li>
+              <li>• Consensus Mechanisms</li>
+            </ul>
           </div>
         </div>
       </div>

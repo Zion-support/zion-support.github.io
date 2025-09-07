@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
-import {CheckCircle,ArrowRight,Star,TrendingUp,Phone,Zap,DollarSign,Shield,Mail,MapPin,Rocket,Brain,Sparkles,Globe,Atom,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,Music,Gamepad2,} from 'lucide-react';import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,CheckCircle,ArrowRight,Star,TrendingUp,Phone,Zap,DollarSign,Shield,Mail,MapPin,Rocket,Brain,Sparkles,Globe,Atom,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,{title: '🚀 2028 Futuristic Innovations',
+import {CheckCircle,ArrowRight,Star,TrendingUp,Phone,Zap,DollarSign,Shield,Mail,MapPin,Rocket,Brain,Sparkles,Globe,Atom,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,Music,Gamepad2,} from 'lucide-react';import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,CheckCircle,ArrowRight,Star,TrendingUp,Phone,Zap,DollarSign,Shield,Mail,MapPin,Rocket,Brain,Sparkles,Globe,Atom,Heart,Leaf,Car,GraduationCap,Scale,Building,Factory,Camera,Video,{title: '🚀 2028 Futuristic Innovations',;
   description: 'Beyond the future of technology',icon: Rocket,{title: '🏙️ Smart City & Infrastructure',
   description: 'Intelligent urban solutions',icon: Building,{title: '⚛️ Quantum & Advanced Tech',
   description: 'Quantum computing and beyond',icon: Atom,{title: '🤖 AI & Machine Learning',
