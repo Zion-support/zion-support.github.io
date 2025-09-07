@@ -46,12 +46,10 @@ export function NeonBorder({ className = '', children }: { className?: string; c
       {/* Neon border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
       <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
-=======
-=======
-import React, { useEffect, useRef } from 'react';
 interface AnimatedBackgroundProps {
+  variant?: 'particles' | 'grid' | 'waves' | 'nebula';
+  intensity?: 'low' | 'medium' | 'high';
   className?: string;
-  variant?: 'grid' | 'particles' | 'waves' | 'matrix';
 }
 export function AnimatedBackground({ className = '', variant = 'grid' }: AnimatedBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -68,6 +66,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
       vy: number;
       size: number;
       opacity: number;
+      color: string;
     }> = [];
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -109,7 +108,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
     };
     const drawParticles = () => {
       particles.forEach((particle, index) => {
-        // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -120,10 +118,13 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(34, 221, 210, ${particle.opacity})`;
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
         ctx.fill();
         // Draw connections
-        particles.slice(index + 1).forEach(otherParticle => {
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index === otherIndex) return;
+          
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
@@ -132,12 +133,16 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(139, 21, 233, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = particle.color;
+            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
       });
+
+      ctx.globalAlpha = 1;
+      animationRef.current = requestAnimationFrame(animate);
     };
     const drawWaves = () => {
       const time = Date.now() * 0.001;
@@ -199,8 +204,10 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
     animate();
     window.addEventListener('resize', resizeCanvas);
     return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
     };
   }, [variant]);
   return (
@@ -237,16 +244,25 @@ export function FloatingParticles({ count = 20, className = '' }: {
   className?: string;
 }) {
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <div
-          key={i}
-          className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse"
+    <div className={`fixed inset-0 pointer-events-none ${className}`}>
+      {Array.from({ length: count }).map((_, index) => (
+        <motion.div
+          key={index}
+          className="absolute w-2 h-2 bg-zion-cyan rounded-full opacity-60"
           style={{
             left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 2}s`,
-            animationDuration: `${2 + Math.random() * 2}s`,
+            top: `${Math.random() * 100}%`
+          }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{
+            duration: Math.random() * 3 + 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: Math.random() * 2
           }}
         />
       ))}
@@ -257,21 +273,25 @@ export function FloatingParticles({ count = 20, className = '' }: {
 export function GradientBorder({ children, className = '', borderWidth = '2px' }: {
   children: React.ReactNode;
   className?: string;
-  borderWidth?: string;
-}) {
+}> = ({ 
+  children, 
+  color = 'zion-cyan', 
+  intensity = 1,
+  className = '' 
+}) => {
   return (
-    <div
-      className={`relative ${className}`}
+    <div 
+      className={`${className}`}
       style={{
-        background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-        padding: borderWidth,
-        borderRadius: 'inherit',
+        textShadow: `
+          0 0 ${5 * intensity}px rgb(var(--${color})),
+          0 0 ${10 * intensity}px rgb(var(--${color})),
+          0 0 ${15 * intensity}px rgb(var(--${color})),
+          0 0 ${20 * intensity}px rgb(var(--${color}))
+        `,
+        filter: `drop-shadow(0 0 ${8 * intensity}px rgb(var(--${color})))`
       }}
     >
-      <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
-        {children}
-      </div>
+      {children}
     </div>
   );
-=======
-}

@@ -44,6 +44,5 @@ export function Button({
       disabled={disabled}
     >
       {children}
-    </button>
-  );
+    </button>);
 }

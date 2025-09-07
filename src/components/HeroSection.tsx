@@ -629,9 +629,9 @@ export const HeroSection: React.FC = () => {
               to="/services"
               className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
-              <Link to="/services">
-                <Users className="mr-2 h-5 w-5" />
-                {t("hero.explore_services", "Explore Services")}
+              <Link to="/innovative-services-2027">
+                <Rocket className="mr-2 h-5 w-5" />
+                {t("hero.explore_services", "2027 Services")}
               </Link>
             </Button>
           </motion.div>

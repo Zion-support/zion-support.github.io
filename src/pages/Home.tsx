@@ -1,8 +1,6 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-=======
-import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -320,6 +318,5 @@ export default function Home() {
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
     </div>
-=======
   );
 }
