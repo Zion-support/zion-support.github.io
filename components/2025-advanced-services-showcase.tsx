@@ -207,8 +207,7 @@ const categories = [
     name: 'Quantum Computing',
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
-    description: 'Quantum computing solutions'},
-];
+    description: 'Quantum computing solutions'}];
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
