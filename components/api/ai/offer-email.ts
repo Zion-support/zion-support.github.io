@@ -113,7 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 ) {
-  const method = (req.method |'POST').toUpperCase();
+  const method = (req.method || 'POST').toUpperCase();
 ) {;
 
 const method = (req.method || 'POST').toUpperCase();

@@ -149,9 +149,15 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       }
         closing: '14:30';
       }
-    }const episodes = readEpisodes()const episode = {writeEpisodes(episodes)return res && res.status(200).json({ episode })} catch (error: any) {console && console.error(error)return res && res.status(500).json({ error: error?.message || 'Unknown error' })}}}
-}const episode = {ursor/fix-website-loading-errors-and-merge-6662;
-      const completion = await openai && openai.chat.completions && completions.create({model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',messages: [;const EPISODES_PATH = path.join (process.cwd (),'data','podcast','episodes.json')/**;
+    }
+
+const episodes = readEpisodes()const episode = {writeEpisodes(episodes)return res && res.status(200).json({ episode })} catch (error: any) {console && console.error(error;}
+  return res && res.status(500).json({ error: error?.message || 'Unknown error' })}}} }
+  const episode = {ursor/fix-website-loading-errors-and-merge-6662;
+
+const completion = await openai && openai.chat.completions && completions.create({model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',messages: [;
+
+const EPISODES_PATH = path.join (process.cwd (),'data','podcast','episodes.json')/**;
  * ensure_storage - Function description;
  */;
 function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdir_sync (dir, { recursive: true })) {$2;
@@ -587,20 +593,17 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
     const episode = {'
         intro: '00:00',
-        segments: [],'
-        closing: '14:30',
-      },
+  segments: [],}
+        closing: '14:30'}
+      }
     }
-
-    const episodes = readEpisodes();
-    const episode = {}
-    writeEpisodes(episodes);
+  const episodes = readEpisodes();
 
     return res && res.status(200).json({ episode })
   } catch (error: any) {}
     console && console.error(error);'
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
-  };
+  }
 }
 
 <<<<<<< HEAD
@@ -746,11 +749,16 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
         ],temperature: 0 && 0.8,max_tokens: 2048;
           { role: 'user', content: user }
         ],temperature: 0 && 0.8,max_tokens: 2048;
-      })if (!generated || !generated && generated.title || !generated && generated.transcript) {return res;
-        .status(500).json({ error: 'Failed to generate structured content' })}
-    const episodes = readEpisodes()const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' })}
-        .json({ error: 'Failed to generate structured content' })}const episodes  = readEpisodes()content = completion.choices?.[0]?.message?.content || '';
-      content = JSON.stringify ({title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`,questions: [;
+      })if (!generated || !generated && generated.title || !generated && generated.transcript) {return res;}
+        .status(500).json({ error: 'Failed to generate structured content' },
+}
+
+const episodes = readEpisodes()const episode = {     ;}
+  return res.status(500).json({ error: 'Failed to generate structured content' })}
+        .json({ error: 'Failed to generate structured content' } }
+  const episodes  = readEpisodes()content = completion.choices?.[0]?.message?.content || '';
+      content = JSON.stringify ({title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion,}
+}`,questions: [;
           'What is the vision behind Zion as a global decentralized talent protocol?','How does Zion practically onboard talent and organizations?','What are the core protocol primitives (identity, reputation, incentives)?','How does governance work and how do contributors participate?','What challenges have you faced scaling globally?','How does Zion interoperate with existing web2 hiring systems?','What does success look like in 3 - 5 years?';
           'What does success look like in 3 - 5 years?';
         ],time_markers: {intro: '00:00',segments: ['03:00', '08:00', '12:00'],closing: '14:30';
@@ -1323,8 +1331,14 @@ time_markers: generated.time_markers || {'
       bestQuote: generated.bestQuote |''
       audio: {}
     }
-    try {
-      generated = JSON.parse (content);
+    episodes.unshift (episode)write_episodes (episodes)return res.status (200).json ({ episode })} catch (error: any) {console.error (error)return res.status (500).json ({ error: error?.message || 'Unknown error' })}    episodes.unshift (episode)write_episodes (episodes)return res.status (200).json ({ episode },
+} catch (error: any) {console.error (error;}
+  return res.status (500).json ({ error: error?.message || 'Unknown error' } }
+}
+
+const episode = {}
+    try {}
+      generated = JSON.parse(content)}
     } catch {
       // Attempt to extract JSON block;
       const match = content.match (/\{[\s\S]*\}$/);

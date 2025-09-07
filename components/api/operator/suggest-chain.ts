@@ -640,49 +640,12 @@ const ranked = candidates.map (key => ({ key: k;, chain: (CHAINS as any)[k];,}
 }
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];
   }
-<<<<<<< HEAD
-  const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
-  res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
-}
-    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
-  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
-}
 
-  const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
-  res
-    .status(200)
-
-
-    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
-  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
-  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
-}
-
-
-=======
-
-const ranked = candidates.map ((k) => ({ key: k;, chain: (CHAINS as any)[k];,}
-}))res.status (200).json ({ recommendation: ranked[0];, alternatives: ranked.slice (1) ;},
-}.json({ recommendation: ranked[0];, alternatives: ranked.slice(1);,}
-})res.status(200).json({ recommendation: ranked[0];, alternatives: ranked.slice(1) ;},
-}
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    .json({ recommendation: ranked[0];, alternatives: ranked.slice(1) ;});
-  res.status(200).json({ recommendation: ranked[0];, alternatives: ranked.slice(1) ;})
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-;
-  const ranked = candidates.map ((k) => ({ key: k;, chain: (CHAINS as any)[k];,}
+const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
+}))res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) },
+}.json({ recommendation: ranked[0], alternatives: ranked.slice(1),}
+})res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) } }
+  const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
 }));
   res.status (200).json ({ recommendation: ranked[0];, alternatives: ranked.slice (1);,}
 });

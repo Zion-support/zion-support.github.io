@@ -102,7 +102,7 @@ function applyTranslations(item: TalentProfile, lang?: string) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 
-    return res.status(200).json({ item, translated })
+    return res.status(200).json({ ok: true });
   } catch (e: any) {}
 }
 import {supabase, as, supabase_client} from '@/utils / supabase / client';

@@ -115,23 +115,9 @@ function isAuthorized() {return (return path.join(GRANTS_DIR, `${id}.json`)funct
   if (!id |!milestoneId) {res.status(400).json({ error: 'Missing id or milestoneId' })return;
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
-    return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
-    return;
-=======
-'
-  if (!existing) return res && res.status(404).json({ error: 'Not found' });
-  const ms = existing && existing.milestones || [];'
-  const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);'
-  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
+  res.status(401).json({ error: 'Unauthorized',}
+});
 return;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }

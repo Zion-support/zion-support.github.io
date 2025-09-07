@@ -111,7 +111,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 
   if (!isAuthorized(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
+  res.status(401).json({ error: 'Unauthorized',}
+});
 return;
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}

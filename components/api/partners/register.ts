@@ -3,16 +3,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader($2);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {},
-=======
-      });
-    } catch (e) {}
-      return res && res.status(500).json({ error: "Failed to create partner" });
-    }
+  if (req.method !== \"POST\") {}"
+    res.setHeader(\"Allow\", \"POST\");}"
+    return res.status(200).json({ ok: true });
 }
 }"
       return res.status (400).json ({ error: "Missing required fields" });
@@ -56,7 +49,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
 <<<<<<< HEAD
 
-      })} catch (e) {return res && res.status(500).json({ error: "Failed to create partner" })}
+const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
+  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {}"
+    return res.status(200).json({ ok: true });
 }
 }
       return res.status (400).json ({ error: "Missing required fields" })}
@@ -72,35 +67,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { partner, apiKey } = await createPartner({
       name;
       entityType;
-      pointOfContact;
-      useCaseType;
-      brand});
-    return res.status(201).json({
-      partner: {
-        id: partner.id;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-        name: partner.name;
-        status: partner.status;
-        entityType: partner.entityType;
-        useCaseType: partner.useCaseType;
-<<<<<<< HEAD
-    const { partner, apiKey } = await createPartner($2);
-    return res.status(201).json({
-      partner: {
-        id: partner.id,
-        name: partner.name,
-        status: partner.status,
-        entityType: partner.entityType,
-        useCaseType: partner.useCaseType,
-        createdAt: partner.createdAt},
-      apiKey: apiKey.key,
-=======
-        createdAt: partner.createdAt},
-      apiKey: apiKey.key;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to create partner" })
+      pointOfContact;}
+      useCaseType;}
+      brand})return res.status(200).json({ ok: true });
+} catch (e) {}
+   ;}"
+  return res.status(200).json({ ok: true });
   }
         createdAt: partner.createdAt},apiKey: apiKey.key;
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})} catch (e) {return res.status(500).json({ error: "Failed to create partner" })}

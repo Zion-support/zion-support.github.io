@@ -272,9 +272,7 @@ data: existingUrl,
         shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
         createdAt: new Date().toISOString(),
         clicks: 0,
-        isActive: true,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      };
+        isActive: true }
 
       urlStorage.set(shortCode, shortUrl);
 
@@ -415,6 +413,14 @@ notFound: true,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   // Increment click count;
+shortUrl.clicks++;
+  urlStorage.set(shortCode, shortUrl);
+  // Redirect to original URL;
+return {
+    redirect: {
+      destination: shortUrl.originalUrl,}
+permanent: false,}
+    } }
       permanent: false;
     }
 }

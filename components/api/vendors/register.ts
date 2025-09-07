@@ -398,7 +398,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }    res && res.status(500).json({ error: e && e.message })
-  };
+  }
 }
 =======
 
@@ -563,16 +563,10 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
       about
       verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
       case_studies: Array.is_array (case_studies) ? case_studies : [,
-})
-    res.status (201).json ({ vendor })
-  } catch (e: any) {}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    res.status (500).json ({ error: e.message });
-=======
-    res.status (500).json ({ error: e.message,}
+});
+    res.status (201).json ({ vendor });
+  } catch (e: any) {
+  res.status (500).json ({ error: e.message,}
 });
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
@@ -580,37 +574,10 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
       case_studies: Array.is_array (case_studies) ? case_studies : []
    ,
-})
-    res.status (201).json ({ vendor })
-  } catch (e: any) {}
-<<<<<<< HEAD
-    res.status (500).json ({ error: e.message })
-  }    res.status (500).json ({ error: e.message })
-    res.status(500).json({ error: e.message,}
-})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  }    res.status(500).json({ error: e.message })
-  }
-=======
-    res.status (500).json ({ error: e.message });
-  }    res.status (500).json ({ error: e.message });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  }
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-  }
-}
-res.status(500).json({ error: e.message });
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-  } catch (e: any) {}
-    res.status (500).json ({ error: e.message,}
+});
+    res.status (201).json ({ vendor });
+  } catch (e: any) {
+  res.status (500).json ({ error: e.message,}
 });
   }    res.status (500).json ({ error: e.message,}
 });

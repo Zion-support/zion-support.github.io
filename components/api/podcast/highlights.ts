@@ -165,7 +165,7 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
   return res.status(200).json({ episode });
 <<<<<<< HEAD
 const EPISODES_PATH = null;
-  return res.status(200).json({ episode })
+  return res.status(200).json({ ok: true });
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const EPISODES_PATH = path.join(

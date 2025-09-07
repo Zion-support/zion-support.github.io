@@ -95,107 +95,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 }
 
-}
-  };
-}
-
-};
-}
-
-}
-
-    const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : [];
-    return res && res.status(200).json({ jobs })
-<<<<<<< HEAD
-  } catch (e) {"
-    return res && res.status(500).json({ error: "Failed to load jobs" })
-=======
-  } catch (e) {
-    return res && res.status(500).json({ error: "Failed to load jobs" ;})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  };
-}
-
-}
-;'
-const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json');
-;
-export default async /**;
- * handler - Function description;
- */
-<<<<<<< HEAD
-function handler() {}
-  // Check condition;
-if ( {) {}
-  $2;
-}'
-    res.set_header ('Allow', 'GET');'
-    return res.status (405).json ({ error: 'Method Not Allowed' });
-=======
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'GET');
-    return res.status (405).json ({ error: 'Method Not Allowed' ;});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  }
-  try {}
-    const jobs = (await fs.path_exists (JOBS_FILE));
-      ? await fs.readJSON (JOBS_FILE);
-      : [];
-    return res.status (200).json ({ jobs });
-<<<<<<< HEAD
-  } catch (e) {'
-    return res.status (500).json ({ error: 'Failed to load jobs' });
-=======
-  } catch (e) {
-    return res.status (500).json ({ error: 'Failed to load jobs' ;});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  }
-export default async /**;
- * handler - Function description;
- */
-<<<<<<< HEAD
-function handler() {}
-  // Check condition;
-if ( {) {}
-  $2;
-}"
-    res.set_header ("Allow", "GET");"
-    return res.status (405).json ({ error: "Method Not Allowed" });
-=======
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ("Allow", "GET");
-    return res.status (405).json ({ error: "Method Not Allowed" ;});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  }
-  try {}
-    const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];
-    return res.status (200).json ({ jobs });
-<<<<<<< HEAD
-  } catch (e) {"
-    return res.status (500).json ({ error: "Failed to load jobs" });
-=======
-  } catch (e) {
-    return res.status (500).json ({ error: "Failed to load jobs" ;});
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    return res.status(200).json({ jobs })
+    return res.status(200).json({ ok: true });
   } catch (e) {}"
-    return res.status(500).json({ error: \"Failed to load jobs\" ;})
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-<<<<<<< HEAD
-}
-  };
+    return res.status(200).json({ ok: true });
 }
 
 };
@@ -292,7 +194,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 '"
 =======
   try {const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];}"
-    return res.status (200).json ({ jobs })} catch (e) {return res.status (500).json ({ error: \"Failed to load jobs\" ;})return res.status(200).json({ jobs })} catch (e) {return res.status(500).json({ error: \"Failed to load jobs\" ;})
+    return res.status (200).json ({ jobs })} catch (e) {return res.status (500).json ({ error: \"Failed to load jobs\" })return res.status(200).json({ jobs })} catch (e) {return res.status(200).json({ ok: true });
 }"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

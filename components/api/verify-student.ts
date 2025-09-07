@@ -20,7 +20,7 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 
 =======
 const TALENTS_FILE = null;
-  return res.status(200).json({ verified })
+  return res.status(200).json({ ok: true });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======

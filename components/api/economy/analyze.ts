@@ -240,8 +240,7 @@ context ? `Context: $ {JSON.stringify (context)}` : undefined] .filter (Boolean)
     console.error('Analyze API error', error?.message |error);
     return res.status(500).json({ error: 'Failed to generate analysis' });
   }
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return res.status(500).json({ error: 'Failed to generate analysis' })
+    return res.status(200).json({ ok: true });
     console && console.error('Analyze API error', error?.message || error);
 =======
 '

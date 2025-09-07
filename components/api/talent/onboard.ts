@@ -752,16 +752,7 @@ const record = {
 <<<<<<< HEAD
         summary,}
         tags,}
-      }}
-
-const perRecordPath = path.join(dataDir, `${id}.json`)
-    await fse.writeJSON(perRecordPath, record, { spaces: 2,}
-})
-=======
-        summary,
-        tags,
-      },
-    };
+      } }
 
     const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
