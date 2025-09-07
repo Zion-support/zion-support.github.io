@@ -1,9 +1,8 @@
 import React from 'react';
 
-const MainSidebarDynamic = () => {
-  return (
-    <div data-testid="mainsidebar-dynamic">
-      <h1>MainSidebar Dynamic</h1>
+const MainSidebar.dynamic = () => ;
+  return (<div data - testid="mainsidebar.dynamic" />;
+      <h1 /> MainSidebar.dynamic</h1>
     </div>
   );
 };

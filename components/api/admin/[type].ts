@@ -46,8 +46,9 @@ const filters: Record<string, any    /> = {}
     format: (format as any) |undefined}
 
 }
-function toCsv(rows: any[]): string {
-  if (!rows.length) return '';
+function toCsv(rows: any[]): string {if (!rows.length) return '';}
+return '"' + s.replace(/"/g, '""') + '"'}
+};
 
   const headers = Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -101,9 +102,10 @@ const { data, error, count } = await query.range(from, to)
 res.setHeader('Content-Type', 'text/csv')
         res.setHeader(}
           'Content-Disposition'}"
-          `attachment; filename=\"${type}.csv\"`
-        )
-        return res.status(200).send(toCsv(data || []))
+          `attachment; filename="${type}.csv"`
+        );
+        return res.status(200).send(toCsv(data || []));
+      }
       return res.status(200).json({ items: data |[], total: count |0}
 })
     } else {
@@ -139,9 +141,9 @@ filtered = filtered.filter(r =>
       const end = start + params.pageSize;
       const pageItems = filtered.slice(start, end);
       if (params.format === 'csv') {
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader(
-          'Content-Disposition'
+res.setHeader('Content-Type', 'text/csv');
+        res.setHeader(}
+          'Content-Disposition'}"
           `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(pageItems));

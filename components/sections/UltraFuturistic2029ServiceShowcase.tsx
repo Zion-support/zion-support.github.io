@@ -26,6 +26,32 @@ const categoryIcons: { [key: string]: any}
   'AI & Augmented Reality': Eye}
 }
 }
+    visible: {
+      opacity: 1;
+y: 0;
+transition: {
+
+        duration: 0.6}
+ease: 'easeOut' as const}
+      }
+    }
+  };
+
+  return (
+    <section className="py-20 relative overflow-hidden" />;
+      {/* Background Elements */}
+
+      <div className='absolute inset-0 pointer-events-none' />
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl' /></div>
+        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl' /></div>
+        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl' /></div>
+      </div>
+
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
+        {/* Header */}
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />        {/* Header */}
+
+        {/* Header *}
 }
 }
 > {

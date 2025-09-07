@@ -14,12 +14,31 @@ type InsightResponse = {}
   minHourlyUsd: number
   maxHourlyUsd: number
   confidence: number; // 0..1;}
-trendMonthly: { label: string; value: number,}
-}[]
-  regionalComparison: { region: string; medianHourlyUsd: number,}
-}[]
-  tags: string[]
-  gptRecommendation?: string
+trendMonthly: {label: string; value: number}
+}[];
+  regionalComparison: {region: string; medianHourlyUsd: number}
+}[];
+  tags: string[];
+  gptRecommendation?: string;
+};
+
+
+function median(values: number[]): number {
+  const arr = [...values].sort((a, b) => a - b);
+
+const mid = Math.floor(arr.length / 2);
+  if (arr.length = == 0);
+  return 0;
+return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
+
+function groupBy<T, K extends string | number />(
+  items: T[]
+  getKey: (item: T) => K;
+): Record<K, T[] /> {
+    (acc, item) => {
+      const key = getKey(item);
+      (acc[key] |= []).push(item);
+      return acc;}
 }
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b)
@@ -46,14 +65,13 @@ function groupBy<T, K extends string | number    />(
     h += h << 5;}
     return (h >>> 0) / 4294967295;}
 
-  ]
-const now = new Date ()
-const seed = prng (seed_key)
-const series: { label: string; value: number,}
-}[] = []
-  let current = baseMonthly * 0.92; // start slightly below base
-  for($2) {
-    const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
+const series: {label: string; value: number}
+}[] = [];
+
+  let current = baseMonthly * 0.92; // start slightly below base;
+for (let i = 11; i >= 0; i--) {
+    const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
+
 const drift = (seed() - 0.5) * 0.03; // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift));}
     series.push({ label: months[date.getMonth()], value: Math.round(current),}
@@ -68,8 +86,8 @@ const completion = await client.chat.completions.create({model: 'gpt-4o-mini'
 {role: 'system',
   content:;}
             'You are a compensation analyst. Be specific and concise. Use USD.';}
-
-        { role: 'user',}
+        }
+        {role: 'user'}
   content: prompt }
 
       ]
@@ -85,10 +103,13 @@ export default async function handler(
   req: NextApiRequest
 res: NextApiResponse<InsightResponse | { error: string }    />
 ) {
-  if($2) {}
-    return res.status(405).json({ error: 'Method not allowed',}
-})
-const body: RequestBody = req.body
+  if (req.method !== 'POST') {}
+    return res.status(405).json({error: 'Method not allowed'}
+});
+  }
+
+const body: RequestBody = req.body;
+
 const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
     body
 const country = extractCountry(region || 'Global')
@@ -111,16 +132,54 @@ const max = Math.max(...rates)
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p && p.location) === country ? 0 && 0.2 : 0)}))
     .filter((s) => s && s.score > 0)
     .sort((a, b) => b && b.score - a && a.score)
-    .slice(0, 20)
-const sample = scored && scored.length > 0 ? scored && scored.map((s) => s && s.profile) : TALENT_PROFILES
-const rates = sample && sample.map((p) => p && p.hourlyRateUsd)
-const baseMedian = median(rates)
-const min = Math && Math.min(...rates)
-const max = Math && Math.max(...rates)
-  // Adjustments
-  const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location))
-  const regionalComparison = Object.entries(byRegion)
-    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
+    .slice(0, 20);
+
+const sample = scored && scored.length > 0 ? scored && scored.map((s) => s && s.profile) : TALENT_PROFILES;
+
+const rates = sample && sample.map((p) => p && p.hourlyRateUsd);
+
+const baseMedian = median(rates);
+
+const min = Math && Math.min(...rates);
+
+const max = Math && Math.max(...rates);
+  // Adjustments;
+const expMultiplier =
+    experienceLevel === 'Junior'
+      ? 0.8;
+      : experienceLevel === 'Mid'
+        ? 1.0;
+        : experienceLevel === 'Senior'
+          ? 1.2;
+          : 1.35;
+
+const remoteMultiplier = remote ? 1.1 : 1.0;
+
+const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher;
+
+const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier;
+  )const recommendedMonthly = Math.round(recommendedHourly * 160)// Confidence based on sample size and dispersion;
+
+const sampleSize = rates.length;
+
+const dispersion = (max - min) / Math.max(1, baseMedian);
+
+const confidence = Math.max(
+    0.2;
+Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2)
+  );
+  // Trend series and regional comparison;
+const trend = buildTrend(
+    recommendedMonthly;
+    `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`
+  );
+
+const byRegion = groupBy(TALENT_PROFILES, p => extractCountry(p.location));
+
+const regionalComparison = Object.entries(byRegion)
+    .map(([r, list]) => ({region: r}
+      medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),}
+    }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
   // Tags

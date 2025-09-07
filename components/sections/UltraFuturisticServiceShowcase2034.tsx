@@ -7,19 +7,17 @@ visible: {
   staggerChildren: 0.1
 }
 }
-}
-> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) ) 
-}</div> </motion.div> {
-  /* Search and Filter */
-}<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
-  /* Category Filter */
-}<select </option>) )
-}</select> </div> </motion.div> {
-  /* Service Categories */
-}<motion.div key= {
-  category.id
-}initial= {  {}
-const serviceCategories = [
+> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6"  /> Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"  /> Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
+}</div> </motion.div> {}
+  /* Search and Filter */}"
+}<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {}
+  /* Category Filter */}
+}<select </option />) )
+}</select> </div> </motion.div> {}
+  /* Service Categories */}
+}<motion.div key= {}
+  category.id }
+}initial= {
   {
     id: 'ai-services'
     title: '🧠 Revolutionary AI Services'
@@ -162,8 +160,57 @@ export default function UltraFuturisticServiceShowcase2034() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+
+        <motion.div;
+initial={{ opacity: 0, y: 20 }
+}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.6 }}
+          viewport={{ once: true }
+} />;
+          <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6' />;
+            Revolutionary Technology Services;
+          </h2>;
+          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed' />;
+            Discover our comprehensive suite of cutting-edge AI, quantum;
+            computing, and emerging technology solutions. Each service is;
+            designed to transform your business and propel you into the future.;
+          </p>;
+        stagger_children: 0.1}}  }
+
+const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
+},visible: { opacity: 1, coordinate_y: 0}
+},        stagger_children: 0.1;
+      }
+    }
+  }
+
+const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
+},visible: { opacity: 1, coordinate_y: 0}
+}}
+  }
+;
+  const itemVariants = {hidden: { opacity: 0, y: 20}
+},visible: { opacity: 1, y: 0}
+},;
+  return (<section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden' />;"
+      {/* Animated Background */}return (<section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden" />;
+      {/* Animated Background */}"
+      <div className="absolute inset - 0 overflow - hidden" />;"
+        <div className="absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse" /></div>;"
+        <div className="absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000" /></div>;"
+        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - gradient - to - r from - green - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500" /></div>;
+      </div>;"
+      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8" />;
+        {/* Header */}
+    hidden: { opacity: 0, y: 20}
+},visible: { opacity: 1, y: 0}
+}}
+
+const itemVariants = {hidden: { opacity: 0, y: 20}
+},{/* Header */}<motion.div;
+          initial={{ opacity: 0, y: 20 }
+}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -204,7 +251,27 @@ export default function UltraFuturisticServiceShowcase2034() {
 
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
             ].map((stat, index) => (
-              <motion.div
+              <motion.div;
+            ].map((stat, index) = /> (;
+              <motion&& motion.div;
+key={stat && stat.label}
+                initial={{ opacity: 0, scale: 0 && 0.8 }
+}
+                whileInView={{ opacity: 1, scale: 1 }
+}
+                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }
+}
+                className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300' />;
+                <stat && stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
+                <div className='text-2xl font-bold text-white' />;
+                  {stat && stat.value}
+                </div>;"
+                <div className='text-sm text-gray-400' />{stat && stat.label}</div>              </motion && motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+"
+                <stat && stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;"
+                <div className="text-2xl font-bold text-white" />{stat && stat.value}</div>;"
+                <div className="text-sm text-gray-400" />{stat && stat.label}</div>;
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -224,6 +291,66 @@ export default function UltraFuturisticServiceShowcase2034() {
             ))}
           </div>
         </motion.div>
+
+        {/* Services Grid */}
+        <motion&& motion.div;
+          variants={containerVariants}
+initial='hidden';
+          whileInView='visible';
+          viewport={{ once: true }
+}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
+
+          {filteredServices.map((service, index) => (<motion.div;}
+              key={service.id}
+              variants={itemVariants}
+className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />
+
+              {/* Popular Badge */}
+
+              {service.popular && (
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />
+                  Popular}
+                </div>}
+              )}
+
+
+              {/* Service Icon *}
+}
+<div className='flex items-center justify-between mb-4' />;
+                <div;
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}
+
+                 />
+                  {service.icon}
+                </div>
+              )}
+
+          </div>;
+        </motion && motion.div>;
+
+
+        {/* Services Grid */}
+        <motion&& motion.div;
+variants={containerVariants}
+
+
+              )}
+              {/* Service Icon */}
+
+                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300' />
+
+                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
+                <div className='text - 2xl font - bold text - white' />;
+                  {stat.value}
+                </div>;"
+                <div className='text - sm text - gray - 400' />{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300">
+"
+                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;"
+                <div className="text - 2xl font - bold text - white" />{stat.value}</div>;"
+                <div className="text - sm text - gray - 400" />{stat.label}</div>))}
+          </div>;
+        </motion.div>;
         {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -339,15 +466,33 @@ export default function UltraFuturisticServiceShowcase2034() {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          {filteredServices.map((service, index) => (
-            <motion.div
+          initial='hidden';
+          whileInView='visible';
+          viewport={{ once: true }
+}"
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />          initial="hidden";"
+          whileInView="visible";
+          viewport={{ once: true }
+}"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
+              key={service && service.id}
+              variants={itemVariants}
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />;
+              {/* Popular Badge */}"
+              {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105">
+}
+              {/* Popular Badge *}
+}"
+              {service && service.popular && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold" />;
+                </div>;"
+          initial="hidden";"
+          whileInView="visible";}
+          viewport={{ once: true }
+}"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {filteredServices.map((service, index) => (<motion.div;}
               key={service.id}
               variants={itemVariants}
               className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
@@ -424,11 +569,38 @@ export default function UltraFuturisticServiceShowcase2034() {
                 )}
               </div>
               {/* Service Meta */}
-              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
-                <div className='flex items-center space-x-2 text-gray-400'>
-                  <Clock className='w-4 h-4' />
-                  <span>{service.setupTime}</span>
-                </div>                  <span>{service.setupTime}</span>
+<div className='grid grid-cols-2 gap-4 mb-6 text-sm' />;
+                <div className='flex items-center space-x-2 text-gray-400' />;
+                  <Clock className='w-4 h-4' />;
+                  <span />{service.setupTime}</span>;
+                </div>                  <span />{service.setupTime}</span>;
+                {service.description}
+              </p>;
+              {/* Features */}<span />{feature}</span>;
+                  </div>;
+                ))}"
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-sm text-gray-400" />;"
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
+                    <span />{feature}</span>;
+                  </div>;"
+                {service.features.length > 3 && (<div className='text-sm text-cyan-400' />                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4" />;"
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-sm text-gray-400" />;"
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
+                  </div>;
+                    +{service.features.length - 3} more features;
+                  </div>;
+                )}
+              </div>;
+              {/* Service Meta */}
+
+                </div>"
+                <div className="flex items-center space-x-2 text-gray-400" />"
+                  <Users className="w-4 h-4" />
+                  <span />{service.customers.toLocaleString()}</span>
+                </div>"
+                <div className="flex items-center space-x-2 text-gray-400" />"
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span />{service.rating}/5</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Users className="w-4 h-4" />
@@ -472,8 +644,62 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
                 <div className="text-sm text-green-300 font-medium">
                   {service.roi}
-                </div>
-              </div>
+                </div>;
+              </div>;
+              {/* Service Meta */}
+              <div className='grid grid-cols-2 gap-4 mb-6 text-sm' />;
+                <div className='flex items-center space-x-2 text-gray-400' />;
+                  <Clock className='w-4 h-4' />;
+                  <span />{service && service.setupTime}</span>;
+                </div>                  <span />{service && service.setupTime}</span>;
+                </div>;"
+                <div className="flex items-center space-x-2 text-gray-400" />;"
+                  <Users className="w-4 h-4" />;
+                  <span />{service && service.customers.toLocaleString()}</span>;
+                </div>;"
+                <div className="flex items-center space-x-2 text-gray-400" />;"
+                  <Star className="w-4 h-4 text-yellow-400" />;
+                  <span />{service && service.rating}/5</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400' />;
+                  <Users className='w-4 h-4' />;
+                  <span />{service && service.customers.toLocaleString()}</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400' />;
+                  <Star className='w-4 h-4 text-yellow-400' />;
+                  <span />{service && service.rating}/5</span>;
+                </div>;
+                <div className='flex items-center space-x-2 text-gray-400' />;"
+                  <TrendingUp className='w-4 h-4 text-green-400' />                  <span />{service && service.growthRate}</span>                <div className="flex items-center space-x-2 text-gray-400" />;"
+                  <TrendingUp className="w-4 h-4 text-green-400" />;
+                  <span />{service && service.growthRate}</span>;
+                </div>;
+              </div>;
+              {/* Market Position */}
+              <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10' />;
+                <div className='text-xs text-gray-400 mb-1' />;
+                  Market Position;
+                </div>;"
+                <div className='text-sm text-gray-300 leading-relaxed' />                  {service && service.marketPosition}              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10" />;"
+                <div className="text-xs text-gray-400 mb-1" />Market Position</div>;"
+                <div className="text-sm text-gray-300 leading-relaxed" />;
+                  {service && service.marketPosition}
+                </div>;
+              </div>;
+              {/* ROI */}
+              <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30' />;
+                <div className='text-xs text-green-400 mb-1 font-semibold' />;
+                  Expected ROI;
+                </div>;"
+                <div className='text-sm text-green-300 font-medium' />                  {service && service.roi}              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30" />;"
+                <div className="text-xs text-green-400 mb-1 font-semibold" />Expected ROI</div>;"
+                <div className="text-sm text-green-300 font-medium" />;
+                  {service && service.roi}
+                </div>;
+
+              </div>;
+
+
               {/* Action Buttons */}
               <div className='flex space-x-3'>
                 <a

@@ -64,9 +64,63 @@ const serviceCategories = [ {
 {
   name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3, 999/month' 
 }
-{
-  name: 'NFT Marketplace Platform', href: '/nft-marketplace-platform', description: 'Complete NFT ecosystem', price: '$2, 999/month' 
-}] 
+            <div className="relative" />;"
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
+
+            {/* Company Links */}
+
+{companyLinks.slice(1, 5).map(link => (}
+              <Link;}
+key={link.name}
+                href={link.href}
+                className='text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2' />
+
+                <link.icon className='w-4 h-4' />;
+                <span />{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
+                </span>;
+              </Link>;
+            ))}
+          </div>;
+          {/* Search and Actions */}
+<div className='hidden lg:flex items-center space-x-4' />;
+            {/* Search */}
+            <div className='relative' />;
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
+              <input;
+                type='text';
+                placeholder='Search services...';
+                value={searchQuery}
+                onChange={e = /> setSearchQuery(e.target.value)}
+                className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
+              />;
+            </div>;
+            {/* CTA Button */}
+            <Link;
+href='/contact';
+              className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25' />
+
+              Get Started;
+            </Link>;
+          </div>;
+          {/* Mobile Menu Button */}
+<div className='lg:hidden' />;
+            <button;
+              onClick={toggleMenu}
+              className='text-purple-200 hover:text-white transition-colors p-2' />
+
+              {isOpen ? (<X className='w-6 h-6' />;}
+              ) : (<Menu className='w-6 h-6' />;}
+              )}
+
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence />;
+        {isOpen && (<motion&& motion.div;}
+            initial={{ opacity: 0, height: 0 }
 }
 {
   title: '🚗 Autonomous & Mobility', icon: Car, color: 'from-red-600 to-pink-600', description: 'Self-driving and mobility solutions', services: [ {
@@ -78,9 +132,123 @@ const serviceCategories = [ {
 {
   name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2, 999/month' 
 }
-{
-  name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1, 999/month' 
-}] 
+                          </h4>;
+                          <p className='text-xs text-purple-300' />;
+                            {service.description}
+                          </p>;
+                          <span className='text-xs text-purple-400 font-medium' />;
+                            {service.price}
+
+                          </span>
+                        </Link>
+
+                      ))}
+                    </div>;
+                  </div>;
+                ))}
+              {/* Mobile Company Links */}
+<div className='space-y-4' />;
+                <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2' />;
+                  Company;
+                </h3>;
+                <div className='grid grid-cols-2 gap-4' />;
+                  {companyLinks.map(link => (<Link;}
+                      key={link.name}
+                      href={link.href}
+                      onClick={closeMenu}
+className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />
+
+                      <link.icon className='w-5 h-5 text-purple-400' />;
+                      <span className='text-purple-200' />;
+                        {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
+                      </span>;
+                    </Link>;
+                  ))}
+
+                </div>
+              </div>
+              {/* Mobile CTA */}
+
+<div className='pt-4 border-t border-purple-500/30' />
+                <Link;
+href='/contact'
+
+                  onClick={closeMenu}
+                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300' />
+
+                  Get Started;
+                </Link>;
+              </div>;
+            </div>;
+          </motion.div>;
+        )}
+
+      </AnimatePresence>
+
+      {/* Search Results Dropdown */}
+      {searchQuery && filteredServices.length > 0 && (<div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50' />;
+          <div className='p-4' />;
+            <div className='space-y-2' />;}
+              {filteredServices.slice(0, 8).map(service => (<Link;}
+                  key={service.name}
+                  href={service.href}
+                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />
+
+                  <div className='flex items-center justify-between' />;
+                    <div />;
+                      <h4 className='text-sm font-medium text-white' />;
+                        {service.name}
+                      </h4>;
+                      <p className='text-xs text-purple-300' />;
+                        {service.description}
+                      </p>;
+                    </div>;
+                    <span className='text-xs text-purple-400 font-medium' />;
+                      {service.price}
+                    </span>;
+                  </div>;
+                    </span>                  </div>;
+                </Link>;
+      {/* Search Results Dropdown */}
+      {searchQuery && filteredServices && filteredServices.length > 0 && (<div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50' />;
+          <div className='p-4' />;
+            <div className='space-y-2' />;}
+              {filteredServices && filteredServices.slice(0, 8).map(service => (<Link;}
+                  key={service && service.name}
+                  href={service && service.href}
+                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />;
+                  <div className='flex items-center justify-between' />;
+                    <div />;
+                      <h4 className='text-sm font-medium text-white' />;
+                        {service && service.name}
+                      </h4>;
+                      <p className='text-xs text-purple-300' />;
+                        {service && service.description}
+                      </p>;
+                    </div>;
+                    <span className='text-xs text-purple-400 font-medium' />;
+                      {service && service.price}
+                    </span>                  </div>                <Link;
+                  key={service && service.name}
+                  href={service && service.href}"
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors" />;"
+                  <div className="flex items-center justify-between" />;
+                    <div />;"
+                      <h4 className="text-sm font-medium text-white" />{service && service.name}</h4>;"
+                      <p className="text-xs text-purple-300" />{service && service.description}</p>;
+                    </div>;"
+                    <span className="text-xs text-purple-400 font-medium" />{service && service.price}</span>;
+                  </div>;
+                </Link>;
+              ))}
+            </div>;
+          </div>;
+        </div>;
+
+      )}
+
+    </nav>
+  );
 }
 {
   title: '🏥 Healthcare & Biotech', icon: Heart, color: 'from-pink-600 to-rose-600', description: 'Advanced healthcare solutions', services: [ {

@@ -165,9 +165,23 @@ export default function CuttingEdgeServicesShowcase2025() {
   ]
 const filteredServices = allServices.filter(service => {
 
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));'
-    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory
-    hidden: { opacity: 0 }
+   ;
+  const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.tags.some(tag =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+const matchesCategory =
+      selectedCategory === 'all' || service.category === selectedCategory;}
+    return matchesSearch && matchesCategory;}
+  });
+
+const containerVariants = {}
+    hidden: {opacity: 0}
+}
+;
 
 export default /**
  * CuttingEdgeServicesShowcase2025 - Function description
@@ -196,7 +210,7 @@ const filtered_services = all_services.filter (service => {
   const matches_category = selected_category === 'all' || service.category === selected_category
     return matches_search && matches_category
 const container_variants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 },
     visible: {
       opacity: 1
@@ -259,7 +273,8 @@ name='keywords'
               initial={{ opacity: 0, y: 30 ,}
 
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{duration: 0.8 }
+}
 
 className='text-center'
                 />
@@ -403,8 +418,8 @@ href='/contact'
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true ,}
-}    />
+              viewport={{once: true }
+} />;
               {/* Search */}
               <div className='relative flex-1 max-w-md'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />
@@ -505,17 +520,20 @@ href='/contact'
                   }`}
                 >
                   {/* Service Header */}
-                  <div
-                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
-                  >
-                    <div className='flex items-start justify-between mb-4'>
-                      <div className='flex-1'>
-                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
-                          {service.name}
-                        </h3>
-                        <p className='text - white / 70 text - sm leading - relaxed'    />
-                          {service.description}</h3>
-                        <p className=\"text-white/70 text-sm leading-relaxed\"    />
+
+<div;
+className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
+                   />
+                    <div className='flex items-start justify-between mb-4' />
+                      <div className='flex-1' />
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300' />
+
+                          {service.nam,}
+}
+                        </h3>;
+                        <p className='text - white / 70 text - sm leading - relaxed' />;
+                          {service.description}</h3>;
+                        <p className="text-white/70 text-sm leading-relaxed" />;
                           {service.description}
 
                         </p>
@@ -619,6 +637,34 @@ href='/contact'
                       </a>
                     </div>
                   </div>
+
+                  {/* Service Details *,}
+}
+
+                      </div>
+                    </div>
+
+                    </div>;
+                    {/* Pricing */}
+                    <div className='mb-6' />;
+                      <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider' />;
+                        Starting From;
+                      </h4>;
+                      <div className='text-2xl font-bold text-white' />;
+                        ${service && service.pricing.starter && starter.price}
+                        <span className='text-sm font-normal text-white/60' />;
+                          /{service && service.pricing.starter && starter.period}
+                        </span>                      </div>;
+                    </div>;
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
+                        Get Started;
+                        <ArrowRight className="ml-2 w-4 h-4" />;
+                      </a>;
+                    </div>;
+
+                  </div>;
+
+
                   {/* Hover Effect Overlay */}
 
                   {/* Hover Effect Overlay */}'"
@@ -629,15 +675,17 @@ href='/contact'
               ))}
             </motion.div>
             {/* No Results */}
-            {filteredServices.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className='text-center py-20'
-              >
-                <div className='text-6xl mb-4'>🔍</div>
-                <h3 className='text-2xl font-bold text-white mb-2'>
-                  No services found
+            {filteredServices && filteredServices.length === 0 && (;}
+              <motion&& motion.div;}
+initial={{ opacity: 0 }}
+                animate={{opacity: 1 }
+}
+
+className='text-center py-20'
+               />
+                <div className='text-6xl mb-4' />🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2' />
+                  No services found;
                 </h3>
                 <p className='text-white/70 mb-6'    />
                   Try adjusting your search terms or category filter
@@ -658,11 +706,16 @@ href='/contact'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   }}
 
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                >
-                  Clear Filters
-                </button>
-              </motion && motion.div>
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                    setSelectedCategory('all')
+                  ,
+}
+
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+
+                  Clear Filters;
+                </button>;
+              </motion && motion.div>;
             )}
           </div>
         </section>
@@ -683,10 +736,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
-
-                />
-<h2 className='text-3xl md:text-4xl font-bold text-white mb-6'    />
+              viewport={{once: true }
+}
+             />
+<h2 className='text-3xl md:text-4xl font-bold text-white mb-6' />
                 Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-white/80 mb-8 leading-relaxed'    />

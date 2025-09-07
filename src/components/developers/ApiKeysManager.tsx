@@ -3,66 +3,47 @@ import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 import { useState } from 'react'
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 
-import { format } from 'date-fns'
-import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-  DialogTrigger
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Label } from '@/components/ui/label'
-import { Badge } from '@/components/ui/badge'
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from '@/components/ui/popover'
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle
-} from '@/components/ui/alert-dialog'
-import CodeBlock from './CodeBlock'
-export function ApiKeysManager() {
-  const {
-    keys
-    loading
-    newApiKey
-    fetchApiKeys
-    createApiKey
-    regenerateApiKey
-    revokeApiKey
-    clearNewApiKey
-  } = useApiKeys()
-  const [showCreateDialog, setShowCreateDialog] = useState(false)
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(
-    null
-  )
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<
-    string | null
-  >(null)
+;
+
+export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,import { format } from "date-fns",import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",import { Input } from "@/components/ui/input",import { Checkbox } from "@/components/ui/checkbox",import { Label } from "@/components/ui/label",import { Badge } from "@/components/ui/badge",import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
+import CodeBlock from './CodeBlock';
+
+export function ApiKeysManager() {const {keys;
+    loading;
+    newApiKey;
+    fetchApiKeys;
+    createApiKey;
+    regenerateApiKey;
+    revokeApiKey;}
+    clearNewApiKey;}
+  } = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null />(null),const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null />(null),// Create key form state;
+"
+const [keyName, setKeyName] = useState(""),const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[] />([]),// Load keys on mount;
+  useState(() => {fetchApiKeys()keys,loading,newApiKey;
+    fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[] />([]),// Load keys on mount;}
+  useState(() => {fetchApiKeys()if (keyName.trim() === '' || selectedScopes.length = == 0);}
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName('')setSelectedScopes([]) }
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null;}
+  useState(() => {fetchApiKeys()};"
+  const handleCreateKey = async () => {if (keyName.trim() === "" || selectedScopes.length === 0);}"
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName("")setSelectedScopes([])import { useState  } from 'react';
+import { Check, Clock, Key, MoreVertical, RefreshCw, X  } from 'lucide-react';
+import { format  } from 'date - fns';
+import { useApiKeys, type ApiKeyScope  } from '@/hooks / useApiKeys';
+import { Button  } from '@/components / ui / button';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
+import { Input  } from '@/components / ui / input';
+import { Checkbox  } from '@/components / ui / checkbox';
+import { Label  } from '@/components / ui / label';
+import { Badge  } from '@/components / ui / badge';
+  Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
+  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
+
+
 
   // Create key form state
   const [keyName, setKeyName] = useState("");
@@ -90,56 +71,54 @@ export function ApiKeysManager() {
   useState(() => {
     fetchApiKeys()
 
-  })
-  const handleCreateKey = async () => {
-    if (keyName.trim() === '' |selectedScopes.length === 0) return
-    await createApiKey(keyName, selectedScopes)
-    setShowCreateDialog(false)
-    setKeyName('');
-    setSelectedScopes([]) };
-  const handleRegenerateKey = async (keyId: string) => {;
-    await regenerateApiKey(keyId);
-    setShowRegenerateConfirm(null);  useState(() => {
-    fetchApiKeys()
-  })
-  const handleCreateKey = async () => {
-    if (keyName.trim() === "" |selectedScopes.length === 0) return
-    await createApiKey(keyName, selectedScopes)
-    setShowCreateDialog(false)
-    setKeyName("")
-    setSelectedScopes([])
-  }
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId)
-    setShowRegenerateConfirm(null)
-  const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId)
-    setShowDeleteConfirm(null)
-  }
-  const handleRegenerateKey = async (keyId: string,) => {
-    await regenerateApiKey(keyId)
-    setShowRegenerateConfirm(null)
-  }
-  const handleRevokeKey = async (keyId: string,) => {
-    await revokeApiKey(keyId)
-    await regenerateApiKey(keyId),
-    setShowRegenerateConfirm(null)
-  },
-  
-  const handleRevokeKey = async (keyId: string,) => {
-    await revokeApiKey(keyId),
-    setShowDeleteConfirm(null)
-  }
-  // Scope options
-  const scopeOptions: {
-    value: ApiKeyScope
-    label: string
-    description: string
-  }[] = [
-    {
-      value: 'jobs:read'
-      label: 'Read Jobs'
-      description: 'Access to view job listings'
+const [key_name, setKeyName] = useState ('')const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([])// Load keys on mount;
+  useState (() => {fetchApiKeys ()})const handleCreateKey = async () => {if (=== '' || selected_scopes.length === 0);}
+  return) {$2;}
+}
+    await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName ('')setSelectedScopes ([]) }
+
+const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null;}
+  useState (() => {fetchApiKeys ()};"
+  const handleCreateKey = async () => {if (=== "" || selected_scopes.length === 0);}
+  return) {$2;}
+}"
+    await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName ("")setSelectedScopes ([])}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null}
+});
+  const handleCreateKey  = null;
+
+const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null}
+}
+;
+  const handleRegenerateKey = async (keyId: string,) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)},await revokeApiKey(keyId),setShowDeleteConfirm(null)}
+  // Scope options;
+
+  const scope_options: {,
+  value: ApiKeyScope;
+    label: string;,
+  description: string;
+  }[] = [;
+
+    {"
+      value: 'jobs:read'','
+  label: 'Read Jobs'''
+      description: 'Access to view job listings''
+    }
+    {'
+      value: 'jobs:write'','
+  label: 'Write Jobs'''
+      description: 'Create and manage job listings''
+    }
+    {'
+      value: 'talent:read'','
+  label: 'Read Talent'''
+      description: 'Access to view talent profiles''
+    }
+    {'
+      value: 'quotes:write'','
+  label: 'Write Quotes'''
+      description: 'Create and manage quotes''
     }
     {
       value: 'jobs:write'
@@ -231,13 +210,37 @@ export function ApiKeysManager() {
         ? prev.filter(s => s !== scope) 
         : [...prev, scope]
     )
-  },
-  
-  const getExampleCode = (key: string) => {
-    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
-  -H "Authorization: Bearer ${key}" \\
-  -H "Content-Type: application/json"`
-  },
+  }'
+  const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \""
+  -H "Authorization: Bearer ${key}" \""
+      value: 'webhooks:manage',''
+      label: 'Manage Webhooks',''
+      description: 'Set up and manage webhook endpoints','
+    },
+  ];
+  // Toggle a scope selection;
+  const toggle_scope = (scope: ApiKeyScope) =>: any {
+  // TODO: Implement
+}
+    setSelectedScopes (prev =>;)
+      prev.includes (scope) ? prev.filter (string => s !== scope) : [...prev, scope]);
+  }'
+  const getExampleCode = (key: string) =>: any {    return `curl -X GET "https://api.ziontechgroup.com / v1 / jobs" \\;""
+  -H "Authorization: Bearer ${key}" \\;""
+  -H "Content - Type: application / json"` }"
+  // Reset form when dialog closes;
+  const handleDialogClose = () =>: any {
+  // TODO: Implement
+}"
+    setKeyName ('');  -H "Content - Type: application / json"`;"
+  }
+  // Reset form when dialog closes;
+  const handleDialogClose = () =>: any {
+  // TODO: Implement
+}"
+    setKeyName ('');'
+    setShowCreateDialog (false);
+  }
 
   // Reset form when dialog closes
   const handleDialogClose = () => {

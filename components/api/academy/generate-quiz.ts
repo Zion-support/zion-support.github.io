@@ -72,6 +72,25 @@ res: NextApiResponse
 
       ]
     })
+};
+
+
+  if (!apiKey) return fallback();
+  try {}
+    const client = new OpenAI({ apiKey });
+
+const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleConten}
+}`;
+
+const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+  messages: [
+{
+          role: 'system'}
+  content: 'You are an expert course designer for founders.'}
+        },
+        { role: 'user'}
+  content: prompt}
 }
   if (!apiKey) return fallback()
   try {}

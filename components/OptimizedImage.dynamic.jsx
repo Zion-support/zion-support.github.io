@@ -1,9 +1,8 @@
 import React from 'react';
 
-const OptimizedImageDynamic = () => {
-  return (
-    <div data-testid="optimizedimage-dynamic">
-      <h1>OptimizedImage Dynamic</h1>
+const OptimizedImage.dynamic = () => ;
+  return (<div data - testid="optimizedimage.dynamic" />;
+      <h1 /> OptimizedImage.dynamic</h1>
     </div>
   );
 };

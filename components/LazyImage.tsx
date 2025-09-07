@@ -11,29 +11,11 @@ interface LazyImageProps {
   placeholder?: "blur" | "empty";
   blurDataURL?: string;
   sizes?: string;
-  quality?: number;
-  fill?: boolean;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-export default function LazyImage({
-  src
-  alt
-  width
-  height
-  className = ""
-  priority = false
-  placeholder = "empty"
-  blurDataURL
-  sizes
-  quality = 75
-  fill = false
-  style
-  onLoad
-  onError
-}: LazyImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  quality?: number;}
+  fill?: boolean;}
+  src,alt,width,height,className = "",priority = false,placeholder = "empty",blurDataURL,sizes,quality = 75,fill = false,style,onLoad,onError,}: LazyImageProps) {const [isLoaded, setIsLoaded] = useState(false)const [isInView, setIsInView] = useState(priority)const [hasError, setHasError] = useState(false)const imgRef = useRef<HTMLDivElement />(null)return (<div;}
+  src,alt,width,height,className = "",priority = false,placeholder = "empty",blurDataURL,sizes,quality = 75,fill = false,style,onLoad,onError,}: LazyImageProps) {const [isLoaded, setIsLoaded] =;
+  useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
@@ -69,16 +51,16 @@ export default function LazyImage({
       <div
         ref={imgRef}
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
-        style={style}    />
-        <div className=\"text-center\"    />
-          <div className=\"text-4xl mb-2\"    />📷</div>
-          <div className=\"text-sm\"    />Image failed to load</div>
-        </div>
-      </div>
+        style={style} />;
+        <div className="text-center" />;
+          <div className="text-4xl mb-2" />📷</div>;
+          <div className="text-sm" />Image failed to load</div>;
+        </div>;
+      </div>;
     )}
-  return (<div ref={imgRef} className={`relative ${className}`} style={style}    />
-      {!isInView && !priority && (<div className=\"absolute inset-0 flex items-center justify-center bg-gray-100\"    />
-          <LoadingSpinner size=\"sm\" color=\"gray\"    />;}
+  return (<div ref={imgRef} className={`relative ${className}`} style={style} />;
+      {!isInView && !priority && (<div className="absolute inset-0 flex items-center justify-center bg-gray-100" />;
+          <LoadingSpinner size="sm" color="gray" />;}
         </div>;}
       )}
         <Image
@@ -103,9 +85,9 @@ const observer = new IntersectionObserver (([entry]) => {// Check condition;}
   if($2) {$2;}
 
           setIsInView (true)observer.disconnect ()}
-      },{threshold: 0.1,root_margin: \"50px\",},)// Check condition
-  if($2) {$2;}
-
+      },{threshold: 0.1,root_margin: "50px",},)// Check condition;
+if ( {) {$2;}
+}
       observer.observe (img_ref.current)}
     return () => observer.disconnect ()}, [priority])const handle_load = () =>: any {setIsLoaded (true)on_load?.()}const handle_error = () =>: any {setHasError (true)on_error?.()}// Check condition
     return () => observer.disconnect ()}, [priority])const handle_load = () =>: any {setIsLoaded (true)on_load?.()}
@@ -117,19 +99,23 @@ const observer = new IntersectionObserver (([entry]) => {// Check condition;}
         ref={img_ref}
         className={`flex items - center justify - center bg - gray - 200 text - gray - 500 ${class_name}`}
         style={style}
-
-        </div>
-      </div>)
-  return (`
-    <div ref={img_ref} className={`relative ${class_name}`} style={style}>
-          <LoadingSpinner size="sm" color="gray" />
+       />;
+        <div className="text-center" />;
+          <div className="text-4xl mb-2" />📷</div>;
+          <div className="text-sm" />Image failed to load</div>;
+        </div>;
+      </div>)}
+  return (<div ref={img_ref} className={`relative ${class_name}`} style={style} />;
+      {!isInView && !priority && (<div className="absolute inset - 0 flex items - center justify - center bg-gray-100" />;}
+          <LoadingSpinner size="sm" color="gray" />;}
         </div>)}
         </div>
     </div>
-  )
-  return (<div ref={img_ref} className={`relative ${class_name}`} style={style}    />
-      {!isInView && !priority && (<div className=\"absolute inset - 0 flex items - center justify - center bg-gray-100\"    />
-          <LoadingSpinner size=\"sm\" color=\"gray\"    />
+  );
+}
+  return (<div ref={img_ref} className={`relative ${class_name}`} style={style} />;
+      {!isInView && !priority && (<div className="absolute inset - 0 flex items - center justify - center bg-gray-100" />;
+          <LoadingSpinner size="sm" color="gray" />
     </div>}
   );}
 
@@ -146,5 +132,5 @@ const observer = new IntersectionObserver (([entry]) => {// Check condition;}
           quality={quality}
           on_load={handle_load}
           on_error={handle_error}
-          className={`transition - opacity duration - 300 ${is_loaded ? \"opacity - 100\" : \'opacity - 0\';}
+          className={`transition - opacity duration - 300 ${is_loaded ? "opacity - 100" : "opacity - 0";}
           }`}

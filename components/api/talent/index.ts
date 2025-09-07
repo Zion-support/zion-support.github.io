@@ -23,28 +23,18 @@ export default async function handler(
       if (hasSupabase) {
         const { data, error } = await supabaseClient
           .from('talent_profiles')
-          .select('*');
-          .order('created_at', { ascending: false });
+          .order('created_at', {ascending: false}
+});
         if (error) throw error;
-        return res.status(200).json({ items: data as TalentProfile[] });
-     
-}
-      return res.status(200).json({ items: LOCAL });
-   
-} catch (e: any) {
-      return res.status(500).json({ error: e.message });
-    }  }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    try {
-      if (hasSupabase) {;
-        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
-        if (error) throw error;
-        return res.status(200).json({ items: data as TalentProfile[] })
+        return res && res.status(200).json({items: data as TalentProfile[]}
+});
       }
-      return res.status(200).json({ items: LOCAL })
+      return res && res.status(200).json({items: LOCAL}
+});
     } catch (e: any) {
-      return res.status(500).json({ error: e.message })
+}
+      return res.status(500).json({error: e.message}
+});
     }
   }
   if (req.method === 'POST') {
@@ -118,10 +108,18 @@ id: item.id,
           // i18n
 original_language: item.originalLanguage,}
           translations: item.translations as any,}
-        } as any)
-        if (error) throw error
-        return res.status(201).json({ slug: item.slug })
-origin/cursor/automate-test-improve-and-merge-code-2533
+        } as any);
+        if (error) throw error;
+        return res.status(201).json({slug: item.slug}
+});
+      }
+      // Fallback: return the slug as if saved;
+      return res.status (201).json ({slug: item.slug}
+});
+    } catch (e: any) {}
+      return res.status (500).json ({error: e.message}
+});
+    }
 
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug });

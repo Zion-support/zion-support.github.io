@@ -1,9 +1,8 @@
 import React from 'react';
 
-const PerformanceMonitorDynamic = () => {
-  return (
-    <div data-testid="performancemonitor-dynamic">
-      <h1>PerformanceMonitor Dynamic</h1>
+const PerformanceMonitor.dynamic = () => ;
+  return (<div data - testid="performancemonitor.dynamic" />;
+      <h1 /> PerformanceMonitor.dynamic</h1>
     </div>
   );
 };

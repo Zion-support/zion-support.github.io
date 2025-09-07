@@ -175,7 +175,19 @@ export function TestimonialCarousel() {
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
             </div>;
-          </Carousel>;
+            {/* Author Details */}"
+            <div className="text-center md:text-left" />;"
+              <h4 className="text-lg font-semibold text-gray-900" />;
+                {currentTestimonial.name}
+              </h4>;"
+              <p className="text-blue-600 font-medium" />;
+                {currentTestimonial.role}
+              </p>;"
+              <p className="text-gray-500 text-sm" />;
+                {currentTestimonial.company}
+              </p>;
+            </div>;
+          </div>;
         </div>;
       </div>;
     </section>;

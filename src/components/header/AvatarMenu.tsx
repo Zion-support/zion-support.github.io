@@ -63,4 +63,4 @@ export const AvatarMenu: React.FC;
 }
 
 export default AvatarMenu;
-"
+";"

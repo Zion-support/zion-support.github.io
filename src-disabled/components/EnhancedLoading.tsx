@@ -1,6 +1,6 @@
 
 interface EnhancedLoadingProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';\"\";
+  size?: 'sm' | 'md' | 'lg' | 'xl';"";
    variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
    text?: string;}
    className?: string}
@@ -30,4 +30,4 @@ export const FullScreenLoading: React.FC<{ text?: string }> = ({ text = 'Loading
 }> = ({ text = 'Loading...', size = 'md' }) => (<div className='flex items - center space - x-2' /> <EnhancedLoading size={size} variant='dots' /> <span className='text - sm text - gray - 600 dark: text - gray - 400' />{tex}
 }</span> </div>)  export;
   const ButtonLoading: React.FC<{ text?: string size?: 'sm' | 'md'}"
-}> = ({ text = 'Loading...', size = 'sm' }) => (<div className='flex items - center space - x-2' /> <EnhancedLoading size={size} variant='spinner' /> <span />{text}</span> </div>) ';`\"'\";"
+}> = ({ text = 'Loading...', size = 'sm' }) => (<div className='flex items - center space - x-2' /> <EnhancedLoading size={size} variant='spinner' /> <span />{text}</span> </div>) ';`"'";"

@@ -10,12 +10,13 @@ type CarouselOptions = {
   axis?: 'x' | 'y'
   [key: string]: any
 }
-type CarouselPlugin = any
-type CarouselProps = {
-  opts?: CarouselOptions
-  plugins?: CarouselPlugin
-  orientation?: "horizontal" | "vertical"
-  setApi?: (api: CarouselApi) => void
+
+type CarouselPlugin = any;
+
+type CarouselProps = {opts?: CarouselOptions;
+  plugins?: CarouselPlugin;"
+  orientation?: "horizontal" | "vertical";}
+  setApi?: (api: CarouselApi) => void;}
 }
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0]
@@ -139,9 +140,10 @@ className={cn(&quot;relative&quot;, className)}
         >;
           {children}
         </div>;
-      </CarouselContext.Provider>;
-    );
-  }
+      </CarouselContext.Provider>;"
+    )})Carousel.displayName = "Carousel";
+
+
 )
 Carousel.displayName = &quot;Carousel&quot;
 const CarouselContent = React.forwardRef<
@@ -160,6 +162,17 @@ const CarouselContent = React.forwardRef<
             : &quot;-mt-4 flex-col snap-y snap-mandatory&quot;
           className
         )}
+        {...props}
+      />;
+    </div>;"
+  )})CarouselContent.displayName = "CarouselContent";
+
+const CarouselItem = React.forwardRef<;
+  HTMLDivElement;
+  React.HTMLAttributes<HTMLDivElement />;
+>(({ className, ...props }, ref) => {const { orientation } = useCarousel()className={cn (&quot;flex & quot;,orientation === &quot;horizontal & quot;}
+            ? &quot;-ml - 4 snap - x snap - mandatory & quot;}
+            : &quot;-mt - 4 flex - col snap - y snap - mandatory & quot;,class_name)}
         {...props}
       />
     </div>
@@ -205,10 +218,20 @@ const CarouselPrevious = React.forwardRef<
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
-      {...props}
->
-      <ArrowLeft className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Previous slide</span>
+      {...props} />;"
+      <ArrowLeft className="h-4 w-4" />;"
+      <span className="sr-only" />Previous slide</span>;
+    </Button>;"
+  )})CarouselPrevious.displayName = "CarouselPrevious";
+
+
+
+
+    >
+</Button>"
+      <ArrowLeft className="h-4 w-4" />"
+</ArrowLeft>"
+      <span className="sr-only">Previous slide</span>"
     </Button>
   )
 })

@@ -1,20 +1,61 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-;
-function fixSyntaxErrors(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    ;
-    // Fix common syntax errors;
-    content = content.replace(/([\s\S]*?);
-    content = content.replace(//g, '');
-    content = content.replace(/;
-    ;
-    // Fix shebang issues;
-    if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
-      content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
+const { execSync } = require('child_process');
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {'INFO': 'ℹ️', 'SUCCESS': '✅', 'ERROR': '❌', 'WARNING': '⚠️', 'PROGRESS': '🔄'}[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  fixQuotesInFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) return false;
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      
+      // Fix escaped quotes
+      content = content.replace(/\\"/g, '"');
+      content = content.replace(/\\'/g, "'");
+      
+      // Fix malformed JSX tags
+      content = content.replace(/<(\w+)\s*\/>/g, '<$1 />');
+      content = content.replace(/<(\w+)\s*\/\s*>/g, '<$1 />');
+      
+      // Fix malformed import statements
+      content = content.replace(/import\s+(\w+)\s+from\s+\\"([^"]+)\\"\s*;/g, 'import $1 from "$2";');
+      content = content.replace(/import\s+(\w+)\s+from\s+\\'([^']+)\\'/g, "import $1 from '$2';");
+      
+      // Fix malformed JSX attributes
+      content = content.replace(/className=\\"([^"]+)\\"\s*\/>/g, 'className="$1" />');
+      content = content.replace(/className=\\'([^']+)\\'/g, "className='$1'");
+      
+      // Fix malformed object syntax
+      content = content.replace(/\{\s*(\w+):\s*([^,}]+),\s*\}/g, '{$1: $2}');
+      
+      // Fix malformed function calls
+      content = content.replace(/fetch\s*\(\s*"([^"]+)"\s*,\s*\{\s*(\w+):\s*"([^"]+)"\s*,\s*\}/g, 'fetch("$1", {$2: "$3"}');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`Fixed syntax in ${filePath}`, 'SUCCESS');
+        return true;
+      }
+      return false;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
     }
     ;
     // Fix missing commas in object literals;
@@ -49,148 +90,170 @@ function fixSyntaxErrors(filePath) {;
     console.error(`Error processing ${filePath} `, error.message);
     return false;
   }
-}
-;
-function findFilesWithErrors(dir) {;
-  const files = [];
-  const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
-  ;
-  function traverse(currentDir) {;
-    const items = fs.readdirSync(currentDir);
-    ;
-    for (const item of items) {;
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      ;
-      if (stat.isDirectory()) {;
-        if (!['node_modules', '.git', '.next', 'dist', 'build', 'backup-merge-conflicts'].includes(item)) {;
-          traverse(fullPath);
-        }
-      } else if (stat.isFile()) {;
-        const ext = path.extname(fullPath);
-        if (extensions.includes(ext)) {;
-          files.push(fullPath);
-        }
+
+  fixDesignMapFile() {
+    const filePath = path.join(this.projectRoot, 'pages/design-map.tsx');
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Fix the malformed Head component
+      content = content.replace(
+        /<Head \/>\s*<title \/>Zion OS Design Map<\/title>/g,
+        '<Head>\n        <title>Zion OS Design Map</title>'
+      );
+      
+      // Fix malformed JSX elements
+      content = content.replace(/<(\w+)\s*\/>/g, '<$1 />');
+      
+      fs.writeFileSync(filePath, content);
+      this.log('Fixed design-map.tsx', 'SUCCESS');
+      this.fixedFiles.push(filePath);
+    } catch (error) {
+      this.log(`Error fixing design-map.tsx: ${error.message}`, 'ERROR');
+    }
+  }
+
+  fixPricingFile() {
+    const filePath = path.join(this.projectRoot, 'pages/pricing.tsx');
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Fix malformed import statements
+      content = content.replace(/Bot as BotIcon,\s*\}/g, 'Bot as BotIcon,');
+      content = content.replace(/ChevronRight as ChevronRightIcon,\s*\}/g, 'ChevronRight as ChevronRightIcon,');
+      
+      fs.writeFileSync(filePath, content);
+      this.log('Fixed pricing.tsx', 'SUCCESS');
+      this.fixedFiles.push(filePath);
+    } catch (error) {
+      this.log(`Error fixing pricing.tsx: ${error.message}`, 'ERROR');
+    }
+  }
+
+  fixPrivacyFile() {
+    const filePath = path.join(this.projectRoot, 'pages/privacy.tsx');
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Fix malformed import statements
+      content = content.replace(/MapPin,\s*\}/g, 'MapPin,');
+      content = content.replace(/Users,\s*\}/g, 'Users,');
+      
+      fs.writeFileSync(filePath, content);
+      this.log('Fixed privacy.tsx', 'SUCCESS');
+      this.fixedFiles.push(filePath);
+    } catch (error) {
+      this.log(`Error fixing privacy.tsx: ${error.message}`, 'ERROR');
+    }
+  }
+
+  fixJestSetup() {
+    const filePath = path.join(this.projectRoot, 'src/test/setup.ts');
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Convert to CommonJS format for Jest
+      content = content.replace(/import "@testing-library\/jest-dom";/g, 'require("@testing-library/jest-dom");');
+      
+      fs.writeFileSync(filePath, content);
+      this.log('Fixed Jest setup file', 'SUCCESS');
+      this.fixedFiles.push(filePath);
+    } catch (error) {
+      this.log(`Error fixing Jest setup: ${error.message}`, 'ERROR');
+    }
+  }
+
+  fixAllFiles() {
+    this.log('🔧 Starting comprehensive syntax fixing...');
+    
+    // Get all TypeScript and JavaScript files
+    const filesToFix = [
+      'pages/design-map.tsx',
+      'pages/pricing.tsx', 
+      'pages/privacy.tsx',
+      'pages/space-tech.tsx',
+      'pages/team.tsx',
+      'src/test/setup.ts'
+    ];
+    
+    // Fix specific files with known issues
+    this.fixDesignMapFile();
+    this.fixPricingFile();
+    this.fixPrivacyFile();
+    this.fixJestSetup();
+    
+    // Fix quotes in all files
+    filesToFix.forEach(file => {
+      this.fixQuotesInFile(path.join(this.projectRoot, file));
+    });
+    
+    // Fix all remaining files with quote issues
+    this.fixQuotesInAllFiles();
+    
+    this.generateReport();
+  }
+
+  fixQuotesInAllFiles() {
+    const extensions = ['.tsx', '.ts', '.jsx', '.js'];
+    const directories = ['pages', 'components', 'src'];
+    
+    directories.forEach(dir => {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {
+        this.fixQuotesInDirectory(dirPath, extensions);
       }
+    });
+  }
+
+  fixQuotesInDirectory(dirPath, extensions) {
+    const files = fs.readdirSync(dirPath);
+    
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        this.fixQuotesInDirectory(filePath, extensions);
+      } else if (extensions.some(ext => file.endsWith(ext))) {
+        this.fixQuotesInFile(filePath);
+      }
+    });
+  }
+
+  generateReport() {
+    this.log('\n📊 COMPREHENSIVE SYNTAX FIXER REPORT');
+    this.log('='.repeat(50));
+    this.log(`Files fixed: ${this.fixedFiles.length}`);
+    this.log(`Errors encountered: ${this.errors.length}`);
+    
+    if (this.fixedFiles.length > 0) {
+      this.log('\n✅ Fixed files:');
+      this.fixedFiles.forEach(file => {
+        this.log(`  - ${file}`);
+      });
     }
-  }
-  ;
-  traverse(dir);
-  return files;
-}
-;
-// Main execution;
-console.log('🔍 Scanning for files with syntax errors...');
-const files = findFilesWithErrors(process.cwd());
-;
-console.log(`Found ${files.length} files to check`);
-;
-let fixedCount = 0;
-for (const file of files) {;
-  if (fixSyntaxErrors(file)) {;
-    fixedCount++;
-  }
-  
-  return fixed;
-}
-
-// Run the fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.fixAllSyntaxErrors().catch(console.error);
-}
-
-    this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
-    for (const file of problematicFiles) {;
-  const result = await this.fixFile(file);
-      if (result.fixed) {;
-  this.fixedFiles++;,
-}
+    
+    if (this.errors.length > 0) {
+      this.log('\n❌ Errors:');
+      this.errors.forEach(error => {
+        this.log(`  - ${error.file}: ${error.error}`);
+      });
     }
-
-    this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
-    if (this.errors.length > 0) {;
-  this.log(`⚠️  ${this.errors.length} errors occurred:`);
-      this.errors.forEach(error => {;
-  this.log(`   - ${error.file}: ${error.error}`);,
-});,
-}
-
-    return {;
-  totalFiles: allFiles.length,
-      fixedFiles: this.fixedFiles.length,
-      errors: this.errors.length,
-      fixedFileList: this.fixedFiles,
-      errorList: this.errors;,
-}
-  }
-
-  generateReport(results) {;
-  const report = {;
-  timestamp: new Date().toISOString(),
-      summary: results,
+    
+    const report = {
+      timestamp: new Date().toISOString(),
       fixedFiles: this.fixedFiles,
-      errors: this.errors;,
-}
-      fixed: this.fixedFiles,
       errors: this.errors,
-      totalFiles: problematicFiles.length;,
-}
-  }
-
-  async createCleanESLintConfig() {;
-  this.log("🔧 Creating clean ESLint configuration...");
-    const eslintConfig = `module.exports = {;
-  extends: [ "next/core-web-vitals",
-    "eslint: recommended",
-    "@typescript-eslint/recommended" ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  rules: {;
-  "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "react-hooks/exhaustive-deps": "warn";,
-},
-  ignorePatterns: ["node_modules/", ".next/", "out/"];,
-};`;
-    try {;
-  fs.writeFileSync(".eslintrc.js", eslintConfig);
-      this.log("✅ Created clean ESLint configuration");,
-} catch (error) {;
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
-}
-  }
-
-  async run() {;
-  try {;
-  // Fix syntax issues;
-      const fixResult = await this.fixAllFiles();
-      // Create clean ESLint config;
-      await this.createCleanESLintConfig();
-      this.log("🎉 Comprehensive syntax fixing completed successfully");
-      return fixResult;,
-} catch (error) {;
-  this.log(`💥 Syntax fixing failed: ${error.message}`);
-      throw error;,
-}
+      totalFixed: this.fixedFiles.length,
+      totalErrors: this.errors.length
+    };
+    
+    fs.writeFileSync('syntax-fix-report.json', JSON.stringify(report, null, 2));
+    this.log('\n📊 Report saved to: syntax-fix-report.json');
   }
 }
 
-// Run the syntax fixer if this file is executed directly;
-if (require.main === module) {;
-  const fixer = new ComprehensiveSyntaxFixer();
-  fixer.run();
-    .then((result) => {;
-  console.log("✅ Syntax fixing completed");
-      console.log(`📊 Fixed ${result.fixed} files`);
-      if (result.errors.length > 0) {;
-  console.log(`⚠️  ${result.errors.length} errors occurred`);,
-}
-      process.exit(0);,
-});
-    .catch((error) => {;
-  console.error("❌ Syntax fixing failed: ", error.message);
-      process.exit(1);,
-});,
-}
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllFiles();
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))

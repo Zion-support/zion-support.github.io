@@ -17,4 +17,4 @@ const options = { method, headers: { ` Authorization: `Bearer ${apiKey `,}
 export { ApiPlayground;}
 }
 
-export default ApiPlayground  export default ApiPlayground export default ApiPlayground'` '';''`\"\";
+export default ApiPlayground  export default ApiPlayground export default ApiPlayground'` '';''`"";

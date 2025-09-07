@@ -81,6 +81,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
                     ))}
+                  </ul>;
+                </div>;
+              </div>;
+            ) : (<p className='text-gray-500 text-sm' />No usage yet.</p>            )}
+          </div>;
+        </div>;
+              <p className="text-gray-500 text-sm" />No usage yet.</p>;
+
                   </ul>
                 </div>
               </div>

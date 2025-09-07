@@ -239,32 +239,61 @@ particle.y += particle.vy
 particle.rotation += particle.rotationSpeed
 //Quantum entanglement effect 
 }
-}//Bounce off edges with quantum tunneling if (particle.x <= 0 || particle.x >= canvas.width) {
-  if (enableQuantumEffects && Math.random () < 0.1) {
-  //Quantum tunneling effect 
-}if (particle.y <= 0 || particle.y >= canvas.height) {
-  if (enableQuantumEffects && Math.random () < 0.1) {
-  //Quantum tunneling effect 
-}//Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-//Draw particle with enhanced effects ctx.save ()
-ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife)
-ctx.translate (particle.x, particle.y)
-ctx.rotate (particle.rotation)
-ctx.restore () 
-})
-//Add quantum field effects 
+      {enableHolographic && (<div;
+          className='fixed inset-0 pointer-events-none';}
+          style={{zIndex: -1 }
+} />;
+          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5' />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]' />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]' />;
+        </div>;
+      )}
+        <div;
+          className='fixed inset-0 pointer-events-none';
+          style={{zIndex: -1 }
+} />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
+        </div>;
+      )}
+
+      {children}
+
+    </div>
+  );
+  return (
+    <div className='relative min - h-screen' />;
+
+      <canvas;
+        ref={canvas_ref}
+        className='fixed inset - 0 w - full h - full pointer - events - none';
+        style={{z_index: -1 }
 }
-}//Add holographic matrix effect 
-}animationRef.current = requestAnimationFrame (animate) 
+      />;
+      {/* Additional futuristic overlay effects */}
+      {enable_holographic && (<div;
+          className='fixed inset - 0 pointer - events - none';}
+          style={{z_index: -1 }
 }
-//Handle window resize window.addEventListener ('resize', handleResize)
-initParticles ()
-animate ()
-return (<div className="relative min-h-screen" > <canvas </div>) 
-}{
-  children 
-}</div>) 
+         />;
+          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />
+    </div>
+  );
 }
+      {enableQuantumEffects && (<div;
+          className='fixed inset - 0 pointer - events - none';}
+          style={{z_index: -1 }
+}
+         />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]' />
+    </div>
+  );
+}
+
+      {children}
+
+    </div>
+);
+}
+

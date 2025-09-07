@@ -1,21 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
+import React from "react";
+import Layout from "../../components/Layout";
 
-export default function unbridge() {
+export default function UnBridge() {
   return (
-    <Layout>
-      <Head>
-        <title>Un Bridge - Zion Tech Group</title>
-        <meta name="description" content="Un Bridge solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Un Bridge</h1>
-          <p className="text-lg text-gray-600">
-            Professional un bridge solutions tailored to your business needs.
-          </p>
+    <Layout
+      title="UN Bridge - Zion Tech Group"
+      description="UN Bridge protocol page"
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              UN Bridge
+            </h1>
+            <p className="text-xl text-gray-600">
+              UN Bridge protocol page is under construction.
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

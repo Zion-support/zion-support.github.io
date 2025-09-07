@@ -44,11 +44,115 @@ const serviceCategories = [ {
   title: '🏙️ Enterprise IT Solutions', services: [ {
   name: 'Autonomous DevOps', href: '/autonomous-devops-platform' 
 }
-{
-  name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' 
+              {/* Certifications */}
+<div className='space-y-3' />;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />;
+                  <Award className='w-4 h-4' />;
+                  <span />Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2' />;
+                  {certifications.map((cert, index) => ({/* Certifications */}
+              <div className='space-y-3' />;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />;
+                  <Award className='w-4 h-4' />;
+                  <span />Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2' />;
+
+                  {certifications && certifications.map((cert, index) => (;}
+                    <div;}
+key={index}
+
+                      className='flex items-center space-x-2 text-xs text-gray-400'
+                     />
+                      <CheckCircle className='w-3 h-3 text-green-400' />
+                      <span />{cert}</span>
+                    </div>
+
+                  ))}
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40'>
+
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";"
+                      rel="noopener noreferrer";"
+                      className="w - 10 h - 10 bg - gray - 800 / 50 hover: bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40">
+"
+                      <social.icon className="w - 5 h - 5" />)
 }
-{
-  name: 'AI Enterprise Security', href: '/ai-powered-enterprise-security' 
+                </div>;
+              </div>;
+              {/* Certifications */}
+              <div className='space - y-3' />;
+                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2' />;
+                  <Award className='w - 4 h - 4' />;
+                  <span /> Certifications</span>;
+                </h5>;
+                <div className='grid grid - cols - 1 gap - 2' />;
+                  {certifications.map ((cert, index) => (<div;}
+                      key={index}
+                      className='flex items - center space - x-2 text - xs text - gray - 400' />
+
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span />{cert}</span>                  <span /> Certifications</span>;
+                </h5>;"
+                <div className="grid grid - cols - 1 gap - 2" />;"
+                  {certifications.map ((cert, index) => (<div key={index} className="flex items - center space - x-2 text - xs text - gray - 400" />;"
+                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;
+                      <span />{cert}</span>;
+                    </div>))}</div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Bottom Bar */}
+<div className='border-t border-purple-500/20' />;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />;
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0' />;
+                <span />&copy; 2024 Zion Tech Group. All rights reserved.</span>;
+                <Link;
+                  href='/privacy';
+                  className='hover:text-purple-400 transition-colors' />;
+                  Privacy Policy;
+                </Link>;
+
+                <Link;
+href='/terms'
+
+                  className='hover:text-purple-400 transition-colors'
+                 />
+                  Terms of Service;
+                </Link>
+              </div>
+
+              <div className='flex items-center space-x-4 text-sm text-gray-400' />
+                <div className='flex items-center space-x-2' />
+                  <Heart className='w-4 h-4 text-red-400' />
+                  <span />Made with passion for innovation</span>
+                </div>
+                <div className='flex items-center space-x-2' />
+                  <Star className='w-4 h-4 text-yellow-400' />
+                  <span />5.0/5.0 Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+  );
 }
 {
   name: 'Intelligent Data Governance', href: '/intelligent-data-governance' 

@@ -15,11 +15,32 @@ export default function VendorProfilePage({ vendor }: Props) {
     const title = String(formData.get('title') |'New lead');
     setLoading(true);
     setMessage(null)
-    try {}
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
-        ) : ("
-          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
+    try {
+
+      const res = await fetch('/api/vendors/lead', {method: 'POST'}
+  headers: { 'Content-Type': 'application/json',}
+},
+body: JSON.stringify({ vendorId: vendor.id, title }),
+      });
+      if (!res.ok) throw new Error('Failed to submit');
+      setMessage('Thanks! We will contact you soon.');
+      form.reset();
+    } catch (e: any) {}
+      setMessage(e.message);}
+    } finally {}
+      setLoading(false);}
+    }
+
+  }
+  return (<div className='space-y-8' />;
+      <div className='flex items-center gap-4' />;
+        {vendor.logoUrl ? (// eslint-disable-next-line @next/next/no-img-element;}
+          <img;}
+            src={vendor.logoUrl}
+            alt={vendor.name}
+            className='w-16 h-16 rounded';
+          />;
+        ) : (<div className='w-16 h-16 rounded bg-gray-100 dark:bg-gray-900' />;
         )}
         <div>"
           <div className="text-2xl font-semibold flex items-center gap-2">

@@ -181,13 +181,63 @@ export function PrimaryNav() {
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
-          </div>
-              {isLoggedIn && <UserMenu  />}
-            </div>
-          </div>
-          {/* Mobile menu button */}
-          <button
-            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
+</UserMenu>
+
+              </Link>;
+            {isLoggedIn && <UserMenu />}
+
+</UserMenu>
+          </div>;"
+            <div className='flex items - center gap - 1 flex - wrap'>;'
+</div>
+                <>;
+                  <Link;'
+                    href='/auth / login';''
+                    className='text - sm hover:text - primary whitespace - nowrap';''
+                    data - testid='login - link';'
+                    on_click={e => {
+</Link>
+                  </Link>;
+                  <Link;'
+                    href='/signup';''
+                    className='text - sm hover:text - primary whitespace - nowrap';'
+                  >;
+</Link>
+
+                  </Link>;
+                </>)}
+              {isLoggedIn && <UserMenu />}
+</UserMenu>
+            </div>;
+
+          </div>;'
+          <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'>;'
+</div>
+
+            <ModeToggle />;
+</ModeToggle>
+            <LanguageSelector />;
+
+</LanguageSelector>
+              <Link;'
+                href='/auth / login';''
+                className='text - sm hover:text - primary';''
+                data - testid='login - link';'
+                on_click={e => {
+</Link>
+
+              </Link>)}
+            {isLoggedIn && <UserMenu />}
+</UserMenu>
+          </div>;
+
+              {isLoggedIn && <UserMenu />}
+</UserMenu>
+            </div>;
+          </div>;
+          </div>;
+          <button;'
+            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0""
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}          >

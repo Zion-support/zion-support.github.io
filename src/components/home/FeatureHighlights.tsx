@@ -90,10 +90,128 @@ export function FeatureHighlights({
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          {highlightsData.map((category, index) => (
-            <Card
+        </div>"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
+</div>"
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">"
+</Card>"
+              <CardContent className="p-6">"
+</CardContent>"
+                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>""
+                <ul className="space-y-3">"
+</ul>"
+                    <li key={idx} className="flex items-start">"
+</li>"
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />"
+</Check>"
+                      <span className="text-zion-slate-light">{feature}</span>"
+                    </li>"
+    <section className={cn("py-16 bg-zion-blue", className)} style={style}>;"
+</section>"
+      <div className="container mx-auto px-4">;"
+</div>"
+        <div className="text-center mb-12">;"
+</div>"
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>;""
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;"
+</p>
+          </p>;
+        </div>;"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;"
+</div>"
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;"
+</Card>"
+              <CardContent className="p-6">;"
+</CardContent>"
+                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>;""
+                <ul className="space-y-3">;"
+</ul>"
+                    <li key={idx} className="flex items-start">;"
+</li>"
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;"
+</Check>"
+                      <span className="text-zion-slate-light">{feature}</span>;"
+                    </li>;
+                </ul>;
+              </CardContent>;
+            </Card>;"
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;'
+</div>
+            <Card;
+              key={index}'
+              className='bg - zion - blue - dark border - zion - blue - light';'
+            >;
+</Card>'
+              <CardContent className='p - 6'>;'
+</CardContent>'
+                <h3 className='text - xl font - bold text - white mb - 4'>;'
+</h3>
+                </h3>;'
+                <ul className='space - y-3'>;'
+</ul>'
+                    <li key={idx} className='flex items - start'>;'
+</li>'
+                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;'
+</Check>'
+                      <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;""
+              <CardContent className="p - 6">;"
+</CardContent>"
+                <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;""
+                <ul className="space - y-3">;"
+</ul>"
+                    <li key={idx} className="flex items - start">;"
+</li>"
+                      <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;"
+</Check>"
+                      <span className="text - zion - slate - light">{feature}</span>))}"
+
+                </ul>;
+              </CardContent>;
+            </Card>))}
+        </div>;
+      </div>;
+
+    </section>);"
+    <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";"
+</section>"
+      <div className="max - w-7xl mx - auto px - 6">;"
+</div>"
+        <motion.div          className="text - center mb - 16";"
+          initial = {
+
+
+export /**;
+ * FeatureHighlights - Function description;
+ */;"
+function FeatureHighlights() {return (";"
+    <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900" />";"
+      <div className="max - w-7xl mx - auto px - 6" />;"
+        <motion.div          className="text - center mb - 16";}
+          initial = {{ opacity: 0,coordinate_y: 20;}
+}}
+          whileInView = {{ opacity: 1,coordinate_y: 0;}
+}}
+          viewport={{ once: true }}
+
+          transition={{ duration: 0.6 }}"
+        >";"
+</motion>"
+          <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
+</div>"
+            <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;"
+</Award>
+          </div>;"
+          <h2 className="text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;"
+</h2>
+          </h2>;"
+          <p className="text - lg md:text - xl text - zion - slate - light max - w-3xl mx - auto leading - relaxed">;"
+</p>
+            global reach, and enterprise - grade security.</p>;
+        </motion.div>;"
+";""
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;"
+</div>
+            <motion.div;
               key={index}
               className='bg-zion-blue-dark border-zion-blue-light'
             >

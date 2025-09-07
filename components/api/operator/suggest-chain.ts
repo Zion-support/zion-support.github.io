@@ -1,13 +1,52 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { CHAINS } from '../../../utils/chains';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { region, stakeUsd } = req.body || {},
-  const stake = null;
+import { CHAINS  } from '../../../utils/chains';
+
+const stake = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)export default async function handler() {if (req.method !== 'POST');}
+  return res.status(405).json({error: 'Method not allowed'}
+})const { region, stakeUsd } = req.body || {};
+  const stake  = null;
+
+export default async function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({error: 'Method not allowed'}
+})const { region, stakeUsd } = req.body |{}
+
+export default async function handler() {if (req.method !== 'POST')return res.status(405).json({error: 'Method not allowed'}
+})const { region, stakeUsd } = req.body || {}
+
+export default async function handler() {if (req.method !== 'POST') return res.status(405).json({error: 'Method not allowed'}
+})const { region, stakeUsd }  = req.body |{}
+
+const stake = Number(stakeUsd |0)const stake  = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0;
+  return res.status(405).json({error: 'Method not allowed'}
+})const { region, stakeUsd } = req.body || {}
+;
+  const stake  = Number(stakeUsd || 0)// Simple heuristics;
+  // - Low stake: prefer low fees (Polygon, BNB, Avalanche)// - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum;
+  // - Region hints (very rough):;
+  //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum;
+  let candidates  = ['polygon', 'bnb', 'avalanche'];ursor/fix-website-loading-errors-and-merge-6662;
+  let candidates = ['polygon', 'bnb', 'avalanche'];
+let candidates  = ['polygon', 'bnb', 'avalanche'];if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
+
+const regionLc = (region |'').toString().toLowerCase()if (regionLc.includes('apac') |regionLc.includes('asia')) {candidates =;
+      stake > 5000;
+        ? ['arbitrum', 'optimism', 'avalanche'];
+
+const stake = Number(stakeUsd || 0);
+
 export default async function handler(
-  req: NextApiRequest
-res: NextApiResponse
+  req: NextApiRequest;
+res: NextApiResponse;
 ) {
+  if (req.method !== 'POST')}
+    return res.status(405).json({error: 'Method not allowed'}
+});
+
+const { region, stakeUsd } = req.body |{};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');}
+    return res.status(405).json({error: 'Method not allowed'}
+});
 
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,6 +55,17 @@ res: NextApiResponse
   const stake = Number(stakeUsd |0)
   // Simple heuristics
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;}
+  if (req.method !== 'POST') return res.status(405).json({error: 'Method not allowed'}
+});
+
+const { region, stakeUsd } = req.body |{}
+
+const stake = Number(stakeUsd |0);
+
+const stake = Number(stakeUsd || 0);
+
+  // Simple heuristics;
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
@@ -106,15 +156,26 @@ function handler() { return null; }
     .json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+const ranked = candidates && candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k],}
+}))res && res.status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) })}
+import { CHAINS  ,}
+} from '../../../utils / chains';
+
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({error: 'Method not allowed'}
+})) {$2;}
+}
 
 const { region, stake_usd } = req.body || {}
 
-export default async /**
- * handler - Function description
- */
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
-})) {$2
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).json ({error: 'Method not allowed'}
+})) {$2;
+}
 const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k],}
 }))
   res

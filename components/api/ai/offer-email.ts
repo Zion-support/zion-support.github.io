@@ -7,11 +7,9 @@ export default async function handler(
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error });
-import { Star } from 'lucide-react';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+}
+    return res.status(405).json({error: 'Method not allowed'}
+});
 
   const method = (req.method |'POST').toUpperCase()
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });

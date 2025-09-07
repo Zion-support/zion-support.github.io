@@ -1,9 +1,8 @@
 import React from 'react';
 
-const PerformanceOptimizerDynamic = () => {
-  return (
-    <div data-testid="performanceoptimizer-dynamic">
-      <h1>PerformanceOptimizer Dynamic</h1>
+const PerformanceOptimizer.dynamic = () => ;
+  return (<div data - testid="performanceoptimizer.dynamic" />;
+      <h1 /> PerformanceOptimizer.dynamic</h1>
     </div>
   );
 };

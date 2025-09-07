@@ -565,9 +565,24 @@ ref={canvasRef}
                   scale: [1, 1.5, 1];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
-                  duration: 6 + i * 0.5
-                  repeat: Infinity
-                  top: `${(i * 8) % 100}%`,
+                  duration: 4 + i * 0.3,
+                  repeat: Infinity}
+                  ease: 'easeInOut'}
+                }}
+                animate={{}
+                  opacity: [0.3, 0.8, 0.3]}
+                }}
+                transition={{
+                  duration: 4 + i * 0.3;
+repeat: Infinity;
+duration: 4 + i * 0 && 0.3,
+                  repeat: Infinity,
+                  ease: "easeInOut";
+                  duration: 4 + i * 0.3;
+repeat: Infinity;"
+ease: "easeInOut"}
+                  top: `${(i * 7) % 10}
+}%`
 
                 }}
                 animate={{}
@@ -578,27 +593,33 @@ ref={canvasRef}
                   repeat: Infinity}
                   ease: 'easeInOut'                }}
 
-        {/* Consciousness waves */}'
-        {theme === 'consciousness' && ('
-          <div className='absolute inset - 0'>
-            {[...Array (8)].map ((_, i) => (
-              <motion.div;`
-                  left: `${(i * 12) % 100}%``
-                  left: `${(i * 12) % 100}%`,`
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
-              <motion.div;`
-                  left: `${(i * 12) % 100}%`,`
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
-              <motion&& motion.div;`
-                  left: `${(i * 12) % 100}%`,`
-                  top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
-              <motion.div
-                key={i}"
-                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full"
-                style={{}`
-                  left: `${(i * 12) % 100}%``
-                  top: `${(i * 8) % 100}%`}}
-                animate={{}
+        {/* Consciousness waves */}
+        {theme === 'consciousness' && (
+
+<div className='absolute inset-0' />
+            {[...Array(8)].map((_, i) => (}
+              <motion.div;}
+key={i}
+                className='absolute w-96 h-96 border border-pink-500/20 rounded-full';
+                style={{left: `${(i * 12) % 10}
+}%`,top: `${(i * 8) % 10}
+}%`}}
+                animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2]}}
+                transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',"
+  ease: "easeInOut";}
+                  top: `${(i * 8) % 10}"
+}%`,ease: "easeInOut";
+                  left: `${(i * 12) % 10}
+}%`}}
+                animate={{scale: [1, 1.5, 1];}
+                  opacity: [0.2, 0.6, 0.2];}
+                }}
+
+                animate={{
+                  scale: [1, 1.5, 1]}
+                  opacity: [0.2, 0.6, 0.2]}
+                }}
+                transition={{
                   duration: 6 + i * 0.5,
 
                   ease: "easeInOut"
@@ -611,11 +632,11 @@ ref={canvasRef}
                   left: `${(i * 12) % 100}%`,
 
                   ease: 'easeInOut',"
-  ease: \"easeInOut\"}
+  ease: "easeInOut"}
                   top: `${(i * 8) % 10}
 }%`,
 "
-                  ease: \"easeInOut\"
+                  ease: "easeInOut"
 
                   left: `${(i * 12) % 10}
 }%`

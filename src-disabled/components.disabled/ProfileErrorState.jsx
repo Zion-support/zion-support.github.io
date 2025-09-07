@@ -42,6 +42,6 @@ export const ProfileErrorState = () => {
         </CardContent>;
       </Card>;
     </div>;
-  )}'';\"\";
+  )}'';"";
 }'';';';
-'''''\"'\";
+'''''"'";

@@ -3,21 +3,162 @@ import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-export function WebhooksManager() {
-  const {
-    webhooks;
+;
+loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[] />([]),const [testEventType, setTestEventType] = useState<WebhookEventType />('new_application'),// Load webhooks on mount;
+  useEffect(() => {}
+fetchWebhooks()import { useState, useEffect  } from 'react';
+import { format  } from 'date - fns';
+import { useState, useEffect } from "react",import { format } from "date-fns",import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X  } from 'lucide-react';"
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",import { Input } from "@/components/ui/input",import { Checkbox } from "@/components/ui/checkbox",import { Label } from "@/components/ui/label",import { Badge } from "@/components/ui/badge",import { Switch } from "@/components/ui/switch",import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",import { ScrollArea  } from '@/components/ui/scroll-area';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+
+export function WebhooksManager() {const {webhooks;
+    loading;
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;}
+    clearTestResult;}
+  } = useWebhooks()const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null />(null),const [showTestDialog, setShowTestDialog] = useState<string | null />(null),const [showTestResult, setShowTestResult] = useState(false)import { format  } from 'date-fns';
+import { Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook} from 'lucide-react';
+import { useWebhooks, type WebhookEventType  } from '@/hooks/useWebhooks';
+import { Button  } from '@/components/ui/button';
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle;
+} from '@/components/ui/card';
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+  DialogTrigger;
+} from '@/components/ui/dialog';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Label  } from '@/components/ui/label';
+import { Badge  } from '@/components/ui/badge';
+import { Switch  } from '@/components/ui/switch';
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu';
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle;
+} from '@/components/ui/alert-dialog';
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue;
+} from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger  } from '@/components/ui/dropdown-menu';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
+
+
+  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
+</WebhookEventType>
+  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),'
+</WebhookEventType>
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState < string | null>()
+    null);
+  const [showTestDialog, setShowTestDialog] = useState < string | null>(null);
+  const [showTestResult, setShowTestResult] = useState (false);
+  // Create webhook form state;'
+  const [webhook_name, setWebhookName] = useState ('');''
+  const [webhook_url, setWebhookUrl] = useState ('');''
+  const [webhook_secret, setWebhookSecret] = useState ('');'
+  const [selected_events, setSelectedEvents] = useState < WebhookEventType[]>([]);
+  const [testEventType, setTestEventType] =;'
+    useState < WebhookEventType>('new_application');'
+  // Load webhooks on mount;
+  useEffect (() => {
+    fetch_webhooks ();
+  }, []);
+  const handleCreateWebhook = async () => {
+    // Check condition;'
+if (=== '' ||) {'
+  $2;
+}'
+      webhook_url.trim () === '' ||;'
+      selected_events.length === 0);
+      return;
+    await create_webhook (
+      webhook_name,
+      webhook_url,
+      selected_events,)'
+      webhook_secret.trim () === '' ? undefined : webhook_secret);'
+    setShowCreateDialog (false);
+    resetWebhookForm ();
+  }
+  const handleToggleStatus = async (
+    webhook_id: string,)
+    current_status: boolean) => {
+    await toggle_webhook (webhook_id, !current_status) }
+  const handleDeleteWebhook = async (webhook_id: string) => {
+    await delete_webhook (webhook_id);
+    setShowDeleteConfirm (null) }
+  const handleTestWebhook = async (webhook_id: string) => {
+    await test_webhook (webhook_id, testEventType);
+    setShowTestResult (true);  const handleToggleStatus = async (webhook_id: string, current_status: boolean) => {
+    await toggle_webhook (webhook_id, !current_status);
+
+
+const handleToggleStatus = async (webhook_id: string,current_status: boolean) => {await toggle_webhook (webhook_id, !current_status) }
+
+
+  const handleTestWebhook = async (webhook_id: string) => {
+    await test_webhook (webhook_id, testEventType);
+    setShowTestResult (true);
+  const handleToggleStatus = async (webhook_id: string, current_status: boolean, ) => {
+    await toggle_webhook (webhook_id, !current_status);
+  },
+  const handleDeleteWebhook = async (webhook_id: string, ) => {
+    await delete_webhook (webhook_id),
+    setShowDeleteConfirm (null);
+  },
+  const handleTestWebhook = async (webhook_id: string, ) => {
+    await test_webhook (webhook_id, testEventType),
+    setShowTestResult (true);
+  },
+  const resetWebhookForm = () =>: any {
+  // TODO: Implement
+}'
+    setWebhookName ('');''
+    setWebhookUrl ('');''
+    setWebhookSecret ('');'
+    setSelectedEvents ([]);
+
+
+const handleTestWebhook = async (webhook_id: string) => {await test_webhook (webhook_id, testEventType)setShowTestResult (true)const handleToggleStatus = async (webhook_id: string, current_status: boolean) => {await toggle_webhook (webhook_id, !current_status)}
+
+const handleDeleteWebhook = async (webhook_id: string) => {await delete_webhook (webhook_id)setShowDeleteConfirm (null)setShowDeleteConfirm (null}
+}
+
+const handleTestWebhook = async (webhook_id: string) => {await test_webhook (webhook_id, testEventType)setShowTestResult (true)const handleToggleStatus = async (webhook_id: string, current_status: boolean, ) => {await toggle_webhook (webhook_id, !current_status)},const handleDeleteWebhook = async (webhook_id: string, ) => {await delete_webhook (webhook_id),setShowDeleteConfirm (null)},const handleTestWebhook = async (webhook_id: string, ) => {await test_webhook (webhook_id, testEventType),setShowTestResult (true)},const resetWebhookForm = () =>: any {setWebhookName ('')setWebhookUrl ('')setWebhookSecret ('')setSelectedEvents ([])}
+
+const handleDeleteWebhook = async (webhookId: string,) => {await deleteWebhook(webhookId)setShowDeleteConfirm(null;}
+}
+
+const handleTestWebhook = async (webhookId: string,) => {await testWebhook(webhookId, testEventType)setShowTestResult(true)}
+;
+  const {    webhooks,    webhooks;
     loading;
     testResult;
     fetchWebhooks;

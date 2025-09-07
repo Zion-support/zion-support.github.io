@@ -54,9 +54,47 @@ const serviceCategories = [ {
   name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain', price: 'Custom pricing' 
 }] 
 }
-{
-  title: 'Healthcare & Life Sciences', icon: Microscope, color: 'from-teal-600 to-cyan-600', description: 'Healthcare innovation', services: [ {
-  name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$4, 999/month' 
+                    <div className='mt-3 ml-11 space-y-2' />;
+                      {item.subItems.slice(0, 3).map(subItem => (<Link;}
+                          key={subItem.name}
+                          href={subItem.href}
+                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1';
+                          onClick={() = /> setIsOpen(false)}>;
+                          {subItem.name}
+                        </Link>;
+                    {/* Mobile Sub-items */}
+                    <div className='mt-3 ml-11 space-y-2' />;
+                      {item && item.subItems.slice(0, 3).map(subItem => (<Link;}
+                          key={subItem && subItem.name}
+                          href={subItem && subItem.href}
+                          className='block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1'                          onClick={() = /> setIsOpen(false}
+}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1";
+                          onClick={() => setIsOpen(false)}
+                        >;
+                          {subItem && subItem.name}
+                        </Link>;
+
+                      ))}
+
+                    </div>
+                  </div>
+
+                ))}
+                {/* Quick Links */}
+<div className='space-y-3 pt-4' />;
+                  <Link;
+                    href='/services';
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium';
+                    onClick={() = /> setIsOpen(false)}
+
+                  >
+                    All Services;
+                  </Link>
+                  <Link;
+href='/pricing'
+                    className='block text-gray-300 hover: text-white transition-colors duration-200 font-medium'
+
+                    onClick={() = /> setIsOpen(false}
 }
 {
   name: 'Autonomous Healthcare AI', href: '/autonomous-healthcare-ai-platform', description: 'Self-learning healthcare', price: '$2, 499/month' 

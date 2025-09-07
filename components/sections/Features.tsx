@@ -1,13 +1,33 @@
-</p> </div> {
-  /* Features Grid */ 
-}<div className= {
-  `grid grid-cols-1 gap-8 $ {
-  gridCols[columns] 
-}` 
-}> {
-  features.map ( (feature, index) => (<Card key= {
-  index 
-}</div> <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" /> </div> </p> </Card>) ) 
-}</div> </div> </section>) 
+import Card from '../ui/Card';
+
+import { Zap } from 'lucide-react';
+
+interface Feature {
+  icon: React.ReactNode;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);}
+    this.state = {hasError: false}
+};
+  }
+  
+  static getDerivedStateFromError(error) {}
+    return {hasError: true}
+};
+  }
+  
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
+  }
+  
+  render() {
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
+    }
+    
+    return this.props.children;
+
+  }
 }
 export default Features

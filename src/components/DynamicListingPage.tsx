@@ -105,6 +105,16 @@ interface DynamicListingPageProps {;
    */;
   detailBasePath?: string;
 }
+"
+export function DynamicListingPage() {const router = useRouter(),const [searchQuery, setSearchQuery] = useState(""),const [selectedCategories, setSelectedCategories] =;
+  useState<string[] />([]);
+  const toggleCategory = (setSelectedCategories(prev =>;
+      prev.includes(category)? prev.filter(c => c !== category): [...prev, category];) => {
+  return $3;}
+}
+    )},const clearCategories = () => setSelectedCategories([]),const [view, setView] =;"
+  useState<ListingView />("grid");"
+  const isGrid = view === "grid",// Swap icons to match action;
 
   min: number
 max: number
@@ -298,20 +308,112 @@ export function DynamicListingPage({
     }, 500)
   },
 
-  return (
-    <div className="min-h-screen bg-zion-blue py-12 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <GradientHeading>{title}</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-            {description}
-          </p>
-        </div>
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
-          <div className='lg:col-span-1'>
-            <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>
-              <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
-                <Filter className='mr-2 h-5 w-5' /> Filters
+
+const toggleCategory = (setSelectedCategories (prev => prev && prev.includes (category) ? prev && prev.filter (c => c !== category) : [...prev, category] min: 0;
+max: 10000 ;) => {
+  return $3;}
+}
+})export function DynamicListingPage(): any ({title,description,categorySlug,listings: allListings,categoryFilters,initialPrice = { min: 0, max: 10000}
+},detailBasePath = '/marketplace/listing'}: DynamicListingPageProps) {const router = useRouter()const [searchQuery, setSearchQuery] =;
+  useState('');
+  const [selectedCategories, setSelectedCategories] = useState<string[] />([];
+  const toggleCategory = (    setSelectedCategories(prev =>;
+      prev && prev.includes(category)? prev && prev.filter(c => c !== category): [...prev, category];) => {
+  return $3;}
+}
+    )}
+
+
+        // Store quote data in sessionStorage for the request-quote page;
+        const quoteData = {
+          serviceType: categorySlug;,
+  specificItem: {
+
+
+const ToggleViewIcon = isGrid ? (<List className='h-4 w-4' />;
+  ) : (<LayoutGrid className='h-4 w-4' />;
+  )const [isLoading, setIsLoading] = useState(false);
+  const [priceRange, setPriceRange] = useState<PriceRange />({min: 0,max: 1000}
+})const [selectedRating, setSelectedRating] = useState<number | null />(null)const [selectedBrand, setSelectedBrand] = useState('all');
+  const [specQuery, setSpecQuery] = useState('');
+  const [selectedAvailability, setSelectedAvailability] = useState('all');
+  const [sortOption, setSortOption]  = useState('newest');
+  const brandOptions = Array && Array.from(new Set(allListings && allListings.map(l => l && l.brand).filter(Boolean)))const availabilityOptions = Array && Array.from(new Set(allListings && allListings.map(l => l && l.availability).filter(Boolean));
+  useEffect(() => {}
+const listingsWithPrice = allListings && allListings.filter(l => l && l.price !== null)if (listingsWithPrice && listingsWithPrice.length > 0) {const max = Math && Math.max(...listingsWithPrice && listingsWithPrice.map(l => l && l.price || 0))setPriceRange({ min: 0, max })setCurrentPriceFilter([0, max])}
+  }, [allListings];
+  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
+    [number, number];
+  >([0, initialPrice && initialPrice.max])const handleSliderChange = (values: number[]) => ;
+  const [min, max] = values && values.map(Number)if (min = = null || max == null || isNaN(min) || isNaN(max));
+  return;
+    setCurrentPriceFilter([min, max])}let filteredListings: ProductListing[] = [];
+  try {filteredListings = allListings && allListings.filter(listing => {     ;
+  const matchesSearch =;
+        !searchQuery ||;
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some((tag: string) =>;
+            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())))const matchesBrand =;
+        selectedBrand === 'all' ||;
+        (listing && listing.brand && listing && listing.brand = == selectedBrand;
+  const matchesSpecs =;
+        !specQuery ||;
+        (listing && listing.specifications &&;
+          listing && listing.specifications.some(s =>;
+            s && s.toLowerCase().includes(specQuery && specQuery.toLowerCase()))) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some(tag =>;
+            tag && tag.toLowerCase().includes(specQuery && specQuery.toLowerCase())))const matchesAvailability =;
+        selectedAvailability === 'all' ||;
+        (listing && listing.availability && listing && listing.availability = == selectedAvailability;
+  const matchesCategory =;
+        selectedCategories && selectedCategories.length === 0 ||;
+        selectedCategories && selectedCategories.includes(listing && listing.category)const matchesPrice =;
+        listing && listing.price === null ||;
+        (listing && listing.price >= currentPriceFilter[0] &&;
+          listing && listing.price <= currentPriceFilter[1])const matchesRating =;
+        selectedRating === null ||;
+        (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),return (matchesSearch &&;
+        matchesCategory &&;
+        matchesPrice &&;
+        matchesRating &&;
+        matchesBrand &&;
+        matchesSpecs &&;}
+        matchesAvailability;}
+      )})filteredListings && filteredListings.sort((a, b) => {      switch (sortOption) {case 'price-asc':;
+          return (a && a.price || 0) - (b && b.price || 0)case 'price-desc':;
+          return (b && b.price || 0) - (a && a.price || 0)case 'rating':;
+          return (b && b.rating || 0) - (a && a.rating || 0)case 'newest':;}
+        default:;}
+          return (new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime())}
+    })} catch (error) {captureException(error)logErrorToProduction('Listing filter error:', { data: error }
+}
+
+const handleRequestQuote = (setIsLoading(true)const listing  = allListings && allListings.find(item => item && item.id === listingId)setTimeout(() => {setIsLoading(false)if (listing) {toast({title: 'Quote Requested',
+  description: `Your quote request for ${listing && listing.title) => {
+  return $3;}
+} has been sent.`})router.push ('/request - quote')}
+   
+}, 500)}
+;"
+  const listing = allListings.find((item) => item.id === listingId),setTimeout(() => {setIsLoading(false),if (listing) {toast({title: "Quote Requested",description: `Your quote request for ${listing.title} has been sent.
+}),// Store quote data in sessionStorage for the request-quote page;
+
+
+
+'
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">"
+</div>"
+          <div className="lg:col-span-1">"
+</div>"
+            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">"
+</div>"
+              <h3 className="text-lg font-medium text-white mb-4 flex items-center">"
+</h3>"
+                <Filter className="mr-2 h-5 w-5" /> Filters;"
+</Filter>
               </h3>
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>

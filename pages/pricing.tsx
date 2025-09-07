@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from "react";
+import Head from "next/head";
 
-export default function pricing() {
+export default function PricingPage() {
   return (
-    <Layout>
+    <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Pricing solutions and services." />
+        <meta name="description" content="Transparent pricing for all our technology services" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Pricing</h1>
-          <p className="text-lg text-gray-600">
-            Professional pricing solutions tailored to your business needs.
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Simple, Transparent Pricing
+          </h1>
+          <p className="text-xl text-gray-600">
+            Pricing page is under construction.
           </p>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }

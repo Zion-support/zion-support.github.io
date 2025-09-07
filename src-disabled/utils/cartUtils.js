@@ -170,7 +170,7 @@ export const formatPrice = (if (typeof price !== 'number' || isNaN(price)) ;
   return '$0.00';) => {
   return $3;}
 }
-  }return new Intl.NumberFormat('en-US', {style: 'currency',}
+  }return new Intl.NumberFormat('en-US', {style: 'currency'}
   currency: currency;}
   }).format(price)}/**;
  * Get cart summary for display*/;

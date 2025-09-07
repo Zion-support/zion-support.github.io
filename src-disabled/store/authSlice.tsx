@@ -35,7 +35,7 @@ const authSlice = createSlice({name: 'auth', initialState,reducers: {setLoggedIn
   }
 })export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
 
-export default authSlice.reducer;\"\";
+export default authSlice.reducer;"";
 
 interface User  {id: string;
    email: string;

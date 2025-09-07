@@ -55,11 +55,11 @@ const recentSearches = [
 const popularSearches = [
   'Micro SAAS', 'IT Infrastructure','DevOps', 'Machine Learning'
 ];
-return (<div className=\"relative\" ref={inputRef} />;
-      <div className=\"relative\" />;
-        <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light\" />;
+return (<div className="relative" ref={inputRef} />;
+      <div className="relative" />;
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
         <input;
-          type=\"text\";
+          type="text";
           value={value}
           onChange={(e) = /> onChange(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -70,20 +70,20 @@ return (<div className=\"relative\" ref={inputRef} />;
         />;
         {value && (<button;}
             onClick={handleClear}
-            className=\"absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors\" />
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors" />
 
-            <X className=\"h-4 w-4\" />;
+            <X className="h-4 w-4" />;
           </button>;
         )}
       </div>;
       {/* Suggestions Dropdown */}
       {isOpen && (<div;}
           ref={suggestionsRef}
-          className=\"absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto\" />
+          className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto" />
 
           {/* Search Results */}
-          {filteredSuggestions.length > 0 && (<div className=\"py-2\" />;
-              <div className=\"px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider\" />;
+          {filteredSuggestions.length > 0 && (<div className="py-2" />;
+              <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider" />;
                 Search Results;
               </div>;
               {filteredSuggestions.map((suggestion, index) => {const Icon = getSuggestionIcon(suggestion;}
@@ -95,45 +95,45 @@ return (<div className=\"relative\" ref={inputRef} />;
                         : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10';}
                     }`}>
 
-                    <Icon className=\"h-4 w-4 mr-3 text-zion-cyan flex-shrink-0\" />;
-                    <span className=\"truncate\" />{suggestion}</span>;
+                    <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" />;
+                    <span className="truncate" />{suggestion}</span>;
                   </button>;
                 )})}
             </div>;
           )}{/* Recent Searches */}
-          {value.trim() === '' && (<div className=\"py-2\" />;
-              <div className=\"px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider\" />;
+          {value.trim() === '' && (<div className="py-2" />;
+              <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider" />;
                 Recent Searches;
               </div>;}
               {recentSearches.map((search) => (<button;}
                   key={search}
                   onClick={() = /> handleSuggestionSelect(search)}
-                  className=\"w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors\">
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors">
 
-                  <Clock className=\"h-4 w-4 mr-3 text-zion-slate-light\" />;
+                  <Clock className="h-4 w-4 mr-3 text-zion-slate-light" />;
                   <span />{search}</span>;
                 </button>;
               ))}
             </div>;
           )}{/* Popular Searches */}
-          {value.trim() === '' && (<div className=\"py-2\" />;
-              <div className=\"px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider\" />;
+          {value.trim() === '' && (<div className="py-2" />;
+              <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider" />;
                 Popular Searches;
               </div>;}
               {popularSearches.map((search) => (<button;}
                   key={search}
                   onClick={() = /> handleSuggestionSelect(search)}
-                  className=\"w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors\">
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors">
 
-                  <TrendingUp className=\"h-4 w-4 mr-3 text-zion-cyan\" />;
+                  <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan" />;
                   <span />{search}</span>;
                 </button>;
               ))}
             </div>;
           )}{/* No Results */}
-          {value.trim() && filteredSuggestions.length === 0 && (<div className=\"py-4 text-center\" />;
-              <div className=\"text-zion-slate-light text-sm mb-2\" />No results found</div>;
-              <div className=\"text-xs text-zion-slate-light\" />;
+          {value.trim() && filteredSuggestions.length === 0 && (<div className="py-4 text-center" />;
+              <div className="text-zion-slate-light text-sm mb-2" />No results found</div>;
+              <div className="text-xs text-zion-slate-light" />;
                 Try different keywords or browse our categories;
               </div>;}
             </div>;}

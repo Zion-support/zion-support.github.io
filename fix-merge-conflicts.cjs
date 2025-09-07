@@ -28,7 +28,7 @@ const files = [
 
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
     if (!content.includes('')) {

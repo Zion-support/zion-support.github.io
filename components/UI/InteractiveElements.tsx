@@ -65,23 +65,23 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 
     >
       {loading && (<motion.div;}
-          className=\'absolute inset-0 flex items-center justify-center\';}
+          className="absolute inset-0 flex items-center justify-center";}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }
-
-            />;"
-          <div className=\"w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin\"    />
-        </motion.div>
-      )}<motion.div
+}
+         />;"
+          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />;
+        </motion.div>;
+      )}<motion.div;
         className={`flex items-center gap-2 ${loading ? 'opacity-0' : 'opacity-100'}`}
         animate={{ opacity: loading ? 0 : 1 }
-
-          />;"
-        {icon && <span className=\"flex-shrink-0\"    />{icon}</span>}
+}
+       />;"
+        {icon && <span className="flex-shrink-0" />{icon}</span>}
         {children}
       </motion.div>
       {variant === 'gradient' && (<motion.div;}"
-          className=\'absolute inset-0 bg-gradient-to-r from-white/20 to-transparent\';}
+          className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent";}
           initial={{ x: '-100%' }}
           animate={{ x: isHovered ? '100%' : '-100%' }
 
@@ -128,7 +128,7 @@ const ref = useRef(null)const isInView = useInView(ref, { once: true, margin: '-
   return (<motion.div
       ref={ref}
       variants={variants}"
-      initial=\'hidden\'
+      initial="hidden";
       animate={controls}
       className={className}
         />
@@ -220,7 +220,7 @@ const ref = useRef(null)const isInView = useInView(ref, { once: true, margin: '-
   return (<motion.div
       ref={ref}
       variants={variants}"
-      initial=\'hidden\'
+      initial="hidden";
       animate={controls}
       className={className}
         />

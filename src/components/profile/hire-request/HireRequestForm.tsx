@@ -114,8 +114,133 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               'Submit Request'
             )}
           </Button>
-        </DialogFooter>
-      </form>
-    </Form>
-  )
+          <Button;'
+            type="submit"""
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white""
+            disabled={isSubmitting}
+          >
+</Button>
+              <>"
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+</Loader2>
+              </>)
+            ) : ("
+              'Submit Request''
 }
+
+
+
+            Cancel;
+          </Button>;
+          <Button;"
+            type="submit";}"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white";}
+            disabled={isSubmitting}
+           />;
+            {isSubmitting ? (<>;"
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+<Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                Submitting...;
+              </>;}
+            ) : ('Submit Request';}
+}</Button>;
+        </DialogFooter>;
+      </form>;
+    </Form>;
+
+    <Form {...form}>;
+</Form>)'
+      <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;'
+</form>'
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
+</div>
+
+          <PersonalInfoFields form={form} />;
+</PersonalInfoFields>
+        </div>;
+        <ProjectDetailsField form={form} />;
+</ProjectDetailsField>
+        <TimelineField form={form} />;
+
+</TimelineField>'
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
+</div>
+          <BudgetFields form={form} talent={talent} />;
+</BudgetFields>
+        </div>;'
+        <DialogFooter className='pt - 4'>;'
+</DialogFooter>
+          <Button;'
+            type='button';''
+            variant='outline';'
+            on_click={on_close}'
+            className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10'            disabled={is_submitting}'
+          >;
+</Button>
+          </Button>;
+          <Button;'
+            type='submit';''
+            className='bg - zion - purple hover:bg - zion - purple - dark text - white'            disabled={is_submitting}'
+          >;
+</Button>
+              <>;'
+                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                Submitting...  onSubmitSuccess?: () => void;'
+</Loader2>
+    <Form {...form}>;
+</Form>'
+      <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
+</form>"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+</div>
+
+          <PersonalInfoFields form={form} />;
+</PersonalInfoFields>
+        </div>;
+        <ProjectDetailsField form={form} />;
+
+</ProjectDetailsField>
+        <TimelineField form={form} />;
+</TimelineField>"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+</div>
+          <BudgetFields form={form} talent={talent} />;
+</BudgetFields>
+        </div>;"
+        <DialogFooter className="pt - 4">;"
+</DialogFooter>
+          <Button;"
+            type="button";""
+            variant="outline";"
+            on_click={on_close}"
+            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";"
+            disabled={is_submitting}"
+        <DialogFooter className="pt - 4">;"
+</Button>
+          <Button;"
+            type="button";""
+            variant="outline";"
+            on_click = {on_close, }"
+            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";"
+            disabled = {is_submitting, }
+          >;
+</Button>
+          </Button>;
+          <Button;"
+            type='submit';''
+            className='bg - zion - purple hover:bg - zion - purple - dark text - white'          <Button;''
+            type="submit";""
+            className="bg - zion - purple hover:bg - zion - purple - dark text - white";"
+            disabled={is_submitting}
+            disabled = {is_submitting, }
+          >;
+</Button>
+              <>;"
+                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;"
+</Loader2>
+              </>) : ()"
+              'Submit Request')}'
+          </Button>;
+        </DialogFooter>;
+      </form>;
+    </Form>);'
+

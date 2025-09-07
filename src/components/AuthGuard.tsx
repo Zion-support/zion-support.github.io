@@ -77,18 +77,32 @@ export function AuthGuard({
     allowGuest,
   ]);
 
-  // Show loading state while auth is being determined
-  if (isLoading) {
-    return (
-      fallback || (
-        <div className='flex items-center justify-center min-h-screen'>
-          <div className='flex items-center gap-2 text-muted-foreground'>
-            <Loader2 className='h-6 w-6 animate-spin' />
-            <span>Loading...</span>
-          </div>
-        </div>
-      )
-    );
+const hasRequiredRole = requireRole.some(role => userRoles.includes(role))if (!hasRequiredRole) ;
+  return (fallback || (<div className='flex flex-col items-center justify-center min-h-screen gap-4' />;
+            <Shield className='h-12 w-12 text-muted-foreground' />;
+            <div className='text-center' />;
+              <h2 className='text-xl font-semibold mb-2' />Access Denied</h2>;}
+              <p className='text-muted-foreground' />;}
+                This feature requires {requireRole.join(' or ')} privileges.;
+              </p>;
+            </div>;
+          </div>;
+        ))}
+  }// Render children if all auth checks pass;
+  return <>{children}</>;}, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest])//Show loading state while auth is being determined Please log in to access this feature. </p> </div> </div> if (!hasRequiredRole) {return fallback || (<div className="flex flex-col items-center justify-center min-h-screen gap-4"  /> <Shield className="h-12 w-12 text-muted-foreground" /> <div className="text-center"  /> <h2 className="text-xl font-semibold mb-2"  />Access Denied</h2> <p className="text-muted-foreground"  /> This feature requires {';}
+  requireRole.join ('or ')}privileges. </p> </div> </div>)// Hook for programmatic auth checks;
+
+export function useAuthGuard() {const { user, isAuthenticated, isLoading } = useAuth()const router = useRouter(;
+  const requireAuth = (if (isLoading) return false;if (!isAuthenticated) {const redirectTo = options?.redirectTo || '/login';
+
+const returnUrl = options?;) => {
+  return $3;}
+}
+  returnUrl || router.asPath;if (options?.showToast !== false) {toast({title: 'Authentication Required'}
+  description: 'Please log in to continue.',variant: 'destructive'})}router.push(`${redirectTo}?returnTo = ${encodeURIComponent(returnUrl}
+}`;
+  return false;
+    }return true;
   }
 
   // Show unauthorized state if auth is required but user is not authenticated
@@ -228,13 +242,9 @@ export function useAuthGuard() {
 }`);
 return false;
 }return true;
-};
-if (!hasRequiredRole) {;
-  if (options?.showToast !== false) {;
-  toast ({;
-  ';
-}router.push (options?.redirectTo || '/dashboard');
-return false;
-}return true;
-};
-}'"
+}if (!hasRequiredRole) {if (options?.showToast !== false) {toast ({';}
+}router.push (options?.redirectTo || '/dashboard')return false;
+}return true;"
+}}'";
+    isLoading}
+}"

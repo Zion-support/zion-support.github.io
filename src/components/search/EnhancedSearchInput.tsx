@@ -105,9 +105,60 @@ interface EnhancedSearchInputProps {;
    * Optional callback when a suggestion is selected. This allows parent;
    * components to perform actions such as navigation.;
    */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
-  placeholder?: string,;
-  /**;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,placeholder?: string,/**;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,placeholder?: string,onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  placeholder?: string;/**;
+   * Optional list of fallback suggestions (e.g. recent searches).;
+   * If provided, these will be shown when the input is empty.;
+   */;
+  searchSuggestions?: SearchSuggestion[];}
+}
+}
+
+export function EnhancedSearchInput() {searchSuggestions;}"
+}: EnhancedSearchInputProps) {import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
+import { Search, X   } from 'lucide-react';
+import { Input  } from '@/components/ui/input';
+import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
+import { SearchSuggestion  } from '@/types/search';
+
+export function EnhancedSearchInput() {const debouncedFetchSuggestions = useMemo((,) =>;}
+      debounce(async (query: string,) => {() =>;}
+      debounce(async (query: string) => {if (!query.trim()) {import { log_info, log_warn  } from '@/utils / production_logger';
+
+interface EnhancedSearchInputProps {
+  value: string,on_change: (value: string, ) => void,/**;* Optional callback when a suggestion is selected. This allows parent;
+  * components to perform actions such as navigation.;
+  */;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,placeholder?: string;  /**;
+  * Optional list of fallback suggestions (e.g. recent searches).;
+  * If provided, these will be shown when the input is empty.;
+  */;
+  search_suggestions?: SearchSuggestion[];}
+}
+}
+
+export /**;
+ * EnhancedSearchInput - Function description;
+ */;
+function EnhancedSearchInput() {import React, { useState, useEffect, useRef, useCallback, useMemo } from './react'; // Added useMemo;
+import { Input  } from '@/components / ui / input';
+import { AutocompleteSuggestions  } from '@/components / search / AutocompleteSuggestions';
+import { SearchSuggestion  } from '@/types / search';
+
+export /**;
+ * EnhancedSearchInput - Function description;
+ */;
+function EnhancedSearchInput() {const [is_focused, setIsFocused] = useState (false)const [filtered_suggestions, setFilteredSuggestions] = useState < SearchSuggestion[]>([])const [highlighted_index, setHighlightedIndex] = useState < number>(-1)const input_ref = useRef < HTMLInputElement>(null)const container_ref =;}
+  useRef < HTMLDivElement>(null)const [valueOnFocus, setValueOnFocus] = useState < string | null>(null)const [enterHandledPostFocus, setEnterHandledPostFocus] = useState (false)const { t } = use_translation ()const [api_suggestions, setApiSuggestions] = useState < SearchSuggestion[]>([])const [loading, set_loading] =;
+  useState (false)const debounced = use_debounce (value, 200;
+  const debouncedFetchSuggestions = useMemo ((, ) =>;
+      debounce (async (query: string, ) => {if () {) {$2;}
+}
+          setApiSuggestions ([]),* Optional callback when a suggestion is selected. This allows parent;
+   * components to perform actions such as navigation.;
+   */;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,placeholder?: string,/**;
    * Optional list of fallback suggestions (e.g. recent searches).;
    * If provided, these will be shown when the input is empty.;
    */;

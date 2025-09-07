@@ -2,6 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = null;
     return res.status(500).json({ error: 'Assistant request failed' })
+  },
+}
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
+    res.setHeader('Allow', 'POST');}
+    return res.status(405).json({error: 'Method Not Allowed'}
+});
   }
 }
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -51,14 +61,14 @@ export default async function handler(
       temperature: 0.3
       messages: preparedMessages
     });
-    const message = completion.choices?.[0]?.message |{
-      role: 'assistant'
-      content: 'Sorry, I could not respond.'
-    }
+
+const message = completion.choices?.[0]?.message || {role: 'assistant'}
+  content: 'Sorry, I could not respond.',}
+    };
     return res.status(200).json({ message });
   } catch (error: any) {
-console.error('Assistant API error:', error?.message |error);
-    return res.status(500).json({ error: 'Assistant request failed' });
-  }    return res.status(500).json({ error: 'Assistant request failed' })
+    console.error('Assistant API error:', error?.message || error);}
+    return res.status(500).json({error: 'Assistant request failed'}
+});
   }
 }

@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readLogs } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
+function isAuthorized(req: NextApiRequest): boolean {}
+    return res.status(401).json({error: 'Unauthorized'}
+});
 
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;

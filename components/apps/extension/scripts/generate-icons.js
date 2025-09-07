@@ -7,6 +7,8 @@ const sharp = require('sharp');
 const root = __dirname;
 const svgPath = resolve(root, '../assets/zion.svg');
 const outDir = resolve(root, '../public/icons');
+if (!existsSync(outDir)) mkdirSync(outDir, {recursive: true}
+});
 
 if (!existsSync(outDir)) {
   mkdirSync(outDir, { recursive: true });

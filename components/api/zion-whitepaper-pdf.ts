@@ -25,7 +25,24 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse;
+) {
+  const editionParam = (req.query.edition as string) || 'full';
+
+const edition =
+    editionParam === 'investor' || editionParam === 'developer'
+      ? editionParam;
+      : 'full';
+
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(}
+    'Content-Disposition'}
+    `attachment; filename="zion-protocol-${edition}.pdf"`
+  );
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
 ) {
   const editionParam = (req.query.edition as string) |'full';
   const edition =
@@ -33,8 +50,8 @@ export default async function handler(
       ? editionParam
       : 'full';
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader(
-    'Content-Disposition'
+  res.setHeader(}
+    'Content-Disposition'}"
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

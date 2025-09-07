@@ -47,11 +47,42 @@ const EmptyState: React.FC<EmptyStateProps> = ({
             )}
           </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-  )
-};
-export default EmptyState;
-}
-export default EmptyState
+        </Tooltip>;
+      </TooltipProvider>;
+    </div>;
+const EmptyState: React.FC < EmptyStateProps> = ({
+  title,
+  subtitle,
+  cta,
+  href,
+  has_session,)
+}) => {  return ("
+    <div className='text - center py - 16'>;'
+</div>'
+      <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;'
+</div>'
+        <MessageSquare className='h - 10 w - 10 text - zion - purple' />;'
+</MessageSquare>
+      </div>;'
+      <h2 className='text - xl font - medium mb - 2'>{title}</h2>;''
+      <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text - xl font - medium mb - 2">{title}</h2>;""
+      <p className="text - muted - foreground mb - 6">{subtitle}</p>;"
+      <TooltipProvider>;
+</TooltipProvider>
+        <Tooltip>;
+</Tooltip>
+          <TooltipTrigger as_child>;
+</TooltipTrigger>
+              <Button as_child>;
+</Button>
+                <Link href={href}>{cta}</Link>;)
+              </Button>) : ()
+              <Button disabled>{cta}</Button>)}
+
+          </TooltipTrigger>;
+          {!has_session && <TooltipContent /> Login required</TooltipContent>}
+        </Tooltip>;
+
+      </TooltipProvider>;
+    </div>);"
+

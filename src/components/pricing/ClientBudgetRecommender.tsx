@@ -1,15 +1,14 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  getClientBudgetSuggestion;
+
+import React, { useState } from "react",import { Button  } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import {getClientBudgetSuggestion;
   PricingSuggestion;
-  ClientBudgetParams;
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from 'lucide-react'
+  ClientBudgetParams;}
+  trackPricingSuggestion;}"
+} from "@/services/pricingSuggestionService",import { PricingSuggestionBox  } from './PricingSuggestionBox';
+import { useAuth  } from '@/hooks/useAuth';
+import { Sparkles  } from 'lucide-react';
+
 interface ClientBudgetRecommenderProps {
   jobTitle: string;
   category: string;
@@ -203,20 +202,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             onApplySuggestion={handleApplySuggestion}
             rateType='hourly'          />
         )}
-      </div>
-    </div>
-  )
-}
-if (scope) params.scope = scope
-if (experienceLevel) params.experienceLevel = experienceLevel
-//Track this suggestion application if (user && user.id) {
-  trackPricingSuggestion ({
-}
-return (<div className="space-y-4" > <div> {"
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
-  generateSuggestion "
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />)
-}</div> </div>)
-}
-'"  )
-}
+      </div>;
+    </div>;
+  )}if (scope) params.scope = scope;
+if (experienceLevel) params.experienceLevel = experienceLevel;
+//Track this suggestion application if (user && user.id) {trackPricingSuggestion ({;}"
+}return (<div className="space-y-4"  /> <div /> {";}"
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={generateSuggestion ";}"
+} /> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />)}</div> </div>)}'";"

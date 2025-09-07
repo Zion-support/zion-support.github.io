@@ -141,8 +141,40 @@ title: 'Services', items: [ {
 {
   label: 'Our Team', href: '/team' 
 }
-{
-  label: 'Careers', href: '/careers' 
+            {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants} />;
+                <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />;
+                  {section && section.title === 'Services' && (<Briefcase className='w-5 h-5 text-cyan-400' />;}
+                  )}
+                  {section && section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400' />;}
+                  )}
+                  {section && section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400' />;}
+                  )}
+                  {section && section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400' />;}
+                  )}
+                  <span />{section && section.title}</span>;
+                </h4>;
+                <ul className='space-y-3' />;
+                  {section && section.items.map(item => (<li key={item && item.label} />;
+                      <Link;
+                        href={item && item.href}
+                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl}
+}</span>;
+                </h4>;
+                <ul className="space-y-3" />;
+                  {section && section.items.map((item) => (<li key={item && item.label} />;
+                      <Link;
+                        href={item && item.href}"
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block" />;
+                        {item && item.label}
+                      </Link>;
+                    </li>;
+                  ))}
+                </ul>;
+              </motion && motion.div>;
+            ))}
+          {/* Social Links & Newsletter */}
+          <motion&& motion.div;
+            initial={{ opacity: 0, y: 20 }
 }
 {
   label: 'Investors', href: '/investors' 
@@ -164,17 +196,53 @@ title: 'Services', items: [ {
 {
   label: 'Documentation', href: '/docs' 
 }
-{
-  label: 'Support', href: '/support' 
-}] 
-}]
-const containerVariants = {
-  hidden: {
-  opacity: 0 
+                   />;
+                    <social.icon className='w - 5 h - 5' />                  </motion.a>          >;"
+            <div className="flex flex - col lg:flex - row items - center justify-between gap-8" />;
+              {/* Social Links */}"
+              <div className="flex items-center space-x-6" />;"
+                <span className="text - gray-400 font-medium" />Follow Us:</span>;
+                {social_links.map ((social) => (<motion.a;}
+                    key={social.label}
+                    href={social.href}"
+                    target="_blank";"
+                    rel="noopener noreferrer";"
+                    className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110";
+                    while_hover={{ coordinate_y: -2 }}
+                    while_tap={{ scale: 0.95 }
 }
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
+                   />;"
+                    <social.icon className="w-5 h-5" />;
+                  </motion.a>))}
+              </div>;
+              {/* Newsletter Signup */}
+              <div className='flex - 1 max - w-md' />;
+                <h5 className='text - lg font - semibold text - white mb - 3' />;
+                  Stay Updated;
+                </h5>;
+                <p className='text - gray - 400 text - sm mb - 4' />;
+                  Get the latest insights on AI consciousness, quantum;
+                  computing, and future technology.;
+                </p>;
+                <div className='flex space - x-2' />;
+                  <input;
+                    type='email';
+                    placeholder='Enter your email';
+                    className='flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent';
+                  />;
+                  <motion.button;
+                    className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover: from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 }
+}                </p />;"
+                <div className="flex space-x-2" />;
+                  <input;"
+                    type="email";"
+                    placeholder="Enter your email";"
+                    className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent";
+                  />;
+                  <motion.button;"
+                    className="px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200";
+                    while_hover={{ scale: 1.05 }}
+                    while_tap={{ scale: 0.95 }
 }
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>

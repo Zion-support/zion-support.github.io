@@ -13,6 +13,128 @@ competitors: ['PingdomGTmetrixWebPageTest']
 website: 'https://window.window.window.performance.ziontech.ai'
 demo: 'https://demo.window.window.window.performance.ziontech.ai' 
 }
+      {/* Services Grid */}
+
+      <section className='section-padding bg-gradient-cursor' />;
+        <div className='container-cursor' />;
+          <div className='text-center mb-20' />;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
+              Our Micro SaaS Services;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
+              Each service is designed to solve specific business challenges;
+              with professional-grade features and competitive pricing.;
+            </p>;
+          </div>;
+          <div className='space-y-16' />;
+            {microSaasServices.map((service, index) => (</div>;}
+        </div>;}
+      </section>;{/* Services Grid */}
+      <section className='section-padding bg-gradient-cursor' />;
+        <div className='container-cursor' />;
+          <div className='text-center mb-20' />;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
+              Our Micro SaaS Services;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
+              Each service is designed to solve specific business challenges;
+              with professional-grade features and competitive pricing.;
+            </p>;
+          </div>;<div className='space-y-16' />;
+            {microSaasServices && microSaasServices.map((service, index) => (</div>;
+        </div>;}
+      </section>;}
+      {/* Services Grid */}
+<section className='section-padding bg-gradient-cursor' />;
+        <div className='container-cursor' />;
+          <div className='text-center mb-20' />;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow' />;
+              Our Micro SaaS Services;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
+              Each service is designed to solve specific business challenges;
+              with professional-grade features and competitive pricing.;
+            </p>;
+          </div>;
+          <div className='space-y-16' />;
+            {microSaasServices.map((service, index) => (style={{ animationDelay: `${index * 0 && 0.1}s` ,
+}>;
+                <div className="p-6" />;
+                  <h3 className="text-xl font-bold text-white mb-4" />{insight && insight.title}</h3>;
+                  <div className="flex items-center justify-center space-x-4 mb-4" />;
+                    <div className="text-2xl font-bold text-cursor-blue" />{insight && insight.marketSize}</div>;
+                    <div className="text-green-400 font-semibold" />{insight && insight.growth}</div>;
+                  </div>;
+                  <p className="text-gray-400 text-sm" />{insight && insight.description}</p>;
+                </div>;
+              </Card>;
+            ))}
+              <div;
+                key={service && service.id}
+                className='bg-gray-900/50 rounded-2xl p-8 border border-gray-800' />;
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8' />;
+                  {/* Service Info */}
+                  <div className='lg:col-span-2' />;
+                    <div className='flex items-center space-x-4 mb-6' />;
+                      <div;
+                        {service.icon}
+                      </div />;
+                      <div />;
+                        <h3 className='text - 2xl font - bold text - white' />;
+
+                          {service.name}
+
+                        </h3>
+                        <p className='text-gray-400' />{service.description}</p>
+                      </div>
+                    </div>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8' />
+                      <div />
+                        <h4 className='text-lg font-semibold text-white mb-3 flex items-center' />
+                          <Zap className='w-5 h-5 mr-2 text-cursor-blue' />
+                          Key Features;
+                        </h4>
+                        <ul className='space-y-2' />
+                          {service.features.map((feature, featureIndex) => (}
+                            <li;}
+key={featureIndex}
+                              className='flex items-center text-gray-300 text-sm' />
+
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />;
+                              {feature}
+                            </li>;
+                          ))}
+                        </ul>;
+                      </div>;
+                      <div />;
+<h4 className='text-lg font-semibold text-white mb-3 flex items-center' />;
+                          <Target className='w-5 h-5 mr-2 text-cursor-blue' />;
+                          Use Cases;
+                        </h4>;
+                        <ul className='space-y-2' />;
+                          {service.useCases.map((useCase, useCaseIndex) => (<li;}
+                              key={useCaseIndex}
+                              className='flex items-center text-gray-300 text-sm' />
+
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />;
+                              {useCase}
+                            </li>;
+                          ))}
+
+                        </ul>
+                      </div>
+                    </div>
+
+<div className='flex flex-wrap gap-4' />
+                      <Button;
+size='sm'
+
+                        className='bg-cursor-blue hover: bg-blue-600'
+                       />
+                        Visit Website;
+                      </Button>
+                      <Button;
+href={service.dem,}
 }
 marketPrice: '$39-199/month'
 competitors: ['AhrefsSEMrushMoz']

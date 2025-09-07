@@ -9,7 +9,56 @@ const serviceCategories = [ {
   name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' 
 }
 {
-  name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' 
+    name: 'Instagram',
+  href: '#',
+    icon: Instagram}
+    color: 'hover:text-pink-400'}
+  }
+];
+
+const EnhancedFooter2025: React.FC = () => {
+ ;
+  const currentYear = new Date().getFullYear()
+ ;
+  return (}
+<footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50' />}
+      {/* Background Effects */}
+      <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' /></div>
+      <div className='relative z-10' />
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" />;"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12" />;
+            {/* Company Info */}
+
+            <div className='lg:col-span-1' />
+              <div className='flex items-center space-x-3 mb-6' />
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center' />
+                  <Star className='w-7 h-7 text-white' />
+                </div>
+                <div />
+                  <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent' />
+                    Zion Tech Group;
+                  </div>
+                  <div className='text-sm text-gray-400' />
+                    Future Technology Solutions;
+                  </div>
+                </div>
+              </div>
+              <p className='text-gray-400 mb-6 leading-relaxed' />
+                Leading the future with revolutionary AI, quantum computing, and;
+emerging technology solutions that transform businesses;
+worldwide.
+              </p>
+
+              {/* Contact Info */}
+              <div className='space-y-3' />;
+                <div className='flex items-center space-x-3 text-gray-300' />;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <a;
+                    href={`tel: ${contactInfo.mobile}`}
+                    className='hover:text-cyan-400 transition-colors' />
+
+                    {contactInfo.mobil}
 }
 {
   name: 'AI Ethics & Governance', href: '/ai-ethics-governance' 
@@ -36,8 +85,32 @@ const serviceCategories = [ {
   title: 'Enterprise IT', icon: Shield, services: [ {
   name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' 
 }
-{
-  name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' 
+                  </Link>;
+                ))}
+              </div>;
+            </div>;
+                    {link.name}
+                  </Link>;
+                ))}
+              </div>;
+            </div>;
+                    {link.name}</div>;"
+            </div>;className="block text - gray - 400 hover: text - white transition - colors duration - 200 text - sm">
+
+                ))}
+
+            {/* Legal Links */}
+
+            <div />
+<h4 className='text-white font-semibold mb-4' />Legal</h4>
+              <div className='space-y-2' />
+                {legalLinks.map(link => (}
+                  <Link;}
+key={link.name}
+                    href={link.href}
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm' />
+
+                    {link.nam}
 }
 {
   name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' 
@@ -59,8 +132,25 @@ const serviceCategories = [ {
 {
   name: 'CyberShield Pro', href: '/cyber-shield-pro' 
 }
-{
-  name: 'DataVault Hub', href: '/data-vault-hub' 
+
+className='text-gray-400 mb-6 max-w-2xl mx-auto'
+               />
+                Get the latest insights on AI, quantum computing, and emerging;
+technologies delivered to your inbox.
+              </motion.p>"
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
+              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>
+              
+              <motion.div;
+className='text-gray-400 mb-6 max-w-2xl mx-auto' />;
+                Get the latest insights on AI, quantum computing, and emerging;
+                technologies delivered to your inbox.;
+              </motion && motion.p>              >;
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
+              </motion && motion.p>;
+                initial={{ opacity: 0, y: 20 }
 }
 {
   name: 'DevOps Automation Studio', href: '/devops-automation-studio' 

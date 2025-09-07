@@ -20,72 +20,28 @@ interface DiscussionPost {
   body: string
 const initialPosts: DiscussionPost[] = [
   {
-    id: 1,  time: string
-  title: string
-
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-interface DiscussionPost {
-  id: number,
-  author: string,
-  avatar?: string,
-  time: string,
-  title: string,
-  body: string
-}
-const initialPosts: DiscussionPost[] = [
-  {
-    author: "Anna Zhou",
-    time: "2h ago",
-    title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+    id: 1,
+    author: 'John Doe',
+    avatar: 'JD',
+    time: '2 hours ago',
+    title: 'Best practices for React performance optimization',
+    body: 'I've been working on optimizing a large React application and wanted to share some techniques that have worked well for me...'
+  },
   {
     id: 2,
-    author: "David Kim",
-    time: "50m ago",
-    title: "Quick tip: How to rank your Zion listing higher",
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
-
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts),
-  const [showNew, setShowNew] = useState(false),
-  const [newTitle, setNewTitle] = useState(""),
-  const [newBody, setNewBody] = useState(""),
-
-    id: 1
-    author: 'Anna Zhou'
-    time: '2h ago'
-    title: 'What AI trends are you most excited for in 2025?'
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
-  }
-    id: 2
-    author: 'David Kim'
-    time: '50m ago'
-    title: 'Quick tip: How to rank your Zion listing higher'
-    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'
-  }
-]
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts)
-  const [showNew, setShowNew] = useState(false)
-  const [newTitle, setNewTitle] = useState('')
-  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
-  const [newBody, setNewBody] = useState("")
-  const handleAddPost = () => {
-    if (!newTitle.trim() |!newBody.trim()) return
-    setPosts([
-      {
-        id: Date.now()
-        author: 'You'
-        time: 'Now'
-        title: newTitle
-        body: newBody
-      }
-      ...posts
-    ])
-    setNewTitle('')
-    setNewBody('')
-    setShowNew(false)
+    author: 'Jane Smith',
+    avatar: 'JS',
+    time: '4 hours ago',
+    title: 'TypeScript vs JavaScript for large projects',
+    body: 'What are your thoughts on using TypeScript for large-scale applications? I'm considering migrating our codebase...'
+  },
+  {
+    id: 3,
+    author: 'Mike Johnson',
+    avatar: 'MJ',
+    time: '1 day ago',
+    title: 'Database design patterns for microservices',
+    body: 'I'm architecting a microservices system and would love to hear about database design patterns that work well...'
   }
         author: 'You',
         time: 'Now',

@@ -6,6 +6,10 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
   testMatch: [
     '**/__tests__/**/*.(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -24,8 +28,8 @@ const customJestConfig = {
     '/src_backup/',
     '/src.disabled/'
   ],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
   testTimeout: 30000,
   passWithNoTests: true

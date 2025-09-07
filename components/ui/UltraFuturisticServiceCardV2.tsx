@@ -133,20 +133,20 @@
 
 origin/cursor/automate-test-improve-and-merge-code-2533
             {service.popular && (
-              <motion.div
-        <div className=\"absolute inset-0 opacity-5\"    />;"
-          <div className=\"absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400\"    /></div>;"
-          <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]\"    /></div>;}
+              <motion.div;
+        <div className="absolute inset-0 opacity-5" />;"
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400" /></div>;"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]" /></div>;}
         </div>;}
         {/* Header */}"
-        <div className=\"relative z-10 mb-6\"    />;"
-          <div className=\"flex items-start justify-between mb-4\"    />;"
-            <div className=\"flex items-center space-x-3\"    />;"
-              <div className=\"text-3xl\"    />{service && service.icon}</div>
-              <div    />;"
-                <div className=\"flex items-center space-x-2\"    />
+        <div className="relative z-10 mb-6" />;"
+          <div className="flex items-start justify-between mb-4" />;"
+            <div className="flex items-center space-x-3" />;"
+              <div className="text-3xl" />{service && service.icon}</div>;
+              <div />;"
+                <div className="flex items-center space-x-2" />;
                   {getCategoryIcon(service && service.category)}"
-                  <span className=\"text-xs font-medium text-gray-400 uppercase tracking-wider\"    />
+                  <span className="text-xs font-medium text-gray-400 uppercase tracking-wider" />;
                     {service && service.category}
                   </span>
                 </div>
@@ -239,9 +239,9 @@ transition={{ delay: 0.5, type: 'spring'}
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features
           </h4>;"
-          <div className='space-y-2'    />            {service && service.features.slice(0, 3).map((feature, idx) => (        <div className=\"relative z-10 mb-6\"    />;"
-          <h4 className=\"text-sm font-semibold text-gray-300 mb-3\"    />Key Features</h4>;"
-          <div className=\"space-y-2\"    />;}
+          <div className='space-y-2' />            {service && service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6" />;"
+          <h4 className="text-sm font-semibold text-gray-300 mb-3" />Key Features</h4>;"
+          <div className="space-y-2" />;}
             {service && service.features.slice(0, 3).map((feature, idx) => (<motion&& motion.div;}
                 key={idx}
                 initial={{ opacity: 0, x: -20 }
@@ -254,14 +254,14 @@ transition={{ delay: 0.5, type: 'spring'}
                 <span className='text-gray-300'    />{feature}</span>
               </motion && motion.div>
             ))}
-            {service && service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2'    />                +{service && service.features.length - 3} more features              >;"
-                <div className=\"w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full\"    /></div>;"
-                <span className=\"text-gray-300\"    />{feature}</span>
-              </motion && motion.div>
+            {service && service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2' />                +{service && service.features.length - 3} more features              >;"
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full" /></div>;"
+                <span className="text-gray-300" />{feature}</span>;
+              </motion && motion.div>;
             ))}"
-            {service && service.features.length > 3 && (<div className=\"text-xs text-gray-500 mt-2\"    />;}
-                +{service && service.features.length - 3} more features
-              </div>
+            {service && service.features.length > 3 && (<div className="text-xs text-gray-500 mt-2" />;}
+                +{service && service.features.length - 3} more features;
+              </div>;
                 key={idx}
                 initial={{ opacity: 0, coordinate_x: -20 }
 
@@ -274,9 +274,9 @@ transition={{ delay: 0.5, type: 'spring'}
           <h4 className='text-sm font-semibold text-gray-300 mb-3'    />
             Key Benefits
           </h4>;"
-          <div className='space-y-2'    />            {service && service.benefits.slice(0, 2).map((benefit, idx) => (        <div className=\"relative z-10 mb-6\"    />;"
-          <h4 className=\"text-sm font-semibold text-gray-300 mb-3\"    />Key Benefits</h4>;"
-          <div className=\"space-y-2\"    />;}
+          <div className='space-y-2' />            {service && service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6" />;"
+          <h4 className="text-sm font-semibold text-gray-300 mb-3" />Key Benefits</h4>;"
+          <div className="space-y-2" />;}
             {service && service.benefits.slice(0, 2).map((benefit, idx) => (<motion&& motion.div;}
                 key={idx}
                 initial={{ opacity: 0, x: -20 }
@@ -393,17 +393,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-gray-400'    />Growth Rate</span>
                 <span className='text-green-400 font-medium'    />
                   {service && service.growthRate}"
-                </span>              </div>          <div className=\"relative z-10 mb-6\"    />;"
-            <div className=\"bg-gray-800/30 rounded-lg p-3 border border-gray-600/20\"    />;"
-              <div className=\"flex items-center justify-between text-xs\"    />;"
-                <span className=\"text-gray-400\"    />Market Size</span>;"
-                <span className=\"text-cyan-400 font-medium\"    />{service && service.marketSize}</span>
+                </span>              </div>          <div className="relative z-10 mb-6" />;"
+            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20" />;"
+              <div className="flex items-center justify-between text-xs" />;"
+                <span className="text-gray-400" />Market Size</span>;"
+                <span className="text-cyan-400 font-medium" />{service && service.marketSize}</span>;
               </div>;"
-              <div className=\"flex items-center justify-between text-xs mt-1\"    />;"
-                <span className=\"text-gray-400\"    />Growth Rate</span>;"
-                <span className=\"text-green-400 font-medium\"    />{service && service.growthRate}</span>
-            </div>
-          </div>
+              <div className="flex items-center justify-between text-xs mt-1" />;"
+                <span className="text-gray-400" />Growth Rate</span>;"
+                <span className="text-green-400 font-medium" />{service && service.growthRate}</span>;
+            </div>;
+          </div>;
+
         )}
         {/* CTA Button */}
         <div className='relative z-10'>          <motion.a
@@ -430,8 +431,8 @@ href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
 }"
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className=\"relative z-10\"    />
-          <motion&& motion.a
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10" />;
+          <motion&& motion.a;
             href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }
@@ -442,20 +443,16 @@ href={service && service.link}
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200'    />
             </span>;</motion.a>
             {/* Button glow effect */}
-            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'    /></div>          </motion && motion.a>          >;"
-            <span className=\"relative z-10 flex items-center space-x-2\"    />
-              <span    />Learn More</span>;"
-              <ArrowRight className=\"w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200\"    />
-            </span>
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300' /></div>          </motion && motion.a>          >;"
+            <span className="relative z-10 flex items-center space-x-2" />;
+              <span />Learn More</span>;"
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />;
+            </span>;
             {/* Button glow effect */}"
-            <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300\"    /></div>
-          </motion && motion.a>
-        </div>;</motion.a>
-        </div>
-          </motion.a>
-
-        </div>
-
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" /></div>;
+          </motion && motion.a>;
+        </div>;</motion.a>;
+        </div>;
         {/* Hover overlay */}
         <motion&& motion.div
           initial={{ opacity: 0 }}

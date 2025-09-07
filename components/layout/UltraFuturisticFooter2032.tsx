@@ -359,33 +359,28 @@ target='_blank'
                   type='email''
                   placeholder='Enter your email address''
                   className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
-"
-          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">"
-            <div className="text-center">"
-              <h3 className="text-2xl font-bold text-white mb-4">
+                />
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105' />
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" />
 
-                    </a>
+                />;
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105' />                  Subscribe                Stay Ahead with Future Technology;
+              </h3>;"
+              <p className="text-slate-300 mb-8 max-w-2xl mx-auto" />;
+                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
+              </p>;"
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" />;
 
-              <div>
-<h4 className='text-lg font-medium text-white mb-4'>
-                  Follow Us
-                </h4>
-                <div className='flex space-x-4'>
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-target='_blank'
-                      rel='noopener noreferrer'
-                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
-                    >
-                      <social.icon className='w-5 h-5' />                    </a>                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
-                    >
-                      <social.icon className="w-5 h-5" />
-                  ))}
-                </div>
+                <input;"
+type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+
+                />"
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105" />
+                  Subscribe;
+                </button>
               </div>
             </motion.div>
           </div>

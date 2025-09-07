@@ -1,9 +1,8 @@
 import React from 'react';
 
-const ModernLayoutDynamic = () => {
-  return (
-    <div data-testid="modernlayout-dynamic">
-      <h1>ModernLayout Dynamic</h1>
+const ModernLayout.dynamic = () => ;
+  return (<div data - testid="modernlayout.dynamic" />;
+      <h1 /> ModernLayout.dynamic</h1>
     </div>
   );
 };

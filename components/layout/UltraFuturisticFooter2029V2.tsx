@@ -453,12 +453,87 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
           </div>
-          {/* Service Categories */}
-          {footerSections.map((section, index) => (
-            <motion.div
-              key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+
+              viewport={{ once: true }
+}>;
+              <Link href='/' className='flex items-center space-x-3 mb-6 group' />;
+                <div className='relative' />;
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300' />;
+                    <Rocket className='w-7 h-7 text-white' />;
+                  </div>;
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
+                </div>;
+                <div />;
+                  <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />;
+                    Zion Tech Group;
+                  </h3>;
+                  <p className='text-sm text-gray-400' />;
+                    Future Technology Solutions;
+                  </p>;
+                </div>;
+              </Link>;<p className='text-gray-300 mb-6 leading-relaxed' />;
+                Leading the future with cutting-edge AI, quantum computing,space technology, and innovative micro SAAS solutions.;
+                Transforming businesses through next-generation technology.;
+              </p>;
+              {/* Contact Info */}
+              <div className='space-y-3' />;
+                <div className='flex items-center space-x-3 text-gray-300' />;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm' />{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-gray-300' />;
+                  <Mail className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm' />{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-gray-300' />;
+                  <MapPin className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm' />{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-gray-300' />;
+                  <Globe className='w-4 h-4 text-cyan-400' />;
+                  <span className='text-sm' />{contactInfo && contactInfo.website}</span>                </div>                  </div>;
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
+                </div>;
+                <div />;"
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" />;
+                    Zion Tech Group;
+                  </h3>;"
+                  <p className="text-sm text-gray-400" />Future Technology Solutions</p>;
+                </div>;
+              </Link>;"
+              <p className="text-gray-300 mb-6 leading-relaxed" />;
+                Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. ;
+                Transforming businesses through next-generation technology.;
+              </p>;
+              {/* Contact Info */}"
+              <div className="space-y-3" />;"
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <Phone className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.mobile}</span>;
+                </div>;"
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <Mail className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.email}</span>;
+                </div>;"
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <MapPin className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.address}</span>;
+                </div>;"
+                <div className="flex items-center space-x-3 text-gray-300" />;"
+                  <Globe className="w-4 h-4 text-cyan-400" />;"
+                  <span className="text-sm" />{contactInfo && contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;{/* Service Categories */}
+          {footerSections && footerSections.map((section, index) => (<motion&& motion.div;}
+              key={section && section.title}
+              initial={{ opacity: 0, y: 20 }
+}
+
+              whileInView={{ opacity: 1, y: 0 }
+}
+
               transition={{ duration: 0.6, delay: index * 0.1 }}
 
               viewport={{ once: true }

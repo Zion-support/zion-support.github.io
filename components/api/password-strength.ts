@@ -34,7 +34,21 @@ interface PasswordStrengthResult {
 }
 export default async function handler(
 
-  req: NextApiRequest
+  req: NextApiRequest;
+  res: NextApiResponse<PasswordStrengthResult | { error: string } />
+) {
+  if (req.method !== 'POST') {}
+return res.status(405).json({ error: 'Method not allowed'}
+});
+  }
+  try {}
+    const { password } = req.body;
+    if (!password || typeof password !== 'string') {}
+      return res.status(400).json({ error: 'Password is required'}
+});
+    }
+    // Password analysis;
+const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
 
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {

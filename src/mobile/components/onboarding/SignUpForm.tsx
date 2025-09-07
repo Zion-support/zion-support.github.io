@@ -18,21 +18,46 @@ import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
-  const router = useRouter()
-  const { signUp, login, loginWithGoogle } = useAuth()
-  const [formData, setFormData] = useState({
-    email: ""
-    password: ""
-    name: ""})
-  const [isLoading, setIsLoading] = useState(false)
-  const [signupMode, setSignupMode] = useState(true)
-  const [error, setError] = useState("")
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+
+;'
+import { use_router } from 'next/router';''
+import Link from 'next / link';''
+import { use_auth  } from '@/context / auth / AuthProvider';''
+import { AlertCircle } from 'lucide-react'import { use_router } from 'next/router';''
+import { AlertCircle } from 'lucide-react';''
+import { Alert, AlertDescription  } from '@/components/ui/ alert';''
+import { PasswordStrengthMeter  } from '@/components/ PasswordStrengthMeter';''
+import {logErrorToProduction} from '@/utils/ production_logger';'
+export /**
+ * SignUpForm - Function description;
+ */
+function SignUpForm() {
+  const router = use_router ();
+  const { sign_up, login, loginWithGoogle } = use_auth ();
+  const [form_data, setFormData] = useState ({'
+    email: "",""
+    password: "",")"
+    name: ""}),"
+    }
+    if (!formData.email.trim()) {"
+      errors.email = 'Email is required''
+    } else if (!emailRegex.test(formData.email)) {'
+      errors.email = 'Invalid email address''
+    }
+    if (!formData.password) {'
+      errors.password = 'Password is required''
+    } else if (!strongPasswordRegex.test(formData.password)) {'
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.''
+
+    }
+    try {setShowVerificationMessage(false), // Reset verification message;}
+      if (signupMode) {const result = await signUp(formData.email, formData.password, {name: formData.nam}
+})if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;if (Object.keys(errors).length > 0) {setFieldErrors(errors),setIsLoading(false),return;}
+    }try {setShowVerificationMessage(false), // Reset verification message;}
+      if (signupMode) {if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;}
+        }if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;}"
+          router.push("/mobile")if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;if (error) {throw new Error(error)}router.push("/mobile")router.push("/mobile")}
+    } catch (err: any) {logErrorToProduction('Signup/Login error:', { data: err })setError(err.message |'An unexpected error occurred. Please try again.')} finally {setIsLoading(false)}
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

@@ -31,13 +31,9 @@ app.command('/zion', async ({ command, ack, respond }) => {
   const text = (command.text |'').trim();
   const [sub, ...rest] = text.split(' ');
   const userId = command.user_id;
-  try {
-    if (!sub |sub.toLowerCase() === 'help') {
-      await respond({ response_type: 'ephemeral', text: helpText() });
-      return;    }
-    if (sub === 'post-job') {
-      const role = rest.join(' ') |'Cloud Engineer';
-      const res = await fetch(`${apiBase}/jobs/generate`, {      return
+  try {if (!sub |sub.toLowerCase() === 'help') {await respond({response_type: 'ephemeral'}
+  text: helpText(),}
+})return;
     }
     if (sub === 'post-job') {
       const role = rest.join(' ') |'Cloud Engineer';
@@ -60,78 +56,42 @@ app.command('/zion', async ({ command, ack, respond }) => {
         {
           headers: { 'x-user-id': userId }
         }
-      );
-      const data = (await res.json()) as any;
-      const lines = (data.results |[])
-        .slice(0, 5)
-        .map(
-          (t: any) =>
-            `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0, 3).join(', ') |''}`
-        );
-      await respond({
-        response_type: 'ephemeral'
-        text: lines.length ? lines.join('\n') : 'No matches yet.'
-      });
+      ,
+})return;
+    }
+    if (sub = == 'track-project') ;
+  const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`;
+        {headers: { 'x-user-id': userId }
+       ,
+}
+      )const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({response_type: 'ephemeral';}
+          text: 'Project not found.';}
+        })return;
+      }
+      await respond({})return;
+    }
+    await respond({response_type: 'ephemeral'}
+  text: helpText() })} catch (err: any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name,}
+}/track`, {headers: { 'x-user-id': userId }
+     ,
+};
+  const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({response_type: 'ephemeral'}
+  text: 'Project not found.',}
+})return;
+      }
       return;
     }
-    if (sub === 'track-project') {
-      const name = rest.join(' ') |'Kleber';
-      const res = await fetch(
-        `${apiBase}/projects/${encodeURIComponent(name)}/track`
-        {
-          headers: { 'x-user-id': userId }
-        }
-      );
-      const data = (await res.json()) as any;
-      if (!data.project) {
-        await respond({
-          response_type: 'ephemeral'
-          text: 'Project not found.'
-        });
-        return;
-      }
-      await respond({
-        response_type: 'ephemeral'
-        text: `*${data.project.name}* – status: ${data.project.status}\nMilestones: ${JSON.stringify(data.project.milestones)}`
-      });
-      return;
-    }
-    await respond({ response_type: 'ephemeral', text: helpText() });
+
+    await respond({response_type: 'ephemeral'}
+  text: helpText(),}
+});
   } catch (err: any) {
-    await respond({
-      response_type: 'ephemeral'
-      text: `Error: ${err.message |'unknown'}`
-    });  }      });
-      const data = (await res.json()) as any;
-      await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
-      return
-    }
-    if (sub === 'suggest-talent') {
-      const q = rest.join(' ') |'AI researcher in Brazil';
-      const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
-        headers: { 'x-user-id': userId }
-      });
-      const data = (await res.json()) as any;
-      const lines = (data.results |[]).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join() |''}`);
-      await respond({ response_type: 'ephemeral', text: lines.length ? lines.join('\n') : 'No matches yet.' });
-      return
-    }
-    if (sub === 'track-project') {
-      const name = rest.join(' ') |'Kleber';
-      const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
-        headers: { 'x-user-id': userId }
-      });
-      const data = (await res.json()) as any;
-      if (!data.project) {
-        await respond({ response_type: 'ephemeral', text: 'Project not found.' });
-        return
-      }
-      await respond({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\nMilestones: ${JSON.stringify(data.project.milestones)}` });
-      return
-    }
-    await respond({ response_type: 'ephemeral', text: helpText() })
-  } catch (err: any) {
-    await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
+    await respond({response_type: 'ephemeral'}
+  text: `Error: ${err.message || 'unknown,}
+}`,
+    });
   }
 });
 (async () => {

@@ -89,10 +89,12 @@ export default function AIDiagnosticPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='mb-8'
-          >
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
+            transition={{duration: 0.8 }
+}
+className='mb-8'
+           />
+
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6' />
               <Stethoscope className='w-4 h-4 mr-2' />
               Healthcare Technology
             </div>
@@ -163,10 +165,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
-          >
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{once: true }
+}
 
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Medical Technology
@@ -189,20 +190,22 @@ analysis and comprehensive healthcare solutions.
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'    />
             {features.map((feature, index) => (
-              <motion.div
-className='text-center mb-16'    />
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'    />
-              Revolutionary Medical Technology
-            </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />
-              Experience the future of medical diagnostics with AI-powered
-              analysis and comprehensive healthcare solutions.
-            </p>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Medical Technology
-            </h2>
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />
-              Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.
+              <motion.div;
+className='text-center mb-16' />;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6' />;
+              Revolutionary Medical Technology;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto' />;
+              Experience the future of medical diagnostics with AI-powered;
+              analysis and comprehensive healthcare solutions.;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8' />            {features && features.map((feature, index) => (          >;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
+              Revolutionary Medical Technology;
+            </h2>;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
+              Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.;
             </p>;}
           </motion && motion.div>;}
                 key={index}
@@ -251,10 +254,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
-          >
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{once: true }
+}
 
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Choose Your Plan
@@ -277,20 +279,22 @@ sizes, from clinics to large hospital systems.
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'    />
             {pricingPlans.map((plan, index) => (
-              <motion.div
-className='text-center mb-16'    />
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'    />
-              Choose Your Plan
-            </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />
-              Flexible pricing options designed for healthcare providers of all
-              sizes, from clinics to large hospital systems.
-            </p>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Choose Your Plan
-            </h2>
-            <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />
-              Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.
+              <motion.div;
+className='text-center mb-16' />;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6' />;
+              Choose Your Plan;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto' />;
+              Flexible pricing options designed for healthcare providers of all;
+              sizes, from clinics to large hospital systems.;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            {pricingPlans && pricingPlans.map((plan, index) => (          >;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
+              Choose Your Plan;
+            </h2>;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
+              Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.;
             </p>;}
           </motion && motion.div>;}
                 key={index}
@@ -359,20 +363,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-                </ul>
-                <button className=\"w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300\"    />
-<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'    />
-                  Get Started
-                </button>
-              </motion.div>
+                </ul>;
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300" />;
+<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300' />;
+                  Get Started;
+                </button>;
+              </motion.div>;
             ))}
-          </div>
-        </div>
-      </section>
-                </ul>;<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'    />                  Get Started                <button className=\"w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300\"    />
-                  Get Started
-                </button>
-              </motion && motion.div>
+          </div>;
+        </div>;
+      </section>;
+                </ul>;<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300' />                  Get Started                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300" />;
+                  Get Started;
+                </button>;
+              </motion && motion.div>;
             ))}
           </div>
         </div>
@@ -382,22 +386,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='py-20 bg-gradient-to-b from-slate-900 to-black'    />
 
       {/* Contact Section */}
-
-      {/* Contact Section */}
-      <section'
-        id='contact''
-        className='py-20 bg-gradient-to-b from-slate-900 to-black'>;'"
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+      <section;
+        id='contact';
+        className='py-20 bg-gradient-to-b from-slate-900 to-black' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />          <motion && motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />;
+          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 ,}
+}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
           >
 
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            viewport={{once: true }
+}
+
+className='text-center mb-16'
+           />
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6' />
               Ready to Transform Healthcare?
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />
@@ -416,12 +424,30 @@ Platform can revolutionize your medical practice.
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />
+            <motion.div;
+className='text-center mb-16' />;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6' />;
+              Ready to Transform Healthcare?;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto' />;
+              Contact our team to learn more about how AI Diagnostic Pro;
+              Platform can revolutionize your medical practice.;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8' />            <motion && motion.div           />;
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" />;
+              Ready to Transform Healthcare?;
+            </h2>;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />;
+              Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.;
+            </p>;
+          </motion && motion.div>;initial={{ opacity: 0, y: 30 ,}
+}
+              whileInView={{ opacity: 1, y: 0 ,}
+}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+
               viewport={{ once: true }}
               className='text-center'
             >
@@ -439,10 +465,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text-gray-300'>{contactInfo.mobile}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <motion.div;
+className='text-center' />;
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4' />;
+                <Phone className='w-8 h-8 text-white' />;
+              </div>;
+              <h3 className='text-xl font-semibold text-white mb-2' />Phone</h3>;
+              <p className='text-gray-300' />{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>            >;
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
+                <Phone className="w-8 h-8 text-white" />;
+              </div>;
+              <h3 className="text-xl font-semibold text-white mb-2" />Phone</h3>;
+              <p className="text-gray-300" />{contactInfo && contactInfo.mobile}</p>;
+            </motion && motion.div>;
+              initial={{ opacity: 0, y: 30 ,}
+}
+              whileInView={{ opacity: 1, y: 0 ,}
+}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+
               viewport={{ once: true }}
               className='text-center'
             >
@@ -460,10 +501,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text-gray-300'>{contactInfo.email}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            <motion.div;
+className='text-center' />;
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4' />;
+                <Mail className='w-8 h-8 text-white' />;
+              </div>;
+              <h3 className='text-xl font-semibold text-white mb-2' />Email</h3>;
+              <p className='text-gray-300' />{contactInfo && contactInfo.email}</p>            </motion && motion.div>            >;
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4" />;
+                <Mail className="w-8 h-8 text-white" />;
+              </div>;
+              <h3 className="text-xl font-semibold text-white mb-2" />Email</h3>;
+              <p className="text-gray-300" />{contactInfo && contactInfo.email}</p>;
+            </motion && motion.div>;
+              initial={{ opacity: 0, y: 30 ,}
+}
+              whileInView={{ opacity: 1, y: 0 ,}
+}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+
               viewport={{ once: true }}
               className='text-center'
             >

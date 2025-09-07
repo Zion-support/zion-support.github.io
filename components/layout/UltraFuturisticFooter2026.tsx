@@ -72,8 +72,200 @@ const serviceCategories = [ {
   {
   opacity: 0, y: 20 
 }
-{
-            <motion.div
+{name: 'AI Autonomous Clinical Trials'}
+  href: '/ai-autonomous-clinical-trials';}
+}];
+}];
+{/* Background Effects */;}
+}<div className="absolute inset-0 overflow-hidden"  /> <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]"  /></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]"  /></div> </div> <motion.div initial= {{title: 'AI & Automation';
+    services: [;
+      {name: 'AI Autonomous Business Processor';}
+        href: '/ai-autonomous-business-processor';}
+      }
+      {name: 'AI Predictive Enterprise Analytics';}
+        href: '/ai-predictive-enterprise-analytics';}
+      }
+      {name: 'AI Autonomous Customer Success';}
+        href: '/ai-autonomous-customer-success';}
+      }
+      {name: 'AI Autonomous Marketing Orchestrator';}
+        href: '/ai-autonomous-marketing-orchestrator';}
+      }
+      {name: 'AI Autonomous Sales Intelligence';}
+        href: '/ai-autonomous-sales-intelligence';}
+      }
+    ];
+  }
+  {title: 'Cybersecurity & Quantum';
+    services: [;
+      {name: 'Quantum Encryption Platform';}
+        href: '/quantum-encryption-platform';}
+      }
+      {name: 'AI Autonomous Threat Hunter';}
+        href: '/ai-autonomous-threat-hunter';}
+      }
+      {name: 'Quantum Zero Trust Security';}
+        href: '/quantum-zero-trust-security';}
+      }
+      {name: 'AI Autonomous Vulnerability Scanner';}
+        href: '/ai-autonomous-vulnerability-scanner';}
+      }
+      {name: 'Quantum Secure Communication';}
+        href: '/quantum-secure-communication';}
+      }
+    ];
+  }
+  {title: 'Fintech & Blockchain';
+    services: [;
+      {name: 'Quantum Financial Trading Platform';}
+        href: '/quantum-financial-trading-platform';}
+      }
+      {name: 'AI Autonomous Wealth Management';}
+        href: '/ai-autonomous-wealth-management';}
+      }
+      {name: 'Quantum Blockchain Finance';}
+        href: '/quantum-blockchain-finance';}
+      }
+      {name: 'AI Autonomous Insurance Platform';}
+        href: '/ai-autonomous-insurance-platform';}
+      }
+      {name: 'Quantum Payment Processing';}
+        href: '/quantum-payment-processing';}
+      }
+    ];
+  }
+  {title: 'Healthcare & Biotech';
+    services: [;
+      {name: 'AI Autonomous Medical Diagnostics';}
+        href: '/ai-autonomous-medical-diagnostics';}
+      }
+      {name: 'Quantum Drug Discovery Platform';}
+        href: '/quantum-drug-discovery-platform';}
+      }
+      {name: 'AI Autonomous Patient Care';}
+        href: '/ai-autonomous-patient-care';}
+      }
+      { name: 'Quantum Genomic Analysis'}
+  href: '/quantum-genomic-analysis'}
+}
+
+      {
+
+        name: 'AI Autonomous Clinical Trials'}
+  href: '/ai-autonomous-clinical-trials'}
+      }
+    ]
+  }
+];
+
+const companyLinks = [
+    { name: 'About Us'}
+  href: '/about'}
+},
+
+    { name: 'Leadership Team'}
+  href: '/leadership'}
+},
+
+    { name: 'Careers'}
+  href: '/careers'}
+},
+
+    { name: 'News & Press'}
+  href: '/news'}
+},
+
+    { name: 'Partners'}
+  href: '/partners'}
+},
+
+    { name: 'Investors'}
+  href: '/investors'}
+},
+
+    { name: 'Contact Us'}
+  href: '/contact'}
+},
+
+
+  { name: 'Locations'}
+  href: '/locations'}
+}
+
+];
+
+const resourceLinks = [
+    { name: 'Documentation'}
+  href: '/docs'}
+},
+
+    { name: 'API Reference'}
+  href: '/api-documentation'}
+},
+
+    { name: 'Case Studies'}
+  href: '/case-studies'}
+},
+
+    { name: 'Blog & News'}
+  href: '/blog'}
+},
+
+    { name: 'Support Center'}
+  href: '/support'}
+},
+
+    { name: 'Training & Certification'}
+  href: '/training'}
+},
+
+    { name: 'Community Forum'}
+  href: '/community'}
+},
+
+  { name: 'Developer Resources'}
+  href: '/developer-resources'}
+}
+
+];
+
+const socialLinks = [
+  { name: 'Facebook'}
+  href: '#', icon: Facebook}
+},
+  { name: 'Twitter'}
+  href: '#', icon: Twitter}
+},
+  { name: 'LinkedIn'}
+  href: '#', icon: Linkedin}
+},
+  { name: 'Instagram'}
+  href: '#', icon: Instagram}
+},
+  { name: 'YouTube'}
+  href: '#', icon: Youtube}
+},
+{ name: 'GitHub'}
+  href: '#', icon: Github}
+}
+];
+
+export default function UltraFuturisticFooter2026() {
+  return (}
+<footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800' />}
+      {/* Background Effects */}
+      <div className='absolute inset-0 overflow-hidden' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]' /></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]' /></div>
+      </div>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16' />
+        {/* Main Footer Content *}
+}"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12" />;
+          {/* Company Info */}
+
+          <div className='lg:col-span-2' />
+            <motion.div;
 initial={{ opacity: 0, y: 20 }
 
               whileInView={{ opacity: 1, y: 0 }}
@@ -115,35 +307,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               </p>
               {/* Contact Info */}"
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo.website}</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>'
-              <div className='space-y-3'>;'
-                <div className='flex items-center text-gray-300'>;'
-                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.mobile}</span>
-                </div>;'
-                <div className='flex items-center text-gray-300'>;'
-                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />
-                  <span>{contactInfo && contactInfo.email}</span>
-                </div>;'
-                <div className='flex items-center text-gray-300'>;'
-                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
-                  <span>{contactInfo && contactInfo.address}</span>
-                </div>;'
-                <div className='flex items-center text-gray-300'>;'"
-                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300">;"
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo && contactInfo.website}</span>
-                </div>
-              </div>
-            </motion && motion.div>
-          </div>
-          {/* Service Categories */}
-          {serviceCategories && serviceCategories.map((category, index) => (
-            <motion&& motion.div
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
+                  <span />{contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+              <div className='space-y-3' />;
+                <div className='flex items-center text-gray-300' />;
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;"
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300" />;"
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
+                  <span />{contactInfo && contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;{/* Service Categories */}
+          {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;}
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -377,13 +567,61 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
 
-                99.9% Uptime
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-  )
+    </footer>;
+  )}className='border - t border - gray - 800 pt - 8'>
+
+          <div className='flex flex - col md:flex - row justify - between items - center' />;
+            <div className='text - gray - 400 text - sm mb - 4 md:mb - 0' />;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link;
+                href='/privacy';
+                className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2' />
+
+                Privacy Policy;
+              </Link>;
+              <span className='mx - 2' />|</span>;
+              <Link;
+                href='/terms';
+                className='hover:text - cyan - 400 transition - colors duration - 300' />
+
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className='flex items - center space - x-2' />;
+              <div className='flex items - center text - gray - 400 text - sm' />;
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse' /></div>;
+              <div className='text - cyan - 400 text - sm font - semibold' />                99.9% Uptime        >;"
+          <div className="flex flex - col md: flex - row justify - between items - center" />;"
+            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0" />;
+              © 2026 Zion Tech Group. All rights reserved. |;"
+              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2" />;
+                Privacy Policy;
+              </Link>;"
+              <span className="mx - 2" />|</span>;"
+              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300" />;
+                Terms of Service;
+              </Link>;
+            </div>;"
+            <div className="flex items - center space - x-2" />;"
+              <div className="flex items - center text - gray - 400 text - sm" />;"
+                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
+                Trusted by 2500+ Companies;
+              </div>;"
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse" /></div>;"
+              <div className="text - cyan - 400 text - sm font - semibold" />;
+                99.9% Uptime;
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+
+  );
+
+
     </footer>
 );
 }

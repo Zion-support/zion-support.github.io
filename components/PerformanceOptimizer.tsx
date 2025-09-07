@@ -7,47 +7,32 @@ setMetrics (newMetrics)
 //Add responsive sizes if not present if (!img.sizes) {
   optimizedCount++ 
 }
-}//Simulate optimization delay await new Promise (resolve => setTimeout (resolve, 1000) )
-setOptimizationStatus ('Font optimization complete')
-//Simulate optimization delay setOptimizationStatus ('Code optimization complete')
-//Simulate optimization delay try {
-  await optimizeImages ()
-await optimizeFonts ()
-await optimizeCode ()
-setOptimizationStatus ('All optimizations complete!')
-//Re-measure performance after optimization //Initialize performance monitoring useEffect ( () => {
-  if (typeof window !== 'undefined') {
-  //Measure initial performance //Monitor for performance issues const observer = new PerformanceObserver ( (list) => {
-  for (const entry of list.getEntries () ) {
-  if (entry.entryType === 'largest-contentful-paint') {
-  
+} from 'lucide-react';
+
+interface PerformanceMetrics {load_time: number;
+
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+
+
+  className = ''}
+              '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';}
+          }optimizedCount++;
+        }
+      }
+
+      setOptimizationStatus(`Optimized ${optimizedCount} images`);
+// Simulate optimization delay;
+await new Promise(resolve => setTimeout(resolve, 1000));
+      setOptimizationStatus('Image optimization complete');
+    } catch (error) {
+      setOptimizationStatus ('Image optimization failed');}
+      console.error ('Image optimization error:', error);}
+    } finally {
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  onMetricsUpdate
-  enableReporting = false
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' |!('performance' in window)) return;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    // Core Web Vitals
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime |0;
-    const ttfb = navigation.responseStart - navigation.requestStart;
-    // Memory usage (if available)
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize
-      total: (performance as any).memory.totalJSHeapSize
-      limit: (performance as any).memory.jsHeapSizeLimit
-    } : undefined;
-    const newMetrics: PerformanceMetrics = {
-      fcp
-      lcp
-      fid: 0, // First Input Delay - would need user interaction to measure
-      cls: 0, // Cumulative Layout Shift - would need observer
-      ttfb
-      memory
+      setIsOptimizing(false);}
     }
     setMetrics(newMetrics);
     if (onMetricsUpdate) {

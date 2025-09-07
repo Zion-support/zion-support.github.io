@@ -1,9 +1,8 @@
 import React from 'react';
 
-const NavigationDynamic = () => {
-  return (
-    <div data-testid="navigation-dynamic">
-      <h1>Navigation Dynamic</h1>
+const Navigation.dynamic = () => ;
+  return (<div data - testid="navigation.dynamic" />;
+      <h1 /> Navigation.dynamic</h1>
     </div>
   );
 };

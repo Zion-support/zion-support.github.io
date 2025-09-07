@@ -1,9 +1,8 @@
 import React from 'react';
 
-const LoadingSpinnerDynamic = () => {
-  return (
-    <div data-testid="loadingspinner-dynamic">
-      <h1>LoadingSpinner Dynamic</h1>
+const LoadingSpinner.dynamic = () => ;
+  return (<div data - testid="loadingspinner.dynamic" />;
+      <h1 /> LoadingSpinner.dynamic</h1>
     </div>
   );
 };

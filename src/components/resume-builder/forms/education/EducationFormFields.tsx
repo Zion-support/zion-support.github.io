@@ -122,13 +122,42 @@ export function EducationFormFields({;
   },
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name='institution'
-            render={({ field }: { field: any }) => (              <FormItem>
+    <Form {...form}>;
+</Form>
+)'
+      <form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;'
+</form>'
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
+</div>
+          <FormField;
+            control={form.control}'
+            name='institution';'
+            render={({ field }: { field: any }) => (              <FormItem>;
+</FormField>
+                <FormLabel > Institution</FormLabel>;
+                <FormControl>;
+</FormControl>
+                  <Input;'
+                    placeholder='University of California, MIT, etc.';'
+                    {...field}
+
+                  />;
+</Input>
+                </FormControl>;
+                <FormMessage />;control={form.control}name="institution";
+            render={({ field }: { field: any}
+}) => (<FormItem />;
+                <FormLabel />Institution</FormLabel>;
+                <FormControl />;"
+                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+
+</FormMessage>
+              <FormItem>
+</FormItem>
+
+
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
                   <Input placeholder="University of California, MIT, etc." {...field} />

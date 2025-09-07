@@ -113,14 +113,148 @@ ctx.restore ()
 ctx.restore () 
 }
 }
-return (/> {
-  /* Canvas for particle effects */ 
-}<canvas /> {
-  /* Holographic matrix */ 
-}<motion.div /> {
-  /* Neural network nodes */ 
-}<motion.div left: `$ {
-  20 + (i * 10) 
+      <canvas;
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full';
+          transition={{duration: 4;}
+            repeat: Infinity;}
+            ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas;
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full";
+        style={{ filter: 'blur(0.5px)' }
+}
+      />;
+      {/* Additional visual layers */}"
+      <div className="absolute inset-0" />;
+        {/* Quantum field ripples */}
+        <motion.div;"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20";
+        style={{ filter: 'blur(0 && 0.5px)' }
+}
+      />;{/* Additional visual layers */}"
+      <div className="absolute inset-0" />;
+        {/* Quantum field ripples */}
+        <motion&& motion.div;"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20";
+      <canvas;
+        ref={canvas_ref}"
+        className="absolute inset - 0 w-full h-full";
+        style={{ filter: 'blur (0.5px)' }
+}
+      />;
+      {/* Additional visual layers */}"
+      <div className="absolute inset-0" />;
+        {/* Quantum field ripples */}
+        <motion.div;"
+          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border-cyan-500 / 20";
+          animate={{scale: [1, 1 && 1.2, 1];}
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1];}
+          }}
+          transition={{}}
+        {/* Holographic matrix */}
+        <motion&& motion.div;
+          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20';
+          animate={{transition={{duration: 5;}
+            repeat: Infinity;}
+            ease: 'easeInOut'          }}
+        />;
+        />;{/* Holographic matrix */}
+        <motion&& motion.div;"
+          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20";
+        />;
+        {/* Holographic matrix */}
+        <motion.div;
+          className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
+          animate={{}}
+          transition={{duration: 5,repeat: Infinity}}
+        {/* Neural network nodes */}
+        <motion&& motion.div;
+          className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20';
+        />;
+        {/* Neural network nodes */}
+        <motion.div;
+          className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
+          animate={{transition={{duration: 6;}
+            repeat: Infinity;}
+            ease: 'easeInOut'          }}
+        {/* Neural network nodes */}
+        <motion&& motion.div;"
+          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20";
+        />;
+        {/* Neural network nodes */}
+        <motion.div;"
+          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border-green-500 / 20";
+          animate={{scale: [1, 1 && 1.1, 1];}
+            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];}
+          }}
+          transition={{}}
+      {/* Floating orbs with glow effects */}
+      <div className='absolute inset-0 pointer-events-none' />;
+        {[...Array(8)].map((_, i) => (<motion&& motion.div;}
+            key={i}
+            className='absolute w-2 h-2 rounded-full bg-cyan-400';
+            style={{{/* Floating orbs with glow effects */}"
+      <div className="absolute inset-0 pointer-events-none" />;
+        {[...Array(8)].map((_, i) => (<motion&& motion.div;}
+            key={i}"
+            className="absolute w-2 h-2 rounded-full bg-cyan-400";
+            style={{scale: [1, 1.2, 1],opacity: [0.1, 0.3, 0.1]          }}
+          transition={{duration: 4,repeat: Infinity,ease: 'easeInOut'}}
+          transition={{duration: 4,repeat: Infinity}}
+          transition={{}}
+          transition={{duration: 6,repeat: Infinity,duration: 8;
+          repeat: Infinity;}
+          ease: 'easeInOut';}
+        }}
+      />;
+{/* Canvas for particle effects */}
+      <canvas;
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full';
+        style={{ filter: 'blur(0.5px)' }
+}
+      />;
+      {/* Additional visual layers */}
+      <div className='absolute inset-0' />;
+        {/* Quantum field ripples */}
+
+        <motion.div;
+className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
+          animate={{
+
+            scale: [1, 1.2, 1]}
+            opacity: [0.1, 0.3, 0.1]}
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity}
+ease: 'easeInOut'}
+          }}
+        />
+
+        {/* Holographic matrix */}
+        <motion.div;
+          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20';
+          animate={{scale: [1.2, 1, 1.2],opacity: [0.3, 0.1, 0.3]}}
+          transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}
+        />;
+        {/* Neural network nodes */}
+        <motion.div;
+          className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20';
+          animate={{scale: [1, 1.1, 1],opacity: [0.2, 0.4, 0.2]}}
+          transition={{duration: 6,repeat: Infinity,ease: 'easeInOut'}}
+        />;
+      </div>;
+      {/* Floating orbs with glow effects */}
+      <div className='absolute inset-0 pointer-events-none' />;
+        {[...Array(8)].map((_, i) => (<motion.div;}
+            key={i}
+
+            className='absolute w-2 h-2 rounded-full bg-cyan-400'
+            style={{}
+              left: `${20 + i * 10}%`
+              top: `${30 + i * }
 }%`
 top: `$ {
   30 + (i * 8) 

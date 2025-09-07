@@ -157,8 +157,8 @@ default:}
 
   })
 const containerVariants = {}
-    hidden: { opacity: 0,}
-
+    hidden: {opacity: 0}
+}
     visible: {
       opacity: 1
 transition: {}
@@ -217,12 +217,12 @@ rel='canonical'
 initial={{ opacity: 0, y: 30 ,}
 
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
-
-              />
-<h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'    />
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
-                Ultimate Futuristic
+            transition={{duration: 0.8 }
+}
+           />
+<h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6' />
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
+                Ultimate Futuristic;
               </span>
               <br    />
               <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent'    />
@@ -674,17 +674,8 @@ href={`mailto: ${contactInfo.email}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-      {/* CTA Section */}'
-      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;'"
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;"
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;'
+            viewport={{once: true }
+}
 
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Experience the Future?

@@ -96,9 +96,9 @@ ease: 'easeInOut'}
 
              />
             }}
-          />
-          <motion.div
-            className=\'absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full\'
+          />;
+          <motion.div;
+            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full";
             animate={{}}
             transition={{duration: 10,repeat: Infinity}}
              />

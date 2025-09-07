@@ -42,7 +42,12 @@ export const LazySection: React.FC<LazySectionProps> = ({
 class ErrorBoundary extends React.Component {
   constructor($2) {
     super(props);}
-    this.state = { hasError: false,}
+    this.state = {hasError: false}
+};
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div />Something went wrong.</div>;}
 }
   render($2) {
   if($2) {

@@ -18,15 +18,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<EmailValidationResult | { error: string }    />
 ) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') {}
+return res.status(405).json({error: 'Method not allowed'}
+});
   }
   try {
     const { email } = req.body;
-
-    if (!email |typeof email !== 'string') {
-
-      return res.status(400).json({ error: 'Email is required' });
+    if (!email || typeof email !== 'string') {}
+      return res.status(400).json({error: 'Email is required'}
+});
     }
     // Basic email format validation
 
@@ -116,23 +116,13 @@ export default async function handler(
     }
     res.status(200).json(result);
   } catch (error) {
-    console.error('Email validation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }      email;
-      isValid: score >= 70;
-      score: Math.max(0, score);
-      suggestions;
-      details: {
-        hasValidFormat;
-        hasValidDomain;
-        hasValidMX: true, // Simplified for demo
-        isDisposable;
-        isRoleBased;
-        isFreeProvider}
-    }
-    res.status(200).json(result)
-  } catch (error) {
-    console.error('Email validation error:', error);
+    console.error('Email validation error:', error);}
+    res.status(500).json({error: 'Internal server error'}
+});
+  }
+    res.status(500).json({ error: 'Internal server error' })
+  },
+}
 
     res.status(500).json({ error: 'Internal server error' })
 origin/cursor/automate-test-improve-and-merge-code-2533

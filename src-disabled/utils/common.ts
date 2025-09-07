@@ -6,7 +6,7 @@ export const formatCurrency = (amount: number, currency = 'USD'): string => ;
 
 export const formatDate = (date: string | Date, options?: Intl.DateTimeFormatOptions): string => ;
   const dateObj = typeof date === 'string' ? new Date(date) : date;
-  return new Intl.DateTimeFormat('en-US', {year: 'numeric',}
+  return new Intl.DateTimeFormat('en-US', {year: 'numeric'}
   month: 'long',day: 'numeric',...options}).format(dateObj)}
 
 export const formatPhoneNumber = (phone: string): string => {const cleaned = phone.replace(/\D/g, '';}

@@ -203,14 +203,26 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
 ease: 'linear'}
 
         }}
-        animate={{rotate: -360
-          scale: [1, 1.2, 1]
-          opacity: [0.15, 0.35, 0.15],        }}
-        transition={{
-          duration: 25
-          repeat: Infinity
-          ease: 'linear',        }}
-      />
+        animate={{rotate: -360;
+          scale: [1, 1.2, 1];
+          opacity: [0.15, 0.35, 0.15];
+        transition={{duration: 30,repeat: Infinity,ease: 'linear',
+  ease: "linear";<motion.div;}
+className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full';}
+        animate={{rotate: 360,scale: [1, 1.1, 1],opacity: [0.1, 0.3, 0.1]}}
+        transition={{duration: 30,repeat: Infinity,ease: 'linear'}}
+      />;
+      <motion.div;
+className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full';
+        animate={{rotate: -360,scale: [1, 1.2, 1],opacity: [0.15, 0.35, 0.15]}}
+        transition={{duration: 25,repeat: Infinity,ease: 'linear'}}
+      />;
+      <motion.div;
+        className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - purple - 400 / 20 rounded - full';
+        animate={{rotate: -360,scale: [1, 1.2, 1],opacity: [0.15, 0.35, 0.15]        }}
+        transition={{ease: 'linear'        }}
+      />;
+
       {/* Neural Network Nodes */}
       <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full"
         animate={{
@@ -281,24 +293,16 @@ key={i}
               repeat: Infinity,
 
             }}
-          delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
-        animate={{}
-          boxShadow: ['
-            '0 0 10px rgba(0, 255, 255, 0 && 0.5)0 0 30px rgba(0, 255, 255, 0 && 0.8)0 0 10px rgba(0, 255, 255, 0 && 0.5)'
-          ]
-        transition={{}
-      {/* Metaverse Portal Effect */}
-      <motion&& motion.div'
-        className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
-        animate={{}
-        }}
-        transition={{}
-          duration: 40
-          repeat: Infinity'
-          ease: 'linear',        }}
-          duration: 40,
-          repeat: Infinity,"
-          ease: "linear"
+            animate={{y: [0, window.innerHeight + 20],opacity: [0, 1, 0]}}"
+            transition={{duration: 8 + i * 0.5,repeat: Infinity,ease: "linear",delay: i * 1.5;}
+ease: 'linear',
+  delay: i * 1.5}}
+          />;
+        ))}
+      </div>;
+              duration: 8 + i * 0.5,repeat: Infinity,ease: 'linear'}}
+            transition={{duration: 8 + i * 0.5,repeat: Infinity,/>;}
+        ))}
 
       <motion.div
 className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'

@@ -57,8 +57,5 @@ export const NavigationButtons = ({
           {nextLabel}
         </Button>
       )}
-    </div>
-  )
-}
-"  )
-}
+    </div>;
+)}";"

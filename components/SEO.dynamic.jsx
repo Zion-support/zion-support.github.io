@@ -1,9 +1,8 @@
 import React from 'react';
 
-const SEODynamic = () => {
-  return (
-    <div data-testid="seo-dynamic">
-      <h1>SEO Dynamic</h1>
+const SEO.dynamic = () => ;
+  return (<div data - testid="seo.dynamic" />;
+      <h1 /> SEO.dynamic</h1>
     </div>
   );
 };

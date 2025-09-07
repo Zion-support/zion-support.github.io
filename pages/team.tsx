@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from "react";
+import Head from "next/head";
 
-export default function team() {
+export default function TeamPage() {
   return (
-    <Layout>
+    <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>Team - Zion Tech Group</title>
-        <meta name="description" content="Team solutions and services." />
+        <title>Our Team - Zion Tech Group</title>
+        <meta name="description" content="Meet the talented individuals behind Zion Tech Group" />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Team</h1>
-          <p className="text-lg text-gray-600">
-            Professional team solutions tailored to your business needs.
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Team
+          </h1>
+          <p className="text-xl text-gray-600">
+            Team page is under construction.
           </p>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
