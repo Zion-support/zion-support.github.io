@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading";
 import {
@@ -55,11 +56,77 @@ export function FaqSection() {
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
-          
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
-                <AccordionTrigger className="text-white hover:text-zion-cyan">,
+
+  );
+}
+
+=======
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+
+const FaqSection: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "What services does Zion Tech offer?",
+      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in machine learning, cloud migration, system administration, and business process optimization."
+    },
+    {
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary based on complexity and scope. Simple implementations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed timelines during the discovery phase and keep you updated throughout the project."
+    },
+    {
+      question: "Do you provide ongoing support?",
+      answer: "Yes, we offer 24/7 support for all our clients. Our support includes monitoring, maintenance, troubleshooting, and continuous optimization. We also provide dedicated account managers for enterprise clients."
+    },
+    {
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and government. Our solutions are tailored to meet the specific compliance and security requirements of each industry."
+    },
+    {
+      question: "How do you ensure data security?",
+      answer: "We implement enterprise-grade security measures including SOC 2 compliance, end-to-end encryption, regular security audits, and advanced threat detection. All our team members are security-certified and we follow industry best practices."
+    },
+    {
+      question: "Can you work with our existing systems?",
+      answer: "Absolutely! We specialize in integrating with existing systems and can work with virtually any technology stack. Our team will assess your current infrastructure and create a seamless integration plan."
+    },
+    {
+      question: "What is your pricing model?",
+      answer: "We offer flexible pricing models including project-based, retainer, and subscription options. Pricing depends on the scope of work, timeline, and specific requirements. We provide detailed quotes after understanding your needs."
+    },
+    {
+      question: "Do you offer training for our team?",
+      answer: "Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the solutions we implement. Training includes documentation, hands-on sessions, and ongoing support."
+    }
+  ];
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Find answers to common questions about our services and solutions.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+            >
+              <button
+                onClick={() => toggleFaq(index)}
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
@@ -71,6 +138,8 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
-}
-;
+  );
+};
+
+export default FaqSection;
+>>>>>>> origin/main

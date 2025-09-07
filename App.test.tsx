@@ -1,10 +1,25 @@
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import HomePage from './app/page';
+import { describe, it, expect } from 'vitest';
+import App from './src/App';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './App';
+>>>>>>> origin/main
 
 describe('App', () => {
   it('renders without crashing', () => {
-    render(<HomePage />);
+    render(<App />);
+<<<<<<< HEAD
+  });
+
+  it('renders the main content', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+=======
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
@@ -17,4 +32,5 @@ describe('App', () => {
     render(<HomePage />);
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
+>>>>>>> origin/main
 });

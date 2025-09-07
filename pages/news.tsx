@@ -1,6 +1,4 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+
 import { 
   Newspaper,
   Calendar, 
@@ -51,6 +49,72 @@ const NewsPage: React.FC = $2;
       image: '/images/news/quantum-azure-partnership.jpg',
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
+  ]
+
+const NewsPage: React.FC = () => {
+  const news_articles = [;
+    {
+
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {;
+  Newspaper,;
+  Calendar,;
+  User,;
+  Tag,;
+  ArrowRight,;
+  ExternalLink,;
+  TrendingUp,;
+  Award,;
+  Rocket,;
+  Globe,;
+  Brain,;
+  Atom,;
+  Zap;
+} from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+const NewsPage: React.FC = () => {;
+  const newsArticles = [;
+    {;
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.';
+      author: 'Press Team';
+      date: '2025-01-15';
+      author: 'Zion Tech Group',;
+      readTime: '5 min read',;
+      featured: true,;
+      image: '/images/news/ai-consciousness-breakthrough.jpg',;
+      tags: ['AI ConsciousnessBreakthroughResearchInnovation'];
+    },;
+    {;
+      id: 2,;
+      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',;
+      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.',;
+      category: 'company',;
+      date: '2025-01-10',;
+      author: 'Zion Tech Group',;
+      readTime: '3 min read',;
+      featured: true,;
+      image: '/images/news/series-c-funding.jpg',;
+      tags: ['FundingInvestmentGrowthExpansion'];
+    },;
+    {;
+      id: 3,;
+      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',;
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.',;
+      category: 'partnerships',;
+      date: '2025-01-05',;
+      author: 'Zion Tech Group',;
+      readTime: '4 min read',;
+      featured: true,;
+      image: '/images/news/quantum-azure-partnership.jpg',;
+      tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership'];
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
 
   const latestNews = $2;
@@ -221,9 +285,27 @@ export default function NewsPage() {
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              animate={{ opacity: 1, y: 0}}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="flex flex - wrap justify - center gap - 4";
+            >;
+              {categories.map ((category, index) => (
+                <button;
+                  key={category}
+
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
@@ -360,6 +442,26 @@ export default function NewsPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Discover the latest developments in AI, quantum computing, and technology
+
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
@@ -758,6 +860,9 @@ export default function NewsPage() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
+
+                For press inquiries, media interviews, or additional information,
+
                 For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
               </p>
@@ -797,14 +902,15 @@ export default function NewsPage() {
               that are shaping the future of AI and quantum computing.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link 
+              <Link
+
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
+
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
@@ -1020,12 +1126,16 @@ export default function NewsPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-700/50 rounded">
-                        {resource.type}
-                      </span>
-                      <span>{resource.size}</span>
-                    </div>
-                    <a
-                      href={resource.download}
+                        {resource.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>;
+                      <span>{resource.size}</span>;
+                    </div>;
+                    <a;
+
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
@@ -1084,3 +1194,55 @@ export default function NewsPage() {
     </div>
   )
 }
+}
+            >;
+              <h2 className="text-4xl font-bold text-white mb-6">;
+                Stay Updated;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Get the latest news, product updates, and industry insights delivered to your inbox. Never miss a breakthrough announcement.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105";
+                >;
+                  Subscribe to Updates;
+                </a>;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300";
+                >;
+                  Media Inquiries;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+};
+;
+}
+
+}
+
+}
+    <div className="min - h-[60vh] px - 6 py - 24">;
+      <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
+      <div className="max - w-3xl mx - auto">;
+        <h1 className="text - 4xl font - bold text - white mb - 4">News & Press</h1>;
+        <p className="text - gray - 300">Press releases and announcements will appear here.</p>;
+      </div>;
+      <EnhancedFooter />;
+    </div>);
+}
+
+;
+

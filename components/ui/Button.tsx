@@ -1,44 +1,97 @@
-import React from 'react';
-import Link from 'next/link';
+
+import React from "react";
+
 interface ButtonProps {
-  children: React.ReactNode,
-  variant?: 'primary' | 'secondary' | 'ghost' | 'outline',
-  size?: 'sm' | 'md' | 'lg',
-  href?: string,
-  onClick?: () => void,
-  className?: string,
-  disabled?: boolean,
-  type?: 'button' | 'submit' | 'reset',
-  icon?: React.ReactNode,
-  iconPosition?: 'left' | 'right',
-  style?: React.CSSProperties
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+interface ButtonProps {;
+  children: React && React.ReactNode;
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  if (asChild) {
+    return React.cloneElement(children as React.ReactElement, {
+      className: classes
+      onClick
+      disabled
+      type
+      ...props
+const Button: React.FC<ButtonProps> = ({;
+  children,;
+  variant = "primary",;
+  size = "md",;
+  className = "",;
+  onClick,;
+  disabled = false,;
+  type = "button",;
+  asChild = false,;
+  ...props;
+}) => {;
+  const baseClasses =;
+    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+  const variantClasses = {;
+    primary: "bg-blue-600 text-white hover:bg-blue-700",;
+    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",;
+    outline: "border border-gray-300 bg-transparent hover:bg-gray-50",;
+    ghost: "hover:bg-gray-100",;
+  };
+  const sizeClasses = {;
+    sm: "h-8 px-3 text-xs",;
+    md: "h-10 px-4 py-2",;
+    lg: "h-12 px-8 text-lg",;
+  };
+  class_name?: string;
+  on_click?: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
+  as_child?: boolean;
 }
-
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC < ButtonProps> = ({
   children,
-  variant = $2;
-  size = $2;
-  href,
-  onClick,
-  className = $2;
-  disabled = $2;
-  type = $2;
-  icon,
-  iconPosition = $2;
-  style}) => {
-  const baseClasses = $2;
-  const variantClasses = $2;
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',
-    ghost: 'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',
-    outline: 'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5'},
+  variant = "primary",
+  size = "md",
+  class_name = "",
+  on_click,
+  disabled = false,
+  type = "button",
+  ...props;
+}) => {
+  const base_classes =;
+    "inline - flex items - center justify - center rounded - md font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50";
+;
+  const variant_classes = {
+    primary: "bg - blue - 600 text - white hover:bg - blue - 700",
+    secondary: "bg - gray - 200 text - gray - 900 hover:bg - gray - 300",
+    outline: "border border - gray - 300 bg - transparent hover:bg - gray - 50",
+    ghost: "hover:bg - gray - 100",
+  }
+;
+  const size_classes = {
+    sm: "h - 8 px - 3 text - xs",
+    md: "h - 10 px - 4 py - 2",
+    lg: "h - 12 px - 8 text - lg",
+  }
+;
+  const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return React.clone_element (children as React.ReactElement, {
+      class_name: classes,
+      on_click,
+      disabled,
+      type,
+      ...props,
+    });
+  }
+  return (
+    <button;
+      className={classes}
+      on_click={on_click}
+      disabled={disabled}
+      type={type}
 
-  const sizeClasses = $2;
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'},
-
-  const classes = $2;
-  const content = $2;
-  if (href) {
-    return (
-      <Link href = $2;
-export default Button,

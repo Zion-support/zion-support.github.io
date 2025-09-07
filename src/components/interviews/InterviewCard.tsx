@@ -256,4 +256,5 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     </Card>
   )
 }
-;
+  );
+

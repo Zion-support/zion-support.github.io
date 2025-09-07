@@ -1,14 +1,19 @@
-import * as React from "react"
-import * as DialogPrimitive from "@radix-ui/react-dialog"
-import { X } from 'lucide-react'
 
-import { cn } from "@/lib/utils"
 
-const Dialog = $2;
+const DialogOverlay = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
-    ref = $2;
+
+  />;
+));
+DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
+
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -26,52 +31,28 @@ DialogOverlay.displayName = $2;
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className = $2;
+
+      </DialogPrimitive.Close>
+    </DialogPrimitive.Content>
+  </DialogPortal>
+))
+
+const DialogHeader = ({
+  className
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className = $2;
-      className
-    )}
-    {...props}
-  />
-)
-DialogHeader.displayName = $2;
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className = $2;
-      className
-    )}
-    {...props}
-  />
-)
-DialogFooter.displayName = $2;
+
+const DialogTitle = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
-    ref = $2;
-      className
-    )}
-    {...props}
-  />
-))
-DialogTitle.displayName = $2;
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
->(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-))
-DialogDescription.displayName = $2;
-  DialogPortal,
-  DialogOverlay,
-  DialogClose,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription}
+
+export {;
+  Dialog,;
+  DialogPortal,;
+  DialogOverlay,;
+  DialogClose,;
+  DialogTrigger,;
+  DialogContent,;
+  DialogHeader,;
+

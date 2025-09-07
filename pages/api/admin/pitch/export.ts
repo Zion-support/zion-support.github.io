@@ -1,12 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi($2);
-  if (!allowed) return res.status(403).json($2);
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { slides, format, version } = req.body || {},
-  if (!Array.isArray(slides)) return res.status(400).json($2);
-  if (format = $2;
+
+
     return res.status(200).json({ url })
   }
 
@@ -18,13 +11,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader($2);
   res.setHeader($2);
   res.status(200).send(html)
-}
 
-function escapeHtml(str: string) {
-  return String(str)
-    .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
-}
+

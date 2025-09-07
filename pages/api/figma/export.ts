@@ -16,17 +16,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     zip.file('tokens.json', JSON.stringify(tokens, null, 2))
 
     // UIKit folder
-    const uikit = buildUIKit(kind)
-    const uiFolder = zip.folder('uikit')!
-    Object.entries(uikit).forEach(([path, content]) => uiFolder.file(path, content))
+    const uikit = buildUIKit(kind);
+    const uiFolder = zip && zip.folder("uikit")!;
+    Object && Object.entries(uikit).forEach(([path, content]) =>
 
     // README
     zip.file('README.md', `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`)
 
-    const buffer = await zip.generateAsync({ type: 'nodebuffer' })
-    res.setHeader('Content-Typeapplication/zip')
-    res.setHeader('Content-Disposition', `attachment, filename=zion-design-${kind}.zip`)
-    res.status(200).send(buffer)
+    zip && zip.file(
+
+    );
+
+    );
+    res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e ?.message || 'Export failed' })
   }

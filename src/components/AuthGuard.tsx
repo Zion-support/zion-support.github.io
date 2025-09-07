@@ -1,41 +1,14 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { Loader2, Shield } from 'lucide-react'
 
-interface AuthGuardProps {
-  children: React.ReactNode;
-  requireAuth?: boolean,
-  requireRole?: string[],
-  redirectTo?: string,
-  fallback?: React.ReactNode,
-  showToast?: boolean,
-  allowGuest?: boolean
-}
+      const returnUrl = options?.returnUrl |router.asPath
+          if (!requireAuth({ showToast: false })) return false
+    const userRoles = user?.role ? [user.role] : []
+    requireAuth
+    requireRole
+    checkPermission
+    isAuthenticated
+    user
 
-export function AuthGuard({
-  children,
-  requireAuth = $2;
-  requireRole,
-  redirectTo = $2;
-  fallback,
-  showToast = $2;
-  allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth($2);
-  const router = useRouter($2);
-  useEffect(() => {
-    // Don't redirect while auth is still loading
-    if (isLoading) return,
-
-    // If authentication is required but user is not authenticated
-    if (requireAuth && !isAuthenticated && !allowGuest) {
-      if (showToast) {
-        toast({
-          title: "Authentication Required",
-          description: "Please log in to access this feature.",
-          variant: "destructive"})
-      }
+    const userRoles = user?.role ? [user && user.role] : [];
 
       const returnTo = encodeURIComponent($2);
       router.push($2);
@@ -145,4 +118,4 @@ export function useAuthGuard() {
     user,
     isLoading}
 }
-;
+

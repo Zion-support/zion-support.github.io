@@ -1,36 +1,59 @@
-import React, { createContext, useContext, useState } from 'react';
+<<<<<<< HEAD
+
+=======
+import React, { createContext, useContext, ReactNode } from "react";
+
 interface AccessibilityContextType {
-  highContras: boolean,
-  largeTex: boolean,
-  reducedMotio: boolean,
-  toggleHighContras: () => void,
-  toggleLargeTex: () => void,
-  toggleReducedMotio: () => void
+  announceToScreenReader: (message: string) => void;
+  setFocus: (elementId: string) => void;
+>>>>>>> origin/main
 }
 
-const AccessibilityContext = $2;
-export const useAccessibility = () => {
-  const context = useContext($2);
-  if (context = $2;
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
+
 interface AccessibilityProviderProps {
-  childre: React.ReactNode
+  children: ReactNode;
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState($2);
-  const [largeText, setLargeText] = useState($2);
-  const [reducedMotion, setReducedMotion] = useState($2);
-  const toggleHighContrast = () => setHighContrast($2);
-  const toggleLargeText = () => setLargeText($2);
-  const toggleReducedMotion = () => setReducedMotion($2);
-  const value = $2;
-    largeText,
-    reducedMotion,
-    toggleHighContrast,
-    toggleLargeText,
-    toggleReducedMotion
-  },
+<<<<<<< HEAD
+=======
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById("live-region");
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  };
 
+  const setFocus = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.focus();
+    }
+  };
+
+>>>>>>> origin/main
   return (
-    <AccessibilityContext.Provider value = $2;
-export default AccessibilityProvider,
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+      {children}
+    </AccessibilityContext.Provider>
+  );
+<<<<<<< HEAD
+
+=======
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+};
+>>>>>>> origin/main

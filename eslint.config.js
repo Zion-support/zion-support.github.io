@@ -1,4 +1,4 @@
-import { FlatCompat } from '@eslint/eslintrc';
+<<<<<<< HEAD
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -20,7 +20,35 @@ export default [
       '**/pages.disabled*/****/pages.broken*/****/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/****/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/****/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt'
     ],
     languageOptions: {
-      ecmaVersion: 2021,
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error'
+=======
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+});
+
+module.exports = [
+  ...compat.extends('next/core-web-vitals'),
+  {
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    },
+    languageOptions: {
+      ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
         window: 'readonly',
@@ -81,118 +109,7 @@ export default [
           jsx: true
         }
       }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y
-    },
-    rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsparser,
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        // Browser globals
-        window: 'readonly'
-        document: 'readonly'
-        console: 'readonly'
-        localStorage: 'readonly'
-        sessionStorage: 'readonly'
-        setTimeout: 'readonly'
-        clearTimeout: 'readonly'
-        setInterval: 'readonly'
-        clearInterval: 'readonly'
-        fetch: 'readonly'
-        process: 'readonly'
-        // DOM types
-        HTMLInputElement: 'readonly'
-        HTMLTextAreaElement: 'readonly'
-        HTMLSelectElement: 'readonly'
-        HTMLDivElement: 'readonly'
-        HTMLElement: 'readonly'
-        MouseEvent: 'readonly'
-        KeyboardEvent: 'readonly'
-        Node: 'readonly'
-        PerformanceObserver: 'readonly'
-        // React
-        React: 'readonly'
-        // Jest/Testing globals
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        HTMLParagraphElement: 'readonly',
-        HTMLHeadingElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        MessageEvent: 'readonly',
-        RequestInit: 'readonly',
-        AbortController: 'readonly',
-        Performance: 'readonly',
-        PerformanceNavigationTiming: 'readonly'
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      'react': react,
-      'react-hooks': reactHooks
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn'
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    }
-    plugins: {
-      '@typescript-eslint': tseslint,
-      react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
+>>>>>>> origin/main
     }
   }
   {

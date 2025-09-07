@@ -1,3 +1,8 @@
 
-const InteractiveNavigation = $2;
-export default InteractiveNavigation,
+}
+
+interface InteractiveNavigationProps {
+  items: NavItem[];
+  className?: string;
+}
+

@@ -41,22 +41,27 @@ const services = [
 
 export default function App() {
   return (
-    <main>
-      <h1>Welcome to Zion Tech Group</h1>
-      <p>Leading the future of technology with AI, blockchain, and innovative solutions</p>
-      <div className="services-grid">
-        {services.map((service, index) => (
-          <div key={index} className="service-card">
-            <h3>{service.icon} {service.title}</h3>
-            <p>{service.description}</p>
-            <ul>
-              {service.features.map((feature, idx) => (
-                <li key={idx}>{feature}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </main>
-  )
+<<<<<<< HEAD
+    <div className="App">
+      <header className="App-header">
+        <h1>Zion Tech Group</h1>
+        <p>Welcome to our application</p>
+      </header>
+=======
+    <div className="min-h-screen bg-gray-50">
+      <h1 className="text-4xl font-bold text-center py-20">
+        Zion Tech Group
+      </h1>
+      <p className="text-center text-gray-600">
+        This is a Next.js application. Please navigate to the appropriate pages using the Next.js routing system.
+      </p>
+>>>>>>> origin/main
+    </div>
+  );
 }
+
+<<<<<<< HEAD
+export default App;
+=======
+export default App;
+>>>>>>> origin/main

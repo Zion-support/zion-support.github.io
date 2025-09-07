@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -14,7 +15,12 @@ import {
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-const Solutions: NextPage = $2;
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+} from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
+
+      id: 'healthcare',
       name: 'Healthcare Solutions',
       description: 'AI-powered healthcare technology solutions',
       features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
@@ -155,6 +161,18 @@ const Solutions: NextPage = $2;
                 </a>
                 <a 
                   href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </Link>
+                <a
+                  href="/contact"
+
+                <a
+                  href="/contact"
+
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -304,7 +322,60 @@ const Solutions: NextPage = $2;
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default Solutions,
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                Ready for Industry Transformation?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Partner with us to build industry-specific solutions that drive your business forward
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </Link>
+                <a
+                  href="/contact"
+
+                <a
+                  href="/contact"
+
+                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Consultation
+
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+

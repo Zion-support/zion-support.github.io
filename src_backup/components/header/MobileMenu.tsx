@@ -1,5 +1,5 @@
-onClose(), // Close mobile menu on any click
 
+              onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -20,15 +20,15 @@ onClose(), // Close mobile menu on any click
 
     </div>
 
-;
-
+    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
+}
   );
+}
 
-}> {';
-  item.badge > 9 ? '9+' : item.badge ;
-}</span>) ;
-}</div> {;
-  item.name ;
-}</Link>) ) ";
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-}'"
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
+}
+

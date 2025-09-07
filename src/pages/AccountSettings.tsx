@@ -1,92 +1,18 @@
 
-import { useState } from 'react';
-import { useLocalStorage } from '@/hooks';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
-import { toast } from 'sonner';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-export default function AccountSettings() {
-
-  const { user } = useAuth($2);
-  const [displayWeb3, setDisplayWeb3] = useLocalStorage($2);
-  const [didHandle, setDidHandle] = useLocalStorage($2);
-  const [enableBackup, setEnableBackup] = useLocalStorage($2);
-  const [isSubmitting, setIsSubmitting] = useState($2);
-  const handleSave = () => {
-    setIsSubmitting($2);
-    // Simulate API call
-    setTimeout(() => {
-      try {
-        setDisplayWeb3(displayWeb3),
-        setDidHandle(didHandle),
-        setEnableBackup(enableBackup),
-        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),
-        toast.success('Account settings updated successfully');
-      } catch (e) {
-        logErrorToProduction('Failed to save settings', { data:  e }),
-        toast.error('Failed to save settings');
-      } finally {
-        setIsSubmitting(false)
-      }
-    }, 1000)
-  },
-  
-  const handleConnectWallet = $2;
-      if (!ethereum) {
-        toast.error($2);
-        return
-      }
-      
-      // Request accounts
-      const accounts = await ethereum.request($2);
-      const address = $2;
-      // Sign message to verify ownership
-      const message = $2;
-      await ethereum.request($2);
-      // Auto-set DID handle if ENS is available
-      try {
-        const provider = new (window as any).ethers.providers.Web3Provider($2);
-        const ensName = await provider.lookupAddress($2);
-        if (ensName) {
-          setDidHandle(ensName)
-        }
-      } catch (error) {
-        logErrorToProduction('ENS lookup error:', { data: error})
-      }
-      
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet');
-    }
-  },
 
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
-      <main className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
-        <div className="grid gap-6 md: grid-cols-2">
+
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input,
-                  id="email",
-                  value={user?.email || ''}
+
+                  id="email"
+                  value={user?.email || ""}
                   disabled
                   className="bg-gray-100"
                 />
@@ -108,6 +34,7 @@ export default function AccountSettings() {
                     className="flex items-center gap-1"
                   >
                     <Wallet className="h-4 w-4" />
+
                     Connect
                   </Button>
                 </div>
@@ -115,21 +42,7 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-              
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
-                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
-                </div>
-                <Switch
-                  id="displayWeb3"
-                  checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}
-                />
-              </div>
-              
-              <Separator />
-              
+
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
@@ -141,31 +54,20 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
-                  id="backup"
-                  checked={enableBackup}
-                  onCheckedChange={setEnableBackup}
-                />
-              </div>
-              
-              {enableBackup && (
-                <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
-                  Data will be backed up to decentralized storage. This feature is in beta.
-                </div>
+
               )}
               
               <Button 
                 onClick={handleSave}
                 disabled={isSubmitting}
-                className="w-full"
-              >
-                {isSubmitting ? 'Saving...' : 'Save Settings'}
+
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
           
           <Card>
-            <CardHeader>
+
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>Manage your Web3 connections and features</CardDescription>
             </CardHeader>
@@ -242,20 +144,20 @@ export default function AccountSettings() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full"
                   disabled={!enableBackup}
                 >
                   Restore Profile from Backup
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
-                  {enableBackup 
-                    ? 'Restore your profile data from decentralized storage' 
-                    : 'Enable backup first to use this feature'}
+                  {enableBackup
+                    ? "Restore your profile data from decentralized storage"
+                    : "Enable backup first to use this feature"}
                 </p>
               </div>
             </CardContent>
@@ -263,6 +165,26 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
-  )
-}
-;
+  );
+};
+
+              <div>;
+                <h3 className='font - medium mb - 2'>Recovery Options</h3>;
+                <Button;
+                  variant='outline';
+                  className='w - full';
+                  disabled={!enable_backup}                >;
+                  Restore Profile from Backup;
+                </Button>;
+                <p className='text - xs text - gray - 500 mt - 1'>;
+                  {enable_backup;
+                    ? 'Restore your profile data from decentralized storage';
+
+                    : 'Enable backup first to use this feature'}
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        </div>;
+      </main>;
+

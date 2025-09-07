@@ -1,15 +1,27 @@
+<<<<<<< HEAD
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ContactSection } from "@/components/ContactSection";
-import Link from "next/link";
-export default function About() {
-  const team = $2;
-      role: "CEO",
-      image:
-        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto = $2;
-      bio:
-        "Alex Johnson leads Zion as CEO, driving the company's vision to democratize AI globally. With over a decade of experience in technology startups, Alex previously built enterprise platforms adopted by Fortune 500 companies. At Zion, he focuses on building partnerships and ensuring that innovation benefits everyone. Alex believes in open collaboration and empowers the team to push boundaries while upholding transparency. Outside work, he mentors young entrepreneurs and enjoys exploring new cultures. He loves hiking, reading science fiction, and cooking."
+=======
+>>>>>>> origin/main
+import React from 'react';
+
+export default function AboutPage() {
+  return (
+<<<<<<< HEAD
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Card from '../components/Card';
+
+const About: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('mission');
+
+  const teamMembers = [
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'Chief Technology Officer',
+      expertise: 'AI & Machine Learning',
+      image: '👩‍💼',
+      description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.',
     },
     {
       name: "Maria Chen",
@@ -77,7 +89,46 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center content-section">
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+
+  );
+};
+
+export default About;
+
+=======
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          About Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge
+          technology solutions that transform businesses and drive innovation.
+        </p>
+      </section>
+
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Mission</h2>
+          <p className="text-lg text-gray-600 mb-6">
+            At Zion Tech Group, we believe in the power of technology to transform businesses and create meaningful impact. 
+            Our mission is to deliver innovative AI and technology solutions that help organizations thrive in the digital age.
+          </p>
+          <p className="text-lg text-gray-600 mb-6">
+            With over 1000+ successful projects delivered across various industries, we combine technical expertise 
+            with business acumen to create solutions that drive real results.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>,
               <p className="text-zion-slate-light text-lg mb-6">,
@@ -235,4 +286,4 @@ export default function About() {
     </>
   )
 }
-;
+>>>>>>> origin/main

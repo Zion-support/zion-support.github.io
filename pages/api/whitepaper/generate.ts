@@ -8,15 +8,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!isAdmin) return res.status(403).json($2);
   const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {},
 
-  const distLines = $2;
-  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`,
-  const userPrompt = $2;
+  const {
+    token_name
+    token_supply
+    use_cases
+    rewards_logic
+    distribution
+    governance
+    jurisdiction
+
+  const distLines = Array && Array.isArray(distribution)
+    ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
+    : "";
+  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
+  const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
   try {
     let markdown: string,
     if (client) {
-      const completion = await client.responses.create($2);
-      const content = $2;
-      markdown = content.trim()
+
+      } as any);
+      const content = (completion as any)?.output_text || "";
     } else {
       markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
     }

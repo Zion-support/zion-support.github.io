@@ -1,33 +1,5 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip',
-import z from 'zod';
-import { ChatAssistant } from '@/components/ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-export default function Contact() {
-  const [formData, setFormData] = useState($2);
-  const [isSubmitting, setIsSubmitting] = useState($2);
-  const [errors, setErrors] = useState<{
-    name?: string,
-    email?: string,
-    message?: string
-  }>({}),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
+<<<<<<< HEAD
+import React, { useState } from 'react';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {,
     const { name, value } = e.target,
@@ -222,24 +194,216 @@ export default function Contact() {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+
+=======
+import React from 'react';
+
+export default function ContactPage() {
+  return (
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Contact Us
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Ready to transform your business with cutting-edge technology? 
+          Get in touch with our team of experts today.
+        </p>
+      </section>
+
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800 text-lg">
+                      +1 302 464 0950
+                    </a>
+                    <p className="text-gray-600">Available 24/7 for urgent matters</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📧</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 text-lg">
+                      kleber@ziontechgroup.com
+                    </a>
+                    <p className="text-gray-600">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📍</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                    <p className="text-gray-600 text-lg">
+                      364 E Main St STE 1008<br />
+                      Middletown DE 19709
+                    </p>
+                    <p className="text-gray-600">United States</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-12">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>1000+ successful projects delivered</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>24/7 technical support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>Enterprise-grade security</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>Custom solutions for every need</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>Proven track record of success</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+              <form className="space-y-6">
                 <div>
-                  <label htmlFor="message" className="block text-white mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+>>>>>>> origin/main
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+<<<<<<< HEAD
+                    value={formData.service}
+
+                    onChange={handleChange}
+=======
+>>>>>>> origin/main
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-services">AI Services</option>
+                    <option value="micro-saas">Micro SaaS Solutions</option>
+                    <option value="it-services">IT Services</option>
+                    <option value="cloud-services">Cloud Services</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+<<<<<<< HEAD
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="digital-transformation">Digital Transformation</option>
+
+                    <option value="consulting">Consulting</option>
+=======
+                    <option value="blockchain">Blockchain Solutions</option>
+>>>>>>> origin/main
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+<<<<<<< HEAD
+                    Message *
+=======
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message
+>>>>>>> origin/main
                   </label>
                   <Textarea
                     id="message"
                     name="message"
+<<<<<<< HEAD
                     value={formData.message}
                     onChange={handleChange}
                     className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     placeholder="Tell us what you'd like to know..."
                     required
-                  />
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">
-                      {errors.message}
-                    </p>
-                  )}
+=======
+>>>>>>> origin/main
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project or requirements..."
+                  ></textarea>
                 </div>
 
                 <Button
@@ -269,7 +433,8 @@ export default function Contact() {
                   )}
                 </AnimatePresence>
               </form>
-            </div>
+<<<<<<< HEAD
+            )}
 
             <div>
               <TooltipProvider>
@@ -321,106 +486,19 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
-                  width="100%"
-                  height="300",
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Zion Office Locations"
-                ></iframe>
-              </div>
-
-              <div className="mt-8">
-                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
-                  <div className="flex items-center">
-                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
-                      <MessageSquare className="h-6 w-6 text-zion-purple" />
-                    </div>
-                    <div>
-                      <h3 className="text-white text-lg font-bold">
-                        Live AI Support
-                      </h3>
-                      <p className="text-zion-slate-light">
-                        Get instant answers to your questions
-                      </p>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => setIsChatOpen(true)}
-                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  >
-                    Chat With Our AI Assistant
-                  </Button>
-                </Card>
-              </div>
+=======
             </div>
           </div>
-
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Need immediate assistance?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
-              Our customer support team is available 24/7 to help you with any
-              questions.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button,
-                onClick={() => setIsChatOpen(true)}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              >
-                <MessageSquare className="mr-2 h-5 w-5" />
-                Chat With AI
-              </Button>
-              <Button
-                variant="outline"
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                asChild
-              >
-                <a href="mailto:support@ziontechgroup.com">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Email Support
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-zion-slate-light text-lg">,
-              Looking for more details about our platform? Visit our{' '}
-              <Link href="/services" className="text-zion-cyan underline">
-                services page
-              </Link>{' '}
-              or explore the{' '}
-              <Link href="/blog" className="text-zion-cyan underline">
-                Zion blog
-              </Link>{' '}
-              for additional insights.
-            </p>
-          </div>
+>>>>>>> origin/main
         </div>
-      </main>
+      </section>
+    </div>
+<<<<<<< HEAD
 
-      {/* Chat Assistant Modal */}
-      {isChatOpen && (
-        <ChatAssistant
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-          recipient={{
-            id: 'ai-assistant',
-            name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text = $2;
-            role: 'Support Bot'}}
-          onSendMessage={handleSendMessage}
-          starterQuestions={[
-            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?']}
-        />
-      )}
-    </>
-  )
+  );
+};
+
+=======
+  );
 }
-;
+>>>>>>> origin/main

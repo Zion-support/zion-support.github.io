@@ -12,8 +12,22 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json($2);
-  const state = readState($2);
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = readState();
+  if (!state.config.optIn |state.config.paused) {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+
+  const state = readState();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default async function handler(req, res) {
+  try {
+
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -45,25 +59,129 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  const entityId = getEntityId($2);
-  const currentState = readState($2);
-  upsertEvent($2);
-  writeState($2);
-  const alreadyPropagated = $2;
+  const alreadyPropagated = payload && payload.propagate === false;
+
+  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature && baseSignature.signPayload(localBody);
+    if (sig) headers["x-zion-signature"] = sig;
+
+      return res.status(400).json({ error: "Merkle root mismatch" })
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  const entityId = getEntityId(event);
+  const currentState = readState();
+  upsertEvent(currentState, event);
+  writeState(currentState);
+  const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string, string> = {},
-    const localBody = { ...event, propagate: false},
-    const baseSignature = require($2);
-    const sig = baseSignature.signPayload($2);
-    if (sig) headers["x-zion-signature"] = sig,
+    const headers: Record<string, string> = {}
+    const localBody = { ...event, propagate: false }
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature.signPayload(localBody);
+    if (sig) headers["x-zion-signature"] = sig;
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const entityId = getEntityId(event)
+  const currentState = readState()
+  upsertEvent(currentState, event)
+  writeState(currentState)
+  const alreadyPropagated = payload.propagate === false
+  if (!alreadyPropagated && currentState.config.peers.length > 0) {
 
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
-          const url = new URL("/api/sync/publish", peer.baseUrl).toString($2);
+
           try {
-            await axios.post(url, localBody, { headers, timeout: 5000})
+};
+;
+  if (event.type === "proposal") {;
+
+  const event = payload as SyncEvent & { propagate?: boolean }
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "Invalid event" });
+  }
+  if () {) {
+  $2
+}
+    return res.status (403).json ({ error: "Event type not allowed by current scope" });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const votes = (event as any).payload?.votes;
+    const provided_root = event.merkle_root;
+    // Check condition
+if (|| !provided_root) {) {
+  $2
+}
+      return res.status (400).json ({ error: "Proposal events require votes[] and merkle_root" });
+    }
+    const computed = computeMerkleRootFromVotes (votes);
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Merkle root mismatch" });
+    }
+  }
+  const entity_id = getEntityId (event);
+  const current_state = read_state ();
+  upsert_event (current_state, event);
+  write_state (current_state);
+;
+  const already_propagated = payload.propagate === false;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    const headers: Record < string, string> = {}
+    const local_body = { ...event, propagate: false }
+    const base_signature = require ("../../../utils / sync / signature");
+    const sig = base_signature.sign_payload (local_body);
+    // Check condition
+if (headers["x - zion - signature"] = sig) {
+  $2
+}
+    await Promise.all (
+      current_state.config.peers;
+        .filter ((p) => !p.paused);
+        .map (async (peer) => {
+          const url = new URL ("/api / sync / publish", peer.base_url).to_string ();
+          try {
+            await axios.post (url, local_body, { headers, timeout: 5000 });
           } catch {
             // ignore peer failure
           }

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -147,6 +148,7 @@ export default function Support() {
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+
               Get the support you need for our AI consciousness, quantum computing, 
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
@@ -366,6 +368,92 @@ export default function Support() {
                     placeholder="Search for help topics, questions, or solutions..."
                     value = $2;
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."
+              }
+              {
+                question: "How does Quantum Neural Ecosystem work?"
+                answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."
+              }
+              {
+                question: "What makes Space Resource Intelligence unique?"
+                answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."
+              }
+              {
+                question: "How secure is your Quantum Cybersecurity platform?"
+                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."
+              }
+              {
+                question: "Can I integrate your AI with my existing systems?"
+                answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."
+              }
+              {
+                question: "What support do you offer for enterprise deployments?"
+                answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
+              }
+
+                    <span className="text - sm text - gray - 400">({category.count})</span>;
+                  </button>))}
+
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="flex flex-wrap gap-2">
+                {supportCategories.map((category) => (
+                  <button
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
+                      selectedCategory === category.id;
+                        ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400';
+                        : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >;
+                    {category.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <span className="text-sm text-gray-400">({category.count})</span>
+                  </button>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* FAQ Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                question: "What is AI Consciousness Evolution?",
+                answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self - aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence.";
               },
               {
                 question: "How does Quantum Neural Ecosystem work?",
@@ -387,6 +475,12 @@ export default function Support() {
                 question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
               }
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
@@ -566,7 +660,7 @@ export default function Support() {
                 Support Hours & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Our expert support team is available to help you succeed with our 
+
                 revolutionary technology solutions.
               </p>
               
@@ -582,17 +676,46 @@ export default function Support() {
                         ? 'bg-green-500/20 text-green-400' 
                         : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
-                      {schedule.status}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20}}
-              whileInView={{ opacity: 1, x: 0}}
-              transition = $2;
+                      {schedule.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>;
+                  </div>;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, x: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
+                <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
+                <p className="text-gray-300 mb-6">
+
+                  For urgent technical issues or critical support needs,
+
+                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
                   our team is available around the clock.
                 </p>
                 
@@ -630,9 +753,49 @@ export default function Support() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition = $2;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Still Need Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+
+              revolutionary technology solutions. Don't hesitate to reach out.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+              >
+                Get Support
+                <ArrowRight className="w-5 h-5" />
+              <a
+                href="/resources"
+                className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                Browse Resources
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+},
 export default Support,
           </div>
         </section>
@@ -673,3 +836,156 @@ export default Support,
                   For critical issues affecting production systems, contact our emergency support line: </p>
                 <div className = $2;
 export default SupportPage,
+              className="relative";
+            >;
+              <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">;
+                <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>;
+                <p className="text-gray-300 mb-6">;
+                  For urgent technical issues or critical support needs,;
+                  our team is available around the clock.;
+                </p>;
+                <div className="space-y-4">;
+                  <div className="flex items-center gap-3">;
+                    <Phone className="w-5 h-5 text-cyan-400" />;
+                    <span className="text-white">+1 302 464 0950</span>;
+                  </div>;
+                  <div className="flex items-center gap-3">;
+                    <Mail className="w-5 h-5 text-purple-400" />;
+                    <span className="text-white">support@ziontechgroup.com</span>;
+                  </div>;
+                  <div className="flex items-center gap-3">;
+                    <MessageCircle className="w-5 h-5 text-green-400" />;
+                    <span className="text-white">Live Chat Available</span>;
+                  </div>;
+                </div>;
+                <div className="mt-6 pt-6 border-t border-cyan-500/20">;
+                  <a;
+                    href="/contact";
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300";
+                  >;
+                    Contact Support;
+                    <ArrowRight className="w-5 h-5" />;
+                  </a>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
+        <div className="container mx-auto px-4 text-center">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >;
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+              Still Need Help?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Our support team is dedicated to ensuring your success with our;
+              revolutionary technology solutions. Don't hesitate to reach out.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <a;
+                href="/contact";
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300";
+              >;
+                Get Support;
+                <ArrowRight className="w-5 h-5" />;
+              </a>;
+              <a;
+                href="/resources";
+                className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300";
+              >;
+                Browse Resources;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+},;
+export default Support,;
+          </div>;
+        </section>;
+        {/* Contact Support */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >;
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                Still Need Help?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Our expert support team is ready to assist you with any questions or technical issues;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center";
+                >;
+                  Contact Support;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </a>;
+                <a;
+                  href="tel:+13024640950";
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center";
+                >;
+                  <Phone className="w-5 h-5 mr-2" />;
+                  Call Now;
+                </a>;
+              </div>;
+              <div className="mt-8 p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30">;
+                <h3 className="text-xl font-bold text-white mb-4">Emergency Support</h3>;
+                <p className="text-gray-300 mb-4">;
+                  For critical issues affecting production systems, contact our emergency support line: </p>;
+                <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>;
+                <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </main>;
+    </Layout>;
+  );
+};
+export default SupportPage;
+

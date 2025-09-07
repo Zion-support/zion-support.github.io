@@ -1,61 +1,27 @@
 
-import { useState } from 'react';
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils";
-interface CodeBlockProps {
-  code: string;
-  language?: string,
-  showLineNumbers?: boolean,
-  className?: string
+
+          {language}
+        </div>;
+      )}
+
+    </div>;
+  );
+
+    >;
+      <pre;
+        className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}
+      >;
+        {showLineNumbers && (
+
+export default CodeBlock;
+;
+}
+}
+}
 }
 
-export function CodeBlock({ 
-  code,
-  language = $2;
-  showLineNumbers = $2;
-  className
-}: CodeBlockProps) {
-  const [copied, setCopied] = useState($2);
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText($2);
-    setCopied($2);
-    setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  },
-
-  return (
-    <div className = $2;
-      className
-    )}>
-      <pre className = $2;
-        showLineNumbers && "pl-12 relative"
-      )}>
-        {showLineNumbers && (
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
-            {code.split('\n').map((_, i) => (
-              <div key={i} className="h-6 leading-6">
-                {i + 1}
-              </div>
-            ))}
-          </div>
-        )}
-        <code className="language-javascript">{code}</code>
-      </pre>
-      <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors",
-        onClick={handleCopyClick}
-        aria-label="Copy code"
-      >
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>
-      {language && (
-        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
-          {language}
-        </div>
-      )}
-    </div>
-  )
+    </div>;
+  );
 }
 ;
-export default CodeBlock;
+

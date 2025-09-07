@@ -1,13 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
-import { signPayload } from "../../../utils/sync/signature";
-import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
+import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",;
+import { signPayload } from "../../../utils/sync/signature",;
+import axios from "axios",;
+import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json($2);
-  const state = readState($2);
-  if (!state.config.optIn || state.config.paused) {
+
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const state = readState()
+  if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
@@ -19,20 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes($2);
   const version = $2;
   const event = {
-    eventId: uuidv4($2);
-    type: "proposal" as const,
-    payload: { id: proposalId, proposalId, title, votes },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: Date.now($2);
-    merkleRoot},
 
-  upsertEvent($2);
-  writeState($2);
-  const body = { ...event, propagate: false},
-  const headers: Record<string, string> = {},
-  const sig = signPayload($2);
-  if (sig) headers["x-zion-signature"] = sig,
+    merkleRoot};
+
+  upsertEvent(state, event);
+  writeState(state);
 
   await Promise.all(
     state.config.peers
@@ -48,4 +40,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   ),
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
-}
+

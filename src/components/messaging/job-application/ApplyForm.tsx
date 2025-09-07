@@ -1,20 +1,17 @@
 
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { useMessaging } from "@/context/MessagingContext";
-import { toast } from "@/hooks/use-toast";
-import { ResumeSelector, ResumeOption } from "../resume-selector";
-import { MessageTab } from "./MessageTab";
-import { ResumeTab } from "./ResumeTab";
-import { Job } from "./types";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ApplyFormProps {
-  job: Job;
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>,
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useMessaging } from '@/context/MessagingContext';
+import { toast } from '@/hooks/use-toast';
+import { ResumeSelector, ResumeOption } from '../resume-selector';
+import { MessageTab } from './MessageTab';
+import { ResumeTab } from './ResumeTab';
+import { Job } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
 }
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
@@ -103,20 +100,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     }
   },
 
-  return (
-    <>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
-          <TabsTrigger value="message" className="flex-1">
-            Message
-          </TabsTrigger>
-          <TabsTrigger value="resume" className="flex-1">
-            Resume
-          </TabsTrigger>
-        </TabsList>
-        
-        <TabsContent value="message">
-          <MessageTab 
             message={message}
             setMessage={setMessage}
             proposalLink={proposalLink}
@@ -131,21 +114,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           />
         </TabsContent>
       </Tabs>
-      
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
-        <Button
-          type="button"
-          variant="outline",
-          onClick={onClose}
-          className="border-zion-purple/30 text-white"
-        >
-          Cancel
-        </Button>
-        <Button
-          type="button" 
-          onClick={handleApply}
-          disabled={isSubmitting}
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+
         >
           {isSubmitting ? (
             <>
@@ -155,8 +124,4 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           ) : (
             'Submit Application',
           )}
-        </Button>
-      </div>
-    </>
-  )
-}
+

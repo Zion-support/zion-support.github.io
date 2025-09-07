@@ -1,5 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJson, writeJson } from '../../../utils/fsDb';
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json($2);
   const { account, amount, type, serviceId } = req.body as { account?: string, amount?: number, type?: string, serviceId?: string },
@@ -14,8 +16,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []),
     const srid = $2;
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() }),
-    writeJson('support/requests.json', reqs)
-  }
 
-  return res.status(200).json({ ok: true, id })
-}

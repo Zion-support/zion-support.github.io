@@ -42,80 +42,78 @@ export function TemplateSaveForm({
     if (!currentValues && !editTemplate) {
       return,
     }
-    
-    setSaving($2);
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id,
-          title: values.title,
-          templateData: editTemplate.template_data,
-          isDefault: values.isDefault})
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title,
-          templateData: currentValues,
-          isDefault: values.isDefault})
-      }
-      
-      onComplete()
-    } finally {
-      setSaving(false)
-    }
-  },
-  
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-          name="title"
-          render={({ field }: { field: ControllerRenderProps<FormValues, "title"> }) => (
-            <FormItem>
+
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
             </FormItem>
-          )}
-        />
-        
-        <FormField
+
+            field: ControllerRenderProps<FormValues, 'title'>;
+          }) => (            <FormItem>;
+              <FormLabel>Template Name</FormLabel>;
+            field: ControllerRenderProps < FormValues, 'title'>;
+          }) => (            <FormItem>;
+              <FormLabel > Template Name</FormLabel>;
+
+              <FormControl>;
+                <Input {...field} placeholder='Enter template name' />;
+              </FormControl>;
+              <FormMessage />;
+
+            </FormItem>)}
+        />;
+        <FormField;
           control={form.control}
-          name="isDefault"
-          render={({ field }: { field: ControllerRenderProps<FormValues, "isDefault"> }) => (
-            <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
-              <FormControl>
+          name='is_default';
+
+          render={({
+            field
+          }: {
+
+            field: ControllerRenderProps<FormValues, 'isDefault'>;
+          }) => (;
+            <FormItem className='flex items-center justify-between'>;
+              <FormLabel className='cursor-pointer'>;
+                Set as default template;
+              </FormLabel>;
+              <FormControl>;
+
                 <Switch
-                  aria-label="Default template"
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+                  aria-label='Default template'
+                  checked={field && field.value}
+                  onCheckedChange={field && field.onChange}                />;
+
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
           )}
-        />
-        
-        <div className="flex gap-2 justify-end">
-          <Button type="button" variant="outline" onClick={onCancel}>
+
             Cancel
           </Button>
-          <Button type="submit" disabled={saving}>
-            {saving ? (
+
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
+
+  editTemplate ? "Update" : "Save" 
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"};
+
               `${editTemplate ? "Update" : "Save"} Template`
+
             )}
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )
-}
-;
+          </Button>;
+        </div>;
+      </form>;
+

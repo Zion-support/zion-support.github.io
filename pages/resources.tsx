@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -270,4 +272,26 @@ export default function ResourcesPage() {
       <EnhancedFooter />
     </>
   )
-}
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
+            <p className="text-xl text-blue-100 mb-8">;
+              Can't find what you're looking for? Our team is here to help with custom research;
+              personalized consultations, and tailored solutions for your specific needs.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <a;
+                href="/contact";
+              >;
+                Contact Our Experts;
+              </a>;
+              <a;
+                href="/contact";
+              >;
+                Request Custom Research;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+

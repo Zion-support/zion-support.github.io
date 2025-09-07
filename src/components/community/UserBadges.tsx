@@ -1,21 +1,24 @@
 
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
-import { Badge } from "@/types/community";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-interface UserBadgesProps {
-  badges: Badge[],
-}
-
-const iconMap = $2;
+  Trophy,
   Award,
   BadgeCheck,
   Star,
   MessageSquare
 },
 
-export const UserBadges = $2;
+export const UserBadges = ({ badges }: UserBadgesProps) => {
+  if (!badges?.length) return null,
+
   return (
-    <div className = $2;
+
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+export default UserBadges;
+}
+}
+}
+
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -39,9 +42,18 @@ export const UserBadges = $2;
             </Tooltip>
           </TooltipProvider>
         )
-      })}
-    </div>
-  )
-},
-;
-export default UserBadges;
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
+import { Badge } from "@/types/community",;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
+
+interface UserBadgesProps {;
+  badges: Badge[];
+}
+
+const iconMap = {;
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+  MessageSquare;
+

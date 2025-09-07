@@ -1,3 +1,4 @@
+
 // Test setup file for Jest
 require("@testing-library/jest-dom");
 
@@ -5,6 +6,14 @@ require("@testing-library/jest-dom");
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+
+import '@testing-library/jest-dom';
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+
     matches: false,
     media: query,
     onchange: null,
@@ -17,7 +26,7 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+
   constructor() {}
   disconnect() {}
   observe() {}
@@ -25,7 +34,7 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+
   constructor() {}
   disconnect() {}
   observe() {}
@@ -33,14 +42,13 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock console methods to reduce noise in tests
-const originalError = console.error;
-const originalWarn = console.warn;
+
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
 
 beforeAll(() => {
-  console.error = (...args) => {
-    if (
-      typeof args[0] === "string" &&
-      args[0].includes("Warning: ReactDOM.render is no longer supported")
+  console.error = (...args: any[]) => {
+
     ) {
       return;
     }
@@ -51,6 +59,7 @@ beforeAll(() => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+
     ) {
       return;
     }
@@ -59,6 +68,4 @@ beforeAll(() => {
 });
 
 afterAll(() => {
-  console.error = originalError;
-  console.warn = originalWarn;
-});
+

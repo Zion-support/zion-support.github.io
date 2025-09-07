@@ -1,78 +1,35 @@
-import React, { useEffect } from 'react';
-
-interface PerformanceData {
-  domContentLoaded: number;
-  loadComplete: number;
-  totalLoadTime: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  resourceCount: number;
-  memory: {
-    used: number;
-    total: number;
-    limit: number;
-  } | null;
-}
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void;
+  onPerformanceData?: (data: any) => void;
 }
 
-// Extend the Window interface to include performance
-declare global {
-  interface Window {
-    performance: Performance;
-  }
-}
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
+    if (typeof window !== 'undefined' && 'performance' in window) {
 
-    const measurePerformance = () => {
-      const navigation = (window.performance as Performance).getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.performance.getEntriesByType('paint');
-      
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
-        } : null
-      };
+        }
+      });
 
-      if (onPerformanceData) {
-        onPerformanceData(performanceData);
-      }
-    },
+      observer.observe({ entryTypes: ['navigation'] });
 
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance()
-    } else {
-      window.addEventListener('load', measurePerformance)
+      return () => observer.disconnect();
+
     }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance)
-    }
-  }, []),
+  }, []);
 
   return null, // This component doesn't render anything visible
 },
 
-export default PerformanceMonitor,
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+

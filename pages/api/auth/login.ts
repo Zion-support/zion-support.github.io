@@ -1,6 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
-import { UserRole } from '../../../utils/messaging/types';
+
+import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
+import { UserRole } from '../../../utils/messaging/types',;
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json($2);
   const { name, role } = req.body as { name: string, role: UserRole},
@@ -10,4 +11,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   upsertUser($2);
   setUserCookie($2);
   res.status(200).json({ user })
-}
+

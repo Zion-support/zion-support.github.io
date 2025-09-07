@@ -8,12 +8,12 @@ describe('App Smoke Tests', () => {
   });
   it('should render a basic structure', () => {
     const { container } = render(<App />);
+<<<<<<< HEAD
+    expect(container).toBeInTheDocument();
+  });
+});
+=======
     expect(container.firstChild).toBeTruthy();
   });
 });
-
-describe('App Smoke Test', () => {
-  it('renders without crashing', () => {
-    render(<App />);
-  });
-});
+>>>>>>> origin/main

@@ -1,6 +1,7 @@
 
-        }
-      }
+<<<<<<< HEAD
+=======
+import { useEffect } from 'react';
 
     },
 ,
@@ -54,4 +55,6 @@
           <span className = $2;
           <button,
 
-            onClick = $2;
+  return null;
+};
+>>>>>>> origin/main

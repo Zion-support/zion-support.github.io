@@ -1,22 +1,23 @@
-import * as React from "react"
-import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
-import { Circle } from 'lucide-react'
 
-import { cn } from "@/lib/utils"
 
 const RadioGroup = $2;
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  return (
-    <RadioGroupPrimitive.Root
-      className={cn("grid gap-2", className)}
+
       {...props}
-      ref = $2;
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
->(({ className, ...props }, ref) => {
-  return (
-    <RadioGroupPrimitive.Item
-      ref = $2;
+      ref={ref}
+    />;
+  );
+});
+
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
+>(({ className, ...props }, ref) => {;
+  return (;
+    <RadioGroupPrimitive.Item;
+      ref={ref}
+
         className
       )}
       {...props}
@@ -30,3 +31,7 @@ const RadioGroup = $2;
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
 export { RadioGroup, RadioGroupItem }
+
+export { RadioGroup, RadioGroupItem }
+;
+
