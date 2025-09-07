@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-09-06T00:46:49.695Z",
+  "duration": "46s",
+  "fixedFiles": [],
+  "errors": [],
+  "summary": {
+    "totalFixed": 0,
+    "totalErrors": 0,
+    "successRate": null
+  }
+}

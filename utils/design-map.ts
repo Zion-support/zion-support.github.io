@@ -1,239 +1,273 @@
-
-export type UIKitKind = "ios" | "android" | "web";""
-export type UIKitKind = "ios" | "android" | "web";"
-
-export interface TokenSet {
-  // TODO: Implement
-}
-export interface TokenSet {;
-
-  colors: Record<string, string>;
-</string>
-  typography: Record<string, any>;
-</string>
-  spacing: Record<string, number>;
-</string>
-  components: Record<string, any>;
-</string>
-export async function buildTokenSet(fileId: string): Promise<TokenSet> {
-</TokenSet>
-  colors: Record<string, string>;
-</string>
-    fontSizes: Record<string, string>;
-</string>
-export async function buildTokenSet(): Promise<TokenSet> {
-</TokenSet>
-  const colors: Record<string, string> = {};
-</string>
-export function buildUIKit(kind: UIKitKind): Record<string, string> {
-</string>"
-        'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',''
-        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',''
-        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }','
-</CButton>'
-      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }","
-export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
-</Partial>
-    return (await res && res.json()) as Partial<TokenSet>;
-</TokenSet>
-  properties: Record<string, any>;
-</string>
-  tokens: Record<string, any>;
-</string>
-  fills?: Array<{
-    type: string;
-    color?: {
-      r: number;,
-  g: number;
-      b: number;,
-  a: number;
-
-    };
+export type DesignMapSection = {
+  id: string;
+  title: string;
+  description?: string;
+  items?: Array<{
+    id: string;
+    title: string;
   }>;
-  effects?: Array<{
-    type: string;
-    radius?: number;
-    color?: {
+};
 
-      r: number;,
-  g: number;
-      b: number;,
-  a: number;
-
-    };
-  }>;
-  characters?: string;
-  style?: {
-    fontFamily?: string;
-    fontSize?: number;
-    fontWeight?: number;
-    textAlignHorizontal?: string;}
-    textAlignVertical?: string;}
+export type DesignMap = {
+  route: string;
+  products: {
+    foundations: DesignMapSection[];
+    talent: DesignMapSection[];
+    client: DesignMapSection[];
+    aiTools: DesignMapSection[];
+    dao: DesignMapSection[];
+    admin: DesignMapSection[];
+    mobile: DesignMapSection[];
   };
-}
+};
 
-  const tokens = await buildTokenSet(fileId);
-    };
-  };
-}
-
-
-  getDesignSystem(id: string): DesignSystem | null {
-  // TODO: Implement
-}
-    return this.designSystems.get(id) || null;
-
-  }
-
-  addComponent(designSystemId: string, component: DesignElement): boolean {
-  // TODO: Implement
-}
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-  const tokens = await buildTokenSet(fileId);
+export function getZionDesignMap(): DesignMap {
   return {
-  // TODO: Implement
-}
-    designSystem.components.push(component);
-    designSystem.lastUpdated = new Date();}
-    return true;}
-  }
-
-  addToken(designSystemId: string, key: string, value: any): boolean {
-  // TODO: Implement
-}
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-
-    designSystem.tokens[key] = value;
-    designSystem.lastUpdated = new Date();}
-    return true;}
-  }
-
-  addAsset(designSystemId: string, asset: DesignElement): boolean {
-  // TODO: Implement
-}
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-
-    designSystem.assets.push(asset);
-    designSystem.lastUpdated = new Date();}
-    return true;}
-  }
-
-  // Figma integration methods;
-
-  importFromFigma(figmaData: FigmaNode[], designSystemId: string): DesignElement[] {
-
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return [];
-
-    const elements: DesignElement[] = [];
-    
-    for (const node of figmaData) {
-      this.figmaNodes.set(node.id, node);
-      const element = this.convertFigmaNodeToDesignElement(node);}
-      elements.push(element);}
+    route: '/design-map',
+    products: {
+      foundations: [
+        {
+          id: 'foundations-colors',
+          title: 'Color system',
+          items: [
+            { id: 'light', title: 'Light' },
+            { id: 'dark', title: 'Dark' }
+          ]
+        },
+        {
+          id: 'foundations-typography',
+          title: 'Typography',
+          items: [
+            { id: 'heading-scale', title: 'Heading scale' },
+            { id: 'body-text', title: 'Body text' },
+            { id: 'mono', title: 'Monospace' }
+          ]
+        },
+        {
+          id: 'foundations-icons',
+          title: 'Icon set',
+          items: [
+            { id: 'system', title: 'System icons' },
+            { id: 'product', title: 'Product icons' }
+          ]
+        },
+        {
+          id: 'foundations-components',
+          title: 'Component library',
+          items: [
+            { id: 'buttons', title: 'Buttons' },
+            { id: 'cards', title: 'Cards' },
+            { id: 'badges', title: 'Badges' },
+            { id: 'tags', title: 'Tags' }
+          ]
+        }
+      ],
+      talent: [
+        {
+          id: 'talent-resume',
+          title: 'Resume builder',
+          items: [
+            { id: 'sections', title: 'Sections' },
+            { id: 'templates', title: 'Templates' },
+            { id: 'export', title: 'Export' }
+          ]
+        },
+        {
+          id: 'talent-apply',
+          title: 'Job application flow',
+          items: [
+            { id: 'job-list', title: 'Job list' },
+            { id: 'apply-form', title: 'Apply form' },
+            { id: 'status', title: 'Status' }
+          ]
+        },
+        {
+          id: 'talent-portfolio',
+          title: 'Portfolio / project cards',
+          items: [
+            { id: 'grid', title: 'Grid' },
+            { id: 'detail', title: 'Detail' }
+          ]
+        },
+        {
+          id: 'talent-interview',
+          title: 'Interview & chat UI',
+          items: [
+            { id: 'chat', title: 'Chat' },
+            { id: 'interview', title: 'Interview' }
+          ]
+        },
+        {
+          id: 'talent-dashboard',
+          title: 'Dashboard with stats',
+          items: [
+            { id: 'overview', title: 'Overview' },
+            { id: 'charts', title: 'Charts' }
+          ]
+        }
+      ],
+      client: [
+        {
+          id: 'client-job-post',
+          title: 'Job post flow',
+          items: [
+            { id: 'draft', title: 'Draft' },
+            { id: 'publish', title: 'Publish' }
+          ]
+        },
+        {
+          id: 'client-team-builder',
+          title: 'Team builder',
+          items: [
+            { id: 'roles', title: 'Roles' },
+            { id: 'invite', title: 'Invite' }
+          ]
+        },
+        {
+          id: 'client-shortlist-offer',
+          title: 'Shortlist + offer page',
+          items: [
+            { id: 'shortlist', title: 'Shortlist' },
+            { id: 'offer', title: 'Offer' }
+          ]
+        },
+        {
+          id: 'client-milestone-quote',
+          title: 'Milestone + quote view',
+          items: [
+            { id: 'milestones', title: 'Milestones' },
+            { id: 'quotes', title: 'Quotes' }
+          ]
+        }
+      ],
+      aiTools: [
+        {
+          id: 'ai-gpt-prompts',
+          title: 'GPT prompt modals',
+          items: [
+            { id: 'prompt-modal', title: 'Prompt modal' },
+            { id: 'history', title: 'History' }
+          ]
+        },
+        {
+          id: 'ai-content-assistant',
+          title: 'Content assistant panels',
+          items: [
+            { id: 'side-panel', title: 'Side panel' },
+            { id: 'inline', title: 'Inline helper' }
+          ]
+        },
+        {
+          id: 'ai-scoring',
+          title: 'Scoring overlays',
+          items: [
+            { id: 'resume-score', title: 'Resume score' },
+            { id: 'job-fit', title: 'Job fit' }
+          ]
+        },
+        {
+          id: 'ai-chat',
+          title: 'Chat-style interaction screens',
+          items: [
+            { id: 'chat', title: 'Chat' },
+            { id: 'agent', title: 'Agent view' }
+          ]
+        }
+      ],
+      dao: [
+        {
+          id: 'dao-voting',
+          title: 'Voting screens',
+          items: [
+            { id: 'list', title: 'Proposals list' },
+            { id: 'vote', title: 'Vote flow' }
+          ]
+        },
+        {
+          id: 'dao-treasury',
+          title: 'Treasury dashboard',
+          items: [
+            { id: 'balances', title: 'Balances' },
+            { id: 'activity', title: 'Activity' }
+          ]
+        },
+        {
+          id: 'dao-proposals',
+          title: 'Proposal submission',
+          items: [
+            { id: 'create', title: 'Create proposal' },
+            { id: 'review', title: 'Review' }
+          ]
+        },
+        {
+          id: 'dao-token',
+          title: 'Token transfer + staking',
+          items: [
+            { id: 'transfer', title: 'Transfer' },
+            { id: 'stake', title: 'Stake' }
+          ]
+        }
+      ],
+      admin: [
+        {
+          id: 'admin-user-metrics',
+          title: 'User metrics',
+          items: [
+            { id: 'cohorts', title: 'Cohorts' },
+            { id: 'funnels', title: 'Funnels' }
+          ]
+        },
+        {
+          id: 'admin-content-approvals',
+          title: 'Content approvals',
+          items: [
+            { id: 'queue', title: 'Queue' },
+            { id: 'policies', title: 'Policies' }
+          ]
+        },
+        {
+          id: 'admin-global-toggles',
+          title: 'Global toggle center',
+          items: [
+            { id: 'flags', title: 'Feature flags' },
+            { id: 'experiments', title: 'Experiments' }
+          ]
+        },
+        {
+          id: 'admin-deployment',
+          title: 'Deployment panel',
+          items: [
+            { id: 'environments', title: 'Environments' },
+            { id: 'releases', title: 'Releases' }
+          ]
+        }
+      ],
+      mobile: [
+        {
+          id: 'mobile-nav',
+          title: 'Navigation tabs',
+          items: [
+            { id: 'tabs', title: 'Tabs' },
+            { id: 'topbar', title: 'Top bar' }
+          ]
+        },
+        {
+          id: 'mobile-flows',
+          title: 'Condensed flows for jobs + chat',
+          items: [
+            { id: 'jobs', title: 'Jobs' },
+            { id: 'chat', title: 'Chat' }
+          ]
+        },
+        {
+          id: 'mobile-onboarding',
+          title: 'App onboarding',
+          items: [
+            { id: 'welcome', title: 'Welcome' },
+            { id: 'permissions', title: 'Permissions' }
+          ]
+        }
+      ]
     }
-
-    designSystem.components.push(...elements);
-    designSystem.lastUpdated = new Date();
-    return elements;
-  }
-
-  private convertFigmaNodeToDesignElement(node: FigmaNode): DesignElement {
-  // TODO: Implement
-}
-    const element: DesignElement = {,
-  id: node.id,
-      type: this.mapFigmaTypeToElementType(node.type),
-      name: node.name,
-      figmaId: node.id,
-      properties: this.extractProperties(node),}
-      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child))}
-    };
-
-    return element;
-  }
-
-"
-  private mapFigmaTypeToElementType(figmaType: string): DesignElement['type'] {''
-    const typeMap: Record<string, DesignElement['type']> = {'
-</string>
-  private extractProperties(node: FigmaNode): Record<string, any> {
-</string>
-    const properties: Record<string, any> = {};
-</string>
-    code += `    <div {...props}>\n`;
-</div>
-    code += `    </div>\n`;
-    return `<!-- HTML for ${designSystem.name} -->`;
-  }
-
-  private exportToCSS(designSystem: DesignSystem): string {
-  // TODO: Implement
-}
-    // Generate CSS styles;
-    return `/* CSS for ${designSystem.name} */`;
-  }
-
-  // Utility methods;
-  getAllDesignSystems(): DesignSystem[] {
-    return Array.from(this.designSystems.values());
-  }
-
-  clearDesignSystem(id: string): boolean {
-  // TODO: Implement
-}
-    return this.designSystems.delete(id);
-  }
-
-  clearAll(): void {
-  // TODO: Implement
-}
-    this.designSystems.clear();
-    this.figmaNodes.clear();
-  }
-}
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-</UIKit>
-export async function buildTokenSet (file_id: string): Promise < TokenSet> {
-  // Placeholder implementation;
-  return {
-  // TODO: Implement
-}
-    colors: {,'
-  primary: "#007AFF",""
-      secondary: "#5856D6",""
-      success: "#34C759",""
-      warning: "#FF9500",""
-      error: "#FF3B30","
-    },
-    typography: {,"
-  heading1: { fontSize: 32, fontWeight: "bold" },""
-      heading2: { fontSize: 24, fontWeight: "bold" },""
-      body: { fontSize: 16, fontWeight: "normal" },"
-
-    },
-    spacing: {,
-  xs: 4,
-      sm: 8,
-      md: 16,
-      lg: 24,
-      xl: 32,}
-      xl: 32,}
-}
-  };
-
-}
-    },
   };
 }
-
-export async function buildUIKit(
-  fileId: string,
-
-  kind: UIKitKind,)
-): Promise<UIKit> {
-</UIKit>"
-

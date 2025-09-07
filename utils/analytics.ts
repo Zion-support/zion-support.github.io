@@ -1,11 +1,22 @@
-export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';'
+export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
+
 export interface TrackEventPayload {
-  // TODO: Implement
-}
   event: string;
-
   properties?: Record<string, any>;
-</string>
-  properties?: Record<string, any>;
-</string>'
+  userId?: string;
+  userType?: UserType;
+}
 
+export async function trackEvent(payload: TrackEventPayload) {
+  try {
+    await fetch('/api/analytics/events/track', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (error) {
+    console.error('Failed to track event:', error);
+  }
+}

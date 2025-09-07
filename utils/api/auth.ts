@@ -1,19 +1,18 @@
-export interface User {
-  // TODO: Implement
-}
-  id: string;,
+interface User {
+  id: string;
+  role: 'client' | 'talent' | 'admin';
   email: string;
-
-  role: 'client' | 'talent' | 'admin';'
-  name?: string;
+  name: string;
 }
 
-export interface AuthContext {
-  // TODO: Implement
+export function validateUser(userId: string, role: string): User | null {
+  if (!userId || !role) return null;
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
+  
+  return {
+    id: userId,
+    role: role as 'client' | 'talent' | 'admin',
+    email: '',
+    name: ''
+  };
 }
-  user: User | null;,
-  login: (email: string, password: string) => Promise<User | null>;
-</User>'
-  register: (email: string, password: string, role: User['role']) => Promise<User | null>;'
-</User>'
-

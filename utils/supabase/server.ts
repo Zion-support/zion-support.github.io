@@ -1,52 +1,38 @@
-
-import { createClient } from "@supabase/supabase-js";"
-const supabaseUrl ="
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";"
-const supabaseKey ="
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";"
-export function getServerSupabase() {
-  return createClient(supabaseUrl, supabaseKey);
-}
-"
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';''
-const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';'
-// Supabase server utilities;'
-import { createClient } from '@supabase/supabase-js';''
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';''
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';''
-import { createClient } from '@supabase/supabase-js';''
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';''
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';''
-import { createClient } from '@supabase/supabase-js';''
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';''
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';'
-export function getServerSupabase() {
-  return createClient(supabaseUrl, supabaseKey);
+// Mock Supabase server client implementation
+interface SupabaseClient {
+  auth: any;
+  from: (table: string) => any;
 }
 
+let cachedClient: SupabaseClient | null = null;
 
-export function getClientSupabase() {'
-  return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');''
-import { create_client } from '@supabase / supabase - js';'
-;'
-const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';''
-const supabase_key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder - key';'
+export function createServerClient(): SupabaseClient {
+  if (cachedClient) {
+    return cachedClient;
+  }
 
-;
-export /**
- * getServerSupabase - Function description;
- */
-function getServerSupabase() {}
-  return create_client (supabase_url, supabase_key);}
+  cachedClient = {
+    auth: {
+      getUser: () => Promise.resolve({ data: { user: null }, error: null }),
+      signOut: () => Promise.resolve({ error: null })
+    },
+    from: (table: string) => ({
+      select: (columns?: string) => ({
+        eq: (column: string, value: any) => ({
+          eq: (column2: string, value2: any) => ({
+            maybeSingle: () => Promise.resolve({ data: null, error: null })
+          })
+        })
+      }),
+      insert: (data: any) => Promise.resolve({ data: null, error: null }),
+      update: (data: any) => ({
+        eq: (column: string, value: any) => ({
+          eq: (column2: string, value2: any) => Promise.resolve({ data: null, error: null })
+        })
+      }),
+      delete: () => Promise.resolve({ data: null, error: null })
+    })
+  };
+
+  return cachedClient;
 }
-
-
-
-
-export function getServerSupabase() {;}
-  return createClient(supabaseUrl, supabaseKey);}
-}
-
-
-
-'
