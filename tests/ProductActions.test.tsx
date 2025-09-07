@@ -1,13 +1,31 @@
 import React from 'react';
-interface ProductActions.testProps {
-  // Add props here as needed
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { vi } from 'vitest';
+
+interface ProductActionsProps {
+  productId: string;
+  addToCart: (productId: string) => Promise<void>;
 }
-export default function ProductActions.test({ }: ProductActions.testProps) {
+
+function ProductActions({ productId, addToCart }: ProductActionsProps) {
+  const [status, setStatus] = React.useState('Add to Cart');
+
+  const handleAddToCart = async () => {
+    setStatus('Adding...');
+    try {
+      await addToCart(productId);
+      setStatus('Added!');
+      setTimeout(() => setStatus('Add to Cart'), 1500);
+    } catch (error) {
+      setStatus('Error');
+    }
+  };
+
   return (
-    <div>
-      <h1>ProductActions.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <button onClick={handleAddToCart}>
+      {status}
+    </button>
   );
 }
 
@@ -16,6 +34,7 @@ function setup() {
   render(<ProductActions productId='1' addToCart={addToCart} />);
   const button = screen.getByRole('button', { name: /add to cart/i });
   return { addToCart, button };
+}
 
 describe('ProductActions', () => {
   it('resets label after mutation success', async () => {
@@ -41,17 +60,3 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
-<<<<<<< HEAD
-=======
-interface ProductActions.testProps {
-  // Add props here as needed
-}
-export default function ProductActions.test({ }: ProductActions.testProps) {
-  return (
-    <div>
-      <h1>ProductActions.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,49 +1,23 @@
 import React from 'react';
-interface ServiceTypeStep.testProps {
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+interface ServiceTypeStepProps {
   // Add props here as needed
 }
-<<<<<<< HEAD
 
-interface ServiceTypeStep.testProps {
-  // Add props here as needed
-<=
-}
-
->interface ServiceTypeStep.testProps {
-=======
-}
-
-
-interface ServiceTypeStep.testProps {
-  // Add props here as needed
-interface ServiceTypeStep.testProps {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-  // Add props here as needed
-}
-export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
+export default function ServiceTypeStep({ }: ServiceTypeStepProps) {
   return (
     <div>
-      <h1>ServiceTypeStep.test</h1>
+      <h1>ServiceTypeStep</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<
-
-=
-}
-}
-=
-
-
->}
->
-=======
-
-
-}
 }
 
-
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+describe('ServiceTypeStep', () => {
+  it('renders without crashing', () => {
+    render(<ServiceTypeStep />);
+    expect(screen.getByText('ServiceTypeStep')).toBeInTheDocument();
+  });
+});
