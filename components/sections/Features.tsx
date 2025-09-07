@@ -1,13 +1,42 @@
 import Card from '../ui/Card';
+<<<<<<< HEAD
 import { Zap  } from 'lucide-react';
 interface Feature  {icon: React.ReactNode;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+import { Zap } from 'lucide-react';
+
+interface Feature {
+  icon: React.ReactNode;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
 }
 import React from 'react';
   title: string;
   description: string;
   color: string;
+<<<<<<< HEAD
   gradient: string;delay?: number;
   return (<section className='py-24 bg-black relative overflow-hidden'>;
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
@@ -26,10 +55,23 @@ import React from 'react';
   subtitle: string;
   features: Feature[];
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+=======
+  gradient: string;
+
+  delay?: number
+}
+
+interface FeaturesProps {
+  title: string;
+  subtitle: string;
+  features: Feature[];
+          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             {subtitle}
           </p>;
         </div>;{/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
+<<<<<<< HEAD
           {features && features.map((feature, index) => (<Card;
               key={index}}export default Features;  )}export default Features;
               </p>;
@@ -37,6 +79,13 @@ import React from 'react';
         </div>;
       </div>;
     </section>)}export default Features)}export default Features;className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1';
+=======
+          {features && features.map((feature, index) => (;
+            <Card
+              key={index}
+
+className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >;
               <div className='relative'>;
@@ -55,7 +104,17 @@ import React from 'react';
               </p>;
             </Card>;
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
 )}export default Features;
+=======
+        </div>
+      </div>
+    </section>
+);
+};
+
+export default Features;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

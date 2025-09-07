@@ -21,6 +21,7 @@
           </li>;
         ))}
         )}
+<<<<<<< HEAD
       </ul>;
     </div>;
   )export async function getStaticProps() {try{const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json')const raw = fs && fs.readFileSync(p,'utf8')return { props: { data: JSON && JSON.parse(raw) } }
@@ -29,3 +30,9 @@
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
+=======
+      </ul>
+    </div>
+  );
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

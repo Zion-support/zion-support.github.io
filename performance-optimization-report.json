@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T22:09:22.350Z",
   "bundleAnalysis": {
     "success": true,
@@ -59,6 +60,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   "timestamp": "2025-09-06T22:41:57.033Z",
   "optimizations": [
     {
@@ -20061,6 +20065,7 @@ ursor/automate-test-improve-and-merge-code-646c
       "size": 8745,
       "recommendation": "Consider splitting this component"
     }
+<<<<<<< HEAD
 
   "timestamp": "2025-09-06T04:57:30.817Z",
   "issues": [],
@@ -20145,6 +20150,9 @@ ursor/automate-test-improve-and-merge-code-646c
     "Enable gzip compression",
     "Implement HTTP/2",
     "Use resource hints (preload, prefetch)"
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   ],
   "recommendations": [
     "Consider splitting 448 large components",
@@ -20178,6 +20186,7 @@ ursor/automate-test-improve-and-merge-code-646c
     "codeSplitting": 8,
     "largeComponents": 448
   }
+<<<<<<< HEAD
   }
 
 
@@ -20189,12 +20198,16 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   }
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
-  }
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export default function FavoritesPage() {export default function FavoritesPage() {const { favorites, remove } = useFavorites()const profiles = useMemo(() => TALENT_PROFILES.filter(t => favorites.includes(t.slug))[favorites];
   )const profiles  = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites])const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([])useEffect(() => {try {const raw = localStorage && localStorage.getItem(storageKey)if (raw) setFavorites(JSON && JSON.parse(raw))} catch {}
@@ -99,6 +100,43 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
       </div>;
 <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>;
       {profiles.length === 0 ? (<div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
+=======
+import { useEffect, useMemo, useState  } from 'react';
+import Head from 'next/head',
+import Link from 'next/link';
+import { TALENT_PROFILES } from '../data/talent';
+  const storageKey = null;
+  return (
+    <div>
+      <Head>
+        <title>Favorites — Zion AI Marketplace</title>
+      </Head>
+
+
+<div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
+        <nav aria-label='Breadcrumb'>
+          <ol className='flex items-center gap-2'>
+            <li>
+              <Link href='/'>
+                <a className='hover:underline'>Home</a>
+              </Link>
+            </li>
+            <li aria-hidden='true'>/</li>
+            <li
+              className='text-gray-900 dark:text-gray-100'
+              aria-current='page'
+            >
+              Favorites
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+<h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
+
+      {profiles.length === 0 ? (
+        <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           <div className='text - gray - 600 dark:text - gray - 300'>;
             You haven't saved any talent yet.;
           </div>;
@@ -109,6 +147,7 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
               </a>;
             </Link>;
           </div>;
+<<<<<<< HEAD
         </div>) : (<div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (<div;
               key={t.slug}</div>;
@@ -149,6 +188,20 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
                 <div>;
                   <div className='font-medium'>{t.name}</div>;
                   <div className='text-sm text-gray-600 dark:text-gray-300'>;
+=======
+        </div>) : (
+        <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+          {profiles.map (t => (
+            <div;
+              key={t.slug}
+
+              className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
+            >
+              <div className='flex items-center justify-between'>
+                <div>
+                  <div className='font-medium'>{t.name}</div>
+                  <div className='text-sm text-gray-600 dark:text-gray-300'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     {t.title}
                   </div>;
                 </div>;
@@ -188,5 +241,11 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
           ))}
         </div>;
       )}
+<<<<<<< HEAD
     </div>;
   )}
+=======
+    </div>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

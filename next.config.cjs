@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -32,6 +33,10 @@ const nextConfig = {
     unoptimized: true
   },
     ignoreDuringBuilds: true,
+=======
+
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   reactStrictMode: false,
   swcMinify: false,
 =======
@@ -54,7 +59,6 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
   },
   experimental: {
     esmExternals: false,
@@ -115,25 +119,17 @@ module.exports = nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   eslint: {
     ignoreDuringBuilds: true
   },
   typescript: {
     ignoreBuildErrors: true
-<<<<<<< HEAD
-  },
-  experimental: {
-    esmExternals: false
-  }
-};
 
-module.exports = nextConfig;
-=======
   }
 };
 
 export default nextConfig;
+<<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 =======
@@ -165,3 +161,5 @@ export default nextConfig;
 
 module.exports = nextConfig;
 >>>>>>> origin/chore/fix-automation-and-build
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

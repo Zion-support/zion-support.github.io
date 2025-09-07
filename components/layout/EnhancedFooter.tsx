@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 ;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   return (    <footer className='bg-gray-900 text-white'>;
+=======
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  return (    <footer className='bg-gray-900 text-white'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Main Footer Content */}
       <div className='container mx-auto px-4 py-12'>;
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
@@ -159,6 +164,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         </div>;
       </div>;
       {/* Bottom Footer */}
+<<<<<<< HEAD
       <div className='border-t border-gray-700 py-6'>;
         <div className='container mx-auto px-4'>;
           <div className='flex flex-col md:flex-row justify-between items-center'>;
@@ -180,6 +186,36 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       </div>;
     </footer>;
   )}const EnhancedFooter: React.FC = () => {const currentYear  = new Date().getFullYear()const company = null;
+=======
+      <div className='border-t border-gray-700 py-6'>
+        <div className='container mx-auto px-4'>
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <p className='text-gray-300 text-sm'>
+              &copy 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className='flex space-x-6 mt-4 md:mt-0'>
+              <Link href='/privacy' className='text-gray-300 hover:text-white text-sm transition-colors'>
+                Privacy Policy
+              </Link>
+              <Link href='/terms' className='text-gray-300 hover:text-white text-sm transition-colors'>
+                Terms of Service
+              </Link>
+              <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>
+                Sitemap
+              </Link>
+            </div>          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear();
+
+  const company = null;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   ];
   const resources = null;
   ];

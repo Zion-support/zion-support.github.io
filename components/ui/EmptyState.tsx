@@ -1,10 +1,22 @@
 
+<<<<<<< HEAD
 ;
 import React from 'react',import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = any;
 import React from 'react';
 export type EmptyStateProps = {title: string;
+=======
+import React from 'react',
+import Link from 'next/link';
+import EnhancedButton from './EnhancedButton';
+export type EmptyStateProps = any;
+import React from "react";
+import Link from "next/link";
+import EnhancedButton from "./EnhancedButton";
+export type EmptyStateProps = {
+  title: string;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   description?: string;
   primaryAction?: { label: string; href: string }secondaryAction?: { label: string; href: string }
 }export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction,}: EmptyStateProps) {primaryAction?: { label: string; href: string }secondaryAction?: { label: string; href: string }
@@ -12,6 +24,7 @@ export type EmptyStateProps = {title: string;
 }const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {return (<div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;
       <h3 className='text-lg font-semibold'>{title}</h3>;
+<<<<<<< HEAD
       {description && (<p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}export type EmptyStateProps = {primary_action?: { label: string; href: string }
   secondary_action?: { label: string; href: string }
@@ -33,10 +46,26 @@ function EmptyState() {return (<div className='w - full border border - dashed b
               <a>;
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>;
 export default function EmptyState() {return (<div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
+=======
+      {description && (;
+        <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
+      )}
+
+      {(primaryAction |secondaryAction) && (
+        <div className='flex gap-2 mt-2'>
+          {primaryAction && (
+            <Link href={primaryAction.href}>
+              <a>
+                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
+export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
+  return (
+    <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
       <h3 className="text-lg font-semibold">{title}</h3>;
       {description && <p className="text-sm opacity-80 max-w-prose">{description}</p>}
           )}
+<<<<<<< HEAD
           {secondaryAction && (<Link href={secondaryAction.href}>;
               <a>;
 <EnhancedButton variant='secondary' size='md'>;
@@ -44,6 +73,17 @@ export default function EmptyState() {return (<div className="w-full border bord
                 </EnhancedButton>;
               </a>;
             </Link>;
+=======
+          {secondaryAction && (
+            <Link href={secondaryAction.href}>
+              <a>
+
+<EnhancedButton variant='secondary' size='md'>
+                  {secondaryAction.label}
+                </EnhancedButton>
+              </a>
+            </Link>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           )}
           {secondaryAction && (<Link href={secondaryAction && secondaryAction.href}>;
               <a>;
@@ -54,5 +94,13 @@ export default function EmptyState() {return (<div className="w-full border bord
             </Link>;
           )}
         </div>;
+<<<<<<< HEAD
       )}}</div>;
   )}
+=======
+      )}
+
+    </div>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

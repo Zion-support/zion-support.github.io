@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 export type PaginationProps = any;
@@ -8,7 +11,18 @@ export type PaginationProps = {page: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
+<<<<<<< HEAD
 export default function Pagination() {const totalPages = Math.max(1, Math.ceil(total / pageSize))const canPrev = page > 1;
+=======
+export default function Pagination({
+  page,
+  pageSize,
+  total,
+  onChange,
+}: PaginationProps) {
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const canPrev = page > 1;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   const canNext = page < totalPages;
   const goTo = (p: number) => {if (p >= 1 && p <= totalPages) onChange(p)}return (<div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton;
@@ -26,6 +40,7 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
         variant='secondary';
         size='md';
         onClick={() => goTo(page + 1)}
+<<<<<<< HEAD
         disabled={!canNext}>        Next;
       </EnhancedButton>;
     </div>;
@@ -34,6 +49,18 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
       </EnhancedButton>;
     </div>;
   )}return (<div className="flex items-center justify-between gap-2 mt-4">;
+=======
+        disabled={!canNext}
+
+      >
+        Next
+      </EnhancedButton>
+    </div>
+  );
+}
+  return (
+    <div className="flex items-center justify-between gap-2 mt-4">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
         Prev;
       </EnhancedButton>;
@@ -92,6 +119,7 @@ if ( {) {$2;
     } else {const start_page = Math.max (1, current_page - 2)const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1)// Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
         pages.push (1)// Check condition;
 if ( {) {$2;
 }
@@ -158,3 +186,8 @@ if ( {) {$2;
         </span>)}
     </nav>)})export default Pagination;
 }
+=======
+
+export default Pagination;
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

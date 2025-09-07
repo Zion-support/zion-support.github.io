@@ -6,5 +6,29 @@
     "Alt text validation completed",
     "Sitemap generation recommended"
   ],
+<<<<<<< HEAD
   "status": "completed"
 }
+=======
+  "improvements": [
+    {
+      "type": "sitemap",
+      "name": "XML Sitemap",
+      "status": "created",
+      "file": "public/sitemap.xml"
+    },
+    {
+      "type": "robots",
+      "name": "robots.txt",
+      "status": "created",
+      "file": "public/robots.txt"
+    }
+  ],
+  "summary": {
+
+    "overall": "poor",
+    "totalIssues": 2383,
+    "recommendations": []
+  }
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

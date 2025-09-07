@@ -30,6 +30,7 @@ export default function LocationsPage() {return (<div className="min-h-screen pt
           <a className="text-cyan-400" href="tel:+13024640950">;
             +1 302 464 0950;
           </a>{" "}
+<<<<<<< HEAD
           or email{" "}import React from './react';
 import Head from './next / head';
 export default /**;
@@ -79,3 +80,15 @@ function LocationsPage() {return (<div className="min - h-screen pt - 24 pb - 20
       </div>;
     </div>;
   )
+=======
+          or email{" "}
+
+          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
+            kleber@ziontechgroup.com
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

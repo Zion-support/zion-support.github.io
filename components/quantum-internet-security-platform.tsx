@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   Phone,Mail,MapPin,Check,ArrowRight,Shield,Star,import React from 'react',import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star   } from 'lucide-react';
@@ -28,6 +29,51 @@ export default function QuantumInternetSecurityPage() {const service = enhancedR
           <div className='text-center mb-10'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
               <Shield className='w-10 h-10' />;
+=======
+
+import React from 'react',
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function QuantumInternetSecurityPage() {
+  const service = null;
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Shield
+  Star;
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
+export default function QuantumInternetSecurityPage() {
+export default function QuantumInternetSecurityPage() {
+
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/quantum-internet-security-platform')
+  );
+  if (!service) return null;
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+<meta name='description' content={service.description} />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/quantum-internet-security-platform'
+        />
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-10'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+              <Shield className='w-10 h-10' />
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               {service.name}
             </h1>;
             <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'>;
@@ -68,6 +114,7 @@ export default function QuantumInternetSecurityPage() {const service = enhancedR
                 <div className='flex items-center text-yellow-400'>;
                   <Star className='w-4 h-4 mr-1' />;
                   {service.rating.toFixed(1)}
+<<<<<<< HEAD
                 </div>;
               </div>;
               <Button;
@@ -187,3 +234,40 @@ export default function QuantumInternetSecurityPage() {const service = enhancedR
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>)}}
+=======
+                </div>
+              </div>
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+
+                className='w-full'
+              >
+                Request a Security Demo
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+
+  );
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

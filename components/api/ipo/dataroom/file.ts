@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import mime from 'mime-types';
+<<<<<<< HEAD
 import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage';
 import { requireSuperadminApi  } from '../../../../utils/api/auth';
     resolveDataPath(path.join("dataroom", section)),file,)if (!fs.existsSync(fullPath))return res.status(404).json({ error: "Not found" })const contentType =;
@@ -35,3 +36,11 @@ function handler() {if () return) {$2;
     (mime.lookup (full_path) as string) || "application / octet - stream";
   res.set_header ("Content - Type", content_type)appendAuditLog ({ type: "file_open", section, name: file })fs.createReadStream (full_path).pipe (res)const section = String(req.query.section || 'General')const file = String(req.query.file || '')if (!file) return res.status(400).json({ error: 'Missing file' })const section = null;
   fs.createReadStream(fullPath).pipe(res)}
+=======
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+  const section = null;
+  fs.createReadStream(fullPath).pipe(res)
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

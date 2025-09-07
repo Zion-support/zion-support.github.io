@@ -1,8 +1,12 @@
 
+<<<<<<< HEAD
 import React from 'react';
     monthly?: number;
     yearly?: number;
     currency?: string;id: string;
+=======
+  id: string;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   name: string;
   tagline: string;
   description: string;
@@ -10,6 +14,7 @@ import React from 'react';
     yearly?: number;
     currency?: string;
     trialDays?: number;
+<<<<<<< HEAD
     setupTime?: string;
   },period?: string;
   pricing?: any;
@@ -252,6 +257,16 @@ export default UltraFuturisticServiceCard2026;</div>;
         <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration-500 rounded-2xl"></div>;
       </div>;
     </motion.div>),})UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';export default UltraFuturisticServiceCard2026;category: string;
+=======
+    setupTime?: string
+  },
+  period?: string;
+  pricing?: any;
+  features: string[],;
+  popular?: boolean;
+
+  category: string;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   icon: string;
   marketPrice?: string;
   competitors?: string[];
@@ -259,6 +274,15 @@ export default UltraFuturisticServiceCard2026;</div>;
   useCases?: string[];
   integration?: string[],benefits?: string[];
 }
+<<<<<<< HEAD
 interface ServiceCardProps  {service: Service;
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
 }const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps>  = ({ service, variant;
+=======
+interface ServiceCardProps {
+  service: Service;
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

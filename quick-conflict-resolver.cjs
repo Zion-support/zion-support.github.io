@@ -12,6 +12,7 @@ function removeConflictMarkers(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/[\s\S]*?([\s\S]*?)
     content = content.replace(/[\s\S]*?([\s\S]*?)
     content = content.replace(/[\s\S]*?([\s\S]*?)(?=\n|$)/g, '$1');
@@ -20,6 +21,12 @@ function removeConflictMarkers(filePath) {
     content = content.replace(/[\s\S]*?[\s\S]*?
     content = content.replace(/[\s\S]*?[\s\S]*?
     
+=======
+    content = content.replace(/([\s\S]*?)    content = content.replace(/([\s\S]*?)    content = content.replace(/([\s\S]*?)(?=\n|$)/g, '$1');
+    
+    // Clean up any remaining markers
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
     

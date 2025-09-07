@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition;
 if (strength = 'very - weak') {$2;
@@ -64,12 +65,17 @@ if ( {) {$2;
         has_numbers;
         has_symbols;
         hasCommonPatterns;password.toLowerCase () .includes (pattern) )// Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
+=======
+password.toLowerCase () .includes (pattern) );
+// Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
 else if (score < 70) strength = 'medium';
 else if (score < 90) strength = 'strong';
 else strength = 'very-strong';
 // Generate feedback const feedback: string[] = [];
+<<<<<<< HEAD
 if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ')if (!hasUppercase) feedback.push ('Add uppercase letters')if (!hasLowercase) feedback.push ('Add lowercase letters')if (!hasNumbers) feedback.push ('Add numbers')if (!hasSymbols) feedback.push ('Add special characters')if (hasCommonPatterns) feedback.push ('Avoid common patterns and words')if (entropy < 30) feedback.push ('Password is too predictable')// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
 interface PasswordStrengthResult  {password: string;
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
@@ -81,9 +87,22 @@ interface PasswordStrengthResult  {password: string;
     hasNumbers: boolean;
     hasSymbols: boolean;hasCommonPatterns: boolean;
     hasCommonPatterns: boolean;entropy: number;
+=======
+if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ');
+if (!hasUppercase) feedback.push ('Add uppercase letters');
+if (!hasLowercase) feedback.push ('Add lowercase letters');
+if (!hasNumbers) feedback.push ('Add numbers');
+if (!hasSymbols) feedback.push ('Add special characters');
+if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
+if (entropy < 30) feedback.push ('Password is too predictable');
+
+    hasCommonPatterns: boolean;
+    entropy: number
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
   suggestions: string[];
 }
+<<<<<<< HEAD
 export default async function handler() {if (req.method !== 'POST') {return res.status(405).json({ error: 'Method not allowed' })}    return res.status(405).json({ error: 'Method not allowed' })}
   try {const { password }  = req.body;if (!password |typeof password !== 'string') {return res.status(400).json({ error: 'Password is required' })}
     // Password analysis;
@@ -108,6 +127,38 @@ const hasSymbols = /[!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]/.test(password)// Check
       'admin123';
       'qwerty';
       'asdf';
+=======
+export default async function handler(
+
+  req: NextApiRequest;
+  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+) {
+  if (req.method !== 'POST') {
+return res.status(405).json({ error: 'Method not allowed' });
+  }
+  try {
+    const { password } = req.body;
+    if (!password || typeof password !== 'string') {
+      return res.status(400).json({ error: 'Password is required' });
+    }
+    // Password analysis
+const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+
+    // Check for common patterns
+    const commonPatterns = [
+      '123'
+      'abc'
+      'qwe'
+      'password'
+      'admin'
+      'user'
+      'test'
+      '123456'
+      'password123'
+      'admin123'
+      'qwerty'
+      'asdf'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     ];
     const hasCommonPatterns = commonPatterns.some(pattern =>;
       password.toLowerCase().includes(pattern))// Calculate entropy (simplified)const charsetSize =;
@@ -152,8 +203,20 @@ const feedback: string[] = [];
       }
       suggestions;
     }
+<<<<<<< HEAD
     res.status(200).json(result)} catch (error) {console.error('Password strength check error:', error)res.status(500).json({ error: 'Internal server error' })}
 }
   }}
     res.status(500).json({ error: 'Internal server error' })}
 }
+=======
+    res.status(200).json(result);
+  } catch (error) {
+    console.error('Password strength check error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+
+  }
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

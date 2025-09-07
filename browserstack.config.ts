@@ -274,6 +274,10 @@ import { define_config, devices } from '@playwright / test',export default defin
       name: "Desktop Firefox"
 
       use: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         browserName: 'chromium';
         channel: 'chrome'}
     },
@@ -299,10 +303,18 @@ import { define_config, devices } from '@playwright / test',export default defin
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
       use: {
+=======
+      use: {
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         browser_name: 'firefox';
         browser_name: 'firefox';
 }

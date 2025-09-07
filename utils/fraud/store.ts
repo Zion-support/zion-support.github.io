@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
   private records: Map < string, FraudRecord> = new Map ()create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {const id = Date.now ().to_string ()const new_record: FraudRecord = {export interface FraudRecord  {id: string;
+=======
+export interface FraudRecord {
+  id: string;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   type: string;
   severity: "low" | "medium" | "high" | "critical";
   description: string;
@@ -20,7 +25,67 @@
       ];
     }}
 }
+<<<<<<< HEAD
 export const fraud_store = new FraudStore ()export const getFraudStore  = () =>: any fraud_store;export const fraudStore = new FraudStore()export const getFraudStore = () => fraudStore;
+=======
+
+
+class FraudStore {
+  private records: Map<string, FraudRecord> = new Map();
+
+  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
+    const id = Date.now().toString();
+    const newRecord: FraudRecord = {
+      ...record,
+      id,
+      timestamp: new Date().toISOString(),
+    };
+    this.records.set(id, newRecord);
+    return newRecord;
+  }
+  get_record (id: string): FraudRecord | undefined {
+    return this.records.get (id);
+  }
+
+  updateRecord(
+    id: string,
+    updates: Partial<FraudRecord>,
+  ): FraudRecord | undefined {
+    const record = this.records.get(id);
+    if (!record) return undefined;
+
+    const updatedRecord = { ...record, ...updates };
+    this.records.set(id, updatedRecord);
+    return updatedRecord;
+  }
+  list_records (): FraudRecord[] {
+    return Array.from (this.records.values ());
+  }
+
+  async generateMonthlyReport(month: string): Promise<MonthlyReport> {
+    const records = this.listRecords();
+    const monthRecords = records.filter((r) => r.timestamp.startsWith(month));
+
+    return {
+      month,
+      totalCases: monthRecords.length,
+      resolvedCases: monthRecords.filter((r) => r.status === "resolved").length,
+      falsePositives: monthRecords.filter((r) => r.status === "false_positive")
+        .length,
+      averageResolutionTime: 24, // placeholder
+      topFraudTypes: [
+        { type: "suspicious_activity", count: 5 },
+        { type: "unauthorized_access", count: 3 },
+      ],
+    };
+  }
+}
+
+
+export const fraudStore = new FraudStore();
+export const getFraudStore = () => fraudStore;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient  } from '@supabase/supabase-js';
@@ -88,6 +153,29 @@ const dataDir = path.resolve(process.cwd(), 'data/fraud')const eventsPath = path
       .split('\n').filter(Boolean).map(line => {try {return JSON.parse(line) as AdminActionRecord;
         } catch {return null;
         }
+<<<<<<< HEAD
       }).filter(Boolean) as AdminActionRecord[];
   }export function getFraudStore(): FraudStore {return new FraudStore()export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>;
 ): FraudEvent {const id = uuidv4()return {id,userId: partial.userId ?? null,source: partial.source,content: partial.content ?? null,metadata: partial.metadata ?? null,ipAddress: partial.ipAddress ?? null,createdAt: partial.createdAt ?? new Date().toISOString()}
+=======
+      })
+      .filter(Boolean) as AdminActionRecord[];
+  }
+
+export function getFraudStore(): FraudStore {
+  return new FraudStore();
+
+export function newEvent(
+  partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>
+): FraudEvent {
+  const id = uuidv4();
+  return {
+    id,
+    userId: partial.userId ?? null,
+    source: partial.source,
+    content: partial.content ?? null,
+    metadata: partial.metadata ?? null,
+    ipAddress: partial.ipAddress ?? null,
+    createdAt: partial.createdAt ?? new Date().toISOString(),
+  };
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

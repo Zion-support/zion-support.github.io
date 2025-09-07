@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
   return {props: {docs: content as DocsContent,},}}import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
@@ -36,12 +37,22 @@ export type Section = {id: string,title: string,html?: string;
 }export const getStaticProps: GetStaticProps<PageProps> = async () => {return {props: {docs: content as DocsContent}}
     return () => clearTimeout(id)import React, { useEffect } from 'react';
 export type Section = any;}, [])return (<div className='p-8 max-w-4xl mx-auto'>;
+=======
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = any;
+  }, []);
+  return (
+    <div className='p-8 max-w-4xl mx-auto'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;
       <div className='space-y-8'>;
         {docs && docs.sections.map(s => (<section key={s && s.id}>;
             <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code &&;
+<<<<<<< HEAD
               s && s.code.map((c, i) => (<pre;
                   key={i}className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
@@ -51,6 +62,19 @@ export type Section = any;}, [])return (<div className='p-8 max-w-4xl mx-auto'>;
                   {c.content}
                 </pre>;
               ))}return (<div className="p-8 max-w-4xl mx-auto">;
+=======
+              s && s.code.map((c, i) => (;
+                <pre
+                  key={i}
+
+                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
+                >
+                  {c.content}
+                </pre>
+              ))}
+  return (
+    <div className="p-8 max-w-4xl mx-auto">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
       <div className="space-y-8">;
         {docs && docs.sections.map((s) => (<section key={s && s.id}>;
@@ -86,6 +110,14 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
     </div>)))}
           </section>;
         ))}
+<<<<<<< HEAD
       </div>;
     </div>;
   )})}
+=======
+      </div>
+    </div>
+
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

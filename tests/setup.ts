@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React from 'react';
 =======
 import React from 'react';
@@ -6,6 +10,10 @@ interface SetupProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 =======
 export default function Setup({ }: SetupProps) {
   return (
@@ -45,6 +53,10 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React from 'react';
 
 

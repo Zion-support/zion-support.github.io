@@ -21,10 +21,15 @@ for file in "${files[@]}"; do
         
         # Process the file to resolve conflicts by keeping HEAD version
         awk '
+<<<<<<< HEAD
         /^/ { in_head = 1; next }
         /^/ { in_head = 0; in_other = 1; next }
         /^
         in_other { next }
+=======
+        /^/ { in_head = 0; in_other = 1; next }
+        /^        in_other { next }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         { print }
         ' "$file" > "$temp_file"
         

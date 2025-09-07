@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+#!/usr/bin/env node
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ;
 #!/usr / bin / env node;
@@ -57,12 +62,33 @@ function fixSyntaxErrors() {try {let content = fs.readFileSync(filePath, 'utf8')
     })// Fix broken string literals;
     content = content.replace(/['"]([^'"]*)\s*['"]\s*['"]/g, (match, str) => {modified = true;
       return `"${str}"`;
+<<<<<<< HEAD
     })// Fix missing commas in arrays and objects;
     content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {if (arrayContent &&;
         !arrayContent.endsWith(',') &&;
         !arrayContent.endsWith(';')) {const items = arrayContent;
           .split(',').map(item => item.trim()).filter(item => item)if (items.length > 1) {modified = true;
           return `[${items.join(', ')}]`;}
+=======
+    });
+
+    // Fix missing commas in arrays and objects
+    content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
+      if (
+        arrayContent &&
+        !arrayContent.endsWith(',') &&
+        !arrayContent.endsWith(';')
+      ) {
+        const items = arrayContent
+          .split(',')
+          .map(item => item.trim())
+          .filter(item => item);
+        if (items.length > 1) {
+          modified = true;
+          return `[${items.join(', ')}]`;
+=======
+        }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         return match;
       },);
     // Fix other common syntax issues;
@@ -103,6 +129,7 @@ if (&&) {$2;
           return match + ";";
         }
         return match;
+<<<<<<< HEAD
       },);
     // Check condition;
 if ( {) {$2;
@@ -121,6 +148,66 @@ function findFiles() {let files  = [];try {const items  = fs.readdirSync(dir)for
 }// Main execution;
 function main() {console.log('Starting syntax error fixes...')const srcDir = path.join(process.cwd(), 'src')const files  = findFiles(srcDir)let fixedCount = 0;
   let totalCount  = files.length;console.log(`Found ${totalCount} files to check...`)for (const file of files) {if (fixSyntaxErrors(file)) {fixedCount++;
+=======
+      },
+    );
+
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+  }
+
+
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Fixing syntax errors in API files...');
+
+const fixFile = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix common syntax issues
+    content = content.replace(/,\s*$/gm, ''); // Remove trailing commas
+    content = content.replace(/,\s*}/g, '}'); // Remove trailing commas before closing braces
+    content = content.replace(/,\s*]/g, ']'); // Remove trailing commas before closing brackets
+    content = content.replace(/,\s*\)/g, ')'); // Remove trailing commas before closing parentheses
+    
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n(\s*[a-zA-Z])/g, '$1;\n$2');
+    
+    // Fix import statements
+    content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');
+    
+    // Fix function declarations
+    content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{/g, 'export default function $1($2) {');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
+    return false;
+  }
+};
+
+const main = () => {
+  const apiDir = 'pages/api';
+  const files = [];
+  
+  const walkDir = (dir) => {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        walkDir(fullPath);
+      } else if (item.endsWith('.ts') || item.endsWith('.js')) {
+        files.push(fullPath);
+      }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }
   }console.log(`\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`;
   )// Run linting to check remaining errors;
@@ -141,7 +228,16 @@ const fs = require('fs')const path  = require('path')console.log('🔧 Fixing sy
 }const main = () => {const apiDir = 'pages/api';
   const files  = [];const walkDir = (dir) => {const items = fs.readdirSync(dir)for (const item of items) {const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.js')) {files.push(fullPath)}
     }
+<<<<<<< HEAD
   }walkDir(apiDir)let fixed = 0;
   files.forEach(file => {if (fixFile(file)) {fixed++;
     }
   })console.log(`\n🎉 Fixed ${fixed}/${files.length} files`)}main()ursor/automate-test-improve-and-merge-code-646c;
+=======
+  });
+  
+  console.log(`\n🎉 Fixed ${fixed}/${files.length} files`);
+};
+
+main();
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

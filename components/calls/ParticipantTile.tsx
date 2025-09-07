@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
@@ -6,6 +7,15 @@ type Props = any;
 import type {RemoteParticipant;
   LocalParticipant;
   TrackPublication;
+=======
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+type Props = any;
+import type {
+  RemoteParticipant
+  LocalParticipant
+  TrackPublication
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   Track;
   RemoteParticipant,LocalParticipant,TrackPublication,Track,RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit-client';
 type Props = {participant: RemoteParticipant | LocalParticipant;
@@ -16,6 +26,7 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
   participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+<<<<<<< HEAD
 }
 export default function ParticipantTile() {}}
 export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElement | null>(null)const audioRef = useRef<HTMLAudioElement | null>(null)useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.attach(videoRef.current)}export default function ParticipantTile(): any ({participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,isLocal?: boolean;
@@ -35,10 +46,56 @@ export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElem
     }participant.tracks.forEach(pub => {const track = pub.track;
 if (track) handleTrackSubscribed(pub, track)})participant.on('trackSubscribed', handleTrackSubscribed)participant.on('trackUnsubscribed', handleTrackUnsubscribed)return () => {participant.off('trackSubscribed', handleTrackSubscribed)participant.off('trackUnsubscribed', handleTrackUnsubscribed)}}, [participant])return (<div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
       <video;
+=======
+
+}
+export default function ParticipantTile({
+  participant,
+  isLocal,
+  displayName,
+}: Props) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+
+track.attach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.attach(audioRef.current);
+      }
+    };
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+track.detach(videoRef.current);
+      }
+      if (track.kind === 'audio' && audioRef.current) {
+        track.detach(audioRef.current);
+      }
+    };
+
+    participant.tracks.forEach(pub => {
+      const track = pub.track;
+if (track) handleTrackSubscribed(pub, track);
+    });
+    participant.on('trackSubscribed', handleTrackSubscribed);
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+    return () => {
+      participant.off('trackSubscribed', handleTrackSubscribed);
+
+participant.off('trackUnsubscribed', handleTrackUnsubscribed);
+    };
+  }, [participant]);
+  return (
+    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
+      <video
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         ref={videoRef}
         autoPlay;
         playsInline;
         muted={Boolean(isLocal)}
+<<<<<<< HEAD
         className='w-full h-48 object-cover bg-black';
       />;
       <audio ref={audioRef} autoPlay className='hidden' />;
@@ -50,6 +107,27 @@ if (track) handleTrackSubscribed(pub, track)})participant.on('trackSubscribed', 
     </div>;
   )return (RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit - client';
 type Props = {participant: RemoteParticipant | LocalParticipant;
+=======
+        className='w-full h-48 object-cover bg-black'
+
+      />
+      <audio ref={audioRef} autoPlay className='hidden' />
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
+        {displayName |
+          (participant as any).name |
+          (isLocal ? 'You' : 'Participant')}
+      </div>
+    </div>
+  );
+  return (
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,
+  Track,
+} from 'livekit - client';
+type Props = {
+  participant: RemoteParticipant | LocalParticipant;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   is_local?: boolean;
   display_name?: string;
 }export default /**;
@@ -118,7 +196,17 @@ if ( {) {$2;
       <div className="absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white">;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
+<<<<<<< HEAD
     </div>)}
       </div>;
     </div>;
 )})
+=======
+    </div>);
+}
+      </div>
+    </div>
+);
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

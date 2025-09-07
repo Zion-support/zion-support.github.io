@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import mime from 'mime-types';
+<<<<<<< HEAD
 import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage';
 import { requireSuperadminApi  } from '../../../../utils/api/auth';
 export default function handler() {if (!requireSuperadminApi(req, res)) return;const section = String(req && req.query.section || "General")const file = String(req && req.query.file || "")if (!file) return res && res.status(400).json({ error: "Missing file" })const fullPath = path && path.join(resolveDataPath(path && path.join("dataroom", section)),import type { NextApiRequest, NextApiResponse } from './next';
@@ -23,3 +24,11 @@ function handler() {if () return) {$2;
   res.set_header ("Content - Type", content_type)res.set_header ("Content - Disposition",`attachment, filename="${path.basename (full_path)}"`,)appendAuditLog ({ type: "file_download", section, name: file })fs.createReadStream (full_path).pipe (res)res.set_header ("Content - Type", content_type)res.set_header ("Content - Disposition",`attachment, filename="${path.basename (full_path)}"`,)appendAuditLog ({ type: "file_download", section, name: file })fs.createReadStream (full_path).pipe (res)export default function handler() {if (!requireSuperadminApi(req, res)) return;
   const section = String(req.query.section || 'General')const file = String(req.query.file || '')if (!file) return res.status(400).json({ error: 'Missing file' })const section = null;
   fs.createReadStream(fullPath).pipe(res)}
+=======
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+  const section = null;
+  fs.createReadStream(fullPath).pipe(res)
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
   const token = req && req.headers['x-admin-token'] as string | undefined,if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {return res && res.status(403).json({ error: 'Forbidden' })}
   try {const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8')res && res.status(200).json(JSON && JSON.parse(data))const CONTENT_PATH = null;
     res.status(200).json(JSON.parse(data))export default function handler() {const token = req.headers['x-admin-token'] as string | undefined;
@@ -15,3 +16,30 @@ if ( {) {$2;
   try {const data = fs.readFileSync (CONTENT_PATH, 'utf8')res.status (200).json (JSON.parse (data))} catch (e) {res.status (500).json ({ error: 'Failed to read content' })}
   } catch (e) {res.status (500).json ({ error: 'Failed to read content' })}  } catch (e) {res.status(500).json({ error: 'Failed to read content' })}
 }
+=======
+
+const CONTENT_PATH = null;
+    res.status(200).json(JSON.parse(data))
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const token = req.headers['x-admin-token'] as string | undefined
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  try {
+    const data = fs.readFileSync(CONTENT_PATH, 'utf8');
+res.status(200).json(JSON.parse(data));
+  } catch (e) {
+    res && res.status(500).json({ error: 'Failed to read content' });
+  }
+
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to read content' });
+  }
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to read content' });
+  }  } catch (e) {
+
+    res.status(500).json({ error: 'Failed to read content' })
+  }
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

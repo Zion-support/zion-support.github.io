@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -60,3 +61,6 @@ function QuantumSecureCloudInfrastructure() {return (<ServiceLanding;
     industries={["Financial Services", "Healthcare", "Government"]}
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
   />)}
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

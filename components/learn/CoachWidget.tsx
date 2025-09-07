@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
         body: JSON.stringify({ prompt: input })})const data = await resp.json()setReply(data.text |'')} finally {return (      })const data = await resp.json()setReply(data.text |'')}
   }
   return (return (      })}
@@ -32,6 +33,30 @@ function ask() {if () return) {$2;
         <input;
           className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black';
           placeholder='Ask for help...';
+=======
+import React, { useState } from 'react';
+export default function CoachWidget() {
+  const [input, setInput] = useState('');
+  const [reply, setReply] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false);
+  async function ask() {
+    if (!input.trim()) return;
+    setLoading(true);
+    try {
+      const resp = null;
+      setReply(data.text || '')
+    } finally {
+      setLoading(false)
+    }
+  }
+  return (
+<div className='border rounded p-3'>
+      <div className='font-medium mb-2'>ZionGPT Coach</div>
+      <div className='flex gap-2'>
+        <input
+          className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
+          placeholder='Ask for help...'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           value={input}
           on_change={e => set_input (e.target.value)}
         />;
@@ -42,6 +67,7 @@ function ask() {if () return) {$2;
         >;
           {loading ? '...' : 'Ask'}
         </button>;
+<<<<<<< HEAD
       {reply && (<div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
           {reply}</div>)}
     </div>)}
@@ -49,3 +75,13 @@ function ask() {if () return) {$2;
       )}
     </div>;
   )
+=======
+      {reply && (
+        <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
+          {reply}
+
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

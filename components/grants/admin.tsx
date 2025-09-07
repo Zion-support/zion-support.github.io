@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export default function GrantsAdminPage() {const [token, setToken]  = useState('')const [items, setItems] = useState<GrantApplication[]>([])const [selected, setSelected] = useState<GrantApplication | null>(null)const [milestones, setMilestones]  = useState<Milestone[]>([])const headers  = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token])const load = () => {fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))}
   useEffect(() => {load()}, [])const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })load()const setStatus = async (id: string,status: 'Under Review' | 'Approved' | 'Rejected';
   ) => {await fetch(`/api/grants/${id}/status`, {method: 'POST',headers,body: JSON && JSON.stringify({ status }),})load()}const saveMilestones = async () => {if (!selected) return;
@@ -44,6 +45,73 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
     )const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json())setSelected(r.record)}return (<EnhancedLayout>;
 <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>;
   return (<EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers })const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ())set_selected (r.record)}return (<EnhancedLayout>;
+=======
+export default function GrantsAdminPage() {
+  const [token, setToken] = useState('');
+
+
+const headers = useMemo(
+    () =>
+      token
+        ? {
+            Authorization: `Bearer ${token}`
+            'Content-Type': 'application/json'
+          }
+        : { 'Content-Type': 'application/json' }
+    [token]
+  );
+  const load = () => {
+    fetch('/api/grants?status=Submitted')
+      .then(r => r.json())
+      .then(d => setItems(d.items |[]));
+  }
+  useEffect(() => {
+    load();
+  }, []);
+  const setStatus = async (
+    id: string
+    status: 'Under Review' | 'Approved' | 'Rejected'
+  ) => {
+    await fetch(`/api/grants/${id}/status`, {
+      method: 'POST'
+      headers
+      body: JSON.stringify({ status })
+    });
+    load();
+  };
+
+  const saveMilestones = async () => {
+    if (!selected) return;
+await fetch(`/api/grants/${selected.id}/milestones`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ milestones }),
+    });
+    alert('Milestones saved');
+  };
+
+  const markComplete = async (milestoneId: string) => {
+    if (!selected) return;
+await fetch(
+      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
+      { method: 'POST', headers }
+    );
+    const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
+    setSelected(r.record);
+  };
+
+  return (
+    <EnhancedLayout>
+<h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
+  return (
+    <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
+    const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
+    set_selected (r.record);
+  }
+;
+  return (
+    <EnhancedLayout>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <h1 className='text - 2xl font - semibold mb - 4'>Grants Admin</h1>;
       <div className='grid md:grid - cols - 3 gap - 6'>;
         <div className='md:col - span - 2'>;
@@ -64,6 +132,7 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
                   <div>;
                     <div className='font - medium'>{g.project_name}</div>;
                     <div className='text - xs text - gray - 600'>;
+<<<<<<< HEAD
                       {g.sector} • {g.region} • {g.program}</div>;
                   </div>;
                   <div className='flex gap - 2'>;
@@ -111,6 +180,15 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
                   <div className='flex gap-2'>;
                     <button;
                       className='px-2 py-1 border rounded';
+=======
+                      {g.sector} • {g.region} • {g.program}
+
+                    </div>
+                  </div>
+                  <div className='flex gap-2'>
+                    <button
+                      className='px-2 py-1 border rounded'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                       onClick={() => setStatus(g.id, 'Under Review')}
                     >;
                       Under Review;
@@ -141,12 +219,22 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
                 No submitted applications.;
               </div>;
             )}
+<<<<<<< HEAD
           </div>;
         </div>;
         <div>;
           <div className='border rounded p-3'>;
             <h2 className='font-medium mb-2'>Milestone Planner</h2>;
             {selected ? (<div className='space - y-2'>;
+=======
+          </div>
+        </div>
+        <div>
+          <div className='border rounded p-3'>
+            <h2 className='font-medium mb-2'>Milestone Planner</h2>
+            {selected ? (
+              <div className='space - y-2'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 {(milestones.length === 0;
                   ? selected.milestones || [];
                   : milestones).map ((m, idx) => (<div key={m.id || idx} className='border rounded p - 2'>;
@@ -211,6 +299,7 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
                     className='px - 2 py - 1 border rounded';
                     on_click={() =>;
                       set_milestones (ms => [;
+<<<<<<< HEAD
                         ...(ms.length ? ms : selected.milestones || []),{id: `${Date.now ()}-${Math.random ()}`,title: '',tranche_amount: 0,tranche_currency: 'USDC',} as any,])}>;
                     Add Milestone;
                   </button>;
@@ -328,3 +417,38 @@ await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`,{ me
         </div>;
       </div>;
     </EnhancedLayout>)})}
+=======
+                        ...(ms.length ? ms : selected.milestones || []),
+                        {
+                          id: `${Date.now ()}-${Math.random ()}`,
+                          title: '',
+                          tranche_amount: 0,
+                          tranche_currency: 'USDC',
+                        } as any,
+                      ]);
+                    }
+
+                  >
+                    Add Milestone
+                  </button>
+                  <button
+                    className='px-2 py-1 bg-blue-600 text-white rounded'
+                    onClick={saveMilestones}
+                  >
+                    Save Milestones
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className='text-sm text-gray-600'>
+                Select a grant to plan milestones.
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </EnhancedLayout>
+
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

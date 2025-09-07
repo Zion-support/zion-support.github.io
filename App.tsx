@@ -12,6 +12,7 @@ import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
 export default function App(): React.JSX.Element {
+<<<<<<< HEAD
   const services = [
     {
       title: 'AI Solutions',
@@ -51,6 +52,8 @@ export default function App(): React.JSX.Element {
     },
   ];
 
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   return (
     <main>
       <h1>Hello App</h1>

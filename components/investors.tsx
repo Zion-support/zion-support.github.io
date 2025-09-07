@@ -38,6 +38,7 @@ export default function InvestorsPage() {export default function InvestorsPage()
           </div>;
         </div>;
         <div className='pt-4 text-slate-300'>;
+<<<<<<< HEAD
           Contact IR:{' '}<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
 				<title>Investors | Zion Tech Group</title>;
@@ -118,3 +119,14 @@ function InvestorsPage() {return (<div className='min - h-screen pt - 24 pb - 20
       </div>;
     </div>;
   )
+=======
+          Contact IR:{' '}
+
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            kleber@ziontechgroup.com
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

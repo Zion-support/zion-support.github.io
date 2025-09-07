@@ -1,5 +1,6 @@
 {
 
+<<<<<<< HEAD
   "timestamp": "2025-09-05T15:52:31.442Z",
   "totalDuration": 19528,
   "successfulPhases": 3,
@@ -68,6 +69,8 @@ ursor/automate-test-improve-and-merge-code-646c
       "success": true,
       "duration": 1355,
       "errors": []
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   "timestamp": "2025-09-06T22:31:53.507Z",
   "summary": {
     "totalScripts": 8,

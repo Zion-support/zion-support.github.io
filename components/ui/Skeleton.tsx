@@ -1,5 +1,6 @@
 export type SkeletonProps = {className?: string;
 }
+<<<<<<< HEAD
 export type SkeletonProps = {transform: translateX(100%)}        }
       `}</style>;
     </div>;
@@ -48,3 +49,15 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
       `}</style>;
     </div>;
   )}
+=======
+export type SkeletonProps = {;
+
+            transform: translateX(100%);
+
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

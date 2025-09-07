@@ -16,6 +16,7 @@
         "name": "Performance Monitor",
         "path": "scripts/performance-monitor.cjs",
         "success": false,
+<<<<<<< HEAD
         "error": "Command failed: node scripts/performance-monitor.cjs\n/workspace/scripts/performance-monitor.cjs:1\n\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
       },
       {
@@ -121,6 +122,9 @@
     "successfulPhases": 4,
     "failedPhases": 2,
     "overallSuccess": false
+=======
+        "error": "Command failed: node scripts/performance-monitor.cjs\n/workspace/scripts/performance-monitor.cjs:1\n
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     "builds": {
       "success": false
     },
@@ -141,9 +145,19 @@
     ]
   },
   "summary": {
+<<<<<<< HEAD
     "totalPhases": 6,
     "successfulPhases": 5,
     "failedPhases": 1,
     "overallSuccess": false
+=======
+    "totalScripts": 6,
+    "successfulScripts": 3,
+    "failedScripts": 3,
+    "testsPassed": 0,
+    "testsFailed": 3,
+    "buildSuccess": false,
+    "totalErrors": 12
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
 }

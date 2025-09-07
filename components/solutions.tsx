@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
  const SolutionsPage: React.FC = () => {const industrySolutions = [ {category: 'Healthcare & Life Sciences', solutions: [ {];
 }
@@ -293,8 +294,20 @@ export default Solutions;}}
 }
 }
 }import { Heart, DollarSign, Factory, ShoppingCart, Building2;
+=======
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import { Heart, DollarSign, Factory, ShoppingCart, Building2;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;
   Users, Globe, Cpu, Database, Network, Target;
   } from 'lucide-react';
 const SolutionsPage: React.FC;
+<<<<<<< HEAD
 export default Solutions;
+=======
+export default Solutions;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

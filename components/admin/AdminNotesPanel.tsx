@@ -5,20 +5,35 @@ export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | '
 }type Note = {target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
   targetType: string; // e.g., 'user' | 'listing';
 export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
 }type Note = {id: string;
+=======
+
+export type AdminNotesPanelProps = any;
+  targetId: string; // unique identifier for the target
+}
+;
+type Note = {
+  id: string;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   target_type: string;
   target_id: string;
   text: string;targetType,targetId,}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}type Note = {id: string;
   targetType: string;
   targetId: string;
   text: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   authorId: string;
   createdAt: number;
 }}export default function AdminNotesPanel() {authorId: string;
   createdAt: number;
 }
+<<<<<<< HEAD
 export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useState(true)const [adminId, setAdminId] = useState('admin-demo')const [notes, setNotes] = useState<Note[]>([])const [loading, setLoading] = useState(false)const [adding, setAdding] = useState(false)const [text, setText]  = useState('')async function fetchNotes() {try {setLoading(true)const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,{headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}
       )if (!res && res.ok) {setNotes([])return;
       }method: 'POST',headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },body: JSON.stringify({ targetType, targetId, text })})const data = await res.json()setNotes(data.notes |[])} finally {setLoading(false)}
@@ -27,9 +42,30 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
         headers: {'Content-Type': 'application/json';
           'X-Admin': isAdmin ? 'true' : 'false';
           'X-Admin-User': adminId;
+=======
+export default function AdminNotesPanel({
+  targetType,
+  targetId,
+}: AdminNotesPanelProps) {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [adminId, setAdminId] = useState('admin-demo');
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState('');
+
+  async function fetchNotes() {
+    try {
+      setLoading(true);
+const res = await fetch(
+        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
+        {
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         }
         body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
       }
+<<<<<<< HEAD
       setText('')setAdding(false)}await fetchNotes()} finally {setAdding(false)await fetchNotes()} finally {setAdding(false)}
   }}
   }if (!isAdmin) {return (<div className='rounded border p-3'>;
@@ -37,6 +73,58 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
           <input;
             id='isAdminToggle';
             type='checkbox';
+=======
+
+      const data = await res.json();
+      setNotes(data.notes |[]);
+    } finally {
+      setLoading(false);
+    }
+  }
+  useEffect(() => {
+if (isAdmin) fetchNotes();
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {
+    if (!text.trim()) return;
+    setAdding(true);
+    try {
+      const res = await fetch('/api/admin/notes', {
+
+        method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+          'X-Admin': isAdmin ? 'true' : 'false',
+          'X-Admin-User': adminId,
+        },
+        body: JSON.stringify({ targetType, targetId, text }),
+      });
+      if (!res.ok) {
+        alert('Failed to add note');
+        return;
+      }
+      setText('');
+
+      await fetchNotes();
+    } finally {
+      setAdding(false);
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+    }
+  }
+
+
+    }
+  }
+
+  if (!isAdmin) {
+    return (
+<div className='rounded border p-3'>
+        <div className='flex items-center gap-2 text-sm'>
+          <input
+            id='isAdminToggle'
+            type='checkbox'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />;
@@ -199,6 +287,7 @@ if ( {) {$2;
             ))}
           </ul>;
         )}
+<<<<<<< HEAD
       </div>;
     </div>;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {target_type: string; // e.g., 'user' | 'listing';
@@ -375,3 +464,10 @@ if ( {) {$2;
           </ul>)}
       </div>;
     </div>)})}
+=======
+      </div>
+    </div>
+
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

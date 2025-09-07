@@ -1,4 +1,5 @@
 import Head from 'next/head';
+<<<<<<< HEAD
 import { useRouter   } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button';
@@ -97,6 +98,77 @@ if (return undefined) {$2;
           <div className='text-center mb-10'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
               <span className='text-5xl' aria-hidden>;
+=======
+import { useRouter  } from 'next/router';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { extraServices  } from '../data/extra-services';
+import { additionalEnhancedServices  } from '../data/additional-real-services';
+import { innovativeAIServices  } from '../data/innovative-ai-services';
+import { quantumSpaceServices  } from '../data/quantum-space-services';
+import { enterpriseITServices  } from '../data/enterprise-it-services';
+import { newRealServices  } from '../data/new-real-services';
+import { marketReadyServices  } from '../data/market-ready-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices  } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions  } from '../data/comprehensive-it-solutions';
+import { marketValidatedServices  } from '../data/market-validated-services';
+import { newRealInnovations  } from '../data/new-real-innovations';
+import { realMarketServices  } from '../data/real-market-services';
+import { new2025Services  } from '../data/new-2025-services';
+import { curatedMarketServices  } from '../data/curated-market-services';
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
+import { nextGenAIServices  } from '../data/next-gen-ai-services';
+import { industryRealServices  } from '../data/industry-real-services';
+import { professionalServices  } from '../data/professional-services';
+import { realVerifiedServices } from '../data/real-verified-services';
+
+  const router = null;
+      }
+    });
+    if (byLink) return byLink;
+    const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
+    if (byId) return byId;
+
+return undefined;
+  }, [slug]);
+  if (!service) {
+    return (
+      <UltraAdvancedFuturisticBackground>
+<div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-3xl mx-auto text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
+              Service not found
+            </h1>
+            <p className='text-gray-300 mb-8'>
+              We couldn't find the service you were looking for. Explore all
+              services below.
+            </p>
+            <Button href='/services' variant='quantum' size='lg'>
+              Browse Services
+            </Button>
+          </div>
+        </div>
+      </UltraAdvancedFuturisticBackground>
+    );
+  }
+
+  const canonicalUrl = `https://ziontechgroup.com/${slug}`;
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+
+<meta name='description' content={service.description} />
+        <link rel='canonical' href={canonicalUrl} />
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-10'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+              <span className='text-5xl' aria-hidden>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 {service.icon}
               </span>;
               {service.name}
@@ -132,6 +204,7 @@ if (return undefined) {$2;
                     ? service && service.rating.toFixed(1): service && service.rating}
                 </div>;
               </div>;
+<<<<<<< HEAD
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -261,6 +334,87 @@ function collectAllServices(): Svc[] {return enhancedRealMicroSaasServices.conca
     marketValidatedServices as Svc[];
     newRealInnovations as Svc[];
     realMarketServices as Svc[];
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+
+                className='w-full'
+              >
+                Start Free Trial
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+// Static export support: generate root-level pages for service slugs
+
+type Svc = (typeof enhancedRealMicroSaasServices)[number];
+function collectAllServices(): Svc[] {
+  return enhancedRealMicroSaasServices.concat(
+    extraServices as Svc[]
+    additionalEnhancedServices as Svc[]
+    innovativeAIServices as Svc[]
+    quantumSpaceServices as Svc[]
+    enterpriseITServices as Svc[]
+    newRealServices as Svc[]
+    marketReadyServices as Svc[]
+    nextGenerationAIServices as Svc[]
+    emergingTechnologyServices as Svc[]
+    comprehensiveITSolutions as Svc[]
+    marketValidatedServices as Svc[]
+    newRealInnovations as Svc[]
+    realMarketServices as Svc[]
+    realVerifiedServices as unknown as Svc[]
+  );
+function normalizeSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+
+    .replace(/(^-|-$)/g, '');
+
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+}
+
+function collectAllServices(): any (): Svc[] {;
+  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
+    extraServices as Svc[],;
+    additionalEnhancedServices as Svc[],;
+    innovativeAIServices as Svc[],;
+    quantumSpaceServices as Svc[],;
+    enterpriseITServices as Svc[],;
+    newRealServices as Svc[],;
+    marketReadyServices as Svc[],;
+    nextGenerationAIServices as Svc[],;
+    emergingTechnologyServices as Svc[],;
+    comprehensiveITSolutions as Svc[],;
+    marketValidatedServices as Svc[],;
+    newRealInnovations as Svc[],;
+    realMarketServices as Svc[],;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     realVerifiedServices as unknown as Svc[];
   )function normalizeSlug(value: string): string {return value;
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')function extractRootSlugFromLink(link?: string): string | null {if (!link) return null;
@@ -270,6 +424,7 @@ function collectAllServices(): Svc[] {return enhancedRealMicroSaasServices.conca
   } catch {return null;
   }
 }
+<<<<<<< HEAD
   }}.replace(/(^-|-$)/g, '')export const getStaticPaths: GetStaticPaths = async () => {export const getStaticPaths: GetStaticPaths  = async () => {export const getStaticPaths: GetStaticPaths = async () => {export const getStaticPaths: GetStaticPaths = async () => {}function collectAllServices(): any (): Svc[] {return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(extraServices as Svc[],additionalEnhancedServices as Svc[],innovativeAIServices as Svc[],quantumSpaceServices as Svc[],enterpriseITServices as Svc[],newRealServices as Svc[],marketReadyServices as Svc[],nextGenerationAIServices as Svc[],emergingTechnologyServices as Svc[],comprehensiveITSolutions as Svc[],marketValidatedServices as Svc[],newRealInnovations as Svc[],realMarketServices as Svc[],realVerifiedServices as unknown as Svc[];
   )function normalizeSlug(): any (value: string): string {return value;
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')function extractRootSlugFromLink(): any (link?: string): string | null {if (!link) return null;
@@ -341,3 +496,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynam
 }
 }export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} }}
+=======
+  const services = collectAllServices();
+  const staticSlugs = new Set<string>();
+
+  try {
+const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+      }
+    }
+  } catch {}
+
+// Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
+    slug => !staticSlugs.has(slug)
+  );
+  return {
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
+    fallback: true,
+  }
+};
+
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };
+};
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

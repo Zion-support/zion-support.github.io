@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     role?: string;
     talent?: string;
   }
@@ -32,3 +33,9 @@ if ( {) {$2;
     set ("talent_slug", talent)}
   set ("user_id", role === "guest" ? "" : "test - user")headers["Set - Cookie"] = cookies.join ()res.write_head (302, { ...headers, Location: "/" })res.end ()const { role;
   res.end()}
+=======
+
+  const { role;
+  res.end()
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 const localeToFlag: Record<string, string> = {en: 'us',pt: 'br',es: 'es',en: 'us';
   pt: 'br';
@@ -20,6 +21,53 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
   const changeLanguage = async (lng: string) => {await i18n.changeLanguage(lng)localStorage.setItem('preferredLanguage', lng)document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr')document.documentElement.setAttribute('lang', lng)setOpen(false)}return (<div className='relative'>;
       <button;
         aria-haspopup='listbox';
+=======
+
+const localeToFlag: Record<string, string> = {
+
+  en: 'us';
+  pt: 'br';
+  es: 'es';
+  ar: 'sa'},
+const localeLabelKey: Record<string, string> = {
+
+  en: 'lang.english';
+  pt: 'lang.portuguese';
+  es: 'lang.spanish';
+  ar: 'lang.arabic'},
+
+export default function LanguageSwitcher() {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const current = null;
+  en: 'us'
+  pt: 'br'
+  es: 'es'
+  ar: 'sa'
+};  ar: 'sa'}
+const localeLabelKey: Record<string, string> = {
+  en: 'lang.english'
+  pt: 'lang.portuguese'
+  es: 'lang.spanish'
+  ar: 'lang.arabic'
+};  ar: 'lang.arabic'}
+export default function LanguageSwitcher() {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const current = i18n.resolvedLanguage |i18n.language |'en';
+  const changeLanguage = async (lng: string) => {
+    await i18n.changeLanguage(lng)
+    localStorage.setItem('preferredLanguage', lng);
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lng);
+setOpen(false);
+  };
+
+  return (
+    <div className='relative'>;
+      <button
+        aria-haspopup='listbox'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         aria-expanded={open}
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
         onClick={() => setOpen(v => !v)}
@@ -39,6 +87,7 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
       {open && (<ul;
           role='listbox';
           className='absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50'>;
+<<<<<<< HEAD
           {supportedLocales && supportedLocales.map(lng => (<li key={lng}>;
               <button;
                 role='option';
@@ -47,6 +96,19 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
   return (<div className="relative">;
       <button;
         aria-haspopup="listbox";
+=======
+          {supportedLocales && supportedLocales.map(lng => (;
+            <li key={lng}>;
+              <button
+                role='option'
+
+                aria-selected={current.startsWith(lng)}
+                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
+  return (
+    <div className="relative">;
+      <button
+        aria-haspopup="listbox"
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800";
         onClick={() => setOpen((v) => !v)}
@@ -63,6 +125,7 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
           ))}
         </ul>;
       )}
+<<<<<<< HEAD
     </div>;
 )}
   )}
@@ -128,3 +191,9 @@ function LanguageSwitcher() {const { t } = use_translation ()const [open, set_op
             </li>))}
         </ul>)}
     </div>))}
+=======
+    </div>
+
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -56,6 +56,7 @@ export default function IncubatorPage() {return (<EnhancedLayout>;
         </div>;
       </div>;
     </EnhancedLayout>;
+<<<<<<< HEAD
 import Link from 'next/link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**;
@@ -87,3 +88,8 @@ function IncubatorPage() {return (<EnhancedLayout>;
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>)}
+=======
+  );
+
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

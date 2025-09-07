@@ -3,6 +3,7 @@ export default function OnboardingWizard() {export default function OnboardingWi
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
   const { user, completeOnboarding, setUser } = useUser()const { addToast } = useToast()const [step, setStep] = useState(0)const isClient  = user?.role === 'client';const steps = useMemo(() => {if (isClient) {return [;
   const steps = useMemo(() => {if (isClient) {return [;
         {title: 'Ready to find top IT talent?';
@@ -22,6 +23,46 @@ import React, { useMemo, useState } from 'react';
           )}
         {const steps = useMemo(() => {if (isClient) {return [;
           title: 'Invite or message talent',content: <p>Send invites or start a conversation to move fast.</p>,},];
+=======
+  const { user, completeOnboarding, setUser } = useUser();
+  const { addToast } = useToast();
+  const [step, setStep] = useState(0);
+  const isClient = user?.role === 'client';
+
+
+  const isClient = null;
+          content: (
+            <div className='space-y-4'>
+              <p>Post a role or import your job brief to get started.</p>
+              <Link href='/jobs/post'>
+                <a className='inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5'>
+                  Post a job
+                </a>
+              </Link>
+            </div>
+          )
+        }
+        {
+          title: 'View suggested matches'
+          content: (
+            <p>
+              We will surface the best matches instantly based on your job
+              brief.
+            </p>
+          )
+        }
+        {
+
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+
+          title: 'Invite or message talent',;
+          content: <p>Send invites or start a conversation to move fast.</p>,;
+        },;
+
+      ];
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }
     return [;
       {title: 'Complete your profile';
@@ -77,6 +118,7 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
           >;
             Next;
           </button>;
+<<<<<<< HEAD
         ) : (<button;
             onClick={() => {completeOnboarding()})}}className='px-3 py-2 rounded-md border';
           >;
@@ -242,6 +284,19 @@ if (return null) {$2;
           >;
             Finish;
           </button>;
+=======
+        ) : (;
+          <button
+            onClick={() => {;
+              completeOnboarding();
+              });
+            }}
+
+            className='px-3 py-2 rounded-md border'
+          >
+            Finish
+          </button>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         )}
       </div>;
     </div>;
@@ -268,6 +323,13 @@ if (return null) {$2;
         {step < steps.length - 1 ? (<button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>;
         ) : (<button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>;
         )}
+<<<<<<< HEAD
       </div>;
     </div>;
 )}
+=======
+      </div>
+    </div>
+);
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -5,7 +5,12 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export type ProposalForm = {export type ProposalForm = {import EnhancedLayout from '../layout/EnhancedLayout';
+=======
+
+import EnhancedLayout from '../layout/EnhancedLayout';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = any;
 export type ProposalType =;
@@ -13,11 +18,20 @@ export type ProposalType =;
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
+<<<<<<< HEAD
 export type ProposalForm = {targetInstitution: string;export type ProposalForm = {target_institution: string;
+=======
+export type ProposalForm = {
+  targetInstitution: string;
+;
+export type ProposalForm = {
+  target_institution: string;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   type: ProposalType;
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
+<<<<<<< HEAD
   language?: string;targetInstitution: string,type: ProposalType,regionalScope: string,budgetOrGoals: string,supportingMultiverses: string,language?: string;
   customPrompt?: string;
 }customPrompt?: string;
@@ -50,13 +64,157 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
       setStatusMessage('Export failed')}}}}
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {}
   }async function handleExport() {setStatusMessage('Exporting to PDF/Markdown/JSON...')try {const res = await fetch('/api/proposals/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setExportLinks({pdfUrl: data && data.pdfUrl,jsonUrl: data && data.jsonUrl,mdUrl: data && data.mdUrl,})setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}      const data = await res && res.json()setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}
+=======
+  language?: string;
+
+  customPrompt?: string;
+};
+
+export default function ProposalGenerator() {
+  const [form, setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP'
+    type: 'Workforce Dev'
+    regionalScope: 'Global'
+    budgetOrGoals: ''
+    supportingMultiverses: ''
+    language: 'English'
+    customPrompt:
+
+'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+  });
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [draftMarkdown, setDraftMarkdown] = useState('');
+  const [draftJson, setDraftJson] = useState<any>(null);
+    pdfUrl?: string;
+    jsonUrl?: string;
+    mdUrl?: string;
+  } | null>(null);
+  const [statusMessage, setStatusMessage] = useState('');
+
+  function handleChange<K extends keyof ProposalForm>(
+    key: K
+    value: ProposalForm[K]
+  ) {
+    setForm(prev => ({ ...prev, [key]: value }));
+  }
+  async function handleGenerate() {
+    setIsGenerating(true);
+    setStatusMessage('Generating draft...');
+    try {
+      const res = await fetch('/api/proposals/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      setDraftMarkdown(data.markdown |'');
+      setDraftJson(data.json |null);
+      setStatusMessage('Draft ready. You can edit and export.');
+    } catch (e: any) {
+      console.error(e);
+      setStatusMessage('Failed to generate. You can edit manually and export.');
+    } finally {
+      setIsGenerating(false);
+    }
+  }
+    } finally {
+
+      setIsGenerating(false);    }
+
+    }
+  }
+
+  async function handleExport() {
+    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+    try {
+      const res = await fetch('/api/proposals/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+
+          markdown: draftMarkdown,
+          json: draftJson,
+meta: form,
+        }),
+      });
+      const data = await res.json();
+      setExportLinks({
+        pdfUrl: data.pdfUrl
+        jsonUrl: data.jsonUrl
+        mdUrl: data.mdUrl
+      });
+      setStatusMessage('Exported. Files saved.');
+    } catch (e) {
+      console.error(e);
+      setStatusMessage('Export failed');
+    }
+      setStatusMessage('Export failed');    }
+
+    }
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
       )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}
   }
+<<<<<<< HEAD
   return (<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div className='space-y-4'>      const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`)} catch (e) {console && console.error(e)setStatusMessage('Submission failed')} catch (e) {console.error(e)setStatusMessage('Submission failed')setStatusMessage('Submission failed')}
+=======
+  async function handleSubmitBridge() {
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+    try {
+      const res = await fetch('/api/proposals/submit', {
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+          markdown: draftMarkdown,
+          json: draftJson,
+          meta: form,
+        }),
+      });
+      const data = await res && res.json();
+      setExportLinks({;
+        pdfUrl: data && data.pdfUrl,;
+        jsonUrl: data && data.jsonUrl,;
+        mdUrl: data && data.mdUrl,;
+      });
+      setStatusMessage('Exported. Files saved.');
+    } catch (e) {;
+      console && console.error(e);
+      setStatusMessage('Export failed');    }      const data = await res && res.json();
+      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),;
+      setStatusMessage('Exported. Files saved.');
+    } catch (e) {;
+      console && console.error(e);
+      setStatusMessage('Export failed');
+    }
+  }
+  async function handleSubmitBridge() {;
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+    try {;
+      const res = await fetch('/api/proposals/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          markdown: draftMarkdown,;
+          json: draftJson,;
+          meta: form,;
+        }),;
+      });
+      const data = await res && res.json();
+      setStatusMessage(;
+        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
+      );
+
+    } catch (e) {
+      console.error(e);
+      setStatusMessage('Submission failed');
+      setStatusMessage('Submission failed')
+    }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
   return (<div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -74,6 +232,7 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
           </div>;
           <div>;
             <label className='block text-sm font-medium'>Type</label>;
+<<<<<<< HEAD
             <select;
               className='w-full border rounded px-3 py-2';
               value={form && form.type}
@@ -115,6 +274,26 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
 <label className='block text-sm font-medium'>Regional scope</label>;
             <input;
               className='w-full border rounded px-3 py-2';
+=======
+            <select
+              className='w-full border rounded px-3 py-2'
+
+              value={form.type}
+              onChange={e =>
+                handleChange('type', e.target.value as ProposalType)
+              }
+            >
+              <option>Workforce Dev</option>
+              <option>AI Ethics</option>
+              <option>Digital ID</option>
+              <option>Education</option>
+            </select>
+          </div>
+          <div>
+<label className='block text-sm font-medium'>Regional scope</label>
+            <input
+              className='w-full border rounded px-3 py-2'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               value={form && form.regionalScope}
               onChange={e => handleChange('regionalScope', e && e.target.value)}
               placeholder='Global / Africa / LATAM / APAC / EU / ...';
@@ -164,6 +343,7 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
             </div>;
           </div>;
           <div className='flex gap-2'>;
+<<<<<<< HEAD
             <button;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input;
             <textarea;
@@ -204,10 +384,16 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
           <div className="flex gap-2">;
             <button;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
+=======
+            <button
+
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
+<<<<<<< HEAD
             <button;
 className='px-4 py-2 bg-emerald-600 text-white rounded';
               onClick={handleExport}
@@ -235,12 +421,33 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
             </button>;
           </div>;
 {statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;
+=======
+            <button
+
+className='px-4 py-2 bg-emerald-600 text-white rounded'
+              onClick={handleExport}
+              disabled={!draftMarkdown}>;
+              Export (PDF/JSON/MD);
+            </button>;
+            <button
+
+className='px-4 py-2 bg-purple-600 text-white rounded'
+              onClick={handleSubmitBridge}
+              disabled={!draftMarkdown}
+            >
+              Submit Bridge
+            </button>
+          </div>
+{statusMessage && (
+            <p className='text-sm text-gray-600'>{statusMessage}</p>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           )}
           {exportLinks && (<div className='text-sm space-y-1'>;
               {exportLinks && exportLinks.pdfUrl && (<div>;
                   <a;
                     className='text-blue-600 underline';
                     href={exportLinks && exportLinks.pdfUrl}
+<<<<<<< HEAD
                     target='_blank';
                     rel='noreferrer'>;
                     PDF;
@@ -561,3 +768,56 @@ function handleSubmitBridge() {setStatusMessage ('Submitting via bridge (email /
         </div>;
       </div>;
     </div>)}
+=======
+                    target='_blank'
+
+                    rel='noreferrer'
+                  >
+                    PDF
+                  </a>
+                </div>
+              )}
+              {exportLinks.mdUrl && (
+                <div>
+<a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.mdUrl}
+                    target='_blank'
+
+                    rel='noreferrer'
+                  >
+                    Markdown
+                  </a>
+                </div>
+              )}
+              {exportLinks.jsonUrl && (
+                <div>
+<a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.jsonUrl}
+                    target='_blank'
+
+                    rel='noreferrer'
+                  >
+                    JSON
+                  </a>
+                </div>
+              )}
+            </div>;
+          )}
+
+        </div>
+<div className='space-y-2'>
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>
+          <textarea
+            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+            value={draftMarkdown}
+            onChange={e => setDraftMarkdown(e.target.value)}
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,4 +1,5 @@
 import type { GetServerSideProps } from 'next';
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null },export default function AgencyDashboardPage() {type Props = { vendor: Vendor | null }import { FormEvent, useEffect, useState  } from 'react';
 import type { Vendor } from '../utils/vendor-types';
@@ -9,6 +10,56 @@ type Props = any;export default function AgencyDashboardPage() {const [activeVen
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated)}
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
+=======
+
+import { FormEvent, useEffect, useState } from 'react';
+import type { Vendor } from '../utils/vendor-types';
+type Props = any;
+export default function AgencyDashboardPage({ vendor }: Props) {
+  const [activeVendor, setActiveVendor] = useState(vendor);
+  const [pkgTitle, setPkgTitle] = useState('');
+  const [pkgDesc, setPkgDesc] = useState('');
+  const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+
+
+if (!activeVendor)
+    return (
+      <div className='text-gray-500'>No vendor found. Please apply first.</div>
+    );
+
+  async function saveProfile(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const updated = {
+...activeVendor,
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ''),
+      servicesOffered: String(
+        formData.get('servicesOffered') |
+          activeVendor.servicesOffered?.join(',') |
+          ''
+      )
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+    } as Vendor;
+    // For MVP, update via direct API not implemented; keep local preview only
+    setActiveVendor(updated);
+  }
+  function addPackage() {
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+const packages = [
+      ...(activeVendor.packages || []),
+      {
+        id: `pkg_${Date.now()}`
+        title: pkgTitle
+        description: pkgDesc
+        priceUsd: Number(pkgPrice)
+      }
+
+
+  function addPackage() {;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [;
       ...(activeVendor.packages |[])if (!activeVendor)return (<div className='text-gray-500'>No vendor found. Please apply first.</div>;
@@ -58,6 +109,7 @@ const packages = [;
           </div>;
           <div className='md:col-span-2'>;
             <label className='block text-sm mb-1'>Services Offered</label>;
+<<<<<<< HEAD
             <input;
               name='servicesOffered';
     setPkgTitle('')setPkgDesc('')<section className='space-y-3'>;
@@ -75,6 +127,27 @@ const packages = [;
 <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+=======
+            <input
+              name='servicesOffered'
+
+              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
+              className='w-full border rounded px-3 py-2 bg-transparent'
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
+              Save
+            </button>
+          </div>
+        </form>
+      </section>
+
+<section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Publish Packages</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
@@ -123,6 +196,7 @@ const packages = [;
             className='border rounded px-3 py-2 bg-transparent';
           />;
           <div className='flex gap-2'>;
+<<<<<<< HEAD
             <input;
               placeholder='Price (USD)';
               type='number';
@@ -154,6 +228,63 @@ const packages = [;
     )const data = await res && res.json()setItems(data && data.items || [])}    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`)const data = await res && res.json()setItems(data && data.items || [])}
   async function changeStatus(): any (itemId: string, status: string) {await fetch('/api/vendors/update-pipeline', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({ itemId, status }),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ itemId, status }),})fetchItems()useEffect(() => {}fetchItems()}, [])return (<div className='space-y-2'>;
       {items && items.length === 0 && (<div className='text-sm text-gray-500'>No leads yet.</div>;
+=======
+            <input
+              placeholder='Price (USD)'
+              type='number'
+              value={pkgPrice}
+
+              onChange={e => setPkgPrice(Number(e.target.value))}
+              className='border rounded px-3 py-2 bg-transparent w-full'
+            />
+            <button
+              onClick={addPackage}
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </section>
+
+<section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Project Pipeline</h2>
+        <Pipeline vendorId={activeVendor.id} />
+      </section>
+      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
+    </div>
+  );
+
+function Pipeline({ vendorId }: { vendorId: string }) {
+  const [items, setItems] = useState<any[]>([]);
+  async function fetchItems() {
+
+const res = await fetch(
+      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
+    );
+    const data = await res.json();
+    setItems(data.items || []);
+  }
+
+  async function changeStatus(itemId: string, status: string) {
+    await fetch('/api/vendors/update-pipeline', {
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ itemId, status }),
+    });
+    fetchItems();
+  useEffect(() => {;
+
+  }
+
+    fetchItems();
+  }, []);
+  return (
+    <div className='space-y-2'>;
+      {items && items.length === 0 && (;
+        <div className='text-sm text-gray-500'>No leads yet.</div>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       )}
       {items && items.map(item => (<div;
           key={item && item.id}
@@ -187,6 +318,7 @@ const packages = [;
   const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } }})defaultValue={item.status}
             onChange={e => changeStatus(item.id, e.target.value)}
+<<<<<<< HEAD
             className='border rounded px-2 py-1 bg-transparent text-sm';
           >;
             <option value='lead'>Lead</option>;
@@ -214,3 +346,25 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {cons
 }</div>;
 )export const getServerSideProps: GetServerSideProps<Props> = async () => {const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } }}
+=======
+            className='border rounded px-2 py-1 bg-transparent text-sm'
+          >
+            <option value='lead'>Lead</option>
+            <option value='qualified'>Qualified</option>
+            <option value='proposal'>Proposal</option>
+            <option value='in_progress'>In Progress</option>
+            <option value='complete'>Complete</option>
+            <option value='lost'>Lost</option>
+          </select>
+        </div>
+      ))}
+
+    </div>
+);
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] || null; // tie to auth later
+  return { props: { vendor } };
+};
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

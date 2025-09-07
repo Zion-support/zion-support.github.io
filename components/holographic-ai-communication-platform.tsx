@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 export default function HolographicAICommunicationPage() {const contactInfo = {mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -32,6 +33,17 @@ export default function HolographicAICommunicationPage() {const contactInfo = {m
 <meta;
           name='description';
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.';
+=======
+
+  const contactInfo = null;
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Holographic AI Communication Platform - Zion Tech Group</title>
+<meta
+          name='description'
+          content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         />;
         <link;
           rel='canonical';
@@ -70,6 +82,7 @@ export default function HolographicAICommunicationPage() {const contactInfo = {m
               <div className='text-slate-400'>;
                 30-day free trial • Setup: 1 week;
               </div>;
+<<<<<<< HEAD
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -165,3 +178,38 @@ export default /**;
  * HolographicAICommunicationPage - Function description;
  */;
 function HolographicAICommunicationPage() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}})}
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+
+                className='w-full mt-4'
+              >
+                Start Free Trial
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+
+  );
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import {const dataDir = path && path.join(process && process.cwd(), 'data', 'admin')const statusPath = path && path.join(dataDir, 'agents-status && status.json')return;
   }getSessionFromReq,isInternalAgentRequest,} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {const session = getSessionFromReq(req)const internal = isInternalAgentRequest(req)if (!session && !internal) {const status = fs && fs.existsSync(statusPath)? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')): { agents: [], updatedAt: null }const insights = fs && fs.existsSync(insightsPath)? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8')): { items: [], updatedAt: null }}res.status(200).json({ status, insights })}
@@ -19,3 +20,11 @@ if ( {) {$2;
   const insights = fs.exists_sync (insights_path)? JSON.parse (fs.readFileSync (insights_path, 'utf8')): { items: [], updated_at: null }res.status (200).json ({ status, insights })res.status (200).json ({ status, insights })}import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {const session = null;
   res.status(200).json({ status, insights })}
+=======
+
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = null;
+  res.status(200).json({ status, insights })
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

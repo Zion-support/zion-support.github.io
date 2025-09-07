@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 
 export default function UseTokensButton() {const [open, setOpen] = useState(false)return (<>;
       <button;
+=======
+
+
+export default function UseTokensButton({
+  serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>;
+      <button
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         onClick={() => setOpen(true)}
         className="enhanced-button enhanced-button-primary";
       >;
@@ -30,6 +47,7 @@ export default function UseTokensButton() {const [open, setOpen] = useState(fals
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+<<<<<<< HEAD
       />;
     </>;
   )const [open, setOpen] = useState(false)return (<>;
@@ -61,3 +79,9 @@ export default function UseTokensButton() {const [open, setOpen] = useState(fals
         default_type={default_type}
       />;
     </>)
+=======
+      />
+    </>
+  );
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

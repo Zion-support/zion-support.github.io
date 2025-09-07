@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 ;
 const RevolutionaryServicesShowcase: React.FC = () => {const [activeCategory, setActiveCategory] = useState('all')const [visibleServices, setVisibleServices] = useState(12)const categories = [;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React, { useState } from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap   } from 'lucide-react';
@@ -8,6 +11,7 @@ import { revolutionary2025MicroSaasServices   } from '../../data/revolutionary-2
 import { emergingTech2025Services   } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services  } from '../../data/enterprise-it-2025-services';
 const RevolutionaryServicesShowcase: React.FC;
+<<<<<<< HEAD
   const containerVariants = {hidden: { opacity: 0 }
     visible: {opacity: 1;
       transition: {staggerChildren: 0.1,},},}const itemVariants = {hidden: { opacity: 0, y: 20 }
@@ -33,10 +37,42 @@ const RevolutionaryServicesShowcase: React.FC;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}<motion.div;
           className='text-center mb-16';
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+
+duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
+      <div className='max-w-7xl mx-auto'>;
+        {/* Header */}
+
+        <motion.div
+          className='text-center mb-16'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
         >;
             </span>;
             <br />;
@@ -73,10 +109,31 @@ const RevolutionaryServicesShowcase: React.FC;
         {/* Category Filter */}
 <motion.div;
           className='flex flex-wrap justify-center gap-4 mb-12';
+=======
+        >
+
+<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              Revolutionary 2025
+            </span>
+            <br />
+            <span className='text-white'>Services</span>
+          </h2>
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+            Experience the future with our cutting-edge AI, quantum computing
+            and emerging technology solutions. Transform your business with
+            services that were once science fiction.
+          </p>
+        </motion.div>
+        {/* Category Filter */}
+<motion.div
+          className='flex flex-wrap justify-center gap-4 mb-12'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
         >;
           {categories.map((category) => ({categories.map(category => (<button;
               key={category.id}
@@ -107,6 +164,37 @@ const RevolutionaryServicesShowcase: React.FC;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;<motion.div;
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12';
+=======
+        >
+
+{categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => {
+                setActiveCategory(category.id);
+
+setVisibleServices(12);
+              }}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
+                activeCategory === category && category.id;
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
+              }`}
+
+            >
+              {category.name}
+<span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>
+                {category.count}
+              </span>
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Services Grid */}
+
+        <motion.div
+className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           variants={containerVariants}
           initial='hidden';
           whileInView='visible';
@@ -115,7 +203,11 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12';
           {filteredServices.slice(0, visibleServices).map((service, index) => (<motion.div;
               key={service.id}
               variants={itemVariants}
+<<<<<<< HEAD
 className='group relative cursor-pointer';
+=======
+className='group relative cursor-pointer'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               style={{ perspective: '1000px' }}
             >;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
@@ -123,6 +215,7 @@ className='group relative cursor-pointer';
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
+<<<<<<< HEAD
                 {/* Background Effects */}{/* Popular Badge */}
                 {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
                     <Star className='w-3 h-3 inline mr-1' />                    POPULAR              style={{ perspective: '1000px' }}
@@ -216,6 +309,28 @@ className='group relative cursor-pointer';
                   </div>;
                 )}<div>;
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
+=======
+                {/* Background Effects */}
+
+                <div className='absolute inset-0 rounded-2xl overflow-hidden'>
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
+                </div>
+                {/* Popular Badge */}
+                {service.popular && (
+<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
+                    <Star className='w-3 h-3 inline mr-1' />
+                    POPULAR
+                  </div>
+                )}
+
+
+
+
+
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         <motion.div;
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
           variants={container_variants}
@@ -286,6 +401,7 @@ className='group relative cursor-pointer';
                         {service.price}
                       </div>;
                       <div className='text - gray - 400 text - sm'>;
+<<<<<<< HEAD
                         {service.period}<h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">;
                           {service.name}
                         </h3>;
@@ -332,6 +448,16 @@ className='group relative cursor-pointer';
         {visibleServices < filteredServices.length && (<motion.div;
             className='text-center'            initial={{ opacity: 0 }}className="text-center";
 <p className='text-gray-300 mb-4 leading-relaxed'>;
+=======
+                        {service.period}
+
+                      </div>
+                    </div>
+                  </div>
+                  {/* Description */}
+
+<p className='text-gray-300 mb-4 leading-relaxed'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     {service.description}
                   </p>;
                   {/* Stats Grid */}
@@ -404,12 +530,19 @@ className='group relative cursor-pointer';
           ))}
         </motion.div>;
         {/* Load More Button */}
+<<<<<<< HEAD
         {visibleServices < filteredServices.length && (<motion.div;
             className='text-center';
+=======
+        {visibleServices < filteredServices.length && (
+<motion.div
+            className='text-center'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
+<<<<<<< HEAD
             <button;
               onClick={loadMore}className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
             >;
@@ -434,10 +567,26 @@ className='group relative cursor-pointer';
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;{/* Call to Action */}
 <motion.div;
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20';
+=======
+            <button
+              onClick={loadMore}
+
+className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
+            >
+              Load More Revolutionary Services
+            </button>
+          </motion.div>
+        )}
+
+        {/* Call to Action */}
+<motion.div
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
         >;
 <h3 className='text-3xl font-bold text-white mb-4'>;
             Ready to Experience the Future?;
@@ -574,3 +723,36 @@ className='group relative cursor-pointer';
         </motion.div>;
       </div>;
     </section>)}export default RevolutionaryServicesShowcase)}export default RevolutionaryServicesShowcase;export default RevolutionaryServicesShowcase;})}export default RevolutionaryServicesShowcase;
+=======
+        >
+<h3 className='text-3xl font-bold text-white mb-4'>
+            Ready to Experience the Future?
+          </h3>
+          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+            Join the revolution with our cutting-edge AI, quantum, and emerging
+            technology services. Transform your business and stay ahead of the
+            competition.
+          </p>
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+            <a
+              href='/contact'
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>;
+              Start Your Transformation;
+            </a>;
+            <a
+              href='/pricing'
+
+              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+            >
+              View Pricing
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+
+);
+};
+
+export default RevolutionaryServicesShowcase;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

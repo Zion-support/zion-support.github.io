@@ -9,5 +9,8 @@ export default /**;
  */;
 function handler() {const vendor_id = String (req.query.vendor_id || "")if (return res.status (400).json ({ error: "vendor_id required" })) {$2;
 }
+<<<<<<< HEAD
   const items = listPipelineForVendor (vendor_id)res.status (200).json ({ items })res.status (200).json ({ items })const vendorId = null;
   res.status(200).json({ items })}
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

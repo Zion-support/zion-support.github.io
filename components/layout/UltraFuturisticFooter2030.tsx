@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
   Phone;
   Mail;
@@ -41,6 +42,20 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 const contactInfo  = null;services: [;
       {name: 'AI Consciousness Evolution';
         href: '/ai-consciousness-evolution-platform';
+=======
+import { motion } from 'framer-motion';
+
+import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
+  Github, ArrowRight, Heart, Star, Award, CheckCircle
+ } from 'lucide-react';
+const contactInfo = null;
+    services: [
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       }
       {name: 'AI Emotional Intelligence';
         href: '/ai-emotion-intelligence-platform';
@@ -48,6 +63,7 @@ const contactInfo  = null;services: [;
       {name: 'AI Creativity Orchestrator';
         href: '/ai-creativity-orchestrator';
       }
+<<<<<<< HEAD
       {name: 'Quantum Cloud Infrastructure',href: '/quantum-cloud-infrastructure',},],},{title: '🧬 Biotech & DNA Computing',services: [;
       {name: 'DNA Computing Platform',href: '/biotech-dna-computing-platform',},{name: 'Personalized Nutrition',href: '/biotech-personalized-nutrition',},{name: 'Predictive Health Analytics',href: '/ai-predictive-health-analytics',},{ name: 'Research Automation', href: '/advanced-research-automation' },],},{title: '🏙️ Enterprise IT Solutions',services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },{name: 'Autonomous IT Operations',href: '/autonomous-it-operations-center',},{name: 'AI Enterprise Security',href: '/ai-powered-enterprise-security',},{name: 'Intelligent Data Governance',href: '/intelligent-data-governance',},],},{title: '🌌 Space & Metaverse Tech',services: [;
@@ -115,6 +131,146 @@ const socialLinks = [;
   {name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{ name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: Facebook,},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: Instagram,},{ name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },];const certifications = [;
   'ISO 27001 Certified','SOC 2 Type II Compliant','GDPR Compliant','HIPAA Compliant','PCI DSS Level 1','FedRAMP Authorized',];export default function UltraFuturisticFooter2030() {return (<footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>;
 export default function UltraFuturisticFooter2030() {return (<footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>;
+=======
+      {
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure',
+      },
+    ],
+  },
+  {
+    title: '🧬 Biotech & DNA Computing',
+    services: [
+      {
+        name: 'DNA Computing Platform',
+        href: '/biotech-dna-computing-platform',
+      },
+      {
+        name: 'Personalized Nutrition',
+        href: '/biotech-personalized-nutrition',
+      },
+      {
+        name: 'Predictive Health Analytics',
+        href: '/ai-predictive-health-analytics',
+      },
+      { name: 'Research Automation', href: '/advanced-research-automation' },
+    ],
+  },
+  {
+    title: '🏙️ Enterprise IT Solutions',
+    services: [
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
+{
+        name: 'Autonomous IT Operations',
+        href: '/autonomous-it-operations-center',
+      },
+      {
+        name: 'AI Enterprise Security',
+        href: '/ai-powered-enterprise-security',
+      },
+      {
+        name: 'Intelligent Data Governance',
+        href: '/intelligent-data-governance',
+      },
+    ],
+  },
+  {
+    title: '🌌 Space & Metaverse Tech',
+    services: [
+      {
+        name: 'Space Mining Automation',
+        href: '/space-mining-automation-platform',
+      },
+      {
+        name: 'Metaverse Digital Reality',
+        href: '/metaverse-digital-reality-platform',
+      },
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform' },
+      { name: 'AI Research Assistant', href: '/ai-research-assistant' },
+    ],
+  },
+  {
+    title: '🎯 2030 Innovative Micro SAAS',
+    services: [
+      {
+        name: 'AI Business Intelligence Suite 2030',
+        href: '/ai-business-intelligence-suite-2030',
+      },
+      {
+
+        name: 'AI Customer Experience Platform 2030',
+        href: '/ai-customer-experience-platform-2030',
+      },
+      {
+        name: 'AI Marketing Automation Suite 2030',
+        href: '/ai-marketing-automation-2030',
+      },
+      {
+        name: 'AI HR Management Suite 2030',
+        href: '/ai-hr-management-suite-2030',
+      },
+    ],
+  },
+];
+
+const quickLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Resources', href: '/resources' },
+
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+{ name: 'Contact', href: '/contact' },
+];
+const companyInfo = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+
+{ name: 'Status', href: '/status' },
+];
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin,
+  },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/ziontechgroup',
+    icon: Facebook,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram,
+  },
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+];
+
+const certifications = [
+  'ISO 27001 Certified',
+  'SOC 2 Type II Compliant',
+  'GDPR Compliant',
+  'HIPAA Compliant',
+  'PCI DSS Level 1',
+  'FedRAMP Authorized',
+];
+
+export default function UltraFuturisticFooter2030() {
+  return (
+<footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
+export default function UltraFuturisticFooter2030() {
+  return (
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Animated Background */}
       <div className='absolute inset-0'>;
         <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>;
@@ -158,6 +314,7 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                     className='hover:text-purple-400 transition-colors';
                   >;
                     {contactInfo.mobile}
+<<<<<<< HEAD
                   </a>;
                 </div>;
                 <div className='flex items-center space-x-3 text-sm text-gray-300'>;
@@ -213,16 +370,67 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                           {service && service.name}
                         </Link>;<div className='space-y-1'>;
                       {category.services.map((service, serviceIndex) => (<Link;
+=======
+                  </a>
+                </div>
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <a
+                    href={`mailto:${contactInfo.email}`}
+                    className='hover:text-purple-400 transition-colors'
+                  >
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>
+                  <MapPin className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-sm text-gray-300'>
+                  <Globe className='w-4 h-4 text-purple-400' />
+                  <a
+                    href={contactInfo.website}
+                    className='hover:text-purple-400 transition-colors'
+                  >
+                    {contactInfo.website.replace('https://', '')}
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Service Categories */}
+<div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Rocket className='w-5 h-5 text-purple-400' />
+                <span>Our Services</span>
+              </h4>
+              <div className='grid grid-cols-1 gap-4'>
+                {serviceCategories.slice(0, 3).map((category, index) => (
+                  <div key={index} className='space-y-2'>
+                    <h5 className='text-sm font-medium text-purple-300'>
+                      {category.title}
+                    </h5>
+
+                    <div className='space-y-1'>
+                      {category.services.map((service, serviceIndex) => (
+                        <Link
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                           key={serviceIndex}
                           href={service.href}
 className='block text-xs text-gray-400 hover:text-purple-300 transition-colors';
                         >;
                           {service.name}
+<<<<<<< HEAD
                         </Link>;
+=======
+                        </Link>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                       ))}
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
             {/* Quick Links */}))}
                   <Link;
                     key={index}
@@ -249,6 +457,41 @@ className='block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                     <span>{link.name}</span>;
                   </Link>;
                 ))}
+=======
+            {/* Quick Links */}
+
+<div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Target className='w-5 h-5 text-cyan-400' />
+                <span>Quick Links</span>
+              </h4>
+              <div className='space-y-2'>
+                {quickLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+className='block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex items-center space-x-2 group'
+                  >
+                    <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />
+                    <span>{link.name}</span>
+                  </Link>
+                ))}
+              </div>
+
+<div className='space-y-2'>
+                <h5 className='text-sm font-medium text-cyan-300'>Company</h5>
+                {companyInfo.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <span>Connect & Trust</span>
+              </h4>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               </div>;
 <div className='space-y-2'>;
                 <h5 className='text-sm font-medium text-cyan-300'>Company</h5>;
@@ -272,6 +515,7 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors';
               </div>;
             </div>;
             {/* Social & Certifications */}
+<<<<<<< HEAD
 <div className='space-y-6'>;
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
                 <Users className='w-5 h-5 text-green-400' />;
@@ -314,6 +558,42 @@ target='_blank';
                   ))}
                 </div>;
               </div>;
+=======
+<div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Users className='w-5 h-5 text-green-400' />
+                <span>Connect & Trust</span>
+              </h4>
+              {/* Social Links */}
+
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300'>
+                  Follow Us
+                </h5>
+                <div className='flex flex-wrap gap-2'>
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
+                    >
+                      <social.icon className='w-5 h-5' />
+                    </a>
+                  ))}
+                </div>
+              </div>
+              {/* Certifications */}
+<div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
+
+                  <span>Certifications</span>
+                </h5>
+                <div className='grid grid-cols-1 gap-2'>
+                  {certifications.map((cert, index) => (
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               {/* Certifications */}
 <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
@@ -328,6 +608,7 @@ target='_blank';
                   <span>Certifications</span>;
                 </h5>;
                 <div className='grid grid-cols-1 gap-2'>;
+<<<<<<< HEAD
                   {certifications && certifications.map((cert, index) => (<div;
                       key={index}className='flex items-center space-x-2 text-xs text-gray-400'>;
                       <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
@@ -350,6 +631,17 @@ target='_blank';
                       <CheckCircle className='w-3 h-3 text-green-400' />;
                       <span>{cert}</span>;
                     </div>;
+=======
+                  {certifications && certifications.map((cert, index) => (;
+                    <div
+                      key={index}
+
+                      className='flex items-center space-x-2 text-xs text-gray-400'
+                    >
+                      <CheckCircle className='w-3 h-3 text-green-400' />
+                      <span>{cert}</span>
+                    </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                   ))}
                 </div>;
               </div>;
@@ -399,6 +691,7 @@ target='_blank';
                   className='hover:text-purple-400 transition-colors'>;
                   Privacy Policy;
                 </Link>;
+<<<<<<< HEAD
                 <Link;
                   href='/terms';
               <div className="flex items-center space-x-4 text-sm text-gray-400">;
@@ -419,12 +712,39 @@ target='_blank';
                 <div className='flex items-center space-x-2'>;
                   <Star className='w-4 h-4 text-yellow-400' />;
                   <span>5.0/5.0 Rating</span>;
+=======
+                <Link
+                  href='/terms'
+
+                  className='hover:text-purple-400 transition-colors'
+                >
+                  Terms of Service
+                </Link>
+              </div>
+
+              <div className='flex items-center space-x-4 text-sm text-gray-400'>
+                <div className='flex items-center space-x-2'>
+                  <Heart className='w-4 h-4 text-red-400' />
+                  <span>Made with passion for innovation</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Star className='w-4 h-4 text-yellow-400' />
+                  <span>5.0/5.0 Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </footer>;
                 </div>;
               </div>;
@@ -437,3 +757,8 @@ target='_blank';
 }
   )}
     </footer>)}
+=======
+  );
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

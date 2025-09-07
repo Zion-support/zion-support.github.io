@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 ;
 import React from 'react',import SEO from '../components/SEO';
+=======
+import React from 'react',
+import SEO from '../components/SEO';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {return (<>;
 			<SEO title;
@@ -10,6 +15,7 @@ export default function RAGEvaluationLabPage() {return (<>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
 						))}
+<<<<<<< HEAD
 					</div>;
   return (<>;
       <SEO;
@@ -17,6 +23,18 @@ export default function RAGEvaluationLabPage() {return (<>;
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.';
               {title: 'Grounding & Faithfulness';
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.';
+=======
+					</div>
+
+  return (
+    <>;
+      <SEO
+        title='RAG Evaluation Lab'
+        description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+              {
+                title: 'Grounding & Faithfulness'
+                desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               }
               {<div;
                 key={f && f.title}
@@ -24,6 +42,7 @@ export default function RAGEvaluationLabPage() {return (<>;
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
+<<<<<<< HEAD
             ))}/mo;
                   </span>;
                 </p>;
@@ -97,6 +116,47 @@ export default function RAGEvaluationLabPage() {return (<>;
               </div>;
             </div>;
             <p className='mt-4 text-sm text-gray-400'>;
+=======
+            ))}
+
+          </div>
+          <div className='mt-12'>
+            <h2 className='text-2xl font-semibold'>Pricing</h2>
+            <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <div className='rounded-2xl border border-cyan-400/30 p-6'>
+                <h3 className='text-xl font-bold'>Starter</h3>
+                <p className='mt-2 text-gray-300'>
+                  Offline evals, 3 projects, 10k runs/mo.
+                </p>
+                <p className='mt-4 text-3xl font-bold'>
+                  $149
+                  <span className='text-base font-normal text-gray-300'>
+                    /mo
+                  </span>
+                </p>
+              </div>
+              <div className='rounded-2xl border border-blue-400/30 p-6'>
+                <h3 className='text-xl font-bold'>Growth</h3>
+                <p className='mt-2 text-gray-300'>
+                  Live canaries, alerts, 10 projects, 100k runs/mo.
+                </p>
+                <p className='mt-4 text-3xl font-bold'>
+                  $449
+                  <span className='text-base font-normal text-gray-300'>
+                    /mo
+                  </span>
+                </p>
+              </div>
+              <div className='rounded-2xl border border-purple-400/30 p-6'>
+                <h3 className='text-xl font-bold'>Enterprise</h3>
+                <p className='mt-2 text-gray-300'>
+                  SSO, SOC 2, private networking, custom limits.
+                </p>
+                <p className='mt-4 text-3xl font-bold'>Custom</p>
+              </div>
+            </div>
+            <p className='mt-4 text-sm text-gray-400'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               Market references:{' '}
               <a;
                 className='underline hover:text-cyan-300';
@@ -116,6 +176,7 @@ export default function RAGEvaluationLabPage() {return (<>;
                 Arize;
               </a>;
               ,{' '}
+<<<<<<< HEAD
               <a;
                 className='underline hover:text-cyan-300';
                 href='https://promptfoo.dev';
@@ -146,3 +207,35 @@ export default function RAGEvaluationLabPage() {return (<>;
       </section>;
     </>;
   )
+=======
+              <a
+                className='underline hover:text-cyan-300'
+                href='https://promptfoo.dev'
+                target='_blank'
+                rel='noreferrer'
+              >
+                promptfoo
+              </a>
+              .
+            </p>
+          </div>
+          <div className='mt-12 flex flex-wrap items-center gap-4'>
+            <Link
+              href='/contact'
+              className='px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold'
+            >
+              Start Evaluating
+            </Link>
+            <a
+              href='mailto:kleber@ziontechgroup.com'
+              className='px-5 py-3 rounded-lg border border-white/20'
+            >
+              Email: kleber@ziontechgroup.com
+            </a>
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

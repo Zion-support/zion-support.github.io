@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='))if (match) return decodeURIComponent(match.split('=')[1])if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })try {function getUserId(req: NextApiRequest): string {const cookie = req && req.headers.cookie || '';
   const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='))if (match) return decodeURIComponent(match && match.split('=')[1])return 'demo-user-1';
 }import { supabase  } from '../../../utils/supabase/client';
@@ -32,3 +33,25 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 } // tolerate in dev;
     return res.status (200).json ({ ok: true })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}
     return res.status (200).json ({ ok: true })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}
+=======
+
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+    return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    const userId = getUserId(req);
+    const { error } = await supabase
+      .from('notifications')
+      .update({ read_status: true })
+      .eq('id', id)
+      .eq('user_id', userId);
+
+
+if (error) return res.status(200).json({ ok: true }); // tolerate in dev
+
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Unexpected error' });
+  }
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

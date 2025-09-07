@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 export function useCurrentUser() {export function useCurrentUser() {export function useCurrentUser() {const { data, error, mutate } = useSWR('/api/auth/me', fetcher)return {user: data?.user |null;
     loading: !data && !error;
     error;
@@ -18,3 +19,14 @@ function useCurrentUser() {const { data, error, mutate } = useSWR ('/api / auth 
 }
   }mutate}
 }
+=======
+
+    user: data?.user || null,
+    loading: !data && !error,
+    error,
+    mutate,
+
+  };
+    mutate}
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React, { useRef } from 'react';
 import { motion, useInView  } from 'framer-motion';
 interface LazySectionProps  {children: React.ReactNode,className?: string;
   threshold?: number;
   delay?: number;
+<<<<<<< HEAD
   direction?: 'up' | 'down' | 'left' | 'right';
 }export const LazySection: React.FC<LazySectionProps> = ({children;
   className = '';
@@ -24,6 +28,23 @@ export const LazySection: React.FC<LazySectionProps> = ({children;
   }
   const getAnimatePosition = () => {switch (direction) {case 'up':;
 return { opacity: 1, y: 0 }case 'down':;
+=======
+  direction?: 'up' | 'down' | 'left' | 'right'
+}
+
+
+export const LazySection: React.FC<LazySectionProps> = ({
+  children;
+  className;
+    }
+  }
+  const getAnimatePosition = () => {
+    switch (direction) {
+      case 'up':
+
+return { opacity: 1, y: 0 };
+      case 'down':
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         return { opacity: 1, y: 0 }
       case 'left':;
         return { opacity: 1, x: 0 }
@@ -32,9 +53,22 @@ return { opacity: 1, y: 0 }case 'down':;
       default:;
         return { opacity: 1, y: 0 }
     }
+<<<<<<< HEAD
   }>;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+  }
+    >
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }
     return this.props.children;
   }
@@ -56,4 +90,12 @@ export const LazySection: React.FC<LazySectionProps> = ({children,className = ''
         return { opacity: 1, y: 0 }}
   }{children}
     </motion && motion.div>;
+<<<<<<< HEAD
   )}export default LazySection;
+=======
+  );
+
+};
+
+export default LazySection;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

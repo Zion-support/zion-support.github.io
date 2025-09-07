@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function AutomationInsightsPage() {const automationTrends = [;
     {id: 'ai-automation-2025';
       title: 'AI Automation Trends 2025';
@@ -85,6 +86,113 @@ export default function AutomationInsightsPage() {const automationTrends = [;
             </p>;
           </section>;
           <section className='mx-auto max-w-7xl'>;
+=======
+
+  const automationTrends = null;
+  ];
+
+  const automationTools = [;
+    {;
+      id: 'automation-framework',;
+      title: 'Zion Automation Framework',,
+  description:;
+        'Our proprietary framework for building scalable automation solutions.',;
+      type: 'Framework',;
+      complexity: 'Advanced',      type: 'Framework',;
+      complexity: 'Advanced';
+    {
+
+      id: 'automation-framework',
+      title: 'Zion Automation Framework',
+description:
+        'Our proprietary framework for building scalable automation solutions.',
+      type: 'Framework',
+      complexity: 'Advanced',
+    },
+    {
+      id: 'performance-monitor',
+      title: 'Performance Monitoring Suite',
+      description:
+        'Comprehensive tools for monitoring and optimizing automation performance.',
+      type: 'Tool',
+      complexity: 'Intermediate',
+    },
+    {
+      id: 'deployment-automation',
+      title: 'Deployment Automation',
+      description: 'Streamlined deployment processes for automation systems.',
+      type: 'Process',
+complexity: 'Beginner',
+    },
+  ];
+
+  const successMetrics = [;
+    {;
+      metric: '227',;
+      label: 'Active Automations',,
+  description: 'Successfully deployed and running',;
+    },;
+    {;
+      metric: '99 && 99.9%',;
+      label: 'Uptime',,
+  description: 'Reliable automation performance',    {;
+      metric: '99 && 99.9%',;
+      label: 'Uptime',,
+  description: 'Reliable automation performance';
+    {
+
+      metric: '227',
+      label: 'Active Automations',
+description: 'Successfully deployed and running',
+    },
+    {
+      metric: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable automation performance',
+    },
+    {
+      metric: '40%',
+      label: 'Efficiency Gain',
+      label: 'Average improvement across projects',
+    },
+    {
+      metric: '2,960+',
+      label: 'Pages Generated',
+      description: 'Content created autonomously',
+    },
+  ];
+  return (
+    <>
+      <Head>
+<title>
+          Automation Insights | Zion Tech Group - AI Automation Expertise
+        </title>
+        <meta
+          name='description'
+          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems."
+        />
+        <meta
+          property='og:title'
+          content='Automation Insights | Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Expert insights on AI automation, autonomous systems, and industry trends.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <section className='text-center mb-16'>
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
+              Automation Insights
+            </h1>
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
+              Deep insights into AI automation, autonomous systems, and the
+              future of intelligent technology
+            </p>
+          </section>
+          <section className='mx-auto max-w-7xl'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             {/* Success Metrics */}
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
@@ -100,8 +208,13 @@ export default function AutomationInsightsPage() {const automationTrends = [;
                     </div>;
                     <div className='text-sm text-white/70'>;
                       {item.description}
+<<<<<<< HEAD
                     </div>;
                   </div>;
+=======
+                    </div>
+                  </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 ))}
               </div>;
             </div>;{/* Automation Trends */}{/* Automation Trends */}
@@ -131,6 +244,7 @@ export default function AutomationInsightsPage() {const automationTrends = [;
                       {trend && trend.title}
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
+<<<<<<< HEAD
                     <Link;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
                     <div className="flex items-center justify-between mb-4">;
@@ -152,6 +266,20 @@ export default function AutomationInsightsPage() {const automationTrends = [;
                       Read More <span className='ml-1'>→</span>                    </Link>;
                     </Link>;
                   </div>;
+=======
+                    <Link
+
+                      href={`/blog/${trend.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Read More <span className='ml-1'>→</span>
+                    </Link>
+                      Read More <span className='ml-1'>→</span>                    </Link>
+
+                    </Link>
+
+                  </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 ))}
               </div>;
             </div>;
@@ -253,6 +381,7 @@ export default function AutomationInsightsPage() {const automationTrends = [;
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
                   Get Started;
                 </Link>;
+<<<<<<< HEAD
                 <Link;
                   href='/case-studies';
                 <Link;
@@ -285,3 +414,20 @@ export default function AutomationInsightsPage() {const automationTrends = [;
       </div>;
     </>;
   )}
+=======
+                <Link
+                  href='/case-studies'
+
+                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
+                >
+                  View Case Studies
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
