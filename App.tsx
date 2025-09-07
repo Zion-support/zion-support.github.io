@@ -1,15 +1,4 @@
 import React from 'react';
-import Header from './src/components/Header';
-import Footer from './src/components/Footer';
-import ServiceCard from './src/components/ServiceCard';
-import TestimonialCarousel from './src/components/TestimonialCarousel';
-import ContactSection from './src/components/ContactSection';
-import BenefitsSection from './src/components/BenefitsSection';
-import HowItWorksSection from './src/components/HowItWorksSection';
-import FaqSection from './src/components/FaqSection';
-import ChatAssistant from './src/components/ChatAssistant';
-import ScrollToTop from './src/components/ScrollToTop';
-import ParticleBackground from './src/components/ParticleBackground';
 
 export default function App() {
   const services = [
@@ -53,9 +42,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <ParticleBackground />
-      <Header />
-
       <main className="relative">
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center">
@@ -84,42 +70,24 @@ export default function App() {
             <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                  features={service.features}
-                />
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-sm text-gray-500 flex items-center">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
-        <BenefitsSection />
-
-        {/* How It Works Section */}
-        <HowItWorksSection />
-
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <TestimonialCarousel />
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <FaqSection />
-
-        {/* Contact Section */}
-        <ContactSection />
       </main>
-
-      <Footer />
-      <ChatAssistant />
-      <ScrollToTop />
     </div>
   );
 }
