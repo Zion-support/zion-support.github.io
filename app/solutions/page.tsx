@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRight } from 'lucide-react';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
@@ -128,7 +128,7 @@ export default function SolutionsPage() {
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
               Contact Us
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
+              <ArrowRight className="h-5 w-5 ml-2" />
             </Link>
             <Link
               href="/services"
