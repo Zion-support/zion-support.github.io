@@ -291,6 +291,28 @@ export function AppFooter() {
                 </div>
               </div>
             </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {[
+                { icon: Linkedin, href: "https://linkedin.com/company/ziontechgroup", label: "LinkedIn" },
+                { icon: Twitter, href: "https://twitter.com/ziontechgroup", label: "Twitter" },
+                { icon: Facebook, href: "https://facebook.com/ziontechgroup", label: "Facebook" },
+                { icon: Youtube, href: "https://youtube.com/@ziontechgroup", label: "YouTube" },
+                { icon: Github, href: "https://github.com/ziontechgroup", label: "GitHub" }
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-zinc-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-zinc-700 transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -563,7 +585,39 @@ export function AppFooter() {
         </div>
       </div>
 
-      {/* Back to Top Button */}
+      {/* Bottom Footer */}
+      <div className="border-t border-zinc-800 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+              <div className="flex items-center space-x-4">
+                <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+                <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
+                <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
+                <Link to="/accessibility" className="hover:text-cyan-400 transition-colors">Accessibility</Link>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <Shield className="w-4 h-4 text-green-400" />
+                <span>SOC 2 Type II Certified</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <Star className="w-4 h-4 text-yellow-400" />
+                <span>4.9/5 Rating</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <CheckCircle className="w-4 h-4 text-blue-400" />
+                <span>99.9% Uptime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-2 flex items-center justify-center z-50 group"

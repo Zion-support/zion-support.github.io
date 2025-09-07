@@ -53,6 +53,7 @@ import {
   TrendingDown,
   CheckCircle
 } from 'lucide-react';
+import { allInnovativeServices2026 } from '../data/innovativeServices2026';
 
 export default function InnovativeServicesShowcase2026() {
   const services = [

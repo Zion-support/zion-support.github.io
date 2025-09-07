@@ -2,9 +2,9 @@ export type InnovativeService = {
   id: string;
   title: string;
   description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation';
-  price: string;
-  billing: 'month' | 'project' | 'hour' | 'year';
+  price: number;
+  pricingModel: string;
+  userLimit: string;
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -473,7 +473,8 @@ export const innovativeServices2026: InnovativeService[] = [
     smb: true
   },
 
-  // EMERGING TECHNOLOGIES
+// Revolutionary Micro SAAS Services 2026
+export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
   {
     id: 'quantum-computing-as-a-service',
     title: 'Quantum Computing as a Service',
@@ -2187,7 +2188,8 @@ export const innovativeServices2026: InnovativeService[] = [
   }
 ];
 
-export const serviceCategories = [
+// Revolutionary IT Infrastructure Services 2026
+export const revolutionaryITInfrastructureServices2026: ITService[] = [
   {
     name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
