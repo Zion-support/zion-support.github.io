@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +102,14 @@ import Footer.dynamic from '../components/Footer.dynamic';
 
 describe('Footer.dynamic', () => {
 >>>>>>> pr/11282
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Footer from '../components/Footer';
+
+describe('Footer', () => {
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   test('renders without crashing', () => {
     render(<Footer.dynamic />);
     expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument();
@@ -119,6 +128,7 @@ describe('Footer.dynamic', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe("Footerdynamic",() => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling",() => { render(<Footerdynamic />)})});''"
 <<<<<<< HEAD
@@ -182,3 +192,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

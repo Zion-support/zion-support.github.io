@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createMocks, RequestMethod } from 'node-mocks-http'; // RequestMethod can be useful;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset'; // Adjust path as necessary;
@@ -147,6 +148,8 @@ main
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset';
@@ -220,6 +223,7 @@ describe('/api/auth/reset token validation', () => {
       error: 'Invalid or expired token'
     });
   });
+<<<<<<< HEAD
 });
 >>>>>>> origin/main
 =======
@@ -235,3 +239,6 @@ describe('/api/auth/reset token validation', () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

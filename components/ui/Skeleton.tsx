@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 
 export type SkeletonProps = {
@@ -203,3 +204,17 @@ export default Component
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> merged-prs-20250907-203621
+=======
+export type SkeletonProps = {className?: string;}
+}
+export type SkeletonProps = {;
+
+            transform: translateX(100%);}
+}
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

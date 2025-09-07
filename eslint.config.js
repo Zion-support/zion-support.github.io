@@ -233,7 +233,8 @@ export default [
 <<<<<<< HEAD
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'prefer-const': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
     }
   },
   {

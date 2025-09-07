@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import '@testing-library/jest-dom';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 describe('AccessibilityEnhancer', () => {
@@ -18,6 +21,7 @@ describe('AccessibilityEnhancer', () => {
     render(<AccessibilityEnhancer />);
     expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
     // Add specific content tests based on component
@@ -58,6 +62,8 @@ describe('AccessibilityEnhancer.test', () => {
 });
 <<<<<<< HEAD
 
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
     // Add specific content tests based on component
@@ -70,6 +76,7 @@ describe('AccessibilityEnhancer.test', () => {
     render(<AccessibilityEnhancer />);
     // Add styling tests if needed
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 });
@@ -113,3 +120,6 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

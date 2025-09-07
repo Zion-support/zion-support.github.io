@@ -16,6 +16,7 @@ import { describe, it, expect } from 'vitest';
 
 describe('Trust Score User API', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 })'';'
@@ -93,10 +94,13 @@ const { describe,it,expect } from "vitest"; describe('Trust Score User API', () 
 import { describe, it, expect } from 'vitest';
 
 describe('Trust Score User API', () => {
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   it('should work', () => {
 >>>>>>> origin/chore/fix-lint-and-merge
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 const { describe,it,expect } from "vitest"; describe("Trust Score User API",() => { it("should work",() => { expect(true).toBe(true)})});"""
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
 
@@ -157,3 +161,6 @@ const { describe,it,expect } from "vitest"; describe('Trust Score User API', () 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

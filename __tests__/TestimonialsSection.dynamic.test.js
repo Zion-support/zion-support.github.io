@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
 =======
@@ -146,32 +147,18 @@ describe('TestimonialsSectiondynamic', () => {
       screen.getByTestId('testimonialssection.dynamic')
     ).toBeInTheDocument();
 =======
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import TestimonialsSection from '../components/TestimonialsSection';
 
 describe('TestimonialsSection', () => {
   test('renders without crashing', () => {
     render(<TestimonialsSection />);
     expect(screen.getByTestId('testimonialssection')).toBeInTheDocument();
->>>>>>> origin/main
   });
-
-  test('displays correct content', () => {
-    render(<TestimonialsSectiondynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<TestimonialsSectiondynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<TestimonialsSectiondynamic />);
-    // Add styling tests if needed
-  });
-});
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
   test('displays correct content', () => {
     render(<TestimonialsSection />);
     // Add specific content tests based on component
@@ -185,6 +172,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -258,3 +246,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

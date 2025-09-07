@@ -15,6 +15,7 @@ const path = require('path');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -61,6 +62,9 @@ class TestFileFixer {
     this.fixedFiles = [];
     this.errors = [];
   }
+=======
+const testDir = path.join(__dirname, '__tests__');
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -206,13 +210,13 @@ describe('${fileName}', () => {
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
->>>>>>> origin/main
   
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       findAndFixTestFiles(filePath);
     } else if (file.endsWith(.test.tsx') || file.endsWith('.test.ts)) {
@@ -344,6 +348,8 @@ console.log(`Fixed ${fixedCount} malformed test files`);`;
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
       fixedCount += walkDir(filePath);
     } else if (file.endsWith('.test.js') || file.endsWith('.test.tsx')) {
       if (fixTestFile(filePath)) {
@@ -357,6 +363,7 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 
 console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
+<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} test files.`);
 >>>>>>> origin/main
 <<<<<<< HEAD
@@ -365,3 +372,6 @@ module.exports = TestFileFixer;
 >>>>>>> pr/11282
 =======
 >>>>>>> merged-prs-20250907-203621
+=======
+console.log(`Fixed ${fixedCount} test files.`);
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

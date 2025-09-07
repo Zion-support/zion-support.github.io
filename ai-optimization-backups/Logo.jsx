@@ -5,6 +5,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> pr/11282
 import { Link  } from 'react-router-dom';
@@ -633,6 +634,8 @@ src={customLogo}
         </span>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { Link } from 'react-router-dom';
 
 export function Logo() {
@@ -643,6 +646,7 @@ export function Logo() {
           <span className="text-white font-bold text-lg">Z</span>
         </div>
         <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> pr/11282
@@ -691,3 +695,9 @@ origin/automation-improvements-final
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+      </div>
+    </Link>
+  );
+}
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

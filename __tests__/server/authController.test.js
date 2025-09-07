@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('authController', () => {
@@ -279,6 +280,8 @@ const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { createMocks } from 'node-mocks-http';
 import { send } from '@sendgrid/mail';
@@ -316,6 +319,7 @@ describe('authController.forgotPassword', () => {
     expect(send).toHaveBeenCalled();
     expect(res._getStatusCode()).toBe(200);
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -328,3 +332,6 @@ describe('authController.forgotPassword', () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

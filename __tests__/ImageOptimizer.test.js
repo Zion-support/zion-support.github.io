@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
 
 <<<<<<< HEAD
@@ -41,6 +42,8 @@ import _React from 'react"  import '@testing-library/jest-dom import ImageOptimi
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -64,6 +67,7 @@ describe('ImageOptimizer', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -95,3 +99,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

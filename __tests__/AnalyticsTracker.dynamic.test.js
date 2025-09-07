@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});
@@ -20,6 +21,8 @@ describe('AnalyticsTrackerdynamic', () => {
 =======
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -29,17 +32,7 @@ describe('AnalyticsTracker.dynamic.test', () => {
 <<<<<<< HEAD
     render(<AnalyticsTracker />);
     expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
->>>>>>> origin/main
   });
-
-});
-
-});
-
-import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});
-
-});
-});
   test('displays correct content', () => {
     render(<AnalyticsTracker />);
     // Add specific content tests based on component
@@ -53,6 +46,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Analytic
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AnalyticsTrackerdynamic from "./components/AnalyticsTracker.dynamic"; describe("AnalyticsTrackerdynamic",() => { test("renders without crashing",() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId("analyticstracker.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<AnalyticsTrackerdynamic />)}); test("handles user interactions",() => { render(<AnalyticsTrackerdynamic />)}); test("applies correct styling",() => { render(<AnalyticsTrackerdynamic />)})});''"
 
@@ -131,3 +125,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

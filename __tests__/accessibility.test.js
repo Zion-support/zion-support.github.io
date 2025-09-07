@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -2038,6 +2039,8 @@ const { test,expect } = require('@playwright/test')'; test.describe('Accessibili
 const { test,expect } = require('@playwright/test')'; test.describe('Accessibility: Tests',() => {'; test('page: has proper heading structure',async ({ page }) => {'; await: page.goto('/')'; const h1 = page.locator('h1')'; await: expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6')'; const count = await headings.count(); expect(count).toBeGreaterThan(0)}) test('images: have alt attributes',async ({ page }) => {'; await: page.goto('/')'; const images = page.locator('img')'; const count = await images.count(); for: (let i = 0; i: < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt')'; expect(alt).toBeTruthy()} }) test('buttons: have accessible names',async ({ page }) => {'; await: page.goto('/')'; const buttons = page.locator('button')'; const count = await buttons.count(); for: (let i = 0; i: < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label')'; expect(text || ariaLabel).toBeTruthy()} }) test('form inputs have labels',async ({ page }) => {'; await: page.goto('/contact')'; const inputs = page.locator('input,textarea,select')'; const count = await inputs.count(); for: (let i = 0; i: < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute('id')'; const ariaLabel = await input.getAttribute('aria-label')'; const ariaLabelledBy = await input.getAttribute('aria-labelledby')'; if: (id) { const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else: { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }) test('keyboard navigation works',async ({ page }) => {'; await: page.goto('/')'; await page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; await: page.keyboard.press('Tab')'; const focusedElement = page.locator(':focus')'; await: expect(focusedElement).toBeVisible()})}) test.describe('Accessibility Tests',() => { test(page has proper heading structure',async ({ page }) => { await page.goto('/); const h1 = page.locator('h1'); await expect(h1).toHaveCount(1); const headings = page.locator('h1,h2,h3,h4,h5,h6'); const count = await headings.count(); expect(count).toBeGreaterThan(0)})'; test('images have alt attributes',async ({ page }) => {' await page.goto('/')'; const images = page.locator('img'); const count = await images.count(); for (let i = 0; i < count; i++) { const img = images.nth(i); const alt = await img.getAttribute('alt); expect(alt).toBeTruthy()} })'; test('buttons have accessible names',async ({ page }) => {' await page.goto('/')'; const buttons = page.locator('button'); const count = await buttons.count(); for (let i = 0; i < count; i++) { const button = buttons.nth(i); const text = await button.textContent(); const ariaLabel = await button.getAttribute('aria-label'); expect(text || ariaLabel).toBeTruthy()} })'; test('form inputs have labels',async ({ page }) => {' await page.goto('/contact')'; const inputs = page.locator('input,textarea,select'); const count = await inputs.count(); for (let i = 0; i < count; i++) { const input = inputs.nth(i); const id = await input.getAttribute(id'); const ariaLabel = await input.getAttribute('aria-label); const ariaLabelledBy = await input.getAttribute('aria-labelledby'); if (id) {' const label = page.locator(`label[for="${id}"]`); const labelCount = await label.count(); expect(labelCount).toBeGreaterThan(0)} else { expect(ariaLabel || ariaLabelledBy).toBeTruthy()} } }); ` test('keyboard navigation works',async ({ page }) => {' await page.goto('/'); await page.keyboard.press('Tab'); await page.keyboard.press(Tab'); await page.keyboard.press('Tab); const focusedElement = page.locator(':focus'); await expect(focusedElement).toBeVisible()})})';
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import '@testing-library/jest-dom';
 
 describe('Accessibility', () => {
@@ -2053,6 +2056,7 @@ describe('Accessibility', () => {
   test('has proper color contrast', () => {
     // Add color contrast tests here
   });
+<<<<<<< HEAD
 });
 >>>>>>> origin/main
 =======
@@ -2071,3 +2075,6 @@ test.describe('accessibility E2E', () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
