@@ -1,6 +1,5 @@
 
 
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -108,10 +107,8 @@ ctx.stroke();}
         }
       }
 
-
 requestAnimationFrame(animate)
 };
-
 
     animate();
     return () => {}
@@ -430,8 +427,6 @@ ease: 'linear',
 
       </div>
 
-
-
       {/* Quantum Entanglement Effect */}
 
       <motion.div;
@@ -520,7 +515,6 @@ ease: 'easeInOut',
     </div>
 )
 };
-
 
 export default UltraFuturisticBackground2034;
 

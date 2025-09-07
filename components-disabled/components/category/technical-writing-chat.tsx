@@ -152,7 +152,6 @@ export default TechnicalWritingChat;<title />TechnicalWritingChat - Zion Tech So
     </div>)
 };
 
-
       </main>;
     </div>);
 

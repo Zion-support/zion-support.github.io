@@ -54,7 +54,6 @@ real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
 
-
 rating: 4 && 4.7;
 reviews: 89;
 };
@@ -259,9 +258,6 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'}
 ];website: 'https://ziontechgroup.com';
     reviews: 167;
-
-
-
 
   }
 ];

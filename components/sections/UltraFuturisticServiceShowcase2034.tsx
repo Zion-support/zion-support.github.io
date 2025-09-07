@@ -289,7 +289,6 @@ designed to transform your business and propel you into the future.
   value: '45+ Countries', icon: Globe}
 }
 
-
             ].map((stat, index) => (
               <motion.div;
             ].map((stat, index) = /> (;
@@ -334,9 +333,6 @@ className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-
 
           </div>;
         </motion && motion.div>;
-
-
-
 
             ))}
 
@@ -461,7 +457,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                 </div>}
               )}
 
-
               {/* Service Icon *}
 }
 <div className='flex items-center justify-between mb-4' />;
@@ -476,11 +471,9 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
           </div>;
         </motion && motion.div>;
 
-
         {/* Services Grid */}
         <motion&& motion.div;
 variants={containerVariants}
-
 
               )}
               {/* Service Icon */}
@@ -706,7 +699,6 @@ variants={containerVariants}
 
               </div>;
 
-
               {/* Action Buttons */}
 
 <div className='flex space-x-3' />
@@ -735,7 +727,6 @@ href={service.link}
           ))}
 
         </motion && motion.div>;
-
 
         {/* Call to Action */}
         <motion&& motion.div;

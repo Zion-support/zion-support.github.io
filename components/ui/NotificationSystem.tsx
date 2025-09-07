@@ -118,7 +118,7 @@ const [notifications, setNotifications]  = useState<Notification[] />([])const a
 
 const NotificationContainer: React.FC = () => ;"
   const { notifications, removeNotification }  = useNotifications()return (<div className=\"fixed top-4 right-4 z-50 space-y-2\" />;
-      {notifications.map((notification) => (ursor/automate-test-improve-and-merge-code-646c;}
+      {notifications.map((notification) => (;}
         <div;}
           key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`} />
@@ -153,7 +153,7 @@ const NotificationContainer: React.FC = () => ;"
   )}
 
 export default NotificationSystem;
-ursor/automate-test-improve-and-merge-code-646c;"
+;"
               {notification.title && (<p className=\"text-sm\" />{notification.message}</p>;
             </div>;
             {onDismiss && (<button;}
@@ -206,7 +206,7 @@ export const useNotifications = () => ;
   const context = useContext(NotificationContext)if (context === undefined) {throw new Error('useNotifications must be used within a NotificationProvider')}
  ;
   return context;
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined />(undefined);
@@ -218,8 +218,6 @@ interface NotificationProviderProps {
 
 export const NotificationProvider: React.FC<NotificationProviderProps /> = ({ children   }
 }) => {
-
-
 
   const [notifications, setNotifications] = useState<Notification[] />([]);
 
@@ -246,7 +244,6 @@ const removeNotification = (
 }
 };
 
-
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }} />
       {children}
@@ -254,7 +251,6 @@ const removeNotification = (
     </NotificationContext.Provider>
   )
 };
-
 
 const NotificationContainer: React.FC = () => {}
  ;}
@@ -294,7 +290,6 @@ onClick={() = /> handleDismiss(notification.id)}"
   )
 };
 
-
 export default NotificationSystem;
 
   return (
@@ -315,7 +310,6 @@ onClick={() = /> onRemove(notification.id)}"
     </div>
   )
 };
-
 
 export const useNotifications = (
  ;

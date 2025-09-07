@@ -178,7 +178,6 @@ onClick={syncDepin}
         )}
       </section>
 
-
 <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800' />
         <h2 className='text-lg font-semibold' />Operator AI Actions</h2>
         <p className='text-sm text-gray-600 dark:text-gray-300' />

@@ -253,7 +253,6 @@ const features = [
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 ];
 
-
 const features  = null;return (<>;
 			<SEO title=\"Secrets Rotation Automation\" description=\"Automate key and secret rotation across cloud and CI/CD with approvals and audit logs.\" />;
 			<main id=\"main\" className=\"container mx-auto px-4 py-24\" />;
@@ -302,9 +301,6 @@ const features  = null;return (<>;
 }
 }
 
-
-
-
     </>);
 }
 
@@ -348,7 +344,6 @@ const features = [
   return (
 
   return (
-
 
 return (
   return (

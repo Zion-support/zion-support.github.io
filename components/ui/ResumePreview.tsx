@@ -135,10 +135,6 @@ className='underline'}
             </div>;
           </header>;
 
-
-
-
-
           {/* Summary */}
 
           {data.summary && (

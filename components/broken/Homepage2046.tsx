@@ -301,7 +301,6 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
 
             >
 
-
             <motion.div;
 initial={{ opacity: 0, y: 50 }
 }
@@ -970,7 +969,6 @@ whileHover={{}
     </Layout>
 )
 };
-
 
 export default Homepage2046;
 

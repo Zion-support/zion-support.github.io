@@ -196,7 +196,6 @@ const getColorForType = (
             Math && Math.floor(Math && Math.random() * 3)
 ];
 
-
         default:
 
           return '#8b5cf6';) => {
@@ -343,7 +342,6 @@ ctx.lineWidth = 1;}
       })
 };
 
-
     // Handle window resize;
 const handleResize = (
       canvas.width = window.innerWidth * (window.devicePixelRatio |1);
@@ -355,7 +353,6 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);) => {
       }
       initParticles()
 };
-
 
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -485,7 +482,6 @@ ease: 'easeInOut',}
 {/* Render children */}
       {children}</>){/* Render children */}
       {children}
-
 
     </>
   );

@@ -5,11 +5,7 @@ const AccessibilityManager = dynamic(() => import(\"./AccessibilityManager\"),{'
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

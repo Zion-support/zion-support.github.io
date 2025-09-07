@@ -387,7 +387,6 @@ href={contactInfo.websit}
         </div>
       </div>
 
-
       {/* Main Navigation */}
 <nav;
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled;
@@ -420,7 +419,6 @@ href={contactInfo.websit}
                 </span>
               </div>
             </motion.div>
-
 
             {/* Desktop Navigation *}
 }
@@ -526,7 +524,6 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
               </motion.button>
             </div>
 
-
             {/* Mobile Menu Button *}
 }
 <div className='lg:hidden' />;
@@ -541,8 +538,6 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
           </div>
         </div>
       </nav>
-
-
 
                 {isOpen ? <X size={24} /> : <Menu size={24} /
 }

@@ -1,7 +1,6 @@
 
 import TryItConsole from './TryItConsole';
 
-
 import { EndpointSpec } from '../../data/api-docs/types';
 
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
@@ -68,7 +67,6 @@ method={endpoint && endpoint.method}
           </ul>
         </div>
       )}
-
 
 {endpoint.errors && endpoint.errors.length > 0 && (
         <div />

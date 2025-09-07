@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign  } from 'lucide-react';
@@ -71,7 +70,6 @@ ease: 'easeOut' as const}
     })
   };
 
-  
     >
 
       {/* Holographic glow effect */}
@@ -113,7 +111,6 @@ className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orang
 
               </motion.div>
 
-            
 }
           </div>;
             )}
@@ -485,7 +482,6 @@ href={service.link}
     </motion.div>
 )
 };
-
 
 export default QuantumHolographicCard;
 

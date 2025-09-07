@@ -115,7 +115,6 @@ const allServices = [
     ...innovative2025AIServicesBatch;
 ];
 
-
 const filteredServices = activeCategory === 'all'
       ? allServices;
       : allServices.filter(service => {
@@ -160,7 +159,6 @@ const filteredServices = activeCategory === 'all'
   if (isLoading) {}
     return <LoadingFallback />}
 };
-
 
 const stagger_container = {
     animate: {
@@ -572,8 +570,6 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
                   <p className='text-gray-300' />{feature.description}</p>
                 </motion.div>
 
-
-
             </div>;
           </div>;
         </section>;{/* CTA Section */}
@@ -628,7 +624,6 @@ className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-bla
     </Layout>
 )
 };
-
 
   animate: {
   transition: {
@@ -979,8 +974,6 @@ const filtered_services = active_category === 'all' ? all_services;"
 export default Homepage2035)
 };
 
-
 export default Homepage2035;
-
 
 "

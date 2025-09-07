@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 import {readOrgData, filterOrgData} from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
 

@@ -84,7 +84,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
 
-
 id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
     description:;

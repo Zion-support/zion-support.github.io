@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface AdvancedCybersecurityService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
@@ -95,7 +95,7 @@ export const \"advancedCybersecurityServices2025\": AdvancedCybersecurityService
     reviews: 96;}
 ]}}
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface AdvancedCybersecurityService  {\"id\": string;
   name: string;
@@ -156,7 +156,7 @@ export const \"advancedCybersecurityServices2025\": AdvancedCybersecurityService
   {id:,iot-security-orchestrator',\"name\": 'IoT Security Orchestrator,tagline:,Comprehensive security for connected devices and IoT ecosystems',\"price\": '$999,period:,/month',\"description\": Advanced IoT security platform that protects connected devices, sensors, and IoT ecosystems from cyber threats. Features device authentication, network segmentation, and behavioral monitoring.',features['IoT device authentication','Network segmentation','Behavioral monitoring','Threat detection','Device management','Security policies','Compliance monitoring','Real-time alerts','Mobile app access','API security';
     ],\"popular\": false,icon:,📱',\"color\": 'from-teal-600 to-cyan-700,textColor:,text-teal-400',\"link\": 'https://ziontechgroup.com/iot-security-orchestrator,marketPosition:,Leading IoT security platform. Our \"advantage\": Comprehensive device protection with behavioral monitoring and automated threat response.,targetAudience['Manufacturing companies','Smart cities','Healthcare IoT','Connected homes','Industrial IoT'],\"trialDays\": 14,setupTime:,1-2 weeks',\"category\": 'IoT Security & Device Protection,\"realService\": true,technology[,IoT Security','Device Authentication','Network Security','Behavioral Analysis','Threat Detection'],integrations['IoT platforms','Network devices','Cloud services','Security tools','Custom systems'],useCases['Smart manufacturing','Connected healthcare','Smart city security','Industrial IoT','Connected home security'],\"roi\": 'Organizations achieve 250% ROI with 80% reduction in IoT security incidents and 90% improvement in device compliance.,competitors[,Armis','Forescout','Palo Alto Networks IoT','Microsoft IoT Security','Custom solutions'],\"marketSize\": '$18.9B IoT security market,\"growthRate\": '42% annual growth',\"contactInfo\": contact,\"realImplementation\": true,implementationDetails:,Comprehensive IoT security platform with device authentication and behavioral monitoring.',\"launchDate\": '2024-07-25,\"customers\": 52,\"rating\": 4.5;}
     reviews: 96;}
-]}}ursor/automate-test-improve-and-merge-code-646c;
+]}};
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface AdvancedCybersecurityService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
@@ -300,10 +300,6 @@ const contact = { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,addr
   link: 'https: marketPosition:,Leading IoT security platform. Our advantage: Comprehensive device protection with behavioral monitoring and automated threat response.,targetAudience[ 'Manufacturing companies','Smart cities','Healthcare IoT','Connected homes','Industrial IoT'],trialDays: 14,setupTime:,1-2 weeks',category: 'IoT Security & Device Protection,realService: true,technology[,IoT Security','Device Authentication','Network Security','Behavioral Analysis','Threat Detection'],integrations[ 'IoT platforms','Network devices','Cloud services','Security tools','Custom systems'],useCases[ 'Smart manufacturing','Connected healthcare','Smart city security','Industrial IoT','Connected home security'],roi: 'Organizations achieve 250% ROI with 80% reduction in IoT security incidents and 90% improvement in device compliance.,competitors[,Armis','Forescout','Palo Alto Networks IoT','Microsoft IoT Security','Custom solutions'],marketSize: '$18.9B IoT security market,growthRate: '42% annual growth',}
   contactInfo: contact,realImplementation: true,implementationDetails:,Comprehensive IoT security platform with device authentication and behavioral monitoring.',launchDate: '2024-07-25,customers: 52,rating: 4.5 reviews: 96 ]}}
 
-
-
-
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -406,7 +402,7 @@ const contact = { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,addr
 }
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface AdvancedCybersecurityService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}

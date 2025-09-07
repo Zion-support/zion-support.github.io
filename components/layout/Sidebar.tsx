@@ -11,7 +11,6 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
 
-
 const quickLinks = [}
   { name: \"Home\", href: \"/\", icon: Home}"
 },{ name: \"Services\", href: \"/services\", icon: Briefcase}"

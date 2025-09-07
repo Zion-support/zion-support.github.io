@@ -10,7 +10,6 @@ interface UltraFuturisticBackgroundProps {
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({ children,className = '';}
    }) => {
 
-
 const getBackgroundClasses = () => ;
   const baseClasses  = 'relative overflow-hidden';switch (variant) {case 'quantum':;
 
@@ -84,8 +83,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   className = ''}
    }) => {
 
-
-
   const getBackgroundClasses = (
    ;
   const baseClasses = 'relative overflow-hidden';
@@ -128,7 +125,6 @@ export default UltraFuturisticBackground;
     </div>
   )
 };
-
 
 export default UltraFuturisticBackground;
 export default UltraFuturisticBackground;

@@ -27,7 +27,6 @@ margin: [10, 10, 10, 10],
     html2pdf().set(opt).from(element).save()
 };
 
-
     >
       Download as PDF;
     </button>

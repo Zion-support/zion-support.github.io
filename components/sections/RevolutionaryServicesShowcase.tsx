@@ -1,6 +1,5 @@
 
 
-
 import React, { useState } from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap   } from 'lucide-react';
@@ -142,10 +141,6 @@ className='group relative cursor-pointer'
                   </div>}
                 }
 }
-
-
-
-
 
                       <div />
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300' />
@@ -379,7 +374,6 @@ href='/pricing'
 
 )
 };
-
 
 export default RevolutionaryServicesShowcase;
 

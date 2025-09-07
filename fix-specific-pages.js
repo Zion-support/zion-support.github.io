@@ -65,9 +65,7 @@ const parts = backupContent.split('');
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
 
-
 '),
-
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution;
@@ -84,12 +82,6 @@ if (!backupContent.includes('export default')) {}
   return { restored: false, reason: 'Backup content is also corrupted' }
    ,
 }
-
-
-
-
-    
-
 
     // Create a backup of the current corrupted file;
 const timestamp = Date.now()
@@ -166,7 +158,6 @@ details: []
 }
   }
 
-
  ,
 },
   
@@ -176,10 +167,7 @@ details: []
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
 
-
-
   },
-
 
   for (const pagePath of corruptedPages) {}
     if (!fs.existsSync(pagePath)) {}
@@ -204,7 +192,6 @@ reason: 'Page not found'}
       continue;
     }
 
-
     console.log(`\n🔍 Checking: ${pagePath}`)
     const result = restorePage(pagePath)
 
@@ -216,9 +203,7 @@ reason: 'Page not found'}
     // // // console.log(`\n🔍 Checking: ${pagePat,}
 }`),
 
-
     const result = restorePage(pagePath),
-
 
     // // // console.log(`\n🔍 Checking: ${pagePat,}
 }`),
@@ -227,7 +212,6 @@ reason: 'Page not found'}
 }`),
     // // // console.log(`\n🔍 Checking: ${pagePat,}
 }`),
-
 
     const result = restorePage(pagePath),
    ;
@@ -249,8 +233,6 @@ reason: 'Page not found'}
 }
   // Generate summary;
 results.failed++,
-
-
 
  ;
   return results;
@@ -433,8 +415,6 @@ if ({}
   fixSpecificPages()}
 }
 
-
-
 // Function to fix specific corrupted pages;
 /**
  * fixSpecificPages - Function description;
@@ -598,7 +578,6 @@ module.exports = {restorePage,fixSpecificPages,findBestBackup;}
 
 }
 
-
 ;
 module.exports = {;
   restorePage,;
@@ -606,17 +585,11 @@ module.exports = {;
   findBestBackup}
 };
 
-
-
-
-
 module.exports = {
   restore_page,
   fixSpecificPages,}
   findBestBackup}
 };
-
-
 
 main;
 module.exports = {

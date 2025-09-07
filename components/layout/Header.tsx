@@ -323,7 +323,6 @@ onClick={() = /> setIsMenuOpen(!isMenuOpen}
 }"
               className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\"
 
-
     { name: 'Contact'}
   href: '/contact', icon: Phone}
 }
@@ -370,7 +369,6 @@ const service_categories = [
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];}
 }
 ];
-
 
 const serviceCategories = [
     { name: 'AI Solutions'}
@@ -465,7 +463,6 @@ const resourceCategories = [
 
 ];
 
-
 const isActive = (path: string) = /> location && location.pathname === path;
 
 const resourceCategories = [
@@ -509,7 +506,6 @@ const resourceCategories = [
 }
   ]
 ];
-
 
 const isActive = (path: string) = /> location && location.pathname === path;
 
@@ -605,7 +601,6 @@ const resource_categories = [
             </Link>;
           </div>;
 
-
           {/* Desktop Navigation */}"
           <div className=\"hidden md:block\" />;"
             <div className=\"ml-10 flex items-baseline space-x-4\" />;
@@ -622,10 +617,6 @@ const resource_categories = [
             </div>;
           </div>;
 
-
-
-
-
             </div>;
           </div>;
           {/* Mobile menu button */}"
@@ -639,7 +630,6 @@ const resource_categories = [
             </button />;
           </div>;
         </div>;
-
 
         {/* Mobile Navigation */}
         <AnimatePresence />;
@@ -705,8 +695,6 @@ export default Header;
 
 export default Header;
 
-
-
 "
           <div className=\"flex - shrink - 0\" />;"
             <Link href=\"/\" className=\"text - 2xl font - bold text - blue - 600\" />;
@@ -769,7 +757,6 @@ export default Header;
           </a>;
     </header>)
 };
-
 
 export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge';
@@ -1333,7 +1320,7 @@ const isActive  = (href: string) => router.pathname === href;return (<header cla
             <button;
               onClick={() = /> setIsMenuOpen(!isMenuOpen)}"
               className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200\";
-ursor/automate-test-improve-and-merge-code-646c;
+;
     { name: 'Contact'}
   href: '/contact', icon: Phone}
 }];{ name: 'Contact'}
@@ -1449,7 +1436,6 @@ const resourceCategories = [
 }
   ]
 ];
-
 
 const isActive = (path: string) = /> location && location.pathname === path;
 
@@ -2408,7 +2394,6 @@ href=\"/contact\"
   )
 };
 
-
 export default Header;
 }
 
@@ -2459,12 +2444,11 @@ export default Header;
 export default Header;}
 }
 
-export default Header;ursor/automate-test-improve-and-merge-code-646c;
+export default Header;;
   )}
 
 export default Header;
 };
-
 
 export default Header;
 "

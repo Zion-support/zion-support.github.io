@@ -91,7 +91,6 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
   // AI Autonomous Business Management;
   {
 
-
 id: 'ai-autonomous-business-manager',
   name: 'AI Autonomous Business Manager',
     tagline: 'Fully autonomous business operations and decision making',

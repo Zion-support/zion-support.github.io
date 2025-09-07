@@ -57,7 +57,6 @@ ctx.restore();
       ctx.line_width = 0.5;
       ctx.globalCompositeOperation = 'screen';
 
-
 for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -73,7 +72,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -121,10 +119,8 @@ ease: 'easeInOut'}
         />
       </div>
 
-
             duration: 20,
             repeat: Infinity,
-
 
             duration: 20,
             repeat: Infinity
@@ -135,7 +131,6 @@ ease: 'easeInOut'}
             ease: 'easeInOut',
   ease: \"easeInOut\"
 
-          
 }
           transition={{duration: 20;}
             repeat: Infinity;}
@@ -144,7 +139,6 @@ ease: 'easeInOut'}
           transition={{duration: 20,repeat: Infinity,ease: 'easeInOut'}}
         />;
       </div>;
-
 
       {/* Floating geometric shapes */}
 
@@ -217,7 +211,6 @@ ease: 'linear'}
         <motion.div;
           }}
 
-
         />;
       </div>;
       {/* Quantum energy waves */}
@@ -247,7 +240,6 @@ ease: 'easeInOut'}
           transition={{
             duration: 8,
             repeat: Infinity,
-
 
         />
       </div>}
@@ -338,7 +330,6 @@ ease: 'linear'}
     </div>
 )
 };
-
 
 export default UltraFuturisticBackground2029;
 

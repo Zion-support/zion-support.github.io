@@ -60,7 +60,6 @@ const hasChildren = null;
     })
 };
 
-
 const deploy = () => onDeploy && onDeploy(node.path);
   return (
 <div className='ml-2' />

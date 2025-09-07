@@ -1,7 +1,5 @@
 
 
-
-
 export type RedemptionType =;
   | \"boost_profile\";"
   | \"promote_listing\";"
@@ -198,7 +196,5 @@ disabled={!account |isSubmitting |tokens <= 0}
   )}
     </div>)}
 }
-
-
 
 "

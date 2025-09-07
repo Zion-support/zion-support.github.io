@@ -1760,7 +1760,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 }
 };
 
-
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {

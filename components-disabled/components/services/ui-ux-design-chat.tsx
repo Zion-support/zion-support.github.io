@@ -37,7 +37,6 @@ const UiUxDesignChat: NextPage = () => {
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
 
-
 const UiUxDesignChat: NextPage = () => {
   return (
     <div />
@@ -45,9 +44,7 @@ const UiUxDesignChat: NextPage = () => {
 
       </Head>;
 
-
       </Head>;
-
 
 const UiUxDesignChat: NextPage = () => {
       <main />
@@ -79,8 +76,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default UiUxDesignChat;
-
-
 
         <title />UiUxDesignChat - Zion Tech Solutions</title>
 
@@ -134,7 +129,6 @@ export default UiUxDesignChat;<title />UiUxDesignChat - Zion Tech Solutions</tit
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
     </div>)
 };
-
 
 export default UiUxDesignChat;
 const UiUxDesignChat: NextPage = () => {

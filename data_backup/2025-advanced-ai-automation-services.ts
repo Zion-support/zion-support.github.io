@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface AdvancedAIAutomationService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
@@ -93,7 +93,7 @@ export const \"advancedAIAutomationServices2025\": AdvancedAIAutomationService[]
 }
 export default advancedAIAutomationServices2025}}
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface AdvancedAIAutomationService  {\"id\": string;
   name: string;
@@ -154,7 +154,7 @@ export const \"advancedAIAutomationServices2025\": AdvancedAIAutomationService[]
 ];
 }
 }
-export default advancedAIAutomationServices2025}}ursor/automate-test-improve-and-merge-code-646c;
+export default advancedAIAutomationServices2025}};
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface AdvancedAIAutomationService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
@@ -221,10 +221,6 @@ const contact = { mobile:,+1 302 464 0950',
   contactInfo: contact,realImplementation: true,implementationDetails:,AI-powered supply chain optimization platform with demand forecasting,inventory management,and logistics optimization',launchDate: '2025-02-20,customers: 67,rating: 4.6 reviews: 43 ];}
 }
 export default advancedAIAutomationServices2025}}
-
-
-
-
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -324,7 +320,7 @@ const contact = { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,addr
 export default advancedAIAutomationServices2025}}
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant } from \"../types/service-variants\";
 
 export interface AdvancedAIAutomationService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}

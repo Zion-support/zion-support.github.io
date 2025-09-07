@@ -126,8 +126,6 @@ const transcript = `Transcript for ${item.title} (Track: ${item.trac,}
 
 }
 
-
-
 }
 }
 
@@ -135,6 +133,4 @@ const transcript = `Transcript for ${item.title} (Track: ${item.trac,}
 }
 
 }
-
-
 

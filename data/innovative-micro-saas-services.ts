@@ -845,7 +845,6 @@ export const newInnovativeServices = [;
     email: string;
     address: string;
 
-
 address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup && ziontechgroup.com'}
     };

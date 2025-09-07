@@ -74,8 +74,6 @@ else if (metrics.cls < 0.4) score += 50;else score += 25;}
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
 
-
-
  ;
   return new Promise ( (resolve) => {}
   if (typeof window !== 'undefined' && 'performance' in window) {}
@@ -96,8 +94,6 @@ const formatTime = (ms: number) : string => {;
   return 'N/A'}
 };
 
-
-
 //Get device icon const getDeviceIcon = (
   switch (deviceType) {
   case 'mobile':;
@@ -114,13 +110,11 @@ let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
 
-
 else score += 25;
 ) => {
   return $3;}
 }
 };
-
 
 //Don't render anything in production return (<AnimatePresence /> {"
   isVisible && (<motion.div </div /> <div className = \"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {

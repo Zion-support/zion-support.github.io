@@ -494,7 +494,6 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
 
 ];
 
-
 ;
 ];
 ;

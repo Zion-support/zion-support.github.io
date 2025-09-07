@@ -14,8 +14,6 @@ particles.push ({ intensity = 'high',
   children,}
    }) => {
 
-
-
   intensity?: 'low' | 'medium' | 'high';
 
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai';
@@ -430,10 +428,8 @@ Math.PI * 2}
         }
       }
 
-
       animationFrameId = requestAnimationFrame(animate)
 };
-
 
     initParticles();
     animate();
@@ -483,5 +479,4 @@ ref={canvasRef}
 }
 
 export default UltraAdvancedFuturisticBackground;
-
 

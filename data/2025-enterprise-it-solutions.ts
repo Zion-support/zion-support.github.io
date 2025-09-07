@@ -400,7 +400,6 @@ implementationDetails: 'Enterprise platform with monitoring engine, observabilit
 	}
 ];
 
-
 id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';

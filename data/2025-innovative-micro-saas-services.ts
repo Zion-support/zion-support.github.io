@@ -2341,10 +2341,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45;
 ];
 
-
   }
-
-
 
 export interface InnovativeMicroSaasService2025 {;
   id: string,;

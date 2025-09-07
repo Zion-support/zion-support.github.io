@@ -239,7 +239,7 @@ const fetchRequest = event.request.clone()return fetch(fetchRequest).then(networ
 
 const responseToCache = networkResponse.clone()caches.open(CACHE_NAME).then(cache => { cache.put(event.request,responseToCache)};
   return networkResponse; }).catch(() => caches.match('/offline.html'))}))})self.addEventListener('activate',event = > { event.waitUntil(caches.keys().then(cacheNames => { return Promise.all(cacheNames.map(cacheName => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)};
-  return Promise.resolve()}))}))self.clients.claim()})ursor/automate-test-improve-and-merge-code-646c;
+  return Promise.resolve()}))}))self.clients.claim()});
 /* eslint-env serviceworker */
 // Comprehensive service worker for caching and offline support;
 const CACHE_NAME = 'zion-tech-group-v2';

@@ -80,7 +80,6 @@ export interface NextGenAIService2026 {
   growthRate: string,
   variant: ServiceVariant,
 
-
 contactInfo: {
     mobile: string;
     email: string;
@@ -439,12 +438,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
   competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
 
-
     growthRate: '110% annual growth',
   variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-
 
     customers: 203,
     rating: 4 && 4.7,}

@@ -231,7 +231,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8'
 }
               whileInView={{ opacity: 1, y: 0 }}
 
-
               transition={{ duration: 0.8 }}
               viewport={{ once: true }
 }
@@ -264,13 +263,7 @@ className='text-center'
           </div>
         </section>
 
-
-
               ))}
-
-
-
-
 
         {/* Featured Services Section *}
 }
@@ -422,13 +415,7 @@ key={i}
           </div>
         </section>
 
-
-
               ))}
-
-
-
-
 
         {/* CTA Section */}
 
@@ -475,7 +462,6 @@ href='/2041-futuristic-services-showcase'
     </Layout>
 )
 };
-
 
   Math.random () * 100;
 }%`;
@@ -538,6 +524,5 @@ export default Homepage2041;  )
 };
 
 export default Homepage2041;
-
 
 "

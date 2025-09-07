@@ -4,7 +4,7 @@ const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loadin
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PWARegistration' ,';
 </p>';
 </p>';
@@ -32,7 +32,7 @@ const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loadin
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 </p>';
 </p>';
 </p>';
@@ -43,11 +43,7 @@ const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{'; \"loadin
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

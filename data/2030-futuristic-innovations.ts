@@ -1000,7 +1000,6 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
   // AI Consciousness & Emotional Intelligence;
   {
 
-
 id: 'ai-consciousness-evolution-platform',
   name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop genuine AI consciousness and self-awareness',

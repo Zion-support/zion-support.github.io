@@ -65,7 +65,6 @@ const getCategoryColor = (
     )
 };
 
-
 const getCategoryIcon = (
    ;
   const icons = {
@@ -86,7 +85,6 @@ const getCategoryIcon = (
     };
     return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />
 };
-
 
   return (
     <section className='py-20 bg-gray-900' />
@@ -324,7 +322,6 @@ className='group'
                           key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                         />                    <div className=\"flex flex-wrap gap-2 mb-6\" />;
                       {service.tags.slice(0, 3).map((tag, idx) => (<span;}
                           key={idx}
-
 
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
                          />
@@ -598,7 +595,6 @@ href='/pricing'
 )
 };
 
-
   /* Search and Filters */ 
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {}
@@ -754,6 +750,5 @@ export default Enhanced2027ServicesShowcase;  )
 }
 
 export default Enhanced2027ServicesShowcase;
-
 
 "

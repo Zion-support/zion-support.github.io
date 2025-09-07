@@ -37,7 +37,6 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 }
   return new OpenAI({ apiKey });
 
-
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote,}
 }
@@ -111,16 +110,10 @@ const completion = await openai.responses.create ({model: 'gpt - 4o - mini';}
 
 }
 
-
-
   return completion && completion.output_text;
 }
 
-
 }
-
-
-
 
   return completion.output_text;
 }

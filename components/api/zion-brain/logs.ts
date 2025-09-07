@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 import { readLogs } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
     return res.status(401).json({ error: 'Unauthorized',}

@@ -3214,7 +3214,7 @@ export default specializedInnovativeServices2027}}
 ;
 :corrupted_backup/2027-specialized-innovative-services.ts;
 :data_backup/2027-specialized-innovative-services.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface SpecializedInnovativeService2027  {\"id\": string;
   name: string;
@@ -5312,7 +5312,7 @@ export const searchSpecializedServices = (query: string) => ;
   const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
-export default specializedInnovativeServices2027}}ursor/automate-test-improve-and-merge-code-646c;
+export default specializedInnovativeServices2027}};
 
 export interface SpecializedInnovativeService2027 { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: numbe,
@@ -5903,7 +5903,7 @@ export const searchSpecializedServices = (query: string) => ;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface SpecializedInnovativeService2027 { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: numbe,

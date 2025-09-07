@@ -20,7 +20,6 @@ interface ImageOptimizerProps {
 
 const ImageOptimizer: React.FC<ImageOptimizerProps /> = ({ src,alt,width,height,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL,sizes,fill = false,style,onLoad,onError   }) => {
 
-
 const [isLoaded, setIsLoaded] =;
   useState(false);
   const [hasError, setHasError] = useState(false;

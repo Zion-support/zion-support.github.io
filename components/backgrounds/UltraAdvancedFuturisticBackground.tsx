@@ -1,6 +1,5 @@
 
 
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -27,8 +26,6 @@ const particles: Array< {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
 for (let i = 0, i < count, i++) {
   particles.push ({
-
-  
 
 export default function UltraAdvancedFuturisticBackground({
   children,
@@ -409,7 +406,6 @@ for (let i = 0; i < 20; i++) {
       animationRef.current = requestAnimationFrame(animate)
 };
 
-
     // Handle window resize;
 const handleResize = (
       canvas.width = window.innerWidth;
@@ -417,7 +413,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     initParticles();

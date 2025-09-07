@@ -1702,7 +1702,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     email: string;
     address: string;
 
-
       'Natural language business communication',
       'Multi-platform task execution',
       'Real-time market analysis',

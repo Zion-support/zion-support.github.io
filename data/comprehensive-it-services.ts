@@ -30,7 +30,6 @@ export interface ComprehensiveITService {
     email: string;
     address: string;
 
-
   {
 
     id: 'quantum - cloud - infrastructure',

@@ -12,8 +12,6 @@
     qualityOfWork?: number;
     timeliness?: number;
 
-
-
 categories?: {
     communication?: number;
     qualityOfWork?: number;
@@ -82,7 +80,6 @@ export type ReviewFormValues = any;
 const ReviewForm: React.FC<Props /> = ({ initial   ,}
 }) => {
 
-
 const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -96,7 +93,6 @@ type Props = {initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'fr
 }
 const ReviewForm: React.FC < Props> = ({ initial   ,}
 }) => {
-
 
 const [rating, set_rating] = useState (0)const [text, set_text] = useState ('')const [anonymous, set_anonymous] = useState (false)const [communication, set_communication] = useState < number | undefined>()const [qualityOfWork, setQualityOfWork] = useState < number | undefined>()const [timeliness, set_timeliness] = useState < number | undefined>()const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState < boolean>(false)const [submitting, set_submitting] = useState (false)const [message, set_message]  = useState < string | null>(null)async /**;
  * handle_submit - Function description;
@@ -130,7 +126,6 @@ function handle_submit() {e.prevent_default ()set_submitting (true)set_message (
   anonymous?: boolean;
 };
 
-
 type Props = {
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId' />;
@@ -140,14 +135,11 @@ type Props = {;
   anonymous?: boolean;
 };
 
-
 type Props = {
   initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
 }
 const ReviewForm: React.FC < Props> = ({ initial   ,}
 }) => {
-
-
 
   const [rating, set_rating] = useState (0);
 
@@ -194,7 +186,6 @@ timeliness;}
 wouldWorkWithAgain}
           }
         })
-
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
@@ -258,11 +249,9 @@ const data = await res.json ();
             timeliness;}
             wouldWorkWithAgain}})});
 
-
     }
   }
   return (
-
 
     }
   }
@@ -305,7 +294,6 @@ className='w-full rounded-md border border-gray-300 p-3 focus: outline-none focu
 className=\"w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500\"
           rows={5}
           value={text}
-
 
         <input;
 id='anonymous'
@@ -441,7 +429,6 @@ export default ReviewForm;</button>;{message && <p className='text-sm' />{messag
       </div>;
       </button>;
 
-
       {message && <p className='text-sm' />{message}</p>}
     </form>;
   )}
@@ -487,10 +474,8 @@ export default ReviewForm;
     </form>)
 };
 
-
 export default ReviewForm;    </form>)
 };
-
 
 export default ReviewForm;
 ;

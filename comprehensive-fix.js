@@ -95,7 +95,7 @@ const ${componentName} = () => {return (<>;}
 
 export default ${componentName}`}// Function to fix Next.js Link issues;
 function fixNextLinks() {try {let content = fs.readFileSync(filePath, \"utf8\")// Add Link import if not present and file has href attributes;
-ursor/automate-test-improve-and-merge-code-646c;
+;
   content = content.replace(/import React from \"react\";/,\"import React from 'react';}
 import Link from \"next/link\";\";}
       )}// Replace <a href=\"/...\" /> with <Link href=\"/...\" />;
@@ -266,7 +266,7 @@ export default ${componentName}`}function fixNextLinks(filePath) { try { let con
   const problematicFiles = [ \"src/pages/services/AICustomerServiceAutomation.js.jsx\",\"src/pages/services/EnterpriseIT.js.jsx\"]; problematicFiles.forEach(filePath => { try { if (fs.existsSync(filePath)) { fs.unlinkSync(filePath)console.log(`Removed problematic file: ${filePath}`)} } catch (error) { console.error(`Error removing ${filePat,}
 }:`,error.message)} })console.log(\"Comprehensive fix completed!\"):corrupted_backup/comprehensive-fix.js;
 :comprehensive-fix.js;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 #!/usr/bin/env node; import fs from \"fs\"; import path from \"path\"; import { fileURLToPath } from \"url\";
 
 const __filename = fileURLToPath(import.meta.url)const __dirname = path.dirname(__filename;

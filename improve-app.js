@@ -2,7 +2,7 @@
 <:improve-app.js;
 <:corrupted_backup/improve-app.js;
 =>:improve-app.js;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 #!/usr/bin/env node const fs = require('fs');
   const path = require('path') class AppImprover { constructor() { this.improvements = []; this.issues = [] } log() {} analyzeApp() { this.log('Analyzing application structure...')this.checkNextConfig()this.checkPackageJson()this.checkAppStructure()this.checkForOptimizations() } checkNextConfig() { try {;}
   const configPath = 'next.config.js;'; if () { const content = fs.readFileSync(configPath,'utf8') { ) { const content = fs.readFileSync(configPath,'utf8'})if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message }`)},
@@ -166,7 +166,7 @@ const files = fs.readdirSync(dirPath;)files.forEach(file = > ;}
     if ( {recommendations.push('Consider implementing code splitting')) {{recommendations.push('Consider implementing code splitting')}
       recommendations.push('Use dynamic imports for large components')recommendations.push('Optimize images and assets') }
     return recommendations}}}
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 }}if() { const optimizer = new PerformanceOptimizer;()optimizer.analyzeBundle()optimizer.generateReport() }
 module.exports = PerformanceOptimizer\";
     fs.writeFileSync('scripts/performance-optimizer.js', performanceScript)this.log('✅ Created performance optimizer script')}
@@ -191,7 +191,7 @@ const { execSync  } = require('child_process';)const fs = require('fs')class Sec
         fixesApplied: this.fixes.length }
    ,
 }fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2))console.log('Security report generated')}}}
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 }}if() { const auditor = new SecurityAuditor;()auditor.runAudit()auditor.fixIssues()auditor.generateReport() }
 module.exports = SecurityAuditor\";
     fs.writeFileSync('scripts/security-auditor.js', securityScript)this.log('✅ Created security auditor script')}
@@ -204,7 +204,7 @@ module.exports = SecurityAuditor\";
     if ( {console.log('\\"nImprovements\": ')) {{console.log('\\nImprovements: ')}this.improvements.forEach(improvement => console.log(\`  - \${improvement}\`))}
   }
   async run() { this.log('🚀 Starting app improvement analysis...')this.analyzeApp()this.createOptimizedNextConfig()this.createPerformanceScript()this.createSecurityScript()this.generateReport()this.log('✅ App improvement analysis completed') }}},
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 }}if() { const improver = new AppImprover;()improver.run().catch(error => {console.error('App improvement \"failed\":  ,', error)process.exit(1) })}
 module.exports = AppImprover;\";
 #!/usr/bin/env node const fs = require('fs');
@@ -662,7 +662,7 @@ const files = fs.readdirSync(dirPath;)files.forEach(file = > {;}
 } if() {;}
   const improver = new AppImprover;()improver.run().catch(error => { console.error('App improvement failed: ,',error)process.exit(1) })} module.exports = AppImprover;\";
 >:improve-app.js;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 #!/usr/bin/env node const fs = require('fs');
   const path = require('path') class AppImprover { constructor() { this.improvements = []; this.issues = [] } log() { console.log(`🔧 ${message}`)} analyzeApp() { this.log('Analyzing application structure...')this.checkNextConfig()this.checkPackageJson()this.checkAppStructure()this.checkForOptimizations() } checkNextConfig() { try {;}
   const configPath = 'next.config.js;'; if () { const content = fs.readFileSync(configPath,'utf8') { ) { const content = fs.readFileSync(configPath,'utf8'})if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message }`)},

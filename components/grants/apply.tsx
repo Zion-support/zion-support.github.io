@@ -12,15 +12,12 @@ const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
 
@@ -30,7 +27,6 @@ const categories: GrantCategory[] = [;
   'Regional Expansion';
   'Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 
@@ -59,7 +55,6 @@ import type { GrantCategory } from '../../types / grants';
 const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;
  * ApplyGrantPage - Function description;
@@ -109,7 +104,6 @@ const categories: GrantCategory[] = [;
   'Regional Expansion',;
   'Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 
@@ -228,7 +222,6 @@ const data = await resp.json ();
     } catch (e: any) {}
       set_error (e.message);}
     } finally {
-
 
   const save = async (submit: boolean) => {;
     try {;
@@ -418,7 +411,6 @@ const data = await resp.json();
     }
   }
 
- 
 };
 
   return (
@@ -544,12 +536,9 @@ const data = await resp.json();
   }
     }
 
-
   };
 
-
   return (
-
 
         {error && <div className='text-sm text-red-600' />{error}</div>}
         <div className='flex gap-3' />
@@ -602,7 +591,6 @@ disabled={loading}
             <select className=\"mt-1 w-full border rounded p-2\" value={sector} onChange={(e) = /> setSector(e.target.value)}>;"
               <option value=\"\" />Select sector</option>;
         </label>;
-
 
   );
 

@@ -6361,7 +6361,6 @@ export const serviceCategories = [
   'Enterprise IT';
 ];
 
-
 ;
 export interface RealMicroSaasService {;
   id: string,;

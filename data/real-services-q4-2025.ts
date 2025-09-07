@@ -52,7 +52,6 @@ reviews: 21}
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
     features: [;
 
-
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
@@ -437,7 +436,6 @@ implementationDetails: 'Webhook ingestion, cookie-less heuristics';
 ;
 	}
 ];
-
 
 id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',

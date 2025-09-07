@@ -631,7 +631,6 @@ const filtered_services = sidebar_items.flat_map (item = />;
   '/knowledge-base' }'        ]'      }]  }
 ]
 
- 
 };
   {
     name: 'AI & Consciousness',

@@ -152,7 +152,6 @@ export default MobileAppDevelopmentChat;<title />MobileAppDevelopmentChat - Zion
     </div>)
 };
 
-
       </main>;
     </div>);
 

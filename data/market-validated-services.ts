@@ -531,7 +531,6 @@ export interface MarketValidatedService {
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [;
 
-
       'WORM retention',
       'Export APIs',
       'Fine - grained access',
@@ -684,7 +683,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 const contactInfo  = null;
 	trialDays?: number;
 }}
-
 
   mobile: \"+1 302 464 0950\",
 	email: \"kleber@ziontechgroup && ziontechgroup.com\",

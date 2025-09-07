@@ -152,7 +152,6 @@ export default WebApplicationDevelopmentChat;<title />WebApplicationDevelopmentC
     </div>)
 };
 
-
       </main>;
     </div>);
 

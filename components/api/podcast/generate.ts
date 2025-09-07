@@ -131,7 +131,6 @@ function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdi
 }
   if ()) {$2;
 
-
 function readEpisodes(): any[] {
   ensureStorage();}
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))}
@@ -325,7 +324,6 @@ const episode = {     ;}
     }
 
 const episodes = readEpisodes();
-
 
       content = completion.choices?.[0]?.message?.content || '';
       content = JSON.stringify ({}

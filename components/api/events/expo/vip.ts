@@ -93,8 +93,6 @@ const address = String(req.query.address || '').toLowerCase();}
   res.status(200).json({ allowed: allowlist.has(address) })
 }
 
-
-
 }
 }
 

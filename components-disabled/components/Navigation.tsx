@@ -45,8 +45,6 @@ const Navigation = (
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 ];
 
-
-
   return (
     <nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />
       <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />
@@ -288,7 +286,6 @@ export default function Navigation() {export default function Navigation() {expo
     </nav>
   )
 };
-
 
 export default Navigation;
 import React, { useState } from \"react\";
@@ -812,7 +809,6 @@ key={index}
               <a;
                 href=\"tel:+13024640950\";
                   )}
-
 
                 </AnimatePresence />;
               </div>;
@@ -1651,10 +1647,10 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  =;
           </div>;}
         </div>;}
       )}</nav>;
-  )}export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+  )}export default Navigation;;
   )}
 
-export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+export default Navigation;;
     </>);
 }
   Menu, 
@@ -1667,8 +1663,6 @@ const Navigation = (
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 ];
-
-
 
   return (
     <nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />
@@ -1829,12 +1823,11 @@ href=\"/contact\"
   ),
 };
 
-
 export default Navigation;
     </>);
 }
-  )}export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+  )}export default Navigation;;
   )}
 
-export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+export default Navigation;;
 

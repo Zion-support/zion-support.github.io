@@ -52,12 +52,8 @@ const appeal: TrustAppeal = {
   } catch ,
 }
 
-
-
-
   return res && res.status(200).json({ ok: true, appeal });
 }
-
 
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase   } from '../../../utils / supabase / client';
@@ -105,7 +101,6 @@ return res.status(200).json({ ok: true, appeal })}return res.status(200).json({ 
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
 }
-
 
 return res.status(200).json({ ok: true, appeal });
 }

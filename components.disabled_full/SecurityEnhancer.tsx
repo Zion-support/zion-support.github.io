@@ -28,7 +28,7 @@ import React,{ useEffect } from 'react'; const SecurityEnhancer: React.FC = () =
 } })}detectXSS()const monitorActivity = ( document.addEventListener('submit',e => { const form = e.target as HTMLFormElement; const inputs = form.querySelectorAll('input,textarea')inputs.forEach(input => { const value = (input as HTMLInputElement).value; if (value.includes('<script') || value.includes('javascript:')) { console.warn('Potential XSS attempt detected in form submission')e.preventDefault()) = /> {
   return $3;}
 } })})let lastUrl = window.location.href; const observer = new MutationObserver(() = /> { if (window.location.href !== lastUrl) { console.log('URL changed from',lastUrl,'to',window.location.href)lastUrl = window.location.href} })observer.observe(document.body,{ childList: 'true',}
-  subtree: 'true' })}monitorActivity()return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\"Content-Security-Policy\"]' )addedMetas.forEach(meta => meta.remove())}},[])return null}export default SecurityEnhancer;ursor/automate-test-improve-and-merge-code-646c;
+  subtree: 'true' })}monitorActivity()return () => { const addedMetas = document.querySelectorAll( 'meta[http-equiv=\"Content-Security-Policy\"]' )addedMetas.forEach(meta => meta.remove())}},[])return null}export default SecurityEnhancer;;
       addedMetas.forEach(meta => meta.remove())}}, [])return null;
 }export default SecurityEnhancer;
       });

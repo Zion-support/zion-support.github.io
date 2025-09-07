@@ -8,7 +8,6 @@ export default function FuturisticFooter() {
   const currentYear = null;
 ];
 
-
 const serviceCategories = [
   {;
       name: 'AI & Machine Learning',;}
@@ -35,7 +34,6 @@ const serviceCategories = [
       href: '/services?category=Blockchain%20%26%20Web3',;}
     }
 ];
-
 
 const socialLinks = [
   {;

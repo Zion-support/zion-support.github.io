@@ -10,7 +10,6 @@ name: string;
     yearly: number;
     currency: string;
 
-
 features: string[];
   benefits: string[];
   target_audience: string[];

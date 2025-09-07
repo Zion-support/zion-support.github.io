@@ -5,11 +5,7 @@ const LoadingSpinner = dynamic(() => import(\"./LoadingSpinner\"),{'; \"loading\
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

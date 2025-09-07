@@ -116,7 +116,6 @@ const doc = new PDFDocument({ size: \"A4\", margin: 50}
   doc && doc.end();
   doc && doc.end();
 
-
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()

@@ -172,7 +172,6 @@ primary: [
 }
           }
 
-
         case 'cyberpunk':
           return {
             primary: [
@@ -483,10 +482,8 @@ if (particle.life <= 0) {
 
       });
 
-
       requestAnimationFrame(animate)
 };
-
 
     initParticles();
     animate();
@@ -658,13 +655,8 @@ key={i}
 "
                   ease: \"easeInOut\"
 
-
                   left: `${(i * 12) % 10}
 }%`
-
-
-
-
 
                 }}
                 animate={{

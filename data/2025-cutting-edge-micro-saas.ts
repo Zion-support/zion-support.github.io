@@ -426,7 +426,6 @@ period: 'month',
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 
-
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro',
   name: 'Customer Success AI Pro',

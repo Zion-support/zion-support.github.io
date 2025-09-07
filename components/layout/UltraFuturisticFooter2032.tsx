@@ -323,7 +323,6 @@ challenges.
                    />
                     {contactInfo.website}
 
-
                     {contactInfo.website}
 
                   </a>
@@ -421,7 +420,6 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
 
                 </ul>
               </div>
-
 
               {/* Social Links */}
 
