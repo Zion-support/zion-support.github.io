@@ -81,28 +81,27 @@ const NotFound = () => {
             </motion.h1>
 
             <motion.h2
-              className="text-2xl md:text-3xl font-semibold text-white mb-4"
+              className="text-3xl md:text-4xl font-semibold text-white mb-6"
               variants={fadeInUp}
             >
               Page Not Found
             </motion.h2>
 
             <motion.p
-              className="text-lg text-gray-300 mb-8 max-w-md mx-auto"
+              className="text-lg text-gray-300 mb-8 max-w-md mx-auto leading-relaxed"
               variants={fadeInUp}
             >
-              Sorry, the page you're looking for doesn't exist or has been moved. 
-              Let's get you back on track.
+              Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved, deleted, or you entered the wrong URL.
             </motion.p>
 
             {/* Action Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={fadeInUp}
             >
               <Link href="/">
                 <motion.button
-                  className="group bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
+                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-200"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -112,55 +111,42 @@ const NotFound = () => {
               </Link>
 
               <motion.button
-                className="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
+                onClick={() => window.history.back()}
+                className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors duration-200 backdrop-blur-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.history.back()}
               >
                 <ArrowLeft className="w-5 h-5" />
                 Go Back
               </motion.button>
-            </motion.div>
 
-            {/* Search Suggestion */}
-            <motion.div
-              className="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-xl max-w-md mx-auto"
-              variants={fadeInUp}
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <Search className="w-5 h-5 text-blue-300" />
-                <h3 className="text-lg font-semibold text-white">Looking for something specific?</h3>
-              </div>
-              <p className="text-gray-300 text-sm mb-4">
-                Try searching for our services or browse our main sections:
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {['Web Development', 'Mobile Apps', 'AI Integration', 'Cloud Services'].map((service, index) => (
-                  <motion.span
-                    key={service}
-                    className="px-3 py-1 bg-white/20 text-white text-sm rounded-full"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {service}
-                  </motion.span>
-                ))}
-              </div>
+              <Link href="/search">
+                <motion.button
+                  className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors duration-200 backdrop-blur-sm"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Search className="w-5 h-5" />
+                  Search
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Help Text */}
-            <motion.p
-              className="text-sm text-gray-400 mt-8"
+            <motion.div
+              className="mt-12 text-center"
               variants={fadeInUp}
             >
-              If you believe this is an error, please{' '}
-              <a 
-                href="mailto:support@ziontechgroup.com" 
-                className="text-blue-300 hover:text-blue-200 underline"
-              >
-                contact our support team
-              </a>
-            </motion.p>
+              <p className="text-gray-400 text-sm">
+                Need help?{' '}
+                <a
+                  href="mailto:support@ziontechgroup.com" 
+                  className="text-blue-300 hover:text-blue-200 underline"
+                >
+                  contact our support team
+                </a>
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>
