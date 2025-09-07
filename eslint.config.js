@@ -1,68 +1,87 @@
-<<<<<<< HEAD
 import js from '@eslint/js';
+import { FlatCompat } from '@eslint/eslintrc';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import typescript from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
 export default [
-  js.configs.recommended,
-      'automation/',
-      'pm2-automation/',
-      'pages.disabled/',
-      'pages.disabled_auto/',
-      'pages.disabled_full/',
-      'pages.corrupted.*/',
-      'pages.broken/',
-      'pages.bak/',
-      'pages.blog.disabled/',
-      'pages._archive_corrupted/',
-      'pages._quarantine/',
-      'pages-disabled/',
-      'pages-quarantine/',
-      'pages.__backup/',
-      'pages-backup/',
-      'tests.disabled/',
-      'components.disabled/',
-      'zion-os.disabled/',
-      'zion_academy/',
-      'temp_backup/',
-      'temp_broken_files/',
-      'temp_exclude/',
-      'test_build/',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-<<<<<<< HEAD
-      '*.spec.tsx',
-      'pm2-automation/**',
-      'services/**',
-      '*.js',
-      '*.ts',
-      'public/sw*.js',
-      'resolve-*.js',
-      'run-complete-automation.js',
-      'security-config.js',
-      'seo-improvements.js';
-      'simple-test.js';
-      'syntax-fixer.js';
-      'performance-monitor.js']}];
-=======
-=======
-      '*.spec.tsx'
-    ]
-  },
->>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
+  ...compat.extends('next/core-web-vitals'),
   {
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
       'coverage/**',
+      '.next/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+    ],
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-html-link-for-pages': 'off',
+      '@next/next/no-img-element': 'off',
+      'no-console': 'off',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
