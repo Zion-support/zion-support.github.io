@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -21,8 +24,12 @@ console.log(""🧪 Starting Adaptive Test Generator...")
       "testSuggestions"
       "testPatterns"
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log(""🧪 Starting Adaptive Test Generator...")
 // Get automation interval from environment variable ("default")
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -119,8 +126,11 @@ console.log("🧪 Starting Adaptive Test Generator...)
 });console.log( Generated test for utility)
   console.log("� Generating integration tests...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const integrationTests = ["]
   "name": "App Navigation"", ""description": "Test navigation between main app routes"", ""content": this.generateIntegrationTest("navigation")", "}", "
   "name": "Form Submission"", ""description": "Test form submission flows"", ""content": this.generateIntegrationTest("form")", "}", "
@@ -238,21 +248,35 @@ console.log(")
     return match ? match[1] : "UnknownHook"
     return match ? match[1] : "UnknownType"
     return match ? match[1] : "UnknownService"
+<<<<<<< HEAD
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";"library/react"""
+=======
   generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react"""
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { describe, it, expect } from "
 import ${component.name} from `./${path.basename(component.path, path.extname(component.path))}
   it("renders without crashing")
+<<<<<<< HEAD
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";library/react""
+import { describe, it, expect  } from "vitest"}"
+"
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";"library/react""";"
+import { describe, it, expect  } from "vitest";"
+=======
   generateComponentTest(component) {return import { render, screen  } from @testing-;library/react""
 import { describe, it, expect  } from vitest}"
 "
   generateComponentTest(component) {return import { render, screen  } from @testing-;"library/react";"
 import { describe, it, expect  } from "vitest;
+>>>>>>> merged-prs-20250907-203621
 import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}
 describe("${component.name})
   it(renders without crashing")
     expect(screen.getByRole(`main``)
   it(")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   expect(screen.getByText("test data")).toBeInTheDocument()})})}
@@ -273,6 +297,7 @@ process.on("SIGTERM)
   console.error( Failed to start adaptive test "generator")
 
 =======
+>>>>>>> merged-prs-20250907-203621
   return `import { describe, it, expect } from "vitest"
   it("should handle normal input")
     const result = ${utility.name}("test input")
@@ -322,11 +347,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start adaptive test "generator")
+<<<<<<< HEAD
+  console.error(" Failed to start adaptive test "generator")
+  console.error(" Failed to start adaptive test "generator")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -344,3 +379,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

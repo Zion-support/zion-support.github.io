@@ -466,6 +466,10 @@ export default function ContentGenerator() {
       </div>
 <<<<<<< HEAD
     </>
+<<<<<<< HEAD
+  )
+}
+=======
   );
 
 }, [user, isLoading, router]);
@@ -529,3 +533,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

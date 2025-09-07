@@ -6,12 +6,21 @@ on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch: {}
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
 
 permissions:
   contents: write
 
 jobs:
-
+  build-sitemap:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,6 +54,5 @@ jobs:
           else
             git commit -m "chore(automation): update sitemap [skip ci]"
             git push
-
           fi
           fi

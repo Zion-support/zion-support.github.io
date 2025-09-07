@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 import React, { useState, useRef, useEffect } from 'react';
@@ -15,6 +17,7 @@ import { ImageIcon, AlertTriangle } from lucide-react'
 import { cn  } from '@/lib/utils;
 import { imageOptimization  } from @/utils/performance';
 =======
+>>>>>>> merged-prs-20250907-203621
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
@@ -35,6 +38,8 @@ interface OptimizedImageProps {}
   width?: number;
   height?: number;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { cn  } from '@/lib / utils';
 import { image_optimization  } from @/utils / performance;
@@ -72,6 +77,7 @@ if (return) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       entries => {
 
         const [entry] = entries;        // Check condition
@@ -140,6 +146,8 @@ if ( {) {
   }, [src]);
   // Monitor image performance;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     observer_ref.current = new IntersectionObserver (entries => {const [entry] = entries;        // Check condition;
 if ( {) {$2;
 }
@@ -177,6 +185,7 @@ if ( {) {$2;
 if ( {) {$2;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   useEffect ((, ) => {}
     // Check condition;
 if ( {) {}
@@ -391,11 +400,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setLoadProgress(100),
     onLoad?.();
 <<<<<<< HEAD
+  },;
+=======
+<<<<<<< HEAD
   },
   const handle_load = () =>: any {setIsLoading (false)setHasError (false)setLoadProgress (100)on_load?.()}
 =======
   },;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Handle image error with retry logic;
   const handleError = () => {
     if (retries < retryCount) {
@@ -460,6 +473,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             transition={{ duration: 0.3 }}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     return (
 
   // Simulate loading progress for demo purposes;
@@ -519,6 +534,7 @@ if ( {) {$2;
 
             className="absolute inset-0
 =======
+>>>>>>> merged-prs-20250907-203621
             className="absolute inset-0"
 >>>>>>> origin/chore/fix-lint-and-merge
           >
@@ -530,6 +546,8 @@ if ( {) {$2;
 
                   className=h-full bg-blue-500
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   className="h-full bg-blue-500"
 
@@ -546,6 +564,7 @@ if ( {) {$2;
                   className=h-full bg-blue-500;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   initial={{ width: 0 }}
 
                   animate={{ width: `${loadProgress}%` }}
@@ -572,6 +591,8 @@ if ( {) {$2;
               <span className=text-xs mt-1>Retried {retries} times</span>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             animate={{ opacity: 1 }}className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400";
           >;
             <AlertTriangle className=h-8 w-8 mb-2 />;
@@ -589,6 +610,7 @@ if ( {) {$2;
         {/* Actual image */}<motion.img;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <span className="text-xs mt-1">Retried {retries} times</span>
 
             )}
@@ -647,6 +669,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   className,
 
 <<<<<<< HEAD
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1)
+  },
+=======
+<<<<<<< HEAD
 
 
   return (
@@ -691,6 +718,7 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
     setLoadedCount(prev => prev + 1)
   },
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return ('
     <div className={cn('space-y-4, className)}>
@@ -726,6 +754,8 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
                 aspectRatio={aspectRatio}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 aspectRatio={aspectRatio}</div>;
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300;
                 onLoad={handleImageLoad}
@@ -736,6 +766,7 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
                 </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 className=rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
@@ -782,16 +813,22 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
           aspectRatio='1/1'
           objectFit='cover'
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder=color'
           placeholderColor='#f3f4f6
           priority={true}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           className=rounded-full"
 =======
+>>>>>>> merged-prs-20250907-203621
           className="rounded-full"
 >>>>>>> origin/chore/fix-lint-and-merge
         />
@@ -807,6 +844,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
 
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               />;{image && image.caption && (<div className=absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm>{image && image.caption}</p>;
@@ -842,6 +881,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
   )}{(is_loading || !isInView) && !has_error && (<motion.div;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}'
@@ -1050,9 +1090,13 @@ interface ImageMetrics {
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
   wasOptimized: boolean;
 }export const OptimizedImage: React.FC<OptimizedImageProps> = ({)}
 }
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

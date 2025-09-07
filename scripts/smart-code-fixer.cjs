@@ -1,27 +1,19 @@
 <<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+
 #!/usr/bin/env node
 
 
 
 
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 console.log('🔧 Smart Code Fixer');
 
@@ -34,21 +26,28 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 // Function to fix unescaped entities only in JSX content;
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals;
   // This regex looks for single quotes that are not preceded by import, from, or within quotes;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
 <<<<<<< HEAD
@@ -69,68 +68,68 @@ function fixSpecificIssues(content, filePath) {
   return { content, modified };
 
 // Function to process a single file;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }
-=======
-    // Only replace if its likely JSX content (contains spaces or common JSX patterns)
-    if (content.includes('&') || content.includes(<) || content.includes('>')) {}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Function to fix specific linting issues
 function fixSpecificIssues(content, filePath) {
   let modified = false;
 
   // Fix unused imports
-  if (content.includes("import Image from next/image") && !content.includes('<Image')) {
-    content = content.replace(/import Image from next\/image/, '// import Image from \'next/image\;);
+  if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
+    content = content.replace(/import Image from 'next\/image'/, '// import Image from \'next/image\';');
     modified = true;
   }
 
+  if (content.includes("import { Mail, Phone, MapPin } from 'lucide-react'") && !content.includes('<Mail')) {
+    content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react'/, 'import { Phone, MapPin } from \'lucide-react\';');
+    modified = true;
+  }
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+=======
+    // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
+>>>>>>> merged-prs-20250907-203621
     if (content.includes('&') || content.includes('<') || content.includes('>')) {}
 // Function to fix specific linting issues,
   function fixSpecificIssues(content, filePath) {
   let modified = false
   // Fix unused imports,
   if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 function processFile(filePath) {
   try {
   // TODO: Implement,
   let modifiedContent = content;
     let hasChanges = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Apply fixes;
+    // Apply fixes
     const result = fixSpecificIssues(modifiedContent, filePath);
     modifiedContent = result.content;
     hasChanges = result.modified;
 
-<<<<<<< HEAD
-    // Fix unescaped entities
-    // Fix unescaped entities
+    // Fix unescaped entities;
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
     const result = fixSpecificIssues(modifiedContent, filePath);
     modifiedContent = result.content;
     hasChanges = result.modified;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-    // Fix unescaped entities;
->>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     const originalContent = modifiedContent;
     modifiedContent = fixUnescapedEntities(modifiedContent);
     if (modifiedContent !== originalContent) {
       hasChanges = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -145,6 +144,8 @@ function processFile(filePath) {
 
     // Write back if modified;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
     if (hasChanges) {
       return false;
   } catch (error) {`;
@@ -153,6 +154,7 @@ function processFile(filePath) {
     return false;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,21 +174,30 @@ return { content, modified }
 
 // Function to find all relevant files;
 
+    return false;
+  }
+}
+
+// Function to find all relevant files
+function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   const files = [];
->>>>>>> origin/chore/fix-lint-and-merge
   function traverse(currentDir) {
   // TODO: Implement
       const items = fs.readdirSync(currentDir);
+      
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
   // TODO: Implement
-<<<<<<< HEAD
+          const stat = fs.statSync(fullPath);
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+            traverse(fullPath);
+          } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+`;
           
-<<<<<<< HEAD
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
       return false
   } catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message)
@@ -199,22 +210,20 @@ return { content, modified }
         const fullPath = path.join(currentDir, item)
   // TODO: Implement,
   if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
           if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> merged-prs-20250907-203621
             traverse(fullPath);
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
             files.push(fullPath);
           }
         } catch (error) {
-<<<<<<< HEAD
           // Skip broken symlinks or inaccessible files,
   if (error.code !== 'ENOENT' && error.code !== 'EACCES') {
-=======
-          // Skip broken symlinks or inaccessible files
-          if (error.code !== 'ENOENT' && error.code !== EACCES) {
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
             console.warn(`⚠️  Skipping ${fullPath}: ${error.message}`);
           }
         }
@@ -242,19 +251,14 @@ return { content, modified }
       fixedCount++;
     }
   }
-<<<<<<< HEAD
   console.log('\n📊 Summary:');
-=======
-  
-  console.log(\n📊 Summary:);
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   console.log(`✅ Files fixed: ${fixedCount}`);
   console.log(`📁 Total files processed: ${totalFiles}`);
   if (fixedCount > 0) {
     console.log('\n🔧 Running linter to verify fixes...');
     try {
-      execSync(npm run lint:fix, { stdio: 'inherit' });
-      console.log(✅ Linting completed successfully);
+      execSync('npm run lint:fix', { stdio: 'inherit' });
+      console.log('✅ Linting completed successfully');
     } catch (error) {
       console.log('⚠️  Linting completed with warnings');
     }
@@ -265,6 +269,7 @@ return { content, modified }
   if (require.main === module) {
   main();
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities }
@@ -282,3 +287,6 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
 `;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+>>>>>>> merged-prs-20250907-203621

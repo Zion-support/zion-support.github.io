@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   // Handle sending messages to the AI chat assistant
+>>>>>>> merged-prs-20250907-203621
 :src/components/ChatAssistantTrigger.tsx
 import { useState } from "react,
 import { MessageSquare } from 'lucide-react
@@ -80,6 +83,8 @@ export function ChatAssistantTrigger() {
         throw new Error(Failed to get response from AI assistant");
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction(Error in AI chat:', { data: error })
@@ -87,6 +92,7 @@ export function ChatAssistantTrigger() {
     }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   },
 
@@ -116,6 +122,9 @@ export function ChatAssistantTrigger() {
       return Promise.resolve()
     }
   },
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
   // Handle sending messages to the AI chat assistant;
 // Handle sending messages to the AI chat assistant;
@@ -150,6 +159,7 @@ import { Button } from @/components/ui/button",import { ChatAssistant } from "@/
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         <ChatAssistant
 
           isOpen = {isOpen}
@@ -202,7 +212,10 @@ import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
 import { ChatAssistant  } from '@/components / ChatAssistant';
 import {logErrorToProduction} from '@/utils / production_logger';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export /**
  * ChatAssistantTrigger - Function description
  */
@@ -233,6 +246,9 @@ if ( {) {
   },
   return (
     <>;
+<<<<<<< HEAD
+      <Button;
+=======
 <<<<<<< HEAD
       return Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:, { data: error }),return Promise.resolve()}
   },size="icon;
@@ -288,6 +304,7 @@ if ( {) {$2;
         aria - label=Open chat assistant";
 =======
       <Button;
+>>>>>>> merged-prs-20250907-203621
         on_click = {(, ) => setIsOpen (true), }
         size="icon";
         variant="outline";
@@ -308,6 +325,8 @@ if ( {) {$2;
             role: 'Virtual Assistant;
           }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           onSendMessage = {handleSendMessage, }
           onSendMessage = {handleSendMessage}
         />)}
@@ -316,6 +335,7 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           onSendMessage = {handleSendMessage}
         />)}
@@ -346,6 +366,8 @@ return (<> <Button > <MessageSquare className=h-5 w-5" /> </Button> {
 }</>) ;
 <<<<<<< HEAD
 }'"
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
       {is_open && (<ChatAssistant;
           is_open = {is_open }
@@ -363,3 +385,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

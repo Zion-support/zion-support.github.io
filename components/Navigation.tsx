@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 'use client';
 
@@ -17,170 +22,33 @@ const navigation = [;
   ];return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">;
+>>>>>>> merged-prs-20250907-203621
 import { 
   Menu, 
-  X 
-
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  ];
-
-
-  return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">;
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">;
-              <span className="text-white font-bold text-lg">Z</span>;
-            </div>;
-            <span className="text-white text-xl font-bold">Zion Tech Group</span>;
-          </Link>;
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">;
-            {navigation.map((item) => (<div key={item.name} className="relative">;
-                {item.dropdown ? (<div className="relative">;
-                    <button;
-                      onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center text-gray-300 hover:text-white transition-colors";
-                    >;
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />;
-                    </button>;
-                    <AnimatePresence>;
-                      {activeDropdown === item.name && (<motion.div;
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50";
-                        >;
-                          {item.dropdown.map((dropdownItem) => (<Link;
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors";
-                              onClick={() => setActiveDropdown(null)}
-                            >;
-                              {dropdownItem.name}
-                            </Link>;
-                          ))}
-                        </motion.div>;
-                      )}
-                    </AnimatePresence>;
-                  </div>;
-                ) : (<Link;
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors";
-                  >;
-                    {item.name}
-                  </Link>;
-                )}
-              </div>;
-            ))}
-          </div>;
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">;
-            <Link;
-              href="/contact";
-              className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors";
-            >;
-              Get Started;
-              <ArrowRight className="ml-2 h-4 w-4" />;
-            </Link>;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
-            <button;
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors";
-            >;
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>;
-          </div>;
-        </div>;
-        {/* Mobile Navigation */}
-        <AnimatePresence>;
-          {isOpen && (<motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-gray-800";
-            >;
-              <div className="py-4 space-y-2">;
-                {navigation.map((item) => (<div key={item.name}>;
-                    {item.dropdown ? (<div>;
-                        <button;
-                          onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-300 hover:text-white transition-colors";
-                        >;
-                          {item.name}
-                          <ChevronDown className="h-4 w-4" />;
-                        </button>;
-                        {activeDropdown === item.name && (<div className="pl-4 space-y-1">;
-                            {item.dropdown.map((dropdownItem) => (<Link;
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
-                                className="block px-4 py-2 text-gray-400 hover:text-white transition-colors";
-                                onClick={() => {setIsOpen(false)setActiveDropdown(null)}}
-                              >;
-                                {dropdownItem.name}
-                              </Link>;
-                            ))}
-                          </div>;
-                        )}
-                      </div>;
-                    ) : (<Link;
-                        href={item.href}
-                        className="block px-4 py-2 text-gray-300 hover:text-white transition-colors";
-                        onClick={() => setIsOpen(false)}
-                      >;
-                        {item.name}
-                      </Link>;
-                    )}
-                  </div>;
-                ))}
-                <div className="pt-4 border-t border-gray-800">;
-                  <Link;
-                    href="/contact";
-                    className="block px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition-colors";
-                    onClick={() => setIsOpen(false)}
-                  >;
-                    Get Started;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>;
-          )}
-        </AnimatePresence>;
-      </div>;
-    </nav>;
-  )}export default Navigation;
-import { motion, AnimatePresence  } from 'framer-motion';
-origin/automation-improvements-final;
-  Menu;
-  X;
-  ChevronDown;
-  ChevronRight;
-  Phone;
-  Mail;
-  MapPin;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Github;
-  ArrowRight;
-  Building;
-  Users;
-  ShoppingCart;
-  Shield;
-  Zap;
-  Globe;
-  BarChart3;
-  Search;
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+  BarChart3,
+  Search,;
 } from "lucide-react";
+<<<<<<< HEAD
+import SearchModal from "./SearchModal";
+=======
 import SearchModal from './SearchModal';
 export default function Navigation() {export default function Navigation() {export default function Navigation() {const [isMenuOpen, setIsMenuOpen] = useState(false)const [isServicesOpen, setIsServicesOpen] = useState(false)const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)const [isIndustriesOpen, setIsIndustriesOpen] = useState(false)const [isResourcesOpen, setIsResourcesOpen] = useState(false)const [isSearchOpen, setIsSearchOpen] = useState(false){name: "Blockchain";
       href: "/blockchain";
@@ -221,13 +89,123 @@ export default function Navigation() {export default function Navigation() {expo
 };
 
 export default Navigation;
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+>>>>>>> merged-prs-20250907-203621
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+  BarChart3
+} from 'lucide-react;
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+ursor/integrate-build-improve-and-re-verify-8f7d
+  BarChart3,
+  Search,;
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+  BarChart3,
+  Search
+} from 'lucide-react';
+import SearchModal from './SearchModal';
+=======
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  ChevronRight,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+  ArrowRight,;
+  Building,;
+  Users,;
+  ShoppingCart,;
+  Shield,;
+  Zap,;
+  Globe,;
+  BarChart3,;
+  Search,;
+
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  BarChart3
+} from 'lucide-react;
+  BarChart3
+} from 'lucide-react;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+<<<<<<< HEAD
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   Menu
   X
   ChevronDown
@@ -252,15 +230,74 @@ import {
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 
+<<<<<<< HEAD
 export default function Navigation() {
 export default function Navigation() {;
 export default function Navigation() {;
+=======
+
+
+<<<<<<< HEAD
+export default function Navigation() {
+export default function Navigation() {;
+origin/main
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function Navigation() {
+export default function Navigation() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+} from './lucide-react';
+import SearchModal from "./SearchModal";
+;
+export default /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState (false);
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState (false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState (false);
+  const [isSearchOpen, setIsSearchOpen] = useState (false);
+;
+  const services = [;
+    {
+      name: "AI Services",
+      href: "/ai - services",
+      description: "Machine Learning, NLP, Computer Vision",
+      icon: BarChart3,
+    },
+    {
+      name: "IT Services",
+      href: "/it - services",
+      description: "Cloud, DevOps, Cybersecurity",
+      icon: Shield,
+    },
+    {
+      name: "Micro SaaS",
+      href: "/micro - saas",
+      description: "Custom SaaS Solutions",
+      icon: Zap,
+    },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -280,6 +317,25 @@ export default function Navigation() {;
       icon: Shield
     }
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+  const solutions = [;
+    {
+      name: "Enterprise Solutions",
+      href: "/enterprise",
+      description: "Large - scale business solutions",
+      icon: Building,
+    },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -287,6 +343,97 @@ export default function Navigation() {;
       icon: Zap
     }
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      name: "E - commerce",
+      href: "/ecommerce",
+      description: "Online store solutions",
+      icon: ShoppingCart,
+    },
+    {
+      name: "Healthcare",
+      href: "/industries / healthcare",
+      description: "Medical technology solutions",
+      icon: Users,
+    },
+    {
+      name: "Finance",
+      href: "/industries / finance",
+      description: "Fintech and banking solutions",
+      icon: BarChart3,
+    },
+    {
+      name: "Education",
+      href: "/industries / education",
+      description: "EdTech platforms",
+      icon: Users,
+    },
+  ];
+;
+  const industries = [;
+    {
+      name: "Healthcare",
+      href: "/industries / healthcare",
+      description: "Medical technology solutions",
+    },
+    {
+      name: "Finance",
+      href: "/industries / finance",
+      description: "Fintech and banking solutions",
+    },
+    {
+      name: "Education",
+      href: "/industries / education",
+      description: "EdTech platforms",
+    },
+    {
+      name: "Government",
+      href: "/industries / government",
+      description: "Public sector solutions",
+    },
+    {
+      name: "Manufacturing",
+      href: "/industries / manufacturing",
+      description: "Industrial automation",
+    },
+    {
+      name: "Retail",
+      href: "/industries / retail",
+      description: "E - commerce and retail tech",
+    },
+    {
+      name: "Real Estate",
+      href: "/industries / real - estate",
+      description: "Property technology",
+    },
+  ];
+;
+  const resources = [;
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" },
+    {
+      name: "Case Studies",
+      href: "/case - studies",
+      description: "Success stories and projects",
+    },
+    {
+      name: "White Papers",
+      href: "/white - papers",
+      description: "In - depth research and analysis",
+    },
+    {
+      name: "Tutorials",
+      href: "/tutorials",
+      description: "Step - by - step guides",
+    },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       name: "Training"
       href: "/training"
@@ -299,6 +446,181 @@ export default function Navigation() {;
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const services = [;
+    {;
+      name: "AI Services",;
+      href: "/ai-services",;
+      description: "Machine Learning, NLP, Computer Vision",;
+      icon: BarChart3,;
+    },;
+    {;
+      name: "IT Services",;
+      href: "/it-services",;
+      description: "Cloud, DevOps, Cybersecurity",;
+      icon: Shield,;
+    },;
+    {;
+      name: "Micro SaaS",;
+      href: "/micro-saas",;
+      description: "Custom SaaS Solutions",;
+      icon: Zap,;
+    },;
+    {;
+      name: "Blockchain",;
+      href: "/blockchain",;
+      description: "Smart Contracts, DeFi, NFTs",;
+      icon: Building,;
+    },;
+    {;
+      name: "IoT Solutions",;
+      href: "/iot",;
+      description: "Connected Devices, Edge Computing",;
+      icon: Globe,;
+    },;
+    {;
+      name: "Cybersecurity",;
+      href: "/cybersecurity",;
+      description: "Security Audits, Compliance",;
+      icon: Shield,;
+    },;
+  ];
+  const solutions = [;
+    {;
+      name: "Enterprise Solutions",;
+      href: "/enterprise",;
+      description: "Large-scale business solutions",;
+      icon: Building,;
+    },;
+    {;
+      name: "Startup Solutions",;
+      href: "/startup",;
+      description: "Scalable startup platforms",;
+      icon: Zap,;
+    },;
+    {;
+      name: "E-commerce",;
+      href: "/ecommerce",;
+      description: "Online store solutions",;
+      icon: ShoppingCart,;
+    },;
+    {;
+      name: "Healthcare",;
+      href: "/industries/healthcare",;
+      description: "Medical technology solutions",;
+      icon: Users,;
+    },;
+    {;
+      name: "Finance",;
+      href: "/industries/finance",;
+      description: "Fintech and banking solutions",;
+      icon: BarChart3,;
+    },;
+    {;
+      name: "Education",;
+      href: "/industries/education",;
+      description: "EdTech platforms",;
+      icon: Users,;
+    },;
+  ];
+  const industries = [;
+    {;
+      name: "Healthcare",;
+      href: "/industries/healthcare",;
+      description: "Medical technology solutions",;
+    },;
+    {;
+      name: "Finance",;
+      href: "/industries/finance",;
+      description: "Fintech and banking solutions",;
+    },;
+    {;
+      name: "Education",;
+      href: "/industries/education",;
+      description: "EdTech platforms",;
+    },;
+    {;
+      name: "Government",;
+      href: "/industries/government",;
+      description: "Public sector solutions",;
+    },;
+    {;
+      name: "Manufacturing",;
+      href: "/industries/manufacturing",;
+      description: "Industrial automation",;
+    },;
+    {;
+      name: "Retail",;
+      href: "/industries/retail",;
+      description: "E-commerce and retail tech",;
+    },;
+    {;
+      name: "Real Estate",;
+      href: "/industries/real-estate",;
+      description: "Property technology",;
+    },;
+  ];
+  const resources = [;
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" },;
+    {;
+      name: "Case Studies",;
+      href: "/case-studies",;
+      description: "Success stories and projects",;
+    },;
+    {;
+      name: "White Papers",;
+      href: "/white-papers",;
+      description: "In-depth research and analysis",;
+    },;
+    {;
+      name: "Tutorials",;
+      href: "/tutorials",;
+      description: "Step-by-step guides",;
+    },;
+    {;
+      name: "Training",;
+      href: "/training",;
+      description: "Professional development",;
+    },;
+    {;
+      name: "Events",;
+      href: "/events",;
+      description: "Webinars and conferences",;
+    },;
+    { name: "News", href: "/news", description: "Industry news and updates" },;
+  ];
+  const quickLinks = [;
+    { name: "About Us", href: "/about" },;
+    { name: "Our Team", href: "/team" },;
+    { name: "Careers", href: "/careers" },;
+    { name: "Contact", href: "/contact" },;
+    { name: "Support", href: "/support" },;
+    { name: "Status", href: "/status" },;
+<<<<<<< HEAD
+=======
+
+  ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  ];
+
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+
+<<<<<<< HEAD
+  ];
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <>;
       {/* Top Bar */}
@@ -315,21 +637,146 @@ export default function Navigation() {;
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  href="mailto:kleber@ziontechgroup && ziontechgroup.com"
+                  className="hover:text-blue-300">;
+                  kleber@ziontechgroup && ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+            <div className="flex items-center space-x-4">;
+              <span className="text-blue-200">24/7 Support Available</span>;
+              <div className="flex space-x-2">;
+                <a href="#" className="hover:text-blue-300">;
+                  <Facebook className="w-4 h-4" />;
+                </a>;
+                <a href="#" className="hover:text-blue-300">;
+                  <Twitter className="w-4 h-4" />;
+                </a>;
+                <a href="#" className="hover:text-blue-300">;
+                  <Linkedin className="w-4 h-4" />;
+                </a>;
+                <a href="#" className="hover:text-blue-300">;
+                  <Instagram className="w-4 h-4" />;
+;
+  const quick_links = [;
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/team" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact", href: "/contact" },
+    { name: "Support", href: "/support" },
+    { name: "Status", href: "/status" },
+  ];
+;
+  return (
+    <>;
+      {/* Top Bar */}
+      <div className="bg - blue - 900 text - white py - 2">;
+        <div className="container mx - auto px - 4">;
+          <div className="flex flex - col md:flex - row justify - between items - center text - sm">;
+            <div className="flex items - center space - x-6 mb - 2 md:mb - 0">;
+              <div className="flex items - center">;
+                <Phone className="w - 4 h - 4 mr - 2" />;
+                <a href="tel:+13024640950" className="hover:text - blue - 300">;
+                  +1 302 464 0950;
+                </a>;
+              </div>;
+              <div className="flex items - center">;
+                <Mail className="w - 4 h - 4 mr - 2" />;
+                <a;
+                  href="mailto:kleber@ziontechgroup.com";
+                  className="hover:text - blue - 300";
+                >;
+                  kleber@ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+            <div className="flex items - center space - x-4">;
+              <span className="text - blue - 200">24 / 7 Support Available</span>;
+              <div className="flex space - x-2">;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Facebook className="w - 4 h - 4" />;
+                </a>;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Twitter className="w - 4 h - 4" />;
+                </a>;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Linkedin className="w - 4 h - 4" />;
+                </a>;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Instagram className="w - 4 h - 4" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <Link href="/" className="flex items-center space-x-2">;
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
+                <span className="text-white font-bold text-xl">Z</span>;
+              </div>;
+              <div>;
+                <div className="text-xl font-bold text-gray-900">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text-xs text-gray-500">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">;
         <div className="container mx-auto px-4">;
           <div className="flex justify-between items-center py-4">;
             {/* Logo */}
+<<<<<<< HEAD
+=======
+            <Link href="/" className="flex items - center space - x-2">;
+              <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
+                <span className="text - white font - bold text - xl">Z</span>;
+              </div>;
+              <div>;
+                <div className="text - xl font - bold text - gray - 900">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text - xs text - gray - 500">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Home;
+              </Link>;
+=======
+
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Home;
+              </Link>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -387,6 +834,19 @@ export default function Navigation() {;
                           return (
                             <Link;
                               key={index}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </AnimatePresence>;
+              </div>;
+=======
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -463,6 +923,19 @@ export default function Navigation() {;
                           return (
                             <Link;
                               key={index}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </AnimatePresence>;
+              </div>;
+=======
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -500,6 +973,19 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </AnimatePresence>;
+              </div>;
+=======
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -537,26 +1023,84 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </AnimatePresence>;
               </div>;
-
               <Link
                 href="/pricing"
+<<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Pricing;
               </Link>;
             </div>;
+=======
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+                </AnimatePresence>;
+              </div>;
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+origin/main
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
+<<<<<<< HEAD
+=======
+                className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
+                aria-label="Search";
+              >;
+                <Search className="w-5 h-5" />;
+              </button>;
+              <Link
+                href="/contact"
+
+<<<<<<< HEAD
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               >
                 Get Started
               </Link>
@@ -586,6 +1130,19 @@ export default function Navigation() {;
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </button>;
+          </div>;
+=======
+
+            </button>;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -599,6 +1156,21 @@ export default function Navigation() {;
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  >;
+                    Home;
+                  </Link>;
+=======
+
+                  >;
+                    Home;
+                  </Link>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -615,6 +1187,19 @@ export default function Navigation() {;
                           {service && service.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -631,6 +1216,19 @@ export default function Navigation() {;
                           {solution && solution.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -647,6 +1245,19 @@ export default function Navigation() {;
                           {industry && industry.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -663,10 +1274,38 @@ export default function Navigation() {;
                           {resource && resource.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  >;
+                    Pricing;
+                  </Link>;
+                  <div className="px-4 py-2 space-y-2">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -929,6 +1568,21 @@ export default function Navigation() {;
                     </a>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </AnimatePresence>;
+        </div>;
+      </nav>;
+=======
+
+          </AnimatePresence>;
+        </div>;
+      </nav>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -944,8 +1598,11 @@ export default function Navigation() {;
       <SearchModal;
         is_open={isSearchOpen}
         on_close={() => setIsSearchOpen (false)}
+<<<<<<< HEAD
+=======
       />;
     </>);
+<<<<<<< HEAD
 }
 } from 'lucide-react';
 
@@ -2452,6 +3109,7 @@ const Navigation = () => {
       <SearchModal
         is_open={isSearchOpen}
         on_close={() => setIsSearchOpen (false)}
+>>>>>>> merged-prs-20250907-203621
       />
     </>)
 import React, { useState } from 'react
@@ -2610,6 +3268,42 @@ const Navigation = () => {
       </div>
 
 const Navigation: React.FC = () => {
+<<<<<<< HEAD
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+  return (
+    <motion.nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          : 'bg-transparent'
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <motion.div
+            className="flex items-center space-x-2"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className={`text-xl font-bold ${
+              scrolled ? 'text-gray-900' : 'text-white'
+            }`}>
+              Zion Tech Group
+            </span>
+          </motion.div>
+
+          {/* Desktop Navigation */}
+=======
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -2663,6 +3357,7 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.a
@@ -2693,6 +3388,8 @@ const Navigation: React.FC = () => {
             </motion.button>
           </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {isMenuOpen && (
         <div className="md: hidden">
@@ -2731,6 +3428,7 @@ const Navigation: React.FC = () => {
 export default Navigation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+>>>>>>> merged-prs-20250907-203621
           {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden p-2 rounded-lg transition-colors duration-200"
@@ -2815,6 +3513,12 @@ export default Navigation;
   )
 }
 export default Navigation
+<<<<<<< HEAD
+=======
 =======
 export default Navigation;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

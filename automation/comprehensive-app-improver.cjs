@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -20,6 +22,18 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -517,6 +531,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -555,6 +570,15 @@ main
 #!/usr/bin/env node;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -744,7 +768,20 @@ scanner.runSecurityScan().catch(console.error);"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+  this.log(`Fatal "error": ${error.message}`, ``)
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+<<<<<<< HEAD
+  this.log(`Fatal "error": ${error.message}`, ``)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
   this.log(`Fatal "error": ${error.message}`, ``)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -778,6 +815,283 @@ main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+class ComprehensiveAppImprover {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.improvements = [];
+    this.errors = [];
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursiv: true });
+    }
+  }
+
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+      const result = execSync(command, {
+        cw: process.cwd(),
+        encodin: 'utf8',
+        timeou: 60000,
+      });
+      this.log(`✅ ${description} - Success`);
+      return { succes: true, outpu: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Faile: ${error.message}`);
+      return { succes: false, erro: error.message };
+    }
+  }
+
+  async improveCodeQuality() {
+    this.log('🔧 Improving code quality...');
+
+    // Fix common syntax issues
+    await this.runCommand('node fix-syntax-errors.cjs', 'Fix syntax errors');
+
+    // Run linting fixes
+    await this.runCommand('npm run: lint:fix', 'Fix linting issues');
+
+    // Optimize imports
+    await this.optimizeImports();
+
+    this.improvements.push('Code quality improvements applied');
+  }
+
+  async optimizeImports() {
+    this.log('📦 Optimizing imports...');
+
+    const files = this.getTypeScriptFiles('.');
+    let optimizedCount = 0;
+
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+
+        // Remove unused imports
+        content = this.removeUnusedImports(content);
+
+        // Sort imports
+        content = this.sortImports(content);
+
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content, 'utf8');
+          optimizedCount++;
+        }
+      } catch (error) {
+        this.errors.push({ file, erro: error.message });
+      }
+    }
+
+    this.log(`✅ Optimized ${optimizedCount} files`);
+  }
+
+  removeUnusedImports(content) {
+    // Simple unused import removal (basic implementation)
+    const lines = content.split('\n');
+    const usedIdentifiers = new Set();
+
+    // Find used identifiers
+    lines.forEach(line => {
+      const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
+      if (matches) {
+        matches.forEach(match => usedIdentifiers.add(match));
+      }
+    });
+
+    // Remove unused imports
+    return lines
+      .filter(line => {
+        if (line.trim().startsWith('import ')) {
+          const importMatch = line.match(/import\s*{([^}]+)}/);
+          if (importMatch) {
+            const imports = importMatch[1].split(',').map(imp => imp.trim());
+            const usedImports = imports.filter(imp => usedIdentifiers.has(imp));
+            if (usedImports.length === 0) {
+              return false; // Remove unused import
+            }
+          }
+        }
+        return true;
+      })
+      .join('\n');
+  }
+
+  sortImports(content) {
+    const lines = content.split('\n');
+    const importLines = [];
+    const otherLines = [];
+    let inImports = false;
+
+    lines.forEach(line => {
+      if (line.trim().startsWith('import ')) {
+    importLines.push(line),
+    inImports = true
+  } else if (inImports && line.trim() === '') {
+        importLines.push(line);
+      } else {
+        if (inImports) {
+    otherLines.push(line),
+    inImports = false
+  } else {
+          otherLines.push(line);
+        }
+      }
+    });
+
+    // Sort imports
+    importLines.sort();
+
+    return [...importLines, ...otherLines].join('\n');
+  }
+
+  getTypeScriptFiles(dir) {
+    const files = [];
+
+    function walkDir(currentPath) {
+      const items = fs.readdirSync(currentPath);
+
+      for (const item of items) {
+        const fullPath = path.join(currentPath, item);
+        const stat = fs.statSync(fullPath);
+
+        if (
+          stat.isDirectory() &&
+          !item.startsWith('.') &&
+          item !== 'node_modules'
+        ) {
+          walkDir(fullPath);
+        } else if (
+          stat.isFile() &&
+          (item.endsWith('.ts') || item.endsWith('.tsx'))
+        ) {
+          files.push(fullPath);
+        }
+      }
+    }
+
+    walkDir(dir);
+    return files;
+  }
+
+  async improvePerformance() {
+    this.log('⚡ Improving performance...');
+
+    // Optimize images
+    await this.runCommand('npm run: optimize:images', 'Optimize images');
+
+    // Bundle analysis
+    await this.runCommand('npm run analyze', 'Analyze bundle');
+
+    this.improvements.push('Performance optimizations applied');
+  }
+
+  async improveSecurity() {
+    this.log('🔒 Improving security...');
+
+    // Run security audit
+    await this.runCommand('npm audit', 'Security audit');
+
+    // Fix security issues
+    await this.runCommand('npm audit fix', 'Fix security issues');
+
+    this.improvements.push('Security improvements applied');
+  }
+
+  async improveAccessibility() {
+    this.log('♿ Improving accessibility...');
+
+    // Run accessibility tests
+    await this.runCommand('npm run: test:accessibility', 'Accessibility tests');
+
+    this.improvements.push('Accessibility improvements applied');
+  }
+
+  async generateReport() {
+    const report = {
+      timestam: new Date().toISOString(),
+      improvement: this.improvements,
+      error: this.errors,
+      summar: {
+        totalImprovement: this.improvements.length,
+        totalError: this.errors.length,
+        successRat: this.errors.length === 0
+            ? 10: 0: Math.round(
+                (this.improvements.length /
+                  (this.improvements.length + this.errors.length)) *
+                  100
+              );
+      };
+    };
+
+    const reportPath = path.join(
+      this.reportsDir;
+      'comprehensive-app-improvement-report.json'
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log(`📊 Report saved: to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting Comprehensive App Improver...');
+
+    this.ensureDirectories();
+
+    try {
+      await this.improveCodeQuality();
+      await this.improvePerformance();
+      await this.improveSecurity();
+      await this.improveAccessibility();
+
+      const report = await this.generateReport();
+
+      this.log('🎉 Comprehensive app improvement completed!');
+      this.log(
+        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+      );
+
+      return report;
+    } catch (error) {
+      this.log(`❌ Erro: ${error.message}`);
+      throw error;
+    }
+  }
+}
+
+// Run the improver
+if (require.main === module) {
+  const improver = new ComprehensiveAppImprover();
+  improver.run().catch(error => {
+    console.error('❌ Erro: ', error);
+    process.exit(1);
+  });
+}
+
+module.exports = ComprehensiveAppImprover;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  this.log(`Fatal "error": ${error.message}`, ``)
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 <<<<<<< HEAD
   this.log(`Fatal "error": ${error.message}`, ``)
@@ -793,44 +1107,29 @@ main
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
 class ComprehensiveAppImprover {
-  // TODO: Implement
-  constructor() {"
+  constructor() {
     this.reportsDir = './automation-reports';
     this.improvements = [];
     this.errors = [];
+  }
 
-
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      fs.mkdirSync(this.reportsDir, { recursiv: true });
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
 
-      fs.mkdirSync(this.reportsDir, { recursiv: true });
-      fs.mkdirSync(this.reportsDir, { recursiv: e: true });
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
-<<<<<<< HEAD
   async runCommand(command, description) {
     this.log(`🚀 ${description}`);
     try {
-        cw: process.cwd(),
-        encodin: 'utf8',
-        timeou: 60000,
+      const result = execSync(command, {
         cwd: process.cwd(),
         encoding: 'utf8',
         timeout: 60000,
@@ -838,17 +1137,6 @@ main
       this.log(`✅ ${description} - Success`);
       return { success: true, output: result };
     } catch (error) {
-
-        cw: d: process.cwd(),
-        encodin: g: 'utf8',
-        timeou: t: 60000,
-      });
-      this.log(`✅ ${description} - Success`);
-      return { succes: s: true, outpu: t: result };
-    } catch (error) {
-      this.log(`❌ ${description} - Faile: d: ${error.message}`);
-      return { succes: s: false, erro: r: error.message };
-
       this.log(`❌ ${description} - Failed: ${error.message}`);
       return { success: false, error: error.message };
     }
@@ -891,17 +1179,6 @@ main
           optimizedCount++;
         }
       } catch (error) {
-        this.errors.push({ file, erro: error.message });
-
-        this.errors.push({ file, erro: error.message });
-        this.errors.push({ file, erro: r: error.message });
-main
-        this.errors.push({ file, erro: r: error.message });
-
-        this.errors.push({ file, erro: error.message });
-
-        this.errors.push({ file, erro: r: error.message });
-
         this.errors.push({ file, error: error.message });
       }
     }
@@ -941,23 +1218,13 @@ main
   }
 
   sortImports(content) {
+    const lines = content.split('\n');
     const importLines = [];
     const otherLines = [];
     let inImports = false;
 
     lines.forEach(line => {
       if (line.trim().startsWith('import ')) {
-    importLines.push(line),
-    inImports = true
-  } else if (inImports && line.trim() === '') {
-        importLines.push(line);
-      } else {
-        if (inImports) {
-    otherLines.push(line),
-    inImports = false
-  } else {
-
-
         importLines.push(line);
         inImports = true;
       } else if (inImports && line.trim() === '') {
@@ -979,12 +1246,14 @@ main
   }
 
   getTypeScriptFiles(dir) {
+    const files = [];
 
     function walkDir(currentPath) {
       const items = fs.readdirSync(currentPath);
 
       for (const item of items) {
         const fullPath = path.join(currentPath, item);
+        const stat = fs.statSync(fullPath);
 
         if (
           stat.isDirectory() &&
@@ -1040,33 +1309,26 @@ main
 
   async generateReport() {
     const report = {
-      timestam: new Date().toISOString(),
-      improvement: this.improvements,
-      error: this.errors,
-      summar: {
-        totalImprovement: this.improvements.length,
-        totalError: this.errors.length,
-        successRat: this.errors.length === 0
-
-
-      timestam: p: new Date().toISOString(),
-      improvement: s: this.improvements,
-      error: s: this.errors,
-      summar: y: {
-        totalImprovement: s: this.improvements.length,
-        totalError: s: this.errors.length,
-        successRat: e:
+      timestamp: new Date().toISOString(),
+      improvements: this.improvements,
+      errors: this.errors,
+      summary: {
+        totalImprovements: this.improvements.length,
+        totalErrors: this.errors.length,
+        successRate:
           this.errors.length === 0
-
-            ? 10: 0: Math.round(
+            ? 100
+            : Math.round(
                 (this.improvements.length /
                   (this.improvements.length + this.errors.length)) *
                   100
-              );
-      };
+              ),
+      },
     };
 
     const reportPath = path.join(
+<<<<<<< HEAD
+=======
       this.reportsDir;
       'comprehensive-app-improvement-report.json'
     );
@@ -1656,12 +1918,16 @@ if (require.main === module) {
 module.exports = ComprehensiveAppImprover;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -1713,10 +1979,26 @@ class $1 {
   async installDependencies() {"
   this.log("Installing dependencies...")"
     // Try different installation methods;
+<<<<<<< HEAD
     const methods = ["
 
         this.fixesApplied.push("Dependencies installed")"
     this.log("Failed to install dependencies with all methods", "ERROR")"
+=======
+    const methods = [
+  "npm install --legacy-peer-deps --force",
+      "npm install --force",
+      "yarn install --ignore-engines" ]
+    for (const method of methods) {
+  const result = await this.runCommand(method, { silent: true })
+      if (result !== null) {
+  this.log(`Dependencies installed successfully using: ${method}`)
+        this.fixesApplied.push("Dependencies installed")
+        return true;
+}
+    }
+    this.log("Failed to install dependencies with all methods", "ERROR")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return false;
 <<<<<<< HEAD
 }
@@ -1747,9 +2029,21 @@ class $1 {
           npm: ">=8.0.0";"
         fixes.push("Added engines configuration"),"
       // Write back the fixed package.json;
+<<<<<<< HEAD
 
   async createMissingConfigFiles() {"
   this.log("Creating missing configuration files...")"
+=======
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+      this.log(`Package.json fixed: ${fixes.join(", ")}`)
+      this.fixesApplied.push(...fixes)
+} catch (error) {
+  this.log(`Failed to fix package.json: ${error.message}`, "ERROR"),
+}
+  }
+  async createMissingConfigFiles() {
+  this.log("Creating missing configuration files...")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const configs = [
 <<<<<<< HEAD
   {
@@ -1783,7 +2077,6 @@ const nextConfig = {
   domains: ["localhost"]}}"`;
 module.exports = nextConfig`;
     ]
-
     for (const config of configs) {
   const configPath = path.join(this.projectRoot, config.file)
       if (!fs.existsSync(configPath)) {
@@ -2001,6 +2294,7 @@ class SecurityScanner {
   // TODO: Implement
     this.vulnerabilities = []
     this.recommendations = [],
+<<<<<<< HEAD
   async scanDependencies() {"
   console.log("🔍 Scanning dependencies for vulnerabilities...")"
   // TODO: Implement
@@ -2011,6 +2305,27 @@ class SecurityScanner {
     const sensitivePatterns = []"
 
 
+=======
+}
+  async scanDependencies() {
+  console.log("🔍 Scanning dependencies for vulnerabilities...")
+    try {
+  execSync("npm audit", { stdio: "pipe" })
+      console.log("✅ No critical vulnerabilities found"),
+} catch (error) {
+  this.vulnerabilities.push("Dependency vulnerabilities detected")
+      this.recommendations.push("Run npm audit fix"),
+}
+  }
+  async scanSecrets() {
+  console.log("🔐 Scanning for exposed secrets...")
+    const sensitivePatterns = [
+  /password\\s*[:=]\\s*[""][^""]+[""]/gi,
+      /api[_-]?key\\s*[:=]\\s*[""][^""]+[""]/gi,
+      /secret\\s*[:=]\\s*[""][^""]+[""]/gi,
+      /token\\s*[:=]\\s*[""][^""]+[""]/gi;
+    ]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const files = this.findSourceFiles()
 <<<<<<< HEAD
     for (const file of files) {
@@ -2101,7 +2416,12 @@ class SecurityScanner {
   console.log("\\n🎉 No security issues found!"),"
 const scanner = new SecurityScanner()`;
 scanner.runSecurityScan().catch(console.error)`;
+<<<<<<< HEAD
 
+=======
+}
+    ]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     for (const script of scripts) {
   const scriptPath = path.join(this.projectRoot, script.name)
       const scriptDir = path.dirname(scriptPath)
@@ -2129,6 +2449,7 @@ scanner.runSecurityScan().catch(console.error)`;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
       this.log("Updated package.json scripts")
       this.fixesApplied.push("Updated package.json scripts")
+<<<<<<< HEAD
 =======
       fs.writeFileSync(scriptPath, script.content)"
 
@@ -2140,6 +2461,13 @@ scanner.runSecurityScan().catch(console.error)`;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))"
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+} catch (error) {
+  this.log(`Failed to update package.json: ${error.message}`, "ERROR"),
+}
+  }
+  async generateReport() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const endTime = new Date()
 <<<<<<< HEAD
   timestamp: endTime.toISOString(),
@@ -2157,6 +2485,7 @@ scanner.runSecurityScan().catch(console.error)`;
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))"
 
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
       this.reportsDir,
 
     );
@@ -2177,6 +2506,7 @@ scanner.runSecurityScan().catch(console.error)`;
       await this.improveSecurity();
       await this.improveAccessibility();
 
+      const report = await this.generateReport();
 
       this.log('🎉 Comprehensive app improvement completed!');
       this.log(
@@ -2188,6 +2518,11 @@ scanner.runSecurityScan().catch(console.error)`;
       this.log(`❌ Error: ${error.message}`);
       throw error;
     }
+<<<<<<< HEAD
+  }
+}
+
+=======
 =======
   async run() {"
   this.log("🚀 Starting Comprehensive App Improvement Process...")
@@ -2210,9 +2545,16 @@ scanner.runSecurityScan().catch(console.error)`;
       // Step 8: Update package.json scripts;
       await this.updatePackageJsonScripts()
       // Step 9: Generate report;
+<<<<<<< HEAD
       await this.generateReport()"
       this.log("\\n🎉 Comprehensive App Improvement completed!")"
 
+=======
+      await this.generateReport()
+      this.log("\\n🎉 Comprehensive App Improvement completed!")
+} catch (error) {
+  this.log(`Fatal error: ${error.message}`, "ERROR')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       await this.generateReport()
       process.exit(1),
 <<<<<<< HEAD
@@ -2223,27 +2565,49 @@ scanner.runSecurityScan().catch(console.error)`;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 // Run the improver;
 const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+// Run the improver;
+const improver = new ComprehensiveAppImprover()
+improver.run().catch(console.error)
+>>>>>>> origin/main
+=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 // Run the improver
 if (require.main === module) {
+  const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
-    console.error('❌ Erro: ', error);
+    console.error('❌ Error:', error);
     process.exit(1);
   });
 }
 <<<<<<< HEAD
+
 module.exports = ComprehensiveAppImprover;
+=======
+<<<<<<< HEAD
+module.exports = ComprehensiveAppImprover;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 
 module.exports = ComprehensiveAppImprover;
@@ -2267,6 +2631,7 @@ improver.run().catch(console.error)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
@@ -2329,3 +2694,13 @@ improver.run().catch(console.error)
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

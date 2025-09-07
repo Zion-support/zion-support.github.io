@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+  log(message, type = 'INFO')
+=======
+<<<<<<< HEAD
 
 
 const fs = require('fs')
@@ -103,6 +108,7 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     const lines = content.split('\n')
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
@@ -120,6 +126,15 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
+<<<<<<< HEAD
+
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,3 +166,4 @@ const path = require('path')
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

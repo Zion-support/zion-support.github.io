@@ -13,10 +13,9 @@ export const ReputationDisplay = ({
   size = md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
-  const currentLevel = Math.floor(reputation / 100);
-  const nextMilestone = (currentLevel + 1) * 100;
-  const progress = ((reputation % 100) / 100) * 100;
-  
+  const currentLevel = Math.floor(reputation / 100)
+  const nextMilestone = (currentLevel + 1) * 100
+  const progress = ((reputation % 100) / 100) * 100
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -94,6 +93,8 @@ export const ReputationDisplay = ({
 
 },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 reputation: number;
   size?: sm' | 'md | lg';
 import { Trophy  } from 'lucide-react;
@@ -126,6 +127,7 @@ interface ReputationDisplayProps  {reputation: number;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export default ReputationDisplay,
 import { Trophy } from lucide-react';
@@ -148,6 +150,11 @@ export default ReputationDisplay;
       icon: 'w - 5 h - 5',
       progress: h - 3},
 
+<<<<<<< HEAD
+  }
+  return (
+    <div className='space - y-1'>;
+=======
 <<<<<<< HEAD
 export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayProps) =>: any {export const ReputationDisplay = ({reputation;
   size = md;
@@ -182,6 +189,7 @@ export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayPr
   return (
     <div className='space - y-1'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
         <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
         <span className=font - semibold'>{reputation}</span>;
@@ -228,6 +236,8 @@ export const ReputationDisplay = ({
         <span className="text-muted-foreground>rep</span>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <Progress value={progress} className={sizeClasses[size].progress} />;<div className=text-xs text-muted-foreground">;
         Level {currentLevel} • {Math && Math.round(nextMilestone - reputation)} to level up;</div>;
     </div>;
@@ -247,6 +257,7 @@ export default ReputationDisplay;
       </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Progress value={progress} className={sizeClasses[size].progress} />;
 
       </div>;

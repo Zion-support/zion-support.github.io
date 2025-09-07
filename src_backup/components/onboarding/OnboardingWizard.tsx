@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react;
 import { useRouter  } from next/router';
 import { useAuth  } from '@/hooks/useAuth;
@@ -19,6 +21,7 @@ import { Card;
 import { cn  } from '@/lib/utils;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from @/components/ui/card';
 =======
+>>>>>>> merged-prs-20250907-203621
 import { useState, useEffect  } from 'react';
 import { useRouter  } from 'next/router';
 import { useAuth  } from '@/hooks/useAuth';
@@ -44,6 +47,11 @@ import {}
   Calendar;
   Eye;
   MessageSquare'
+<<<<<<< HEAD
+} from 'lucide-react''
+import { cn } from '@/lib/utils''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+=======
 <<<<<<< HEAD
 } from 'lucide-react
 import { cn } from '@/lib/utils'
@@ -78,6 +86,7 @@ interface OnboardingWizardProps {
 import { cn } from '@/lib/utils''
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { cn } from '@/lib/utils;
 
@@ -270,6 +279,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
       <CardHeader>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <CardTitle className=text-center text-white>
           {type === client' ? 
             "Ready to find top IT talent?" : 
@@ -279,6 +290,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>
         <div className="flex items-center mb-6">
 =======
+>>>>>>> merged-prs-20250907-203621
         <CardTitle className='text-center text-white'>
           {type === 'client'
             ? 'Ready to find top IT talent?'
@@ -287,7 +299,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardHeader>;
       <CardContent>;
         <div className='flex items-center mb-6'>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           {/* Step dots */}
 
           <div className=flex items-center justify-center flex-1>
@@ -303,6 +318,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     : index < currentStep"
                     ? "bg-zion-cyan
                     : "bg-zion-blue-light"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface OnboardingWizardProps  {url: string;
   }skipText?: string;interface OnboardingWizardProps  {type: client | 'talent';
@@ -377,6 +394,7 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
                     : bg-zion-blue-light;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 )}
               />;
             ))}
@@ -400,6 +418,9 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
             onClick={handleSkip}>;
 
 <<<<<<< HEAD
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+=======
+<<<<<<< HEAD
           className=w-full bg-zion-purple hover:bg-zion-purple-light
         </Button>;{steps[currentStep]?.skipText && (<Button;
             variant=ghost';
@@ -408,6 +429,7 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
 =======
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           onClick={handleAction}
         >;
           {steps[currentStep]?.action.text}
@@ -424,15 +446,21 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
           </Button>
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
           >;{steps[currentStep]?.skipText}
           </Button>;
@@ -532,3 +560,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

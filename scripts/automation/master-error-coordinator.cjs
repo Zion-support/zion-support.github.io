@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   "cwd"
@@ -17,6 +19,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -52,8 +55,13 @@ const path = require("path")
           "success"
           timestamp
           "output"
+<<<<<<< HEAD
+  if($2) {await this.log(" ${process.name} completed successfully")} else {await this.log(" ${process.name} failed")
+  "process"
+=======
         if (result.success) {await this.log( ${process.name} completed successfully)} else {await this.log(" ${process.name} failed")
   process
+>>>>>>> merged-prs-20250907-203621
             "error"
             timestamp
       } catch (error) {  await this.log(" Error running ${process.name  }: ${error.message}")
@@ -65,8 +73,11 @@ const path = require("path")
           timestamp
   await this.log("� Checking project health...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const healthChecks = ["{ "name": "TypeScript Check"", ""command": "npm run type-check" }", "{ "name": "Linting Check"", ""command": "npm run lint" }", "{ "name": "Build Check"", ""command": "npm run build" }", "{ "name": "Dependencies Check"", ""command": "npm ls --depth=0" }"]
   "timestamp"
       "checks"
@@ -75,8 +86,13 @@ const path = require("path")
   "name"
 >>>>>>> origin/chore/fix-lint-and-merge
           "success"
+<<<<<<< HEAD
+          "timestamp"
+  if($2) {await this.log(" ${check.name} passed")} else {await this.log(" ${check.name} failed")
+=======
           timestamp
         if (result.success) {await this.log(" ${check.name} passed")} else {await this.log( ${check.name} failed)
+>>>>>>> merged-prs-20250907-203621
   "check"
             error
             "timestamp"
@@ -91,8 +107,11 @@ const path = require("path")
           error
           "timestamp"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const healthReportFile = path.join(this.projectRoot, "automation/reports/health-report.json")
   await this.log("� Applying emergency fixes...")
     const emergencyFixes = ["]
@@ -149,8 +168,13 @@ const path = require("path")
         totalFixes
     await fs.writeFile(this.coordinationReportFile, JSON.stringify(report, null, 2));await this.log(" Coordination report "generated: ${this.coordinationReportFile})
   await this.log("� Restarting failed processes...")
+<<<<<<< HEAD
+  try {await this.log("� Restarting ${process.name}...");const restartResult = await this.runCommand("pm2 restart ${process.name}", { "silent"})
+  if($2) {await this.log(" ${process.name} restarted successfully")} else {await this.log(" Failed to restart ${process.name}")
+=======
   try {await this.log(� Restarting ${process.name}...);const restartResult = await this.runCommand("pm2 restart ${process.name}", { silent})
         if (restartResult.success) {await this.log(" ${process.name} restarted successfully")} else {await this.log( Failed to restart ${process.name})
+>>>>>>> merged-prs-20250907-203621
       } catch (error) {  await this.log(" Error restarting ${process.name  }: ${error.message}")
   await this.log( Starting Master Error Coordinator)
   await this.log(" Starting Master Error Coordinator")
@@ -176,11 +200,21 @@ const path = require("path")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error("Master error coordinator "failed")
+<<<<<<< HEAD
+  console.error("Master error coordinator "failed")
+  console.error("Master error coordinator "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -198,3 +232,4 @@ const path = require("path")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

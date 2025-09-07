@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,16 +12,18 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Health Check Automation Script;
- * Monitors system health and reports status;
+ * Health Check Automation Script
+ * Monitors system health and reports status
  */
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -28,6 +32,7 @@ const path = require(path');
 const { execSync } = require('child_process');
 =======
 
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -44,6 +49,16 @@ class HealthChecker {}
     ensureLogsDir() {}
         const logsDir = path.dirname(this.logFile);
         if (!fs.existsSync(logsDir)) {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString();
+        const logMessage = `[${timestamp}] ${message}\n`;`
+        console.log(logMessage.trim());
+        fs.appendFileSync(this.logFile, logMessage)};
+        
+=======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
     log(message) {}
@@ -74,11 +89,17 @@ class HealthChecker {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
             "checks": {};
         };
+<<<<<<< HEAD
+    async checkSystemHealth() {}"
+
+            "checks": {};"
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -87,13 +108,15 @@ class HealthChecker {}
             "checks": {};"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
             healthReport.checks.nodeVersion = {}
@@ -106,6 +129,7 @@ class HealthChecker {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             // Check available memory;
             const memUsage = process.memoryUsage();
             healthReport.checks.memory = {}
@@ -127,15 +151,25 @@ class HealthChecker {}
             };
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
 <<<<<<< HEAD
+            healthReport.checks.nodeVersion = {}"
+=======
+<<<<<<< HEAD
 =======
 =======
             healthReport.checks.nodeVersion = {}"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check disk space;
             try {}"
+<<<<<<< HEAD
+                const diskUsage = execSync('df -h ., { "encoding": utf8})
+})
+                healthReport.checks.diskSpace = {}
+        
+=======
                 const diskUsage = execSync('df -h ., { "encoding: utf8})
 });
                 healthReport.checks.diskSpace = {}
@@ -211,6 +245,7 @@ class HealthChecker {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         this.log(`Health check completed. "Status": ${healthReport.status}`);
 =======
 
@@ -222,8 +257,8 @@ class HealthChecker {}
         return healthReport};
 >>>>>>> origin/chore/fix-lint-and-merge
     async run() {}
-            await this.checkSystemHealth();
-            // Exit after successful completion;
+            await this.checkSystemHealth()
+            // Exit after successful completion
             setTimeout(() => {}"
 
             process.exit(1)}
@@ -236,12 +271,22 @@ if (require.main === module) {}
 =======
     healthChecker.run()};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 module.exports = HealthChecker;
+<<<<<<< HEAD
+module.exports = HealthChecker;
+module.exports = HealthChecker;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -264,3 +309,4 @@ module.exports = HealthChecker;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

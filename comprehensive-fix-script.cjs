@@ -47,11 +47,7 @@ class ComprehensiveFixScript {
 
   async fixSyntaxErrors() {
     this.log('\n🔧 FIXING SYNTAX ERRORS');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
       // Remove problematic pattern files
       const patternDir = path.join(this.projectRoot, 'components/reports/patterns');
@@ -79,11 +75,7 @@ class ComprehensiveFixScript {
 
       // Fix common syntax issues in remaining files
       await this.fixCommonSyntaxIssues();
-<<<<<<< HEAD
-
-=======
       
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('✅ Syntax errors fixed', 'SUCCESS');
     } catch (error) {
       this.log(`❌ Error fixing syntax: ${error.message}`, 'ERROR');
@@ -109,19 +101,11 @@ class ComprehensiveFixScript {
       if (fs.existsSync(filePath)) {
         try {
           let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-
-          // Fix common syntax issues
-          content = content
-            .replace(/
-            .replace(/^\s*$/gm, '')
-=======
           
           // Fix common syntax issues
           content = content
             .replace(/            .replace(//g, '')
             .replace(/            .replace(/^\s*$/gm, '')
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             .replace(/\n\s*\n\s*\n/g, '\n\n');
 
           // Ensure proper React component structure
@@ -141,11 +125,7 @@ class ComprehensiveFixScript {
 
   async runTests() {
     this.log('\n🧪 RUNNING TESTS');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
       // Run type check
       const typeResult = await this.runCommand(
@@ -178,11 +158,7 @@ class ComprehensiveFixScript {
 
   async buildProject() {
     this.log('\n🏗️ BUILDING PROJECT');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
       // Clean build
       await this.runCommand('npm run clean', 'Clean build');
@@ -207,14 +183,11 @@ class ComprehensiveFixScript {
 
   async createAdditionalScripts() {
     this.log('\n🚀 CREATING ADDITIONAL SCRIPTS');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
       // Create a comprehensive test script
       const testScript = `#!/usr/bin/env node
+const { execSync } = require('child_process');
 
 class ComprehensiveTester {
   constructor() {
@@ -235,24 +208,14 @@ class ComprehensiveTester {
 
   async runAllTests() {
     console.log('🧪 Running comprehensive tests...');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     await this.runTest('npm run type-check', 'TypeScript check');
     await this.runTest('npm run lint:check', 'Linting check');
     await this.runTest('npm run build', 'Build test');
     await this.runTest('npm run test:smoke', 'Smoke tests');
-<<<<<<< HEAD
-
-    console.log(\`\\n📊 Results: \${this.results.passed} passed, \${this.results.failed} failed\`);
-
-=======
     
     console.log(\`\\n📊 Results: \${this.results.passed} passed, \${this.results.failed} failed\`);
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (this.results.failed > 0) {
       console.log('\\n❌ Failed tests:');
       this.results.errors.forEach(err => {
@@ -272,6 +235,8 @@ tester.runAllTests();
 
       // Create a performance monitor
       const perfScript = `#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
@@ -306,22 +271,14 @@ class PerformanceMonitor {
       memoryUsage: this.metrics.memoryUsage,
       recommendations: []
     };
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     }
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push('Consider optimizing memory usage');
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log('Performance report generated:', reportPath);
@@ -340,6 +297,8 @@ monitor.generateReport();
 
       // Create a health check script
       const healthScript = `#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
 class HealthChecker {
   constructor() {
@@ -388,15 +347,8 @@ class HealthChecker {
   generateReport() {
     const passed = this.checks.filter(c => c.status === 'PASS').length;
     const total = this.checks.length;
-<<<<<<< HEAD
-
-=======
     
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const report = {
->>>>>>> origin/chore/fix-lint-and-merge
       timestamp: new Date().toISOString(),
       summary: {
         total,
@@ -406,17 +358,10 @@ class HealthChecker {
       },
       checks: this.checks
     };
-<<<<<<< HEAD
-
-    const reportPath = path.join(process.cwd(), 'health-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-=======
     
     const reportPath = path.join(process.cwd(), 'health-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log(\`Health Check Report: \${passed}/\${total} checks passed (\${report.summary.healthScore}%)\`);
     return report;
   }
@@ -444,11 +389,7 @@ checker.generateReport();
 
   async commitAndPush() {
     this.log('\n📝 COMMITTING AND PUSHING CHANGES');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
       // Add all changes
       await this.runCommand('git add .', 'Git add');
@@ -469,11 +410,7 @@ checker.generateReport();
 
   generateReport() {
     const duration = Date.now() - this.startTime;
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log('\n📊 COMPREHENSIVE FIX REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${duration}ms`);
@@ -492,6 +429,7 @@ checker.generateReport();
     }
 
     // Save report
+    const report = {
       timestamp: new Date().toISOString(),
       duration,
       fixedFiles: this.fixedFiles,

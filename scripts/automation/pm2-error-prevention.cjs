@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -49,8 +52,11 @@ const { execSync } = require("child_process")
 // console.log(" Prevention checks completed)
     console.log(" Prevention checks completed")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const result = execSync("npm run type-check")
   "cwd"
         "encoding": "utf8"
@@ -66,7 +72,11 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes(".ts") || content.includes(.ts"")
       const importLines = content.match(/import.*"from/g")
+<<<<<<< HEAD
+  if($2) {console.log(⚠  Found ${importIssues} import issues"")
+=======
     if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
+>>>>>>> merged-prs-20250907-203621
   console.log("" No import issues found")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes("any"")
@@ -76,7 +86,7 @@ const { execSync } = require("child_process")
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-    if (syntaxIssues > 0) {console.log("})
+  if($2) {console.log("})
   console.log("" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
   "cwd"
@@ -84,7 +94,7 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
       const unusedImportCount = (result.match(/""unused/g"")
   console.log("" No syntax issues found")
-      if (this.config.autoFix) {"}
+  if($2) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
@@ -92,7 +102,11 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
         "stdio": "pipe"
       const unusedImportCount = (result.match(/"unused/g")
+<<<<<<< HEAD
+  if($2) {console.log(⚠  Found ${unusedImportCount} unused imports")
+=======
       if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
+>>>>>>> merged-prs-20250907-203621
 // console.log(" No unused imports found")
 >>>>>>> origin/chore/fix-lint-and-merge
       console.log(")
@@ -150,12 +164,22 @@ process.on(SIGTERM)
 =======
 process.on("SIGTERM")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+  console.log("� Received SIGTERM, shutting down gracefully...")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+
+
+
+=======
 <<<<<<< HEAD
 
   console.log(� Received SIGTERM, shutting down gracefully...)
@@ -181,3 +205,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

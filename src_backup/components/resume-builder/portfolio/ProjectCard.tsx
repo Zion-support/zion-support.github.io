@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState  } from 'react;
 import { Card, CardContent, CardFooter  } from @/components/ui/card';
 import { Button  } from '@/components/ui/button;
@@ -39,6 +41,7 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from @/components/ui/button';'
 import { Badge } from @/components/ui/badge;
 =======
+>>>>>>> merged-prs-20250907-203621
 import { useState } from 'react';'
 import { Card, CardContent, CardFooter } from '@/components/ui/card';'
 import { Button } from '@/components/ui/button';'
@@ -51,6 +54,8 @@ import { Badge } from '@/components/ui/badge';
 
 interface ProjectCardProps {
   project: PortfolioProject;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   onDelete: (projectId: string) => void;
 }}interface ProjectCardProps  {project: PortfolioProject;
@@ -154,6 +159,7 @@ interface ProjectCardProps {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject,) => void,
 =======
+>>>>>>> merged-prs-20250907-203621
   onEdit: (project: PortfolioProject) => void;'
   onDelete: (projectId: string) => void;import Image from 'next/image';'
 import { PortfolioProject } from '@/types/resume';
@@ -310,6 +316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </div>
       </CardContent>
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
@@ -318,6 +326,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         </div>
       </CardContent>
@@ -347,6 +356,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </Link>
           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           {project.demo_url && (
             <a
@@ -435,6 +446,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         </div>;
 '
@@ -459,6 +471,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             variant='ghost
 
 <<<<<<< HEAD
+            size='icon'
+            onClick={() => onEdit(project)}'
+            aria-label='Edit project';
+          >;'
+            <Edit className='h-4 w-4' />;
+          <Button'
+            variant='ghost''
+=======
+<<<<<<< HEAD
             size=icon'
         </div>;
 <div className='flex gap-2>;
@@ -468,6 +489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => onEdit(project)}
             onClick={() => onEdit(project)}
 =======
+>>>>>>> merged-prs-20250907-203621
             size='icon'
             onClick={() => onEdit(project)}'
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -498,6 +520,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 Are you sure you want to delete this project? This action cannot
               be undone.
@@ -535,6 +560,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >;
 =======
 
+>>>>>>> merged-prs-20250907-203621
             aria-label='Delete project';
           >;'
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -626,6 +652,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogAction;
               onClick={handleDelete}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               className='bg-destructive text-destructive-foreground';
             >;
               Delete;
@@ -636,6 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             </AlertDialogDescription>
           </AlertDialogHeader>
@@ -676,8 +705,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Card>)})}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
     </Card>);

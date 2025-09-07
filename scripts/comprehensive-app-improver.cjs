@@ -1,5 +1,14 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -130,6 +139,7 @@ NEXT_PUBLIC_API_URL="http"
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -215,11 +225,21 @@ NEXT_PUBLIC_API_URL="http"
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error("Fatal "error")
+<<<<<<< HEAD
+  console.error("Fatal "error")
+  console.error("Fatal "error")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -235,3 +255,4 @@ NEXT_PUBLIC_API_URL="http"
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

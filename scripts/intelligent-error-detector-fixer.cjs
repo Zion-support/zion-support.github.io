@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,11 +15,14 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "intelligent-error-detector.log")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -25,6 +31,7 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     fs.appendFileSync(this.logFile, logMessage + "\n")
@@ -65,6 +72,8 @@ const { execSync } = require("child_process")
         "type": "success"
     recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 // console.log("\n + =")
@@ -97,6 +106,7 @@ const { execSync } = require("child_process")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 // console.log("\n" + "=")
     console.log(" INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
 // console.log("=")
@@ -110,11 +120,21 @@ const { execSync } = require("child_process")
       this.log("� Intelligent Error Detector & Fixer completed successfully")
       return { "success": true, "errors": this.errors, "fixes"}
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       this.log(`� Error detection "failed": ${error.message}`, ``)
+<<<<<<< HEAD
+      this.log(`� Error detection "failed": ${error.message}`, ``)
+      this.log(`� Error detection "failed": ${error.message}`, ``)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -132,3 +152,4 @@ const { execSync } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

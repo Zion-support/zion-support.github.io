@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+'use client';"";
+import * as React from 'react';"";
+import * as AccordionPrimitive from '@radix-ui/react-accordion';"";
+import { ChevronDown     } from 'lucide-react';
+=======
+<<<<<<< HEAD
 'use client;";
 import * as React from react';";
 import * as AccordionPrimitive from '@radix-ui/react-accordion;";
@@ -21,6 +27,7 @@ import * as React from 'react';\"\";
 import * as AccordionPrimitive from '@radix-ui/react-accordion';\"\";
 import { ChevronDown     } from 'lucide-react';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export default function Page() {import { cn  } from '@/lib/utils;
 

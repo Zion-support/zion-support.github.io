@@ -1,6 +1,13 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Generate search index for the application
+ */
+=======
 =======
 /**
  * Search Index Generator;
@@ -10,6 +17,7 @@
 const fs = require('fs');
 const path = require('path');
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class SearchIndexGenerator {
   // TODO: Implement
 }
@@ -255,6 +263,15 @@ class SearchIndexGenerator {
   }
 }
 
+<<<<<<< HEAD
+// Run the search index generator
+if (require.main === module) {
+  const generator = new SearchIndexGenerator();
+  generator.generate().catch(console.error);
+}
+
+module.exports = SearchIndexGenerator;
+=======
 
 module.exports = SearchIndexGenerator;
 =======
@@ -271,3 +288,4 @@ module.exports = SearchIndexGenerator;
 const generator = new SearchIndexGenerator();
 generator.generateIndex();
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -62,6 +62,8 @@ const [isOpen, setIsOpen] = useState(false)
         <div
           className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (
     <>
       {/* Fixed button in the bottom right */}
@@ -98,12 +100,16 @@ export function SupportWidget() {
               : bg-white border border-gray-200"
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+>>>>>>> merged-prs-20250907-203621
             'fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col'
             theme === 'dark'
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           )}
           style={{ height: 600px', maxHeight: '80vh }}        >
           <div className=flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -111,6 +117,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <MessageSquare className=h-5 w-5 text-zion-cyan mr-2' />
               <h3
                 className={cn(
+<<<<<<< HEAD
+                  'font-semibold'
+                  theme === 'dark' ? 'text-white' : 'text-gray-800'
+=======
 <<<<<<< HEAD
                   'font-semibold
                   theme === dark' ? 'text-white : text-gray-800'
@@ -120,6 +130,7 @@ main
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 )}
               >
 "
@@ -159,6 +170,9 @@ export function SupportWidget() { return null; }
         </Button>
       )}
 <<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = useRouter()import React, { useState } from react;
 import { useRouter  } from 'next/router';
@@ -181,6 +195,7 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       {/* Support panel */}
       {isOpen && (
         <div;
@@ -232,6 +247,9 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
       )}
     </>;
   );
+<<<<<<< HEAD
+};
+=======
 }
                 variant=ghost"
                 size="icon
@@ -253,6 +271,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                 className="h-8 w-8 rounded-full;
                 onClick={() => router.push(/help")}
 =======
+>>>>>>> merged-prs-20250907-203621
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -281,6 +300,8 @@ ursor/automate-test-improve-and-merge-code-646c;
     </>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
               <Button
 ;
               <Button
@@ -296,3 +317,4 @@ ursor/automate-test-improve-and-merge-code-646c;
 =======
   );
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

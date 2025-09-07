@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+>>>>>>> merged-prs-20250907-203621
 :src/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
@@ -362,9 +365,12 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
   const router = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <>
@@ -1713,6 +1719,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/ProjectDetails.tsx
   )
 }

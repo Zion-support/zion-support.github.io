@@ -1,5 +1,23 @@
 <<<<<<< HEAD
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+}</div>) 
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
+=======
+
+
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+
+}</div>) import { useEffect, useState } from 'react';
+
+export default function AutomationStatusPage() {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 export default function AutomationStatusPage() {
  </div>) : (<div className="text-sm text-gray-500 >No status available yet.</div>)}</div>) import { useEffect, useState  } from react';
@@ -23,12 +41,25 @@ export default function AutomationStatusPage() {const [status, setStatus]  = use
 }
 }</div>) import { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 export default function AutomationStatusPage() {
+=======
+
+import { useEffect, useState } from 'react';
+
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
+}</div>) import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+export default function AutomationStatusPage() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
+<<<<<<< HEAD
+=======
 
 =======
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 
+<<<<<<< HEAD
 }</div>) import { useEffect, useState } from 'react';
 
 import { useEffect, useState  } from 'react';
@@ -55,6 +86,9 @@ export default function AutomationStatusPage() { return null; }
   useEffect(() => {
     fetch(/automation/status && status.json');
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   useEffect(() => {;
 
     fetch('/automation/status && status.json');
@@ -62,13 +96,23 @@ export default function AutomationStatusPage() { return null; }
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
+<<<<<<< HEAD
+  }, []);
+  return (
+=======
 
   }, []);
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-4>;
       <h1 className=text-xl font-semibold">Autonomous Automation Status</h1>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <div className="space-y-4">;
+      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {status ? (;
         <div className="rounded-lg border p-4 text-sm>;
           <div>Last Run: {new Date(status && status.runAt || ').toLocaleString() || —'}</div>;
@@ -76,6 +120,7 @@ export default function AutomationStatusPage() { return null; }
           <div className=mt-2"><a className="underline href=/metrics/latest && latest.json">View latest metrics JSON</a></div>;
         </div>;
       ) : (;
+<<<<<<< HEAD
         <div className="text-sm text-gray-500>No status available yet.</div>;
 =======
     <div className="space-y-4">;
@@ -106,6 +151,20 @@ export default function AutomationStatusPage() { return null; }
   return (
 </div>) : (<div className=text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react;
+=======
+        <div className="text-sm text-gray-500">No status available yet.</div>;
+      )}
+    </div>;
+  );
+}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+</div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
+}</div>) import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default /**
  * AutomationStatusPage - Function description
 =======
@@ -163,6 +222,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>) : ("
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
+<<<<<<< HEAD
 });
 }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -171,10 +231,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
 <<<<<<< HEAD
+=======
+        </div>
+      ) : (
+        <div className=&quot;text-sm text-gray-500&quot;>No status available yet.</div>
+      )}
+    </div>
+  )
+
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   );
 }
 
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

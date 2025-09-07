@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -64,8 +67,12 @@ const { execSync } = require("child_process")
   console.log(" Running comprehensive fixes...")
 // console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
+<<<<<<< HEAD
+
+=======
         const fs = require("fs")
         const path = require("path")
+>>>>>>> merged-prs-20250907-203621
             .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
             .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
         const srcDir = path.join(process.cwd(), "src"
@@ -170,12 +177,22 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.log(")
+<<<<<<< HEAD
+  console.log(")
+  console.log(")
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -200,3 +217,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -54,6 +54,7 @@ const logsDir = path.join(process.cwd(), logs
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -77,3 +78,9 @@ console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+=======
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

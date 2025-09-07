@@ -38,7 +38,10 @@ import { ForumCategoryInfo } from "@/types/community",
     icon: FileText"
 =======
     icon: "FileText"
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   {
     id: "announcements
@@ -50,6 +53,8 @@ import { ForumCategoryInfo } from "@/types/community",
 const categories: ForumCategoryInfo[] = [;
 
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   {id: "getting-hired;
     name: Getting Hired";
@@ -95,6 +100,7 @@ import { ForumCategoryInfo } from "@/types/community,{id: project-help";
     name: Project Help",
     description: "Get help with your ongoing projects and collaboration.,
 =======
+>>>>>>> merged-prs-20250907-203621
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
@@ -200,6 +206,16 @@ export default ForumCategories
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+import Link from "next/link",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { useAuth } from "@/hooks/useAuth",;
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
+import { ForumCategoryInfo } from "@/types/community",;
+const categories: ForumCategoryInfo[] = [;
+  {;
+    id: "getting-hired",;
+=======
 import Link from next/link,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from @/hooks/useAuth,
@@ -207,6 +223,7 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone } from lucide-react
 import { ForumCategoryInfo } from "@/types/community",
   {
     id: getting-hired,
+>>>>>>> merged-prs-20250907-203621
 
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,
@@ -244,11 +261,21 @@ import { ForumCategoryInfo } from "@/types/community",
   {;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+  {;
+
+    id: "announcements",;
+    name: "Announcements",,
+  description: "Official announcements from the Zion team.",;
+    adminOnly: true,;
+    icon: "Megaphone";
+=======
     id: "announcements",
     name: Announcements,,
   description: "Official announcements from the Zion team.",
     adminOnly: true,
     icon: Megaphone;
+>>>>>>> merged-prs-20250907-203621
   }
 
 ];
@@ -276,6 +303,8 @@ export const ForumCategories = () => {
             <Card className=h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </Link>)})}
     </div>)}],const iconMap = {Briefcase,MessageSquare,Code,FileText,Megaphone;
 },export const ForumCategories = () => {const { user } = useAuth(),const isAdmin = user?.userType === 'admin || user?.role === admin',const visibleCategories = categories.filter(category => !category.adminOnly || isAdmin;
@@ -284,12 +313,15 @@ export const ForumCategories = () => {
             <Card className=h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <CardHeader className="flex flex-row items-center gap-4">;
 
                 <div className=p-2 bg-zion-purple/10 rounded-full>;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 <CardTitle className=text-xl>{category && category.name}</CardTitle>;
@@ -301,15 +333,23 @@ export const ForumCategories = () => {
               <CardContent>;
                 <CardDescription className="text-base">{category.description}</CardDescription>;
 =======
+>>>>>>> merged-prs-20250907-203621
                 <CardTitle className="text-xl">{category && category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               </CardContent>;
             </Card>;
           </Link>;
+<<<<<<< HEAD
+        );
+      })}
+=======
 <<<<<<< HEAD
         )const isAdmin = user?.userType === 'admin || user?.role === admin';
 export default ForumCategories;import Link from next/link,import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { useAuth } from @/hooks/useAuth,import { MessageSquare, Briefcase, Code, FileText, Megaphone  } from 'lucide-react;
@@ -340,6 +380,7 @@ export default ForumCategories;import Link from next/link,import { Card, CardCon
         );
       })}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>;
   )
 }
@@ -367,6 +408,8 @@ import { ForumCategoryInfo } from @/types/community';
 
 <<<<<<< HEAD
   {
+<<<<<<< HEAD
+=======
   )}export default ForumCategories;export default ForumCategories;export default ForumCategories;
 ";
   const is_admin  = user?.user_type === 'admin || user?.role === admin';export default ForumCategories;export default ForumCategories;import Link from 'next/link;
@@ -379,3 +422,4 @@ import { ForumCategoryInfo  } from '@/types/community';
 const categories: ForumCategoryInfo[] = [
   {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

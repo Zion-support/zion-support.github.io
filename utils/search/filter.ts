@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { ParsedFilters } from './parser';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
@@ -28,12 +27,14 @@ function computeRelevanceScore(text: string, keywords: string[], weight = $2;
 
 function computeSkillOverlap(skills: string[], wanted: string[]): number {
   const set = $2;
+  let score = $2;
   for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
   return score
 }
 
 function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (!candidate) return 0,
+  let score = $2;
   if (max && candidate <= max) score += 1.5,
   if (min && candidate >= min) score += 0.5,
   return score
@@ -102,5 +103,3 @@ export function suggestDidYouMean(query: string): string | null {
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',
   return null
 }
-=======
->>>>>>> origin/chore/fix-lint-and-merge

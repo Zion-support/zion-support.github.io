@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({"query": "filters": {},"sortBy": null "sortOrder": "asc" "results": data "isLoading": false "totalResults": data.length})const [debouncedQuery,setDebouncedQuery] = useState()")} "export default ComponentName;""";"
 import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({\"query\": "filters": {},\"sortBy\": null "sortOrder": \"asc\" "results": data "isLoading": false "totalResults": data.length})const [debouncedQuery,setDebouncedQuery] = useState()\")} \"export default ComponentName;\";"
 import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({\"query\": "filters": {},\"sortBy\": null "sortOrder": \"asc\" "results": data "isLoading": false "totalResults": data && data.length})const [debouncedQuery,setDebouncedQuery] = useState()\")} \"export default ComponentName;\";"
@@ -13,3 +17,14 @@ import { useState,useEffect,useCallback,useMemo } from \"react\"; export const u
 =======
 import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+=======
+import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
+
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

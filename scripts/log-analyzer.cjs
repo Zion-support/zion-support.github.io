@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -55,6 +58,7 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -69,12 +73,15 @@ const { execSync } = require('child_process')
     this.log(' Analyzing error logs...')
         file.includes('error') || file.includes('stderr') || file.includes('crash')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
           const content = fs.readFileSync(logFile, 'utf8')
           const lines = content.split('\n')
             if (line.includes('"Error")
@@ -98,11 +105,21 @@ const { execSync } = require('child_process')
         "message"
         "impact"
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       console.error('\n� Log Analyzer "failed")
+<<<<<<< HEAD
+      console.error('\n� Log Analyzer "failed")
+      console.error('\n� Log Analyzer "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -124,3 +141,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

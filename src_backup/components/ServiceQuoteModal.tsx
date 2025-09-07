@@ -22,12 +22,16 @@ import { useState  } from 'react;
 ;
 
 <<<<<<< HEAD
+import { useState } from 'react',
+=======
+<<<<<<< HEAD
 
 import { useState } from react',
 import { useState } from 'react,
 =======
 import { useState } from 'react',
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog,
 import { Button } from @/components/ui/button",
@@ -239,9 +243,12 @@ const TIMELINE_OPTIONS = [;"
             startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ...formData;            startDate: startDate?.toISOString(),endDate: endDate?.toISOString()}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         }
       }),
       if (error) throw error,
@@ -491,6 +498,8 @@ const TIMELINE_OPTIONS = [;"
       </DialogContent>
     </Dialog>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 </Button>;
               )}</div>;
           </DialogFooter>;
@@ -538,6 +547,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </form>;
       </DialogContent>;
     </Dialog>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/ServiceQuoteModal.tsx
   )
 =======

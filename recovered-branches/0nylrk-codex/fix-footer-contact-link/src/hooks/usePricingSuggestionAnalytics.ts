@@ -1,23 +1,79 @@
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { supabase } from "@/integrations/supabase/client";
+interface PricingSuggestionAnalytics {
+  totalSuggestions: number,
+  acceptanceRate: number,
+  averagePriceGap: number,
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number}[],
+  recentSuggestions: {
+    id: string,
+=======
 interface PricingSuggestionAnalytics {
 
   total_suggestions: number;
   acceptance_rate: number;
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
+<<<<<<< HEAD
   recent_suggestions: {}
+=======
+  recent_suggestions: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     id: string;
     user_id: string;
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
+<<<<<<< HEAD
+=======
+    accepted: boolean;
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { supabase } from "@/integrations/supabase/client";
+interface PricingSuggestionAnalytics {
+  totalSuggestions: number;
+  acceptanceRate: number;
+
+  averagePriceGap: number
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
+
+  recentSuggestions: {
+    id: string;
+    userId: string;
+    suggestedMin: number;
+    suggestedMax: number;
+    actualValue?: number;
+    accepted: boolean;
+
+    createdAt: string
+    type: 'client' | 'talent'
+  }[];
+  isLoading: boolean
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     createdAt: string
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
+import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ';
 import {useState, useEffect} from 'react';"
@@ -25,6 +81,7 @@ import {supabase} from "@/integrations/supabase/client";'
 import { useState, useEffect } from 'react',"
 import { supabase } from "@/integrations/supabase/client",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PricingSuggestionAnalytics {
 
   averagePriceGap: number
@@ -57,6 +114,7 @@ interface PricingSuggestionAnalytics {
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
   recentSuggestions: {}
     id: string,
+<<<<<<< HEAD
 
 }
   total_suggestions: number;,
@@ -70,27 +128,181 @@ interface PricingSuggestionAnalytics {
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
+=======
+>>>>>>> merged-prs-20250907-203621
+    userId: string,
+    suggestedMin: number,
+    suggestedMax: number,
+    actualValue?: number,
+    accepted: boolean,
+    createdAt: string,
+    type: 'client' | 'talent'
+  }[],
+  isLoading: boolean,
+  error: string | null
+}
+<<<<<<< HEAD
+
+    createdAt: string
+    type: 'client' | 'talent'
+  }[];
+  isLoading: boolean
+interface PricingSuggestionAnalytics {
+  totalSuggestions: number,
+  acceptanceRate: number,
+  averagePriceGap: number,
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
+  recentSuggestions: {
+    id: string,
+    userId: string,
+    suggestedMin: number,
+    suggestedMax: number,
+    actualValue?: number,
+    accepted: boolean,
+    createdAt: string,
+    type: 'client' | 'talent'
+  }[],
+  isLoading: boolean,
+=======
+export function usePricingSuggestionAnalytics(days = 30) {
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+  error: string | null
+}
+export function usePricingSuggestionAnalytics(days = 30) {
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
+    totalSuggestions: 0;
+    acceptanceRate: 0;
+    averagePriceGap: 0;
+    suggestionsByCategory: [];
+    recentSuggestions: [];
+<<<<<<< HEAD
+    isLoading: true,
+    error: null}),
+
+=======
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+    totalSuggestions: 0;
+    acceptanceRate: 0;
+    averagePriceGap: 0;
+    suggestionsByCategory: [];
+    recentSuggestions: [];
+    isLoading: true
+    error: null
+  });
+    totalSuggestions: 0,
+    acceptanceRate: 0,
+    averagePriceGap: 0,
+    suggestionsByCategory: [],
+    recentSuggestions: [],
+    isLoading: true,
+    error: null
+  }),
+
+
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     isLoading: true,
     error: null
   }),
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
+<<<<<<< HEAD
+        await new Promise(resolve => setTimeout(resolve, 1000)),
 
+        // Mock data for demonstration
+        const mockData = $2;
+          acceptanceRate: 0.72,
+          averagePriceGap: 12.5,
+=======
+
+<<<<<<< HEAD
+=======
+          acceptanceRate: 0 && 0.72;
+          averagePriceGap: 12 && 12.5,
+          suggestionsByCategory: [
+            { category: 'development', count: 120, acceptanceRate: 0 && 0.75 };
+            { category: 'design', count: 65, acceptanceRate: 0 && 0.82 };
+            { category: 'marketing', count: 42, acceptanceRate: 0 && 0.64 };
+            { category: 'content', count: 18, acceptanceRate: 0 && 0.56 };
+            { category: 'data', count: 11, acceptanceRate: 0 && 0.78 }];
+          recentSuggestions: Array(10).fill(null).map((_, i) => ({
+            id: `suggestion-${i}`;
+            userId: `user-${Math && Math.floor(Math && Math.random() * 100)}`;
+            suggestedMin: 30 + Math && Math.floor(Math && Math.random() * 30);
+            suggestedMax: 60 + Math && Math.floor(Math && Math.random() * 40);
+            actualValue: Math && Math.random() > 0 && 0.3 ? 45 + Math && Math.floor(Math && Math.random() * 30) : undefined;
+            accepted: Math && Math.random() > 0 && 0.25;
+            createdAt: new Date(Date && Date.now() - Math && Math.floor(Math && Math.random() * 1000000000)).toISOString(),
+            type: Math && Math.random() > 0 && 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
+        };
+<<<<<<< HEAD
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Mock data for demonstration
+        const mockData = {
+          totalSuggestions: 256;
+          acceptanceRate: 0.72;
+          averagePriceGap: 12.5
+>>>>>>> merged-prs-20250907-203621
+          suggestionsByCategory: [
+            { category: 'development', count: 120, acceptanceRate: 0.75 }
+            { category: 'design', count: 65, acceptanceRate: 0.82 }
+            { category: 'marketing', count: 42, acceptanceRate: 0.64 }
+            { category: 'content', count: 18, acceptanceRate: 0.56 }
+            { category: 'data', count: 11, acceptanceRate: 0.78 }];
+          recentSuggestions: Array(10).fill(null).map((_, i) => ({
+<<<<<<< HEAD
+            id: `suggestion-${i}`,
+=======
+            id: `suggestion-${i}`;
+            userId: `user-${Math.floor(Math.random() * 100)}`;
+            suggestedMin: 30 + Math.floor(Math.random() * 30);
+            suggestedMax: 60 + Math.floor(Math.random() * 40);
+            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined;
+            accepted: Math.random() > 0.25;
+            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString()
+            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
+        }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         setAnalytics({
 
           ...mockData;
           isLoading: false;
           error: null;
         });
+<<<<<<< HEAD
 
         // Mock data for demonstration;
         const mockData = {}
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        await new Promise(resolve => setTimeout(resolve, 1000)),
+
+        // Mock data for demonstration
+        const mockData = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           totalSuggestions: 256,
           acceptanceRate: 0.72,
           averagePriceGap: 12.5,
@@ -102,11 +314,19 @@ interface PricingSuggestionAnalytics {
             { category: 'data', count: 11, acceptanceRate: 0.78 }],
           recentSuggestions: Array(10).fill(null).map((_, i) => ({}
             id: `suggestion-${i}`,`
+>>>>>>> merged-prs-20250907-203621
             userId: `user-${Math.floor(Math.random() * 100)}`,
             suggestedMin: 30 + Math.floor(Math.random() * 30),
             suggestedMax: 60 + Math.floor(Math.random() * 40),
             actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
             accepted: Math.random() > 0.25,
+<<<<<<< HEAD
+            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString($2);
+            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
+        },
+
+        setAnalytics($2);
+=======
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),'
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         },
@@ -117,14 +337,66 @@ interface PricingSuggestionAnalytics {
           error: null;
         }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase'
         //   .from('pricing_suggestions')
         //   .select(...)
+<<<<<<< HEAD
+        console && console.error("Error fetching pricing suggestion analytics:", error);
+        //   .gte('created_at', `now() - interval '${days} days'`);
+        // if (error) throw error;
+        //   .gte('created_at', `now() - interval '${days} days'`),
+        
+        // if (error) throw error,
+        // Process data and setAnalytics({...})
+      } catch (error) {
+        console.error("Error fetching pricing suggestion analytics:", error);
+        setAnalytics({
+          ...analytics;
+          isLoading: false
+          error: "Failed to load pricing analytics data."
+        })
+      }
+    }
+    fetchAnalytics()
+  }, [days]);
+=======
 
+<<<<<<< HEAD
         // Process data and setAnalytics({...})
       } catch (error) {
         console && console.error("Error fetching pricing suggestion analytics:", error);
+=======
+    created_at: string,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        //   .gte('created_at', `now() - interval '${days} days'`),
+        
+        // if (error) throw error,
+
+        // Process data and setAnalytics({...})
+      } catch (error) {
+
+};
+
+<<<<<<< HEAD
+
+  return analytics
+};
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        console.error("Error fetching pricing suggestion analytics:", error),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         setAnalytics({
           ...analytics,
           isLoading: false,
@@ -161,7 +433,105 @@ interface PricingSuggestionAnalytics {;
     accepted: boolean,;
     createdAt: string,;
 
+<<<<<<< HEAD
 '
+=======
+<<<<<<< HEAD
+}
+
+
+import { useState, useEffect } from 'react',;
+import { supabase } from "@/integrations/supabase/client",;
+;
+interface PricingSuggestionAnalytics {;
+  totalSuggestions:number,;
+  acceptanceRate:number,;
+  averagePriceGap:number,;
+  suggestionsByCategory:{ category:string, count:number, acceptanceRate:number }[],;
+  recentSuggestions:{;
+    id:string,;
+    userId:string,;
+    suggestedMin:number,;
+    suggestedMax:number,;
+    actualValue?:number,;
+    accepted:boolean,;
+    createdAt:string,;
+    type:'client' | 'talent';
+  }[],;
+  isLoading:boolean,;
+  error:string | null;
+    type: 'client' | 'talent';
+  }[],;
+  isLoading: boolean,;
+  error: string | null;
+}
+;
+export function usePricingSuggestionAnalytics(days = 30) {;
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
+    totalSuggestions: 0,;
+    acceptanceRate: 0,;
+    averagePriceGap: 0,;
+    suggestionsByCategory: [],;
+    recentSuggestions: [],;
+    isLoading: true,;
+    error: null;
+  }),;
+  useEffect(() => {;
+    // This would fetch actual data from the database in a real implementation;
+    // For now, let's simulate the data;
+    const fetchAnalytics = async () => {;
+      try {;
+        // Simulate API delay;
+        await new Promise(resolve => setTimeout(resolve, 1000)),;
+        // Mock data for demonstration;
+        const mockData = {;
+          totalSuggestions: 256,;
+          acceptanceRate: 0.72,;
+          averagePriceGap: 12.5,;
+          suggestionsByCategory: [;
+            { category: 'development', count: 120, acceptanceRate: 0.75 },;
+            { category: 'design', count: 65, acceptanceRate: 0.82 },;
+            { category: 'marketing', count: 42, acceptanceRate: 0.64 },;
+            { category: 'content', count: 18, acceptanceRate: 0.56 },;
+            { category: 'data', count: 11, acceptanceRate: 0.78 }],;
+          recentSuggestions: Array(10).fill(null).map((_, i) => ({;
+            id: `suggestion-${i}`,;
+            userId: `user-${Math.floor(Math.random() * 100)}`,;
+            suggestedMin: 30 + Math.floor(Math.random() * 30),;
+            suggestedMax: 60 + Math.floor(Math.random() * 40),;
+            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,;
+            accepted: Math.random() > 0.25,;
+            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),;
+            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}));
+        },;
+        setAnalytics({;
+          ...mockData,;
+          isLoading: false,;
+          error: null;
+        }),;
+        // In a real implementation with Supabase, you might do:;
+        // const { data, error } = await supabase;
+        //   .from('pricing_suggestions');
+        //   .select(...);
+        //   .gte('created_at', `now() - interval '${days} days'`),;
+        // if (error) throw error,;
+        // Process data and setAnalytics({...});
+      } catch (error) {;
+        console.error("Error fetching pricing suggestion analytics:", error),;
+        setAnalytics({;
+          ...analytics,;
+          isLoading: false,;
+          error: "Failed to load pricing analytics data.";
+        });
+      }
+    };
+    fetchAnalytics();
+  }, [days]);
+  return analytics;
+}
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -244,7 +614,36 @@ if (throw error) {}
   return analytics;
 }
 
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
+<<<<<<< HEAD
+        //   .gte('created_at', `now() - interval '${days} days'`),
+        
+        // if (error) throw error,
+        // Process data and setAnalytics({...})
+      } catch (error) {
+        console.error($2);
+        setAnalytics({
+          ...analytics;
+          isLoading: false
+          error: "Failed to load pricing analytics data."
+        })
+      }
+    },
+
+    fetchAnalytics()
+  }, [days]),
+
+  return analytics
+}
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

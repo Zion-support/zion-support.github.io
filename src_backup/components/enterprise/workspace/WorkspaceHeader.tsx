@@ -38,6 +38,8 @@ export /**;
  * WorkspaceHeader - Function description;
  */
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { type Company  } from ./CompanyDashboard;
 import { Bell, Users, Settings  } from 'lucide-react';
@@ -70,6 +72,7 @@ function WorkspaceHeader() {return (<div className=space - y-6>;
       <div className='flex items - center justify - between'>;
         <div className=flex items - center gap - 4>;
 =======
+>>>>>>> merged-prs-20250907-203621
 function WorkspaceHeader() {}
 >>>>>>> origin/chore/fix-lint-and-merge
   return ('
@@ -107,12 +110,15 @@ function WorkspaceHeader() {}
             </p>;
           </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 interface WorkspaceHeaderProps {
   company: Company;
         </div>;
             <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;
             <p className=text-muted-foreground">;
 =======
+>>>>>>> merged-prs-20250907-203621
         </div>;"
             <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;"
             <p className="text-muted-foreground">;
@@ -138,6 +144,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {
           </div>
           <div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <img;
               src={company.logoUrl || "/placeholder.svg}
               alt={company.name}
@@ -150,6 +158,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {
               className="max-h-10 max-w-10"
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 "
               className="max-h-10 max-w-10
 
@@ -169,7 +178,10 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {
 
 =======
             <p className="text-muted-foreground">
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <p className='text-muted-foreground'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {company.plan} Plan · {company.teamSize} team members
@@ -188,6 +200,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Bell className=h-4 w-4 />
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -198,6 +212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Bell className=h-4 w-4 />
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </Button>
 
           <Button variant="outline" size=icon aria-label="Team members">
@@ -216,6 +231,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className="text-2xl font-medium">8</div>
         </div>
+<<<<<<< HEAD
+=======
         <div className=bg-card rounded-lg p-4 border border-border">"
           <div className=text-sm text-muted-foreground>Candidate Applications</div>"
           <div className="text-2xl font-medium>47</div>
@@ -313,6 +330,7 @@ export /**
             <h1 className=text-3xl font-bold tracking-tight>{company && company.name} Workspace</h1>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }          </Button>"
           <Button variant="outline size=icon" aria-label="Team members>
@@ -508,6 +526,9 @@ export /**;
     </div>
   );
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
     </div>)}<div className='bg-card rounded-lg p-4 border border-border'>;
           <div className=text-sm text-muted-foreground>;
             Interviews Scheduled;
@@ -521,3 +542,4 @@ export /**;
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

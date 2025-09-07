@@ -3,6 +3,13 @@ import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 
+<<<<<<< HEAD
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+=======
 return <OnboardingTracker steps={steps} />
 
 <<<<<<< HEAD
@@ -41,6 +48,7 @@ import { useAuth } from @/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus;
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from lucide-react'
 import { OnboardingTracker, OnboardingStep } from ./OnboardingTracker";
+>>>>>>> merged-prs-20250907-203621
 export function TalentOnboardingSteps() {
   const { user } = useAuth($2);
   const onboardingStatus = useOnboardingStatus($2);
@@ -60,7 +68,10 @@ main
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     {
       id: "skills,
@@ -73,7 +84,10 @@ main
 main
 =======
       link: "/profile/skills",
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     {
       id: "availability,
@@ -84,6 +98,14 @@ main
       id: match",
       label: "Receive your first job match,
       completed: onboardingStatus.matchReceived,
+<<<<<<< HEAD
+      link: "/talent-dashboard",
+      action: "View Matches"}],
+  
+  return <OnboardingTracker steps={steps} />
+}
+;
+=======
 <<<<<<< HEAD
       link: /talent-dashboard",
       action: "Set},
@@ -143,3 +165,4 @@ export /**;
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

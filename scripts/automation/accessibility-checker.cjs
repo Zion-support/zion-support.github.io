@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,16 +12,18 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Accessibility Checker Automation;
- * Checks and improves accessibility compliance;
+ * Accessibility Checker Automation
+ * Checks and improves accessibility compliance
  */
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -28,6 +32,7 @@ const path = require(path');
 const { execSync } = require('child_process');
 =======
 
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -41,6 +46,17 @@ class AccessibilityChecker {}
         this.projectRoot = process.cwd();
 
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    }
+  log($2) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+})
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+=======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
     log(message) {}
@@ -59,6 +75,7 @@ class AccessibilityChecker {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
         console.log(message)};
 >>>>>>> origin/chore/fix-lint-and-merge
     checkAccessibilityIssues() {}
@@ -78,16 +95,21 @@ class AccessibilityChecker {}
         const files = this.findSourceFiles(;);
         const issues = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         for (const file of files) {}
             try {}
 
         const files = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         const scanDirectory = (dir) => {}
             if () retu) {}
@@ -99,11 +121,17 @@ class AccessibilityChecker {}
             if () retu) {}
     ) retu}r;n;
 =======
+>>>>>>> merged-prs-20250907-203621
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         const scanDirectory = (dir) => {}
@@ -111,10 +139,14 @@ class AccessibilityChecker {}
     ) retu}r;n;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+                
+=======
 <<<<<<< HEAD
 
                 if (&& !item.startsWith('.) && item !== node_modules') {}
@@ -134,10 +166,11 @@ class AccessibilityChecker {}
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
+                    files.push(fullPath)}
+            }
         }) {}
     && !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -161,16 +194,24 @@ class AccessibilityChecker {}
 =======
         const lines = content.split('\n';);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
 =======
+>>>>>>> merged-prs-20250907-203621
         
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
             
+<<<<<<< HEAD
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         for (let i = ;0; i < lines.length i++) {}
@@ -178,19 +219,29 @@ class AccessibilityChecker {}
             const lineNumber = i +;1;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             // Check for missing alt attributes;
             if (&& !line.includes(alt=')) {}
                 issues.push({})
 
                 })}
+<<<<<<< HEAD
+            // Check for missing aria-labels
+            if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
+                if (!line.includes('>') || line.trim().endsWith('/>')) {}
+=======
             // Check for missing aria-labels;
             if (line.includes('<button) && !line.includes(aria-label') && !line.includes('aria-labelledby)) {}
                 if (!line.includes(>') || line.trim().endsWith('/>)) {}
+>>>>>>> merged-prs-20250907-203621
 
-            // Check for heading hierarchy;
+            // Check for heading hierarchy
             if (line.match(/<h[1-6]/)) {}
                 const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
      {}
+<<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
 
         const utilsDir = path.join(this.projectRoot, utils';);
@@ -266,14 +317,20 @@ class AccessibilityChecker {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const utilsDir = path.join(this.projectRoot, 'utils';);
 >>>>>>> origin/chore/fix-lint-and-merge
         if () {}
             fs.mkdirSync(utilsDir, { recursive: true })}
         // Accessibility utilities;
         const accessibilityUtils = "/**
+<<<<<<< HEAD
+ * Accessibility Utilities
+ * Helper functions for accessibility compliance
+=======
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
+>>>>>>> merged-prs-20250907-203621
  */
 <<<<<<< HEAD
 =======
@@ -295,6 +352,9 @@ export const accessibility = {}
   // Generate unique IDs for form elements;"
   "generateId": (prefix = 'element') => {}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     return \"\${prefi) {}
     ) {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
@@ -307,15 +367,20 @@ export const accessibility = {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 export const accessibility = {}
-  // Generate unique IDs for form elements;
+  // Generate unique IDs for form elements
   "generateId": (prefix = 'element') => {}
     return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
+<<<<<<< HEAD
+  
+=======
 <<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Check if element is focusable;
   "isFocusable": (element) => {}
     const focusableSelectors = ['a[href]',
@@ -347,6 +412,11 @@ export const accessibility = {}
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
    ];
 <<<<<<< HEAD
+    
+    return focusableSelectors.some(selector => element.matches(selector))},
+  
+=======
+<<<<<<< HEAD
 
   // Trap focus within an element;
 
@@ -360,11 +430,18 @@ export const accessibility = {}
     return focusableSelectors.some(selector => element.matches(selector))},
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   // Trap focus within an element;
   "trapFocus": (element) => {}
     const focusableElements = element.querySelectorAll()
       'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])"
    ;);
+<<<<<<< HEAD
+    
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+=======
 <<<<<<< HEAD
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
@@ -375,16 +452,21 @@ export const accessibility = {}
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     const handleTabKey = (e) => {}
       if ( {})
-        if (e.shiftKey) {}
-          if (document.activeElement === firstElement) {}
+  if($2) {}
+  if($2) {}
             lastElement.focus() {}
      {}
-        if (e.shiftKey) {}
-          if (document.activeElement === firstElement) {}
+  if($2) {}
+  if($2) {}
             lastElement.focus(}
+<<<<<<< HEAD
+})
+=======
 });
+>>>>>>> merged-prs-20250907-203621
             e.preventDefault()}
         } else {}
           if ( {})
@@ -404,18 +486,24 @@ export const accessibility = {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     element.addEventListener('keydown', handleTabKey);
     return () => {;}
       element.removeEventListener('keydown', handleTabKey)}},
 =======
+>>>>>>> merged-prs-20250907-203621
     
     element.addEventListener('keydown', handleTabKey);
     
     return () => {;}
       element.removeEventListener('keydown', handleTabKey)}},
   
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Announce message to screen readers;
   announce": (message, priority = polite) => {}
     const announcement = document.createElement('div';);
@@ -424,6 +512,8 @@ export const accessibility = {}
     announcement.className = 'sr-only';
     announcement.textContent = message;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -431,12 +521,23 @@ export const accessibility = {}
     setTimeout(() => {}
       document.body.removeChild(announcement)}, 1000)},
 =======
+>>>>>>> merged-prs-20250907-203621
     
     document.body.appendChild(announcement);
     
     setTimeout(() => {}
       document.body.removeChild(announcement)}, 1000)},
   
+<<<<<<< HEAD
+  // Skip to main content link;
+  "createSkipLink": (targetId = 'main') => {}
+    const skipLink = document.createElement('a';)
+    skipLink.href = \"#\${targetId}\"
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'skip-link'
+    skipLink.style.cssText = \'
+      "position": absolute;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
   // Skip to main content link;
@@ -447,6 +548,7 @@ export const accessibility = {}
     skipLink.className = 'skip-link';
     skipLink.style.cssText = \
       "position: absolute;
+>>>>>>> merged-prs-20250907-203621
       top: -40px;
       left: 6px;
       background: #000;
@@ -461,6 +563,8 @@ export const accessibility = {}
 =======
     \";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     skipLink.addEventListener('focus', () => {}
       skipLink.style.top = '6px'}
 });
@@ -470,6 +574,7 @@ export const accessibility = {}
     return skipLink};
 };
 =======
+>>>>>>> merged-prs-20250907-203621
     
     skipLink.addEventListener('focus', () => {}
       skipLink.style.top = '6px'}
@@ -482,11 +587,24 @@ export const accessibility = {}
     return skipLink};
 };
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 // Screen reader only class;
 export const srOnly = \
 .sr-only {}
+<<<<<<< HEAD
+  "position": absolu;t;e
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  white-"space": nowrap
+=======
   "position": absolu;t;e;
   width: 1px;
   height: 1px;
@@ -495,6 +613,7 @@ export const srOnly = \
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+>>>>>>> merged-prs-20250907-203621
   border: 0}
 .skip-"link": focus {}
   position: absolute;
@@ -510,22 +629,31 @@ export const srOnly = \
 \";
 ";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
         // Accessibility testing component;
         const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
 =======
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
         
         // Accessibility testing component;
         const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface AccessibilityTestProps {}
   "children": React.ReactNode}
 export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }) => {}
   const [issues, setIssues] = useState<string[]>([]);
+<<<<<<< HEAD
+  
+=======
 <<<<<<< HEAD
 
 =======
@@ -534,12 +662,19 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   useEffect(() => {}
     if ( {})
-      // Run accessibility checks in development;
+      // Run accessibility checks in development
       const checkAccessibility = () => {}
         const "newIssues": string[] = [) {}]
      {}
+<<<<<<< HEAD
+      // Run accessibility checks in development
+      const checkAccessibility = () => {}
+        const newIssues: string[] = [}];
+        
+=======
       // Run accessibility checks in development;
         const newIssues: string[] = [}];
 <<<<<<< HEAD
@@ -550,11 +685,15 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         // Check for missing alt attributes;
         const images = document.querySelectorAll('img: not([alt]);';);
         images.forEach((img, index) => {}
           newIssues.push(\"Image \${index + 1} missing alt attribute\")}
 });
+<<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
 
 =======
@@ -563,10 +702,15 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         // Check for missing form labels;
         const inputs = document.querySelectorAll(input: not([aria-label]):not([aria-labelledby]);;);
         inputs.forEach((input, index) => {}
+<<<<<<< HEAD
+          const hasLabel = input.closest('label') || input.previousElementSibling?.tagName === 'LABE;L;'
+=======
           const hasLabel = input.closest('label') || input.previousElementSibling?.tagName === LABE;L;;
+>>>>>>> merged-prs-20250907-203621
           if ( {})
             newIssues.push(\"Input \${index + 1} missing label\")}
         })) {}
@@ -581,6 +725,11 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         })};
         setIssues(newIssues)};
 <<<<<<< HEAD
+      
+      checkAccessibility();
+      
+=======
+<<<<<<< HEAD
       checkAccessibility();
 =======
       
@@ -588,11 +737,14 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       // Re-check when DOM changes;
       const observer = new MutationObserver(checkAccessibilit;y;);
       observer.observe(document.body, { "childList": true, subtree: true }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   if ( {})
     return () {}
@@ -603,16 +755,23 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
       return () => observer.disconnect()};
   }, []);
 =======
+>>>>>>> merged-prs-20250907-203621
       
       return () => observer.disconnect()};
   }, []);
   
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   if ( {})
     return () {}
      {}
     return (};)
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <div>
         <div style={{}
           "position": 'fixed',
@@ -625,7 +784,11 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
           fontSize: '12px'
         }}>
           Accessibility "Issues": {issues.length}
+<<<<<<< HEAD
+          <ul style={{ "margin": '5px 0 0 0', "paddingLeft": '20px' }}>
+=======
           <ul style={{ margin: 5px 0 0 0, "paddingLeft": '20px' }}>
+>>>>>>> merged-prs-20250907-203621
             {issues.map((issue, index) => (})
               <li key={index}>{issue}</li>
             ))}
@@ -666,16 +829,28 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
   return <>{children}</>};
 ";
 <<<<<<< HEAD
+
+        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
+        
+=======
+<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
 =======
 
         fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         this.log('Accessibility utilities created');
         return { "status": 'success' }};
     generateAccessibilityReport() {}
         this.log('Generating accessibility report...');
+<<<<<<< HEAD
+        
+        const issues = this.checkAccessibilityIssues(;);
+        const utilities = this.createAccessibilityUtilities(;);
+        
+=======
 <<<<<<< HEAD
         const issues = this.checkAccessibilityIssues(;);
         const utilities = this.createAccessibilityUtilities(;);
@@ -685,6 +860,7 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         const utilities = this.createAccessibilityUtilities(;);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -694,20 +870,26 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
                 "summary": {}
                     total: issues.length,
                     "errors": issues.filter(i => i.severity === 'error').length,
-                    "warnings": issues.filter(i => i.severity === 'warning').length;
-                };
+                    "warnings": issues.filter(i => i.severity === 'warning').length
+                }
             },
             "recommendations": this.generateAccessibilityRecommendations(issues);
        };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Accessibility report saved to ${this.reportFile}`);
 =======
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Accessibility report saved to ${this.reportFile}`);
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         return report};
     generateAccessibilityRecommendations(issues) {}
         const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',]
@@ -722,6 +904,22 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
             'Test with screen readers and keyboard-only navigation',
             Implement skip links for main content
         ];
+<<<<<<< HEAD
+        
+        if () {}
+            recommendations.push('Add alt attributes to all images')};
+        if (issues.some(i => i.type === 'missing_form_label')) {}
+            recommendations.push('Add labels to all form inputs')}
+        return recommendations) {}
+    ) {}
+            recommendations.push('Add alt attributes to all images')}
+        if (issues.some(i => i.type === 'missing_form_label')) {}
+            recommendations.push('Add labels to all form inputs')}
+        return recommendations}}
+    async run() {}
+        this.log('Accessibility Checker started');
+        
+=======
 <<<<<<< HEAD
 
 =======
@@ -750,9 +948,10 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         try {}
-            const report = this.generateAccessibilityReport(;);
-            this.log('Accessibility Checker completed successfully');
+            const report = this.generateAccessibilityReport(;)
+            this.log('Accessibility Checker completed successfully')
             return report} catch (error) {}
 <<<<<<< HEAD
             this.log(`Accessibility Checker "failed: ${error.message}`);
@@ -763,13 +962,23 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
 
 export const AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
 
+<<<<<<< HEAD
+  const [issues, setIssues] = useState<string[]>([])
+=======
+>>>>>>> merged-prs-20250907-203621
 </string>
       <div>
 </div>
         <div style={{}
 
+<<<<<<< HEAD
+        const issues = this.checkAccessibilityIssues(;)
+        const utilities = this.createAccessibilityUtilities(;)
+        const report = {}
+=======
         const issues = this.checkAccessibilityIssues(;);
         const utilities = this.createAccessibilityUtilities(;);
+>>>>>>> merged-prs-20250907-203621
 
             accessibility": {}"
                 issues: issues,
@@ -780,6 +989,9 @@ export const AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children 
             },
             "recommendations": this.generateAccessibilityRecommendations(issues);"
 
+<<<<<<< HEAD
+
+=======
 
 <<<<<<< HEAD
             throw error}
@@ -790,18 +1002,29 @@ export const AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children 
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
             throw error};
 // Run the checker if this script is executed directly;
     const checker = new AccessibilityChecker) {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
+module.exports = AccessibilityChecker;
+module.exports = AccessibilityChecker;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -824,3 +1047,4 @@ module.exports = AccessibilityChecker;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

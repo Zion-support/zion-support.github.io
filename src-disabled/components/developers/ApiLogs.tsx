@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/components/developers/ApiLogs.tsx
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -9,6 +12,8 @@ import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
 import { Badge  } from '@/components / ui / badge';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { ApiLogsChart  } from './ApiLogsChart';
 import { ApiLogsChart  } from './ApiLogsChart;
@@ -25,6 +30,7 @@ function ApiLogs() {
   );
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { ApiLogsChart  } from ./ApiLogsChart';
 export /**
@@ -273,6 +279,11 @@ export function ApiLogs() {
 <<<<<<< HEAD
 :src/components/developers/ApiLogs.tsx
     </Card>
+<<<<<<< HEAD
+  )
+}
+;
+=======
   );
 
 }
@@ -297,3 +308,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </Card>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

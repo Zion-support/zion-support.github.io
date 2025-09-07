@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       smart-testing-automation.log
       this.projectRoot,logs"
@@ -61,8 +67,11 @@ const crypto = require("crypto")
       hooks
   this.log(" Running Jest coverage analysis...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const coverageOutput = execSync(npm run test -- --coverage --watchAll=false")
   "cwd"
               "stdio": "pipe"
@@ -85,7 +94,10 @@ const crypto = require("crypto")
     const srcDir = path.join(this.projectRoot, "src")
   const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
   const testContent = fs.readFileSync(testFile, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         // Track what"
   "suites
       cases"
@@ -100,8 +112,11 @@ const crypto = require("crypto")
       hooks
       "total"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const srcDir = path.join(this.projectRoot, "src")
     const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")]
   const content = fs.readFileSync(file, "utf8")
@@ -136,8 +151,11 @@ const crypto = require("crypto")
               ? default
               : "named"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const lines = content.substring(0, index).split("\n")
   const testsDir = path.join(this.projectRoot, "tests")
     const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
@@ -150,6 +168,15 @@ const crypto = require("crypto")
             "timestamp"
 >>>>>>> origin/chore/fix-lint-and-merge
           this.log(Generated test for ${item.name} in ${testFilePath}")
+<<<<<<< HEAD
+            "
+            "ERROR"
+  "component"
+      "utility"
+      "hook"
+  getComponentTestTemplate($2) {return "import React from "react"}
+import { render, screen  } from "@testing-";"library/react""
+=======
             
             ERROR"
   "component
@@ -157,6 +184,7 @@ const crypto = require("crypto")
       "hook
   getComponentTestTemplate(item) {return import React from "react"}
 import { render, screen  } from @testing-;"library/react"
+>>>>>>> merged-prs-20250907-203621
 import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
 describe(${item.name}")
   it(")
@@ -170,10 +198,14 @@ describe("${item.name}")
   it(should handle edge cases")
   it(`should handle invalid input gracefully``)
 <<<<<<< HEAD
+  return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+=======
+<<<<<<< HEAD
 
 =======
   return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 describe("${item.name}")
   it(should work correctly with valid input)
   it("should handle edge cases")
@@ -200,7 +232,10 @@ describe("${item.name}")
   return importPath.replace("/index", ")
       path.join(this.projectRoot, "src")
     const testDir = path.join(this.projectRoot, "tests")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       relativePath.replace(/\.(tsx?|jsx?)$/, ".test.$1"
   fs.mkdirSync(testDirPath, { recursive})
   "success"
@@ -211,8 +246,11 @@ describe("${item.name}")
       duration
   this.log("🧪 Running existing tests...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
       const testOutput = execSync("npm test -- --watchAll=false")
   "cwd"
         "stdio": "pipe"
@@ -302,11 +340,21 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+<<<<<<< HEAD
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -324,3 +372,4 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

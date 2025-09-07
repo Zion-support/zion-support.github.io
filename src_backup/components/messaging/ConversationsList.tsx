@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import React, { useMemo } from 'react',;
+import { User } from 'lucide-react';
+=======
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import React, { useMemo } from 'react;
@@ -21,6 +25,7 @@ import { Conversation } from @/types/messaging',import { ConversationItem } from
 =======
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
+>>>>>>> merged-prs-20250907-203621
 import { Conversation } from '@/types/messaging',;
 import { ConversationItem } from './ConversationItem',;
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window',;
@@ -50,7 +55,10 @@ export function ConversationsList({;
 ;
     return (;
       <div style={style}>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         <ConversationItem;
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
@@ -87,6 +95,8 @@ export function ConversationsList({
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto>;
   markAsRead: (conversationId: string) => Promise<void>;
 export function ConversationsList() {const itemSize  = null;return (<div className=w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
@@ -95,6 +105,7 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
       </div>;{conversations && conversations.length === 0 ? (<div className='p-8 text-center text-zion-slate>;
           <User className=h-10 w-10 mx-auto mb-2 text-zion-purple/40' />;
 =======
+>>>>>>> merged-prs-20250907-203621
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
         <h3 className='font-medium text-white'>Conversations</h3>;
@@ -115,6 +126,14 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
           height={listHeight}
           itemCount={conversations && conversations.length}
           itemSize={itemSize}
+<<<<<<< HEAD
+          width="100%"
+        >
+          {Row}
+        </List>
+      )}
+    </div>
+=======
 <<<<<<< HEAD
           width="100%;
         >;
@@ -204,3 +223,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const axios = require("child_process")
+const fs = require("fs")
+const path = require("path")
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -93,6 +99,7 @@ const path = require("path")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   constructor(baseUrl = ""https": //ziontechgroup.com")
   log(message, level = "info")
     this.log(` "Checking"`)
@@ -154,6 +161,12 @@ const path = require("path")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
 <<<<<<< HEAD
+
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +186,7 @@ const path = require("path")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
       if (!html.includes(<h1>")"
 </h1>"`;

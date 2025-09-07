@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -10,11 +13,14 @@ import { ArrowLeft } from 'lucide-react';
 import { ArrowLeft } from lucide-react';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react,
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Button } from "@/components/ui/button;
 import Link from next/link";
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from 'react',
 
 import { Button } from "@/components/ui/button";
@@ -34,6 +40,8 @@ export function BackToDirectoryButton() {
         <Link
           href=/talents
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { ArrowLeft  } from 'lucide-react';
 import React from react,export function BackToDirectoryButton() {export function BackToDirectoryButton() {return (<div className='container mx-auto px-4 md:px-6 mb-12'>;
@@ -61,6 +69,7 @@ import React from react,export function BackToDirectoryButton() {export function
   )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           Back to Talent Directory
 
 import React from 'react',
@@ -114,6 +123,8 @@ import { Button } from '@/components / ui / button';
 import { ArrowLeft } from lucide-react;
 import { Button  } from '@/components / ui / button';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import Link from next / link;
 import { Button   } from '@/components / ui / button';
 import Link from ./next / link;
@@ -123,6 +134,7 @@ export /**;
 function BackToDirectoryButton() {return (<div className='container mx - auto px - 4 md:px - 6 mb - 12'>;
       <Button variant=outline as_child className='my - 8'>;
 =======
+>>>>>>> merged-prs-20250907-203621
 import Link from './next / link';
 export /**
  * BackToDirectoryButton - Function description
@@ -140,6 +152,8 @@ function BackToDirectoryButton() {
     </div>);
 });
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   );
 }
@@ -164,5 +178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -2,6 +2,10 @@
 
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -9,6 +13,10 @@
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
+<<<<<<< HEAD
+const { execSync } = require("child_process")
+const fs = require("fs")
+=======
 <<<<<<< HEAD
 const { execSync } = require("child_process)
 const fs = require(fs")
@@ -145,8 +153,24 @@ class CodeQualityChecker {
       checks: []
     }
   }
+>>>>>>> merged-prs-20250907-203621
 
 
+<<<<<<< HEAD
+// console.log("\n Code Quality "Results": ")
+    console.log("=")
+// console.log(`"Passed"`)
+    console.log(`"Failed"`)
+// console.log(`"Warnings"`)
+    console.log("=")
+
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+
+
+
+=======
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -155,3 +179,4 @@ class CodeQualityChecker {
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

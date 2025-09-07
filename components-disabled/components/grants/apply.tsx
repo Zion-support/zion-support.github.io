@@ -13,6 +13,15 @@ const categories: GrantCategory[] = [
 export default function ApplyGrantPage() {;
 
 <<<<<<< HEAD
+import { useState  } from 'react';
+  'Ecosystem Tools
+  'Talent Development
+  'Regional Expansion
+  'Research Grants]
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+export default function ApplyGrantPage() {
+=======
+<<<<<<< HEAD
 }
 
 import { useState  } from 'react';'
@@ -39,13 +48,17 @@ import { useState  } from 'react';
   'Research Grants]
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
+>>>>>>> merged-prs-20250907-203621
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
   'Regional Expansion',;
   'Research Grants',;']
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState();
@@ -59,6 +72,8 @@ const categories: GrantCategory[] = [;
 </string>
   const [sector, setSector] = useState<string>();
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout';'
@@ -82,12 +97,16 @@ function ApplyGrantPage() {
   const [proposal_summary, setProposalSummary] = useState ('');'
   const [timeline, set_timeline] = useState ('');'
 =======
+>>>>>>> merged-prs-20250907-203621
   const [program, set_program] = useState<'grant' | 'incubator'>('grant');
   const [project_name, setProjectName] = useState ();
   const [team_info, setTeamInfo] = useState ();
   const [proposal_summary, setProposalSummary] = useState ();
   const [timeline, set_timeline] = useState ();
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   const [budget_amount, setBudgetAmount] = useState < number>(0);
   const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(')
     'USDC');  const [supporting_links, setSupportingLinks] = useState < string>();  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -184,6 +203,8 @@ function ApplyGrantPage() {
 
           submit})});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
       router && router.push(`/grants/${data && data.id}`);`    } catch ("e": any) {;
       }
@@ -192,6 +213,7 @@ function ApplyGrantPage() {
       }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       setLoading(false);
 
           <textarea;
@@ -230,6 +252,8 @@ function ApplyGrantPage() {
           <label className="text-sm">Program;"
 </label>"
             <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   const _save = async ("_submit": boolean) => {
@@ -326,6 +350,7 @@ return (;
             <select,
 className='mt-1 w-full border rounded p-2''
 =======
+>>>>>>> merged-prs-20250907-203621
 </select>
 "
       <h1 className='text-2xl font-semibold mb-4'>
@@ -334,7 +359,10 @@ className='mt-1 w-full border rounded p-2''
         <div className='grid md:grid-cols-2 gap-3'>
           <label className='text-sm'>
             <select;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               value={program}
               onChange={e => setProgram(e.target.value as any)}
               <option value='grant'>Grant</option>

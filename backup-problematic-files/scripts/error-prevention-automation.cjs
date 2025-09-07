@@ -24,6 +24,7 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
         "stdio"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -36,3 +37,9 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      this.log(` ${description} "failed"`)
+=======
+      this.log(` ${description} "failed"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

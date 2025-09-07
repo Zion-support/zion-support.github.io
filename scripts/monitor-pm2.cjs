@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,6 +12,7 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -18,6 +21,8 @@
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -29,13 +34,19 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
     this.logsDir = "./logs"
 const { exec } = require("$1")
+<<<<<<< HEAD
+
+"
+=======
 const fs = require("$1")
 const path = require("path")"
+>>>>>>> merged-prs-20250907-203621
     this.logsDir = "./logs"
       exec("pm2 status --no-daemon")
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -129,12 +140,22 @@ Examples":;"
     "default"
   process.on("SIGINT")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
   process.on(")
+<<<<<<< HEAD
+  process.on(")
+  process.on(")
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -159,3 +180,4 @@ Examples":;"
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

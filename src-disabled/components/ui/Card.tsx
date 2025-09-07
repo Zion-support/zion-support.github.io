@@ -1,5 +1,18 @@
 <<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
+<<<<<<< HEAD
+import * as React from 'react';
+import {cn} from '@/lib/utils';
+import React from 'react';
+import { cn } from '../../lib/utils';
+
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+=======
 import * as React from 'react;
 import {cn} from @/lib/utils';
 import React from 'react;
@@ -41,6 +54,7 @@ const Card = React.forwardRef<;
 ))CardContent.displayName = CardContent';const CardFooter = React.forwardRef<;
   HTMLDivElement,React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (<div;
+>>>>>>> merged-prs-20250907-203621
     className={cn(
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/card.tsx
       'rounded-lg border bg-card text-card-foreground shadow-sm
@@ -188,7 +202,10 @@ export {
   CardContent}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0:components.disabled/components/ui/Card.tsx
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   />;
 ))CardFooter.displayName = 'CardFooter';export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }export {Card,CardHeader,CardFooter,CardTitle,CardDescription,CardContent}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

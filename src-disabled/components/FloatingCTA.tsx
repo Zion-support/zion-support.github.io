@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button,
 
 
@@ -16,6 +18,7 @@ import { useState, useEffect } from 'react
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { X } from lucide-react'
 
@@ -23,11 +26,14 @@ import { X } from lucide-react'
   useEffect(() => {
   // TODO: Add dependencies if needed
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { Button } from '@/components / ui / button;
 import { Button } from @/components/ui/ button';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { X } from 'lucide-react
 
@@ -44,6 +50,8 @@ import { X } from lucide-react';
   return () => {
     // Cleanup function;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 }
 
@@ -52,11 +60,14 @@ import { X } from lucide-react';
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }
 
 export function FloatingCTA() {
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Button } from @/components/ui/button",
 import Link from "next/link,
@@ -93,12 +104,16 @@ import { Button } from @/components/ui/button
 import Link from "next/link"
 import { useState, useEffect } from react
 =======
+>>>>>>> merged-prs-20250907-203621
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
 import { X } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export function FloatingCTA() {
 import { Button } from "@/components/ui/button",
 import Link from next/link","
@@ -111,6 +126,8 @@ export function FloatingCTA() {,
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       if (scrollPosition > threshold && !isClosed) {
@@ -188,6 +205,7 @@ if ( {) {$2;
         setIsVisible(true)
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
 
@@ -233,9 +251,12 @@ if ( {) {}
 import { X } from lucide-react;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     },
 
   const [ isClosed, setIsClosed ] = useState(false),
@@ -260,10 +281,13 @@ export function FloatingCTA() {
     setIsVisible(false);  }      if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       } else {
 origin/cursor/automate-test-improve-and-merge-code-2533
       } else {
 =======
+>>>>>>> merged-prs-20250907-203621
       } else {;
 >>>>>>> origin/chore/fix-lint-and-merge
         setIsVisible(false);
@@ -331,7 +355,10 @@ setIsVisible(false);
 
   if (!isVisible) return null;
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   return (
     <div className=fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between>
@@ -350,6 +377,8 @@ setIsVisible(false);
             <Link href=/signup>Register Now</Link>
           </Button>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -373,6 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <X className="w-5 h-5" />
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           <button 
             onClick={handleClose}
 
@@ -383,9 +413,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import Link from next/link,
 import { useState, useEffect } from "react",
@@ -429,10 +462,13 @@ export function FloatingCTA() { return null; }
             <X className="w-5 h-5" />;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 ;
 
 import { Button } from "@/components/ui/button",;
@@ -465,6 +501,8 @@ export function FloatingCTA() {;
   return (;
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         setIsVisible (true)} else {setIsVisible (false)}export function FloatingCTA() {},const [ isVisible, setIsVisible ] = useState(false),const [ isClosed, setIsClosed ]  = useState(false),useEffect((,) => {const handleScroll = () => {const scrollPosition = window && window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px;if (scrollPosition > threshold && !isClosed) {setIsVisible(true)} else {export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false)const [isClosed, setIsClosed] = useState(false)useEffect(() => {const handleScroll = () => {const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px;
@@ -483,6 +521,7 @@ export function FloatingCTA() {;
             size=sm;"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap;
 =======
+>>>>>>> merged-prs-20250907-203621
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
           <p className="text-white font-medium">Ready to explore Zion?</p>;
@@ -500,6 +539,13 @@ export function FloatingCTA() {;
           </Button>;
           <button;
             onClick={handleClose}
+<<<<<<< HEAD
+            className="text-zion-slate hover: text-white p-1";
+            aria-label="Close";
+          >;
+
+            <X className="w-5 h-5" />;
+=======
 <<<<<<< HEAD
             className=text-zion-slate hover: text-white p-1";"
             aria-label=Close;
@@ -569,6 +615,7 @@ export function FloatingCTA() {
           >;<X className=w-5 h-5 />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           </button>;
         </div>;
@@ -586,6 +633,8 @@ if (return null) {}
   $2;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (
     <div className='fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in>;
   )}}, [is_closed])const handle_close = () =>: any {setIsClosed (true)setIsVisible (false)setIsVisible (false)}
@@ -602,6 +651,7 @@ if (return null) {$2;
         </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <div className='flex items - center gap - 2>;
           <Button;
@@ -619,6 +669,8 @@ if (return null) {$2;
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}
 }, [is_closed])return (<div className=fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in > <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between" > <div className=mr - 4 > <p className="text - white font - medium" >Ready to explore Zion?</p> <p className=text - zion - slate - light text - sm >Register today to access all features!</p> </div> <div className="flex items - center gap - 2" > <Button variant=default size="sm" className=bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap as_child > <Link href="/signup" >Register Now</Link> </Button> <button aria - label=Close w - 5 h - 5" /> </button> </div> </div> </div>)}";
       {/* Backdrop */}
@@ -627,6 +679,7 @@ if (return null) {$2;
             className=fixed inset - 0 bg - black / 20 z - 40";initial={{ opacity: 0 }}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }
 }, [is_closed]);"
@@ -663,6 +716,8 @@ pr-12325
 '";
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 ;
 }
@@ -679,6 +734,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })}}, [isClosed])return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className=bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between > <div className="mr-4" > <p className=text-white font-medium >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className=flex items-center gap-2 > <Button variant="default" size=sm className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href=/signup >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5 /> </button> </div> </div> </div>)}';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 });
 }
@@ -688,5 +744,9 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }'"
 =======
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
+<<<<<<< HEAD
+}'"
+=======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

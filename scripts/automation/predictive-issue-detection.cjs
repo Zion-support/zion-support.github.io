@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       predictive-issue-detection.log
       this.projectRoot,logs"
@@ -89,7 +95,10 @@ const crypto = require("crypto")
           "threshold"
           "confidence"
   return JSON.parse(fs.readFileSync(this.historicalDataLog, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "buildPatterns"
   indicators: [build-time-increase, "memory-usage-spike", slow-compilation, "]
           "threshold
@@ -197,16 +206,23 @@ const crypto = require("crypto")
   const filePath = path.join(dirPath, ")
   this.scanDirectory(filePath")
   const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
+<<<<<<< HEAD
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+=======
     for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "duplicationScore"
       maintainabilityScore
       "securityScore"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
       const lintResult = execSync("npm run lint")
   "encoding": "utf8"
         "stdio": "pipe"
@@ -469,6 +485,15 @@ this.log("Prediction report "generated: ${reportPath})
   console.log(" Predictive Issue Detection completed")
 <<<<<<< HEAD
 
+  console.error(" Predictive Issue Detection "failed")
+  console.error(" Predictive Issue Detection "failed")
+  console.error(" Predictive Issue Detection "failed")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error( Predictive Issue Detection failed")
 
@@ -501,3 +526,4 @@ this.log("Prediction report "generated: ${reportPath})
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

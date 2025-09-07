@@ -8,6 +8,31 @@ const UiUxDesignChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+const UiUxDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />UiUxDesignChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"UiUxDesignChat blog post\" />{\" \"}
+;
+  const UiUxDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"UiUxDesignChat blog post\" />;
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"UiUxDesignChat blog post\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const UiUxDesignChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+=======
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
@@ -40,6 +65,7 @@ const UiUxDesignChat: NextPage = () => {
     <div />
       <Head />
 ;
+>>>>>>> merged-prs-20250907-203621
   const UiUxDesignChat: NextPage = () => {;
   return (
     <div />;
@@ -47,16 +73,22 @@ const UiUxDesignChat: NextPage = () => {
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 }
 return (;
 =======
+>>>>>>> merged-prs-20250907-203621
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const UiUxDesignChat: NextPage = () => {
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <div>
 </div>
       <Head>
@@ -68,6 +100,9 @@ const UiUxDesignChat: NextPage = () => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
 const UiUxDesignChat: NextPage = () => {
   return (
     <div />
@@ -75,7 +110,10 @@ const UiUxDesignChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
@@ -114,17 +152,23 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title > UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}"
 =======
+>>>>>>> merged-prs-20250907-203621
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"UiUxDesignChat blog post\" />{\" \"}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Head>;
       <main />;
         <h1  /> UiUxDesignChat</h1>;
@@ -149,17 +193,23 @@ export default UiUxDesignChat;<div />;
   )},export default UiUxDesignChat;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}"
 =======
+>>>>>>> merged-prs-20250907-203621
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"UiUxDesignChat blog post\" />{\" \"}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Head>;
       <main />;
         <h1 />UiUxDesignChat</h1>;
@@ -176,9 +226,13 @@ export default UiUxDesignChat;<title />UiUxDesignChat - Zion Tech Solutions</tit
 
 export default UiUxDesignChat;
 <<<<<<< HEAD
+const UiUxDesignChat: NextPage = () => {
+=======
+<<<<<<< HEAD
 =======
 const UiUxDesignChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  ;
   return (
     <div />
@@ -201,9 +255,13 @@ export default UiUxDesignChat;
         <title />UiUxDesignChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+const UiUxDesignChat: NextPage = () => {
+=======
+<<<<<<< HEAD
 =======
 const UiUxDesignChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  ;
   return (
     <div />

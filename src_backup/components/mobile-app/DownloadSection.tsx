@@ -81,16 +81,21 @@ export const DownloadSection: React.FC = () => {
                 onGooglePlayClick={() => logInfo("Google Play button clicked)}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               
 
               <div className=text-sm text-gray-400">
 =======
+>>>>>>> merged-prs-20250907-203621
               <div className="text-sm text-gray-400">
 >>>>>>> origin/chore/fix-lint-and-merge
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 ;
@@ -108,6 +113,7 @@ export const DownloadSection: React.FC = () => {// These would typically come fr
   const appStoreUrl = "#, // Replace with actual App Store URL when available;
   const googlePlayUrl = #", // Replace with actual Google Play URL when available;
   return (<section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/DownloadSection.tsx
             <div className=flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg>
@@ -154,10 +160,13 @@ export const DownloadSection: React.FC = () => {
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <div className="text - sm text - gray - 400">;
               <div className=text - sm text - gray - 400>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
@@ -179,9 +188,12 @@ export const DownloadSection: React.FC = () => {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <div className=flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
 
                 <QrCodeIcon className=w-full h-full p-2 />;
@@ -202,6 +214,8 @@ export const DownloadSection: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 {/* This would be replaced with an actual QR code in production */}
                 <QrCodeIcon className=w - full h - full p - 2 />;{/* This would be replaced with an actual QR code in production */}
@@ -257,6 +271,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 ";
 
             <div className=flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg>

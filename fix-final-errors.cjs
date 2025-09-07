@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<<< HEAD:fix-final-errors.cjs
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -45,11 +48,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 // Final targeted fixes for remaining errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -149,6 +151,8 @@ files.forEach(file => {
 });
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Final targeted fixes for remaining errorsconst fixes = [/ Fix missing semicolons in import statements {" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*$/gm,"" replacement: "import { $1 } from \"$2\";" }, / Fix malformed import statements {"" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*export\s*default\s*function/g,"" replacement: "import { $1 } from \"$2\";\n\nexport default function" }, / Fix missing semicolons after import statements {" pattern: /import\s+([^]+)\s*$/gm,"" replacement: "import $1;" }, / Fix unterminated string literals {"" pattern: /"([^"]*)\s*$/gm,"" replacement: "\"$1\";" }, / Fix malformed function declarations {" pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,"" replacement: "export default function $1() {\n return (" }, / Fix missing closing brackets {" pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix malformed JSX {" pattern: /<\/div>\s*;\s*$/gm,"" replacement: "</div>\n );\n}" }, / Fix missing semicolons in object properties {"" pattern: /(\w+):\s*"([^"]*)",\s*$/gm,"" replacement: "$1: \"$2\"," }, / Fix malformed array declarations {" pattern: /const\s+(\w+)\s*=\s*\[\s*$/gm,"" replacement: "const $1 = [\n " }, / Fix missing commas in arrays {"" pattern: /"([^"]*)"\s*;\s*"([^"]*)"/g,"" replacement: "\"$1\",\n \"$2\"" }];function fixFile(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); let originalContent = content; / Apply fixes fixes.forEach(fix => { content = content.replace(fix.pattern, fix.replacement)}); / Additional cleanup content = content" .replace(/;\s*;\s*/g, ";\n")" .replace(/,\s*,\s*/g, ",\n")" .replace(/\s+$/gm, "") / Remove trailing whitespace .trim(); / Ensure proper file ending" if (!content.endsWith("}") && !content.endsWith(";")) {" content += "\n}"} if (content !== originalContent) { fs.writeFileSync(filePath, content);" console.log(`Fixed: ${filePath}`); return true} return false} catch (error) {` console.error(`Error fixing ${filePath}:`, error.message); return false}}function findTsxFiles(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); " if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {" traverse(fullPath)} else if (item.endsWith(".tsx") | item.endsWith(".jsx")) { files.push(fullPath)} } } traverse(dir); return files}/ Main execution"const srcDir = path.join(__dirname, "src");const files = findTsxFiles(srcDir);`console.log(`Found ${files.length} files to check.`);let fixedCount = 0;files.forEach(file => { if (fixFile(file)) { fixedCount++}});`console.log(`Fixed ${fixedCount} files.`);'"`'"`
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +176,7 @@ files.forEach(file => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
@@ -206,6 +211,11 @@ main
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -214,18 +224,15 @@ const path = require('path')
     "pattern"
     "replacement"
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
-=======
-// Final targeted fixes for remaining errors;
-const fixes = [// Fix missing semicolons in import statements;
-  {]
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "replacement"
     "pattern"
     "replacement"
     "replacement"
+    "pattern"
 <<<<<<< HEAD
-    "pattern"
+    "replacement"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,6 +240,14 @@ const fixes = [// Fix missing semicolons in import statements;
 
 
     "replacement"
+=======
+=======
+    "replacement"
+<<<<<<<< HEAD:fix-final-errors.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     "replacement"
 <<<<<<< HEAD
 =======
@@ -370,6 +385,7 @@ console.log(`Fixed final errors in ${fixedCount} files.`);
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     "replacement"
@@ -394,3 +410,9 @@ console.log(`Fixed final errors in ${fixedCount} files.`);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+========
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

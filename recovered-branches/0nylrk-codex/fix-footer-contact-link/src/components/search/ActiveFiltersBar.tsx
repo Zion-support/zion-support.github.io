@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import React from "react",
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { X } from "lucide-react";
+interface ActiveFiltersBarProps {
+  selectedProductTypes: string[],
+  selectedLocations: string[],
+  selectedAvailability: string[],
+  selectedRating: number | null,
+  searchQuery: string,
+  onRemoveFilter: (filterType: string, value: string) => void,
+  onRemoveRating: () => void,
+  onClearSearch: () => void
+}
+
+=======
+<<<<<<< HEAD
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
@@ -111,6 +128,211 @@ import { X } from "lucide-react",;
 
 import {X} from "lucide-react";
 
+=======
+
+
+
+<<<<<<< HEAD
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+import React from "react",
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { X } from "lucide-react";
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { X } from "lucide-react",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface ActiveFiltersBarProps {
+
+>>>>>>> merged-prs-20250907-203621
+  selectedProductTypes: string[]
+  selectedLocations: string[]
+  selectedAvailability: string[]
+  selectedRating: number | null
+  searchQuery: string
+  onRemoveFilter: (filterType: string, value: string) => void
+  onRemoveRating: () => void
+
+  onClearSearch: () => void
+}
+<<<<<<< HEAD
+export function ActiveFiltersBar({
+=======
+
+<<<<<<< HEAD
+export function ActiveFiltersBar({;
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+export function ActiveFiltersBar({
+  selectedProductTypes,
+  selectedLocations,
+  selectedAvailability,
+  selectedRating,
+  searchQuery,
+  onRemoveFilter,
+  onRemoveRating,
+>>>>>>> merged-prs-20250907-203621
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+export function ActiveFiltersBar({
+  selectedProductTypes,
+  selectedLocations,
+  selectedAvailability,
+  selectedRating,
+  searchQuery,
+  onRemoveFilter,
+  onRemoveRating,
+  onClearSearch
+}: ActiveFiltersBarProps) {
+<<<<<<< HEAD
+  const hasActiveFilters = $2;
+=======
+
+  const hasActiveFilters =
+    selectedProductTypes.length > 0 |
+    selectedLocations.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRating !== null |
+    !!searchQuery;
+  if (!hasActiveFilters) return null;
+
+  const hasActiveFilters = 
+    selectedProductTypes.length > 0 || 
+    selectedLocations.length > 0 || 
+    selectedAvailability.length > 0 || 
+    selectedRating !== null ||
+    !!searchQuery,
+    
+>>>>>>> merged-prs-20250907-203621
+  if (!hasActiveFilters) return null,
+  
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
+      {searchQuery && (
+<<<<<<< HEAD
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { X } from "lucide-react",;
+interface ActiveFiltersBarProps {;
+  selectedProductTypes: string[],;
+  selectedLocations: string[],;
+  selectedAvailability: string[],;
+  selectedRating: number | null,;
+  searchQuery: string,;
+  onRemoveFilter: (filterType: string, value: string) => void,;
+  onRemoveRating: () => void,;
+  onClearSearch: () => void;
+}
+;
+export function ActiveFiltersBar({;
+  selectedProductTypes,;
+  selectedLocations,;
+  selectedAvailability,;
+  selectedRating,;
+  searchQuery,;
+  onRemoveFilter,;
+  onRemoveRating,;
+  onClearSearch;
+}: ActiveFiltersBarProps) {;
+  const hasActiveFilters =;
+    selectedProductTypes.length > 0 ||;
+    selectedLocations.length > 0 ||;
+    selectedAvailability.length > 0 ||;
+    selectedRating !== null ||;
+    !!searchQuery;
+  if (!hasActiveFilters) return null;
+  return (;
+    <div className="flex flex-wrap gap-2 items-center mb-4">;
+      <span className="text-sm text-zion-slate-light">Active filters:</span>;
+      {searchQuery && (;
+        <ClickableBadge;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={onClearSearch}
+        >
+          Search: {searchQuery}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+      {selectedProductTypes.map(type => (
+=======
+  onClearSearch;
+}: ActiveFiltersBarProps) {;
+  const hasActiveFilters = ;
+    selectedProductTypes && selectedProductTypes.length > 0 || ;
+    selectedLocations && selectedLocations.length > 0 || ;
+    selectedAvailability && selectedAvailability.length > 0 || ;
+    selectedRating !== null ||;
+    !!searchQuery;
+  if (!hasActiveFilters) return null;
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">;
+      <span className="text-sm text-zion-slate-light">Active filters:</span>;
+      {searchQuery && (;
+
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}>;
+
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+
+          onClick={onClearSearch}
+        >
+          Search: {searchQuery}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      )}
+      {selectedProductTypes && selectedProductTypes.map(type => (;
+>>>>>>> merged-prs-20250907-203621
+        <ClickableBadge
+          key={`type-${type}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('productTypes', type)}
+<<<<<<< HEAD
+=======
+
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { X } from "lucide-react",;
+;
+interface ActiveFiltersBarProps {;
+  selectedProductTypes:string[],;
+  selectedLocations:string[],;
+  selectedAvailability:string[],;
+  selectedRating:number | null,;
+  searchQuery:string,;
+  onRemoveFilter:(filterType:string, value:string) => void,;
+  onRemoveRating:() => void,;
+  onClearSearch:() => void;
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { X } from "lucide-react",;
+=======
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
   selectedLocations: string[],;
@@ -122,6 +344,39 @@ interface ActiveFiltersBarProps {;
   onRemoveRating: () => void,;
   onClearSearch: () => void;
 }
+<<<<<<< HEAD
+;
+export function ActiveFiltersBar({;
+  selectedProductTypes,;
+  selectedLocations,;
+  selectedAvailability,;
+  selectedRating,;
+  searchQuery,;
+  onRemoveFilter,;
+  onRemoveRating,;
+  onClearSearch;
+}: ActiveFiltersBarProps) {;
+  const hasActiveFilters =;
+    selectedProductTypes.length > 0 ||;
+    selectedLocations.length > 0 ||;
+    selectedAvailability.length > 0 ||;
+    selectedRating !== null ||;
+    !!searchQuery;
+  if (!hasActiveFilters) return null;
+  return (;
+    <div className="flex flex-wrap gap-2 items-center mb-4">;
+      <span className="text-sm text-zion-slate-light">Active filters:</span>;
+      {searchQuery && (;
+        <ClickableBadge;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={onClearSearch}
+        >
+          Search: {searchQuery}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+      {selectedProductTypes.map(type => (
+=======
 
 export function ActiveFiltersBar(): any ({;
 
@@ -178,10 +433,34 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD
         <ClickableBadge;`
           key={`type-${type}`}"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"'
+=======
+
+
+      {selectedProductTypes && selectedProductTypes.map(type => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <ClickableBadge
+          key={`type-${type}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           onClick={() => onRemoveFilter('productTypes', type)}
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+        >
+          {type}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+<<<<<<< HEAD
+      ))}
+      {selectedLocations.map(location => (
+=======
+      ))}
+      {selectedLocations.map(location => (
+=======
         >;
           {type}"
           <X className="h-3 w-3" />;
@@ -194,6 +473,7 @@ export function ActiveFiltersBar(): any ({;
         </ClickableBadge>;
       ))}
 
+<<<<<<< HEAD
       {selectedRating !== null && (;
 
         <ClickableBadge
@@ -201,6 +481,70 @@ export function ActiveFiltersBar(): any ({;
           onClick={onRemoveRating}>;
 ;
       {selectedRating !== null && (;
+=======
+
+      {selectedLocations && selectedLocations.map(location => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
+        <ClickableBadge
+          key={`location-${location}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('locations', location)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ;
+      {selectedLocations.map(location => (;
+        <ClickableBadge ;
+          key={`location-${location}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('locations', location)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        >;
+          {location}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+        >
+          {location}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      ))}
+      {selectedAvailability.map(availability => (
+<<<<<<< HEAD
+=======
+=======
+
+
+      {selectedAvailability && selectedAvailability.map(availability => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
+        <ClickableBadge
+          key={`availability-${availability}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('availability', availability)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ;
+      {selectedAvailability.map(availability => (;
+        <ClickableBadge ;
+          key={`availability-${availability}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('availability', availability)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        >;
+          {availability}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+      ;
+      {selectedRating !== null && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <ClickableBadge ;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={onRemoveRating}
@@ -210,7 +554,11 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD
 
+=======
+    </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 
@@ -239,7 +587,11 @@ interface ActiveFiltersBarProps {}
         </ClickableBadge>)}
     </div>);
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ),;}
  interface ActiveFiltersBarProps {
   selectedProductTypes: string[];
@@ -260,6 +612,7 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 }> </ClickableBadge>) 
 }{
   selectedProductTypes.map (type => (<ClickableBadge key= {
+<<<<<<< HEAD
 
     </div>);"
 return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span className="text-sm text-zion-slate-light" >Active filters:</span> {"
@@ -290,8 +643,59 @@ pr-12325
 </ClickableBadge>"
           <X className="h-3 w-3" />"
 </X>
+=======
+  `type-$ {
+  type 
+}` 
+}</ClickableBadge>) ) 
+}{
+  selectedLocations.map (location => (<ClickableBadge key= {
+  `location-$ {
+  location 
+}` 
+}</ClickableBadge>) ) 
+}{
+  selectedAvailability.map (availability => (<ClickableBadge key= {
+  `availability-$ {
+  availability 
+}` 
+}</ClickableBadge>) ) 
+}{
+  selectedRating !== null && (<ClickableBadge className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2" onClick= {
+  onRemoveRating 
+}> </ClickableBadge>) 
+}</div>) 
+}
+>>>>>>> merged-prs-20250907-203621
+        >
+          {availability}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      ))}
+      {selectedRating !== null && (
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onRemoveRating}
+        >
+          {selectedRating}+ Stars
+          <X className="h-3 w-3" />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
         </ClickableBadge>
       )}
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

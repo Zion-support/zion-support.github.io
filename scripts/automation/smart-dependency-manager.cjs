@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -133,6 +136,8 @@ const { execSync } = require("child_process")
 console.log( Applied ${updatesApplied} smart updates)
   try {const packageJsonPath = require.resolve("${packageName}/package.json")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, utf8)
@@ -167,6 +172,7 @@ console.log( Applied ${updatesApplied} smart updates)
   console.error(` Smart Dependency Manager failed": "`)
 
 =======
+>>>>>>> merged-prs-20250907-203621
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
     const requiredMajor = required.split(".")
     const installedMajor = installed.split(".")
@@ -188,11 +194,21 @@ console.log( Applied ${updatesApplied} smart updates)
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(` Smart Dependency Manager "failed": "`)
+<<<<<<< HEAD
+  console.error(` Smart Dependency Manager "failed": "`)
+  console.error(` Smart Dependency Manager "failed": "`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -210,3 +226,4 @@ console.log( Applied ${updatesApplied} smart updates)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

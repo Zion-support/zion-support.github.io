@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -50,7 +53,10 @@ const { execSync } = require("child_process")
         return packageJson.version || "Unknown"
     } catch (error) {  this.log(`Failed to get project "version": ${error.message  }`, "WARN"`)
     return "Unknown"
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   const result = execSync("git log -1 --format=")
   const result = execSync(git log -1 --format=%H %s %an %ad)
   "cwd"
@@ -66,6 +72,15 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
         "encoding": "utf8"
   return "Unknown"
+<<<<<<< HEAD
+  return "Unknown"
+  const result = execSync("git branch --show-current")
+  "cwd"
+        "stdio": "pipe"
+        "encoding": "utf8"
+  return "Unknown"
+=======
+>>>>>>> merged-prs-20250907-203621
   "status": "UNKNOWN"
 >>>>>>> origin/chore/fix-lint-and-merge
       "issues"
@@ -159,14 +174,22 @@ const { execSync } = require("child_process")
       "backupFiles"
       "issues"
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD
+  health.issues.push(Found ${corrupted.length} corrupted source files")
+  if($2) {health.issues.push(`Found ${backupFiles.length} backup files``)
+  health.status = "HEALTHY"
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
   health.issues.push(Found ${corrupted.length} corrupted source files")
       if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files``)
   health.status = HEALTHY
+>>>>>>> merged-prs-20250907-203621
   health.status = "CRITICAL"
   health.status = WARNING
     } catch (error) {  health.issues.push("File health check "failed: ${error.message  })
       health.status = "ERROR"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
               content.includes("from,")
@@ -174,6 +197,7 @@ const { execSync } = require("child_process")
     } catch (error) {  this.log(`Error scanning directory ${dir  }: ${error.message}`, "WARN"`)
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const files = fs.readdirSync(dir, { "withFileTypes"})
           (file.name.endsWith(".tsx") || file.name.endsWith(".ts")
   const content = fs.readFileSync(fullPath, "utf8")
@@ -201,10 +225,14 @@ const { execSync } = require("child_process")
       .replace(/\*/g, .*)
       .replace(/\?/g, ".")
 <<<<<<< HEAD
+  const items = fs.readdirSync(dir, { "withFileTypes"})
+=======
+<<<<<<< HEAD
 
 =======
   const items = fs.readdirSync(dir, { "withFileTypes"})
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           !item.name.startsWith(".")
           item.name !== node_modules
           !item.name.startsWith(".")
@@ -314,8 +342,11 @@ const { execSync } = require("child_process")
         <div class=timestamp">            Generated at
 </body></html>"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   return "<div class="issues-list><div class=issue style="background": #f0fdf4; color: #059669;>✓ No issues found</div></div>"
     return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠ ${issue}</div>`).join("")}</div>"
     const htmlFile = path.join(this.dashboardDir, "index.html")
@@ -326,7 +357,10 @@ const { execSync } = require("child_process")
     const htmlFile = path.join(this.dashboardDir, "index.html")
     const jsonFile = path.join(this.dashboardDir, "health-data.json")
     const timestampFile = path.join(this.dashboardDir, "last-updated.txt")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "timestamp"
       overallStatus
       "summary"
@@ -374,6 +408,12 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.files.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
 <<<<<<< HEAD
+
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -393,6 +433,7 @@ this.log("Summary report "generated": ${summaryFile}")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
 </html>"
             <p><strong>"Branch
@@ -406,5 +447,8 @@ this.log("Summary report "generated": ${summaryFile}")
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

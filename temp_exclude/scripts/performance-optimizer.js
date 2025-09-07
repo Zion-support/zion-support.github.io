@@ -127,6 +127,10 @@ class PerformanceMonitor {
       // Monitor page load time
       window.addEventListener('load', () => {
     this.metrics.pageLoadTime = performance.now(),
+<<<<<<< HEAD
+=======
+        this.reportMetrics()});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ;
 #!/usr/bin/env node;
@@ -150,6 +154,7 @@ const fs = // // require('fs')const path = // // require('path')const glob = // 
           // Add useMemo to expensive calculations;
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {fileOptimizations++;}
           }
+<<<<<<< HEAD
         }
         // Optimize imports - remove unused imports;
         const importLines = newContent.split('\n').filter(line => line.trim().startsWith('import'))const usedImports = new Set()// Simple heuristic to find used imports;
@@ -172,3 +177,59 @@ const fs = // // require('fs')const path = // // require('path')class Performanc
     }}
   startMonitoring() {if (typeof window !== 'undefined') {// Monitor page load time;}
       window.addEventListener('load', () => {this.metrics.pageLoadTime = performance.now(),}
+=======
+        });
+
+        observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
+    }
+  }
+  reportMetrics() {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance "Metrics": ', this.metrics)}
+
+    // Send to analytics in production
+    if (typeof gtag !== 'undefined') {
+      Object.entries(this.metrics).forEach(([key, value]) => {
+        gtag('event', key, {
+
+
+          "event_category": 'Performance',
+          "value": Math.round(value),
+          "non_interaction": true
+        })})}
+  }
+}
+export default PerformanceMonitor;";
+
+    const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
+    const utilsDir = path.dirname(scriptPath);
+    if (!fs.existsSync(utilsDir)) {
+      fs.mkdirSync(utilsDir, { "recursive": true })}
+    fs.writeFileSync(scriptPath, monitoringScript);
+    this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
+
+}
+// Run the script
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.optimizePerformance()
+    .then(() => optimizer.createPerformanceMonitoringScript())
+    .then(() => {
+    console.log('🎉 Performance optimization completed successfully'),
+    process.exit(0)
+  })
+    .catch((error) => {
+
+      console.error('❌ Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+      console.error('❌ Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

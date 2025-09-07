@@ -38,6 +38,28 @@ export default function NewJobPage() {
   },
 
   return (
+<<<<<<< HEAD:pages/jobs/new.tsx
+    <>
+      <Head>
+        <title>new | Zion Tech Group</title>
+        <meta name="description" content="new page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              new
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the new page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+=======
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
         <h1 className="text-lg font-semibold mb-3">Post a Job</h1>

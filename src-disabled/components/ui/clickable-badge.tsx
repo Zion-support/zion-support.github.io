@@ -15,6 +15,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
 <<<<<<< HEAD
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+=======
+<<<<<<< HEAD
 export function ClickableBadge({>;
       <span>{children}</span>;
       {onRemove && (<button;
@@ -31,6 +35,7 @@ export function ClickableBadge() {return (<div;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export function ClickableBadge({
   children;
   className;
@@ -65,6 +70,8 @@ export function ClickableBadge({
           <X className=h-3 w-3" />
         </button>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export function ClickableBadge({
 
 
@@ -75,6 +82,7 @@ export function ClickableBadge({
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import React from react",
 import { X } from lucide-react';
@@ -85,6 +93,8 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
   variant?: "default | secondary" | "destructive | outline";
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 export function ClickableBadge({
   children,
@@ -93,6 +103,7 @@ export function ClickableBadge({
   onRemove,
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   ...props;
 }:,  ClickableBadgeProps) {}: ClickableBadgeProps) {
@@ -107,15 +118,20 @@ export function ClickableBadge({
       )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   )
 }
             e.stopPropagation()
             onRemove()
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           className=ml-1 rounded-full p-0.5 hover:bg-background/20";
 
@@ -128,6 +144,7 @@ export function ClickableBadge({
           className=ml-1 rounded-full p-0.5 hover:bg-background/20";
           aria-label="Remove;
 =======
+>>>>>>> merged-prs-20250907-203621
           aria-label="Remove";
 >>>>>>> origin/chore/fix-lint-and-merge
         >;
@@ -135,6 +152,8 @@ export function ClickableBadge({
         </button>;
       )}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import React from 'react;
@@ -157,6 +176,7 @@ import { cn } from "@/lib/utils,import { badgeVariants } from @/components/ui/ba
       )}import { cn  } from @/lib / utils';
 import { badge_variants } from @/components / ui / badge - variants';
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -200,6 +220,15 @@ function ClickableBadge() {
           type='button;
           on_click={e => {
 <<<<<<< HEAD
+import React from './react';
+import { cn  } from '@/lib / utils';
+import { badge_variants  } from '@/components / ui / badge - variants';
+export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
+  on_remove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+=======
+<<<<<<< HEAD
 import React from ./react';
 import { cn  } from '@/lib / utils;
 import { badge_variants  } from @/components / ui / badge - variants';
@@ -231,6 +260,7 @@ export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivEleme
   on_remove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
+>>>>>>> merged-prs-20250907-203621
 export /**
  * ClickableBadge - Function description
  */
@@ -249,10 +279,13 @@ function ClickableBadge() {
         <button;
           type='button';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           on_click={e => {e.stop_propagation ()on_remove () }}
           className=ml - 1 rounded - full p - 0.5 hover:bg - background / 20';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           on_click={e => {
             e.stop_propagation ();
             on_remove () }}
@@ -262,11 +295,14 @@ function ClickableBadge() {
           <X className='h - 3 w - 3' />;
         </button>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>))}
             e.stop_propagation ()on_remove ()}}
           className=ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>));
 }
             e.stop_propagation ();
@@ -282,6 +318,9 @@ function ClickableBadge() {
 }
 <<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+;
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -289,3 +328,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

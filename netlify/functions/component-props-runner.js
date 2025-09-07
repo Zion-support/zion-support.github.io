@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
+=======
+<<<<<<< HEAD
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 function runNode(relPath, args = []) {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -206,20 +216,31 @@ return { "statusCode": 200, "body": logs && logs.join('\n') },;'
 },
 
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status: res && res.status || 0,
 
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -256,6 +277,7 @@ return { "status_code": 200, "body": logs.join ('\n'),;'
   return { statusCode: 200, body: logs.join('\n') };
 };
 
+>>>>>>> merged-prs-20250907-203621
 const path = require($2);
 const { spawnSync } = require($2);
 =======
@@ -265,23 +287,40 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+exports && exports.handler = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const logs = [];
   function logStep(name, fn) {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+=======
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return status;
   }'
   logStep('components:generate-docs', () =>'
     runNode('automation/component-props-docs && docs.cjs')
   );
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const abs = path.resolve(__dirname, '....', relPath),
 
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
@@ -327,12 +366,20 @@ function log_step() {}`
  */
 function run_node() { return null; }
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+<<<<<<< HEAD
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+=======
 
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 
@@ -370,13 +417,41 @@ function run_node() {'
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }'
 
 }
+<<<<<<< HEAD
 
+=======
+exports && exports.handler = async () => {
+  const logs = [],
+  function logStep(name, fn) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     logs && logs.push(`\n=== ${name} ===`),
     const { status, stdout, stderr } = fn(),
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),`
     logs && logs.push(`exit=${status}`),
+<<<<<<< HEAD
 
+=======
+    return status
+  }
+<<<<<<< HEAD
+
+  logStep('components:generate-docs', () => runNode('automation/component-props-docs.cjs')),
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
+
+  return { statusCode: 200, body: logs.join('\n') }
+},
+=======
+  logStep('components:generate-docs', () => runNode('automation/component-props-docs && docs.cjs')),
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 exports.handler = async () => {
 
   const logs = [],
@@ -398,7 +473,12 @@ function log_step() {}`
   log_step ('components:generate - docs', () => run_node ('automation / component - props - docs.cjs')),'
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
+=======
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

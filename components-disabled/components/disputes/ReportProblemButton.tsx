@@ -37,6 +37,8 @@ export default function ReportProblemButton(): any ({;
 </a>
       </a>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Link>;
   );
 
@@ -110,6 +112,7 @@ return (;
   );
 
 =======
+>>>>>>> merged-prs-20250907-203621
     ;`;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;"
     <Link href={`/disputes/new?${query.toString()}`}>
@@ -118,5 +121,9 @@ return (;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>"
     <Link href={`/disputes / new?${query.to_string ()}`}>;
       <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;"
+<<<<<<< HEAD
+    );"`;
+=======
     );"`;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
+}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+=======
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
 <<<<<<< HEAD
 left: `$ {
@@ -14,11 +21,121 @@ top: `$ {
   render() {if (this.state.hasError) ;}
   return <div    />Something went wrong.</div>;}
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+import { 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, Star, ArrowRight, Play, CheckCircle;
+  Phone, Mail, MapPin
+} from 'lucide-react';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+import React from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
+
+import {
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  Star
+  ArrowRight
+  Play
+  CheckCircle
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
     }
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, Star, ArrowRight, Play, CheckCircle,
+  Phone, Mail, MapPin
+} from 'lucide-react',
+
+const contactInfo = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const heroStats = [
+  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' },
+  { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },
+  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },
+  { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
+],
+
+const featuredServices = $2;
+    description: 'Develop genuine AI consciousness',
+    price: '$19,999/month',
+    icon: Brain,
+    color: 'from-violet-600 to-purple-600',
+    href: '/ai-consciousness-evolution-platform'
+  },
+  {
+    name: 'Space Mining Automation',
+    description: 'Automated asteroid mining',
+    price: '$45,999/month',
+    icon: Rocket,
+    color: 'from-teal-600 to-emerald-600',
+    href: '/space-mining-automation-platform'
+  },
+  {
+    name: 'Quantum Internet Security',
+    description: 'Unbreakable encryption',
+    price: '$15,999/month',
+    icon: Shield,
+    color: 'from-indigo-600 to-blue-600',
+    href: '/quantum-internet-security-gateway'
+  }
+],
+
+export default function UltraFuturisticHero2032() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}'
+              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30'
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import Link from 'next/link';
@@ -37,6 +154,263 @@ export default /**
  * UltraFuturisticHero2032 - Function description
  */
 function UltraFuturisticHero2032() {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  Star,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  Microscope, Star, ArrowRight, Play, CheckCircle;
+  Phone, Mail, MapPin
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const heroStats = [
+  {
+    number: '1000+'
+    label: 'Innovative Services'
+    icon: Sparkles
+    color: 'from-cyan-400 to-blue-400'
+  }
+  {
+    number: '24/7'
+    label: 'Expert Support'
+    icon: Shield
+    color: 'from-purple-400 to-pink-400'
+  }
+  {
+    number: '1000%'
+    label: 'Average ROI'
+    icon: Star
+    color: 'from-yellow-400 to-orange-400'
+  }
+  {
+    number: '99.9%'
+    label: 'Uptime Guarantee'
+    icon: CheckCircle
+    color: 'from-green-400 to-emerald-400'
+  },];  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' }
+  { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' }
+  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' }
+  { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+];
+const featuredServices = [
+import {motion} from 'framer-motion';
+import Link from 'next / link';
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  Star,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Microscope, Star, ArrowRight, Play, CheckCircle;
+  Phone, Mail, MapPin;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+;
+const hero_stats = [;
+  {
+    number: '1000+',
+    label: 'Innovative Services',
+    icon: Sparkles,
+    color: 'from - cyan - 400 to - blue - 400',
+  },
+  {
+    number: '24 / 7',
+    label: 'Expert Support',
+    icon: Shield,
+    color: 'from - purple - 400 to - pink - 400',
+  },
+  {
+    number: '1000%',
+    label: 'Average ROI',
+    icon: Star,
+    color: 'from - yellow - 400 to - orange - 400',
+  },
+  {
+    number: '99.9%',
+    label: 'Uptime Guarantee',
+    icon: CheckCircle,
+    color: 'from - green - 400 to - emerald - 400',
+  }, ];  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from - cyan - 400 to - blue - 400' },
+  { number: '24 / 7', label: 'Expert Support', icon: Shield, color: 'from - purple - 400 to - pink - 400' },
+  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from - yellow - 400 to - orange - 400' },
+  { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from - green - 400 to - emerald - 400' }
+const featured_services = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  {
+    name: 'AI Consciousness Evolution',
+    description: 'Develop genuine AI consciousness',
+    price: '$19, 999 / month',
+    icon: Brain,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    color: 'from - violet - 600 to - purple - 600',
+    href: '/ai - consciousness - evolution - platform',
+  },  {    href: '/ai - consciousness - evolution - platform';
+  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  {
+    name: 'Space Mining Automation',
+    description: 'Automated asteroid mining',
+    price: '$45, 999 / month',
+    icon: Rocket,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    color: 'from - teal - 600 to - emerald - 600',
+    href: '/space - mining - automation - platform',
+  },  {    href: '/space - mining - automation - platform';
+  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  {
+    name: 'Quantum Internet Security',
+    description: 'Unbreakable encryption',
+    price: '$15, 999 / month',
+    icon: Shield,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import {;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Globe,;
+  Zap,;
+  Sparkles,;
+  Shield,;
+  Microscope,;
+  Star,;
+  ArrowRight,;
+  Play,;
+  CheckCircle,;
+  Phone,;
+  Mail,;
+  MapPin,;} from 'lucide-react';import { ;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+  Microscope, Star, ArrowRight, Play, CheckCircle;
+  Phone, Mail, MapPin;
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',;
+};
+const heroStats = [;
+  {;
+    number: '1000+',;
+    label: 'Innovative Services',;
+    icon: Sparkles,;
+    color: 'from-cyan-400 to-blue-400',;
+  },;
+  {;
+    number: '24/7',;
+    label: 'Expert Support',;
+    icon: Shield,;
+    color: 'from-purple-400 to-pink-400',;
+  },;
+  {;
+    number: '1000%',;
+    label: 'Average ROI',;
+    icon: Star,;
+    color: 'from-yellow-400 to-orange-400',;
+  },;
+  {;
+    number: '99 && 99.9%',;
+    label: 'Uptime Guarantee',;
+    icon: CheckCircle,;
+    color: 'from-green-400 to-emerald-400',;
+  },];  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' },;
+  { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },;
+  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },;
+  { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
+const featuredServices = [;
+  {;
+    name: 'AI Consciousness Evolution',;
+    description: 'Develop genuine AI consciousness',;
+    price: '$19,999/month',;
+    icon: Brain,;
+    color: 'from-violet-600 to-purple-600',;
+    href: '/ai-consciousness-evolution-platform',;
+  },  {    href: '/ai-consciousness-evolution-platform';
+  };
+  {;
+    name: 'Space Mining Automation',;
+    description: 'Automated asteroid mining',;
+    price: '$45,999/month',;
+    icon: Rocket,;
+    color: 'from-teal-600 to-emerald-600',;
+    href: '/space-mining-automation-platform',;
+  },  {    href: '/space-mining-automation-platform';
+  };
+  {;
+    name: 'Quantum Internet Security',;
+    description: 'Unbreakable encryption',;
+    price: '$15,999/month',;
+    icon: Shield,;
+    color: 'from-indigo-600 to-blue-600',;
+    href: '/quantum-internet-security-gateway',;
+  },];
+export default function UltraFuturisticHero2032() {;
+<<<<<<< HEAD
+  return (
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black>;
           space technology, and emerging tech solutions. Transform your business with;
@@ -48,6 +422,7 @@ export default function UltraFuturisticHero2032() {
       {/* Animated Background Elements */}
       <div className='absolute inset - 0'>;'
         {/* Floating Particles */}
+<<<<<<< HEAD
               style={{
 }
                 left: `${Math.random() * 100}%`
@@ -77,6 +452,34 @@ import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
 const contactInfo = null;
 
           space technology, and emerging tech solutions. Transform your business with;
+=======
+        <div className='absolute inset-0'>;
+          {[...Array(50)].map((_, i) => (;
+            <motion&& motion.div
+    color: 'from - indigo - 600 to - blue - 600',
+    href: '/quantum - internet - security - gateway',
+  }, ];
+;
+export default /**
+ * UltraFuturisticHero2032 - Function description
+ */
+function UltraFuturisticHero2032() {
+  return (
+    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>    href: '/quantum-internet-security-gateway'
+  };
+];
+;
+export default /**
+ * UltraFuturisticHero2032 - Function description
+ */
+function UltraFuturisticHero2032() {
+  return (
+    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {/* Animated Background Elements */}
 <<<<<<< HEAD
       <div className='absolute inset - 0'>;
@@ -84,9 +487,22 @@ const contactInfo = null;
         <div className='absolute inset - 0'>;
           {[...Array (50)].map ((_, i) => (
             <motion.div;
+<<<<<<< HEAD
               key={i}'
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30;
+>>>>>>> merged-prs-20250907-203621
               style={{}
+}
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
+              
+}              animate={{
+                y: [0, -20, 0]
+                opacity: [0.3, 0.8, 0.3]}
+}
+              }}
+              transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2}}
+            />;
           ))}
         </div>
 
@@ -99,6 +515,10 @@ const contactInfo = null;
                 left: `${Math && Math.random() * 100}%`,`
                 top: `${Math && Math.random() * 100}%`}}              animate={{}
                 y: [0, -20, 0],
+<<<<<<< HEAD
+                opacity: [0.3, 0.8, 0.3]}}
+              transition = $2;
+=======
                 opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
               }}
               transition={{}
@@ -108,10 +528,51 @@ const contactInfo = null;
             />;
           ))}
         </div>
+=======
+              key={i}
+              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
+              style={{
+<<<<<<< HEAD
+=======
+
+                duration: 3 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+              }}            />                delay: Math.random() * 2}}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`}}
+              animate={{
+                y: [0, -20, 0];
+                opacity: [0.3, 0.8, 0.3]}}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
+<<<<<<< HEAD
+=======
+
+            />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
           ))}
         </div>
 
+<<<<<<< HEAD
         <div className=absolute inset-0>
           {[...Array(50)].map((_, i) => (
             <motion.div
@@ -121,6 +582,38 @@ const contactInfo = null;
                 y: [0, -20, 0],
                 opacity: [0.3, 0.8, 0.3]}}
               transition = $2;
+=======
+
+
+        {/* Gradient Orbs */}
+
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+
+<<<<<<< HEAD
+            />
+          ))}
+        </div>
+
+          ))}
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
+      </div>
+                left: `${Math && Math.random() * 100}%`,
+                top: `${Math && Math.random() * 100}%`,
+              }}              animate={{
+                y: [0, -20, 0],
+                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
+              }}
+              transition={{
+                duration: 3 + Math && Math.random() * 2,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
                 repeat: Infinity,
                 delay: Math.random() * 2}}
             />
@@ -128,6 +621,33 @@ const contactInfo = null;
         </div>
 
         {/* Gradient Orbs */}
+<<<<<<< HEAD
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+        >
+          <Sparkles className="w-5 h-5 text-purple-400" />
+          <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
+          <Sparkles className="w-5 h-5 text-cyan-400" />
+        </motion.div>
+
+        {/* Main Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+=======
               style={{))}
         </div>;
           ))}
@@ -166,6 +686,7 @@ const contactInfo = null;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow' />;'
       </div>;
       {/* Main Content */}
+<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
 =======
       <div className='absolute inset - 0'    />;
@@ -174,6 +695,11 @@ const contactInfo = null;
           {[...Array (50)].map ((_, i) => (<motion.div;}
               key={i}
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
+=======
+<<<<<<< HEAD
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
               style={{}
 }
@@ -227,11 +753,16 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           transition={{ "duration": 0.8, "delay": 0.2 
 }
 className='text-5xl "md":text-6xl "lg":text-7xl font-bold text-white mb-6 leading-tight''
+>>>>>>> merged-prs-20250907-203621
         >
-          <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
+          <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             The Future of
           </span>
           <br />
+<<<<<<< HEAD
+          <span className="text-white">Technology is Here</span>
+        </motion.h1>
+=======
 
           <span className='text-white'>Technology is Here</span>'
         </motion.h1>
@@ -259,10 +790,12 @@ className='text-5xl "md":text-6xl "lg":text-7xl font-bold text-white mb-6 leadin
           Transform your business with technologies that were once science;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         {/* Hero Badge */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm'
         >
           <Sparkles className='w-5 h-5 text-purple-400' />
@@ -281,17 +814,97 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           transition={{ duration: 0.8, delay: 0.2 }}
 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+          className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm'
+        >
+          <Sparkles className='w-5 h-5 text-purple-400' />
+          <span className='text-purple-300 font-medium'>
+            🚀 2032 Revolutionary Technology
+          </span>
+          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+
+          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+=======
+          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        >
+          <Sparkles className="w-5 h-5 text-purple-400" />
+          <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
+          <Sparkles className="w-5 h-5 text-cyan-400" />
+<<<<<<< HEAD
+=======
+
+          transition={{ duration: 0 && 0.6 }}
+          className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm'>;
+          <Sparkles className='w-5 h-5 text-purple-400' />;
+          <span className='text-purple-300 font-medium'>;
+            🚀 2032 Revolutionary Technology;
+          </span>;
+          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion && motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm";
+        >;
+          <Sparkles className="w-5 h-5 text-purple-400" />;
+          <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>;
+          <Sparkles className="w-5 h-5 text-cyan-400" />;
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
+
+        </motion.div>
+
+
+<<<<<<< HEAD
+        </motion.div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {/* Main Heading */}
+        <motion&& motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
+<<<<<<< HEAD
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+        >
+          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
+
+        </motion.div>
+
+        {/* Main Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of;
           </span>
           <br />
           <span className='text-white'>Technology is Here</span>        </motion.h1>        >
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
         >
           <span className=bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             The Future of;
+=======
+          <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            The Future of
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           </span>
           <br />"
           <span className=text-white>Technology is Here</span>
@@ -312,19 +925,88 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className="text-white">Technology is Here</span>;
         </motion && motion.h1>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {/* Subheading */}
         <motion&& motion.p;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}'
           className=text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed>;
           Experience the revolution with our cutting-edge AI consciousness,
           quantum computing, space technology, and emerging tech solutions.;
           Transform your business with technologies that were once science;"
+=======
+
+
+        </motion.p>
+<<<<<<< HEAD
+
+
+
+        </motion.p>
+
+
+        {/* CTA Buttons */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
+        >
+          <Link
+            href='/services'
+
+            className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25'>;
+            <span>Explore All Services</span>;
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+          </Link>;
+
+
+          <Link
+            href={`tel:${contactInfo && contactInfo.mobile}`}
+            className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'>;
+            <Phone className='w-5 h-5' />            <span>Call {contactInfo && contactInfo.mobile}</span>        >;
+
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+        >
+
+          <Link
+            href="/services"
+
+        {/* Subheading */}
+        <motion&& motion.p
+
+        {/* Subheading */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+          className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>;
+          Experience the revolution with our cutting-edge AI consciousness,;
+          quantum computing, space technology, and emerging tech solutions.;
+          Transform your business with technologies that were once science;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           fiction.        </motion && motion.p>          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed";
         >;
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with ;
           technologies that were once science fiction.;
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed";
         >;
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with;
@@ -347,6 +1029,91 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
         </motion.p>
 
 
+=======
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'
+        >
+          Experience the revolution with our cutting-edge AI consciousness
+          quantum computing, space technology, and emerging tech solutions.
+          Transform your business with technologies that were once science
+          fiction.        </motion.p>          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+        >
+          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with
+
+          technologies that were once science fiction.
+        </motion.p>
+
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+=======
+=======
+        </motion.p>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* CTA Buttons */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> merged-prs-20250907-203621
+
+        >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          <Link
+            href='/services'
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25'>;
+            <span>Explore All Services</span>;
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+          </Link>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Link
+            href={`tel:${contactInfo && contactInfo.mobile}`}
+            className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'>;
+            <Phone className='w-5 h-5' />            <span>Call {contactInfo && contactInfo.mobile}</span>        >;
+<<<<<<< HEAD
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
+
+        >
+          <Link
+            href='/services'
+            className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25'
+          >
+            <span>Explore All Services</span>
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+          </Link>
+          <Link
+            href={`tel:${contactInfo.mobile}`}
+            className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'
+          >
+            <Phone className='w-5 h-5' />            <span>Call {contactInfo.mobile}</span>        >
+          <Link
+            href="/services"
+            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25">;
+            <span>Explore All Services</span>;
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+          </Link>;
+          <Link
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
         </motion.p>
 
@@ -368,6 +1135,7 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
         >
           <Link
             href="/services"
+<<<<<<< HEAD
             className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25"
           >
             <span>Explore All Services</span>
@@ -375,6 +1143,10 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
           </Link>
           
           <Link
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             href={`tel:${contactInfo.mobile}`}
             className="group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300"
           >
@@ -382,6 +1154,21 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
             <span>Call {contactInfo.mobile}</span>
           </Link>
         </motion.div>
+<<<<<<< HEAD
+
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+        >
+          {heroStats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.8 }}
+=======
+<<<<<<< HEAD
         {/* CTA Buttons */}
           technologies that were once science fiction.
 
@@ -391,6 +1178,9 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
 
           transition={{ "duration": 0.8, "delay": 0.4 
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
         {/* Main Heading *}
 }
         <motion&& motion.h1;
@@ -398,8 +1188,15 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
 >>>>>>> origin/chore/fix-lint-and-merge
 }
 
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
           transition={{ duration: 0.8, delay: 0.2 }
 }
@@ -410,8 +1207,15 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           </span>
           <br    />
 
+<<<<<<< HEAD
           <span className='text-white'    />Technology is Here</span>
         </motion.h1>
+=======
+        {/* Stats Grid */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }
 }
@@ -439,6 +1243,7 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           Transform your business with technologies that were once science;"
           fiction.        </motion && motion.p>          className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed\">
 
+<<<<<<< HEAD
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with ;
           technologies that were once science fiction.;
 
@@ -530,6 +1335,22 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
             />
           {heroStats.map((stat, index) => (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        >
+          {heroStats.map((stat, index) => (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <motion.div
                 left: `${Math.random () * 100}%`,
                 top: `${Math.random () * 100}%`,
@@ -688,8 +1509,16 @@ left: `${Math.random () * 10}
 }
           animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </motion && motion.div>
+=======
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16'        >          className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16";
+        >;
+          {hero_stats.map ((stat, index) => (
+            <motion.div;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -711,6 +1540,7 @@ className='text-center group';
                 {stat.number}
 
 
+<<<<<<< HEAD
               className=text-center group
 
 =======
@@ -720,6 +1550,13 @@ className='text-center group';
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }
 }"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'    />          className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mb-16\">
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              className='text-center group'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
           {heroStats && heroStats.map((stat, index) => (<motion&& motion.div;}
               key={stat && stat.label}
@@ -757,9 +1594,16 @@ className='text-center group';
 }
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
 
 className='text-center group'
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             >
               <div;
 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg
@@ -838,30 +1682,108 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> merged-prs-20250907-203621
               animate={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
               className="text-center group"
             >
               <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
                 <stat.icon className="w-8 h-8 text-white" />
+<<<<<<< HEAD
               </div>
+=======
+              </div>
+<<<<<<< HEAD
+=======
+
+              <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>
+
+<<<<<<< HEAD
+</motion && motion.div>;
+        {/* Featured Services */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mb-16"
+        >
+              className='text-center group'
+
+            >
+              <div
+                className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
+              >
+                <stat.icon className='w-8 h-8 text-white' />
+              </div>
+              <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>
+                {stat.number}
+              </div>
+              <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>            >
+              <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
               <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
+<<<<<<< HEAD
             </motion.div>
           ))}
         </motion.div>
 
         {/* Featured Services */}
+=======
+<<<<<<< HEAD
+=======
+            </motion.div>
+          ))}
+        </motion.div>
+              <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+            </motion.div>
+          ))}
+        </motion.div>
+
+<<<<<<< HEAD
+        {/* Featured Services */}
           animate={{ opacity: 1, y: 0 }}
 
 
+>>>>>>> merged-prs-20250907-203621
         <motion.div
           initial={{ opacity: 0, y: 30}}
           animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mb-16"
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        {/* Featured Services */}
+        <motion.div
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Featured Services */}
+        <motion&& motion.div
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
         >
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
             Featured Revolutionary Services
@@ -869,18 +1791,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+              >
+=======
+>>>>>>> merged-prs-20250907-203621
                 key={service.name}
                 initial={{ opacity: 0, y: 20}}
                 animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+<<<<<<< HEAD
+                className="group"
+=======
                 className=group
 
 className='group''
               >
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.2 }}
 className='mb-16';
         >;
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                <Link
+                  href={service && service.href}
+                  className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
+                  <div
+
+
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 
               <div className='text-gray-400 text-sm'    />{stat.label}</div>
@@ -892,6 +1841,7 @@ className='mb-16';
           initial={{ opacity: 0, y: 30 }
 }
 
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }
 }
 
@@ -1081,6 +2031,11 @@ className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-c
             ))}
           </div>
         </motion.div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1118,6 +2073,7 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
 >>>>>>> origin/chore/fix-lint-and-merge
             Ready to Transform Your Business?
           </h3>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'    />
             <div className='flex items-center space-x-3 text-gray-300'    />
               <Phone className='w-5 h-5 text-cyan-400'    />
@@ -1134,11 +2090,161 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
 <<<<<<< HEAD
                 href={`"tel": ${contactInfo && contactInfo.mobile},`}
                 className='"hover":text-cyan-400 transition-colors'>;'
+=======
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <Phone className='w-5 h-5 text-cyan-400' />
+<<<<<<< HEAD
+              className='text - center group';
+            >;
+              <div;
+                className={`w - 16 h - 16 mx - auto mb - 4 flex items - center justify - center bg - gradient - to - r ${stat.color} rounded - 2xl transform transition - all duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 group - hover:shadow - lg`}
+              >;
+                <stat.icon className='w - 8 h - 8 text - white' />;
+              </div>;
+              <div className='text - 3xl md:text - 4xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent mb - 2'>;
+                {stat.number}
+              </div>;
+              <div className='text - gray - 400 text - sm'>{stat.label}</div>            </motion.div>            >;
+              <div className={`w - 16 h - 16 mx - auto mb - 4 flex items - center justify - center bg - gradient - to - r ${stat.color} rounded - 2xl transform transition - all duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 group - hover:shadow - lg`}>;
+                <stat.icon className="w - 8 h - 8 text - white" />;
+              </div>;
+              <div className="text - 3xl md:text - 4xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent mb - 2">;
+                {stat.number}
+              </div>;
+              <div className="text - gray - 400 text - sm">{stat.label}</div>;
+            </motion.div>))}
+        </motion.div>;
+        {/* Featured Services */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className='mb - 16';
+        >;
+          <h2 className='text - 2xl md:text - 3xl font - bold text - white mb - 8'>;
+            Featured Revolutionary Services;
+          </h2>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {featured_services.map ((service, index) => (        >;
+          <h2 className="text - 2xl md:text - 3xl font - bold text - white mb - 8">;
+            Featured Revolutionary Services;
+          </h2>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+            {featured_services.map ((service, index) => (
+              <motion.div;
+                key={service.name}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+                className='group'
+
+>>>>>>> merged-prs-20250907-203621
+              >
+                <Link
+                  href={service.href}
+                  className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'
+                >
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
+                  >
+                    <service.icon className='w-8 h-8 text-white' />
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>                    {service.name}
+                  </h3>
+                  <p className='text-gray-400 text-sm mb-4 leading-relaxed'>
+                    {service.description}
+                  </p>
+                  <div className='flex items-center justify-between'>
+                    <div className='text-2xl font-bold text-cyan-400'>
+                      {service.price}
+                    </div>
+                    <div className='text-purple-400 group-hover:text-cyan-400 transition-colors'>
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    </div>
+                  </div>
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Contact Information */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          transition={{ duration: 0 && 0.8, delay: 1 && 1.6 }}
+          className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'>;
+          <h3 className='text-2xl font-bold text-white mb-6 text-center'>;
+            Ready to Transform Your Business?;
+          </h3>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>;
+            <div className='flex items-center space-x-3 text-gray-300'>;
+              <Phone className='w-5 h-5 text-cyan-400' />;
+              <a
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className='hover:text-cyan-400 transition-colors'>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 {contactInfo && contactInfo.mobile}
               </a>;
             </div>;
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Mail className='w-5 h-5 text-purple-400' />;
+<<<<<<< HEAD
+=======
+              <a
+<<<<<<< HEAD
+          transition={{ duration: 0.8, delay: 1.6 }}
+          className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
+
+        >
+          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
+            Ready to Transform Your Business?
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <Phone className='w-5 h-5 text-cyan-400' />
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='hover:text-cyan-400 transition-colors'
+              >
+                {contactInfo.mobile}
+              </a>
+            </div>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <Mail className='w-5 h-5 text-purple-400' />
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className='hover:text-purple-400 transition-colors'
+              >
+                {contactInfo.email}
+              </a>
+            </div>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <MapPin className='w-5 h-5 text-green-400' />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>
+          <div className='text-center'>
+            <Link
+              href='/contact'
+              className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
+            >
+              <span>Get Started Today</span>
+              <ArrowRight className='w-5 h-5' />            </Link>        >
+=======
+
+          transition={{ duration: 0.8, delay: 1.6 }}
+          className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto"
+        >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             Ready to Transform Your Business?
           </h3>"
@@ -1243,21 +2349,26 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
                 {contactInfo.email}
               </a>
             </div>
-            <div className='flex items-center space-x-3 text-gray-300'>'
-              <MapPin className='w-5 h-5 text-green-400' />'
+            <div className="flex items-center space-x-3 text-gray-300">
+              <MapPin className="w-5 h-5 text-green-400" />
               <span>{contactInfo.address}</span>
             </div>
           </div>
-          <div className='text-center'>'
-            <Link,
-href='/contact''
-              className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 "hover":shadow-xl "hover":shadow-cyan-500/30 "hover":shadow-xl "hover":shadow-purple-500/25''
+          
+          <div className="text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25"
             >
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </motion.div>
+<<<<<<< HEAD
+      </div>
+
+=======
       </div>`
                 href={`mailto:${contactInfo && contactInfo.email}`}'
                 className='hover:text-purple-400 transition-colors'>;
@@ -1271,7 +2382,14 @@ href='/contact''
             </div>;
           </div>;<div className='text-center'>;
           </div>;
+<<<<<<< HEAD
 '
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <div className='text-center'>;
             <Link'
               href='/contact''
@@ -1281,10 +2399,16 @@ href='/contact''
           <h3 className="text-2xl font-bold text-white mb-6 text-center">;
             Ready to Transform Your Business?;
           </h3>;
+<<<<<<< HEAD
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;"
             <div className="flex items-center space-x-3 text-gray-300">;"
               <Phone className="w-5 h-5 text-cyan-400" />;"`
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;
+            <div className="flex items-center space-x-3 text-gray-300">;
+              <Phone className="w-5 h-5 text-cyan-400" />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">;
                 {contactInfo && contactInfo.mobile}
               </a>;
@@ -1300,7 +2424,10 @@ href='/contact''
               <span>{contactInfo && contactInfo.address}</span>;
             </div>;
           </div>;
+<<<<<<< HEAD
 "
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <div className="text-center">;
             <Link"
               href="/contact""
@@ -1340,6 +2467,7 @@ href='/contact''
             </Link>;
           </div>;
         </motion && motion.div>;
+<<<<<<< HEAD
       </div>;{/* Floating Action Button */}
       <motion&& motion.div;
                 className='group';
@@ -1347,6 +2475,25 @@ href='/contact''
 
       {/* Floating Action Button */}
       <motion&& motion.div'
+=======
+      </div>;
+<<<<<<< HEAD
+
+
+
+=======
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {/* Floating Action Button */}
+      <motion&& motion.div
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 className='group';
               >;
                 <Link;
@@ -1764,9 +2911,16 @@ href='/contact'
       </div>
       {/* Floating Action Button */}
       <motion.div;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}}href={`tel:${contactInfo && contactInfo.mobile}`}
         animate={{ opacity: 1, scale: 1 }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -1777,7 +2931,22 @@ href='/contact'
         </Link>;
       </motion && motion.div>;
     </section>;
+<<<<<<< HEAD
 }'
+=======
+  );
+}
+
+<<<<<<< HEAD
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 2 }}
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         className='fixed bottom - 8 right - 8 z - 50';
       >;
         <Link;`
@@ -1839,10 +3008,41 @@ className='fixed bottom-8 right-8 z-50';
   )>;
         <Link;
     </section>);
+        >
+          <Phone className=&quot;w-7 h-7 text-white group-hover:rotate-12 transition-transform&quot; />
+        </a>
+      </motion.div>
+    </section>
+  )
+
 }
+<<<<<<< HEAD
         className='fixed bottom-8 right-8 z-50'
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        className='fixed bottom-8 right-8 z-50'
+
+
+
+<<<<<<< HEAD
+
+      {/* Floating Action Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 2 }}
+        className='fixed bottom-8 right-8 z-50'
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1851,6 +3051,7 @@ className='fixed bottom-8 right-8 z-50';
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
+<<<<<<< HEAD
   );      >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1878,6 +3079,7 @@ className='fixed bottom-8 right-8 z-50';
 
   )
 
+>>>>>>> merged-prs-20250907-203621
       {/* Floating Action Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0}}
@@ -1893,6 +3095,11 @@ className='fixed bottom-8 right-8 z-50';
         </Link>
       </motion.div>
     </section>
+<<<<<<< HEAD
+  );
+
+"
+=======
   )
 }
   );
@@ -1935,3 +3142,29 @@ href={`tel:${contactInfo.mobile}
 =======
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+    </section>
+    </section>;
+  );      >
+        <Link
+          href={`tel:${contactInfo.mobile}`}
+          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
+        >
+          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
+        </Link>
+      </motion.div>
+    </section>
+  )
+}
+
+  );
+    </section>
+  );
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

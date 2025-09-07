@@ -481,6 +481,7 @@ export default function ResourcesPage() {
       </section>
 
       <EnhancedFooter />
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/resources.tsx.backup.1756000986
     </>
   );
 }

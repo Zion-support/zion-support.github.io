@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
+<<<<<<< HEAD
 import { useForm  } from 'react-hook-form';''
 import { zodResolver  } from '@hookform/resolvers/zod';''
 import { z  } from 'zod';''
@@ -10,11 +13,89 @@ import { Textarea  } from '@/components/ui/textarea';''
 import { Input  } from '@/components/ui/input';''
 import { Checkbox  } from '@/components/ui/checkbox';''
 import { Alert, AlertDescription } from '@/components/ui/alert';'
+=======
+
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from '@/components/ui/form',
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
+// Define schema for form validation
+
+const educationSchema = z.object({
+  institution: z.string().min($2);
+  degree: z.string().min($2);
+  field_of_study: z.string().optional($2);
+  start_date: z.string().min($2);
+  end_date: z.string().optional($2);
+  is_current: z.boolean().default($2);
+  description: z.string().optional($2);
+  location: z.string().optional()}),
+
+type EducationFormValues = $2;
+export function EducationFormFields({ 
+  isEditing, 
+  onSubmit, 
+  onCancel 
+}: EducationFormFieldsProps) {
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+
+  const form = useForm<EducationFormValues>({
+    resolver: zodResolver($2);
+    defaultValues: {
+      institution: '',
+      degree: '',
+      field_of_study: '',
+      start_date: format(new Date(), 'yyyy-MM-dd'),
+      is_current: false,
+      description: '',
+      location: ''}}),
+
+  const handleSubmit = async (data: EducationFormValues) => {
+    setIsLoading($2);
+    setError($2);
+    try {
+      await onSubmit(data)
+    } catch (err: any) {
+      setError(err.message || 'An error occurred')
+    } finally {
+      setIsLoading(false)
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { Form;
   FormControl;
   FormField;
   FormItem;
+<<<<<<< HEAD
+=======
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -29,7 +110,14 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Define schema for form validation
 
 // Define schema for form validation;
@@ -42,6 +130,29 @@ const educationSchema = z.object({'
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()})
+<<<<<<< HEAD
+=======
+type EducationFormValues = z.infer<typeof educationSchema>;
+
+
+<<<<<<< HEAD
+
+export function EducationFormFields({
+  isEditing
+  onSubmit
+  onCancel
+}: EducationFormFieldsProps) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+export function EducationFormFields({ 
+  isEditing, 
+  onSubmit, 
+  onCancel 
+}: EducationFormFieldsProps) {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 export function EducationFormFields({
   isEditing
@@ -49,6 +160,7 @@ export function EducationFormFields({
   onCancel
 }: EducationFormFieldsProps) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -71,12 +183,35 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+=======
+import {use_form} from 'react - hook - form';
+import {zod_resolver} from '@hookform / resolvers / zod';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import {z} from 'zod';
+import {format} from 'date - fns';
+import {Loader2} from 'lucide-react';
+import {Button} from '@/components / ui / button';
+import {Textarea} from '@/components / ui / textarea';
+import {Input} from '@/components / ui / input';
+import {Checkbox} from '@/components / ui / checkbox';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
+import {useState} from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {EducationFormFieldsProps} from './types';
-
     }
   }
   };
+<<<<<<< HEAD
+=======
 
 import { useForm } from 'react-hook-form',;
 
@@ -139,7 +274,11 @@ import { useForm } from 'react-hook-form',;'
 import { zodResolver } from '@hookform/resolvers/zod',;'
   }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -164,7 +303,31 @@ import {;
 import { useState } from 'react',;'
 import { EducationFormFieldsProps } from './types',;'
 import { Education } from '@/types/resume',;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+// Define schema for form validation;
+const educationSchema = z.object({;
+  institution: z.string().min(1, 'Institution is required'),;
+  degree: z.string().min(1, 'Degree is required'),;
+  field_of_study: z.string().optional(),;
+  start_date: z.string().min(1, 'Start date is required'),;
+  end_date: z.string().optional(),;
+  is_current: z.boolean().default(false),;
+  description: z.string().optional(),;
+  location: z.string().optional()}),;
+type EducationFormValues = z.infer<typeof educationSchema>,;
+export function EducationFormFields({;
+  isEditing,;
+  onSubmit,;
+  onCancel;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Define schema for form validation;
 const educationSchema = z.object({;'
   institution:z.string().min(1, 'Institution is required'),;'
@@ -179,6 +342,7 @@ const educationSchema = z.object({;'
 type EducationFormValues = z.infer<typeof educationSchema>,;
 ;
 
+<<<<<<< HEAD
       location:''}}),;
 ;
 <<<<<<< HEAD
@@ -200,6 +364,37 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
   const handleSubmit = async (data:EducationFormValues) => {;
 >>>>>>> origin/chore/fix-lint-and-merge
     setIsLoading(true),;
+=======
+type EducationFormValues = z && z.infer<typeof educationSchema>;
+
+export function EducationFormFields(): any ({ ;
+  isEditing, ;
+  onSubmit, ;
+  onCancel ;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const form = useForm<EducationFormValues>({;
+    resolver: zodResolver(educationSchema),;
+    defaultValues: {;
+      institution: '',;
+      degree: '',;
+      field_of_study: '',;
+<<<<<<< HEAD
+
+
+
+=======
+      start_date: format(new Date(), 'yyyy-MM-dd');
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     setError(null),;
     try {;
       await onSubmit(data);
@@ -208,6 +403,7 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
     } finally {;
     }
 
+<<<<<<< HEAD
   },'
 import {z} from 'zod';'
 import {format} from 'date - fns';'
@@ -220,10 +416,241 @@ import {Alert, AlertDescription} from '@/components / ui / alert';'
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';'
 import {useState} from 'react';'
 import {EducationFormFieldsProps} from './types';
+=======
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  return (
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField
+            control={form && form.control}
+            name="institution"
+<<<<<<< HEAD
+      start_date: format(new Date(), 'yyyy-MM-dd'),;
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true),;
+    setError(null);
+    try {;
+      await onSubmit(data);
+    } catch (err: any) {;
+      setError(err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false);
+>>>>>>> merged-prs-20250907-203621
+    }
+  },
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+<<<<<<< HEAD
+            control={form.control}
+            name="institution"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Institution</FormLabel>
+                <FormControl>
+                  <Input placeholder="University of California, MIT, etc." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="degree"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Degree</FormLabel>
+                <FormControl>
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <FormField
+          control={form.control}
+          name="field_of_study"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Field of Study</FormLabel>
+              <FormControl>
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="start_date"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Start Date</FormLabel>
+                <FormControl>
+                  <Input
+                    type="date"
+                    {...field}
+                    value={field.value |''}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="space-y-4">
+            <FormField
+              control={form.control}
+              name="is_current"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>I am currently studying here</FormLabel>
+                  </div>
+                </FormItem>
+              )}
+            />
+            {!form.watch('is_current') && (
+              <FormField
+                control={form.control}
+                name="end_date"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>End Date</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="date"
+                        {...field}
+                        value={field.value |''}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
+          </div>
+        </div>
+        <FormField
+          control={form.control}
+=======
+            control={form.control}
+            name="institution"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Institution</FormLabel>
+                <FormControl>
+                  <Input placeholder="University of California, MIT, etc." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="degree"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Degree</FormLabel>
+                <FormControl>
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <FormField
+          control={form.control}
+          name="field_of_study"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Field of Study</FormLabel>
+              <FormControl>
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="start_date"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Start Date</FormLabel>
+                <FormControl>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Institution</FormLabel>;
+import {Education} from '@/types / resume';
+// Define schema for form validation;
+const education_schema = z.object ({
+  institution: z.string ().min (1, 'Institution is required');
+  degree: z.string ().min (1, 'Degree is required');
+  field_of_study: z.string ().optional (),
+  start_date: z.string ().min (1, 'Start date is required');
+  end_date: z.string ().optional (),
+  is_current: z.boolean ().default (false),
+  description: z.string ().optional (),
+  location: z.string ().optional ()}),
+type EducationFormValues = z.infer < typeof education_schema>;
+;
+export /**
+ * EducationFormFields - Function description
+ */
+function EducationFormFields() {
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const form = use_form < EducationFormValues>({
+    resolver: zod_resolver (education_schema),
+    default_values: {
+      institution: '',
+      degree: '',
+      field_of_study: '',
+      start_date: format (new Date (), 'yyyy - MM - dd');
+      is_current: false,
+      description: '',
+      location: ''}}),
+  const handle_submit = async (data: EducationFormValues) => {
+    setIsLoading (true);
+    set_error (null),
+    try {
+      await on_submit (data);
+    } catch (err: any) {
+      set_error (err.message || 'An error occurred');
+    } finally {
+      setIsLoading (false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
   }
 
   return (
+<<<<<<< HEAD
     <Form {...form}>;"
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -231,12 +658,100 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="institution"
 
+=======
+    <Form {...form}>;
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+          <FormField;
+            control={form.control}
+            name="institution";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel > Institution</FormLabel>;
+
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { format } from 'date-fns',;
+import { Loader2 } from 'lucide-react',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { useState } from 'react',;
+import { EducationFormFieldsProps } from './types',;
+import { Education } from '@/types/resume',;
+;
+// Define schema for form validation;
+const educationSchema = z.object({;
+  institution:z.string().min(1, 'Institution is required'),;
+  degree:z.string().min(1, 'Degree is required'),;
+  field_of_study:z.string().optional(),;
+  start_date:z.string().min(1, 'Start date is required'),;
+  end_date:z.string().optional(),;
+  is_current:z.boolean().default(false),;
+  description:z.string().optional(),;
+  location:z.string().optional()}),;
+;
+type EducationFormValues = z.infer<typeof educationSchema>,;
+;
+export function EducationFormFields({ ;
+  isEditing, ;
+  onSubmit, ;
+  onCancel ;
+} EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  const form = useForm<EducationFormValues>({;
+    resolver:zodResolver(educationSchema),;
+    defaultValues:{;
+      institution:'',;
+      degree:'',;
+      field_of_study:'',;
+      start_date:format(new Date(), 'yyyy-MM-dd'),;
+      is_current:false,;
+      description:'',;
+      location:''}}),;
+;
+  const handleSubmit = async (data:EducationFormValues) => {;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      await onSubmit(data);
+    } catch (err:any) {;
+      setError(err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="institution";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Institution</FormLabel>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
+              </FormItem>;            )}
           />;
+<<<<<<< HEAD
 
           <FormField
             control={form && form.control}
@@ -248,10 +763,17 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="degree"
 
+=======
+;
+          <FormField;
+            control={form.control}
+            name="degree";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
@@ -262,6 +784,10 @@ import {EducationFormFieldsProps} from './types';
           />;
         </div>;
 
+=======
+          />;
+        </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <FormField
           control={form && form.control}
 
@@ -269,13 +795,37 @@ import {EducationFormFieldsProps} from './types';
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
+<<<<<<< HEAD
 
+=======
+              </FormItem>)}
+          />;
+          <FormField;
+            control={form.control}
+            name="degree";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel > Degree</FormLabel>;
+                <FormControl>;
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+        </div>;
+        <FormField;
+          control={form.control}
+          name="field_of_study";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Field of Study</FormLabel>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <FormControl>;
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
-
         />;
+<<<<<<< HEAD
           <FormField
             control={form && form.control}
             name="start_date"        />;
@@ -302,9 +852,17 @@ import {EducationFormFieldsProps} from './types';
                     value={field.value |''}
                   />
 
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+                  <Input
+                    type="date"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   <Input 
                     type="date" 
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 <Input
                     type="date"
                   <Input 
@@ -312,6 +870,10 @@ import {EducationFormFieldsProps} from './types';
           <FormField
             control={form && form.control}
             name="start_date"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     {...field}
                     value={field.value |''}
                   />
@@ -320,6 +882,77 @@ import {EducationFormFieldsProps} from './types';
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
+=======
+          />
+          <div className="space-y-4">
+<<<<<<< HEAD
+          <FormField
+            control={form && form.control}
+            name="start_date"
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;            )}
+          />;
+        </div>;
+;
+        <FormField;
+          control={form.control}
+          name="field_of_study";
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Field of Study</FormLabel>;
+              <FormControl>;
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="start_date";
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Start Date</FormLabel>;
+                <FormControl>;
+<<<<<<< HEAD
+                  <Input ;
+                    type="date" ;
+                    {...field}
+                    value={field.value || ''} ;
+=======
+                  <Input
+                    type="date" 
+                    {...field}
+                    value={field && field.value || ''} 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+<<<<<<< HEAD
+;
+          <div className="space-y-4">;
+            <FormField;
+              control={form.control}
+              name="is_current";
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
                   <Input
                     type="date"
@@ -337,6 +970,7 @@ import {EducationFormFieldsProps} from './types';
                     <Checkbox
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
+<<<<<<< HEAD
 
             <FormField;
               control={form && form.control}"
@@ -346,6 +980,9 @@ import {EducationFormFieldsProps} from './types';
                   <FormControl>;
                     <Checkbox;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     />;
                   </FormControl>;"
                   <div className="space-y-1 leading-none">;
@@ -353,10 +990,67 @@ import {EducationFormFieldsProps} from './types';
                   </div>;
                 </FormItem>;
               )}
+<<<<<<< HEAD
+            />;
+              <FormField
+                control={form && form.control}
+                name="end_date"
+;
+            {!form.watch('is_current') && (;
+              <FormField;
+                control={form.control}
+                name="end_date";
+=======
 
+<<<<<<< HEAD
                         type="date" ;
                         {...field} ;'
                         value={field.value || ''} ;
+=======
+            />;
+
+            {!form && form.watch('is_current') && (;
+
+              <FormField
+                control={form && form.control}
+                name="end_date"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>End Date</FormLabel>;
+                    <FormControl>;
+<<<<<<< HEAD
+                )}
+                      <Input ;
+                        type="date" ;
+                        {...field} ;
+                        value={field.value || ''} ;
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;                )}
+              />;
+            )}
+          </div>;
+        </div>;
+        />;
+        <FormField
+          control={form && form.control}
+          name="description"
+;
+        <FormField;
+          control={form.control}
+          name="location";
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Location (Optional)</FormLabel>;
+=======
+                      <Input
+                        type="date" 
+                        {...field} 
+                        value={field && field.value || ''} 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                       />;
                     </FormControl>;
                     <FormMessage />;
@@ -376,36 +1070,255 @@ import {EducationFormFieldsProps} from './types';
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
+<<<<<<< HEAD
 
+=======
+=======
+            </FormItem>)}
+        />;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+          <FormField;
+            control={form.control}
+            name="start_date";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel > Start Date</FormLabel>;
+                <FormControl>;
+                  <Input;
+                    type="date";
+                    {...field}
+                    value={field.value || ''}
+                  />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+          <div className="space - y-4">;
+            <FormField;
+              control={form.control}
+              name="is_current";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0 py - 2">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value}
+                      onCheckedChange={field.on_change}
+                    />;
+                  </FormControl>;
+                  <div className="space - y-1 leading - none">;
+                    <FormLabel > I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>)}
+            />;
+            {!form.watch ('is_current') && (
+              <FormField;
+                control={form.control}
+                name="end_date";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > End Date</FormLabel>;
+                    <FormControl>;
+                      <Input;
+                        type="date";
+                        {...field}
+                        value={field.value || ''}
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />)}
+          </div>;
+        </div>;
+        <FormField;
+          control={form.control}
+          name="location";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Location (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <FormControl>;
 
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
+            </FormItem>;          )}
+        />;
+;
+        <FormField;
+          control={form.control}
+          name="description";
+=======
 
+<<<<<<< HEAD
+=======
+        />;
+
+
+        <FormField
+          control={form && form.control}
+          name="description"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                <Textarea;
+                  placeholder="Notable achievements, courses, activities...";
+                  className="min-h-[100px]";
+=======
+                <Textarea
+                  placeholder="Notable achievements, courses, activities..."
+                  className="min-h-[100px]"
+=======
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           name="description";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
 
+=======
+                <Textarea;
+                  placeholder="Notable achievements, courses, activities...";
+                  className="min - h-[100px]";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
           </Button>;
 "
           <Button type="submit" disabled={isLoading}>;"
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}'
             {isEditing ? 'Update' : 'Add'} Education;
+=======
+        />;
 
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+        <div className="flex justify-between pt-2">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onCancel}>;
+            {isEditing ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
+            <FormField
+              control={form.control}
+              name="is_current"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>I am currently studying here</FormLabel>
+                  </div>
+                </FormItem>
+              )}
+            />
+            {!form.watch('is_current') && (
+              <FormField
+                control={form.control}
+                name="end_date"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>End Date</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="date"
+                        {...field}
+                        value={field.value |''}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
+          </div>
+        </div>
+        <FormField
+          control={form.control}
+>>>>>>> merged-prs-20250907-203621
+          name="location"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Location (Optional)</FormLabel>
+              <FormControl>
+                <Input placeholder="Cambridge, MA" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="description"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Notable achievements, courses, activities..."
+                  className="min-h-[100px]"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="flex justify-between pt-2">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onCancel}
+          >
+            {isEditing ? 'Cancel' : 'Back'}
+          </Button>
+          <Button type="submit" disabled={isLoading}>
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isEditing ? 'Update' : 'Add'} Education
+          </Button>
+        </div>
+      </form>
+    </Form>
+  )
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>;
+<<<<<<< HEAD
 
         </div>;
       </form>;
@@ -696,10 +1609,34 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
 </Button>"
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
 </Loader2>
+=======
+          <Button type="submit" disabled={isLoading}>;
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isEditing ? 'Update' : 'Add'} Education;
+            </FormItem>;
+          )}
+        />;
+;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+;
+        <div className="flex justify-between pt-2">;
+          <Button;
+            type="button";
+            variant="outline";
+            onClick={onCancel}
+          >;
+            {isEditing ? 'Cancel' :'Back'}
+          </Button>;
+;
+          <Button type="submit" disabled={isLoading}>;
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isEditing ? 'Update' :'Add'} Education;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           </Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
             </FormItem>)}"
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}""
         <div className="flex justify - between pt - 2">;"
@@ -707,6 +1644,15 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
           <Button;"
             type="button";""
             variant="outline";"
+=======
+            </FormItem>)}
+        />;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="flex justify - between pt - 2">;
+          <Button;
+            type="button";
+            variant="outline";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             on_click={on_cancel}
           >;
 </Button>
@@ -720,4 +1666,42 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
         </div>;
       </form>;
     </Form>);
+<<<<<<< HEAD
 }
+=======
+}
+
+}
+;
+
+<<<<<<< HEAD
+  ),;}
+ type EducationFormValues = z.infer<typeof educationSchema>;
+</FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {
+  field.value 
+}onCheckedChange= {
+  field.onChange 
+}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) 
+}/> {
+  !form.watch ('is current') && (<FormField control= {
+  form.control 
+}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="flex justify-between pt-2" > <Button > {
+  isEditing ? 'Cancel' : 'Back' 
+}</Button> </Button> </div> </form> </Form>) 
+}
+}
+}
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

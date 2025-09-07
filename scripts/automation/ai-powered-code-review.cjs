@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -22,10 +25,14 @@ const { execSync, spawn } = require("child_process")
   console.log("🤖 AI-Powered Code Review System Initialized)
   fs.mkdirSync(logDir, { "recursive"})
 <<<<<<< HEAD
+  const data = fs.readFileSync(this.reviewHistory, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
   const data = fs.readFileSync(this.reviewHistory, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "totalReviews"
           totalIssues
           "totalImprovements"
@@ -66,7 +73,10 @@ this.logError("Code review failed")
   console.log("" Reviewing ""TypeScript/JavaScript"" files...")
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")]
   const content = fs.readFileSync(file, ")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         results.filesReviewed++;"
         results.issues.push(...fileResults.issues);
         results.improvements.push(...fileResults.improvements);
@@ -83,7 +93,10 @@ this.logError("Code review failed")
         "line": this.findLineNumber(content, "any")
         "suggestion": "Replace with specific interface or union type"
     const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+["")]
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "file"
             type: "typescript"
             severity: "info",message: "Unused import ${importedItem}"
@@ -113,7 +126,10 @@ this.logError("Code review failed")
   const content = fs.readFileSync(file, "utf8")
     const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")]
   const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         } catch (error) {  console.error(Error reviewing React component ${file  }:, error")
     if (!content.includes(interface) && !content.includes("type Props") && !content.includes(PropTypes)
   "file"
@@ -240,15 +256,22 @@ this.logError("Code review failed")
   if (issue.severity === info" && issue.type === "typescript)
   if (issue.message.includes(`Unused import``)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
         const content = fs.readFileSync(issue.file, "utf8")
         const lines = content.split("\n")
         if (importLine.includes("import")
           fs.writeFileSync(issue.file, lines.join(")
   const glob = require("glob")
         const matches = glob.sync(pattern, { "cwd"})
+<<<<<<< HEAD
+
+=======
   const glob = require("glob")
+>>>>>>> merged-prs-20250907-203621
         const matches = glob.sync(pattern, { "cwd"})
         if (stat.isDirectory() && !item.startsWith(".") && !item.includes("node_modules")
     if (pattern.includes("*.ts") && ext === ".ts"
@@ -287,8 +310,11 @@ this.logError("Code review failed")
   console.log(� Setting up file change monitoring...)
     // In production, you"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const gitStatus = execSync("git status --porcelain")
   "cwd"
         "encoding": "utf8"
@@ -301,6 +327,12 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split( )
         .filter(file => file && !file.startsWith(".")
+<<<<<<< HEAD
+
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+=======
 <<<<<<< HEAD
 
 
@@ -338,9 +370,13 @@ this.logError("Code review failed")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
         .map(line => line.split(" ")"
 </button>"`;
 
+<<<<<<< HEAD
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

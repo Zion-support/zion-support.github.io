@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
@@ -15,34 +16,21 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 main
-<<<<<<< HEAD
+#!/usr/bin/env node;
 
 
 
 
 
 
-
-
-      log(❌ Error processing directory ${currentPath}: ${error.message}", red""),}
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
 
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
->>>>>>> origin/chore/fix-lint-and-merge
 
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
-<<<<<<< HEAD
-
-=======
 ;
 function main() {;"
   log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
@@ -59,21 +47,15 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 
 if (require.main === module) {;
   main()}
->>>>>>> origin/chore/fix-lint-and-merge
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -99,6 +81,10 @@ const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -107,24 +93,17 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const fs = require("$1")
-const path = require("$1")
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const { execSync } = require("child_process")
-=======
-const fs = require("$1");
-const path = require("$1");
-const { execSync } = require("child_process");
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-const fs = require("$1")
-const path = require("$1")
+>>>>>>> merged-prs-20250907-203621
+  "reset": "\x1b[0m"]
+  "red": "\x1b[31m"]
+  "green": "\x1b[32m"]
+  "yellow": "\x1b[33m"]
+  "blue": "\x1b[34m"]
+  "magenta": "\x1b[35m"]
+  "cyan": "\x1b[36m"]
+function log(message, color = "reset")
 const { execSync } = require("child_process")
->>>>>>> origin/chore/fix-lint-and-merge
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -153,15 +132,9 @@ function log(message, color = "reset")
       content = content.replace(unexpectedExportRegex, "$1;\nexport ")
       fixed = true;log(`Fixed unexpected export placement in ${filePath}, "yellow"`)
     // Fix "6"
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         missingSemicolonBeforeReturnRegex,$1;\nreturn "
-    // Fix 2
+    // Fix "2"
       /import\s+\{\s*Link\s*\}\s+from\s+["]next\/link[];?\s*\nimport\s+\{\s*Link\s*\}\s+from\s+[]next\/link["]
-<<<<<<< HEAD
-
-=======
       content = content.replace(linkRegex, import { Link  } from "next/link)
       fixed = true;log("Fixed duplicate Link imports in ${filePath}", "yellow")
     // Fix "3"
@@ -169,35 +142,33 @@ function log(message, color = "reset")
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log("Fixed unterminated strings in ${filePath}", "yellow")
     // Fix "4": Fix unexpected keyword "import"
->>>>>>> origin/chore/fix-lint-and-merge
       content = content.replace(unexpectedImportRegex, "$1;\nimport ")
-      fixed = true;log(Fixed unexpected import placement in ${filePath}, "yellow")
-    // Fix 5: Fix unexpected keyword "export"
-      content = content.replace(unexpectedExportRegex, $1;\nexport )
-      fixed = true;log("Fixed unexpected export placement in ${filePath}", yellow)
+      fixed = true;log("Fixed unexpected import placement in ${filePath}", "yellow")
+    // Fix "5": Fix unexpected keyword "export"
+      content = content.replace(unexpectedExportRegex, "$1;\nexport ")
+      fixed = true;log("Fixed unexpected export placement in ${filePath}", "yellow")
     // Fix "6"
-        missingSemicolonBeforeReturnRegex,$1;\nreturn 
-      fixed = true;log(Fixed missing semicolon before return in ${filePath}", "yellow)
-    // Fix 7"
-      content = content.replace(jsxClosingTagRegex, "<$1$2></$1>)
-      fixed = true;log(`Fixed JSX closing tag issues in ${filePath}, yellow"`)
-    // Fix "8
-      content = content.replace(missingCommaRegex, $1,\n  $"2": )
-      fixed = true;log(`Fixed missing commas in ${filePath}, yellow"`)
-    // Fix "9
-      content = content.replace(unterminatedCommentRegex, /*$1*/")
-      fixed = true;log(`Fixed unterminated comments in ${filePath}, "yellow`)
-    // Fix 10"
-      content = content.replace(duplicateExportRegex, "export default $1;);;      fixed = true;log(`Fixed duplicate exports in ${filePath}, "yellow");};"
-      fs.writeFileSync(filePath, content, "utf8);log( Fixed syntax issues in ${filePath}", "green);;      return true;"}"
-    return false} catch (error) {log(` Error fixing ${filePath}: ${error.message}, red);";    return false;"}
-  extensions = [.js", ".jsx, .ts", ".tsx]) {"}
-            !["node_modules, .git", ".next, dist", "]
-          if();            ![node_modules, ".git", .next, "dist", build].includes(item)") {"}
-        `red;
+        missingSemicolonBeforeReturnRegex,$1;\nreturn "
+      fixed = true;log("Fixed missing semicolon before return in ${filePath}", "yellow")
+    // Fix "7"
+      content = content.replace(jsxClosingTagRegex, "<$1$2></$1>")
+      fixed = true;log(`Fixed JSX closing tag issues in ${filePath}, "yellow"`)
+    // Fix "8"
+      content = content.replace(missingCommaRegex, "$1,\n  $"2": ")
+      fixed = true;log(`Fixed missing commas in ${filePath}, "yellow"`)
+    // Fix "9"
+      content = content.replace(unterminatedCommentRegex, "/*$1*/")
+      fixed = true;log(`Fixed unterminated comments in ${filePath}, "yellow"`)
+    // Fix "10"
+      content = content.replace(duplicateExportRegex, "export default $1;");";      fixed = true;log(`Fixed duplicate exports in ${filePath}, "yellow");"}";"
+      fs.writeFileSync(filePath, content, "utf8");log(" Fixed syntax issues in ${filePath}", "green");";      return true;"}"
+    return false,} catch (error) {log(` Error fixing ${filePath}: ${error.message}, "red");";    return false;"}"
+  extensions = [".js", ".jsx", ".ts", ".tsx"]") {"}
+            !["node_modules", ".git", ".next", "dist", "]
+          if();            !["node_modules", ".git", ".next", "dist", "build"].includes(item)") {"}"
+        `red;"
       log( Error processing directory ${currentPath}: ${error.message}")
         "red
-<<<<<<< HEAD
         `red;"
       log( Error processing directory ${currentPath}: ${error.message}", red),"
   log(" Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
@@ -208,13 +179,12 @@ function log(message, color = "reset")
   const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
-  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
+  if($2) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
+<<<<<<< HEAD
 <<<<<<< HEAD
       "blue"
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 
 <<<<<<< HEAD
@@ -224,3 +194,6 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      "blue"
+>>>>>>> merged-prs-20250907-203621

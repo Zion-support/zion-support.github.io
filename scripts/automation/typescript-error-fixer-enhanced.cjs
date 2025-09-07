@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -100,6 +102,7 @@ async log(message, type = "INFO)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -175,6 +178,9 @@ async log(message, type = "INFO")
   "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
   )}"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
           this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
 });await this.log("Added default export to ${file}")
       } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", "ERROR")
@@ -207,11 +213,21 @@ async log(message, type = "INFO")
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(""Error": ")
+<<<<<<< HEAD
+  console.error(""Error": ")
+  console.error(""Error": ")
+          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -230,3 +246,4 @@ async log(message, type = "INFO")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

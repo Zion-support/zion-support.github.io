@@ -25,11 +25,7 @@ class ComprehensiveFileFixer {
     const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
     const isPage = filePath.includes('/pages/');
     const isComponent = filePath.includes('/components/');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (filePath.endsWith('.tsx')) {
       return `import React from 'react';
 
@@ -73,22 +69,14 @@ export const ${componentName} = () => {
   return null;
 };`;
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return '';
   }
 
   async fixFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-
-=======
       
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check if file is corrupted (has syntax errors)
       if (this.isFileCorrupted(content)) {
         const newContent = this.getBasicReactComponent(filePath);
@@ -99,11 +87,7 @@ export const ${componentName} = () => {
           return true;
         }
       }
-<<<<<<< HEAD
-
-=======
       
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return false;
     } catch (err) {
       this.error(`Failed to fix ${filePath}: ${err.message}`);
@@ -114,13 +98,8 @@ export const ${componentName} = () => {
   isFileCorrupted(content) {
     // Check for common corruption patterns
     const corruptionPatterns = [
-<<<<<<< HEAD
-      /
-      /Error: Parsing error/,
-=======
       /      //,
       /      /Error: Parsing error/,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       /Unexpected token/,
       /Missing semicolon/,
       /Unterminated string literal/,
@@ -132,29 +111,17 @@ export const ${componentName} = () => {
       /Expected corresponding JSX closing tag/,
       /Merge conflict marker encountered/
     ];
-<<<<<<< HEAD
-
-=======
     
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return corruptionPatterns.some(pattern => pattern.test(content));
   }
 
   async findAndFixFiles(dir) {
     const files = fs.readdirSync(dir);
-<<<<<<< HEAD
-
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-
-=======
     
     for (const file of files) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (stat.isDirectory()) {
         await this.findAndFixFiles(filePath);
       } else if (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx')) {
@@ -165,21 +132,12 @@ export const ${componentName} = () => {
 
   async run() {
     this.log('Starting comprehensive file fixing...');
-<<<<<<< HEAD
-
-    try {
-      await this.findAndFixFiles(this.srcDir);
-
-      this.log(`Fixed ${this.fixedFiles.length} files`);
-
-=======
     
     try {
       await this.findAndFixFiles(this.srcDir);
       
       this.log(`Fixed ${this.fixedFiles.length} files`);
       
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (this.errors.length > 0) {
         this.log(`Encountered ${this.errors.length} errors:`);
         this.errors.forEach(error => this.log(`  - ${error}`));

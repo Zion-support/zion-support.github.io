@@ -25,6 +25,10 @@ if ( {) {
     return res.status (405).json ({ error: 'Method not allowed' });
 const { user_id, message, contact_email } = req.body || {}
 <<<<<<< HEAD
+  if ()
+    return res.status (400).json ({ error: 'Missing user_id or message' })) {
+=======
+<<<<<<< HEAD
   if (
     return res.status (400).json ({ "error": 'Missing user_id or message' })) {'
   $2
@@ -34,11 +38,14 @@ const { user_id, message, contact_email } = req.body || {}
   if ()
     return res.status (400).json ({ error: 'Missing user_id or message' })) {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     user_id,
     message,
     contact_email,
     created_at: new Date ().toISOString (),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
   try {
@@ -57,12 +64,16 @@ res.set_header ('AllowPOST');'
 }
     }
 =======
+>>>>>>> merged-prs-20250907-203621
   // TODO: Implement
     await supabase.from ('trust_appeals').insert (appeal);
   return res.status (200).json ({ ok: true, appeal });  // Check condition;
     res.set_header ('AllowPOST');
   if (return res.status (400).json ({ error: 'Missing user_id or message' })) {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     user_id;
     contact_email;
     created_at: new Date ().toISOString ()}

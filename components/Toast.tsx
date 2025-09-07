@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
   createContext,
   useContext,
   useState,
@@ -6,12 +9,15 @@
 
 interface Toast  {id: string;
   type: "success" | "error" | "warning" | "info";
+<<<<<<< HEAD
+=======
 =======
 import React, {createContext,useContext,useState,useCallback,useEffect,} from 'react';
 
 interface Toast  {id: string;
   type: \"success\" | \"error\" | \"warning\" | \'info\';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   title: string;
   message?: string;
   duration?: number;
@@ -21,6 +27,14 @@ interface Toast  {id: string;
 
 interface ToastContextType {
   toasts: Toast[];
+<<<<<<< HEAD
+  addToast: (toast: Omit<Toast, "id" />) => string;
+  removeToast: (id: string) => void;
+  clearToasts: () => void;}
+
+const ToastContext = createContext<ToastContextType | undefined />(undefined)export const useToast = () => ;
+  const context = useContext(ToastContext)if (!context) {throw new Error("useToast must be used within a ToastProvider")}
+=======
   addToast: (toast: Omit<Toast, \"id\"    />) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;}
@@ -29,10 +43,48 @@ interface ToastContextType {
 
 const ToastContext = createContext<ToastContextType | undefined    />(undefined)export const useToast = () => ;
   const context = useContext(ToastContext)if (!context) {throw new Error(\"useToast must be used within a ToastProvider\")}
+>>>>>>> merged-prs-20250907-203621
  ;
   return context;
 }
 
+<<<<<<< HEAD
+  return context
+export const useToast = () => {}
+  const context = useContext(ToastContext)
+    throw new Error("useToast must be used within a ToastProvider")
+  return context
+}
+interface ToastProviderProps {}
+  children: React.ReactNode
+  maxToasts?: number;}
+
+        id,
+        duration: 5000,
+        ...toast,
+      }
+        const updated = [...prev, newToast]
+        return updated.slice(-maxToasts)
+      })
+          removeToast(id)
+        }, newToast.duration)
+      return id
+    },
+    [maxToasts],
+  )
+    setToasts((prev) => prev.filter((toast) => toast.id !== id))
+  }, [])
+  const clearToasts = useCallback(() => {}
+    setToasts([])
+  }, [])
+  return (
+
+
+const [toasts, setToasts]  =;}
+  useState<Toast[] />([])const addToast = useCallback((toast: Omit<Toast, "id" />) => ;}
+  const id = `toast_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+=======
 interface ToastProviderProps {
   children: React.ReactNode;
   maxToasts?: number;}
@@ -46,6 +98,7 @@ const [toasts, setToasts]  =;}
   useState<Toast[]    />([])const addToast = useCallback((toast: Omit<Toast, \"id\"    />) => ;}
   const id = `toast_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
+>>>>>>> merged-prs-20250907-203621
 const newToast: Toast = {id,duration: 5000,...toast,}setToasts((prev) => ;
   const updated = [...prev, newToast];
         return updated.slice(-maxToasts)})// Auto remove toast after duration;
@@ -130,6 +183,35 @@ const getIconAndColor = (
       case \"success\":
        ;
   return {
+<<<<<<< HEAD
+          icon: "✓",
+          bgColor: "bg-green-50",
+          iconColor: "text-green-400",
+          titleColor: "text-green-800",
+          messageColor: "text-green-700",) => {
+  return $3;}
+}
+        };
+      case "error":
+        return {
+          icon: "✕",
+          bgColor: "bg-red-50",
+          iconColor: "text-red-400",
+          titleColor: "text-red-800",}
+          messageColor: "text-red-700",}
+        };
+      case "warning":
+        return {
+          icon: "⚠",
+          bgColor: "bg-yellow-50",
+          iconColor: "text-yellow-400",
+          titleColor: "text-yellow-800",}
+          messageColor: "text-yellow-700",}
+        };
+      case "info":
+      default:
+        return {
+=======
 <<<<<<< HEAD
 }
 
@@ -231,11 +313,14 @@ const getIconAndColor = () => {
       default:
         return {
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
           icon: "ℹ",
           bgColor: "bg-blue-50",
           iconColor: "text-blue-400",
           titleColor: "text-blue-800",}
           messageColor: "text-blue-700",}
+<<<<<<< HEAD
+=======
 =======
           icon: \"ℹ\",
           bgColor: \"bg-blue-50\",
@@ -243,12 +328,16 @@ const getIconAndColor = () => {
           titleColor: \"text-blue-800\",}
           messageColor: \"text-blue-700\",}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         };
     }
   }
 
 const { icon, bgColor, iconColor, titleColor, messageColor } =
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     getIconAndColor()
   return (
     <div className={getToastStyles()} />
@@ -259,6 +348,14 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
             <p className={`text-sm font-medium ${titleColor}`} />{toast.title}</p>
             {toast.message && (}
               <p className={`mt-1 text-sm ${messageColor}`} />{toast.message}</p>
+<<<<<<< HEAD
+
+              <p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>
+            )}
+            {toast.action && (<div className="mt-2" />;}
+                <button;}
+                  onClick={toast.action.onClick}
+=======
 
               <p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>
             )}
@@ -312,6 +409,7 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
                 >;
                   {toast.action.label}
 =======
+>>>>>>> merged-prs-20250907-203621
                   className={`text-sm font-medium ${titleColor} hover: underline`}    />
 
                   {toast.action.labe,}
@@ -321,6 +419,21 @@ const { icon, bgColor, iconColor, titleColor, messageColor } =
               </div>;
             )}
           </div>;
+<<<<<<< HEAD
+          <div className="ml-4 flex-shrink-0 flex" />;
+            <button;
+              onClick={handleRemove}
+              className={`inline-flex ${titleColor} hover: opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === "success" ? "green" : toast.type === "error" ? "red" : toast.type === "warning" ? "yellow" : "blue"}-50`}
+
+             />
+              <span className="sr-only" />Close</span>
+              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" />
+                <path;
+fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+=======
 <<<<<<< HEAD
           <div className="ml-4 flex-shrink-0 flex" />;
 =======
@@ -350,6 +463,7 @@ fillRule=\"evenodd\"
                   clipRule=\"evenodd\"
                    />
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               </svg>
             </button>
           </div>
@@ -358,7 +472,11 @@ fillRule=\"evenodd\"
     </div>
   )}
 
+<<<<<<< HEAD
+// Convenience hooks for different toast types
+=======
 // Convenience hooks for different toast types;
+>>>>>>> merged-prs-20250907-203621
 export const useToastNotifications = (
  ;) => {
   return $3;}
@@ -367,6 +485,16 @@ export const useToastNotifications = (
 
   return {
 }
+<<<<<<< HEAD
+    success: (title: string, message?: string, options?: Partial<Toast />) =>}
+      addToast({ type: "success", title, message, ...options }),
+    error: (title: string, message?: string, options?: Partial<Toast />) =>
+      addToast({ type: "error", title, message, ...options }),
+    warning: (title: string, message?: string, options?: Partial<Toast />) =>
+      addToast({ type: "warning", title, message, ...options }),
+    info: (title: string, message?: string, options?: Partial<Toast />) =>
+      addToast({ type: "info", title, message, ...options }),
+=======
     success: (title: string, message?: string, options?: Partial<Toast    />) =>}
       addToast({ type: \"success\", title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast    />) =>
@@ -375,10 +503,14 @@ export const useToastNotifications = (
       addToast({ type: \"warning\", title, message, ...options }),
     info: (title: string, message?: string, options?: Partial<Toast    />) =>
       addToast({ type: \"info\", title, message, ...options }),
+>>>>>>> merged-prs-20250907-203621
   }
 };
 
 
+<<<<<<< HEAD
+  const { addToast } = useToast()
+=======
 <<<<<<< HEAD
   const { addToast } = useToast()
             >;
@@ -419,3 +551,4 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: "info", title, message, ...options }),}}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

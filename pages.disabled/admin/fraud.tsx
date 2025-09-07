@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 interface FraudItem {
@@ -35,6 +38,18 @@ export default function FraudAdminPage() {
     setError(null)
     try {
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react',;
+;
+import React, { useEffect, useMemo, useState } from 'react';
+interface FraudItem {
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
 export default /**
  * FraudAdminPage - Function description
  */
@@ -59,6 +74,11 @@ function FraudAdminPage() {
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
 
   id: string
   userId: string | null
@@ -83,8 +103,11 @@ export default function FraudAdminPage() {
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
     const saved = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
   const fetchItems = async () => {
     setLoading(true)
     setError(null)
@@ -100,6 +123,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       set_loading (false);
 
     }
+<<<<<<< HEAD
+  }
+  useEffect(() => {
+=======
 
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -107,6 +134,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -114,6 +142,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
 export default function FraudAdminPage() {
 
   const [items, setItems] = useState<FraudItem[]>([]);
@@ -154,12 +189,20 @@ const res = await fetch('/api/fraud/admin/list', {
     localStorage.setItem('admin-token', adminToken);
     fetchItems();
   };
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
       },
@@ -194,6 +237,9 @@ fetchItems();
     else alert(json.error || 'Action failed');
   };
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
       },
@@ -228,6 +274,7 @@ const FraudPage: React.FC = () => {
         </button>
       </div>
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
       {loading && <div>Loading...</div>}
       {error && <div className='text-red-600'>{error}</div>}
 
@@ -289,6 +336,44 @@ const FraudPage: React.FC = () => {
                       Ignore
                     </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Content-Type': 'application/json'
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})}
+      body: JSON.stringify({ fraudId: id, action })})
+    const json = await res.json()
+    if (res.ok) fetchItems()
+    else alert(json.error |'Action failed')
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        'Content-Type': 'application/json',
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})
+      },
+      body: JSON.stringify({ fraudId: id, action })
+    });
+    const json = await res.json();
+    if (res.ok) fetchItems();
+    else alert(json.error || 'Action failed');
+  };
+<<<<<<< HEAD
+=======
+
+
+=======
+        'Content-Type': 'application/json',
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})
+      },
+      body: JSON.stringify({ fraudId: id, action })
+    });
+    const json = await res.json();
+    if (res.ok) fetchItems();
+    else alert(json.error || 'Action failed');
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -297,6 +382,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+<<<<<<< HEAD
+          value={adminToken}
+          onChange={(e) => setAdminToken(e.target.value)}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
           value={adminToken  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -307,7 +401,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
@@ -315,7 +417,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
+      {loading && <div>Loading...</div>}
+      {error && <div className="text-red-600">{error}</div>}
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -327,6 +439,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -344,8 +465,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {items.map((it) => (
               <tr key={it.id} className="border-t">
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
                 <td className="p-2 border">{it.userId || '—'}</td>
 
+=======
+<<<<<<< HEAD
+                <td className="p-2 border">{it.userId || '—'}</td>
+
+
+                <td className="p-2 border">{it.userId |'—'}</td>
+                <td className="p-2 border">{it.userId || '—'}</td>
+=======
+
+                <td className="p-2 border">{it.userId || '—'}</td>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
@@ -353,19 +489,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+<<<<<<< HEAD
+                    ))}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
 
+=======
+<<<<<<< HEAD
+                    <div className="font-semibold">{it.gpt?.label || '—'}</div>
+
+
+                    <div className="font-semibold">{it.gpt?.label |'—'}</div>
+                    <div className="font-semibold">{it.gpt?.label || '—'}</div>
+=======
+
+                    <div className="font-semibold">{it.gpt?.label || '—'}</div>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -378,7 +545,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </td>
               </tr>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </tbody>
         </table>
       </div>
@@ -386,8 +557,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
 }
 
+=======
+<<<<<<< HEAD
+}
+
+  )
+}
+=======
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
   },
   useEffect (() => {
     fetch_items (),
@@ -470,12 +655,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>);
 }
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
+=======
+<<<<<<< HEAD
   );
 
+  );
+};
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+}
+=======
 
+<<<<<<< HEAD:pages.disabled/admin/fraud.tsx
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/fraud.tsx

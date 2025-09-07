@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from \"react\"; import { cn } from \"@/lib/utils\"; export const PageLoader = ({ text = \"Loading...\",className }) => {}; return (); <div\"; className={cn(; \"flex flex-col items-center justify-center min-h-screen\',className)}; >; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
+const React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading.",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen",className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
+import _React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading...",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen',className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
+=======
 
 =======
 import _React from react; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = Loading...,className }) => {} return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen,className)} >; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
@@ -18,6 +23,7 @@ const React from react"; import { cn } from "@/lib/utils; export const PageLoade
 
 import _React from "react"; import { cn } from @/lib/utils; export const PageLoader = ({ text = "Loading...",className }) => {} return (); <div className={cn( flex flex-col items-center justify-center min-h-screen',className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -26,3 +32,6 @@ import _React from "react"; import { cn } from @/lib/utils; export const PageLoa
 import React from \"react\; import { cn } from \@/lib/utils\"; export const PageLoader = ({ text = \"Loading...\,className }) => {} return (); <div\; className={cn(; \"flex flex-col items-center justify-center min-h-screen\',className)} >; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
 const React from react; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = Loading.,className }) => {} return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen,className)} >; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+import { useRef, useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { useRef, useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Copy, Download, Link, Plus } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -29,10 +48,82 @@ import { Label } from '@/components/ui/label';
   SelectValue,;'
 } from '@/components/ui/select';
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
 export function PartnerReferralLinks() { return null; }
   } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);'
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');'
+=======
+<<<<<<< HEAD
+import { toast } from '@/hooks/use-toast'
+import { useReferrals } from '@/hooks/useReferrals'
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+} from '@/components/ui/dialog'
+import { Label } from '@/components/ui/label'
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+export function PartnerReferralLinks() {
+  const {
+    referralCode
+    getReferralLink
+    copyReferralLink
+    shareOnSocialMedia
+  } = useReferrals()
+=======
+export function PartnerReferralLinks() {;
+  const {;
+    referralCode,;
+    getReferralLink,;
+    copyReferralLink,;
+    shareOnSocialMedia,;
+  } = useReferrals();
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
+  const [customParam, setCustomParam] = useState<string>('');
+  const [generatedLinks, setGeneratedLinks] = useState<;
+<<<<<<< HEAD
+    { name: string; link: string }[]
+  >([])
+  // Get the base referral link
+  const baseLink = getReferralLink()
+  const handleCopyLink = (link: string) => {
+    navigator.clipboard.writeText(link);    toast({
+      title: 'Link copied!'
+      description: 'The referral link has been copied to your clipboard'
+      variant: 'default'
+    })
+  }
+  const handleGenerateLink = () => {
+    if (baseLink) {
+      const url = new URL(baseLink)
+      // Add custom campaign parameter if selected
+      if (selectedCampaign !== 'default') {
+        url.searchParams.append('campaign', selectedCampaign)
+      }
+      // Add custom parameter if provided
+      if (customParam) {
+        url.searchParams.append('source', customParam)
+      }
+      const newLink = {
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`
+        link: url.toString()
+      }
+      setGeneratedLinks(prev => [...prev, newLink])
+      setIsDialogOpen(false)
+      setCustomParam('')
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
     { name: string; link: string }[];
   >([]);
 
@@ -67,6 +158,7 @@ export function PartnerReferralLinks() { return null; }
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);'
       setCustomParam('');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   };
 
@@ -113,6 +205,13 @@ import { Label } from "@/components/ui/label",
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
 export function PartnerReferralLinks() {
 
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
@@ -135,6 +234,147 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected"
       if (selectedCampaign !== "default") {"
         url.searchParams.append("campaign", selectedCampaign)
+<<<<<<< HEAD
+      
+      // Add custom parameter if provided
+      if (customParam) {
+        url.searchParams.append("source", customParam)
+      }
+      
+      const newLink = {
+        url.searchParams.append('source', customParam)
+      }
+      
+      const newLink = {
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,
+        link: url.toString(),
+      }
+      setGeneratedLinks(prev => [...prev, newLink])
+      setIsDialogOpen(false)
+      setCustomParam('')
+    }
+  }
+  const handleDownloadLinks = () => {
+    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks]
+    const csvContent = [
+      'Name,Link',
+      ...allLinks.map(l => `${l.name},${l.link}`),
+    ].join('\n')
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.setAttribute('href', url)
+    link.setAttribute('download', 'zion_referral_links.csv')
+    link.style.visibility = 'hidden'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+        link: url.toString()
+      },
+      
+      setGeneratedLinks(prev => [...prev, newLink]),
+      setIsDialogOpen(false),
+      setCustomParam("")
+    }
+  },
+  
+  const handleDownloadLinks = () => {
+    const allLinks = [
+      { name: "Default", link: baseLink },
+      ...generatedLinks
+    ],
+    
+    const csvContent = [
+      "Name,Link",
+      ...allLinks.map(l => `${l.name},${l.link}`)
+    ].join("\n"),
+    
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
+    const url = URL.createObjectURL(blob),
+    const link = document.createElement("a"),
+    link.setAttribute("href", url),
+    link.setAttribute("download", "zion_referral_links.csv"),
+    link.style.visibility = 'hidden',
+    document.body.appendChild(link),
+    link.click(),
+    document.body.removeChild(link)
+  },
+  return (
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="flex items-center justify-between">
+            <span>Your Referral Link</span>
+      }
+      
+      // Add custom parameter if provided
+      if (customParam) {
+        url.searchParams.append("source", customParam)
+      }
+      
+      const newLink = {
+        url.searchParams.append('source', customParam)
+        url.searchParams.append("source", customParam)
+      }
+      
+      const newLink = {
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,
+        link: url.toString(),
+      }
+      setGeneratedLinks(prev => [...prev, newLink])
+      setIsDialogOpen(false)
+      setCustomParam('')
+    }
+  }
+  const handleDownloadLinks = () => {
+    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks]
+    const csvContent = [
+      'Name,Link',
+      ...allLinks.map(l => `${l.name},${l.link}`),
+    ].join('\n')
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.setAttribute('href', url)
+    link.setAttribute('download', 'zion_referral_links.csv')
+    link.style.visibility = 'hidden'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+        link: url.toString()
+      },
+      
+      setGeneratedLinks(prev => [...prev, newLink]),
+      setIsDialogOpen(false),
+      setCustomParam("")
+    }
+  },
+  
+  const handleDownloadLinks = () => {
+    const allLinks = [
+      { name: "Default", link: baseLink },
+      ...generatedLinks
+    ],
+    
+    const csvContent = [
+      "Name,Link",
+      ...allLinks.map(l => `${l.name},${l.link}`)
+    ].join("\n"),
+    
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
+    const url = URL.createObjectURL(blob),
+    const link = document.createElement("a"),
+    link.setAttribute("href", url),
+    link.setAttribute("download", "zion_referral_links.csv"),
+    link.style.visibility = 'hidden',
+    document.body.appendChild(link),
+    link.click(),
+    document.body.removeChild(link)
+  },
+=======
 
       }
 <<<<<<< HEAD
@@ -168,6 +408,7 @@ export function PartnerReferralLinks() {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       },
@@ -196,6 +437,12 @@ export function PartnerReferralLinks() {
     document.body.appendChild(link),
     link.click(),
     document.body.removeChild(link)
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
 
   return (
     <div className="space-y-6">
@@ -204,7 +451,36 @@ export function PartnerReferralLinks() {
         <CardHeader>"
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+<<<<<<< HEAD
+            <Button
+              variant='outline'
+              size='sm'
+              onClick={handleDownloadLinks}
+              className='flex items-center gap-2'            >
+              <Download className='h-4 w-4' />
+              Export Links
+            </Button>
+          </CardTitle>
+          <CardDescription>
+            Share this link with your audience to earn rewards
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className='flex space-x-2'>
+            <Input value={baseLink} readOnly className='font-mono text-sm' />
+            <Button variant='outline' onClick={() => handleCopyLink(baseLink)}>
+              <Copy className='h-4 w-4' />
+              <span className='sr-only'>Copy</span>            </Button>
+          </div>
+        </CardContent>
+      </Card>
+      <div className='flex justify-between items-center'>
+        <h3 className='text-lg font-semibold text-white'>
+          Custom Campaign Links
+        </h3>
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
               variant="outline" 
               size="sm" 
@@ -270,11 +546,24 @@ export function PartnerReferralLinks() { return null; }
     link.style.visibility = 'hidden',;
     document.body.appendChild(link),;
     link.click();
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
 
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
             <Button;'
               variant='outline';'
+=======
+    document.body.removeChild(link);
+  };
+  return (;
+    <div className="space-y-6">;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle className="flex items-center justify-between">;
+            <span>Your Referral Link</span>;
+            <Button;
+              variant='outline';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
               size='sm';
               on_click={handleDownloadLinks}'
               className='flex items - center gap - 2'            >;'
@@ -287,6 +576,24 @@ export function PartnerReferralLinks() { return null; }
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+          <div className="flex space-x-2">;
+            <Input;
+              value={baseLink}
+              readOnly
+              className="font-mono text-sm"
+            />
+            <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
+              <Copy className="h-4 w-4" />
+              <span className="sr-only">Copy</span>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
+=======
 
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 
@@ -319,6 +626,40 @@ export function PartnerReferralLinks() { return null; }
             <DialogHeader>;
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
+=======
+              <DialogDescription>;
+                Generate a trackable link for specific marketing campaigns;
+              </DialogDescription>;
+            </DialogHeader>;
+
+            <div className='grid gap - 4 py - 4'>;
+              <div className='grid gap - 2'>;
+                <Label html_for='campaign'>Campaign Type</Label>;
+                <Select;
+                  value={selected_campaign}
+                  onValueChange={setSelectedCampaign}                >;
+
+                  <SelectTrigger id='campaign'>;
+                    <SelectValue placeholder='Select campaign type' />;
+                  </SelectTrigger>;
+                  <SelectContent>;
+                    <SelectItem value='default'>General (Default)</SelectItem>;
+                    <SelectItem value='youtube'>YouTube</SelectItem>;
+                    <SelectItem value='newsletter'>Newsletter</SelectItem>;
+                    <SelectItem value='blog'>Blog</SelectItem>;
+                    <SelectItem value='podcast'>Podcast</SelectItem>;
+                    <SelectItem value='social'>Social Media</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+              </div>;
+
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 
               <Plus className="h-4 w-4" />
@@ -332,7 +673,27 @@ export function PartnerReferralLinks() { return null; }
                 Generate a trackable link for specific marketing campaigns;
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
+            <div className='grid gap-4 py-4'>
+              <div className='grid gap-2'>
+                <Label htmlFor='campaign'>Campaign Type</Label>
+                <Select
+                  value={selectedCampaign}
+                  onValueChange={setSelectedCampaign}                >
+                  <SelectTrigger id='campaign'>
+                    <SelectValue placeholder='Select campaign type' />
+                  </SelectTrigger>
+            <div className='grid gap-4 py-4'>
+              <div className='grid gap-2'>
+                <Label htmlFor='campaign'>Campaign Type</Label>
+                <Select
+                  value={selectedCampaign}
+                  onValueChange={setSelectedCampaign}                >
+                  <SelectTrigger id='campaign'>
+                    <SelectValue placeholder='Select campaign type' />
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
 
@@ -354,7 +715,24 @@ export function PartnerReferralLinks() { return null; }
                   </SelectContent>
                 </Select>
               </div>
+<<<<<<< HEAD
+              <div className='grid gap-2'>
+                <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
+                <Input
+                  id='custom'
+                  placeholder='spring_campaign, video_123, etc.'
+                  value={customParam}
+                  onChange={e => setCustomParam(e.target.value)}                />
+              </div>
+            </div>
+            <DialogFooter>
+              <Button
+                type='button'
+                variant='secondary'
+                onClick={() => setIsDialogOpen(false)}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid gap-2">
 
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
@@ -391,6 +769,33 @@ export function PartnerReferralLinks() { return null; }
 
                 type='button'
                 onClick={handleGenerateLink}
+<<<<<<< HEAD
+                className='bg-zion-purple hover:bg-zion-purple-dark'              >
+                Generate Link
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+                    <span>{item.name |'Campaign Link'}</span>                  </div>
+      <div className="grid gap-4">
+        {generatedLinks.length > 0 ? (
+          generatedLinks.map((item, index) => (
+      <div className='grid gap-4'>
+        {generatedLinks.length > 0 ? (
+          generatedLinks.map((item, index) => (
+            <Card
+              key={index}
+              className='bg-zion-blue-dark border-zion-blue-light'
+            >
+              <CardHeader className='pb-2'>
+                <CardTitle className='text-base flex items-center justify-between'>
+                  <div className='flex items-center gap-2'>
+                    <Link className='h-4 w-4 text-zion-purple' />
+                    <span>{item.name |'Campaign Link'}</span>                  </div>
+                    <span>{item.name || 'Campaign Link'}</span>                  </div>
+
+=======
 
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
                 Generate Link
@@ -401,8 +806,28 @@ export function PartnerReferralLinks() { return null; }
 
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <div className="grid gap-4">
+        {generatedLinks.length > 0 ? (
+          generatedLinks.map((item, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Link className="h-4 w-4 text-zion-purple" />
+                    <span>{item.name || "Campaign Link"}</span>
+                  </div>
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
 
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">"
               <CardHeader className="pb-2">"
@@ -411,6 +836,7 @@ export function PartnerReferralLinks() { return null; }
                     <Link className="h-4 w-4 text-zion-purple" />"
 
                 </CardTitle>
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
 
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
@@ -419,6 +845,8 @@ export function PartnerReferralLinks() { return null; }
                     readOnly
                     className="font-mono text-xs"
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
 
@@ -445,9 +873,36 @@ export function PartnerReferralLinks() { return null; }
               </CardHeader>;'
               <CardContent className='pb-4'>;'
                 <div className='flex space-x-2'>;
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
                   <Input;
                     value={item.link}
+=======
+<<<<<<< HEAD
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pb-4">
+                <div className="flex space-x-2">
+                  <Input
+                    value={item.link}
+                    readOnly
+                    className="font-mono text-xs"
+                  />
+                  <Button
+                    variant='outline'
+                    size='sm'
+                    onClick={() => handleCopyLink(item.link)}                  >
+                    <Copy className='h-4 w-4' />
+                    <span className='sr-only'>Copy</span>
+=======
+                  <Input
+                    value={item.link}
+                    readOnly
 
+                    className="font-mono text-xs"
+                  />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Button 
                     variant="outline" 
 
@@ -456,7 +911,14 @@ export function PartnerReferralLinks() { return null; }
                   >"
                     <Copy className="h-4 w-4" />"
                     <span className="sr-only">Copy</span>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
                   </Button>
 
                 </div>
@@ -467,9 +929,18 @@ export function PartnerReferralLinks() { return null; }
               <p className="text-zion-slate-light text-center mb-4">
 
               </p>
+<<<<<<< HEAD
+              <Button
+                variant='outline'
+=======
 
                 variant="outline"
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
                 onClick={() => setIsDialogOpen(true)}"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                onClick={() => setIsDialogOpen(true)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
                 className="flex items-center gap-2";
               >;"
                 <Plus className="h-4 w-4" />;
@@ -510,8 +981,90 @@ export function PartnerReferralLinks() { return null; }
     </div>;
   );
 
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
 }
 
+=======
+}//Add custom parameter if provided if (customParam) {;
+
+}const newLink = {;
+  name: `$ {;
+  selectedCampaign ;
+}$ {;
+  customParam ? `-$ {;
+  customParam ;
+}`: "" ;
+}`;
+};
+
+};
+...generatedLinks ];
+link && link.style.visibility = 'hidden';
+document && document.body.appendChild (link);
+link && link.click ();
+document && document.body.removeChild (link);
+};";
+  baseLink ";
+}readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Selectvalue= {
+  selectedCampaign 
+}onValueChange= {
+  setSelectedCampaign "
+}> <SelectTrigger id=" campaign"> <SelectValue placeholder=" Select campaign type"/> </SelectTrigger> <SelectContent> <SelectItem value=" default">General (Default) </SelectItem> <SelectItem value=" youtube">YouTube</SelectItem> <SelectItem value=" newsletter">Newsletter</SelectItem> <SelectItem value=" blog">Blog</SelectItem> <SelectItem value=" podcast">Podcast</SelectItem> <SelectItem value=" social">Social Media</SelectItem> </SelectContent> </Select> </div> <div className="grid gap-2"> <Label htmlFor=" custom">Custom Parameter (Optional) </Label> <Input /> </div> </div> <DialogFooter> <Button > Cancel </Button> <Button className="bg-zion-purple hover:bg-zion-purple-dark"> Generate Link </Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className="grid gap-4"> {;
+  generatedLinks && generatedLinks.length > 0 ? (generatedLinks && generatedLinks.map ( (item, index) => (<Cardkey= {
+  index "
+}className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader className="pb-2"> <CardTitle className="text-base flex items-center justify-between"> <div className="flex items-center gap-2"> </div> </CardTitle> </CardHeader> <CardContent className="pb-4"> <div className="flex space-x-2"> <Inputvalue= {
+  item && item.link "
+}readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
+}</div> </div>) ;
+}'"}
+
+              <div className='grid gap - 2'>;
+                <Label html_for='custom'>Custom Parameter (Optional)</Label>;
+                <Input;
+                  id='custom';
+                  placeholder='spring_campaign, video_123, etc.';
+                  value={custom_param}
+                  on_change={e => setCustomParam (e.target.value)}                />;
+              </div>;
+            </div>;
+            <DialogFooter>;
+              <Button;
+                type='button';
+                variant='secondary';
+                on_click={() => setIsDialogOpen (false)}
+<<<<<<< HEAD
+              <Button 
+                variant="outline"
+                onClick={() => setIsDialogOpen(true)}
+                className="flex items-center gap-2";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              >;
+                <Plus className="h-4 w-4" />;
+                Create First Link;
+              </Button>;
+            </CardContent>;
+          </Card>;
+        )}
+      </div>;
+    </div>;
+  );
+}
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+}
+=======
+}const new_link = {
+  name: `$ {
+  selected_campaign;
+}$ {
+  custom_param ? `-$ {
+  custom_param;
+}`: "";
+}`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx
 }
 }
 ...generated_links ];'
@@ -522,6 +1075,7 @@ link.click ();
       </div>;
     </div>;
   );
+<<<<<<< HEAD:src-disabled/components/partners/PartnerReferralLinks.tsx
 
 link.style.visibility = 'hidden';
 document.body.appendChild (link);
@@ -541,3 +1095,7 @@ document.body.removeChild (link);
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
 }</div> </div>) ;
 }'"
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/partners/PartnerReferralLinks.tsx

@@ -1,55 +1,45 @@
-<<<<<<< HEAD
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
 console.log('🧹 Cleaning main source files...');
-=======
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require(path');
-
-console.log('🧹 Cleaning main source files...);
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 // Files to clean (main source files only)
 const filesToClean = [
-  app/layout.tsx',
-  'app/page.tsx,
-  app/about/page.tsx',
-  'app/contact/page.tsx,
-  app/services/page.tsx',
-  'app/solutions/page.tsx,
-  app/research/page.tsx',
-  'pages/_app.tsx,
-  pages/index.tsx',
-  'pages/about.tsx,
-  pages/contact.tsx',
-  'pages/services.tsx,
-  pages/solutions.tsx',
-  'pages/research.tsx,
-  pages/AIServices.tsx',
-  'pages/automation.tsx,
-  pages/blockchain-solutions.tsx',
-  'pages/calendar.tsx,
-  pages/case-studies.tsx',
-  'pages/community.tsx,
-  pages/enterprise.tsx',
-  'pages/faq.tsx,
-  pages/guides.tsx',
-  'pages/help.tsx,
-  pages/news.tsx',
-  'pages/pricing.tsx,
-  pages/privacy.tsx',
-  'pages/quantum-services.tsx,
-  pages/resources.tsx',
-  'pages/search.tsx,
-  pages/services-advertising.tsx',
-  'pages/support.tsx,
-  pages/ai-powered-cybersecurity.tsx',
-  'pages/ai-powered-devops-platform.tsx,
-  pages/api-docs.tsx',
-  'pages/api-documentation.tsx
+  'app/layout.tsx',
+  'app/page.tsx',
+  'app/about/page.tsx',
+  'app/contact/page.tsx',
+  'app/services/page.tsx',
+  'app/solutions/page.tsx',
+  'app/research/page.tsx',
+  'pages/_app.tsx',
+  'pages/index.tsx',
+  'pages/about.tsx',
+  'pages/contact.tsx',
+  'pages/services.tsx',
+  'pages/solutions.tsx',
+  'pages/research.tsx',
+  'pages/AIServices.tsx',
+  'pages/automation.tsx',
+  'pages/blockchain-solutions.tsx',
+  'pages/calendar.tsx',
+  'pages/case-studies.tsx',
+  'pages/community.tsx',
+  'pages/enterprise.tsx',
+  'pages/faq.tsx',
+  'pages/guides.tsx',
+  'pages/help.tsx',
+  'pages/news.tsx',
+  'pages/pricing.tsx',
+  'pages/privacy.tsx',
+  'pages/quantum-services.tsx',
+  'pages/resources.tsx',
+  'pages/search.tsx',
+  'pages/services-advertising.tsx',
+  'pages/support.tsx',
+  'pages/ai-powered-cybersecurity.tsx',
+  'pages/ai-powered-devops-platform.tsx',
+  'pages/api-docs.tsx',
+  'pages/api-documentation.tsx'
 ];
 function cleanFile(filePath) {
   try {
@@ -57,7 +47,6 @@ function cleanFile(filePath) {
       console.log(`⚠️  File not found: ${filePath}`);
       return;
     }
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove merge conflict markers,
   content = content.replace(/
@@ -73,29 +62,6 @@ function cleanFile(filePath) {
       if (!content.includes('export default') && !content.includes('function') && !content.includes('const')) {
         const componentName = path.basename(filePath, '.tsx').replace(/[^a-zA-Z0-9]/g, '');
         content = `import React from 'react';
-=======
-
-    let content = fs.readFileSync(filePath, utf8');
-    
-    // Remove merge conflict markers
-    content = content.replace(/
-    content = content.replace(/
-    
-    // Clean up any remaining merge conflict markers
-    content = content.replace(/
-    
-    // Remove empty lines and clean up syntax
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
-    content = content.replace(/;\s*;/g, ;');
-    content = content.replace(/,\s*,/g, ',);
-    
-    // Basic React component template
-    if (filePath.endsWith(.tsx') && !filePath.includes('api/)) {
-      if (!content.includes(export default') && !content.includes('function) && !content.includes(const')) {
-        const componentName = path.basename(filePath, '.tsx).replace(/[^a-zA-Z0-9]/g, ');
-        content = `import React from 'react;
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 export default function ${componentName}() {
   return (
     <div>
@@ -113,14 +79,6 @@ export default function ${componentName}() {
     console.error(`❌ Error cleaning ${filePath}:`, error.message);
   }
 }
-<<<<<<< HEAD
 // Clean all files,
   filesToClean.forEach(cleanFile);
 console.log('🎉 Main source files cleaned!');
-=======
-
-// Clean all files
-filesToClean.forEach(cleanFile);
-
-console.log(🎉 Main source files cleaned!');
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

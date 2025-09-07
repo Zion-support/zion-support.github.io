@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 import { Job } from "@/types/jobs,
 import { toast } from sonner",
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/jobs/ApplyToJobForm.tsx
 import { useState } from "react;
 import { useRouter  } from 'next/router;
@@ -28,8 +31,11 @@ import { Alert, AlertDescription } from "@/components/ui/alert,
 import { AlertCircle, FileText, Loader2 } from lucide-react'
 import { formatDistanceToNow } from "date-fns",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/jobs/ApplyToJobForm.tsx
 import { Job } from @/types/jobs;
 import { toast } from "sonner";
@@ -137,6 +143,9 @@ import { toast } from "sonner",
       toast.error("Failed to submit application")
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/components/jobs/ApplyToJobForm.tsx
   return (
     <form onSubmit={handleSubmit} className=space-y-6>
@@ -161,9 +170,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow  } from './date - fns';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Job  } from '@/types/ jobs';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Job  } from '@/types / jobs';
 import { Job  } from '@/types/ jobs;
 import { Job  } from @/types / jobs';
@@ -230,6 +242,8 @@ if ( {) {}
   },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
   
 
@@ -279,6 +293,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Alert variant=destructive">
           <AlertCircle className="h-4 w-4 />
 =======
+>>>>>>> merged-prs-20250907-203621
           <AlertCircle className="h-4 w-4" />
 >>>>>>> origin/chore/fix-lint-and-merge
           <AlertDescription>{error}</AlertDescription>
@@ -304,6 +319,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <div>
 
+<<<<<<< HEAD
+import { toast } from "sonner";
+interface ApplyToJobFormProps {;
+  job: Job,;
+  onSuccess?: () => void;
+}
+=======
 import { toast } from sonner";
 interface ApplyToJobFormProps {
   job: Job,
@@ -419,6 +441,7 @@ interface ApplyToJobFormProps {;
   job: Job,;
   onSuccess?: () => void;
 }
+>>>>>>> merged-prs-20250907-203621
 export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
@@ -447,6 +470,8 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
             rows = {6}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         
 
@@ -455,6 +480,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
         <div>
           <Label htmlFor=resume">Select Resume (Optional)</Label>
 =======
+>>>>>>> merged-prs-20250907-203621
           <Label htmlFor="resume">Select Resume (Optional)</Label>
 >>>>>>> origin/chore/fix-lint-and-merge
           {isResumesLoading ? ("
@@ -465,6 +491,8 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
           ) : resumes && resumes.length > 0 ? (
 
             <Select
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <Textarea;
             id=coverLetter";
@@ -500,6 +528,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
         <h3 className="text-lg font-medium mb-1>Apply to: {job.title}</h3>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -573,6 +602,8 @@ interface ApplyToJobFormProps {
         </p>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {error && (<Alert variant="destructive">;
           <AlertCircle className=h-4 w-4 />;
           <AlertDescription>{error}</AlertDescription>;
@@ -583,6 +614,7 @@ interface ApplyToJobFormProps {
         <Alert variant=destructive">;"
           <AlertCircle className=h-4 w-4 />;
 =======
+>>>>>>> merged-prs-20250907-203621
       {error && (;"
         <Alert variant="destructive">;"
           <AlertCircle className="h-4 w-4" />;
@@ -598,10 +630,13 @@ interface ApplyToJobFormProps {
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             rows={6}placeholder="Introduce yourself and explain why you are a good fit for this job...";
             rows={6}placeholder="Introduce yourself and explain why you are a good fit for this job...;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             rows={6}
 
             placeholder=Introduce yourself and explain why you are a good fit for this job...";
@@ -611,6 +646,8 @@ interface ApplyToJobFormProps {
           <p className="text-xs text-muted-foreground mt-1">;
             Provide a brief introduction and highlight your relevant skills and experience.;
           </p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </div>;<div>;
           <Label htmlFor=resume>Select Resume (Optional)</Label>;
@@ -637,6 +674,7 @@ interface ApplyToJobFormProps {
         <div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </div>;
 
         <div>;
@@ -653,6 +691,8 @@ interface ApplyToJobFormProps {
           <Textarea;"
             id="cover_letter";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             value = {cover_letter }
             on_change = {(e, ) => setCoverLetter (e.target.value) }
             rows = {6 }
@@ -663,6 +703,7 @@ interface ApplyToJobFormProps {
             value = {cover_letter}
             on_change = {(e, ) => setCoverLetter (e.target.value)}
 =======
+>>>>>>> merged-prs-20250907-203621
             value = {cover_letter, }
             on_change = {(e, ) => setCoverLetter (e.target.value), }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -672,6 +713,8 @@ interface ApplyToJobFormProps {
         </div>;
         <div>;"
           <Label html_for="resume">Select Resume (Optional)</Label>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           {isResumesLoading ? (<div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className=h - 4 w - 4 animate - spin />;
@@ -688,6 +731,7 @@ interface ApplyToJobFormProps {
                         {resume && resume.basic_info.title || Untitled Resume}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <span > Loading your resumes...</span>;
             </div>) : resumes && resumes.length > 0 ? (
@@ -715,6 +759,8 @@ interface ApplyToJobFormProps {
               </SelectContent>;
             </Select>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           ) : (<div className="flex items-center justify-between mt-2 p-3 border rounded-md">;
               <div className="flex items-center gap-2">;
                 <FileText className="h-5 w-5 text-muted-foreground" />;
@@ -730,6 +776,7 @@ interface ApplyToJobFormProps {
                 onClick = {(,) => router && router.push(/dashboard/talent/portfolio")}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           ) : (;"
             <div className=flex items-center justify-between mt-2 p-3 border rounded-md>;"
               <div className="flex items-center gap-2>;
@@ -742,6 +789,8 @@ interface ApplyToJobFormProps {
               </Button>;
             </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           )}</div>;<div>;
           <Label htmlFor=cvUpload>Or Upload CV (PDF)</Label>;<input;
             id="cvUpload";
@@ -750,6 +799,7 @@ interface ApplyToJobFormProps {
             className=mt-1;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           )}
 
@@ -777,6 +827,8 @@ interface ApplyToJobFormProps {
 
       <div className="flex justify-end gap-2">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null)}
           />;
@@ -788,6 +840,7 @@ interface ApplyToJobFormProps {
           type=button
           variant="outline"
 
+>>>>>>> merged-prs-20250907-203621
           type="button"
           type=button
           variant="outline"
@@ -809,6 +862,9 @@ interface ApplyToJobFormProps {
           onClick={() => {
             if (onSuccess) onSuccess();
 
+<<<<<<< HEAD
+          }}
+=======
         <Button
           type=button
 
@@ -835,10 +891,13 @@ interface ApplyToJobFormProps {
 =======
           }}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         >;
           Cancel;
         </Button>;"
         <Button type="submit" disabled={isSubmitting}>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           {isSubmitting ? (<>;
               <Loader2 className=h-4 w-4 mr-2 animate-spin" />;
@@ -931,6 +990,7 @@ handle_submit;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           {isSubmitting ? (;
             <>;"
               <Loader2 className="h-4 w-4 mr-2 animate-spin />;
@@ -1085,6 +1145,8 @@ handleSubmit ;
 }</Button> </div> </form>) ;
 <<<<<<< HEAD
 }"
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className="space - y-4" > <div> <Label html_for=cover_letter >Cover Letter</Label> <Textarea className="mt - 1" /> <p className=text - xs text - muted - foreground mt - 1 > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className=h - 4 w - 4 animate - spin /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {selectedResumeId;
 }onValueChange= {setSelectedResumeId ";
@@ -1105,3 +1167,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

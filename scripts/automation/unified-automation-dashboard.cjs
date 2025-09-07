@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -26,8 +29,11 @@ const { execSync } = require("child_process")
     if (level === ERROR)
   fs.appendFileSync(this.errorFile, logMessage + "\n")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const output = execSync("pm2 jlist", { "encoding": "})
       return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR""`)
     fs.appendFileSync(this.logFile, logMessage + "\n")
@@ -99,8 +105,12 @@ this.log("Dashboard generated successfully at ${htmlPath}")
       reports["console-error-fixer"]
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
+<<<<<<< HEAD
+  generateHTMLDashboard($2) {return "}
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
   generateHTMLDashboard(dashboard) {return "}
+>>>>>>> merged-prs-20250907-203621
 <html lang="
     <meta name=viewport content=width=device-width, initial-scale=1.0
     <script src="https": //cdn.tailwindcss.com
@@ -261,11 +271,21 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -283,3 +303,4 @@ this.log("Dashboard generated successfully at ${htmlPath}")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

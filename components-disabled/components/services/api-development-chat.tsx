@@ -8,6 +8,31 @@ const ApiDevelopmentChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
+;
+  const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"ApiDevelopmentChat service\" />;
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"ApiDevelopmentChat service\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const ApiDevelopmentChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+=======
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
@@ -40,6 +65,7 @@ const ApiDevelopmentChat: NextPage = () => {
     <div />
       <Head />
 ;
+>>>>>>> merged-prs-20250907-203621
   const ApiDevelopmentChat: NextPage = () => {;
   return (
     <div />;
@@ -47,16 +73,22 @@ const ApiDevelopmentChat: NextPage = () => {
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 }
 return (;
 =======
+>>>>>>> merged-prs-20250907-203621
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const ApiDevelopmentChat: NextPage = () => {
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <div>
 </div>
       <Head>
@@ -68,6 +100,9 @@ const ApiDevelopmentChat: NextPage = () => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
 const ApiDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -75,7 +110,10 @@ const ApiDevelopmentChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -114,17 +152,23 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title > ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}"
 =======
+>>>>>>> merged-prs-20250907-203621
 const ApiDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Head>;
       <main />;
         <h1  /> ApiDevelopmentChat</h1>;
@@ -149,17 +193,23 @@ export default ApiDevelopmentChat;<div />;
   )},export default ApiDevelopmentChat;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}"
 =======
+>>>>>>> merged-prs-20250907-203621
 const ApiDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Head>;
       <main />;
         <h1 />ApiDevelopmentChat</h1>;
@@ -176,9 +226,13 @@ export default ApiDevelopmentChat;<title />ApiDevelopmentChat - Zion Tech Soluti
 
 export default ApiDevelopmentChat;
 <<<<<<< HEAD
+const ApiDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
 =======
 const ApiDevelopmentChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  ;
   return (
     <div />
@@ -201,9 +255,13 @@ export default ApiDevelopmentChat;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+const ApiDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
 =======
 const ApiDevelopmentChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  ;
   return (
     <div />

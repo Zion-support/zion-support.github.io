@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,6 +12,7 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -19,16 +22,24 @@
  * Handles intelligent deployment processes;
  */
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
+
+
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 =======
-
-
 <<<<<<< HEAD
 =======
 =======
@@ -41,11 +52,38 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class SmartDeploymentAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-
+        this.logFile = path.join(this.projectRoot, 'logs', 'smart-deployment-automation.log');
+        this.reportFile = path.join(this.projectRoot, 'deployment-automation-report.json');
+        this.ensureLogsDirectory()};
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot, 'logs';);
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString(}
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+        console.log(message)};
+    preDeploymentChecks() {}
+        this.log('Running pre-deployment checks...');
+    preDeploymentChecks() {}
+        this.log('Running pre-deployment checks...');
+        
+        
+        
+=======
 <<<<<<< HEAD
 
 
@@ -88,6 +126,7 @@ class SmartDeploymentAutomation {}
         this.log('Running pre-deployment checks...');
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const checks = {}
             "lint": this.runLintCheck(),
             "typeCheck": this.runTypeCheck(),
@@ -100,15 +139,25 @@ class SmartDeploymentAutomation {}
 
 =======
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
+<<<<<<< HEAD
+
+        
+        
+
+        
+=======
 <<<<<<< HEAD
 
 =======
@@ -135,12 +184,14 @@ class SmartDeploymentAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
     preDeploymentChecks() {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             test: this.runTestCheck();"
         // Health check after each instance;
 
+<<<<<<< HEAD
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <<<<<<< HEAD
 =======
@@ -186,17 +237,33 @@ class SmartDeploymentAutomation {}
         this.log(Generating production build...');
 
 =======
+>>>>>>> merged-prs-20250907-203621
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
+        const healthCheck = await this.performHealthCheck(environment)
+  if($2) {
+          throw new Error(`Health check failed after deploying instance ${i}`)
+  preDeploymentChecks($2) {}"
+
+            "test": this.runTestCheck();"
+        // Health check after each instance
+        const healthCheck = await this.performHealthCheck(environment)
+        this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`)
+        return { checks, allPassed }}
+  runLintCheck($2) {}
         try {}
             execSync('npm run lint', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot, 
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
 =======
                 "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 "stdio": 'pipe'
             }
 });
@@ -206,43 +273,55 @@ class SmartDeploymentAutomation {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             return { "status": 'success', "message": 'Lint check passed' }} catch (error) {}
             return { "status": 'failed', "message": error.message }};"
-    runTypeCheck() {}
+  runTypeCheck($2) {}
         try {}"
             execSync('npm run type-check', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot, 
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
 =======
                 "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 "stdio": 'pipe'
             }
 });
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             return { "status": 'success', "message": 'Type check passed' }} catch (error) {}
-    runBuildCheck() {}
+  runBuildCheck($2) {}
             execSync('npm run build', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot, 
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
 =======
                 "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 "stdio": 'pipe'
             }
 });
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             return { "status": 'success', "message": 'Build check passed' }} catch (error) {}
-    runTestCheck() {}
+  runTestCheck($2) {}
             execSync('npm test', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot, 
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
 =======
                 "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 "stdio": 'pipe'
             }
 });
@@ -254,8 +333,11 @@ class SmartDeploymentAutomation {}
     generateBuild() {}
         this.log('Generating production build...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         try {}
             execSync('npm run build, {})
                 "cwd: this.projectRoot,
@@ -263,11 +345,14 @@ class SmartDeploymentAutomation {}
             }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         
         try {}
             execSync('npm run build, {})
@@ -276,6 +361,9 @@ class SmartDeploymentAutomation {}
             }
 });
             
+<<<<<<< HEAD
+            
+=======
 <<<<<<< HEAD
 
 =======
@@ -314,18 +402,26 @@ class SmartDeploymentAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
             this.log('Production build generated successfully');
             return { "status": 'success', "message": 'Build completed' }} catch (error) {}`;
             this.log(`Build "failed": ${error.message}`);""
     optimizeBuild() {}"
         this.log('Optimizing build...');
 <<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
         try {}
             // Check if build optimization is available;
             const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8';););
             if ( {})
                 execSync('npm run "build": production', { })
+<<<<<<< HEAD
+                    "cwd": this.projectRoot, 
+=======
                     "cwd": this.projectRoot,
 =======
         
@@ -348,6 +444,7 @@ class SmartDeploymentAutomation {}
 =======
                     "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                     "stdio": 'pipe'
 =======
                 })) {}
@@ -355,11 +452,15 @@ class SmartDeploymentAutomation {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 })};
                 this.log('Production build optimization completed')} else {}
-                this.log('No production build optimization script found')};
-            return { "status": 'success', "message": 'Build optimization completed' }} catch (error) {}`;
+                this.log('No production build optimization script found')}
+            return { "status": 'success', "message": 'Build optimization completed' }} catch (error) {}`
             this.log(`Build optimization "failed": ${error.message}`);""
     checkDeploymentReadiness() {}"
         this.log('Checking deployment readiness...');
+<<<<<<< HEAD
+        
+        
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -368,6 +469,7 @@ class SmartDeploymentAutomation {}
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
         const readiness = {}
 <<<<<<< HEAD
             "buildExists: fs.existsSync(path.join(this.projectRoot, '.next)),
@@ -380,6 +482,12 @@ class SmartDeploymentAutomation {}
             "packageJsonExists": fs.existsSync(path.join(this.projectRoot, 'package.json')),
             "nodeModulesExists": fs.existsSync(path.join(this.projectRoot, 'node_modules')),
             "logsDirectoryExists": fs.existsSync(path.join(this.projectRoot, 'logs'));
+<<<<<<< HEAD
+       };
+        const isReady = Object.values(readiness).every(Boolean;);
+        const isReady = Object.values(readiness).every(Boolean;);
+        `;
+=======
 <<<<<<< HEAD
        };
 <<<<<<< HEAD
@@ -396,12 +504,13 @@ class SmartDeploymentAutomation {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <<<<<<< HEAD
 =======
+>>>>>>> merged-prs-20250907-203621
         
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+        
+        
+<<<<<<< HEAD
 =======
-        
-        
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         this.log(`Deployment "readiness: ${isReady ? 'ready : not ready'}`);
@@ -428,15 +537,21 @@ class SmartDeploymentAutomation {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+>>>>>>> merged-prs-20250907-203621
         this.log(`Deployment "readiness": ${isReady ? 'ready' : 'not ready'}`);
         return { ...readiness, isReady }};
     generateDeploymentReport() {}
         this.log('Generating deployment automation report...');
 <<<<<<< HEAD
+        
+        
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -450,12 +565,20 @@ class SmartDeploymentAutomation {}
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Deployment report saved to ${this.reportFile}`);
 =======
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Deployment report saved to ${this.reportFile}`);
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Deployment report saved to ${this.reportFile}`);
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -467,6 +590,18 @@ class SmartDeploymentAutomation {}
 
 =======
         
+<<<<<<< HEAD
+        return report};
+    generateDeploymentRecommendations() {}
+"recommendations": this.generateDeploymentRecommendations()
+       }
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+        this.log(`Deployment report saved to ${this.reportFile}`)
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+        this.log(`Deployment report saved to ${this.reportFile}`)
+        return report}
+  generateDeploymentRecommendations($2) {}
+=======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
         
@@ -476,6 +611,7 @@ class SmartDeploymentAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return report};
     generateDeploymentRecommendations() {}
+>>>>>>> merged-prs-20250907-203621
         return [;]
             'Implement automated testing in CI/CD pipeline',
             'Use environment-specific configuration files',
@@ -484,9 +620,16 @@ class SmartDeploymentAutomation {}
             'Use containerization for consistent deployments',
             'Implement rollback mechanisms',
             'Set up automated health checks post-deployment'
-        ]};
+        ]}
     async run() {}
         this.log('Smart Deployment Automation started');
+<<<<<<< HEAD
+        
+        
+        try {}
+            const report = this.generateDeploymentReport(;)
+            this.log('Smart Deployment Automation completed successfully')
+=======
 <<<<<<< HEAD
 =======
         
@@ -495,6 +638,7 @@ class SmartDeploymentAutomation {}
         try {}
             const report = this.generateDeploymentReport(;);
             this.log(Smart Deployment Automation completed successfully');
+>>>>>>> merged-prs-20250907-203621
             return report} catch (error) {}
 <<<<<<< HEAD
             this.log(`Smart Deployment Automation "failed: ${error.message}`);
@@ -533,8 +677,8 @@ class SmartDeploymentAutomation {}
 
 =======
 
-        return report};
-    generateDeploymentRecommendations() {}
+return report}
+  generateDeploymentRecommendations($2) {}
         return [;]"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -543,6 +687,12 @@ class SmartDeploymentAutomation {}
     const automation = new SmartDeploymentAutomation) {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
+
+module.exports = SmartDeploymentAutomation;
+module.exports = SmartDeploymentAutomation;
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -564,9 +714,9 @@ module.exports = SmartDeploymentAutomation;
 
 <<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 module.exports = SmartDeploymentAutomation;
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = SmartDeploymentAutomation;
 
 =======

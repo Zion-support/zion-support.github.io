@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,6 +15,7 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -33,6 +37,15 @@ console.log(' Starting JSX/TSX syntax fixer...')
       execSync('npm run type-check', { "stdio"})
       summary
       "status"
+<<<<<<< HEAD
+
+  console.error(' JSX/TSX syntax fixer failed to "start")
+  console.error(' JSX/TSX syntax fixer failed to "start")
+  console.error(' JSX/TSX syntax fixer failed to "start")
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -67,3 +80,4 @@ console.log(' Starting JSX/TSX syntax fixer...')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

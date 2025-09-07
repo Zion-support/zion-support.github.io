@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/""usr/bin/env""
+#!/usr/bin/env
+=======
+<<<<<<< HEAD
 
 
       console.log( Error Fixer Automation completed successfully!")
@@ -28,6 +32,7 @@
 =======
 #!/usr/bin/env
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -39,6 +44,9 @@ const glob = require("glob")
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 // console.log("" Error Fixer Automation completed successfully!")
       console.log(")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)
@@ -212,6 +220,17 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
         "totalErrors"
         "successRate"
 <<<<<<< HEAD
+
+      console.error('Automation "failed")
+      console.error('Automation "failed")
+      console.error('Automation "failed")
+// console.log( Error Fixer Automation completed successfully!")
+      console.log(")"
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -248,3 +267,4 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

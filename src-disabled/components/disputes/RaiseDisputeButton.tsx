@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 import React, { useState } from 'react;
@@ -14,6 +16,7 @@ import { useRouter } from 'next/router';
 import { DisputeForm } from ./DisputeForm";
 import { useRouter } from 'next/router;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 :src/components/disputes/RaiseDisputeButton.tsx
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -39,6 +42,8 @@ import {  Dialog
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { ShieldAlert } from 'lucide-react
   DialogDescription} from "@/components/ui/dialog
@@ -55,6 +60,7 @@ return (
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 Dialog,
   DialogContent,
   DialogHeader,
@@ -101,6 +107,8 @@ export function RaiseDisputeButton({
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
+=======
 
 
 }
@@ -110,6 +118,7 @@ export function RaiseDisputeButton({
   milestoneId;
   variant;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -117,8 +126,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     router.push(`/dashboard/disputes/${disputeId}`)
   },
   
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 Dialog,
   DialogContent,
   DialogHeader,
@@ -174,6 +186,8 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   DialogDescription} from @/components/ui/dialog,import { DisputeForm  } from ./DisputeForm';
 import { useRouter  } from 'next/router;
@@ -213,6 +227,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
       </Button>;<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
         Raise Dispute;
@@ -233,6 +248,8 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
         <DialogContent className=sm:max - w-[550px]>;,
           <DialogHeader>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <DialogTitle > Raise a Dispute</DialogTitle>;<DialogDescription>Please provide details about the issue you're experiencing with;
               this project.;
             </DialogDescription>;
@@ -243,6 +260,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
   )}<DisputeForm;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <DialogTitle > Raise a Dispute</DialogTitle>;
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
@@ -260,6 +278,8 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -270,6 +290,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
@@ -279,9 +300,12 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
 :src/components/disputes/RaiseDisputeButton.tsx
   )
 }
+<<<<<<< HEAD
+=======
           
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
@@ -332,6 +356,8 @@ export function RaiseDisputeButton({
   return (;
     <>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             onDisputeCreated={handleDisputeCreated}onCancel={() => setIsDialogOpen(false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -344,6 +370,7 @@ export function RaiseDisputeButton({
 }export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeId}`)}return (<>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Button;
         variant={variant} ;
         size={size} ;
@@ -367,9 +394,12 @@ export function RaiseDisputeButton({
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             onCancel={() => setIsDialogOpen(false)}          />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             onCancel={() => setIsDialogOpen(false)}
           />;
@@ -377,6 +407,8 @@ export function RaiseDisputeButton({
       </Dialog>;
     </>;
   );
+<<<<<<< HEAD
+=======
 
 }
 
@@ -387,6 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
+>>>>>>> merged-prs-20250907-203621
 :src/components/disputes/RaiseDisputeButton.tsx
 }
 

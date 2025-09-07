@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T04:25:47.740Z",
   "stats": {
     "totalFiles": 8,
@@ -7,6 +6,8 @@
     "functions": 7,
     "classes": 0,
     "comments": 5
+<<<<<<< HEAD
+=======
   ]
 }
   ]
@@ -19,6 +20,7 @@ ursor/automate-test-improve-and-merge-code-646c
     "passed": 1,
     "failed": 2,
     "warnings": 0
+>>>>>>> merged-prs-20250907-203621
   },
   "issues": [
     {
@@ -41,6 +43,9 @@ ursor/automate-test-improve-and-merge-code-646c
     Remove console.log statements from production code",
     "Consider using TypeScript for better type safety
   ]
+<<<<<<< HEAD
+}
+=======
 }
   "timestamp": "2025-09-07T10:14:30.109Z",
   "issues": [
@@ -1096,3 +1101,4 @@ ursor/automate-test-improve-and-merge-code-646c
   ]
 }
 origin/cursor/fix-syntax-push-and-merge-to-main-8452
+>>>>>>> merged-prs-20250907-203621

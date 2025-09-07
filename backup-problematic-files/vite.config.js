@@ -3,7 +3,11 @@
   plugins: [react()],
   server: {,
     port: 3000,
+<<<<<<< HEAD
     host: true;
+=======
+    host: true
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   },
 
     rollupOptions: {,

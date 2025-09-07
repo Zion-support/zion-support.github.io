@@ -8,6 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 type EmptyStateCardProps = {}
 
 <<<<<<< HEAD
+  type: 'active' | 'archived';
+
+=======
+<<<<<<< HEAD
 import { MessageSquare, ArchiveIcon } from lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/card;'
 
@@ -56,6 +60,7 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: active' | 'archive
   type: 'active' | 'archived';
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           }
         </p>
       </CardContent>;

@@ -1,5 +1,15 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+=======
+<<<<<<< HEAD
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require(path')
@@ -46,6 +56,7 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 console.log('� Starting File Size Optimization...')
 const largeFiles = ['pages/ai-services.tsx']
   'pages/it-services.tsx
@@ -55,12 +66,24 @@ const largeFiles = ['pages/ai-services.tsx']
   const lines = content.split('\n')
 <<<<<<< HEAD
     const backupPath = filePath + '.backup;'
+
+console.log(' File size optimization completed')
+console.log(' File size optimization completed')
+
+console.log(' File size optimization completed')
+=======
+<<<<<<< HEAD
+    const backupPath = filePath + '.backup;'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 console.log(' File size optimization completed')
+<<<<<<< HEAD
+    const backupPath = filePath + '.backup;
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -77,6 +100,7 @@ console.log(' File size optimization completed')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> merged-prs-20250907-203621
 
 console.log( File size optimization completed)
 

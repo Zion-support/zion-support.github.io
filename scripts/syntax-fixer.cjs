@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -29,6 +32,7 @@ const util = require(util")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -40,11 +44,21 @@ const util = require("util")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+<<<<<<< HEAD
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -66,3 +80,4 @@ const util = require("util")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

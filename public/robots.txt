@@ -2,13 +2,20 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 <<<<<<< HEAD
 Disallow: /private/
 
@@ -34,3 +41,12 @@ Crawl-delay: 1
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+=======
+Disallow: /private/
+
+# Allow all other content
+Allow: /about
+Allow: /services
+Allow: /contact
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

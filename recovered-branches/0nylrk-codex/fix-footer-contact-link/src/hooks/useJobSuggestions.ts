@@ -1,5 +1,28 @@
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { JobMatch } from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
+  useEffect(() => {
+    const fetchSuggestedJobs = $2;
+      try {
+        setIsLoading($2);
+        // Get job matches with job details
+        const { data, error } = await supabase
+          .from("job_talent_matches")
+          .select(`
+            *,
+            job: job_id(*)
+          `)
+          .eq("talent_id", talentId)
+          .order($2);
+=======
 useEffect(() => {
 
+<<<<<<< HEAD
     const fetchSuggestedJobs = async () => {
 
 import {useState, useEffect} from "react";
@@ -18,6 +41,13 @@ import { JobMatch } from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {};
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -26,11 +56,48 @@ export function useJobSuggestions(talentId?: string) {};
 
         setIsLoading(true);
 
+<<<<<<< HEAD
+
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { JobMatch } from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import { JobMatch } from "@/types/jobs",
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  
+  useEffect(() => {
+
+    const fetchSuggestedJobs = async () => {
+      if (!talentId) return;
+      try {
+        setIsLoading(true);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!talentId) return,
       
       try {}
         setIsLoading(true),
+<<<<<<< HEAD
+=======
+        
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Get job matches with job details
         const { data, error } = await supabase
 
@@ -39,6 +106,7 @@ export function useJobSuggestions(talentId?: string) {};
 
           .order("created_at", { ascending: false }),
           
+>>>>>>> merged-prs-20250907-203621
         if (error) throw error,
         
         setJobMatches(data || [])
@@ -63,10 +131,7 @@ export function useJobSuggestions(talentId?: string) {};
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
-            *;
-            job:job_id (*)
-          `)
-          .eq("talent_id", talentId)
+<<<<<<< HEAD
 
             *,
             job:job_id (*)
@@ -75,20 +140,107 @@ export function useJobSuggestions(talentId?: string) {};
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
+=======
+            *;
+            job:job_id (*)
+          `)
+          .eq("talent_id", talentId)
+
+<<<<<<< HEAD
+            *,
+            job:job_id (*)
+          `)
+          .eq("talent_id", talentId)
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        setJobMatches(data |[])
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           .order("created_at", { ascending: false }),
           
         if (error) throw error,
         
         setJobMatches(data || [])
+<<<<<<< HEAD
+      } catch (error) {
+        console.error("Error fetching job matches:", error),
+        toast({
+          title: "Error";
+          description: "Failed to load job suggestions"
+          title: "Error",
+          description: "Failed to load job suggestions",
+          variant: "destructive"})
+      } finally {
+        setIsLoading(false)
+      }
+=======
 
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           title: "Error",
           description: "Failed to load job suggestions",
 
           variant: "destructive"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    fetchSuggestedJobs()
+  }, [talentId]);
+=======
+=======
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { JobMatch } from '@/types / jobs';
+export /**
+ * useJobSuggestions - Function description
+ */
+function useJobSuggestions() {
+  const [job_matches, setJobMatches] = useState < JobMatch[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
+  useEffect (() => {
+    const fetchSuggestedJobs = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      try {
+        setIsLoading (true);
+;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from ("job_talent_matches");
+          .select (`;
+            *;
+            job:job_id (*);
+          `);
+          .eq ("talent_id", talent_id);
+          .order ("created_at", { ascending: false });
+;
+        // Check condition
+if (throw error) {
+  $2
+}
+        setJobMatches (data || []);
+      } catch (error) {
+        console.error ("Error fetching job matches:", error);
+        toast ({
+          title: "Error";
+          description: "Failed to load job suggestions",
+          variant: "destructive"});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       } finally {
         setIsLoading (false);
       }
@@ -98,18 +250,120 @@ export function useJobSuggestions(talentId?: string) {};
       }
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
+<<<<<<< HEAD
 
+  const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
+    try {
+      const updates = $2;
+        ...(status = $2;
+      const { error } = await supabase
+        .from("job_talent_matches")
+        .update(updates)
+        .eq($2);
+      if (error) throw error,
+      
+      // Update local state
+      setJobMatches(matches => 
+        matches.map(match => 
+          match.id === matchId 
+            ? { ...match, status, ...(status = $2;
+      // Show appropriate message
+      if (status = $2;
+          description: "You've successfully applied to this job"
+        })
+      } else if (status = $2;
+          description: "This job will be removed from your suggestions"
+        })
+      }
+    } catch (error) {
+      console.error($2);
+      toast({
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
+    }
+  },
+
+  // Filter matches by status
+  const newMatches = jobMatches.filter($2);
+  const viewedMatches = jobMatches.filter($2);
+  const appliedMatches = jobMatches.filter($2);
+  const declinedMatches = jobMatches.filter($2);
+  return {
+    jobMatches;
+    isLoading;
+    updateJobMatchStatus;
+    categorizedMatches: {
+      newMatches;
+      viewedMatches;
+      appliedMatches
+
+      declinedMatches
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { JobMatch } from "@/types/jobs",;
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchSuggestedJobs = async () => {;
+      if (!talentId) return,;
+      try {;
+        setIsLoading(true),;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from("job_talent_matches");
+          .select(`;
+            *,;
+            job:job_id (*);
+          `);
+          .eq("talent_id", talentId);
+          .order("created_at", { ascending: false }),;
+        if (error) throw error,;
+        setJobMatches(data || []);
+      } catch (error) {;
+        console.error("Error fetching job matches:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load job suggestions",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
 
+<<<<<<< HEAD
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+=======
+<<<<<<< HEAD
+      }
+      const { error } = await supabase
+        .from("job_talent_matches")
+        .update(updates)
+        .eq("id", matchId);
+      if (error) throw error;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       },
       
       const { error } = await supabase"
@@ -118,6 +372,36 @@ export function useJobSuggestions(talentId?: string) {};
         .eq("id", matchId),
         
       if (error) throw error,
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+    }
+      setJobMatches(matches => 
+        matches && matches.map(match => 
+          match && match.id === matchId 
+            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
+            : match
+        )
+
+
+      ),
+      
+
+
+      // Update local state
+      setJobMatches(matches =>
+        matches.map(match =>
+          match.id === matchId
+            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
+            : match
+        )
+      );
+      ),
+      
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       // Update local state
 
@@ -131,6 +415,7 @@ export function useJobSuggestions(talentId?: string) {};
 
       ),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Show appropriate message
 
       if (status === 'applied') {
@@ -145,20 +430,46 @@ export function useJobSuggestions(talentId?: string) {};
           description: "This job will be removed from your suggestions"
         })
       }
+<<<<<<< HEAD
 
+=======
+    } catch (error) {
+<<<<<<< HEAD
+      console.error("Error updating job match status:", error),
+      toast({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
     }
   }
   // Filter matches by status
+<<<<<<< HEAD
+=======
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+=======
+      console && console.error("Error updating job match status:", error);
+      toast({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
   const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
 
   const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     jobMatches;
     isLoading;
     updateJobMatchStatus;
@@ -166,6 +477,7 @@ export function useJobSuggestions(talentId?: string) {};
       newMatches;
       viewedMatches;
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -191,6 +503,51 @@ export function useJobSuggestions() { return null; }
       } finally {;
         setIsLoading(false);
 
+=======
+      declinedMatches
+<<<<<<< HEAD
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { JobMatch } from "@/types/jobs",;
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchSuggestedJobs = async () => {;
+      if (!talentId) return,;
+      try {;
+        setIsLoading(true),;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from("job_talent_matches");
+          .select(`;
+            *,;
+            job:job_id (*);
+          `);
+          .eq("talent_id", talentId);
+          .order("created_at", { ascending: false }),;
+        if (error) throw error,;
+        setJobMatches(data || []);
+      } catch (error) {;
+        console.error("Error fetching job matches:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load job suggestions",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+    }
+  }
+=======
+    }
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
     fetchSuggestedJobs ();
@@ -261,7 +618,77 @@ if ( {) {}
     }
   }
 ;
+<<<<<<< HEAD
 
+=======
+  // Filter matches by status;
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+      }
+    },;
+    fetchSuggestedJobs();
+  }, [talentId]),;
+  const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {;
+    try {;
+      const updates = {;
+        status,;
+        ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {});
+      },;
+      const { error } = await supabase;
+        .from("job_talent_matches");
+        .update(updates);
+        .eq("id", matchId),;
+      if (error) throw error,;
+      // Update local state;
+      setJobMatches(matches =>;
+        matches.map(match =>;
+          match.id === matchId;
+            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
+            : match;
+        );
+      ),;
+      // Show appropriate message;
+      if (status === 'applied') {;
+        toast({;
+          title: "Application Submitted",;
+          description: "You've successfully applied to this job";
+        });
+      } else if (status === 'declined') {;
+        toast({;
+          title: "Job Declined",;
+          description: "This job will be removed from your suggestions";
+        });
+      }
+    } catch (error) {;
+      console.error("Error updating job match status:", error),;
+      toast({;
+        title: "Error",;
+        description: "Failed to update job status",;
+        variant: "destructive"});
+<<<<<<< HEAD
+=======
+    }
+  },;
+  // Filter matches by status;
+  const newMatches = jobMatches.filter(match => match.status === 'new'),;
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied'),;
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined'),;
+  return {;
+    jobMatches,;
+    isLoading,;
+    updateJobMatchStatus,;
+    categorizedMatches: {;
+      newMatches,;
+      viewedMatches;
+      appliedMatches;
+      declinedMatches;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const new_matches = job_matches.filter (match => match.status === 'new');
+  const viewed_matches = job_matches.filter (match => match.status === 'viewed');
+  const applied_matches = job_matches.filter (match => match.status === 'applied');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const declined_matches = job_matches.filter (match => match.status === 'declined');
 ;
   return {}
@@ -274,9 +701,16 @@ if ( {) {}
       applied_matches,
       declined_matches;
 
+<<<<<<< HEAD
     }
   }
 
+=======
+
+    }
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 import { useState, useEffect } from "react",;
@@ -285,6 +719,7 @@ import { toast } from "@/hooks/use-toast",;
 import { JobMatch } from "@/types/jobs",;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function useJobSuggestions() {;
   }
 =======
@@ -292,6 +727,11 @@ export function useJobSuggestions(talentId?:string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+export function useJobSuggestions(talentId?:string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ;
   useEffect(() => {;
     const fetchSuggestedJobs = async () => {;
@@ -302,12 +742,15 @@ export function useJobSuggestions(talentId?:string) {;
         ;
         // Get job matches with job details;
 <<<<<<< HEAD
+<<<<<<< HEAD
           .from("job_talent_matches");"
           .select(`;`            *,;
             "job":job_id (*);
           `);`          .eq("talent_id", talentId);"
           .order("created_at", { "ascending":false }),;"
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         const { data, error } = await supabase;
           .from("job_talent_matches");
           .select(`;
@@ -316,7 +759,10 @@ export function useJobSuggestions(talentId?:string) {;
           `);
           .eq("talent_id", talentId);
           .order("created_at", { ascending:false }),;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           ;
         if (error) throw error,;
         ;
@@ -343,6 +789,7 @@ export function useJobSuggestions(talentId?:string) {;
       },;
       ;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     },;
     fetchSuggestedJobs();
@@ -357,6 +804,10 @@ export function useJobSuggestions(talentId?:string) {;
       const { error } = await supabase;
         .from("job_talent_matches");
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      const { error } = await supabase;
+        .from("job_talent_matches");
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         .update(updates);
         .eq("id", matchId),;
         ;
@@ -413,11 +864,15 @@ export function useJobSuggestions(talentId?:string) {;
 const [isLoading, setIsLoading] = useState (true);
 useEffect ( () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   }
 =======
   const fetchSuggestedJobs = async () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  const fetchSuggestedJobs = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (!talentId) return;
 setIsLoading (true);
 //Get job matches with job details .select (`*;
@@ -443,6 +898,14 @@ job:job id (*) `)
     }
   }
 }
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     }
   }
 }
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

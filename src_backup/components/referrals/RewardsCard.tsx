@@ -1,12 +1,17 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,
 import { ReferralReward } from @/types/referrals";
@@ -15,10 +20,13 @@ import { BadgeDollarSign, Badge } from 'lucide-react
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from @/components/ui/ card';
 import { ReferralReward  } from '@/types/ referrals;
@@ -26,12 +34,16 @@ import { format_date  } from @/utils/ referral_utils';
 import { Badge } from '@/components/ui/ badge;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/ card';
 =======
+>>>>>>> merged-prs-20250907-203621
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralReward  } from '@/types / referrals';
 import { format_date  } from '@/utils / referral_utils';
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface RewardsCardProps {
 
 import {
@@ -61,15 +73,20 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 interface RewardsCardProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   rewards: ReferralReward[];
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   isLoading: boolean
 }
 
     return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <Card>
         <CardHeader>
@@ -91,6 +108,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           <CardTitle className=flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5 />
@@ -112,6 +130,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
 
 <<<<<<< HEAD
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+=======
+<<<<<<< HEAD
 
           <CardTitle className=flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5 />
@@ -123,6 +145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <Card>
         <CardHeader>
@@ -150,10 +173,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     )
 
@@ -163,6 +189,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <Card>
       <CardHeader>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <CardTitle className='flex items-center gap-2'>
           <BadgeDollarSign className='h-5 w-5' />
 <CardTitle className='flex items-center gap-2>
@@ -170,6 +198,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <CardTitle className="flex items-center gap-2>
           <BadgeDollarSign className=h-5 w-5" />
@@ -181,6 +210,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <CardContent>
 
 ;
+<<<<<<< HEAD
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+    return (;
+      <Card>;
+        <CardHeader>;
+
+  }
+
+=======
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,import { ReferralReward  } from '@/types/referrals;
 import { formatDate  } from @/utils/referralUtils';
@@ -320,6 +359,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
             Your Rewards;</CardTitle>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </CardTitle>;
 
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
@@ -366,7 +406,10 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
                     <BadgeDollarSign className='h-4 w-4 text-green-600' />;
                   ) : (;
                     <Badge className='h-4 w-4 text-blue-600' />;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   )}
                   <p className='font-medium>                    {reward && reward.reward_type === credit'                  <p className=font-medium">;
                     {reward && reward.reward_type === 'credit;
@@ -374,6 +417,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
                       : Visibility Boost'}
                   </p>;
                 </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   <p className="font-medium>
                     {reward.reward_type === 'credit
@@ -393,6 +438,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   Earned on {formatDate(reward.created_at)}
 
@@ -400,6 +446,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
                   Earned on {formatDate(reward.created_at)}
                 </p>
                 {reward.expires_at && (
+<<<<<<< HEAD
+                  <p className='text-xs text-muted-foreground'>
+=======
 <<<<<<< HEAD
                   <p className=text-xs text-muted-foreground'>
             >;
@@ -427,6 +476,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 =======
                   <p className='text-xs text-muted-foreground'>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                     Expires on {formatDate(reward.expires_at)}
 
@@ -437,17 +487,22 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
             </div>;
           ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           ))}</div>;
       </CardContent>;
@@ -488,6 +543,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
     </Card>);
 }
 =======
+>>>>>>> merged-prs-20250907-203621
 
 ;
 >>>>>>> origin/chore/fix-lint-and-merge

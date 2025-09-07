@@ -1,22 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🚀 Zion Tech Group - Complete Automation Suite Report
 
 **Timestamp:** 2025-09-07T02:53:54.838Z
 **Duration:** 23172ms
 
+=======
+# Automation Report
+**Timestamp:** 2025-09-07T05:23:29.906Z
+**Duration:** NaNms
+>>>>>>> merged-prs-20250907-203621
 ## Summary
-- ✅ Successful: 5
+- ✅ Successful: 4
 - ❌ Errors: 4
-**Timestamp:** 2025-09-07T02:51:20.034Z
-**Duration:** 9764ms
-
-## Summary
-- ✅ Successful: 1
-- ❌ Errors: 8
 - ⚠️ Warnings: 0
 ## Successful Operations
 - Operation
-- scripts/auto-fixer.js
+<<<<<<< HEAD
 - scripts/advanced-build-optimizer.js
 - scripts/performance-monitor-enhanced.js
 - scripts/performance-optimizer.js
@@ -98,6 +98,13 @@ Node.js v22.16.0
 >>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+- scripts/auto-fixer.js
+- scripts/advanced-build-optimizer.js
+- scripts/performance-monitor-enhanced.js
+- scripts/auto-fixer.js
+>>>>>>> merged-prs-20250907-203621
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs,
   Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'
@@ -116,6 +123,7 @@ Node.js v22.16.0
   syscall: 'stat',
   path: '/workspace/media/docu-script/requirements.txt'
 }
+<<<<<<< HEAD
 
 - scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
 /workspace/scripts/auto-fixer.js:3
@@ -444,6 +452,8 @@ This file is being treated as an ES module because it has a '.js' file extension
     at <unknown> (next.config.js:58:1)
 
 
+=======
+>>>>>>> merged-prs-20250907-203621
 - ESLint: Command failed: npm run lint,
   npm warn config optional Use `--omit=optional` to exclude optional dependencies, or,
   npm warn config `--include=optional` to include them.
@@ -638,6 +648,8 @@ Caused by:
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+>>>>>>> merged-prs-20250907-203621
 ## Recommendations
 - Address all errors before deployment
 

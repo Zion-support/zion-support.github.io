@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -17,9 +20,13 @@ const path = require("path")
 const glob = require("glob")
     // Get automation interval from environment variable ("default")
 const { execSync, spawn } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
 const glob = require("glob")
+>>>>>>> merged-prs-20250907-203621
     // Get automation interval from environment variable ("default")
       this.log(" Fixing TypeScript compilation errors...")
       this.log(" Fixing type annotation errors...")
@@ -127,11 +134,21 @@ const glob = require("glob")
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start TypeScript error "fixer")
+<<<<<<< HEAD
+  console.error(" Failed to start TypeScript error "fixer")
+  console.error(" Failed to start TypeScript error "fixer")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -153,3 +170,4 @@ const glob = require("glob")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

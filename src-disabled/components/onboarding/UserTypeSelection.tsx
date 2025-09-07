@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/components/onboarding/UserTypeSelection.tsx
 import { useState } from "react;
 import { useState } from 'react;
@@ -13,7 +16,10 @@ import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 import { useState } from "react";
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { Briefcase, Star, User } from lucide-react'
 import { Button } from "@/components/ui/button;
@@ -23,7 +29,10 @@ export function UserTypeSelection({
   selectedType
 }: UserTypeSelectionProps) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/onboarding/UserTypeSelection.tsx
   const userTypes: UserTypeOption[] = [
     {
@@ -31,6 +40,8 @@ id: 'serviceProvider
       name: Service Provider'
 
       description: 'I want to offer services on the platform'
+<<<<<<< HEAD
+=======
       icon: Briefcase
 
 ;
@@ -71,6 +82,7 @@ id: 'serviceProvider'
       name: 'Service Provider'
 
       description: 'I want to offer services on the platform'
+>>>>>>> merged-prs-20250907-203621
 
     }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -81,8 +93,11 @@ interface UserTypeSelectionProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const userTypes: UserTypeOption[] = [
 >>>>>>> origin/chore/fix-lint-and-merge
     {
@@ -102,6 +117,8 @@ interface UserTypeSelectionProps {
 <<<<<<< HEAD
 :src/components/onboarding/UserTypeSelection.tsx
     {
+<<<<<<< HEAD
+=======
 
 
 
@@ -109,6 +126,7 @@ interface UserTypeSelectionProps {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       id: client,
       name: "Client",
@@ -157,6 +175,8 @@ interface UserTypeSelectionProps {
           This helps us personalize your experience;
         </p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       </div>;<div className='grid gap-4 md:grid-cols-3'>;
       </div>;<div className='grid gap-4 md:grid-cols-3>;
         {userTypes && userTypes.map(type => {const Icon = type && type.icon;
@@ -174,6 +194,7 @@ interface UserTypeSelectionProps {
         <h3 className=text - 2xl font - bold text - white'>Choose your role</h3>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </div>;
 
       <div className='grid gap-4 md:grid-cols-3>;
@@ -208,6 +229,8 @@ interface UserTypeSelectionProps {
       </div>;'
       <div className='grid gap - 4 md:grid - cols - 3'>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {user_types.map (type => {const Icon = type.icon;
           const is_selected = selected_type === type.id;
               on_click={() => on_select (type.id)}
@@ -228,6 +251,7 @@ interface UserTypeSelectionProps {
                 <p className=text - sm text - zion - slate - light mt - 1'>;{type.description}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         {user_types.map (type => {}
           const Icon = type.icon;
 
@@ -247,14 +271,19 @@ interface UserTypeSelectionProps {
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <div className="grid gap-4 md: grid-cols-3>
         {userTypes.map((type) => {}
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       id: serviceProvider";
             </Button>)})}/>;<div className="grid gap-4 md: grid-cols-3>;
@@ -269,6 +298,7 @@ interface UserTypeSelectionProps {
       icon: Star;
     },{id: "client";
 =======
+>>>>>>> merged-prs-20250907-203621
       id: "serviceProvider";
       name: "Service Provider";
       description: "I want to offer services on the platform";
@@ -282,7 +312,10 @@ interface UserTypeSelectionProps {
     },
     {
       id: "client";
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       name: "Client";
       description: "I want to discover and hire talent or services";
       icon: User
@@ -292,13 +325,18 @@ interface UserTypeSelectionProps {
   return (
     <div className;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
           return (
             <Button;
               key={type.id}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               onClick={() => onSelect(type.id)}
 
@@ -324,6 +362,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   : border-zion-blue-light hover:border-zion-cyan/50 text-white"
 
@@ -384,6 +423,8 @@ interface UserTypeSelectionProps {"
       icon: User;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   ],return (<div className;return (<Button;
               key={type.id}
               onClick={() => onSelect(type.id)}variant="outline;
@@ -429,6 +470,7 @@ import { useState } from "react,import { Button } from @/components/ui/button",i
         <h3 className=text-2xl font-bold text-white>Choose your role</h3>;"
         <p className="text-zion-slate-light mt-2>;
 =======
+>>>>>>> merged-prs-20250907-203621
   ],;
   return (;"
     <div className="space-y-6">;"
@@ -447,6 +489,8 @@ import { useState } from "react,import { Button } from @/components/ui/button",i
             <Button;
               key={type.id}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               onClick={() => onSelect(type.id)}
               variant=outline;
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${isSelected;
@@ -454,6 +498,7 @@ import { useState } from "react,import { Button } from @/components/ui/button",i
                   : border-zion-blue-light hover:border-zion-cyan/50 text-white;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected;"
@@ -474,6 +519,8 @@ import { useState } from "react,import { Button } from @/components/ui/button",i
           );
 
         })}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -499,6 +546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }
 
@@ -506,6 +554,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/components/onboarding/UserTypeSelection.tsx
 }
 }

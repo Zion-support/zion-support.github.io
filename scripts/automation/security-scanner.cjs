@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,16 +12,18 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Security Scanner Automation;
- * Comprehensive security scanning and vulnerability detection;
+ * Security Scanner Automation
+ * Comprehensive security scanning and vulnerability detection
  */
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -28,6 +32,7 @@ const path = require(path');
 const { execSync } = require('child_process');
 =======
 
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -41,6 +46,17 @@ class SecurityScanner {}
         this.projectRoot = process.cwd();
 
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    }
+  log($2) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+})
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+=======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
     log(message) {}
@@ -59,11 +75,14 @@ class SecurityScanner {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
         console.log(message)};
 >>>>>>> origin/chore/fix-lint-and-merge
     scanForVulnerabilities() {}
         this.log(Scanning for security vulnerabilities...');
         try {}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             const auditData = JSON.parse(auditResult;);
@@ -85,6 +104,7 @@ class SecurityScanner {}
        ];
 
 =======
+>>>>>>> merged-prs-20250907-203621
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot,
                 "encoding": 'utf8',
@@ -99,6 +119,9 @@ class SecurityScanner {}
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+<<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -118,6 +141,7 @@ class SecurityScanner {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
@@ -128,12 +152,15 @@ class SecurityScanner {}
             { "name": 'GitHub Tokens', "pattern": /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi };
        ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         const files = this.findSourceFiles(;);
         const foundSecrets = [];
         for (const file of files) {}
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
 =======
+>>>>>>> merged-prs-20250907-203621
         
 =======
             `;
@@ -146,6 +173,10 @@ class SecurityScanner {}
         const foundSecrets = [];
         for (const file of files) {}
 <<<<<<< HEAD
+            try {}"
+
+=======
+<<<<<<< HEAD
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
                 
@@ -155,6 +186,7 @@ class SecurityScanner {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 for (const secretType of secretPatterns) {}
                     const matches = content.match(secretType.pattern;);
                     if ( {})
@@ -162,6 +194,8 @@ class SecurityScanner {}
 
         const files = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         const scanDirectory = (dir) => {}
             if () retu) {}
@@ -173,11 +207,17 @@ class SecurityScanner {}
             if () retu) {}
     ) retu}r;n;
 =======
+>>>>>>> merged-prs-20250907-203621
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         const scanDirectory = (dir) => {}
@@ -185,10 +225,14 @@ class SecurityScanner {}
     ) retu}r;n;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+                
+=======
 <<<<<<< HEAD
 
                 if (&& !item.startsWith(.') && item !== 'node_modules) {}
@@ -208,10 +252,11 @@ class SecurityScanner {}
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
+                    files.push(fullPath)}
+            }
         }) {}
     && !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -226,6 +271,9 @@ class SecurityScanner {}
         return files}
     checkFilePermissions() {}
 <<<<<<< HEAD
+        
+=======
+<<<<<<< HEAD
 
         ];
 
@@ -236,6 +284,7 @@ class SecurityScanner {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
@@ -243,6 +292,11 @@ class SecurityScanner {}
             '.env.production',
             '.env.development'
         ];
+<<<<<<< HEAD
+        
+        const permissionIssues = [];
+        
+=======
 <<<<<<< HEAD
         const permissionIssues = [];
 =======
@@ -252,6 +306,7 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         const permissionIssues = [];
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -265,6 +320,9 @@ class SecurityScanner {}
                 const isWritableByOthers = (mode & 0o002) !==;0;
                 const isExecutableByOthers = (mode & 0o001) !==;0;
 <<<<<<< HEAD
+                
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -273,13 +331,19 @@ class SecurityScanner {}
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
                         readableByOthers: isReadableByOthers,
                         "writableByOthers": isWritableByOthers,
+<<<<<<< HEAD
+                        "executableByOthers": isExecutableByOthers,
+                        "severity": 'medium'
+=======
                         executableByOthers: isExecutableByOthers,
                         "severity": medium'
+>>>>>>> merged-prs-20250907-203621
                     })}
             }
         }
@@ -311,26 +375,35 @@ class SecurityScanner {}
 =======
         this.log('Checking dependencies for security issues...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
 =======
+>>>>>>> merged-prs-20250907-203621
         
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
 =======
+>>>>>>> merged-prs-20250907-203621
             
             const totalDeps = Object.keys(dependencies).lengt;h;
 =======
@@ -343,6 +416,11 @@ class SecurityScanner {}
             this.log(`Analyzing ${totalDeps} dependencies`);
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
+<<<<<<< HEAD
+        
+        const vulnerable = [];
+        
+=======
 <<<<<<< HEAD
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -369,13 +447,19 @@ class SecurityScanner {}
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         for (const [name, version] of Object.entries(dependencies)) {}
             const packageVersion = \`\${name}@\${version}\;`;`
             if ([0]))) {}
                 vulnerable.push({})
                     "name": name,
+<<<<<<< HEAD
+                    "version": version,
+                    "severity": 'high'
+=======
                     version: version,
                     "severity": 'high
+>>>>>>> merged-prs-20250907-203621
                 })}
         }
         return vulnerable) {}
@@ -396,6 +480,12 @@ class SecurityScanner {}
 =======
         this.log('Generating security headers configuration...');
 <<<<<<< HEAD
+        
+        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+        let nextConfig = ;';';
+        
+=======
+<<<<<<< HEAD
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
 =======
@@ -404,6 +494,7 @@ class SecurityScanner {}
         let nextConfig = ;';';
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
 =======
@@ -421,6 +512,16 @@ class SecurityScanner {}
 
 =======
         if (!nextConfig.includes('X-Frame-Options')) {}
+<<<<<<< HEAD
+            const securityHeaders =
+  // Security headers
+  async headers() {}
+    return ) {}
+
+  // Security headers
+    return }[;]
+            
+=======
             const securityHeaders = 
 >>>>>>> origin/chore/fix-lint-and-merge
   // Security headers;
@@ -459,6 +560,7 @@ class SecurityScanner {}
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             // Insert security headers before the closing brace;
             const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
@@ -471,10 +573,14 @@ class SecurityScanner {}
 =======
         this.log('Generating security scan report...');
 <<<<<<< HEAD
+        
+=======
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         const report = {}
             "timestamp": new Date().toISOString(),
             project: this.projectRoot,
@@ -482,6 +588,10 @@ class SecurityScanner {}
                 vulnerabilities: this.scanForVulnerabilities(),
                 secrets: this.scanForSecrets(),
                 "permissions": this.checkFilePermissions(),
+<<<<<<< HEAD
+                "dependencies": this.checkDependencies(),
+                "headers": this.generateSecurityHeaders()
+=======
                 dependencies: this.checkDependencies(),
                 "headers": this.generateSecurityHeaders();
             },
@@ -525,6 +635,7 @@ class SecurityScanner {}
                 "permissions": this.checkFilePermissions(),
                 dependencies: this.checkDependencies(),
                 "headers": this.generateSecurityHeaders();
+>>>>>>> merged-prs-20250907-203621
             },
             "recommendations": this.generateSecurityRecommendations();
 <<<<<<< HEAD
@@ -534,15 +645,21 @@ class SecurityScanner {}
 =======
        };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Security scan report saved to ${this.reportFile}");
 =======
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Security scan report saved to ${this.reportFile}");
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         return report};
     generateSecurityRecommendations() {}
         return [;]
@@ -558,9 +675,15 @@ class SecurityScanner {}
             'Regularly scan for vulnerabilities in CI/CD pipeline',
             'Use security headers like HSTS, X-Frame-Options',
             'Implement proper logging and monitoring for security events'
-        ]};
+        ]}
     async run() {}
         this.log('Security Scanner started');
+<<<<<<< HEAD
+        
+        try {}
+            const report = this.generateSecurityReport(;)
+            this.log('Security Scanner completed successfully')
+=======
 <<<<<<< HEAD
 
 =======
@@ -571,6 +694,7 @@ class SecurityScanner {}
 >>>>>>> origin/chore/fix-lint-and-merge
         try {}
             this.log('Security Scanner completed successfully');
+>>>>>>> merged-prs-20250907-203621
             return report} catch (error) {}
             this.log("Security Scanner "failed": ${error.message}`);
 =======
@@ -579,8 +703,7 @@ class SecurityScanner {}
             // Insert security headers before the closing brace;"
             const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");"
             fs.writeFileSync(nextConfigPath, updatedConfig);"
-            this.log('Security headers added to Next.js config')};
-
+            this.log('Security headers added to Next.js config')}
             "security": {}"
                 vulnerabilities: this.scanForVulnerabilities(),"
                 "secrets": this.scanForSecrets(),
@@ -595,7 +718,11 @@ class SecurityScanner {}
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
         this.log("Security scan report saved to ${this.reportFile}");"
         return report}
+<<<<<<< HEAD
+  generateSecurityRecommendations($2) {}
+=======
     generateSecurityRecommendations() {}
+>>>>>>> merged-prs-20250907-203621
         return [;]"
 
 <<<<<<< HEAD
@@ -613,12 +740,22 @@ class SecurityScanner {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 module.exports = SecurityScanner;
+<<<<<<< HEAD
+module.exports = SecurityScanner;
+module.exports = SecurityScanner;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -641,3 +778,4 @@ module.exports = SecurityScanner;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

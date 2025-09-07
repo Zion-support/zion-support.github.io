@@ -1,8 +1,34 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
+import { 
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { 
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
+} from "@/components/ui/select",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { 
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft;
+  Trash2, Plus, CheckCircle2
+} from "lucide-react",
+import { useAuth } from "@/hooks/useAuth";
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+// Define the form schema with validation
+=======
 import {
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage
 } from "@/components/ui/form",
@@ -20,10 +46,109 @@ import {
   Trash2, Plus, CheckCircle2
 } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
+=======
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Define the form schema with validation
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
+<<<<<<< HEAD
+    fullName: z.string().min($2);
+    professionalTitle: z.string().min($2);
+    profilePicture: z.any().optional()}),
+  
+  // Step 2: Experience
+  experience: z.object({
+    bio: z.string().min($2);
+    keyProjects: z.array(
+      z.object({
+        title: z.string().min($2);
+        description: z.string().min(10, "Project description is required")})
+    ).min($2);
+    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
+  
+  // Step 3: Skills & Tech Stack
+  skills: z.object({
+    skillsList: z.string().min($2);
+    toolsUsed: z.string().optional()}),
+  
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min($2);
+    timezone: z.string().min($2);
+    hourlyRate: z.string().optional($2);
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
+    ).optional().default($2);
+    cv: z.any().optional()})}),
+
+type TalentFormValues = $2;
+export function TalentOnboardingForm() {
+  const { user } = useAuth($2);
+  const navigate = useNavigate($2);
+  const [currentStep, setCurrentStep] = useState($2);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),
+  const [cvFileName, setCvFileName] = useState<string | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [showSuccessScreen, setShowSuccessScreen] = useState($2);
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer($2);
+  const totalSteps = $2;
+  const form = useForm<TalentFormValues>({
+    resolver: zodResolver($2);
+    defaultValues: {
+      basicInfo: {
+        fullName: user ?.displayName || "",
+        professionalTitle: "",
+        profilePicture: undefined},
+      experience: {
+        bio: ""
+        keyProjects: [{ title: "", description: "" }]
+        yearsOfExperience: ""}
+      skills: {
+        skillsList: ""
+        toolsUsed: ""}
+      availability: {
+        availabilityType: "",
+        timezone: "",
+        hourlyRate: "",
+        portfolioLinks: [{ url: "" }],
+        cv: undefined}},
+    mode: "onChange"}),
+  
+  const { fields: projectFields, append: appendProject, remove: removeProject} = 
+    useFieldArray($2);
+  const { fields: linkFields, append: appendLink, remove: removeLink} = 
+    useFieldArray($2);
+  // Handle profile picture upload
+  const handleProfilePictureUpload = $2;
+    if (!file) return,
+    
+    // Preview the image
+    const reader = new FileReader($2);
+    reader.onloadend = $2;
+    reader.readAsDataURL($2);
+    // Store the file in the form data
+    form.setValue("basicInfo.profilePicture", file)
+  },
+
+  // Handle CV upload
+  const handleCvUpload = $2;
+    const { error: cvError} = await supabase.storage
+      .from('resumes')
+      .upload($2);
+    if (cvError) {
+      console.error($2);
+=======
 
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
@@ -37,6 +162,7 @@ const talentSchema = z.object({
         title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {useForm, useFieldArray} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -54,6 +180,10 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -76,8 +206,77 @@ import {
   Trash2, Plus, CheckCircle2
 } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
         title: z.string().min(2, "Project title is required"),
   description: z.string().min(10, "Project description is required")})
+=======
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+// Define the form schema with validation
+
+const talentSchema = z.object({
+  // Step 1: Basic Info
+  basicInfo: z.object({
+    fullName: z.string().min(2, "Name must be at least 2 characters");
+    professionalTitle: z.string().min(2, "Professional title is required");
+    profilePicture: z.any().optional()})
+    fullName: z.string().min(2, "Name must be at least 2 characters"),
+    professionalTitle: z.string().min(2, "Professional title is required"),
+    profilePicture: z.any().optional()}),
+  
+  // Step 2: Experience
+  experience: z.object({
+    bio: z.string().min(50, "Bio must be at least 50 characters"),
+    keyProjects: z.array(
+      z.object({
+        title: z.string().min(2, "Project title is required"),
+        description: z.string().min(10, "Project description is required")})
+
+
+
+// Define the form schema with validation
+
+const talentSchema = z.object({
+  // Step 1: Basic Info
+  basicInfo: z.object({
+
+
+    fullName: z.string().min(2, "Name must be at least 2 characters"),
+    professionalTitle: z.string().min(2, "Professional title is required"),
+    profilePicture: z.any().optional()}),
+  
+
+
+  // Step 2: Experience
+  experience: z.object({
+    bio: z.string().min(50, "Bio must be at least 50 characters");
+    keyProjects: z.array(
+      z.object({
+        title: z.string().min(2, "Project title is required");
+        description: z.string().min(10, "Project description is required")})
+
+    ).min(1, "Add at least one key project");
+    yearsOfExperience: z.string().min(1, "Years of experience is required")});
+  // Step 3: Skills & Tech Stack
+  skills: z.object({
+    skillsList: z.string().min(2, "Add at least one skill");
+    toolsUsed: z.string().optional()})
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min(1, "Select your availability");
+    timezone: z.string().min(1, "Timezone is required");
+    hourlyRate: z.string().optional()
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
+    ).optional().default([]);
+    cv: z.any().optional()})})
+type TalentFormValues = z.infer<typeof talentSchema>;
+export function TalentOnboardingForm() {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
 <<<<<<< HEAD
@@ -313,12 +512,55 @@ type TalentFormValues = z && z.infer<typeof talentSchema>;
       z.object({"
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
 
+<<<<<<< HEAD
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
     ).optional().default([]),
     cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
+export function TalentOnboardingForm() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
+  const [cvFileName, setCvFileName] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const totalSteps = 4;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    ).min(1, "Add at least one key project"),
+    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
+  
+  // Step 3: Skills & Tech Stack
+  skills: z.object({
+    skillsList: z.string().min(2, "Add at least one skill"),
+    toolsUsed: z.string().optional()}),
+  
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min(1, "Select your availability"),
+    timezone: z.string().min(1, "Timezone is required"),
+    hourlyRate: z.string().optional(),
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
+    ).optional().default([]),
+    cv: z.any().optional()})}),
+
+type TalentFormValues = z.infer<typeof talentSchema>,
+
+<<<<<<< HEAD
 export function TalentOnboardingForm() {;
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -327,6 +569,7 @@ export function TalentOnboardingForm() {;
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export function TalentOnboardingForm() {
   const { user } = useAuth(),
   const navigate = useNavigate(),
@@ -335,7 +578,18 @@ export function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState<string | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),
+<<<<<<< HEAD
+=======
+  
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
+  
+  const totalSteps = 4,
+  
+=======
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<TalentFormValues>({
 
     resolver: zodResolver(talentSchema)
@@ -367,6 +621,7 @@ export function TalentOnboardingForm() {
       name: "availability.portfolioLinks"
       control: form.control})
 
+<<<<<<< HEAD
     // Preview the image
 
     const reader = new FileReader()
@@ -375,6 +630,14 @@ export function TalentOnboardingForm() {
 
     },
     reader.readAsDataURL(file),
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const file = e.target.files?.[0],
+    if (!file) return,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     
     // Store the file in the form data"
     form.setValue("basicInfo.profilePicture", file)
@@ -384,28 +647,59 @@ export function TalentOnboardingForm() {
 
     if (cvError) {
 
+<<<<<<< HEAD
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const file = e.target.files?.[0],
+    if (!file) return,
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
 
+<<<<<<< HEAD
 }
+=======
+
+<<<<<<< HEAD
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     reader.readAsDataURL(file);
     // Store the file in the form data
     form.setValue("basicInfo.profilePicture", file)
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     },
     reader.readAsDataURL(file),
     // Store the file in the form data
     form.setValue("basicInfo.profilePicture", file)
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Handle CV upload
   const handleCvUpload = async (file: File) => {
     const fileName = `cv-${user?.id}-${Date.now()}`;
     const { error: cvError } = await supabase.storage
       .from('resumes')
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       .upload(fileName, file),
 
     if (cvError) {
@@ -418,6 +712,74 @@ export function TalentOnboardingForm() {
 
   const totalSteps = 4;
 
+<<<<<<< HEAD
+=======
+
+};
+
+<<<<<<< HEAD
+  // Handle CV upload
+  const handleCvUpload = async (file: File) => {
+    const fileName = `cv-${user?.id}-${Date.now()}`,
+    const { error: cvError } = await supabase.storage
+      .from('resumes')
+      .upload(fileName, file);
+      .upload(fileName, file),
+      
+    if (cvError) {
+      console.error("Error uploading CV:", cvError),
+>>>>>>> merged-prs-20250907-203621
+      throw new Error("Failed to upload CV")
+    }
+    // Get the public URL
+    const { data: { publicUrl } } = supabase.storage
+      .from('resumes')
+<<<<<<< HEAD
+      .getPublicUrl($2);
+    return publicUrl
+  },
+
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+
+  return null
+}
+=======
+      .getPublicUrl(fileName);
+    return publicUrl
+  }
+
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+  return null
+};
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React, { useState } from "react",;
+import { useForm, useFieldArray } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { useNavigate } from "react-router-dom",;
+import {;
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import {;
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue;
+} from "@/components/ui/select",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { Separator } from "@/components/ui/separator",;
+import { toast } from "@/components/ui/use-toast",;
+import {;
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft,;
+  Trash2, Plus, CheckCircle2;
+} from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { supabase } from "@/integrations/supabase/client",;
 // Define the form schema with validation;
 const talentSchema = z.object({;
@@ -437,7 +799,12 @@ type TalentFormValues = z.infer<typeof talentSchema>,;
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
   const totalSteps = 4,;
+<<<<<<< HEAD
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const totalSteps = 4;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -459,15 +826,32 @@ type TalentFormValues = z.infer<typeof talentSchema>,;
         portfolioLinks: [{ url: "" }],;
         cv: undefined}},;"
     mode: "onChange"}),;
+<<<<<<< HEAD
 
     if (!file) return,;
     ;
+=======
+<<<<<<< HEAD
+  const { fields: projectFields, append: appendProject, remove: removeProject } =;
+    useFieldArray({;
+      name: "experience.keyProjects",;
+      control: form.control}),;
+  const { fields: linkFields, append: appendLink, remove: removeLink } =;
+    useFieldArray({;
+      name: "availability.portfolioLinks",;
+      control: form.control}),;
+  // Handle profile picture upload;
+  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e.target.files?.[0],;
+    if (!file) return,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Preview the image;
     const reader = new FileReader(),;
     reader.onloadend = () => {;
       setProfilePictureUrl(reader.result as string);
     },;
     reader.readAsDataURL(file),;
+<<<<<<< HEAD
     ;
     // Store the file in the form data;"
     form.setValue("basicInfo.profilePicture", file),;
@@ -609,8 +993,173 @@ if ( {) {}
 }"
       console.error ("Error uploading CV:", cv_error);"
       throw new Error ("Failed to upload CV");
+=======
+    // Store the file in the form data;
+    form.setValue("basicInfo.profilePicture", file);
+  },;
+  // Handle CV upload;
+  const handleCvUpload = async (file: File) => {;
+    const fileName = `cv-${user?.id}-${Date.now()}`,;
+    const { error: cvError } = await supabase.storage;
+      .from('resumes');
+      .upload(fileName, file),;
+    if (cvError) {;
+      console.error("Error uploading CV:", cvError),;
+      throw new Error("Failed to upload CV");
     }
+;
     // Get the public URL;
+    const { data: { publicUrl } } = supabase.storage;
+      .from('resumes');
+      .getPublicUrl(fileName);
+    return publicUrl;
+  };
+  // Rest of the file remains unchanged...;
+  // [Previous implementation continues...];
+  return null;
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+import React, { useState } from "react",;
+import { useForm, useFieldArray } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { useNavigate } from "react-router-dom",;
+import { ;
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage ;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { ;
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue ;
+} from "@/components/ui/select",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { Separator } from "@/components/ui/separator",;
+import { toast } from "@/components/ui/use-toast",;
+import { ;
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, ;
+  Trash2, Plus, CheckCircle2;
+} from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;
+import { supabase } from "@/integrations/supabase/client",;
+;
+// Define the form schema with validation;
+const talentSchema = z.object({;
+  // Step 1:Basic Info;
+  basicInfo:z.object({;
+    fullName:z.string().min(2, "Name must be at least 2 characters"),;
+    professionalTitle:z.string().min(2, "Professional title is required"),;
+    profilePicture:z.any().optional()}),;
+  ;
+  // Step 2:Experience;
+  experience:z.object({;
+    bio:z.string().min(50, "Bio must be at least 50 characters"),;
+    keyProjects:z.array(;
+      z.object({;
+        title:z.string().min(2, "Project title is required"),;
+        description:z.string().min(10, "Project description is required")});
+    ).min(1, "Add at least one key project"),;
+    yearsOfExperience:z.string().min(1, "Years of experience is required")}),;
+  ;
+  // Step 3:Skills & Tech Stack;
+  skills:z.object({;
+    skillsList:z.string().min(2, "Add at least one skill"),;
+    toolsUsed:z.string().optional()}),;
+  ;
+  // Step 4:Availability & Preferences;
+  availability:z.object({;
+    availabilityType:z.string().min(1, "Select your availability"),;
+    timezone:z.string().min(1, "Timezone is required"),;
+    hourlyRate:z.string().optional(),;
+    portfolioLinks:z.array(;
+      z.object({;
+        url:z.string().url("Must be a valid URL").min(5, "URL is required")});
+    ).optional().default([]),;
+    cv:z.any().optional()})}),;
+;
+type TalentFormValues = z.infer<typeof talentSchema>,;
+;
+export function TalentOnboardingForm() {;
+  const { user } = useAuth(),;
+  const navigate = useNavigate(),;
+  const [currentStep, setCurrentStep] = useState(1),;
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
+  const [cvFileName, setCvFileName] = useState<string | null>(null),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
+  ;
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
+  ;
+  const totalSteps = 4,;
+  ;
+  const form = useForm<TalentFormValues>({;
+    resolver:zodResolver(talentSchema),;
+    defaultValues:{;
+      basicInfo:{;
+        fullName:user?.displayName || "",;
+        professionalTitle:"",;
+        profilePicture:undefined},;
+      experience:{;
+        bio:"",;
+        keyProjects:[{ title:"", description:"" }],;
+        yearsOfExperience:""},;
+      skills:{;
+        skillsList:"",;
+        toolsUsed:""},;
+      availability:{;
+        availabilityType:"",;
+        timezone:"",;
+        hourlyRate:"",;
+        portfolioLinks:[{ url:"" }],;
+        cv:undefined}},;
+    mode:"onChange"}),;
+  ;
+  const { fields:projectFields, append:appendProject, remove:removeProject } = ;
+    useFieldArray({;
+      name:"experience.keyProjects",;
+      control:form.control}),;
+    ;
+  const { fields:linkFields, append:appendLink, remove:removeLink } = ;
+    useFieldArray({;
+      name:"availability.portfolioLinks",;
+      control:form.control}),;
+;
+  // Handle profile picture upload;
+  const handleProfilePictureUpload = async (e:React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e.target.files?.[0],;
+    if (!file) return,;
+    ;
+    // Preview the image;
+    const reader = new FileReader(),;
+    reader.onloadend = () => {;
+      setProfilePictureUrl(reader.result as string);
+    },;
+    reader.readAsDataURL(file),;
+    ;
+    // Store the file in the form data;
+    form.setValue("basicInfo.profilePicture", file),;
+  },;
+;
+  // Handle CV upload;
+  const handleCvUpload = async (file:File) => {;
+    const fileName = `cv-${user?.id}-${Date.now()}`,;
+    const { error:cvError } = await supabase.storage;
+      .from('resumes');
+      .upload(fileName, file),;
+      ;
+    if (cvError) {;
+      console.error("Error uploading CV:", cvError),;
+      throw new Error("Failed to upload CV"),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    }
+    ;
+    // Get the public URL;
+<<<<<<< HEAD
     const { data: { public_url } } = supabase.storage;'
       .from ('resumes');
       .getPublicUrl (file_name);
@@ -766,7 +1315,50 @@ return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 
+=======
+    const { data:{ publicUrl } } = supabase.storage;
+      .from('resumes');
+      .getPublicUrl(fileName),;
+    ;
+    return publicUrl,;
+  },;
+;
+  // Rest of the file remains unchanged...;
+  // [Previous implementation continues...];
+;
+  return null,;   //Step 1: Basic Info basicInfo: z.object ({
+  ) .optional () .default ([]);
+cv: z.any () .optional () 
+}) 
+});
+type TalentFormValues = z.infer<typeof talentSchema>;
+const form = useForm<TalentFormValues> ({
+  resolver: zodResolver (talentSchema), defaultValues: {
+  basicInfo: {
+  cv: undefined 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
+};
+//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0];
+if (!file) return;
+//Preview the image const reader = new FileReader ();
+reader.onloadend = () => {
+  setProfilePictureUrl (reader.result as string) 
+};
+reader.readAsDataURL (file);
+}data: {
+  publicUrl 
+}
+}= supabase.storage.from ('resumes') .getPublicUrl (fileName);
+return publicUrl;
+};
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}
+}
+}
+<<<<<<< HEAD
+=======
 
       console.error ("Error uploading CV:", cv_error);
       throw new Error ("Failed to upload CV");
@@ -780,6 +1372,7 @@ return publicUrl;
 ;
     // Check condition;
 
+<<<<<<< HEAD
 if ( {) {
   $2;
 }'
@@ -1019,3 +1612,8 @@ return publicUrl;
 }
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

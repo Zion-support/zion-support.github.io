@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,6 +15,7 @@ class ComponentReplacer {}
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react;
 import { motion, AnimatePresence } from framer-motion';
 import {}
+>>>>>>> merged-prs-20250907-203621
 
 =======
     
@@ -34,6 +38,8 @@ class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -49,12 +55,16 @@ class ComponentReplacer {}
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   replaceComponent() {}
     this.log('Replacing broken AIChatbotSystem component with working version...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -69,15 +79,24 @@ import { }
   ThumbsUp,
   ThumbsDown,
   Sparkles,
+<<<<<<< HEAD
+    
+=======
 =======
     
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   Bot, 
   User, 
   Send, 
@@ -95,6 +114,9 @@ import { }
   HelpCircle,
   Star;
 <<<<<<< HEAD
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
 } from 'lucide-react;
 
 =======
@@ -107,10 +129,32 @@ import { }
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 interface ChatMessage {}
   id": string;"
   content: string;,
 
+<<<<<<< HEAD
+
+interface ChatMessage {}
+  "id": string;
+  content: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+  type: 'text' | 'file';
+  status: 'sending' | 'sent' | 'error';
+  metadata?: {}
+    confidence?: number
+    suggestions?: string[]
+    relatedServices?: string[]
+    estimatedResponseTime?: number}}
+interface AIChatbotSystemProps {}
+  showHeader?: boolean
+  showSettings?: boolean
+  maxMessages?: number
+  autoScroll?: boolean}
+export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -141,10 +185,15 @@ interface AIChatbotSystemProps {}
   autoScroll?: boolean};
 export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -161,9 +210,13 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Sample welcome message;
+const [messages, setMessages] = useState<ChatMessage[]>([])
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  // Sample welcome message
   useEffect(() => {}
-    if (isOpen && messages.length === 0) {}
+  if($2) {}
       const "welcomeMessage": ChatMessage = {}
         id: 'welcome,
         content: "Hello! Im Zion AI, your intelligent assistant. I can help you "with: \\n\\n• Information about our services\\n• Technical support and guidance\\n• Project inquiries and quotes\\n• General questions about Zion Tech Group\\n\\nHow can I assist you today?,
@@ -182,6 +235,10 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   }, [isOpen, messages.length]);
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -195,11 +252,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Auto-scroll to bottom;
   useEffect(() => {}
     if (autoScroll && messagesEndRef.current) {}
       messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })}
   }, [messages, autoScroll]);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -217,12 +277,33 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> merged-prs-20250907-203621
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
     setIsTyping(true);
     
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+<<<<<<< HEAD
+
+  // Simulate AI response;
+  const simulateAIResponse = useCallback(async ("userInput": string) => {}
+    setIsTyping(true);
+    
+    // Simulate processing delay;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
+    
+    const responses = [{}]
+        "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
+        "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
+        "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation']
+      },
+      {}
+        "content": "That's a great question! Let me provide you with detailed information about our services.",
+        "suggestions": ['Learn more', 'Schedule demo', 'Request quote', 'View portfolio'],
+        "relatedServices": ['Consulting', 'Implementation', 'Support']
+=======
     
 <<<<<<< HEAD
 
@@ -246,6 +327,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
         content: "That's a great question! Let me provide you with detailed information about our services.",
         suggestions: [Learn more, 'Schedule demo', Request quote, 'View portfolio'],
         "relatedServices": [Consulting, 'Implementation', Support];
+>>>>>>> merged-prs-20250907-203621
       },
       {}
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.",
@@ -253,8 +335,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
         "relatedServices": ['Digital Transformation', Process Optimization, 'Change Management'];
       }
     ];
-<<<<<<< HEAD
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
+<<<<<<< HEAD
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+=======
 =======
 <<<<<<< HEAD
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
@@ -273,6 +362,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     const botMessage: ChatMessage = {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     const "botMessage": ChatMessage = {}
 >>>>>>> origin/chore/fix-lint-and-merge
       id: Date.now().toString(),
@@ -298,11 +388,22 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
 =======
+<<<<<<< HEAD
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false)}, []);
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
 
+<<<<<<< HEAD
+
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false)}, []);
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -310,10 +411,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Handle message submission;
   const handleSubmit = useCallback(async (e: React.FormEvent) => {}
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -329,6 +435,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     const userMessage: ChatMessage = {}
       id: Date.now().toString(),
       "content": inputValue.trim(),
@@ -345,6 +452,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 =======
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -353,11 +463,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   const handleSuggestionClick = useCallback((suggestion: string) => {}
     setInputValue(suggestion)}, []);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
@@ -370,6 +483,21 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
 <<<<<<< HEAD
 
+  // Handle file upload;
+}
+    setMessages(prev => [...prev, userMessage])
+    setInputValue('')
+    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse])
+  // Handle suggestion clicks
+  const handleSuggestionClick = useCallback(("suggestion": string) => {}
+    setInputValue(suggestion)}, [])
+  // Handle file upload
+  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
+    const file = e.target.files?.[0]
+  if($2) {}
+=======
+<<<<<<< HEAD
+
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 =======
@@ -379,6 +507,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {}
     const file = e.target.files?.[0];
     if (file) {}
+>>>>>>> merged-prs-20250907-203621
       const fileMessage: ChatMessage = {}
         id: Date.now().toString(),
         "content": \Uploaded: \${file.name}\,
@@ -390,14 +519,19 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       setMessages(prev => [...prev, fileMessage])}
   }, []);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -443,9 +577,24 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   return ()
+>>>>>>> merged-prs-20250907-203621
 
   const handleFileUpload = useCallback((e": React.ChangeEvent<HTMLInputElement>) => {}"
 
+<<<<<<< HEAD
+
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+
+
+  // Toggle voice input;
+  const toggleVoiceInput = useCallback(() => {}
+    setIsListening(!isListening)}, [isListening]);
+
+
+  return ()
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 =======
@@ -464,11 +613,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return ()
 =======
+>>>>>>> merged-prs-20250907-203621
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
     <>
       {/* Chat Toggle Button */};
       <button;
@@ -479,6 +632,33 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
       </button>
+<<<<<<< HEAD
+
+
+      {/* Chat Interface */};
+</button>"
+        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
+
+      </button>
+      <AnimatePresence>
+
+          <motion.div;"
+            initial={{ "opacity": 0, "y": 20, "scale": 0.95 }}
+            animate={{ "opacity": 1, "y": 0, "scale": 1 }}
+            exit={{ "opacity": 0, "y": 20, "scale": 0.95 }}
+            className="fixed bottom-24 right-6 w-96 h-[600px] bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl z-40 flex flex-col
+          >
+</motion>"
+              <div className="p-4 border-b border-zinc-700 bg-zinc-800/50 rounded-t-2xl">"
+</div>"
+                <div className="flex items-center justify-between">"
+                  <div className="flex items-center gap-3">"
+                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center">"
+                      <Bot className="w-5 h-5 text-white" />"
+
+                    </div>
+                    <div>
+=======
 <<<<<<< HEAD
 =======
 
@@ -533,6 +713,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       {/* Message Metadata */}
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
                       <p className="text-xs text-zinc-400">Powered by AI</p>
                     </div>
@@ -580,19 +761,36 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     )};
                   </div>
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                   {/* Message Content */};
                   <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
                     <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+<<<<<<< HEAD
+                      
+                      
+                      {/* Message Metadata */};
+{/* Message Content */}
+                  <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
+                    <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
+                      <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+
+                      {/* Message Metadata */}
+=======
 <<<<<<< HEAD
 =======
                       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                       {/* Message Metadata */};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       {message.metadata && (})
                         <div className=mt-2 space-y-2">
                           {message.metadata.suggestions && (})
@@ -601,6 +799,19 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                                 <button;
 =======
 
+<<<<<<< HEAD
+                      <p className="text-xs text-zinc-400">Powered by AI</p>"
+                  <div className="flex items-center gap-2">"
+                        onClick={() => setShowSettingsPanel(!showSettingsPanel)}
+                        <Settings className="w-4 h-4" />"
+
+                      onClick={() => setIsOpen(false)}
+                      <X className="w-4 h-4" />"
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">"
+                <motion.div
+                  key={message.id};"
+=======
                       <p className=text-xs text-zinc-400">Powered by AI</p>"
                   <div className=flex items-center gap-2>"
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
@@ -612,6 +823,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
             <div className=flex-1 overflow-y-auto p-4 space-y-4">"
                 <motion.div;
                   key={message.id}
+>>>>>>> merged-prs-20250907-203621
 
                       <div className=w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
                         <User className=w-4 h-4 text-zinc-300 />"
@@ -656,6 +868,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                                   onClick={() => handleSuggestionClick(suggestion)};
                                 <span;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
                                   key={index};
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
                                 >
@@ -668,14 +883,30 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       )};
                     </div>
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                     {/* Message Actions */};
+{/* Message Actions */}
                     <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
                       <span className="text-xs text-zinc-500">
-                        {message.timestamp.toLocaleTimeString()};
+                        {message.timestamp.toLocaleTimeString()}
                       </span>
+<<<<<<< HEAD
+
+
+                      {message.sender === 'bot' && (})
+                        <div className="flex items-center gap-1">
+                          <button
+                            onClick={() => rateResponse(message.id, 'positive')}
+                            className="p-1 text-zinc-400 "hover": text-green-400 transition-colors"
+                            aria-label="Rate response positively"
+=======
 <<<<<<< HEAD
 =======
 
@@ -687,13 +918,21 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                             onClick={() => rateResponse(message.id, 'positive')}
                             className=p-1 text-zinc-400 "hover": text-green-400 transition-colors
                             aria-label=Rate response positively"
+>>>>>>> merged-prs-20250907-203621
                           >
                             <ThumbsUp className="w-3 h-3 />
                           </button>
+<<<<<<< HEAD
+                          <button
+                            onClick={() => rateResponse(message.id, 'negative')}
+                            className="p-1 text-zinc-400 "hover": text-red-400 transition-colors"
+                            aria-label="Rate response negatively"
+=======
                           <button;
                             onClick={() => rateResponse(message.id, negative)}
                             className=p-1 text-zinc-400 "hover": text-red-400 transition-colors
                             aria-label=Rate response negatively"
+>>>>>>> merged-prs-20250907-203621
                           >
                             <ThumbsDown className="w-3 h-3 />
                           </button>
@@ -724,6 +963,16 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                   <div className=flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">"
                     <div className=flex space-x-1>"
 
+<<<<<<< HEAD
+                    <span className="text-sm text-zinc-400">Zion AI is typing...</span>"
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+
+
+            {/* Input Area */};
+{/* Input Area */}
+=======
                     <span className="text-sm text-zinc-400>Zion AI is typing...</span>
               )}
               <div ref={messagesEndRef} />
@@ -746,9 +995,22 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             {/* Input Area */};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className=flex items-center gap-2>
                 <div className="flex-1 relative">
+<<<<<<< HEAD
+                  <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder="Ask me anything about Zion Tech Group..."
+                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
+                    disabled={isTyping}
+                  />
+
+
+=======
                   <input;
                     type=text
                     value={inputValue}
@@ -778,9 +1040,11 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                   {/* File Upload */};
+{/* File Upload */}
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                    <input;
+                    <input
                       type="file"
                       onChange={handleFileUpload};
 =======
@@ -793,8 +1057,13 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     type="text
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
+<<<<<<< HEAD
+</input>"
+                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">"
+=======
 </input>
                   <label className=absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">"
+>>>>>>> merged-prs-20250907-203621
 </label>
 
 <<<<<<< HEAD
@@ -821,6 +1090,30 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
                   </label>
                 </div>
+
+
+                {/* Voice Input */};
+{/* Voice Input */}
+                {settings.voiceEnabled && (})
+                  <button
+                    type="button"
+                    onClick={toggleVoiceInput}
+                    className={\"p-3 rounded-lg transition-colors \${isListening ? 'bg-red-500 text-white' : 'bg-zinc-700 text-zinc-400 "hover": bg-zinc-600'}\"}
+                    aria-label="Voice input"
+                  >
+                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                  </button>
+                )}
+                {/* Send Button */}
+                <button
+                  type="submit"
+                  disabled={!inputValue.trim() || isTyping}
+                  className="p-3 bg-zion-cyan text-white rounded-lg "hover": bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+=======
+<<<<<<< HEAD
+                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
+                  </label>
+                </div>
 <<<<<<< HEAD
 =======
 
@@ -842,11 +1135,18 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                   type=submit
                   disabled={!inputValue.trim() || isTyping}
                   className="p-3 bg-zion-cyan text-white rounded-lg "hover: bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed
+>>>>>>> merged-prs-20250907-203621
                   aria-label="Send message"
                 >
                   <Send className=w-4 h-4 />
                 </button>
               </form>
+<<<<<<< HEAD
+
+
+              {/* Quick Actions */};
+{/* Quick Actions */}
+=======
 <<<<<<< HEAD
 
 =======
@@ -864,6 +1164,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               {/* Quick Actions */};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className=flex items-center gap-2>
                   <Sparkles className="w-3 h-3" />
@@ -885,6 +1186,18 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
                   <span>24/7 Available</span>
     </>
+<<<<<<< HEAD
+  )};
+";
+    
+    
+    fs.writeFileSync(this.filePath, workingComponent);
+    this.log('AIChatbotSystem component replaced successfully!')};
+  async run() {}
+    this.log('Starting Component Replacer...');
+    
+    
+=======
 <<<<<<< HEAD
 
 =======
@@ -916,6 +1229,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> merged-prs-20250907-203621
     try {}
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
@@ -960,16 +1274,28 @@ module.exports = ComponentReplacer;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   automation.run();
     .then(() => {}"
 
       process.exit(1)})};
+<<<<<<< HEAD
+
+module.exports = ComponentReplacer;
+module.exports = ComponentReplacer;
+module.exports = ComponentReplacer;
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -991,3 +1317,4 @@ module.exports = ComponentReplacer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

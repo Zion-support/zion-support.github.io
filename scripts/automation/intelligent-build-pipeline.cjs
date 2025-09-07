@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       intelligent-build-pipeline.log
       this.projectRoot,logs"
@@ -28,10 +34,14 @@ const crypto = require("crypto")
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}``)
         this.projectRoot,build-pipeline.config.json"
 <<<<<<< HEAD
+  return JSON.parse(fs.readFileSync(configPath, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
   return JSON.parse(fs.readFileSync(configPath, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }`)} catch (error) {``}
       this.log(Failed to load pipeline "config": ${error.message}, WARN")
   "buildStrategies
@@ -140,7 +150,10 @@ const crypto = require("crypto")
       const distPath = path.join(this.projectRoot, "dist")
     const calculateSize = (dir, prefix = "")
   const filePath = path.join(dir, ")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         if (stats.isDirectory()) {calculateSize(filePath"})
       "averageFileSize
       largestFiles"
@@ -322,9 +335,13 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
             result
             "success"
 <<<<<<< HEAD
+  if($2) {this.log(" Successfully "applied"})
+=======
+<<<<<<< HEAD
 
 =======
           if (result.success) {this.log(" Successfully "applied"})
+>>>>>>> merged-prs-20250907-203621
   this.log(⚠ Partially "applied")
             ` Failed to "apply": ${strategy.name  } - ${error.message}`,ERROR
   "strategy"
@@ -470,6 +487,15 @@ this.log(Pipeline report "generated": ${reportPath})
   console.log(")
 <<<<<<< HEAD
 
+  console.error(" Intelligent Build Pipeline "failed": ")
+  console.error(" Intelligent Build Pipeline "failed": ")
+  console.error(" Intelligent Build Pipeline "failed": ")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error( Intelligent Build Pipeline failed": ")
 
@@ -503,3 +529,4 @@ this.log(Pipeline report "generated": ${reportPath})
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,5 +1,7 @@
 return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 return (<div className='space-y-3>;
       <div className=flex justify-between items-center px-4'>;
@@ -7,6 +9,7 @@ return (<div className='space-y-3>;
       <div className='flex justify-between items-center px-4'>;
         <div className=flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
 =======
+>>>>>>> merged-prs-20250907-203621
     <div className='space-y-3'>;'
       <div className='flex justify-between items-center px-4'>;'
         <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
@@ -143,7 +146,10 @@ function BrowseFilters() {}
                         >;
 
                           Freelance;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                         </Badge>;
                       </div>;
                     </div>;
@@ -175,7 +181,10 @@ function BrowseFilters() {}
                         >;
 
                           Senior;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                         </Badge>;
                       </div>;
                     </div>;
@@ -213,6 +222,8 @@ function BrowseFilters() {}
                         </Badge>;
                       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     </div>;import React, { useState } from "react,import { Button } from @/components/ui/button",import { Slider } from "@/components/ui/slider,import { Switch } from @/components/ui/switch",import { Input } from "@/components/ui/input,import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select",import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet,import { Badge } from @/components/ui/badge",import { Label } from "@/components/ui/label,import { Label  } from @/components/ui/label;
 interface BrowseFiltersProps  {return (<div className=space-y-3">;
       <div className="flex justify-between items-center px-4>;
@@ -240,6 +251,7 @@ interface BrowseFiltersProps  {return (<div className=space-y-3">;
                       </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     </div>;
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from @/components/ui/sheet",
@@ -247,12 +259,15 @@ import { Badge } from "@/components/ui/badge,
 import { Label } from @/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet,
 import { Badge } from @/components/ui/badge",
 import { Label } from "@/components/ui/label;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface BrowseFiltersProps {
 
   return (
@@ -312,6 +327,9 @@ interface BrowseFiltersProps {
                       <Label>Experience (years)</Label>
                       <Slider"
 <<<<<<< HEAD
+                        aria-label="Years of experience"
+=======
+<<<<<<< HEAD
                         aria-label="Years of experience
                     <div className=space-y-2">;
                       <Label>Experience Level</Label>;
@@ -339,6 +357,7 @@ interface BrowseFiltersProps {
 =======
                         aria-label="Years of experience"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
@@ -529,6 +548,8 @@ interface BrowseFiltersProps {
             </Badge>
           ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -541,6 +562,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}</div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         </div>;
       </div>;
@@ -562,12 +584,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}</div>;
       </div>;
     </div>;
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }
 

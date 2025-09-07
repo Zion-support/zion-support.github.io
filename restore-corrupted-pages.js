@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 ')
 const fs = require($2);
 const path = require($2);
@@ -43,7 +47,7 @@ const path = require($2);
                         currentContent.length < 100 ||
                         !currentContent.includes($2);
     if (!isCorrupted) {
-      return { restored: false, reason: Page is not corrupted }
+      return { restored: false, reason: 'Page is not corrupted' }
     }
     // Find backup,
   const backupPath = findBestBackup($2);
@@ -55,10 +59,31 @@ const path = require($2);
     // Handle merge conflicts by taking the content after the conflict markers,
   if (backupContent.includes('')) {
       const parts = backupContent.split($2);
+<<<<<<< HEAD
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+=======
+=======
+>>>>>>> merged-prs-20250907-203621
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+'),
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      if (parts.length > 1) {
+<<<<<<< HEAD
+        // Take the content after the conflict resolution
+
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');'
 const path = require('path');
@@ -83,6 +108,10 @@ function findBestBackup() { return null; }
           content.includes('return') &&;
           content.length > 100) {;
         return backupPath;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       }
 
       // // // console.log(`Error reading backup ${backupPath}:`, error.message);
@@ -90,6 +119,7 @@ function findBestBackup() { return null; }
   return null;
 // Function to restore a corrupted page;
 
+<<<<<<< HEAD
       return { restored: false, reason: 'Page is not corrupted' }
     // Find backup;
     const backupPath = findBestBackup(pagePath);
@@ -99,17 +129,63 @@ function findBestBackup() { return null; }
 
       if (parts.length > 1) {;
 
-        // Take the content after the conflict resolution;
-
-      }
+=======
+    // Ensure it has proper structure
+    if (!backupContent.includes('export default')) {
+      return { restored: false, reason: 'Backup content is also corrupted' }
     }
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    
+
+
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    // Create a backup of the current corrupted file
+
+    const timestamp = Date.now()
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`
+    fs.writeFileSync(corruptedBackupPath, currentContent)
+    // Restore the page
+    fs.writeFileSync(pagePath, backupContent)
+    return {
+      restored: true
+      backupUsed: backupPath
+
+      corruptedBackup: corruptedBackupPath
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+'),
+      // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+        // Take the content after the conflict resolution;
+
+<<<<<<< HEAD
+=======
+=======
+        // Take the content after the conflict resolution,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+>>>>>>> merged-prs-20250907-203621
+      }
+    }
     // Clean up the content,
   backupContent = backupContent.trim($2);
     // Ensure it has proper structure,
   if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
+<<<<<<< HEAD
     // Create a backup of the current corrupted file,
   const timestamp = Date.now($2);
     const corruptedBackupPath = $2;
@@ -120,16 +196,66 @@ function findBestBackup() { return null; }
       restored: true, 
       backupUsed: backupPath,
       corruptedBackup: corruptedBackupPath}
+=======
+    // Create a backup of the current corrupted file;
+    const timestamp = Date.now (),
+    const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
+    fs.writeFileSync (corruptedBackupPath, current_content),
+    // Restore the page;
+
+<<<<<<< HEAD
+;
+    // Create a backup of the current corrupted file;
+    const timestamp = Date.now();
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
+    fs.writeFileSync(corruptedBackupPath, currentContent),;
+    // Restore the page;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    fs.writeFileSync(pagePath, backupContent),;
+    return {;
+      restored: true,;
+      backupUsed: backupPath,;
+      corruptedBackup: corruptedBackupPath;
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
+<<<<<<< HEAD
 // Function to scan and restore all corrupted pages,
   function restoreAllCorruptedPages() {
   const pagesDir = path.join(process.cwd(), 'pages'),
   const results = $2;
     restored: 0,
     failed: 0,
+=======
+
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Function to scan and restore all corrupted pages
+function restoreAllCorruptedPages() {
+  const pagesDir = path.join(process.cwd(), 'pages')
+  const results = {
+
+    total: 0
+    restored: 0
+    failed: 0
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     details: []
   },
   function scanDirectory(dir) {
@@ -142,6 +268,10 @@ function findBestBackup() { return null; }
         }
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 
@@ -150,6 +280,7 @@ function findBestBackup() { return null; }
         results.total++,
         
         console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
 =======
     // Clean up the content
 
@@ -202,6 +333,13 @@ if ( {) {
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
 
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     // Create a backup of the current corrupted file;
     const timestamp = Date.now();`
@@ -267,13 +405,27 @@ function restoreAllCorruptedPages() {
 
 >>>>>>> origin/chore/fix-lint-and-merge
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
+
 
         const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+=======
 
         const result = restorePage(fullPath),
 
         const result = restorePage(fullPath),
 <<<<<<< HEAD
+<<<<<<< HEAD
+        console.log($2);
+        const result = restorePage($2);
+=======
+
+        const result = restorePage(fullPath),
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
         console.log($2);
         const result = restorePage($2);
 =======
@@ -281,20 +433,55 @@ function restoreAllCorruptedPages() {
         const result = restorePage(fullPath),
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         if (result.restored) {
           results.restored++`;
           console.log(`✅ Restored: ${fullPath}`)`;
           console.log(`   Used backup: ${result.backupUsed}`)`;
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
-
+<<<<<<< HEAD
           results.failed++
           console.log(`❌ Failed: ${fullPath}`)
+
+<<<<<<< HEAD
+          results.failed++
+          console.log(`❌ Failed: ${fullPath}`)
+=======
+          console.log(`   Reason: ${result.reason}`)
+          results.failed++,
+          results.failed++,
+          console.log(`❌ Failed: ${fullPath}`),
+          console.log(`   Reason: ${result.reason}`)
+          // // // console.log(`❌ Failed: ${fullPath}`),
+          // // // console.log(`   Reason: ${result.reason}`)
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
+        results.total++,;
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
+        const result = restorePage(fullPath);
+        if (result.restored) {;
+          results.restored++,;
+          // // // console.log(`✅ Restored: ${fullPath}`),;
+          // // // console.log(`   Used backup: ${result.backupUsed}`),;
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {;
+          results.failed++,;
+          // // // console.log(`❌ Failed: ${fullPath}`),;
+          // // // console.log(`   Reason: ${result.reason}`);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   // TODO: Implement
 }`;
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
+<<<<<<< HEAD
 
           // // // console.log(`❌ Failed: ${fullPath}`),
 <<<<<<< HEAD
@@ -302,18 +489,26 @@ function restoreAllCorruptedPages() {
       } else if (entry.name.endsWith(.tsx) || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+>>>>>>> merged-prs-20250907-203621
         if (result.restored) {
           results.restored++,
-          // // // console.log(`✅ Restored: ${fullPath}`),
-          // // // console.log(`   Used backup: ${result.backupUsed}`),
-          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+          console.log($2);
+          console.log($2);
+          console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
           results.failed++,
+<<<<<<< HEAD
+          console.log($2);
+          console.log(`   Reason: ${result.reason}`)
+=======
           // // // console.log(`❌ Failed: ${fullPath}`),
           // // // console.log(`   Reason: ${result.reason}`);
           results.failed++
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+          results.failed++,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
           // // // console.log(`   Reason: ${result.reason}`)
 
@@ -321,20 +516,47 @@ function restoreAllCorruptedPages() {
 
           // // // console.log(`   Reason: ${result.reason}`);
 
+>>>>>>> merged-prs-20250907-203621
         }
-        results.details.push({}
-          file: fullPath;
-          ...result;
+        results.details.push({
+          file: fullPath
+          ...result
         })
       }
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  console.log('🚀 Starting page restoration process...')
+  scanDirectory(pagesDir)
+  // Generate summary
+  console.log('\n📊 Restoration Summary: ')
+  console.log(`   Total pages: ${results.total}`)
+  console.log(`   Restored: ${results.restored}`)
+  console.log(`   Failed: ${results.failed}`)
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json')
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
+
+  return results
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
   
+<<<<<<< HEAD
   console.log(🚀 Starting page restoration process...),
 =======
   return results
@@ -348,7 +570,26 @@ function restoreAllCorruptedPages() {
 
   console.log('🚀 Starting page restoration process...'),
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.log('🚀 Starting page restoration process...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // // // console.log('🚀 Starting page restoration process...'),
+<<<<<<< HEAD
+  scanDirectory(pagesDir),
+  // Generate summary
+  console.log('\n📊 Restoration Summary: '),
+  console.log(`   Total pages: ${results.total}`),
+  console.log(`   Restored: ${results.restored}`),
+  console.log(`   Failed: ${results.failed}`),
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
+  
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+  
+  return results
+=======
 
   scanDirectory(pagesDir),
   // Generate summary
@@ -358,6 +599,7 @@ function restoreAllCorruptedPages() {
   scanDirectory(pagesDir),
   // Generate summary
 
+<<<<<<< HEAD
   scanDirectory(pagesDir),
   // Generate summary
 
@@ -373,6 +615,11 @@ function restoreAllCorruptedPages() {
   // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
 <<<<<<< HEAD
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+>>>>>>> merged-prs-20250907-203621
   console.log($2);
   scanDirectory($2);
   // Generate summary,
@@ -386,6 +633,8 @@ function restoreAllCorruptedPages() {
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   console.log($2);
   return results
+<<<<<<< HEAD
+=======
 =======
   // Save detailed report'
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json')
@@ -399,6 +648,9 @@ function restoreAllCorruptedPages() {
   scanDirectory(pagesDir),
   // Generate summary;
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -411,7 +663,10 @@ function restoreAllCorruptedPages() {
   return results;
 
 
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 =======
   // // // console.log('\n📊 Restoration Summary: '),;`;
   // // // console.log(`   Total pages: ${results.total}`),;`;
@@ -424,17 +679,27 @@ function restoreAllCorruptedPages() {
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 module.exports = {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Function to scan and restore all corrupted pages;
 /**
  * restoreAllCorruptedPages - Function description
@@ -484,6 +749,7 @@ if ({restoreAllCorruptedPages()}// Function to scan and restore all corrupted pa
  * scan_directory - Function description;
  */;
 }
+<<<<<<< HEAD
         // Check condition;
 if ( {) {$2;
 =======
@@ -523,13 +789,40 @@ module.exports = {restorePage,restoreAllCorruptedPages,findBestBackup;
 =======
 
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+<<<<<<< HEAD
+module.exports = {
+
+  restorePage
+  restoreAllCorruptedPages
+  findBestBackup
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 module.exports = {;
   restorePage,;
   restoreAllCorruptedPages,;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+  findBestBackup;
+};
+<<<<<<< HEAD
+
+=======
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 module.exports = {
   restore_page,
   restoreAllCorruptedPages,
@@ -551,11 +844,15 @@ module.exports = {
 main
 
 
+>>>>>>> merged-prs-20250907-203621
 }
 // Run the restoration if this script is executed directly,
   if (require.main = $2;
   restoreAllCorruptedPages,
   findBestBackup
+<<<<<<< HEAD
+},
+=======
 },
 =======
 main;
@@ -566,4 +863,25 @@ module.exports = {}
 },;
 
 };
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+
+<<<<<<< HEAD
+main
+
+module.exports = {
+  restorePage,
+  restoreAllCorruptedPages,
+  findBestBackup;
+},;
+
+};
+main
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

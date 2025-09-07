@@ -1,11 +1,32 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
+import { AlertTriangle, RefreshCw } from 'lucide-react';
+
+interface Props {
+  children: ReactNode,
+  fallback?: ReactNode;
+=======
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props  {children: ReactNode,  fallback?: ReactNode;}
+=======
+import {AlertTriangle, RefreshCw} from 'lucide-react';
+<<<<<<< HEAD
+;
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface Props {
+  children: ReactNode,  fallback?: ReactNode;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 }
 
-<<<<<<< HEAD
 interface State {
+<<<<<<< HEAD
   hasError: boolean,
   error?: Error;
 }
@@ -13,6 +34,22 @@ interface State {
 
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
+<<<<<<< HEAD
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // eslint-disable-next-line no-console
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined }),
+  };
+
+  public render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+=======
 =======
 interface State  {}
       return (<div className=\"min-h-screen flex items-center justify-center bg-gray-50\"    />;"
@@ -21,6 +58,50 @@ interface State  {}
               <AlertTriangle className=\"w-12 h-12 text-red-500\"    />;
             </div>;"
             <h2 className=\"text-xl font-semibold text-gray-900 mb-2\"    />;
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface Props {;
+  children: ReactNode,  fallback?: ReactNode;
+}
+interface State {;
+  hasError: boolean,;
+  error?: Error;
+}
+class ErrorBoundary extends Component<Props, State> {;
+  public state: State = {;
+    hasError: false;
+  },;
+  public static getDerivedStateFromError(error: Error): State {;
+    return { hasError: true, error };
+  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    // eslint-disable-next-line no-console;
+    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+  private handleRetry = () => {;
+    this && this.setState({ hasError: false, error: undefined }),;
+  };
+  public render() {;
+    if (this && this.state.hasError) {;
+      if (this && this.props.fallback) {;
+        return this && this.props.fallback;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      }
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">;
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">;
+            <div className="flex justify-center mb-4">;
+              <AlertTriangle className="w-12 h-12 text-red-500" />;
+            </div>;
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               Something went wrong;
             </h2>;"
             <p className=\"text-gray-600 mb-6\"    />;
@@ -52,7 +133,26 @@ interface State  {}
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
   has_error: boolean,error?: Error;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </div>;
+        </div>;
+      ),;
+    }
+    return this && this.props.children;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  has_error: boolean,
+  error?: Error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 <<<<<<< HEAD
 class ErrorBoundary extends Component < Props, State> {}
@@ -75,9 +175,12 @@ if ( {) {$2;}
       // Check condition;
 if ( {) {$2;}
 }
+>>>>>>> merged-prs-20250907-203621
         return this.props.fallback;
 <<<<<<< HEAD
       }
+<<<<<<< HEAD
+=======
       return (
         <div className="min - h-screen flex items - center justify - center bg-gray-50">;
           <div className="max - w-md w - full bg - white shadow - lg rounded - lg p-6 text-center">;
@@ -101,6 +204,7 @@ if ( {) {$2;}
       if (this.props.fallback) {
         return this.props.fallback;
       }
+>>>>>>> merged-prs-20250907-203621
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -127,6 +231,8 @@ if ( {) {$2;}
                   Error Details
                 </summary>
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+<<<<<<< HEAD
+=======
 =======
       }"
       return (<div className=\"min - h-screen flex items - center justify - center bg-gray-50\"    />;"
@@ -160,13 +266,22 @@ if ( {) {$2;}
                 </summary>;}"
                 <pre className=\"mt - 2 text - xs text - red - 600 bg - red - 50 p-2 rounded overflow-auto\"    />;}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   {this.state.error.stack}
-                </pre>;
-              </details>)}
-          </div>;
-        </div>)}
+                </pre>
+              </details>
+            )}
+          </div>
+        </div>
+      );
+    }
+
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
+export default ErrorBoundary;
+=======
 export default ErrorBoundary;"
+>>>>>>> merged-prs-20250907-203621

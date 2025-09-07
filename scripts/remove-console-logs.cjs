@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,6 +16,7 @@
 >>>>>>> origin/chore/fix-lint-and-merge
 
 #!/usr/bin/env node
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 <<<<<<< HEAD
 const path = require(path');
@@ -19,17 +25,27 @@ const { glob } = require('glob);
 =======
 const path = require('path');
 const { glob } = require('glob');
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 /**
- * Script to remove console.log statements from production builds;
- * This helps improve performance and security;
+ * Script to remove console.log statements from production builds
+ * This helps improve performance and security
  */
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
 const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   // Keep console.error for debugging;
 ];
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 
@@ -44,6 +60,7 @@ const EXCLUDE_PATTERNS = [node_modules',
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
   'dist',
@@ -63,14 +80,20 @@ function shouldProcessFile(filePath) {
 =======
     if (pattern.includes('*')) {
       return filePath.includes(pattern.replace('*', ''))}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
     return filePath.includes(pattern)})}
 function removeConsoleStatements(content) {
   let modifiedContent = content;
   let removedCount = 0;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -79,6 +102,7 @@ function removeConsoleStatements(content) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   CONSOLE_PATTERNS.forEach(pattern => {
     const matches = modifiedContent.match(pattern);
     if (matches) {
@@ -87,6 +111,12 @@ function removeConsoleStatements(content) {
   });
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+  return { "content": modifiedContent, removedCount }}
+
+function processFile(filePath) {
+  try {
+=======
   return { "content: modifiedContent, removedCount }}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
@@ -104,10 +134,23 @@ function processFile(filePath) {
   return { "content": modifiedContent, removedCount }}
 function processFile(filePath) {
   try {
+>>>>>>> merged-prs-20250907-203621
     const content = fs.readFileSync(filePath, 'utf8');
     const { "content": newContent, removedCount } = removeConsoleStatements(content);
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
+<<<<<<< HEAD
+      
+      
+      return removedCount}
+
+  let results = [];
+  const list = fs.readdirSync(dir);
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+=======
 =======
 
   CONSOLE_PATTERNS.forEach(pattern => {)
@@ -141,6 +184,7 @@ function getAllFiles(dir, extensions = [.js', '.jsx, .ts', '.tsx]) {
   const list = fs.readdirSync(dir);
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   list.forEach(file => {
 =======
   list.forEach(file => {)
@@ -148,22 +192,39 @@ function getAllFiles(dir, extensions = [.js', '.jsx, .ts', '.tsx]) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat && stat.isDirectory()) {
-      results = results.concat(getAllFiles(filePath, extensions));
+      results = results.concat(getAllFiles(filePath, extensions))
     } else {
   // TODO: Implement
-      const ext = path.extname(file);
+      const ext = path.extname(file)
       if (extensions.includes(ext)) {
         results.push(filePath);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
       }
     }
   });
   return results;
 }
 function main() {
+<<<<<<< HEAD
+
+
+
+
+
+
+  const srcDir = path.join(process.cwd(), 'src');
+  const pagesDir = path.join(process.cwd(), 'pages');
+  
+  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
+    `${pagesDir}/**/*.{js,jsx,ts,tsx}`
+  ];
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -221,11 +282,14 @@ function main() {
 =======
   const pagesDir = path.join(process.cwd(), 'pages');`;
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,`;
+>>>>>>> merged-prs-20250907-203621
 
-    `${pagesDir}/**/*.{js,jsx,ts,tsx}`]
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   let totalRemoved = 0;
   let filesProcessed = 0;
   for (const pattern of patterns) {
@@ -234,6 +298,9 @@ function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
+<<<<<<< HEAD
+        filesProcessed++}
+=======
 <<<<<<< HEAD
 
 =======
@@ -255,10 +322,13 @@ function main() {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -269,11 +339,30 @@ ursor/expand-services-advertise-and-build-project-0033
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> merged-prs-20250907-203621
 
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
+
+
+}
+
+if (require.main === module) {
+  main().catch(console.error)}
+
+
+module.exports = { removeConsoleStatements, processFile };
+
+module.exports = { removeConsoleStatements, processFile };
+
+
+  console.log("\n📊 Summary: ");"`;
+  console.log(`   Files processed: ${filesProcessed}`);"`;
+    console.log(`\n✨ No console statements found to remove.`)
+  if($2) {
+=======
 <<<<<<< HEAD
 
 =======
@@ -332,6 +421,7 @@ module.exports = { removeConsoleStatements, processFile };
 
 if (require.main === module) {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   main().catch(console.error)}
 
 "`;

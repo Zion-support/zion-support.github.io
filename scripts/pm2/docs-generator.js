@@ -1,4 +1,20 @@
+<<<<<<< HEAD
+}
+},
+=======
+<<<<<<< HEAD
 super(props);
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.state = { hasError: false };
 }};
 ; async generateReadme() {; try {; this && this.log('📝 Generating README && README.md...');'
@@ -9,6 +25,7 @@ ${packageJson && packageJson.description || 'A modern web application built with
 - Node && Node.js ${process && process.version};'
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const pagesDir = path.join(this.projectRoot, 'pages/api')if (fs.existsSync(pagesDir)) {const apiFiles  = this.getApiFiles(pagesDir)apiFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8';'
   }
@@ -160,6 +177,12 @@ if (require.main = == module) {
 =======
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+}}
+; async generate_readme () { try { this.log ('📝 Generating README.md...');
+; const package_json = JSON.parse (fs.readFileSync ('package.json', 'utf8')); const readme_content = `# ${package_json.name};;
+${package_json.description || 'A modern web application built with Next.js'}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 ${packageJson.description || 'A modern web application built with Next.js'};
 ;
@@ -184,6 +207,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ### Installation;
 \`\`\`bash;
 npm install;
@@ -228,6 +258,21 @@ ${this.projectRoot}/;
 └── package.json # Dependencies and scripts;
 \`\`\`;
 ## 🛠️ Available Scripts;
+<<<<<<< HEAD
+=======
+
+${Object.entries (package_json.scripts || {}).map (([key, value]) = > `- **${key}**: \`${value}\``).join ('\n')}
+;
+## 📦 Dependencies;
+### Production Dependencies;
+${Object.keys (package_json.dependencies || {}).map (dep = > `- ${dep}`).join ('\n')}
+;
+### Development Dependencies;
+${Object.keys (package_json.dev_dependencies || {}).map (dep = > `- ${dep}`).join ('\n')};
+
+## 🔧 Configuration;
+This project uses Next && Next.js with the following configuration:  , - TypeScript support,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
@@ -3210,6 +3255,99 @@ if (require.main === module) {
   });
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+}};
+; async generateReadme() {; try {; this.log('📝 Generating README.md...');
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;;
+${packageJson.description || 'A modern web application built with Next.js'};
+; fs.writeFileSync ('docs / COMPONENTS.md', docs_content);
+; return { success: true, message: 'Component documentation generated successfully', components: component_docs.length}} catch (error) { return { success: false,
+    error: error.message}}}
+; getComponentFiles (dir) { const files = [];
+; const scan_directory = (current_dir) = > { const items = fs.readdir_sync (current_dir); items.for_each (item = > { const full_path = path.join (current_dir, item); const stat = fs.stat_sync (full_path);
+; if () {) {
+  $2
+} scan_directory (full_path)} else if (|| item.ends_with ('.tsx')) {) {
+  $2
+} files.push (full_path)}})}
+; scan_directory (dir); return files}
+; extractComponentInfo (file_path, content) { const file_name = path.basename (file_path, path.extname (file_path)); const component_name = file_name.char_at (0).toUpperCase () + file_name.slice (1);
+; // Extract description from comments; const comment_match = content.match (/\/\*\*([\s\S]*?)\*\//); const description = comment_match ? comment_match[1].trim (): `${component_name} component`;
+; // Extract props from interface or PropTypes; const props = []; const prop_match = content.match (/interface\s+\w + Props\s*{([\s\S]*?)}/); // Check condition
+if ( {) {
+  $2
+} const prop_lines = prop_match[1].split ('\n'); prop_lines.for_each (line = > { const prop_match = line.match (/(\w+)\s*: \s*(\w+)/); // Check condition
+if ( {) {
+  $2
+} props.push ({ name: prop_match[1], type: prop_match[2], description: 'Component prop'})}})}
+; return { name: component_name,
+    file: file_path.replace (this.project_root + '/', ''); description: description, props: props, usage: `<${component_name} />`}}
+; async generate_report (readme_result, api_result, component_result) { const report = { timestamp: new Date ().toISOString (), summary: {
+      , readme_generated: readme_result.success, apiDocsGenerated: api_result.success, componentDocsGenerated: component_result.success, total_endpoints: api_result.endpoints || 0, total_components: component_result.components || 0;
+    },
+    details: {, readme: readme_result, api: api_result,
+    components: component_result} recommendations: []}
+; // Generate recommendations; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'high', message: 'README generation failed', action: 'Check file permissions and try again'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'API documentation generation failed', action: 'Check API route files and try again'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'Component documentation generation failed', action: 'Check component files and try again'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'low', message: 'No API endpoints found', action: 'Consider adding API routes for better documentation'})}
+; return report}
+; async save_report (report) { try { const report_dir = path.dirname (this.report_file); if () {) {
+  $2
+} fs.mkdir_sync (report_dir, { recursive: true })}
+; fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2)); this.log (`Report saved to: ${this.report_file}`)} catch (error) { this.log (`Error saving report: ${error.message}`)}}
+; async run () { this.log ('📚 Starting Docs Generator...'); this.log (`Project root: ${this.project_root}`);
+; try { // Create logs directory if it doesn't exist; const logs_dir = path.dirname (this.log_file); if () {) {
+  $2
+} fs.mkdir_sync (logs_dir, { recursive: true })}
+; // Create docs directory if it doesn't exist; const docs_dir = path.join (this.project_root, 'docs'); if () {) {
+  $2
+} fs.mkdir_sync (docs_dir, { recursive: true })}
+; // Generate all documentation; const readme_result = await this.generate_readme (); const api_result = await this.generateApiDocs (); const component_result = await this.generateComponentDocs ();
+; // Generate report; this.log ('📊 Generating documentation report...'); const report = await this.generate_report (readme_result, api_result, component_result);
+; // Save report; await this.save_report (report);
+; const duration = Date.now () - this.start_time;
+; // Log summary; this.log ('\n📊 Docs Generator Summary: '); this.log (`README: ${report.summary.readme_generated ? 'Generated': 'Failed'}`); this.log (`API Docs: ${report.summary.apiDocsGenerated ? 'Generated': 'Failed'}`); this.log (`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated': 'Failed'}`); this.log (`Total Endpoints: ${report.summary.total_endpoints}`); this.log (`Total Components: ${report.summary.total_components}`); this.log (`Duration: ${duration}ms`);
+; // Check condition
+if ( {) {
+  $2
+} this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ Documentation generated successfully!')}
+} catch (error) { this.log (`❌ Error running docs generator: ${error.message}`); process.exit (1)}}}
+;
+// Run the docs generator;
+const docs_generator = new DocsGenerator ();
+docs_generator.run ().catch (error = > { process.exit (1)});
+${package_json.description || 'A modern web application built with Next.js'}
+;
+## 🚀 Getting Started;
+### Prerequisites;
+- Node.js ${process.version}
+- npm ${exec_sync ('npm --version', { encoding: 'utf8' }).trim ()}
+;
+}}; async generateReadme() {try {; this.log('📝 Generating README.md...'); const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;
+${packageJson.description |'A modern web application built with Next.js'}
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ## 🚀 Getting Started;
 ### Prerequisites;
 - Node.js ${process.version}
@@ -3217,11 +3355,16 @@ if (require.main === module) {
 }};
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
+>>>>>>> merged-prs-20250907-203621
 ,
   async generateReadme() {,
     try {,
-      this.log('📝 Generating README.md...'),
+      this.log($2);
 ,
+<<<<<<< HEAD
+      const packageJson = $2;
+      const readmeContent = $2;
+=======
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name};
 ;
@@ -3244,9 +3387,20 @@ npm run dev;
 Open [http: //localhost:3000](http://localhost:3000) with your browser to see the result.,
 ### Build;
 
+<<<<<<< HEAD
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.;
 ### Build;
 
+=======
+
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.;
+### Build;
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 \`\`\`bash;
 npm run build;
 npm start;
@@ -3262,6 +3416,27 @@ ${this.projectRoot}/;
 └── package.json # Dependencies and scripts;
 \`\`\`;
 ## 🛠️ Available Scripts;
+<<<<<<< HEAD
+=======
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
+
+${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')};
+
+;
+## 📦 Dependencies;
+### Production Dependencies;
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
+;
+### Development Dependencies;
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
+;
+## 🔧 Configuration;
+
+This project uses Next.js with the following configuration: ;
+- TypeScript support;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
@@ -3291,6 +3466,13 @@ The project includes automated monitoring with PM2:  , - Code quality monitoring
 The project includes automated monitoring with PM2: ;
 - Code quality monitoring;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - Performance monitoring;
 - Security scanning;
 - Health checks;
@@ -3306,11 +3488,227 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support;
 For support, email support@example.com or create an issue in the repository.;
 ---;
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
 #!/usr/bin/env node
 /**
  * PM2 Documentation Generator Script
  * Automatically generates and updates documentation
+=======
+
+Generated on ${new Date().toISOString()};
+`;
+;
+      fs.writeFileSync('README.md', readmeContent);
+;
+      return {;
+        success: true, message: 'README.md generated successfully',
+      ;
+    } catch (error) {;
+      return {;
+        success: false, error: error.message,
+      ;
+};
+};
+;
+  async generateApiDocs() {;
+    try {;
+      this.log('🔌 Generating API documentation...');
+;
+      const apiDocs = {;
+        title: 'API Documentation', version: '1.0.0',
+        description: 'API endpoints and documentation', baseUrl: 'http://localhost:3000',
+        endpoints: [], generatedAt: new Date().toISOString(),
+      ;
+;
+      // Scan for API routes;
+      const pagesDir = path.join(this.projectRoot, 'pages/api');
+      if (fs.existsSync(pagesDir)) {;
+        const apiFiles = this.getApiFiles(pagesDir);
+;
+        apiFiles.forEach(file => {;
+          const content = fs.readFileSync(file, 'utf8');
+          const endpoint = this.extractApiEndpoint(file, content);
+          if (endpoint) {;
+            apiDocs.endpoints.push(endpoint);
+          };
+        });
+      };
+;
+      const docsContent = `# API Documentation;
+## Overview;
+- **Base URL**: ${apiDocs.baseUrl};
+- **Version**: ${apiDocs.version};
+- **Generated**: ${apiDocs.generatedAt};
+;
+## Endpoints;
+${apiDocs.endpoints.map(endpoint => `;
+### ${endpoint.method} ${endpoint.path};
+Generated on ${new Date ().toISOString ()}
+`;
+; fs.writeFileSync ('README.md', readme_content);
+; return { success: true,
+    message: 'README.md generated successfully'}} catch (error) { return { success: false,
+    error: error.message}}}
+; async generateApiDocs () { try { this.log ('🔌 Generating API documentation...');
+; const api_docs = { title: 'API Documentation', version: '1.0.0', description: 'API endpoints and documentation', base_url: 'http: //localhost: 3000', endpoints: [],
+    generated_at: new Date ().toISOString ()}
+; // Scan for API routes; const pages_dir = path.join (this.project_root, 'pages / api'); if () {) {
+  $2
+} const api_files = this.getApiFiles (pages_dir);
+; api_files.for_each (file = > { const content = fs.readFileSync (file, 'utf8'); const endpoint = this.extractApiEndpoint (file, content); // Check condition
+if ( {) {
+  $2
+} api_docs.endpoints.push (endpoint)}})}
+; const docs_content = `# API Documentation;## Overview;
+- **Base URL**: ${api_docs.base_url}
+- **Version**: ${api_docs.version}
+- **Generated**: ${api_docs.generated_at}
+;
+## Endpoints;
+${api_docs.endpoints.map (endpoint = > `;### ${endpoint.method} ${endpoint.path}
+
+;
+${endpoint.description}
+;
+**Parameters: **,
+
+${endpoint.parameters.map (param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join ('\n')};
+**Response: **, \`\`\`json,
+${JSON.stringify (endpoint.response, null, 2)}
+\`\`\`;
+`).join ('\n')}
+;
+
+## Error Handling;
+All endpoints return appropriate HTTP status codes:  , - \`200\`: Success
+- \`400\`: Bad Request;
+- \`401\`: Unauthorized;
+- \`404\`: Not Found;
+- \`500\`: Internal Server Error;
+## Rate Limiting;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
+---;
+
+Generated by Docs Generator on ${new Date ().toISOString ()}
+`;
+; fs.writeFileSync ('docs / API.md', docs_content);
+; return { success: true, message: 'API documentation generated successfully', endpoints: api_docs.endpoints.length}} catch (error) { return { success: false,
+    error: error.message}}}
+; getApiFiles (dir) { const files = [];
+; const scan_directory = (current_dir) = > { const items = fs.readdir_sync (current_dir); items.for_each (item = > { const full_path = path.join (current_dir, item); const stat = fs.stat_sync (full_path);
+; if () {) {
+  $2
+} scan_directory (full_path)} else if (|| item.ends_with ('.ts')) {) {
+  $2
+} files.push (full_path)}})}
+; scan_directory (dir); return files}
+; extractApiEndpoint (file_path, content) { const relative_path = file_path.replace (this.project_root + '/pages / api', ''); const path = relative_path.replace (/\.(js | ts)$/, '').replace (/\/index$/, '') || '/';
+; // Extract HTTP method from content; const method = content.includes ('export default') ? 'GET': 'POST';
+; // Extract description from comments; const comment_match = content.match (/\/\*\*([\s\S]*?)\*\//); const description = comment_match ? comment_match[1].trim (): 'API endpoint';
+; return { method: method, path: path, description: description, parameters: [], response: {, success: true, data: {}}}}
+; async generateComponentDocs () { try { this.log ('🧩 Generating component documentation...');
+; const components_dir = path.join (this.project_root, 'components'); const component_docs = [];
+; if () {) {
+  $2
+} const component_files = this.getComponentFiles (components_dir);
+; component_files.for_each (file = > { const content = fs.readFileSync (file, 'utf8'); const component_info = this.extractComponentInfo (file, content); // Check condition
+if ( {) {
+  $2
+} component_docs.push (component_info)}})}
+; const docs_content = `# Component Documentation;
+## Overview;
+This document describes all React components in the application.;
+## Components;
+${component_docs.map (component = > `;
+### ${component.name}
+;
+${component.description}
+;
+**File**: \`${component.file}\`;
+**Props: **,
+${component.props.map (prop = > `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join ('\n')}
+;
+**Usage: **, \`\`\`jsx,
+${component.usage}
+\`\`\`;
+`).join ('\n')}
+;
+---;
+Generated by Docs Generator on ${new Date ().toISOString ()}
+`;
+; fs.writeFileSync ('docs / COMPONENTS.md', docs_content);
+; return { success: true, message: 'Component documentation generated successfully', components: component_docs.length}} catch (error) { return { success: false,
+    error: error.message}}}
+; getComponentFiles (dir) { const files = [];
+; const scan_directory = (current_dir) = > { const items = fs.readdir_sync (current_dir); items.for_each (item = > { const full_path = path.join (current_dir, item); const stat = fs.stat_sync (full_path);
+; if () {) {
+  $2
+} scan_directory (full_path)} else if (|| item.ends_with ('.tsx')) {) {
+  $2
+} files.push (full_path)}})}
+; scan_directory (dir); return files}
+; extractComponentInfo (file_path, content) { const file_name = path.basename (file_path, path.extname (file_path)); const component_name = file_name.char_at (0).toUpperCase () + file_name.slice (1);
+; // Extract description from comments; const comment_match = content.match (/\/\*\*([\s\S]*?)\*\//); const description = comment_match ? comment_match[1].trim (): `${component_name} component`;
+; // Extract props from interface or PropTypes; const props = []; const prop_match = content.match (/interface\s+\w + Props\s*{([\s\S]*?)}/); // Check condition
+if ( {) {
+  $2
+} const prop_lines = prop_match[1].split ('\n'); prop_lines.for_each (line = > { const prop_match = line.match (/(\w+)\s*: \s*(\w+)/); // Check condition
+if ( {) {
+  $2
+} props.push ({ name: prop_match[1], type: prop_match[2], description: 'Component prop'})}})}
+; return { name: component_name,
+    file: file_path.replace (this.project_root + '/', ''); description: description, props: props, usage: `<${component_name} />`}}
+; async generate_report (readme_result, api_result, component_result) { const report = { timestamp: new Date ().toISOString (), summary: {
+      , readme_generated: readme_result.success, apiDocsGenerated: api_result.success, componentDocsGenerated: component_result.success, total_endpoints: api_result.endpoints || 0, total_components: component_result.components || 0;
+    },
+    details: {, readme: readme_result, api: api_result,
+    components: component_result} recommendations: []}
+; // Generate recommendations; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'high', message: 'README generation failed', action: 'Check file permissions and try again'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'API documentation generation failed', action: 'Check API route files and try again'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'medium', message: 'Component documentation generation failed', action: 'Check component files and try again'})}
+; // Check condition
+if ( {) {
+  $2
+} report.recommendations.push ({ priority: 'low', message: 'No API endpoints found', action: 'Consider adding API routes for better documentation'})}
+; return report}
+; async save_report (report) { try { const report_dir = path.dirname (this.report_file); if () {) {
+  $2
+} fs.mkdir_sync (report_dir, { recursive: true })}
+; fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2)); this.log (`Report saved to: ${this.report_file}`)} catch (error) { this.log (`Error saving report: ${error.message}`)}}
+; async run () { this.log ('📚 Starting Docs Generator...'); this.log (`Project root: ${this.project_root}`);
+; try { // Create logs directory if it doesn't exist; const logs_dir = path.dirname (this.log_file); if () {) {
+  $2
+} fs.mkdir_sync (logs_dir, { recursive: true })}
+; // Create docs directory if it doesn't exist; const docs_dir = path.join (this.project_root, 'docs'); if () {) {
+  $2
+} fs.mkdir_sync (docs_dir, { recursive: true })}
+; // Generate all documentation; const readme_result = await this.generate_readme (); const api_result = await this.generateApiDocs (); const component_result = await this.generateComponentDocs ();
+; // Generate report; this.log ('📊 Generating documentation report...'); const report = await this.generate_report (readme_result, api_result, component_result);
+; // Save report; await this.save_report (report);
+; const duration = Date.now () - this.start_time;
+; // Log summary; this.log ('\n📊 Docs Generator Summary: '); this.log (`README: ${report.summary.readme_generated ? 'Generated': 'Failed'}`); this.log (`API Docs: ${report.summary.apiDocsGenerated ? 'Generated': 'Failed'}`); this.log (`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated': 'Failed'}`); this.log (`Total Endpoints: ${report.summary.total_endpoints}`); this.log (`Total Components: ${report.summary.total_components}`); this.log (`Duration: ${duration}ms`);
+; // Check condition
+if ( {) {
+  $2
+} this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ Documentation generated successfully!')}
+} catch (error) { this.log (`❌ Error running docs generator: ${error.message}`); process.exit (1)}}}
+;
+// Run the docs generator;
+const docs_generator = new DocsGenerator ();
+docs_generator.run ().catch (error => {
+  process.exit (1);
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const docs_generator = new DocsGenerator ();
 docs_generator.run ().catch (error = > {_; process.exit (1)});
 #!/usr / bin / env node const { exec_sync } = require ('child_process'); const fs = require ('fs'); const path = require ('path'); class DocsGenerator { constructor () { this.process_name = process.env.PM2_PROCESS_NAME || 'docs - generator'; this.auto_generate = process.env.AUTO_GENERATE === 'true'; this.update_readme = process.env.UPDATE_README === 'true'; this.api_docs = process.env.API_DOCS === 'true'; this.component_docs = process.env.COMPONENT_DOCS === 'true'; this.log_file = 'logs / pm2 / docs - generator.log'; this.error_file = 'logs / pm2 / docs - generator - error.log'; this.ensureLogDirectory ()} ensureLogDirectory () { const log_dir = path.dirname (this.log_file); if () { fs.mkdir_sync (log_dir, { recursive: true })} } log (message, level = 'INFO') { const timestamp = new Date ().toISOString ()) {
@@ -3528,6 +3926,7 @@ if ( {) {
 module.exports = DocsGenerator;
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
 
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -3535,6 +3934,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }};
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
+=======
+Generated by Docs Generator on ${new Date().toISOString();
+`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 origin/automation-improvements-final
 }};
@@ -3550,14 +3953,29 @@ origin/main
 - Node.js ${process.version}
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    };
+  };
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }};
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
+>>>>>>> merged-prs-20250907-203621
 ,
-  async generateReadme() {,
-    try {,
-      this.log('📝 Generating README.md...'),
+${packageJson.description || 'A modern web application built with Next.js'},
 ,
+<<<<<<< HEAD
+## 🚀 Getting Started,
+### Prerequisites,
+- Node.js ${process.version},
+- npm ${execSync('npm --version', { encodin: g: 'utf8' }).trim()},
+=======
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name};
 ;
@@ -3567,6 +3985,10 @@ ${packageJson.description || 'A modern web application built with Next.js'};
 ### Prerequisites;
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 ### Installation;
 \`\`\`bash;
@@ -3576,9 +3998,13 @@ npm install;
 \`\`\`bash;
 npm run dev;
 \`\`\`;
+<<<<<<< HEAD
 
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
 
+=======
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.;
 ### Build;
 \`\`\`bash;
@@ -3596,6 +4022,7 @@ ${this.projectRoot}/;
 └── package.json # Dependencies and scripts;
 \`\`\`;
 ## 🛠️ Available Scripts;
+<<<<<<< HEAD
 
 ${Object.keys(packageJson.dependencies |{}).map(dep = > `- ${dep}`).join('\n')}
 ### Development Dependencies;
@@ -3604,6 +4031,8 @@ ${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\
 ## 🔧 Configuration;
 This project uses Next.js with the following configuration:  , - TypeScript support
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')};
 ;
 ## 📦 Dependencies;
@@ -3611,6 +4040,12 @@ ${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**
 ${Object.keys(packageJson.dependencies || {}).map(dep = > `- ${dep}`).join('\n')};
 ;
 ### Development Dependencies;
+<<<<<<< HEAD
+=======
+${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};;
+## 🔧 Configuration;
+This project uses Next.js with the following configuration:  , - TypeScript support,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};
 ;
 ## 🔧 Configuration;
@@ -3620,6 +4055,7 @@ This project uses Next.js with the following configuration: ;
 - Prettier for code formatting;
 - PM2 for process management;
 ## 📊 Monitoring;
+<<<<<<< HEAD
 
 docsGenerator.run().catch(error = > {process.exit(1)});
 ${packageJson.description |'A modern web application built with Next.js'}
@@ -3667,6 +4103,10 @@ The project includes automated monitoring with PM2:  ,- Code quality monitoring;
 
 The project includes automated monitoring with PM2:  ,
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+The project includes automated monitoring with PM2:  ,- Code quality monitoring;
+The project includes automated monitoring with PM2: ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - Code quality monitoring;
 - Performance monitoring;
 - Security scanning;
@@ -3674,6 +4114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 - Automated testing;
 ## 🤝 Contributing;
 1. Fork the repository;
+<<<<<<< HEAD
 <<<<<<< HEAD
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`)3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)4. Push to the branch (\`git push origin feature/AmazingFeature\`)5. Open a Pull Request;`## 📄 License;
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
@@ -3777,11 +4218,14 @@ The project includes automated monitoring with "PM2":  ,- Code quality monitorin
 1. Fork the repository;
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`)3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)4. Push to the branch (\`git push origin feature/AmazingFeature\`)5. Open a Pull Request;`## 📄 License;
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`);
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
 4. Push to the branch (\`git push origin feature/AmazingFeature\`);
 5. Open a Pull Request;
 ## 📄 License;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
 ## 📞 Support;
@@ -3794,10 +4238,33 @@ For support, email support@example.com or create an issue in the repository.;
 ${apiDocs.endpoints.map(endpoint = > `;
 ### ${endpoint.method} ${endpoint.path};
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
+## 📞 Support,
+## 📞 Support;
+For support, email support@example.com or create an issue in the repository.;
+---;
+Generated on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('README.md', readmeContent);
+; return {; success: true; message: 'README.md generated successfully'}} catch (error) {; return {; success: false; error: error.message}}};
+; async generateApiDocs() {; try {; this.log('🔌 Generating API documentation...');
+; const apiDocs = {; title: 'API Documentation'; version: '1.0.0'; description: 'API endpoints and documentation'; baseUrl: 'http: //localhost: 3000'; endpoints: []; generatedAt: new Date().toISOString()};
+; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {; const apiFiles = this.getApiFiles(pagesDir);
+; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
+; const docsContent = `# API Documentation;## Overview;
+- **Base URL**: ${apiDocs.baseUrl};
+- **Version**: ${apiDocs.version};
+- **Generated**: ${apiDocs.generatedAt};
+;
+## Endpoints;
+${apiDocs.endpoints.map(endpoint = > `;### ${endpoint.method} ${endpoint.path};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 ${endpoint.description};
 ;
 **Parameters: **,
+<<<<<<< HEAD
 ${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
 ;
 **Response: **, \`\`\`json,
@@ -3806,6 +4273,16 @@ ${JSON.stringify(endpoint.response, null, 2)};
 `).join('\n')}
 ## Error Handling;
 All endpoints return appropriate HTTP status codes:  , - \`200\`: Success
+=======
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};;
+**Response: **, \`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)};
+\`\`\`;
+`).join('\n')};
+;
+## Error Handling;
+All endpoints return appropriate HTTP status codes:  , - \`200\`: Success,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - \`400\`: Bad Request;
 - \`401\`: Unauthorized;
 - \`404\`: Not Found;
@@ -3835,6 +4312,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
 This document describes all React components in the application.;
 ## Components;
 ${componentDocs.map(component = > `;
+<<<<<<< HEAD
 ### ${component.name}
 ${component.description}
 **File**: \`${component.file}\`;
@@ -3867,6 +4345,140 @@ Generated on ${new Date().toISOString()};
 ; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
 ; const docsContent = `# API Documentation;
 ## Overview;
+=======
+### ${component.name};
+;
+${component.description};
+;
+**File**: \`${component.file}\`;
+**Props: **,
+${component.props.map(prop = > `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')};
+;
+**Usage: **, \`\`\`jsx,
+${component.usage};
+\`\`\`;
+`).join('\n')};
+;
+---;
+Generated by Docs Generator on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('docs/COMPONENTS.md', docsContent);
+; return {; success: true, message: 'Component documentation generated successfully', components: componentDocs.length}} catch (error) {; return {; success: false,
+    error: error.message}}};
+; getComponentFiles(dir) {; const files = [];
+; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {; files.push(fullPath)}})};
+; scanDirectory(dir); return files};
+; extractComponentInfo(filePath, content) {; const fileName = path.basename(filePath, path.extname(filePath)); const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): `${componentName} component`;
+; // Extract props from interface or PropTypes; const props = []; const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/); if (propMatch) {; const propLines = propMatch[1].split('\n'); propLines.forEach(line = > {; const propMatch = line.match(/(\w+)\s*: \s*(\w+)/); if (propMatch) {; props.push({; name: propMatch[1], type: propMatch[2], description: 'Component prop'})}})};
+; return {; name: componentName,
+    file: filePath.replace(this.projectRoot + '/', ''); description: description, props: props, usage: `<${componentName} />`}};
+; async generateReport(readmeResult, apiResult, componentResult) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , readmeGenerated: readmeResult.success, apiDocsGenerated: apiResult.success, componentDocsGenerated: componentResult.success, totalEndpoints: apiResult.endpoints || 0, totalComponents: componentResult.components || 0
+    },
+    details: {, readme: readmeResult, api: apiResult,
+    components: componentResult}; recommendations: []};
+; // Generate recommendations; if (!readmeResult.success) {; report.recommendations.push({; priority: 'high', message: 'README generation failed', action: 'Check file permissions and try again'})};
+; if (!apiResult.success) {; report.recommendations.push({; priority: 'medium', message: 'API documentation generation failed', action: 'Check API route files and try again'})};
+; if (!componentResult.success) {; report.recommendations.push({; priority: 'medium', message: 'Component documentation generation failed', action: 'Check component files and try again'})};
+; if (report.summary.totalEndpoints = = = 0) {; report.recommendations.push({; priority: 'low', message: 'No API endpoints found', action: 'Consider adding API routes for better documentation'})};
+; return report};
+; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};
+; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};
+; async run() {; this.log('📚 Starting Docs Generator...'); this.log(`Project root: ${this.projectRoot}`);
+; try {; // Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })};
+; // Create docs directory if it doesn't exist; const docsDir = path.join(this.projectRoot, 'docs'); if (!fs.existsSync(docsDir)) {; fs.mkdirSync(docsDir, { recursive: true })};
+; // Generate all documentation; const readmeResult = await this.generateReadme(); const apiResult = await this.generateApiDocs(); const componentResult = await this.generateComponentDocs();
+; // Generate report; this.log('📊 Generating documentation report...'); const report = await this.generateReport(readmeResult, apiResult, componentResult);
+; // Save report; await this.saveReport(report);
+; const duration = Date.now() - this.startTime;
+; // Log summary; this.log('\n📊 Docs Generator Summary: '); this.log(`README: ${report.summary.readmeGenerated ? 'Generated': 'Failed'}`); this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Total Endpoints: ${report.summary.totalEndpoints}`); this.log(`Total Components: ${report.summary.totalComponents}`); this.log(`Duration: ${duration}ms`);
+; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ Documentation generated successfully!')};
+} catch (error) {; this.log(`❌ Error running docs generator: ${error.message}`); process.exit(1)}}};
+;
+// Run the docs generator;
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error = > {; process.exit(1)});
+${packageJson.description || 'A modern web application built with Next.js'};
+;
+## 🚀 Getting Started;
+### Prerequisites;
+- Node.js ${process.version};
+- npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
+;
+### Installation;
+\`\`\`bash;
+npm install;
+\`\`\`;
+### Development;
+\`\`\`bash;
+npm run dev;
+\`\`\`;
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
+\`\`\`bash;
+npm run build;
+npm start;
+\`\`\`;
+## 📁 Project Structure;
+\`\`\`;
+${this.projectRoot}/;
+├── pages/ # Next.js pages;
+├── components/ # React components;
+├── styles/ # CSS styles;
+├── public/ # Static assets;
+├── scripts/ # Build and utility scripts;
+└── package.json # Dependencies and scripts;
+\`\`\`;
+## 🛠️ Available Scripts;
+${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')};
+;
+## 📦 Dependencies;
+### Production Dependencies;
+${Object.keys(packageJson.dependencies || {}).map(dep = > `- ${dep}`).join('\n')};
+;
+### Development Dependencies;
+${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};;
+## 🔧 Configuration;
+This project uses Next.js with the following configuration:  , - TypeScript support,
+- ESLint for code quality;
+- Prettier for code formatting;
+- PM2 for process management;
+## 📊 Monitoring;
+The project includes automated monitoring with PM2:  ,- Code quality monitoring;
+- Performance monitoring;
+- Security scanning;
+- Health checks;
+- Automated testing;
+## 🤝 Contributing;
+1. Fork the repository;
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`);
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
+4. Push to the branch (\`git push origin feature/AmazingFeature\`);
+5. Open a Pull Request;
+## 📄 License;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
+## 📞 Support;
+For support, email support@example.com or create an issue in the repository.;
+---;
+Generated on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('README.md', readmeContent);
+; return {; success: true,
+    message: 'README.md generated successfully'}} catch (error) {; return {; success: false,
+    error: error.message}}};
+; async generateApiDocs() {; try {; this.log('🔌 Generating API documentation...');
+; const apiDocs = {; title: 'API Documentation', version: '1.0.0', description: 'API endpoints and documentation', baseUrl: 'http: //localhost: 3000', endpoints: [],
+    generatedAt: new Date().toISOString()};
+; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {; const apiFiles = this.getApiFiles(pagesDir);
+; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
+; const docsContent = `# API Documentation;## Overview;
+; const docsContent = `# API Documentation;
+## Overview;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 ,
 ### Installation,
 \`\`\`bash,
@@ -3876,9 +4488,21 @@ npm install,
 \`\`\`bash,
 npm run dev,
 \`\`\`,
+<<<<<<< HEAD
+Open [htt: //localhos: 3000](htt: //localhos: 3000) with your browser to see the result.,
+=======
+<<<<<<< HEAD
 
 Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser to see the result.,
 
+=======
+<<<<<<< HEAD
+Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser to see the result.,
+=======
+Open [http: //localhost:3000](http://localhost:3000) with your browser to see the result.,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 ### Build,
 \`\`\`bash,
 npm run build,
@@ -3895,15 +4519,68 @@ ${this.projectRoot}/,
 └── package.json          # Dependencies and scripts,
 \`\`\`,
 ## 🛠️ Available Scripts,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},
+,
+## 📦 Dependencies,
+### Production Dependencies,
+<<<<<<< HEAD
+${Object.keys(packageJson.dependencies || {}).map(dep = $2;
+,
+### Development Dependencies,
+${Object.keys(packageJson.devDependencies || {}).map(dep = $2;
+,
+## 🔧 Configuration,
+This project uses Next.js with the following: configuration: ,
+=======
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')},
+,
+### Development Dependencies,
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')},
+,
+## 🔧 Configuration,
+This project uses Next.js with the following: configuration: ,
+=======
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
+,
+## 📦 Dependencies,
+### Production Dependencies,
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
+,
+### Development Dependencies,
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
+,
+## 🔧 Configuration,
+This project uses Next.js with the following configuration:  ,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 - TypeScript support,
 - ESLint for code quality,
 - Prettier for code formatting,
 - PM2 for process management,
 ## 📊 Monitoring,
+<<<<<<< HEAD
+The project includes automated monitoring with: PM2: ,
+=======
+<<<<<<< HEAD
 
 The project includes automated monitoring with: PM2:,
 
+=======
+<<<<<<< HEAD
+The project includes automated monitoring with: PM2:,
+=======
+The project includes automated monitoring with PM2:,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 - Code quality monitoring,
 - Performance monitoring,
 - Security scanning,
@@ -3911,62 +4588,210 @@ The project includes automated monitoring with: PM2:,
 - Automated testing,
 ## 🤝 Contributing,
 1. Fork the repository,
-2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),
-3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),
-4. Push to the branch (\`git push origin feature/AmazingFeature\`),
+2. Create your feature branch($2);
+3. Commit your changes($2);
+4. Push to the branch($2);
 5. Open a Pull Request,
 ## 📄 License,
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
 ## 📞 Support,
 For support, email support@example.com or create an issue in the repository.,
 ---,
+<<<<<<< HEAD
+Generated on ${new Date().toISOString()},
+=======
+<<<<<<< HEAD
 
 Generated on ${new Date().toISOString()},
 
+=======
+<<<<<<< HEAD
+Generated on ${new Date().toISOString()},
+=======
+Generated on ${new Date().toISOString()};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 `,
 ,
-      fs.writeFileSync('README.md', readmeContent),
+      fs.writeFileSync($2);
 ,
       return {,
+<<<<<<< HEAD
+        succes: true,
+        messag: 'README.md generated successfully'
+      
+=======
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        succes: s: true,
+        messag: e: 'README.md generated successfully'
+      
+    } catch (error) {,
+      return {,
+        succes: s: false,
+        erro: r: error.message
+      
+},;
+,;
+  async generateReadme() {,;
+    try {,;
+      this.log('📝 Generating README.md...'),;
+,;
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
+      const readmeContent = `# ${packageJson.name},;
+,;
+${packageJson.description || 'A modern web application built with Next.js'},;
+,;
+## 🚀 Getting Started,;
+### Prerequisites,;
+- Node.js ${process.version},;
+- npm ${execSync('npm --version', { encodin: g: 'utf8' }).trim()},;
+,;
+### Installation,;
+\`\`\`bash,;
+npm install,;
+\`\`\`,;
+### Development,;
+\`\`\`bash,;
+npm run dev,;
+\`\`\`,;
+Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser to see the result.,;
+### Build,;
+\`\`\`bash,;
+npm run build,;
+npm start,;
+\`\`\`,;
+## 📁 Project Structure,;
+\`\`\`,;
+${this.projectRoot}/,;
+├── pages/                 # Next.js pages,;
+├── components/            # React components,;
+├── styles/               # CSS styles,;
+├── public/               # Static assets,;
+├── scripts/              # Build and utility scripts,;
+└── package.json          # Dependencies and scripts,;
+\`\`\`,;
+## 🛠️ Available Scripts,;
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},;
+,;
+## 📦 Dependencies,;
+### Production Dependencies,;
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')},;
+,;
+### Development Dependencies,;
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')},;
+,;
+## 🔧 Configuration,;
+This project uses Next.js with the following: configuration: ,;
+- TypeScript support,;
+- ESLint for code quality,;
+- Prettier for code formatting,;
+- PM2 for process management,;
+## 📊 Monitoring,;
+The project includes automated monitoring with: PM2:,;
+- Code quality monitoring,;
+- Performance monitoring,;
+- Security scanning,;
+- Health checks,;
+- Automated testing,;
+## 🤝 Contributing,;
+1. Fork the repository,;
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),;
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),;
+4. Push to the branch (\`git push origin feature/AmazingFeature\`),;
+5. Open a Pull Request,;
+## 📄 License,;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,;
+## 📞 Support,;
+For support, email support@example.com or create an issue in the repository.,;
+---,;
+Generated on ${new Date().toISOString()},;
+`,;
+,;
+      fs.writeFileSync('README.md', readmeContent),;
+,;
+      return {,;
+        succes: s: true,;
+        messag: e: 'README.md generated successfully';
+    } catch (error) {,;
+      return {,;
+        succes: s: false,;
+        erro: r: error.message;
+}
+},;
+,;
+  async generateApiDocs() {,;
+    try {,;
+      this.log('🔌 Generating API documentation...'),;
+,;
+      const apiDocs = {,;
+        titl: e: 'API Documentation',;
+        versio: n: '1.0.0',;
+        descriptio: n: 'API endpoints and documentation',;
+        baseUr: l: 'htt: p://localhos: t:3000',;
+        endpoint: s: [],;
+        generatedA: t: new Date().toISOString(),;
+      ,;
+,;
+      // Scan for API routes,;
+      const pagesDir = path.join(this.projectRoot, 'pages/api'),;
+      if (fs.existsSync(pagesDir)) {,;
+        const apiFiles = this.getApiFiles(pagesDir),;
+,;
+        apiFiles.forEach(file => {,;
+          const content = fs.readFileSync(file, 'utf8'),;
+          const endpoint = this.extractApiEndpoint(file, content),;
+          if (endpoint) {,;
+            apiDocs.endpoints.push(endpoint);
+          }
+        })
+      },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         success: true,
         message: 'README.md generated successfully',
       };
 
+>>>>>>> merged-prs-20250907-203621
     } catch (error) {,
       return {,
-        success: false,
-        error: error.message,
-      };
-    };
-  };
+        succes: false,
+        erro: error.message
+      
+}
+},
 ,
   async generateApiDocs() {,
     try {,
-      this.log('🔌 Generating API documentation...'),
+      this.log($2);
 ,
-      const apiDocs = {,
-        title: 'API Documentation',
-        version: '1.0.0',
-        description: 'API endpoints and documentation',
-        baseUrl: 'http://localhost:3000',
-        endpoints: [],
-        generatedAt: new Date().toISOString(),
-      };
+      const apiDocs = $2;
+        titl: 'API Documentation',
+        versio: '1.0.0',
+        descriptio: 'API endpoints and documentation',
+        baseUr: l: 'htt: //localhos: 3000',
+        endpoint: [],
+        generatedA: new Date().toISOString($2);
+      ,
 ,
       // Scan for API routes,
-      const pagesDir = path.join(this.projectRoot, 'pages/api'),
+      const pagesDir = path.join($2);
       if (fs.existsSync(pagesDir)) {,
-        const apiFiles = this.getApiFiles(pagesDir),
+        const apiFiles = this.getApiFiles($2);
 ,
-        apiFiles.forEach(file => {,
-          const content = fs.readFileSync(file, 'utf8'),
-          const endpoint = this.extractApiEndpoint(file, content),
+        apiFiles.forEach($2);
+          const endpoint = this.extractApiEndpoint($2);
           if (endpoint) {,
+<<<<<<< HEAD
+=======
             apiDocs.endpoints.push(endpoint),
           };
         }),
       };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   };
@@ -4509,12 +5334,823 @@ Open ["http": //"localhost": 3000]("http": //"localhost": 3000) with your browse
 npm start;
 \`\`\`;`## 📁 Project Structure;
 \`\`\`;`${this.projectRoot}/;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+,
+      const docsContent = `# API Documentation,
+## Overview,
+- **Base URL**: ${apiDocs.baseUrl};
+- **Version**: ${apiDocs.version};
+- **Generated**: ${apiDocs.generatedAt};
+<<<<<<< HEAD
+;
+## Endpoints;
+${apiDocs.endpoints.map(endpoint = > `;
+### ${endpoint.method} ${endpoint.path};
+;
+${endpoint.description};
+;
+**Parameters: **;
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
+;
+**Response: **;
+\`\`\`json;
+,
+**Parameter: s: **,
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')},
+,
+**Respons: e: **,
+\`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)};
+\`\`\`;
+`).join('\n')};
+;
+## Error Handling;
+All endpoints return appropriate HTTP status codes: ;
+- \`200\`: Success;
+- \`400\`: Bad Request;
+- \`401\`: Unauthorized;
+- \`404\`: Not Found;
+- \`500\`: Internal Server Error;
+## Rate Limiting;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
+---;
+Generated by Docs Generator on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('docs/API.md', docsContent);
+; return {; success: true; message: 'API documentation generated successfully'; endpoints: apiDocs.endpoints.length}} catch (error) {; return {; success: false; error: error.message}}};
+; getApiFiles(dir) {; const files = [];
+; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.ts')) {; files.push(fullPath)}})};
+; scanDirectory(dir); return files};
+; extractApiEndpoint(filePath, content) {; const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''); const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/';
+; // Extract HTTP method from content; const method = content.includes('export default') ? 'GET': 'POST';
+; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): 'API endpoint';
+; return {; method: method; path: path; description: description; parameters: []; response: {; success: true; data: {}}}};
+; async generateComponentDocs() {; try {; this.log('🧩 Generating component documentation...');
+; const componentsDir = path.join(this.projectRoot, 'components'); const componentDocs = [];
+; if (fs.existsSync(componentsDir)) {; const componentFiles = this.getComponentFiles(componentsDir);
+; componentFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const componentInfo = this.extractComponentInfo(file, content); if (componentInfo) {; componentDocs.push(componentInfo)}})};
+; const docsContent = `# Component Documentation;
+## Overview;
+This document describes all React components in the application.;
+## Components;
+${componentDocs.map(component = > `;
+### ${component.name};
+;
+${component.description};
+;
+**File**: \`${component.file}\`;
+**Props: **,
+${component.props.map(prop = > `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')};
+;
+**Usage: **, \`\`\`jsx,
+,
+## Error Handling,
+All endpoints return appropriate HTTP status: codes: ,
+=======
+,
+## Endpoints,
+${apiDocs.endpoints.map(endpoint => `,
+### ${endpoint.method} ${endpoint.path};
+,
+${endpoint.description};
+,
+**Parameters: **,
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
+,
+**Response: **,
+\`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)};
+\`\`\`,
+`).join('\n')};
+,
+## Error Handling,
+All endpoints return appropriate HTTP status codes:  ,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+- \`200\`: Success,
+- \`400\`: Bad Request,
+- \`401\`: Unauthorized,
+- \`404\`: Not Found,
+- \`500\`: Internal Server Error,
+## Rate Limiting,
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,
+---,
+<<<<<<< HEAD
+Generated by Docs Generator on ${new Date().toISOString(),
+=======
+Generated by Docs Generator on ${new Date().toISOString()};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+`,
+,
+      fs.writeFileSync('docs/API.md', docsContent),
+,
+      return {,
+<<<<<<< HEAD
+        succes: s: true,
+        messag: e: 'API documentation generated successfully',
+        endpoint: s: apiDocs.endpoints.length
+      
+    } catch (error) {,
+      return {,
+        succes: s: false,
+        erro: r: error.message
+      
+        });
+      },;
+,;
+      const docsContent = `# API Documentation,;
+## Overview,;
+- **Base URL**: ${apiDocs.baseUrl},;
+- **Version**: ${apiDocs.version},;
+- **Generated**: ${apiDocs.generatedAt},;
+,;
+## Endpoints,;
+${apiDocs.endpoints.map(endpoint => `,;
+### ${endpoint.method} ${endpoint.path},;
+,;
+${endpoint.description},;
+,;
+**Parameter: s: **,;
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')},;
+,;
+**Respons: e: **,;
+\`\`\`json,;
+${JSON.stringify(endpoint.response, null, 2)},;
+\`\`\`,;
+`).join('\n')},;
+,;
+## Error Handling,;
+All endpoints return appropriate HTTP status: codes: ,;
+- \`200\`: Success,;
+- \`400\`: Bad Request,;
+- \`401\`: Unauthorized,;
+- \`404\`: Not Found,;
+- \`500\`: Internal Server Error,;
+## Rate Limiting,;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,;
+---,;
+Generated by Docs Generator on ${new Date().toISOString(),;
+`,;
+,;
+      fs.writeFileSync('docs/API.md', docsContent),;
+,;
+      return {,;
+        succes: s: true,;
+        messag: e: 'API documentation generated successfully',;
+        endpoint: s: apiDocs.endpoints.length;
+    } catch (error) {,;
+      return {,;
+        succes: s: false,;
+        erro: r: error.message;
+}
+},;
+,;
+  getApiFiles(dir) {,;
+    const files = [],;
+,;
+    const scanDirectory = (currentDir) => {,;
+      const items = fs.readdirSync(currentDir),;
+      items.forEach(item => {,;
+        const fullPath = path.join(currentDir, item),;
+        const stat = fs.statSync(fullPath),;
+,;
+        if (stat.isDirectory()) {,;
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.ts')) {,;
+          files.push(fullPath);
+        }
+      });
+},;
+,;
+    scanDirectory(dir),;
+    return files;
+},;
+,;
+  extractApiEndpoint(filePath, content) {,;
+    const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''),;
+    const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/',;
+,;
+    // Extract HTTP method from content,;
+    const method = content.includes('export default') ? 'GET' : 'POST',;
+,;
+    // Extract description from comments,;
+    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//),;
+    const description = commentMatch ? commentMatch[1].trim() : 'API endpoint',;
+,;
+    return {,;
+      metho: d: method,;
+      pat: h: path,;
+      descriptio: n: description,;
+      parameter: s: [],;
+      respons: e: {,;
+        succes: s: true,;
+        dat: a: {;
+      }
+}
+},;
+,;
+  async generateComponentDocs() {,;
+    try {,;
+      this.log('🧩 Generating component documentation...'),;
+,;
+      const componentsDir = path.join(this.projectRoot, 'components'),;
+      const componentDocs = [],;
+,;
+      if (fs.existsSync(componentsDir)) {,;
+        const componentFiles = this.getComponentFiles(componentsDir),;
+,;
+        componentFiles.forEach(file => {,;
+          const content = fs.readFileSync(file, 'utf8'),;
+          const componentInfo = this.extractComponentInfo(file, content),;
+          if (componentInfo) {,;
+            componentDocs.push(componentInfo);
+          }
+        })
+      },
+=======
+        success: true,
+        message: 'API documentation generated successfully',
+        endpoints: apiDocs.endpoints.length,
+      };
+    } catch (error) {,
+      return {,
+        success: false,
+        error: error.message,
+      };
+    };
+  };
+,
+  getApiFiles(dir) {,
+    const files = [],
+,
+    const scanDirectory = (currentDir) => {,
+      const items = fs.readdirSync(currentDir),
+      items.forEach(item => {,
+        const fullPath = path.join(currentDir, item),
+        const stat = fs.statSync(fullPath),
+,
+        if (stat.isDirectory()) {,
+          scanDirectory(fullPath),
+        } else if (item.endsWith('.js') || item.endsWith('.ts')) {,
+          files.push(fullPath),
+        };
+      }),
+    };
+,
+    scanDirectory(dir),
+    return files,
+  };
+,
+  extractApiEndpoint(filePath, content) {,
+    const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''),
+    const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/',
+,
+    // Extract HTTP method from content,
+    const method = content.includes('export default') ? 'GET' : 'POST',
+,
+    // Extract description from comments,
+    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//),
+    const description = commentMatch ? commentMatch[1].trim() : 'API endpoint',
+,
+    return {,
+      method: method,
+      path: path,
+      description: description,
+      parameters: [],
+      response: {,
+        success: true,
+        data: {};
+      };
+    };
+  };
+,
+  async generateComponentDocs() {,
+    try {,
+      this.log('🧩 Generating component documentation...'),
+,
+      const componentsDir = path.join(this.projectRoot, 'components'),
+      const componentDocs = [],
+,
+      if (fs.existsSync(componentsDir)) {,
+        const componentFiles = this.getComponentFiles(componentsDir),
+,
+        componentFiles.forEach(file => {,
+          const content = fs.readFileSync(file, 'utf8'),
+          const componentInfo = this.extractComponentInfo(file, content),
+          if (componentInfo) {,
+            componentDocs.push(componentInfo),
+          };
+        }),
+      };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+,
+      const docsContent = `# Component Documentation,
+## Overview,
+This document describes all React components in the application.,
+## Components,
+${componentDocs.map(component => `,
+<<<<<<< HEAD
+${component.usage};
+\`\`\`;
+`).join('\n')};
+;
+---;
+Generated by Docs Generator on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('docs/COMPONENTS.md', docsContent);
+; return {; success: true; message: 'Component documentation generated successfully'; components: componentDocs.length}} catch (error) {; return {; success: false; error: error.message}}};
+; getComponentFiles(dir) {; const files = [];
+; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {; files.push(fullPath)}})};
+; scanDirectory(dir); return files};
+; extractComponentInfo(filePath, content) {; const fileName = path.basename(filePath, path.extname(filePath)); const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): `${componentName} component`;
+; // Extract props from interface or PropTypes; const props = []; const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/); if (propMatch) {; const propLines = propMatch[1].split('\n'); propLines.forEach(line = > {; const propMatch = line.match(/(\w+)\s*: \s*(\w+)/); if (propMatch) {; props.push({; name: propMatch[1]; type: propMatch[2]; description: 'Component prop'})}})};
+; return {; name: componentName; file: filePath.replace(this.projectRoot + '/', ''); description: description; props: props; usage: `<${componentName} />`}};
+; async generateReport(readmeResult, apiResult, componentResult) {; const report = {; timestamp: new Date().toISOString(); summary: {; readmeGenerated: readmeResult.success; apiDocsGenerated: apiResult.success; componentDocsGenerated: componentResult.success; totalEndpoints: apiResult.endpoints || 0; totalComponents: componentResult.components || 0}; details: {; readme: readmeResult; api: apiResult; components: componentResult}; recommendations: []};
+; // Generate recommendations; if (!readmeResult.success) {; report.recommendations.push({; priority: 'high'; message: 'README generation failed'; action: 'Check file permissions and try again'})};
+; if (!apiResult.success) {; report.recommendations.push({; priority: 'medium'; message: 'API documentation generation failed'; action: 'Check API route files and try again'})};
+; if (!componentResult.success) {; report.recommendations.push({; priority: 'medium'; message: 'Component documentation generation failed'; action: 'Check component files and try again'})};
+; if (report.summary.totalEndpoints = = = 0) {; report.recommendations.push({; priority: 'low'; message: 'No API endpoints found'; action: 'Consider adding API routes for better documentation'})};
+; return report};
+; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};
+; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};
+; async run() {; this.log('📚 Starting Docs Generator...'); this.log(`Project root: ${this.projectRoot}`);
+; try {; // Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })};
+; // Create docs directory if it doesn't exist; const docsDir = path.join(this.projectRoot, 'docs'); if (!fs.existsSync(docsDir)) {; fs.mkdirSync(docsDir, { recursive: true })};
+; // Generate all documentation; const readmeResult = await this.generateReadme(); const apiResult = await this.generateApiDocs(); const componentResult = await this.generateComponentDocs();
+; // Generate report; this.log('📊 Generating documentation report...'); const report = await this.generateReport(readmeResult, apiResult, componentResult);
+; // Save report; await this.saveReport(report);
+; const duration = Date.now() - this.startTime;
+; // Log summary; this.log('\n📊 Docs Generator Summary: '); this.log(`README: ${report.summary.readmeGenerated ? 'Generated': 'Failed'}`); this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Total Endpoints: ${report.summary.totalEndpoints}`); this.log(`Total Components: ${report.summary.totalComponents}`); this.log(`Duration: ${duration}ms`);
+; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ Documentation generated successfully!')};
+} catch (error) {; this.log(`❌ Error running docs generator: ${error.message}`); process.exit(1)}}};
+;
+// Run the docs generator;
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error => {;
+  process.exit(1);
+});
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error = > {_; process.exit(1)});
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+#!/usr/bin/env node
+/**
+ * PM2 Documentation Generator Script
+ * Automatically generates and updates documentation
+ */
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+class DocsGenerator {
+  constructor() {
+    this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator';
+    this.autoGenerate = process.env.AUTO_GENERATE === 'true';
+    this.updateReadme = process.env.UPDATE_README === 'true';
+    this.apiDocs = process.env.API_DOCS === 'true';
+    this.componentDocs = process.env.COMPONENT_DOCS === 'true';
+    this.logFile = 'logs/pm2/docs-generator.log';
+    this.errorFile = 'logs/pm2/docs-generator-error.log';
+    this.ensureLogDirectory();
+  }
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { "recursive": true });
+    }
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
+    try {
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Failed to write to log "file": ', error.message);
+    }
+  }
+  error(message) {
+    this.log(message, 'ERROR');
+    try {
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`);
+    } catch (err) {
+      console.error('Failed to write to error "file": ', err.message);
+    }
+  }
+  async generateReadme() {
+    this.log('Generating README documentation...');
+    try {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      let readmeContent = `# ${packageJson.name || 'Project'}\n\n`;
+      readmeContent += `${packageJson.description || 'A modern web application'}\n\n`;
+      // Add version and status badges
+      readmeContent += `![Version]("https": //img.shields.io/badge/version-${packageJson.version || '1.0.0'}-blue.svg)\n`;
+      readmeContent += `![Node]("https": //img.shields.io/badge/node-${process.version}-green.svg)\n`;
+      readmeContent += `![License]("https": //img.shields.io/badge/license-${packageJson.license || 'MIT'}-yellow.svg)\n\n`;
+      // Add table of contents
+      readmeContent += "## Table of Contents\n\n";
+      readmeContent += "- [Installation](#installation)\n";
+      readmeContent += "- [Usage](#usage)\n";
+      readmeContent += "- [Scripts](#scripts)\n";
+      readmeContent += "- [API Documentation](#api-documentation)\n";
+      readmeContent += "- [Contributing](#contributing)\n";
+      readmeContent += "- [License](#license)\n\n";
+      // Add installation section
+      readmeContent += "## Installation\n\n";
+      readmeContent += "\"\"\"bash\n";
+      readmeContent += "npm install\n";
+      readmeContent += "\"\"\"\n\n";
+      // Add usage section
+      readmeContent += "## Usage\n\n";
+      readmeContent += "\"\"\"bash\n";
+      readmeContent += "# Development\n";
+      readmeContent += "npm run dev\n\n";
+      readmeContent += "# Production build\n";
+      readmeContent += "npm run build\n";
+      readmeContent += "npm run start\n";
+      readmeContent += "\"\"\"\n\n";
+      // Add scripts section
+      if (packageJson.scripts) {
+        readmeContent += "## Scripts\n\n";
+        readmeContent += "| Script | Description |\n";
+        readmeContent += "|--------|-------------|\n";
+        for (const [script, description] of Object.entries(packageJson.scripts)) {
+          const desc = this.getScriptDescription(script, description);
+          readmeContent += "| \"${script}\` | ${desc} |\n`;
+        }
+        readmeContent += "\n";
+      }
+      // Add API documentation section
+      if (this.apiDocs) {
+        readmeContent += "## API Documentation\n\n";
+        readmeContent += "API documentation is automatically generated and available at \"/api/docs\".\n\n";
+      }
+      // Add contributing section
+      readmeContent += "## Contributing\n\n";
+      readmeContent += "1. Fork the repository\n";
+      readmeContent += "2. Create your feature branch (\"git checkout -b feature/amazing-feature\")\n";
+      readmeContent += "3. Commit your changes (\"git commit -m 'Add some amazing feature'\")\n";
+      readmeContent += "4. Push to the branch (\"git push origin feature/amazing-feature\")\n";
+      readmeContent += "5. Open a Pull Request\n\n";
+      // Add license section
+      readmeContent += "## License\n\n";
+      readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`;
+      // Write README file
+      fs.writeFileSync('README.md', readmeContent);
+      this.log('README.md generated successfully');
+      return { "success": true, "file": 'README.md' };
+    } catch (error) {
+      this.error(`Failed to generate "README": ${error.message}`);
+      return { "success": false, "error": error.message };
+    }
+  }
+  getScriptDescription(script, command) {
+    const descriptions = {
+      'dev': 'Start development server',
+      'build': 'Build for production',
+      'start': 'Start production server',
+      'test': 'Run tests',
+      'lint': 'Run linter',
+      '"lint": fix': 'Fix linting issues',
+      'type-check': 'Run TypeScript type checking',
+      'clean': 'Clean build artifacts',
+      'check': 'Run all checks (lint, type-check, test)',
+      'precommit': 'Pre-commit hook',
+      'prepare': 'Prepare script for git hooks'
+    };
+    return descriptions[script] || command;
+  }
+  async generateApiDocs() {
+    this.log('Generating API documentation...');
+    try {
+      const apiFiles = this.findApiFiles();
+      let apiDocs = "# API Documentation\n\n";
+      apiDocs += `Generated "on": ${new Date().toISOString()}\n\n`;
+      for (const file of apiFiles) {
+        const fileDocs = this.extractApiDocumentation(file);
+        if (fileDocs) {
+          apiDocs += fileDocs;
+        }
+      }
+      const docsDir = 'docs';
+      if (!fs.existsSync(docsDir)) {
+        fs.mkdirSync(docsDir, { "recursive": true });
+      }
+      fs.writeFileSync(path.join(docsDir, 'API.md'), apiDocs);
+      this.log('API documentation generated successfully');
+      return { "success": true, "file": 'docs/API.md' };
+    } catch (error) {
+      this.error(`Failed to generate API "docs": ${error.message}`);
+      return { "success": false, "error": error.message };
+    }
+  }
+  findApiFiles() {
+    const files = [];
+    function scanDirectory(dir) {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          if (stat.isDirectory()) {
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (['.js', '.ts', '.jsx', '.tsx'].includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (error) {
+        // Skip directories we can't read
+      }
+    }
+    // Look for API files in common directories
+    const apiDirs = ['api', 'pages/api', 'src/api', 'lib/api', 'routes'];
+    for (const dir of apiDirs) {
+      if (fs.existsSync(dir)) {
+        scanDirectory(dir);
+      }
+    }
+    return files;
+  }
+  extractApiDocumentation(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      let docs = `## ${path.basename(filePath)}\n\n`;
+      let inComment = false;
+      let commentLines = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        // Check for JSDoc comments
+        if (line.trim().startsWith('/**')) {
+          inComment = true;
+          commentLines = [];
+          continue;
+        }
+        if (inComment) {
+          if (line.trim().endsWith('*/')) {
+            inComment = false;
+            // Process collected comment lines
+            const comment = commentLines.join('\n');
+            if (comment.includes('@api') || comment.includes('@route')) {
+              docs += this.formatApiComment(comment);
+            }
+            commentLines = [];
+          } else {
+            commentLines.push(line.replace(/^\s*\*\s?/, ''));
+          }
+        }
+      }
+      return docs;
+    } catch (error) {
+      this.log(`Failed to extract docs from ${filePath}: ${error.message}`, 'WARNING');
+      return null;
+    }
+  }
+  formatApiComment(comment) {
+    let formatted = '"""\n';
+    formatted += comment.replace(/@\w+/g, '').trim();
+    formatted += '\n"""\n\n';
+    return formatted;
+  }
+  async generateComponentDocs() {
+    this.log('Generating component documentation...');
+    try {
+      const componentFiles = this.findComponentFiles();
+      let componentDocs = "# Component Documentation\n\n";
+      componentDocs += `Generated "on": ${new Date().toISOString()}\n\n`;
+      for (const file of componentFiles) {
+        const componentDoc = this.extractComponentDocumentation(file);
+        if (componentDoc) {
+          componentDocs += componentDoc;
+        }
+      }
+      const docsDir = 'docs';
+      if (!fs.existsSync(docsDir)) {
+        fs.mkdirSync(docsDir, { "recursive": true });
+      }
+      fs.writeFileSync(path.join(docsDir, 'COMPONENTS.md'), componentDocs);
+      this.log('Component documentation generated successfully');
+      return { "success": true, "file": 'docs/COMPONENTS.md' };
+    } catch (error) {
+      this.error(`Failed to generate component "docs": ${error.message}`);
+      return { "success": false, "error": error.message };
+    }
+  }
+  findComponentFiles() {
+    const files = [];
+    function scanDirectory(dir) {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          if (stat.isDirectory()) {
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (['.jsx', '.tsx', '.vue', '.svelte'].includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (error) {
+        // Skip directories we can't read
+      }
+    }
+    // Look for component files in common directories
+    const componentDirs = ['components', 'src/components', 'lib/components', 'pages'];
+    for (const dir of componentDirs) {
+      if (fs.existsSync(dir)) {
+        scanDirectory(dir);
+      }
+    }
+    return files;
+  }
+  extractComponentDocumentation(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      let docs = `## ${path.basename(filePath)}\n\n`;
+      let inComment = false;
+      let commentLines = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        // Check for JSDoc comments
+        if (line.trim().startsWith('/**')) {
+          inComment = true;
+          commentLines = [];
+          continue;
+        }
+        if (inComment) {
+          if (line.trim().endsWith('*/')) {
+            inComment = false;
+            // Process collected comment lines
+            const comment = commentLines.join('\n');
+            if (comment.includes('@component') || comment.includes('@props')) {
+              docs += this.formatComponentComment(comment);
+            }
+            commentLines = [];
+          } else {
+            commentLines.push(line.replace(/^\s*\*\s?/, ''));
+          }
+        }
+      }
+      return docs;
+    } catch (error) {
+      this.log(`Failed to extract component docs from ${filePath}: ${error.message}`, 'WARNING');
+      return null;
+    }
+  }
+  formatComponentComment(comment) {
+    let formatted = '"""\n';
+    formatted += comment.replace(/@\w+/g, '').trim();
+    formatted += '\n"""\n\n';
+    return formatted;
+  }
+  async generateDocumentationReport() {
+    this.log('Generating documentation report...');
+    try {
+      const report = {
+        "timestamp": new Date().toISOString(),
+        "processName": this.processName,
+        "readmeGenerated": this.updateReadme ? await this.generateReadme() : null,
+        "apiDocsGenerated": this.apiDocs ? await this.generateApiDocs() : null,
+        "componentDocsGenerated": this.componentDocs ? await this.generateComponentDocs() : null,
+        "environment": {
+          nodeVersion: process.version,
+          "platform": process.platform,
+          "cwd": process.cwd()
+        }
+      };
+      const reportFile = `docs-reports/docs-generation-${Date.now()}.json`;
+      const reportDir = path.dirname(reportFile);
+      if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir, { "recursive": true });
+      }
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+      this.log(`Documentation report saved "to": ${reportFile}`);
+      return report;
+    } catch (error) {
+      this.error(`Failed to generate documentation "report": ${error.message}`);
+      return null;
+    }
+  }
+  async start() {
+    this.log(`Starting ${this.processName}...`);
+    // Run initial documentation generation
+    await this.generateDocumentationReport();
+    // Set up periodic documentation updates
+    const interval = 2 * 60 * 60 * 1000; // 2 hours
+    setInterval(async () => {
+      this.log('Running scheduled documentation generation...');
+      await this.generateDocumentationReport();
+    }, interval);
+    this.log(`${this.processName} started successfully`);
+  }
+}
+// Start the automation if this script is run directly
+if (require.main === module) {
+  const generator = new DocsGenerator();
+  generator.start().catch(error => {
+    console.error('Documentation generator failed to "start": ', error);
+    process.exit(1);
+  });
+}
+module.exports = DocsGenerator;
+=======
+### ${component.name};
+,
+${component.description};
+,
+**File**: \`${component.file}\`,
+**Props: **,
+${component.props.map(prop => `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')};
+,
+**Usage: **,
+\`\`\`jsx,
+${component.usage};
+\`\`\`,
+`).join('\n')};
+,
+---,
+Generated by Docs Generator on ${new Date().toISOString()};
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+}};
+; async generateReadme() {; try {; this.log('📝 Generating README.md...');
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;
+;
+origin/automation-improvements-final
+}};
+; async generateReadme() {; try {; this.log('📝 Generating README.md...');
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;;
+${packageJson.description || 'A modern web application built with Next.js'};
+;
+}}; async generateReadme() {try {; this.log('📝 Generating README.md...'); const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;
+${packageJson.description |'A modern web application built with Next.js'}
+origin/main
+## 🚀 Getting Started;
+### Prerequisites;
+- Node.js ${process.version}
+- npm ${execSync('npm --version', { encoding: 'utf8' }).trim()}
+}};
+; async generateReadme() {; try {; this.log('📝 Generating README.md...');
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
+,
+  async generateReadme() {,
+    try {,
+      this.log('📝 Generating README.md...'),
+,
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
+      const readmeContent = `# ${packageJson.name};
+;
+${packageJson.description || 'A modern web application built with Next.js'};
+;
+## 🚀 Getting Started;
+### Prerequisites;
+- Node.js ${process.version};
+- npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
+;
+### Installation;
+\`\`\`bash;
+npm install;
+\`\`\`;
+### Development;
+\`\`\`bash;
+npm run dev;
+\`\`\`;
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.;
+### Build;
+\`\`\`bash;
+npm run build;
+npm start;
+\`\`\`;
+## 📁 Project Structure;
+\`\`\`;
+${this.projectRoot}/;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ├── pages/ # Next.js pages;
 ├── components/ # React components;
 ├── styles/ # CSS styles;
 ├── public/ # Static assets;
 ├── scripts/ # Build and utility scripts;
 └── package.json # Dependencies and scripts;
+<<<<<<< HEAD
 \`\`\`;`## 🛠️ Available Scripts;
 ${Object.entries(packageJson.scripts |{}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')}'## 📦 Dependencies;
 ### Production Dependencies;
@@ -4526,18 +6162,46 @@ ${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**
 ## 📦 Dependencies;
 ### Production Dependencies;
 ${Object.keys(packageJson.dependencies || {}).map(dep = > `- ${dep}`).join('\n')}### Development Dependencies;'${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')}## 🔧 Configuration;'This project uses Next.js with the following "configuration": ;
+=======
+\`\`\`;
+## 🛠️ Available Scripts;
+${Object.entries(packageJson.scripts |{}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')}
+## 📦 Dependencies;
+### Production Dependencies;
+${Object.keys(packageJson.dependencies |{}).map(dep = > `- ${dep}`).join('\n')}
+### Development Dependencies;
+${Object.keys(packageJson.devDependencies |{}).map(dep = > `- ${dep}`).join('\n')}
+## 🔧 Configuration;
+This project uses Next.js with the following configuration:  , - TypeScript support
+${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')};
+;
+## 📦 Dependencies;
+### Production Dependencies;
+${Object.keys(packageJson.dependencies || {}).map(dep = > `- ${dep}`).join('\n')};
+;
+### Development Dependencies;
+${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};
+;
+## 🔧 Configuration;
+This project uses Next.js with the following configuration: ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - TypeScript support;
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
 ## 📊 Monitoring;
+<<<<<<< HEAD
 The project includes automated monitoring with "PM2":  ,- Code quality monitoring;
+=======
+The project includes automated monitoring with PM2:  ,- Code quality monitoring;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - Performance monitoring;
 - Security scanning;
 - Health checks;
 - Automated testing;
 ## 🤝 Contributing;
 1. Fork the repository;
+<<<<<<< HEAD
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`)3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)4. Push to the branch (\`git push origin feature/AmazingFeature\`)5. Open a Pull Request;`## 📄 License;
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
 ## 📞 Support;
@@ -4653,25 +6317,130 @@ const docsGenerator = new DocsGenerator()docsGenerator.run().catch(error = > {pr
 npm start;
 \`\`\`;`## 📁 Project Structure;
 \`\`\`;`${this.projectRoot}/;
+=======
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`);
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
+4. Push to the branch (\`git push origin feature/AmazingFeature\`);
+5. Open a Pull Request;
+## 📄 License;
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
+## 📞 Support
+For support, email support@example.com or create an issue in the repository.;
+---;
+Generated on ${new Date().toISOString()}
+`; fs.writeFileSync('README.md', readmeContent); return {success: true
+    message: 'README.md generated successfully'}} catch (error) {return {; success: false
+    error: error.message}}}; async generateApiDocs() {try {; this.log('🔌 Generating API documentation...'); const apiDocs = {; title: 'API Documentation', version: '1.0.0', description: 'API endpoints and documentation', baseUrl: 'http: //localhost: 3000', endpoints: []
+    generatedAt: new Date().toISOString()}; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {const apiFiles = this.getApiFiles(pagesDir); apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})}; const docsContent = `# API Documentation;## Overview;
+- **Base URL**: ${apiDocs.baseUrl}
+- **Version**: ${apiDocs.version}
+- **Generated**: ${apiDocs.generatedAt}
+## Endpoints;
+${apiDocs.endpoints.map(endpoint = > `;### ${endpoint.method} ${endpoint.path}
+${endpoint.description}
+**Parameters: **
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')}
+**Response: **, \`\`\`json
+${JSON.stringify(endpoint.response, null, 2)}
+\`\`\`;
+`).join('\n')}
+## Error Handling;
+All endpoints return appropriate HTTP status codes:  , - \`200\`: Success
+- \`400\`: Bad Request;
+- \`401\`: Unauthorized;
+- \`404\`: Not Found;
+- \`500\`: Internal Server Error;
+## Rate Limiting;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
+---;
+Generated by Docs Generator on ${new Date().toISOString()}
+`; fs.writeFileSync('docs/API.md', docsContent); return {success: true, message: 'API documentation generated successfully', endpoints: apiDocs.endpoints.length}} catch (error) {return {; success: false
+    error: error.message}}}; getApiFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.ts')) {files.push(fullPath)}})}; scanDirectory(dir); return files}; extractApiEndpoint(filePath, content) {const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''); const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') |'/'; // Extract HTTP method from content; const method = content.includes('export default') ? 'GET': 'POST'; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): 'API endpoint'; return {; method: method, path: path, description: description, parameters: [], response: {, success: true, data: {}}}}; async generateComponentDocs() {try {; this.log('🧩 Generating component documentation...'); const componentsDir = path.join(this.projectRoot, 'components'); const componentDocs = []; if (fs.existsSync(componentsDir)) {; const componentFiles = this.getComponentFiles(componentsDir); componentFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const componentInfo = this.extractComponentInfo(file, content); if (componentInfo) {; componentDocs.push(componentInfo)}})}; const docsContent = `# Component Documentation;
+## Overview;
+This document describes all React components in the application.;
+## Components;
+${componentDocs.map(component = > `;
+### ${component.name}
+${component.description}
+**File**: \`${component.file}\`;
+**Props: **
+${component.props.map(prop = > `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')}
+**Usage: **, \`\`\`jsx
+${component.usage}
+\`\`\`;
+`).join('\n')}
+---;
+Generated by Docs Generator on ${new Date().toISOString()}
+`; fs.writeFileSync('docs/COMPONENTS.md', docsContent); return {success: true, message: 'Component documentation generated successfully', components: componentDocs.length}} catch (error) {return {; success: false
+    error: error.message}}}; getComponentFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.jsx') |item.endsWith('.tsx')) {files.push(fullPath)}})}; scanDirectory(dir); return files}; extractComponentInfo(filePath, content) {const fileName = path.basename(filePath, path.extname(filePath)); const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): `${componentName} component`; // Extract props from interface or PropTypes; const props = []; const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/); if (propMatch) {const propLines = propMatch[1].split('\n'); propLines.forEach(line = > {; const propMatch = line.match(/(\w+)\s*: \s*(\w+)/); if (propMatch) {; props.push({; name: propMatch[1], type: propMatch[2], description: 'Component prop'})}})}; return {name: componentName
+    file: filePath.replace(this.projectRoot + '/', ''); description: description, props: props, usage: `<${componentName} />`}}; async generateReport(readmeResult, apiResult, componentResult) {const report = {; timestamp: new Date().toISOString(), summary: {
+      , readmeGenerated: readmeResult.success, apiDocsGenerated: apiResult.success, componentDocsGenerated: componentResult.success, totalEndpoints: apiResult.endpoints |0, totalComponents: componentResult.components |0
+    }
+    details: {, readme: readmeResult, api: apiResult
+    components: componentResult}; recommendations: []}; // Generate recommendations; if (!readmeResult.success) {report.recommendations.push({; priority: 'high', message: 'README generation failed', action: 'Check file permissions and try again'})}; if (!apiResult.success) {report.recommendations.push({; priority: 'medium', message: 'API documentation generation failed', action: 'Check API route files and try again'})}; if (!componentResult.success) {report.recommendations.push({; priority: 'medium', message: 'Component documentation generation failed', action: 'Check component files and try again'})}; if (report.summary.totalEndpoints = = = 0) {report.recommendations.push({; priority: 'low', message: 'No API endpoints found', action: 'Consider adding API routes for better documentation'})}; return report}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async run() {this.log('📚 Starting Docs Generator...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Create docs directory if it doesn't exist; const docsDir = path.join(this.projectRoot, 'docs'); if (!fs.existsSync(docsDir)) {fs.mkdirSync(docsDir, { recursive: true })}; // Generate all documentation; const readmeResult = await this.generateReadme(); const apiResult = await this.generateApiDocs(); const componentResult = await this.generateComponentDocs(); // Generate report; this.log('📊 Generating documentation report...'); const report = await this.generateReport(readmeResult, apiResult, componentResult); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Docs Generator Summary: '); this.log(`README: ${report.summary.readmeGenerated ? 'Generated': 'Failed'}`); this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Total Endpoints: ${report.summary.totalEndpoints}`); this.log(`Total Components: ${report.summary.totalComponents}`); this.log(`Duration: ${duration}ms`); if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ Documentation generated successfully!')}
+} catch (error) {this.log(`❌ Error running docs generator: ${error.message}`); process.exit(1)}}}
+// Run the docs generator;
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error = > {process.exit(1)});
+${packageJson.description |'A modern web application built with Next.js'}
+## 🚀 Getting Started;
+### Prerequisites;
+- Node.js ${process.version}
+- npm ${execSync('npm --version', { encoding: 'utf8' }).trim()}
+### Installation;
+\`\`\`bash;
+npm install;
+\`\`\`;
+### Development;
+\`\`\`bash;
+npm run dev;
+\`\`\`;
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
+\`\`\`bash;
+npm run build;
+npm start;
+\`\`\`;
+## 📁 Project Structure;
+\`\`\`;
+${this.projectRoot}/;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ├── pages/ # Next.js pages;
 ├── components/ # React components;
 ├── styles/ # CSS styles;
 ├── public/ # Static assets;
 ├── scripts/ # Build and utility scripts;
 └── package.json # Dependencies and scripts;
+<<<<<<< HEAD
 \`\`\`;`## 🛠️ Available Scripts;
 ${Object.entries(packageJson.scripts |{}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')}'## 📦 Dependencies;
 ### Production Dependencies;
 ${Object.keys(packageJson.dependencies |{}).map(dep = > `- ${dep}`).join('\n')}'### Development Dependencies;
 ${Object.keys(packageJson.devDependencies |{}).map(dep = > `- ${dep}`).join('\n')}'## 🔧 Configuration;
 This project uses Next.js with the following "configuration":  , - TypeScript support;
+=======
+\`\`\`;
+## 🛠️ Available Scripts;
+${Object.entries(packageJson.scripts |{}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')}
+## 📦 Dependencies;
+### Production Dependencies;
+${Object.keys(packageJson.dependencies |{}).map(dep = > `- ${dep}`).join('\n')}
+### Development Dependencies;
+${Object.keys(packageJson.devDependencies |{}).map(dep = > `- ${dep}`).join('\n')}
+## 🔧 Configuration;
+This project uses Next.js with the following configuration:  , - TypeScript support
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
 ## 📊 Monitoring;
+<<<<<<< HEAD
 The project includes automated monitoring with "PM2":  ,- Code quality monitoring;
 The project includes automated monitoring with "PM2": ;
 The project includes automated monitoring with "PM2":  ,- Code quality monitoring;
+=======
+The project includes automated monitoring with PM2:  ,- Code quality monitoring;
+The project includes automated monitoring with PM2: ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 - Code quality monitoring;
 - Performance monitoring;
 - Security scanning;
@@ -4679,11 +6448,20 @@ The project includes automated monitoring with "PM2":  ,- Code quality monitorin
 - Automated testing;
 ## 🤝 Contributing;
 1. Fork the repository;
+<<<<<<< HEAD
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`)3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)4. Push to the branch (\`git push origin feature/AmazingFeature\`)5. Open a Pull Request;`## 📄 License;
+=======
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`);
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
+4. Push to the branch (\`git push origin feature/AmazingFeature\`);
+5. Open a Pull Request;
+## 📄 License;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
 ## 📞 Support;
 For support, email support@example.com or create an issue in the repository.;
 ---;
+<<<<<<< HEAD
 Generated on ${new Date().toISOString()}`;fs.writeFileSync('README.md', readmeContent)return {"success": true,"message": 'README.md generated successfully','
 } catch (error) {return {"success": false,"error": error.message}
 }async generateApiDocs() {try {this.log('🔌 Generating API documentation...')const apiDocs = {"title": 'API Documentation', "version": '1.0.0', "description": 'API endpoints and documentation', "baseUrl": '"http": //"localhost": 3000', "endpoints": [],"generatedAt": new Date().toISOString(,'
@@ -4896,11 +6674,73 @@ const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.i
 const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } };'
   return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const reportFile = `docs-reports/docs-generation-${Date.now()}.json`;`
 } fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved "to": ${reportFil,`}`); return report} catch (error) { this.error(`Failed to generate documentation "report": ${error.messag,`}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport();`
+=======
+Generated on ${new Date().toISOString()}
+`; fs.writeFileSync('README.md', readmeContent); return {success: true
+    message: 'README.md generated successfully'}} catch (error) {return {; success: false
+    error: error.message}}}; async generateApiDocs() {try {; this.log('🔌 Generating API documentation...'); const apiDocs = {; title: 'API Documentation', version: '1.0.0', description: 'API endpoints and documentation', baseUrl: 'http: //localhost: 3000', endpoints: []
+    generatedAt: new Date().toISOString()}; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {const apiFiles = this.getApiFiles(pagesDir); apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})}; const docsContent = `# API Documentation;## Overview;
+- **Base URL**: ${apiDocs.baseUrl}
+- **Version**: ${apiDocs.version}
+- **Generated**: ${apiDocs.generatedAt}
+## Endpoints;
+${apiDocs.endpoints.map(endpoint = > `;### ${endpoint.method} ${endpoint.path}
+${endpoint.description}
+**Parameters: **
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')}
+**Response: **, \`\`\`json
+${JSON.stringify(endpoint.response, null, 2)}
+\`\`\`;
+`).join('\n')}
+## Error Handling;
+All endpoints return appropriate HTTP status codes:  , - \`200\`: Success
+- \`400\`: Bad Request;
+- \`401\`: Unauthorized;
+- \`404\`: Not Found;
+- \`500\`: Internal Server Error;
+## Rate Limiting;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
+---;
+Generated by Docs Generator on ${new Date().toISOString()}
+`; fs.writeFileSync('docs/API.md', docsContent); return {success: true, message: 'API documentation generated successfully', endpoints: apiDocs.endpoints.length}} catch (error) {return {; success: false
+    error: error.message}}}; getApiFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.ts')) {files.push(fullPath)}})}; scanDirectory(dir); return files}; extractApiEndpoint(filePath, content) {const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''); const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') |'/'; // Extract HTTP method from content; const method = content.includes('export default') ? 'GET': 'POST'; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): 'API endpoint'; return {; method: method, path: path, description: description, parameters: [], response: {, success: true, data: {}}}}; async generateComponentDocs() {try {; this.log('🧩 Generating component documentation...'); const componentsDir = path.join(this.projectRoot, 'components'); const componentDocs = []; if (fs.existsSync(componentsDir)) {; const componentFiles = this.getComponentFiles(componentsDir); componentFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const componentInfo = this.extractComponentInfo(file, content); if (componentInfo) {; componentDocs.push(componentInfo)}})}; const docsContent = `# Component Documentation;
+## Overview;
+This document describes all React components in the application.;
+## Components;
+${componentDocs.map(component = > `;
+### ${component.name}
+${component.description}
+**File**: \`${component.file}\`;
+**Props: **
+${component.props.map(prop = > `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')}
+**Usage: **, \`\`\`jsx
+${component.usage}
+\`\`\`;
+`).join('\n')}
+---;
+Generated by Docs Generator on ${new Date().toISOString()}
+`; fs.writeFileSync('docs/COMPONENTS.md', docsContent); return {success: true, message: 'Component documentation generated successfully', components: componentDocs.length}} catch (error) {return {; success: false
+    error: error.message}}}; getComponentFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.jsx') |item.endsWith('.tsx')) {files.push(fullPath)}})}; scanDirectory(dir); return files}; extractComponentInfo(filePath, content) {const fileName = path.basename(filePath, path.extname(filePath)); const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): `${componentName} component`; // Extract props from interface or PropTypes; const props = []; const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/); if (propMatch) {const propLines = propMatch[1].split('\n'); propLines.forEach(line = > {; const propMatch = line.match(/(\w+)\s*: \s*(\w+)/); if (propMatch) {; props.push({; name: propMatch[1], type: propMatch[2], description: 'Component prop'})}})}; return {name: componentName
+    file: filePath.replace(this.projectRoot + '/', ''); description: description, props: props, usage: `<${componentName} />`}}; async generateReport(readmeResult, apiResult, componentResult) {const report = {; timestamp: new Date().toISOString(), summary: {
+      , readmeGenerated: readmeResult.success, apiDocsGenerated: apiResult.success, componentDocsGenerated: componentResult.success, totalEndpoints: apiResult.endpoints |0, totalComponents: componentResult.components |0
+    }
+    details: {, readme: readmeResult, api: apiResult
+    components: componentResult}; recommendations: []}; // Generate recommendations; if (!readmeResult.success) {report.recommendations.push({; priority: 'high', message: 'README generation failed', action: 'Check file permissions and try again'})}; if (!apiResult.success) {report.recommendations.push({; priority: 'medium', message: 'API documentation generation failed', action: 'Check API route files and try again'})}; if (!componentResult.success) {report.recommendations.push({; priority: 'medium', message: 'Component documentation generation failed', action: 'Check component files and try again'})}; if (report.summary.totalEndpoints = = = 0) {report.recommendations.push({; priority: 'low', message: 'No API endpoints found', action: 'Consider adding API routes for better documentation'})}; return report}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async run() {this.log('📚 Starting Docs Generator...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Create docs directory if it doesn't exist; const docsDir = path.join(this.projectRoot, 'docs'); if (!fs.existsSync(docsDir)) {fs.mkdirSync(docsDir, { recursive: true })}; // Generate all documentation; const readmeResult = await this.generateReadme(); const apiResult = await this.generateApiDocs(); const componentResult = await this.generateComponentDocs(); // Generate report; this.log('📊 Generating documentation report...'); const report = await this.generateReport(readmeResult, apiResult, componentResult); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Docs Generator Summary: '); this.log(`README: ${report.summary.readmeGenerated ? 'Generated': 'Failed'}`); this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated': 'Failed'}`); this.log(`Total Endpoints: ${report.summary.totalEndpoints}`); this.log(`Total Components: ${report.summary.totalComponents}`); this.log(`Duration: ${duration}ms`); if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ Documentation generated successfully!')}
+} catch (error) {this.log(`❌ Error running docs generator: ${error.message}`); process.exit(1)}}}
+// Run the docs generator;
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error => {process.exit(1);
+});
+const docsGenerator = new DocsGenerator();
+docsGenerator.run().catch(error = > {_; process.exit(1)});
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME |'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name |'Project'}\n\n`; readmeContent += `${packageJson.description |'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] |command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node
 /**
  * PM2 Documentation Generator Script
  * Automatically generates and updates documentation
  */
+<<<<<<< HEAD
 const { execSync } = require('child_process');'
 
 
@@ -5310,11 +7150,37 @@ const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Do
           if (componentInfo) {,;
             }
             componentDocs.push(componentInfo);
+>>>>>>> merged-prs-20250907-203621
             apiDocs.endpoints.push(endpoint)
           }
         })
       },
 ,
+<<<<<<< HEAD
+      const docsContent = $2;
+## Overview,
+- **Base URL**: ${apiDocs.baseUrl},
+- **Version**: ${apiDocs.version},
+- **Generated**: ${apiDocs.generatedAt},
+,
+## Endpoints,
+${apiDocs.endpoints.map(endpoint = $2;
+### ${endpoint.method} ${endpoint.path},
+,
+${endpoint.description},
+,
+**Parameter: **,
+${endpoint.parameters.map(param = $2;
+,
+**Respons: **,
+\`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)},
+\`\`\`,
+`).join('\n')},
+,
+## Error Handling,
+All endpoints return appropriate HTTP status: codes: ,
+=======
 This document describes all React components in the application.,
 ## Components,
 ${componentDocs.map(component => `,`### ${component.name};
@@ -5798,18 +7664,594 @@ ${packageJson.description || 'A modern web application built with Next.js'},;'
 ,;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+class DocsGenerator {
+  constructor() {
+    this.processName = process.env.PM2_PROCESS_NAME |'docs-generator';
+    this.autoGenerate = process.env.AUTO_GENERATE === 'true';
+    this.updateReadme = process.env.UPDATE_README === 'true';
+    this.apiDocs = process.env.API_DOCS === 'true';
+    this.componentDocs = process.env.COMPONENT_DOCS === 'true';
+    this.logFile = 'logs/pm2/docs-generator.log';
+    this.errorFile = 'logs/pm2/docs-generator-error.log';
+    this.ensureLogDirectory();
+  }
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { "recursive": true });
+    }
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
+    try {
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Failed to write to log "file": ', error.message);
+    }
+  }
+  error(message) {
+    this.log(message, 'ERROR');
+    try {
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`);
+    } catch (err) {
+      console.error('Failed to write to error "file": ', err.message);
+    }
+  }
+  async generateReadme() {
+    this.log('Generating README documentation...');
+    try {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      let readmeContent = `# ${packageJson.name |'Project'}\n\n`;
+      readmeContent += `${packageJson.description |'A modern web application'}\n\n`;
+      // Add version and status badges
+      readmeContent += `![Version]("https": //img.shields.io/badge/version-${packageJson.version |'1.0.0'}-blue.svg)\n`;
+      readmeContent += `![Node]("https": //img.shields.io/badge/node-${process.version}-green.svg)\n`;
+      readmeContent += `![License]("https": //img.shields.io/badge/license-${packageJson.license |'MIT'}-yellow.svg)\n\n`;
+      // Add table of contents
+      readmeContent += "## Table of Contents\n\n";
+      readmeContent += "- [Installation](#installation)\n";
+      readmeContent += "- [Usage](#usage)\n";
+      readmeContent += "- [Scripts](#scripts)\n";
+      readmeContent += "- [API Documentation](#api-documentation)\n";
+      readmeContent += "- [Contributing](#contributing)\n";
+      readmeContent += "- [License](#license)\n\n";
+      // Add installation section
+      readmeContent += "## Installation\n\n";
+      readmeContent += "\"\"\"bash\n";
+      readmeContent += "npm install\n";
+      readmeContent += "\"\"\"\n\n";
+      // Add usage section
+      readmeContent += "## Usage\n\n";
+      readmeContent += "\"\"\"bash\n";
+      readmeContent += "# Development\n";
+      readmeContent += "npm run dev\n\n";
+      readmeContent += "# Production build\n";
+      readmeContent += "npm run build\n";
+      readmeContent += "npm run start\n";
+      readmeContent += "\"\"\"\n\n";
+      // Add scripts section
+      if (packageJson.scripts) {
+        readmeContent += "## Scripts\n\n";
+        readmeContent += "| Script | Description |\n";
+        readmeContent += "|--------|-------------|\n";
+        for (const [script, description] of Object.entries(packageJson.scripts)) {
+          const desc = this.getScriptDescription(script, description);
+          readmeContent += "| \"${script}\` | ${desc} |\n`;
+        }
+        readmeContent += "\n";
+      }
+      // Add API documentation section
+      if (this.apiDocs) {
+        readmeContent += "## API Documentation\n\n";
+        readmeContent += "API documentation is automatically generated and available at \"/api/docs\".\n\n";
+      }
+      // Add contributing section
+      readmeContent += "## Contributing\n\n";
+      readmeContent += "1. Fork the repository\n";
+      readmeContent += "2. Create your feature branch (\"git checkout -b feature/amazing-feature\")\n";
+      readmeContent += "3. Commit your changes (\"git commit -m 'Add some amazing feature'\")\n";
+      readmeContent += "4. Push to the branch (\"git push origin feature/amazing-feature\")\n";
+      readmeContent += "5. Open a Pull Request\n\n";
+      // Add license section
+      readmeContent += "## License\n\n";
+      readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`;
+      // Write README file
+      fs.writeFileSync('README.md', readmeContent);
+      this.log('README.md generated successfully');
+      return { "success": true, "file": 'README.md' }
+    } catch (error) {
+      this.error(`Failed to generate "README": ${error.message}`);
+      return { "success": false, "error": error.message }
+    }
+  }
+  getScriptDescription(script, command) {
+    const descriptions = {
+      'dev': 'Start development server'
+      'build': 'Build for production'
+      'start': 'Start production server'
+      'test': 'Run tests'
+      'lint': 'Run linter'
+      '"lint": fix': 'Fix linting issues'
+      'type-check': 'Run TypeScript type checking'
+      'clean': 'Clean build artifacts'
+      'check': 'Run all checks (lint, type-check, test)'
+      'precommit': 'Pre-commit hook'
+      'prepare': 'Prepare script for git hooks'
+    }
+    return descriptions[script] |command;
+  }
+  async generateApiDocs() {
+    this.log('Generating API documentation...');
+    try {
+      const apiFiles = this.findApiFiles();
+      let apiDocs = "# API Documentation\n\n";
+      apiDocs += `Generated "on": ${new Date().toISOString()}\n\n`;
+      for (const file of apiFiles) {
+        const fileDocs = this.extractApiDocumentation(file);
+        if (fileDocs) {
+          apiDocs += fileDocs;
+        }
+      }
+      const docsDir = 'docs';
+      if (!fs.existsSync(docsDir)) {
+        fs.mkdirSync(docsDir, { "recursive": true });
+      }
+      fs.writeFileSync(path.join(docsDir, 'API.md'), apiDocs);
+      this.log('API documentation generated successfully');
+      return { "success": true, "file": 'docs/API.md' }
+    } catch (error) {
+      this.error(`Failed to generate API "docs": ${error.message}`);
+      return { "success": false, "error": error.message }
+    }
+  }
+  findApiFiles() {
+    const files = [];
+    function scanDirectory(dir) {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          if (stat.isDirectory()) {
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (['.js', '.ts', '.jsx', '.tsx'].includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (error) {
+        // Skip directories we can't read
+      }
+    }
+    // Look for API files in common directories
+    const apiDirs = ['api', 'pages/api', 'src/api', 'lib/api', 'routes'];
+    for (const dir of apiDirs) {
+      if (fs.existsSync(dir)) {
+        scanDirectory(dir);
+      }
+    }
+    return files;
+  }
+  extractApiDocumentation(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      let docs = `## ${path.basename(filePath)}\n\n`;
+      let inComment = false;
+      let commentLines = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        // Check for JSDoc comments
+        if (line.trim().startsWith('/**')) {
+          inComment = true;
+          commentLines = [];
+          continue;
+        }
+        if (inComment) {
+          if (line.trim().endsWith('*/')) {
+            inComment = false;
+            // Process collected comment lines
+            const comment = commentLines.join('\n');
+            if (comment.includes('@api') |comment.includes('@route')) {
+              docs += this.formatApiComment(comment);
+            }
+            commentLines = [];
+          } else {
+            commentLines.push(line.replace(/^\s*\*\s?/, ''));
+          }
+        }
+      }
+      return docs;
+    } catch (error) {
+      this.log(`Failed to extract docs from ${filePath}: ${error.message}`, 'WARNING');
+      return null;
+    }
+  }
+  formatApiComment(comment) {
+    let formatted = '"""\n';
+    formatted += comment.replace(/@\w+/g, '').trim();
+    formatted += '\n"""\n\n';
+    return formatted;
+  }
+  async generateComponentDocs() {
+    this.log('Generating component documentation...');
+    try {
+      const componentFiles = this.findComponentFiles();
+      let componentDocs = "# Component Documentation\n\n";
+      componentDocs += `Generated "on": ${new Date().toISOString()}\n\n`;
+      for (const file of componentFiles) {
+        const componentDoc = this.extractComponentDocumentation(file);
+        if (componentDoc) {
+          componentDocs += componentDoc;
+        }
+      }
+      const docsDir = 'docs';
+      if (!fs.existsSync(docsDir)) {
+        fs.mkdirSync(docsDir, { "recursive": true });
+      }
+      fs.writeFileSync(path.join(docsDir, 'COMPONENTS.md'), componentDocs);
+      this.log('Component documentation generated successfully');
+      return { "success": true, "file": 'docs/COMPONENTS.md' }
+    } catch (error) {
+      this.error(`Failed to generate component "docs": ${error.message}`);
+      return { "success": false, "error": error.message }
+    }
+  }
+  findComponentFiles() {
+    const files = [];
+    function scanDirectory(dir) {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          if (stat.isDirectory()) {
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (['.jsx', '.tsx', '.vue', '.svelte'].includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (error) {
+        // Skip directories we can't read
+      }
+    }
+    // Look for component files in common directories
+    const componentDirs = ['components', 'src/components', 'lib/components', 'pages'];
+    for (const dir of componentDirs) {
+      if (fs.existsSync(dir)) {
+        scanDirectory(dir);
+      }
+    }
+    return files;
+  }
+  extractComponentDocumentation(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      let docs = `## ${path.basename(filePath)}\n\n`;
+      let inComment = false;
+      let commentLines = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        // Check for JSDoc comments
+        if (line.trim().startsWith('/**')) {
+          inComment = true;
+          commentLines = [];
+          continue;
+        }
+        if (inComment) {
+          if (line.trim().endsWith('*/')) {
+            inComment = false;
+            // Process collected comment lines
+            const comment = commentLines.join('\n');
+            if (comment.includes('@component') |comment.includes('@props')) {
+              docs += this.formatComponentComment(comment);
+            }
+            commentLines = [];
+          } else {
+            commentLines.push(line.replace(/^\s*\*\s?/, ''));
+          }
+        }
+      }
+      return docs;
+    } catch (error) {
+      this.log(`Failed to extract component docs from ${filePath}: ${error.message}`, 'WARNING');
+      return null;
+    }
+  }
+  formatComponentComment(comment) {
+    let formatted = '"""\n';
+    formatted += comment.replace(/@\w+/g, '').trim();
+    formatted += '\n"""\n\n';
+    return formatted;
+  }
+  async generateDocumentationReport() {
+    this.log('Generating documentation report...');
+    try {
+      const report = {
+        "timestamp": new Date().toISOString()
+        "processName": this.processName
+        "readmeGenerated": this.updateReadme ? await this.generateReadme() : null
+        "apiDocsGenerated": this.apiDocs ? await this.generateApiDocs() : null
+        "componentDocsGenerated": this.componentDocs ? await this.generateComponentDocs() : null
+        "environment": {
+          nodeVersion: process.version
+          "platform": process.platform
+          "cwd": process.cwd()
+        }
+      }
+      const reportFile = `docs-reports/docs-generation-${Date.now()}.json`;
+      const reportDir = path.dirname(reportFile);
+      if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir, { "recursive": true });
+      }
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+      this.log(`Documentation report saved "to": ${reportFile}`);
+      return report;
+    } catch (error) {
+      this.error(`Failed to generate documentation "report": ${error.message}`);
+      return null;
+    }
+  }
+  async start() {
+    this.log(`Starting ${this.processName}...`);
+    // Run initial documentation generation
+    await this.generateDocumentationReport();
+    // Set up periodic documentation updates
+    const interval = 2 * 60 * 60 * 1000; // 2 hours
+    setInterval(async () => {
+      this.log('Running scheduled documentation generation...');
+      await this.generateDocumentationReport();
+    }, interval);
+    this.log(`${this.processName} started successfully`);
+  }
+}
+// Start the automation if this script is run directly
+if (require.main === module) {
+  const generator = new DocsGenerator();
+  generator.start().catch(error => {
+    console.error('Documentation generator failed to "start": ', error);
+    process.exit(1);
+  });
+}
+module.exports = DocsGenerator;
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name || 'Project'}\n\n`; readmeContent += `${packageJson.description || 'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] || command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') || comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') || comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+docsGenerator.run().catch(error = > {; process.exit(1)});
+    };
+  };
+,
+  async generateReadme() {,
+    try {,
+      this.log('📝 Generating README.md...'),
+,
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
+      const readmeContent = `# ${packageJson.name};
+,
+${packageJson.description || 'A modern web application built with Next.js'};
+,
+## 🚀 Getting Started,
+### Prerequisites,
+- Node.js ${process.version};
+- npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
+Generated on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('README.md', readmeContent);
+; return {; success: true; message: 'README.md generated successfully'}} catch (error) {; return {; success: false; error: error.message}}};
+; async generateApiDocs() {; try {; this.log('🔌 Generating API documentation...');
+; const apiDocs = {; title: 'API Documentation'; version: '1.0.0'; description: 'API endpoints and documentation'; baseUrl: 'http: //localhost: 3000'; endpoints: []; generatedAt: new Date().toISOString()};
+; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {; const apiFiles = this.getApiFiles(pagesDir);
+; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
+; const docsContent = `# API Documentation;
+## Overview;
+,
+### Installation,
+\`\`\`bash,
+npm install,
+\`\`\`,
+### Development,
+\`\`\`bash,
+npm run dev,
+\`\`\`,
+Open [http: //localhost:3000](http://localhost:3000) with your browser to see the result.,
+Open [http: //localhost:3000](http://localhost:3000) with your browser to see the result.,
+Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser to see the result.,
+### Build,
+\`\`\`bash,
+npm run build,
+npm start,
+\`\`\`,
+## 📁 Project Structure,
+\`\`\`,
+${this.projectRoot}/,
+├── pages/                 # Next.js pages,
+├── components/            # React components,
+├── styles/               # CSS styles,
+├── public/               # Static assets,
+├── scripts/              # Build and utility scripts,
+└── package.json          # Dependencies and scripts,
+\`\`\`,
+## 🛠️ Available Scripts,
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
+,
+## 📦 Dependencies,
+### Production Dependencies,
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
+,
+### Development Dependencies,
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
+,
+## 🔧 Configuration,
+This project uses Next.js with the following configuration:  ,
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},
+,
+## 📦 Dependencies,
+### Production Dependencies,
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')},
+,
+### Development Dependencies,
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')},
+,
+## 🔧 Configuration,
+This project uses Next.js with the following: configuration: ,
+- TypeScript support,
+- ESLint for code quality,
+- Prettier for code formatting,
+- PM2 for process management,
+## 📊 Monitoring,
+The project includes automated monitoring with PM2:,
+The project includes automated monitoring with PM2:,
+The project includes automated monitoring with: PM2:,
+- Code quality monitoring,
+- Performance monitoring,
+- Security scanning,
+- Health checks,
+- Automated testing,
+## 🤝 Contributing,
+1. Fork the repository,
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),
+4. Push to the branch (\`git push origin feature/AmazingFeature\`),
+5. Open a Pull Request,
+## 📄 License,
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
+## 📞 Support,
+For support, email support@example.com or create an issue in the repository.,
+---,
+Generated on ${new Date().toISOString()};
+Generated on ${new Date().toISOString()};
+Generated on ${new Date().toISOString()},
+`,
+,
+      fs.writeFileSync('README.md', readmeContent),
+,
+      return {,
+        success: true,
+        message: 'README.md generated successfully',
+      };
+
+        success: true,
+        message: 'README.md generated successfully',
+      };
+    } catch (error) {,
+      return {,
+        success: false,
+        error: error.message,
+      };
+    };
+  };
+,
+  async generateApiDocs() {,
+    try {,
+      this.log('🔌 Generating API documentation...'),
+,
+      const apiDocs = {,
+        title: 'API Documentation',
+        version: '1.0.0',
+        description: 'API endpoints and documentation',
+        baseUrl: 'http://localhost:3000',
+        endpoints: [],
+        generatedAt: new Date().toISOString(),
+      };
+,
+      // Scan for API routes,
+      const pagesDir = path.join(this.projectRoot, 'pages/api'),
+      if (fs.existsSync(pagesDir)) {,
+        const apiFiles = this.getApiFiles(pagesDir),
+,
+        apiFiles.forEach(file => {,
+          const content = fs.readFileSync(file, 'utf8'),
+          const endpoint = this.extractApiEndpoint(file, content),
+          if (endpoint) {,
+            apiDocs.endpoints.push(endpoint),
+          };
+        }),
+      };
+        succes: s: true,
+        messag: e: 'README.md generated successfully'
+      
+    } catch (error) {,
+      return {,
+        succes: s: false,
+        erro: r: error.message
+      
+},;
+,;
+  async generateReadme() {,;
+    try {,;
+      this.log('📝 Generating README.md...'),;
+,;
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
+      const readmeContent = `# ${packageJson.name},;
+,;
+${packageJson.description || 'A modern web application built with Next.js'},;
+,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ## 🚀 Getting Started,;
 ### Prerequisites,;
 - Node.js ${process.version},;
 - npm ${execSync('npm --version', { encodin: g: 'utf8' }).trim()},;
+<<<<<<< HEAD
 
+=======
+,;
+### Installation,;
+\`\`\`bash,;
+npm install,;
+\`\`\`,;
+### Development,;
+\`\`\`bash,;
+npm run dev,;
+\`\`\`,;
+Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser to see the result.,;
+### Build,;
+\`\`\`bash,;
+npm run build,;
+npm start,;
+\`\`\`,;
+## 📁 Project Structure,;
+\`\`\`,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ${this.projectRoot}/,;
 ├── pages/                 # Next.js pages,;
 ├── components/            # React components,;
 ├── styles/               # CSS styles,;
 ├── public/               # Static assets,;
 ├── scripts/              # Build and utility scripts,;
+<<<<<<< HEAD
 
+=======
+└── package.json          # Dependencies and scripts,;
+\`\`\`,;
+## 🛠️ Available Scripts,;
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},;
+,;
+## 📦 Dependencies,;
+### Production Dependencies,;
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')},;
+,;
+### Development Dependencies,;
+${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')},;
+,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ## 🔧 Configuration,;
 This project uses Next.js with the following: configuration: ,;
 - TypeScript support,;
@@ -5824,7 +8266,13 @@ The project includes automated monitoring with: PM2:,;
 - Health checks,;
 - Automated testing,;
 ## 🤝 Contributing,;
+<<<<<<< HEAD
 
+=======
+1. Fork the repository,;
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),;
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),;
 5. Open a Pull Request,;
 ## 📄 License,;
@@ -5832,12 +8280,33 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support,;
 For support, email support@example.com or create an issue in the repository.,;
 ---,;
+<<<<<<< HEAD
 
+=======
+Generated on ${new Date().toISOString()},;
+`,;
+,;
+      fs.writeFileSync('README.md', readmeContent),;
+,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {,;
         succes: s: true,;
         messag: e: 'README.md generated successfully';
     } catch (error) {,;
+<<<<<<< HEAD
 
+=======
+      return {,;
+        succes: s: false,;
+        erro: r: error.message;
+}
+},;
+,;
+  async generateApiDocs() {,;
+    try {,;
+      this.log('🔌 Generating API documentation...'),;
+,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       const apiDocs = {,;
         titl: e: 'API Documentation',;
         versio: n: '1.0.0',;
@@ -5845,24 +8314,118 @@ For support, email support@example.com or create an issue in the repository.,;
         baseUr: l: 'htt: p://localhos: t:3000',;
         endpoint: s: [],;
         generatedA: t: new Date().toISOString(),;
+<<<<<<< HEAD
 
+=======
+      ,;
+,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Scan for API routes,;
       const pagesDir = path.join(this.projectRoot, 'pages/api'),;
       if (fs.existsSync(pagesDir)) {,;
         const apiFiles = this.getApiFiles(pagesDir),;
+<<<<<<< HEAD
 
+=======
+,;
+        apiFiles.forEach(file => {,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           const content = fs.readFileSync(file, 'utf8'),;
           const endpoint = this.extractApiEndpoint(file, content),;
           if (endpoint) {,;
             apiDocs.endpoints.push(endpoint);
+<<<<<<< HEAD
 
+=======
+          }
+        })
+      },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ,
       const docsContent = `# API Documentation,
 ## Overview,
 - **Base URL**: ${apiDocs.baseUrl};
 - **Version**: ${apiDocs.version};
 - **Generated**: ${apiDocs.generatedAt};
+<<<<<<< HEAD
 
+=======
+,
+## Endpoints,
+${apiDocs.endpoints.map(endpoint => `,
+### ${endpoint.method} ${endpoint.path};
+,
+${endpoint.description};
+,
+**Parameters: **,
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
+,
+**Response: **,
+\`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)};
+\`\`\`,
+`).join('\n')};
+,
+## Error Handling,
+All endpoints return appropriate HTTP status codes:  ,
+;
+## Endpoints;
+${apiDocs.endpoints.map(endpoint = > `;
+### ${endpoint.method} ${endpoint.path};
+;
+${endpoint.description};
+;
+**Parameters: **;
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
+;
+**Response: **;
+\`\`\`json;
+,
+**Parameter: s: **,
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')},
+,
+**Respons: e: **,
+\`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)};
+\`\`\`;
+`).join('\n')};
+;
+## Error Handling;
+All endpoints return appropriate HTTP status codes: ;
+- \`200\`: Success;
+- \`400\`: Bad Request;
+- \`401\`: Unauthorized;
+- \`404\`: Not Found;
+- \`500\`: Internal Server Error;
+## Rate Limiting;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
+---;
+Generated by Docs Generator on ${new Date().toISOString()};
+`;
+; fs.writeFileSync('docs/API.md', docsContent);
+; return {; success: true; message: 'API documentation generated successfully'; endpoints: apiDocs.endpoints.length}} catch (error) {; return {; success: false; error: error.message}}};
+; getApiFiles(dir) {; const files = [];
+; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.ts')) {; files.push(fullPath)}})};
+; scanDirectory(dir); return files};
+; extractApiEndpoint(filePath, content) {; const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''); const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/';
+; // Extract HTTP method from content; const method = content.includes('export default') ? 'GET': 'POST';
+; // Extract description from comments; const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//); const description = commentMatch ? commentMatch[1].trim(): 'API endpoint';
+; return {; method: method; path: path; description: description; parameters: []; response: {; success: true; data: {}}}};
+; async generateComponentDocs() {; try {; this.log('🧩 Generating component documentation...');
+; const componentsDir = path.join(this.projectRoot, 'components'); const componentDocs = [];
+; if (fs.existsSync(componentsDir)) {; const componentFiles = this.getComponentFiles(componentsDir);
+; componentFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const componentInfo = this.extractComponentInfo(file, content); if (componentInfo) {; componentDocs.push(componentInfo)}})};
+; const docsContent = `# Component Documentation;
+## Overview;
+This document describes all React components in the application.;
+## Components;
+${componentDocs.map(component = > `;
+,
+## Error Handling,
+All endpoints return appropriate HTTP status: codes: ,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 - \`200\`: Success,
 - \`400\`: Bad Request,
 - \`401\`: Unauthorized,
@@ -5871,25 +8434,413 @@ For support, email support@example.com or create an issue in the repository.,;
 ## Rate Limiting,
 API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,
 ---,
+<<<<<<< HEAD
+Generated by Docs Generator on ${new Date().toISOString($2);
+=======
+<<<<<<< HEAD
 
 Generated by Docs Generator on ${new Date().toISOString(),
 
+=======
+Generated by Docs Generator on ${new Date().toISOString()};
+Generated by Docs Generator on ${new Date().toISOString()};
+Generated by Docs Generator on ${new Date().toISOString(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 `,
 ,
-      fs.writeFileSync('docs/API.md', docsContent),
+      fs.writeFileSync($2);
 ,
       return {,
-
+        succes: true,
+        messag: 'API documentation generated successfully',
+        endpoint: apiDocs.endpoints.length
+      
+    } catch (error) {,
+      return {,
+        succes: false,
+        erro: error.message
+      
+}
+},
 ,
-      const docsContent = `# Component Documentation,
+  getApiFiles(dir) {,
+    const files = $2;
+,
+    const scanDirectory = $2;
+      const items = fs.readdirSync($2);
+      items.forEach($2);
+        const stat = fs.statSync($2);
+,
+        if (stat.isDirectory()) {,
+          scanDirectory(fullPath)
+        } else if (item.endsWith('.js') || item.endsWith('.ts')) {,
+          files.push(fullPath)
+        }
+      })
+},
+,
+    scanDirectory($2);
+    return files
+},
+,
+  extractApiEndpoint(filePath, content) {,
+    const relativePath = filePath.replace($2);
+    const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/',
+,
+    // Extract HTTP method from content,
+    const method = $2;
+,
+    // Extract description from comments,
+    const commentMatch = $2;
+    const description = $2;
+,
+    return {,
+      metho: method,
+      pat: path,
+      descriptio: description,
+      parameter: [],
+      respons: {,
+        succes: true,
+        dat: a: {
+      }
+}
+},
+,
+  async generateComponentDocs() {,
+    try {,
+      this.log($2);
+,
+      const componentsDir = path.join($2);
+      const componentDocs = $2;
+,
+      if (fs.existsSync(componentsDir)) {,
+        const componentFiles = this.getComponentFiles($2);
+,
+        componentFiles.forEach($2);
+          const componentInfo = this.extractComponentInfo($2);
+          if (componentInfo) {,
+            componentDocs.push(componentInfo)
+          }
+        })
+      },
+,
+      const docsContent = $2;
 ## Overview,
 This document describes all React components in the application.,
 ## Components,
-${componentDocs.map(component => `,
-### ${component.name};
+${componentDocs.map(component = $2;
+### ${component.name},
+,
+${component.description},
+,
+**File**: \`${component.file}\`,
+**Prop: **,
+${component.props.map(prop = $2;
+,
+**Usag: **,
+\`\`\`jsx,
+${component.usage,
+\`\`\`,
+`).join('\n')},
+,
+---,
+Generated by Docs Generator on ${new Date().toISOString()},
+`,
+,
+      fs.writeFileSync($2);
+,
+      return {,
+        succes: true,
+        messag: 'Component documentation generated successfully',
+        component: componentDocs.length
+      
+    } catch (error) {,
+      return {,
+<<<<<<< HEAD
+        succes: false,
+        erro: error.message
+      
+=======
+        success: false,
+        error: error.message,
+      };
+    };
+  };
+,
+  getComponentFiles(dir) {,
+    const files = [],
+,
+    const scanDirectory = (currentDir) => {,
+      const items = fs.readdirSync(currentDir),
+      items.forEach(item => {,
+        const fullPath = path.join(currentDir, item),
+        const stat = fs.statSync(fullPath),
+,
+        if (stat.isDirectory()) {,
+          scanDirectory(fullPath),
+        } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {,
+          files.push(fullPath),
+        };
+      }),
+    };
+,
+    scanDirectory(dir),
+    return files,
+  };
+,
+  extractComponentInfo(filePath, content) {,
+    const fileName = path.basename(filePath, path.extname(filePath)),
+    const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1),
+,
+    // Extract description from comments,
+    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//),
+    const description = commentMatch ? commentMatch[1].trim() : `${componentName} component`,
+,
+    // Extract props from interface or PropTypes,
+    const props = [],
+    const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/),
+    if (propMatch) {,
+      const propLines = propMatch[1].split('\n'),
+      propLines.forEach(line => {,
+        const propMatch = line.match(/(\w+)\s*:\s*(\w+)/),
+        if (propMatch) {,
+          props.push({,
+            name: propMatch[1],
+            type: propMatch[2],
+            description: 'Component prop',
+          }),
+        };
+      }),
+    };
+,
+    return {,
+      name: componentName,
+      file: filePath.replace(this.projectRoot + '/', ''),
+      description: description,
+      props: props,
+      usage: `<${componentName} />`,
+    };
+  };
+,
+  async generateReport(readmeResult, apiResult, componentResult) {,
+    const report = {,
+      timestamp: new Date().toISOString(),
+      summary: {,
+        readmeGenerated: readmeResult.success,
+        apiDocsGenerated: apiResult.success,
+        componentDocsGenerated: componentResult.success,
+        totalEndpoints: apiResult.endpoints || 0,
+        totalComponents: componentResult.components || 0,
+      },
+      details: {,
+        readme: readmeResult,
+        api: apiResult,
+        components: componentResult,
+      },
+      recommendations: [],
+    };
+,
+    // Generate recommendations,
+    if (!readmeResult.success) {,
+      report.recommendations.push({,
+        priority: 'high',
+        message: 'README generation failed',
+        action: 'Check file permissions and try again',
+      }),
+    };
+,
+    if (!apiResult.success) {,
+      report.recommendations.push({,
+        priority: 'medium',
+        message: 'API documentation generation failed',
+        action: 'Check API route files and try again',
+      }),
+    };
+,
+    if (!componentResult.success) {,
+      report.recommendations.push({,
+        priority: 'medium',
+        message: 'Component documentation generation failed',
+        action: 'Check component files and try again',
+      }),
+    };
+,
+    if (report.summary.totalEndpoints === 0) {,
+      report.recommendations.push({,
+        priority: 'low',
+        message: 'No API endpoints found',
+        action: 'Consider adding API routes for better documentation',
+      }),
+    };
+,
+    return report,
+  };
+,
+  async saveReport(report) {,
+    try {,
+      const reportDir = path.dirname(this.reportFile),
+      if (!fs.existsSync(reportDir)) {,
+        fs.mkdirSync(reportDir, { recursive: true }),
+      };
+        succes: s: true,
+        messag: e: 'API documentation generated successfully',
+        endpoint: s: apiDocs.endpoints.length
+      
+    } catch (error) {,
+      return {,
+        succes: s: false,
+        erro: r: error.message
+      
+        });
+      },;
+,;
+      const docsContent = `# API Documentation,;
+## Overview,;
+- **Base URL**: ${apiDocs.baseUrl},;
+- **Version**: ${apiDocs.version},;
+- **Generated**: ${apiDocs.generatedAt},;
+,;
+## Endpoints,;
+${apiDocs.endpoints.map(endpoint => `,;
+### ${endpoint.method} ${endpoint.path},;
+,;
+${endpoint.description},;
+,;
+**Parameter: s: **,;
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')},;
+,;
+**Respons: e: **,;
+\`\`\`json,;
+${JSON.stringify(endpoint.response, null, 2)},;
+\`\`\`,;
+`).join('\n')},;
+,;
+## Error Handling,;
+All endpoints return appropriate HTTP status: codes: ,;
+- \`200\`: Success,;
+- \`400\`: Bad Request,;
+- \`401\`: Unauthorized,;
+- \`404\`: Not Found,;
+- \`500\`: Internal Server Error,;
+## Rate Limiting,;
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,;
+---,;
+Generated by Docs Generator on ${new Date().toISOString(),;
+`,;
+,;
+      fs.writeFileSync('docs/API.md', docsContent),;
+,;
+      return {,;
+        succes: s: true,;
+        messag: e: 'API documentation generated successfully',;
+        endpoint: s: apiDocs.endpoints.length;
+    } catch (error) {,;
+      return {,;
+        succes: s: false,;
+        erro: r: error.message;
+}
+},;
+,;
+  getApiFiles(dir) {,;
+    const files = [],;
+,;
+    const scanDirectory = (currentDir) => {,;
+      const items = fs.readdirSync(currentDir),;
+      items.forEach(item => {,;
+        const fullPath = path.join(currentDir, item),;
+        const stat = fs.statSync(fullPath),;
+,;
+        if (stat.isDirectory()) {,;
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.ts')) {,;
+          files.push(fullPath);
+        }
+      });
+},;
+,;
+    scanDirectory(dir),;
+    return files;
+},;
+,;
+  extractApiEndpoint(filePath, content) {,;
+    const relativePath = filePath.replace(this.projectRoot + '/pages/api', ''),;
+    const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/',;
+,;
+    // Extract HTTP method from content,;
+    const method = content.includes('export default') ? 'GET' : 'POST',;
+,;
+    // Extract description from comments,;
+    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//),;
+    const description = commentMatch ? commentMatch[1].trim() : 'API endpoint',;
+,;
+    return {,;
+      metho: d: method,;
+      pat: h: path,;
+      descriptio: n: description,;
+      parameter: s: [],;
+      respons: e: {,;
+        succes: s: true,;
+        dat: a: {;
+      }
+}
+},;
+,;
+  async generateComponentDocs() {,;
+    try {,;
+      this.log('🧩 Generating component documentation...'),;
+,;
+      const componentsDir = path.join(this.projectRoot, 'components'),;
+      const componentDocs = [],;
+,;
+      if (fs.existsSync(componentsDir)) {,;
+        const componentFiles = this.getComponentFiles(componentsDir),;
+,;
+        componentFiles.forEach(file => {,;
+          const content = fs.readFileSync(file, 'utf8'),;
+          const componentInfo = this.extractComponentInfo(file, content),;
+          if (componentInfo) {,;
+            componentDocs.push(componentInfo);
+          }
+        })
+      },
+,
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      this.log(`Report saved to: ${this.reportFile}`),
+    } catch (error) {,
+      this.log(`Error saving report: ${error.message}`),
+    };
+  };
+,
+  async run() {,
+    this.log('📚 Starting Docs Generator...'),
+    this.log(`Project root: ${this.projectRoot}`),
+,
+    try {,
+      // Create logs directory if it doesn't exist,
+      const logsDir = path.dirname(this.logFile),
+      if (!fs.existsSync(logsDir)) {,
+        fs.mkdirSync(logsDir, { recursive: true }),
+      };
+,
+      // Create docs directory if it doesn't exist,
+      const docsDir = path.join(this.projectRoot, 'docs'),
+      if (!fs.existsSync(docsDir)) {,
+        fs.mkdirSync(docsDir, { recursive: true }),
+      };
+,
+<<<<<<< HEAD
+      // Generate all documentation,
+      const readmeResult = await this.generateReadme(),
+      const apiResult = await this.generateApiDocs(),
+      const componentResult = await this.generateComponentDocs(),
+=======
+---,
+Generated by Docs Generator on ${new Date().toISOString()};
 
+
+<<<<<<< HEAD
 ${component.usage};
-
 \`\`\`;
 `).join('\n')};
 ;
@@ -5928,13 +8879,27 @@ Generated by Docs Generator on ${new Date().toISOString()};
 // Run the docs generator;
 const docsGenerator = new DocsGenerator();
 docsGenerator.run().catch(error = > {; process.exit(1)});
+=======
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 `,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ,
-      fs.writeFileSync('docs/COMPONENTS.md', docsContent),
+      // Generate report,
+      this.log('📊 Generating documentation report...'),
+      const report = await this.generateReport(readmeResult, apiResult, componentResult),
 ,
+<<<<<<< HEAD
+=======
       return {,
 
+<<<<<<< HEAD
+        success: true,
         message: 'Component documentation generated successfully',
         components: componentDocs.length,
       };
@@ -6095,6 +9060,7 @@ docsGenerator.run().catch(error = > {; process.exit(1)});
       this.log('📊 Generating documentation report...'),
       const report = await this.generateReport(readmeResult, apiResult, componentResult),
 ,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Save report,
       await this.saveReport(report),
 ,
@@ -6125,7 +9091,12 @@ docsGenerator.run().catch(error = > {; process.exit(1)});
     };
   };
 };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         succes: s: true,
 
         messag: e: 'Component documentation generated successfully',
@@ -6170,224 +9141,8 @@ Generated by Docs Generator on ${new Date().toISOString()},;`
       return {,;
         succes: s: false,;
         erro: r: error.message;
+>>>>>>> merged-prs-20250907-203621
 }
-},;
-,;
-  getComponentFiles(dir) {,;
-    const files = [],;
-,;
-    const scanDirectory = (currentDir) => {,;
-      const items = fs.readdirSync(currentDir),;
-      items.forEach(item => {,;
-        const fullPath = path.join(currentDir, item),;
-        const stat = fs.statSync(fullPath),;
-,;
-        if (stat.isDirectory()) {,;
-          scanDirectory(fullPath);'
-        } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {,;
-          files.push(fullPath);
-        }
-      });
-},;
-,;
-    scanDirectory(dir),;
-    return files;
-},;
-,;
-  extractComponentInfo(filePath, content) {,;
-    const fileName = path.basename(filePath, path.extname(filePath)),;
-    const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1),;
-,;
-    // Extract description from comments,;
-    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//),;`
-    const description = commentMatch ? commentMatch[1].trim() : `${componentName} component`,;
-,;
-    // Extract props from interface or PropTypes,;
-    const props = [],;
-    const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/),;
-    if (propMatch) {,;'
-      const propLines = propMatch[1].split('\n'),;
-      propLines.forEach(line => {,;
-        const propMatch = line.match(/(\w+)\s*:\s*(\w+)/),;
-        if (propMatch) {,;
-          props.push({,;
-            nam: e: propMatch[1],;
-            typ: e: propMatch[2],;'
-            descriptio: n: 'Component prop';
-          });
-        }
-      });
-},;
-,;
-    return {,;
-      nam: e: componentName,;'
-      fil: e: filePath.replace(this.projectRoot + '/', ''),;
-      descriptio: n: description,;
-      prop: s: props,;`
-      usag: e: `<${componentName} />`;
-}
-},;
-,;
-
-  async generateReport(readmeResult, apiResult, componentResult) {,;
-    const report = {,;
-      timestam: p: new Date().toISOString(),;
-      summar: y: {,;
-        readmeGenerate: d: readmeResult.success,;
-        apiDocsGenerate: d: apiResult.success,;
-        componentDocsGenerate: d: componentResult.success,;
-        totalEndpoint: s: apiResult.endpoints || 0,;
-        totalComponent: s: componentResult.components || 0,;
-
-      detail: s: {,;
-        readm: e: readmeResult,;
-        ap: i: apiResult,;
-        component: s: componentResult,;
-
-      // Create logs directory if it doesn't exist,;
-      const logsDir = path.dirname(this.logFile),;
-      if (!fs.existsSync(logsDir)) {,;
-        fs.mkdirSync(logsDir, { recursiv: e: true });
-
-      // Generate all documentation,;
-      const readmeResult = await this.generateReadme(),;
-      const apiResult = await this.generateApiDocs(),;
-      const componentResult = await this.generateComponentDocs(),;
-
-This project uses Next.js with the following: configuration:  ,;
-- TypeScript support,;
-- ESLint for code quality,;
-- Prettier for code formatting,;
-- PM2 for process management,;
-## 📊 Monitoring,;
-The project includes automated monitoring with: PM2:,;
-- Code quality monitoring,;
-- Performance monitoring,;
-- Security scanning,;
-- Health checks,;
-- Automated testing,;
-## 🤝 Contributing,;
-
-4. Push to the branch (\`git push origin feature/AmazingFeature\`),;
-5. Open a Pull Request,;
-## 📄 License,;
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,;
-## 📞 Support,;
-For support, email support@example.com or create an issue in the repository.,;
----,;
-
-    } catch (error) {,;
-      return {,;
-        succes: s: false,;
-        erro: r: error.message;
-      }
-    }
-  },;
-,;
-  async generateApiDocs() {,;
-    try {,;
-      this.log('🔌 Generating API documentation...'),;
-,;
-      const apiDocs = {,;
-        titl: e: 'API Documentation',;
-        versio: n: '1.0.0',;
-        descriptio: n: 'API endpoints and documentation',;
-        baseUr: l: 'htt: p://localhos: t:3000',;
-        endpoint: s: [],;
-
-<<<<<<< HEAD
-        }
-        "titl": "e": 'API Documentation',;'
-        "versio": "n": '1.0.0',;'
-        "descriptio": "n": 'API endpoints and documentation',;'
-        "baseUr": "l": '"htt": "p"://"localhos": "t":3000',;'
-        "endpoint": "s": [],;
-        "generatedA": "t": new Date().toISOString();
-      },;
-,;
-      // Scan for API routes,;
-
-      if (fs.existsSync(pagesDir)) {,;
-
-}
-
-,;
-        apiFiles.forEach((file) => {,;
-
-}
-
-
-          if (endpoint) {,;
-            }
-            apiDocs.endpoints.push(endpoint);
-          }
-        });
-      },;
-,;
-
-const docsContent = `# API Documentation,;`## Overview,;
-- **Base URL**: ${apiDocs.baseUrl},;
-- **Version**: ${apiDocs.version},;
-- **Generated**: ${apiDocs.generatedAt},;
-,;
-## Endpoints,;
-${apiDocs.endpoints.map(endpoint => { return `,; }`### ${endpoint.method} ${endpoint.path},;
-,;
-${endpoint.description},;
-,;
-**"Parameter": "s": **,;
-${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')},;',;
-**"Respons": "e": **,;
-\`\`\`json,;`${JSON.stringify(endpoint.response, null, 2)},;
-\`\`\`,;``).join('\n')},;'
-,;
-## Error Handling,;
-All endpoints return appropriate HTTP "status": "codes":  ,;
-- \`200\`: Success,;`- \`400\`: Bad Request,;`- \`401\`: Unauthorized,;`- \`404\`: Not Found,;`- \`500\`: Internal Server Error,;`## Rate Limiting,;
-API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,;
----,;
-Generated by Docs Generator on ${new Date().toISOString()},;
-`,;`,;
-      fs.writeFileSync('docs/API.md', docsContent),;'
-,;
-      return {,;
-        }
-        "succes": "s": true,;
-        "messag": "e": 'API documentation generated successfully',;'
-        "endpoint": "s": apiDocs.endpoints.length;
-      }
-    } catch (error) {,;
-      }
-      return {,;
-        }
-        "succes": "s": false,;
-        "erro": "r": error.message;
-      }
-    }
-  },;
-,;
-  getApiFiles(dir) {,;
-
-}
-
-,;
-
-const scanDirectory = (currentDir) => {,;
-
-}
-
-      items.forEach((item) => {,;
-
-}
-
-
-,;
-        if (stat.isDirectory()) {,;
-          }
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.ts')) {,;'
-          }
-          files.push(fullPath);
 },
 ,
   getComponentFiles(dir) {,
@@ -6424,6 +9179,7 @@ const scanDirectory = (currentDir) => {,;
     if (propMatch) {,
       const propLines = propMatch[1].split($2);
       propLines.forEach(line = $2;
+        const propMatch = $2;
         if (propMatch) {,
           props.push({,
             nam: propMatch[1],
@@ -6561,319 +9317,477 @@ const scanDirectory = (currentDir) => {,;
         this.log('\n✨ Documentation generated successfully!')
       }
 
+    } catch (error) {,
+      this.log($2);
+      process.exit(1)
 }
-
-
-,;
-    // Extract HTTP method from content,;
-
-,;
-    // Extract description from comments,;
-
-
-,;
-    return {,;
+}
+},
+,
+// Run the docs generator,
+const docsGenerator = new DocsGenerator($2);
+docsGenerator.run().catch(error = $2;
+  process.exit(1)
+})
+    }
+  },
+,
+  async generateReadme() {,
+    try {,
+      this.log($2);
+,
+      const packageJson = $2;
+      const readmeContent = $2;
+,
+${packageJson.description || 'A modern web application built with Next.js'},
+,
+## 🚀 Getting Started,
+### Prerequisites,
+- Node.js ${process.version},
+- npm ${execSync('npm --version', { encodin: g: 'utf8' }).trim()},
+,
+### Installation,
+\`\`\`bash,
+npm install,
+\`\`\`,
+### Development,
+\`\`\`bash,
+npm run dev,
+\`\`\`,
+Open [htt: //localhos: 3000](htt: //localhos: 3000) with your browser to see the result.,
+### Build,
+\`\`\`bash,
+npm run build,
+npm start,
+\`\`\`,
+## 📁 Project Structure,
+\`\`\`,
+${this.projectRoot}/,
+├── pages/                 # Next.js pages,
+├── components/            # React components,
+├── styles/               # CSS styles,
+├── public/               # Static assets,
+├── scripts/              # Build and utility scripts,
+└── package.json          # Dependencies and scripts,
+\`\`\`,
+## 🛠️ Available Scripts,
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},
+,
+## 📦 Dependencies,
+### Production Dependencies,
+${Object.keys(packageJson.dependencies || {}).map(dep = $2;
+,
+### Development Dependencies,
+${Object.keys(packageJson.devDependencies || {}).map(dep = $2;
+,
+## 🔧 Configuration,
+This project uses Next.js with the following: configuration: ,
+- TypeScript support,
+- ESLint for code quality,
+- Prettier for code formatting,
+- PM2 for process management,
+## 📊 Monitoring,
+The project includes automated monitoring with: PM2: ,
+- Code quality monitoring,
+- Performance monitoring,
+- Security scanning,
+- Health checks,
+- Automated testing,
+## 🤝 Contributing,
+1. Fork the repository,
+2. Create your feature branch($2);
+3. Commit your changes($2);
+4. Push to the branch($2);
+5. Open a Pull Request,
+## 📄 License,
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
+## 📞 Support,
+For support, email support@example.com or create an issue in the repository.,
+---,
+Generated on ${new Date().toISOString()},
+`,
+,
+      fs.writeFileSync($2);
+,
+      return {,
+        succes: true,
+        messag: 'README.md generated successfully'
       }
-      "metho": "d": method,;
-      "pat": "h": path,;
-      "descriptio": "n": description,;
-      "parameter": "s": [],;
-      "respons": "e": {,;
-        }
-        "succes": "s": true,;
-        "dat": "a": {}
+    } catch (error) {,
+      return {,
+        succes: false,
+        erro: error.message
       }
     }
- 
-},;
-,;
-  async generateComponentDocs() {,;
-    }
-    try {,;
-      }
-      this.log('🧩 Generating component documentation...'),;'
-,;
-
-
-,;
-      if (fs.existsSync(componentsDir)) {,;
-
-}
-
-,;
-        componentFiles.forEach((file) => {,;
-
-}
-
-
-          if (componentInfo) {,;
-            }
-            componentDocs.push(componentInfo);
+  },
+,
+  async generateApiDocs() {,
+    try {,
+      this.log($2);
+,
+      const apiDocs = $2;
+        titl: 'API Documentation',
+        versio: '1.0.0',
+        descriptio: 'API endpoints and documentation',
+        baseUr: l: 'htt: //localhos: 3000',
+        endpoint: [],
+        generatedA: new Date().toISOString()
+      },
+,
+      // Scan for API routes,
+      const pagesDir = path.join($2);
+      if (fs.existsSync(pagesDir)) {,
+        const apiFiles = this.getApiFiles($2);
+,
+        apiFiles.forEach($2);
+          const endpoint = this.extractApiEndpoint($2);
+          if (endpoint) {,
+            apiDocs.endpoints.push(endpoint)
           }
-        });
-      },;
-,;
-
-This document describes all React components in the application.,;
-## Components,;
-${componentDocs.map(component => { return `,; }`### ${component.name},;
-,;
-${component.description},;
-,;
-**File**: \`${component.file}\`,;`**"Prop": "s": **,;
-${component.props.map(prop => `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')},;',;
-**"Usag": "e": **,;
-\`\`\`jsx,;`${component.usage},;
-\`\`\`,;``).join('\n')},;'
-,;
----,;
-Generated by Docs Generator on ${new Date().toISOString()},;
-`,;`,;
-      fs.writeFileSync('docs/COMPONENTS.md', docsContent),;'
-,;
-      return {,;
-        }
-        "succes": "s": true,;
-        "messag": "e": 'Component documentation generated successfully',;'
-        "component": "s": componentDocs.length;
+        })
+      },
+,
+      const docsContent = $2;
+## Overview,
+- **Base URL**: ${apiDocs.baseUrl},
+- **Version**: ${apiDocs.version},
+- **Generated**: ${apiDocs.generatedAt},
+,
+## Endpoints,
+${apiDocs.endpoints.map(endpoint = $2;
+### ${endpoint.method} ${endpoint.path},
+,
+${endpoint.description},
+,
+**Parameter: **,
+${endpoint.parameters.map(param = $2;
+,
+**Respons: **,
+\`\`\`json,
+${JSON.stringify(endpoint.response, null, 2)},
+\`\`\`,
+`).join('\n')},
+,
+## Error Handling,
+All endpoints return appropriate HTTP status: codes: ,
+- \`200\`: Success,
+- \`400\`: Bad Request,
+- \`401\`: Unauthorized,
+- \`404\`: Not Found,
+- \`500\`: Internal Server Error,
+## Rate Limiting,
+API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,
+---,
+Generated by Docs Generator on ${new Date().toISOString()},
+`,
+,
+      fs.writeFileSync($2);
+,
+      return {,
+        succes: true,
+        messag: 'API documentation generated successfully',
+        endpoint: apiDocs.endpoints.length
       }
-    } catch (error) {,;
-      }
-      return {,;
-        }
-        "succes": "s": false,;
-        "erro": "r": error.message;
+    } catch (error) {,
+      return {,
+        succes: false,
+        erro: error.message
       }
     }
-  },;
-,;
-  getComponentFiles(dir) {,;
-
-}
-
-,;
-
-
-}
-
-      items.forEach((item) => {,;
-
-}
-
-
-,;
-        if (stat.isDirectory()) {,;
-          }
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {,;'
-          }
-          files.push(fullPath);
+  },
+,
+  getApiFiles(dir) {,
+    const files = $2;
+,
+    const scanDirectory = $2;
+      const items = fs.readdirSync($2);
+      items.forEach($2);
+        const stat = fs.statSync($2);
+,
+        if (stat.isDirectory()) {,
+          scanDirectory(fullPath)
+        } else if (item.endsWith('.js') || item.endsWith('.ts')) {,
+          files.push(fullPath)
         }
-      });
-    },;
-,;
-    scanDirectory(dir),;
-    return files;
-  },;
-,;
-  extractComponentInfo(filePath, content) {,;
-
-}
-
-const fileName = path.basename(filePath, path.extname(filePath)),;
-
-const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1),;
-,;
-    // Extract description from comments,;
-
-
-const description = commentMatch ? commentMatch[1].trim() : `${componentName} component`,;`,;
-    // Extract props from interface or PropTypes,;
-
-const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/),;
-    if (propMatch) {,;
-
-}
-
-const propLines = propMatch[1].split('\n'),;'
-      propLines.forEach((line) => {,;
-
-}
-
-const propMatch = line.match(/(\w+)\s*:\s*(\w+)/),;
-        if (propMatch) {,;
-          }
-          props.push({,;
-            }
-            "nam": "e": propMatch[1],;
-            "typ": "e": propMatch[2],;
-            "descriptio": "n": 'Component prop';'
-          });
-        }
-      });
-    },;
-,;
-    return {,;
+      })
+    },
+,
+    scanDirectory($2);
+    return files
+  },
+,
+  extractApiEndpoint(filePath, content) {,
+    const relativePath = filePath.replace($2);
+    const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/',
+,
+    // Extract HTTP method from content,
+    const method = $2;
+,
+    // Extract description from comments,
+    const commentMatch = $2;
+    const description = $2;
+,
+    return {,
+      metho: method,
+      pat: path,
+      descriptio: description,
+      parameter: [],
+      respons: {,
+        succes: true,
+        dat: a: {}
       }
-      "nam": "e": componentName,;
-      "fil": "e": filePath.replace(this.projectRoot + '/', ''),;'
-      "descriptio": "n": description,;
-      "prop": "s": props,;
-      "usag": "e": `<${componentNam,`} />`;`    }
-  },;
-,;
-  async generateReport(readmeResult, apiResult, componentResult) {,;
-
-}
-
-const report = {,;
-      }
-      "timestam": "p": new Date().toISOString(),;
-      "summar": "y": {,;
-        }
-        "readmeGenerate": "d": readmeResult.success,;
-        "apiDocsGenerate": "d": apiResult.success,;
-        "componentDocsGenerate": "d": componentResult.success,;
-        "totalEndpoint": "s": apiResult.endpoints || 0,;
-        "totalComponent": "s": componentResult.components || 0;
-      },;
-      "detail": "s": {,;
-        }
-        "readm": "e": readmeResult,;
-        "ap": "i": apiResult,;
-        "component": "s": componentResult;
-      },;
-      "recommendation": "s": [];
-    },;
-,;
-    // Generate recommendations,;
-    if (!readmeResult.success) {,;
-      }
-      report.recommendations.push({,;
-        }
-        "priorit": "y": 'high',;'
-        "messag": "e": 'README generation failed',;'
-        "actio": "n": 'Check file permissions and try again';'
-      });
-    },;
-,;
-    if (!apiResult.success) {,;
-      }
-      report.recommendations.push({,;
-        }
-        "priorit": "y": 'medium',;'
-        "messag": "e": 'API documentation generation failed',;'
-        "actio": "n": 'Check API route files and try again';'
-      });
-    },;
-,;
-    if (!componentResult.success) {,;
-      }
-      report.recommendations.push({,;
-        }
-        "priorit": "y": 'medium',;'
-        "messag": "e": 'Component documentation generation failed',;'
-        "actio": "n": 'Check component files and try again';'
-      });
-    },;
-,;
-    if (report.summary.totalEndpoints === 0) {,;
-      }
-      report.recommendations.push({,;
-        }
-        "priorit": "y": 'low',;'
-        "messag": "e": 'No API endpoints found',;'
-        "actio": "n": 'Consider adding API routes for better documentation';'
-      });
-    },;
-,;
-    return report;
-  },;
-,;
-  async saveReport(report) {,;
     }
-    try {,;
-
-}
-
-const reportDir = path.dirname(this.reportFile),;
-      if (!fs.existsSync(reportDir)) {,;
-        }
-        fs.mkdirSync(reportDir, { "recursiv": "e": true
-});
-      },;
-,;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
-      this.log(`Report "saved": "to": ${this.reportFil,`}`);`    } catch (error) {,;
+  },
+,
+  async generateComponentDocs() {,
+    try {,
+      this.log($2);
+,
+      const componentsDir = path.join($2);
+      const componentDocs = $2;
+,
+      if (fs.existsSync(componentsDir)) {,
+        const componentFiles = this.getComponentFiles($2);
+,
+        componentFiles.forEach($2);
+          const componentInfo = this.extractComponentInfo($2);
+          if (componentInfo) {,
+            componentDocs.push(componentInfo)
+          }
+        })
+      },
+,
+      const docsContent = $2;
+## Overview,
+This document describes all React components in the application.,
+## Components,
+${componentDocs.map(component = $2;
+### ${component.name},
+,
+${component.description},
+,
+**File**: \`${component.file}\`,
+**Prop: **,
+${component.props.map(prop = $2;
+,
+**Usag: **,
+\`\`\`jsx,
+${component.usage},
+\`\`\`,
+`).join('\n')},
+,
+---,
+Generated by Docs Generator on ${new Date().toISOString()},
+`,
+,
+      fs.writeFileSync($2);
+,
+      return {,
+        succes: true,
+        messag: 'Component documentation generated successfully',
+        component: componentDocs.length
       }
-      this.log(`Error "saving": "report": ${error.messag,`}`);`    }
-  },;
-,;
-  async run() {,;
+    } catch (error) {,
+      return {,
+        succes: false,
+        erro: error.message
+      }
     }
-    this.log('📚 Starting Docs Generator...'),;'
-    this.log(`"Project": "root": ${this.projectRoo,`}`),;`,;
-    try {,;
-      // Create logs directory if it doesn't exist,;'
-
-}
-
-      if (!fs.existsSync(logsDir)) {,;
+  },
+,
+  getComponentFiles(dir) {,
+    const files = $2;
+,
+    const scanDirectory = $2;
+      const items = fs.readdirSync($2);
+      items.forEach($2);
+        const stat = fs.statSync($2);
+,
+        if (stat.isDirectory()) {,
+          scanDirectory(fullPath)
+        } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {,
+          files.push(fullPath)
         }
-        fs.mkdirSync(logsDir, { "recursiv": "e": true
-});
-      },;
-,;
-      // Create docs directory if it doesn't exist,;'
-
-      if (!fs.existsSync(docsDir)) {,;
+      })
+    },
+,
+    scanDirectory($2);
+    return files
+  },
+,
+  extractComponentInfo(filePath, content) {,
+    const fileName = path.basename(filePath, path.extname(filePath)),
+    const componentName = fileName.charAt(0).toUpperCase() + fileName.slice($2);
+,
+    // Extract description from comments,
+    const commentMatch = $2;
+    const description = $2;
+,
+    // Extract props from interface or PropTypes,
+    const props = $2;
+    const propMatch = $2;
+    if (propMatch) {,
+      const propLines = propMatch[1].split($2);
+      propLines.forEach(line = $2;
+        const propMatch = $2;
+        if (propMatch) {,
+          props.push({,
+            nam: propMatch[1],
+            typ: propMatch[2],
+            descriptio: 'Component prop'
+          })
         }
-        fs.mkdirSync(docsDir, { "recursiv": "e": true
-});
-      },;
-,;
-      // Generate all documentation,;
-
-
-
-,;
-      // Generate report,;
-      this.log('📊 Generating documentation report...'),;'
-
-,;
-      // Save report,;
-      await this.saveReport(report),;
-,;
-
-,;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-      // Log summary,;
-      this.log('\n📊 Docs Generator: Summary: '),;
-      this.log(`READM: E: ${report.summary.readmeGenerated ? 'Generated' : 'Failed'}`),;
-      this.log(`API: Docs: ${report.summary.apiDocsGenerated ? 'Generated' : 'Failed'}`),;
-      this.log(`Component: Docs: ${report.summary.componentDocsGenerated ? 'Generated' : 'Failed'}`),;
-      this.log(`Total: Endpoints: ${report.summary.totalEndpoints}`),;
-      this.log(`Total: Components: ${report.summary.totalComponents}`),;
-      this.log(`Duratio: n: ${duration}ms`),;
-,;
-      if (report.recommendations.length > 0) {,;
-        this.log('\n💡 Recommendation: s: '),;
-        report.recommendations.forEach(rec => {,;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
-          this.log(`    Actio: n: ${rec.action}`);
-        });
-      } else {,;
-        this.log('\n✨ Documentation generated successfully!');
+      })
+    },
+,
+    return {,
+      nam: componentName,
+      fil: filePath.replace($2);
+      descriptio: description,
+      prop: props,
+      usag: `<${componentName} />`
+    }
+  },
+,
+  async generateReport(readmeResult, apiResult, componentResult) {,
+    const report = $2;
+      timestam: new Date().toISOString($2);
+      summar: {,
+        readmeGenerate: readmeResult.success,
+        apiDocsGenerate: apiResult.success,
+        componentDocsGenerate: componentResult.success,
+        totalEndpoint: apiResult.endpoints || 0,
+        totalComponent: componentResult.components || 0
+      },
+      detail: {,
+        readm: readmeResult,
+        ap: i: apiResult,
+        component: componentResult},
+      recommendation: []
+    },
+,
+    // Generate recommendations,
+    if (!readmeResult.success) {,
+      report.recommendations.push({,
+        priorit: 'high',
+        messag: 'README generation failed',
+        actio: 'Check file permissions and try again'
+      })
+    },
+,
+    if (!apiResult.success) {,
+      report.recommendations.push({,
+        priorit: 'medium',
+        messag: 'API documentation generation failed',
+        actio: 'Check API route files and try again'
+      })
+    },
+,
+    if (!componentResult.success) {,
+      report.recommendations.push({,
+        priorit: 'medium',
+        messag: 'Component documentation generation failed',
+        actio: 'Check component files and try again'
+      })
+    },
+,
+    if (report.summary.totalEndpoints = $2;
+      report.recommendations.push({,
+        priorit: 'low',
+        messag: 'No API endpoints found',
+        actio: 'Consider adding API routes for better documentation'
+      })
+    },
+,
+    return report
+  },
+,
+  async saveReport(report) {,
+    try {,
+      const reportDir = path.dirname($2);
+      if (!fs.existsSync(reportDir)) {,
+        fs.mkdirSync(reportDir, { recursiv: true})
+      },
+,
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      this.log(`Report saved: to: ${this.reportFile}`)
+    } catch (error) {,
+      this.log(`Error saving: report: ${error.message}`)
+    }
+  },
+,
+  async run() {,
+    this.log($2);
+    this.log($2);
+,
+    try {,
+      // Create logs directory if it doesn't exist,
+      const logsDir = path.dirname($2);
+      if (!fs.existsSync(logsDir)) {,
+        fs.mkdirSync(logsDir, { recursiv: true})
+      },
+,
+      // Create docs directory if it doesn't exist,
+      const docsDir = path.join($2);
+      if (!fs.existsSync(docsDir)) {,
+        fs.mkdirSync(docsDir, { recursiv: true})
+      },
+,
+      // Generate all documentation,
+      const readmeResult = await this.generateReadme($2);
+      const apiResult = await this.generateApiDocs($2);
+      const componentResult = await this.generateComponentDocs($2);
+,
+      // Generate report,
+      this.log($2);
+      const report = await this.generateReport($2);
+,
+      // Save report,
+      await this.saveReport($2);
+,
+      const duration = $2;
+,
+      // Log summary,
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+,
+      if (report.recommendations.length > 0) {,
+        this.log($2);
+        report.recommendations.forEach(rec = $2;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+          this.log(`    Actio: ${rec.action}`)
+        })
+      } else {,
+        this.log('\n✨ Documentation generated successfully!')
       }
-;
-    } catch (error) {,;
-      this.log(`❌ Error running docs: generator: ${error.message}`),;
-      process.exit(1);
+
+    } catch (error) {,
+      this.log($2);
+      process.exit(1)
     }
   }
 },
+<<<<<<< HEAD
+,
+// Run the docs generator,
+const docsGenerator = new DocsGenerator($2);
+docsGenerator.run().catch(error = $2;
+  process.exit(1)
+}),
+=======
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ,
 // Run the docs generator,
 <<<<<<< HEAD
@@ -6900,6 +9814,28 @@ const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMess
 
 }
 
+<<<<<<< HEAD
+docsGenerator.run().catch(error = > {; process.exit(1)});
+
+
+
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME |'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name |'Project'}\n\n`; readmeContent += `${packageJson.description |'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] |command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+docsGenerator.run().catch(error = > {process.exit(1)});
+
+  process.exit(1),
+}),
+ursor/automate-test-improve-and-merge-code-8ee2
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+docsGenerator.run().catch(error = > {; process.exit(1)});
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME |'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name |'Project'}\n\n`; readmeContent += `${packageJson.description |'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] |command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+docsGenerator.run().catch(error = > {process.exit(1)});
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME |'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name |'Project'}\n\n`; readmeContent += `${packageJson.description |'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] |command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+docsGenerator.run().catch(error = > {process.exit(1)});
+
+=======
 
 
 }
@@ -6999,6 +9935,7 @@ docsGenerator.run().catch(error = > {; process.exit(1)});
 '`
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME |'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name |'Project'}\n\n`; readmeContent += `${packageJson.description |'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] |command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
 docsGenerator.run().catch(error = > {process.exit(1)});
+<<<<<<< HEAD
 
   process.exit(1),
 }),
@@ -7078,6 +10015,12 @@ docsGenerator.run().catch(error = > {process.exit(1)});'`
 >>>>>>> origin/chore/fix-lint-and-merge
 docsGenerator.run().catch(error = > {process.exit(1)});
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr / bin / env node const { exec_sync } = require ('child_process'); const fs = require ('fs'); const path = require ('path'); class DocsGenerator { constructor () { this.process_name = process.env.PM2_PROCESS_NAME || 'docs - generator'; this.auto_generate = process.env.AUTO_GENERATE === 'true'; this.update_readme = process.env.UPDATE_README === 'true'; this.api_docs = process.env.API_DOCS === 'true'; this.component_docs = process.env.COMPONENT_DOCS === 'true'; this.log_file = 'logs / pm2 / docs - generator.log'; this.error_file = 'logs / pm2 / docs - generator - error.log'; this.ensureLogDirectory ()} ensureLogDirectory () { const log_dir = path.dirname (this.log_file); if () { fs.mkdir_sync (log_dir, { recursive: true })} } log (message, level = 'INFO') { const timestamp = new Date ().toISOString ()) {
   $2
 } const log_message = `[${timestamp}] [${level}] ${message}\n`; console.log (log_message.trim ()); try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Failed to write to log file:', error.message)} } error (message) { this.log (message, 'ERROR'); try { fs.appendFileSync (this.error_file, `[${new Date ().toISOString ()}] ERROR: ${message}\n`)} catch (err) { console.error ('Failed to write to error file:', err.message)} } async generate_readme () { this.log ('Generating README documentation...'); try { const package_json = JSON.parse (fs.readFileSync ('package.json', 'utf8')); let readme_content = `# ${package_json.name || 'Project'}\n\n`; readme_content += `${package_json.description || 'A modern web application'}\n\n`; readme_content += `![Version](https: readme_content += `![Node](https: readme_content += `![License](https: readme_content += `## Table of Contents\n\n`; readme_content += `- [Installation](#installation)\n`; readme_content += `- [Usage](#usage)\n`; readme_content += `- [Scripts](#scripts)\n`; readme_content += `- [API Documentation](#api - documentation)\n`; readme_content += `- [Contributing](#contributing)\n`; readme_content += `- [License](#license)\n\n`; readme_content += `## Installation\n\n`; readme_content += `\`\`\`bash\n`; readme_content += `npm install\n`; readme_content += `\`\`\`\n\n`; readme_content += `## Usage\n\n`; readme_content += `\`\`\`bash\n`; readme_content += `# Development\n`; readme_content += `npm run dev\n\n`; readme_content += `# Production build\n`; readme_content += `npm run build\n`; readme_content += `npm run start\n`; readme_content += `\`\`\`\n\n`; // Check condition
@@ -7220,6 +10163,7 @@ docs_generator.run ().catch (error = > { process.exit (1)});
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   process.exit(1)
 }),
 origin/main,
@@ -7261,3 +10205,19 @@ const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running
 docsGenerator.run().catch(error = > {process.exit(1)});
   process.exit(1)
 }),
+=======
+<<<<<<< HEAD
+  process.exit(1)
+}),
+origin/main
+origin/automation-improvements-final
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); const path = require('path'); class DocsGenerator { constructor() { this.processName = process.env.PM2_PROCESS_NAME |'docs-generator'; this.autoGenerate = process.env.AUTO_GENERATE === 'true'; this.updateReadme = process.env.UPDATE_README === 'true'; this.apiDocs = process.env.API_DOCS === 'true'; this.componentDocs = process.env.COMPONENT_DOCS === 'true'; this.logFile = 'logs/pm2/docs-generator.log'; this.errorFile = 'logs/pm2/docs-generator-error.log'; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile,logMessage)} catch (error) { console.error('Failed to write to log file:',error.message)} } error(message) { this.log(message,'ERROR'); try { fs.appendFileSync(this.errorFile,`[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) { console.error('Failed to write to error file:',err.message)} } async generateReadme() { this.log('Generating README documentation...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); let readmeContent = `# ${packageJson.name |'Project'}\n\n`; readmeContent += `${packageJson.description |'A modern web application'}\n\n`; readmeContent += `![Version](https: readmeContent += `![Node](https: readmeContent += `![License](https: readmeContent += `## Table of Contents\n\n`; readmeContent += `- [Installation](#installation)\n`; readmeContent += `- [Usage](#usage)\n`; readmeContent += `- [Scripts](#scripts)\n`; readmeContent += `- [API Documentation](#api-documentation)\n`; readmeContent += `- [Contributing](#contributing)\n`; readmeContent += `- [License](#license)\n\n`; readmeContent += `## Installation\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `npm install\n`; readmeContent += `\`\`\`\n\n`; readmeContent += `## Usage\n\n`; readmeContent += `\`\`\`bash\n`; readmeContent += `# Development\n`; readmeContent += `npm run dev\n\n`; readmeContent += `# Production build\n`; readmeContent += `npm run build\n`; readmeContent += `npm run start\n`; readmeContent += `\`\`\`\n\n`; if (packageJson.scripts) { readmeContent += `## Scripts\n\n`; readmeContent += `| Script | Description |\n`; readmeContent += `|--------|-------------|\n`; for (const [script,description] of Object.entries(packageJson.scripts)) { const desc = this.getScriptDescription(script,description); readmeContent += `| \`${script}\` | ${desc} |\n`} readmeContent += `\n`} if (this.apiDocs) { readmeContent += `## API Documentation\n\n`; readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`} readmeContent += `## Contributing\n\n`; readmeContent += `1. Fork the repository\n`; readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`; readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`; readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`; readmeContent += `5. Open a Pull Request\n\n`; readmeContent += `## License\n\n`; readmeContent += `This project is licensed under the ${packageJson.license |'MIT'} License.\n\n`; fs.writeFileSync('README.md',readmeContent); this.log('README.md generated successfully'); return { success: true,file: 'README.md' }} catch (error) { this.error(`Failed to generate README: ${error.message}`); return { success: false,error: error.message }} } getScriptDescription(script,command) { const descriptions = { 'dev': 'Start development server','build': 'Build for production','start': 'Start production server','test': 'Run tests','lint': 'Run linter','lint:fix': 'Fix linting issues','type-check': 'Run TypeScript type checking','clean': 'Clean build artifacts','check': 'Run all checks (lint,type-check,test)','precommit': 'Pre-commit hook','prepare': 'Prepare script for git hooks' }; return descriptions[script] |command} async generateApiDocs() { this.log('Generating API documentation...'); try { const apiFiles = this.findApiFiles(); let apiDocs = `# API Documentation\n\n`; apiDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of apiFiles) { const fileDocs = this.extractApiDocumentation(file); if (fileDocs) { apiDocs += fileDocs} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'API.md'),apiDocs); this.log('API documentation generated successfully'); return { success: true,file: 'docs/API.md' }} catch (error) { this.error(`Failed to generate API docs: ${error.message}`); return { success: false,error: error.message }} } findApiFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.js','.ts','.jsx','.tsx'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const apiDirs = ['api','pages/api','src/api','lib/api','routes']; for (const dir of apiDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractApiDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@api') |comment.includes('@route')) { docs += this.formatApiComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatApiComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateComponentDocs() { this.log('Generating component documentation...'); try { const componentFiles = this.findComponentFiles(); let componentDocs = `# Component Documentation\n\n`; componentDocs += `Generated on: ${new Date().toISOString()}\n\n`; for (const file of componentFiles) { const componentDoc = this.extractComponentDocumentation(file); if (componentDoc) { componentDocs += componentDoc} } const docsDir = 'docs'; if (!fs.existsSync(docsDir)) { fs.mkdirSync(docsDir,{ recursive: true })} fs.writeFileSync(path.join(docsDir,'COMPONENTS.md'),componentDocs); this.log('Component documentation generated successfully'); return { success: true,file: 'docs/COMPONENTS.md' }} catch (error) { this.error(`Failed to generate component docs: ${error.message}`); return { success: false,error: error.message }} } findComponentFiles() { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { if (!['node_modules','.git','dist','build','coverage','logs'].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) { const ext = path.extname(item); if (['.jsx','.tsx','.vue','.svelte'].includes(ext)) { files.push(fullPath)} } } } catch (error) { } } const componentDirs = ['components','src/components','lib/components','pages']; for (const dir of componentDirs) { if (fs.existsSync(dir)) { scanDirectory(dir)} } return files} extractComponentDocumentation(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let docs = `## ${path.basename(filePath)}\n\n`; let inComment = false; let commentLines = []; for (let i = 0; i < lines.length; i++) { const line = lines[i]; if (line.trim().startsWith('')) { inComment = false; const comment = commentLines.join('\n'); if (comment.includes('@component') |comment.includes('@props')) { docs += this.formatComponentComment(comment)} commentLines = []} else { commentLines.push(line.replace(/^\s*\*\s?/,''))} } } return docs} catch (error) { this.log(`Failed to extract component docs from ${filePath}: ${error.message}`,'WARNING'); return null} } formatComponentComment(comment) { let formatted = '```\n'; formatted += comment.replace(/@\w+/g,'').trim(); formatted += '\n```\n\n'; return formatted} async generateDocumentationReport() { this.log('Generating documentation report...'); try { const report = { timestamp: new Date().toISOString(),processName: this.processName,readmeGenerated: this.updateReadme ? await this.generateReadme() : null,apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,environment: { nodeVersion: process.version,platform: process.platform,cwd: process.cwd() } }; const reportFile = `docs-reports/docs-generation-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(report,null,2)); this.log(`Documentation report saved to: ${reportFile}`); return report} catch (error) { this.error(`Failed to generate documentation report: ${error.message}`); return null} } async start() { this.log(`Starting ${this.processName}...`); await this.generateDocumentationReport(); const interval = 2 * 60 * 60 * 1000; setInterval(async () => { this.log('Running scheduled documentation generation...'); await this.generateDocumentationReport()},interval); this.log(`${this.processName} started successfully`)} } if (require.main === module) { const generator = new DocsGenerator(); generator.start().catch(error => { console.error('Documentation generator failed to start:',error); process.exit(1)})} module.exports = DocsGenerator;
+docsGenerator.run().catch(error = > {process.exit(1)});
+  process.exit(1)
+}),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

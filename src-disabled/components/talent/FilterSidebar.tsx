@@ -176,6 +176,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {isMobileFilterOpen && (;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <Button
           onClick={() =>
             window.dispatchEvent(new CustomEvent(closeMobileFilter'))
@@ -195,6 +197,7 @@ export /**
  * FilterSidebar - Function description
 import { FilterSidebarProps } from @/types / filters';
 =======
+>>>>>>> merged-prs-20250907-203621
 import { FilterSidebarProps } from '@/types / filters';
 >>>>>>> origin/chore/fix-lint-and-merge
 export /**;

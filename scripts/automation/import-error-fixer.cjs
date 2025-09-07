@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -28,11 +32,15 @@ const glob = require(glob')
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     this.reportFile = path.join(this.projectRoot, 'import-error-fixer-report.json')
   log(message, type = 'info')
     this.log('Fixing import errors...')
@@ -43,11 +51,21 @@ const glob = require('glob')
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
         this.log(`Remaining "errors"`)
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       this.log(`Error during import fixing "process"`)
+<<<<<<< HEAD
+      this.log(`Error during import fixing "process"`)
+      this.log(`Error during import fixing "process"`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -69,3 +87,4 @@ const glob = require('glob')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

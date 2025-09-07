@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 import React, { useState } from 'react';
@@ -21,6 +23,7 @@ import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Button } from '@/components/ui/button';
 import {;
   Form,;
@@ -85,6 +88,8 @@ interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   userDetails?: UserProfile
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -93,6 +98,7 @@ import React, { useState } from react;
 import { Button } from '@/components/ui/ button';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { Button } from @/components / ui / button;
 import {}
@@ -101,6 +107,8 @@ import {}
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/ form';
@@ -113,6 +121,7 @@ import { Textarea } from '@/components/ui/ textarea';
 import { Input } from @/components / ui / input;'
 import { Textarea } from '@/components / ui / textarea;
 =======
+>>>>>>> merged-prs-20250907-203621
   FormMessage,';
 } from '@/components / ui / form';'
 import { Input } from '@/components / ui / input';'
@@ -122,6 +131,8 @@ import { Textarea } from '@/components / ui / textarea';
   SelectTrigger,
   SelectValue,
   SelectContent,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   SelectItem,
 } from '@/components/ui/ select';
@@ -145,6 +156,7 @@ interface InterviewRequestFormProps {
 } from '@/components / ui / select';
 import { Calendar } from @/components / ui / calendar';
 =======
+>>>>>>> merged-prs-20250907-203621
   SelectItem,'
 } from '@/components / ui / select';'
 import { Calendar } from '@/components / ui / calendar';
@@ -165,6 +177,10 @@ import { use_interviews } from '@/hooks / use_interviews';
 import { logErrorToProduction } from @/utils / production_logger';
 interface InterviewRequestFormProps {}
   talent: TalentProfile;
+<<<<<<< HEAD
+  on_close: () => void;
+  user_details?: UserProfile;
+=======
 <<<<<<< HEAD
 import { cn  } from '@/lib/utils;
 import { zodResolver  } from @hookform/resolvers/zod';
@@ -214,6 +230,7 @@ if ( {) {$2;
   on_close: () => void;
   user_details?: UserProfile;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 const form_schema = z.object ({}
   date: z;
     .date ({'
@@ -336,6 +353,8 @@ interface InterviewRequestFormProps {}
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       const scheduled_date = new Date (dateTimeString)// Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration)await request_interview ({import React, { useState } from "react,import { Button } from @/components/ui/button",import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form,import { Input } from @/components/ui/input",import { Textarea } from "@/components/ui/textarea,import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from @/components/ui/select",import { Calendar } from "@/components/ui/calendar,import { Popover, PopoverTrigger, PopoverContent } from @/components/ui/popover",import { TalentProfile } from "@/types/talent,import type { UserProfile } from @/types/auth",import { cn } from "@/lib/utils,import { zodResolver } from @hookform/resolvers/zod",import { useForm, ControllerRenderProps } from "react-hook-form,import { z } from zod",import { format, addDays } from "date-fns,import { Form;
   FormField;
@@ -421,6 +440,7 @@ import { toast } from @/components/ui/use-toast",import { useInterviews } from "
             </FormItem>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 const formSchema = z.object({
   date: z.date({
     required_error: Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -592,9 +612,12 @@ export function InterviewRequestForm(): any ({
             </FormItem>
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         />;
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title>;
 =======
+>>>>>>> merged-prs-20250907-203621
         />
 
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
@@ -603,6 +626,8 @@ export function InterviewRequestForm(): any ({
               <FormLabel>Interview Title</FormLabel>;
             field: ControllerRenderProps < z.infer < typeof form_schema>, 'title'>;
           }) => (            <FormItem>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               <FormLabel > Interview Title</FormLabel>;<FormControl>;
                 <Input placeholder=Brief title for the interview {...field} />;
@@ -621,6 +646,7 @@ export function InterviewRequestForm(): any ({
                         className={cn("w-full pl-3 text-left font-normal,!field.value && text-muted-foreground";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <FormLabel > Interview Title</FormLabel>;
 
               <FormControl>;'
@@ -645,6 +671,9 @@ export function InterviewRequestForm(): any ({
                           "w-full pl-3 text-left font-normal",
                           !field.value && text-muted-foreground"
                         )}
+<<<<<<< HEAD
+                      >
+=======
 <<<<<<< HEAD
                       >;
 const formSchema = null;
@@ -685,6 +714,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       >
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, date'>;
             }) => (;'
@@ -717,6 +747,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </FormItem>
 
 <<<<<<< HEAD
+                      selected={field && field.value}
+                      onSelect={field && field.onChange}
+                      disabled={date =>;
+=======
+<<<<<<< HEAD
                       initialFocus;
                       className="p-3 pointer-events-auto;
                     />;
@@ -748,6 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onSelect={field && field.onChange}
                       disabled={date =>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                         date < new Date() || date > addDays(new Date(), 90);
                       }                      initialFocus;'
                       className='p-3 pointer-events-auto;
@@ -863,11 +899,14 @@ interface InterviewRequestFormProps {
         </div>;
         <FormField;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           control={form.control}
           name="title;
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, title"> }) => (<FormItem>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           control={form.control}"
           name=title;"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title> }) => (;
@@ -882,6 +921,8 @@ interface InterviewRequestFormProps {
         />;
         <div className=grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             control={form.control}
             name="date;
@@ -899,6 +940,7 @@ interface InterviewRequestFormProps {
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, date"> }) => (;"
               <FormItem className=flex flex-col>;
 =======
+>>>>>>> merged-prs-20250907-203621
             control={form.control}"
             name="date";"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (;"
@@ -916,6 +958,8 @@ interface InterviewRequestFormProps {
                     <Calendar;
                       mode="single";
                       selected={field.value}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       on_select={field.on_change}
                       disabled={date =>;
@@ -966,6 +1010,7 @@ interface InterviewRequestFormProps {
                     ))}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
@@ -987,6 +1032,8 @@ interface InterviewRequestFormProps {
                 <FormMessage />;
               </FormItem>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             )}
           />;
         </div>;
@@ -997,6 +1044,7 @@ interface InterviewRequestFormProps {
             name=duration
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField;
@@ -1012,6 +1060,8 @@ interface InterviewRequestFormProps {
             render={({}
               field}: {}
               field: ControllerRenderProps<
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 z.infer<typeof formSchema>,
                 'duration'
@@ -1055,6 +1105,7 @@ interface InterviewRequestFormProps {
                 z.infer < typeof form_schema>,duration;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 'duration'
               >
@@ -1100,6 +1151,8 @@ interface InterviewRequestFormProps {
                   </SelectContent>;
                 </Select>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <FormMessage />;/>;<FormField;
             control={form && form.control}
             name='platform;
@@ -1109,6 +1162,7 @@ interface InterviewRequestFormProps {
             control={form.control}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 <FormMessage />;
           />;
 
@@ -1131,13 +1185,18 @@ interface InterviewRequestFormProps {
               <FormItem>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 <FormLabel>Platform</FormLabel>
                 z && z.infer<typeof formSchema>,
                 'platform';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             name=platform;render={({field;
             }: {/>;
@@ -1149,6 +1208,7 @@ interface InterviewRequestFormProps {
                 z && z.infer<typeof formSchema>,'platform';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               >;
             }) => (              <FormItem>;
                 <FormLabel>Platform</FormLabel>;
@@ -1156,10 +1216,13 @@ interface InterviewRequestFormProps {
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,platform;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 'platform';
               >;
@@ -1174,6 +1237,8 @@ interface InterviewRequestFormProps {
                       <SelectValue placeholder=Select platform' />;
                     </SelectTrigger>;
                   </FormControl>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   <SelectContent>;
                     <SelectItem value='zoom>Zoom</SelectItem>;<SelectItem value=google - meet'>Google Meet</SelectItem>;<SelectItem value='teams>Microsoft Teams</SelectItem>;
@@ -1191,6 +1256,7 @@ interface InterviewRequestFormProps {
             control={form.control}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   <SelectContent>;'
                   <SelectContent>;
                     <SelectItem value='zoom'>Zoom</SelectItem>;
@@ -1209,6 +1275,8 @@ interface InterviewRequestFormProps {
             render={({
               field
             }: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 z && z.infer<typeof formSchema>,
@@ -1229,6 +1297,7 @@ interface InterviewRequestFormProps {
                 z.infer < typeof form_schema>,'meeting_link;
                 z && z.infer<typeof formSchema>,
 =======
+>>>>>>> merged-prs-20250907-203621
                 z && z.infer<typeof formSchema>,;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -1243,6 +1312,8 @@ interface InterviewRequestFormProps {
             }) => (              <FormItem>;
                 <FormLabel > Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   <Input;
                     placeholder={`Add your ${form.watch (platform')} link here`}
@@ -1261,6 +1332,7 @@ interface InterviewRequestFormProps {
                     placeholder={`Add your ${form.watch('platform)} link here`}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                     {...field}
                   />;
@@ -1278,6 +1350,8 @@ interface InterviewRequestFormProps {
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           />
         )}
@@ -1302,6 +1376,7 @@ interface InterviewRequestFormProps {
           }: {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           />;
         )}
 
@@ -1321,6 +1396,8 @@ interface InterviewRequestFormProps {
 
         <FormField;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           name='notes';render={({field;
           }: {field: ControllerRenderProps<z && z.infer<typeof formSchema>, notes>;
           }) => (            <FormItem>;
@@ -1338,6 +1415,7 @@ interface InterviewRequestFormProps {
                   className=h-20";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           control={form.control}"
           name=notes"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes> }) => (
@@ -1357,6 +1435,11 @@ interface InterviewRequestFormProps {
         />
 
 <<<<<<< HEAD
+        <div className="flex justify-end gap-4 pt-4">
+
+          <Button variant="outline" onClick={onClose} type="button">
+=======
+<<<<<<< HEAD
 
         <div className="flex justify-end gap-4 pt-4>
           <Button variant=outline" onClick={onClose} type="button>
@@ -1368,6 +1451,7 @@ interface InterviewRequestFormProps {
 >>>>>>> origin/chore/fix-lint-and-merge
 
           <Button variant="outline onClick={onClose} type=button">
+>>>>>>> merged-prs-20250907-203621
 
             Cancel
 
@@ -1380,10 +1464,13 @@ interface InterviewRequestFormProps {
       </form>
     </Form>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 toast ({}finally {
   setIsSubmitting (false) ;
@@ -1396,6 +1483,8 @@ toast ({}finally {
 }/> <div className=grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
 
             </FormItem>)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         />;
         <div className=flex justify-end gap-4 pt-4">;
@@ -1478,6 +1567,7 @@ toast ({}finally {
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         />;'
         <div className='flex justify - end gap - 4 pt - 4>;
           <Button variant='outline' on_click={on_close} type=button>;
@@ -1521,6 +1611,9 @@ toast ({}finally {
 toast ({}finally {
   setIsSubmitting (false) ;
 <<<<<<< HEAD
+}";
+=======
+<<<<<<< HEAD
 };
 }<CalendarIcon className=ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0 align=start" > <Calendar initial_focus className="p - 3 pointer - events - auto /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {field.on_change;
 }default_value= {field.value ;
@@ -1540,6 +1633,7 @@ toast ({}finally {
 =======
 }";
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
@@ -1579,6 +1673,9 @@ toast ({}finally {
 }/> </Button> </div> </form> </Form>) ;
 <<<<<<< HEAD
 }'"
+=======
+<<<<<<< HEAD
+}'"
 }'
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<CalendarIcon className=ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0 align=start" > <Calendar initialFocus className="p-3 pointer-events-auto /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {field.onChange ;
@@ -1598,3 +1695,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

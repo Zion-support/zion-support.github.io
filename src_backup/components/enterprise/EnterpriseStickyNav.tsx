@@ -131,6 +131,8 @@ export function EnterpriseStickyNav() {
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
         <div className="flex items-center justify-between h-12">;
@@ -150,6 +152,7 @@ export function EnterpriseStickyNav() {
       <div className=container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12>
 =======
+>>>>>>> merged-prs-20250907-203621
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
@@ -174,6 +177,8 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import { useState  } from 'react;
@@ -275,6 +280,7 @@ export function EnterpriseStickyNav() {const [open, setOpen]  = useState(false)i
               <Link href="#testimonials className=text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/enterprise/EnterpriseStickyNav.tsx
     </nav>;
   );
@@ -298,11 +304,15 @@ export function EnterpriseStickyNav() {;
             className=md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
 <<<<<<< HEAD
+            aria-label="Toggle navigation";
+=======
+<<<<<<< HEAD
             aria-label="Toggle navigation;
             aria-expanded={open}
 =======
             aria-label="Toggle navigation";
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     </nav>
 
@@ -321,6 +331,8 @@ export function EnterpriseStickyNav() {;
               <Link href="#testimonials className=text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               <Link href="#contact className=text-sm font-medium hover:text-primary">Contact Us</Link>;
 
@@ -362,11 +374,14 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             </li>;
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -377,6 +392,7 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
         </div>;
       </div>;)}
     </nav>)})}
+>>>>>>> merged-prs-20250907-203621
 
   );
 }

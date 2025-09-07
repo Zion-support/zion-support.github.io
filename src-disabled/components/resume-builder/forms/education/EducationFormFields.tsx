@@ -11,6 +11,8 @@ import { z } from 'zod';
 import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
@@ -23,11 +25,14 @@ import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Button } from '@/components/ui/ button';
 import { Textarea } from '@/components/ui/ textarea';
@@ -52,6 +57,7 @@ import { Alert, AlertDescription } from '@/components/ui/ alert;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 
@@ -60,6 +66,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/ form';
@@ -72,6 +80,7 @@ import { EducationFormFieldsProps } from ./types';
 import { Education } from '@/types/ resume;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { Education } from @/types / resume';
 // Define schema for form validation;
@@ -135,6 +144,10 @@ import { EducationFormFieldsProps  } from ./types';
 // Define schema for form validation
 const educationSchema = null;
 
+<<<<<<< HEAD
+  return (
+
+=======
 <<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
@@ -208,6 +221,7 @@ const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.han
 =======
   return (
 
+>>>>>>> merged-prs-20250907-203621
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
 >>>>>>> origin/chore/fix-lint-and-merge
 </div>
@@ -219,15 +233,21 @@ pr-12325
                 <FormLabel > Institution</FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <Input;
                     placeholder=University of California, MIT, etc.;{...field}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   <Input;'
                     placeholder='University of California, MIT, etc.;
                     {...field}
                   />;
                 </FormControl>;
+<<<<<<< HEAD
+                <FormMessage />;
+=======
 <<<<<<< HEAD
                 <FormMessage />;control={form.control}name="institution;
             render={({ field }: { field: any }) => (<FormItem>;
@@ -291,6 +311,7 @@ pr-12325
 =======
                 <FormMessage />;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             control={form.control}
             name=institution""
 
@@ -358,10 +379,13 @@ pr-12325
 
             )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           />
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           />;
           />
 
@@ -385,6 +409,14 @@ pr-12325
             <FormField
               control={form.control}
 
+<<<<<<< HEAD
+              )}
+
+            />;
+'
+            {!form && form.watch('is_current') && (;
+
+=======
 <<<<<<< HEAD
 
 
@@ -472,6 +504,7 @@ pr-12325
           name=location';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <FormField;
                 control={form && form.control}'
                 name=end_date
@@ -531,9 +564,12 @@ pr-12325
               control={form.control}'
               name='is_current';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               render={({ field }: { field: any }) => ('
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2>                  <FormControl>;
               render={({ field }: { field: any }) => (
@@ -548,11 +584,14 @@ pr-12325
                   </div>;
                 </FormItem>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             />;
             {!form.watch ('is_current) && (<FormField;
                 control={form.control}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <FormField;
                 control={form.control}
@@ -572,6 +611,8 @@ pr-12325
           control={form.control}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         />;
 
 
@@ -581,6 +622,7 @@ pr-12325
           control={form && form.control}
           name=description'
 =======
+>>>>>>> merged-prs-20250907-203621
           name='description'
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -590,6 +632,8 @@ pr-12325
                 <Textarea'
                   placeholder='Notable achievements, courses, activities...''
                   className='min-h-[100px]'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           control={form.control}/>;<FormField;
           control={form && form.control}control={form.control}name=description';
@@ -601,6 +645,7 @@ pr-12325
                   className=min-h-[100px]';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             </FormItem>)}
         />;
@@ -610,6 +655,8 @@ pr-12325
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
@@ -634,6 +681,7 @@ pr-12325
                   className=min-h-[100px]";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           name="location
           render={({ field }: { field: any }) => (
@@ -681,6 +729,8 @@ pr-12325
       </form>
     </Form>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;{isEditing ? 'Update' : Add} Education;
@@ -692,6 +742,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   )
         />;
@@ -700,12 +751,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDescription>{error}</AlertDescription>;
           </Alert>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         )}<div className='flex justify-between pt-2'>;
           <Button type=button variant='outline' onClick={onCancel}>            {isEditing ? Cancel : 'Back'}
           </Button>;<Button type=submit disabled={isLoading}>;
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         )}
 
             {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin />}'
@@ -715,11 +769,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </form>;
     </Form>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   )}</FormItem>)}
         />;
         {error && (<Alert variant='destructive>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   );
 
@@ -735,15 +792,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </form>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Form>)}})
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </Form>);
 }
 }
 }})
 }
 <<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

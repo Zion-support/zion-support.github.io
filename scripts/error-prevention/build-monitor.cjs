@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 =======
@@ -23,6 +26,8 @@ class BuildMonitor {}
   constructor() {}
     this.isRunning = false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -33,18 +38,35 @@ class BuildMonitor {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null}
   async start() {}
 
     this.isRunning = true;
 <<<<<<< HEAD
+    
+    // Initial build check;
+    await this.runBuildCheck();
+    
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
     // Initial build check;
     await this.runBuildCheck();
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
+<<<<<<< HEAD
+
+    
+    
+
+    
+
+
+=======
 
 
     
@@ -110,10 +132,15 @@ class BuildMonitor {}
       let errorOutput = ;;';
       child.stdout.on('data, (data) => {}
 =======
+>>>>>>> merged-prs-20250907-203621
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
+<<<<<<< HEAD
+      
+      
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,10 +153,13 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
@@ -140,11 +170,24 @@ class BuildMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+>>>>>>> merged-prs-20250907-203621
 
 =======
 
 =======
 "
+<<<<<<< HEAD
+      let output = ;';';
+      let errorOutput = ;';';
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+});
+
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
@@ -164,12 +207,31 @@ class BuildMonitor {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on('close, (code) => {}
 =======
+>>>>>>> merged-prs-20250907-203621
+
 
 <<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+      child.on('close', (code) => {}
+        if ( {})
 
+          console.log('Build check passed ✓')) {}
+     {}
+          console.log('Build check passed ✓')}
+          this.lastBuildTime = new Date()} else {}
+          console.log('Build check failed ✗');
+          
+          // Attempt to fix common build issues;
+          this.attemptBuildFix()};
+      })} catch (error) {}
+      console.error('Error running build "check": ', error.message)}
+  }
+  async attemptBuildFix() {}
+    try {}
+      console.log('Attempting to fix build issues...');
+      
+      
+      // Clean build directory;
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -233,10 +295,20 @@ class BuildMonitor {}
           console.log(Clean completed, retrying build...')) {}
           console.log('Clean completed, retrying build...)}
 =======
+>>>>>>> merged-prs-20250907-203621
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+<<<<<<< HEAD
+
+
+
+
+      cleanChild.on('close', (code) => {}
+          console.log('Clean completed, retrying build...')) {}
+          console.log('Clean completed, retrying build...')}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -259,6 +331,7 @@ class BuildMonitor {}
           console.log('Clean completed, retrying build...')) {}
           console.log('Clean completed, retrying build...')};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           this.runBuildCheck()} else {}
           console.log(Clean failed')}
       console.error('Error running build "fix": , error.message)}
@@ -273,16 +346,33 @@ class BuildMonitor {}
 =======
     console.log('Stopping Build Monitor...');
 <<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
     this.isRunning = false;
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     if ( {})
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')) {}
+<<<<<<< HEAD
+    console.log('Build Monitor stopped')}}
+// Start the monitor if run directly
+  const monitor = new BuildMonitor) {}
+  const monitor = new BuildMonitor}(;);
+  
+  // Handle graceful shutdown;
+  process.on('SIGINT', () => {}
+    monitor.stop()
+    process.exit(0)}
+});
+  
+=======
     console.log('Build Monitor stopped')}};
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -324,10 +414,20 @@ module.exports = BuildMonitor;
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   process.on('SIGTERM', () => {}
-    monitor.stop();
+    monitor.stop()
     process.exit(0)}
 });
+<<<<<<< HEAD
+module.exports = BuildMonitor;
+  
+  monitor.start().catch(console.error)};
+
+module.exports = BuildMonitor;
+module.exports = BuildMonitor;
+module.exports = BuildMonitor;
+=======
 <<<<<<< HEAD
   monitor.start().catch(console.error)};
 <<<<<<< HEAD
@@ -350,14 +450,17 @@ module.exports = BuildMonitor;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
   // Handle graceful shutdown;
 
   monitor.start().catch(console.error)}
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

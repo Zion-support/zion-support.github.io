@@ -1,3 +1,5 @@
+<<<<<<< HEAD:pages/api/jobs/[id].ts
+=======
 if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
@@ -101,27 +103,23 @@ if (job.status = status as Job["status"]) {
     return;
   }
 
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/jobs/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    res.status(200).json({ job: { id: req.query.id } });
-  } else if (req.method === 'PATCH') {
-    res.status(200).json({ message: 'Job updated' });
-  } else {
-    res.setHeader('Allow', ['GET', 'PATCH']);
-    res.status(405).end('Method Not Allowed');
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
-}
+
+  try {
+    // TODO: Implement id logic
+    res.status(200).json({ message: 'id endpoint' });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in id:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/jobs/[id].ts
+=======
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../utils/db';
@@ -303,4 +301,5 @@ res.setHeader("Allow", "GET, PATCH");
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
 
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/jobs/[id].ts
 }

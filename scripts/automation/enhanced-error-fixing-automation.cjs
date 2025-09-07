@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +32,7 @@
             } else if (line.includes(")) {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 
 
@@ -36,20 +45,23 @@
           const newLines = [];
           let inConflict = false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
           
           for (const line of lines) {
-<<<<<<< HEAD
               continue;
             } else if (line.includes("")) {
+<<<<<<< HEAD
+=======
 =======
             if (line.includes("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               inConflict = false;
               continue;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             } else if (!inConflict) {
               newLines.push(line);
             }
@@ -111,10 +123,88 @@ if (require.main === module) {
 
 module.exports = EnhancedErrorFixingAutomation;
 <<<<<<< HEAD
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
+<<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+          // Simple merge conflict resolution - keep the HEAD version
+          const lines = content.split("\n");"
+          const newLines = []
+          let inConflict = false
+  for($2) {
+              continue
+            } else if (line.includes("")) {              inConflict = false
+              continue
+            } else if (!inConflict) {
+              newLines.push(line)
+          "
+          fs.writeFileSync(file, newLines.join("\n"));"
+          this.fixesApplied.push({"
+            type: "merge_conflict","
+            file: file,"
+            description: "Resolved merge conflicts)
+          })
+  getTypeScriptFiles($2) {
+    const files = [];"
+    const srcDir = path.join(process.cwd(), "src");"
+    function walkDir(dir) {
+      if (!fs.existsSync(dir)) return
+      const items = fs.readdirSync(dir)
+  for($2) {
+        const fullPath = path.join(dir, item)
+        const stat = fs.statSync(fullPath)
+        if (stat.isDirectory()) {
+          walkDir(fullPath);"
+        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {"
+          files.push(fullPath)
+    walkDir(srcDir)
+    return files
+  async generateReport() {
+    const duration = Date.now() - this.startTime
+    const report = {
+      timestamp: new Date().toISOString(),`
+      duration: `${duration}ms`,
+      fixesApplied: this.fixesApplied,
+      summary: {,
+  totalFixes: this.fixesApplied.length,"
+        mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict").length;"
+    }
+    const reportPath = path.join(this.projectRoot, "error-fixing-report.json");"
+
+    return report
+  async run() {"
+    this.log("Starting Enhanced Error Fixing Automation...");"
+    try {
+  // TODO: Implement
+      // Run all fix operations
+      await this.fixMergeConflicts()
+      // Generate report
+      const report = await this.generateReport();`
+      this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`)
+      throw error
+// Run the automation if called directly
+  if($2) {
+  const automation = new EnhancedErrorFixingAutomation()
+  automation.run().catch(console.error)
+module.exports = EnhancedErrorFixingAutomation
+//
+
+//
+///usr/bin/env node
+console.log( Starting Enhanced Error Fixing Automation System...")
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,6 +241,7 @@ const fs = require("fs")
 const path = require("path")
 console.log( Starting Enhanced Error Fixing Automation System...")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "AUTOMATION_INTERVAL"
   MAX_RETRIES
   "LOG_LEVEL": process.env.LOG_LEVEL || info
@@ -172,7 +263,10 @@ console.log( Starting Enhanced Error Fixing Automation System...")
         "stdio": "pipe"
       const errorOutput = error.stdout || error.stderr || "
     const lines = output.split("\n")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "file"
           line
           "column"
@@ -182,7 +276,10 @@ console.log( Starting Enhanced Error Fixing Automation System...")
           "message"
   let content = fs.readFileSync(error.file, "utf8")
       const lines = content.split("\n")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       if (error.message.includes("Cannot find module")
         error.message.includes(Property)
         error.message.includes("does not exist")
@@ -196,8 +293,11 @@ console.log( Starting Enhanced Error Fixing Automation System...")
           "fix": TypeScript error fix
   console.warn(⚠  Could not fix TypeScript error in ${error.file}:")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const moduleName = error.message.match(/Cannot find module "([^"]+)"
         new RegExp(import.*from\\s+[]${moduleName}[], "g"),import {   } from "${moduleName}"
 const { execSync, spawn } = require("child_process")"
@@ -255,8 +355,11 @@ export default function"
         content = content.replace(/onClick=/g, onClick=)
   console.log(`" Fixing type annotations..."`)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   let content = fs.readFileSync(file, "utf8")
         content = content.replace(/:\s*any"/g, ": any")
         content = content.replace(/:\s*string"/g, ": string")
@@ -268,7 +371,10 @@ export default function"
   console.warn(⚠  Could not fix type annotations in ${file}:")
   console.log(" Fixing interface errors...")
   let content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           /interface\s+([^{]+)\s*{\s*;/g,interface $1 {"}
         content = content.replace(/:\s*{\s*;/g, ": {})
         content = content.replace(/;\s*}/g, }")
@@ -284,8 +390,11 @@ export default function"
         console.log( ESLint check passed)
   console.warn("⚠  ESLint check still has issues")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const srcDir = path.join(process.cwd(), "src"
   walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx")
       const content = fs.readFileSync(filePath, "utf8")
@@ -348,6 +457,16 @@ export default function"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
 <<<<<<< HEAD
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+
+
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -371,3 +490,4 @@ export default function"
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> merged-prs-20250907-203621

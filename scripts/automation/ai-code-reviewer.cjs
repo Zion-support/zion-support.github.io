@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -29,7 +32,11 @@ const crypto = require("crypto")
   "patterns"
           suggestions
           "performance"
+<<<<<<< HEAD
+  this.learningDataObj = { "patterns":  "suggestions":  "performance"
+=======
   this.learningDataObj = { patterns: {}, "suggestions": {}, performance
+>>>>>>> merged-prs-20250907-203621
   log(message, level = "INFO")
   this.log(🤖 Starting AI-powered code quality analysis...)
   this.log("🤖 Starting AI-powered code quality analysis...")
@@ -58,8 +65,11 @@ const crypto = require("crypto")
         line.includes(from)
         !line.includes("//")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const lines = content.split("\n")
       if (line.includes(": any") && !line.includes("// eslint-disable")
   "type": "TYPESCRIPT_ANTI_PATTERN"
@@ -73,7 +83,10 @@ const crypto = require("crypto")
         line.includes("from")
         !line.includes("//")
   const imports = importMatch[1].split(",")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           // This is a simplified check - in practice you"
       if (line.includes(function) || line.includes("=>")
   if (lines[i].includes({})
@@ -145,7 +158,10 @@ const crypto = require("crypto")
             "suggestion": "Move sensitive data to environment variables"
   const tsFiles = this.findFilesByExtension(".ts", ".tsx")
   const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         if (content.includes("dangerouslySetInnerHTML")
   type: "SECURITY_RISK"
             severity: "HIGH"
@@ -240,11 +256,21 @@ this.log(")
 =======
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -262,3 +288,4 @@ this.log(")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,11 +15,14 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "advanced-security.log")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -25,6 +31,7 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       fs.mkdirSync(this.reportsDir, { "recursive"})
     fs.appendFileSync(this.logFile, logMessage + "\n")
     this.log(" Checking dependencies for vulnerabilities...")
@@ -63,12 +70,15 @@ const { execSync } = require("child_process")
             if (line.includes("=") && !line.startsWith("#")
               const [key, value] = line.split("=")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
               if (value && value.trim() !== ""
 =======
 const fs = require("child_process)
@@ -202,11 +212,21 @@ const { execSync } = require("child_process)
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     console.error(" Security audit "failed": ")
+<<<<<<< HEAD
+    console.error(" Security audit "failed": ")
+    console.error(" Security audit "failed": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -224,3 +244,4 @@ const { execSync } = require("child_process)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

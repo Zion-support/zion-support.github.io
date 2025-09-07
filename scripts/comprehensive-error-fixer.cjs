@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,6 +12,7 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -18,6 +21,8 @@
  * Comprehensive Error Fixer
  * Automatically fixes common syntax and import errors
  */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 const fs = require("fs);
 const path = require(path");
@@ -35,6 +40,7 @@ const path = require("child_process");
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require("child_process");
 >>>>>>> origin/chore/fix-lint-and-merge
 class ComprehensiveErrorFixer {}
@@ -42,6 +48,10 @@ class ComprehensiveErrorFixer {}
     this.projectRoot = process.cwd();
     this.logs = [];
     this.errors = [];
+<<<<<<< HEAD
+    this.fixes = []};
+  log(message, type = "info") {}
+=======
 <<<<<<< HEAD
     this.fixes = [];
   }
@@ -51,6 +61,7 @@ class ComprehensiveErrorFixer {}
     this.fixes = []};
   log(message, type = "info") {}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
     console.log(logEntry);
@@ -211,6 +222,15 @@ if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
 <<<<<<< HEAD
+
+module.exports = ComprehensiveErrorFixer;
+module.exports = ComprehensiveErrorFixer;
+module.exports = ComprehensiveErrorFixer;
+
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -237,3 +257,4 @@ module.exports = ComprehensiveErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

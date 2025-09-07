@@ -240,20 +240,26 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                     </Button>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     
 
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     {isArchived ? (
 
                       <>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
                           variant=ghost
 =======
+>>>>>>> merged-prs-20250907-203621
                           variant="ghost"
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -378,6 +384,8 @@ interface QuotesTableProps {
   onViewDetails: (quote: QuoteRequest) => void;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus) => void,toggleArchive: (id: string, isArchived: boolean) => void,deleteQuote: (id: string) => void,onViewDetails: (quote: QuoteRequest) => void;
 }}
@@ -395,6 +403,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   updateStatus,
   toggleArchive,
 =======
+>>>>>>> merged-prs-20250907-203621
 ;
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes,;
@@ -452,6 +461,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <span className="sr-only">View Details</span>;
                     </Button>;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         >;
                           <Archive className="h-4 w-4 />;
@@ -511,6 +522,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                           }}
 
                           <span className="sr-only>Delete</span>;
@@ -536,6 +548,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     )}
                       </DropdownMenu>;)}
                   </div>;
@@ -547,6 +561,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   )}";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       </DropdownMenu>;
 
                     )}
@@ -636,6 +651,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
         </TableBody>;
       </Table>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}'";Table;
   TableBody;
   TableCell;
@@ -685,6 +702,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 ';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import React from react";
   Table;

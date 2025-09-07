@@ -724,79 +724,16 @@ export default function TalentPage() {;
             <motion.div;"
               className="text-center mb-16""
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> merged-prs-20250907-203621
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-            >
-</motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
-</h2>
-              </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
-</p>
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-</div>
-                <motion.div,
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-</motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
-</h2>
-              </h2>;"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;"
-</p>
-              </p>;
-            </motion && motion.div>;"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
-</div>
-                <motion&& motion.div,
-    key={index}"
-                  className="bg-white p-6 rounded-lg shadow-lg""
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}"
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">;"
-</motion>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">;"
-</h3>
-                  </h3>;"
-                  <p className="text-gray-600 mb-4">;"
-</p>
-                  </p>;"
-                  <p className="text-gray-700 mb-4">;"
-</p>
-                  </p>;"
-                  <div className="mb-4">;"
-</div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>;""
-                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">;"
-</ul>
-                        <li key={reqIndex}>{req}</li>;
-                    </ul>;
-                  </div>;"
-                  <div className="mb-4">;"
-</div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>;""
-                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">;"
-</ul>
-                        <li key={benefitIndex}>{benefit}</li>;
-                    </ul>;
-                  </div>;"
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">;"
-</button>
-                  </button>;"
-                  <div className="flex items-center">;"
-</div>"
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />;"
-</CheckCircle>"
-                    <span className="text-gray-900 font-medium">{value}</span>;"
 
                   </div>;
                 </motion && motion.div>;
@@ -886,6 +823,8 @@ export default function TalentPage() {;
                         </div>"
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">"
 </span>
+<<<<<<< HEAD
+=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -1009,6 +948,7 @@ export default function TalentPage() {;
                         </div>
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">
                           {job.department}
+>>>>>>> merged-prs-20250907-203621
                         </span>
                       </div>
                     </div>

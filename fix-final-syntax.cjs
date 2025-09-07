@@ -1,6 +1,36 @@
 <<<<<<< HEAD
 
 
+// Final targeted fixes for remaining syntax errors
+const fixes = [// Fix missing semicolons in import statements
+  {
+    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
+    "replacement": 'import { $1 } from \'$2\';'
+  },
+  
+  // Fix malformed import statements
+  {
+    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
+    "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
+  },
+  
+  // Fix missing semicolons after import statements
+  {
+    "pattern": /import\s+([^]+)\s*$/gm,
+    "replacement": 'import $1;'
+  },
+  
+  // Fix unterminated string literals
+  {
+    "pattern": /'([^']*)\s*$/gm,
+    "replacement": '\'$1\';'
+  },
+  
+  // Fix malformed function declarations
+=======
+<<<<<<< HEAD
+
+
   // Fix unterminated string literals;
   // Fix unterminated string literals;
   {
@@ -111,6 +141,7 @@ main
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> merged-prs-20250907-203621
   {
 <<<<<<< HEAD
     "pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
@@ -122,6 +153,10 @@ main
     replacement: const $1 = $2;
   },
 <<<<<<< HEAD
+  
+  // Fix missing closing brackets and parentheses
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Fix missing semicolons in function declarations
@@ -140,6 +175,7 @@ main
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> merged-prs-20250907-203621
   {
 <<<<<<< HEAD
     "pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,
@@ -151,6 +187,10 @@ main
     replacement: function $1() {\n
   },
 <<<<<<< HEAD
+  
+  // Fix malformed JSX attributes
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Fix missing semicolons in arrow functions
@@ -169,11 +209,31 @@ main
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> merged-prs-20250907-203621
   {
 <<<<<<< HEAD
     pattern": /className="([^]*);\s*/g,
     "replacement": className=$1'
   },
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in object properties
+  {
+    "pattern": /(\w+):\s*'([^']*)',\s*;/g,
+    "replacement": '$1: \'$2\','
+  },
+  
+  // Fix malformed return statements
+  {
+    "pattern": /return\s*\(\s*<div";"/g,
+    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
+  },
+  
+  // Fix duplicated content (remove duplicate lines)
+  {
+    "pattern": /^(.*)\n\1$/gm,
+    "replacement": '$1'
+=======
 
 
 =======
@@ -241,9 +301,16 @@ main
 =======
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
+>>>>>>> merged-prs-20250907-203621
   },
 <<<<<<< HEAD
   
+<<<<<<< HEAD
+  // Fix missing closing brackets in arrays
+  {
+    "pattern": /(\[.*?);\s*\]\s*},/g,
+    "replacement": '$1\n  ]\n},'
+=======
   // Fix missing semicolons in if statements
 
   // Fix missing semicolons in if statements
@@ -264,9 +331,20 @@ main
 =======
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
+>>>>>>> merged-prs-20250907-203621
   },
 <<<<<<< HEAD
   
+<<<<<<< HEAD
+  // Fix malformed JSX closing tags
+  {
+    "pattern": /<\/div>\s*\)\s*}\s*$/gm,
+    "replacement": '    </div>\n  );\n}'
+  }
+
+console.log('🔧 Fixing final syntax errors...');
+
+=======
   // Fix missing semicolons in for loops
 
   // Fix missing semicolons in for loops
@@ -407,6 +485,7 @@ console.log('🔧 Fixing final syntax errors...');
 console.log('🔧 Fixing final syntax errors...');
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> merged-prs-20250907-203621
 // Fix specific files with known issues
 =======
 
@@ -421,6 +500,8 @@ const filesToFix = [
     'src/components/ui/use-toast.ts'
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -433,10 +514,20 @@ main
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 ];
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
+
+        return;
+
+    }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+
+=======
 <<<<<<< HEAD
 
 
@@ -566,6 +657,7 @@ function walkDirectory(dir) {
 =======
     let fixes = 0;
 
+>>>>>>> merged-prs-20250907-203621
     // Fix textarea.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -596,6 +688,12 @@ function walkDirectory(dir) {
     } else {
         console.log(`✨ No issues found in ${filePath}`);
     }
+<<<<<<< HEAD
+
+    return fixes;
+}
+
+=======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
@@ -609,6 +707,7 @@ function walkDirectory(dir) {
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> merged-prs-20250907-203621
 // Process all files
 =======
 
@@ -620,6 +719,8 @@ filesToFix.forEach(file => {)
 });
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -675,12 +776,15 @@ console.log(`   Total fixes applied: ${totalFixes}`);
 
 if (totalFixes > 0) {
 }
+>>>>>>> merged-prs-20250907-203621
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
 main
 
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -828,6 +932,7 @@ main
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
@@ -847,6 +952,8 @@ const path = require('path')
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
     "replacement"
     "replacement"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     "replacement"
 
@@ -882,3 +989,4 @@ main
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

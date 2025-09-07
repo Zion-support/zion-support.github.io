@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,16 +12,18 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * SEO Optimizer Automation;
- * Optimizes the application for search engines;
+ * SEO Optimizer Automation
+ * Optimizes the application for search engines
  */
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -28,6 +32,7 @@ const path = require(path');
 const { execSync } = require('child_process');
 =======
 
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -41,6 +46,17 @@ class SEOOptimizer {}
         this.projectRoot = process.cwd();
 
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    }
+  log($2) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+})
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+=======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
     log(message) {}
@@ -59,6 +75,7 @@ class SEOOptimizer {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
         console.log(message)};
 >>>>>>> origin/chore/fix-lint-and-merge
     generateSitemap() {}
@@ -75,6 +92,10 @@ class SEOOptimizer {}
 =======
         console.log(message)};
 <<<<<<< HEAD
+    generateSitemap() {}"
+
+=======
+<<<<<<< HEAD
     generateSitemap() {}
         this.log('Generating sitemap...');
         
@@ -89,11 +110,14 @@ class SEOOptimizer {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 ${pages.map(page => `  <url>`})
 </url>
     <loc>https://ziontechgroup.com${page}</loc>"
     <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
     <changefreq>weekly</changefreq>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -107,12 +131,16 @@ ${pages.map(page => `  <url>`})
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 
   </url>).join(\n')}
 </urlset;>;;"
         fs.writeFileSync(sitemapPath, sitemap);`;
         this.log(`Sitemap generated with ${pages.length} pages`);
+<<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
         
 
@@ -132,19 +160,29 @@ ${pages.map(page => `  <url>`})
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         // Find pages from pages directory;
         if () {}
             this.findPagesInDirectory(pagesDir, '', pages)};
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
         "
+<<<<<<< HEAD
+        return { "status": success, "pages": pages.length }};"
+  findPages($2) {}"
+=======
         return { status: success, "pages": pages.length }}
     findPages() {}
+>>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
             this.findPagesInDirectory(pagesDir, , pages)}
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
+<<<<<<< HEAD
+            this.findPagesInAppDirectory(appDir, , pages)}
+        return [...new Set(pages)) {}]
+=======
 
 =======
             this.findPagesInDirectory(pagesDir, , pages)};
@@ -154,12 +192,15 @@ ${pages.map(page => `  <url>`})
             this.findPagesInAppDirectory(appDir, , pages)};
         return [...new Set(pages)) {}]
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     ) {}
 
         return [...new Set(pages)}]; // Remove duplicates;
     findPagesInDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir;);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -168,13 +209,17 @@ ${pages.map(page => `  <url>`})
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
 =======
+>>>>>>> merged-prs-20250907-203621
         
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
             
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             if () {}
                 this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith(.js') || item.endsWith('.jsx) || item.endsWith(.ts') || item.endsWith('.tsx)) {}
                 let pagePath = path.join(basePath, item) {}
@@ -193,9 +238,13 @@ ${pages.map(page => `  <url>`})
                 pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, '');
                 pagePath = pagePath.replace(/\\/g, '/');
 <<<<<<< HEAD
+                
+=======
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 if ( {})
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
@@ -218,6 +267,8 @@ ${pages.map(page => `  <url>`})
         const items = fs.readdirSync(dir) {}
      {}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
                     pages.push(pagePath)};
@@ -232,13 +283,17 @@ ${pages.map(page => `  <url>`})
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
 =======
+>>>>>>> merged-prs-20250907-203621
         
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
             
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             if () {}
                 this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === page.js' || item === 'page.jsx || item === page.ts' || item === 'page.tsx) {}
                 let pagePath = basePath || ) {}
@@ -251,6 +306,11 @@ ${pages.map(page => `  <url>`})
     }
     generateRobotsTxt() {}
         this.log('Generating robots.txt...');
+<<<<<<< HEAD
+        
+        const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
+        const robotsContent = "User-"agent": *
+=======
 <<<<<<< HEAD
 
 
@@ -269,17 +329,23 @@ Allow: /
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
         const robotsContent = "User-"agent": *
 =======
+>>>>>>> merged-prs-20250907-203621
 
         const items = fs.readdirSync(dir})
 
         const robotsContent = "User-"agent": *"
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 Allow: /
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 # Sitemap;
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Disallow admin and private areas;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 Disallow: /admin/
 Disallow: /api/
@@ -295,16 +361,22 @@ Crawl-delay: 1;";
         this.log('Creating SEO meta component...');
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
 Disallow: /admin/,
   Disallow: /api/
 Disallow: /_next/,
   Disallow: /private/
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
 # Crawl delay;"
 Crawl-delay: 1;";"
         fs.writeFileSync(robotsPath, robotsContent);"
         this.log('Robots.txt generated');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         
         return { "status": 'success' }};
@@ -324,9 +396,26 @@ Crawl-delay: 1;";"
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface SEOProps {}
+<<<<<<< HEAD
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  publishedTime?: string
+  modifiedTime?: string
+  author?: string
+  section?: string
+  tags?: string[]}
+export default function SEO({})
+  
+
+=======
   title?: string;
   description?: string;
   keywords?: string;
@@ -367,10 +456,14 @@ export default function SEO({})
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
   return (;)
     <Head>
 
       <title>{fullTitle}</title>
+<<<<<<< HEAD
+      
+=======
 <<<<<<< HEAD
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
@@ -383,6 +476,7 @@ export default function SEO({})
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       {/* Open Graph Meta Tags */};
       <meta property=""og": type" content={type} />
       <meta property=""og": title" content={fullTitle} />
@@ -392,18 +486,26 @@ export default function SEO({})
       <meta property=""og": site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
 <<<<<<< HEAD
+      
+=======
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       {/* Twitter Card Meta Tags */};
       <meta name=""twitter": card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name=""twitter": description" content={fullDescription} />
       <meta name=""twitter": image" content={image} />
 <<<<<<< HEAD
+      
+=======
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       {/* Additional Meta Tags */};
       {publishedTime && <meta property=""article": published_time" content={publishedTime} />};
       {modifiedTime && <meta property=""article": modified_time" content={modifiedTime} />};
@@ -411,13 +513,17 @@ export default function SEO({})
       {section && <meta property=""article": section" content={section} />};
       {tags.map(tag => (})
         <meta key={tag} property=""article": tag" content={tag} />
-      ))};
-      {/* Canonical URL */};
+      ))}
+      {/* Canonical URL */}
       <link rel="canonical" href={url} />
+<<<<<<< HEAD
+      
+=======
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       {/* Favicon */};
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -425,9 +531,13 @@ export default function SEO({})
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
 <<<<<<< HEAD
+      
+=======
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       {/* Structured Data */};
       <script;
         type="application/ld+json"
@@ -518,11 +628,14 @@ export default function SEO({})
               "addressCountry": US
             },
 
+<<<<<<< HEAD
+            ]
+=======
             ];
           }
+>>>>>>> merged-prs-20250907-203621
         }}
       />
-<<<<<<< HEAD
 
         const manifestPath = path.join(this.projectRoot, 'public', site.webmanifest;);
 =======
@@ -545,7 +658,10 @@ export default function SEO({})
     generateManifest() {}
         this.log('Generating web app manifest...');
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const manifestPath = path.join(this.projectRoot, 'public', 'site.webmanifest';);
 >>>>>>> origin/chore/fix-lint-and-merge
         const manifest = {}
@@ -562,9 +678,15 @@ export default function SEO({})
                     type: "image/png"
                 },
                 {}
+<<<<<<< HEAD
+                    "src": "/android-chrome-512x512.png",
+                    "sizes": "512x512",
+                    "type": "image/png"
+=======
                     src: "/android-chrome-512x512.png",
                     sizes: "512x512",
                     type: "image/png"
+>>>>>>> merged-prs-20250907-203621
                 }
             ],
 <<<<<<< HEAD
@@ -579,12 +701,15 @@ export default function SEO({})
             "dir": "ltr"
        };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
         this.log('Web app manifest generated');
         return { "status": 'success' }};
     generateSEOReport() {}
         this.log('Generating SEO optimization report...');
 =======
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
         this.log('Web app manifest generated');
@@ -593,16 +718,24 @@ export default function SEO({})
     generateSEOReport() {}
         this.log('Generating SEO optimization report...');
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         const report = {}
             timestamp: new Date().toISOString(),
             "project": this.projectRoot,
             seo: {}
                 sitemap: this.generateSitemap(),
                 "robots": this.generateRobotsTxt(),
+<<<<<<< HEAD
+                "metaComponent": this.createSEOMetaComponent(),
+                "manifest": this.generateManifest()
+=======
                 metaComponent: this.createSEOMetaComponent(),
                 "manifest": this.generateManifest();
+>>>>>>> merged-prs-20250907-203621
             },
 <<<<<<< HEAD
             recommendations: this.generateSEORecommendations();
@@ -613,14 +746,20 @@ export default function SEO({})
             "recommendations": this.generateSEORecommendations();
        };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("SEO optimization report saved to ${this.reportFile}");
 =======
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("SEO optimization report saved to ${this.reportFile}");
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         return report};
 >>>>>>> origin/chore/fix-lint-and-merge
     generateSEORecommendations() {}
@@ -634,6 +773,13 @@ export default function SEO({})
             'Implement internal linking strategy',
             Create high-quality, original content regularly,
             'Optimize for mobile-first indexing',
+<<<<<<< HEAD
+            'Implement AMP (Accelerated Mobile Pages) for better mobile performance'
+        ]}
+    async run() {}
+        this.log('SEO Optimizer started');
+        
+=======
             Implement AMP (Accelerated Mobile Pages) for better mobile performance
         ]}
     async run() {}
@@ -646,15 +792,24 @@ export default function SEO({})
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         try {}
-            const report = this.generateSEOReport(;);
-            this.log('SEO Optimizer completed successfully');
+            const report = this.generateSEOReport(;)
+            this.log('SEO Optimizer completed successfully')
             return report} catch (error) {}
+<<<<<<< HEAD
+            this.log("SEO Optimizer "failed": ${error.message}`)
+            throw error}
+    }
+}
+// Run the optimizer if this script is executed directly
+=======
             this.log("SEO Optimizer "failed": ${error.message}`);
             throw error}
     }
 }
 // Run the optimizer if this script is executed directly;
+>>>>>>> merged-prs-20250907-203621
 if ( {})
     const optimizer = new SEOOptimizer) {}
      {}
@@ -667,11 +822,21 @@ if ( {})
 =======
     optimizer.run().catch(console.error)};
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+module.exports = SEOOptimizer;
+<<<<<<< HEAD
+module.exports = SEOOptimizer;
+
+module.exports = SEOOptimizer;
+
+module.exports = SEOOptimizer;
 
 =======
-module.exports = SEOOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -699,3 +864,4 @@ module.exports = SEOOptimizer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

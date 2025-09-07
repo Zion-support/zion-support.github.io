@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Star } from 'lucide-react';
 import { Star } from 'lucide-react;
 
 
 import { Star } from lucide-react'
 =======
+>>>>>>> merged-prs-20250907-203621
 import { Star } from 'lucide-react'
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -13,6 +16,8 @@ export const CommunityTrust: React.FC = () => {
   const stats = [
 
 
+<<<<<<< HEAD
+=======
 import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof;
@@ -36,6 +41,7 @@ export const CommunityTrust: React.FC = () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   return (
     <section className=py-16 bg-zion-blue>;
       <div className='container mx-auto px-4'>;
@@ -43,6 +49,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-3xl md:text-4xl font-bold text-white'>;
             Trusted by the{' '}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import { Star  } from 'lucide-react';
@@ -61,6 +69,7 @@ import React from 'react'; import { Star  } from lucide-react;
 import React from './react';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <span className='text-zion-cyan'>Tech Community</span>;
             <span className=text-zion-cyan>Tech Community</span>;
           </h2>;'
@@ -79,6 +88,8 @@ export const CommunityTrust: React.FC = () => {}
         </div>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const CommunityTrust: React.FC = () => {// Stats display with social proof;
   const stats  = [;{ value: 4.8, label: 'App Store Rating' },{ value: 50K+, label: 'Downloads' },{ value: 96%, label: 'User Satisfaction' },{ value: 12M+, label: 'Matches Made' },</div>;{/* Rating display */}
         <div className=max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6>;
@@ -90,6 +101,7 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
               key={index}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         {/* Rating display */}'
         <div className='max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6>;
           <div className='flex justify-center mb-4'>;
@@ -127,6 +139,8 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
         </div>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               />            ))}];
     { value: 4.8, label: "App Store Rating" },{ value: 50K+, label: "Downloads" },{ value: 96%, label: "User Satisfaction" },{ value: 12M+, label: "Matches Made" }
   ],return (<section className=py-16 bg-zion-blue>;
@@ -141,6 +155,7 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
         </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </div>;
 
           <blockquote className=text-center text-lg text-white italic mb-4>;
@@ -160,6 +175,8 @@ export const CommunityTrust: React.FC = () => {// Stats display with social proo
             <div className=text-sm text-zion-slate-light">CTO at TechFlow</div>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <section className="py-16 bg-zion-blue>;
             <div className=text-sm text-zion-slate-light">CTO at TechFlow</div>;{/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16>;
@@ -174,6 +191,7 @@ import React from "react,export const CommunityTrust: React.FC = () => {// Stats
         <div className=text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold text-white>;
 =======
+>>>>>>> merged-prs-20250907-203621
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -215,6 +233,8 @@ import React from "react,export const CommunityTrust: React.FC = () => {// Stats
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>"
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>
           <blockquote className='text-center text-lg text-white italic mb-4>
             "The Zion app has completely changed how I find tech talent. The AI
@@ -226,6 +246,7 @@ import React from "react,export const CommunityTrust: React.FC = () => {// Stats
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </div>
           <blockquote className='text-center text-lg text-white italic mb-4>
             The Zion app has completely changed how I find tech talent. The AI
@@ -240,6 +261,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </section>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           ))}</div>;{/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
@@ -270,6 +293,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <blockquote className=text-center text-lg text-white italic mb-4">;"
             The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.;
 =======
+>>>>>>> merged-prs-20250907-203621
           </div>;"
           <blockquote className="text-center text-lg text-white italic mb-4">;"
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
@@ -282,6 +306,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   )}</div>) ))}}</div>) )}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>)}'"  )})}}</div>;
           <blockquote className='text - center text - lg text - white italic mb - 4'>;
@@ -339,6 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 }</div>) ) ;
 
@@ -413,5 +440,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
+<<<<<<< HEAD
+'"
+=======
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

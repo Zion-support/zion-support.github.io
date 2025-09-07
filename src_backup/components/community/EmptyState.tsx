@@ -9,7 +9,10 @@ import { Button } from @/components/ui/button'
 
 =======
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import React from 'react',
 import Link from 'next/link';
 import { Button  } from '@/components/ui/button';
@@ -49,6 +52,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   title: string;
   subtitle: string;
@@ -145,6 +150,7 @@ import { Button } from @/components/ui/button',
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip,
 interface EmptyStateProps {
 =======
+>>>>>>> merged-prs-20250907-203621
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -198,6 +204,8 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   cta,
   href,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   has_session}) => {  return (
     <div className='text - center py - 16>;
             ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className=text-center py-16">;
@@ -224,6 +232,7 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
       <div className=bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple />;
 =======
+>>>>>>> merged-prs-20250907-203621
   has_session,
 }) => {  return (
     <div className='text - center py - 16'>;
@@ -251,6 +260,8 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
 export default EmptyState;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
@@ -265,6 +276,7 @@ export default EmptyState;
 
 },
 =======
+>>>>>>> merged-prs-20250907-203621
 },;
 >>>>>>> origin/chore/fix-lint-and-merge
 export default EmptyState;
@@ -273,6 +285,10 @@ export default EmptyState;
       </TooltipProvider>
     </div>
 );
+<<<<<<< HEAD
+};
+export default EmptyState;
+=======
 <<<<<<< HEAD
 }
 },export default EmptyState;</Tooltip>;
@@ -284,3 +300,4 @@ export default EmptyState;
 };
 export default EmptyState;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -117,6 +117,7 @@ class CodeQualityMonitor {
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 async function checkCodeDuplication() {
@@ -186,6 +187,9 @@ async function checkCodeStyle() {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   if (duplications.length > 0) {}
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+=======
+  if (duplications.length > 0) {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
       .slice(0, 5);
@@ -233,6 +237,7 @@ async function checkDocumentationCoverage() {
   if (docCoverage < 50) {
     return { "passed": false, "error": 'Low documentation coverage' };
   }
+<<<<<<< HEAD
   
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 =======
@@ -248,6 +253,8 @@ async function checkDocumentationCoverage() {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   };
 };
 async function checkTestCoverage() {}
@@ -281,7 +288,10 @@ async function runCodeQualityMonitor() {}
   const tsQualityResult = await checkTypeScriptQuality();
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const results = [complexityResult,]
     duplicationResult,
     styleResult,
@@ -290,6 +300,7 @@ async function runCodeQualityMonitor() {}
     docCoverageResult,
   ];
   const issuesFound = results.filter(r => !r.passed);
+<<<<<<< HEAD
 
   const endTime = Date.now();
   const duration = endTime - startTime;
@@ -315,6 +326,12 @@ async function runCodeQualityMonitor() {}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+=======
+  const endTime = Date.now();
+  const duration = endTime - startTime;
+    process.exit(1);
+  } else {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -346,9 +363,13 @@ monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
+<<<<<<< HEAD
 });
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+=======
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

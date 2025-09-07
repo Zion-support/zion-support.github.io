@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,14 +12,20 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Automation Test Runner;
- * Tests all automation scripts and reports results;
+ * Automation Test Runner
+ * Tests all automation scripts and reports results
  */
+<<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+=======
 <<<<<<< HEAD
 
 =======
@@ -40,6 +48,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
         "encoding"
         "stdio"
         "status"
@@ -48,11 +57,21 @@ const { execSync } = require('child_process')
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
           "status"
+<<<<<<< HEAD
+          "status"
+          "status"
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -74,3 +93,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

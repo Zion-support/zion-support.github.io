@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,17 +12,20 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Monitoring Automation;
- * Sets up comprehensive monitoring for the application;
+ * Monitoring Automation
+ * Sets up comprehensive monitoring for the application
  */
-<<<<<<< HEAD
-
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require('path')
+
+=======
 const path = require(path')
 
 =======
@@ -33,6 +38,7 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+>>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
 
@@ -40,7 +46,13 @@ const path = require('path')
 =======
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
+
+const fs = require('fs')
+const path = require('path')
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   log(message, type = 'INFO')
 <<<<<<< HEAD
       'INFO': 'ℹ'
@@ -53,7 +65,10 @@ const path = require('path')
     "version"
     const metrics = "
     const alerting = "
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       "service"
       console.error(Failed to send alert)
         "type"
@@ -69,6 +84,15 @@ const path = require('path')
         "type"
         severity
                 console.error('Failed to load "metrics")
+<<<<<<< HEAD
+
+    console.error('Monitoring automation "failed")
+    console.error('Monitoring automation "failed")
+    console.error('Monitoring automation "failed")
+
+
+
+=======
 <<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -103,3 +127,4 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

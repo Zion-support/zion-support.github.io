@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -33,11 +37,15 @@ const glob = require(glob')
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const glob = require('glob')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json')
   log(message, level = 'info')
     this.log('Starting Comprehensive Error Fixer...', 'info')
@@ -60,6 +68,15 @@ const glob = require('glob')
       const importRegex = /import\s+.*\s+from\s+['"]([^'')]
           "type"
           "description"
+<<<<<<< HEAD
+
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,3 +108,4 @@ const glob = require('glob')
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

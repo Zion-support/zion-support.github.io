@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react;
 import { useRouter  } from 'next/router;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 :src/pages/UpdatePassword.tsx
 import { useRouter } from next/router'
 import { zodResolver } from @hookform/resolvers/zod"
@@ -473,6 +476,9 @@ export default function UpdatePassword() {
                 </Form>
               )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/UpdatePassword.tsx
 =======
 >>>>>>> origin/chore/fix-lint-and-merge

@@ -36,7 +36,10 @@ function Calendar({
 }: CalendarProps) {
         IconLeft: ({ ..._props }) => <ChevronLeft className='h-4 w-4' />
         IconRight: ({ ..._props }) => <ChevronRight className='h-4 w-4' />
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       }}      {...props}
     />
   )
@@ -51,5 +54,9 @@ export { Calendar }
 =======
 }: CalendarProps) {
 }/>)
+<<<<<<< HEAD
+}"
+=======
 }"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

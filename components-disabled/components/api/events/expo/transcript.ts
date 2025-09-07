@@ -13,6 +13,8 @@ export default async function handler(
 }
   const { id } = req && req.query as { id?: string };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const item = agendaItems && agendaItems.find(i => { return i && i.id === id); }
   if (!item) return res && res.status(404).send('Not found');'
   const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.track}, "Time": ${item && item.time})\n\n["00":00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Type', 'text/plain');'
@@ -23,6 +25,7 @@ export default async function handler(
   if (!item) return res && res.status(404).send('Not found');'
   const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.track}, "Time": ${item && item.time})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Typetext/plain'),'
 =======
+>>>>>>> merged-prs-20250907-203621
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
   if (!item) return res && res.status(404).send('Not found');`;
   const transcript = `Transcript for ${item && item.title} (Track: ${item && item.track}, Time: ${item && item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -31,7 +34,10 @@ export default async function handler(
   // TODO: Implement
   const transcript = `Transcript for ${item && item.title} (Track: ${item && item.track}, Time: ${item && item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
   res && res.setHeader('Content-Typetext/plain'),
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   res && res.status(200).send(transcript);
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
@@ -47,6 +53,10 @@ const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${
   res.set_header ('Content - Type', 'text / plain');
   res.status (200).send (transcript);export default async /**
 <<<<<<< HEAD
+const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q & A...`;
+  res.set_header ('Content - Typetext / plain'),
+=======
+<<<<<<< HEAD
  * handler - Function description
  */
 function handler() {
@@ -61,6 +71,7 @@ const transcript = `Transcript for ${item.title} ("Track": ${item.track}, "Time"
 const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q & A...`;
   res.set_header ('Content - Typetext / plain'),
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   res.status (200).send (transcript);
 
 `;

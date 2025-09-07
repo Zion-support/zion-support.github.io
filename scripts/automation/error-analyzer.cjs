@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -58,6 +61,7 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -98,11 +102,21 @@ const path = require('path')
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     console.error(' Error analyzer "failed")
+<<<<<<< HEAD
+    console.error(' Error analyzer "failed")
+    console.error(' Error analyzer "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -124,3 +138,4 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

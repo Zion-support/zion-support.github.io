@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,13 +12,18 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
     console.log(`[${timestamp}] � Master "Controller"`)
@@ -35,7 +42,11 @@ const { execSync } = require("child_process")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message  }")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs"", "console-error-fixer.cjs", "performance-monitor.cjs"", "health-checker.cjs", "git-operations-manager.cjs"", "dependency-manager.cjs", "build-optimizer.cjs"", ""]
+<<<<<<< HEAD
+
+=======
   const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
+>>>>>>> merged-prs-20250907-203621
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message}")
@@ -48,13 +59,26 @@ const { execSync } = require("child_process")
   this.log( Monitoring automation status...)
       await this.generateHealthReport()} catch (error) {  this.log(` Error during "monitoring"`})
 <<<<<<< HEAD
+  const status = execSync("pm2 jlist", { "encoding": "utf8"})
+=======
+<<<<<<< HEAD
 
 =======
   const status = execSync("pm2 jlist", { "encoding": "utf8"})
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       return JSON.parse(status)} catch (error) {  this.log(` Could not get PM2 "status"`})
         if (app.pm2_env && app.pm2_env.status === errored)
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
+<<<<<<< HEAD
+            "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring..."
+  if($2) {this.log("⚠ ${app.name} is in error state, attempting restart...")
+          this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
+  try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
+  "stdio": "pipe"
+  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
+  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
+=======
             "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring...
         if (app.pm2_env && app.pm2_env.status === errored") {this.log("⚠ ${app.name} is in error state, attempting restart...)
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting...
@@ -62,6 +86,7 @@ const { execSync } = require("child_process")
   "stdio": pipe
   try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": pipe`})
   try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": pipe`})
+>>>>>>> merged-prs-20250907-203621
   "timestamp"
         controllerStatus
           "automationsCount"
@@ -212,11 +237,21 @@ const { execSync } = require("child_process")
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   process.on("SIGTERM")
+<<<<<<< HEAD
+  process.on("SIGTERM")
+  process.on("SIGTERM")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -234,3 +269,4 @@ const { execSync } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

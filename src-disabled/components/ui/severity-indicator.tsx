@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4
 
@@ -9,6 +11,7 @@ import { cn } from "@/lib/utils,
 import React from react";
 import { cn } from "@/lib/utils;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 :src/components/ui/severity-indicator.tsx
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react
 
@@ -20,6 +23,8 @@ interface SeverityIndicatorProps {
   className?: string
 }
 
+<<<<<<< HEAD
+=======
 export function SeverityIndicator({
   severity,
   showIcon = true,
@@ -27,6 +32,7 @@ export function SeverityIndicator({
   size = md',
   className,
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 export function SeverityIndicator({ 
   severity;
   showIcon;
@@ -57,6 +63,8 @@ export function SeverityIndicator({
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
+<<<<<<< HEAD
+=======
           "text-green-500"
           "text-green-500
         )} />;
@@ -77,6 +85,7 @@ interface SeverityIndicatorProps  {severity: "safe | suspicious" | "dangerous,sh
 }
 export function SeverityIndicator ({severity,show_icon = true,show_text = true,size = md";
       default:;
+>>>>>>> merged-prs-20250907-203621
         return <AlertCircle className={cn(
           size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4,
           text-destructive"
@@ -126,6 +135,8 @@ export function SeverityIndicator ({
 
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
 
         
@@ -157,6 +168,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   },
 
   return (
@@ -207,6 +219,17 @@ export function SeverityIndicator({
       default:;
         return <CheckCircle className={cn(;
 <<<<<<< HEAD
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
+          "text-green-500";
+        )} />;
+    }
+  };
+  return (;
+
+    <div className={cn("flex items-center gap-1", className)}>;
+      {showIcon && getSeverityIcon()}
+=======
+<<<<<<< HEAD
           size === "sm ? h-3 w-3" : size === "lg ? h-5 w-5" : "h-4 w-4;
         return <CheckCircle className={cn (size === sm" ? "h - 3 w - 3 : size === lg" ? "h - 5 w - 5 : h - 4 w - 4";
           "text - green - 500)} />;}
@@ -253,6 +276,7 @@ export function SeverityIndicator({
     <div className={cn("flex items-center gap-1", className)}>;
       {showIcon && getSeverityIcon()}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>;
   );
@@ -269,8 +293,11 @@ export function SeverityIndicator({
 }
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
     </div>)}
   )}}
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

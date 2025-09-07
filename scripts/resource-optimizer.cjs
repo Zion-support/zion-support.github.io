@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,6 +15,7 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -40,10 +44,14 @@ const { execSync } = require('child_process')
           // Skip files that can
     this.log('⚡ Optimizing JavaScript...')
 <<<<<<< HEAD
+          const content = fs.readFileSync(jsFile, 'utf8')
+=======
+<<<<<<< HEAD
 
 =======
           const content = fs.readFileSync(jsFile, 'utf8')
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             .replace(/\/\*[\s\S]*?\*\//g, '')
             .replace(/\/\/.*$/gm, )
             .replace(/\s+/g, ' ')
@@ -137,11 +145,21 @@ const { execSync } = require('child_process')
         "priority"
         "impact"
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       console.error('\n� Resource Optimizer "failed")
+<<<<<<< HEAD
+      console.error('\n� Resource Optimizer "failed")
+      console.error('\n� Resource Optimizer "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -159,3 +177,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from \'react\'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+const React from "react"; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+=======
+import React from \'react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import _React from 'react; return()<div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )}export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }import React from \react\'; return ()<div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )}export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }const React from "react; return ()<div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )}export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }'``;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -6,6 +16,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 const React from react"; return()<div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> )}export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }export { Badge }`'"`;
 import _React from 'react; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );} export { Badge } export { Badge } export { Badge } export { Badge } export { Badge } export { Badge }
 
+<<<<<<< HEAD
 import React from \react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );} export { Badge } export { Badge } export { Badge } export { Badge } export { Badge } export { Badge }
 const React from react; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );} export { Badge } export { Badge } export { Badge } export { Badge } export { Badge } export { Badge }'`"`
 
@@ -19,3 +30,6 @@ import _React from react'; return (); <div className={`${baseClasses} ${variantC
 import React from \'react\; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );} export { Badge } export { Badge } export { Badge } export { Badge } export { Badge } export { Badge }
 const React from "react"; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );} export { Badge } export { Badge } export { Badge } export { Badge } export { Badge } export { Badge }`'"`
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

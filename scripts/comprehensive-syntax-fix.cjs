@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -19,6 +23,7 @@
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 console.log(' Comprehensive syntax fix...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'
@@ -30,6 +35,12 @@ console.log(' Comprehensive syntax fix...')
     content = content.replace(/>\s*<h2 className="([^"]*)\n\s*([^"]*)"/g, '>\n            <h2 className="$1 $2"
     content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, '<h1 className="$1 $2"
     content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g, '<p className="$1 $2"
+<<<<<<< HEAD
+
+    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +61,7 @@ console.log(' Comprehensive syntax fix...')
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
 </div>"
     content = content.replace(/>\s*<h2 className="([^]*)\n\s*([^]*)"/g,>\n            <h2 className="$1 $2

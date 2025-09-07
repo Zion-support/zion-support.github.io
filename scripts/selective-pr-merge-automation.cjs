@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -12,11 +13,6 @@
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 #!/usr/bin/env node;
 
 
@@ -25,12 +21,15 @@
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -48,9 +47,12 @@ const path = require('path');
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+// console.log(' Selective PR Merge Automation System')
+>>>>>>> merged-prs-20250907-203621
 console.log('===')
   log(message, type = 'info')
-const result = execSync(command, {"encoding": 'utf8',"stdio"});
+      const result = execSync(command, {"encoding": 'utf8',"stdio"})
       this.log(` ${description} "failed"`)
       this.log(`Error getting priority "branches"`)
         await this.runCommand("git commit -m "Resolve merge conflicts with main branch"")
@@ -60,6 +62,7 @@ const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(`Automation "failed"`)
 // console.log('\n Failed "branches")
     console.log('\n Detailed report saved "to")
+<<<<<<< HEAD
 =======
 
 
@@ -117,3 +120,7 @@ const path = require('path')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 "`;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.error('Automation "failed")
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> merged-prs-20250907-203621

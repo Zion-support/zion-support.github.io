@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -73,7 +76,10 @@ const glob = require("glob")
   this.log(" Fixing TypeScript configuration...")
     const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
   const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           "compilerOptions"
             allowJs
             "skipLibCheck"
@@ -104,7 +110,10 @@ const glob = require("glob")
           "WARN"
   this.log(" Fixing ESLint configuration...")
     const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   try {const eslintConfig = "}
   extends: [""next/core-web-vitals, ""next/typescript]
   "rules": {@typescript-eslint/no-unused-vars": "warn,@typescript-eslint/no-explicit-any"": warn,"react/react-in-jsx-scope": off","react/prop-types: "off",no-console: warn"}
@@ -119,8 +128,11 @@ const glob = require("glob")
           WARN
   this.log(" Fixing common TypeScript errors...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const patterns = ["src/**/*.ts"", "src/**/*.tsx", "pages/**/*.ts"", "pages/**/*.tsx", "components/**/*.ts"", "components/**/*.tsx", ""]
   const files = glob.sync(pattern, { "cwd"})
   const filePath = path.join(this.projectRoot, ")
@@ -130,7 +142,7 @@ const glob = require("glob")
             !content.includes("import * as React")
               content.includes("export default")
               content.includes("export {"})
-  content = "import React from "react";
+  content = "import React from "react"
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
@@ -164,7 +176,7 @@ const glob = require("glob")
             content.includes("<")
             !content.includes("import React")
             !content.includes("import * as React")
-  content = import React from "react";
+  content = import React from "react"
             /<>\s*<\/>/g,<React.Fragment></React.Fragment>"
             "className={$1}"
             this.fixesApplied.push(""FIXED_REACT")
@@ -193,6 +205,8 @@ const glob = require("glob")
           content.includes("<")
           content.includes(>)
           content.includes("return")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -238,6 +252,7 @@ const glob = require("glob")
   this.log(Remaining "errors": ")
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const oldPath = path.join(this.projectRoot, ")
           this.projectRoot", file.replace(".js", ".jsx")
           this.projectRoot", file.replace(".js", ".jsx")
@@ -269,11 +284,21 @@ const glob = require("glob")
         "success"
     this.log(" Report generated")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   this.log("Remaining "errors": ")
+<<<<<<< HEAD
+  this.log("Remaining "errors": ")
+  this.log("Remaining "errors": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -291,3 +316,4 @@ const glob = require("glob")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

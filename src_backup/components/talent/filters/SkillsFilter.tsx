@@ -21,6 +21,8 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         <div className=mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp  } from 'lucide-react;
 import { Button } from "@/components/ui/button,import { Checkbox  } from @/components/ui/checkbox';
 import { SkillsFilterProps  } from '@/types/filters;
@@ -87,6 +89,7 @@ import { SkillsFilterProps   } from @/types / filters';
 ];<Checkbox;
             <div key={skill} className="flex items-center>
 =======
+>>>>>>> merged-prs-20250907-203621
             <div key={skill} className="flex items-center">
 >>>>>>> origin/chore/fix-lint-and-merge
               <Checkbox
@@ -137,6 +140,8 @@ className=border-zion-slate-light data-[state=checked]:bg-zion-purple data-[stat
     </div>;
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 onCheckedChange={() => toggleSkill(skill)}{skill}
               ">;
                 {skill}
@@ -173,6 +178,7 @@ export /**;
               <label;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }
 
@@ -204,5 +210,9 @@ export /**;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+;
+=======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

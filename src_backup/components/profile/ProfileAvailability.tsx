@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
@@ -7,6 +9,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { Calendar, Clock, Check } from 'lucide-react
 import { Calendar } from lucide-react'
 =======
+>>>>>>> merged-prs-20250907-203621
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -241,6 +244,37 @@ export function ProfileAvailability(): any ({;
         return ';
     }
 <<<<<<< HEAD
+  };
+
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {;
+    switch (status) {;
+      case 'available':;
+        return 'Available Now';
+      case 'limited':;
+        return 'Limited Availability';
+      case 'unavailable':;
+        return 'Currently Unavailable';
+      default:;
+        return '';    }
+  };
+
+  return (
+    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>;
+      <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>;
+
+      <div className='flex flex-col md:flex-row md:items-center md:gap-6 mb-4'>;
+        <Badge
+          variant='outline'          className={`${getStatusColor(availability && availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}>;
+          {getStatusText(availability && availability.status)}
+        </Badge>;
+
+        {availability && availability.nextAvailable && availability && availability.status !== 'available' && (;
+          <div className='flex items-center gap-2 text-zion-slate-light'>;
+            <Calendar className='h-4 w-4' />            <span>Next available: {availability && availability.nextAvailable}</span>;
+          </div>;
+        )}
+=======
+<<<<<<< HEAD
   }const getStatusText = (status: available' | 'limited | unavailable') => {switch (status) {case 'available:;
         return Available Now';
       case 'limited:;
@@ -437,6 +471,7 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
           </div>;
         )}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       )}
 
@@ -457,9 +492,12 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
           {getStatusText (availability.status)}
         </Badge>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {availability.next_available && availability.status !== available' && (<div className='flex items - center gap - 2 text - zion - slate - light>;
             <Calendar className=h - 4 w - 4' />            <span > Next available: {availability.next_available}</span>;
 =======
+>>>>>>> merged-prs-20250907-203621
         {availability.next_available && availability.status !== 'available' && (
           <div className='flex items - center gap - 2 text - zion - slate - light'>;
             <Calendar className='h - 4 w - 4' />            <span > Next available: {availability.next_available}</span>;
@@ -474,6 +512,8 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
         >;
           {getStatusText (availability.status)}
         </Badge>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         {availability.next_available && availability.status !== 'available && (<div className=flex items - center gap - 2 text - zion - slate - light'>;
             <Calendar className='h - 4 w - 4 />;
@@ -490,6 +530,7 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
             <div className=grid grid - cols - 1 md:grid - cols - 2 gap - 2'>;
               {availability.available_hours.map ((slot, index) => (<div;
 =======
+>>>>>>> merged-prs-20250907-203621
         {availability.next_available && availability.status !== 'available' && (
           <div className='flex items - center gap - 2 text - zion - slate - light'>;
             <Calendar className='h - 4 w - 4' />;
@@ -509,7 +550,10 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
             <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 2'>;
               {availability.available_hours.map ((slot, index) => (
                 <div;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   key={index}
                   className='flex items - center gap - 2 text - zion - slate;
                 >;
@@ -519,6 +563,8 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
                     <span>{slot.hours}</span>;
                   </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {availability.available_hours && availability.available_hours.length > 0 && (<div className=mt - 4">;
           <h4 className="text - zion - slate - light text - sm mb - 2>Weekly Availability</h4>;
           <div className=grid grid - cols - 1 md:grid - cols - 2 gap - 2">;
@@ -527,6 +573,7 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
                 <div className="flex items - center gap - 1>;
                   <Clock className=h - 4 w - 4 text - zion - cyan" />;
 =======
+>>>>>>> merged-prs-20250907-203621
       {availability.available_hours && availability.available_hours.length > 0 && (
         <div className="mt - 4">;
           <h4 className="text - zion - slate - light text - sm mb - 2">Weekly Availability</h4>;
@@ -546,9 +593,12 @@ interface ProfileAvailabilityProps  {availability: Availability;export function 
           </div>;
         </div>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}</div>;
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }

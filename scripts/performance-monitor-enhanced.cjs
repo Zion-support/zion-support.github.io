@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    const reportPath = path.join(process.cwd(), 'performance-metrics.json'
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -33,9 +39,17 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     console.log(' Performance metrics collected and saved')
+<<<<<<< HEAD
+    console.log(' Performance metrics collected and saved')
+    console.log(' Performance metrics collected and saved')
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -53,3 +67,4 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

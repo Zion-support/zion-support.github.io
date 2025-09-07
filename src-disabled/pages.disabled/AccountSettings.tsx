@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
 import { useState  } from 'react;
 import { useLocalStorage  } from @/hooks';
@@ -271,6 +274,8 @@ const AccountSettings: React.FC = () => {
   return (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -287,6 +292,7 @@ import { Button } from @/components/ui/button';
 import { Input } from '@/components/ui/input;
 import { Wallet, Database, Save } from lucide-react';
 =======
+>>>>>>> merged-prs-20250907-203621
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -320,15 +326,21 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useLocalStorage(enable_backup', false);
   const handleSave = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <>
       <SEO title=Account Settings" description="Manage your account />
       <Header />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
       <main className='container mx-auto py-8 px-4>
         <h1 className=text-3xl font-bold mb-6 text-white'>Account Settings</h1>
@@ -420,6 +432,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
               <div className=flex items-center justify-between'>
                 <div className='space-y-0.5>
@@ -455,6 +470,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <Separator />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               
               <div className="flex items-center justify-between">
                 <div className=space-y-0.5>
@@ -464,6 +481,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <div className=flex items-center justify-between>
                 <div className="space-y-0.5">
@@ -478,6 +496,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <Switch
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
                   id=backup'
                   checked={enableBackup}
@@ -522,10 +543,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={handleSave}
                 disabled={isSubmitting}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 className="w-full"
                 className="w-full
               >
                 {isSubmitting ? Saving..." : "Save Settings}
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
                 className=w-full'              >
 =======
@@ -540,9 +564,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <CardHeader>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
@@ -659,8 +686,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 
+>>>>>>> merged-prs-20250907-203621
 :src/pages/AccountSettings.tsx
   )
 }
@@ -689,18 +719,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </main>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     </>);
 
 }
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
+=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

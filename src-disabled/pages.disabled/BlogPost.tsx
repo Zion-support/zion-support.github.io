@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { useState, useEffect } from "react;
@@ -52,6 +54,7 @@ import { BLOG_POSTS } from @/data/blog-posts";
 import { useSkeletonTimeout } from @/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry;
 =======
+>>>>>>> merged-prs-20250907-203621
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
@@ -67,6 +70,8 @@ default:
     }
   }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const articleLd = {
     '@context: https://schema.org'
@@ -84,6 +89,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   return (
     <>
       <SEO
@@ -478,7 +484,11 @@ outline"className= border-zion-blue-light text-zion-slate-light hover:bg-zion-bl
 }'"
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

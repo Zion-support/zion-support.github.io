@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   console.log( Starting continuous build and test with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
@@ -25,13 +27,18 @@ process.on("SIGTERM)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 console.log(""� Starting continuous build and test automation...")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require("child_process")
 console.log(""� Starting continuous build and test automation...")
 // Get automation interval from environment variable ("default")
@@ -97,11 +104,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start continuous build and "test": ")
+<<<<<<< HEAD
+  console.error(" Failed to start continuous build and "test": ")
+  console.error(" Failed to start continuous build and "test": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -119,3 +136,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs').promises;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 const fs = require('fs').promises;
@@ -23,11 +27,16 @@ class ComprehensiveSyntaxErrorFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs').promises;
+>>>>>>> merged-prs-20250907-203621
 const path = require('path');
 class ComprehensiveSyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -41,11 +50,15 @@ const path = require('path');
 class ComprehensiveSyntaxErrorFixer {}
   constructor() {}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     this.projectRoot = path.join(__dirname, '..');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
     this.fixedFiles = []};
 >>>>>>> origin/chore/fix-lint-and-merge
   async log(message) {}
@@ -56,6 +69,10 @@ class ComprehensiveSyntaxErrorFixer {}
       let fixedContent = content;
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -69,12 +86,17 @@ class ComprehensiveSyntaxErrorFixer {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       // Fix common syntax errors;
       const fixes = [// Fix malformed imports;]
 
       ];
 <<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -88,8 +110,16 @@ class ComprehensiveSyntaxErrorFixer {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       let hasChanges = false;
       for (const fix of fixes) {}
+let fixedContent = content
+      // Fix common syntax errors
+      const fixes = [// Fix malformed imports;]
+
+      ]
+      let hasChanges = false
+  for($2) {}
         if (fixedContent.includes(fix.from)) {}
 
 <<<<<<< HEAD
@@ -112,14 +142,27 @@ class ComprehensiveSyntaxErrorFixer {}
   };
   async run() {}
     await this.log('Starting comprehensive syntax error fixing...');
+    
+    
+=======
+<<<<<<< HEAD
+  };
+  async run() {}
+    await this.log('Starting comprehensive syntax error fixing...');
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     const filesToFix = ['components/layout/ModernLayout.tsx',]
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];
+<<<<<<< HEAD
+
+
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -129,6 +172,7 @@ class ComprehensiveSyntaxErrorFixer {}
 >>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     let fixedCount = 0;
     for (const file of filesToFix) {}
       const fullPath = path.join(this.projectRoot, file);
@@ -144,12 +188,22 @@ if (require.main === module) {}
 =======
   fixer.run().catch(console.error)};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 module.exports = ComprehensiveSyntaxErrorFixer;
+<<<<<<< HEAD
+module.exports = ComprehensiveSyntaxErrorFixer;
+module.exports = ComprehensiveSyntaxErrorFixer;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -172,3 +226,4 @@ module.exports = ComprehensiveSyntaxErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

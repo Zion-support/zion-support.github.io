@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react'
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
+=======
+<<<<<<< HEAD
 =======
 return (
 
@@ -47,9 +62,9 @@ import { zodResolver  } from '@hookform/resolvers/zod';
 import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
+>>>>>>> merged-prs-20250907-203621
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
-<<<<<<< HEAD
   resumeId: string,
   certifications: Certification[],
   onComplete: () => void,
@@ -214,6 +229,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       credential_url: '})
                   } else {
                     onBack()
+<<<<<<< HEAD
+=======
 import { useState   } from 'react;
 import { useForm   } from react-hook-form';
 import { Button   } from '@/components/ui/button;
@@ -290,6 +307,7 @@ interface CertificationsFormProps  {resumeId: string;
                 {editingId ? Cancel' : 'Back}</Button>;
               <div className="flex gap-2>;
                 <Button type=submit" disabled={isLoading}>;
+>>>>>>> merged-prs-20250907-203621
                   }
                 }}
               >
@@ -350,6 +368,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 <<<<<<< HEAD
+  )
+}
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
   )
@@ -389,3 +411,4 @@ if ( {) {$2;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

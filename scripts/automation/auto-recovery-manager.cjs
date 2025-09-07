@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -40,7 +43,10 @@ const { execSync } = require("child_process")
 "
     // Check for project-specific issues"
     const projectIssues = await this.checkProjectIssues();"
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     issues.push(...projectIssues);"
 this.log(Found ${issues.length} system issues")
     if (!fs.existsSync(path.join(this.workspacePath, package.json)
@@ -66,6 +72,19 @@ this.log(Found ${issues.length} system issues")
         "name": "missing-dependencies"
         "description": "node_modules directory is missing"
         "severity": "high"
+<<<<<<< HEAD
+    if (!fs.existsSync(path.join(this.workspacePath, "package.json")
+  "type": "project"
+        "name": "missing-package-json"
+        "description": "package.json file is missing"
+        "severity": "critical"
+    if (!fs.existsSync(path.join(this.workspacePath, "node_modules")
+  "type": "project"
+        "name": "missing-dependencies"
+        "description": "node_modules directory is missing"
+        "severity": "high"
+=======
+>>>>>>> merged-prs-20250907-203621
   const content = fs.readFileSync(filePath, "utf8")
           content.includes("")
           content.includes(">>>>>>>")
@@ -213,8 +232,11 @@ this.log(Found ${issues.length} system issues")
         `ERROR
   this.log(" Recovering encoding issues in ${filePath}...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
       const encodings = ["utf8", "latin1", "cp1252"]
           fs.writeFileSync(filePath, content, ")
       const encodings = ["utf8", "latin1", "cp1252"]
@@ -292,6 +314,15 @@ this.log( Unreadable file "recovered")
         "recoveryRate"
       "recoveryResults"
 <<<<<<< HEAD
+
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -322,3 +353,4 @@ this.log( Unreadable file "recovered")
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

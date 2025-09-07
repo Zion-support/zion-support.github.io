@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/components/contracts/page/ContractTypeCards.tsx
 import { Button } from '@/components/ui/button
 import {
@@ -52,14 +55,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10>
       <Card>
         <CardHeader>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <CardTitle className="flex items-center gap-2">
 <CardTitle className="flex items-center gap-2">
@@ -70,6 +78,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <CardTitle className=flex items-center gap-2">
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             <FileText className="h-5 w-5 />
 
@@ -81,11 +90,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardHeader>
         <CardContent>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           <ul className=space-y-2">
             <li className="text-sm>✓ Legally binding templates</li>
@@ -96,6 +108,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
         <CardFooter>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           <Button variant="outline onClick={onStandardClick}>
 
@@ -104,6 +118,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           <Button variant="outline onClick={onStandardClick}>
 
@@ -130,10 +145,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardTitle>
             <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
           <Button variant='outline' onClick={onStandardClick}>
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           <Button variant='outline' onClick={onStandardClick}>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             Create Standard Contract
           </Button>
@@ -158,6 +176,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       
       <Card>
 
@@ -172,6 +192,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               Blockchain Powered
             </span>
           </div>
@@ -199,6 +220,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={onSmartClick}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <ul className='space-y-2>
             <li className=text-sm'>✓ All standard contract features</li>
@@ -207,6 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <li className='text-sm>✓ Permanent on-chain record</li>
             <li className=text-sm'>✓ Multi-signature approval flow</li>
 =======
+>>>>>>> merged-prs-20250907-203621
 <ul className='space-y-2'>
             <li className='text-sm'>✓ All standard contract features</li>
             <li className='text-sm'>✓ Automatic escrow payment release</li>
@@ -221,9 +245,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600
             onClick={onSmartClick}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           >
             Create Smart Contract
@@ -236,10 +263,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> merged-prs-20250907-203621
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -257,6 +287,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 
@@ -269,11 +301,15 @@ interface ContractTypeCardsProps {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export function ContractTypeCards(): any ({
   onStandardClick,
   onSmartClick}:,  ContractTypeCardsProps) {
   return (
+<<<<<<< HEAD
+    <div className='grid md:grid-cols-2 gap-6 mb-10'>;
+=======
 <<<<<<< HEAD
     <div className='grid md:grid-cols-2 gap-6 mb-10>;
 import { Button  } from @/components/ui/button';
@@ -389,6 +425,7 @@ import { Button } from @/components/ui/button",import { Card, CardContent, CardD
 =======
     <div className='grid md:grid-cols-2 gap-6 mb-10'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
@@ -405,9 +442,12 @@ interface ContractTypeCardsProps {
 export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }:,  ContractTypeCardsProps) {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     <div className=grid md:grid-cols-2 gap-6 mb-10">;
 
@@ -428,6 +468,12 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
+  CardTitle,
+} from '@/components / ui / card';
+import { FileText, ShieldCheck } from 'lucide-react';
+interface ContractTypeCardsProps {
+=======
 <<<<<<< HEAD
   CardTitle} from @/components/ui/ card';
 import { FileText, ShieldCheck } from 'lucide-react;
@@ -452,6 +498,7 @@ function ContractTypeCards() {return (<div className=grid md:grid - cols - 2 gap
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   onStandardClick: () => void;,
   onSmartClick: () => void;,
 export /**
@@ -461,6 +508,16 @@ export /**
     <div className='grid md:grid - cols - 2 gap - 6 mb - 10>;
       <Card>;
         <CardHeader>;
+<<<<<<< HEAD
+          <CardTitle className='flex items - center gap - 2'>;
+            <FileText className='h - 5 w - 5' />            Standard Contracts;
+          <CardTitle className="flex items - center gap - 2">;
+            <FileText className="h - 5 w - 5" />;
+interface ContractTypeCardsProps {
+  onStandardClick: () => void,
+  onSmartClick: () => void;
+}
+=======
 <<<<<<< HEAD
           <CardTitle className=flex items - center gap - 2'>;
             <FileText className='h - 5 w - 5 />            Standard Contracts;
@@ -480,13 +537,17 @@ interface ContractTypeCardsProps {
   onStandardClick: () => void,
   onSmartClick: () => void;
 }
+>>>>>>> merged-prs-20250907-203621
 export /**
  * ContractTypeCards - Function description
  */
 function ContractTypeCards() {
   return (
     <div className="grid md:grid - cols - 2 gap - 6 mb - 10">;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
@@ -494,10 +555,13 @@ function ContractTypeCards() {
             <FileText className=h - 5 w - 5" />;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             Standard Contracts;
             <FileText className="h - 5 w - 5 />;Standard Contracts;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             Standard Contracts;
 
           </CardTitle>;
@@ -507,7 +571,10 @@ function ContractTypeCards() {
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 
           <ul className=space - y-2'>;
         <CardContent>;<ul className='space - y-2>;
@@ -539,6 +606,10 @@ function ContractTypeCards() {
               Smart Contracts;
             </CardTitle>;
 <<<<<<< HEAD
+
+              Blockchain Powered;
+=======
+<<<<<<< HEAD
             <span className='px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
         <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
           <div className="flex justify - between items - center">;
@@ -564,6 +635,7 @@ function ContractTypeCards() {
 
               Blockchain Powered;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </span>;
           </div>;
           <CardDescription>;
@@ -572,11 +644,14 @@ function ContractTypeCards() {
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           <ul className='space - y-2>;
         <CardContent>;<ul className=space - y-2'>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           <ul className='space - y-2>;
         <CardFooter>;
@@ -641,13 +716,18 @@ pr-12325
           >;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   );
@@ -667,6 +747,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}})}</div>)})}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>;
   );
 }

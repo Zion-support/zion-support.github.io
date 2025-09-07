@@ -7,6 +7,8 @@ import { cn } from '@/lib / utils;interface InteractiveFeaturesProps {
 }
 interface InteractiveFeaturesProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { ArrowRight, Search, Users, Zap, Settings  } from lucide-react';
 import Link from 'next / link;
 import { cn } from @/lib / utils';interface InteractiveFeaturesProps  {class_name?: string,style?: React.CSSProperties;
@@ -42,6 +44,7 @@ import { cn } from @/lib/utils';interface InteractiveFeaturesProps {
   style?: React && React.CSSProperties;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   class_name?: string;
   style?: React.CSSProperties;
@@ -122,6 +125,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
   const handleToggle = (index: number) => {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { cn } from '@/lib/utils;interface InteractiveFeaturesProps  {className?: string,style?: React && React.CSSProperties;}interface InteractiveFeaturesProps  {className?: string;
   style?: React && React.CSSProperties;export function InteractiveFeatures(): any ({className,style}: InteractiveFeaturesProps) {const [openIndex, setOpenIndex]  = React && React.useState<number | null>(null)const features = [;
     {title: AI Talent Matching',description:;
@@ -143,6 +148,7 @@ import { cn } from '@/lib/utils;interface InteractiveFeaturesProps  {className?:
         </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               key={index}
 
               onMouseEnter={() => setOpenIndex(index)}
@@ -155,6 +161,11 @@ import { cn } from '@/lib/utils;interface InteractiveFeaturesProps  {className?:
 
                 {feature.icon}
 <<<<<<< HEAD
+                <div>
+                  <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+=======
+<<<<<<< HEAD
                 <div>;
                   <CardTitle className=text-lg text-white">{feature.title}</CardTitle>;
                   <CardDescription className="text-zion-slate-light>;
@@ -163,6 +174,7 @@ import { cn } from '@/lib/utils;interface InteractiveFeaturesProps  {className?:
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     {feature.description}
                   </CardDescription>
                 </div>
@@ -213,6 +225,9 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react
   );
 
 <<<<<<< HEAD
+export default InteractiveFeatures;
+=======
+<<<<<<< HEAD
   )</Card>))}
         </div>;
       </div>;
@@ -228,3 +243,4 @@ export default InteractiveFeatures;
 =======
 export default InteractiveFeatures;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -208,6 +208,7 @@ process.on(SIGINT")
 process.on(SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -228,3 +229,9 @@ console.log(` Starting comprehensive code quality automation...``)"
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.error(" Failed to start code quality "automation": ")
+=======
+  console.error(" Failed to start code quality "automation": ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

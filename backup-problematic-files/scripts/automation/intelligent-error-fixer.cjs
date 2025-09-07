@@ -120,6 +120,7 @@ console.log(🤖 Starting intelligent error fixer...")
 });console.log(" "Completed: ${command})
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -136,3 +137,9 @@ console.log(🤖 Starting intelligent error fixer...")
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  const sourceDirs = ["src", "components", "pages"]
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

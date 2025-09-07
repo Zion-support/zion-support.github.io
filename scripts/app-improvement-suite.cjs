@@ -128,12 +128,16 @@ class AppImprovementSuite {
 
   findPageFiles(dir) {
     const pageFiles = [];
+    const files = fs.readdirSync(dir);
     
     for (const file of files) {
+      const fullPath = path.join(dir, file);
+      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         pageFiles.push(...this.findPageFiles(fullPath));
       } else if (stat.isFile()) {
+        const ext = path.extname(file).toLowerCase();
         if (['.tsx', '.jsx', '.ts', '.js'].includes(ext)) {
           pageFiles.push(fullPath);
         }
@@ -172,12 +176,16 @@ class AppImprovementSuite {
 
   findComponentFiles(dir) {
     const componentFiles = [];
+    const files = fs.readdirSync(dir);
     
     for (const file of files) {
+      const fullPath = path.join(dir, file);
+      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         componentFiles.push(...this.findComponentFiles(fullPath));
       } else if (stat.isFile()) {
+        const ext = path.extname(file).toLowerCase();
         if (['.tsx', '.jsx', '.ts', '.js'].includes(ext)) {
           componentFiles.push(fullPath);
         }

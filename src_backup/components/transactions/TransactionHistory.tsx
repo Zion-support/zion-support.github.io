@@ -149,6 +149,8 @@ import {
   CardFooter,
   CardHeader,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   CardTitle} from @/components/ui/card';
 import { Badge } from '@/components/ui/badge;
 export /**;
@@ -177,6 +179,7 @@ import { useCurrency  } from @/hooks/useCurrency';
 import { logErrorToProduction  } from '@/utils/productionLogger;
 interface Transaction  {id: string;
 =======
+>>>>>>> merged-prs-20250907-203621
   CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -198,7 +201,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface Transaction {
   id: string;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   user_id: string;
   provider_id: string;
   service_id: string;

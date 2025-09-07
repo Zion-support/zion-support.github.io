@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -19,6 +23,7 @@ console.log(✨ Line break fixes completed!')
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 console.log(' Fixing line breaks in className attributes...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'
@@ -29,11 +34,21 @@ console.log(' Fixing line breaks in className attributes...')
     if (content !== fs.readFileSync(filePath, 'utf8')
 // console.log(` Fixed: ${path.relative('/workspace'`})
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 console.log('✨ Line break fixes completed!')
+<<<<<<< HEAD
+console.log('✨ Line break fixes completed!')
+console.log('✨ Line break fixes completed!')
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -55,3 +70,4 @@ console.log('✨ Line break fixes completed!')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

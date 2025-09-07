@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -38,6 +41,7 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -51,6 +55,15 @@ const { execSync } = require('child_process')
           return match + ''
       const jsxIssues = [{ "pattern": /render\(<([^>]+)>\s*\)/g, "replacement"}
         { "pattern": /expect\(screen\.getByTestId\('([^']+)'\)\)\.toBeInTheDocument\(\)/g, "replacement": 'expect(screen.getByTestId("$1"})
+<<<<<<< HEAD
+
+      const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
+      const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
+      const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,3 +95,4 @@ const { execSync } = require('child_process')
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

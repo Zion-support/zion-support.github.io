@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
@@ -63,8 +66,13 @@ const path = require("path")
 >>>>>>> origin/chore/fix-lint-and-merge
   console.log(� High failure probability detected - initiating preventive measures")
       "
+<<<<<<< HEAD
+  console.log(")
+  if($2) {"}
+=======
   console.log()
     if (this.predictions.failureProbability > this.mlModel.failureThreshold) {}
+>>>>>>> merged-prs-20250907-203621
 // console.log(� High failure probability detected - initiating preventive measures"")
   console.log(⚡ Low performance detected - initiating optimization)
   console.log(� Restarting ${process.name} due to high restart count")
@@ -85,7 +93,11 @@ const path = require("path")
 // console.log( Intelligent Predictive Monitor initialized successfully)
   console.log(" Intelligent Predictive Monitor initialized successfully")
 <<<<<<< HEAD
+  console.error(" Intelligent Predictive Monitor "failed": ")
+=======
+<<<<<<< HEAD
   console.error( Intelligent Predictive Monitor failed": ")
+>>>>>>> merged-prs-20250907-203621
 
 
   console.error( Intelligent Predictive Monitor failed": ")
@@ -98,6 +110,13 @@ const path = require("path")
 
 =======
   console.error(" Intelligent Predictive Monitor "failed": ")
+<<<<<<< HEAD
+  console.error(" Intelligent Predictive Monitor "failed": ")
+  console.error(" Intelligent Predictive Monitor "failed": ")
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,3 +140,4 @@ const path = require("path")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

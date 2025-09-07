@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -26,10 +36,23 @@ const glob = require('glob');
 
 
 =======
+>>>>>>> merged-prs-20250907-203621
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+
+<<<<<<< HEAD
+function deriveAlias(modulePath) {}
+
+function ensureDefaultExport(content, name) {}
+	const hasDefault = /export\s+default\s+/m.test(content)
+  if($2) {}`
+		return content.trimEnd() + `\n\nexport default ${name};\n`}
+	return content}
+function fixExportDefaultConst(filePath, content) {}
+	let changed = false
+	let names = []
+	const fixed = content.replace(/export\s+default\s+const\s+([A-Za-z_$][\w$]*)/g, (m, name) => {}
+		changed = true
 =======
-
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
@@ -51,6 +74,7 @@ function fixExportDefaultConst(filePath, content) {}
 	const fixed = content.replace(/export\s+default\s+const\s+([A-Za-z_$][\w$]*)/g, (m, name) => {}
 		changed = true;
 
+>>>>>>> merged-prs-20250907-203621
 				out = ensureDefaultExport(out, name)}
 		}
 		return out}
@@ -58,6 +82,10 @@ function fixExportDefaultConst(filePath, content) {}
 function processFile(fullPath) {}
 
 	let content = original;
+<<<<<<< HEAD
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+=======
 <<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -67,10 +95,17 @@ function processFile(fullPath) {}
 	content = fixExportDefaultConst(fullPath, content);
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
 
+<<<<<<< HEAD
+
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -78,16 +113,24 @@ function processFile(fullPath) {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 	if (content !== original) {}
 
 		return true}
 	return false}
 function run() {}
 	const projectRoot = process.cwd();
-
+	const patterns = ['src/**/*.{js,jsx,ts,tsx}'];
 	let total = 0;
 	let changed = 0;
 	for (const pattern of patterns) {}
+<<<<<<< HEAD
+		const files = glob.sync(pattern, { "cwd": projectRoot, "nodir": true }
+});
+		for (const rel of files) {}
+			total++;
+			const fp = path.resolve(projectRoot, rel);
+=======
 		const files = glob.sync(pattern, { "cwd: projectRoot, nodir": true }")
 		for (const rel of files) {}
 			total++;
@@ -103,6 +146,7 @@ function run() {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 			try {}
 				if (processFile(fp)) {}
 					changed++}
@@ -113,12 +157,22 @@ function run() {}
 =======
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 run();
+<<<<<<< HEAD
+run();
+run();
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -141,3 +195,4 @@ run();
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

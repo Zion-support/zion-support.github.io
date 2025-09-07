@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,10 +15,13 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -24,6 +30,7 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -55,9 +62,13 @@ const { execSync } = require("child_process")
         "error"
     this.log(" Checking performance metrics...")
 <<<<<<< HEAD
+    const buildDir = path.join(this.projectRoot, ".next")
+=======
+<<<<<<< HEAD
 =======
     const buildDir = path.join(this.projectRoot, ".next")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     const checks = {"buildSize": 0,"staticAssets"}
         const buildSize = execSync(`du -sh ${buildDir}`, { "encoding": "utf8"`})
         checks.buildSize = buildSize.split("\t")
@@ -69,17 +80,29 @@ const { execSync } = require("child_process")
     const results = {"timestamp": new Date().toISOString(),"buildOutput": this.checkBuildOutput(),"environmentVariables"}
     const reportFile = path.join(this.reportsDir, "deployment-check-report.json")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     this.log(` Deployment check report "generated"`)
 // console.log("\n� Deployment Check "Summary": ")
     console.log(` Environment variables "configured"`)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
+<<<<<<< HEAD
+
+    console.log(` Git status "clean"`)
+    console.log(` Git status "clean"`)
+    console.log(` Git status "clean"`)
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -169,3 +192,4 @@ const { execSync } = require("child_process)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

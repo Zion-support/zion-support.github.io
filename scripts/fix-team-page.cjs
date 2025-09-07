@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,13 +12,20 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Fix Team Page - Targeted fix for team.tsx;
+ * Fix Team Page - Targeted fix for team.tsx
  */
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -132,6 +141,7 @@ const fs = require('fs')
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -213,6 +223,14 @@ const fs = require('fs')
               "display"
               "border"
 <<<<<<< HEAD
+
+              "transition"
+              "transition"
+              "transition"
+
+const fs = require('fs')
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -231,9 +249,11 @@ const fs = require('fs')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
+
 
 <<<<<<< HEAD
-
+=======
 
 =======
 const fs = require('fs')
@@ -242,3 +262,4 @@ const fs = require('fs')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -2,7 +2,7 @@ name: Release Drafter
 
 on:
   push:
-
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -23,4 +23,3 @@ permissions:
 permissions:
   contents: write
   pull-requests: read
-

@@ -13,6 +13,8 @@ import {cn} from @/lib/utils"
 import { cn } from "@/lib/utils
  
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >(({ className, separator, ...props }, ref,) => (}
 >(({ className, separator, ...props }, ref,) => (import { cn  } from '@/lib/utils;
 const Breadcrumb = null;
@@ -46,6 +48,7 @@ const Breadcrumb = React.forwardRef<;
     ref={ref}
     aria-label="breadcrumb;
     className={cn(inline-flex items-center gap-1 text-sm text-zion-slate-light",className;
+>>>>>>> merged-prs-20250907-203621
 const Breadcrumb = $2;
   React.ComponentPropsWithoutRef<"nav> & {
 =======
@@ -79,6 +82,9 @@ const Breadcrumb = React.forward_ref<;
       className
     )}
     {...props}
+<<<<<<< HEAD
+  />
+=======
 <<<<<<< HEAD
 
   />));
@@ -142,6 +148,7 @@ const BreadcrumbItem = React.forward_ref<;
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<a'> & {
+>>>>>>> merged-prs-20250907-203621
 ))
 Breadcrumb.displayName = $2;
   React.ComponentPropsWithoutRef<ol">
@@ -202,6 +209,11 @@ BreadcrumbLink.displayName = $2;
   ...props
 }: React.ComponentProps<"li>) => (
   <li
+<<<<<<< HEAD
+    role="presentation"
+    aria-hidden="true"
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+=======
     role=presentation"
     aria-hidden="true
   HTMLAnchorElement,React.ComponentPropsWithoutRef<'a> & {asChild?: boolean;
@@ -311,6 +323,7 @@ const BreadcrumbSeparator = ({
 
 
     className={cn([&>svg]:size-3.5 text-zion-slate-light/70", className)}
+>>>>>>> merged-prs-20250907-203621
     {...props}
 
   >
@@ -352,6 +365,14 @@ export {
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
+<<<<<<< HEAD
+  BreadcrumbSeparator,
+
+export {
+
+  BreadcrumbEllipsis}
+;
+=======
 <<<<<<< HEAD
   BreadcrumbSeparator}: React && React.ComponentProps<"span>) => (<span;
     role=presentation";
@@ -396,3 +417,4 @@ export {
   BreadcrumbEllipsis}
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

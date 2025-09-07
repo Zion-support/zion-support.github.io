@@ -1,5 +1,18 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -90,6 +103,7 @@ const path = require("path")
 const { execSync } = require("child_process")
   const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require("child_process")
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
@@ -150,8 +164,11 @@ const { execSync } = require("child_process")
   this.log(⚠ ESLint auto-fix failed, checking for specific errors...)
   this.log(` ESLint check "failed"`)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const files = this.findFiles(".ts,.tsx,.js,.jsx")
   let content = fs.readFileSync(file, "utf8")
         content = content.replace(/[\t]+$/gm, )
@@ -169,7 +186,10 @@ const { execSync } = require("child_process")
   this.log(` ESLint check "failed"`)
     const files = this.findFiles(".ts,.tsx,.js,.jsx")
   let content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         content = content.replace(/[\t]+$/gm, ")
         content = content.replace(/([^])\n/g, "$1;\n
         content = content.replace(/([^]*)/g, $1
@@ -178,11 +198,16 @@ const { execSync } = require("child_process")
           this.errorsFixed.push({ file, "type": eslint})
   this.log(" Checking for syntax errors...")
 <<<<<<< HEAD
+    const files = this.findFiles(".ts,.tsx,.js,.jsx")
+  const content = fs.readFileSync(file, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
     const files = this.findFiles(".ts,.tsx,.js,.jsx")
   const content = fs.readFileSync(file, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         if (content.includes(")
             type: "merge_conflict"
             needsManualFix
@@ -209,7 +234,10 @@ const { execSync } = require("child_process")
         execSync("npm install", { "stdio": "inherit"})
         this.errorsFixed.push({ "type": "dependencies", "action": "installed"})
   const outdated = execSync("npm outdated --json", { "encoding": "utf8"})
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         if (outdated && outdated !== "{}")
   this.log(� Updating outdated packages...)
           execSync("npm update", { stdio: "inherit"})
@@ -228,6 +256,36 @@ const { execSync } = require("child_process")
   this.log( Build still failing after cache clear)
   this.log(` Build check "failed"`)
 <<<<<<< HEAD
+  const exts = extensions.split(",")
+  this.log(` Dependency check "failed"`)
+  this.log(" Checking build errors...")
+  execSync("npm run build", { "stdio": "pipe"})
+        this.log(" Build successful")
+  this.log("⚠ Build failed, attempting to fix...")
+  execSync("rm -rf dist", { "stdio": "pipe"})
+          execSync("rm -rf .vite", { "stdio": "pipe"})
+          this.log("🧹 Cleared build cache")
+  execSync("npm run build", { "stdio": "pipe"})
+          this.log(" Build successful after cache clear")
+          this.errorsFixed.push({ "type": "build_cache", "action": "cleared"})
+  this.log(" Build still failing after cache clear")
+  this.log(` Build check "failed"`)
+  const exts = extensions.split(",")
+          !item.startsWith(".")
+          item !== "node_modules"
+  "timestamp"
+      "fixesApplied"
+      "errorsFixed"
+      "status": "completed"
+  "isRunning"
+      "fixesApplied"
+      "lastCheck"
+      "logFile"
+  process.on("SIGINT")
+  process.on("SIGINT")
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   const exts = extensions.split(",")
@@ -274,6 +332,13 @@ const { execSync } = require("child_process")
 =======
   process.on(")
 <<<<<<< HEAD
+  process.on(")
+  process.on(")
+
+
+
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -295,3 +360,4 @@ const { execSync } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

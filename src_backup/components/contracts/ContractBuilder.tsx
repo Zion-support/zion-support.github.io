@@ -4,6 +4,8 @@ isOpen;
   clientName;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const handleLoadTemplate = (templateData: ContractFormValues,) => {;
   const handleLoadTemplate = (templateData: ContractFormValues,) => {
     setFormValues(templateData);
@@ -24,6 +26,7 @@ isOpen;
           setShowSmartContractBuilder(false);          onClose();
 
 =======
+>>>>>>> merged-prs-20250907-203621
   onContractGenerated;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
@@ -33,7 +36,10 @@ isOpen;
   );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { useState } from 'react;
 import {
@@ -52,6 +58,8 @@ import { SmartContractBuilder } from ./SmartContractBuilder';
 
 interface ContractBuilderProps {
   isOpen: boolean;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 isOpen;
   onClose;
@@ -74,6 +82,7 @@ import { SmartContractBuilder  } from ./SmartContractBuilder';
 interface ContractBuilderProps  {isOpen: boolean;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
@@ -140,6 +149,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export function ContractBuilder() {const [activeTab, setActiveTab] = useState<string>("form)const [generatedContract, setGeneratedContract] = useState<string | null>(null)const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;
   ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)const handleLoadTemplate = null;
           onClose()}}
@@ -149,6 +160,7 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
     )}return (<Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto>;
 =======
+>>>>>>> merged-prs-20250907-203621
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
 >>>>>>> origin/chore/fix-lint-and-merge
         <DialogHeader>;
@@ -185,6 +197,8 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
                 <Save className=h-4 w-4" />;
                 Templates;
               </Button>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
@@ -227,9 +241,28 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               talent = {talent}
 
+<<<<<<< HEAD
+              clientName = {clientName,}
+              initialValues = {formValues,}
+              onFormValuesChange = {setFormValues,}
+              onContractGenerated = {handleContractGenerated,}
+
+                contractContent = {generatedContract,}
+                talent = {talent,}
+                onClose = {onClose,}
+                status="ready"
+
+        <TemplateManager
+
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
+=======
 <<<<<<< HEAD
               clientName = {clientName}
               initialValues = {formValues}
@@ -360,3 +393,4 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

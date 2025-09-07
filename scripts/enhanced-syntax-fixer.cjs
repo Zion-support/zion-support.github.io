@@ -1,5 +1,16 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
+=======
+<<<<<<< HEAD
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require(path')
@@ -57,6 +68,7 @@ const path = require('path')
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
   console.log(' Starting Enhanced Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -74,6 +86,12 @@ const { execSync } = require('child_process')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
     const reportPath = 'enhanced-syntax-fix-report.json;'
+<<<<<<< HEAD
+
+    console.error(' Enhanced syntax fixer "failed")
+    console.error(' Enhanced syntax fixer "failed")
+    console.error(' Enhanced syntax fixer "failed")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +112,7 @@ const { execSync } = require('child_process')
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
     const reportPath = 'enhanced-syntax-fix-report.json;
 

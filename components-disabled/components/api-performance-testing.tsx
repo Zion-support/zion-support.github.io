@@ -64,6 +64,8 @@ export default function ApiPerformanceTestingPage() {
   return (
 export default function ApiPerformanceTestingPage() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
     "k6/Gatling-compatible test runner","
     "SLO-aware latency reports","
@@ -71,13 +73,17 @@ export default function ApiPerformanceTestingPage() {
     "CI checks and PR annotations","
     "Synthetic traffic for staging""
 =======
+>>>>>>> merged-prs-20250907-203621
   const features = [
     \"k6/Gatling-compatible test runner\",
     \"SLO-aware latency reports\",
     \"Regression baselines per endpoint\",
     \"CI checks and PR annotations\",
     \"Synthetic traffic for staging\"
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   ];
 ;
   return (
@@ -391,11 +397,16 @@ key={,}
     </>)}
 
 <<<<<<< HEAD
+const features = [
+  'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+=======
+<<<<<<< HEAD
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
 =======
 const features = [
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 ];
 
 const features  = null;return (<>;
@@ -450,11 +461,16 @@ const features  = null;return (<>;
 }
 
 <<<<<<< HEAD
+const features = [
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+=======
+<<<<<<< HEAD
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
 =======
 const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 	];
 	return (
 		<>

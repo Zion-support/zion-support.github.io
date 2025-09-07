@@ -1,10 +1,12 @@
 <<<<<<< HEAD
-module.exports = {
-=======
 export default {
->>>>>>> origin/chore/fix-lint-and-merge
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+	plugins: {
+		tailwindcss: {},
+		autoprefixer: {},
+	},
+};
+=======
+},
+module.exports = $2;
+    autoprefixer: {}}},
+>>>>>>> merged-prs-20250907-203621

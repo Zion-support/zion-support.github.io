@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,14 +12,19 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log("" Starting comprehensive code quality automation...")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log("" Starting comprehensive code quality automation...")
 // Get automation interval from environment variable ("default")
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -77,7 +84,10 @@ console.log(` Starting comprehensive code quality automation...``)
   console.log("  ⚠  Prettier not available, using manual formatting")
               f.endsWith(".jsx")
     const filesToFormat = [""src/components"", ""src/pages"", ""src/utils"", ""src/services"", "]
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               f.endsWith(".tsx")
               f.endsWith(.ts)
               f.endsWith(".js")
@@ -142,20 +152,29 @@ console.log(` Starting comprehensive code quality automation...``)
   // Skip files that can
 console.log(`   Optimized structure in ${improvements} files`)} catch (error) {  console.log(`  ⚠  Code structure optimization "failed"`})
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const filesToOptimize = ["""src/components""", """src/pages""", """src/utils"""]
   const filesToOptimize = [""src/components"", ""src/pages"", ""src/utils""]
           .filter(f => f.endsWith(".tsx") || f.endsWith(".ts")
   const filePath = path.join(dir, ")
   let content = fs.readFileSync(filePath", "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               file.endsWith(".tsx")
               content.includes(export default function)
               !content.includes("/**")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const componentName = file.replace(".tsx", ")
               const docComment = "
   fs.writeFileSync(filePath, content, "utf8")
@@ -180,8 +199,11 @@ console.log(`   Optimized structure in ${improvements} files`)} catch (error) { 
 });
 "
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const testFiles = countTestFiles("src");console.log(    🧪 Test "files": ${testFiles}```)
     const issues = await checkCommonIssues();console.log("    ⚠  Common issues "found": ${issues}")
   execSync("npm run lint", { "stdio": "pipe"})
@@ -201,7 +223,10 @@ console.log(`   Optimized structure in ${improvements} files`)} catch (error) { 
 =======
         item.endsWith(".jsx")
   const content = fs.readFileSync(fullPath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           count += content.split("\n")
   // Skip files that can
   // Skip directories that can
@@ -247,6 +272,8 @@ process.on("SIGINT")
         item.endsWith(.js)
         item.endsWith(".jsx")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   // Skip files that can"
   // Skip directories that can"
@@ -262,6 +289,7 @@ process.on(SIGTERM")
 
   console.error( Failed to start code quality "automation": )
 =======
+>>>>>>> merged-prs-20250907-203621
   const content = fs.readFileSync(fullPath, "utf8")
   // Skip files that can"
   // Skip directories that can"
@@ -270,6 +298,18 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+
+  console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
+
+// Get automation interval from environment variable ("default")"
+  console.log(` Running code quality automation at ${new Date().toISOString()}`
+console.log(` Starting comprehensive code quality automation...``)"
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,3 +340,4 @@ console.log(` Starting comprehensive code quality automation...``)"
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

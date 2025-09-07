@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -21,8 +24,12 @@ console.log("" Starting Intelligent Code Refactorer...")
       "complexityReduction"
       "refactoringPatterns"
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -98,12 +105,15 @@ console.log(" Starting Intelligent Code Refactorer...)
       this.refactoringMetrics.refactoringPatterns.get(patterns)
   console.log("� Extracting magic numbers...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           "file"
           timestamp
           "description"
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const filePath = path.join(process.cwd(), "src"
         let content = fs.readFileSync(filePath, "utf8")
   content = constantDeclaration + "\n"
@@ -236,7 +246,10 @@ console.log(` Simplified code in ${pattern.file}");)} catch (error) {`}
               "suggested"
               "line"
     const prefix = contextWords[0] ? contextWords[0].toUpperCase() : "
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   isConsistentNaming(name")
   isConsistentNaming(name")
       /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)}
@@ -260,11 +273,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start intelligent code "refactorer")
+<<<<<<< HEAD
+  console.error(" Failed to start intelligent code "refactorer")
+  console.error(" Failed to start intelligent code "refactorer")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -286,3 +309,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

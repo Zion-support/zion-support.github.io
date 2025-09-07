@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+
+import { useState, useEffect } from "react";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { JobsList } from "@/components/jobs/JobsList";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
+import { JobStatus } from "@/types/jobs";
+import { SEO } from "@/components/SEO";
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { useJobs } from "@/hooks/useJobs";
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+import { useIsMobile } from "@/hooks/use-mobile";
+function ClientDashboardContent() {
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
+  const { jobs, isLoading } = useJobs($2);
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
+  const isMobile = useIsMobile($2);
+  // Set the first job as selected when jobs are loaded (if any)
+  useEffect(() => {
+    if (jobs.length > 0 && !selectedJobId) {
+      setSelectedJobId($2);
+      setSelectedJobTitle(jobs[0].title)
+    }
+  }, [jobs, selectedJobId]),
+
+  const handleJobSelect = (jobId: string, jobTitle: string) => {
+    setSelectedJobId($2);
+=======
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -15,6 +51,7 @@ import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSte
 import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
@@ -61,6 +98,43 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 
 function ClientDashboardContent() {
+=======
+<<<<<<< HEAD
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, isLoading } = useJobs();
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
+  const isMobile = useIsMobile();
+  // Set the first job as selected when jobs are loaded (if any);
+  useEffect(() => {;
+    if (jobs && jobs.length > 0 && !selectedJobId) {;
+      setSelectedJobId(jobs[0].id);
+      setSelectedJobTitle(jobs[0].title);
+    }
+  }, [jobs, selectedJobId]);
+import { useState, useEffect } from "react",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { JobsList } from "@/components/jobs/JobsList",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Link } from "react-router-dom",
+import { JobStatus } from "@/types/jobs",
+import { SEO } from "@/components/SEO",
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
+import { useJobs } from "@/hooks/useJobs",
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { useIsMobile } from "@/hooks/use-mobile";
+function ClientDashboardContent() {
+=======
+function ClientDashboardContent() {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
 
   const { jobs, isLoading } = useJobs();
@@ -68,6 +142,9 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);"
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+<<<<<<< HEAD
+import { useIsMobile } from "@/hooks/use-mobile",
+=======
 
   // Set the first job as selected when jobs are loaded (if any);
   useEffect(() => {;
@@ -78,6 +155,12 @@ function ClientDashboardContent() {
     }
   }, [jobs, selectedJobId]);
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
 
@@ -90,6 +173,49 @@ function ClientDashboardContent() {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
 
+<<<<<<< HEAD
+=======
+  },
+
+<<<<<<< HEAD
+  }, [jobs, selectedJobId]);
+  }, [jobs, selectedJobId]),
+
+  const handleJobSelect = (jobId: string, jobTitle: string) => {
+    setSelectedJobId(jobId)
+>>>>>>> merged-prs-20250907-203621
+    setSelectedJobTitle(jobTitle)
+  },
+<<<<<<< HEAD
+
+  return (
+    <>
+      <SEO
+        title="Client Dashboard | Zion AI Marketplace"
+        description="Manage your jobs and talent requests in the Zion AI Marketplace."
+      />
+      <AppHeader />
+      <main className="container mx-auto px-4 py-8">
+        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
+          <div>
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>
+            <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>
+          </div>
+          <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
+            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
+              <Link to="/hiring-tracker">
+                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
+              </Link>
+            </Button>
+            <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
+              <Link to="/post-job">
+                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <>
       <SEO"
@@ -122,10 +248,46 @@ function ClientDashboardContent() {
             <Button asChild className={isMobile ? "w-full justify-center" : ""}>"
               <Link to="/post-job">"
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
+>>>>>>> merged-prs-20250907-203621
               </Link>
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
+        {/* New Onboarding Steps */}
+        <div className="mb-8">
+          <ClientOnboardingSteps />
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
+              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
+                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
+                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>
+                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>
+                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
+                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
+              </TabsList>
+              <TabsContent value="all" className="mt-0">
+                <JobsList onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="new" className="mt-0">
+                <JobsList filter="new" onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="in_progress" className="mt-0">
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="filled" className="mt-0">
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="closed" className="mt-0">
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />
+              </TabsContent>
+            </Tabs>
+          </div>
+          <div>
+            <div className="sticky top-4 space-y-6">
+=======
         {/* New Onboarding Steps */}"
         <div className="mb-8">
           <ClientOnboardingSteps />
@@ -341,29 +503,309 @@ function ClientDashboardContent() {"
           <div>"
             <div className="sticky top-4 space-y-6">
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
+=======
+
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useState, useEffect } from "react",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { JobsList } from "@/components/jobs/JobsList",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Link } from "react-router-dom",;
+import { JobStatus } from "@/types/jobs",;
+import { SEO } from "@/components/SEO",;
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",;
+import { useJobs } from "@/hooks/useJobs",;
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",;
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",;
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+function ClientDashboardContent() {;
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;
+  const { jobs, isLoading } = useJobs(),;
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),;
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
+  const isMobile = useIsMobile(),;
+  // Set the first job as selected when jobs are loaded (if any);
+  useEffect(() => {;
+    if (jobs.length > 0 && !selectedJobId) {;
+      setSelectedJobId(jobs[0].id),;
+      setSelectedJobTitle(jobs[0].title);
+    }
+  }, [jobs, selectedJobId]),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const handleJobSelect = (jobId: string, jobTitle: string) => {;
+    setSelectedJobId(jobId),;
+    setSelectedJobTitle(jobTitle);
+  };
+<<<<<<< HEAD
+  return (;
+    <>;
+      <SEO;
+        title="Client Dashboard | Zion AI Marketplace";
+        description="Manage your jobs and talent requests in the Zion AI Marketplace.";
+=======
+
+  return (
+    <>;
+      <SEO
+        title="Client Dashboard | Zion AI Marketplace" 
+        description="Manage your jobs and talent requests in the Zion AI Marketplace." 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>;
+          <div>;
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>;
+            <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>;
+          </div>;
+          <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
+            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
+
+import { useState, useEffect } from "react",;
+import { AppHeader } from "@/layout/AppHeader", ;
+import { Footer } from "@/components/Footer",;
+import { JobsList } from "@/components/jobs/JobsList",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Link } from "react-router-dom",;
+import { JobStatus } from "@/types/jobs",;
+import { SEO } from "@/components/SEO",;
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",;
+import { useJobs } from "@/hooks/useJobs",;
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",;
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",;
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+;
+function ClientDashboardContent() {;
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;
+  const { jobs, isLoading } = useJobs(),;
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),;
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
+  const isMobile = useIsMobile(),;
+;
+  // Set the first job as selected when jobs are loaded (if any);
+  useEffect(() => {;
+    if (jobs.length > 0 && !selectedJobId) {;
+      setSelectedJobId(jobs[0].id),;
+      setSelectedJobTitle(jobs[0].title),;
+    }
+  }, [jobs, selectedJobId]),;
+;
+  const handleJobSelect = (jobId:string, jobTitle:string) => {;
+    setSelectedJobId(jobId),;
+    setSelectedJobTitle(jobTitle);
+  },;
+;
+  return (;
+    <>;
+      <SEO ;
+        title="Client Dashboard | Zion AI Marketplace" ;
+        description="Manage your jobs and talent requests in the Zion AI Marketplace." ;
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' :''} mb-8 gap-4`}>;
+          <div>;
+            <h1 className={`text-${isMobile ? '2xl' :'3xl'} font-bold`}>My Jobs</h1>;
+            <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>;
+          </div>;
+          <div className={`flex gap-2 ${isMobile ? 'flex-col' :''}`}>;
+            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' :''}>;
+              <Link to="/hiring-tracker">;
+                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
+              </Link>;
+            </Button>;
+            <Button asChild className={isMobile ? 'w-full justify-center' :''}>;
+            <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
+              <Link to="/post-job">;
+                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
+              </Link>;
+            </Button>;
+          </div>;
+        </div>;
+<<<<<<< HEAD
+;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {/* New Onboarding Steps */}
+        <div className="mb-8">;
+          <ClientOnboardingSteps />;
+        </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+          <div className="lg:col-span-2">;
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
+              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
+                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
+                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
+                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>;
+                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
+                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
+              </TabsList>;
+<<<<<<< HEAD
+;
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+          <div className="lg:col-span-2">;
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
+              <TabsList className={`mb-6 ${isMobile ? 'w-full' :''}`}>;
+                <TabsTrigger value="all" className={isMobile ? 'flex-1' :''}>All</TabsTrigger>;
+                <TabsTrigger value="new" className={isMobile ? 'flex-1' :''}>New</TabsTrigger>;
+                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' :''}>Active</TabsTrigger>;
+                <TabsTrigger value="filled" className={isMobile ? 'flex-1' :''}>Filled</TabsTrigger>;
+                <TabsTrigger value="closed" className={isMobile ? 'flex-1' :''}>Closed</TabsTrigger>;
+              </TabsList>;
+              ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <TabsContent value="all" className="mt-0">;
+                <JobsList onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="new" className="mt-0">;
+                <JobsList filter="new" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="in_progress" className="mt-0">;
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="filled" className="mt-0">;
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="closed" className="mt-0">;
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+<<<<<<< HEAD
+          ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <div>;
+            <div className="sticky top-4 space-y-6">;
+
+
+
+<<<<<<< HEAD
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
-
+              ;
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
+              ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+              {/* Active Projects Card */}
+              <ActiveProjectsCard />
+              {/* Upcoming Interviews Card */}
+<<<<<<< HEAD
+              <UpcomingInterviewsCard />
+              {/* AI Talent Suggestions */}
+              <div>
+                <h2 className="text-xl font-semibold mb-4 flex items-center">
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
+                  AI Talent Suggestions
+                </h2>
+                {selectedJobId ? (
+                  <SuggestedTalents jobId={selectedJobId} />
+                ) : (
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
+                    <p className="text-muted-foreground">
+                      Select a job to see AI-matched talent suggestions
+                    </p>
+                  </div>
+                )}
+=======
+              <UpcomingInterviewsCard />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
                   AI Talent Suggestions;
                 </h2>;
+<<<<<<< HEAD
+                ;
+                {selectedJobId ? (;
+                  <SuggestedTalents jobId={selectedJobId} />;
+                ) :(;
+=======
 
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">;
                     <p className="text-muted-foreground">;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
+<<<<<<< HEAD
                 )}
+=======
+<<<<<<< HEAD
+                )}
+          <div>;
+            <div className="sticky top-4 space-y-6">;
+              {/* Active Projects Card */}
+              <ActiveProjectsCard />
+              {/* Upcoming Interviews Card */}
+              <UpcomingInterviewsCard />
+              {/* AI Talent Suggestions */}
+              <div>
+                <h2 className="text-xl font-semibold mb-4 flex items-center">
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
+                  AI Talent Suggestions
+                </h2>
+                {selectedJobId ? (
+                  <SuggestedTalents jobId={selectedJobId} />
+                ) : (
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
+                    <p className="text-muted-foreground">
+                      Select a job to see AI-matched talent suggestions
+                    </p>
+                  </div>
+                )}
+>>>>>>> merged-prs-20250907-203621
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -576,6 +1018,7 @@ function ClientDashboardContent() { return null; }
                     <p className="text-muted-foreground">;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
+<<<<<<< HEAD
                   </div>;
 
               <div>
@@ -640,6 +1083,9 @@ if ( {) {
 
 }
 
+=======
+                  </div>)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               </div>;
             </div>;
           </div>;
@@ -658,12 +1104,16 @@ export default function ClientDashboard() {;
   );
 }
 
+<<<<<<< HEAD
 export default function ClientDashboard() {}
   return (
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>;
   );
+=======
+    </>);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
  * ClientDashboard - Function description
@@ -675,6 +1125,7 @@ function ClientDashboard() {}
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 
               </div>;
             </div>;
@@ -888,9 +1339,41 @@ export default function ClientDashboard() {
 
     <ProtectedRoute>;
 
+=======
+<<<<<<< HEAD
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  ),;
+}
+>>>>>>> merged-prs-20250907-203621
+}
+export default function ClientDashboard() {
+  return (
+    <ProtectedRoute>
+      <ClientDashboardContent />
+    </ProtectedRoute>
+  )
+}
+;
+export default function ClientDashboard() {;
+  return (;
+    <ProtectedRoute>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <ClientDashboardContent />;
     </ProtectedRoute>;
   );
 }
 ;
+<<<<<<< HEAD
 ;
+=======
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

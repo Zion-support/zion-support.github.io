@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+// console.log('� Auditing dependencies...')
+        console.log(' Auditing code security...')
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -24,9 +30,17 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
             "status"
+<<<<<<< HEAD
+            "status"
+            "status"
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -48,3 +62,4 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

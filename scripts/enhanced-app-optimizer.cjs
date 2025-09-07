@@ -200,6 +200,8 @@ class EnhancedAppOptimizer {
     try {
       // Generate sitemap
       const sitemapGenerator = `
+        const fs = require('fs');
+        const path = require('path');
         
         function generateSitemap() {
           const pages = [

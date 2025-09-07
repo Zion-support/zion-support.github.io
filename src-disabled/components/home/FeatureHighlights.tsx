@@ -20,6 +20,8 @@ interface FeatureHighlightsProps {
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -40,6 +42,7 @@ function FeatureHighlights() {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   const highlightsData = [
 
@@ -76,6 +79,8 @@ function FeatureHighlights() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6>
           {highlightsData.map((category, index) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <Card
             <Card key={index} className=bg-zion-blue-dark border-zion-blue-light">
@@ -182,6 +187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => (
@@ -268,12 +274,15 @@ interface FeatureHighlightsProps {
 pr-12325
             <Card;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6>;
           {highlights_data.map ((category, index) => (<Card;
               key={index}
               key={index}
 =======
+>>>>>>> merged-prs-20250907-203621
               key={index}'
 >>>>>>> origin/chore/fix-lint-and-merge
               className='bg - zion - blue - dark border - zion - blue - light';
@@ -283,6 +292,8 @@ pr-12325
                   {category.title}
                 </h3>;'
                 <ul className='space - y-3'>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   {category.features.map ((feature, idx) => (<li key={idx} className='flex items - start'>;
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
@@ -304,6 +315,7 @@ pr-12325
                       <span className="text - zion - slate - light>{feature}</span>))}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   {category.features.map ((feature, idx) => ('
                     <li key={idx} className=flex items - start>;'
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0 />;
@@ -317,6 +329,8 @@ pr-12325
             </Card>))}
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </section>)}
 import { motion   } from framer-motion;
@@ -342,6 +356,7 @@ import { motion   } from framer-motion;
 },visible: {opacity: 1,coordinate_x: 0,transition: { duration: 0.5 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </section>);
 
     icon: ⚡","
@@ -390,6 +405,8 @@ import { motion   } from framer-motion;
 export /**;
  * FeatureHighlights - Function description;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
  */;
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900>;
       <div className="max - w-7xl mx - auto px - 6">;
@@ -399,6 +416,7 @@ export /**;
           whileInView = {{ opacity: 1,coordinate_y: 0;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  */
 
   { opacity: 0,
@@ -414,6 +432,8 @@ export /**;
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
             <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>;
 ";
           <h2 className=text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6>;
@@ -426,6 +446,7 @@ export /**;
 ;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             Experience the next generation of talent marketplace with cutting - edge AI,
             global reach, and enterprise - grade security.</p>;
@@ -439,7 +460,10 @@ export /**;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
           {features.map ((feature, index (
             <motion.div;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               key={index}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}"
@@ -460,6 +484,8 @@ export /**;
 pr-12325
               variants={item_variants}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               while_hover={{coordinate_y: -5,scale: 1.02,transition: { duration: 0.3 }
               }};
               className=group";
@@ -471,6 +497,7 @@ pr-12325
 ";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               while_hover={{}
                 coordinate_y: -5,
                 scale: 1.02,
@@ -493,6 +520,8 @@ pr-12325
       </div>;
     </section>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   )}
   {icon: ⚡,title: "Lightning Fast Performance",description: Optimized solutions that deliver exceptional speed and efficiency for your business needs;
 },{icon: "🔒",title: Enterprise Security,description: "Bank-level security protocols and compliance standards to protect your valuable data";
@@ -513,6 +542,7 @@ pr-12325
           whileInView = {{ opacity: 1,y: 0;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 
 import { motion  } from 'framer-motion';
@@ -591,6 +621,8 @@ import { motion  } from 'framer-motion';
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">;
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>;
 ;
           <h2 className=text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">;
@@ -616,6 +648,7 @@ import { motion  } from 'framer-motion';
 ";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.</p>;
@@ -669,12 +702,18 @@ pr-12325
                   {feature && feature.description}
                 </p>;
 <<<<<<< HEAD
+              </div>;
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
+=======
+<<<<<<< HEAD
               </div>;<h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200>;
 =======
               </div>;
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 {feature && feature.title}
               </h3>;
               <p className="text-gray-400 text-sm leading-relaxed">;
@@ -682,6 +721,8 @@ pr-12325
               </p>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </div>;<motion&& motion.div          className="mt-16 text-center";
         </div>;<motion&& motion.div          className=mt-16 text-center;
@@ -701,6 +742,7 @@ pr-12325
 ))}</p>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </div>;
 
   { duration: 0 && 0.6,
@@ -725,6 +767,8 @@ pr-12325
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           transition = {{ duration: 0.6,delay: 0.4;
 }}
         >";
@@ -732,6 +776,7 @@ pr-12325
             <span > Experience the difference</span>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           transition = {}
   { duration: 0.6,
   delay: 0.4;
@@ -744,6 +789,8 @@ pr-12325
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </section>)}
 '"`);
 
@@ -752,6 +799,7 @@ pr-12325
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 '`);
 
@@ -759,6 +807,9 @@ pr-12325
       </div>
     </section>
   );
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -770,3 +821,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

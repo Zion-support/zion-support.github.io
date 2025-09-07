@@ -1,10 +1,24 @@
 import * as React from &quot;react&quot;
 import * as React from "react"
 
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+import * as React from &quot;react&quot;
+import * as React from "react"
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older;`
  * React version is used where `useId` is unavailable, this hook provides;`
  * a small fallback that mimics the API using `useRef`.
+<<<<<<< HEAD
+ */
+=======
 
 import * as React from &quot;react & quot;
 
@@ -31,6 +45,7 @@ if (.use_id === &quot) {}
   // Check condition;
 if ( {) {}
   $2;
+>>>>>>> merged-prs-20250907-203621
 }
 
  */
@@ -40,7 +55,15 @@ import * as React from "react""
  * React version is used where `useId` is unavailable, this hook provides;`;
  * a small fallback that mimics the API using `useRef`.
  */
+<<<<<<< HEAD
 
+import * as React from &quot;react & quot;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
 
 export function useReactId(): string {
@@ -68,9 +91,47 @@ if (.use_id === &quot) {
 if ( {) {
   $2
 }
-
+    id_ref.current = Math.random ().to_string (36).slice (2);
+  }
+  return id_ref.current;
+}
+import * as React from "react";
 ;
+/**;
+ * React 18 introduced `useId` for generating unique IDs. If an older;
+ * React version is used where `useId` is unavailable, this hook provides;
+ * a small fallback that mimics the API using `useRef`.;
+ */;
+export function useReactId():string {;
+  if (typeof (React as any).useId === "function") {;
+    return (React as any).useId();
+  }
+export function useReactId(): string {;
+  if (typeof (React as any).useId === &quot;function&quot;) {
+export function useReactId(): string {
+  if (typeof (React as any).useId === "function") {
+    return (React as any).useId()
+  }
+  const idRef = React.useRef<string | null>(null);
+  if (idRef.current === null) {idRef.current = Math.random().toString(36).slice(2);
+  }
+  return idRef.current;
+<<<<<<< HEAD
+}
+=======
+}
+;
+  const idRef = React.useRef<string | null>(null);
+  if (idRef.current === null) {;
+    idRef.current = Math.random().toString(36).slice(2);
+  }
+  return idRef.current;
+}
+;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
     id_ref.current = Math.random ().to_string (36).slice (2);
   }
   return id_ref.current;
@@ -105,3 +166,8 @@ export function useReactId(): string {
   return idRef.current;
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

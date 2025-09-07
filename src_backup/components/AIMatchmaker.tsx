@@ -36,6 +36,9 @@ export function AIMatchmaker({ serviceType = ", onMatchSelect, className }: AIMa
         description: Tell us what you're looking for so we can find matches.",
 
 <<<<<<< HEAD
+          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
+=======
+<<<<<<< HEAD
 
 import { Sparkles, Search  } from lucide-react;
 import React from 'react';
@@ -134,6 +137,7 @@ function AIMatchmaker() {const [query, set_query] = useState (')const [is_matchm
 =======
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           AI Matchmaker;
         </CardTitle>;
         <p className='text-sm text-zion-slate-light'>;
@@ -169,6 +173,14 @@ interface AIMatchmakerProps {
       return;
     }
 <<<<<<< HEAD
+;
+    setIsMatchmaking(true),;
+    setHasSearched(true),;
+    try {;
+      logInfo("Starting AI matching", { data: { query, serviceType } }),;
+      // Get AI matches;
+=======
+<<<<<<< HEAD
 
     setIsMatchmaking(true);
     setHasSearched(true);
@@ -190,6 +202,7 @@ interface AIMatchmakerProps {
     try {;
       logInfo("Starting AI matching", { data: { query, serviceType } }),;
       // Get AI matches;
+>>>>>>> merged-prs-20250907-203621
       const results = await findMatches(;
         query,;
         serviceType,;
@@ -212,6 +225,8 @@ interface AIMatchmakerProps {
       }
     }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }if (!query && query.trim () ) {toast ({return;
 }setIsMatchmaking (true)setHasSearched (true)serviceType;
@@ -269,6 +284,7 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   },
   
   // Extract just the items from each MatchResult
@@ -300,6 +316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="space-y-2>
             <Textarea
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <div className=space-y-4">;
           <div className="space-y-2>;
             <Textarea;
@@ -310,6 +328,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white';
               placeholder="Describe what you need... (e.g., I need a senior machine learning engineer with expertise in computer vision for a 3-month project)
 =======
+>>>>>>> merged-prs-20250907-203621
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
 >>>>>>> origin/chore/fix-lint-and-merge
               value={query}
@@ -323,6 +342,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white;
             >;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               disabled={isMatchmaking}className=w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;{isMatchmaking ? (<>Analyzing your needs...</>;
@@ -344,6 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}<div className=space - y-4>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </CardContent>;
     </Card>;
   );

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -94,6 +96,7 @@
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 /**
  * Intelligent Repository Manager;
@@ -138,7 +141,11 @@
             return { "percentage": 0, "status"}
             const auditResult = await this.executeCommand('npm', { "args"})
             this.log(`Failed to check security "vulnerabilities"`)
+<<<<<<< HEAD
+            return { "vulnerabilities":  "riskLevel"
+=======
             return { "vulnerabilities": {}, "riskLevel"
+>>>>>>> merged-prs-20250907-203621
                 "args"
             this.log(`PR created "successfully"`)
             this.log(`Failed to create "PR"`)
@@ -173,11 +180,18 @@
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     console.error('Failed to start Intelligent Repository "Manager")
+<<<<<<< HEAD
+    console.error('Failed to start Intelligent Repository "Manager")
+    console.error('Failed to start Intelligent Repository "Manager")
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -195,7 +209,11 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
+console.error('Failed to start Intelligent Repository "Manager")
+    console.error('Failed to start Intelligent Repository "Manager")
+///usr/bin/env node
 /**
  * Intelligent Repository Manager;
  * 
@@ -203,6 +221,10 @@
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

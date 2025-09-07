@@ -46,12 +46,15 @@ interface StepProps {"
         className={cn(
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium          {
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
 
               status === incomplete
@@ -115,6 +118,9 @@ interface StepProps {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
 export function Step() { return null; }
@@ -141,6 +147,8 @@ export function Step() { return null; }
           <span>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -151,6 +159,7 @@ export function Step() { return null; }
             text-zion-slate-light": status === "incomplete,
             text-zion-slate-light": status === "incomplete,
 =======
+>>>>>>> merged-prs-20250907-203621
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -193,6 +202,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {}
   const childrenArray = React.Children.toArray(children),
 
 <<<<<<< HEAD
+          if (!React.isValidElement(child)) return null,
+=======
+<<<<<<< HEAD
 
 
   return (
@@ -220,11 +232,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
 =======
           if (!React.isValidElement(child)) return null,
+>>>>>>> merged-prs-20250907-203621
           "
           let status: "incomplete" | "current" | "complete" = "incomplete","
           if (index < currentStep) status = "complete","
           if (index === currentStep) status = "current",
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           if (!React.isValidElement(child)) return null,
 
@@ -232,6 +248,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         })}
       </ol>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       
@@ -248,6 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 interface StepsProps {
   currentStep: number,
 =======
+>>>>>>> merged-prs-20250907-203621
 interface StepsProps {;
   currentStep: number,;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -268,6 +287,9 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 export function Steps({ currentStep, className, children }: StepsProps) {
   return (;
 
+<<<<<<< HEAD
+    <div className={cn("w-full", className)}>;
+=======
 <<<<<<< HEAD
     <div className={cn("w-full, className)}>;
         {status === complete" ? (<CheckIcon className="h-5 w-5 />;
@@ -309,6 +331,7 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
 =======
     <div className={cn("w-full", className)}>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16>;
         {React.Children.map(childrenArray, (child, index) => {
@@ -327,6 +350,8 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
             style={{;
             style={{
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             style={{interface StepsProps  {currentStep: number,className?: string;
   children: React && React.ReactNode;
@@ -354,6 +379,7 @@ if (status = "current") {$2;
 interface StepProps  {status: incomplete | "current" | complete,label: string,description?: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           // Check condition
 if (status = "current") {

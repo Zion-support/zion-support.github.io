@@ -11,9 +11,12 @@ try {
       on_submit ({ email, address });
     } finally {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState } from 'react,import { Button } from @/components/ui/button',import { Input } from '@/components/ui/input,import { Label } from @/components/ui/label',import { Textarea } from '@/components/ui/textarea,try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
 =======
+>>>>>>> merged-prs-20250907-203621
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,7 +38,10 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   }
 }
 import React from 'react';
@@ -46,6 +52,8 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -53,6 +61,7 @@ import { Label } from '@/components/ui/label',;
 import { Textarea } from '@/components/ui/textarea',;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import {;
 import { useState } from react';
 import { Button } from '@/components/ui/button;
@@ -63,6 +72,8 @@ import { Textarea } from @/components/ui/textarea';
 import { Textarea } from '@/components/ui/textarea,
 import {
 
+<<<<<<< HEAD
+=======
   Dialog,
   DialogContent,
   DialogDescription,
@@ -88,12 +99,16 @@ import { Button   } from '@/components/ui/button;
 import { Input   } from @/components/ui/input';
 import { Label   } from '@/components/ui/label;
 =======
+>>>>>>> merged-prs-20250907-203621
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Dialog;
   DialogContent;
   DialogDescription;
@@ -122,6 +137,8 @@ import { Textarea } from '@/components/ui/textarea
 import { User, Mail, MapPin, CreditCard } from 'lucide-react
 import { isProdDomain } from @/utils/getStripe';
 interface GuestCheckoutModalProps {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   open: boolean;
@@ -224,6 +241,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
         </DialogHeader>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     }
   },
@@ -235,6 +253,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         )}
               htmlFor=guest-email'
         )}<form onSubmit={handleSubmit} className='space-y-4>;
@@ -242,6 +262,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               htmlFor='guest-email;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <form onSubmit={handleSubmit} className=space-y-4'>;
           <div className='space-y-2>;
@@ -254,11 +275,14 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               Email Address;
             </Label>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <Input
               id='guest-email'
               type='email'
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <Input id='guest-email''
               type='email''
               value={email || ''}'
@@ -281,6 +305,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             />
           </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <Input;
               id='guest-email;
@@ -329,12 +355,16 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           </div>;<div className='space-y-2>;<Label;
               htmlFor=guest-address';
 =======
+>>>>>>> merged-prs-20250907-203621
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || '')}
               placeholder='your && your.email@example && example.com'              required;
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
             />;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </div>;
 
           <div className='space-y-2>;
@@ -345,12 +375,15 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               Shipping Address;
             </Label>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <Textarea;
               id=guest-address;
               value={address || ''}
               onChange={e => setAddress(e && e.target.value || )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <Textarea
               id='guest-address'
               value={address || '}'
@@ -359,10 +392,13 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               className=bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';,
             />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
           </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </div>;
           <div className=bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
             <p className='text-yellow-400 text-sm>;
@@ -378,11 +414,16 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           </DialogDescription>;
         </DialogHeader>;
 <<<<<<< HEAD
+        {!isProdDomain () && (
+          <div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+=======
+<<<<<<< HEAD
         {!isProdDomain () && (<div className=rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
 =======
         {!isProdDomain () && (
           <div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>)}
@@ -422,9 +463,12 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           </div>;
           <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <p className='text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <p className='text - yellow - 400 text - sm'>;
             <p className=text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
             <p className='text - yellow - 400 text - sm>;
@@ -494,6 +538,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
         <form onSubmit={handleSubmit} className=space-y-4">
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue
             >
@@ -501,6 +547,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             <Label htmlFor="guest-address className=text-white flex items-center gap-2">
               <MapPin className="h-4 w-4 text-zion-cyan />
 =======
+>>>>>>> merged-prs-20250907-203621
           <div className="space-y-2">
             <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
               <MapPin className="h-4 w-4 text-zion-cyan" />
@@ -571,6 +618,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           <DialogFooter className=space - x-2'>;
           </div>;<form onSubmit={handleSubmit} className=space-y-4">;
@@ -611,6 +660,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               disabled={isSubmitting || !email || !address}
               className=bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
               {isSubmitting ? (;
@@ -623,16 +673,25 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 };
 }
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
+    </Dialog>;
+  );
+}
+;
+=======
 <<<<<<< HEAD
 
 }
@@ -673,3 +732,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,13 +12,18 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
   fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -58,7 +65,7 @@ const { execSync } = require("child_process")
     const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]
   let content = fs.readFileSync(file, "utf8")
         if (content.includes("React") && !content.includes("import React")
-  content = "import React from "react";
+  content = "import React from "react"
         if (content.includes("<Helmet>") && !content.includes("<>")
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")
             /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>"
@@ -66,7 +73,10 @@ const { execSync } = require("child_process")
   this.log("Fixing ""import/export"" errors...")
     const sourceFiles = this.findFiles(["**/*.ts"", "**/*.tsx", "**/*.js"", "**/*.jsx", "")]
   let content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         content = content.replace(/import\s+([^]+)$/gm, "import $1;"
         content = content.replace(/export\s+([^]+)$/gm, export $1;
   fs.writeFileSync(file, content, "utf8")
@@ -134,6 +144,12 @@ const { execSync } = require("child_process")
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
 <<<<<<< HEAD
+
+      this.log(")
+      this.log(")
+      this.log(")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -153,6 +169,7 @@ const { execSync } = require("child_process")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
         if (content.includes("<Helmet>) && !content.includes(<>")"
 
@@ -160,6 +177,10 @@ const { execSync } = require("child_process")
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

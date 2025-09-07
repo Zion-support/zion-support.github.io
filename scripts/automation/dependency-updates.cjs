@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,17 +12,20 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""� Starting continuous dependency updates automation...")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log(""� Starting continuous dependency updates automation...")
-// Get automation interval from environment variable ("default")
-// console.log(`" Checking for outdated dependencies..."`)
+//
   console.log("� Starting continuous dependency updates automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Checking for outdated dependencies..."`)
@@ -113,11 +118,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start continuous dependency "updates": ")
+<<<<<<< HEAD
+  console.error(" Failed to start continuous dependency "updates": ")
+  console.error(" Failed to start continuous dependency "updates": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -135,3 +150,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

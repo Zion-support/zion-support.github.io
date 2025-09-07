@@ -1,7 +1,31 @@
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
 
+=======
+
+
+<<<<<<< HEAD
+=======
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import { GetServerSideProps } from 'next',;
+import { useState } from 'react',;
+import { readJson } from '../../utils/fsDb',;
+<<<<<<< HEAD
+import { GetServerSideProps } from 'next',;
+import { useState } from 'react',;
+import { readJson } from '../../utils/fsDb',;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
 export const getServerSideProps: GetServerSideProps = async () => {
 
   const requests = readJson<any[]>('support/requests.json', [])
@@ -11,10 +35,19 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve() { return null; }
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
 
 '
 import { GetServerSideProps } from 'next','
 import { useState } from 'react','
+=======
+    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
+<<<<<<< HEAD
+=======
+
+import { GetServerSideProps } from 'next',
+import { useState } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
 import { read_json } from '../../utils / fs_db',
 export const getServerSideProps: GetServerSideProps = async () => {'
   const requests = read_json < any[]>('support / requests.json', []),
@@ -32,6 +65,13 @@ function resolve() { return null; }
     await fetch ('/api / support / resolve', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id }) }),'
     set_requests ((prev: any[]) => prev.map ((r) => (r.id === id ? { ...r, status: 'resolved', resolved_at: Date.now () } : r)));
 
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 
@@ -42,8 +82,42 @@ export const getServerSideProps: GetServerSideProps = async () => {;'
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const requests = readJson<any[]>('support/requests.json', []),;
+  return { props: { initialRequests: requests }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export default function SupportRequests(req, res) {
+  try {
+  const [requests, setRequests] = useState(initialRequests);
+  async function resolve(id: string) {;
+    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
+    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
   }
 
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
 '
 import { GetServerSideProps } from 'next';'
 import { useState } from 'react';'
@@ -73,12 +147,32 @@ export default function SupportRequests(req, res) {}
 
 }
 
+=======
+<<<<<<< HEAD
+}
+
+=======
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
               <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
           </div>))}
       </div>;
     </div>);
 }
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
@@ -90,6 +184,13 @@ export default function SupportRequests(req, res) {}
   }
 }
 
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
         {requests.map((r) => (
           <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
             <div className="text-sm">
@@ -103,9 +204,50 @@ export default function SupportRequests(req, res) {}
             {r.status !== 'resolved' && ("
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
 
+<<<<<<< HEAD
   );
 };
 
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Support Requests</h1>
+      <div className="grid gap-3">
+        {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
+        {requests.length === 0 && <div className="opacity-70">No requests found.</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {requests.map((r) => (
+          <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
+            <div className="text-sm">
+              <div className="font-medium">{r.id}</div>
+              <div className="opacity-80">Session: {r.sessionId}</div>
+              <div className="opacity-80">Tag: {r.tag}</div>
+              <div className="opacity-80">Reason: {r.reason}</div>
+              <div className="opacity-80">Status: {r.status}</div>
+            </div>
+            {r.status !== 'resolved' && (
+              <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+  );
+};
+  );
+};
+=======
+  );
+};
+
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx
             )  } catch (error) {
     console.error("Error:", error);
 
@@ -124,4 +266,20 @@ export default function SupportRequests(req, res) {}
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages-disabled/admin/support-requests.tsx
   }
+=======
+  }
+<<<<<<< HEAD
+}
+
+}
+}
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/admin/support-requests.tsx

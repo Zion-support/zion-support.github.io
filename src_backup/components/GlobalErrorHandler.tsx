@@ -1,6 +1,9 @@
 reportError: (error: Error, context?: any) => void;
 
 <<<<<<< HEAD
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react;
 reportError: (error: Error, context?: any) => void;import React, { createContext, useContext, useState, useCallback, ReactNode } from react';
 import { toast   } from '@/hooks/use-toast;
@@ -14,6 +17,7 @@ import React, {createContext;
 =======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { toast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
 import React, {
@@ -41,6 +45,8 @@ interface ErrorContextType {
   useState,
   useCallback,
   ReactNode,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger;
 interface ErrorContextType  {reportError: (error: Error, context?: any) => void;showRetryableError: (error: Error, retryAction?: () => void) => void;
@@ -89,6 +95,7 @@ import { toast } from '@/hooks / use - toast';
 import { Button } from @/components / ui / button';'
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from lucide-react;'
 =======
+>>>>>>> merged-prs-20250907-203621
 } from 'react';'
 import { toast } from '@/hooks / use - toast';'
 import { Button } from '@/components / ui / button';'
@@ -626,6 +633,9 @@ export function useGlobalErrorHandler(): ErrorContextType {
 
 // Helper function to convert technical errors to user-friendly messages
 <<<<<<< HEAD
+function getErrorMessage(error: Error): string {
+=======
+<<<<<<< HEAD
 }: undefined})}, [])const clearAllErrors = useCallback(() => {setRetryCount({})// Clear any active toasts would go here if the toast system supports it;
   }, [])import * as Sentry from '@sentry/nextjs',import {logErrorToProduction} from @/utils/productionLogger,interface ErrorContextType  {reportError: (error: Error, context?: any) => void,showRetryableError: (error: Error, retryAction?: () => void) => void,showNetworkError: (retryAction?: () => void) => void,showAuthError: (loginAction?: () => void) => void,clearAllErrors: () => void;
 }const ErrorContext = createContext<ErrorContextType | null>(null),interface GlobalErrorHandlerProps  {children: ReactNode;
@@ -666,3 +676,4 @@ export function useErrorHandler() {const { reportError, showRetryableError, show
 =======
 function getErrorMessage(error: Error): string {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

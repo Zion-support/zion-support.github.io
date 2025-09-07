@@ -24,7 +24,10 @@ import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
@@ -81,6 +84,8 @@ export const OfflineIndicator = () => {
 } }
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from react',
 import { WifiOff, Wifi } from 'lucide-react;
 import { WifiOff, Wifi  } from lucide-react';
@@ -113,6 +118,7 @@ export const OfflineIndicator = () => {
         // Show brief "back online" message then hide
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
+>>>>>>> merged-prs-20250907-203621
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
 
@@ -155,6 +161,12 @@ export const OfflineIndicator = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
 <<<<<<< HEAD
+            <WifiOff className="h-4 w-4" />
+
+          )}
+
+=======
+<<<<<<< HEAD
             <WifiOff className=h-4 w-4" />
           )}
 
@@ -192,6 +204,7 @@ export const OfflineIndicator = null;
           )}
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </div>;
       </Alert>;
     </div>;
@@ -215,6 +228,9 @@ export const OfflineIndicator = null;
 } }
 
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)} }
@@ -222,3 +238,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

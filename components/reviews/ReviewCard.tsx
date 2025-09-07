@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -20,6 +22,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
           onClick={() => onReport && onReport(review.id)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 type Props = any;
 
 export default ReviewCard;
@@ -37,8 +40,13 @@ export default ReviewCard;
           </span>
         </div>
         <button
+<<<<<<< HEAD
+          className="text-xs text-red-500 hover:underline"
+          onClick={() => onReport && onReport(review.id)}
+=======
           className=text-xs text-red-500 hover:underline'
           onClick={() =    /> onReport && onReport(review.id)}
+>>>>>>> merged-prs-20250907-203621
         >
           Report abuse
         </button>
@@ -65,6 +73,11 @@ export default ReviewCard;
     </div>
   )
 };
+<<<<<<< HEAD
+
+export default ReviewCard;
+export default ReviewCard
+=======
 =======
             readOnly;
             size={18}
@@ -108,3 +121,4 @@ export default ReviewCard;
 >>>>>>> origin/chore/fix-lint-and-merge
 
 export default ReviewCard;
+>>>>>>> merged-prs-20250907-203621

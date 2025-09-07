@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,14 +12,21 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Intelligent Auto-Scaler;
- * AI-powered auto-scaling system for PM2 processes;
+ * Intelligent Auto-Scaler
+ * AI-powered auto-scaling system for PM2 processes
  */
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -44,6 +53,7 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -51,6 +61,9 @@ const { execSync } = require('child_process')
     this.logFile = path.join(this.projectRoot, 'logs', 'auto-scaler.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'scaling-config.json')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
       "scalingStrategy"
       this.log(` Failed to save scaling "config"`)
           this.log(` Failed to connect to "PM2"`)
@@ -73,6 +86,8 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,6 +128,7 @@ const { execSync } = require(child_process')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> merged-prs-20250907-203621
 
 <<<<<<< HEAD
       this.log(` Fatal error"`)
@@ -134,20 +150,28 @@ const { execSync } = require(child_process')
       "onlineProcesses"`;
 =======
       this.log(` Fatal "error"`)
+<<<<<<< HEAD
+      this.log(` Fatal "error"`)
+
+      this.log(` Fatal "error"`)
+
+      this.log(` Fatal "error"`)
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
       "scalingStrategy"""
-      this.log(` Failed to save scaling "config"`)""`;
-          this.log(` Failed to connect to "PM2"`)""`;
+      this.log(` Failed to save scaling "config"`)""`
+          this.log(` Failed to connect to "PM2"`)""`
       this.log(` Scaling analysis "failed"`)""
       "action"""
       "reason"""
-      "priority"""`;
-      this.log(` Failed to save scaling "history"`)""`;
+      "priority"""`
+      this.log(` Failed to save scaling "history"`)""`
       return { "score": 0.5, "message"}""
       "level"""
         "type"""
         "message"""
-        "action"""`;
+        "action"""`
       this.log(` Strategy optimization "failed"`)""
       "onlineProcesses"""`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

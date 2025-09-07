@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+=======
+<<<<<<< HEAD
 const "AIConsciousnessEvolutionPlatform": React.FC = () => {
  }
 
@@ -6,6 +9,7 @@ const "AIConsciousnessEvolutionPlatform": React.FC = () => {
 =======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {

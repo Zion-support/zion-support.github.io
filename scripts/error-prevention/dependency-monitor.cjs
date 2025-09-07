@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 =======
@@ -23,6 +26,8 @@ class DependencyMonitor {}
   constructor() {}
     this.isRunning = false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -33,8 +38,11 @@ class DependencyMonitor {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     this.interval = 600000; // 10 minutes;
-
+    this.packageJsonPath = path.join(process.cwd(), 'package.json')};
+  async start() {}
+    console.log('Starting Dependency Monitor...');
     this.isRunning = true;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +57,14 @@ class DependencyMonitor {}
 =======
     // Initial dependency check;
     await this.runDependencyCheck();
+<<<<<<< HEAD
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runDependencyCheck()}, this.interval);
+
+    
+    
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
@@ -62,9 +78,14 @@ class DependencyMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     
+<<<<<<< HEAD
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -90,16 +111,21 @@ class DependencyMonitor {}
       console.log('Running dependency check...);
 
 =======
+>>>>>>> merged-prs-20250907-203621
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
+<<<<<<< HEAD
+      
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -108,6 +134,21 @@ class DependencyMonitor {}
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check for outdated packages;
+<<<<<<< HEAD
+
+    
+
+    
+
+
+    console.log('Dependency Monitor started successfully')};
+      this.runDependencyCheck()}, this.interval)
+    console.log('Dependency Monitor started successfully')}
+  async runDependencyCheck() {}
+    try {}
+      console.log('Running dependency check...')
+      // Check for outdated packages
+=======
 <<<<<<< HEAD
 
 
@@ -121,10 +162,13 @@ class DependencyMonitor {}
       let errorOutput = ;';;
       child.stdout.on(data', (data) => {}
 =======
+>>>>>>> merged-prs-20250907-203621
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
@@ -135,11 +179,24 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+>>>>>>> merged-prs-20250907-203621
 
 =======
 
 =======
 "
+<<<<<<< HEAD
+      let output = ;';';
+      let errorOutput = ;';';
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+});
+
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
@@ -159,13 +216,13 @@ class DependencyMonitor {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on(close', (code) => {}
 =======
+>>>>>>> merged-prs-20250907-203621
+
 
 <<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
       child.on('close', (code) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
         if ( {})
@@ -187,11 +244,15 @@ class DependencyMonitor {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
 <<<<<<< HEAD
+          
+=======
+<<<<<<< HEAD
           console.log('"Output": ', output);
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -218,6 +279,22 @@ class DependencyMonitor {}
 =======
       line.includes('→') && !line.includes('Package');
    ;);
+<<<<<<< HEAD
+
+    
+    
+
+    
+
+
+    if ( {})
+      console.log('Outdated packages "found": ')) {}
+     {}
+      console.log('Outdated packages found:')};
+      outdatedPackages.forEach(pkg => {})
+        console.log(`  ${pkg}`)})};
+  };
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,8 +329,14 @@ class DependencyMonitor {}
       console.log(Outdated packages found:)}
       outdatedPackages.forEach(pkg => {})
         console.log(`  ${pkg}`)})}
+>>>>>>> merged-prs-20250907-203621
   async checkPackageIntegrity() {}
+    try {}
       console.log('Checking package integrity...');
+<<<<<<< HEAD
+      
+      
+=======
 <<<<<<< HEAD
 
       
@@ -272,11 +355,15 @@ class DependencyMonitor {}
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
@@ -286,6 +373,9 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+
+=======
 =======
 
       let output = ;';';
@@ -321,6 +411,7 @@ class DependencyMonitor {}
         if ( {})
       const child = spawn('npm', [ls], {})
 =======
+>>>>>>> merged-prs-20250907-203621
       child.on('close', (code) => {}
         if ( {})
 =======
@@ -343,17 +434,28 @@ class DependencyMonitor {}
 =======
     console.log('Stopping Dependency Monitor...');
 <<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
     this.isRunning = false;
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     if ( {})
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
 >>>>>>> origin/chore/fix-lint-and-merge
     console.log('Dependency Monitor stopped')) {}
+<<<<<<< HEAD
+    console.log('Dependency Monitor stopped')}}
+// Start the monitor if run directly
+  const monitor = new DependencyMonitor) {}
+  const monitor = new DependencyMonitor}(;);
+  
+=======
     console.log(Dependency Monitor stopped)}}
 
 // Start the monitor if run directly;
@@ -368,11 +470,15 @@ class DependencyMonitor {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
-    monitor.stop();
+    monitor.stop()
     process.exit(0)}
 });
+<<<<<<< HEAD
+  
+=======
 <<<<<<< HEAD
 
 =======
@@ -381,10 +487,20 @@ class DependencyMonitor {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   process.on('SIGTERM', () => {}
-    monitor.stop();
+    monitor.stop()
     process.exit(0)}
 });
+<<<<<<< HEAD
+module.exports = DependencyMonitor;
+  
+  monitor.start().catch(console.error)};
+
+module.exports = DependencyMonitor;
+module.exports = DependencyMonitor;
+module.exports = DependencyMonitor;
+=======
 <<<<<<< HEAD
 module.exports = DependencyMonitor;
   
@@ -419,14 +535,17 @@ module.exports = DependencyMonitor;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
   // Handle graceful shutdown;
 
   monitor.start().catch(console.error)}
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

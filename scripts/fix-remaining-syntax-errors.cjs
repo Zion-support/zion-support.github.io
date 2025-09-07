@@ -2,23 +2,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 
 console.log('🔧 Fixing remaining syntax errors...');
 
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-<<<<<<< HEAD
 
 =======
     // Fix common syntax issues
@@ -56,6 +52,8 @@ function fixSyntaxErrors(filePath) {
       const serviceName = fileName.replace(/-/g, ' ).replace(/\b\w/g, l => l.toUpperCase());
       
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
@@ -90,13 +88,17 @@ const path = require('path');
   if (content.length < 100 || content.includes('icon:') || content.includes('title:')) {
       const fileName = path.basename(filePath, path.extname(filePath))
       const serviceName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
       content = `export default function ServicePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>${serviceName}</h1>
       <p>Learn about our ${serviceName.toLowerCase()} services.</p>
     </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +130,8 @@ const path = require('path');
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed: ${filePath}`);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
       return true;
     }
     return false;
@@ -136,6 +140,7 @@ const path = require('path');
     return false;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -151,6 +156,11 @@ function fixAllFiles() {
 =======
 const filesToCheck = [;
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+// Function to find and fix all TypeScript/JSX files,
+  function fixAllFiles() {
+  const filesToCheck = [
+>>>>>>> merged-prs-20250907-203621
     'components/Footer.tsx',
     'components/Header.tsx',
     'components/layout/MainLayout.tsx',
@@ -196,38 +206,48 @@ function findServicePages(dir) {
         } else if (stat.isFile() && item === 'page.tsx') {
           files.push(fullPath);
         }
->>>>>>> origin/chore/fix-lint-and-merge
+// Function to find and fix all TypeScript/JSX files
+function fixAllFiles() {
+  const filesToCheck = [
+    'components/Footer.tsx',
+    'components/Header.tsx',
+    'components/layout/MainLayout.tsx',
+    'pages/about.tsx',
+    'pages/ai-services.tsx',
+    'pages/blog.tsx',
+    'pages/contact.tsx',
+    'pages/index.tsx',
+    'pages/privacy.tsx',
+    'pages/terms.tsx',
+    'pages/services.tsx',
+    'pages/pricing.tsx'
+  ];
+  let totalFixed = 0;
+  filesToCheck.forEach(file => {
+    const filePath = path.join(process.cwd(), file);
+    if (fs.existsSync(filePath)) {
+      if (fixHoverSyntax(filePath)) {
+        totalFixed++;
       }
     } catch (error) {
-      // Skip directories that cant be read
+      // Skip directories that can't be read
     }
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
-});
-=======
->>>>>>> origin/chore/fix-lint-and-merge
   
   scanDirectory(dir);
   return files;
 }
-
-<<<<<<< HEAD
-
-try {
-  console.log('🔍 Scanning for syntax errors...');
-  const fixedCount = fixAllFiles();
-try {
-  console.log(🔍 Scanning for syntax errors...);
-  
-
-=======
 // Main execution
 async function main() {
   console.log('🚀 Starting syntax error resolution...');
+try {
+  console.log('🔍 Scanning for syntax errors...');
+  const fixedCount = fixAllFiles();
   
->>>>>>> origin/chore/fix-lint-and-merge
   // Find all service page files
   const servicePages = findServicePages('/workspace/app/services');
   console.log(`Found ${servicePages.length} service page files`);
@@ -255,6 +275,8 @@ async function main() {
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
   scanDirectory(dir);
   return files;
 }
@@ -269,6 +291,7 @@ async function main() {
   console.error('❌ Error:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
       fixedCount++;
@@ -289,3 +312,5 @@ async function main() {
 
 main().catch(console.error);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621

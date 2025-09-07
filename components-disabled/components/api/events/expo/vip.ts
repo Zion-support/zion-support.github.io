@@ -7,6 +7,8 @@ export default async /**
  */
 function handler() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   const address = String (req.query.address || '').toLowerCase ();'
   if (return res.status (400).json ({ "allowed": false })) {
@@ -23,10 +25,16 @@ function handler() {
 }
 res.status (200).json ({ "allowed": allowlist.has (address) });
 =======
+>>>>>>> merged-prs-20250907-203621
   const address = String (req.query.address || ).toLowerCase ();
   if (return res.status (400).json ({ allowed: false })) {
   $2;
   res.status (200).json ({ allowed: allowlist.has (address) });
+<<<<<<< HEAD
+
+  [(process && process.env.EXPO_VIP_ADDRESS || ).toLowerCase()].filter(Boolean);
+);
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
 
   [(process && process.env.EXPO_VIP_ADDRESS || ).toLowerCase()].filter(Boolean);
@@ -62,10 +70,15 @@ export default async function handler() {;
 
   res.status(200).json({ "allowed": allowlist.has(address) })
 =======
+>>>>>>> merged-prs-20250907-203621
 export default async function handler(
   req: NextApiRequest;,
   res: NextApiResponse;)
 ) {
 const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || ).toLowerCase()].filter(Boolean));
+<<<<<<< HEAD
+</string>
+=======
 </string>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

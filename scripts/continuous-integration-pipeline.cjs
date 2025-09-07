@@ -1,5 +1,14 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+
+=======
+<<<<<<< HEAD
+
 =======
 
 
@@ -127,6 +136,7 @@ const path = require("path)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -205,11 +215,21 @@ const path = require("path")
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     console.error(" CI pipeline "failed": ")
+<<<<<<< HEAD
+    console.error(" CI pipeline "failed": ")
+    console.error(" CI pipeline "failed": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -225,3 +245,4 @@ const path = require("path")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

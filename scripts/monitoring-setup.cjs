@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +54,7 @@ app.get("/ready")
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -80,11 +86,21 @@ app.get("/ready")
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
     console.log(" Monitoring setup completed!")
+<<<<<<< HEAD
+    console.log(" Monitoring setup completed!")
+    console.log(" Monitoring setup completed!")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -104,3 +120,4 @@ app.get("/ready")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

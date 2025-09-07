@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+=======
 
 
+<<<<<<< HEAD:pages.disabled/automation/dao-leaderboard.tsx
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/automation/dao-leaderboard.tsx
 export default function DaoLeaderboardPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 25)
@@ -26,6 +33,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+<<<<<<< HEAD:pages.disabled/automation/dao-leaderboard.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/automation/dao-leaderboard.tsx
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / dao - leaderboard.json',
@@ -53,7 +66,11 @@ function DaoLeaderboardPage() {
             </li>))}
         </ul>;
       </div>;
+<<<<<<< HEAD:pages.disabled/automation/dao-leaderboard.tsx
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/automation/dao-leaderboard.tsx
     </EnhancedLayout>);
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
@@ -83,14 +100,47 @@ export default function DaoLeaderboardPage() {
               </div>
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
+<<<<<<< HEAD:pages.disabled/automation/dao-leaderboard.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/automation/dao-leaderboard.tsx
           ))}
         </ul>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD:pages.disabled/automation/dao-leaderboard.tsx
   )
 
+=======
+
+<<<<<<< HEAD
+
+  );
+};
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/automation/dao-leaderboard.tsx
 }
 
+<<<<<<< HEAD:pages.disabled/automation/dao-leaderboard.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/automation/dao-leaderboard.tsx

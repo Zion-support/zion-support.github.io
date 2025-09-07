@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/api/partners/leaderboard.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement leaderboard logic
+    res.status(200).json({ message: 'leaderboard endpoint' });
+  } catch (error) {
+    console.error('Error in leaderboard:', error);
+    res.status(500).json({ message: 'Internal server error' });
+=======
+=======
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
+>>>>>>> merged-prs-20250907-203621
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -9,11 +35,28 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
       "placeholder-key";
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
@@ -21,23 +64,84 @@ export default async function handler(
 
       });
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getServerSupabase  } from '../../../utils / supabase / server';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const using_placeholder =;
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
+      "placeholder - key";
+  try {
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (200).json ({
+        leaders: [;
+          { code: "aihub", profile_completions: 9 },
+          { code: "modelmasters", profile_completions: 7 },
+          { code: "promptpro", profile_completions: 5 },
+        ],
+      });
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
           { code: 'promptpro', profile_completions: 5 }
         ]})
+<<<<<<< HEAD
+    }
+=======
 
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
+<<<<<<< HEAD
+    for (const row of data || []) {
+      if (row.event !== 'profile_completed') continue;
+      const key = row.partner_code as string;
+      map.set(key, (map.get(key) || 0) + 1)
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
-
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
+<<<<<<< HEAD
+    return res && res.status(200).json({ leaders });
+    return res.status(200).json({ leaders })
+  } catch (e: any) {
+    return res && res.status(500).json({ error: e?.message });
+  }
+}
+=======
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+
+  } catch (e: any) {
+    return res && res.status(500).json({ error: e?.message });
+  }
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -65,6 +169,40 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+<<<<<<< HEAD
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
+  _req: NextApiRequest
+  res: NextApiResponse
+) {
+  const usingPlaceholder =
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+      "placeholder-key";
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({
+        leaders: [
+          { code: "aihub", profile_completions: 9 }
+          { code: "modelmasters", profile_completions: 7 }
+          { code: "promptpro", profile_completions: 5 }
+        ]
+      });
+    }
+
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -95,6 +233,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       });
     }
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -110,6 +253,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
 }
 }
   } catch (error) {
@@ -131,6 +275,21 @@ export default async function handler(req, res) {
           { code: 'aihub', profile_completions: 9 },;
           { code: 'modelmasters', profile_completions: 7 },;
           { code: 'promptpro', profile_completions: 5 }]});
+=======
+<<<<<<< HEAD
+
+    const supabase = getServerSupabase();
+    const startOfMonth = new Date();
+    startOfMonth.setDate(1);
+    startOfMonth.setHours(0, 0, 0, 0);
+
+    const { data, error } = await supabase;
+      .from('referral_events');
+      .select('partner_code, event, created_at');
+      .gte('created_at', startOfMonth.toISOString()),;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      map.set(key, (map.get(key) || 0) + 1);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -145,6 +304,7 @@ export default async function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
 
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
@@ -174,6 +334,15 @@ return res.status(200).json({ leaders });
 
   } catch (e: any) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const leaders = Array.from(map.entries());
+      .map(([code, profile_completions]) => ({ code, profile_completions }));
+      .sort((a, b) => b.profile_completions - a.profile_completions);
+      .slice(0, 10);
+    return res.status(200).json({ leaders });
+  } catch (error) {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -183,7 +352,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
   }
 }
   } catch (error) {
@@ -219,12 +393,41 @@ export default async function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+<<<<<<< HEAD
+    const { data, error } = await supabase
+      .from("referral_events")
+      .select("partner_code, event, created_at")
+      .gte("created_at", startOfMonth.toISOString());
+    if (error) return res.status(500).json({ error: "Database error" });
+    const map = new Map<string, number>();
+    for (const row of data |[]) {
+      if (row.event !== "profile_completed") continue;
+      const key = row.partner_code as string;
+      map.set(key, (map.get(key) |0) + 1);
+    }
+    const leaders = Array.from(map.entries())
+      .map(([code, profile_completions]) => ({ code, profile_completions }))
+      .sort((a, b) => b.profile_completions - a.profile_completions)
+      .slice(0, 10);
+    return res.status(200).json({ leaders });
 
+  } catch (e: any) {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -251,7 +454,14 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -259,6 +469,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages.disabled/api-disabled/api/partners/leaderboard.ts
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -280,5 +491,35 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/partners/leaderboard.ts
   }
 }
+=======
+<<<<<<< HEAD
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/partners/leaderboard.ts

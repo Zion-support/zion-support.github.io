@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,20 +12,28 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log("" Starting continuous improvement automation...")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log("" Starting continuous improvement automation...")
 // Get automation interval from environment variable ("default")
   console.log(` Running continuous improvement at ${new Date().toISOString()}
 // console.log(`"� Checking for pending improvements..."`)
 >>>>>>> origin/chore/fix-lint-and-merge
 console.log(" Starting continuous improvement automation...")
+<<<<<<< HEAD
+//
+=======
 console.log( Starting continuous improvement automation...")
 // Get automation interval from environment variable ("default)
   console.log(` Running continuous improvement at ${new Date().toISOString()}
@@ -31,6 +41,7 @@ console.log( Starting continuous improvement automation...")
 console.log(" Starting continuous improvement automation...)
 // Get automation interval from environment variable (default")
 // console.log("� Checking for pending improvements...)
+>>>>>>> merged-prs-20250907-203621
     console.log(" Running quality checks...")
   execSync(npm run lint, { "stdio": inherit})
 // console.log(" Linting completed")
@@ -82,6 +93,15 @@ process.on(SIGTERM)
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 
+  console.error(" Failed to start continuous "improvement": ")
+  console.error(" Failed to start continuous "improvement": ")
+  console.error(" Failed to start continuous "improvement": ")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error( Failed to start continuous improvement": ")
 
@@ -115,3 +135,4 @@ process.on(SIGTERM)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

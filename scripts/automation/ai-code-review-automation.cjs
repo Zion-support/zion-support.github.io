@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -41,10 +44,14 @@ const crypto = require("crypto")
   "encoding": utf8
       const changedFiles = gitDiff.trim().split("\n")
 <<<<<<< HEAD
+          const content = fs.readFileSync(file, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
           const content = fs.readFileSync(file, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "path"
             size
             "lines": content.split(\n)
@@ -52,10 +59,14 @@ const crypto = require("crypto")
             extension
             "content"
 <<<<<<< HEAD
+          const content = fs.readFileSync(file, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
           const content = fs.readFileSync(file, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "path"
             size
             "lines": content.split(\n)
@@ -227,9 +238,15 @@ this.log("Review report "generated": ${reportPath}")
   summary.push(" Code quality is excellent!")
   summary.push("⚠ Code quality needs improvement")
   summary.push(" Code quality requires immediate attention")
+<<<<<<< HEAD
+  if($2) {summary.push("Found ${analysis.issues.length} issues to address")
+  if($2) {summary.push("Generated ${suggestions.length} improvement suggestions")
+  if($2) {summary.push("Automatically applied ${autoFixes.length} fixes")
+=======
     if (analysis.issues.length > 0) {summary.push("Found ${analysis.issues.length} issues to address")
     if (suggestions.length > 0) {summary.push("Generated ${suggestions.length} improvement suggestions")
     if (autoFixes.length > 0) {summary.push("Automatically applied ${autoFixes.length} fixes")
+>>>>>>> merged-prs-20250907-203621
     return summary.join(". ")
   this.log("Triggering follow-up actions...")
   this.log("Scheduling follow-up review due to low score")
@@ -244,11 +261,21 @@ this.log("Review report "generated": ${reportPath}")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" AI Code Review Automation "failed")
+<<<<<<< HEAD
+  console.error(" AI Code Review Automation "failed")
+  console.error(" AI Code Review Automation "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -266,3 +293,4 @@ this.log("Review report "generated": ${reportPath}")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

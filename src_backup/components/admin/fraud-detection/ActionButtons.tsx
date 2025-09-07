@@ -64,12 +64,15 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
 
+<<<<<<< HEAD
+=======
 
         disabled={status === actioned || status === 'ignored'}
 =======
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
 
+>>>>>>> merged-prs-20250907-203621
         disabled={status === 'actioned' || status === 'ignored'}
 >>>>>>> origin/chore/fix-lint-and-merge
       >
@@ -84,6 +87,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         onClick={() => onAction(flagId, suspension)}
         disabled={status === "actioned" |status === ignored}
         aria-label="Suspend user"
+<<<<<<< HEAD
+=======
 
 ;
 import { Eye, Info, AlertTriangle, Ban  } from lucide-react;
@@ -119,6 +124,7 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         disabled={status === 'actioned || status === ignored'}
 =======
         aria-label="Suspend user"
+>>>>>>> merged-prs-20250907-203621
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -164,6 +170,8 @@ interface ActionButtonsProps {
           Ignore
         </Button>
       )}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -172,6 +180,7 @@ interface ActionButtonsProps {
 
 
   );
+>>>>>>> merged-prs-20250907-203621
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
     </div>
   );
@@ -195,6 +204,9 @@ interface ActionButtonsProps {
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (;
 <<<<<<< HEAD
+    <div className="flex space-x-2">;
+=======
+<<<<<<< HEAD
     <div className=flex space-x-2">;
       >;
         <Ban className="h-4 w-4 />;
@@ -215,6 +227,7 @@ import React from react",import { Button } from "@/components/ui/button,interfac
 =======
     <div className="flex space-x-2">;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Button;
         variant="ghost;
         size=icon";
@@ -255,11 +268,14 @@ import React from react",import { Button } from "@/components/ui/button,interfac
         <Ban className="h-4 w-4 />;
       </Button>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {status === 'pending && (<Button;
           variant=ghost";
           size="sm;
           onClick={() => onAction(flagId, ignore')}
 =======
+>>>>>>> merged-prs-20250907-203621
       {status === 'pending' && (;
         <Button;
           variant="ghost";
@@ -271,6 +287,8 @@ import React from react",import { Button } from "@/components/ui/button,interfac
         </Button>;
       )}
     </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Button } from '@/components/ui/ button;
 import { Eye, Info, AlertTriangle, Ban } from lucide-react';
@@ -336,12 +354,17 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }
 
 '},
   );
 });
+<<<<<<< HEAD
+};
+'"
+=======
 <<<<<<< HEAD
 }
     </div>)}
@@ -351,3 +374,4 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
 };
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -75,6 +75,7 @@ class EnhancedAutomationSuite {;
   }
 ;
   async performSecurityAudit() {;
+    const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
 
     try {
@@ -116,6 +117,7 @@ class EnhancedAutomationSuite {;
   }
 ;
   async optimizePerformance() {;
+    const startTime = Date.now();
     this.log('\n⚡ OPTIMIZING PERFORMANCE');
 
     try {
@@ -154,6 +156,7 @@ class EnhancedAutomationSuite {;
   }
 ;
   async optimizeSEO() {;
+    const startTime = Date.now();
     this.log('\n🔍 OPTIMIZING SEO');
 
     try {
@@ -195,6 +198,7 @@ class EnhancedAutomationSuite {;
   }
 ;
   async improveAccessibility() {;
+    const startTime = Date.now();
     this.log('\n♿ IMPROVING ACCESSIBILITY');
 
     try {
@@ -229,6 +233,7 @@ class EnhancedAutomationSuite {;
   }
 ;
   async optimizeBuild() {;
+    const startTime = Date.now();
     this.log('\n🏗️ OPTIMIZING BUILD');
 ;
     try {;
@@ -267,6 +272,7 @@ class EnhancedAutomationSuite {;
   }
 ;
   async deployChanges() {;
+    const startTime = Date.now();
     this.log('\n🚀 DEPLOYING CHANGES');
 ;
     try {;

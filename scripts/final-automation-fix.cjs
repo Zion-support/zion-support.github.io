@@ -1,5 +1,14 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -81,6 +90,7 @@ const { execSync } = require("child_process)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -141,11 +151,21 @@ const { execSync } = require("child_process")
     this.log(" Starting Final Automation Fix")
       this.log("� Final Automation Fix completed successfully!")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       this.log(` Final automation fix "failed"`)
+<<<<<<< HEAD
+      this.log(` Final automation fix "failed"`)
+      this.log(` Final automation fix "failed"`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -165,3 +185,4 @@ const { execSync } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

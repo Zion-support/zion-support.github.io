@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState  } from 'react;
 import { logDebug, logErrorToProduction  } from @/utils/productionLogger';
 
@@ -36,6 +38,7 @@ import { slugify  } from @/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation;
 import { MobileMenu  } from @/components/header/MobileMenu';
 =======
+>>>>>>> merged-prs-20250907-203621
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -99,6 +102,8 @@ import { CartDrawer  } from '@/components/cart/CartDrawer';'
 import { LoginModal } from '@/components/auth/LoginModal';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Menu, X  } from 'lucide-react;
 import { useTranslation   } from react-i18next';
 import { CartDrawer   } from '@/components/cart/CartDrawer;
@@ -148,6 +153,7 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
 export function PrimaryNav() {
 import { LoginModal } from '@/components / auth / LoginModal;
 =======
+>>>>>>> merged-prs-20250907-203621
 import { LoginModal } from '@/components / auth / LoginModal';
 >>>>>>> origin/chore/fix-lint-and-merge
 export /**;
@@ -217,6 +223,8 @@ if ( {) {}
     // context not available;
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const router = useRouter(),
   const [query, setQuery] = useState(''),
   try {
@@ -265,6 +273,7 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
     if (trimmed) {
       logDebug(PrimaryNav search submit:', { query: trimmed }),
 =======
+>>>>>>> merged-prs-20250907-203621
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -309,6 +318,8 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
           </div>
 
           {/* Actions container with responsive layout */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0>;
             {/* Search form with clamped width */}
@@ -411,6 +422,7 @@ if ( {) {$2;
                   setQuery(');
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   } else if (sugg.type === 'doc && sugg.slug && sugg.slug.startsWith(/')) {
                     // Documentation suggestions navigate directly to their path;
@@ -434,6 +446,9 @@ if ( {) {$2;
                   // // // // // console && console.log('PrimaryNav search suggestion selected:',
   sugg);
                   // Handle different suggestion types with proper navigation;
+<<<<<<< HEAD
+                  if(sugg && sugg.id) {;
+=======
 <<<<<<< HEAD
                   if(sugg && sugg.id) {
                     router.push (`/blog/${sugg.slug}`)} else {// Default: search results page with query parameter;
@@ -464,6 +479,7 @@ if ( {) {$2;
 =======
                   if(sugg && sugg.id) {;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 `
                     // Product listings with IDs go to product detail page`;`
                     router && router.push(`/marketplace/listing/${sugg && sugg.id;`
@@ -585,6 +601,8 @@ if ( {) {}
               <LanguageSelector />;
             </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <Link;
                     href='/signup';
                     href=/signup
@@ -609,6 +627,7 @@ if ( {) {}
                 className=text-sm hover:text-primary;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             {/* Auth links - flex wrap for very small screens */}
 
                     data-testid="login-link";
@@ -658,6 +677,13 @@ if ( {) {}
                 className="text-sm hover:text-primary;
                 data-testid="login-link";
 <<<<<<< HEAD
+                onClick={(e) => {;
+                  e.preventDefault();
+                  setLoginOpen(true);
+                }}
+              >;
+=======
+<<<<<<< HEAD
                 onClick={(e) => {e.preventDefault(),setLoginOpen(true)<div className=hidden md: flex lg:hidden items-center gap-2 order-2>;
             <ModeToggle />;
             <LanguageSelector />;
@@ -677,6 +703,7 @@ if ( {) {}
                 }}
               >;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -686,6 +713,8 @@ export function PrimaryNav() {
                   setLoginOpen(true)
                 }}
               >
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 {t(auth.login')}
               </Link>;
@@ -706,6 +735,7 @@ export function PrimaryNav() {
                   >;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 {t(auth.login')}
 
@@ -767,6 +797,8 @@ export function PrimaryNav() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           </button>;
         </div>;
@@ -882,6 +914,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   unreadCount 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           >
 
               <X className=h-6 w-6 />
@@ -897,6 +930,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onOpenChange= {
   setLoginOpen ;
 }/> </>) ;
+<<<<<<< HEAD
+}'"
+=======
 <<<<<<< HEAD
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -1170,3 +1206,4 @@ return (<> <header className=sticky top - 0 z - 70 w - full border - b border - 
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

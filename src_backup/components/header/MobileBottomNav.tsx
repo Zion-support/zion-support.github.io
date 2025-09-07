@@ -38,6 +38,8 @@ function MobileBottomNav() {
   const is_authenticated = !!user;
   const { items: wishlist_items } = use_wishlist (); // Renamed to avoid conflict;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react,import { useRouter } from next/router",import Link from "next/link,import { cn } from @/lib/utils",import { useAuth } from "@/hooks/useAuth,import { useWishlist  } from @/hooks/useWishlist';
 import { useCart   } from '@/context/CartContext;
 import { logWarn  } from @/utils/productionLogger';
@@ -49,6 +51,7 @@ export /**;
   const { items: wishlist_items } = use_wishlist ()// Renamed to avoid conflict;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   const favorites_count = wishlist_items.length;
   const cartContextValue = use_cart (); // Call hook at top level;
   let cart_count = 0;
@@ -90,6 +93,10 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     // logWarn(MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
+<<<<<<< HEAD
+:src/components/header/MobileBottomNav.tsx
+=======
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: Home'
@@ -182,6 +189,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   } else {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.)
   }
@@ -193,6 +202,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     {
       name: Browse",
       href: "/talent,
@@ -282,8 +292,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             aria-label={item.name}
             className={cn(
 <<<<<<< HEAD
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+=======
+<<<<<<< HEAD
               flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
               'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
+>>>>>>> merged-prs-20250907-203621
 :src/components/header/MobileBottomNav.tsx
 
               item.matches(router.pathname)
@@ -340,14 +354,20 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   const cartContextValue = useCart(); // Call hook at top level;
   let cartCount = 0;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   if (cartContextValue && cartContextValue.items) {cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {// logWarn(MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")}
 =======
+>>>>>>> merged-prs-20250907-203621
   if (cartContextValue && cartContextValue.items) {;
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i && i.quantity, 0);  } else {;
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.");
   }
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   const navItems = [;
     {;
       name: 'Home',;
@@ -423,6 +443,85 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   return (;
 
 <<<<<<< HEAD
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
+      <div className="flex justify-around items-center h-16">;
+        {visibleItems.map(item => (;
+          <Link;
+            key={item.name}
+            href={item.href}
+            aria-label={item.name}
+            className={cn(;
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+              item.matches(router.pathname);
+                ? "text-primary";
+                : "text-foreground/70 hover:text-foreground";
+            )}
+          >;
+            <div className="relative">;
+              <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />;
+              {item.badge && item.badge > 0 && (;
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+              )}
+            </div>;
+            <span className='hidden sm:block text-xs font-medium'>;
+              {item && item.name}
+            </span>;
+          </Link>;
+        ))}
+
+      name: 'Browse',
+      href: '/talent',
+      icon: Search,
+      matches: (path: string) =>;
+        path.starts_with ('/talent') ||;
+        path.starts_with ('/categories') ||;
+        path.starts_with ('/marketplace'),    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: MessageCircle,
+      matches: (path: string) =>;
+        path.starts_with ('/community') || path.starts_with ('/forum'),    },
+    {
+      name: 'Wishlist',
+      href: '/wishlist',
+      icon: Heart,
+      matches: (path: string) => path.starts_with ('/wishlist'),      badge: favorites_count,
+      auth_required: true,
+    },
+    {
+      name: 'Messages',
+      href: '/messages',
+      icon: MessageSquare,
+      matches: (path: string) =>;
+        path.starts_with ('/messages') || path.starts_with ('/inbox'),      badge: unread_count,
+      auth_required: true,
+    },
+    {
+      name: 'Cart',
+      href: '/cart',
+      icon: ShoppingCart,
+      matches: (path: string) => path.starts_with ('/cart'),
+      badge: cart_count,    },
+    {
+      name: 'Dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: (path: string) => path.starts_with ('/dashboard'),
+      auth_required: true,
+    },
+  ];
+
+  // Filter items based on auth status;
+  const visibleItems = navItems.filter(item =>;
+    !item.authRequired || (item.authRequired && isAuthenticated);
+  );
+  return (;
+=======
+<<<<<<< HEAD
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20>;
     {name: 'Home;
       href: /';
@@ -479,6 +578,7 @@ import { useWishlist } from @/hooks/useWishlist",import { useCart } from @/conte
               {item.badge && item.badge > 0 && (<span className=absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;{item.badge > 9 ? '9+ : item.badge}
                 </span>;
 =======
+>>>>>>> merged-prs-20250907-203621
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
       <div className="flex justify-around items-center h-16">;
         {visibleItems.map(item => (;

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { useTranslation } from "react-i18next;
@@ -17,6 +19,7 @@ import { Loader2 } from lucide-react';
 import { useTranslation } from 'react-i18next;
 import { logErrorToProduction } from @/utils/productionLogger';export function ITServiceRequestHero() {export function ITServiceRequestHero(): any (...args[]):  {
 =======
+>>>>>>> merged-prs-20250907-203621
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -74,6 +77,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { icon: Shield, text: Certified Technicians, color: "text-zion-cyan-light" },
     { icon: Zap, text: Fast Response", color: "text-zion-purple-light }
   ];
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion  } from framer-motion';'
 import { Link  } from react-router-dom;";"
@@ -110,6 +115,7 @@ export function ITServiceRequestHero() {return (;
         <div className=absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl></div>";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export function ITServiceRequestHero() { return null; }
       {/* Background Elements */}";"
       <div className="absolute inset-0">";"
@@ -141,6 +147,8 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   y: 20
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     if(location.trim()) {
       setIsSubmitting(true)
@@ -202,6 +210,7 @@ if ( {) {$2;
       toast ({title: Missing Information,description: 'Name, email and location are required.',variant: destructive})return;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
       setIsSubmitting (true);
       // Simulate API call;
@@ -283,6 +292,8 @@ if ( {) {}
       setIsSubmitting (false);
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     setIsSubmitting (true)setIsSubmitting(true),try {const res = await axios.post ('/api / onsite - request', {name,email,phone,company,location}
     } catch (err: any) {logErrorToProduction(err)toast({title: Submission Failed,description: 'There was an error submitting your request.',variant: destructive})} finally {setIsSubmitting (false)}
   }return (<section;
@@ -354,6 +365,7 @@ if ( {) {}
                   "Well confirm your request here.;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <section
@@ -373,6 +385,8 @@ if ( {) {}
 
               src="/logos/zion-logo.png"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 {t(onsite_form && onsite_form.email_helper',We'll confirm your request here.;)}
               </p>;
@@ -425,6 +439,7 @@ if ( {) {}
         <div className='md:h - full md:flex md:flex - col md:items - center md:justify - center'>;
               alt=Zion logo
 =======
+>>>>>>> merged-prs-20250907-203621
               alt="Zion logo"
 >>>>>>> origin/chore/fix-lint-and-merge
               width={200}
@@ -625,10 +640,13 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }'"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 }
 import React, { useState } from "react,
 =======
+>>>>>>> merged-prs-20250907-203621
 import React, { useState } from "react",;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -676,6 +694,8 @@ export function ITServiceRequestHero() { return null; }
   }
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </section>)}catch (err: any) {logErrorToProduction (err)toast ({}finally {}finally {setIsSubmitting (false)}";
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className=container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className=mb-6 text-4xl md:text-5xl text-center > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className=bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type=email value= {email;
 }onChange= {(e) => setEmail (e.target.value) ";
@@ -701,6 +721,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   }return (<section;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <section;"
       className=py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)];
     >;"
@@ -790,6 +811,8 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }on_change= {
   (e) => set_email (e.target.value) ";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }}setIsSubmitting (false)}";
 py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ] > <div className=container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center > <GradientHeading className=mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className=bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4 > <Image <Input type=email" value= {email;
 }on_change= {(e) => set_email (e.target.value) ";
@@ -816,6 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }className=bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text-white required /> <p className="text - xs text - zion - slate-light" > {;
   t (onsite form.email helper', We'll confirm your request here.");
 =======
+>>>>>>> merged-prs-20250907-203621
 }className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text-white" required /> <p className="text - xs text - zion - slate-light" > {";
   t ('onsite form.email helper', "We'll confirm your request here.");
 >>>>>>> origin/chore/fix-lint-and-merge

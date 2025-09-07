@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
   "timestamp": "2025-09-06T03:11:23.175Z",
   "duration": "10s",
   "fixedFiles": [],
@@ -11,6 +14,9 @@
     "totalWarnings": 0,
     "successRate": null
   }
+<<<<<<< HEAD
+}
+=======
 }
 
 
@@ -17078,3 +17084,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

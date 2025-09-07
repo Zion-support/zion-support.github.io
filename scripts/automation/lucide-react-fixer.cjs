@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -80,7 +83,11 @@ const { execSync } = require("child_process")
       if (line.trim().startsWith("import ") && line.includes("lucide-react")
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""]
   const icons = match[1].split(",")
+<<<<<<< HEAD
+  if($2) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+=======
           if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+>>>>>>> merged-prs-20250907-203621
       } else if (inImportBlock && line.trim() === ""
         newLines.push("")
     return newLines.join("\n")
@@ -95,6 +102,15 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
+<<<<<<< HEAD
+
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,3 +142,4 @@ const { execSync } = require("child_process")
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

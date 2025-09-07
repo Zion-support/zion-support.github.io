@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 name: string;
   role?: string;
@@ -20,6 +22,7 @@ export interface Testimonial  {name: string;role?: string;
 }interface ServiceLandingTemplateProps  {title: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 role?: string;
   text: string;
   avatar?: string;
@@ -83,12 +86,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({}
   title,
   subtitle,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   heroImage,
   heroImage,
 
 main
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   description,
   benefits,
@@ -126,7 +132,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       <section className="bg-zion-blue py-16 px-4 text-center">"
         <div className="container mx-auto">"
           <GradientHeading level="h1" className="mb-4">
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             {title}
           </GradientHeading>
           <p className=text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -161,12 +170,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <p className="text - xl text - gray - 600 max - w-3xl mx - auto mb - 8">;
             {subtitle}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {benefits.length > 0 && (ursor/automate-test-improve-and-merge-code-646c;
         <section className=py - 16 px - 4>;
           <div className="max - w-7xl mx - auto">;
           </p>;
           <p className=text - lg text - gray - 600 max - w-3xl mx - auto">;
 =======
+>>>>>>> merged-prs-20250907-203621
           </p>;"
           <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -226,6 +238,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                       {benefit && benefit.icon}
                     </div>;
 
+<<<<<<< HEAD
+                  )}
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+=======
 <<<<<<< HEAD
           </p>;
         </div>;
@@ -328,10 +346,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 main
@@ -347,6 +368,7 @@ main
           <div className=max-w-7xl mx-auto">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       )}
 
       {features && features.length > 0 && (;"
@@ -363,6 +385,8 @@ main
                 </div>;
 
               ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 </div>;))}
             </div>;
@@ -395,6 +419,7 @@ main
                   <h3 className=text - xl font - semibold mb - 3>{benefit.title}</h3>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </div>
           </div>
         </section>
@@ -424,6 +449,8 @@ main
         </section>)}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </section>)}{stats.length > 0 && (<section className=py - 16 px - 4">;
           <div className="max - w-7xl mx - auto>;
             <div className=grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
@@ -431,6 +458,7 @@ main
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       {stats.length > 0 && ("
         <section className="py - 16 px - 4">;"
           <div className="max - w-7xl mx - auto">;"
@@ -448,6 +476,9 @@ main
               {stats.map((stat, index) => (
                 <div key={index}>
 <<<<<<< HEAD
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+=======
+<<<<<<< HEAD
                   <div className="text-4xl font-bold text-blue-600 mb-2>
         <section className=py-16 px-4">;
           <div className="max-w-7xl mx-auto>;
@@ -461,6 +492,7 @@ main
 =======
                   <div className="text-4xl font-bold text-blue-600 mb-2">
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     {stat.value}
 
       {stats && stats.length > 0 && (;"
@@ -476,6 +508,8 @@ main
                 </div>;
 
               ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 </div>;))}
             </div>;
@@ -509,6 +543,7 @@ main
         <div className="max-w-4xl mx-auto text-center">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </div>
           </div>
         </section>
@@ -523,17 +558,22 @@ main
           <p className="text-xl text-blue-100 mb-8">;
             Contact us today to learn more about our services.;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             className=bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block
           >
 
 main
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </p>;
 
             {ctaText}
 
           </a>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block";
           >;
@@ -544,6 +584,7 @@ main
             {ctaText}</a>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </div>;
       </section>;
     </div>;
@@ -580,6 +621,8 @@ main
           </h2>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>
             {testimonials.map((t, idx) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   </div>;
                   </div>;
@@ -621,6 +664,7 @@ main
                     <div>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <Card;
                 key={idx}
                 className="bg-zion-blue-dark border-zion-purple/30"
@@ -646,13 +690,19 @@ main
                         <p className=text-sm text-gray-400>{t.role}</p>
                       )}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     </div>
                   </div>
                 </CardFooter>
               </Card>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     </div>;
                   </div>;
@@ -660,6 +710,7 @@ main
               </Card>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                     </div>;
                   </div>;
@@ -683,6 +734,8 @@ main
     </div>
   )
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     <div>;
                       <p className="font-semibold text-white>{t.name}</p>;
@@ -720,6 +773,7 @@ main
   )</div>;
                   </div>;
 =======
+>>>>>>> merged-prs-20250907-203621
                   </div>;"
 >>>>>>> origin/chore/fix-lint-and-merge
                   <div className="text - gray - 600">{stat.label}</div>;
@@ -745,6 +799,9 @@ main
       </section>;
     </div>);
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
     </div>)}}}
 },<section className=py-12 bg-zion-blue-dark text-center'>;
         <Button;
@@ -761,3 +818,4 @@ main
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

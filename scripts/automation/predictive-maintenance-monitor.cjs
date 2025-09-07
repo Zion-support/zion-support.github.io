@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -105,8 +108,11 @@ console.log(""� Starting Predictive Maintenance Monitor...")
         timestamp
   console.log("� Analyzing dependency health...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
   "totalDependencies"
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -114,8 +120,11 @@ console.log(""� Starting Predictive Maintenance Monitor...")
         securityVulnerabilities
         "largeDependencies"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const outdatedOutput = execSync("npm outdated --json")
   "encoding": "utf8"
           "stdio": "pipe"
@@ -354,11 +363,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start predictive maintenance "monitor": ")
+<<<<<<< HEAD
+  console.error(" Failed to start predictive maintenance "monitor": ")
+  console.error(" Failed to start predictive maintenance "monitor": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -376,3 +395,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

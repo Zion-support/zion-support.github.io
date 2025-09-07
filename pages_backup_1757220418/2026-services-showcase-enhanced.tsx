@@ -14,7 +14,6 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from ../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3;
 export default function Services2026ShowcaseEnhancedPage() {
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   const [searchTerm, setSearchTerm] = useState($2);
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
@@ -79,6 +78,8 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s = $2;
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s = $2;
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s = $2;
+<<<<<<< HEAD
+=======
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
@@ -143,46 +144,51 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length }
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length }
   ]
+>>>>>>> merged-prs-20250907-203621
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' }
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' }
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' }
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' }
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   ],
 
+<<<<<<< HEAD
+=======
   ]
+>>>>>>> merged-prs-20250907-203621
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' }
-    { id: 'price-low', name: 'Price Low to High' }
-    { id: 'price-high', name: 'Price High to Low' }
-    { id: 'popularity', name: 'Most Popular' }
-    { id: 'newest', name: 'Newest First' }
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'popularity', name: 'Most Popular' },
+    { id: 'newest', name: 'Newest First' },
     { id: 'rating', name: 'Highest Rated' }
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   ],
 
   // Filter and sort services
   const filteredServices = $2;
+<<<<<<< HEAD
+=======
   ]
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
+>>>>>>> merged-prs-20250907-203621
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
+
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
         filtered = filtered.filter(service => service.category.includes('AI'))
       } else if (selectedCategory === 'quantum') {
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
         filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
         filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT'))
@@ -194,6 +200,8 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
+<<<<<<< HEAD
+=======
         filtered = filtered.filter(service => service.category.includes('Quantum') |service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
         filtered = filtered.filter(service => service.category.includes('Enterprise') |service.category.includes('IT'))
@@ -205,30 +213,34 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') |service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') |service.category.includes('IoT'))
+>>>>>>> merged-prs-20250907-203621
       }
     }
+
     // Price filter
     if (selectedPriceRange !== 'all) {
       filtered = filtered.filter(service => {
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
         const price = parseInt(service.price.replace(/[^0-9]/g, '')),
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
+<<<<<<< HEAD
+=======
         const price = parseInt(service.price.replace(/[^0-9]/g, ''))
         if (selectedPriceRange === 'low') return price < 1000
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000
         if (selectedPriceRange === 'premium') return price >= 20000
+>>>>>>> merged-prs-20250907-203621
         return true
       })
     }
+
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
@@ -244,6 +256,8 @@ export default function Services2026ShowcaseEnhancedPage() {
 
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+<<<<<<< HEAD
+=======
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''))
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''))
@@ -269,12 +283,9 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
   }
+>>>>>>> merged-prs-20250907-203621
 
-    }),
-    return filtered
-  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   // Service statistics
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   const serviceStats = $2;
     aiServices: all2026Services.filter(s = $2;
     quantumServices: all2026Services.filter(s = $2;
@@ -283,6 +294,8 @@ export default function Services2026ShowcaseEnhancedPage() {
     healthcareServices: all2026Services.filter(s = $2;
     financialServices: all2026Services.filter(s = $2;
     manufacturingServices: all2026Services.filter(s = $2;
+<<<<<<< HEAD
+=======
   const serviceStats = {
     totalServices: all2026Services.length,
     aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
@@ -293,21 +306,28 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
   },
+>>>>>>> merged-prs-20250907-203621
   return (
     <UltraFuturisticBackground variant="holographic intensity=high">
       <div className="min-h-screen>
         <Head>
           <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
+<<<<<<< HEAD
+          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
+          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
+          <link rel="icon" href="/favicon.svg" />
+          
+=======
           <meta name=description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology. />
           <meta name=keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security />
           <link rel=icon" href="/favicon.svg />
+>>>>>>> merged-prs-20250907-203621
           {/* Open Graph */}
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
           
           {/* Twitter */}
           <meta name=twitter:card" content="summary_large_image />
@@ -315,15 +335,17 @@ export default function Services2026ShowcaseEnhancedPage() {
           <meta name=twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. />
           <meta name=twitter:image" content="https://ziontechgroup.com/og-image.svg />
         </Head>
+
         {/* Enhanced Header Section */}
         <section className=relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30></div>
           <div className=max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
               initial={{ opacity: 0, y: 20}}
               animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -339,6 +361,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> merged-prs-20250907-203621
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6>
                 Enhanced 2026 Services Showcase
@@ -667,6 +690,9 @@ export default function Services2026ShowcaseEnhancedPage() {
       </div>
     </UltraFuturisticBackground>
   )
+<<<<<<< HEAD
+}
+=======
 <<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
 }
 }
@@ -676,3 +702,4 @@ export default function Services2026ShowcaseEnhancedPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> merged-prs-20250907-203621

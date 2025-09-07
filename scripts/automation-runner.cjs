@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -33,7 +36,10 @@ class AutomationRunner {
       execSync(`node ${scriptPath}`, { stdio: 'inherit' });
       
       const duration = Date.now() - startTime;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.results.push({
         script: scriptName,
         status: 'success,
@@ -56,7 +62,21 @@ class AutomationRunner {
     }
   }
 
+      })
+      this.log(`${scriptName} failed: ${error.message}`)
   async runAllScripts() {
+<<<<<<< HEAD
+    this.log('Starting automation runner...')
+    const scripts = [
+      'performance-optimizer.cjs',
+      'security-enhancer.cjs',
+      'app-improvement-automation.cjs'
+    ]
+  for($2) {
+      await this.runScript(script)
+    await this.generateReport()
+    this.log('Automation runner completed!')
+=======
     this.log('Starting automation runner...);
     
     const scripts = [
@@ -73,6 +93,7 @@ class AutomationRunner {
     this.log('Automation runner completed!);
   }
 
+>>>>>>> merged-prs-20250907-203621
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -82,14 +103,16 @@ class AutomationRunner {
         successful: this.results.filter(r => r.status === success').length,
         failed: this.results.filter(r => r.status === 'failed).length,
         total_duration: this.results.reduce((sum, r) => sum + r.duration, 0)
+<<<<<<< HEAD
+=======
       }
     }
+>>>>>>> merged-prs-20250907-203621
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report saved to ${this.reportFile}`);
-  }
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 	// Security;
@@ -107,10 +130,33 @@ class AutomationRunner {
 
 
 =======
+>>>>>>> merged-prs-20250907-203621
 if (require.main === module) {
   const runner = new AutomationRunner();
   runner.runAllScripts().catch(console.error);
 }
+<<<<<<< HEAD
+	// Security;
+	ok = run('npm run "security": audit') && ok;
+
+	// Selected automations (best-effort);
+	run('node scripts/code-quality-checks.cjs || true');
+	run('node scripts/performance-monitor.cjs || true');
+	run('node scripts/security-audit.cjs || true');
+	run('node scripts/seo-optimizer.cjs || true');
+
+	if (!ok) {}
+		console.error('\nAutomation runner encountered failures. See logs above.');
+
+module.exports = AutomationRunner;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+    this.log(`Report saved to ${this.reportFile}`)
+  if($2) {
+  const runner = new AutomationRunner()
+  runner.runAllScripts().catch(console.error)
+module.exports = AutomationRunner
+=======
 
 module.exports = AutomationRunner;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

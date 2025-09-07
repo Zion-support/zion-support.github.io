@@ -14,12 +14,15 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Loader2, Edit, Trash, Star, StarOff } from lucide-react'
 
 
 
 import { useAuth } from "@/hooks/useAuth,
 =======
+>>>>>>> merged-prs-20250907-203621
 
 import { useAuth } from "@/hooks/useAuth",
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -47,6 +50,8 @@ import {
   AlertDialogTitle} from "@/components/ui/alert-dialog,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -56,6 +61,7 @@ import { use_router } from 'next / router;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 // use_router replaces the old use_location hook from react - router;
 import { use_router } from next / router';
 
@@ -73,11 +79,14 @@ import { useAuth } from @/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { use_router } from 'next/router';
 import { use_router } from next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 
   AlertDialog;
@@ -87,6 +96,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   AlertDialogDescription;
   AlertDialogFooter;
   AlertDialogHeader;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   AlertDialogTitle } from '@/components / ui / alert - dialog';
 import { ContractTemplate  } from '@/types / contracts';
@@ -128,12 +139,15 @@ interface TemplateListProps {
   onEdit: (template: ContractTemplate,) => void
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   templates: ContractTemplate[];
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
   onEdit: (template: ContractTemplate) => void
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
@@ -147,6 +161,7 @@ interface TemplateListProps {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
 export function TemplateList({
   templates,
@@ -224,6 +239,8 @@ export function TemplateList(): any ({
   templates;
   isLoading;
   onSelect;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   onEdit
 }: TemplateListProps) {
@@ -307,6 +324,7 @@ import { useRouter } from 'next/router';
       setTemplateToDelete(null)
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   onEdit;
 }:,  TemplateListProps) {,
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
@@ -334,6 +352,8 @@ import { useRouter } from 'next/router';
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { useState } from "react",
 import { useState } from react,
@@ -368,6 +388,7 @@ import {;
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (!templates && templates.length) {
 =======
+>>>>>>> merged-prs-20250907-203621
   if (!templates && templates.length) {;
 >>>>>>> origin/chore/fix-lint-and-merge
     return (
@@ -494,6 +515,8 @@ export function TemplateList({
                 <Button
                   variant="ghost"
                   size="icon"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   onClick={() => onEdit(template)}
                   aria-label=Edit template"
@@ -664,6 +687,7 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             <Separator className="my-3 />
 
@@ -675,11 +699,14 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
               </div>
             </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             
             <Separator className=my-3" />
             
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             <Button 
 
@@ -693,6 +720,8 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
         </Card>
       ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -701,6 +730,7 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
@@ -723,6 +753,8 @@ import {AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,Alert
       </AlertDialog>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 return;
@@ -739,6 +771,7 @@ router.push (`/auth/login?returnTo=$ {
 }`)
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }
 
@@ -759,6 +792,8 @@ router.push (`/auth/login?returnTo=$ {
 }<AlertDialog open= {
   !!templateToDelete
 }onOpenChange= {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   () => setTemplateToDelete (null) 
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={,
@@ -828,6 +863,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
                   onClick={() => handleDeleteClick(template.id)}
                   aria-label=Delete template";
 =======
+>>>>>>> merged-prs-20250907-203621
   () => setTemplateToDelete (null) ""
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={",
                   onClick = {() => handleDeleteClick(template && template.id),}
@@ -840,10 +876,13 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
             </div>;
             <Separator className="my-3" />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <Button;
               onClick={() => onSelect(template)}variant="outline;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <Button
               onClick = {() => onSelect(template)}
               variant=outline" ;
@@ -852,6 +891,8 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
               Use This Template;
             </Button>;
           </CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </Card>;
       ))}
@@ -867,6 +908,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
       ))}<AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         </Card>;
       ))}
@@ -886,6 +928,8 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90
               onClick = {handleDeleteConfirm}>;
@@ -896,6 +940,7 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
             >;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90;
@@ -915,10 +960,13 @@ interface TemplateListProps  {templates: ContractTemplate[],isLoading: boolean,o
     </div>;
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   // Check condition
 if ( {) {
@@ -926,6 +974,8 @@ if ( {) {
 }
     return (
       <div className="flex justify - center items - center py - 8">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   )}
 const handleSetDefault = async (templateId: string) => {if (!user) {const currentPath = router.asPath;
@@ -993,6 +1043,7 @@ if ( {) {$2;
       {templates.map ((template, ) => (<Card key={template.id} className={template.is_default ? "border - zion - purple : "}>;
         <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple />;
 =======
+>>>>>>> merged-prs-20250907-203621
         <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple" />;
 >>>>>>> origin/chore/fix-lint-and-merge
       </div>);
@@ -1017,10 +1068,13 @@ if ( {) {
                 <div className="flex items - center gap - 2">;
                   <h3 className="font - medium">{template.title}</h3>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   {template.is_default && (<span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>)}
                   {template.is_default && (<span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full>Default</span>)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   {template.is_default && (
                     <span className=bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>)}"
                 </div>;
@@ -1033,6 +1087,8 @@ if ( {) {
                   variant=ghost;
                   size="icon";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   on_click = {() => on_edit (template) }
                   on_click = {() => on_edit (template)}
                   aria - label=Edit template;
@@ -1041,12 +1097,16 @@ if ( {) {
                 </Button>;
                 {!template.is_default ? (<TooltipProvider>;
 =======
+>>>>>>> merged-prs-20250907-203621
                   on_click = {() => on_edit (template), }
                   aria - label="Edit template";
                 >;
                   <Edit className="h - 4 w - 4" />;
                 </Button>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 {!template.is_default ? (
                   <TooltipProvider>;
                     <Tooltip>;
@@ -1055,10 +1115,13 @@ if ( {) {
                           variant=ghost;
                           size="icon";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                           on_click = {(, ) => handleSetDefault (template.id) }
                           on_click = {(, ) => handleSetDefault (template.id)}
                           aria - label=Set as default;
 =======
+>>>>>>> merged-prs-20250907-203621
                           on_click = {(, ) => handleSetDefault (template.id), }
                           aria - label="Set as default";
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -1067,12 +1130,15 @@ if ( {) {
                         </Button>;
                       </TooltipTrigger>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       {!user && (<TooltipContent>Please log in to use this feature;
                         </TooltipContent>)}
                     </Tooltip>;
                   </TooltipProvider>) : (<Button variant=ghost size="icon" disabled aria - label=Default template>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       {!user && (
                         <TooltipContent>;
                           Please log in to use this feature;
@@ -1086,9 +1152,12 @@ if ( {) {
                   variant="ghost";
                   size="icon";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   on_click = {() => handleDeleteClick (template.id) }
                   on_click = {() => handleDeleteClick (template.id)}
 =======
+>>>>>>> merged-prs-20250907-203621
                   on_click = {() => handleDeleteClick (template.id), }
 >>>>>>> origin/chore/fix-lint-and-merge
                   aria - label="Delete template";
@@ -1100,10 +1169,13 @@ if ( {) {
             <Separator className="my - 3" />;
             <Button;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               on_click = {() => on_select (template) }
               on_click = {() => on_select (template)}
               variant=outline;
 =======
+>>>>>>> merged-prs-20250907-203621
               on_click = {() => on_select (template), }
               variant="outline";
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -1118,9 +1190,12 @@ if ( {) {
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Template</AlertDialogTitle>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <AlertDialogDescription>Are you sure you want to delete this template? This action cannot be undone.;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
             </AlertDialogDescription>;
@@ -1129,12 +1204,15 @@ if ( {) {
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
               className=bg - destructive text - destructive - foreground hover:bg - destructive / 90;
               on_click = {handleDeleteConfirm }
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";,
               on_click = {handleDeleteConfirm}
 =======
+>>>>>>> merged-prs-20250907-203621
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";",
               on_click = {handleDeleteConfirm, }
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -1144,6 +1222,8 @@ if ( {) {
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </div>)}
 const handleSetDefault = async (template_id: string) => {// Check condition;
@@ -1162,6 +1242,7 @@ router.push (`/auth / login?return_to=$ {encodeURIComponent (current_path)}`)ret
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria - label="Default template"> <StarOff className="h - 4 w - 4" /> </Button>) ";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }
 const handleSetDefault = async (template_id:,  string) => {
@@ -1193,12 +1274,15 @@ return;
 }onOpenChange= {
   () => setTemplateToDelete (null) ";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={
   handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 }'}
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className=bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={",
 =======
+>>>>>>> merged-prs-20250907-203621
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={",
 >>>>>>> origin/chore/fix-lint-and-merge
   handleDeleteConfirm;
@@ -1207,10 +1291,13 @@ return;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 
 }
@@ -1225,6 +1312,8 @@ return ;
 <CardContent className=p-4> <div className="flex items-center justify-between"> <div className=space-y-1> <div className="flex items-center gap-2"> <h3 className=font-medium> {
   template.title ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }<Button > <Trash className="h - 4 w - 4 text - destructive" /> </Button> </div> </div> <Separator className=my - 3 /> <Button className="w - full" > Use This Template </Button> </CardContent> </Card>) )}<AlertDialog open= {!!templateToDelete;
 }onOpenChange= {() => setTemplateToDelete (null) ;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className=bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={handleDeleteConfirm;
@@ -1234,6 +1323,7 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return 
 }await setDefaultTemplate.mutateAsync (templateId)}<CardContent className=p-4> <div className="flex items-center justify-between"> <div className=space-y-1> <div className="flex items-center gap-2"> <h3 className=font-medium> {template.title ;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }</h3> {";
   template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) ";
 }</div> <p className="text-xs text-muted-foreground"> Last updated: {;
@@ -1256,6 +1346,9 @@ router.push (`/auth/login?returnTo=$ {encodeURIComponent (currentPath)}`)return 
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 <<<<<<< HEAD
 }'"
+=======
+<<<<<<< HEAD
+}'"
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<Button > <Trash className="h-4 w-4 text-destructive /> </Button> </div> </div> <Separator className=my-3" /> <Button className="w-full > Use This Template </Button> </CardContent> </Card>) )}<AlertDialog open= {!!templateToDelete ;
@@ -1266,3 +1359,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

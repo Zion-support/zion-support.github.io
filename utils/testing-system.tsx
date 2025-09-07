@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here
+};
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 };
 };
 ;import "@testing-library/jest-dom;
@@ -19,8 +31,13 @@ export class TestingSystem {,
         break,
       default:,
         throw new Error(`Unknown action: ${action}`)
+<<<<<<< HEAD
     }
 };
+=======
+    };
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 };
 // Type definition for HTMLElement,
 interface HTMLElement {,
@@ -42,8 +59,13 @@ export class TestingSystem {,
         break,
       default: ,
         break
+<<<<<<< HEAD
     }
 };
+=======
+    };
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 };
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -68,8 +90,24 @@ export class TestingSystem {
     }
   }
 }
+<<<<<<< HEAD
 import &quot;@testing-library/jest-dom&quot; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
 
+=======
+import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
 interface HTMLElement {
@@ -94,8 +132,31 @@ export class TestingSystem {
         break;
     }
   }
+>>>>>>> merged-prs-20250907-203621
 }
+},
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import "@testing-library/jest-dom;
 import &quot,@testing-library/jest-dom&quot, interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction(element: HTMLElement,action: &apos,click&apos, | &apos,type&apos, | &apos,hover&apos) { switch (action) { case &apos,click&apos,: element.click(), break, case &apos,type&apos,: break, case &apos,hover&apos,: break, default: break} } };
 import "@testing-library/jest-dom", interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click | 'type' | hover' ) { switch (action) { case 'click: element.click(), break, case 'type': break, case hover': break, default: break} } };
@@ -141,4 +202,44 @@ export class TestingSystem {,
     }
 
 };
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here
+}
+
+<<<<<<< HEAD
+origin/main
+origin/automation-improvements-final
+=======
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+}};
+},;
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here;
+<<<<<<< HEAD
+};
+}};
+},;
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

@@ -1,9 +1,38 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+import {Star} from 'lucide-react';
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
+>>>>>>> merged-prs-20250907-203621
 }
-    }
 
+<<<<<<< HEAD
+=======
       observer.observe({ "entryTypes": ['navigation'],'
 })"memory": {"used": number;
     }
@@ -20,13 +49,31 @@ export default PerformanceMonitor
   return null; // This component doesn't render anything;
 }export default PerformanceMonitor;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 interface PerformanceData {
   domContentLoaded: number,
   loadComplete: number,
   totalLoadTime: number,
   firstPaint: number,
   firstContentfulPaint: number,
+<<<<<<< HEAD
   resourceCount: number,
+=======
+<<<<<<< HEAD
+  resourceCount: number,
+=======
+  resource_count: number,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   memory: {
     used: number,
     total: number,
@@ -34,24 +81,54 @@ interface PerformanceData {
   } | null;
 }
 
-interface PerformanceData {
-  domContentLoaded: number,
-  loadComplete: number,
-  totalLoadTime: number,
-  firstPaint: number,
-  firstContentfulPaint: number,
-  resourceCount: number,
-  memory: {
-    used: number,
-    total: number,
-    limit: number,
-  } | null;
-}
-
+<<<<<<< HEAD
 interface PerformanceMonitorProps {
+  onPerformanceData?: (data: PerformanceData) => void,
+}
+
+// Extend the Window interface to include performance
+declare global {
+  interface Window {
+    performance: Performance,
+  }
+}
+
+// Define Performance types if not available
+interface PerformanceEntry {
+  name: string,
+  entryType: string,
+  startTime: number,
+  duration: number,
+=======
+interface PerformanceData {
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory: {
+    used: number,
+    total: number,
+    limit: number,
+  } | null;
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+interface PerformanceMonitorProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Extend the Window interface to include performance;
+declare global {
+  interface Window {
+    performance: Performance,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   onPerformanceData?: ("data": any) => void;
 
+>>>>>>> merged-prs-20250907-203621
 }
 
 interface Performance {
@@ -75,8 +152,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
     const measurePerformance = () => {
+<<<<<<< HEAD
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
+=======
       const navigation = window.performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;
       const paint = window.performance.getEntriesByType(paint');
+>>>>>>> merged-prs-20250907-203621
       
       const performanceData = {
         // Navigation timing
@@ -85,6 +167,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
         
         // Paint timing
+<<<<<<< HEAD
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length,
+        
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        } : null
+=======
         firstPaint: paint.find(entry => entry.name === 'first-paint)?.startTime || 0,
         firstContentfulPaint: paint.find(entry => entry.name === first-contentful-paint')?.startTime || 0,
         
@@ -103,13 +199,23 @@ import React, { useEffect } from 'react';
 interface PerformanceMonitorProps {}
   onPerformanceData?: (data: any) => void;
 }
+<<<<<<< HEAD
+=======
+// Define Performance types if not available;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
 }
 interface PerformanceEntry {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface PerformanceData {;
   domContentLoaded: number;,;
   loadComplete: number;,;
@@ -133,6 +239,7 @@ import React, { useEffect, useState } from 'react' from 'react'';interface Perfo
   ttfb?: number
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
+<<<<<<< HEAD
 
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void;
@@ -151,8 +258,16 @@ declare global {;
   interface Window {;
 
     performance: Performance;,;
+=======
+interface PerformanceMonitorProps {;
+  onPerformanceData?: (data: PerformanceData) => void,;
+}
+// Extend the Window interface to include performance;
+declare global {;
+  interface Window {;
+    performance: Performance,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
-
   interface Performance {;
     getEntriesByType(type: string): PerformanceEntry[];,;
     memory?: {;
@@ -160,18 +275,15 @@ declare global {;
       jsHeapSizeLimit: number;,;
     };
   }
-
   interface PerformanceEntry {;
     name: string;, startTime: number;,;
     duration: number;,;
   }
-
   interface PerformanceNavigationTiming extends PerformanceEntry {;
     domContentLoadedEventStart: number;, domContentLoadedEventEnd: number;,;
     loadEventStart: number;, loadEventEnd: number;,;
     fetchStart: number;,;
   }
-
 // Define Performance types if not available;
 interface PerformanceEntry {;
   name: string;,;
@@ -179,11 +291,9 @@ interface PerformanceEntry {;
   startTime: number;,;
   duration: number;,;
 }
-
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[];,;
 }
-
 interface PerformanceNavigationTiming extends PerformanceEntry {;
   loadEventEnd: number;,;
   loadEventStart: number;,;
@@ -194,19 +304,28 @@ interface PerformanceNavigationTiming extends PerformanceEntry {;
   requestStart: number;,;
   navigationStart: number;,;
 }
-
 // Define Performance types if not available;
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[];
   now(): number;
 }
-
 interface PerformanceEntry {;
   name: string;
   entry_type: string;
   start_time: number;
   duration: number;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface PerformanceNavigationTiming extends PerformanceEntry {;
+=======
+
+
+interface PerformanceNavigationTiming extends PerformanceEntry {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   readonly connectEnd: number;
   readonly connectStart: number;
   readonly domComplete: number;
@@ -236,6 +355,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
   useEffect(() => {
 // Only run on client side
@@ -278,14 +398,79 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (document.readyState === 'complete') {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {;
+  useEffect(() => {;
+    // Only run on client side;
+    if (typeof window === 'undefined' || typeof window && window.performance === 'undefined') return;
+    const measurePerformance = () => {;
+      const navigationEntries = window && window.performance.getEntriesByType('navigation');
+      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
+      const paintEntries = window && window.performance.getEntriesByType('paint');
+      const performanceData = {;
+        // Navigation timing;
+        domContentLoaded: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.domContentLoadedEventStart,;
+        loadComplete: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,;
+        totalLoadTime: navigation && navigation.loadEventEnd - navigation && navigation.fetchStart,;
+        // Paint timing;
+        firstPaint: paintEntries && paintEntries.find(entry => entry && entry.name === 'first-paint')?.startTime || 0,;
+        firstContentfulPaint: paintEntries && paintEntries.find(entry => entry && entry.name === 'first-contentful-paint')?.startTime || 0,;
+        // Resource timing;
+        resourceCount: window && window.performance.getEntriesByType('resource').length,;
+        // Memory usage (if available);
+        memory: (window && window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {;
+          used: (window && window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory && memory.usedJSHeapSize,;
+          total: (window && window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory && memory.totalJSHeapSize,;
+          limit: (window && window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory && memory.jsHeapSizeLimit;
+      },;
+      if (onPerformanceData) {;
+        onPerformanceData(performanceData);
+      }
+      // Log performance data in development;
+      if (process && process.env.NODE_ENV === 'development') {;
+        // eslint-disable-next-line no-console;
+        console && console.log('Performance Metrics:', performanceData);
+      }
+    };
+    // Measure performance after page load;
+    if (document && document.readyState === 'complete') {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
     }
+<<<<<<< HEAD
   }, [onPerformanceData]);
   return null;
 }
 const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
+=======
+<<<<<<< HEAD
+    return () => {;
+      window && window.removeEventListener('load', measurePerformance);
+    };
+=======
+
+
+    return () => {;
+      window && window.removeEventListener('load', measurePerformance);
+    };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }, [onPerformanceData]);
+  return null;
+}
+const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData }) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   useEffect (() => {
 // Only run on client side;
     // Check condition
@@ -353,22 +538,82 @@ interface PerformanceMetrics {fcp?: number;
   cls?: number;
   ttfb?: number;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const observer = new PerformanceObserver((list) => {;const entries = list && list.getEntries();
+      entries && entries.forEach((entry) => {;
+        switch (entry && entry.entryType) {;
+case 'paint': if (entry && entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry && entry.startTime }));'            }
+            break;
+          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry && entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry && entry.processingStart - entry && entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev && prev.cls || 0) + (entry as any).value ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }));
 }
             break;
           case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart ;}));'            break;'        }});
 });
     // Observe different types of performance entries;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    try {;
+observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+=======
+
+    try {;
+observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
       observer && observer.observe({ entryTypes: ['paint';, 'largest-contentful-paint'] });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {setIsVisible(true);
 }, 3000);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return () => {;
+      observer && observer.disconnect();
+=======
+
+    return () => {;
+      observer && observer.disconnect();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       clearTimeout(timer);
 }
 }, []);
   if (!isVisible) return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {;
+if (value <= thresholds && thresholds.good) return 'text-green-600;
+    if (value <= thresholds && thresholds.poor) return 'text-yellow-600;
+    return 'text-red-600;
+};';
+  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {;
+    if (value <= thresholds && thresholds.good) return 'Good;
+    if (value <= thresholds && thresholds.poor) return 'Needs Improvement;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return 'Poor;
 };';
   return (
@@ -377,6 +622,8 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
+<<<<<<< HEAD
+=======
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
   onPerformanceData,
@@ -386,6 +633,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
     if (typeof window === "undefined" || typeof performance === "undefined") {}
       return;
 
+<<<<<<< HEAD
     if (typeof window === 'undefined') return
     // Only show in development or for admin users
     const isDev = process.env.NODE_ENV === 'development'
@@ -415,6 +663,62 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
       })
     })
     // Observe different types of performance entries
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {metrics && metrics.lcp && (;
+<div className="flex justify-between>            <span className="text-gray-600">LCP: </span>"            <span className={getScoreColor(metrics && metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math && Math.round(metrics && metrics.lcp)}ms ({getScoreText(metrics && metrics.lcp, { good: 2500, poor: 4000 })})</span>;
+          </div>;
+        )}
+        {metrics && metrics.fid && (;
+<div className="flex justify-between>            <span className="text-gray-600">FID: </span>"            <span className={getScoreColor(metrics && metrics.fid, { good: 100, poor: 300 })}>"              {Math && Math.round(metrics && metrics.fid)}ms ({getScoreText(metrics && metrics.fid, { good: 100, poor: 300 })})</span>;
+          </div>;
+        )}
+        {metrics && metrics.cls && (;
+<div className="flex justify-between>            <span className="text-gray-600">CLS: </span>"            <span className={getScoreColor(metrics && metrics.cls, { good: 0 && 0.1, poor: 0 && 0.25 })}>"              {metrics && metrics.cls.toFixed(3)} ({getScoreText(metrics && metrics.cls, { good: 0 && 0.1, poor: 0 && 0.25 })})</span>;
+          </div>;
+        )}
+        {metrics && metrics.ttfb && (;
+<div className="flex justify-between>            <span className="text-gray-600">TTFB: </span>"            <span className={getScoreColor(metrics && metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math && Math.round(metrics && metrics.ttfb)}ms ({getScoreText(metrics && metrics.ttfb, { good: 800, poor: 1800 })})</span>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </div>;
+        )}
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, set_metrics] = useState < PerformanceMetrics>({});
+  const [is_visible, setIsVisible] = useState (false);
+  useEffect (() => {
+// Check condition
+if (return) {
+  $2
+}
+    // Only show in development or for admin users;
+    const is_dev = process.env.NODE_ENV === 'development;
+    const is_admin = local_storage.get_item ('admin_mode') === 'true;
+    '    // Check condition
+if (return) {
+  $2
+}
+    const observer = new PerformanceObserver ((list) => {const entries = list.get_entries ();
+;
+      entries.for_each ((entry) => {
+        switch (entry.entry_type) {
+case 'paint': if ( {'              set_metrics (prev => ({ ...prev, fcp: entry.start_time }))) {
+  $2
+}'            }
+            break;
+          case 'largest - contentful - paint': set_metrics (prev => ({ ...prev, lcp: entry.start_time }));'            break;'          case 'first - input': set_metrics (prev => ({ ...prev, fid: entry.processing_start - entry.start_time }));'            break;'          case 'layout - shift': // Check condition
+if (.hadRecentInput) {'              set_metrics (prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value ) {
+  $2
+}
+}));
+}
+            break;
+          case 'navigation': set_metrics (prev => ({ ...prev, ttfb: entry.response_start - entry.request_start }));'            break;'        }});
+});
+    // Observe different types of performance entries;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       observer.observe({ entryTypes: [
         'paint', 'largest-contentful-paint',
@@ -782,6 +1086,7 @@ pr-12243
         fidObserver.disconnect();
         clsObserver.disconnect();
         fcpObserver.disconnect();
+>>>>>>> merged-prs-20250907-203621
       };
 origin/cursor/analyze-improve-and-deploy-application-347d
     }
@@ -803,11 +1108,61 @@ origin/cursor/analyze-improve-and-deploy-application-347d
 
 export default PerformanceMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+
+<<<<<<< HEAD
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', performanceData);
+      }
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [onPerformanceData])
+
+  return null
+}
+
+export default PerformanceMonitor
+=======
+<<<<<<< HEAD
+};
+export default PerformanceMonitor;
+
+    </div>;
+  );
+}
+export default PerformanceMonitor;
+};
+export default PerformanceMonitor;
+
+}
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 
   return null; // This component doesn't render anything
 };
 
+<<<<<<< HEAD
 export default PerformanceMonitor;
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

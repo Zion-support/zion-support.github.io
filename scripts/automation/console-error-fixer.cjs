@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,25 +12,34 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Console Error Fixer Automation;
- * Identifies and fixes console errors and warnings;
+ * Console Error Fixer Automation
+ * Identifies and fixes console errors and warnings
  */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
+
+
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 =======
-
-
 <<<<<<< HEAD
 =======
 =======
@@ -41,11 +52,30 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class ConsoleErrorFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
-
+        this.logFile = path.join(this.projectRoot, 'logs', 'console-error-fixer.log');
+        this.reportFile = path.join(this.projectRoot, 'console-error-fix-report.json');
+        this.ensureLogsDirectory()};
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot, 'logs';);
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString(}
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+=======
 <<<<<<< HEAD
 
 
@@ -65,12 +95,25 @@ class ConsoleErrorFixer {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
         console.log(message)};
 >>>>>>> origin/chore/fix-lint-and-merge
     findConsoleStatements() {}
         this.log(Finding console statements...');
         const files = this.findSourceFiles(;);
         const consoleStatements = [];
+<<<<<<< HEAD
+        
+        
+        
+        for (const file of files) {}
+            try {}
+
+                const lines = content.split('\n';);
+                for (let i = ;0; i < lines.length i++) {}
+                    const line = lines[i];
+                    const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
+=======
 <<<<<<< HEAD
 
         console.log(message)}
@@ -106,12 +149,18 @@ class ConsoleErrorFixer {}
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 
                 for (let i = ;0; i < lines.length i++) {}
                     const line = lines[i];
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
                     
 <<<<<<< HEAD
+                for (let i = ;0; i < lines.length i++) {}
+                    const line = lines[i];
+                    const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -121,20 +170,29 @@ class ConsoleErrorFixer {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <<<<<<< HEAD
 =======
+>>>>>>> merged-prs-20250907-203621
                 
                 for (let i = ;0; i < lines.length i++) {}
                     
+<<<<<<< HEAD
+=======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     if ( {})
                         consoleStatements.push({})
 
         const files = [];
 <<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
@@ -145,11 +203,22 @@ class ConsoleErrorFixer {}
     ) retu}r;n;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            
+=======
 <<<<<<< HEAD
 
 =======
@@ -173,10 +242,15 @@ class ConsoleErrorFixer {}
     ) retu}r;n;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+                
+                
+=======
 <<<<<<< HEAD
 
 =======
@@ -208,10 +282,11 @@ class ConsoleErrorFixer {}
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
+                    files.push(fullPath)}
+            }
         }) {}
     && !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -224,6 +299,22 @@ class ConsoleErrorFixer {}
         scanDirectory(this.projectRoot);
         return files};
     removeConsoleStatements() {}
+<<<<<<< HEAD
+        this.log('Removing console statements...');
+        const files = this.findSourceFiles(;);
+        let removedCount = ;0;
+        const removals = [];
+        
+        const files = this.findSourceFiles(;);
+        let removedCount = ;0;
+        const removals = [];
+        
+        
+        const files = this.findSourceFiles(;);
+        let removedCount = ;0;
+        const removals = [];
+        
+=======
 <<<<<<< HEAD
         this.log('Removing console statements...');
 <<<<<<< HEAD
@@ -243,15 +334,20 @@ class ConsoleErrorFixer {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         for (const file of files) {}
             try {}
                 let content = fs.readFileSync(file, utf8';);
                 let originalContent = conte;n;t;
 <<<<<<< HEAD
+                
+=======
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> merged-prs-20250907-203621
                 // Remove console statements;
                 content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g, ');
                 
@@ -263,6 +359,20 @@ class ConsoleErrorFixer {}
                 content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g, '');
                 // Remove empty lines that might be left behind;
                 content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+<<<<<<< HEAD
+                // Remove console statements;
+                content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g, );
+                // Remove empty lines that might be left behind;
+                content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+                
+                
+                
+                if ( {})
+                    fs.writeFileSync(file, content)) {}
+                    fs.writeFileSync(file, content)}
+                    removedCount++
+                    removals.push({})
+=======
 =======
                 
 =======
@@ -295,6 +405,7 @@ class ConsoleErrorFixer {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
                         "file": file,
                         "action": 'removed_console_statements'
                     })};
@@ -310,11 +421,29 @@ class ConsoleErrorFixer {}
         let replacedCount = ;0;
         const replacements = [];
 =======
+<<<<<<< HEAD
+        const files = this.findSourceFiles(;);
+        let replacedCount = ;0;
+        const replacements = [];
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         
         let replacedCount = ;0;
         const replacements = [];
         
+<<<<<<< HEAD
+        
+        const files = this.findSourceFiles(;);
+        let replacedCount = ;0;
+        const replacements = [];
+        
+        for (const file of files) {}
+            try {}
+                let content = fs.readFileSync(file, 'utf8';);
+                let originalContent = conte;n;t;
+                
+=======
 <<<<<<< HEAD
 
 =======
@@ -324,12 +453,8 @@ class ConsoleErrorFixer {}
                 let content = fs.readFileSync(file, 'utf8;);
 
 =======
+>>>>>>> merged-prs-20250907-203621
                 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-                
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 // Replace console.log with logger.info;
                 content = content.replace(/console\.log\s*\(/g, logger.info(');
                 content = content.replace(/console\.warn\s*\(/g, 'logger.warn();
@@ -361,6 +486,24 @@ class ConsoleErrorFixer {}
                 content = content.replace(/console\.info\s*\(/g, 'logger.info(');
                 content = content.replace(/console\.debug\s*\(/g, 'logger.debug(');
 <<<<<<< HEAD
+                
+                
+                if ( {})
+                    // Add logger import if not present
+                    if (!content.includes('import') || !content.includes('logger')) {}
+                        const importStatement = "import { logger } from './utils/logge) {}
+     {}
+                    // Add logger import if not present
+                    if (!content.includes('import') || !content.includes('logger')) {}
+                        const importStatement = "import { logger } from './utils/logge}r;';\n"
+                        content = importStatement + content}
+                    fs.writeFileSync(file, content)
+                    replacedCount++
+                    replacements.push({})
+                        "file": file,
+                        "action": 'replaced_with_logger'
+=======
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -379,6 +522,7 @@ class ConsoleErrorFixer {}
                     replacements.push({})
                         "file: file,
                         action": 'replaced_with_logger'
+>>>>>>> merged-prs-20250907-203621
                     })}
             } catch (error) {}
                 this.log(`Error processing file ${file}: ${error.message}`)}
@@ -396,11 +540,40 @@ class ConsoleErrorFixer {}
         const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';);
         const loggerDir = path.dirname(loggerPath;);
 =======
+<<<<<<< HEAD
+        const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';);
+        const loggerDir = path.dirname(loggerPath;);
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         
         const loggerPath = path.join(this.projectRoot, 'utils', logger.js;);
         const loggerDir = path.dirname(loggerPath;);
         
+<<<<<<< HEAD
+        
+        const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';);
+        const loggerDir = path.dirname(loggerPath;);
+        
+        if () {}
+            fs.mkdirSync(loggerDir, { "recursive": true })};
+this.log(`Error processing file ${file}: ${error.message}`)}
+        }
+        this.log(`Replaced console statements in ${replacedCount} files`)
+        return { replacedCount, replacements }}
+  createLoggerUtility($2) {}
+        this.log('Creating logger utility...')
+        const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';)
+        const loggerDir = path.dirname(loggerPath;)
+        const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';)
+        const loggerDir = path.dirname(loggerPath;)
+  if($2) {}
+            fs.mkdirSync(loggerDir, { "recursive": true })}
+        const loggerContent = "/**
+ * Logger Utility
+ * Centralized logging for the application
+ */
+=======
 <<<<<<< HEAD
 
 =======
@@ -423,12 +596,15 @@ class ConsoleErrorFixer {}
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
 
-                        content = importStatement + content};
-                    fs.writeFileSync(file, content);
-                    replacedCount++;
-                    replacements.push({})"
 
+<<<<<<< HEAD
+
+class Logger {}
+    constructor() {}"
+
+=======
         const loggerContent = "/**"
  * Logger Utility;
  * Centralized logging for the application;
@@ -451,6 +627,7 @@ class Logger {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 =======
+>>>>>>> merged-prs-20250907-203621
     log(level, message, ...args) {}
         if (this.isDevelopment) {}
             console[level](message, ...args)};
@@ -474,9 +651,14 @@ export const logger = new Logger) {}
  * Centralized logging for the application;
  */
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 class Logger {}
 >>>>>>> origin/chore/fix-lint-and-merge
     constructor() {}
@@ -498,8 +680,11 @@ class Logger {}
 export const logger = new Logger}(;);
 ";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> merged-prs-20250907-203621
         fs.writeFileSync(loggerPath, loggerContent);
         this.log(Logger utility created);
         
@@ -514,8 +699,11 @@ export const logger = new Logger}(;);
         return { "status": 'success', "path": loggerPath }};
     generateErrorReport() {}
         this.log('Generating console error fix report...');
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(loggerPath, loggerContent);
         this.log('Logger utility created');
@@ -525,11 +713,14 @@ export const logger = new Logger}(;);
         this.log('Generating console error fix report...');
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export const logger = new Logger}(;);
 ;
@@ -537,6 +728,9 @@ export const logger = new Logger}(;);
         this.log(Logger utility created);
 
 
+<<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
 =======
         
@@ -547,10 +741,15 @@ export const logger = new Logger}(;);
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         const consoleStatements = this.findConsoleStatements(;);
         const removals = this.removeConsoleStatements(;);
         const replacements = this.replaceWithLogger(;);
         const loggerCreation = this.createLoggerUtility(;);
+<<<<<<< HEAD
+        
+        
+=======
 <<<<<<< HEAD
 
 =======
@@ -562,6 +761,7 @@ export const logger = new Logger}(;);
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
         const report = {}
 
             "fixes: {}
@@ -575,6 +775,9 @@ export const logger = new Logger}(;);
                 "removals": removals,
                 "replacements": replacements,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
                 "loggerCreation": loggerCreation;
             },
             "recommendations": this.generateErrorRecommendations();
@@ -583,12 +786,20 @@ export const logger = new Logger}(;);
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Console error fix report saved to ${this.reportFile}");
 =======
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("Console error fix report saved to ${this.reportFile}");
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Console error fix report saved to ${this.reportFile});
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -613,6 +824,31 @@ export const logger = new Logger}(;);
 
 =======
         
+<<<<<<< HEAD
+        return report};
+    generateErrorRecommendations() {}
+            "recommendations": this.generateErrorRecommendations()
+       }
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+        this.log("Console error fix report saved to ${this.reportFile}")
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+        this.log("Console error fix report saved to ${this.reportFile}")
+        return report}
+  generateErrorRecommendations($2) {}
+        return [;]
+            'Use a proper logging library like Winston or Pino',
+            'Implement log levels for different environments',
+            'Set up log aggregation for production monitoring',
+            'Remove all console statements from production code',
+            'Use structured logging for better debugging',
+            'Implement log rotation to manage log file sizes',
+            'Consider using a logging service for distributed applications'
+        ]}
+    async run() {}
+        this.log('Console Error Fixer started');
+        
+        
+=======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
         
@@ -625,9 +861,10 @@ export const logger = new Logger}(;);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         try {}
-            const report = this.generateErrorReport(;);
-            this.log('Console Error Fixer completed successfully');
+            const report = this.generateErrorReport(;)
+            this.log('Console Error Fixer completed successfully')
             return report} catch (error) {}
 <<<<<<< HEAD
             this.log(Console Error Fixer "failed": ${error.message}`);
@@ -641,9 +878,15 @@ export const logger = new Logger}(;);
             recommendations: this.generateErrorRecommendations();"
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
+<<<<<<< HEAD
+        this.log("Console error fix report saved to ${this.reportFile}");"
+        return report}
+  generateErrorRecommendations($2) {}
+=======
         this.log(Console error fix report saved to ${this.reportFile});"
         return report}
     generateErrorRecommendations() {}
+>>>>>>> merged-prs-20250907-203621
         return [;]"
 
 <<<<<<< HEAD
@@ -661,12 +904,22 @@ export const logger = new Logger}(;);
     const fixer = new ConsoleErrorFixer}(;);
     fixer.run().catch(console.error)};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 module.exports = ConsoleErrorFixer;
+<<<<<<< HEAD
+module.exports = ConsoleErrorFixer;
+module.exports = ConsoleErrorFixer;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -689,3 +942,4 @@ module.exports = ConsoleErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -10,6 +12,7 @@ import {logErrorToProduction} from @/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
 =======
+>>>>>>> merged-prs-20250907-203621
 interface Props {;
 >>>>>>> origin/chore/fix-lint-and-merge
   children: React.ReactNode;
@@ -28,10 +31,13 @@ interface Props {
 }
 interface State {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   hasError: boolean
 
@@ -78,6 +84,8 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 
                 >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from @/components/ui/card;
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -115,6 +123,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   <RefreshCw className=h-4 w-4 mr-2" />
                   Try Again
@@ -206,12 +215,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
       )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     return this.props.children
   }      )
@@ -220,6 +232,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 } ;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -309,6 +323,7 @@ interface Props  {children: React && React.ReactNode;
   }}}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
 
                   onClick={() => window && window.location.reload()}
@@ -317,15 +332,21 @@ interface Props  {children: React && React.ReactNode;
                 <Button onClick={() => window && window.location.reload()} variant="default">;
               </p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <div className=flex gap-2 justify-center>;
                 <Button;
                   onClick={() => this && this.setState({ hasError: false, error: undefined })}variant="outline";
 =======
+>>>>>>> merged-prs-20250907-203621
               <div className="flex gap-2 justify-center">;
                 <Button
                   onClick={() => this && this.setState({ hasError: false, error: undefined })} ;
                   variant="outline";
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 >;
                   <RefreshCw className=h-4 w-4 mr-2 />;
                   Try Again;
@@ -338,6 +359,8 @@ interface Props  {children: React && React.ReactNode;
           </Card>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       )}return this && this.props.children;
   }      )}return this && this.props.children;
   }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
@@ -347,6 +370,7 @@ interface Props  {children: React && React.ReactNode;
 if ( {) {$2;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       );
     }
     return this && this.props.children;
@@ -365,11 +389,16 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+      return (
+        <div className='container py - 8'>;
+=======
+<<<<<<< HEAD
       return (<div className=container py - 8>;
 =======
       return (
         <div className='container py - 8'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           <Card className='border - red - 200 bg - red - 50'>;
             <CardContent className=p - 8 text - center>;
               <AlertTriangle className='mx - auto mb - 4 h - 12 w - 12 text - red - 600' />;
@@ -384,10 +413,13 @@ if ( {) {
                 <Button;
                   on_click={() =>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     this.set_state ({ has_error: false, error: undefined })}
                   variant='outline                >;
                   <RefreshCw className=h - 4 w - 4 mr - 2' />;
 =======
+>>>>>>> merged-prs-20250907-203621
                     this.set_state ({ has_error: false, error: undefined });
                   }
                   variant='outline'                >;
@@ -419,9 +451,15 @@ if ( {) {
     }
     return this.props.children;
 <<<<<<< HEAD
+  });
+    }
+
+=======
+<<<<<<< HEAD
   }      );
   });
     }
+>>>>>>> merged-prs-20250907-203621
     return this.props.children;
   }
 
@@ -444,6 +482,9 @@ if ( {) {
     return this.props.children;
 <<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
 origin/cursor/automate-test-improve-and-merge-code-2533
   }      )}return this.props.children;
   }})}return this.props.children;
@@ -452,3 +493,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

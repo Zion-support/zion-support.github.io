@@ -18,6 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status (401).json ({ error: 'Unauthorized' });
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     res.status (401).json ({ "error": 'Unauthorized' });'
     return;
 
@@ -46,6 +48,7 @@ res.status(200).json({ "message": 'OK' });    return'
 ;
   res.status(200).json({ "message": 'OK' });'
 =======
+>>>>>>> merged-prs-20250907-203621
     res.status(401).json({ error: 'Unauthorized' });
   res.status(200).json({ message: 'OK' });
 res.status (200).json ({ message: 'OK' });    return;
@@ -53,6 +56,9 @@ res.status (200).json ({ message: 'OK' });    return;
   getSessionFromReq;
   isInternalAgentRequest;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 res.status(200).json({ message: 'OK' });    return;

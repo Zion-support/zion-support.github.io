@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,14 +12,21 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Real-time Health Dashboard;
- * Comprehensive monitoring dashboard for PM2 processes;
+ * Real-time Health Dashboard
+ * Comprehensive monitoring dashboard for PM2 processes
  */
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -66,6 +75,7 @@ const { execSync } = require('child_process')
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const pm2 = require('pm2')
 
 const fs = require('fs')
@@ -73,6 +83,9 @@ const path = require('path')
 const http = require('http')
 const { execSync } = require('child_process')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     this.logFile = path.join(this.projectRoot, 'logs', 'health-dashboard.log')
     this.dashboardFile = path.join(this.projectRoot, 'logs', 'dashboard-data.json')
       await fs.mkdir(path.join(this.projectRoot, 'logs')
@@ -120,11 +133,21 @@ const { execSync } = require('child_process')
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
       this.log(` Fatal "error"`)
+<<<<<<< HEAD
+      this.log(` Fatal "error"`)
+      this.log(` Fatal "error"`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -146,3 +169,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

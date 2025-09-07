@@ -1,102 +1,89 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2020",
+=======
+    "target": "ES2017",
+>>>>>>> merged-prs-20250907-203621
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "es2020"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "maxNodeModuleJsDepth": 0,
-    "skipDefaultLibCheck": true,
+<<<<<<< HEAD
     "esModuleInterop": true,
     "module": "ESNext",
+=======
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+>>>>>>> merged-prs-20250907-203621
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "plugins": [
       {
         "name": "next"
       }
+<<<<<<< HEAD
+    ]
+=======
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/assets/*": [
-        "./assets/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/app/*": ["./app/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/public/*": ["./public/*"]
     },
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false
+    "allowSyntheticDefaultImports": true
+>>>>>>> merged-prs-20250907-203621
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+  "include": ["next-env.d.ts", "app/**/*.ts", "app/**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules",
-    ".next",
-    "dist",
-    "build",
-    "backup*",
-    "temp*",
-    "corrupted*",
-    "apps.backup*",
-    "apps*",
-    "recovered-branches*",
-    "src*",
-    "data*",
-    "**/*.backup.*",
-    "**/*.temp.*",
-    "**/*.conflict.*",
-    "src/App.tsx",
-    "src/components/DynamicListingPage.tsx",
-    "src/components/ErrorBoundary.tsx",
-    "src/components/FeaturesGuideSection.tsx",
-    "src/components/Footer.tsx",
-    "src/components/Header.tsx",
-    "src/components/PerformanceMonitor.tsx",
-    "src/components/developers/WebhooksManager.tsx",
-    "src/components/icons/index.tsx",
-    "src/pages/About.tsx",
-    "src/pages/Contact.tsx",
-    "src/pages/Pricing.tsx",
-    "src/pages/Services.tsx"
+    "apps/**",
+    "apps.backup/**",
+    "api-backup/**",
+    "backup/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "broken_files_backup/**",
+    "corrupted_backup/**",
+    "_conflicted_disabled/**",
+    "components-disabled/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "src_backup/**",
+    "utils/**",
+    "vite.config-backup.ts",
+    "browserstack.config.ts",
+    "cypress.config.ts",
+    "jest.config.*",
+    "*.config.ts",
+    "types/**",
+    "netlify/**",
+    "components/**",
+    "src/**"
   ]
 }

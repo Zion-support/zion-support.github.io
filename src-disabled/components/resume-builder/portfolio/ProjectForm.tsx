@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 }
       let success = false;
@@ -33,6 +35,7 @@ import { usePortfolio   } from @/hooks/usePortfolio';
 import { useAuth  } from '@/hooks/useAuth;
 // Define schema for form validation;
 const projectSchema = null;
+>>>>>>> merged-prs-20250907-203621
 :src/components/resume-builder/portfolio/ProjectForm.tsx
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -62,7 +65,10 @@ import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { Form;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   FormControl;
   FormField;
   FormItem;
@@ -71,6 +77,9 @@ import { Form;
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
+<<<<<<< HEAD
+import { useAuth } from '@/hooks/useAuth';
+=======
 <<<<<<< HEAD
 // Define schema for form validation;
 const projectSchema = z.object({title: z.string().min(1, Project title is required')description: z.string().optional()technologies: z.string().optional()image_url: z.string().optional()github_url: z;
@@ -106,6 +115,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         success = await update_project (project.id, project_data);
       } else {
 import { useAuth } from @/hooks/useAuth';
+>>>>>>> merged-prs-20250907-203621
 :src/components/resume-builder/portfolio/ProjectForm.tsx
 // Define schema for form validation
 import { useState } from 'react
@@ -136,6 +146,8 @@ import { useAuth } from '@/hooks/useAuth';
       }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       // Check condition
 if ( {) {
   $2
@@ -159,6 +171,7 @@ import { logErrorToProduction } from @/utils/productionLogger';import {setIsLoad
   }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       // Check condition;
 if ( {) {}
   $2;
@@ -201,10 +214,13 @@ import {;
   FormField,;
   FormItem,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   FormLabel,;
   FormLabel,
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { useAuth } from '@/hooks/useAuth,
 // Define schema for form validation;
@@ -270,9 +286,12 @@ export function ProjectForm() { return null; }
   },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   return (
 
         <FormField
@@ -301,6 +320,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <Form {...form}>;
   return (<Form {...form}>;
     <Form {...form}>;
@@ -310,6 +331,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name=title';
           render={({ field }: { field: any }) => (<FormItem>;
 =======
+>>>>>>> merged-prs-20250907-203621
     <Form {...form}>;'
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
@@ -317,7 +339,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='title';
           render={({ field }: { field: any }) => (
             <FormItem>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
                 <Input;'
@@ -338,6 +363,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 />;
               </FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <FormMessage />;/>;<FormField;
           name=technologies';
           render={({ field }: { field: any }) => (<FormItem>;
@@ -348,6 +375,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </FormItem>)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               <FormMessage />;
         />;
         <FormField
@@ -365,6 +393,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <FormField;
           control={form.control}'
           name='technologies';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           control={form.control}name="title";
           control={form.control}name="title;
@@ -408,6 +438,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FormLabel className='flex items-center gap-2>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           control={form.control}
 
           name="title
@@ -488,12 +519,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <Input;
                     placeholder=https://github && github.com/yourusername/project';
             </FormItem>)}
         />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4>;
           <FormField;
@@ -528,6 +562,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />;
                 </FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <FormMessage />;/>;<FormField;
             control={form && form.control}
             name=demo_url';
@@ -535,6 +571,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FormLabel className='flex items-center gap-2>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 <FormMessage />;
           />;
 
@@ -547,16 +584,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <Input;
                     placeholder=https://your-project-demo && demo.com';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             )}GitHub URL;
                 </FormLabel>;
@@ -584,6 +626,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='image_url;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             )}
                   GitHub URL
                 </FormLabel>
@@ -680,6 +723,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </FormLabel>;
               <FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <Input;
                   placeholder=https://example && example.com/screenshot && screenshot.jpg';
               </FormItem>)}
@@ -717,6 +762,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin />}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           />;
         </div>;
@@ -773,6 +819,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </form>;
     </Form>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 }
 }
@@ -790,6 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
           <Button type=submit disabled={is_loading}>;
             {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
+>>>>>>> merged-prs-20250907-203621
   )
 }
 :src/components/resume-builder/portfolio/ProjectForm.tsx
@@ -819,9 +868,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </form>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Form>)}
 })
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </Form>);
 });

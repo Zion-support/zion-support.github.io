@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 title: string;  showBack?: boolean;  title: string;
   title: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 title: string;  showBack?: boolean;  title: string
 
   title: string;
@@ -13,6 +16,8 @@ title: string;  showBack?: boolean;  title: string
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 onSettingsClick?: () => void;export function MobileHeader({title;
   showBack;
@@ -26,6 +31,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 interface MobileHeaderProps {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export function MobileHeader({
   title;
@@ -74,6 +80,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <span className="sr-only>Back</span>
             </Button>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface MobileHeaderProps {;
   title: string;  showBack?: boolean;  title: string,;
@@ -191,6 +199,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => router && router.back()}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               onClick = {(,) => router && router.back()}
             >;"
@@ -243,6 +252,8 @@ interface MobileHeaderProps {
               <span className=sr-only">Back</span>;
             </Button>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <Button;
               <span className=sr-only'>Settings</span>            </Button>            <Button;
             <Button;
@@ -255,6 +266,7 @@ interface MobileHeaderProps {
             </Button>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               size="icon
               onClick={onSettingsClick}
@@ -268,6 +280,8 @@ interface MobileHeaderProps {
             {title}
           </h1>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         <div className='flex items-center space-x-2'>;
           {showNotifications && (<Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
@@ -311,6 +325,7 @@ interface MobileHeaderProps {
 )
         <div className=flex items-center space-x-2">;
 =======
+>>>>>>> merged-prs-20250907-203621
         <div className="flex items-center space-x-2">;
 >>>>>>> origin/chore/fix-lint-and-merge
           {showNotifications && (;

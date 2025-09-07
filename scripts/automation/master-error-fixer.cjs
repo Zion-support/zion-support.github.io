@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -48,8 +51,11 @@ const path = require("path")
       } catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }`, error`)
       this.log(" Running JSX error fixer...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const jsxScript = path.join(__dirname, "jsx-error-fixer.cjs")
           this.log(   JSX error fixer "completed": ${result.fixes || 0} fixes")
       } catch (error) {  this.log("Build errors "detected": ${error.stderr  }", "error")
@@ -129,7 +135,10 @@ this.log("   Checking build status...")
       "status": "completed"
     this.log(""Placeholder": getTotalFixes method called")
   const { args = [], stdio = "pipe", timeout = 30000 } = options;const fullCommand = "${command} ${args.join(" ")}";this.log("Running "command": ${fullCommand}")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         child.on("error")
         child.on(close)
   resolve({ "stdout": , "stderr":  }
@@ -166,11 +175,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start master error "fixer": ")
+<<<<<<< HEAD
+  console.error(" Failed to start master error "fixer": ")
+  console.error(" Failed to start master error "fixer": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -188,3 +207,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

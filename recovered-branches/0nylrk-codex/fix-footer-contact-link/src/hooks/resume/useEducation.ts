@@ -1,18 +1,68 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
+export function useEducation() {
+  const { user } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  
+  const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError($2);
+      return false
+=======
+<<<<<<< HEAD
+=======
+export function useEducation() {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const { user } = useAuth();
 
+<<<<<<< HEAD
+=======
+  const [error, setError] = useState<string | null>(null);
+  const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to add education')
+      return false
+
+
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -25,21 +75,85 @@ export function useEducation() { return null; }
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {;
+<<<<<<< HEAD
+=======
+    if (!user) {;
+      setError('You must be logged in to add education'),;
+      return false;
 
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
 
+=======
+    
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       const { error } = await supabase
         .from('education')
         .insert({
+<<<<<<< HEAD
+          institution: education && education.institution;
+
+          resume_id: resumeId;
+          institution: education.institution;
+          degree: education.degree;
+          field_of_study: education.field_of_study;
+          start_date: formatDateForDB(education.start_date);
+          end_date: education.is_current ? null : formatDateForDB(education.end_date);
+          is_current: education.is_current;
+          description: education.description;
+          institution_logo_url: education.institution_logo_url
+          location: education.location
+        });
+      if (error) throw error;
+=======
 
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not add education')
 
+<<<<<<< HEAD
+=======
+        });
+      if (error) throw error;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          resume_id: resumeId,
+          institution: education.institution,
+          degree: education.degree,
+          field_of_study: education.field_of_study,
+          start_date: formatDateForDB(education.start_date),
+          end_date: education.is_current ? null : formatDateForDB(education.end_date),
+          is_current: education.is_current,
+          description: education.description,
+          institution_logo_url: education.institution_logo_url,
+          location: education.location
+        }),
+      
+      if (error) throw error,
+      
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
@@ -57,6 +171,23 @@ export function useEducation() { return null; }
     setIsLoading(true);
     setError(null);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  }
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update education')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
     setIsLoading(true),;
@@ -94,6 +225,14 @@ export function useEducation() { return null; }
       setError('You must be logged in to update education'),;
       return false;
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     
     setIsLoading(true),
@@ -106,8 +245,12 @@ export function useEducation() {;
 =======
     }
     
+<<<<<<< HEAD
     setIsLoading(true),
     setError(null),
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -119,7 +262,10 @@ export function useEducation() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ;
   const addEducation = async (resumeId:string, education:Education):Promise<boolean> => {;
     if (!user) {;
@@ -132,12 +278,17 @@ export function useEducation() {;
     ;
     try {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
         .from('education');'
 =======
       const { error } = await supabase;
         .from('education');
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      const { error } = await supabase;
+        .from('education');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         .insert({;
           resume_id:resumeId,;
           institution:education.institution,;
@@ -171,12 +322,17 @@ export function useEducation() {;
     ;
     try {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
         .from('education');'
 =======
       const { error } = await supabase;
         .from('education');
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      const { error } = await supabase;
+        .from('education');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         .update({;
           institution:education.institution,;
           degree:education.degree,;
@@ -210,12 +366,17 @@ export function useEducation() {;
     ;
     try {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
         .from('education');'
 =======
       const { error } = await supabase;
         .from('education');
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      const { error } = await supabase;
+        .from('education');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         .delete();
         .eq('id', eduId),;
       ;
@@ -226,9 +387,44 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not delete education'),;
     } finally {;
       setIsLoading(false),;
+>>>>>>> merged-prs-20250907-203621
     }
+<<<<<<< HEAD
 
+=======
+    
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
+<<<<<<< HEAD
+      const { error } = await supabase
+        .from('education')
+        .insert($2);
+          end_date: education.is_current ? null : formatDateForDB($2);
+          is_current: education.is_current,
+          description: education.description,
+          institution_logo_url: education.institution_logo_url,
+          location: education.location
+        }),
+      
+      if (error) throw error,
+      
+      return showSuccessToast("Education added", "Your education has been added to your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not add education')
+    } finally {
+      setIsLoading(false)
+    }
+  },
+  
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError($2);
+      return false
+=======
 <<<<<<< HEAD
 }
         .from('education')'
@@ -237,7 +433,10 @@ export function useEducation() {;
         .from('education')
 >>>>>>> origin/chore/fix-lint-and-merge
         .update({
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           institution: education && education.institution;
           degree: education && education.degree;
           field_of_study: education && education.field_of_study;
@@ -246,7 +445,31 @@ export function useEducation() {;
           is_current: education && education.is_current;
           description: education && education.description;
           institution_logo_url: education && education.institution_logo_url,
+<<<<<<< HEAD
+=======
+          location: education && education.location
+<<<<<<< HEAD
+          institution: education.institution;
+          degree: education.degree;
+          field_of_study: education.field_of_study;
+          start_date: formatDateForDB(education.start_date);
+          end_date: education.is_current ? null : formatDateForDB(education.end_date);
+          is_current: education.is_current;
+          description: education.description;
+          institution_logo_url: education.institution_logo_url
+          location: education.location
+        })
+        .eq('id', eduId);
+      if (error) throw error;
+=======
 
+        })
+        .eq('id', eduId);
+      if (error) throw error;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           institution: education.institution,
           degree: education.degree,
           field_of_study: education.field_of_study,
@@ -259,7 +482,16 @@ export function useEducation() {;
         .eq('id', eduId),
       
       if (error) throw error,
+<<<<<<< HEAD
 
+=======
+      
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not update education')
@@ -312,12 +544,54 @@ export function useEducation() {;
       setError('You must be logged in to delete education'),;
       return false;
 
+>>>>>>> merged-prs-20250907-203621
     }
     
     setIsLoading(true),
     setError(null),
 
     try {
+<<<<<<< HEAD
+      const { error } = await supabase
+        .from('education')
+        .update($2);
+          end_date: education.is_current ? null : formatDateForDB($2);
+          is_current: education.is_current,
+          description: education.description,
+          institution_logo_url: education.institution_logo_url,
+          location: education.location
+        })
+        .eq($2);
+      if (error) throw error,
+      
+      return showSuccessToast("Education updated", "Your education has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update education')
+    } finally {
+      setIsLoading(false)
+    }
+  },
+  
+  const deleteEducation = async (eduId: string): Promise<boolean> => {
+    if (!user) {
+      setError($2);
+      return false
+    }
+    
+    setIsLoading($2);
+    setError($2);
+    try {
+      const { error } = await supabase
+        .from('education')
+        .delete()
+        .eq($2);
+      if (error) throw error,
+      
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete education')
+    } finally {
+=======
 <<<<<<< HEAD
 }
         .from('education')'
@@ -335,8 +609,13 @@ export function useEducation() {;
     } catch (e: any) {'
       return handleResumeError(e, 'Could not delete education')
     } finally {}
+>>>>>>> merged-prs-20250907-203621
       setIsLoading(false)
+    }
+  },
 
+<<<<<<< HEAD
+=======
 import {useState} from 'react';
 
     } catch (e: any) {
@@ -344,6 +623,24 @@ import {useState} from 'react';
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    }
+  }
+  const deleteEducation = async (eduId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete education')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     setIsLoading(true),;
     setError(null),;
@@ -376,21 +673,97 @@ import {useState} from 'react';
       return false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {supabase} from '@/integrations / supabase / client';'
 import {Education} from '@/types / resume';'
 import {use_auth} from '@/hooks / use_auth';'
 export /**
  * use_education - Function description
 =======
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
 
+=======
+    
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       const { error } = await supabase
         .from('education')
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        .eq('id', eduId);
+      if (error) throw error;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        .eq('id', eduId),
+      
+      if (error) throw error,
+      
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete education')
+    } finally {
+      setIsLoading(false)
+
+
+
+<<<<<<< HEAD
+    }
+  }
+>>>>>>> merged-prs-20250907-203621
+  return {
+    isLoading;
+    error;
+    addEducation;
+    updateEducation;
+
+    deleteEducation
+  }
+}
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      const { error } = await supabase;
+        .from('education');
+        .delete();
+        .eq('id', eduId),;
+      if (error) throw error,;
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume");
+    } catch (e: any) {;
+      return handleResumeError(e, 'Could not delete education');
+    } finally {;
+      setIsLoading(false);
+    }
+=======
+
+=======
+import {useState} from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -412,6 +785,7 @@ if ( {) {}
   $2;
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return {;
     isLoading,;
@@ -419,18 +793,27 @@ if ( {) {}
     addEducation;
     updateEducation;
     deleteEducation;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
   }
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
         .from ('education');
         .insert ({}
 
   }
 }
+<<<<<<< HEAD
     setIsLoading (true);
     set_error (null);
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
     try {
@@ -520,6 +903,7 @@ if (throw error) {
     add_education;
     update_education;
     delete_education;
+<<<<<<< HEAD
 
   },;
 ;
@@ -582,14 +966,84 @@ deleteEducation
 }
 
   }
+=======
+  }
+  },;
+;
+  return {;
+    isLoading,;
+    error,;
+    addEducation,;
+    updateEducation,;
+    deleteEducation;
+  },; setIsLoading (true);
+setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('education') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not add education') 
+}finally {
+  setIsLoading (false) 
+}
+};
+const updateEducation = async (eduId: string, education: Education) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to update education');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('education') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not update education') 
+}finally {
+  setIsLoading (false) 
+}
+};
+const deleteEducation = async (eduId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete education');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('education') .delete () .eq ('id', eduId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete education') 
+}finally {
+  setIsLoading (false) 
+}
+};
+return {
+  isLoading;
+error;
+addEducation;
+updateEducation;
+deleteEducation 
+}
+}
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 ;
   }
 }
 ;
+<<<<<<< HEAD
 
   }
 }
     setIsLoading (true);
     set_error (null);
 ;
+=======
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

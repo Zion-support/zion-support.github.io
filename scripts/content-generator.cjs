@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,14 +12,17 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Content Generator Script;
- * Generates meaningful content for placeholder pages;
+ * Content Generator Script
+ * Generates meaningful content for placeholder pages
  */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -32,6 +37,7 @@ const path = require("path")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     console.log(" Starting Content Generation...")
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
@@ -44,6 +50,8 @@ const path = require("path")
         
       it-services": {"title: IT Services","description: Complete IT solutions for digital transformation"}
         content: "
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         
@@ -59,6 +67,7 @@ const path = require("path")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         "
     console.log(" Generating landing page content...)
       home": {"title: Zion Tech Group - Technology Solutions","description: Leading provider of AI, IT, and digital transformation services","content: }
@@ -76,6 +85,15 @@ const path = require("path")
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
+<<<<<<< HEAD
+
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,3 +121,4 @@ const path = require("path")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

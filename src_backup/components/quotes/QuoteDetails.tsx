@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 ;
@@ -36,6 +38,7 @@ import {format} from "date-fns"
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react;
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from "react";
 import { 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -225,6 +228,8 @@ if (return 'Not specified') {}
         </div>;
       </DialogContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   quote.project description && (<> <h4 className="font - medium mt - 4 >Additional Details</h4> <p> {quote.project description;
 }</p> </>)}(quote.budget min && quote.budget max ? `$$ {quote.budget min;
 }- $$ {quote.budget max;
@@ -234,6 +239,7 @@ if (return 'Not specified') {}
 '";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </Dialog>);
 }
 

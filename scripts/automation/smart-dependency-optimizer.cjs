@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       smart-dependency-optimizer.log
       this.projectRoot,logs"
@@ -49,7 +55,10 @@ const crypto = require("crypto")
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
   const depName = dep.split("@")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "name"
             version
             "usageCount"
@@ -78,8 +87,11 @@ const crypto = require("crypto")
   // Skip files that can
     if (importPath.startsWith("@")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const parts = importPath.split("/")
   return importPath.split("/")
   const usage = { "count": 0, "files": [], "lastUsed"}
@@ -107,7 +119,10 @@ const crypto = require("crypto")
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "name"
             version
             "type"
@@ -130,8 +145,11 @@ const crypto = require("crypto")
   this.log(Dependency conflict analysis "failed: ${error.message  })
         "ERROR"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
           fs.readFileSync(packageLockPath, "utf8")
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
@@ -172,7 +190,10 @@ const crypto = require("crypto")
 =======
         "package.json"
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   this.log("� Checking for outdated dependencies...")
       // For now, we
         fs.readFileSync(path.join(this.projectRoot, package.json"), "utf8
@@ -214,7 +235,10 @@ const crypto = require("crypto")
   const distPath = path.join(this.projectRoot, "dist")
     } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(directory, ")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     usageAnalysis"
   this.log(" Generating optimization recommendations...)
   type": "REMOVE_UNUSED
@@ -320,11 +344,21 @@ this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
+<<<<<<< HEAD
+        ` Smart Dependency Optimization "failed": ${error.message}"
+        ` Smart Dependency Optimization "failed": ${error.message}"
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -346,3 +380,4 @@ this.log(" Smart Dependency Optimization completed successfully")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

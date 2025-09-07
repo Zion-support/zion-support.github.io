@@ -47,7 +47,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface SmartContractBuilderProps {
   isOpen: boolean;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
@@ -66,6 +69,8 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export function SmartContractBuilder() {const [activeTab, setActiveTab] = useState<string>(form"),const [generatedContract, setGeneratedContract] = useState<string | null>(null),const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;
   ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({network: 'ethereum;
@@ -311,6 +316,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         toast && toast.success("Legal draft generated successfully!)} else {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return () => {
     // Cleanup function
@@ -391,6 +397,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
       // For now, assuming data && data.solidityCode IS the bytecode && bytecode.This is a placeholder.// In reality, the Supabase function should return bytecode and ABI.// Or, if it returns Solidity, wed compile it client-side(not recommended for production).setContractAbi(currentAbi);
       setOnChainDeploymentStatus('deploying');"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       toast && toast.info(Deploying contract... This may take a moment && moment.Please confirm in MetaMask.);
       // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current generate-smart-contract' returns Solidity source && source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode && bytecode.let contract;
     setOnChainDeploymentStatus('connecting)setDeploymentError(null)setTransactionHash(null)setDeployedContractAddress(null)setPopulatedSolidityCode(null)try {if(!window.ethereum) {throw new Error("MetaMask is not installed.Please install it to continue.")}
@@ -422,6 +430,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
       // Adjust constructor arguments based on contractTypeToDeploy;
       if(contractTypeToDeploy === simple') {
 =======
+>>>>>>> merged-prs-20250907-203621
       toast && toast.info("Deploying contract... This may take a moment && moment.Please confirm in MetaMask.");'
       // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source && source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode && bytecode.let contract;
       // Adjust constructor arguments based on contractTypeToDeploy;'
@@ -455,6 +464,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 
               <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <TabsList className=grid grid-cols-3> {/* Added new tab */}<TabsTrigger value="form">1.Details</TabsTrigger>;
               <TabsTrigger value=preview_markdown disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
@@ -469,6 +480,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
                 <Save className=h-4 w-4 />;<TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
               <TabsTrigger value=preview_markdown disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
 =======
+>>>>>>> merged-prs-20250907-203621
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -592,6 +604,10 @@ if ( { // Chain not added) {}
                   onClose = {onClose}
 
 <<<<<<< HEAD
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+=======
+<<<<<<< HEAD
                       onClick = {handleDeployContract}
                       disabled = {deployStatus === 'deploying'}
                 <Save className="h - 4 w - 4" />;Templates;
@@ -619,6 +635,7 @@ if ( { // Chain not added) {}
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
 
                       {deployStatus === 'deploying' ? Deploying... : 'Deploy to Blockchain'}
@@ -634,6 +651,8 @@ if ( { // Chain not added) {}
           onSelectTemplate = {handleLoadTemplate}
           currentValues = {formValues}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             )}</TabsContent>;
         </Tabs>;<TemplateManager;
@@ -676,6 +695,7 @@ setActiveTab (preview")}";
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </TabsContent>;
 
         </Tabs>;
@@ -685,6 +705,8 @@ setActiveTab (preview")}";
               <div>
                 <ContractPreview 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }</Button> </div>)}</div>)}</TabsContent> </Tabs> <TemplateManagerisOpen= {templateManagerOpen;
 }onClose= {() => setTemplateManagerOpen (false)}onSelectTemplate= {handleLoadTemplate ;
@@ -699,16 +721,20 @@ setActiveTab (preview")}";
                     <Button;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className=mt-6 flex justify-center>
                     <Button 
                       onClick={handleDeployContract}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       disabled={deployStatus === 'deploying}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700";
                     >;
                       {deployStatus === deploying' ? 'Deploying... : Deploy to Blockchain'}
 =======
+>>>>>>> merged-prs-20250907-203621
                       disabled={deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
                     >
@@ -750,7 +776,10 @@ setActiveTab (preview")}";
   setGeneratedContract (contract);";
 setActiveTab ("preview");
 };";
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   talent ;
 }clientName= {;
   clientName ;

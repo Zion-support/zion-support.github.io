@@ -39,7 +39,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 }
 
@@ -55,7 +58,10 @@ import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
 import type { Prompt } from '@/types / prompts';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface PromptCardProps {
   prompt: Prompt;
 export /**
@@ -75,6 +81,8 @@ function PromptCard() {
   }
     window.open (`/zion - gpt?prompt=${encoded}`, _blank');
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <div className='p - 4 border rounded - md bg - background flex flex - col justify - between>;
 import { useState  } from react';
@@ -102,6 +110,7 @@ export /**;
       <p className='mb - 4 text - sm>{prompt.text}</p>;
       <div className=flex gap - 2 mt - auto'>;
 =======
+>>>>>>> merged-prs-20250907-203621
     <div className='p - 4 border rounded - md bg - background flex flex - col justify - between'>;
       <p className='mb - 4 text - sm'>{prompt.text}</p>;
       <div className='flex gap - 2 mt - auto'>;
@@ -122,6 +131,15 @@ export /**;
         >;
           <Send className='w - 4 h - 4 />        </Button>;
       </div>;
+<<<<<<< HEAD
+    </div>);
+}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
+          <Send className="w - 4 h - 4" />;
+        </Button>;
+      </div>;
+    </div>);
+}
+=======
 <<<<<<< HEAD
     </div>)}        <Button variant="secondary size=sm" on_click={handle_send} aria - label="Send to ZionGPT>;
           <Send className=w - 4 h - 4" />;
@@ -150,3 +168,4 @@ export /**;
     </div>);
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

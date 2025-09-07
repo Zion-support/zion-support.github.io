@@ -36,9 +36,29 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
       '@assets': path.resolve(__dirname, './src/assets'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+=======
+<<<<<<< HEAD
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+=======
+      '@assets': path.resolve(__dirname, './src/assets')
+    }
+  },
+  css: {
+    postcss: false
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
+    jsx: 'automatic'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   },
   build: {
     target: 'esnext',
@@ -209,12 +229,15 @@ import { defineConfig,splitVendorChunkPlugin } from 'vite'; import react from '@
       target: 'esnext',
     },
   },
+<<<<<<< HEAD
   css: {
     devSourcemap: false,
   },
   esbuild: {
     jsx: 'automatic',
   },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   server: {
     port: 3000,
     host: true,

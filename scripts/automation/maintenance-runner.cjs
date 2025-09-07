@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,19 +12,22 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /*
- * Maintenance Runner;
+ * Maintenance Runner
  * Sequentially runs lint fixes, the comprehensive error fixer, type-check, and build.
- * Writes a simple JSON summary to reports/maintenance-summary.json;
+ * Writes a simple JSON summary to reports/maintenance-summary.json
  */
+
+
+
 <<<<<<< HEAD
 
-
-
+=======
 =======
 
 
@@ -60,17 +65,26 @@ const reportsDir = path.join(projectRoot, reports')
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const reportsDir = path.join(projectRoot, 'reports')
     execSync(command, { "stdio"})
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error('Failed to write maintenance "summary")
+<<<<<<< HEAD
+  console.error('Failed to write maintenance "summary")
+  console.error('Failed to write maintenance "summary")
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -88,11 +102,15 @@ const reportsDir = path.join(projectRoot, 'reports')
 <<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -69,6 +69,10 @@ const SearchBar: React.FC = () => {
                 
             <div className="px-4 py-3 text-sm text-gray-500">"
 <<<<<<< HEAD
+const SearchBar: React.FC<SearchBarProps> = ({
+    <div className={'relative ' + className}>
+=======
+<<<<<<< HEAD
               No results found for &quot;{query}&quot;
             </div>
           ) : null}
@@ -127,6 +131,7 @@ return (;
 const SearchBar: React.FC<SearchBarProps> = ({
     <div className={'relative ' + className}>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <form onSubmit={handleSubmit} className="relative">"
 </form>"
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />"

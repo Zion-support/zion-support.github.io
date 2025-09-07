@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // Mock Next.js router
 jest.mock("next/router", () => ({
 
@@ -18,9 +20,50 @@ jest.mock("next/router", () => ({
       events: {,
   on: jest.fn(),
         off: jest.fn(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      isFallback: false
+    };
+  },
+}));
+
+// Mock Next.js Image component
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => {
+    const { src, alt, ...otherProps } = props;
+    return {
+      type: 'img',
+      props: { src, alt, ...otherProps }
+        emit: jest.fn()
+      },
+:jest.setup.js
+      isFallback: false,
+:backup-problematic-files/jest.setup.js
+      isFallback: false
+    }
+  }
+}));
+
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} />
+  }
+}));
+
+:backup-problematic-files/jest.setup.js
+=======
+        emit: jest.fn()
+      },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 :backup-problematic-files/jest.setup.js
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     };
   },
 }));
@@ -29,6 +72,8 @@ jest.mock("next/router", () => ({
     return <img src={src} alt={alt} {...props} />
 };
 });
+<<<<<<< HEAD
+:jest.setup.js
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -37,6 +82,43 @@ jest.mock("next/link", () => {
       <a href={href} {...props}>
         {children}
       </a>
+    );
+  };
+});
+main:jest.setup.js
+=======
+
+<<<<<<< HEAD
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+// Mock Next.js Link component
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
+<<<<<<< HEAD
+:backup-problematic-files/jest.setup.js
+    return <a href={href} {...props}>{children}</a>
+  }
+
+  },
+main:jest.setup.js
+=======
+
+
+  },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}));
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -59,6 +141,7 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
+>>>>>>> merged-prs-20250907-203621
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -66,6 +149,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 
     "media": query,
     "onchange": null,
@@ -74,3 +158,18 @@ global.ResizeObserver = class ResizeObserver {
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
+=======
+};
+
+<<<<<<< HEAD
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+};
+};
+:backup-problematic-files/jest.setup.js
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

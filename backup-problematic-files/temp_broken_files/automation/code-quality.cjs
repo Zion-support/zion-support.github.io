@@ -1,4 +1,4 @@
-    }},
+}},
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
@@ -38,8 +38,6 @@
       });
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
-      
-      
     }},
   {
     "name": 'Import/Export Analysis',
@@ -56,9 +54,6 @@
           importCount += (content.match(/^import\s+/gm) || []).length;
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
-
-        
-        
       }
     }},
   {
@@ -89,8 +84,6 @@
             }
           });
         });
-
-        
       }
     }},
 ];
@@ -120,6 +113,7 @@ if (!fs.existsSync(reportsDir)) {
 }
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality.cjs
 =======
@@ -136,6 +130,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

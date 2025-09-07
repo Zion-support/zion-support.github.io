@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react;
 import { Card, CardContent } from @/components/ui/card';
@@ -38,12 +40,16 @@ interface ResumePreviewCardProps  {resume: Resume;
   };
   }
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import React from 'react,
 import { Card, CardContent } from "@/components/ui/card,
@@ -58,6 +64,10 @@ interface ResumePreviewCardProps {
 }
 
   return (
+<<<<<<< HEAD
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
+      <CardContent className="p-4">
+=======
 <<<<<<< HEAD
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20>
       <CardContent className=p-4">
@@ -98,6 +108,7 @@ interface ResumePreviewCardProps {
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs
               >
@@ -114,6 +125,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 +{resume.skills.length - 5} more
               </Badge>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             {resume.skills.length > 5 && (className=bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge;
               <Badge;
                 variant="outline;
@@ -126,6 +139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             )}
           </div>
         )}
@@ -133,6 +147,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
   )}}<div className="flex items-start justify-between mb-3>;
@@ -147,6 +163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {resume.status && (<Badge className={getStatusColor(resume.status)}>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           {resume.status && (
             <Badge className={getStatusColor(resume.status)}>

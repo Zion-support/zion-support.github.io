@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -33,10 +34,19 @@ const path = require('path')
 // console.log(' Fixing Final Corrupted Files...')
 console.log('')
 const corruptedFiles = ['pages/docs/integration-examples.tsx']
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+// console.log(' Fixing Final Corrupted Files...')
+console.log('')
+const corruptedFiles = ['pages/docs/integration-examples.tsx'];
+>>>>>>> merged-prs-20250907-203621
   'pages/marketplace.tsx'
   'pages/privacy.tsx'
   'pages/request-quote.tsx'
   'pages/schedule-demo.tsx'
+<<<<<<< HEAD
     let content = ''
     if (filePath === 'pages/docs/integration-examples.tsx')
 =======
@@ -88,3 +98,16 @@ const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+let content = '';
+    if (filePath === 'pages/docs/integration-examples.tsx')
+      content = "
+    "name"
+    "email"
+    "company"
+    "phone"
+    "service"
+    "message"
+  const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
+        <meta name="description" content="
+>>>>>>> merged-prs-20250907-203621

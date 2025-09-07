@@ -1,6 +1,18 @@
 
 <<<<<<< HEAD
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }return this.props.children;
   }
+}
+import React, { useState } from 'react';
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+=======
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
   return <div>Something went wrong.</div>;
 =======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
@@ -8,14 +20,31 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   return <div    />Something went wrong.</div>;}
 >>>>>>> origin/chore/fix-lint-and-merge
     }return this.props.children;
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string}[]
 }'
 import React, { useState } from 'react';
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 
@@ -25,6 +54,7 @@ export default function CodeSamples({ samples }: Props) {;
 interface Props {
 samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 
+>>>>>>> merged-prs-20250907-203621
 const tabs: Array<{
   key: Props['samples'][number]['language'];
   label: string;
@@ -33,14 +63,56 @@ const tabs: Array<{
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }
 ];
+<<<<<<< HEAD
+export default function CodeSamples({ samples }: Props) {
+=======
+<<<<<<< HEAD
 export default function CodeSamples({ samples }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+export default function CodeSamples({ samples }: Props) {;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
     <div className='w-full'>
       <div className='flex gap-2 mb-2'>
         {tabs.map(t => (          <button
+<<<<<<< HEAD
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }]
+export default function CodeSamples({ samples }: Props) {
+  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
+  const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code]));
+
+  { key: 'python', label: 'Python' }]
+export default function CodeSamples({ samples }: Props) {
+  const [active, setActive] = useState<typeof tabs[number]['key']>('curl')
+  const sampleMap = null
+  const [active, setActive] = useState<typeof tabs[number]['key']>('curl')
+  const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]))
+const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]))
+  return (
+    <div className="w-full">;"
+      <div className="flex gap-2 mb-2">
+        {tabs && tabs.map((t) => (
+"
+    <div className="w-full">"
+      <div className="flex gap-2 mb-2">
+        {tabs.map((t) => (
+          <button
+            key={t.key}
+=======
 
 
 interface Props {
@@ -84,12 +156,19 @@ export default function CodeSamples() {interface Props  {samples: { language: 'c
 export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
+>>>>>>> merged-prs-20250907-203621
             className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
             onClick={() => setActive(t.key)}
           >
             {t.label}
           </button>
         ))}
+<<<<<<< HEAD
+
+      </pre>
+    </div>
+
+=======
       </div>
 <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>
         <code>{sampleMap[active] || ''}</code>
@@ -97,11 +176,16 @@ export default function CodeSamples({ samples }: Props) {
     </div>
   );"
 }      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">'
+>>>>>>> merged-prs-20250907-203621
         <code>{sampleMap[active] |''}</code>
       </pre>
     </div>
 );
 }
+<<<<<<< HEAD
+
+"
+=======
 
           <button;
             key={t && t.key}'`
@@ -185,16 +269,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
+<<<<<<< HEAD
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
-
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
 export default function CodeSamples({ samples }: Props) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface Props {;
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
-
 const tabs: Array<{;
   key: Props['samples'][number]['language'];
   label: string;
@@ -203,16 +294,21 @@ const tabs: Array<{;
   { key: 'javascript', label: 'JavaScript' },;
   { key: 'python', label: 'Python' },;
 ];
-
 export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
-
+<<<<<<< HEAD
+    <div className="w-full">
+      <div className="flex gap-2 mb-2">
+        {tabs.map((t) => (
+=======
   return (
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
+<<<<<<< HEAD
     <div className="w-full">;
 export default function CodeSamples() {const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl')const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]))return (<div className='w-full'>;
       <div className='flex gap-2 mb-2'>;
@@ -261,6 +357,25 @@ export default function CodeSamples() {const [active, setActive] = useState<type
     <div className="w-full">
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
+=======
+    <div className="w-full">
+      <div className="flex gap-2 mb-2">
+        {tabs.map((t) => (
+          <button
+
+            key={t.key}
+            className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
+            onClick={() => setActive(t.key)}
+          >
+            {t.label}
+          </button>
+        ))}
+
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <button
             key={t.key}
             className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent : bg-high-contrast-secondary border-high-contrast-secondary'}`}
@@ -293,7 +408,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             key={t && t.key}
             className={`px-3 py-1 rounded border ${active === t && t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
             onClick={() => setActive(t && t.key)}
+<<<<<<< HEAD
 =======
+=======
+          >;
+            {t && t.label}
+          </button>;
+        ))}
+
+
+<<<<<<< HEAD
+      </div>;
+      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] || ''}</code>;
+      </pre>;
+    </div>;
+  );
+}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">;
+        <code>{sampleMap[active] || ''}</code>;
+      </pre>;
+    </div>;
+  );
+}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      </div>
+      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+        <code>{sampleMap[active] || ''}</code>
+      </pre>
+    </div>
+  );
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const tabs: Array<{
   key: Props['samples'][number]['language'];
 }
@@ -388,6 +535,7 @@ function CodeSamples() {const [active, set_active] = useState < typeof tabs[numb
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
+<<<<<<< HEAD
     </div>)}
   )
 }
@@ -407,3 +555,93 @@ function CodeSamples() {const [active, set_active] = useState < typeof tabs[numb
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+            key={t.key}
+            className={_`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
+            onClick={_() => setActive(t.key)}
+          >
+            {_t.label}
+          </button>
+        ))}
+      </div>
+      <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm&quot;>
+        <code>{sampleMap[active] || ''}</code>
+      </pre>
+    </div>
+  )
+
+}
+<<<<<<< HEAD
+import React, { useState } from 'react';
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+
+const tabs: Array<{
+  key: Props['samples'][number]['language'];
+  label: string;
+}> = [
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }
+];
+export default function CodeSamples({ samples }: Props) {
+
+export default function CodeSamples({ samples }: Props) {;
+  const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
+  const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
+  return (
+    <div className='w-full'>
+      <div className='flex gap-2 mb-2'>
+        {tabs.map(t => (          <button
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }]
+export default function CodeSamples({ samples }: Props) {
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+  { key: 'curl', label: 'cURL' },
+  { key: 'javascript', label: 'JavaScript' },
+  { key: 'python', label: 'Python' }],
+export default function CodeSamples({ samples }: Props) {;
+  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
+  const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code]));
+
+  return (
+    <div className="w-full">
+      <div className="flex gap-2 mb-2">
+        {tabs.map((t) => (
+          <button
+          <button
+
+
+          <button
+
+            key={t.key}
+            className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
+            onClick={() => setActive(t.key)}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+  );
+}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+);
+}
+  );
+
+}
+}
+  );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

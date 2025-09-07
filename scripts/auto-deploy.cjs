@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+    this.steps = ['git add .']
+      'git commit -m ""feat": automated improvements and fixes"
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -28,9 +34,17 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
         execSync(step, { "stdio"})
+<<<<<<< HEAD
+        execSync(step, { "stdio"})
+        execSync(step, { "stdio"})
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -52,3 +66,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

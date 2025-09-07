@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const fs = require("fs");"const path = require("path");"const { exec } = require("child_process");"const { promisify } = require("util");const execAsync = promisify(exec);class LintFixer { constructor() {" this.logFile = path.join(__dirname, "logs", "lint-fixer.log"); this.fixedFiles = new Set(); } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async getLintErrors() { try {" const { stdout, stderr } = await execAsync("npm run lint 2>&1", { cwd: process.cwd()," timeout: 30000}); const output = stdout | stderr; return this.parseLintOutput(output); } catch (error) {"` this.log(`Failed to get lint errors: ${error.message}`); return []; } } parseLintOutput(output) { const errors = [];" const lines = output.split("\n"); for (const line of lines) { const match = line.match( /^([^(]+)\((\d+),(\d+)\)\s+(error|warning)\s+(.+)$ ); if (match) { const [, filePath, lineNum, colNum, type, message] = match; errors.push({" file: filePath.trim()," line: parseInt(lineNum)," column: parseInt(colNum), type," message: message.trim()}); } } return errors; } async fixFile(filePath, errors) { try {"` this.log(`Fixing file: ${filePath}`); if (!fs.existsSync(filePath)) {"` this.log(`File does not exist: ${filePath}`); return false; }" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix common issues for (const error of errors) {" if (error.type === "error") { const fixed = this.fixSpecificError(content, error); if (fixed !== content) { content = fixed; modified = true; } } } if (modified) {" fs.writeFileSync(filePath, content, "utf8");"` this.log(`Fixed file: ${filePath}`); this.fixedFiles.add(filePath); return true; } return false; } catch (error) {` this.log(`Error fixing file ${filePath}: ${error.message}`); return false; } } fixSpecificError(content, error) {" const lines = content.split("\n"); const lineIndex = error.line - 1; if (lineIndex < 0 | lineIndex >= lines.length) { return content; } let line = lines[lineIndex]; let modified = false; / Fix common TypeScript/React errors" if (error.message.includes("Unexpected any")) {" line = line.replace(/\bany\b/g, "unknown"); modified = true; }" if (error.message.includes("is defined but never used")) { / Add underscore prefix to unused variables const varMatch = line.match(/(\w+)(\s*[:=])/); if (varMatch) {` line = line.replace(varMatch[1], `_${varMatch[1]}`); modified = true; } }" if (error.message.includes("Unexpected console statement")) { / Comment out console statements" line = line.replace(/^(\s*)(console\.)/, "$1/ $2"); modified = true; }" if (error.message.includes("no-undef")) { / Add proper imports for common globals" if (error.message.includes("HTMLButtonElement")) { / This should be handled by proper TypeScript config return content; } } if (modified) { lines[lineIndex] = line;" return lines.join("\n"); } return content; } async runAutoFix() { try {" this.log("Running automatic lint fix.");"" const { stdout, stderr } = await execAsync("npm run lint: fix", {" cwd: process.cwd()," timeout: 30000});"` this.log(`Auto fix output: ${stdout}`); if (stderr) {"` this.log(`Auto fix stderr: ${stderr}`); }" return { success: true, output: stdout }; } catch (error) {"` this.log(`Auto fix failed: ${error.message}`);" return { success: false, output: error.message }; } } async fixErrors() {" this.log("Starting lint fixing process."); / First try automatic fixes const autoFixResult = await this.runAutoFix(); if (autoFixResult.success) {" this.log("Automatic fixes applied successfully"); } / Get remaining errors const errors = await this.getLintErrors();` this.log(`Found ${errors.length} remaining errors`); / Group errors by file const errorsByFile = {}; for (const error of errors) { if (!errorsByFile[error.file]) { errorsByFile[error.file] = []; } errorsByFile[error.file].push(error); } / Fix each file let totalFixed = 0; for (const [filePath, fileErrors] of Object.entries(errorsByFile)) { const fixed = await this.fixFile(filePath, fileErrors); if (fixed) { totalFixed++; } }` this.log(`Fixed ${totalFixed} files`);"` this.log(`Total files processed: ${Object.keys(errorsByFile).length}`); return {" totalErrors: errors.length," filesFixed: totalFixed," filesProcessed: Object.keys(errorsByFile).length}; } async start() {" this.log("Lint Fixer started"); / Run initial fix await this.fixErrors(); / Set up periodic fixes every 6 hours setInterval( async () => { await this.fixErrors(); }, 6 * 60 * 60 * 1000 ); }}/ Start the fixer if this script is run directlyif (require.main === module) { const fixer = new LintFixer(); fixer.start().catch(error => {"" console.error("Lint Fixer failed: ", error); process.exit(1); });}module.exports = LintFixer;'"`'"`
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require("fs");"const path = require("path");"const { exec } = require("child_process");"const { promisify } = require("util");const execAsync = promisify(exec);class LintFixer { constructor() {" this.logFile = path.join(__dirname, "logs", "lint-fixer.log"); this.fixedFiles = new Set(); } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async getLintErrors() { try {" const { stdout, stderr } = await execAsync("npm run lint 2>&1", { cwd: process.cwd()," timeout: 30000}); const output = stdout | stderr; return this.parseLintOutput(output); } catch (error) {"` this.log(`Failed to get lint errors: ${error.message}`); return []; } } parseLintOutput(output) { const errors = [];" const lines = output.split("\n"); for (const line of lines) { const match = line.match( /^([^(]+)\((\d+),(\d+)\)\s+(error|warning)\s+(.+)$ ); if (match) { const [, filePath, lineNum, colNum, type, message] = match; errors.push({" file: filePath.trim()," line: parseInt(lineNum)," column: parseInt(colNum), type," message: message.trim()}); } } return errors; } async fixFile(filePath, errors) { try {"` this.log(`Fixing file: ${filePath}`); if (!fs.existsSync(filePath)) {"` this.log(`File does not exist: ${filePath}`); return false; }" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix common issues for (const error of errors) {" if (error.type === "error") { const fixed = this.fixSpecificError(content, error); if (fixed !== content) { content = fixed; modified = true; } } } if (modified) {" fs.writeFileSync(filePath, content, "utf8");"` this.log(`Fixed file: ${filePath}`); this.fixedFiles.add(filePath); return true; } return false; } catch (error) {` this.log(`Error fixing file ${filePath}: ${error.message}`); return false; } } fixSpecificError(content, error) {" const lines = content.split("\n"); const lineIndex = error.line - 1; if (lineIndex < 0 | lineIndex >= lines.length) { return content; } let line = lines[lineIndex]; let modified = false; / Fix common TypeScript/React errors" if (error.message.includes("Unexpected any")) {" line = line.replace(/\bany\b/g, "unknown"); modified = true; }" if (error.message.includes("is defined but never used")) { / Add underscore prefix to unused variables const varMatch = line.match(/(\w+)(\s*[:=])/); if (varMatch) {` line = line.replace(varMatch[1], `_${varMatch[1]}`); modified = true; } }" if (error.message.includes("Unexpected console statement")) { / Comment out console statements" line = line.replace(/^(\s*)(console\.)/, "$1/ $2"); modified = true; }" if (error.message.includes("no-undef")) { / Add proper imports for common globals" if (error.message.includes("HTMLButtonElement")) { / This should be handled by proper TypeScript config return content; } } if (modified) { lines[lineIndex] = line;" return lines.join("\n"); } return content; } async runAutoFix() { try {" this.log("Running automatic lint fix.");"" const { stdout, stderr } = await execAsync("npm run lint: fix", {" cwd: process.cwd()," timeout: 30000});"` this.log(`Auto fix output: ${stdout}`); if (stderr) {"` this.log(`Auto fix stderr: ${stderr}`); }" return { success: true, output: stdout }; } catch (error) {"` this.log(`Auto fix failed: ${error.message}`);" return { success: false, output: error.message }; } } async fixErrors() {" this.log("Starting lint fixing process."); / First try automatic fixes const autoFixResult = await this.runAutoFix(); if (autoFixResult.success) {" this.log("Automatic fixes applied successfully"); } / Get remaining errors const errors = await this.getLintErrors();` this.log(`Found ${errors.length} remaining errors`); / Group errors by file const errorsByFile = {}; for (const error of errors) { if (!errorsByFile[error.file]) { errorsByFile[error.file] = []; } errorsByFile[error.file].push(error); } / Fix each file let totalFixed = 0; for (const [filePath, fileErrors] of Object.entries(errorsByFile)) { const fixed = await this.fixFile(filePath, fileErrors); if (fixed) { totalFixed++; } }` this.log(`Fixed ${totalFixed} files`);"` this.log(`Total files processed: ${Object.keys(errorsByFile).length}`); return {" totalErrors: errors.length," filesFixed: totalFixed," filesProcessed: Object.keys(errorsByFile).length}; } async start() {" this.log("Lint Fixer started"); / Run initial fix await this.fixErrors(); / Set up periodic fixes every 6 hours setInterval( async () => { await this.fixErrors(); }, 6 * 60 * 60 * 1000 ); }}/ Start the fixer if this script is run directlyif (require.main === module) { const fixer = new LintFixer(); fixer.start().catch(error => {"" console.error("Lint Fixer failed: ", error); process.exit(1); });}module.exports = LintFixer;'"`'"`
 =======
 <<<<<<< HEAD
@@ -36,6 +44,7 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -49,30 +58,36 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+
+
+
 =======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-
-
-
-
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -80,11 +95,20 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class LintFixer {}
   constructor() {}
-
+    this.logFile = path.join(__dirname, 'logs', 'lint-fixer.log');
     this.fixedFiles = new Set();
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+    );
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     );
@@ -128,6 +152,7 @@ class LintFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -141,31 +166,37 @@ class LintFixer {}
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-
-
-
-
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
     const logMessage = `[${timestamp}] ${message}\n`;`
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
+    console.log(logMessage.trim())
+    fs.appendFileSync(this.logFile, logMessage)
   async getLintErrors() {}
     try {}
 
@@ -173,47 +204,17 @@ main
 });
       const output = stdout || stderr;
       return this.parseLintOutput(output);
-<<<<<<< HEAD
-    } catch (error) {}
-      this.log(`Failed to get lint "errors": ${error.message}`);
-      return [];
-    };
-  };
-  parseLintOutput(output) {}
-    const errors = [];
-=======
 
       return [];
   parseLintOutput(output) {}
     const errors = [];"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const lines = output.split('\n');
     for (const line of lines) {}
       const match = line.match()
         /^([^(]+)\((\d+),(\d+)\)\s+(error|warning)\s+(.+)$/
-      if (match) {}
-        const [, filePath, lineNum, colNum, type, message] = match;
+  if($2) {}
+        const [, filePath, lineNum, colNum, type, message] = match
         errors.push({})
-<<<<<<< HEAD
-          "file": filePath.trim(),
-          "line": parseInt(lineNum),
-          "column": parseInt(colNum),
-          type,
-          "message": message.trim()}
-});
-      };
-    };
-    return errors;
-  };
-  async fixFile(filePath, errors) {}
-    try {}
-      this.log(`Fixing "file": ${filePath}`);
-      if (!fs.existsSync(filePath)) {}
-        this.log(`File does not "exist": ${filePath}`);
-        return false;
-      };
-      let content = fs.readFileSync(filePath, 'utf8');
-=======
 
           "column": parseInt(colNum),"
           type,"
@@ -221,7 +222,6 @@ main
     return errors;
   async fixFile(filePath, errors) {}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let modified = false;
       // Fix common issues;
       for (const error of errors) {}
@@ -237,53 +237,18 @@ main
     if (lineIndex < 0 || lineIndex >= lines.length) {}
       return content;
     let line = lines[lineIndex];
-<<<<<<< HEAD
-    let modified = false;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Fix common TypeScript/React errors;
     if (error.message.includes('Unexpected any')) {}
 
     if (error.message.includes('no-undef')) {}
-      // Add proper imports for common globals;
+      // Add proper imports for common globals
       if (error.message.includes('HTMLButtonElement')) {}
         // This should be handled by proper TypeScript config;
-<<<<<<< HEAD
-        return content;
-      };
-    };
-    if (modified) {}
-      lines[lineIndex] = line;
-      return lines.join('\n');
-    };
-    return content;
-  };
-  async runAutoFix() {}
-    try {}
-      this.log('Running automatic lint fix...');
-      const { stdout, stderr } = await execAsync('npm run "lint": fix', {})
-        "cwd": process.cwd(),
-        "timeout": 30000}
-});
-      this.log(`Auto fix "output": ${stdout}`);
-      if (stderr) {}
-        this.log(`Auto fix "stderr": ${stderr}`);
-      };
-      return { "success": true, "output": stdout };
-    } catch (error) {}
-      this.log(`Auto fix "failed": ${error.message}`);
-      return { "success": false, "output": error.message };
-    };
-  };
-  async fixErrors() {}
-    this.log('Starting lint fixing process...');
-=======
 
       return { "success": false, "output": error.message };"
   async fixErrors() {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // First try automatic fixes;
     const autoFixResult = await this.runAutoFix();
     if (autoFixResult.success) {}
@@ -303,45 +268,36 @@ main
       const fixed = await this.fixFile(filePath, fileErrors);
       if (fixed) {}
         totalFixed++;
-<<<<<<< HEAD
-      };
-    };
-    this.log(`Fixed ${totalFixed} files`);
-    this.log(`Total files "processed": ${Object.keys(errorsByFile).length}`);
-    return {}
-=======
 
     return {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "totalErrors": errors.length,
       "filesFixed": totalFixed,
       "filesProcessed": Object.keys(errorsByFile).length};"
   async start() {}"
-    this.log('Lint Fixer started');
-    // Run initial fix;
-    await this.fixErrors();
-    // Set up periodic fixes every 6 hours;
+    this.log('Lint Fixer started')
+    // Run initial fix
+    await this.fixErrors()
+    // Set up periodic fixes every 6 hours
     setInterval()
       async () => {}
       },
-      6 * 60 * 60 * 1000;
-// Start the fixer if this script is run directly;
-if (require.main === module) {}
-  const fixer = new LintFixer();
+      6 * 60 * 60 * 1000
+// Start the fixer if this script is run directly
+  if($2) {}
+  const fixer = new LintFixer()
   fixer.start().catch(error => {})
-
+    console.error('Lint Fixer "failed": ', error);
     process.exit(1);
   }
-<<<<<<< HEAD
-});
-};
-<<<<<<< HEAD
-=======
 module.exports = LintFixer;
-<<<<<<< HEAD
+
+module.exports = LintFixer;
+module.exports = LintFixer;
+module.exports = LintFixer;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = LintFixer;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = LintFixer;
@@ -349,9 +305,21 @@ module.exports = LintFixer;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+module.exports = LintFixer;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 module.exports = LintFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -384,6 +352,7 @@ module.exports = LintFixer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -403,40 +372,45 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 module.exports = LintFixer;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
+
+
+
+module.exports = LintFixer;
+module.exports = LintFixer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = LintFixer;
+
+
+
 
 
 <<<<<<< HEAD
 =======
-
-module.exports = LintFixer;
-module.exports = LintFixer;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-
-module.exports = LintFixer;
-
-
-
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

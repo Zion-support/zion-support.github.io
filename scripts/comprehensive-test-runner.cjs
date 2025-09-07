@@ -1,13 +1,45 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
 
 
 console.log('\n Test Results "Summary)
 
 
+>>>>>>> merged-prs-20250907-203621
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const { execSync } = require('child_process')
+console.log('🧪 Starting Comprehensive Test Runner...')
+  "overall"
+    const output = execSync(command, { "encoding": 'utf8', "stdio"})
+    execSync('npx jest --version', { "stdio"})
+    addTest('Unit Tests', 'skipped', 0, { "reason"})
+    runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
+    addTest('Python Unit Tests', 'skipped', 0, { "reason"})
 
 console.log('\n Test Results "Summary")
-
+<<<<<<< HEAD
 console.log('\n Test Results "Summary")
+console.log('\n Test Results "Summary")
+
+// Configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'test-reports'),
+  testTypes: {
+    unit: true,
+    integration: true,
+    e2e: true,
+    accessibility: true,
+    performance: true,
+    security: true
+  }
+};
+
+
+=======
 =======
 console.log('\n Test Results Summary")
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
@@ -61,3 +93,4 @@ console.log('\n Test Results "Summary")
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -35,8 +38,11 @@ const glob = require("glob")
   return { "success": false, output}
   await this.log("� Checking dependencies...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const npmCheck = await this.runCommand("npm ls --depth=0", { "silent"})
   await this.log("⚠  Dependency conflicts detected")
   "type": "dependency-conflict"
@@ -51,10 +57,14 @@ const glob = require("glob")
         details
       await this.log(" Attempting to fix dependency conflicts...")
 <<<<<<< HEAD
+      const fixResult = await this.runCommand("npm install --legacy-peer-deps")
+=======
+<<<<<<< HEAD
 
 =======
       const fixResult = await this.runCommand("npm install --legacy-peer-deps")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   await this.log(" Dependencies fixed successfully")
   type: "dependency-fix"
           action: "npm install --legacy-peer-deps"
@@ -65,7 +75,10 @@ const glob = require("glob")
 =======
   await this.log(" Checking TypeScript errors...")
     const typeCheck = await this.runCommand("npm run type-check", { "silent"})
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   await this.log("⚠  TypeScript errors detected")
   type: "typescript-error"
         message: "TypeScript compilation errors"
@@ -96,7 +109,7 @@ const glob = require("glob")
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
         if (content.includes("React") && !content.includes(")
-  content = import React from "react";
+  content = import React from "react"
         if (content.includes("useState") && !content.includes(import { useState }")
             /import React from "react"/,import React, { useState } from "react""
   modified = true;")}"
@@ -133,6 +146,8 @@ const glob = require("glob")
             timestamp
   await this.log(" Checking linting errors...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   await this.log("⚠  Linting errors detected")
   type: "linting-error"
@@ -141,6 +156,7 @@ const glob = require("glob")
       await this.log(" Attempting to auto-fix linting issues...")
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const lintCheck = await this.runCommand("npm run lint", { "silent"})
   await this.log("⚠  Linting errors detected")
   "type": "linting-error"
@@ -161,7 +177,10 @@ const glob = require("glob")
   await this.log(" No linting errors found")
   const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
       const configContent = await fs.readFile(eslintConfigPath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       // Check if there"
       if (!configContent.includes("module.exports)
   await this.log( Fixing ESLint configuration...");const fixedConfig = "
@@ -181,7 +200,10 @@ const glob = require("glob")
 =======
   await this.log(" Checking build errors...")
     const buildCheck = await this.runCommand("npm run build", { "silent"})
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   await this.log("⚠  Build errors detected")
   type: "build-error"
         message: "Build compilation errors"
@@ -199,7 +221,10 @@ const glob = require("glob")
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
         const objectPattern = /(\w+:\s*["^", "}")]
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   content = content.replace(objectPattern, "$1,\n  $2")
   content = content.replace(semicolonPattern, $1;\n$2)
   "type": syntax-fix
@@ -214,7 +239,10 @@ const glob = require("glob")
   await this.log(" Fixing module resolution issues...")
   const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
       const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       tsConfig.compilerOptions.moduleResolution = "node"
       await this.log( TypeScript configuration updated)
   "type": tsconfig-fix
@@ -255,11 +283,21 @@ const glob = require("glob")
 =======
   console.log("Automation completed successfully")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error("Automation "failed": ")
+<<<<<<< HEAD
+  console.error("Automation "failed": ")
+  console.error("Automation "failed": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -281,3 +319,4 @@ const glob = require("glob")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

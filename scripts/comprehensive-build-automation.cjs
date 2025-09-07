@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -12,11 +15,14 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync, spawn } = require("child_process")
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -25,6 +31,7 @@ const { execSync, spawn } = require("child_process")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})
@@ -87,6 +94,8 @@ const { execSync, spawn } = require("child_process")
     this.log("Generating build report...")
       this.buildResults.overallStatus = "failed"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -97,6 +106,7 @@ const { execSync, spawn } = require("child_process")
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.buildResults.overallStatus = "warning"
       this.buildResults.overallStatus = "success"
     this.buildResults.summary = {"totalSteps": this.buildResults.steps.length,"successfulSteps": this.buildResults.steps.filter(s => s.status === "success").length,"failedSteps": this.buildResults.steps.filter(s => s.status === "failed"})
@@ -126,6 +136,15 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.overallStatus = "failed"
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
+<<<<<<< HEAD
+
+      console.error("\n Build automation "failed": ")
+      console.error("\n Build automation "failed": ")
+      console.error("\n Build automation "failed": ")
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -261,3 +280,4 @@ const { execSync, spawn } = require("child_process)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

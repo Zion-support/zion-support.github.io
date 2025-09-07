@@ -29,6 +29,8 @@ import { logErrorToProduction } from '@/utils/productionLogger'
 
   id: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from @/components/ui/button;
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -68,6 +70,7 @@ interface QuickAction  {id: string;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   label: string,
   description: string;
   icon: React.ReactNode;
@@ -81,12 +84,15 @@ interface QuickAction  {id: string;
         data: error
       })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react;
 import { use_auth } from @/hooks / use_auth';
 import { Button } from '@/components / ui / button;
 import { Card, CardContent, CardHeader, CardTitle } from @/components / ui / card';
 import { Badge } from '@/components / ui / badge;
 =======
+>>>>>>> merged-prs-20250907-203621
 
 import React, { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
@@ -105,6 +111,9 @@ import {}
   Activity,
   Package,
   Monitor,';
+<<<<<<< HEAD
+} from 'lucide-react';
+=======
 <<<<<<< HEAD
 } from lucide-react;
   category: 'performance' | development | 'maintenance';dangerous?: boolean;
@@ -131,6 +140,7 @@ interface QuickAction  {id: string;
 =======
 } from 'lucide-react';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   id: string;
   label: string,
@@ -409,6 +419,8 @@ export function QuickActions() { return null; }
       </div>
     )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   category: 'performance' | development | 'maintenance';dangerous?: boolean;
 export /**;
  * QuickActions - Function description;
@@ -461,6 +473,7 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
     )className='bg-background/80 backdrop-blur-sm'        >;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -491,6 +504,8 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                 <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">
                   {category}
                 </Badge>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               className=h-6 w-6 p-0;
             >;
@@ -525,6 +540,7 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                           <div className="text-xs opacity-70 mt-1">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <div className=space-y-2>
                 {categoryActions.map((action) => ("

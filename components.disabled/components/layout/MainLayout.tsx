@@ -52,6 +52,9 @@ export default MainLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
+<<<<<<< HEAD
+=======
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

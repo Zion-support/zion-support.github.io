@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportFile = path.join(this.projectRoot, 'performance-optimization-report.json')
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -10,6 +17,7 @@
       execSync('npm run analyze')
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> merged-prs-20250907-203621
 
         "warnings
 
@@ -37,6 +45,9 @@ const { execSync } = require('child_process')
       execSync('npx depcheck --json')
       execSync('npm run analyze')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
         "type"
         "action"
         "status"
@@ -75,11 +86,21 @@ const { execSync } = require('child_process')
         "successful"
         "failed"
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
         "warnings"
+<<<<<<< HEAD
+        "warnings"
+        "warnings"
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -101,3 +122,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

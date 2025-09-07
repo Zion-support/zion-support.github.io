@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { "product": { "findMany": jest.fn(),"aggregate": jest.fn(),'
 },"productReview": { "aggregate": jest.fn()
@@ -24,6 +25,55 @@ ursor/automate-test-improve-and-merge-code-646c;
 }) describe('GET /api/products with fuzzy search',() => { it('should;'
   }
   return products matching "gpt" with similarity >= 0.8',async () => {;'
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint', () => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search', () => { it('should return products matching "gpt"
+    it('should return products matching "gpt"
+          "id"
+          "id"
+
+<<<<<<< HEAD
+import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint', () => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search', () => { it('should return products matching "gpt"
+    it('should return products matching "gpt"
+          "id"
+          "id"
+          "id"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint',() => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search',() => { it('should return products matching "gpt" with similarity >= 0.8',async () => { const mockRawResults = [ { id: 'product-gpt-high-score',name_similarity: 0.9,description_similarity: 0.5 },{ id: 'product-other',name_similarity: 0.2,description_similarity: 0.1 },{ id: 'product-gpt-medium-score',name_similarity: 0.82,description_similarity: 0.85 } ]; const mockProductsData: ProductLike[] = [ { id: 'product-gpt-high-score',name: 'Super GPT Model',description: 'Latest generation AI',images: [] price: null,currency: 'USD',tags: [] },{ id: 'product-gpt-medium-score',name: 'Advanced GPT Assistant',description: 'Your personal AI helper powered by GPT',images: [] price: null,currency: 'USD',tags: [] } ]; const filteredMockRawResults = mockRawResults .filter(p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3) .sort((a,b) => Math.max(b.name_similarity,b.description_similarity) - Math.max(a.name_similarity,a.description_similarity) ) (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults) const expectedProductIds = filteredMockRawResults.map(p => p.id) (prisma.product.findMany as jest.Mock).mockImplementation( async ({ where }: { where: { id: { in: string[] } } }) => { return mockProductsData.filter(p => where.id.in.includes(p.id)) } ) const { req,res } = createMocks({ method: 'GET',url: '/api/products?q=gpt',query: { q: 'gpt' } }); await productHandler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(200) const responseData: ProductLike[] = JSON.parse(res._getData()) expect(responseData.length).toBeGreaterThanOrEqual(1) expect(responseData.length).toBe(filteredMockRawResults.length); expect(responseData[0].id).toBe('product-gpt-high-score') expect(responseData[0].name).toBe('Super GPT Model') const idsFromResponse = responseData.map((p: ProductLike) => p.id) expect(idsFromResponse).toContain('product-gpt-high-score') expect(idsFromResponse).toContain('product-gpt-medium-score') expect(prisma.$queryRawUnsafe).toHaveBeenCalledWith( expect.stringContaining('similarity(name,$1)'),'gpt' ); expect(prisma.product.findMany).toHaveBeenCalledWith({ where: { id: { in: expectedProductIds } } }) }) }) })
+import { NextApiRequest, NextApiResponse } from 'next'
+import { createMocks, createRequest, createResponse } from 'node-mocks-http'
+import productHandler from '@/pages/api/products/index'
+import { PrismaClient } from '@prisma/client'
+// Mock Prisma Client
+jest.mock('@prisma/client', () => {
+  const mPrismaClient = {
+    product: {
+      findMany: jest.fn(),
+      aggregate: jest.fn()
+    },
+    productReview: {
+      aggregate: jest.fn()
+    },
+    $queryRawUnsafe: jest.fn(),
+    $disconnect: jest.fn()
+  };
+  return { PrismaClient: jest.fn(() => mPrismaClient) };
+});
+let prisma: PrismaClient;
+interface ProductLike {
+  id: string
+  name: string
+  description?: string
+  images?: unknown[]
+  price?: number | null
+  currency?: string
+  tags?: string[]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 const mockRawResults = [ { "id": 'product-gpt-high-score',"name_similarity": 0.9,"description_similarity": 0.5,;'
 },{ "id": 'product-other',"name_similarity": 0.2,"description_similarity": 0.1,'
@@ -370,9 +420,19 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     });
 
   });
+<<<<<<< HEAD
+          "id"
+
+});
+});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/integrate-build-improve-and-re-verify-8f7d
+          "id"
+=======
 
           "id"
 
+<<<<<<< HEAD
 });
 
           "id"
@@ -393,11 +453,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import { createRequest, createResponse } from 'node-mocks-http';
 import productHandler from '@/pages/api/products/index';
 import { PrismaClient } from '@prisma/client';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> pr/11282
 
 jest.mock('@prisma/client', () => {
   const mPrismaClient = {
     product: {
       findMany: jest.fn(),
+<<<<<<< HEAD
       aggregate: jest.fn()
     },
     productReview: {
@@ -405,18 +471,33 @@ jest.mock('@prisma/client', () => {
     },
     $queryRawUnsafe: jest.fn(),
     $disconnect: jest.fn()
+=======
+      aggregate: jest.fn(),
+    },
+    productReview: {
+      aggregate: jest.fn(),
+    },
+    $queryRawUnsafe: jest.fn(),
+    $disconnect: jest.fn(),
+>>>>>>> pr/11282
   };
   return { PrismaClient: jest.fn(() => mPrismaClient) };
 });
 
 let prisma: PrismaClient;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> pr/11282
 describe('/api/products API Endpoint', () => {
   let req: ReturnType<typeof createRequest>;
   let res: ReturnType<typeof createResponse>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> pr/11282
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching search query', async () => {
       const mockProducts = [
@@ -426,15 +507,24 @@ describe('/api/products API Endpoint', () => {
           description: 'AI-powered product',
           price: 100,
           currency: 'USD',
+<<<<<<< HEAD
           tags: ['ai', 'gpt']
         }
+=======
+          tags: ['ai', 'gpt'],
+        },
+>>>>>>> pr/11282
       ];
 
       (prisma.product.findMany as jest.Mock).mockResolvedValue(mockProducts);
 
       req = createRequest({
         method: 'GET',
+<<<<<<< HEAD
         query: { search: 'gpt' }
+=======
+        query: { search: 'gpt' },
+>>>>>>> pr/11282
       });
       res = createResponse();
 
@@ -446,4 +536,13 @@ describe('/api/products API Endpoint', () => {
     });
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> pr/11282
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

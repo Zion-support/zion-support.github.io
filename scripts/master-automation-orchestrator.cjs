@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +12,9 @@
 
 =======
 <<<<<<< HEAD
+=======
+<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 <<<<<<< HEAD
 =======
@@ -30,6 +37,7 @@
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -69,25 +77,25 @@ main
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
-
-<>#!/usr/bin/env node;
-
-
-<:scripts/master-automation-orchestrator.cjs
->#!/usr/bin/env node;
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Master Automation Orchestrator...')
 console.log('=====')
+  console.log('\n "Recommendations")
 <<<<<<< HEAD
-    "status"
-      "encoding"
-      "stdio"
-const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
-<<<<<<< HEAD
+=======
+=======
+<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 =======
   console.log('\n "Recommendations")
@@ -96,23 +104,39 @@ const metricsResult = runCommand('Metrics Generation', 'echo "Generating final m
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
 =======
+<<<<<<< HEAD
 =======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+========
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
+<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.results = {
       scripts: [],
       tests: { passed: 0, failed: 0 },
@@ -120,7 +144,11 @@ class MasterAutomationOrchestrator {
       improvements: [],
       errors: []
     };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> merged-prs-20250907-203621
     this.ensureDirectories();
   }
 
@@ -131,10 +159,17 @@ class MasterAutomationOrchestrator {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
 =======
+=======
+  }
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = {
@@ -144,6 +179,9 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
@@ -160,22 +198,27 @@ class MasterAutomationOrchestrator {
     const logMessage = `[${timestamp}] ${message}`;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     const logMessage = `${prefix} [${timestamp}] ${message}`;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-<<<<<<< HEAD
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
+<<<<<<< HEAD
+=======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -184,17 +227,27 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         ...options,
       });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
 =======
+>>>>>>> merged-prs-20250907-203621
       this.log(`✅ ${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       this.results.errors.push(`${description}: ${error.message}`);
+=======
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {
         success: false,
         error: error.message,
@@ -227,7 +280,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } catch (error) {
       this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
       this.results.errors.push(`${description}: ${error.message}`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> merged-prs-20250907-203621
       return { success: false, error: error.message };
     }
   }
@@ -280,7 +337,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
+    const results = [];
     for (const script of testingScripts) {
+      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -300,7 +359,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
+    const results = [];
     for (const script of performanceScripts) {
+      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -320,7 +381,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
+    const results = [];
     for (const script of buildScripts) {
+      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -352,6 +415,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
+    const results = [];
     for (const script of additionalScripts) {
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });
@@ -447,13 +511,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
-<<<<<<< HEAD
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
       return { success: false, error: error.message };
     }
   }
@@ -488,6 +552,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async runTests() {
     this.log('\n🧪 RUNNING TESTS');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Run type check
       const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check');
@@ -522,12 +590,20 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async buildProject() {
     this.log('\n🏗️ BUILDING PROJECT');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Clean build
       await this.runCommand('npm run clean', 'Clean build');
 
       // Build project
       const buildResult = await this.runCommand('npm run build', 'Production build');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (buildResult.success) {
         this.results.builds.success = true;
         this.log('✅ Build successful', 'SUCCESS');
@@ -543,6 +619,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async commitAndPush() {
     this.log('\n📝 COMMITTING AND PUSHING CHANGES');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Add all changes
       await this.runCommand('git add .', 'Git add');
@@ -563,6 +643,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async mergeToMain() {
     this.log('\n🔄 MERGING TO MAIN BRANCH');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Check current branch
       const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
@@ -571,10 +655,20 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       if (currentBranch !== 'main') {
         // Switch to main branch
         await this.runCommand('git checkout main', 'Switch to main branch');
+<<<<<<< HEAD
         // Merge the current branch
         await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
         // Push to main
         await this.runCommand('git push origin main', 'Push to main branch');
+=======
+        
+        // Merge the current branch
+        await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
+        
+        // Push to main
+        await this.runCommand('git push origin main', 'Push to main branch');
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         this.log('✅ Successfully merged to main branch', 'SUCCESS');
       } else {
         this.log('ℹ️ Already on main branch', 'INFO');
@@ -587,6 +681,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.log('\n📊 MASTER AUTOMATION ORCHESTRATOR REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${duration}ms`);
@@ -611,6 +709,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
 
     // Save comprehensive report
+<<<<<<< HEAD
+    const report = {
+=======
+<<<<<<< HEAD
+=======
+    const report = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
       timestamp: new Date().toISOString(),
       duration,
       results: this.results,
@@ -648,6 +754,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Run the automation
 if (require.main === module) {
@@ -655,56 +764,27 @@ if (require.main === module) {
   automation.run().then(result => {
     if (result.success) {
 =======
+>>>>>>> merged-prs-20250907-203621
 // Run the master automation orchestrator
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
   orchestrator.run().then(result => {
     if (result && result.success) {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       console.log('✅ Master automation orchestration completed successfully');
       process.exit(0);
     } else {
       console.log('❌ Master automation orchestration failed');
       process.exit(1);
     }
-<<<<<<< HEAD
-  });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-}
-
-module.exports = MasterAutomationOrchestrator;
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 >origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 main
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
   console.log('\n "Recommendations")
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
   }).catch(console.error);
 }
 
 module.exports = MasterAutomationOrchestrator;
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
@@ -715,4 +795,18 @@ module.exports = MasterAutomationOrchestrator;
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+// Run the master automation orchestrator
+if (require.main === module) {
+  const orchestrator = new MasterAutomationOrchestrator();
+  orchestrator.run().catch(console.error);
+}
+
+module.exports = MasterAutomationOrchestrator;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

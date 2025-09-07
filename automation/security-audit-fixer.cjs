@@ -138,6 +138,8 @@ class SecurityAuditFixer {
     // Create security audit script
     const securityAuditScript = `#!/usr/bin/env node
 
+const { execSync } = require('child_process');
+const fs = require('fs');
 
 class SecurityAuditor {
   constructor() {

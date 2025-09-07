@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+
+const { execSync } = require("child_process");
+const fs = require('fs');
+const path = require('path');
+
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -30,17 +38,21 @@ const { execSync } = require("child_process");
 const fs = require('fs');
 const path = require('path');
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 class FinalAutomationSuite {
   // TODO: Implement
 }
   constructor() {
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     this.results = [];
     this.startTime = Date.now();
   }
@@ -83,6 +95,17 @@ class FinalAutomationSuite {
 
 
 
+<<<<<<< HEAD
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000,
+      });
+      this.log(`✅ ${description} - Success`);
+=======
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
@@ -142,10 +165,49 @@ const path = require("path")
       });
       this.log(`✅ ${description} - Success`);
 
+>>>>>>> merged-prs-20250907-203621
       this.results.push({
         command,
         description,
         success: true,
+<<<<<<< HEAD
+        output: result,
+      });
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      this.results.push({
+        command,
+        description,
+        success: false,
+        error: error.message,
+      });
+      return { success: false, error: error.message };
+    }
+  }
+
+  async runAllAutomations() {
+    this.log('🎯 Starting Final Automation Suite');
+    
+    const automationTasks = [
+      { cmd: 'npm run lint:fix', desc: 'Fix Linting Issues' },
+      { cmd: 'npm run type-check', desc: 'Type Check' },
+      { cmd: 'npm run test:smoke', desc: 'Smoke Tests' },
+      { cmd: 'npm run build', desc: 'Build Application' }
+    ];
+
+    // Run automation tasks
+    for (const task of automationTasks) {
+      await this.runCommand(task.cmd, task.desc);
+    }
+
+    // Generate final report
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+    const successful = this.results.filter(r => r.success).length;
+    const failed = this.results.filter(r => !r.success).length;
+
+=======
 
       });
       return { success: true, output: result };
@@ -1475,6 +1537,7 @@ Enhancements: Performance, Security, SEO, Accessibility`;
     this.log("📋 Generating final automation report...");
   async generateReport() {
     this.log("📊 Generating report...");
+>>>>>>> merged-prs-20250907-203621
     const report = {
       "timestamp": new Date().toISOString(),
       "summary": {
@@ -1971,6 +2034,17 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 }
 
 // Run the final automation suite
+<<<<<<< HEAD
+if (require.main === module) {
+  const suite = new FinalAutomationSuite();
+  suite.runAllAutomations().catch(error => {
+    console.error('❌ Error:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = FinalAutomationSuite;
+=======
       this.log("📊 Summary:");
       this.log(`  - Automation scripts: ✅ Completed`);
       this.log(`  - Additional scripts: ✅ Created`);
@@ -2088,3 +2162,4 @@ module.exports = FinalAutomationSuite;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

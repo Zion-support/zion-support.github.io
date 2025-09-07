@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+///usr/bin/env node
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -13,11 +16,23 @@ if (require.main === module) {
 
 =======
 #!/usr/bin/env node
+>>>>>>> merged-prs-20250907-203621
 /**
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
 
+<<<<<<< HEAD
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+
+    // Fix common JSX issues
+
+    // Fix merge conflict markers
+    content = content.replace(/
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -105,6 +120,7 @@ const fs = require('fs')
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> merged-prs-20250907-203621
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fixCommonErrors(content) {
@@ -167,6 +183,11 @@ if (require.main === module) {
 
 module.exports = SyntaxErrorFixer;
 
+<<<<<<< HEAD
+  log(message, level = 'INFO')
+    this.log(' Starting syntax error fixing...')
+      this.log('Running ESLint auto-fix...')
+=======
 
 
 
@@ -177,3 +198,4 @@ module.exports = SyntaxErrorFixer;
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

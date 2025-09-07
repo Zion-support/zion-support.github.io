@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import { useEffect, useState } from "react",
+=======
+<<<<<<< HEAD
 }
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
@@ -12,6 +15,7 @@ import { useEffect, useState } from react",
 =======
 import { useEffect, useState } from "react",
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { useEffect, useState } from "react;
 import { useRouter  } from next/router';
@@ -49,6 +53,8 @@ export function ProjectOfferBanner() { return null; }
       setPendingOffers(offers);
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }, [projects, isLoading]),
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
     e.stopPropagation(),
@@ -63,6 +69,7 @@ export function ProjectOfferBanner() { return null; }
   }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
     return null;
@@ -147,6 +154,10 @@ export function ProjectOfferBanner() { return null; }
   }
 
 <<<<<<< HEAD
+  return ("
+    <div className="mb-6 space-y-3">;
+=======
+<<<<<<< HEAD
   return (
     <div className=mb-6 space-y-3">;
 
@@ -170,6 +181,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
   return ("
     <div className="mb-6 space-y-3">;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       {pendingOffers;
         .filter(offer => !dismissed && dismissed.has(offer && offer.id));
         .map(offer => (;
@@ -197,6 +209,9 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
                 </Button>;
 
         ))}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     </div>
   );
@@ -229,6 +244,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   if ()) {) {}
   $2;
 }
@@ -252,6 +268,8 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
             </CardContent>;
           </Card>))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}, [projects, is_loading])const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {e.stop_propagation ()set_dismissed (prev => {const updated = new Set (prev)updated.add (project_id)return updated;
 })}
 const handleViewOffer = (project_id: string) =>: any {router.push (`/project/$ {</div>;
@@ -273,6 +291,7 @@ if () ) {) {$2;
 }> <CardContent className=p-4 flex items-center justify-between > <div className="flex items-center gap-2" > <div className=bg-primary/10 rounded-full p-2 > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className=flex items-center gap-2 > <Button size="sm" className=whitespace-nowrap > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )}</div>)};
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }, [projects, is_loading]);
 const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {}

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 default:
 
       default:
@@ -6,6 +8,7 @@ default:
     }
 
 import {ApplicationStatus} from "@/types/jobs";
+>>>>>>> merged-prs-20250907-203621
 :src/components/jobs/MyApplications.tsx
 return <Badge variant="outline>{status}</Badge>
 =======
@@ -86,9 +89,12 @@ export function MyApplications() {
 
   if (isLoading) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     return (
       <div className="flex justify-center items-center p-8>
@@ -165,6 +171,10 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
 <<<<<<< HEAD
+
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+=======
+<<<<<<< HEAD
       case "new": return <Badge variant="secondary">New</Badge>;
 
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
@@ -179,10 +189,13 @@ default:;
     }
   },
 =======
+>>>>>>> merged-prs-20250907-203621
 
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
   if (isLoading) {
 
 <<<<<<< HEAD
@@ -211,6 +224,7 @@ import { useState } from "react,import { useJobApplications } from @/hooks/useJo
   if (applications.length === 0) {return (<Card className=bg-muted/30">;
         <Loader2 className="h-8 w-8 animate-spin text-primary />;
 =======
+>>>>>>> merged-prs-20250907-203621
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
 >>>>>>> origin/chore/fix-lint-and-merge
       </div>;
@@ -237,6 +251,8 @@ import { useState } from "react,import { useJobApplications } from @/hooks/useJo
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     )}
   return (<div className="grid gap-4 md:grid-cols-2>;
@@ -281,6 +297,7 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
               <CardTitle className=text-lg">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     );
   }
   return (;"
@@ -298,6 +315,8 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
           <CardContent>;"
             <div className="space-y-3">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               {application.cover_letter && (<p className="text-sm text-muted-foreground line-clamp-2 mb-2">;{application.cover_letter}
                 </p>;
               )}<div className=flex justify-between items-center>;
@@ -308,6 +327,7 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
                 </p>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               {application.cover_letter && (;"
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2>;
 
@@ -329,11 +349,15 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
                   size="sm 
 
 <<<<<<< HEAD
+                  className="text-xs"
+=======
+<<<<<<< HEAD
 
                   className=text-xs"
                   asChild
                 >
                   className="text-xs
+>>>>>>> merged-prs-20250907-203621
                   asChild;
                 >
 :src/components/jobs/MyApplications.tsx
@@ -341,6 +365,8 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
                     <ExternalLink className=h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+<<<<<<< HEAD
+=======
 
 
   return (
@@ -364,6 +390,7 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
               </CardTitle>;
               {getStatusBadge(application && application.status)}
             </div>;
+>>>>>>> merged-prs-20250907-203621
                 <Button
                   variant="default
 =======
@@ -379,6 +406,8 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
             </p>;
           </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <CardContent>;
             <div className=space-y-3>;
@@ -416,6 +445,7 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           <CardContent>;"
             <div className="space-y-3>;
               {application && application.cover_letter && (;
@@ -499,6 +529,13 @@ if ( {) {}
 <p> {
   error ;
 <<<<<<< HEAD
+}</p> </div>) ";
+}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
+  getStatusBadge (application.status) ;
+}</div> {;
+  application.cover letter ;
+=======
+<<<<<<< HEAD
       ))}</div>;
   )}},// Check condition;
 if ( {) {$2;
@@ -574,10 +611,13 @@ if ( {) {$2;
   )}<p> {error ;
 }</p> </div>) ;
 }You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href=/jobs >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {getStatusBadge (application.status)}</div> {application.cover letter ;
+>>>>>>> merged-prs-20250907-203621
 }</p>) ";
 }<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'"
+<<<<<<< HEAD
+=======
 }<div className="flex justify-between items-center > <Button variant=outline" size="sm className=text-xs" asChild > </Link> </Button> <Button variant="default size=sm" className="text-xs asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'
@@ -594,3 +634,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div>) ;
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

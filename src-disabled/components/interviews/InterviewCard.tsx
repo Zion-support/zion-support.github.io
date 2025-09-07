@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 import React, { useState } from './react;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from @/components / ui / card';
@@ -13,6 +15,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle  } from @/components /
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-reactimport { toast  } from @/components / ui / use - toast';
 import { InterviewResponseForm  } from './InterviewResponseForm;
 =======
+>>>>>>> merged-prs-20250907-203621
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -99,8 +102,12 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   )
 <<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

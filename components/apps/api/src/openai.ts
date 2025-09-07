@@ -1,7 +1,10 @@
 import OpenAI from 'openai';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 type OpenAIClient = OpenAI;
 
@@ -14,6 +17,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {export functio
 <<<<<<< HEAD
 ): Promise<string> {}
 
+>>>>>>> merged-prs-20250907-203621
 type OpenAIClient = OpenAI;
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
@@ -25,11 +29,22 @@ export async function generateJobPost(openai: OpenAIClient, role: string, opts: 
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join() || 'N/A'}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+export async function generateJobPost(
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   openai: OpenAIClient
   role: string
   opts: any
 ): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
@@ -40,6 +55,10 @@ pr-12243
 
 
 pr-12243
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -48,6 +67,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
   return new OpenAI({ apiKey });
 
+<<<<<<< HEAD
 export async function generateJobPost(
   openai: OpenAIClient;
 role: string;
@@ -62,6 +82,42 @@ Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote,}
 }
 Key skills: ${(opts.tags || []).join(', ') || 'N/A;}
+=======
+
+<<<<<<< HEAD
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai && openai.responses.create({
+    model: 'gpt-4o-mini';
+    input: prompt
+  });
+<<<<<<< HEAD
+  return completion && completion.output_text
+}
+
+
+}
+
+
+
+
+  return completion.output_text
+}
+}
+
+}
+=======
+
+  return completion && completion.output_text
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {return new OpenAI({ apiKey })Company: ${opts.company |'Confidential,}
@@ -281,11 +337,16 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: gpt - 4o - mini,
     input: prompt});'
   return completion.output_text;Key skills: ${(opts.tags || []).join () || 'N / A}`
+>>>>>>> merged-prs-20250907-203621
 Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create ({
-    model: 'gpt - 4o - mini';
-    input: prompt;
+  const completion = await openai.responses.create({
+    model: 'gpt-4o-mini';
+    input: prompt
   });
+<<<<<<< HEAD
+  return completion.output_text
+}
+=======
   return completion.output_text;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -419,6 +480,7 @@ const completion = await openai.responses.create ({model: 'gpt - 4o - mini';}
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/chore/fix-lint-and-merge
   return completion && completion.output_text;
@@ -435,3 +497,9 @@ const completion = await openai.responses.create ({model: 'gpt - 4o - mini';}
 }
 
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

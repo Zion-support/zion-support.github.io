@@ -49,6 +49,8 @@ const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
       {...props}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { cn  } from @/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement>  {size?: number | string;
 import React from 'react,import { cn } from @/lib/utils',export interface SpinnerProps extends React.SVGProps<SVGSVGElement>  {size?: number | string;}const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(({ className, size = 24, ...props }, ref,) => (<Loader2;
@@ -58,6 +60,7 @@ import React from 'react,import { cn } from @/lib/utils',export interface Spinne
       height = {size}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     />;
   );
 ),
@@ -76,7 +79,10 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib / utils';
 export interface SpinnerProps extends React.SVGProps < SVGSVGElement> {
   size?: number | string;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
 const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(
   ({ class_name, size = 24, ...props }, ref, ) => (
@@ -91,6 +97,10 @@ const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(
       height = {size}
     />)),
 <<<<<<< HEAD
+Spinner.display_name = 'Spinner',
+export default Spinner,
+=======
+<<<<<<< HEAD
 Spinner.display_name = 'Spinner,
       class_name = {cn (animate - spin', class_name) }
       width = {size }
@@ -102,3 +112,4 @@ export default Spinner,
 Spinner.display_name = 'Spinner',
 export default Spinner,
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

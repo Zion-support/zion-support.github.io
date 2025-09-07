@@ -345,6 +345,7 @@ export default function"
 <<<<<<< HEAD
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
@@ -355,3 +356,8 @@ export default function"
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

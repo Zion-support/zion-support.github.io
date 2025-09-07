@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -126,7 +129,10 @@ console.log(` Found ${totalOptimizations} optimization opportunities`)
   if (optimization.priority === "high")
         appliedCount++;")}")}"
       const content = await fs.readFile(filePath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         this.backupDir,${path.basename(filePath)}.backup.${Date.now()}"
   case performance
         case "memory"
@@ -189,6 +195,15 @@ console.log( AI optimization report saved to ${reportPath})
   console.log("🤖 Starting AI Code Optimizer...")
 <<<<<<< HEAD
 
+  console.error(" AI Code Optimizer "failed")
+  console.error(" AI Code Optimizer "failed")
+  console.error(" AI Code Optimizer "failed")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error( AI Code Optimizer failed")
 
@@ -221,3 +236,4 @@ console.log( AI optimization report saved to ${reportPath})
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

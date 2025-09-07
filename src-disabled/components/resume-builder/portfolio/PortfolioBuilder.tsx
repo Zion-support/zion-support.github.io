@@ -22,6 +22,8 @@ import { Button } from '@/components/ui/button';
 import { FilePlus, Loader2 } from 'lucide-react';
 import { ProjectCard } from './ProjectCard';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
@@ -63,6 +65,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { ProjectForm } from './ProjectForm;
 import { PortfolioProject } from @/types/resume';
@@ -145,6 +148,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       </div>
       {/* Edit or Add Form */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {(showAddProject |editingProject) && (<Card>;
           <CardContent className='pt-6>;
             <h2 className=text-xl font-semibold mb-6'>;
@@ -205,6 +210,7 @@ export function PortfolioBuilder() {<ProjectForm;
       {/* Edit or Add Form */}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       {(showAddProject || editingProject) && (
         <Card>
 
@@ -224,6 +230,8 @@ export function PortfolioBuilder() {<ProjectForm;
                 setEditingProject(null);
               }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 {/* Projects List */}
       {projects.length > 0 ? (
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -239,6 +247,7 @@ export function PortfolioBuilder() {<ProjectForm;
               project={project}<CardContent>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       {/* Projects List */}
       {projects.length > 0 ? ("
@@ -341,6 +350,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <Button;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   onClick={() => setShowAddProject(true)}className="mt-2";
                   onClick={() => setShowAddProject(true)}className=mt-2;
 {/* Projects List */}
@@ -433,6 +444,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() => setShowAddProject(true)}className=mt-2;
                   onClick={() => setShowAddProject(true)}"
 =======
+>>>>>>> merged-prs-20250907-203621
                   onClick={() => setShowAddProject(true)} ;"
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -447,6 +459,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_delete = {handleDeleteProject, }
             />))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </div>) : (!showAddProject && (<Card className='text - center py - 12'>;
         </div>) : (!showAddProject && (<Card className=text - center py - 12'>;
             <CardContent>;
@@ -459,6 +473,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </div>) : (
 
                 <p className='text - muted - foreground max - w-md mx - auto'>;
@@ -471,6 +486,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Add your best work to showcase your skills and experience to potential employers.;
                 </p>;
                 <Button;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   on_click={() => setShowAddProject (true)}
                   className="mt - 2";>;
@@ -485,6 +502,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 >;
                   Add Your First Project;

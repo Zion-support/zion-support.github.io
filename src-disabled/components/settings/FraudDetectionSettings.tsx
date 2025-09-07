@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components/ui/card';
 import { Switch   } from '@/components/ui/switch';
 import { Button   } from '@/components/ui/button';
@@ -9,6 +11,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import {Accordion;
   AccordionContent;
   AccordionItem;
+>>>>>>> merged-prs-20250907-203621
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
@@ -34,6 +37,8 @@ export function FraudDetectionSettings() {
     if (!user?.id) return;
     
     setIsSaving(true);
+<<<<<<< HEAD
+=======
   const handleSavePreferences = null;
 
     try {
@@ -68,6 +73,7 @@ export function FraudDetectionSettings() {
   const [isSaving, setIsSaving] = useState($2);
   const handleSavePreferences = $2;
     setIsSaving($2);
+>>>>>>> merged-prs-20250907-203621
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
@@ -120,6 +126,12 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+<<<<<<< HEAD
+                id="message-scanning"
+                aria-label="Message scanning"
+                checked={messageScanningEnabled}
+                onCheckedChange={setMessageScanningEnabled}
+=======
 <<<<<<< HEAD
                 id="message-scanning
                 aria-label=Message scanning"
@@ -224,6 +236,7 @@ export function FraudDetectionSettings() {const { user } = useAuth()const [messa
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               />
             </div>
 
@@ -298,14 +311,21 @@ export function FraudDetectionSettings() {const { user } = useAuth()const [messa
             >
               {isSaving ? "Saving..." : "Save Preferences"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </Button>
           </div>
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+  )
+}
+=======
 <<<<<<< HEAD
   );
 
@@ -359,3 +379,4 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
   )
 
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

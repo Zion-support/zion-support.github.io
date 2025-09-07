@@ -1,5 +1,14 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/deployment-automation.cjs
+=======
+const deployment = new DeploymentAutomation();
+deployment.deploy().catch(console.error);
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -9,6 +18,7 @@ const path = require('path')
 
 =======
 
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 <<<<<<< HEAD
@@ -40,6 +50,8 @@ const { execSync } = require('child_process')
   console.log(' Deployment report "generated")
 
   console.error(' Deployment automation "failed")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/deployment-automation.cjs
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -94,6 +106,7 @@ deployment.generateDeploymentReport().then(report => {
   }).catch(error => {
   console.error('❌ Deployment automation "failed": ', error)});
   console.error(' Deployment automation "failed")
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
 <<<<<<< HEAD
 
@@ -133,10 +146,13 @@ class DeploymentAutomation {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
+>>>>>>> merged-prs-20250907-203621
 // Run deployment automation
 const deployment = new DeploymentAutomation;(;);
 deployment.generateDeploymentReport().then(report => {}).catch(error => {
@@ -222,6 +238,7 @@ deployment.deploy().catch(console.error);
 <<<<<<< HEAD
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
@@ -229,3 +246,11 @@ deployment.deploy().catch(console.error);
 =======
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

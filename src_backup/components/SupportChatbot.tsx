@@ -50,6 +50,9 @@ const FALLBACK_RESPONSES = [
             role: 'assistant'
             message: finalMsg
 <<<<<<< HEAD
+          }
+=======
+<<<<<<< HEAD
 
 ;
 }
@@ -97,11 +100,15 @@ const FALLBACK_RESPONSES = [
           ...prev;
 =======
           }
+>>>>>>> merged-prs-20250907-203621
         ]) } else if (res.body) {
         const botId = Date.now().toString() + '-a'
         setMessages(prev => [
           ...prev
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           { id: botId, role: 'assistant', message: '' }
         ])
         const reader = res.body.getReader()
@@ -137,6 +144,11 @@ const FALLBACK_RESPONSES = [
                     )
                   )
 <<<<<<< HEAD
+
+interface Msg {;
+  id: string;
+=======
+<<<<<<< HEAD
 interface Msg {
   id: string;
         ])const reader = res.body.getReader()const decoder = new TextDecoder()let done = false;
@@ -161,6 +173,7 @@ interface Msg {
 
 interface Msg {;
   id: string;
+>>>>>>> merged-prs-20250907-203621
   role: 'user' | 'assistant';
 >>>>>>> origin/chore/fix-lint-and-merge
   message: string;
@@ -266,6 +279,8 @@ export function SupportChatbot() {
         role: 'assistant'
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       m.id === bot_id ? { ...m, message: accumulated } : m))accumulated += token,setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))}
               } catch (_) {// ignore parse errors;
               }
@@ -292,6 +307,7 @@ export function SupportChatbot() {
         message: fallbackResponse;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -300,9 +316,12 @@ export function SupportChatbot() {
           accumulated.trim () ||;
           FALLBACK_RESPONSES[;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
           Im experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
 =======
+>>>>>>> merged-prs-20250907-203621
             Math.floor (Math.random () * FALLBACK_RESPONSES.length);
           ] ||;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
@@ -334,6 +353,8 @@ export function SupportChatbot() {
       }
     } catch (err) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)))}
       setMessages(prev => [...prev, errorMsg])} finally {setLoading(false)setTyping(false)}}
   if (!open) {onClick={() => setOpen(true)}
@@ -363,6 +384,7 @@ export function SupportChatbot() {
     }
       logErrorToProduction(Chatbot error:', { data: err }),
 =======
+>>>>>>> merged-prs-20250907-203621
       logErrorToProduction('Chatbot error:', { data: err }),
 >>>>>>> origin/chore/fix-lint-and-merge
       
@@ -417,6 +439,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40>
       <div className=bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium>Help Bot</span>
@@ -432,6 +456,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40>
       <div className=bg-zion-blue-dark p-2 flex justify-between items-center">
@@ -473,6 +498,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setTyping(false);
     }
 <<<<<<< HEAD
+  };
+  if (!open) {;
+=======
+<<<<<<< HEAD
   }
   if (!open) {
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m)))}
@@ -482,6 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
   if (!open) {;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     return (;
       <Button;
         onClick={() => setOpen(true)}
@@ -520,6 +550,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ChatMessage key={m.id} role={m.role} message={m.message} />;
         ))}
 
+<<<<<<< HEAD
+        {typing && (
+          <ChatMessage role="assistant" message="..." />
+        )}
+=======
 <<<<<<< HEAD
         {messages && messages.length === 0 && (<ChatMessage;
             role=assistant;
@@ -637,3 +672,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ChatMessage role="assistant" message="..." />
         )}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

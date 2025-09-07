@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 =======
@@ -19,16 +22,26 @@
 const fs = require('fs');
 const path = require(path');
 function getAllFiles(dir) {}
+<<<<<<< HEAD
+  const entries = fs.readdirSync(dir, { "withFileTypes": true }")
+})
+=======
   const entries = fs.readdirSync(dir, { "withFileTypes: true })
 });
+>>>>>>> merged-prs-20250907-203621
   const files = entries.flatMap((entry) => {}
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) return getAllFiles(fullPath);
+    const fullPath = path.join(dir, entry.name)
+    if (entry.isDirectory()) return getAllFiles(fullPath)
     return [fullPath]}
+<<<<<<< HEAD
+  return files};
+  if (!text.includes('')) return false;
+=======
 <<<<<<< HEAD
   return files}
 
   if (!text.includes(')) return false;
+>>>>>>> merged-prs-20250907-203621
 function resolveConflictsKeepIncoming(filePath) {}"
 
   if (!text.includes()) return false;
@@ -57,19 +70,27 @@ function resolveConflictsKeepIncoming(filePath) {}"
   let i = 0;
   let changed = false;
   while (i < lines.length) {}
-    if (lines[i].startsWith()) {}
+    if (lines[i].startsWith('')) {}
       changed = true;
-
+      // skip until separator ''
       i++;
-      while (i < lines.length && !lines[i].startsWith()) i++;
+      while (i < lines.length && !lines[i].startsWith('')) i++;
       // skip the separator;
-      if (i < lines.length && lines[i].startsWith()) i++;
-      // copy incoming until 
-      while (i < lines.length && !lines[i].startsWith()) {}
+      if (i < lines.length && lines[i].startsWith('')) i++;
+      // copy incoming until ''
+      while (i < lines.length && !lines[i].startsWith('')) {}
         out.push(lines[i]);
         i++}
       // skip the end marker;
-
+      if (i < lines.length && lines[i].startsWith('')) i++;
+      continue};
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+    out.push(lines[i]);
+    i++};
+  fs.writeFileSync(filePath, out.join('\n'));
+  return changed};
+function main() {}
+  const root = path.resolve(process.cwd(), 'src');
   if (!fs.existsSync(root)) return;
   const files = getAllFiles(root).filter((f) => /\.(t|j)sx?$/.test(f));
   let count = 0;
@@ -77,6 +98,8 @@ function resolveConflictsKeepIncoming(filePath) {}"
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         console.log(`Resolved conflicts "in: ${f}`)}
@@ -93,6 +116,7 @@ function resolveConflictsKeepIncoming(filePath) {}"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
@@ -105,6 +129,9 @@ function resolveConflictsKeepIncoming(filePath) {}"
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 <<<<<<< HEAD
@@ -114,6 +141,13 @@ cursor/website-audit-and-update-with-deployment-76dc;
 
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -136,3 +170,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

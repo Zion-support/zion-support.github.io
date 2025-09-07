@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 categories?: {
@@ -48,11 +50,14 @@ type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 };
 
+>>>>>>> merged-prs-20250907-203621
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review' 
 }</button> </form>) 
 }
 export default ReviewForm
+<<<<<<< HEAD
+=======
 =======
   categories?: {;
     communication?: number;
@@ -453,3 +458,4 @@ export default ReviewForm;    </form>);
 export default ReviewForm;
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

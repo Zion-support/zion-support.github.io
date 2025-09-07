@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -15,6 +19,7 @@
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 console.log(' Fixing react-router-dom imports...')
 const pagesDir = path.join(__dirname, '..', 'pages')
 const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
@@ -28,12 +33,22 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       "
     content = content.replace(/to="/g, 'href=')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
         "
+<<<<<<< HEAD
+        "
+        "
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -58,3 +73,4 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

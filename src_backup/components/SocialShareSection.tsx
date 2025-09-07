@@ -211,6 +211,10 @@ export function SocialShareSection() {
         });
       });
 <<<<<<< HEAD
+  },;
+  const shareLinks = [;
+=======
+<<<<<<< HEAD
   },
   const shareLinks = [;
     {name: Twitter",icon: <Twitter className="h-5 w-5 aria-hidden=true" />,color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80,onClick: shareToTwitter;
@@ -228,6 +232,7 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 =======
   },;
   const shareLinks = [;
+>>>>>>> merged-prs-20250907-203621
     {;
       name: "Twitter",;
       icon: <Twitter className="h-5 w-5" aria-hidden="true" />,;
@@ -322,8 +327,11 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 
           <div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <h3 className=text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
 =======
+>>>>>>> merged-prs-20250907-203621
 
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -335,6 +343,8 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           </div>;<div className=flex flex-wrap gap-3'>;
             {shareLinks && shareLinks.map((link, index) => (              <Button;
@@ -353,6 +363,7 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
                 key = {index }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           <div className='flex flex - wrap gap - 3>;
             {share_links.map ((link, index) => (              <Button;
@@ -378,6 +389,9 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 }
 }</div> </div> </div> </section>)
 <<<<<<< HEAD
+}'"
+=======
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({title: t ('errors.failed to copy')})}}</div> </div> </div> </section>)}'";
@@ -385,3 +399,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

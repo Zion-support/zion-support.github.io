@@ -1,5 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 interface SidebarProps  {isOpen: boolean;
   onClose: () => void;
 }const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {if (!isOpen) return null;return (<div className="fixed inset-0 z-50 lg:hidden>;
@@ -41,6 +43,7 @@ interface SidebarProps  {isOpen: boolean;
   )}export default Sidebar;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 interface SidebarProps {
   isOpen: boolean;,
@@ -88,5 +91,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 export default Sidebar;
 =======
 };
+<<<<<<< HEAD
+export default Sidebar;
+=======
 export default Sidebar;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

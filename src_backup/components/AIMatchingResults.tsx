@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+=======
+<<<<<<< HEAD
 interface AIMatchingResultsProps  {matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
@@ -137,6 +148,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react
 import Skeleton from "@/components/ui/skeleton;
 import { cn } from @/lib/utils";
+>>>>>>> merged-prs-20250907-203621
 interface AIMatchingResultsProps {
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
@@ -287,6 +299,8 @@ export function AIMatchingResults({;
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     )}
   return (<div className=space-y-4'>;
       <Tabs;
@@ -356,6 +370,7 @@ export function AIMatchingResults({matches;
   isLoading;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
@@ -403,6 +418,8 @@ export function AIMatchingResults({matches;
                         <div className="flex items-start gap-4>
                           <Avatar className=h-12 w-12 border border-zion-blue-light">
                             {match.image ? (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                               <AvatarImage
                         match.category.toLowerCase().includes("talent) ? bg-zion-cyan" :;
@@ -524,12 +541,18 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                                   </div>
                                 </div>
                               )}
                             </div>
 
+<<<<<<< HEAD
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+=======
 <<<<<<< HEAD
                             <div className="mt-2 flex flex-wrap gap-1>
                               <Badge variant=outline">
@@ -570,6 +593,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 
 }
+>>>>>>> merged-prs-20250907-203621
                               </Badge>
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (,
                                 <Badge key={i} variant="outline>
@@ -594,6 +618,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 }
 =======
                             <div className="mt-2 flex flex-wrap gap-1">
@@ -610,3 +637,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

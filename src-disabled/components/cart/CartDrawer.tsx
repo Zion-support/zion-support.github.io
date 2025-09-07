@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
   }
 import { ShoppingCart } from 'lucide-react;import { useAuth } from @/hooks/useAuth';import { ShoppingCart } from 'lucide-react;
@@ -19,6 +22,8 @@ import { useAuth } from '@/hooks/useAuth;
 import { LoginModal } from @/components/auth/LoginModal';
 export function CartDrawer() {
   const items = null;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (!isAuthenticated) {
@@ -49,6 +54,7 @@ export function CartDrawer() {
   }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   }
 import { ShoppingCart } from lucide-react';import { useAuth } from '@/hooks/useAuth;import { ShoppingCart } from lucide-react';
@@ -60,10 +66,13 @@ import { ShoppingCart } from lucide-react';import { useAuth } from '@/hooks/useA
         {count > 0 && (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center>
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center>
 =======
+>>>>>>> merged-prs-20250907-203621
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -73,15 +82,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 });
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   );
@@ -112,6 +126,7 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
   )})}<Link;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Link ;
         href=/cart';
         aria - label='Cart;
@@ -119,12 +134,15 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
         on_click={handle_click} />;
         <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
         {count > 0 && (<span className=absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         {count > 0 && (
           <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}',
           <span className=absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;,
@@ -142,6 +160,9 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
   );
 <<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
 origin/cursor/automate-test-improve-and-merge-code-2533
     </>)}</Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -151,3 +172,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

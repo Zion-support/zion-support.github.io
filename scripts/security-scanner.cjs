@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -9,6 +11,7 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require(path')
 const { execSync } = require('child_process')
@@ -34,6 +37,8 @@ const { execSync } = require('child_process')
 =======
   log(message, type = 'INFO')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -56,6 +61,7 @@ const { execSync } = require('child_process')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
           this.stats[riskLevel + 'Risk']
       this.log(`Found ${this.stats.vulnerabilitiesFound} dependency vulnerabilities`, 'WARNING'`)
       this.log(`Dependency scan failed: ${error.message}`, 'ERROR'`)
@@ -63,11 +69,21 @@ const { execSync } = require('child_process')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
         pattern: /secret\s*=\s*['"][^'']
+<<<<<<< HEAD
+        pattern: /secret\s*=\s*['"][^'']
+        pattern: /secret\s*=\s*['"][^'']
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -85,3 +101,4 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

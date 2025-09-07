@@ -26,6 +26,9 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 ;
 
 import React, { useState, useEffect } from react';
@@ -39,6 +42,7 @@ import { logErrorToProduction, logInfo  } from '@/utils/productionLogger;
 interface PerformanceMetrics  {bundleSize: number;
 =======
 
+>>>>>>> merged-prs-20250907-203621
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -61,12 +65,23 @@ import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface PerformanceMetrics {;
   bundleSize: number;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   loadTime: number;
   performanceScore: number;
 
   chunkCount: number;
 
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Progress } from '@/components / ui / progress';
+import {
+=======
 <<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card;
 import { Badge } from @/components/ui/ badge';
@@ -103,6 +118,7 @@ import { Button } from '@/components / ui / button';
 import { Progress } from '@/components / ui / progress';
 import {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     const navigation = performance.getEntriesByType (
       navigation')[0] as PerformanceNavigationTiming;
@@ -269,12 +285,15 @@ export function PerformanceDashboard() {
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fid: 0  // First Input Delay - would need Performance Observer;
       },
       setMetrics(performanceMetrics),
       logInfo('Performance metrics collected successfully, {
         loadTime: performanceMetrics.loadTime,
         resourceCount: performanceMetrics.chunkCount;
+>>>>>>> merged-prs-20250907-203621
 
       });
 
@@ -315,7 +334,10 @@ export function PerformanceDashboard() {
         fcp: 0,;
         lcp: 0,;
         cls: 0,;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       });
 
@@ -325,6 +347,8 @@ export function PerformanceDashboard() {
     if (typeof window === 'undefined) return {},
     const vitals: Partial<PerformanceMetrics> = {},
     // Collect navigation timing;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           : 0,performanceScore: 0, // This would need to be calculated;
         chunkCount: resourceCount,cacheHitRate: 0, // This would need to be calculated from resource timing;
@@ -353,6 +377,7 @@ export function PerformanceDashboard() {
     if (navigation) {
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart,
 =======
+>>>>>>> merged-prs-20250907-203621
     const navigation = window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
     if (navigation) {;
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart,;
@@ -388,6 +413,8 @@ export function PerformanceDashboard() {
         }, 2000);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   chunkCount: number
   cacheHitRate: number
@@ -408,6 +435,7 @@ export function PerformanceDashboard() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     return scriptEntries.map(entry => ({
       name: entry.name.split(/').pop()?.split('?)[0] || unknown',
       size: entry.transferSize || entry.encodedBodySize || 0,
@@ -443,6 +471,8 @@ export function PerformanceDashboard() {
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           })})observer && observer.observe({entryTypes: [;
             'paint,largest-contentful-paint','layout-shift,first-input']})// Resolve after a short delay;
@@ -788,6 +818,7 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
         <CardContent>;
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/admin/performance-dashboard.tsx
           <RefreshCw
             className={`w-4 h-4 mr-2 ${isLoading ? animate-spin' : '}`}
@@ -968,10 +999,13 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
             <div className=space-y-2">
+>>>>>>> merged-prs-20250907-203621
 :src/components/admin/performance-dashboard.tsx
             <div className=space-y-2'>
               {chunks.slice(0, 10).map((chunk, index) => (
@@ -982,7 +1016,10 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
                   <div className=flex items-center gap-3'>
                     <span className='text-sm font-mono text-muted-foreground>                      {index + 1}
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> merged-prs-20250907-203621
                     </span>
                     <div>
                       <p className="font-medium text-sm>{chunk.name}</p>
@@ -1014,7 +1051,10 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
                           <Badge variant="secondary" className="text-xs">
                             cached
                           </Badge>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                         )}
                       </div>
                     </div>
@@ -1032,6 +1072,8 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
                 <p className=text-sm text-muted-foreground text-center pt-2">
                   ... and {chunks.length - 10} more chunks
                 </p>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               ))}{chunks.length > 10 && (<p className=text-sm text-muted-foreground text-center pt-2'>;
                   ... and {chunks.length - 10} more chunks;
@@ -1057,6 +1099,7 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
               <CheckCircle className=w-5 h-5 text-green-600 mt-0.5" />
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2>;
@@ -1139,6 +1182,8 @@ export function PerformanceDashboard() {const [metrics, setMetrics] = useState<P
             )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>
         </CardContent>
       </Card>
@@ -1181,11 +1226,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}</CardContent>;
       </Card>;{/* Recommendations */}
 =======
+>>>>>>> merged-prs-20250907-203621
         </CardContent>;
       </Card>;
 
       {/* Recommendations */}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2>;
@@ -1207,9 +1256,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
               </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             </div>;<div className=flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
               <CheckCircle className='w-5 h-5 text-green-600 mt-0 && 0.5 />;
 =======
+>>>>>>> merged-prs-20250907-203621
             </div>;
 
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
@@ -1225,9 +1277,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
               </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             </div>;{metrics && metrics.bundleSize > 2 * 1024 * 1024 && (<div className=flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>;
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0 && 0.5 />;
 =======
+>>>>>>> merged-prs-20250907-203621
             </div>;
 
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
@@ -1270,11 +1325,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {chunk.type}
                         </Badge>;
 <<<<<<< HEAD
+                        {chunk.cached && (
+                          <Badge variant='secondary' className='text - xs'>;
+=======
+<<<<<<< HEAD
                         {chunk.cached && (<Badge variant=secondary' className='text - xs>;
 =======
                         {chunk.cached && (
                           <Badge variant='secondary' className='text - xs'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                             cached;
                           </Badge>)}
                       </div>;
@@ -1288,6 +1348,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>))}
 <<<<<<< HEAD
+              {chunks.length > 10 && (
+                <p className='text - sm text - muted - foreground text - center pt - 2'>;
+                  ... and {chunks.length - 10} more chunks;
+                </p>)}
+            </div>) : (
+            <p className='text - center py - 8 text - muted - foreground'>;
+=======
+<<<<<<< HEAD
               {chunks.length > 10 && (<p className='text - sm text - muted - foreground text - center pt - 2>;
                   ... and {chunks.length - 10} more chunks;
                 </p>)}
@@ -1300,6 +1368,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>) : (
             <p className='text - center py - 8 text - muted - foreground'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               No chunk data available. Refresh to collect metrics.;
             </p>)}
         </CardContent>;
@@ -1339,9 +1408,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             {metrics && metrics.bundle_size > 2 * 1024 * 1024 && (<div className=flex items - start gap - 3 p - 3 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded'>;
                 <AlertTriangle className='w - 5 h - 5 text - yellow - 600 mt - 0.5 />;
 =======
+>>>>>>> merged-prs-20250907-203621
             {metrics && metrics.bundle_size > 2 * 1024 * 1024 && (
               <div className='flex items - start gap - 3 p - 3 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded'>;
                 <AlertTriangle className='w - 5 h - 5 text - yellow - 600 mt - 0.5' />;
@@ -1360,6 +1432,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}
 }}</div>;
         </CardContent>;
@@ -1368,6 +1442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }
 }

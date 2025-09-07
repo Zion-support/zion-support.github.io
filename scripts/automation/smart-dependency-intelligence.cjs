@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       smart-dependency-intelligence.log
       this.projectRoot,logs"
@@ -100,8 +106,11 @@ const crypto = require("crypto")
         "ERROR
   this.log(`Analyzing current dependencies...``)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const packagePath = path.join(this.projectRoot, "package.json")
       const packageLockPath = path.join(this.projectRoot, "package-lock.json")
   throw new Error("package.json not found")
@@ -345,6 +354,15 @@ this.log(Intelligence report "generated": ${reportPath})
   console.log(` Smart Dependency Intelligence completed``)
 <<<<<<< HEAD
 
+  console.error(" Smart Dependency Intelligence "failed": ")
+  console.error(" Smart Dependency Intelligence "failed": ")
+  console.error(" Smart Dependency Intelligence "failed": ")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error(" Smart Dependency Intelligence "failed: )
 
@@ -377,3 +395,4 @@ this.log(Intelligence report "generated": ${reportPath})
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

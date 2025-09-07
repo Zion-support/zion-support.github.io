@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
 const defaultTargets = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
 
 const defaultTargets = ['enptesar]
@@ -45,6 +48,9 @@ const defaultTargets = null;
               {translations[lng] || (lng === 'en' ? text : '')}
             </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
       <div className="text-sm text-gray-500>{loading ? 'Translating : error ? `Error: ${error}` : Ready'}</div>
       <div className=grid md:grid-cols-2 gap-4">
@@ -69,8 +75,11 @@ const defaultTargets = null;
             <div className="whitespace-pre-wrap text-sm min-h-[4rem]">
               {translations[lng] || (lng === 'en' ? text : '')}
             </div>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </div>
         ))}
       </div>
@@ -85,6 +94,9 @@ const defaultTargets = null;
 
   )
 };
+<<<<<<< HEAD
+=======
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

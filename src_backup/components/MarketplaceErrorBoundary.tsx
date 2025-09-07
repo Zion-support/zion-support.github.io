@@ -17,6 +17,8 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     <ErrorBoundary 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:, { data: retryError })
@@ -30,6 +32,7 @@ import * as Sentry from '@sentry/nextjs';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     }
   }
   return (
@@ -50,6 +53,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             onClick={() => window.location.reload()}
 <<<<<<< HEAD
+            variant='outline'
+=======
+<<<<<<< HEAD
             variant='outline
             className=w-full'          >
             Reload Page
@@ -60,6 +66,7 @@ import {ErrorBoundary, FallbackProps} from 'react-error-boundary;
 =======
             variant='outline'
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
@@ -79,7 +86,10 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
 =======
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     <div className="flex items-center justify-center min-h-[400px] p-6>
       <div className=max-w-md w-full space-y-4">
@@ -124,6 +134,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             href=mailto: support@example.com" 
             className="text-primary hover:underline
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <div className='text-center text-sm text-muted-foreground>
@@ -333,6 +345,7 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
             className=w - full";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -348,6 +361,8 @@ export function MarketplaceErrorBoundary({
 
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <div className="flex items-center justify-center min-h-[400px] p-6>;
   )<ErrorBoundary;
   },return (<div className=flex items-center justify-center min-h-[400px] p-6">;
@@ -355,6 +370,7 @@ export function MarketplaceErrorBoundary({
         <Alert variant=destructive">;
           <AlertCircle className="h-4 w-4 />;
 =======
+>>>>>>> merged-prs-20250907-203621
     <div className="flex items-center justify-center min-h-[400px] p-6">;
       <div className="max-w-md w-full space-y-4">;
         <Alert variant="destructive">;
@@ -365,6 +381,8 @@ export function MarketplaceErrorBoundary({
             {error?.message || 'An unexpected error occurred while loading marketplace content.}
           </AlertDescription>;
         </Alert>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </Alert>;<div className="flex flex-col space-y-2>;
         <div className=flex flex-col space-y-2">;
@@ -399,6 +417,7 @@ export function MarketplaceErrorBoundary({
             onClick={() => window && window.location.reload()}variant="outline;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             variant=outline";
 
@@ -407,6 +426,8 @@ export function MarketplaceErrorBoundary({
             Reload Page;
           </Button>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </div>;<div className=text-center text-sm text-muted-foreground">;
         <div className="text-center text-sm text-muted-foreground>;
@@ -441,6 +462,7 @@ export function MarketplaceErrorBoundary({
             contact support;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           </a>;
 
@@ -487,6 +509,8 @@ export function MarketplaceErrorBoundary(): any ({
 } 
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   )}interface MarketplaceErrorBoundaryProps  {children: React && React.ReactNode;export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction(MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStack})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary, marketplace')scope && scope.setContext('errorInfo, {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel(error')Sentry && Sentry.captureException(error)})}>;{children}
     </ErrorBoundary>;
@@ -519,6 +543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}

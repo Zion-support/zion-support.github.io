@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen, src: /placeholder.svg" },
@@ -18,6 +20,7 @@ export const AppScreenshots: React.FC = () => {
         behavior: "smooth"})
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/AppScreenshots.tsx
 }
 import React, { useRef } from "react
@@ -87,7 +90,10 @@ import { Button  } from @/components/ui/button';
         behavior: "smooth"});
 
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   }
     }
 
@@ -134,6 +140,8 @@ export const AppScreenshots: React.FC = () => {
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (
     <section className=py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4>
@@ -145,6 +153,7 @@ export const AppScreenshots: React.FC = () => {
         </div>
             aria-label="Scroll left
 =======
+>>>>>>> merged-prs-20250907-203621
             aria-label="Scroll left"
 >>>>>>> origin/chore/fix-lint-and-merge
           >
@@ -152,6 +161,11 @@ export const AppScreenshots: React.FC = () => {
           </Button>
 
           <div
+<<<<<<< HEAD
+            ref = {scrollContainerRef,}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
+=======
 <<<<<<< HEAD
             ref = {scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory
@@ -170,6 +184,7 @@ export const AppScreenshots: React.FC = () => {
             ref = {scrollContainerRef}
             className=flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
             style={{ scrollbarWidth: "none, msOverflowStyle: none" }}>;
+>>>>>>> merged-prs-20250907-203621
             {mockScreenshots && mockScreenshots.map((screenshot,) => (;
               <div
 :src/components/mobile-app/AppScreenshots.tsx
@@ -198,6 +213,20 @@ export const AppScreenshots: React.FC = () => {
             ))}
 
           <div 
+<<<<<<< HEAD
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {mockScreenshots.map((screenshot) => (
+              <div 
+                key={screenshot.id} 
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
+              >
+                <img
+                  src={screenshot.src}
+                  alt={screenshot.alt}
+=======
 <<<<<<< HEAD
                   className=w-full h-full object-cover";
                   loading="lazy;
@@ -231,13 +260,20 @@ export const AppScreenshots: React.FC = () => {
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
+>>>>>>> merged-prs-20250907-203621
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
+<<<<<<< HEAD
+            ))}
+          </div>
+:src/components/mobile-app/AppScreenshots.tsx
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
             ))}
           </div>
+>>>>>>> merged-prs-20250907-203621
 
           <Button
             variant=ghost"
@@ -253,6 +289,8 @@ export const AppScreenshots: React.FC = () => {
       </div>
     </section>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>;
           <Button;
             variant="ghost;
@@ -266,6 +304,7 @@ export const AppScreenshots: React.FC = () => {
       </div>;
     </section>;
 },import React, { useRef } from "react,import { Button } from @/components/ui/button",// These would be replaced with actual screenshots;
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/AppScreenshots.tsx
   )
 }
@@ -303,7 +342,10 @@ export const AppScreenshots: React.FC = () => {;
   };
   return (;
     <section className="py-16 bg-zion-blue-dark">;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <div className="container mx-auto px-4">;
         <div className=text-center mb-12>;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>;
@@ -321,7 +363,10 @@ export const AppScreenshots: React.FC = () => {;
 =======
             variant="ghost";
             size="icon";
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             aria-label=Scroll right;
 
@@ -337,6 +382,24 @@ export const AppScreenshots: React.FC = () => {;
 }
 }
 import React, { useRef } from './react';
+<<<<<<< HEAD
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button  } from '@/components / ui / button';
+// These would be replaced with actual screenshots;
+const mock_screenshots = [;
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef < HTMLDivElement>(null);
+  const scroll = (direction: "left" | "right", ) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+=======
 <<<<<<< HEAD
 import { Button   } from @/components / ui / button;
 // These would be replaced with actual screenshots;
@@ -362,12 +425,16 @@ export const AppScreenshots: React.FC = () => {
 if ( {) {
   $2
 }
+>>>>>>> merged-prs-20250907-203621
       const scroll_amount = 300,
       scrollContainerRef.current.scroll_by ({
         left: direction === "left" ? -scroll_amount : scroll_amount,
         behavior: "smooth"});
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   }
   return (
     <section className=py - 16 bg - zion - blue-dark>;
@@ -431,6 +498,8 @@ import { Button } from "@/components/ui/button;
 <<<<<<< HEAD
 };
 '"
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)}
 '"}}))// These would be replaced with actual screenshots;
@@ -438,3 +507,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

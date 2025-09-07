@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useLocation } from 'react-router-dom';
 import { useLocation } from 'react-router-dom;
 
@@ -11,6 +13,7 @@ interface SEOProps {
 main
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   image?: string;
   url?: string;
@@ -122,6 +125,8 @@ const SEO: React.FC<SEOProps> = ({}) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   type?: 'website' | 'article' | 'product' | 'service';
   type?: 'website | article' | 'product | service';
   author?: string;
@@ -204,6 +209,7 @@ export const SEO: React.FC<SEOProps> = ({
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   }
   return (
@@ -352,9 +358,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     return null;
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   // Combine all structured data
   const combinedStructuredData = [
@@ -419,6 +428,8 @@ pr-12325
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <meta property="og: type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
@@ -428,6 +439,7 @@ pr-12325
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <meta property=og:type" content={type} />
       <meta property="og:url content={fullUrl} />
@@ -489,6 +501,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       <meta name="author content={author} />
@@ -523,6 +537,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property=og:locale" content="en_US />
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <meta name=author" content={author} />
       <meta name="robots content={noindex ? 'noindex, nofollow : index, follow'} />
@@ -530,6 +545,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       {/* Canonical URL */}
       {canonical && <link rel=canonical" href={canonical} />}
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {/* Additional Meta Tags */}
       <meta name="viewport content=width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -609,6 +626,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 }
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+>>>>>>> merged-prs-20250907-203621
       {/* Open Graph / Facebook */}
       <meta property=og:type" content={type} />
       <meta property="og:url content={currentUrl} />
@@ -617,5 +635,9 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={currentUrl} />
+<<<<<<< HEAD
+      <meta property="og:title" content={fullTitle} />
+=======
       <meta property="og:title" content={fullTitle} />
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

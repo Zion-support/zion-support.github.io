@@ -1,9 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 #!/usr/bin/env node
 
@@ -95,7 +102,12 @@ class ComprehensiveAutomationFixer {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -133,9 +145,33 @@ const automationFiles = ['automation/dependency-fixer.cjs']
       .replace(/\(\s*\[\],/g, '([];')
       .replace(/\(\s*\{\},/g, '({};')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
+=======
+=======
+<<<<<<< HEAD
+      // Fix malformed assignments
+      .replace(/script1\."async": = true/g, 'script1.async = true')
+      .replace(/script1\."src": =/g, 'script1.src =')
+      // Remove extra semicolons
+      .replace(/;+/g, ';')
+      // Fix malformed quotes
+      .replace(/['"]react;['"]/g, "'react'")
+      .replace(/['"]framer-motion;['"]/g, "'framer-motion'")
+      .replace(/['"]lucide-react;['"]/g, "'lucide-react'")
+      // Fix incomplete filter functions
+      .replace(/\.filter\(file => ;/g, '.filter(file => {')
+      .replace(/\.filter\(file => \{$/gm, '.filter(file => {')
+      // Add missing closing braces for filter functions
+      .replace(/\.filter\(file => \{([^}]*)$/gm, (match, content) => {
+        if (!content.includes('}')) {
+          return match + ' return true}'}
+        return match});
+    fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message)}
 }
@@ -947,6 +983,7 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAutomationFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -956,6 +993,16 @@ module.exports = ComprehensiveAutomationFixer;
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
@@ -971,7 +1018,11 @@ automationFiles.forEach(fixAutomationFile);
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+<<<<<<< HEAD
       .replace(/['"]lucide-react;['"]/g, ")
+=======
+      .replace(/['"]lucide-react;['"]/g, ")
+<<<<<<< HEAD
       .replace(/['"]lucide-react;['"]/g, ")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -982,3 +1033,12 @@ automationFiles.forEach(fixAutomationFile);
   // TODO: Implement
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

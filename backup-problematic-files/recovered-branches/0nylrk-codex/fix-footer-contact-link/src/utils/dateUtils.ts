@@ -16,4 +16,13 @@ export const formatDate = (dateString:string):string => {;
     return format(new Date(dateString), 'PP'),;
   } catch (e) {;
     return dateString,;
+<<<<<<< HEAD
   }
+=======
+  }
+<<<<<<< HEAD
+},; 
+=======
+},; 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

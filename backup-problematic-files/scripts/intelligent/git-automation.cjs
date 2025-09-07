@@ -1,11 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       if ( {
         ) {
      {}
         await this.performMerge(branchName)} else if ( {
         ) {
      {}
+=======
+"autoMerge"
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
@@ -627,6 +633,7 @@ class IntelligentGitAutomation {
 // Start the Intelligent Git Automation
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
+<<<<<<< HEAD
 
       autoMerge"
       "conflictResolution
@@ -698,9 +705,113 @@ gitAutomation.start().catch(console.error);
       status"
       console.error('Error saving "analysis)
       console.error('Error saving notification")
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      "autoMerge"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      "conflictResolution"
+      "branchProtection"
+      "mergeStrategy"
+      console.error(' Failed to start Git "Automation")
+      console.error('Error scanning "repositories")
+      const remoteUrl = execSync('git remote get-url origin', { "encoding"})
+      const currentBranch = execSync('git branch --show-current', { "encoding"})
+      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad"', { "encoding"})
+      const status = execSync('git status --porcelain', { "encoding"})
+        "name"
+        "lastCommit"
+        "status"
+      console.error('Error getting repository "info")
+        console.error('Error in continuous "monitoring")
+        console.error('Error in full "analysis")
+      execSync('git fetch origin', { "stdio"})
+      const branches = execSync('git branch -r', { "encoding"})
+      console.error('Error checking pull "requests")
+      console.error('Error checking pull "requests")
+      const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding"`})
+      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding"`})
+      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding"`})
+      execSync('git checkout main', { "stdio"})
+      execSync('git checkout main', { "stdio"})
+      execSync('git pull origin main', { "stdio"})
+        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
+        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
+        execSync(`git commit -m "Merge branch '${branchName}' into main"`, { "stdio"`})
+        execSync(`git merge origin/${branchName}`, { "stdio"`})
+        execSync('git push origin main', { "stdio"})
+        execSync('git push origin main', { "stdio"})
+      "strategy"
+        "default"
+      "modified"
+      "added"
+      "deleted"
+      "renamed"
+    console.log(' Change "summary")
+      execSync('git add .', { "stdio"})
+      execSync(`git commit -m "${commitMessage}"`, { "stdio"`})
+        execSync('git push origin main', { "stdio"})
+        execSync('git push origin main', { "stdio"})
+      console.error(' Auto-commit "failed")
+      console.error('Error in full "analysis")
+          "type"
+          "priority"
+          "message"
+          "action"
+          "type"
+          "priority"
+          "message"
+          "action"
+          "type"
+          "priority"
+          "action"
+          "type"
+          "priority"
+          "action"
+      execSync(`git stash push -m "Backup before ${name}"`, { "stdio"`})
+      execSync(`cp -r . ${backupPath}`, { "stdio"`})
+      console.error('Error creating "backup")
+        execSync("git reset --hard HEAD", { "stdio"})
+        execSync("git clean -fd", { "stdio"})
+      console.error('Error restoring "backup")
+      execSync(`git push origin --delete ${branchName}`, { "stdio"`})
+    console.log('Resolution "details")
+      "status"
+      console.error('Error saving "analysis")
+      console.error('Error saving "notification")
+<<<<<<< HEAD
+      console.error('Error loading "history")
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      console.error('Error loading "history")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       console.error('Error loading "history")
 
 =======
+<<<<<<< HEAD
   // TODO: Implement
 
   async saveNotification(notification) {
@@ -714,3 +825,37 @@ gitAutomation.start().catch(console.error);
   // TODO: Implement
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      console.error('Error loading "history")
+      console.error('Error loading "history")
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+      console.error('Error loading "history")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+      console.error('Error loading "history")
+=======
+      console.error('Error loading "history")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

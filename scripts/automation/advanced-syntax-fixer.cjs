@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/""usr/bin/env""
+#!/usr/bin/env
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -31,6 +35,7 @@ console.log( Report "generated": logs/advanced-syntax-fixes.json)
 =======
 #!/usr/bin/env
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const fs = require("fs")
 const path = require("path")
 console.log([INFO]  Starting advanced syntax error fix automation...")
@@ -39,6 +44,9 @@ console.log([INFO]  Starting advanced syntax error fix automation...")
     content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
     const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     content = content.replace(scriptTagRegex, "<script type=""application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")
     const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g""
@@ -75,11 +83,18 @@ const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+<<<<<<< HEAD
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -99,18 +114,28 @@ console.log(" Report "generated: logs/advanced-syntax-fixes.json")
     content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>
   return match.replace(/<script[^>]*><\/script>\s*/, )"
 =======
+>>>>>>> merged-prs-20250907-203621
     content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")"
 >>>>>>> origin/chore/fix-lint-and-merge
 </script>"
 
+<<<<<<< HEAD
+function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`
+=======
 function getAllFiles(dir, extensions = [.jsx, ".tsx", .js)]"
   console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
+>>>>>>> merged-prs-20250907-203621
 });`)}"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,20 +1,17 @@
-#!/usr/bin/env node
+///usr/bin/env node
 
 /**
  * Accessibility Checker for Zion Tech Group
  * This script checks for accessibility compliance and generates recommendations
  */
 
-import fs from 'fs';
-import path from 'path';
-
-console.log('♿ Accessibility Checker for Zion Tech Group');
-console.log('=');
-
+import fs from 'fs'
+import path from 'path'
+console.log('♿ Accessibility Checker for Zion Tech Group')
+console.log('=')
 // Function to check accessibility compliance
 function checkAccessibility() {
-  console.log('\n🔍 Checking accessibility compliance...');
-  
+  console.log('\n🔍 Checking accessibility compliance...')
   const accessibilityChecks = {
     timestamp: new Date().toISOString(),
     standards: 'WCAG 2.1 AA',
@@ -43,7 +40,7 @@ function checkAccessibility() {
         name: 'Focus Management',
         status: 'checking',
         description: 'Validating focus indicators'
-      }
+
     ],
     recommendations: [
       'Ensure minimum color contrast ratio of 4.5:1',
@@ -55,51 +52,35 @@ function checkAccessibility() {
       'Test with screen readers',
       'Provide text alternatives for multimedia'
     ]
-  };
-  
-  return accessibilityChecks;
-}
-
+  }
+  return accessibilityChecks
 // Function to generate accessibility report
 function generateAccessibilityReport() {
-  console.log('\n📋 Generating accessibility report...');
-  
-  const report = checkAccessibility();
-  
-  const reportsDir = path.join(process.cwd(), 'reports');
+  console.log('\n📋 Generating accessibility report...')
+  const report = checkAccessibility()
+  const reportsDir = path.join(process.cwd(), 'reports')
   if (!fs.existsSync(reportsDir)) {
-    fs.mkdirSync(reportsDir, { recursive: true });
-  }
-  
+    fs.mkdirSync(reportsDir, { recursive: true })
   fs.writeFileSync(
     path.join(reportsDir, 'accessibility-report.json'),
     JSON.stringify(report, null, 2)
-  );
-  
-  console.log('✅ Accessibility report created');
-  return report;
-}
-
+  )
+  console.log('✅ Accessibility report created')
+  return report
 // Main execution
 async function main() {
   try {
-    const report = generateAccessibilityReport();
-    
-    console.log('\n🎉 Accessibility check completed successfully!');
-    console.log('\n📊 Accessibility Status:');
+    const report = generateAccessibilityReport()
+    console.log('\n🎉 Accessibility check completed successfully!')
+    console.log('\n📊 Accessibility Status:')
     report.checks.forEach(check => {
-      console.log(`- ${check.name}: ${check.status}`);
-    });
-    
-    console.log('\n♿ Accessibility Recommendations:');
+      console.log(`- ${check.name}: ${check.status}`)
+    })
+    console.log('\n♿ Accessibility Recommendations:')
     report.recommendations.forEach(rec => {
-      console.log(`- ${rec}`);
-    });
-    
+      console.log(`- ${rec}`)
+    })
   } catch (error) {
-    console.error('❌ Error during accessibility check:', error);
-  }
-}
-
+    console.error('❌ Error during accessibility check:', error)
 // Run the script
-main().catch(console.error);
+main().catch(console.error)

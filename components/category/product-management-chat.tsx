@@ -3,8 +3,17 @@
 }
 export default ProductManagementChat
 =======
+<<<<<<< HEAD
+<main> <h1>ProductManagementChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div>) 
+}
+export default ProductManagementChat
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
 import type { NextPage } from 'next';
+<<<<<<< HEAD
+import Link from 'next/link';
+import Seo from '../../components/seo/Seo';
+=======
 
     <div>'
 
@@ -15,11 +24,17 @@ import type { NextPage } from 'next';
 
 
   return (
+<<<<<<< HEAD
 import Link from next/link';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 const ProductManagementChat: NextPage = () => {
   return (
 
+<<<<<<< HEAD
 
   return (
 
@@ -30,6 +45,13 @@ const ProductManagementChat: NextPage = () => {
 
 
   return (
+=======
+<<<<<<< HEAD
+
+  return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <div>
       <Seo title="Product Management description=Product management strategy and insights by Zion." openGraph={{ title: Product Management', description: 'Product management strategy and insights by Zion.' }} />
 =======
@@ -44,6 +66,7 @@ const ProductManagementChat: NextPage = () => {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -59,6 +82,12 @@ const ProductManagementChat: NextPage = () => {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <div>;
 
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
@@ -72,6 +101,14 @@ const ProductManagementChat: NextPage = () => {
 };
 export default ProductManagementChat;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import Link from 'next / link';
 
 import Seo from '../../components / seo / Seo';
@@ -88,9 +125,13 @@ import Seo from '../../components / seo / Seo';
 ;
 export default ProductManagementChat;
 ;
+<<<<<<< HEAD
 
 export default ProductManagementChat;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default ProductManagementChat;
 
       <main>
@@ -102,6 +143,7 @@ export default ProductManagementChat;
   )
 },
 
+<<<<<<< HEAD
 export default ProductManagementChat;
 export default ProductManagementChat;
 <<<<<<< HEAD
@@ -122,3 +164,20 @@ const ProductManagementChat: NextPage;
 =======
 export default ProductManagementChat;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+export default ProductManagementChat
+
+export default ProductManagementChat;
+export default ProductManagementChat;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default ProductManagementChat;
+
+
+export default ProductManagementChat;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

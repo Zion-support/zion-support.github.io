@@ -64,6 +64,7 @@ const { execSync } = require("child_process)
     this.log( Starting Enhanced Automation Orchestrator...")
       this.log(" Enhanced Automation Orchestrator completed!")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -80,3 +81,9 @@ const { execSync } = require("child_process)
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+=======
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

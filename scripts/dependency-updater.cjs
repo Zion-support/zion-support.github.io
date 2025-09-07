@@ -1,5 +1,18 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+const fs = require('fs')
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+
+
+
+const { execSync } = require('child_process')
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -61,6 +74,7 @@ const fs = require('fs')
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
     const output = execSync('npm outdated --json', { "encoding"})
@@ -76,6 +90,15 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
+<<<<<<< HEAD
+
+    console.log('\n "Recommendations")
+    console.log('\n "Recommendations")
+    console.log('\n "Recommendations")
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,3 +130,4 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

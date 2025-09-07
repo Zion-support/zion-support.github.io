@@ -50,7 +50,10 @@
             text: "Create First Milestone",;
             onClick: (,) => setShowAddForm(true);
           } : undefined;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         }
 
   return (
@@ -115,6 +118,11 @@ if ( {) {
         title=No Milestones Yet";
         description = {is_client ?;
 <<<<<<< HEAD
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet.", }
+        action={is_client ?;
+=======
+<<<<<<< HEAD
           "Break down the project into manageable milestones to track progress and payments. :;
           No milestones have been created for this project yet." }
         action={is_client ?;
@@ -123,11 +131,15 @@ if ( {) {
           "Break down the project into manageable milestones to track progress and payments." :;
           "No milestones have been created for this project yet.", }
         action={is_client ?;
+>>>>>>> merged-prs-20250907-203621
           {
             text: "Create First Milestone",
             on_click: (, ) => setShowAddForm (true);
           } : undefined;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         }
       />);
   }
@@ -172,12 +184,15 @@ if ( {) {
 
             <AddMilestoneForm
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}
 ";<AddMilestoneForm;
 import React, { useState } from 'react;
 import { Milestone,MilestoneStatus,MilestoneActivity} from @/hooks/useMilestones';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import {
   Milestone,
@@ -200,10 +215,13 @@ import { AddMilestoneForm  } from './AddMilestoneForm';
 import { Button  } from @/components/ui/button;
 import { Card, CardContent  } from '@/components/ui/card';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const MilestonesList: React.FC<MilestonesListProps> = ({
 // lucide-react doesnt export PlusIcon, use our icon wrapper
 import { Plus } from lucide-react'
 =======
+>>>>>>> merged-prs-20250907-203621
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
 >>>>>>> origin/chore/fix-lint-and-merge

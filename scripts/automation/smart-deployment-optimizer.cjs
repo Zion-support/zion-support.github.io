@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -25,8 +28,11 @@ console.log("" Starting Smart Deployment Optimizer...")
   fs.mkdirSync(this.reportDir, { recursive})
         this.reportDir,deployment-history.json"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
   console.log(""No historical deployment data found, starting fresh")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
@@ -173,7 +179,10 @@ console.log("" Starting Smart Deployment Optimizer...")
 =======
       this.reportDir,deployment-optimization-${Date.now()}.json"
     const historicalPath = path.join(this.reportDir, "deployment-history.json")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       process.cwd(),deployment-optimization-report.json"
 // console.log(⚠ Build testing failed": ")
   console.log( Generating deployment optimization report...)
@@ -187,8 +196,11 @@ console.log("" Starting Smart Deployment Optimizer...")
       recommendations
       this.reportDir,deployment-optimization-${Date.now()}.json"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const historicalPath = path.join(this.reportDir, "deployment-history.json")
       process.cwd(),deployment-optimization-report.json"
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -216,6 +228,12 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+
+  console.error(" Failed to start smart deployment "optimizer": ")
+  console.error(" Failed to start smart deployment "optimizer": ")
+  console.error(" Failed to start smart deployment "optimizer": ")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -235,6 +253,7 @@ process.on("SIGTERM")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
           if (!htmlContent.includes("<title>)
 </title>"`;

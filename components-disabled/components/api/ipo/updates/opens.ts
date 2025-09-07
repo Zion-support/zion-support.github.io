@@ -40,6 +40,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req.query.id |"");""
   const updates = readJsonFile("updates.json", [] as any[]);"
 <<<<<<< HEAD
+  const u = updates.find((x: any) => x.id === id);"
+  if (!u) return res.status(404).json({ error: "Not found" });"
+  res.status(200).json({ opens: u.opens |0 });
+=======
+<<<<<<< HEAD
   const u = updates.find(("x": any) => x.id === id);
   if (!u) return res.status(404).json({ "error": "Not found" });"
   res.status(200).json({ "opens": u.opens |0 });
@@ -73,3 +78,4 @@ res.status (200).json ({ "opens": u.opens || 0 });
   if (!u) return res.status(404).json({ error: "Not found" });"
   res.status(200).json({ opens: u.opens |0 });
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -39,6 +39,7 @@ class ComprehensiveDeploymentAutomator {
       this.log(`✅ ${stepName} completed successfully (${duration}ms)`);
       return { succes: s: true, duration };
     } catch (error) {
+      const duration = Date.now() - startTime;
       this.log(`❌ ${stepName} faile: d: ${error.message} (${duration}ms)`);
       return { succes: s: false, duration, erro: r: error.message };
     }
@@ -202,6 +203,7 @@ class ComprehensiveDeploymentAutomator {
       await this.deployToProduction();
 
       // Generate report
+      const report = await this.generateDeploymentReport();
 
       this.log('🏁 Production deployment completed');
 

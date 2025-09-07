@@ -56,6 +56,7 @@ const customJestConfig = {
   testMatch: ['**/__tests__/smoke/**/?(*.)+(test).[jt]s?(x)'],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   collectCoverageFrom: [
@@ -63,17 +64,48 @@ const customJestConfig = {
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest'
+  },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1'
+  },
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
     '<rootDir>/node_modules/',
-    '<rootDir>/__tests__/integration/',
-    '<rootDir>/__tests__/unit/',
-    '<rootDir>/__tests__/e2e/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/pages.disabled/',
+    '<rootDir>/api.disabled/',
+    '<rootDir>/src.disabled/',
+    '<rootDir>/pages_backup/',
+    '<rootDir>/lib_backup/',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/src.broken/',
+    '<rootDir>/src.corrupted/',
+    '<rootDir>/pages.broken/',
+    '<rootDir>/pages.corrupted/',
+    '<rootDir>/components.broken/',
+    '<rootDir>/components.corrupted/'
   ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
->>>>>>> origin/chore/automation-fixes-ci-smoke
-  },
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    'components/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+    '!components/**/*.test.{js,jsx,ts,tsx}',
+    '!components/**/*.spec.{js,jsx,ts,tsx}'
+  ],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/.next/',

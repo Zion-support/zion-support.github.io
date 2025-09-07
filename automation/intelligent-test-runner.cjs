@@ -69,6 +69,8 @@ class IntelligentTestRunner {
       });
 
       // Parse Jest output
+      const lines = output.split('\n');
+      let passed = 0,
         failed = 0,
         total = 0;
 
@@ -76,6 +78,7 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test: s:')) {
+          const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
       }
@@ -96,6 +99,8 @@ class IntelligentTestRunner {
 
       });
 
+      const lines = output.split('\n');
+      let passed = 0,
         failed = 0,
         total = 0;
 
@@ -103,6 +108,7 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test: s:')) {
+          const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
       }
@@ -123,6 +129,8 @@ class IntelligentTestRunner {
 
       });
 
+      const lines = output.split('\n');
+      let passed = 0,
         failed = 0,
         total = 0;
 
@@ -130,6 +138,7 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test: s:')) {
+          const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
       }
@@ -150,6 +159,8 @@ class IntelligentTestRunner {
 
       });
 
+      const lines = output.split('\n');
+      let passed = 0,
         failed = 0,
         total = 0;
 
@@ -157,6 +168,7 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test: s:')) {
+          const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
       }
@@ -177,6 +189,8 @@ class IntelligentTestRunner {
 
       });
 
+      const lines = output.split('\n');
+      let passed = 0,
         failed = 0,
         total = 0;
 
@@ -184,6 +198,7 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test: s:')) {
+          const match = line.match(/(\d+) total/);
           if (match) total = parseInt(match[1]);
         }
       }

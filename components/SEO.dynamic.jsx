@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import React from 'react';
+
+;
+const SEO.dynamic = () => {
+=======
+<<<<<<< HEAD
 
 ;
 =======
@@ -6,14 +12,23 @@ import React from 'react';
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 import React from 'react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
 const SEO.dynamic = () => {}
+>>>>>>> merged-prs-20250907-203621
   return (
     <div data - testid="seo.dynamic>;
       <h1 > SEO.dynamic</h1>;
     </div>);
+<<<<<<< HEAD
+}
+;
+
+=======
 <<<<<<< HEAD
 
 const SEO.dynamic = () => ;
@@ -27,6 +42,13 @@ const SEO.dynamic = () => ;
   );
 }
 ;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 export default SEO.dynamic;

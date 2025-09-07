@@ -5,6 +5,47 @@ const path = require(path');
 const glob = require('glob);
 
 
+<<<<<<< HEAD
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix missing closing brace in metadata and missing function declaration
+    if (content.includes('export const metadata = {') && !content.includes('export default function')) {
+      // Find the metadata object and add missing closing brace and function declaration
+      const metadataMatch = content.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/);
+      if (metadataMatch) {
+        const beforeMetadata = content.substring(0, content.indexOf('export const metadata = {'));
+        const afterMetadata = content.substring(content.indexOf('export const metadata = {'));
+        
+        // Extract the metadata content
+        const metadataContent = afterMetadata.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/)[0];
+        
+        // Find where the JSX starts (look for <div)
+        const jsxStart = afterMetadata.search(/^\s*<div/);
+        if (jsxStart !== -1) {
+          const jsxContent = afterMetadata.substring(jsxStart);
+          
+          // Get the function name from the file path
+          const fileName = path.basename(filePath, '.tsx');
+          const functionName = fileName.split('-').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+          ).join('') + 'Page';
+          
+          // Reconstruct the file
+          content = beforeMetadata + 
+            metadataContent + '};\n\n' +
+            `export default function ${functionName}() {\n` +
+            '  return (\n' +
+            jsxContent.replace(/^\s*/, '    ') + '\n' +
+            '  );\n' +
+            '}';
+          
+          modified = true;
+        }
+
+=======
   try {
     let content = fs.readFileSync(filePath, utf8');
     let modified = false;
@@ -152,6 +193,7 @@ function processDirectory(dirPath) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
     // Fix merge conflict markers
+>>>>>>> merged-prs-20250907-203621
     // Fix import statements with commas instead of semicolons
     const importRegex = /^import\s+.*?,\s*$/gm;
     const matches = content.match(importRegex);
@@ -168,7 +210,6 @@ function processDirectory(dirPath) {
       const fixed = match.replace(/(\w+)\s*:\s*([^]+),\s*$/gm, '$1: $2;');
       if (fixed !== match) {
         modified = true;
-
         return fixed;
       }
       return match;
@@ -279,9 +320,6 @@ function processDirectory(dirPath) {
     }
 
     return false;
-  } catch (error) {
-  return false;
-}
 
 // Function to fix specific file types
 function fixFile(filePath) {
@@ -307,6 +345,19 @@ function fixFile(filePath) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
+<<<<<<< HEAD
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixSyntaxErrors(filePath)) {
+        console.log(`Fixed syntax errors in: ${filePath}`);
+        fixedCount++;
+      }
+    });
+  });
+
+  console.log(`\nProcessed ${totalFiles} files`);
+  console.log(`Fixed syntax errors in ${fixedFiles} files`);
+=======
       // Skip node_modules and other common directories
       if (!['node_modules', '.next', 'dist', 'out'].includes(file)) {
         fixedCount += processDirectory(filePath);
@@ -319,6 +370,7 @@ function fixFile(filePath) {
   }
   
   return fixedCount;
+>>>>>>> merged-prs-20250907-203621
 }
 
 // Process the workspace

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { Sun, Moon, Monitor  } from 'lucide-react';
 import { useTheme  } from './ThemeProvider';
@@ -30,6 +32,7 @@ const ThemeToggle: React.FC = () => {const { theme, setTheme }  = useTheme()cons
 import React, { useState, useEffect } from 'react;
 import { Sun, Moon } from lucide-react';
 =======
+>>>>>>> merged-prs-20250907-203621
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -101,7 +104,11 @@ const ThemeToggle: React.FC = () => {
     </div>
   );
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
 }
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

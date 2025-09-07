@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint - env node */;
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -11,3 +12,10 @@ module.exports = next_config,
 const nextConfig = {}
   /* config options here */
 };
+=======
+
+/* eslint-env node */;
+/** @type {import('next').NextConfig} */;'
+const nextConfig = {/* config options here */;
+}module.exports = nextConfig;
+>>>>>>> merged-prs-20250907-203621

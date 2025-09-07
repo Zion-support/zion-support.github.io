@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,19 +12,26 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Advanced Monitoring Dashboard;
- * Real-time monitoring of PM2 processes and system health;
+ * Advanced Monitoring Dashboard
+ * Real-time monitoring of PM2 processes and system health
  */
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 
 
+
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -62,6 +71,7 @@ const path = require('path')
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 const express = require('express')
 
 const fs = require('fs')
@@ -71,13 +81,25 @@ const path = require('path')
 <<<<<<< HEAD
                 "status"
                 console.error('Error fetching "data")
+=======
+<<<<<<< HEAD
+                "status"
+                console.error('Error fetching "data")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
                 "
+<<<<<<< HEAD
+                "
+                "
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -102,3 +124,4 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -72,6 +72,7 @@ const os = require('os')
         '15min'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -84,3 +85,9 @@ const os = require('os')
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+=======
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

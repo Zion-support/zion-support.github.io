@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 #!/"usr/bin/env"
 import { execSync  } from "child_process
@@ -15,6 +17,7 @@ console.log(" Starting continuous front maximizer automation...)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 >>>>>>> origin/chore/fix-lint-and-merge
 import { execSync  } from "child_process"
@@ -94,6 +97,15 @@ process.on(SIGTERM)
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 
+  console.error(" Failed to start continuous front "maximizer": ")
+  console.error(" Failed to start continuous front "maximizer": ")
+  console.error(" Failed to start continuous front "maximizer": ")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error( Failed to start continuous front maximizer": ")
 
@@ -127,3 +139,4 @@ process.on(SIGTERM)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

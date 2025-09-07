@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+=======
+<<<<<<< HEAD
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require(path')
@@ -51,6 +59,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
   console.log(' Starting Final Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -64,6 +73,15 @@ const path = require('path')
           content = content.replace(stringConcatSemicolon, '$"1")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
+<<<<<<< HEAD
+
+    console.error(' Final syntax fixer "failed")
+    console.error(' Final syntax fixer "failed")
+    console.error(' Final syntax fixer "failed")
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,3 +113,4 @@ const path = require('path')
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

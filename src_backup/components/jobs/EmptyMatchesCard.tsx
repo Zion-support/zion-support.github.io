@@ -45,6 +45,8 @@ export function EmptyMatchesCard({
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto>      <Button 
         onClick = {onRefresh}
         disabled = {isProcessing}
@@ -60,6 +62,7 @@ export interface EmptyMatchesCardProps {
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
 
@@ -86,6 +89,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         {isProcessing ? (
           <>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto>
@@ -170,6 +175,7 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           </>
         ) : (
           <>
@@ -192,5 +198,10 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
         )}
       </Button>
     </Card>
+<<<<<<< HEAD
+  )
+}
+=======
   );
 }
+>>>>>>> merged-prs-20250907-203621

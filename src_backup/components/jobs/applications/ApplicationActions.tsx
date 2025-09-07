@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 return (<div className='flex items-center justify-end gap-2>;import Link from next/link';
@@ -78,6 +80,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 return (
     <div className='flex items-center justify-end gap-2>;
 
@@ -154,6 +157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </DropdownMenuContent>
       </DropdownMenu>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           >;
             Shortlist;
           </DropdownMenuItem>;
@@ -197,11 +202,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "hired)}>;
             Hire;
@@ -231,11 +239,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick = {() => onStatusChange(application && application.id, "hired)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             onClick={() => onStatusChange(application && application.id, 'rejected')}
             className=text-red-600          >            onClick={() => onStatusChange(application && application.id, hired")}
@@ -295,12 +306,15 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
           >;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             className=text - red - 600";>;
             Reject;
@@ -309,6 +323,7 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
       </DropdownMenu>;)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 
       <Button variant=default size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
@@ -330,6 +345,9 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
     </div>
   );
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
     </div>)}<Button variant=default size='sm' asChild>;
         <Link href={`/messages?talentId=${application.talent_id}`}>;
           Contact;
@@ -341,3 +359,4 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

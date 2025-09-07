@@ -18,11 +18,14 @@
       this.set_state ({ is_retrying: false });
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       }return (}
       return (// Reset error state after a brief delay;
       this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false})}, 500)} catch (retry_error) {logErrorToProduction (Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   }
   render () {
     // Check condition
@@ -44,6 +47,8 @@ if ( {) {
 
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       return (<div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className=w - full max - w-md space - y-4>;
             <Alert variant='destructive'>;
@@ -51,12 +56,19 @@ if ( {) {
                 {isNetworkError ? (<WifiOff className='h - 4 w - 4' />) : (<RefreshCw className=h - 4 w - 4 />)}<AlertTitle>{isNetworkError;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
                     : Something went wrong}'
                 </AlertTitle>;
+<<<<<<< HEAD
+              </div>;
+              </AlertDescription>;
+            </Alert>;
+
+=======
 <<<<<<< HEAD
               </div>;</AlertDescription>;
             </Alert>;<div className="flex min-h-screen items-center justify-center p-4>;
@@ -89,6 +101,7 @@ if ( {) {
               </AlertDescription>;
             </Alert>;
 
+>>>>>>> merged-prs-20250907-203621
         <div className="flex min-h-screen items-center justify-center p-4">
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -99,9 +112,12 @@ if ( {) {
                   <WifiOff className=h-4 w-4" />
                 ) : (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   <RefreshCw className="h-4 w-4 />
                 )}
@@ -109,10 +125,13 @@ if ( {) {
                   {isNetworkError ? Connection Problem' : 'Something went wrong}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 </AlertTitle>
               </div>
               <AlertDescription className=mt-2">
@@ -128,6 +147,8 @@ if ( {) {
               </AlertDescription>
             </Alert>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
             <div className='flex flex-col gap-2>;
@@ -136,6 +157,7 @@ if ( {) {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 onClick={this.handleRetry}
 
@@ -164,7 +186,10 @@ if ( {) {
                   </>
                 )}
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className=w-full""
@@ -180,16 +205,23 @@ if ( {) {
               >
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 Reload Page
 
               </Button>
             </div>
 
             {!this.state.isOnline && (
+<<<<<<< HEAD
+
+              <AlertDescription className='mt - 2'>;
+=======
 <<<<<<< HEAD
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
@@ -230,6 +262,7 @@ if ( {) {
 
               <AlertDescription className='mt - 2'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 {isNetworkError;
                   ? !this.state.is_online;
                     ? You appear to be offline. Please check your internet connection.';
@@ -243,9 +276,12 @@ if ( {) {
                 disabled={this.state.is_retrying}
                 className='w - full'              >;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 {this.state.is_retrying ? (<>;
                     <RefreshCw className=mr - 2 h - 4 w - 4 animate - spin />;
 =======
+>>>>>>> merged-prs-20250907-203621
                 {this.state.is_retrying ? (
                   <>;
                     <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
@@ -264,6 +300,13 @@ if ( {) {
                 Reload Page;
               </Button>;
             </div>;
+<<<<<<< HEAD
+            {!this.state.is_online && (
+              <div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
+                <WifiOff className='h - 4 w - 4' />;
+                <span > Offline</span>;
+              </div>)}
+=======
 <<<<<<< HEAD
             {!this.state.is_online && (<div className=flex items - center justify - center gap - 2 text - sm text - muted - foreground>;
                 <WifiOff className='h - 4 w - 4' />;
@@ -285,6 +328,7 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
                 <WifiOff className='h - 4 w - 4' />;
                 <span > Offline</span>;
               </div>)}
+>>>>>>> merged-prs-20250907-203621
             {process.env.NODE_ENV === 'development' && this.state.error && ('
 >>>>>>> origin/chore/fix-lint-and-merge
     return this.props.children;
@@ -309,6 +353,8 @@ export const useApiErrorHandler = () =>: any {
                 Reload Page;
               </Button>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             </div>;{!this && this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
             </div>;{!this && this.state.isOnline && (<div className=flex items-center justify-center gap-2 text-sm text-muted-foreground>;
                 <WifiOff className='h-4 w-4' />;
@@ -319,6 +365,7 @@ export const useApiErrorHandler = () =>: any {
                   Debug Info (Development Only)</summary>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </div>;
             {!this && this.state.isOnline && (;
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
@@ -339,6 +386,8 @@ export const useApiErrorHandler = () =>: any {
             )}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className=mt-4 rounded border p-2 text-xs>
                 <summary className="cursor-pointer font-medium">
@@ -356,6 +405,7 @@ export const useApiErrorHandler = () =>: any {
                 <pre className="mt-2 whitespace-pre-wrap break-all">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
@@ -365,9 +415,12 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             )}},return { handleApiError }</div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             )}
 
           </div>;
@@ -378,6 +431,8 @@ export const useApiErrorHandler = () =>: any {
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     Sentry && Sentry.withScope(scope => {;
       scope && scope.setTag('source', 'useApiErrorHandler');
@@ -434,12 +489,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       scope.setTag(source, 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     });
   }
 
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
 }
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

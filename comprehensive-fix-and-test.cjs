@@ -259,6 +259,8 @@ module.exports = [
 
     // Create a performance monitoring script
     const performanceScript = `#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
@@ -321,6 +323,7 @@ console.log('Performance report generated:', reportPath);
 
     // Create a comprehensive test runner
     const testRunnerScript = `#!/usr/bin/env node
+const { execSync } = require('child_process');
 
 class TestRunner {
   constructor() {
@@ -377,6 +380,7 @@ runner.runAllTests().catch(console.error);
     const endTime = Date.now();
     const duration = endTime - this.startTime;
 
+    const report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       fixes: this.results.fixes,

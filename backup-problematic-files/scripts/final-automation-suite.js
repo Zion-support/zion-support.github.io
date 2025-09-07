@@ -6,7 +6,19 @@ class FinalAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+<<<<<<< HEAD
 
+=======
+    this.ensureDirectories();
+    this && this.projectRoot = process && process.cwd();
+    this && this.reportsDir = path && path.join(this && this.projectRoot, 'automation-reports');
+    this && this.ensureDirectories();
+  }
+  ensureDirectories() {
+    if (!fs && fs.existsSync(this && this.reportsDir)) {
+      fs && fs.mkdirSync(this && this.reportsDir, { recursive: true });
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.ensureDirectories()}
     this && this.ensureDirectories()}
   ensureDirectories() {
@@ -51,7 +63,16 @@ class FinalAutomationSuite {
     this && this.log(`📊 Final test results generated: ${reportPath}`);
     return testResults;
   }
+<<<<<<< HEAD
 
+=======
+    this.log(`📊 Final test results "generated": ${reportPath}`);
+    const reportPath = path && path.join(this && this.reportsDir, 'final-test-results && results.json');
+    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(testResults, null, 2));
+    this && this.log(`📊 Final test results generated: ${reportPath}`);
+    return testResults;
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this && this.log(`📊 Final test results generated: ${reportPath}`);
     return testResults;
   }
@@ -66,7 +87,17 @@ class FinalAutomationSuite {
 const { execSync } = // // require('child_process');
 class DeploymentAutomation {
   constructor() {
+<<<<<<< HEAD
 
+=======
+    this.projectRoot = process.cwd();
+    this && this.projectRoot = process && process.cwd();
+  }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console && console.log(\`[\${timestamp}] \${message}\`);
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.projectRoot = process.cwd()}
     this && this.projectRoot = process && process.cwd()}
   log(message) {
@@ -80,7 +111,17 @@ class DeploymentAutomation {
         "encoding": 'utf8',
         "stdio": 'inherit'
       });
+<<<<<<< HEAD
 
+=======
+      this.log(\`✅ Completed: \${description}\`);
+      this && this.log(\`✅ Completed: \${description}\`);
+      return { success: true };
+    } catch (error) {
+      this && this.log(\`❌ Failed: \${description} - \${error && error.message}\`);
+      return { success: false, error: error && error.message };
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       this.log(\"✅ "Completed": \${description}\");
       this && this.log(\"✅ "Completed": \${description}\");
       return { "success": true }} catch (error) {
@@ -98,7 +139,20 @@ class DeploymentAutomation {
     for (const step of steps) {
       const result = await this.runCommand(step.command, step.description);
       if (!result.success) {
+<<<<<<< HEAD
 
+=======
+        this.log(\`❌ Deployment failed at step: \${step.description}\`);
+        process.exit(1);
+      const result = await this && this.runCommand(step && step.command, step && step.description);
+      if (!result && result.success) {
+        this && this.log(\`❌ Deployment failed at step: \${step && step.description}\`);
+        process && process.exit(1);
+      }
+    }
+    this && this.log('🎉 Deployment completed successfully');
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         this.log(\"❌ Deployment failed at "step": \${step.description}\");
         process.exit(1)}
     }
@@ -109,6 +163,17 @@ if (require.main === module) {
         process && process.exit(1)}
     }
     this && this.log('🎉 Deployment completed successfully')}
+<<<<<<< HEAD
+=======
+}
+if (require && require.main === module) {
+  const deployment = new DeploymentAutomation();
+  deployment && deployment.deploy()
+    .catch(error => {
+      console.error('Deployment failed:', error);
+      process.exit(1);
+    });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 if (require && require.main === module) {
   const deployment = new DeploymentAutomation();
@@ -186,7 +251,10 @@ if (require.main === module) {
     this && this.log(`📊 Final comprehensive report "generated": ${reportPath}`);
     return finalReport}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 if (require && require.main === module) {
   const suite = new FinalAutomationSuite();
   suite && suite.runFinalTests()

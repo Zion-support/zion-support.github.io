@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -82,8 +85,11 @@ console.log(""� Starting Smart Documentation Generator...")
 // console.log( Codebase structure analysis completed)
   console.log(" Identifying missing documentation...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
     const structure = this.documentationMetrics.docPatterns.get("structure")
   "type": "component"
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -113,7 +119,10 @@ console.log(""� Starting Smart Documentation Generator...")
         const content = fs.readFileSync(servicePath, "utf8")
   const servicePath = path.join(process.cwd(), "src"
         const content = fs.readFileSync(servicePath, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           this.docsDir,api"
   fs.mkdirSync(apiDocsDir, { recursive})
   "type"
@@ -126,12 +135,18 @@ console.log(""� Starting Smart Documentation Generator...")
   console.log("⚛ Generating component documentation...)
     console.log("⚛ Generating component documentation...")
 <<<<<<< HEAD
+    const structure = this.documentationMetrics.docPatterns.get("structure")
+  const componentPath = path.join(process.cwd(), "src"
+        const content = fs.readFileSync(componentPath, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
     const structure = this.documentationMetrics.docPatterns.get("structure")
   const componentPath = path.join(process.cwd(), "src"
         const content = fs.readFileSync(componentPath, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           this.docsDir,components"
   fs.mkdirSync(componentsDocsDir, { "recursive})
   type": "component
@@ -272,7 +287,10 @@ npm run dev\"\"\"
 This project uses intelligent PM2 automations for continuous "improvement"
 View automation reports in the project root:- \"ai-analysis-report.json\" - AI code analysis results- \"deployment-optimization-report.json\" - Deployment optimization metrics- \"test-generation-report.json\" - Test generation statistics- \"refactoring-report.json\" - Code refactoring progress- \"documentation-report.json\"
     const lines = content.split("\n")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         line.includes("export function")
         (line.includes(export const)
           line.includes("=")
@@ -285,8 +303,12 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
+<<<<<<< HEAD
+  generateServiceExamples($2) {return "\"\"}
+=======
   generateServiceExamples(serviceName) {return "\"\"}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "name": `Example
   description: "Test item"}
 });\\\""
@@ -317,17 +339,23 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
+<<<<<<< HEAD
+  generateServiceExamples($2) {return "\"\"}
+=======
   generateServiceExamples(serviceName) {return "\"\"}
+>>>>>>> merged-prs-20250907-203621
   "name": "Example"
   "description": "Test item"}
 });\`\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-  generateComponentExamples(componentName) {return "\"\"}
-  generateComponentExamples(componentName) {return `\"\"`}
+  generateComponentExamples($2) {return "\"\"}
+  generateComponentExamples($2) {return `\"\"`}
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -335,6 +363,7 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -368,11 +397,21 @@ process.on("SIGTERM")
 =======
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start smart documentation "generator")
+<<<<<<< HEAD
+  console.error(" Failed to start smart documentation "generator")
+  console.error(" Failed to start smart documentation "generator")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -390,3 +429,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,14 +12,19 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""� Starting continuous security audit automation...")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log(""� Starting continuous security audit automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running npm security audit..."`)
@@ -70,6 +77,18 @@ process.on()
       "summary": "Security audit completed"
       "status": "completed"
     const reportPath = path.join(process.cwd(), "security-audit-report.json"
+<<<<<<< HEAD
+    console.log(" Continuous security audit completed successfully")
+  console.error(" Continuous security audit "failed": ")
+  "
+process.on(")
+  console.log("ℹ  No additional security scan available")
+  "timestamp"
+      "summary": "Security audit completed"
+      "status": "completed"
+    const reportPath = path.join(process.cwd(), "security-audit-report.json"
+=======
+>>>>>>> merged-prs-20250907-203621
     console.log(" Continuous security audit completed successfully")
   console.error(" Continuous security audit "failed": ")
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -79,6 +98,15 @@ process.on(SIGINT)
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on(SIGTERM)
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+
+  console.error(" Failed to start continuous security "audit")
+  console.error(" Failed to start continuous security "audit")
+  console.error(" Failed to start continuous security "audit")
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -113,3 +141,4 @@ process.on(SIGTERM)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

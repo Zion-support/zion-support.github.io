@@ -21,11 +21,14 @@ interface MetadataFormProps {
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
@@ -48,6 +51,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
                     <Input
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       placeholder=Enter app title"
 
@@ -189,6 +194,7 @@ if ( {) {$2;
                     <Textarea
                       maxLength={platform === ios" ? 30 : 50}
 =======
+>>>>>>> merged-prs-20250907-203621
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -253,6 +259,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                       maxLength = {maxDescriptionLength}
                 </FormItem>)}
 <<<<<<< HEAD
+            />;
+            <FormField;
+=======
+<<<<<<< HEAD
                   <FormControl>;<Textarea;
                       placeholder="Detailed description of your app;
                       className=min-h-32";
@@ -265,11 +275,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 =======
             />;
             <FormField;
+>>>>>>> merged-prs-20250907-203621
               control = {control, }
               name="long_description";
               render={({ field }: { field: any }, ) => (
                 <FormItem>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   <FormLabel > Long Description</FormLabel>;
                   <FormControl>;
                     <Textarea;
@@ -283,9 +297,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormDescription>;
 
                     <Textarea
+<<<<<<< HEAD
+                      placeholder="Detailed description of your app"
+                      className="min-h-32"
+                      maxLength = {maxDescriptionLength,}
+=======
                       placeholder=Detailed description of your app"
                       className="min-h-32
                       maxLength = {maxDescriptionLength}
+>>>>>>> merged-prs-20250907-203621
 
               <Input
 
@@ -307,6 +327,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   </Badge>
                 ))}
 
+<<<<<<< HEAD
+    </Card>);
+},
+;
+=======
 <<<<<<< HEAD
                   <FormDescription>;/>;<div>;
               <FormLabel htmlFor="keywords>Keywords</FormLabel>;<Input;
@@ -340,11 +365,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> origin/chore/fix-lint-and-merge
     </Card>);
 },
+>>>>>>> merged-prs-20250907-203621
 
                       {...field}
                     />
                   </FormControl>
                 </FormItem>
+<<<<<<< HEAD
+              )}
+=======
 <<<<<<< HEAD
                     <Input;
                       placeholder=e && e.g., 1 && 1.0.0";
@@ -429,3 +458,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               )}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

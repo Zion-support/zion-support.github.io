@@ -4,7 +4,10 @@ import React, { useEffect, useRef } from 'react;
 import React, { useEffect, useRef } from 'react';
 const ParticleBackground: React.FC = () => {,
   const canvasRef = useRef<HTMLCanvasElement>(null);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 interface Particle {
   x: number;
@@ -16,6 +19,9 @@ interface Particle {
 }
 
 <<<<<<< HEAD
+const ParticleBackground: React.FC = () => {
+=======
+<<<<<<< HEAD
 const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
   particleCount = 50,
   className = '
@@ -23,6 +29,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
 =======
 const ParticleBackground: React.FC = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>();
@@ -52,6 +59,8 @@ const ParticleBackground: React.FC = () => {
     const particleCount = 50;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const createParticles = () => {
       particles.length = 0;
       for (let i = 0; i < particleCount; i++) {
@@ -69,6 +78,7 @@ const ParticleBackground: React.FC = () => {
     const updateParticles = () => {
       particles.forEach(particle => {}
 =======
+>>>>>>> merged-prs-20250907-203621
     };
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -87,10 +97,13 @@ particles.forEach((particle) => {
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       });
     }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -105,6 +118,8 @@ particles.forEach((particle) => {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -118,6 +133,7 @@ particles.forEach((particle) => {
     }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             if (distance < 100) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
@@ -133,11 +149,14 @@ particles.forEach((particle) => {
       animationId = requestAnimationFrame(animate);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       updateParticles();
       drawParticles();
       animationId = requestAnimationFrame(animate);
     }
 =======
+>>>>>>> merged-prs-20250907-203621
       animationRef.current = requestAnimationFrame(animate);
     };
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -153,6 +172,8 @@ particles.forEach((particle) => {
 
     return () => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       cancelAnimationFrame(animationId);
       window.removeEventListener(resize', resizeCanvas);
     }
@@ -165,6 +186,7 @@ particles.forEach((particle) => {
       style={{ zIndex: -1 }}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

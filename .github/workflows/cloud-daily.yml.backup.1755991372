@@ -14,14 +14,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+name: Cloud Daily Automations
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
+on:
+  schedule:
+    - cron: '15 3 * * *'
+  workflow_dispatch: {}
 
+permissions:
+  contents: write
+
+concurrency:
+  group: cloud-daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           node-version: 20
           cache: 'npm'
 

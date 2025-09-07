@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -81,6 +84,27 @@ console.log(" Running Lighthouse performance tests...")
     console.log(" Continuous performance monitoring completed successfully")
   console.error( Continuous performance monitoring "failed": ")
     // Don"
+<<<<<<< HEAD
+// console.log("⚠  Lighthouse tests failed but continuing...")
+    console.log("� Checking build output for large files...")
+    const distPath = path.join(process.cwd(), "dist"
+// console.log("⚠  Large files found in build "output": ")
+  console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB"
+// console.log(" No excessively large files found")
+    console.log(" Checking for unused dependencies...")
+  execSync("npx depcheck", { "stdio": "inherit"})
+// console.log("ℹ  Dependency check not available")
+    console.log(" Generating performance report...")
+  "timestamp"
+      "buildSize"
+      "largeFiles"
+      "summary": "Performance monitoring completed"
+    const reportPath = path.join(process.cwd(), "performance-report.json"
+    console.log(" Continuous performance monitoring completed successfully")
+  console.error( Continuous performance monitoring "failed": ")
+    // Don"
+=======
+>>>>>>> merged-prs-20250907-203621
   const fullPath = path.join(currentDir, ")
   "path": path.relative(process.cwd()"
             "size"
@@ -117,11 +141,21 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start continuous performance "monitoring")
+<<<<<<< HEAD
+  console.error(" Failed to start continuous performance "monitoring")
+  console.error(" Failed to start continuous performance "monitoring")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -139,3 +173,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

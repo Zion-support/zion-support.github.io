@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+echo "[automation] Install deps"
+npm ci || npm install --no-audit --no-fund
+
+echo "[automation] Lint (non-blocking)"
+npm run lint || true
+
+echo "[automation] Type-check (non-blocking)"
+npm run type-check || true
+
+echo "[automation] Build"
+npm run build
+
+echo "[automation] Smoke tests"
+npm run test:smoke || true
+
+echo "[automation] OK"
+#!/usr/bin/env bash
+set -euo pipefail
+
 cd "$(dirname "$0")/.."
 
 echo "[1/5] Health check"

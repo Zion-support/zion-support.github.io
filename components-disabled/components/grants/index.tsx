@@ -30,6 +30,19 @@ export default function GrantsPage() {;
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;
         <div className='flex gap-2'>;
           <Link href='/grants/apply'>;
+<<<<<<< HEAD
+
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;
+          ;
+          <Link href='/incubator'>;
+
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+</a>
+
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+
+  useEffect(() => {;
+=======
 
             <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;
           ;
@@ -62,6 +75,7 @@ export default function GrantsPage() {;
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
   useEffect(() => {;
+>>>>>>> merged-prs-20250907-203621
     const params = new URLSearchParams();
     if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
     if (filters && filters.status) params && params.set('status', filters && filters.status);
@@ -70,7 +84,10 @@ export default function GrantsPage() {;
     fetch(`/api/grants?${params && params.toString()}`);
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       .catch(() => setItems([]));  }, [filters]);
   return ()
       .catch(() => setItems([]))

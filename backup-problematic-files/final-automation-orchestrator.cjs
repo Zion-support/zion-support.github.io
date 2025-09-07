@@ -10,12 +10,36 @@ class FinalAutomationOrchestrator {
 <<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.results = [];
     this.startTime = Date.now();
   }
   log(message) {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.results = [];
     this.startTime = Date.now();
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -52,13 +76,31 @@ class FinalAutomationOrchestrator {
     this.startTime = Date.now();
   }
   log(message) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
   async runCommand(command, description) {
     this.log(`🚀 ${description}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -79,6 +121,7 @@ class FinalAutomationOrchestrator {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     .toISOString()}] ${message}`)}
@@ -88,6 +131,12 @@ class FinalAutomationOrchestrator {
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
   // TODO: Implement
       const result = execSync(command, {
@@ -116,7 +165,21 @@ class FinalAutomationOrchestrator {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   async runScript(scriptPath, description) {
     this.log(`🚀 Running: ${description}`);
@@ -197,6 +260,7 @@ class OptimizedSyntaxFixer {
       if (fs.existsSync(filePath)) {
   // TODO: Implement
 
+<<<<<<< HEAD
             this.fixedCount++;
             this.log(\"✅ "Fixed": \${file}\")}"
         } catch (error) {"
@@ -207,6 +271,9 @@ class OptimizedSyntaxFixer {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   async runScript(scriptPath, description) {
     this.log(`🚀 Running: ${description}`);
     try {
@@ -232,10 +299,16 @@ class OptimizedSyntaxFixer {
         this.results.push({ script: scriptPath, success: false, description, error: 'File not found' });
         return { success: false, error: 'File not found' };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -245,9 +318,16 @@ class OptimizedSyntaxFixer {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       }
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
@@ -257,7 +337,23 @@ class OptimizedSyntaxFixer {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
 
   async runAllAutomations() {
@@ -466,6 +562,7 @@ suite.runEnhancements().catch(console.error);"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -473,6 +570,15 @@ suite.runEnhancements().catch(console.error);"
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   async runAllAutomations() {
     this.log('🎯 Starting Final Automation Orchestrator');
@@ -481,8 +587,11 @@ suite.runEnhancements().catch(console.error);"
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const automationScripts = [
 >>>>>>> origin/chore/fix-lint-and-merge
       // Core automation scripts
@@ -506,8 +615,11 @@ suite.runEnhancements().catch(console.error);"
       { path: 'automation/health-check.cjs', desc: 'Health Check' },
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const npmCommands = [
 >>>>>>> origin/chore/fix-lint-and-merge
       { cmd: 'npm run test:smoke', desc: 'Smoke Tests' },
@@ -524,12 +636,25 @@ suite.runEnhancements().catch(console.error);"
       await this.runCommand(cmd.cmd, cmd.desc);
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Generate final report
 =======
 
@@ -543,7 +668,11 @@ suite.runEnhancements().catch(console.error);"
     const successful = this.results.filter(r => r.success).length;
     const failed = this.results.filter(r => !r.success).length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    const report = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       timestamp: new Date().toISOString(),
 =======
       timestamp: new Date().toISOString(),`;
@@ -554,7 +683,18 @@ suite.runEnhancements().catch(console.error);"
         successful,
         failed,
         successRate: Math.round((successful / this.results.length) * 100),
+<<<<<<< HEAD
       results: this.results;
+=======
+      },
+      results: this.results
+    };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -567,11 +707,30 @@ suite.runEnhancements().catch(console.error);"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     fs.writeFileSync(
       path.join(this.reportsDir, 'final-automation-report.json'),
       JSON.stringify(report, null, 2)
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -585,21 +744,54 @@ suite.runEnhancements().catch(console.error);"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.log('🎉 Final Automation Orchestrator Completed');
 =======
     fs.writeFileSync()
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`📊 Summary: ${successful}/${this.results.length} tasks successful (${report.summary.successRate}%)`);
+<<<<<<< HEAD
     if (failed > 0) {`;
       this.log(`⚠️ ${failed} tasks failed`);
 
+=======
+    if (failed > 0) {
+      this.log(`⚠️ ${failed} tasks failed`);
+      this.results.filter(r => !r.success).forEach(result => {
+        this.log(`   - ${result.description}: ${result.error}`);
+      });
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return report;
 <<<<<<< HEAD
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -656,9 +848,12 @@ const { execSync } = require('child_process')
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Run the final automation orchestrator
 if (require.main === module) {
   orchestrator.runAllAutomations().catch(error => {
@@ -667,11 +862,18 @@ if (require.main === module) {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = FinalAutomationOrchestrator;
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 module.exports = FinalAutomationOrchestrator;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -686,3 +888,9 @@ module.exports = FinalAutomationOrchestrator;
 
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

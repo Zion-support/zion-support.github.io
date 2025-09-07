@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<div> <Head> <title>QualityAssuranceChat - Zion Tech Solutions</title> <meta name="description" content="QualityAssuranceChat blog post" /> </Head> <main> <h1>QualityAssuranceChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default QualityAssuranceChat
+=======
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -36,6 +39,8 @@ const QualityAssuranceChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>QualityAssuranceChat</h1>;
 <<<<<<< HEAD
@@ -51,6 +56,7 @@ const QualityAssuranceChat: NextPage = () => {;
 }
 export default QualityAssuranceChat;
 
+<<<<<<< HEAD
 "
 import type { NextPage } from "next";"
 import Head from "next/head";"
@@ -61,6 +67,24 @@ import Head from 'next/head';'
 import Link from 'next/link';
 
 const QualityAssuranceChat: NextPage = () => {}
+=======
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+
+const QualityAssuranceChat: NextPage = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <div>
       <Head>
@@ -71,6 +95,14 @@ const QualityAssuranceChat: NextPage = () => {}
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import type { NextPage } from './next';
 import Head from './next / head';
 
@@ -95,14 +127,22 @@ const QualityAssuranceChat: NextPage = () => {}
 ;
 export default QualityAssuranceChat;
 ;
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <div>
       <Head>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;QualityAssuranceChat blog post&quot; />
       </Head>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <main>
         <h1>QualityAssuranceChat</h1>
         <p>Blog content coming soon...</p>
@@ -114,6 +154,17 @@ pr-12243
 
 export default QualityAssuranceChat
 
+<<<<<<< HEAD
+=======
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const QualityAssuranceChat: NextPage = () => {
   return (
     <div>
@@ -136,8 +187,16 @@ export default QualityAssuranceChat;
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 
 =======
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+        <title>QualityAssuranceChat - Zion Tech Solutions</title>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

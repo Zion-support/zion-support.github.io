@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
 =======
@@ -23,6 +26,8 @@ class TypeChecker {}
   constructor() {}
     this.isRunning = false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -33,18 +38,35 @@ class TypeChecker {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     this.interval = 120000; // 2 minutes;
   }
   async start() {}
 
     this.isRunning = true;
 <<<<<<< HEAD
+    
+    // Initial type check;
+    await this.runTypeCheck();
+    
+=======
+<<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
     // Initial type check;
     await this.runTypeCheck();
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
+<<<<<<< HEAD
+
+    
+    
+
+    
+
+
+=======
 
 
     
@@ -110,10 +132,15 @@ class TypeChecker {}
       let errorOutput = ;;';
       child.stdout.on('data, (data) => {}
 =======
+>>>>>>> merged-prs-20250907-203621
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
       console.log('Running TypeScript type check...');
+<<<<<<< HEAD
+      
+      
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,10 +153,13 @@ class TypeChecker {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
@@ -140,11 +170,24 @@ class TypeChecker {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+>>>>>>> merged-prs-20250907-203621
 
 =======
 
 =======
 "
+<<<<<<< HEAD
+      let output = ;';';
+      let errorOutput = ;';';
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+});
+
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
@@ -164,13 +207,13 @@ class TypeChecker {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on('close, (code) => {}
 =======
+>>>>>>> merged-prs-20250907-203621
+
 
 <<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
       child.on('close', (code) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
         if ( {})
@@ -185,6 +228,9 @@ class TypeChecker {}
           console.log('Type check passed ✓')}} else {}
           console.log('Type check failed ✗');
 <<<<<<< HEAD
+          
+=======
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -192,6 +238,7 @@ class TypeChecker {}
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -220,6 +267,12 @@ class TypeChecker {}
       line.includes('error TS') || line.includes('Type error');
    ;);
 <<<<<<< HEAD
+
+    
+    
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -237,12 +290,18 @@ class TypeChecker {}
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+>>>>>>> merged-prs-20250907-203621
     
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
+
+<<<<<<< HEAD
+    if ( {})
+      console.log('TypeScript errors "found": ')) {}
+      console.log('TypeScript errors found:')};
+      line.includes('error TS') || line.includes('Type error');)
+    if ( {})      console.log('TypeScript errors "found": ')) {}
+      console.log('TypeScript errors found:')}
 =======
-
-
 <<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -262,6 +321,7 @@ class TypeChecker {}
       console.log('TypeScript errors "found": ')) {}
       console.log('TypeScript errors found:')};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       typeErrors.forEach(error => {})
         console.log(`  ${error}`)})}
   stop() {}
@@ -275,16 +335,33 @@ class TypeChecker {}
 =======
     console.log('Stopping Type Checker...');
 <<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
     this.isRunning = false;
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     if ( {})
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')) {}
+<<<<<<< HEAD
+    console.log('Type Checker stopped')}}
+// Start the checker if run directly
+  const checker = new TypeChecker) {}
+  const checker = new TypeChecker}(;);
+  
+  // Handle graceful shutdown;
+  process.on('SIGINT', () => {}
+    checker.stop()
+    process.exit(0)}
+});
+  
+=======
     console.log('Type Checker stopped')}};
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -313,10 +390,20 @@ class TypeChecker {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   process.on('SIGTERM', () => {}
-    checker.stop();
+    checker.stop()
     process.exit(0)}
 });
+<<<<<<< HEAD
+module.exports = TypeChecker;
+  
+  checker.start().catch(console.error)};
+
+module.exports = TypeChecker;
+module.exports = TypeChecker;
+module.exports = TypeChecker;
+=======
 <<<<<<< HEAD
 module.exports = TypeChecker;
   
@@ -351,14 +438,17 @@ module.exports = TypeChecker;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
   // Handle graceful shutdown;
 
   checker.start().catch(console.error)}
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react;
 import { useAuth } from @/hooks/useAuth';
@@ -6,6 +8,7 @@ import { supabase } from '@/integrations/supabase/client;
 import { Job, JobStatus } from @/types/jobs';
 import { Button } from '@/components/ui/button;
 =======
+>>>>>>> merged-prs-20250907-203621
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -26,6 +29,8 @@ import Link from next/link';
 import { logErrorToProduction } from '@/utils/productionLogger;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react,
 import { useAuth } from @/hooks/useAuth",
@@ -34,6 +39,7 @@ import { Job, JobStatus } from @/types/jobs",
 import { Button } from "@/components/ui/button,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
 =======
+>>>>>>> merged-prs-20250907-203621
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -60,6 +66,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {}
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const fetchJobs = async () => {
       if (!user) return,
@@ -159,6 +167,7 @@ if ( {) {$2;
             ? `No jobs with status ${filter} found.` 
             : "You havent posted any jobs yet."
 =======
+>>>>>>> merged-prs-20250907-203621
             : "You haven't posted any jobs yet."
 >>>>>>> origin/chore/fix-lint-and-merge
           }
@@ -214,6 +223,9 @@ if ( {) {$2;
     },
     fetchJobs();
 
+<<<<<<< HEAD
+      <div className="flex justify-center items-center p-8">;
+=======
 <<<<<<< HEAD
       <div className=flex justify-center items-center p-8>;
       </div>)}.order("created_at", { ascending: false }),if (isLoading) {return (<div className=flex justify-center items-center p-8>;
@@ -274,6 +286,7 @@ interface JobsListProps  {filter?: JobStatus;
 =======
       <div className="flex justify-center items-center p-8">;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -375,6 +388,9 @@ return (<div className=grid gap-6 md:grid-cols-2" > {
                   <Edit className="h-4 w-4 />
                 </Link>
               </Button>
+<<<<<<< HEAD
+            </div>
+=======
               <Button variant="outline" size=sm>"
                 <X className="h-4 w-4 />
               </Button>
@@ -429,3 +445,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             </div>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

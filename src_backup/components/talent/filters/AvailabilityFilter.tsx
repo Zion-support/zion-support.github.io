@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox;
@@ -24,6 +26,7 @@ export function AvailabilityFilter({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6>;
 
@@ -102,6 +105,8 @@ import { AvailabilityFilterProps } from "@/types/filters";
 
   { id: project, label: "Project-based" }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         {expanded ? (<ChevronUp className=h - 4 w - 4 text - zion - slate - light' />) : (<ChevronDown className='h - 4 w - 4 text - zion - slate - light />)}
       </button>;{expanded && (<div className=mt - 4 space - y-2'>;
@@ -294,6 +299,7 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
   option.label 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 htmlFor={`availability-${option.id}`}
 
   option.label;

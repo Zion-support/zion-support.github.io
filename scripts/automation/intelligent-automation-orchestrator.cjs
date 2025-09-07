@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -29,8 +32,12 @@ console.log(🧠 Starting intelligent automation orchestrator...)
   "maintenance"
     "automations": ["smart-documentation-generator", "ai-code-analyzer"]
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log(""🧠 Starting intelligent automation orchestrator...")
 // Get automation interval from environment variable ("default")
 console.log("🧠 Starting intelligent automation orchestrator...")
@@ -78,8 +85,11 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   state.testStatus = failed
     state.fileCount = countFiles("src")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const auditResult = execSync("npm audit --json")
   "stdio": "pipe"
         audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"
@@ -133,17 +143,24 @@ console.log("🧠 Starting intelligent automation orchestrator...")
     return "good"
   return "unknown"
   const fullPath = path.join(dir, ")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   files.push(...findFilesWithPattern(fullPath")
         item.endsWith(.ts)
         item.endsWith(".tsx")
         item.endsWith(.js)
         item.endsWith(".jsx")
 <<<<<<< HEAD
+  const content = fs.readFileSync(fullPath, "utf8")
+=======
+<<<<<<< HEAD
 
 =======
   const content = fs.readFileSync(fullPath, "utf8")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Skip files that can"
   // Skip directories that can"
   // Skip files that can
@@ -173,6 +190,18 @@ console.log("🧠 Starting intelligent automation orchestrator...")
         status: "failed"
         error
         "timestamp"
+<<<<<<< HEAD
+  const automationScripts = {enhanced-error-fixer": "./""scripts/automation/enhanced-error-fixer.cjs""",console-error-fixer": "./""scripts/automation/console-error-fixer.cjs""",code-quality-automation"}
+      "./""scripts/automation/code-quality-automation.cjs""",link-checker": "./""scripts/automation/link-checker.cjs""",security-audit": "./""scripts/automation/security-audit.cjs""",performance-monitor": "./""scripts/automation/performance-monitor.cjs""",dependency-updates": "./""scripts/automation/dependency-updates.cjs""",quality-checks": "./""scripts/automation/quality-checks.cjs""",smart-documentation-generator"
+      "./""scripts/automation/smart-documentation-generator.cjs""",ai-code-analyzer": "./""scripts/automation/ai-code-analyzer.cjs"""
+  const automationScripts = {enhanced-error-fixer": "./"scripts/automation/enhanced-error-fixer.cjs"",console-error-fixer": "./"scripts/automation/console-error-fixer.cjs"",code-quality-automation"}
+      "./"scripts/automation/code-quality-automation.cjs"",link-checker": "./"scripts/automation/link-checker.cjs"",security-audit": "./"scripts/automation/security-audit.cjs"",performance-monitor": "./"scripts/automation/performance-monitor.cjs"",dependency-updates": "./"scripts/automation/dependency-updates.cjs"",quality-checks": "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator"
+      "./"scripts/automation/smart-documentation-generator.cjs"",ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs""
+  if($2) {throw new Error("Unknown "automation": ${automationName}")
+  if (!fs.existsSync(scriptPath)) {throw new Error("Automation script not "found": ${scriptPath}")
+  // Execute the automation scriptconst result = execSync("node ${scriptPath}")
+  "stdio": "pipe"
+=======
   const automationScripts = {enhanced-error-fixer: ./""scripts/automation/enhanced-error-fixer.cjs",console-error-fixer": ./"scripts/automation/console-error-fixer.cjs",code-quality-automation"}
       "./scripts/automation/code-quality-automation.cjs"",link-checker: "./"scripts/automation/link-checker.cjs"",security-audit: ./""scripts/automation/security-audit.cjs",performance-monitor": ./"scripts/automation/performance-monitor.cjs",dependency-updates": "./scripts/automation/dependency-updates.cjs"",quality-checks: "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator
       ./""scripts/automation/smart-documentation-generator.cjs",ai-code-analyzer": ./"scripts/automation/ai-code-analyzer.cjs"
@@ -183,6 +212,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   if (!fs.existsSync(scriptPath)) {throw new Error(Automation script not found": ${scriptPath}")
   // Execute the automation scriptconst result = execSync(node ${scriptPath})
   "stdio": pipe
+>>>>>>> merged-prs-20250907-203621
     "timeout"
   lastRun
       "status"
@@ -255,6 +285,15 @@ process.on(SIGTERM)
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 
+  console.error( Failed to start intelligent automation "orchestrator")
+  console.error( Failed to start intelligent automation "orchestrator")
+  console.error( Failed to start intelligent automation "orchestrator")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error( Failed to start intelligent automation orchestrator)
 
@@ -286,3 +325,4 @@ process.on(SIGTERM)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

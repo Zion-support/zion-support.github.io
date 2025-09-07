@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
   id: number,author: string,avatar?: string,time: string,body: string;
@@ -25,6 +27,7 @@ const initial_posts: DiscussionPost[] = [;
   id: number,
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 id: number,
   author: string,
   avatar?: string,
@@ -50,6 +53,9 @@ interface DiscussionPost {
 
   title: string,
   body: string
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -232,6 +238,7 @@ export const CommunityDiscussion: React.FC = () => {
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     id: 1,
 
@@ -257,9 +264,12 @@ export const CommunityDiscussion: React.FC = () => {
         </Button>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {show_new && (<Card className=mb - 6 animate - scale - in'>;
           <CardContent className='py - 5>;
 =======
+>>>>>>> merged-prs-20250907-203621
       {show_new && (
         <Card className='mb - 6 animate - scale - in'>;
           <CardContent className='py - 5'>;
@@ -274,6 +284,8 @@ export const CommunityDiscussion: React.FC = () => {
             />;
             <Textarea;
               placeholder="What's on your mind?";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,body: new_body},...posts])setNewTitle ("")setNewBody ("")setShowNew (false)}return (id: 1,const handleAddPost = () => {if (!newTitle.trim() || !newBody.trim()) return,setPosts([;
       {id: Date.now(),return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
@@ -305,6 +317,7 @@ export const CommunityDiscussion: React.FC = () => {
             <Input;
               className=mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]        title: new_title,
 =======
+>>>>>>> merged-prs-20250907-203621
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,
 >>>>>>> origin/chore/fix-lint-and-merge
         body: new_body},
@@ -341,6 +354,8 @@ export const CommunityDiscussion: React.FC = () => {
           {showNew ? Cancel" : "New Post}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </Button>
       </div>
       {showNew && (
@@ -349,6 +364,7 @@ export const CommunityDiscussion: React.FC = () => {
             <Input
               placeholder=Title (e.g., Share an AI tool, Ask for help...)"
 =======
+>>>>>>> merged-prs-20250907-203621
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -372,6 +388,8 @@ export const CommunityDiscussion: React.FC = () => {
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           {showNew ? Cancel : 'New Post'}
         </Button>;
       </div>;
@@ -381,6 +399,7 @@ export const CommunityDiscussion: React.FC = () => {
               placeholder=Title (e.g., Share an AI tool, Ask for help...);
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate';
 =======
+>>>>>>> merged-prs-20250907-203621
           {showNew ? 'Cancel' : 'New Post'}
         </Button>
       </div>
@@ -390,11 +409,16 @@ export const CommunityDiscussion: React.FC = () => {
             <Input
               placeholder='Title (e.g., Share an AI tool, Ask for help...)'
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setNewTitle(e.target.value)
               }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>;
                 setNewTitle(e.target.value)}maxLength={80}/>;
@@ -475,6 +499,7 @@ export const CommunityDiscussion: React.FC = () => {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
               maxLength={80}
 
@@ -483,6 +508,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {showNew ? "Cancel : New Post"}
         </Button>;
       </div>;
+<<<<<<< HEAD
+      {showNew && (;
+        <Card className="mb-6 animate-scale-in">;
+          <CardContent className="py-5">;
+=======
 <<<<<<< HEAD
       {showNew && (<Card className="mb-6 animate-scale-in>;
           <CardContent className=py-5">;
@@ -494,6 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             <Input;
               placeholder="Title (e.g., Share an AI tool, Ask for help...);
               className=mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
@@ -522,6 +553,8 @@ className=mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[
               </Button>
               <Button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
                 size="sm
@@ -529,11 +562,14 @@ className=mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 className=bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
 size='sm'
                 className=bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale
@@ -564,6 +600,7 @@ size='sm';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 onClick={handleAddPost}
 
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
@@ -662,6 +699,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       )}
 <<<<<<< HEAD
+<div className='flex flex-col gap-6'>
+        {posts.map(post => (
+          <Card
+            key={post.id}
+            className='bg-zion-blue border-zion-slate-dark shadow-lg'
+          >
+            <CardContent className='py-4 flex gap-4'>
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(' ')
+                    .map(s => s[0])
+                    .join('')
+                    .toUpperCase()
+                    .slice(0, 2)}
+                </AvatarFallback>
+              </Avatar>
+              <div>
+<div className='flex gap-2 items-center'>
+                  <span className='font-semibold text-white'>
+                    {post.author}
+                  </span>
+                  <span className='text-xs text-zion-slate-light'>
+                    {post.time}
+                  </span>
+                </div>
+                <h3 className='text-lg font-bold text-zion-cyan mt-1'>
+                  {post.title}
+                </h3>
+                <p className='text-zion-slate-light mt-1 whitespace-pre-line'>
+=======
+<<<<<<< HEAD
 <div className='flex flex-col gap-6>;
         {posts.map(post => (<Card;
             key={post.id}
@@ -718,6 +787,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>
                 <p className='text-zion-slate-light mt-1 whitespace-pre-line'>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   {post.body}
                 </p>
               </div>
@@ -736,15 +806,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   newTitle ;
 <<<<<<< HEAD
+}onChange= {;
+=======
+<<<<<<< HEAD
 }onChange= {
   (e: React && React.ChangeEvent<HTMLInputElement>) => setNewTitle (e && e.target.value) ;
 =======
 }onChange= {;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }maxLength= {
   80 ";
+<<<<<<< HEAD
+}/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
+}.join ("") .toUpperCase () .slice (0, 2) ";
+}</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
+
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
+      </div>;
+=======
 <<<<<<< HEAD
 }/> <Textarea /> <div className= flex gap-3 justify-end> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
 }.join (") .toUpperCase () .slice (0, 2) ;
@@ -859,6 +941,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   post.author ";
 }</span> <span className=text-xs text-zion-slate-light> {
@@ -882,5 +965,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</p> </div> </CardContent> </Card>) ) ";
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
 };
+<<<<<<< HEAD
+'"
+=======
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

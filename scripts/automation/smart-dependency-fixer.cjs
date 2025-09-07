@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,14 +12,19 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(""� Starting smart dependency fixer automation...")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log(""� Starting smart dependency fixer automation...")
 // Get automation interval from environment variable ("default")
   console.log(`� Running smart dependency fixer at ${new Date().toISOString()}
@@ -118,8 +125,11 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(⚠  Could not automatically fix all vulnerabilities)
   console.log(" Attempting to update outdated packages...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const current = pkg.current.split(".")
       const latest = pkg.latest.split(".")
       // Only update if it"
@@ -140,8 +150,11 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(⚠  Could not fix peer dependency issues)
   console.log(" Verifying that dependency issues have been resolved...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const auditOutput = execSync("npm audit --json")
   "stdio": "pipe"
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -166,6 +179,18 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" Missing packages resolved")
   console.log("⚠  Some missing packages remain")
 // console.log(" No missing packages found")
+<<<<<<< HEAD
+
+  console.log(" No missing packages found")
+  console.log(" No missing packages found")
+  console.log(" No missing packages found")
+
+// Get automation interval from environment variable ("default")"
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`
+console.log(`� Starting smart dependency fixer automation...``)"
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,3 +223,4 @@ console.log(`� Starting smart dependency fixer automation...``)"
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -103,6 +103,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     </div>);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   } catch (error) {
     }
@@ -169,6 +171,7 @@ export default function Layout() {
 return (;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <>
       <Head>
 

@@ -1,6 +1,8 @@
 {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": "2025-09-06T00:07:28.790Z",
@@ -541,10 +543,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 
+>>>>>>> merged-prs-20250907-203621
   "timestamp": "2025-09-06T00:32:21.706Z",
   "vulnerabilities": 11,
   "recommendations": [
 
+<<<<<<< HEAD
+=======
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

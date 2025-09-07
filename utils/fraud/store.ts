@@ -1,75 +1,3 @@
-private records: Map < string, FraudRecord> = new Map ();
-;
-  create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
-    const id = Date.now ().to_string ();
-    const new_record: FraudRecord = {      ...record,
-
-  id: string;
-  type: string;
-  severity: "low" | "medium" | "high" | "critical";
-  description: string;
-  source: string;
-  timestamp: string;"
-  status: "pending" | "investigating" | "resolved" | "false_positive";
-  adminId?: string;
-  resolution?: string;
-}
-
-class FraudStore {}
-  private records: Map<string, FraudRecord> = new Map();
-"
-  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {}
-    const id = Date.now().toString();
-
-      ...record,
-
-      id,
-      timestamp: new Date().toISOString(),
-    };
-    this.records.set(id, newRecord);
-    return newRecord;
-  }
-  get_record (id: string): FraudRecord | undefined {}
-    return this.records.get (id);
-  }
-
-  updateRecord(
-    id: string,
-    updates: Partial<FraudRecord>,
-  ): FraudRecord | undefined {}
-    const record = this.records.get(id);
-    if (!record) return undefined;
-
-    const updatedRecord = { ...record, ...updates };
-    this.records.set(id, updatedRecord);
-    return updatedRecord;
-  }
-  list_records (): FraudRecord[] {}
-    return Array.from (this.records.values ());
-  }
-
-  async generateMonthlyReport(month: string): Promise<MonthlyReport> {}
-    const records = this.listRecords();
-    const monthRecords = records.filter((r) => r.timestamp.startsWith(month));
-
-    return {}
-      month,
-      totalCases: monthRecords.length,"
-      resolvedCases: monthRecords.filter((r) => r.status === "resolved").length,"
-      falsePositives: monthRecords.filter((r) => r.status === "false_positive")
-        .length,
-      averageResolutionTime: 24, // placeholder;
-      topFraudTypes: ["
-        { type: "suspicious_activity", count: 5 },"
-        { type: "unauthorized_access", count: 3 },
-      ],
-    };
-  }
-}
-
-<<<<<<< HEAD
-export const fraud_store = new FraudStore ()export const getFraudStore  = () =>: any fraud_store;export const fraudStore = new FraudStore()export const getFraudStore = () => fraudStore;
-import fs from 'fs-extra';
 // Fraud detection store utilities
 import fs from 'fs';
 import path from 'path';
@@ -123,6 +51,7 @@ export class FraudStore {
 
   async updateEventStatus(fraudId: string, status: StoredFraudRecord['status']): Promise<void> {
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       await supabase.from('fraud_events').update({ status }).eq($2);
       return
     }
@@ -146,17 +75,20 @@ export class FraudStore {
       createdAt: action.createdAt ?? new Date().toISOString()},
 
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       await supabase.from('fraud_actions').insert($2);
       return withId
     }
 
     ensureFiles($2);
+    const line = $2;
     await fs.appendFile($2);
     return withId
   }
 
   async listFlagged(limit = 50, offset = 0, filters: ListFilters = {}): Promise<StoredFraudRecord[]> {
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       let query = supabase.from('fraud_events').select('*').order('createdAt', { ascending: false}).range($2);
       if (filters.source) query = query.eq($2);
       if (filters.userId) query = query.eq($2);
@@ -167,6 +99,7 @@ export class FraudStore {
     }
 
     ensureFiles($2);
+    const events = await this._readAllEvents($2);
     const filtered = $2;
       if (filters.userId && e.userId !== filters.userId) return false,
       if (filters.status && e.status !== filters.status) return false,
@@ -179,6 +112,7 @@ export class FraudStore {
   async countEventsByIp(ip: string, source: MonitoredSource, withinMinutes: number): Promise<number> {
     const since = $2;
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       const { data } = await supabase
         .from('fraud_events')
         .select('id, createdAt')
@@ -189,21 +123,25 @@ export class FraudStore {
     }
 
     ensureFiles($2);
+    const events = await this._readAllEvents($2);
     return events.filter((e) => e.ipAddress === ip && e.source === source && Date.parse(e.createdAt) >= since).length
   }
 
   async countFlaggedForUser(userId: string): Promise<number> {
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       const { data } = await supabase.from('fraud_events').select('id').eq($2);
       return data?.length ?? 0
     }
     ensureFiles($2);
+    const events = await this._readAllEvents($2);
     return events.filter((e) => e.userId === userId).length
   }
 
   async getPrivacySettings(userId: string): Promise<PrivacySettings> {
     const now = new Date().toISOString($2);
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       const { data } = await supabase.from('privacy_settings').select('*').eq('userId', userId).limit($2);
       if (data && data[0]) return data[0] as any as PrivacySettings,
       return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now}
@@ -220,11 +158,13 @@ export class FraudStore {
     const updated: PrivacySettings = { userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() },
 
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
       await supabase.from('privacy_settings').upsert($2);
       return updated
     }
 
     ensureFiles($2);
+    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}'),
     json[userId] = updated,
     fs.writeFileSync(privacyPath, JSON.stringify(json, null, 2)),
     return updated
@@ -239,6 +179,8 @@ export class FraudStore {
     let events: StoredFraudRecord[] = [],
 
     if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      const { data } = await supabase
         .from('fraud_events')
         .select('*')
         .gte('createdAt', start.toISOString())
@@ -304,6 +246,7 @@ export class FraudStore {
 
   private async _readAllActions(): Promise<AdminActionRecord[]> {
     ensureFiles($2);
+    const text = fs.readFileSync($2);
     return text
       .split('\n')
       .filter(Boolean)
@@ -333,15 +276,5 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source
     content: partial.content ?? null,
     metadata: partial.metadata ?? null,
     ipAddress: partial.ipAddress ?? null,
-      }).filter(Boolean) as AdminActionRecord[];
-  }export function getFraudStore(): FraudStore {return new FraudStore()export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>;
-): FraudEvent {const id = uuidv4()return {id,userId: partial.userId ?? null,source: partial.source,content: partial.content ?? null,metadata: partial.metadata ?? null,ipAddress: partial.ipAddress ?? null,createdAt: partial.createdAt ?? new Date().toISOString()}
-      }).filter(Boolean) as AdminActionRecord[];
-  }export function getFraudStore(): FraudStore {return new FraudStore()export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>;
-): FraudEvent {const id = uuidv4()return {id,userId: partial.userId ?? null,source: partial.source,content: partial.content ?? null,metadata: partial.metadata ?? null,ipAddress: partial.ipAddress ?? null,createdAt: partial.createdAt ?? new Date().toISOString()}
     createdAt: partial.createdAt ?? new Date().toISOString()}
 }
-=======
-export const fraudStore = new FraudStore();
-export const getFraudStore = () => fraudStore;
->>>>>>> origin/chore/fix-lint-and-merge

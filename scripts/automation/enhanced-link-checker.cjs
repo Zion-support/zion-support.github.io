@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -57,8 +60,11 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   if (url.startsWith(http": //") || url.startsWith(https://)
     if (url.startsWith("//")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   return "https"
     if (url.startsWith("/")) {return "https"}
     if (baseUrl && !url.startsWith("http"")
@@ -120,8 +126,13 @@ console.log(""� Starting Enhanced Link Checker Automation...")
       await this.checkLinkBatch(externalLinks, "external)
   console.log( Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
     // Check internal links"
+<<<<<<< HEAD
+  if($2) {"}
+      console.log(")
+=======
     if (internalLinks.length > 0) {}
       console.log()
+>>>>>>> merged-prs-20250907-203621
       await this.checkLinkBatch(internalLinks, "internal")
   console.log( Checking external links...)
       await this.checkLinkBatch(externalLinks, "external")
@@ -214,11 +225,21 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Link checker automation "failed")
+<<<<<<< HEAD
+  console.error(" Link checker automation "failed")
+  console.error(" Link checker automation "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -236,3 +257,4 @@ console.log(""� Starting Enhanced Link Checker Automation...")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

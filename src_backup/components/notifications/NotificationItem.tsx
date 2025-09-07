@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 import React from 'react;
@@ -21,6 +23,7 @@ export const getTypeIcon = null;
 import { useRouter  } from 'next/router';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import React from 'react';
 import React from react';
 // Use the centralized icon wrapper to avoid missing icons
@@ -157,6 +160,8 @@ export const getTypeIcon = (type: NotificationType) => {
     default:
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     default:;
       return <span className="text-gray-500>📣</span>;
   notification: Notification;
@@ -220,6 +225,7 @@ export const getTypeIcon = (type: NotificationType) => {switch (type) {case mess
     default:;
       return <span className=text-gray-500">📣</span>;
 =======
+>>>>>>> merged-prs-20250907-203621
       return <span className="text-gray-500">📣</span>;
 >>>>>>> origin/chore/fix-lint-and-merge
   }
@@ -242,6 +248,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push;
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
   onMarkAsRead;
@@ -274,6 +282,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                 variant=link";
                 size="sm;
                 className=text-zion-cyan p-0 h-auto";
+>>>>>>> merged-prs-20250907-203621
 :src/components/notifications/NotificationItem.tsx
   }
 
@@ -347,6 +356,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
               >
 
                 {notification.action_text}
+<<<<<<< HEAD
+                <ChevronRight className="h-3 w-3 ml-1" />
+              </Button>
+=======
                 <ChevronRight className="h-3 w-3 ml-1 />;
               </Button>;
 =======
@@ -358,6 +371,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             )}
 
       {/* Action buttons that appear on hover */}
@@ -527,6 +541,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
 interface NotificationItemProps {
   notification: Notification;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   className="h-8 w-8 p-0;
                 >;
                   <Check className=h-4 w-4" />;
@@ -561,6 +577,7 @@ interface NotificationItemProps {
   )})}interface NotificationItemProps  {notification: Notification;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 onMarkAsRead: (id: string) => Promise<void>;
 onDismiss: (id: string) => Promise<void> ;
 }export const NotificationItem: React.FC<NotificationItemProps> = ({;
@@ -568,12 +585,18 @@ onDismiss: (id: string) => Promise<void> ;
 onMarkAsRead;
 onDismiss ;
 <<<<<<< HEAD
+}) => {;
+  const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
+  addSuffix: true ';
+=======
+<<<<<<< HEAD
 }) => {const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {addSuffix: true ;
 =======
 }) => {;
   const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {;
   addSuffix: true ';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }) : 'Just now' ;
 }</p> {;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
@@ -583,6 +606,8 @@ onDismiss ;
 };
 <<<<<<< HEAD
 '"
+<<<<<<< HEAD
+=======
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400 /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 }
 '
@@ -591,3 +616,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         className="flex w-full items-center justify-between text-white font-medium
       >
@@ -21,12 +27,15 @@ import { Checkbox } from @/components / ui / checkbox';
 import { RegionFilterProps } from '@/types / filters;
 const REGION_OPTIONS = [;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   { id: North America', label: 'North America },{ id: Europe', label: 'Europe },{ id: Asia', label: 'Asia },{ id: South America', label: 'South America },{ id: Australia', label: 'Australia },{ id: Africa', label: 'Africa }];
 export /**;
  * RegionFilter - Function description;
  */;
 function RegionFilter() {return (<div className=mb - 6 border - b border - zion - blue - light pb - 6'>;
 =======
+>>>>>>> merged-prs-20250907-203621
   { id: 'North America', label: 'North America' },
   { id: 'Europe', label: 'Europe' },
   { id: 'Asia', label: 'Asia' },
@@ -40,7 +49,10 @@ export /**
 function RegionFilter() {
   return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <button;
         on_click={toggle_section}
         className='flex w - full items - center justify - between text - white font - medium      >;
@@ -80,7 +92,10 @@ import { Checkbox } from "@/components/ui/checkbox,
 import { RegionFilterProps } from @/types/filters",
 =======
 import { ChevronDown, ChevronUp } from 'lucide-react';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 
   { id: "North America, label: North America" },
@@ -96,6 +111,8 @@ import { Checkbox } from "@/components/ui/checkbox;
 import { RegionFilterProps } from @/types/filters";
 const REGION_OPTIONS = null;
 const REGION_OPTIONS = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <div key={region && region.id} className="flex items-center>;import { Checkbox  } from '@/components/ui/checkbox;
 import { RegionFilterProps  } from @/types/filters';
@@ -126,6 +143,7 @@ export function RegionFilter() {return (<div className='mb-6 border-b border-zio
         )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   { id: 'North America', label: 'North America' }
   { id: 'Europe', label: 'Europe' }
   { id: 'Asia', label: 'Asia' }
@@ -187,6 +205,13 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 
               <Checkbox
 <<<<<<< HEAD
+                id={`region-${region && region.id}`}
+                checked={selectedRegions && selectedRegions.includes(region && region.id)}
+                onCheckedChange={() => toggleRegion(region && region.id)}
+                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />;
+              <label
+=======
+<<<<<<< HEAD
       </button>;
       {expanded && (<div className='mt-4 space-y-2>;
           {REGION_OPTIONS.map(region => (<div key={region.id} className=flex items-center'>;
@@ -211,6 +236,7 @@ export function RegionFilter() {return (<div className=mb-6 border-b border-zion
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />;
               <label
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 htmlFor={`region-${region && region.id}`}
                 className=ml-2 text-sm text-zion-slate-light cursor-pointer'>                {region && region.label}                className=ml-2 text-sm text-zion-slate-light cursor-pointer";
                htmlFor="input-;
@@ -228,6 +254,8 @@ export function RegionFilter() {return (<div className=mb-6 border-b border-zion
 
                 htmlFor={`region-${region.id}`}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 onCheckedChange={() => toggleRegion(region.id)}className=border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
@@ -265,6 +293,7 @@ export /**;
   { id: "Australia, label: Australia" },
   { id: "Africa, label: Africa" }
 =======
+>>>>>>> merged-prs-20250907-203621
 const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
@@ -299,6 +328,11 @@ className=border-zion-slate-light data-[state=checked]:bg-zion-purple data-[stat
               />
               <label
 <<<<<<< HEAD
+                htmlFor={`region-${region.id}`}
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >
+=======
+<<<<<<< HEAD
   )}className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple;
               />;
               <label;
@@ -310,6 +344,7 @@ className=border-zion-slate-light data-[state=checked]:bg-zion-purple data-[stat
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 {region.label}
               </label>
             </div>
@@ -329,6 +364,10 @@ toggleSection ;
 }</div>) ;
 }</div>) ;
 <<<<<<< HEAD
+}"
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
 }
     </div>;
   )toggleSection ;
@@ -340,3 +379,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

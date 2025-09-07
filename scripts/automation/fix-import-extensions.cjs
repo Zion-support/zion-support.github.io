@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -17,16 +19,24 @@ const glob = require('glob);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+<<<<<<< HEAD
+
+class ImportExtensionFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+=======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -71,22 +81,41 @@ class ImportExtensionFixer {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async fixImportExtensions() {}
     this.log('Fixing import extensions...');
+    // Find all TypeScript and JavaScript files;
+    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
+});
+=======
+<<<<<<< HEAD
+    console.log(`[${new Date().toISOString()}] ${message}`)};
+  async fixImportExtensions() {}
+    this.log('Fixing import extensions...');
 <<<<<<< HEAD
     // Find all TypeScript and JavaScript files;
     const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
 });
 =======
+>>>>>>> merged-prs-20250907-203621
     
     // Find all TypeScript and JavaScript files;
     const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
 });
     
+<<<<<<< HEAD
+
+});
+    
+    // Find all TypeScript and JavaScript files;
+    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
+});
+    
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 });
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     for (const file of files) {}
       const filePath = path.join(this.projectRoot, file);"
 
@@ -94,8 +123,12 @@ class ImportExtensionFixer {}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> merged-prs-20250907-203621
       // Fix .ts extensions in import statements;
       const originalContent = content;
       
@@ -129,14 +162,18 @@ class ImportExtensionFixer {}
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
       // Fix imports like 'lucide-react.ts' -> 'lucide-react'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 
-      // Fix .ts extensions in import statements;
-      const originalContent = content;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       if (content !== originalContent) {}
         fs.writeFileSync(filePath, content);
         modified = true;
@@ -156,11 +193,39 @@ class ImportExtensionFixer {}
     try {}
       await this.fixImportExtensions();
 =======
+<<<<<<< HEAD
+    try {}
+      await this.fixImportExtensions();
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     
     try {}
       await this.fixImportExtensions();
       
+<<<<<<< HEAD
+    
+    try {}
+      await this.fixImportExtensions();
+      
+      this.log("Import Extension Fixer completed successfully!");
+content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'")
+  if($2) {}
+        fs.writeFileSync(filePath, content)
+        modified = true
+        this.log(`Fixed import extensions in ${file}`)}
+  if($2) {}
+        this.fixesApplied++}
+    }
+  }
+  async run() {}
+    this.log('Starting Import Extension Fixer...')
+    try {}
+      await this.fixImportExtensions()
+    try {}
+      await this.fixImportExtensions()
+      this.log("Import Extension Fixer completed successfully!")
+=======
 <<<<<<< HEAD
 
 =======
@@ -170,6 +235,7 @@ class ImportExtensionFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log("Import Extension Fixer completed successfully!");
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}
       this.log(`Error in Import Extension "Fixer": ${error.message}`);
 =======
@@ -199,16 +265,28 @@ module.exports = ImportExtensionFixer;
 if (require.main === module) {}
   const automation = new ImportExtensionFixer();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   automation.run();
     .then(() => {}"
 
       process.exit(1)})};
+<<<<<<< HEAD
+
+module.exports = ImportExtensionFixer;
+module.exports = ImportExtensionFixer;
+module.exports = ImportExtensionFixer;
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,3 +308,4 @@ module.exports = ImportExtensionFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,14 +12,20 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Intelligent Error Recovery System;
- * Automatically detects and recovers from various types of errors;
+ * Intelligent Error Recovery System
+ * Automatically detects and recovers from various types of errors
  */
+<<<<<<< HEAD
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -93,8 +101,32 @@ const { execSync } = require('child_process')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
 
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+        this.logFile = path.join(this.projectRoot, 'logs', 'error-recovery.log')
+        const logsDir = path.join(this.projectRoot, 'logs')
+        this.log(' Detecting errors...')
+            const syntaxCheck = execSync('npm run type-check', { "cwd": this.projectRoot, "encoding"})
+                "type"
+                "severity"
+            const lintCheck = execSync('npm run lint', { "cwd": this.projectRoot, "encoding"})
+                "type"
+                "severity"
+            const buildCheck = execSync('npm run build', { "cwd": this.projectRoot, "encoding"})
+                "type"
+                "severity"
+            execSync('npm run "lint")
+
+            execSync('npm run "lint")
+            execSync('npm run "lint")
+            execSync('npm run "lint")
+
+const { execSync } = require('child_process')
+
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
@@ -102,3 +134,4 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

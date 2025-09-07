@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -58,9 +59,7 @@
     log('info', `"Low": ${qualityReport.summary.low}`);
     log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
     if (qualityReport.issues.length > 0) {
->>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
 main();
 
 
@@ -76,20 +75,45 @@ main();
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-#!/usr/bin/env node;
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      log('warn', 'Issues "found": ');
+      qualityReport.issues.forEach(issue => {
+        log('warn', `- [${issue.severity.toUpperCase()}] ${issue.message} (${issue.file}:${issue.line})`)})}
+    
+    if (qualityReport.recommendations.length > 0) {
+      log('info', 'Quality "Recommendations": ');
+      qualityReport.recommendations.forEach(rec => {
+        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
+        log('info', `  "Action": ${rec.action}`)})}
+    
+    // Save quality report
+    const reportPath = path.join(process.cwd(), `comprehensive-quality-report-${qualityReport.sessionId}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(qualityReport, null, 2));
+    
+    log('info', `Comprehensive quality report saved "to": comprehensive-quality-report-${qualityReport.sessionId}.json`);
+    
+    // Exit with appropriate status
+    if (qualityReport.summary.critical > 0) {
+      log('error', 'Critical quality issues found');
+      process.exit(1)} else if (qualityReport.summary.high > 0) {
+      log('warn', 'High severity quality issues found');
+      process.exit(0)} else {
+      log('info', 'Code quality analysis completed successfully');
+      process.exit(0)}
+    
+  } catch (error) {
+    log('error', 'Fatal error in comprehensive code quality analysis', error.message);
+    process.exit(1)}
+}
+
+main();
+
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
->>>>>>> origin/chore/fix-lint-and-merge
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
 console.log()
     const content = fs.readFileSync(filePath, 'utf8')
@@ -97,6 +121,7 @@ console.log()
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +139,8 @@ console.log()
 =======
       "severity"""
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -127,9 +154,9 @@ console.log()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       log('info', 'Quality "Recommendations")""`;
-=======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -139,45 +166,14 @@ console.log()
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-      "severity"
 =======
-const fs = require('fs')
-const path = require(path')
-const { execSync } = require('child_process')
-// console.log( Comprehensive Code Quality Analyzer v2.0')
-console.log()
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split(\n')
-    const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//)
-    const commentLines = lines.filter(line => line.trim().startsWith(//')
-    log('warn)
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+>>>>>>> merged-prs-20250907-203621
+      "severity"
       "message"
       "recommendation"
-      "pattern: /password\s*=\s*[][^]
-      "pattern": /api[_-]?key\s*=\s*['][^]
-          type""
-          line""
-      priority""
-      action""
-      log('warn, Issues found")"
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      severity"
-      "message
-      recommendation"
-      "severity
-      message"
-      "recommendation
-      severity"
-      "message
-      recommendation"
-      "pattern: /password\s*=\s*['][^']
       "severity"
-      message
+      "message"
       "recommendation"
-<<<<<<< HEAD
       "severity"
       "message"
       "recommendation"
@@ -254,6 +250,7 @@ console.log()
     "message"
     "action"
       log('warn', 'Issues "found")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       pattern: /api[_-]?key\s*=\s*["][^'']
@@ -338,3 +335,6 @@ console.log()
       log('info', 'Quality "Recommendations")""`;
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      log('info', 'Quality "Recommendations")
+>>>>>>> merged-prs-20250907-203621

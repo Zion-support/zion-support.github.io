@@ -1,11 +1,50 @@
+<<<<<<< HEAD
 import {
+=======
+<<<<<<< HEAD
+import {
+
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from "@/components/ui/select";
+
+import { SortFilterProps } from "@/types/filters";
+
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+<<<<<<< HEAD
+  SelectValue} from "@/components/ui/select",
+import { SortFilterProps } from "@/types/filters";
+=======
+
+
+
+SelectValue} from "@/components/ui/select",
+import { SortFilterProps } from "@/types/filters",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   Select,
   SelectContent,
   SelectItem,
 
+<<<<<<< HEAD
   SelectTrigger,
+=======
 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> merged-prs-20250907-203621
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -13,6 +52,17 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         Sort by
 
       </label>
+<<<<<<< HEAD
+      <Select value={sortOption} onValueChange={setSortOption}>
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
+          <SelectValue placeholder="Sort by" />
+        </SelectTrigger>
+        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">
+          <SelectItem value="relevance">Relevance</SelectItem>
+          <SelectItem value="rating">Highest Rating</SelectItem>
+          <SelectItem value="experience">Most Experienced</SelectItem>
+          <SelectItem value="price-low">Price: Low to High</SelectItem>
+=======
       <Select value={sortOption} onValueChange={setSortOption}>"
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">"
           <SelectValue placeholder="Sort by" />
@@ -22,11 +72,46 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
           <SelectItem value="rating">Highest Rating</SelectItem>"
           <SelectItem value="experience">Most Experienced</SelectItem>"
           <SelectItem value="price-low">Price: Low to High</SelectItem>"
+>>>>>>> merged-prs-20250907-203621
           <SelectItem value="price-high">Price: High to Low</SelectItem>
         </SelectContent>
       </Select>
     </div>
+<<<<<<< HEAD
+  )
+}
+=======
+<<<<<<< HEAD
+  );
+}
+  )
+>>>>>>> merged-prs-20250907-203621
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+<<<<<<< HEAD
+  return (;
+=======
+  return (;
 
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters",;
+;
+export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
+  return (;
+=======
+
+<<<<<<< HEAD
 }
 
 import {;
@@ -45,6 +130,14 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 >>>>>>> origin/chore/fix-lint-and-merge
   return (;
 
+=======
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -56,6 +149,16 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
         <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
+<<<<<<< HEAD
+          <SelectItem value="experience">Most Experienced</SelectItem>;
+          <SelectItem value="price-low">Price: Low to High</SelectItem>;
+          <SelectItem value="price-high">Price: High to Low</SelectItem>;
+        </SelectContent>;
+      </Select>;
+    </div>;
+  );
+=======
+<<<<<<< HEAD
 
   );
 
@@ -65,6 +168,10 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 
 }
 
+=======
+          <SelectItem value="experience">Most Experienced</SelectItem>;
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
   Select,
@@ -86,13 +193,19 @@ export /**;
 
   )
 
+<<<<<<< HEAD
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
 
+=======
+<<<<<<< HEAD
+          <SelectItem value="price-low">Price:Low to High</SelectItem>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <SelectItem value="price-high">Price:High to Low</SelectItem>;
         </SelectContent>;
       </Select>;
     </div>;
   );}
+<<<<<<< HEAD
  export function SortFilter() { return null; }
   return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {}
   sortOption;
@@ -100,12 +213,29 @@ export /**;
   setSortOption "
 }> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>) 
 });
+=======
+ export function SortFilter ({
+  sortOption, setSortOption 
+}: SortFilterProps) {
+  return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {
+  sortOption 
+}onValueChange= {
+  setSortOption 
+}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>) 
 }
+);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+}
+>>>>>>> merged-prs-20250907-203621
 }
 ;
 
 }
+<<<<<<< HEAD
 ;
+=======
+;
+<<<<<<< HEAD
 
         <SelectContent className="bg-zion-blue border-zion-blue-light text-white">"
           <SelectItem value="relevance">Relevance""
@@ -141,3 +271,9 @@ pr-12325
 </SelectTrigger>"
 
 import {
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

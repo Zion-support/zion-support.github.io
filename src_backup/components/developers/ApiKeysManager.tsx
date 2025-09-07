@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 
@@ -25,6 +27,7 @@ export function ApiKeysManager() {const {keys;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export function ApiKeysManager() {
   const { 
     keys,
@@ -71,6 +74,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useState(() => {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 keys,
 
     loading, 
@@ -95,6 +100,7 @@ keys,
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     await createApiKey(keyName, selectedScopes)
 
     setShowCreateDialog(false)
@@ -124,7 +130,10 @@ import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
 import { format } from 'date - fns';
 import { useApiKeys, type ApiKeyScope } from '@/hooks / useApiKeys';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import {
   Card,
   CardContent,
@@ -136,7 +145,10 @@ import {
 =======
   CardTitle,
 } from '@/components / ui / card';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   Dialog,
   DialogContent,
   DialogDescription,
@@ -172,7 +184,10 @@ import { Badge } from '@/components / ui / badge';
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -200,6 +215,8 @@ function ApiKeysManager() {
     createApiKey, 
     regenerateApiKey, 
     revokeApiKey,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     clearNewApiKey;
   } = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),// Create key form state;
@@ -291,6 +308,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     {
 
@@ -340,6 +358,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { value: quotes:write', label: 'Write Quotes, description: Create and manage quotes' },
     { value: 'webhooks:manage, label: Manage Webhooks', description: 'Set up and manage webhook endpoints }],
   // Toggle a scope selection
+<<<<<<< HEAD
+  const toggleScope = (scope: ApiKeyScope) => {
+=======
 <<<<<<< HEAD
   const toggleScope = (scope: ApiKeyScope) => {}
   const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null)const handleRevokeKey = async (key_id: string) => {await revokeApiKey (key_id)setShowDeleteConfirm (null)}const handleRegenerateKey = async (key_id: string, ) => {await regenerateApiKey (key_id),setShowRegenerateConfirm (null)},const handleRevokeKey = async (key_id: string, ) => {await revokeApiKey (key_id),setShowDeleteConfirm (null)},// Scope options;
@@ -412,6 +433,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   const toggleScope = (scope: ApiKeyScope) => {
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     )
   }
@@ -433,6 +455,8 @@ export function ApiKeysManager() {
     null;
   );
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const handleDialogClose = () =>: any {setKeyName (')setShowCreateDialog (false)}setSelectedScopes(prev =>;
       prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope];
@@ -530,6 +554,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     string | null;
   >(null);
 
@@ -704,6 +729,8 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
                       <div key={scope.value} className="flex items-center space-x-2>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
                         <Checkbox 
                           id={scope.value} 
@@ -714,6 +741,7 @@ export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,cre
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                         <Checkbox 
                           id={scope.value} 
 
@@ -732,6 +760,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     ))}
 
+<<<<<<< HEAD
+className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+                        >
+                          {scope.label}
+                          <span className='block text-xs text-zinc-400 mt-1'>
+=======
 <<<<<<< HEAD
 
 className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70
@@ -821,6 +855,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                           {scope.label}
                           <span className='block text-xs text-zinc-400 mt-1'>
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                             {scope.description}
                           </span>
                         </Label>
@@ -843,6 +878,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                 >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               
               <DialogFooter>
                 <Button variant="outline onClick={handleDialogClose}>Cancel</Button>
@@ -850,6 +887,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Create Key
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   Create Key
 
                 </Button>
@@ -858,6 +896,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Dialog>
         </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                           </span>;
                         </Label>;
@@ -979,6 +1019,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   </div>;
                 </div>;
               </div>;
@@ -1088,6 +1129,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
         {newApiKey && (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md>;
                 <Button on_click={handleCreateKey} disabled={key_name.trim () === " || selected_scopes.length === 0}>;</Button>;
               </DialogFooter>;
@@ -1108,12 +1151,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={clearNewApiKey}
 =======
+>>>>>>> merged-prs-20250907-203621
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;
             <div className="flex justify-between items-start mb-2">;
               <span className="font-medium flex items-center">;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
               </span>;
               <Button
+<<<<<<< HEAD
+
+                variant="ghost"
+                size="icon"
+                className="h-6 w-6"
+
+                variant='ghost'
+                size='icon'
+                className='h-6 w-6'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                onClick={clearNewApiKey}
+
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
 
                 variant="ghost
@@ -1156,6 +1213,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         {/* API Keys List */}
         <div className=space-y-4">;
           {loading ? (
@@ -1180,12 +1238,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </div>
 <<<<<<< HEAD
+
+            <p className="text-sm text-zinc-300 mb-2">
+=======
+<<<<<<< HEAD
             <p className="text-sm text-zinc-300 mb-2">
             <p className="text-sm text-zinc-300 mb-2>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
             <p className=text-sm text-zinc-300 mb-2">
+>>>>>>> merged-prs-20250907-203621
 
               This key will only be displayed once. Please save it securely.
 
@@ -1215,6 +1278,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           {loading ? (
             <div className=text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -1226,6 +1291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             keys.map((key) => (
 
             keys.map((key) => (
@@ -1241,6 +1307,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Badge className=bg-green-700 text-white">Active</Badge>
                         ) : (
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white>Active</Badge>
@@ -1317,6 +1385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                           <Badge variant=secondary" className="bg-red-900 text-white border-red-800>Revoked</Badge>
 =======
+>>>>>>> merged-prs-20250907-203621
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -1327,6 +1396,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         onClick={() => setShowDeleteConfirm(key.id)}
                         className=cursor-pointer text-red-500'
                         disabled={!key.is_active}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1538,6 +1609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       >
                         <X size={14} className=mr-2' /> Revoke
 
@@ -1547,9 +1619,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className=bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <div className='mt-3 flex flex-wrap gap-2>
 =======
+>>>>>>> merged-prs-20250907-203621
 <div className='mt-3 flex flex-wrap gap-2'>
 >>>>>>> origin/chore/fix-lint-and-merge
                   {key.scopes.map(scope => (
@@ -1581,6 +1656,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       variant=secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800
                     >
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   {key && key.scopes.map((scope,) => (<Badge;
                       key = {scope}
@@ -1638,6 +1715,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </PopoverTrigger>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       {scope}
                     </Badge>;
                   ))}
@@ -1661,6 +1739,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         ? format(new Date(key && key.last_used_at), 'MMM d, yyyy): Never'}</div>;
                 <div className=mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
@@ -1707,12 +1787,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   )}
                 </div>;
               </div>;
             ));
           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </div>
       </CardContent>
@@ -1728,6 +1811,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardFooter>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       <CardFooter className="justify-between border-t border-zinc-800 py-4>
 
@@ -1749,6 +1833,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Refresh
 
         </Button>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   {key && key.expires_at && (<span>Expires: {format(new Date(key && key.expires_at), MMM d, yyyy')}
                     </span>                  )}                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy)}</span>;<span>Expires: {format(new Date(key.expires_at), MMM d, yyyy')}
@@ -1969,6 +2055,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </CardFooter>      >
 
       >
@@ -2061,14 +2148,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogAction;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700>;
               Cancel;
@@ -2098,6 +2190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className=bg-blue-600 hover:bg-blue-700';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             >;
 
@@ -2105,6 +2198,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {/* Delete Key Confirmation Dialog */}
 <AlertDialog;
@@ -2118,6 +2213,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               This action will revoke the API key and it can no longer be used;
               to access the API. This action cannot be undone.;
@@ -2125,9 +2221,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white>;
@@ -2142,6 +2241,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogFooter>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700>;
               Cancel;
             </AlertDialogCancel>;
@@ -2151,6 +2252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className=bg-red-600 hover:bg-red-700';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             >;
 
               Revoke;
@@ -2159,6 +2261,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AlertDialogContent>;
       </AlertDialog>;
 
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 
 ;
@@ -2253,3 +2358,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

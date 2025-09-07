@@ -1,6 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 =======
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -39,6 +46,10 @@ if (.ends_with (") {
           return match.trim () + ";";
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node
 
 import fs from "fs";
@@ -73,6 +84,7 @@ files.forEach((file) => {
         if (!match.trim().endsWith(";")) {
           modified = true;
           return match.trim() + ";";
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -170,11 +182,39 @@ content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
           modified = true;}
           return `[${items.join(', ')}]`;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         }
         return match;
       },
     );
 
+<<<<<<< HEAD
+    // Fix other common syntax issues
+    // Fix missing semicolons after variable declarations
+    content = content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+      (match, varName) => {
+        if (
+          !match.includes("function") &&
+          !match.includes("if") &&
+          !match.includes("for") &&
+          !match.includes("while") &&
+          !match.includes("switch") &&
+          !match.includes("try") &&
+          !match.includes("catch") &&
+          !match.includes("finally") &&
+          !match.includes("return") &&
+          !match.includes("throw") &&
+          !match.includes("break") &&
+          !match.includes("continue") &&
+          !match.includes("debugger") &&
+          !match.includes("export") &&
+          !match.includes("import")
+        ) {
+=======
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -200,6 +240,7 @@ if (&&) {
           !match.includes ("export") &&;
           !match.includes ("import")) {
 
+<<<<<<< HEAD
 // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
     content = content.replace(
@@ -223,6 +264,9 @@ if (&&) {
           !match.includes("import")
         ) {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           modified = true;
 <<<<<<< HEAD
           return `[${items.join(', ')}]`;
@@ -242,6 +286,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     );
 
+<<<<<<< HEAD
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      console.log(`Fixed: ${file}`);
+      totalFixed++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+=======
 ;
     // Check condition
 if ( {) {
@@ -258,6 +312,7 @@ if ( {) {
 
 });
 
+<<<<<<< HEAD
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${file}`);
@@ -271,10 +326,30 @@ if ( {) {
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
+<<<<<<< HEAD
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+=======
 
 }},
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
         return match;
       },);
@@ -352,6 +427,9 @@ fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -367,7 +445,10 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 }},
 
 }},
@@ -628,3 +709,8 @@ origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 main();
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -20,6 +20,9 @@ import { useTranslation } from react-i18next'
 origin/cursor/automate-test-improve-and-merge-code-2533
 export interface EmptyStateProps {
 <<<<<<< HEAD
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+=======
+<<<<<<< HEAD
   type: 'products | categories' | 'talent | equipment' | 'search | error' | 'network | loading';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb  } from lucide-react';
 import { Button   } from '@/components/ui/button;
@@ -61,6 +64,7 @@ export interface EmptyStateProps  {type:;
 =======
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   title?: string;
   description?: string;
   action?: {
@@ -162,6 +166,12 @@ return (
       <h3 className=text-xl font-semibold text-gray-900 dark:text-white mb-2>
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+        {displayTitle}
+      </h3>
+      
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
+=======
+<<<<<<< HEAD
     | 'loading';import * as React from react,import { Button } from '@/components/ui/button',import Link from next/link,import { useTranslation } from 'react-i18next',export interface EmptyStateProps  {type: products | 'categories' | talent | 'equipment' | search | 'error' | network | 'loading',title?: string,description?: string,action?: {label: string,onClick: () => void;
   },icon?: React.ReactNode;
 }const defaultContent = {products: {icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,title: No Products Available,description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!},categories: {icon: <Lightbulb className=w-16 h-16 text-gray-400 />,title: No Categories Found',description: 'Categories are being organized. Please try refreshing the page or come back later.},talent: {icon: <Users className="w-16 h-16 text-gray-400" />,title: No Talent Profiles',description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.},equipment: {icon: <Wrench className=w-16 h-16 text-gray-400 />,title: No Equipment Available',description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.},search: {icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,title: No Results Found',description: 'Try adjusting your search terms or browse our categories to discover what we have available.},error: {icon: <Server className=w-16 h-16 text-red-400 />,title: Unable to Load Data',description: 'We\re experiencing technical difficulties. Our team has been notified and is working on a fix.},network: {icon: <Wifi className="w-16 h-16 text-orange-400" />,title: 'Connection Issue',description: Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.},loading: {icon: <RefreshCw className=w-16 h-16 text-blue-400 animate-spin />,title: 'Loading...',<h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
@@ -178,22 +188,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       
       <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         {displayDescription}
       </p>;
       {action && (;
         <Button;
           onClick={action.onClick}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           variant="outline";
           className=flex items-center gap-2;
         >;
           <RefreshCw className="w-4 h-4" />;
 =======
+>>>>>>> merged-prs-20250907-203621
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="w-4 h-4" />
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           {action.label}
         </Button>
       )}
@@ -207,6 +224,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </Button>;
       )}{action.label}
@@ -273,6 +292,7 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false}: {
 =======
+>>>>>>> merged-prs-20250907-203621
 }: {
 >>>>>>> origin/chore/fix-lint-and-merge
   onRetry?: () => void
@@ -280,6 +300,8 @@ export function ProductsEmptyState ({
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </div>)// Specific empty state variants for quick use;
 export function ProductsEmptyState ({on_retry,onAddProduct,is_authenticated = false}: {onRetry?: () => void;
@@ -299,6 +321,7 @@ export function ProductsEmptyState ({on_retry,onAddProduct,is_authenticated = fa
       ? { label: 'Try Again', onClick: onRetry }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400>;
           <p>If this issue continues, please contact our support team.</p>;
@@ -403,6 +426,8 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       : undefined;
   const customDescription = isAuthenticated;
     ? "Were working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!;
@@ -468,6 +493,7 @@ export function ProductsEmptyState({onRetry,onAddProduct,isAuthenticated = false
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <EmptyState"
       type=equipment
       action={onRetry ? { label: Refresh Listings', onClick: onRetry } : undefined}
@@ -502,6 +528,8 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
   );
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         label: is_authenticated ? Add Product : 'Login to Add Product',
         on_click: onAddProduct}
@@ -510,6 +538,7 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
     : on_retry;
       ? { label: Try Again', on_click: on_retry }
 =======
+>>>>>>> merged-prs-20250907-203621
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }

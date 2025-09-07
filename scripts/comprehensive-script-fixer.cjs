@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.scriptsDir = path.join(this.projectRoot, 'scripts')
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -42,6 +48,7 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   log(message, level = 'info')
     fixed = fixed.replace(/;\s*,/g, ',')
     fixed = fixed.replace(/{\s*;/g, '{'})
@@ -55,24 +62,37 @@ const path = require('path')
     fixed = fixed.replace(/,\s*\]/g, ']')
     fixed = fixed.replace(/\(\s*;\s*/g, '(')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     fixed = fixed.replace(/;\s*\)/g, ')'
     fixed = fixed.replace(/['"]\s*;\s*['"]/g, '"")
     fixed = fixed.replace(/['"]\s*;\s*$/gm, '')
     fixed = fixed.replace(/require\s*\(\s*['"]\s*;\s*['"]\s*\)/g, 'require("")
       this.log(`⚠ ${this.errors.length} files had "errors"`)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
       this.log(`� Script fixing "failed"`)
+<<<<<<< HEAD
+      this.log(`� Script fixing "failed"`)
+      this.log(`� Script fixing "failed"`)
+
+
+
+=======
 <<<<<<< HEAD
 
       this.log(`� Script fixing failed`)
@@ -98,3 +118,4 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

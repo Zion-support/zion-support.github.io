@@ -1,9 +1,47 @@
 <<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = $2;
+  const superToken = $2;
+  return !superToken || token === superToken
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res.status(401).json($2);
+  if (req.method = $2;
+    return res.status(200).json({ metrics: state.metrics || {} })
+  }
+
+  if (req.method === 'POST') {
+    const started = Date.now($2);
+    try {
+      const metrics = $2;
+      const triggers = evaluateReflexes($2);
+      const state = $2;
+      state.metrics = $2;
+      state.lastTriggers = $2;
+      writeState($2);
+      const latencyMs = $2;
+      appendLog($2);
+      return res.status(200).json({ triggers })
+    } catch (e: any) {
+      appendLog($2);
+      return res.status(500).json({ error: 'Reflex failure' })
+    }
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' })
+}
+=======
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
   const token = null;}
@@ -36,6 +74,47 @@ function isAuthorized(req: NextApiRequest): boolean {const token = req.headers['
 
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
+=======
+
+import {
+  appendLog
+  evaluateReflexes
+  readState
+  writeState;
+  appendLog,
+  evaluateReflexes,
+  readState,;
+  writeState,;
+} from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = req && req.headers['x-admin-token'] || req && req.query.token;
+  const superToken = process && process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  }
+
+<<<<<<< HEAD
+  if (!isAuthorized(req));
+    return res.status(401).json({ error: 'Unauthorized' });
+  if (req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
+    return res.status(200).json({ metrics: state.metrics |{} });  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return res.status(200).json({ metrics: state.metrics || {} });  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+  if (req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
+    return res.status(200).json({ metrics: state.metrics || {} })
+  }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+  if (req && req.method === 'GET') {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
 
@@ -62,6 +141,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 >>>>>>> origin/chore/fix-lint-and-merge
   }
 
+<<<<<<< HEAD
   if (req && req.method = == 'POST') {
    ;
   const started = Date && Date.now();}
@@ -71,18 +151,41 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 const triggers = evaluateReflexes(metrics);
 
 const state = readState<any    />();
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (req && req.method === 'POST') {
+    const started = Date && Date.now();
+    try {
+      const metrics = req && req.body || {};
+      const triggers = evaluateReflexes(metrics);
+      const state = readState<any>();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
+<<<<<<< HEAD
+      const latencyMs = Date && Date.now() - started;
+=======
 
 const latencyMs = Date.now() - started;
 
+<<<<<<< HEAD
 appendLog({
         module: 'reflex',
   type: 'metrics',
         status: 'ok',}
         latencyMs,}
         payload: { metrics, triggers },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      appendLog({
+        module: 'reflex'
+        type: 'metrics'
+        status: 'ok'
+        latencyMs
+        payload: { metrics, triggers }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       });
       return res && res.status(200).json({ triggers });
     } catch (e: any) {
@@ -93,13 +196,56 @@ appendLog({
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
+<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });
 
+=======
+<<<<<<< HEAD
+      return res && res.status(500).json({ error: 'Reflex failure' });    }
+  }
   return res && res.status(405).json({ error: 'Method not allowed' });
+  return res && res.status(405).json({ error: 'Method not allowed' });
+=======
 
+      return res && res.status(500).json({ error: 'Reflex failure' });    }
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  return res && res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+<<<<<<< HEAD
 
 }
 }
+=======
+}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+      return res && res.status(200).json({ triggers })
+    } catch (e: any) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res && res.status(500).json({ error: 'Reflex failure' })
+  }
+  return res && res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
+}
+      const latencyMs = Date.now() - started;
+      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+      return res.status(200).json({ triggers })
+    } catch (e: any) {
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res.status(500).json({ error: 'Reflex failure' })
+    }
+  }
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+=======
+
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   append_log,
   evaluate_reflexes,
   read_state,
@@ -408,6 +554,7 @@ return res.status (405).json ({ error: 'Method not allowed' });'
   }'
   return res.status (405).json ({ error: 'Method not allowed' });
 
+<<<<<<< HEAD
 '
   return res.status(405).json({ error: 'Method not allowed' });
 '
@@ -442,3 +589,31 @@ return res.status (405).json ({ error: 'Method not allowed',}
 
 }
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+<<<<<<< HEAD
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
+}
+  return res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

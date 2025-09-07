@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
@@ -17,6 +19,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -32,11 +35,19 @@ const { execSync } = require('child_process')
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       recommendations.push('Update outdated packages for security and performance')
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+      recommendations.push('Remove unused dependencies to reduce bundle size')
+<<<<<<< HEAD
+      recommendations.push('Remove unused dependencies to reduce bundle size')
+
+      recommendations.push('Remove unused dependencies to reduce bundle size')
 
 =======
-      recommendations.push('Remove unused dependencies to reduce bundle size')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -59,6 +70,7 @@ const { execSync } = require('child_process')
 
 =======
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
       recommendations.push('Remove unused dependencies to reduce bundle size')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

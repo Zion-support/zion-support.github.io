@@ -341,6 +341,8 @@ function analyzeFile(filePath) {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -348,6 +350,7 @@ function analyzeFile(filePath) {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -413,6 +416,9 @@ optimizer.run().catch(console.error);
 module.exports = SEOOptimizer;
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -421,3 +427,4 @@ module.exports = SEOOptimizer;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/main
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

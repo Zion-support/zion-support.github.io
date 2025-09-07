@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react;
 main
@@ -6,6 +8,7 @@ main
 import { Link } from react-router-dom';
 const Sidebar: React.FC = () => {,
 =======
+>>>>>>> merged-prs-20250907-203621
 import { Link } from 'react-router-dom';
 const Sidebar: React.FC = () => {;,
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -192,7 +195,10 @@ main
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};"
       transition={{ duration: 0.3, ease: 'easeInOut' }};
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     >,
       <div className="p-6">,
@@ -608,9 +614,13 @@ export default Sidebar;
   );
 <<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+};
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

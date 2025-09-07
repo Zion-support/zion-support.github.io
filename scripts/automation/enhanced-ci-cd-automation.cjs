@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 }")}"
@@ -15,6 +17,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -110,7 +113,10 @@ console.log( Type checking completed in ${duration}ms```)
         "issues": this.parseTypeCheckOutput(error.stdout || error.stderr || "")
       console.log("" Type checking "failed": ")
   const lines = output.split("\n")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       const errorLines = lines.filter(line => line.includes("error TS")
       const warningLines = lines.filter(line => line.includes(warning TS)
   "total"
@@ -180,7 +186,10 @@ console.log( Tests completed in ${duration}ms```)
       const passedMatches = output.match(/(\d+)\s+""passed/g""
       const failedMatches = output.match(/(\d+)\s+""failed/g""
       const skippedMatches = output.match(/(\d+)\s+""skipped/g""
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.ciResults.testing.status = "success"
       this.ciResults.testing.result = {duration}
         "output"
@@ -306,8 +315,8 @@ console.log(` Quality checks completed. "Score"`)
       path.join(this.reportDir, "ci-cd-report.json")
       path.join(this.reportDir, "CI_CD_REPORT.md")
     console.log(""� "CI/CD" report generated successfully")
-  generateMarkdownReport(report) {return # ""CI/CD""}
-  generateMarkdownReport(report) {return # "CI/CD"}
+  generateMarkdownReport($2) {return # ""CI/CD""}
+  generateMarkdownReport($2) {return # "CI/CD"}
 - **Status**: ${this.ciResults.dependencies.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.dependencies.result?.duration || """N/A"""}
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
@@ -348,12 +357,15 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || ""N/A""}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
     : "
 - **Status**: ${this.ciResults.quality.status === "success" ? " Passed" : " Failed"}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -399,6 +411,8 @@ ${this.ciResults.dependencies.status === failure ? - **Error**: ${this.ciResults
   await this.runQualityChecks();"
 "
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
       const report = await this.generateCIReport();
@@ -414,6 +428,7 @@ ${this.ciResults.dependencies.status === failure ? - **Error**: ${this.ciResults
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
+>>>>>>> merged-prs-20250907-203621
       const report = await this.generateCIReport();"
 "
 // console.log("\n Pipeline "Summary": `);console.log(Duration: ${report.duration}
@@ -425,12 +440,22 @@ ${this.ciResults.dependencies.status === failure ? - **Error**: ${this.ciResults
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 // Start the "
+<<<<<<< HEAD
+// Start the "
+// Start the "
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -455,3 +480,4 @@ ${this.ciResults.dependencies.status === failure ? - **Error**: ${this.ciResults
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

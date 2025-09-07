@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
             "cwd"
@@ -12,6 +14,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -86,8 +89,11 @@ this.testResults.unit.status = "success"
         path.join(process.cwd() lighthouserc.json
   console.log(" Running Lighthouse performance tests...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
         const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
         const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
   "encoding": "utf8"
@@ -124,8 +130,11 @@ this.testResults.unit.status = "success"
             cwd
   console.log("♿ Running basic accessibility checks...")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const output = execSync("npm run lint")
   "encoding": "
             "cwd"
@@ -231,11 +240,21 @@ ${report.qualityGates ? ` All quality gates passed successfully! : "`}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Testing automation "failed": ")
+<<<<<<< HEAD
+  console.error(" Testing automation "failed": ")
+  console.error(" Testing automation "failed": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -253,3 +272,4 @@ ${report.qualityGates ? ` All quality gates passed successfully! : "`}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

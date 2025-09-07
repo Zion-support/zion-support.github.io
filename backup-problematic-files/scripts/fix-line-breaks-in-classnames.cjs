@@ -21,6 +21,7 @@ console.log(' Fixing line breaks in className attributes...')
     if (content !== fs.readFileSync(filePath, utf8')
 // console.log(` Fixed: ${path.relative('/workspace'`})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -37,3 +38,9 @@ console.log('✨ Line break fixes completed!')
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+console.log('✨ Line break fixes completed!')
+=======
+console.log('✨ Line break fixes completed!')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

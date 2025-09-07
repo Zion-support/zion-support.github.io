@@ -1,3 +1,9 @@
+<<<<<<< HEAD:pages/support.tsx
+import React from 'react';
+import Head from 'next/head';
+
+export default function Support() {
+=======
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,25 +331,30 @@ export default function Support() {
     ? supportCategories 
     : supportCategories.filter(cat => cat.id === selectedCategory);
 
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/support.tsx.backup.1755991558
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
-        <div className="relative z-10 container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              How Can We Help?
+    <>
+      <Head>
+        <title>support | Zion Tech Group</title>
+        <meta name="description" content="support page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              support
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing, 
-              and autonomous systems. Our expert team is here to help 24/7.
+            <p className="text-xl text-gray-600">
+              This is the support page.
             </p>
+<<<<<<< HEAD:pages/support.tsx
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+=======
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
@@ -1055,3 +1066,4 @@ export default Support;
 };
 
 export default SupportPage;
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/support.tsx.backup.1755991558

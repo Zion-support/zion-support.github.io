@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const chalk = require("chalk")
@@ -159,6 +162,12 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
 <<<<<<< HEAD
+
+  console.error(chalk.red(" Dashboard "error": ")
+  console.error(chalk.red(" Dashboard "error": ")
+  console.error(chalk.red(" Dashboard "error": ")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -178,6 +187,7 @@ const Table = require("cli-table3")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 
       chalk.gray(  restart <process>  - Restart a specific process")"
 </process>

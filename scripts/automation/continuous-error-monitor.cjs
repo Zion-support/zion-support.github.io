@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,14 +12,20 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { spawn } = require("child_process")
+<<<<<<< HEAD
+
+const { spawn } = require("child_process")
+=======
 const fs = require("fs")
 const path = require("path")
 const { spawn } = require("child_process")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}
     this.log(Continuous error monitoring is now active")
   this.log("Error fixer already running, skipping this cycle)
@@ -41,7 +49,10 @@ const { spawn } = require("child_process")
         "env": { ...process.env, "NODE_ENV": "production"}
       let stdout = "
       let stderr = "
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       child.stdout.on("data")
       child.stderr.on(`data``)
       child.on(close)
@@ -74,12 +85,22 @@ process.on(SIGTERM")
 =======
 process.on("SIGTERM")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.log(")
+<<<<<<< HEAD
+  console.log(")
+  console.log(")
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -104,3 +125,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

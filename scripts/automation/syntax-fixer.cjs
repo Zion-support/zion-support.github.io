@@ -1,5 +1,14 @@
 <<<<<<< HEAD
 
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+
+=======
+<<<<<<< HEAD
+
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -51,6 +60,7 @@ const { exec } = require("child_process)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -74,7 +84,7 @@ const { exec } = require("child_process")
         return before + " + after + "
     fixed = fixed.replace(/^([^\\n]*)([^)]
   if (!after.includes()
-        return before +  + after + 
+        return before +  + after +
     return { "content"}
     fixed = fixed.replace(/^    fixed = fixed.replace(/^\\n/gm, () => { changes++; return }
     return { content"}
@@ -147,11 +157,21 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error("Syntax fixer "failed")
+<<<<<<< HEAD
+  console.error("Syntax fixer "failed")
+  console.error("Syntax fixer "failed")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -167,3 +187,4 @@ const { exec } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

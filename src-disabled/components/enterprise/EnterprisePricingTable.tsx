@@ -34,7 +34,10 @@ import { Badge } from "@/components/ui/badge",;
 
 import {
   Table;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   TableBody;
   TableCell;
   TableHead;
@@ -46,9 +49,12 @@ import { Badge } from @/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export function EnterprisePricingTable() {
   const plans = [
@@ -72,12 +78,15 @@ export function EnterprisePricingTable() {
     {
       name: "Business",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       price: "$1,999";
       price: $1,999";
 
       price: "$1,999,
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       billing: /month",
 
@@ -105,6 +114,8 @@ export function EnterprisePricingTable() {
       features: [
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -130,12 +141,17 @@ export function EnterprisePricingTable() {
       features: [
       <div className="container mx-auto max-w-7xl>
 =======
+>>>>>>> merged-prs-20250907-203621
       <div className="container mx-auto max-w-7xl">
 >>>>>>> origin/chore/fix-lint-and-merge
 
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+<<<<<<< HEAD
+
+import React from 'react';
+=======
 <<<<<<< HEAD
 
 
@@ -183,6 +199,7 @@ import { Table,  Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from 
 
 import React from 'react';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Button } from '@/components/ui/button';
 import { Check, X } from 'lucide-react';
 import {  Table,  Table,;
@@ -277,6 +294,8 @@ export function EnterprisePricingTable() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto>            Choose the perfect plan for your team size and requirements;
           </p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </div>;<div className=overflow-x-auto'>;
           <Table className='border rounded-lg>    <section id="pricing className=py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl>;
@@ -295,6 +314,7 @@ export function EnterprisePricingTable() {
                     <div className="flex flex-col items-center>;
                       {plan && plan.popular && (<Badge className='mb-2 bg-zion-purple>;
 =======
+>>>>>>> merged-prs-20250907-203621
         </div>;
 
         <div className='overflow-x-auto'>;
@@ -319,7 +339,10 @@ export function EnterprisePricingTable() {
                     <div className="flex flex-col items-center">;
                       {plan && plan.popular && (;
                         <Badge className='mb-2 bg-zion-purple'>;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                           Most Popular;
                         </Badge>;
                       )}
@@ -334,6 +357,8 @@ export function EnterprisePricingTable() {
                         {plan && plan.description}
                       </p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       <p className='text-sm font-medium mt-2>{plan && plan.users}</p>                      <Button;
                         className={`mt-4 w-full ${plan && plan.popular ? bg-zion-purple hover:bg-zion-purple/90' : '}`}
                         variant={plan && plan.popular ? default' : 'outline}>;
@@ -347,6 +372,7 @@ export function EnterprisePricingTable() {
                           ? Request Quote';
                           : 'Get Started}                        {plan && plan.name === "Enterprise ? Request Quote" : "Get Started}
 =======
+>>>>>>> merged-prs-20250907-203621
                       <p className='text-sm font-medium mt-2'>{plan && plan.users}</p>                      <Button
                         className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan && plan.popular ? 'default' : 'outline'}>;
@@ -365,6 +391,8 @@ export function EnterprisePricingTable() {
                   </TableHead>;
 
             Choose the perfect plan for your team size and requirements
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           </p>
@@ -410,6 +438,7 @@ export function EnterprisePricingTable() {
                         </Badge>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           </p>
         </div>
@@ -447,6 +476,8 @@ export function EnterprisePricingTable() {
                         <span className='text-2xl font-bold'>{plan.price}</span>
                         <span className='text-sm text-muted-foreground ml-1'>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       <span className='font-bold text-xl>{plan.name}</span>
                       <div className=flex items-baseline mt-1'>
                         <span className='text-2xl font-bold>{plan.price}</span>
@@ -454,6 +485,7 @@ export function EnterprisePricingTable() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                           {plan.billing}
                         </span>
@@ -461,6 +493,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className='text-sm text-muted-foreground mt-1>
                         {plan.description}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
@@ -518,6 +552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       </p>
                       <p className=text-sm font-medium mt-2'>{plan.users}</p>
                       <Button
@@ -528,14 +563,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           ? 'Request Quote'
                           : 'Get Started'}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
                       </Button>
                     </div>
                   </TableHead>
                 ))}
+<<<<<<< HEAD
+
+              </TableRow>;
+=======
 <<<<<<< HEAD
 
 
@@ -551,11 +593,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               </TableRow>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </TableHeader>;
             <TableBody>;
               {(plans[0]?.features || []).map((feature, index,) => (;
                 <TableRow key={feature && feature.name}>;
                   <TableCell className='font-medium'>{feature && feature.name}</TableCell>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   {plans && plans.map(plan => (<TableCell;
                       key={`${plan && plan.name}-${feature && feature.name}`}
@@ -571,6 +616,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <X className="h-5 w-5 text-muted-foreground mx-auto />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   {plans && plans.map(plan => (;
                     <TableCell
                       key={`${plan && plan.name}-${feature && feature.name}`}`
@@ -608,6 +654,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <X className=h-5 w-5 text-muted-foreground mx-auto />
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       {plan && plan.features[index]?.included ? (<Check className="h-5 w-5 text-green-500 mx-auto" />;
                       ) : (<X className="h-5 w-5 text-muted-foreground mx-auto" />;<TableCell className="font-medium">{feature.name}</TableCell>;
                   {plans.map((plan) => (<TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
@@ -631,6 +679,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ) : (<X className=h-5 w-5 text-muted-foreground mx-auto />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                       )}
                     </TableCell>;
                   ))}
@@ -640,9 +689,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       </div>
 
@@ -687,10 +739,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from react;
 import { Button } from '@/components/ui/ button';
 import { Check, X } from lucide-react;
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
@@ -700,6 +755,8 @@ import { Check, X } from 'lucide-react';
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   TableRow,
 } from '@/components/ui/ table';
@@ -821,12 +878,15 @@ export /**;
           <p className=text - xl text - muted - foreground max - w-2xl mx - auto>            Choose the perfect plan for your team size and requirements;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
           </p>;
         </div>;
         <div className=overflow-x-auto>;
           <Table className="border rounded-lg">;
             <TableHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               <TableRow>;
                 <TableHead className='w-[200px]'>Plan Features</TableHead>;
@@ -843,6 +903,7 @@ export /**;
                         <span className=text - sm text - muted - foreground ml - 1>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                           {plan.billing}
                         </span>;
@@ -850,6 +911,8 @@ export /**;
                       <p className="text-sm text-muted-foreground mt-1">;
                         {plan.description}
                       </p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       <p className='text - sm font - medium mt - 2'>{plan.users}</p>                      <Button;
                         className={`mt - 4 w - full ${plan.popular ? bg - zion - purple hover:bg - zion - purple / 90 : ''}`}
@@ -882,6 +945,7 @@ export /**;
                       {plan.features[index]?.included ? (<Check className="h - 5 w - 5 text - green - 500 mx - auto" />) : (<X className=h - 5 w - 5 text - muted - foreground mx - auto />)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               {(plans[0]?.features || []).map ((feature, index, ) => (
                 <TableRow key={feature.name}>;
@@ -915,6 +979,8 @@ export /**;
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 
@@ -936,6 +1002,7 @@ export /**;
   );
 })))]]
 =======
+>>>>>>> merged-prs-20250907-203621
 ;)))]]
 >>>>>>> origin/chore/fix-lint-and-merge
         <div className="mt-8 text-center text-sm text-muted-foreground">;
@@ -959,6 +1026,9 @@ export /**;
   );
 <<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)}</TableBody>;
           </Table>;
@@ -974,3 +1044,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -23,6 +25,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 
@@ -31,11 +34,23 @@ const path = require('path')
     const importLines = lines.filter(line => line.startsWith('import')
     const otherLines = lines.filter(line => !line.startsWith('import')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
     if (otherLines.length > 0 && otherLines[0].includes('{'})
       const componentName = file.replace('.tsx', '').replace(/-/g, '')
       content = importLines.join('\n') + '\n\n'
         otherLines.join('\n') + '\n'
         '};\n\n'
+<<<<<<< HEAD
+
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +82,4 @@ const path = require('path')
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

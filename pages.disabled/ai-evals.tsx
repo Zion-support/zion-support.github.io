@@ -1,9 +1,51 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
 export default function AIEvalsPage() {
 	const contactInfo = null;
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react',;
+import Head from 'next/head',;
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
+
+import React from 'react'
+import Head from 'next/head'
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
+export default function AIEvalsPage() {
+	const contactInfo = {
+		mobile: '+1 302 464 0950'
+		email: 'kleber@ziontechgroup.com'
+		address: '364 E Main St STE 1008 Middletown DE 19709'
+		website: 'https://ziontechgroup.com'
+
+
+	},
+	const plans = [
+		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] },
+		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }],
+export default function AIEvalsPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+	const _plans = [
+		{_name: 'Startup', _price: '$149/month', _items: ['5K eval calls', _'Latency/Cost tracking', _'Toxicity/PII checks', _'CSV export']},
+		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
+		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
+
+	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -18,6 +60,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</Link>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
 
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -42,6 +88,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -78,6 +128,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
 	)
   } catch (error) {
     console.error("Error:", error);
@@ -87,6 +138,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+=======
+
+}
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
@@ -167,6 +226,16 @@ return (
   </div>;
   </QuantumHolographicMatrixBackground>);
 
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
+=======
+	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
+			<Head>
+				<title>AI Evaluations Platform | Zion Tech Group</title>
+				<meta name=&quot;description&quot; content=&quot;Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails.&quot; />
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-evals&quot; />
+			</Head>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 			<div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
 				<div className=&quot;text-center max-w-4xl mx-auto mb-12&quot;>
 					<h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>AI Evaluations</h1>
@@ -185,6 +254,13 @@ return (
 							<ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
 								{p.items.map((i) => (
 									<li key={i} className=&quot;flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400&quot;><Check /> <span>{i}</span></li>
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 
 import React from 'react';
 import Head from 'next/head';
@@ -224,6 +300,10 @@ export default function AIEvalsPage() {_const _contactInfo = {
 		{_name: 'Startup', _price: '$149/month', _items: ['5K eval calls', _'Latency/Cost tracking', _'Toxicity/PII checks', _'CSV export']},
 		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
+=======
+ursor/fix-lint-push-and-merge-to-main-ce13
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
@@ -258,7 +338,68 @@ export default function AIEvalsPage() {_const _contactInfo = {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages.disabled/ai-evals.tsx
 
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+
+
+							</ul>;
+						</div>;
+					))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				</div>
+				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
+						<div className="text-gray-400 text-sm mb-2">Key Metric</div>
+						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400"><Gauge /> Accuracy & Faithfulness</div>
+						<p className="text-gray-400 mt-2 text-sm">Track quality with BLEU/ROUGE/F1 and hallucination/faithfulness scores across datasets.</p>
+					</div>
+					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
+						<div className="text-gray-400 text-sm mb-2">Ops Metric</div>
+						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-purple-400"><Gauge /> Latency & Cost</div>
+						<p className="text-gray-400 mt-2 text-sm">Measure P50/P95 latency and per-call costs to optimize throughput and budget.</p>
+					</div>
+					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
+						<div className="text-gray-400 text-sm mb-2">Safety Metric</div>
+						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-rose-400"><Gauge /> Guardrails</div>
+						<p className="text-gray-400 mt-2 text-sm">PII redaction, toxicity/abuse detection, jailbreak detection, exportable audit logs.</p>
+					</div>
+				</div>
+				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
+						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
+						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
+						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+					</div>
+					<div className="text-center">
+						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
+						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
+					</div>
+				</div>
+			</div>
+		</QuantumHolographicMatrixBackground>
+	);
+};
+	)
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-evals.tsx

@@ -1,3 +1,86 @@
+<<<<<<< HEAD
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex items-end justify-between&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>DAO Metrics</h1>
+          <div className=&quot;text-xs text-gray-500&quot;>Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
+        </div>
+      </div>
+
+      <section className=&quot;grid lg:grid-cols-2 gap-6&quot;>
+        <div className=&quot;border rounded p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Token Distribution (top ~sample)</div>
+          <div className=&quot;space-y-2&quot;>
+            {data.tokenDistribution.map((d) => (
+              <div key={d.address} className=&quot;text-sm&quot;>
+                <div className=&quot;flex items-center justify-between&quot;>
+                  <span className=&quot;truncate mr-2&quot;>{d.address}</span>
+                  <span>{d.percent.toFixed(2)}%</span>
+                </div>
+                <div className=&quot;w-full h-2 bg-gray-200 dark:bg-gray-800 rounded&quot;>
+                  <div className=&quot;h-2 bg-emerald-600 rounded&quot; style={{ width: `${Math.min(100, d.percent)}%` }} />
+
+import { useEffect, useState } from 'react',;
+;
+type Holder = { address: string, amount: string },
+
+import { useEffect, useState } from 'react';
+
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
+
+type Holder = { address: string, amount: string };
+type Metrics = {
+  updatedAt: number;
+  tokenDistribution: { address: string, percent: number }[],;
+  topHolders: Holder[];
+  activeProposals: any[];
+  governanceParticipationRate: number;
+  cached?: boolean;
+},;
+export default function DaoMetrics(req, res) {
+  try {
+  const [data, setData] = useState<Metrics | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      const resp = await fetch('/api/dao/metrics');
+      const json = await resp.json();
+      setData(json);
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load()
+  }, []),
+  if (loading) return <div>Loading...</div>,
+  if (!data) return <div>Error loading data</div>,
+=======
 
 import { useEffect, useState } from 'react';
 
@@ -59,6 +142,11 @@ export default function DaoMetrics(req, res) {
 type Holder = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -81,10 +169,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -119,12 +218,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </td>
                   <td className='py-1'>{h.amount}</td>
                 </tr>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </tbody>
           </table>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -137,20 +247,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ul className='list-disc pl-5 text-sm'>
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </ul>
           ) : (
+<<<<<<< HEAD
+
+            <div className="text-sm text-gray-600">No active proposals.</div>
+          )}
+=======
             <div className="text-sm text-gray-600">No active proposals.</div>
 
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
 <div className="text-sm text-gray-600">No active proposals.</div>
           )}
             <div className="text-sm text-gray-600">No active proposals.</div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -162,11 +294,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </div>
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
 }
 
   );
 };
   )
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
 
 <div className='text-sm text-gray-600'>No active proposals.</div>
           )}
@@ -193,13 +330,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </div>
   )
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
 
 }
+=======
+}
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx
 import { useEffect, useState } from 'react',
 
 import { useEffect, useState } from 'react',;
@@ -312,5 +462,10 @@ if (return <div > Error loading data</div>, ) {
 }
 }
 
+<<<<<<< HEAD:pages.disabled/dao/index.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/dao/index.tsx

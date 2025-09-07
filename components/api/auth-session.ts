@@ -1,15 +1,36 @@
 <<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = getSessionFromReq(req);
+  const internal = isInternalAgentRequest(req);
+  if (!session && !internal) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return
+  }
+  res.status(200).json({ message: 'OK' })
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function handler() {const session = null;
 
 
 
 }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 
 import {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -52,6 +73,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+<<<<<<< HEAD
   res && res.status(200).json({ message: 'OK' });    return
 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -62,10 +84,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
     res.status (401).json ({ error: 'Unauthorized' });
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return;
-
   }
 
+<<<<<<< HEAD
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }'
@@ -85,6 +111,10 @@ import {};
   getSessionFromReq,isInternalAgentRequest} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';'
 
 export default function handler() {const session = getSessionFromReq(req;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  res && res.status(200).json({ message: 'OK' });    return
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   const internal = isInternalAgentRequest(req)if (!session && !internal) {res.status(401).json({ "error": 'Unauthorized','
 };
@@ -130,12 +160,18 @@ isInternalAgentRequest;
 }
 }
 }
+<<<<<<< HEAD
+=======
 
 =======
+<<<<<<< HEAD
   getSessionFromReq,;
   isInternalAgentRequest,;'
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler() { return null; }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     res.status(401).json({ error: 'Unauthorized' });
 
   }
@@ -143,4 +179,45 @@ res.status(200).json({ message: 'OK' });    return
   }
   res.status(200).json({ message: 'OK' });
 }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+res.status (200).json ({ message: 'OK' });    return;
+  }
+  res.status (200).json ({ message: 'OK' });
+
+}
+<<<<<<< HEAD
+
+}
+
+
+import {
+  getSessionFromReq
+  isInternalAgentRequest;
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const session = getSessionFromReq(req);
+  const internal = isInternalAgentRequest(req)
+  if (!session && !internal) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return;
+
+  }
+res.status(200).json({ message: 'OK' });    return
+  }
+  res.status(200).json({ message: 'OK' });
+}
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

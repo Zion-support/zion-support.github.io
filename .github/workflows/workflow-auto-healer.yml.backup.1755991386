@@ -55,10 +55,16 @@ jobs:
             python3 -c "import yaml; yaml.safe_load(open('$file'))" && echo "✅ $file is valid" || echo "❌ $file has errors"
           done
 
+      - name: Create Auto-Heal Report
         run: |
           echo "📊 Auto-Heal Report" > auto-heal-report.md
-          echo "
-
+          echo "=====" >> auto-heal-report.md
+      - name: Create Auto-Heal Report        run: |
+          echo "📊 Auto-Heal Report" > auto-heal-report.md
+          echo "=====" >> auto-heal-report.md
+      - name: Create Auto-Heal Report        run: |
+          echo "📊 Auto-Heal Report" > auto-heal-report.md
+          echo "=====" >> auto-heal-report.md
           echo "" >> auto-heal-report.md
           echo "**Timestamp:** $(date)" >> auto-heal-report.md
           echo "**Workflows Checked:** $(ls .github/workflows/*.yml | wc -l)" >> auto-heal-report.md

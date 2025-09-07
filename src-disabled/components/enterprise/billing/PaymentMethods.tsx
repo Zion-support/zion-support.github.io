@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { CreditCard, Plus, Trash } from 'lucide-react'
 import { CreditCard, Plus, Trash } from 'lucide-react
 
@@ -12,6 +14,7 @@ import React from "react,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
 import { Button } from "@/components/ui/button,
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -23,6 +26,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from @/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -43,6 +48,7 @@ id: pm-1',
       last4: '4242,
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export function PaymentMethods() {
   // Mock payment methods
 
@@ -62,6 +68,8 @@ export function PaymentMethods() {
       expMonth: 4,
       expYear: 2026,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       isDefault: false,
     },
   ];
@@ -69,6 +77,7 @@ export function PaymentMethods() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 export function PaymentMethods() {
   // Mock payment methods
@@ -90,6 +99,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div
             key = {method.id,}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 import { CreditCard, Plus, Trash  } from lucide-react';
@@ -103,6 +114,7 @@ export function PaymentMethods() {// Mock payment methods;
   ],id: 'pm-1,type: credit_card',brand: 'Visa,last4: 4242',expMonth: 12,expYear: 2025,isDefault: true},{id: 'pm-2,type: credit_card',brand: 'Mastercard,last4: 8888',expMonth: 4,expYear: 2026,isDefault: false}];return (<Card>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <Card>
@@ -160,6 +172,10 @@ pr-12325
       <CardHeader>;
         <CardTitle>Payment Methods</CardTitle>;
 <<<<<<< HEAD
+        <CardDescription>;
+          Manage your payment methods for automatic billing;
+=======
+<<<<<<< HEAD
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>;
 <CardDescription>Manage your payment methods for automatic billing;
         </CardDescription>;
@@ -178,12 +194,15 @@ export function PaymentMethods() {// Mock payment methods;
         <CardDescription>;
           Manage your payment methods for automatic billing;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </CardDescription>;
       </CardHeader>;
       <CardContent className='space-y-4'>;
         {paymentMethods && paymentMethods.map(method => (;
           <div            key={method && method.id}
       <CardContent className="space-y-4">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         {paymentMethods && paymentMethods.map((method,) => (<div;
             key = {method && method.id}<CardDescription>Manage your payment methods for automatic billing</CardDescription>;
@@ -193,6 +212,7 @@ export function PaymentMethods() {// Mock payment methods;
             key={method.id}className={`flex items-center justify-between p-4 rounded-lg border ${method.isDefault ? "bg-muted border-primary : border-border";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         {paymentMethods && paymentMethods.map((method,) => (;
           <div
             key = {method && method.id}
@@ -223,6 +243,22 @@ export function PaymentMethods() {// Mock payment methods;
               method.isDefault ? bg-muted border-primary : "border-border"
             }`}
 <<<<<<< HEAD
+          >
+            <div className="flex items-center space-x-4">
+              <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">
+                <CreditCard className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="font-medium">
+                  {method.brand} •••• {method.last4}
+                  {method.isDefault && (
+
+                      Default
+                    </span>
+                  )}
+                </p>
+=======
+<<<<<<< HEAD
           >;
             <div className=flex items-center space-x-4>;
               <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">;
@@ -246,6 +282,7 @@ export function PaymentMethods() {// Mock payment methods;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+>>>>>>> merged-prs-20250907-203621
 
                       Default
                     </span>
@@ -261,6 +298,8 @@ export function PaymentMethods() {// Mock payment methods;
             </div>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
             <div className="flex gap-2">
               {!method.isDefault && (
@@ -269,6 +308,7 @@ export function PaymentMethods() {// Mock payment methods;
 
             <div className=flex gap-2>
 =======
+>>>>>>> merged-prs-20250907-203621
             <div className="flex gap-2">
 >>>>>>> origin/chore/fix-lint-and-merge
               {!method.isDefault && (
@@ -295,6 +335,10 @@ export function PaymentMethods() {// Mock payment methods;
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
+<<<<<<< HEAD
+      </CardFooter>;
+    </Card>;
+=======
 <<<<<<< HEAD
                 </p>;
                 <p className=text-sm text-muted-foreground>;
@@ -379,6 +423,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardFooter>;
     </Card>;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 }
 
@@ -428,9 +473,12 @@ export function PaymentMethods() {
 });
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import React from react;
 =======
+>>>>>>> merged-prs-20250907-203621
 import React from 'react';
 import {
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -439,6 +487,15 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
+  CardTitle,
+} from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { CreditCard, Plus, Trash } from 'lucide-react';
+import React from './react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+=======
 <<<<<<< HEAD
   CardTitle} from '@/components/ui/ card';
 import { Button } from @/components/ui/ button;
@@ -514,6 +571,7 @@ import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 export /**
  * PaymentMethods - Function description
@@ -627,6 +685,8 @@ pr-12325
                 <p className=font-medium">;
                   {method.brand} •••• {method.last4}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   {method.is_default && (<span className='ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py - 0.5'>                      Default;
                     </span>)}
                 </p>;
@@ -637,6 +697,7 @@ pr-12325
             <div className='flex gap - 2'>                    <span className="ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py - 0.5>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                       Default;
                     </span>;
@@ -647,6 +708,8 @@ pr-12325
                 </p>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <div className='flex gap - 2'>;
               {!method.is_default && (<Button size='sm' variant='ghost'>;
@@ -660,6 +723,7 @@ pr-12325
                 <Trash className=h - 4 w - 4" />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               </Button>;
             </div>;
@@ -673,9 +737,12 @@ pr-12325
         </Button>;
       </CardFooter>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Card>);
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </Card>;
   );
 }
@@ -689,6 +756,9 @@ pr-12325
       </CardFooter>
     </Card>
   );
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -705,3 +775,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

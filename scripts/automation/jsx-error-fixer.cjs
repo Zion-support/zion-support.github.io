@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +12,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -17,11 +20,13 @@ const path = require("path")
 console.log("" Starting JSX error fixer automation...")
 // Get automation interval from environment variable ("default")
 const { execSync } = require("child_process")
+<<<<<<< HEAD
+=======
 const fs = require("fs")
 const path = require("path")
+>>>>>>> merged-prs-20250907-203621
 console.log("" Starting JSX error fixer automation...")
-// Get automation interval from environment variable ("default")
-// console.log(" Starting JSX error fixer automation...")
+//
     console.log(`" Fixing JSX closing tag errors..."`)
 // console.log(" Fixing JSX expression errors..."")
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -37,7 +42,10 @@ console.log("" Starting JSX error fixer automation...")
       "summary": "JSX error fixer completed"
       "status": "completed"
     const reportPath = path.join(process.cwd(), "
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     console.log( JSX error fixer completed successfully. Applied ${fixesApplied} fixes.```)
   console.error(" JSX error fixer failed: ")
   console.error(" JSX error fixer failed: ")
@@ -86,7 +94,7 @@ console.log("" Starting JSX error fixer automation...")
         content = content.replace(/href:\s*any"\/"/g, ""href": "/")
         content = content.replace(/key:\s*any(\w+)/g, ""key": $1"
         "
-        if (content !== originalContent) {"}
+  if($2) {"}
           fs.writeFileSync(filePath, content);"
           fixes++;"
           console.log("   Fixed JSX expressions in ${filePath}")
@@ -96,7 +104,10 @@ console.log("" Starting JSX error fixer automation...")
         if (filePath.includes("TermsOfService.tsx")
           const jsxStart = content.indexOf("<div className=max-w-4xl mx-auto space-y-8>")
           const jsxEnd = content.lastIndexOf("</div>")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             content = beforeJSX + <div className="terms-of-service-container>\n"
                      jsxContent + \n +</div>\n"
         if (filePath.includes("SupportRequests.tsx)
@@ -162,11 +173,21 @@ process.on("SIGTERM")
 =======
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   console.error(" Failed to start JSX error "fixer": ")
+<<<<<<< HEAD
+  console.error(" Failed to start JSX error "fixer": ")
+  console.error(" Failed to start JSX error "fixer": ")
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -188,3 +209,4 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

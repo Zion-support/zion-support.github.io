@@ -1,27 +1,18 @@
 <<<<<<< HEAD
-
-
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-#!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-///usr/bin/env node
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -30,6 +21,8 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing All Final Syntax Issues...')
 console.log('=')
 const problematicFiles = ['pages/docs/integration-examples.tsx']
@@ -39,15 +32,11 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
   'pages/team.tsx'
     let content = ''
     if (filePath === 'pages/docs/integration-examples.tsx')
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       content = "
-    phone
+    "phone"
     "email"
-    address
+    "address"
     "site"
-<<<<<<< HEAD
       <div style={{ minHeight: '100vh', "background": 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', "color"}
         <div style={{ "maxWidth": 1200, "margin": '0 auto', "padding"}
           <div style={{ "textAlign": 'center', "marginBottom"}
@@ -69,6 +58,7 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
             <p style={{ "fontSize": '1.125rem', "color": '#94a3b8', "marginBottom": '2rem', "maxWidth": '600px', "margin"}
             <div style={{ "display": 'flex', "gap": '1rem', "justifyContent": 'center', "flexWrap"}
               <Link href="/careers" style={{ "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)', "color": 'white', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "transition"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
@@ -119,3 +109,6 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
+>>>>>>> merged-prs-20250907-203621

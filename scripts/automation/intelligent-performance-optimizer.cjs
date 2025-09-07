@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       intelligent-performance-optimizer.log
       this.projectRoot,logs"
@@ -107,7 +113,10 @@ const crypto = require("crypto")
     const sourceDir = path.join(this.projectRoot, "src")
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
   const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   this.log(Error analyzing React performance in ${file}: ${error.message}")
           "WARN
     for (const [`category, "patterns"`)]
@@ -187,8 +196,11 @@ const crypto = require("crypto")
   total
       "files"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
   return { "duplicates": [], "outdated": [], "large"}
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
@@ -212,7 +224,10 @@ const crypto = require("crypto")
           "
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
   const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   this.log(Error analyzing rendering performance in ${file}: ${error.message}")
           "WARN
       content.includes(`.map(``)
@@ -253,7 +268,10 @@ const crypto = require("crypto")
           "WARN"
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
   const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   this.log(Error analyzing memory usage in ${file}: ${error.message}")
           "WARN
       content.includes(addEventListener")
@@ -398,11 +416,21 @@ const crypto = require("crypto")
   this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
       this.log( Intelligent Performance Optimization completed successfully")
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
 =======
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+<<<<<<< HEAD
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+
+
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -424,3 +452,4 @@ const crypto = require("crypto")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

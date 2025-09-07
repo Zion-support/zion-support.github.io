@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/Categories.tsx
 import useSWR from 'swr,
 import { CategoryCard } from "@/components/CategoryCard,
@@ -271,6 +274,9 @@ export default Categories, ]
 export default Categories")))))))))
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 :src/pages/Categories.tsx
 import { GradientHeading } from @/components/GradientHeading",
 import { SkeletonCard } from @/components/ui',

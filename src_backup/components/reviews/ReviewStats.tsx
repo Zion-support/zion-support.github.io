@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <h3 className="text-xl font-bold>{formattedRating}</h3>;
           <div className=flex items-center">;
@@ -28,6 +30,7 @@ import { Progress } from @/components/ui/progress",interface ReviewStatsProps  {
 <div className=flex items-center">
             <div className="flex mr-2>
 =======
+>>>>>>> merged-prs-20250907-203621
 <div className="flex items-center">
             <div className="flex mr-2">
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -36,6 +39,8 @@ import { Progress } from @/components/ui/progress",interface ReviewStatsProps  {
                   key={i}
                   className={`h-4 w-4 ${
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Star } from lucide-react';
 import { Progress } from '@/components/ui/progress;
@@ -96,6 +101,7 @@ interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
 =======
+>>>>>>> merged-prs-20250907-203621
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 import { Star } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
@@ -137,6 +143,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 {ratingDistribution && (
         <div className=space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
@@ -152,6 +160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       {ratingDistribution && (
         <div className="space-y-2>
@@ -183,6 +192,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
+<<<<<<< HEAD
+import { Star } from 'lucide-react';
+import { Progress } from '@/components / ui / progress';
+import { Progress  } from '@/components / ui / progress';
+interface ReviewStatsProps {
+  average_rating: number;
+=======
 <<<<<<< HEAD
 import { Progress } from '@/components/ui/ progress;
 import { Progress  } from @/components/ui/ progress';
@@ -225,6 +241,7 @@ import { Progress  } from '@/components / ui / progress';
 interface ReviewStatsProps {
   average_rating: number;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   total_reviews: number;
   rating_distribution?: Record < number, number>;
 export /**
@@ -242,9 +259,12 @@ if (return 0) {
     return (count / total_reviews) * 100;
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (<div className=bg - card border rounded - lg p - 4'>;
       <div className='flex items - center justify - between mb - 4>;
 =======
+>>>>>>> merged-prs-20250907-203621
   return (
     <div className='bg - card border rounded - lg p - 4'>;
       <div className='flex items - center justify - between mb - 4'>;
@@ -255,10 +275,13 @@ if (return 0) {
             <div className=flex mr - 2'>;
               {[1, 2, 3, 4, 5].map (index => (                <Star;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   key = {i }
                   className={`h - 4 w - 4 ${i <= Math.round (average_rating)? 'fill - yellow - 400 text - yellow - 400;
                       : text - gray - 300'                  }`}
 =======
+>>>>>>> merged-prs-20250907-203621
                   key = {i, }
                   className={`h - 4 w - 4 ${
                     i <= Math.round (average_rating);
@@ -297,15 +320,20 @@ if (return 0) {
         </div>;
       )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     </div>;
   );
 
 }</div>) ;
 }</div>) ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -315,6 +343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='w - 6 text - sm text - right>{rating}</div>;
               <Star className=h - 3 w - 3 text - yellow - 400' />;
 =======
+>>>>>>> merged-prs-20250907-203621
 }"}
 
       {rating_distribution && (
@@ -341,12 +370,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>))}
         </div>)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>)}</div>)}</div>)}"}}</div>)}</div>)}"}</div>;
     </div>)}</div>)}</div>)}}}</div>)}</div>)}"}</div>;
   )}</div>;
   )}</div>)}</div>)}";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </div>);
 }</div>);
 }</div>);

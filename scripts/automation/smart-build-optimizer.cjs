@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -10,12 +12,16 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
       smart-build-optimizer.log
       this.projectRoot,logs"
@@ -238,6 +244,15 @@ const packagePath = path.join(this.projectRoot, "package.json")
   console.log("Smart Build Optimization completed successfully")
 <<<<<<< HEAD
 
+  console.error("Smart Build Optimization "failed")
+  console.error("Smart Build Optimization "failed")
+  console.error("Smart Build Optimization "failed")
+
+
+
+=======
+<<<<<<< HEAD
+
 
   console.error(Smart Build Optimization failed")
 
@@ -270,3 +285,4 @@ const packagePath = path.join(this.projectRoot, "package.json")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,14 +12,21 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Final Automation Report Generator;
- * Generates a comprehensive report of all automation activities;
+ * Final Automation Report Generator
+ * Generates a comprehensive report of all automation activities
  */
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 
 
@@ -101,6 +110,7 @@ const path = require(path')
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -149,6 +159,12 @@ const path = require('path')
     this.log(`� New Scripts "Created"`)
       this.log(` Final Automation Report "failed"`)
 <<<<<<< HEAD
+
+    console.error('Final Automation Report "failed")
+    console.error('Final Automation Report "failed")
+    console.error('Final Automation Report "failed")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -167,12 +183,17 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> merged-prs-20250907-203621
 
   log(message, type = 'INFO')
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

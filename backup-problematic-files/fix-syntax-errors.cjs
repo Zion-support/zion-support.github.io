@@ -25,6 +25,10 @@ console.log('🔧 Starting syntax error fixes...');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixSyntaxErrors(filePath) {
   try {
+<<<<<<< HEAD
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+=======
   // TODO: Implement
 }
 
@@ -32,6 +36,7 @@ function fixSyntaxErrors(filePath) {
 
 <<<<<<< HEAD
     // Fix common syntax errors
+>>>>>>> merged-prs-20250907-203621
     
     // Fix missing semicolons in imports
     content = content.replace(/import\s+([^;]+)\s*$/gm, 'import $1;');

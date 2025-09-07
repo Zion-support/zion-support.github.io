@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,16 +12,18 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Advanced App Optimizer Automation;
- * Advanced optimization for Next.js applications;
+ * Advanced App Optimizer Automation
+ * Advanced optimization for Next.js applications
  */
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -28,6 +32,7 @@ const path = require(path');
 const { execSync } = require('child_process');
 =======
 
+>>>>>>> merged-prs-20250907-203621
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -41,6 +46,17 @@ class AdvancedAppOptimizer {}
         this.projectRoot = process.cwd();
 
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    }
+  log($2) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+})
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+=======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
     log(message) {}
@@ -68,6 +84,7 @@ class AdvancedAppOptimizer {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
         console.log(message)};
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
@@ -75,6 +92,18 @@ class AdvancedAppOptimizer {}
         let nextConfig = ;';';
 =======
         console.log(message)};
+<<<<<<< HEAD
+  
+  // Image optimization;
+  "images": {}
+    domains: ['ziontechgroup.com'],
+    "formats": ['image/webp', 'image/avif'],
+    "minimumCacheTTL": 60,
+    "dangerouslyAllowSVG": true,
+    "contentSecurityPolicy": "default-src 'sel) {}
+    ) {}
+            nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
+=======
 <<<<<<< HEAD
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
@@ -85,17 +114,22 @@ class AdvancedAppOptimizer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
+>>>>>>> merged-prs-20250907-203621
         const optimizedConfig = "/** @type {import('next').NextConfig} */
 const nextConfig = {}
-  // Performance optimizations;
+  // Performance optimizations
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
+<<<<<<< HEAD
+  
+=======
 <<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Image optimization;
   "images: {}
     domains: ['ziontechgroup.com],
@@ -155,9 +189,13 @@ const nextConfig = {}
     "dangerouslyAllowSVG": true,
     "contentSecurityPolicy": "default-src 'sel}f;'; script-src 'none'; sandbox;"},
 <<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
 =======
@@ -172,11 +210,15 @@ const nextConfig = {}
 
     return config}},
 <<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Experimental features for performance;
   experimental": {}
     optimizeCss: true,
@@ -186,10 +228,14 @@ const nextConfig = {}
 =======
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
 <<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Headers for security and performance;
   async headers() {}
     return [;]
@@ -211,10 +257,14 @@ const nextConfig = {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]},
 <<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   // Redirects and rewrites;
   async redirects() {}
     return [;]
@@ -227,6 +277,11 @@ const nextConfig = {}
         "source": '/home',
         "destination": '/',
         "permanent": true}]}};
+<<<<<<< HEAD
+  // Experimental features for performance;"
+  "experimental": {}"
+    optimizeCss: true,"
+=======
 <<<<<<< HEAD
 module.exports = nextConfig;
 ";
@@ -244,6 +299,7 @@ module.exports = nextConfig;
     optimizeCss: true,"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 
         permanent": true}]}}"
@@ -251,8 +307,9 @@ module.exports = nextConfig;
 ;"
         fs.writeFileSync(nextConfigPath, optimizedConfig);"
         this.log('Next.js configuration optimized');
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
         const utilsDir = path.join(this.projectRoot, utils;);
         if () {}
 
@@ -383,6 +440,7 @@ module.exports = {}
         this.log('Creating performance monitoring utilities...');
 =======
 
+>>>>>>> merged-prs-20250907-203621
         fs.writeFileSync(tailwindConfigPath, optimizedConfig);
         this.log('Tailwind CSS configuration optimized');
         
@@ -390,15 +448,18 @@ module.exports = {}
     createPerformanceMonitoring() {}
         this.log('Creating performance monitoring utilities...');
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
 >>>>>>> origin/chore/fix-lint-and-merge
         // Performance monitoring utility;
         const performanceMonitor = "/**
- * Performance Monitoring Utility;
- * Tracks and reports performance metrics;
+ * Performance Monitoring Utility
+ * Tracks and reports performance metrics
  */
 <<<<<<< HEAD
 =======
@@ -418,8 +479,9 @@ module.exports = {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export class PerformanceMonitor {}
     this.metrics = new Map) {}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 export class PerformanceMonitor {}
   constructor() {}
     this.metrics = new Map}(;);
@@ -438,6 +500,7 @@ export class PerformanceMonitor {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 export class PerformanceMonitor {}
   constructor() {}
     this.metrics = new Map}(;);
@@ -464,6 +527,10 @@ export class PerformanceMonitor {}
       this.metrics.set(name, measure.duration);
 <<<<<<< HEAD
 
+      
+=======
+<<<<<<< HEAD
+
 
       
       this.metrics.set(name, measure.duration);
@@ -477,10 +544,33 @@ export class PerformanceMonitor {}
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+>>>>>>> merged-prs-20250907-203621
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
+<<<<<<< HEAD
+
+      // Log slow operations;
+
+     {}`
+      performance.mark(\`\${name}-end\`)};`
+      performance.measure(name, \`\${name}-start\`, \`\${name}-end\`)
+      const measure = performance.getEntriesByName(name)[0]
+      this.metrics.set(name, measure.duration)
+      const measure = performance.getEntriesByName(name)[0]
+      this.metrics.set(name, measure.duration)
+      const measure = performance.getEntriesByName(name)[0]
+      this.metrics.set(name, measure.duration)
+      // Log slow operations
+        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
+  getMetrics($2) {}
+    return Object.fromEntries(this.metrics)) {}
+     {}"`
+    return Object.fromEntries(this.metrics)}}
+  clearMetrics($2) {}
+    this.metrics.clear()
+=======
       
 <<<<<<< HEAD
 =======
@@ -506,6 +596,7 @@ export class PerformanceMonitor {}
     return Object.fromEntries(this.metrics)}}
   clearMetrics() {}
     this.metrics.clear();
+>>>>>>> merged-prs-20250907-203621
       performance.clearMarks()) {}
 <<<<<<< HEAD
       performance.clearMarks()}
@@ -528,6 +619,13 @@ export function reportWebVitals(metric) {}
       performance.clearMarks()};
       performance.clearMeasures()};
 <<<<<<< HEAD
+
+        fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
+        
+export const performanceMonitor = new PerformanceMonitor;(;);"
+
+=======
+<<<<<<< HEAD
   };
 };
 export const performanceMonitor = new PerformanceMonitor;(;);
@@ -543,10 +641,16 @@ export const performanceMonitor = new PerformanceMonitor;(;);
 export const performanceMonitor = new PerformanceMonitor;(;);"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
         // Web Vitals utility;
         const webVitals = "/**"
  * Web Vitals Utility;
  * Measures Core Web Vitals;
+<<<<<<< HEAD
+
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
+
+=======
 <<<<<<< HEAD
  */
 <<<<<<< HEAD
@@ -556,6 +660,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 export function reportWebVitals(metric) {}
   // Send to analytics service;
   if ( {})
@@ -563,12 +668,15 @@ export function reportWebVitals(metric) {}
       "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       "event_label": metric.id,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
       "non_interaction": true})};
 >>>>>>> origin/chore/fix-lint-and-merge
   // Log to console in development;
@@ -609,6 +717,11 @@ export function initWebVitals() {}
 =======
     getTTFB(reportWebVitals)};
 <<<<<<< HEAD
+
+        fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
+        
+=======
+<<<<<<< HEAD
 };
 ";
 <<<<<<< HEAD
@@ -618,15 +731,22 @@ export function initWebVitals() {}
         fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         this.log('Performance monitoring utilities created');
         return { "status": 'success', "message": 'Performance monitoring created' }};
     optimizeImages() {}
         this.log('Optimizing images...');
 <<<<<<< HEAD
+        
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
         const publicDir = path.join(this.projectRoot, 'public';);
         const imageFiles = this.findImageFiles(publicDir;);
         let optimizedCount = ;0;
         const optimizations = [];
+<<<<<<< HEAD
+=======
 =======
         
         const publicDir = path.join(this.projectRoot, 'public';);
@@ -642,10 +762,14 @@ export function initWebVitals() {}
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
+<<<<<<< HEAD
+                
+=======
 <<<<<<< HEAD
 
 =======
@@ -657,6 +781,7 @@ export function initWebVitals() {}
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 if ( { // Only optimize large images;})
                     optimizations.push({})
 
@@ -670,6 +795,8 @@ export function initWebVitals() {}
 
         const files = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         if () return file) {}
     ) return file}s;
@@ -679,20 +806,29 @@ export function initWebVitals() {}
         if () return file) {}
     ) return file}s;
 =======
+>>>>>>> merged-prs-20250907-203621
         
         if () return file) {}
     ) return file}s;
         
+<<<<<<< HEAD
+        if () return file) {}
+    ) return file}s;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         if () return file) {}
     ) return file}s;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+            
+=======
 <<<<<<< HEAD
 
 =======
@@ -702,6 +838,7 @@ export function initWebVitals() {}
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             if () {}
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -710,6 +847,9 @@ export function initWebVitals() {}
         return files) {}
         return files}}
     generateOptimizationReport() {}
+<<<<<<< HEAD
+        
+=======
 <<<<<<< HEAD
 
 =======
@@ -720,6 +860,7 @@ export function initWebVitals() {}
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         const report = {}
             "timestamp": new Date().toISOString(),
             project: this.projectRoot,
@@ -727,7 +868,11 @@ export function initWebVitals() {}
                 nextConfig: this.optimizeNextConfig(),
                 tailwindConfig: this.optimizeTailwindConfig(),
                 "performanceMonitoring": this.createPerformanceMonitoring(),
+<<<<<<< HEAD
+                "images": this.optimizeImages()
+=======
                 images: this.optimizeImages();
+>>>>>>> merged-prs-20250907-203621
             },
             "recommendations": this.generateOptimizationRecommendations();
 <<<<<<< HEAD
@@ -739,14 +884,20 @@ export function initWebVitals() {}
 =======
        };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Advanced app optimization report saved to ${this.reportFile}");
 =======
+>>>>>>> merged-prs-20250907-203621
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Advanced app optimization report saved to ${this.reportFile}");
         
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         return report};
     generateOptimizationRecommendations() {}
         return [;]
@@ -769,13 +920,17 @@ export function initWebVitals() {}
 =======
         this.log('Advanced App Optimizer started');
 <<<<<<< HEAD
+        
+=======
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         try {}
-            const report = this.generateOptimizationReport(;);
-            this.log('Advanced App Optimizer completed successfully');
+            const report = this.generateOptimizationReport(;)
+            this.log('Advanced App Optimizer completed successfully')
             return report} catch (error) {}
 <<<<<<< HEAD
             this.log(Advanced App Optimizer failed": ${error.message}`);
@@ -793,9 +948,15 @@ export function initWebVitals() {}
             "recommendations: this.generateOptimizationRecommendations();
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
+<<<<<<< HEAD
+        this.log("Advanced app optimization report saved to ${this.reportFile}");"
+        return report}
+  generateOptimizationRecommendations($2) {}
+=======
         this.log("Advanced app optimization report saved to ${this.reportFile});
         return report}
     generateOptimizationRecommendations() {}
+>>>>>>> merged-prs-20250907-203621
         return [;]"
 
 <<<<<<< HEAD
@@ -813,12 +974,22 @@ export function initWebVitals() {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 =======
 module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
+module.exports = AdvancedAppOptimizer;
+module.exports = AdvancedAppOptimizer;
+
+
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -841,3 +1012,4 @@ module.exports = AdvancedAppOptimizer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

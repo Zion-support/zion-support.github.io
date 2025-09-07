@@ -97,6 +97,7 @@ interface ${componentName}Props {
   children?: React.ReactNode;
 }
 
+const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
   children 
 }) => {

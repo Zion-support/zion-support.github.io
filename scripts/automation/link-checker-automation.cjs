@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,23 +12,23 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
- * Link Checker Automation;
- * Checks for broken links and validates URLs;
+ * Link Checker Automation
+ * Checks for broken links and validates URLs
  */
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
+>>>>>>> merged-prs-20250907-203621
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require(path');
 const https = require('https;);
@@ -44,6 +46,10 @@ const https = require('https';);
 const http = require('http';);
 const { URL } = require('url');
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -51,11 +57,30 @@ const { URL } = require('url');
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
 class LinkCheckerAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-
+        this.logFile = path.join(this.projectRoot, 'logs', 'link-checker-automation.log');
+        this.reportFile = path.join(this.projectRoot, 'link-checker-report.json');
+        this.ensureLogsDirectory()};
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot, 'logs';);
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString(}
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+=======
 <<<<<<< HEAD
 
 
@@ -86,12 +111,18 @@ class LinkCheckerAutomation {}
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> merged-prs-20250907-203621
         console.log(message)};
     findLinksInFiles() {}
         this.log('Finding links in project files...');
         const linkPattern = /https?:\/\/[^\s"'<>]+;/;g;
         const files = this.findSourceFiles(;);
         const links = [];
+<<<<<<< HEAD
+        
+        
+        
+=======
 =======
         console.log(message)};
     findLinksInFiles() {}"
@@ -104,10 +135,15 @@ class LinkCheckerAutomation {}
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
         for (const file of files) {}
             try {}
 
                 const matches = content.match(linkPattern;);
+<<<<<<< HEAD
+                
+                
+=======
 <<<<<<< HEAD
 
 =======
@@ -119,8 +155,9 @@ class LinkCheckerAutomation {}
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
                 if ( {})
-                    for (const match of matches) {}
+  for($2) {}
                         links.push({})
 
         this.log(`Found ${links.length} links in project files`)) {`}
@@ -128,6 +165,11 @@ class LinkCheckerAutomation {}
                         links.push({})
 
         const files = [];
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
 <<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -139,11 +181,22 @@ class LinkCheckerAutomation {}
     ) retu}r;n;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            
+=======
 <<<<<<< HEAD
 
 =======
@@ -167,10 +220,16 @@ class LinkCheckerAutomation {}
     ) retu}r;n;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+                
+                
+                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+=======
 <<<<<<< HEAD
 
 =======
@@ -189,10 +248,23 @@ class LinkCheckerAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)}
             }
         }) {}
+<<<<<<< HEAD
+    && !item.startsWith('.') && item !== 'node_modules') {}
+                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
+                    files.push(fullPath)};
+            };
+
+        }};
+        scanDirectory(this.projectRoot);
+        return files};
+    findLineNumber(content, searchText) {}
+        const lines = content.split('\n';);
+=======
     && !item.startsWith(.) && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
 <<<<<<< HEAD
@@ -212,6 +284,7 @@ class LinkCheckerAutomation {}
         return files}
     findLineNumber(content, searchText) {}
         const lines = content.split(\n;);
+>>>>>>> merged-prs-20250907-203621
         for (let i = ;0; i < lines.length i++) {}
                 return i + 1) {}
     ) {}
@@ -219,25 +292,43 @@ class LinkCheckerAutomation {}
         return -1}
     async checkLink(url) {}
 <<<<<<< HEAD
+        return new Promise((resolve) => {;}
+            try {}
+=======
+<<<<<<< HEAD
         return new Promise((resolve) => {}
 
 =======
             try {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> merged-prs-20250907-203621
                 const urlObj = new URL(ur;l;);
+const urlObj = new URL(ur;l;)
                 const options = {}
+<<<<<<< HEAD
+=======
 
 =======
         return new Promise((resolve) => {;}
                 const urlObj = new URL(ur;l;);
                 const options = {}
 <<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
                     "hostname": urlObj.hostname,
                     "port": urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
                     "path": urlObj.pathname + urlObj.search,
                     "method": 'HEAD',
                     "timeout": 10000;
                };
+<<<<<<< HEAD
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                
+                
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                
+=======
 <<<<<<< HEAD
                 const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -256,6 +347,7 @@ class LinkCheckerAutomation {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 const req = client.request(options, (res) => {}
                     resolve({})
                         "url": url,
@@ -276,15 +368,29 @@ class LinkCheckerAutomation {}
                         "valid": res.statusCode < 400;
                     })};);
 <<<<<<< HEAD
+                
+                
+=======
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 req.on('error', (error) => {}
                     resolve({})
                         "url": url,
                         status: 0,
                         "statusText": error.message,
+<<<<<<< HEAD
+                        "valid": false
+                    })}
+});
+                
+                
+                req.on('timeout', () => {}
+                    req.destroy()
+=======
                         valid: false;
                     })}
 });
@@ -306,10 +412,16 @@ class LinkCheckerAutomation {}
                 req.on('timeout', () => {}
 >>>>>>> origin/chore/fix-lint-and-merge
                     req.destroy();
+>>>>>>> merged-prs-20250907-203621
                     resolve({})
                         "url": url,
                         status: 0,
                         "statusText": 'Timeout',
+<<<<<<< HEAD
+                        "valid": false
+                    })}
+});
+=======
                         valid: false;
                     })}
 });
@@ -322,6 +434,7 @@ class LinkCheckerAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+>>>>>>> merged-prs-20250907-203621
 
                     "timeout": 10000;
                 
@@ -329,21 +442,31 @@ class LinkCheckerAutomation {}
 
 <<<<<<< HEAD
 =======
-                
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+<<<<<<< HEAD
 =======
+>>>>>>> merged-prs-20250907-203621
                 
+                
+<<<<<<< HEAD
+=======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 req.setTimeout(10000);
                 req.end()} catch (error) {}
                 resolve({})"
 
         this.log(`Checking ${links.length} links...`);
 <<<<<<< HEAD
+        
+        const results = [];
+        const uniqueUrls = [...new Set(links.map(link => link.url))];
+        
+=======
+<<<<<<< HEAD
 
 =======
         
@@ -357,11 +480,16 @@ class LinkCheckerAutomation {}
 <<<<<<< HEAD
         const results = [];
         const uniqueUrls = [...new Set(links.map(link => link.url))];
+>>>>>>> merged-prs-20250907-203621
         for (let i = ;0; i < uniqueUrls.length i++) {}
             const url = uniqueUrls[i];
             this.log(`Checking link ${i + 1}/${uniqueUrls.length}: ${url}`);
             const result = await this.checkLink(url;);
             results.push(result);
+<<<<<<< HEAD
+        const results = [];
+        const uniqueUrls = [...new Set(links.map(link => link.url))];
+=======
 =======
         
 =======
@@ -369,10 +497,16 @@ class LinkCheckerAutomation {}
         const results = [];
         const uniqueUrls = [...new Set(links.map(link => link.url))];
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         for (let i = ;0; i < uniqueUrls.length i++) {}
 
             const result = await this.checkLink(url;);
             results.push(result);
+<<<<<<< HEAD
+            
+            
+            
+=======
 <<<<<<< HEAD
 
 =======
@@ -382,10 +516,20 @@ class LinkCheckerAutomation {}
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
             // Add a small delay to avoid overwhelming servers;
             await new Promise(resolve => setTimeout(resolve, 100))}
         const validLinks = results.filter(r => r.valid;);
         const brokenLinks = results.filter(r => !r.valid;);
+<<<<<<< HEAD
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        
+        
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        
+=======
 <<<<<<< HEAD
 
 =======
@@ -417,6 +561,7 @@ class LinkCheckerAutomation {}
         this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         return {;}
             "total": results.length,
             "valid": validLinks.length,
@@ -425,6 +570,18 @@ class LinkCheckerAutomation {}
         }};
     generateLinkReport() {}
         this.log('Generating link checker report...');
+<<<<<<< HEAD
+        const links = this.findLinksInFiles(;);
+        "`;
+"results": results
+        }}
+  generateLinkReport($2) {}
+        this.log('Generating link checker report...')
+        const links = this.findLinksInFiles(;);        "`
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);"
+        return {;}"
+            "total": results.length,
+=======
 <<<<<<< HEAD
         const links = this.findLinksInFiles(;);
 =======
@@ -438,6 +595,7 @@ class LinkCheckerAutomation {}
         this.log(`Link check completed: ${validLinks.length} valid, ${brokenLinks.length} broken`);"
         return {}"
             total: results.length,
+>>>>>>> merged-prs-20250907-203621
             "valid": validLinks.length,
             broken: brokenLinks.length,
             "results": results;
@@ -445,19 +603,23 @@ class LinkCheckerAutomation {}
 
         const links = this.findLinksInFiles(;);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
         
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+        
+        
+<<<<<<< HEAD
 =======
-        
-        
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return this.checkAllLinks(links).then(checkResults => {})
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
         return this.checkAllLinks(links).then(checkResults => {;})
 >>>>>>> origin/chore/fix-lint-and-merge
             const report = {}
@@ -468,10 +630,18 @@ class LinkCheckerAutomation {}
                     valid: checkResults.valid,
                     "broken": checkResults.broken,
 <<<<<<< HEAD
+                    "results": checkResults.results;
+                },
+                "recommendations": this.generateLinkRecommendations(checkResults);
+           };
+
+=======
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> merged-prs-20250907-203621
             fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
             this.log(`Link checker report saved to ${this.reportFile}`);
             
@@ -492,6 +662,8 @@ class LinkCheckerAutomation {}
             return report})};
     generateLinkRecommendations(checkResults) {}
         const recommendations = [];
+<<<<<<< HEAD
+=======
 =======
 =======
                     "results": checkResults.results;"
@@ -500,6 +672,7 @@ class LinkCheckerAutomation {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             return report})}
     generateLinkRecommendations(checkResults) {}
@@ -515,12 +688,19 @@ class LinkCheckerAutomation {}
         const recommendations = [];
 <<<<<<< HEAD
         
+        
+        
+        if ( {})
+=======
+<<<<<<< HEAD
+        
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
         if ( {})
 =======
         if ( {})"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
             recommendations.push('Fix or remove broken links')) {}
 
             recommendations.push(Fix or remove broken links)}
@@ -534,25 +714,36 @@ class LinkCheckerAutomation {}
 =======
         recommendations.push('Consider using a link checker service for large projects');
 <<<<<<< HEAD
+        return recommendations};
+    async run() {}
+        this.log('Link Checker Automation started');
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         return recommendations};
     async run() {}
         this.log('Link Checker Automation started');
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         
         return recommendations}
     async run() {}
         this.log('Link Checker Automation started');
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> merged-prs-20250907-203621
         
         return recommendations}
     async run() {}
         this.log(Link Checker Automation started);
         
+<<<<<<< HEAD
+=======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -560,6 +751,7 @@ class LinkCheckerAutomation {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         try {}
             const report = await this.generateLinkReport(;);
             this.log('Link Checker Automation completed successfully');
@@ -591,6 +783,12 @@ class LinkCheckerAutomation {}
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
 <<<<<<< HEAD
+
+module.exports = LinkCheckerAutomation;
+module.exports = LinkCheckerAutomation;
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -611,9 +809,9 @@ module.exports = LinkCheckerAutomation;
 
 <<<<<<< HEAD
 
+>>>>>>> merged-prs-20250907-203621
 module.exports = LinkCheckerAutomation;
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = LinkCheckerAutomation;
 
 =======

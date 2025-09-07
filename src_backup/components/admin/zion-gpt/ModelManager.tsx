@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 // If activating, deactivate all other models with the same purpose;
@@ -13,6 +15,7 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
@@ -54,12 +57,15 @@ import { logErrorToProduction } from '@/utils/productionLogger;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from lucide-react'
 import { supabase  } from '@/integrations/supabase/client;
 import { ModelConfig  } from @/utils/zion-gpt';
 import {logErrorToProduction} from '@/utils/productionLogger;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface ModelVersionData extends ModelConfig {
   trainingStatus: queued' | 'running | succeeded' | 'failed;
   errorMessage?: string
@@ -73,6 +79,8 @@ interface ModelVersionData extends ModelConfig {
       fetch_models ();
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       }
       // Update this model
       await supabase
@@ -83,6 +91,7 @@ interface ModelVersionData extends ModelConfig {
       fetchModels()
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     } catch (error) {
       logErrorToProduction (Error toggling model active state:', { data: error });
     }
@@ -177,6 +186,8 @@ export function ZionGPTModelManager() {
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         await supabase;.from('model_versions).update({ active: false }).eq(purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react;
 import { supabase   } from @/integrations/supabase/client';
 import { ModelConfig   } from '@/utils/zion-gpt;
@@ -259,6 +270,7 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
     <Card className=w-full">
       <CardHeader className="flex flex-row items-center justify-between>
 =======
+>>>>>>> merged-prs-20250907-203621
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -320,6 +332,8 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
                           <RefreshCw className=h-4 w-4" />
                         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                         {activeJobs[model && model.id] ? (<Loader2 className="h-4 w-4 animate-spin />;
                         ) : (<RefreshCw className=h-4 w-4" />;{model.trainingStatus === queued' || model.trainingStatus === 'running ? (<Button;
                         variant="ghost;
@@ -339,6 +353,7 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                       <Button
 
@@ -369,12 +384,15 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
                       </Button>
                     )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
                   </TableCell>;
                 </TableRow>;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               ))}
             </TableBody>;
@@ -494,6 +512,9 @@ return (<Card className="w-full > <CardHeader className=flex flex-row items-cent
 }</TableBody> </Table>) ;
 }</CardContent> </Card>) ;
 <<<<<<< HEAD
+}'"
+=======
+<<<<<<< HEAD
                         size="sm";
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}>;
                         {model.active ? (<>;
@@ -604,3 +625,4 @@ return (<Card className="w-full > <CardHeader className=flex flex-row items-cent
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

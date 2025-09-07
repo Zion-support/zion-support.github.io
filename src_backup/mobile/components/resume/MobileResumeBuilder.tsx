@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+=======
 import {;
   Select;
   SelectContent;
@@ -64,6 +71,7 @@ import { Button } from @/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card;
 import { Input } from @/components/ui/input";
 import { Textarea } from "@/components/ui/textarea;
+>>>>>>> merged-prs-20250907-203621
 import {
   Select,
   SelectContent,
@@ -221,6 +229,8 @@ export function MobileResumeBuilder() {;
 }
 
     <Card>;
+<<<<<<< HEAD
+=======
   )}
       <CardContent className="p-4 space-y-4>;
         <div className=space-y-2">;
@@ -242,6 +252,7 @@ export function MobileResumeBuilder() {;
 }
 
     <Card>;
+>>>>>>> merged-prs-20250907-203621
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
@@ -443,6 +454,9 @@ function EducationStep() {;
         </Card>;
       ))}
 <<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
     </Card>)}
 /**;
  * ExperienceStep - Function description;
@@ -455,6 +469,7 @@ function EducationStep() {;
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Button;
         variant="outline;
         className=w-full gap-2";
@@ -552,6 +567,9 @@ function SkillsStep() {
     </div>
   )
 }
+<<<<<<< HEAD
+;
+=======
 =======
       >;
         <Plus className="h-4 w-4" /> Add Another Education;
@@ -576,3 +594,4 @@ import {
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
 }"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
