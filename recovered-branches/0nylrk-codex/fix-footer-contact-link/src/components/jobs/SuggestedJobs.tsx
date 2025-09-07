@@ -272,6 +272,5 @@ import {NoJobsCard} from "./NoJobsCard";"
                 onDecline={handleDecline}
                 showApplied={true}
               />;
-
-</JobMatchesCard>"
-
+;
+              />;

@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Mail, Phone, MapPin, Globe;
@@ -30,7 +29,6 @@ Atom;}
 }
 } from 'lucide-react';
 
-
 import Link from 'next/link';
 import { AnimatePresence  } from 'framer-motion';
   Mail,Phone,MapPin,Globe,Twitter,Linkedin,Github,ArrowUp,Crown,Zap,Brain,Rocket,Shield,Users,BookOpen} from 'lucide-react';
@@ -40,7 +38,6 @@ interface FooterLink {
   href: string;
 
   description?: string;
-
 
   links: FooterLink[];}
 }
@@ -180,7 +177,6 @@ const footerSections: FooterSection[] = [;
 
     ]
 
- 
 }
   {
     title: 'Resources',
@@ -264,7 +260,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 }
 window.scrollTo({ top: 0, behavior: 'smooth' })
 };
-
 
 const footerSections = [
     {
@@ -571,7 +566,6 @@ className='mt-16 pt-12 border-t border-gray-800/50'
                     className='w-10 h-10 bg-gray-800/50 hover: bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
 
-
                     whileTap={{ scale: 0.95 }
 }
                    />;
@@ -780,7 +774,6 @@ className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-
     </footer>
   )
 };
-
 
 export default UltraAdvancedFuturisticFooter2025;
 

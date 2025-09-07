@@ -177,7 +177,38 @@ if (throw error) {
       })),
       setDisputes(transformedData as Dispute[]),
       setError(null)
-          ...data.project,}
+    } catch (err: any) {
+      console.error(\"Error fetching disputes:\", err),
+      setError(\"Failed to fetch disputes: \" + err.message),
+  const getDisputeById = async (disputeId: string): Promise<Dispute | null /> => {}
+    try {}
+      const { data, error } = await supabase;
+        .from(\"disputes\")
+        .select(`
+          *,
+          project:projects(
+            scope_summary,
+            job_id,
+            client_id,
+            talent_id,
+            job:jobs(title)
+          ),
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
+        `)
+        .eq(\"id\", disputeId)
+        .single(),
+      if (error) throw error,
+      return {
+        ...data;
+        client_profile: data && data.client_profile?.client_profile;
+        talent_profile: data && data.talent_profile?.talent_profile;}
+        project: {}
+        }
+      } as Dispute;
+    } catch (err: any) {
+          ...data && data.project,
+          title: data && data.project?.job?.title || 'Untitled Project'
           title: data.project?.job?.title || 'Untitled Project';}
         }
       } as Dispute;

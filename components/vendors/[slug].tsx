@@ -1,6 +1,5 @@
 import type { GetServerSideProps } from 'next';
 
-
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
@@ -198,5 +197,4 @@ const { getVendorBySlug } = await import('../../utils/vendor-store');
 const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } },
 };
-
 

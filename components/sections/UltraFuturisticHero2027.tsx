@@ -41,7 +41,6 @@ import { motion } from 'framer-motion';
     }
 ];
 
-
 const stats = [
     {
       icon: Brain,
@@ -357,10 +356,6 @@ className='text-center'
                   </div>
                   <div className='text-cyan-300 font-medium' />{trust}</div>
                 </motion.div>
-
-
-
-
 
               )
 }"

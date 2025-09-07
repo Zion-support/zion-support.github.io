@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,9 +13,29 @@ module.exports = {
         foreground: 'var(--foreground)',
         primary: {
           50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        blue: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
         },
         gray: {
           50: '#f9fafb',
@@ -32,7 +49,7 @@ module.exports = {
           800: '#1f2937',
           900: '#111827',
           950: '#030712',
-        }
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -51,31 +68,34 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
+          '100%': { opacity: '1' },
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' }
+          '100%': { transform: 'translateX(0px)', opacity: '1' },
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' }
+          '100%': { transform: 'translateX(0px)', opacity: '1' },
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' }
+          '100%': { transform: 'scale(1)' },
         },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
@@ -86,31 +106,31 @@ module.exports = {
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'left center'
+            'background-position': 'left center',
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'right center'
+            'background-position': 'right center',
           },
         },
         'gradient-y': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'center top'
+            'background-position': 'center top',
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'center bottom'
+            'background-position': 'center bottom',
           },
         },
         'gradient-xy': {
           '0%, 100%': {
             'background-size': '400% 400%',
-            'background-position': 'left center'
+            'background-position': 'left center',
           },
           '50%': {
             'background-size': '400% 400%',
-            'background-position': 'right center'
+            'background-position': 'right center',
           },
         },
       },
@@ -129,11 +149,11 @@ module.exports = {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem'
+        '128': '32rem',
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem'
+        '5xl': '2.5rem',
       },
     },
   },

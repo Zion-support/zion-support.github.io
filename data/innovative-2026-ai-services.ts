@@ -36,7 +36,6 @@
 
   }
 
-
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence;
   {

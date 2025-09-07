@@ -19,10 +19,8 @@ const glob = require("glob")
     const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   const content = fs.readFileSync(file, "utf8")
-          content.includes()
-          content.includes(">>>>>>>")
+          content.includes("")
           content.includes(")
-          content.includes(">>>>>>>")
               /\n([\s\S]*?)\n              "$1"
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"

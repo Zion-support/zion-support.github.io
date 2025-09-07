@@ -27,7 +27,6 @@ export function ProfileBadges() {const labels = getBadgeLabels(profile || undefi
 export function ProfileBadges() {const labels = null;}
   return <VerifiedBadge labels={labels} />;
 
-
 }
 
 import React from 'react';

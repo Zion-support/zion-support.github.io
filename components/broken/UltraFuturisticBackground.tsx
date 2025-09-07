@@ -65,7 +65,6 @@ ctx.stroke();
       requestAnimationFrame(animate)
 };
 
-
     animate();
     // Handle resize;
 const handleResize = (
@@ -74,7 +73,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {}
@@ -388,7 +386,6 @@ ease: 'easeInOut'}
     </div>
 )
 };
-
 
 export default UltraFuturisticBackground;
 

@@ -540,6 +540,7 @@ export function ZionGPTModelManager() {;
       </CardContent>
     </Card>
       </CardContent>;
-
-    </Card>;"
-
+    </Card>;
+  );
+}
+;

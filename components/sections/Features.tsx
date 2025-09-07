@@ -51,7 +51,6 @@ interface FeaturesProps {
         </div>;{/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`} />
 
-
           {features && features.map((feature, index) => (;}
             <Card;}
 key={index}
@@ -84,7 +83,6 @@ className='text-center group bg-gray-900/50 border border-gray-800 hover: border
     </section>
 )
 };
-
 
 export default Features;
 

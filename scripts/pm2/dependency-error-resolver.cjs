@@ -1,6 +1,4 @@
-
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
   'fs'
@@ -10,7 +8,9 @@ import { execSync, spawn } from;
     this.logFile = 'error-reports/dependency-error-resolver-report.json'
     console.log('� Dependency Error Resolver started')
     this."autoInstall"
-  'npm: ls, { "stdio": pipe})} "catch"
-  'UNMET DEPENDENCY') || line.includes(;"missing")
-  'npm outdated --json, { "stdio"}
-        "type": ;outdated, }))    } "catch"
+  'npm: ls', { "stdio": 'pipe})} "catch"
+  'UNMET DEPENDENCY') || line.includes('';"missing")
+  'npm outdated --json', { "stdio"}
+        "type": ';outdated, '}))    } "catch"
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"

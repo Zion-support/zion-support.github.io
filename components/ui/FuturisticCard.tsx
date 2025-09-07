@@ -1,6 +1,9 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
-type Props = {import React from './react';
+interface FuturisticCardProps {
+  children: ReactNode;
+  className?: string;
+}
 
 type Props = {title: string,description: string;
 

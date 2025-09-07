@@ -165,19 +165,7 @@ interface ApplicationActionsProps {
 </Link>
         </Link>;
       </Button>;
-    </div>);
-      <Button ;"
-        variant="default" ;""
-        size="sm";"
-      <Button;"
-        variant="default";""
-        size="sm";"
-        asChild;
-      >;
-</Button>
-        <Link to={`/messages?talentId=${application.talent_id}`}>;
-</Link>
-        </Link>;
-      </Button>;
-    </div>;"
-
+    </div>;
+  );
+}
+;

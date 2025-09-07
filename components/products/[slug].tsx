@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 
-
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
@@ -95,7 +94,6 @@ export default EquipmentDetail;          <div />;
 
   )
 };
-
 
 export default EquipmentDetail;
 

@@ -32,7 +32,6 @@ export interface InnovativeAIService {
     email: string;,
   address: string;
 
-
   {
 
 

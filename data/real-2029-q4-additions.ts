@@ -374,13 +374,12 @@
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.','
     features: [;
 
-'
-      'Goal trees and KPI ownership',''
-      'Weekly executive summaries',''
-      'Alerting on thresholds and trends',''
-      'Warehouse connectors',''
-      'Shareable links with permissions',''
-      'Annotations and change logs',']
+      'Goal trees and KPI ownership',
+      'Weekly executive summaries',
+      'Alerting on thresholds and trends',
+      'Warehouse connectors',
+      'Shareable links with permissions',
+      'Annotations and change logs'
     ],
     popular: false,'
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],''
@@ -786,16 +785,14 @@ export const real2029Q4Additions: RealMarketService[] = [
 	}
 ];
 
-
-'
-  id: 'ai - email - triage - copilot';','
-  name: 'AI Email Triage Copilot',''
-  tagline: 'Auto - categorize, summarize, and draft replies for inbound email';''
-  price: '$99';','
-  period: '/month',''
-  description: 'An AI - driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.';'
-  features: [;'
-  'Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and summaries_analytics: response time, CSAT impact, volume by topic';']
+id: 'ai - email - triage - copilot';
+  name: 'AI Email Triage Copilot',
+  tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
+  price: '$99';
+  period: '/month',
+  description: 'An AI - driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.';
+  features: [;
+  'Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and summaries_analytics: response time, CSAT impact, volume by topic';
   ];
   popular: true;,'
   icon: '✉️';''
@@ -2050,5 +2047,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
   reviews: 16;
 	}
 
+];	}
 ];
 '

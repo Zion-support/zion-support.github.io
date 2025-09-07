@@ -16,7 +16,6 @@ const [loading, setLoading] = useState(false);
 
   useEffect(() => {
 
-
     const saved = null;}
     if (saved) setToken(saved);}
   }, []);

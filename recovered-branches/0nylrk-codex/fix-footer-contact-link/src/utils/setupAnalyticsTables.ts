@@ -279,5 +279,3 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 // Tables creation failed, but we can still continue;
 }
 }
-'
-

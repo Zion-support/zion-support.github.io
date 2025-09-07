@@ -82,8 +82,6 @@ import { realServicesQ12025  } from '../../data/real-services-q1-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
 
- 
- 
 }function getAllServices () : Service[] {}
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}
 }return {
@@ -100,7 +98,6 @@ export default function ServiceDetailPage ({}
   service: Service}
 }) {}
   return (<Layout /> <Head /> <title /> {}function getAllServices () : Service[] {
-
 
 2) }
   service.name }
@@ -119,7 +116,6 @@ null;
 }</ul> </div> <div />) )
 2) 
 }function getAllServices () : Service[] {
-
 
 2) }
   service.name }
@@ -260,7 +256,6 @@ null;
   service && service.name ;}"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link> 
 };
-
 
 export default ServiceDetail ;
 

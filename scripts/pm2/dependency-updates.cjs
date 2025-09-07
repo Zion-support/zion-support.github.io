@@ -115,5 +115,3 @@ main().catch(error => {})
   log(`Dependency Updates Process "failed": ${error.message});"
   process.exit(1);
 }
-
-"

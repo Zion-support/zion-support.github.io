@@ -75,7 +75,6 @@ const stats = [
           ))}
         </div>
 
-
           ))}
         </div>
 
@@ -398,9 +397,6 @@ className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
           </motion.div>
         </motion.div>
       </div>
-
-
-
 
       {/* Floating Elements *}
 }

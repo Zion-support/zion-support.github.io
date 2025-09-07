@@ -30,8 +30,7 @@ class ComprehensiveMergeConflictResolver {}
     const allFiles = await this.getAllFiles(this.projectRoot);
     for (const file of allFiles) {}
       try {}
-        const content = await fs.readFile(file,utf8);
-        if (content.includes() || content.includes() || content.includes('>>>>>>>')) {}
+        const content = await fs.readFile(file, 'utf8');
           if (!filesWithConflicts.includes(file)) {}
             filesWithConflicts.push(file)};
         };

@@ -409,6 +409,6 @@ export default function TalentsPage() {;
       category_filters={TALENT_FILTERS}
       initial_price={{ min: 100, max: 200 }})
     />);
-
-</DynamicListingPage>"
-
+}
+}/>) 
+}

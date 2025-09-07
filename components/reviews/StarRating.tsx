@@ -58,7 +58,6 @@ xmlns='http://www.w3.org/2000/svg';
 "
 export default StarRating;xmlns=\"http://www.w3.org/2000/svg\";
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
@@ -88,7 +87,6 @@ class ErrorBoundary extends React.Component {
 }</div>) 
 };
 
-
 type Props = {
   value: number,;
   onChange: (val: number) => void,;
@@ -96,9 +94,7 @@ type Props = {
   readOnly?: boolean}
 };
 
-
 export const StarRating: React.FC<Props /> = ({ value, onChange, size = 24, readOnly    }) => {
-
 
 ;
 
@@ -110,7 +106,6 @@ const stars = [1, 2, 3, 4, 5];
 key={star}"
             type=\"button\"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
-
 
             onMouseLeave={() = /> !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
@@ -146,7 +141,6 @@ export default StarRating;              width={size}
     </div>)
 };
 
-
 export default StarRating;              width={size}
               height={size}"
               view_box=\"0 0 24 24\";
@@ -171,7 +165,6 @@ export default StarRating;
       })}
     </div>)
 };
-
 
 export default StarRating;
 

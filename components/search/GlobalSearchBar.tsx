@@ -490,7 +490,6 @@ if ( {) {$2;}
 }
       set_suggestions ([])return;      return;
 
-
                   {s}
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}"

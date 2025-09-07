@@ -247,9 +247,6 @@ function Page() {
     </div>);
 }
 
-
-
-
       <Head />
         <title />Innovation Insight — 2025-08-14 21-47</title>
         <meta name=&quot;description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />
@@ -315,6 +312,5 @@ export default function Page() {
   }
 }
 ;
-
 
 "

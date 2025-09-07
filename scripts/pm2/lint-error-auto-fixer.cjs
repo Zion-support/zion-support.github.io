@@ -43,6 +43,6 @@ import { execSync, spawn } from;
         fs.writeFileSync(file +.backup')
         const newContent = lines.join(')
   '
-    const varMatch = message.match(/(.+?)
-    if (line.includes('console.)
+    const varMatch = message.match(/'(.+?)'
+    if (line.includes('console.')
     if (message.includes('single quotes')

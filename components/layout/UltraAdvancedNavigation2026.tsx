@@ -320,7 +320,6 @@ className={`w-4 h-4 transition-transform duration-200 ${}
                     />
                   </button>
 
-
                   {/* Dropdown Menu *}
 }
                   <AnimatePresence />;
@@ -623,7 +622,6 @@ href='/contact'
     </>
   )
 };
-
 
 export default UltraAdvancedNavigation2026;
 

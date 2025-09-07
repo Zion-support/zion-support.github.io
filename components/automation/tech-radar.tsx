@@ -27,7 +27,6 @@ type Item = any;
         </ul>;
       </section>;
 
-
       <section />;"
         <h2 className=\"font-semibold text-lg mb-3\" />PyPI (30 days)</h2>;"
         <ul className=\"grid md:grid-cols-2 gap-3\" />;"
@@ -113,6 +112,5 @@ function TechRadar() {const langs = Object.keys (github;"
     </div>
 );
 }
-
 
 "

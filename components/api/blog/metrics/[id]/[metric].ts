@@ -133,8 +133,6 @@ const post = increment_metric (id, metric as 'views' | 'likes' | 'shares');
 
 }
 
-
-
 }
 }
 
@@ -142,6 +140,4 @@ const post = increment_metric (id, metric as 'views' | 'likes' | 'shares');
 }
 
 }
-
-
 

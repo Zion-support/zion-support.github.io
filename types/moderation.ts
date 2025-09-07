@@ -8,7 +8,7 @@ export interface ModerationResult {
   reason?: string;
   moderatedBy?: string;
   moderatedAt: Date;
-
+}
 
 
 
@@ -23,6 +23,7 @@ export interface ModerationAction {
   adminId: string;
   reason?: string;
   createdAt: string;
+}
 
 
 
@@ -30,12 +31,9 @@ export interface ModerationAction {
 }
 }
 export interface ModerationFlag {
-  // TODO: Implement
-}
-export interface ModerationFlag {;
-  id: string;,"
-  type: "spam" | "inappropriate" | "harassment" | "other";"
-  content: string;,
+  id: string;
+type: \"spam\" | \"inappropriate\" | \"harassment\" | \"other\";
+  content: string;
   reporterId: string;
   targetId: string;,"
   targetType: "post" | "comment" | "user";"
@@ -46,21 +44,12 @@ export interface ModerationFlag {;
   adminNotes?: string;}
 }}
 
-
-}
-export interface ModerationFlag {
-  // TODO: Implement
-}
-}
-
 export interface ModerationRule {
-  // TODO: Implement
+  id: string;
+name: string;
+  pattern: string;
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';}
 }
-  id: string;,
-  name: string;
-  pattern: string;,"
-  action: 'approve' | 'reject' | 'flag';''
-  severity: 'low' | 'medium' | 'high';'
-}
-'
 
+export type ModerationStatus = 'pending' | 'approved' | 'rejected';

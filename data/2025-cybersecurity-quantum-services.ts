@@ -14,7 +14,6 @@ export interface CybersecurityQuantumService {;
   trialDays: number;
     setupTime: string;
 
-
   {
 
 

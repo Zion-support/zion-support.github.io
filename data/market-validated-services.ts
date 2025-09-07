@@ -228,17 +228,16 @@ export interface MarketValidatedService {
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.','
     features: [;
 
-'
-      'WORM retention',''
-      'Export APIs',''
-      'Fine - grained access',''
-      'Tamper evidence',']
-    ],'
-    category: 'Enterprise IT - Security','
-    customers: 420,
-    trial_days: 14,'
-    setup_time: '30 minutes','
-    contact_info,
+      'WORM retention',
+      'Export APIs',
+      'Fine - grained access',
+      'Tamper evidence'
+    ],
+    category: 'Enterprise IT - Security',
+  customers: 420,
+    trial_days: 14,
+    setup_time: '30 minutes',}
+    contact_info}
   },
     customers: 380,
     trial_days: 7,'
@@ -385,10 +384,7 @@ const contactInfo  = null;
 	trialDays?: number;
 }}
 
-
-'
-  mobile: "+1 302 464 0950",""
-	email: "kleber@ziontechgroup && ziontechgroup.com",""
-	address: "364 E Main St STE 1008 Middletown DE 19709";","
-  website: "https://ziontechgroup && ziontechgroup.com";,""
-
+  mobile: \"+1 302 464 0950\",
+	email: \"kleber@ziontechgroup && ziontechgroup.com\",
+	address: \"364 E Main St STE 1008 Middletown DE 19709\";
+  website: \"https://ziontechgroup && ziontechgroup.com\";,

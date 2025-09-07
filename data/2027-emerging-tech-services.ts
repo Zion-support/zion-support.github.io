@@ -17,7 +17,6 @@
 
   link: string;
 
-
   {
 
     id: 'quantum-machine-learning'','

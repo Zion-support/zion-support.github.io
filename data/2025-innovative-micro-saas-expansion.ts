@@ -577,13 +577,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     reviews: 267;
 ];
 
-
   }
-
-
-
-'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;

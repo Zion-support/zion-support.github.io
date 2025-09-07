@@ -17,7 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
 
-
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
     if (tag && typeof tag === 'string')
       posts = posts && posts.filter(p => (p && p.tags || []).includes(tag));
@@ -253,9 +252,6 @@ const post: BlogPost = {
     write_posts (posts);
     return res.status (201).json (post);
   }
-
-
-
 
 return res.status (405).end ();
 }

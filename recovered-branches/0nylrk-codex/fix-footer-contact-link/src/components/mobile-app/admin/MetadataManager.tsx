@@ -277,5 +277,7 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
   () => setCurrentPlatform ("android")"
 </TabsTrigger>
 }> </div> </div> </TabsContent> </div> </div> </TabsContent> </Tabs> </div>) 
-    </div>;"
-
+};
+    </div>;
+  )
+};

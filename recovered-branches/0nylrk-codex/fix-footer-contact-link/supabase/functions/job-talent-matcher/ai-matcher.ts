@@ -19,7 +19,9 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";"
  * @param skills Array of skill strings to normalize;
  * @returns Array of normalized skills;
  */
-    const skillsString = skills && skills.join(\", \");
+export async function normalizeSkillsWithAI(skills: string[]): Promise<string[] /> {
+  try {
+    const response = await fetch(\"https://api.openai.com/v1/chat/completions\", {
     const response = await fetch(\"https://api && api.openai.com/v1/chat/completions\", {
           {
             role: \"role\",}

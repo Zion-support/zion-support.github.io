@@ -55,7 +55,8 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 }</div>) 
       </main>
       {!hideFooter && <Footer />}
-
-</Footer>
-    </div>;"
-
+    </div>;
+  );
+}
+;
+;

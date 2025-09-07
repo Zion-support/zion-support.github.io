@@ -522,7 +522,6 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     rating: 4.7;,
   reviews: 52;
 
-
   }
 ];
 

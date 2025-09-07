@@ -120,11 +120,9 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
-
-module.exports = GitWorkflowAutomator;
 '
-'
-execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
+module.exports = GitWorkflowAutomator;'
+execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
   , { "cwd": this.projectRoot, "stdio"}

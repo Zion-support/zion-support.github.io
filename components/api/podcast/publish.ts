@@ -91,8 +91,6 @@ const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.x
 
 }
 
-
-
 }
 }
 
@@ -100,6 +98,4 @@ const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.x
 }
 
 }
-
-
 

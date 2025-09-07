@@ -594,16 +594,22 @@ onRefresh: () => Promise<void>
 </AlertDialog>
 }> Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
 }Decline </Button> </div>) 
-  isInterviewConfirmed && !isInterviewPast && (<> {)
-  interview.meeting link ? (</Button>) "
-}<AlertDialog> <AlertDialogTrigger asChild> <Button variant="outline" size="sm" className="w-full mt-2" > <X className="h-4 w-4 mr-2" /> Cancel Interview </Button> </AlertDialogTrigger> <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white" > <AlertDialogHeader> <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Go Back</AlertDialogCancel> <AlertDialogAction > Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </>)"
-}</div> </CardFooter> <DialogHeader> <DialogTitle>Respond to Interview Request</DialogTitle> </DialogHeader> <InterviewResponseForm interview= {
-  interview;
-}onConfirm= {"
-  () => handleRespondToInterview ('confirmed')'
-}onClose= {
-  () => setIsResponseDialogOpen (false) 
-}isLoading= {
-  isLoading;
-}/> </DialogContent> </Dialog> </Card>) '
-
+}{}
+  /* For confirmed interviews */ }
+}{
+  isInterviewConfirmed && !isInterviewPast && (<> {}
+  interview.meeting link ? (</Button>) }
+}<AlertDialog /> <AlertDialogTrigger asChild /> <Button variant=\"outline\" size=\"sm\" className=\"w-full mt-2\"  /> <X className=\"h-4 w-4 mr-2\" /> Cancel Interview </Button> </AlertDialogTrigger> <AlertDialogContent className=\"bg-zion-blue-dark border-zion-blue-light text-white\"  /> <AlertDialogHeader /> <AlertDialogTitle />Cancel Confirmed Interview</AlertDialogTitle> <AlertDialogDescription /> Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter /> <AlertDialogCancel />Go Back</AlertDialogCancel> <AlertDialogAction  /> Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </>) 
+}</div> </CardFooter> <DialogHeader /> <DialogTitle />Respond to Interview Request</DialogTitle> </DialogHeader> <InterviewResponseForm interview= {}
+  interview }
+}onConfirm= {}
+  () = /> handleRespondToInterview ('confirmed') }
+}onClose= {}
+  () => setIsResponseDialogOpen (false) }
+}isLoading= {}
+  isLoading }
+}/> </DialogContent> </Dialog> </Card>) 
+}
+  );
+}
+;

@@ -42,6 +42,9 @@
     launchDate: '2029-03-01','
     customers: 18,
 
+      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
+    launchDate: '2029-03-01',
+  customers: 18,
     rating: 4.8,
     reviews: 52;
   },;
@@ -289,17 +292,10 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     variant: 'space-futuristic'',
   contactInfo: {
 
-'
-      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'''
-    launchDate: '2029-03-01'',
-  customers: 18;
-    rating: 4.8;,
-  reviews: 52;
-  }'
-];      mobile: '+1 302 464 0950';','
-  email: 'kleber@ziontechgroup.com';''
-      address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
     }
     realImplementation: true;,'
   implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';''

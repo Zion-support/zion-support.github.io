@@ -9,4 +9,3 @@ import React from 'react';
 
   return <NextSeo {...props} />;
 
-

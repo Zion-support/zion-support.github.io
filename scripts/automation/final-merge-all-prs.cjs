@@ -81,8 +81,7 @@ const { execSync } = require("child_process")
   async resolveFileConflicts(filePath) {this.log(" Resolving conflicts "in": ${filePath}")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
-        !content.includes()
-        !content.includes(">>>>>>>")
+        !content.includes("")
 this.log(" Resolved conflicts "in")
         "ERROR"
     // "Strategy"

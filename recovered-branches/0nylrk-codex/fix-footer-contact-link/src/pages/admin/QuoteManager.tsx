@@ -315,5 +315,5 @@ quote={selectedQuote}
 </TabsContent>
 }/> </Card> </TabsContent> </Tabs> </div> </div> {
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
-</QuoteDetails>"
-
+}
+}

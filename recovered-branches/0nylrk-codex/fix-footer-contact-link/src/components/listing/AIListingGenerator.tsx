@@ -307,6 +307,9 @@ if ( {) {
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
 </GeneratedContentDisplay>
     </div>
-
-    </div>;"
-
+  )
+}
+    </div>;
+  );
+}
+;

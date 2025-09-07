@@ -136,8 +136,85 @@ function resolveConflicts(filePath) {
     // Remove and;
     content = content.replace(/[\s\S]*?
     
-    // Write the resolved content back;)
-    fs.writeFileSync(filePath, content);
+    let resolvedCount = 0;
+    let deletedCount = 0;
+    
+    for (const file of conflictedFiles) {
+      try {
+        if (!fs.existsSync(file)) {
+          console.log(`File ${file} doesn't exist, skipping...`);
+          continue;
+        }
+        
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Check if it's a modify/delete conflict
+        if (content.includes('deleted in') && content.includes('modified in HEAD')) {
+          console.log(`Resolving modify/delete conflict for ${file} - keeping modified version`);
+          // For modify/delete conflicts, keep the modified version (HEAD)
+          const lines = content.split('\n');
+          const resolvedContent = lines.filter(line => 
+            !line.includes('deleted in') &&
+            !line.includes('modified in HEAD')
+          ).join('\n');
+          
+          fs.writeFileSync(file, resolvedContent);
+          deletedCount++;
+        }
+        // Check if it's an add/add conflict
+              incomingContent = '';
+              inConflict = false;
+              // Merge both versions, preferring the longer/more complete one
+              if (incomingContent.trim().length > headContent.trim().length) {
+                resolvedContent += incomingContent;
+              } else {
+                resolvedContent += headContent;
+              }
+            } else if (inConflict) {
+              if (headContent === '') {
+                headContent = line + '\n';
+              } else {
+                headContent += line + '\n';
+              }
+            } else if (incomingContent !== undefined && incomingContent !== '') {
+              if (incomingContent === '') {
+                incomingContent = line + '\n';
+              } else {
+                incomingContent += line + '\n';
+              }
+            } else {
+              resolvedContent += line + '\n';
+            }
+          }
+          
+          fs.writeFileSync(file, resolvedContent);
+          resolvedCount++;
+        }
+        // Check if it's a content conflict
+          const lines = content.split('\n');
+          let resolvedContent = '';
+          let inConflict = false;
+          let keepContent = false;
+          
+          for (const line of lines) {
+              keepContent = true;
+              inConflict = false;
+              keepContent = false;
+            } else if (!inConflict || keepContent) {
+              resolvedContent += line + '\n';
+            }
+          }
+          
+          fs.writeFileSync(file, resolvedContent);
+          resolvedCount++;
+        }
+        
+      } catch (error) {
+        console.log(`Error processing ${file}: ${error.message}`);
+      }
+    }
+    
+    console.log(`Resolved ${resolvedCount} conflicts and handled ${deletedCount} modify/delete conflicts`);
     
     // Add the file to git;
     execSync(`git add "${filePath}"`, { stdio: inherit});

@@ -309,16 +309,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 	}
 ];
 
-
-'
-  id: 'enterprise - data - governance - automation';','
-  name: 'Enterprise Data Governance Automation',''
-  tagline: 'Automated data governance, compliance, and quality management for enterprise data';''
-  price: '$799';','
-  period: '/month',''
-  description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.';'
-  features: [;'
-  'Automated data quality monitoring_compliance and regulatory tracking_data lineage and cataloging_privacy and security controls_master data management_data stewardship workflows_real - time compliance reporting_integration with enterprise systems';']
+id: 'enterprise - data - governance - automation';
+  name: 'Enterprise Data Governance Automation',
+  tagline: 'Automated data governance, compliance, and quality management for enterprise data';
+  price: '$799';
+  period: '/month',
+  description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.';
+  features: [;
+  'Automated data quality monitoring_compliance and regulatory tracking_data lineage and cataloging_privacy and security controls_master data management_data stewardship workflows_real - time compliance reporting_integration with enterprise systems';
   ];
   popular: true;,'
   icon: '🏛️';''
@@ -504,7 +502,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 38;
 }
-	}
+
 ];	}
 
 		rating: 4.8;,

@@ -121,7 +121,7 @@ function SidebarItem() {
         active ? "bg - primary / 10 text - primary" : "text - muted - foreground hover: bg - accent hover:text - accent - foreground",")
         class_name)}
       {...props}
-    >;
-</div>
-    </div>);"
-
+     />;
+      {children}
+    </div>);
+}

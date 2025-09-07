@@ -194,7 +194,6 @@ const companyLinks = [
   href: '/support'}
 },
 
-
   { name: 'Status'}
   href: '/status'}
 }
@@ -679,8 +678,6 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py
                         </Link>
                       ))}
 
-
-
                   {/* Contact Info */}
 <div className='pt-4 border-t border-gray-700/50' />
                     <div className='text-sm font-medium text-gray-400 mb-3' />
@@ -689,9 +686,6 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py
                     <div className='space-y-2 text-sm text-gray-400' />
                       <div className='flex items-center space-x-2' />
                         <Phone className='w-4 h-4 text-cyan-400' />
-
-
-
 
                         <span />{contactInfo.mobile}</span>
                       </div>
@@ -720,7 +714,6 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py
             </div>
           </motion.div>
 
-        
 }
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}

@@ -148,6 +148,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
               </p>
           </div>
       </div>
-
-    </div>"
-
+    </div>
+  )
+}

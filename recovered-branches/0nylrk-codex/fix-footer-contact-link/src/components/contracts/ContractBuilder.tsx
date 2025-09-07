@@ -254,6 +254,7 @@ return (<SmartContractBuilder isOpen= {
       </DialogContent>
     </Dialog>
       </DialogContent>;
-
-    </Dialog>;"
-
+    </Dialog>;
+  );
+}
+;

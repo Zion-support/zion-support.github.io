@@ -79,7 +79,6 @@ export interface EmergingTech2026ServiceV2 {;
   reviews: number;
 }
 
-
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform;
   {

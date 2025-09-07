@@ -635,11 +635,11 @@ if ( {) {
 }</Tabs> </div>) : (<Globe className=" h-4 w-4"/>)"
 </Globe>
 }</Button> </div> </TabsTrigger>) ) 
-}</TabsList> /> </TabsContent>) ) "
-}</Tabs> </div> /> </div> </div> </div> <div className=" pt-4"> <Button > {"
-</div>"
-  isSubmitting ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> {"
-</Loader2>)"
-}</>) : (t ('jobs.post job button') )'
-}</Button> </div> </form>) '
-
+}</TabsList> /> </TabsContent>) ) 
+}</Tabs> </div> /> </div> </div> </div> <div className=\" pt-4\" /> <Button  /> {
+  isSubmitting ? (<> <Loader2 className=\" mr-2 h-4 w-4 animate-spin\" /> {}
+  t ('jobs.submitting') }
+}</>) : (t ('jobs.post job button') ) 
+}</Button> </div> </form>) 
+}
+;

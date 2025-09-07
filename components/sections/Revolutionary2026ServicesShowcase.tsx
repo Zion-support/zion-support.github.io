@@ -308,7 +308,6 @@ href={service.link}
             ))}
           </div>
 
-
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=ai-autonomous'
@@ -341,7 +340,6 @@ initial='hidden'
               </p>
             </div>
           </div>
-
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
             {featuredQuantumServices.map((service, index) => (}
@@ -410,7 +408,6 @@ href={service.link}
             )
 }
           </div>
-
 
 <div className='text-center mt-8' />
             <Link;
@@ -513,7 +510,6 @@ href={service.link}
             )
 }
           </div>
-
 
 <div className='text-center mt-8' />
             <Link;

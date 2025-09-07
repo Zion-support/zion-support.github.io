@@ -1,6 +1,4 @@
-
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
  * PM2 Test Automation Service;
  * Runs automated tests and reports results;
@@ -27,7 +25,6 @@ class TestAutomation {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -151,5 +148,5 @@ if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
-
-'
+module.exports = TestAutomation;module.exports = TestAutomation;
+module.exports = TestAutomation;module.exports = TestAutomation;

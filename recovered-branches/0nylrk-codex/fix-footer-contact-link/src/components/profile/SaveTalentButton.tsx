@@ -35,7 +35,6 @@ interface SaveTalentButtonProps {;
 }
 
 
-
 export function SaveTalentButton({
   talentId,
 

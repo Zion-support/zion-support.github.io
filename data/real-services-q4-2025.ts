@@ -52,19 +52,18 @@
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.','
     features: [;
 
-'
-      'Link shortener and branded domains',''
-      'UTM builder and traffic quality scoring',''
-      'Multi - touch attribution and deduplication',''
-      'Link shortener and branded domains',''
-      'UTM builder and traffic quality scoring',''
-      'Multi - touch attribution and deduplication',''
-      'Link shortener and branded domains',''
-      'UTM builder and traffic quality scoring',''
-      'Multi-touch attribution and deduplication',''
-      'Automated payouts and tax forms',''
-      'Fraud and bot detection',''
-      'Partner portal and reports',']
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi - touch attribution and deduplication',
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi - touch attribution and deduplication',
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi-touch attribution and deduplication',
+      'Automated payouts and tax forms',
+      'Fraud and bot detection',
+      'Partner portal and reports'
     ],
     popular: true,
 '
@@ -375,16 +374,14 @@
 	}
 ];
 
-
-'
-  id: 'ai - email - responder - pro';','
-  name: 'AI Email Responder Pro',''
-  tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';''
-  price: '$129';','
-  period: '/month',''
-  description: 'LLM - powered email assistant that drafts context - aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2 - ready with redaction.';'
-  features: [;'
-  'LLM reply drafts with tone controls_intent routing and SLA prediction_smart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governance_dashboard with analytics and coaching';']
+id: 'ai - email - responder - pro';
+  name: 'AI Email Responder Pro',
+  tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';
+  price: '$129';
+  period: '/month',
+  description: 'LLM - powered email assistant that drafts context - aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2 - ready with redaction.';
+  features: [;
+  'LLM reply drafts with tone controls_intent routing and SLA prediction_smart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governance_dashboard with analytics and coaching';
   ];
   popular: true;,'
   icon: '📧';''
@@ -963,5 +960,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
   reviews: 6;
 	}
 
+];	}
 ];
 '

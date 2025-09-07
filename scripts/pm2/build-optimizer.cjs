@@ -1,6 +1,4 @@
-
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
  * PM2 Build Optimizer Service;
  * Optimizes build process and bundle size;
@@ -28,7 +26,6 @@ class BuildOptimizer {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -244,5 +241,5 @@ if (require.main === module) {}
   const buildOptimizer = new BuildOptimizer();
   buildOptimizer.start().catch(console.error);
 };
-
-"
+module.exports = BuildOptimizer;module.exports = BuildOptimizer;
+module.exports = BuildOptimizer;module.exports = BuildOptimizer;

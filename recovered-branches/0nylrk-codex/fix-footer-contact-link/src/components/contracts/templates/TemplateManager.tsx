@@ -137,6 +137,7 @@ return (<Dialog open= {
       </DialogContent>
     </Dialog>
       </DialogContent>;
-
-    </Dialog>;"
-
+    </Dialog>;
+  );
+}
+;

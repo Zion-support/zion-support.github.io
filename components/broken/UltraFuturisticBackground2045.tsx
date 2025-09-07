@@ -27,7 +27,6 @@ const UltraFuturisticBackground2045: React.FC<
 > = ({ children   ,}
 }) => {
 
-
 }
   const canvasRef = useRef<HTMLCanvasElement />(null);}
 import { motion } from 'framer-motion';
@@ -39,8 +38,6 @@ interface UltraFuturisticBackground2045Props {
 
 const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
 }) => {
-
-
 
   const canvasRef = null;
 
@@ -69,7 +66,6 @@ const UltraFuturisticBackground2045: React.FC<;
   UltraFuturisticBackground2045Props;
 > = ({ children    }) => {
 
-
 const canvasRef = useRef<HTMLCanvasElement />(null)interface UltraFuturisticBackground2045Props {
   children: React.ReactNode;}
 }
@@ -77,7 +73,6 @@ const canvasRef = useRef<HTMLCanvasElement />(null)interface UltraFuturisticBack
 
 const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
 }) => {
-
 
 const canvasRef = null;
 
@@ -113,7 +108,6 @@ interface UltraFuturisticBackground2045Props {
 
 const UltraFuturisticBackground2045: React.FC < UltraFuturisticBackground2045Props> = ({ children   ,}
 }) => {
-
 
 const animation_ref = useRef < number | undefined>(undefined;
   useEffect (() => ;
@@ -223,7 +217,6 @@ ctx.restore();}
       animationRef.current = requestAnimationFrame(animate)
 };
 
-
     animate();
     // Handle resize;
 const handleResize = (
@@ -232,7 +225,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -346,7 +338,6 @@ className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 tr
           }}
         />
 
-
         {/* Energy Orbs */}
         <motion.div;
 className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50';
@@ -407,7 +398,6 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
     </div>
 )
 };
-
 
 export default UltraFuturisticBackground2045;
 

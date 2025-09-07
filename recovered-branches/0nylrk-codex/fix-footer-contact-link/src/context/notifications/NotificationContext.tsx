@@ -291,11 +291,8 @@ if ( {) {
     }
   }, [user]);
   return (;
-
-    <NotificationContext.Provider value={notificationOps}>;
-</NotificationContext>
-    </NotificationContext.Provider>;)
-  );
+    <NotificationContext.Provider value={notificationOps} />;
+      {children}
+    </NotificationContext.Provider>;
+  )
 };
-'
-

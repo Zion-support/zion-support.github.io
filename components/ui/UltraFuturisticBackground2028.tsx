@@ -1,6 +1,5 @@
 
 
-
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -142,7 +141,6 @@ canvas.height = window.innerHeight) => {
 }
 };
 
-
     window.addEventListener('resize', handleResize);
     return () => {}
 window.removeEventListener('resize', handleResize)}
@@ -283,7 +281,6 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
           animate={{y: [0, -15, 0],opacity: [0.25, 0.55, 0.25]}}
           transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}}}/>;
       </div>;
-
 
       {/* Energy Waves */}
 

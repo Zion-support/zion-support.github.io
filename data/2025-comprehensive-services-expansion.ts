@@ -14,55 +14,52 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;,'
 ;]
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 
-
-'
-  {  mobile: '+1 302 464 0950';','
-  email: 'kleber@ziontechgroup.com';''
-  address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
-}'
-  mobile: '+1 302 464 0950',''
-  email: 'kleber@ziontechgroup && ziontechgroup.com',''
-  address: '364 E Main St STE 1008 Middletown DE 19709',''
-  website: 'https://ziontechgroup && ziontechgroup.com',};'
-    tagline:'
-      'Automated code quality analysis, security scanning, and best practice recommendations'''
-    price: '$199'','
-  period: '/month''
-    description:'
-      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'']
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: \"address\",}
+    website: 'https://ziontechgroup.com'}
+}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'};
+    tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
+  price: '$199'
+    period: '/month',
+  description:
+      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
 
-'
-      'Custom rule configuration',''
-      'Team performance analytics',''
-      'Automated PR comments',''
-      'Compliance checking (SOC2, HIPAA)',''
-      'Performance impact analysis',']
+      'Custom rule configuration',
+      'Team performance analytics',
+      'Automated PR comments',
+      'Compliance checking (SOC2, HIPAA)',
+      'Performance impact analysis'
     ],
-    popular: true,'
-    icon: '🔍',''
-    color: 'from-blue-600 to-indigo-700',''
-    textColor: 'text-blue-400',''
-    link: 'https://ziontechgroup.com/ai-code-review-assistant','
-    marketPosition:;'
-      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',''
-    targetAudience: 'Development teams, DevOps engineers, CTOs','
-    trialDays: 14,'
-    setupTime: '2 hours',''
-    category: 'Development & DevOps','
-    realService: true,'
-    technology: ['AI/ML, Static Analysis, Security Scanning'],''
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],'
-    useCases: ['
-      'Code quality improvement, Security compliance, Team productivity'']
-    ]'
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.'','
-  competitors: ['SonarQube, CodeClimate, Snyk']''
-    marketSize: '$8B code quality tools'','
-  growthRate: '35% YoY'''
-    variant: 'ai-futuristic'',
+    popular: true,
+    icon: '🔍',
+  color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+  link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    marketPosition:;
+      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
+    targetAudience: 'Development teams, DevOps engineers, CTOs',
+  trialDays: 14,
+    setupTime: '2 hours',
+  category: 'Development & DevOps',
+    realService: true,
+    technology: ['AI/ML, Static Analysis, Security Scanning'],
+    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
+
+useCases: [
+      'Code quality improvement, Security compliance, Team productivity'
+    ]
+    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',
+  competitors: ['SonarQube, CodeClimate, Snyk']
+    marketSize: '$8B code quality tools',
+  growthRate: '35% YoY'
+    variant: 'ai-futuristic',
   contactInfo: contact;
     realImplementation: true;,
   implementationDetails:

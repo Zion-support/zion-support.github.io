@@ -14,21 +14,17 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;,
 ;]
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
-
-'
-  {  mobile: '+1 302 464 0950';','
-  email: 'kleber@ziontechgroup.com';''
-  address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
-}'
-  mobile: '+1 302 464 0950',''
-  email: 'kleber@ziontechgroup && ziontechgroup.com',''
-  address: '364 E Main St STE 1008 Middletown DE 19709',''
-  website: 'https://ziontechgroup && ziontechgroup.com',};']
-
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: \"address\",}
+    website: 'https://ziontechgroup.com'}
+}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'};
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
-
 
   {
 
@@ -297,9 +293,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   }
 ];
 
-'
-];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';''
-      'Compliance management';'
+];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
+      'Compliance management';
     ];
 
     popular: true;,'

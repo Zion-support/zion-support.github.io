@@ -136,7 +136,6 @@ const quickLinks = [
   href: '/resources'}
 },
 
-
     { name: 'Case Studies'}
   href: '/case-studies'}
 },
@@ -171,7 +170,6 @@ const companyInfo = [
     { name: 'Support'}
   href: '/support'}
 },
-
 
   { name: 'Status'}
   href: '/status'}
@@ -533,6 +531,5 @@ href='/terms'
 
   );
 }
-
 
 "

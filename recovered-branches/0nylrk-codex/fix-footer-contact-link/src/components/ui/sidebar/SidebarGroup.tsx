@@ -19,10 +19,10 @@ interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
 export /**
  * SidebarGroup - Function description;
  */
-
-function SidebarGroup() {
-  return ()"
-    <div className={cn ("mb - 4", class_name)} {...props}>;"
-</div>
-    </div>);"
-
+function SidebarGroup() {}
+  return (}
+    <div className={cn (\"mb - 4\", class_name)} {...props} />;
+      {children}
+    </div>);
+}
+;

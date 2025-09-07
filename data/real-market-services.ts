@@ -14,70 +14,67 @@ export const realMarketServices: RealMarketService[] = [;,'
 ;]
 export const realMarketServices: RealMarketService[] = [;
 
-
-'
-  {  mobile: '+1 302 464 0950';','
-  email: 'kleber@ziontechgroup.com';''
-  address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
-}'
-  mobile: '+1 302 464 0950',''
-  email: 'kleber@ziontechgroup && ziontechgroup.com',''
-  address: '364 E Main St STE 1008 Middletown DE 19709',''
-  website: 'https://ziontechgroup && ziontechgroup.com',};'
-    tagline:'
-      'Centralize model access, control spend, add observability and guardrails'''
-    price: '$299'','
-  period: '/month''
-    description:'
-      'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.''
-    features: ['
-      'Unified API for multiple LLM providers'''
-      'Spend caps, rate limits, and usage alerts'''
-      'PII redaction and secrets filtering'''
-      'Prompt templates and versioning'''
-      'Latency and cost-aware routing'''
-      'Batch and streaming inference'''
-      'Audit logs and RBAC'''
-      'LangChain/LlamaIndex SDK support'''
-      'Export to data warehouse'']
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: \"address\",}
+    website: 'https://ziontechgroup.com'}
+}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'};
+    tagline: 'Centralize model access, control spend, add observability and guardrails',
+  price: '$299'
+    period: '/month',
+  description:
+      'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.'
+    features: [
+      'Unified API for multiple LLM providers'
+      'Spend caps, rate limits, and usage alerts'
+      'PII redaction and secrets filtering'
+      'Prompt templates and versioning'
+      'Latency and cost-aware routing'
+      'Batch and streaming inference'
+      'Audit logs and RBAC'
+      'LangChain/LlamaIndex SDK support'
+      'Export to data warehouse'
     ]
-    popular: true;,'
-  icon: '🧠'''
-    color: 'from-cyan-600 to-blue-700'','
-  textColor: 'text-cyan-400'''
-    link: 'https://ziontechgroup.com/llm-gateway'',
-  marketPosition:'
-      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.'''
-    targetAudience: 'Product teams, platform engineering, data/AI teams''
-    trialDays: 14;,'
-  setupTime: '1 day'''
-    category: 'AI & Data'',
-  realService: true;'
-    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']'
+    popular: true;
+icon: '🧠',
+  color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400',
+  link: 'https://ziontechgroup.com/llm-gateway'
+    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
+  targetAudience: 'Product teams, platform engineering, data/AI teams'
+    trialDays: 14;
+setupTime: '1 day',
+  category: 'AI & Data'
+    realService: true;
+technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
+
 export const realMarketServices: RealMarketService[] = [
   {
 
-'
-      'Unified API for multiple LLM providers',''
-      'Spend caps, rate limits, and usage alerts',''
-      'PII redaction and secrets filtering',''
-      'Prompt templates and versioning',''
-      'Latency and cost - aware routing',''
-      'Batch and streaming inference',''
-      'Audit logs and RBAC',''
-      'LangChain / LlamaIndex SDK support',''
-      'Latency and cost - aware routing',''
-      'Batch and streaming inference',''
-      'Audit logs and RBAC',''
-      'LangChain / LlamaIndex SDK support',''
-      'Export to data warehouse',']
+      'Unified API for multiple LLM providers',
+      'Spend caps, rate limits, and usage alerts',
+      'PII redaction and secrets filtering',
+      'Prompt templates and versioning',
+      'Latency and cost - aware routing',
+      'Batch and streaming inference',
+      'Audit logs and RBAC',
+      'LangChain / LlamaIndex SDK support',
+      'Latency and cost - aware routing',
+      'Batch and streaming inference',
+      'Audit logs and RBAC',
+      'LangChain / LlamaIndex SDK support',
+      'Export to data warehouse'
     ],
-    popular: true,'
-    icon: '🧠',''
-    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],'
-    integrations: ['
-      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'']
+    popular: true,
+    icon: '🧠',
+  technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
+
+    integrations: [
+      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
     ]
     useCases: ['
       'Centralized LLM access, Governance and compliance, Cost optimization'']
@@ -800,29 +797,27 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: contact,
     realImplementation: true,
 
-
-    implementationDetails:'
-      'Replay-safe pullers, checksum compare, and reconciliation dashboards.'''
-    launchDate: '2025-08-22'',
-  customers: 15;
-    rating: 4.7;,
-  reviews: 9;
-  }'
-    id: 'api - backfill - reconciliation',''
-    name: 'API Backfill & Reconciliation','
-    tagline:;'
-      'Recover missed events, dedupe, and reconcile systems with confidence',''
-    price: '$99',''
-    period: '/month','
-    description:;'
-      'Detect and repair data gaps between SaaS APIs and your warehouse / CRM. Provides replay - safe backfills, idempotency, and reconciliation reports.','
-    features: [;'
-      'Gap detection and backfill plans',''
-      'Idempotent replay and deduplication',''
-      'Hash - based reconciliation reports',''
-      'Rate - limit aware workers',''
-      'Alerting and failure retries',''
-      'Warehouse and CRM syncs',']
+implementationDetails: 'Replay-safe pullers, checksum compare, and reconciliation dashboards.',
+  launchDate: '2025-08-22'
+    customers: 15;
+rating: 4.7;}
+reviews: 9}
+  }
+    id: 'api - backfill - reconciliation',
+  name: 'API Backfill & Reconciliation',
+    tagline:;
+      'Recover missed events, dedupe, and reconcile systems with confidence',
+    price: '$99',
+  period: '/month',
+    description:;
+      'Detect and repair data gaps between SaaS APIs and your warehouse / CRM. Provides replay - safe backfills, idempotency, and reconciliation reports.',
+    features: [;
+      'Gap detection and backfill plans',
+      'Idempotent replay and deduplication',
+      'Hash - based reconciliation reports',
+      'Rate - limit aware workers',
+      'Alerting and failure retries',
+      'Warehouse and CRM syncs'
     ],
     popular: false,'
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',''
@@ -1749,10 +1744,9 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;'
   }
-];'
-      address: '364 E Main St STE 1008 Middletown DE 19709','
-    reviews: 36;,'
-  website: 'https://ziontechgroup.com';'
+];
+
+website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
     implementation_details: 'Region rules, consent logging, banner / prefs widgets.';''

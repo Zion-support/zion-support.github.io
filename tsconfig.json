@@ -9,6 +9,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "forceConsistentCasingInFileNames": false,
     "noEmit": true,
 
     "maxNodeModuleJsDepth": 0,
@@ -20,6 +21,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "react",
     "plugins": [
       {
         "name": "next"
@@ -27,38 +29,36 @@
     ],
     "baseUrl": ".",
     "paths": {
-
       "@/*": [
-        "./*"
+        "./src/*"
       ],
       "@/components/*": [
-        "./components/*"
+        "./src/components/*"
       ],
       "@/pages/*": [
-        "./pages/*"
+        "./src/pages/*"
       ],
       "@/utils/*": [
-        "./utils/*"
+        "./src/utils/*"
       ],
       "@/hooks/*": [
-        "./hooks/*"
+        "./src/hooks/*"
       ],
       "@/types/*": [
-        "./types/*"
+        "./src/types/*"
       ],
       "@/styles/*": [
-        "./styles/*"
+        "./src/styles/*"
       ],
       "@/assets/*": [
-        "./assets/*"
+        "./src/assets/*"
       ]
     },
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false
-
+    "strictNullChecks": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true
   },
   "include": [
     "next-env.d.ts",
@@ -67,8 +67,18 @@
     "src/**/*.tsx",
     "pages/**/*.ts",
     "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "components/**/*.ts",
-    "components/**/*.tsx"
+    "components/**/*.tsx",
+    "data/**/*.ts",
+    "data/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "zion/**/*.ts",
+    "zion/**/*.tsx",
+    "protocol/**/*.ts",
+    "protocol/**/*.tsx"
   ],
   "exclude": [
     "node_modules",

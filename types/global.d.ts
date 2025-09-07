@@ -1,7 +1,3 @@
-
-
-
-
 // Global type declarations for DOM types;
 declare global {
   // TODO: Implement
@@ -12,7 +8,6 @@ declare global {
     performance: Performance;
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];}
-
   }
 
   interface Performance {
@@ -99,59 +94,40 @@ declare global {
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
 }
-
-
-
-export {};
-
-// Global type declarations;
-declare module "*.svg" {""
-  const "content": string;"
-  export default content}"
-declare module "*.png" {""
-  const "content": string;"
-  export default content}"
-declare module "*.jpg" {""
-  const "content": string;"
-  export default content}"
-declare module "*.jpeg" {""
-  const "content": string;"
-  export default content}"
-declare module "*.gif" {""
-  const "content": string;"
-  export default content}"
-declare module "*.webp" {""
-  const "content": string;"
-  export default content}"
-declare module "*.css" {""
-  const "content": { [className: string]: string };"
-  export default content}"
-declare module "*.scss" {""
-  const "content": { [className: string]: string };"
-  export default content}"
-declare module "*.module.css" {""
-  const "content": { [className: string]: string };"
-  export default content}"
-declare module "*.module.scss" {""
-  const "content": { [className: string]: string };"
-  export default content}
-// Next.js specific types;
-declare namespace NodeJS {
-  // TODO: Implement
+export default content;}
+}declare module \"*.gif\" {const content: string;
 }
-  interface ProcessEnv {
-  // TODO: Implement
-}"
-    "NODE_ENV": "development" | "production" | "test";"
+export default content;}
+}declare module \"*.webp\" {const content: string;
+}
+export default content;}
+}declare module \"*.css\" {const content: { [className: string]: string,}
+}
+
+export default content;
+}declare module \"*.scss\" {const content: { [className: string]: string,}
+}
+
+export default content;
+}declare module \"*.module.css\" {const content: { [className: string]: string,}
+}
+
+export default content;
+}declare module \"*.module.scss\" {const content: { [className: string]: string,}
+}
+
+export default content;
+}// Environment variables;
+declare namespace NodeJS {interface ProcessEnv  {NODE_ENV: \"development\" | \"production\" | \"test\";
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string;
-    NEXT_PUBLIC_GA_TRACKING_ID?: string}
-}"
-/// <reference types="next" />"
-</reference>"
-/// <reference types="next/image-types/global" />"
-</reference>"
-/// <reference types="next/navigation-types/navigation" />"
-</reference>"
+    SUPABASE_SERVICE_ROLE_KEY?: string;}
+    NEXT_PUBLIC_GA_TRACKING_ID?: string;}
+  }
+}
 
+/// <reference types=\"next\" />
+/// <reference types=\"next/image-types/global\" />
+/// <reference types=\"next/navigation-types/navigation\" />
+
+export {};

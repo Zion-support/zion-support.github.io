@@ -2,7 +2,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Master Automation System Starting...');
-console.log('=====================================');
 
 const automationScripts = [
   {
@@ -37,7 +36,6 @@ let failed = 0;
 let criticalFailed = 0;
 
 console.log('\n📋 Running Automation Scripts...');
-console.log('================================');
 
 automationScripts.forEach(({ name, script, critical }) => {
   console.log(`\n🔧 Running: ${name}`);
@@ -57,7 +55,6 @@ automationScripts.forEach(({ name, script, critical }) => {
 });
 
 console.log('\n📊 Automation Summary');
-console.log('====================');
 console.log(`✅ Passed: ${passed}`);
 console.log(`❌ Failed: ${failed}`);
 console.log(`🚨 Critical Failed: ${criticalFailed}`);

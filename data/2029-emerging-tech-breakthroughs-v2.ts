@@ -690,13 +690,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     reviews: 2;
 ];
 
-
   }
-
-
-
-'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;

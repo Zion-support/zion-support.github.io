@@ -32,7 +32,97 @@ export /**
 function MyApplications() {}
   const { applications, is_loading, error } = useJobApplications ();
 ;
-import { useState } from \"react\";
+  const getStatusBadge = (status: ApplicationStatus) =>: any {}
+import { Link } from \"react-router-dom\",
+import { ApplicationStatus } from \"@/types/jobs\",
+export function MyApplications() {}
+  const { applications, isLoading, error } = useJobApplications(),
+  const getStatusBadge = (
+    switch (status) {
+      case \"new\": return <Badge variant=\"secondary\" />New</Badge>,
+      case \"viewed\":
+        return <Badge variant=\"outline\" />Viewed</Badge>,
+      case \"shortlisted\":
+        return <Badge className=\"bg-blue-100 text-blue-800\" />Shortlisted</Badge>,
+      case \"interview\":
+        return <Badge className=\"bg-purple-100 text-purple-800\" />Interview</Badge>,
+      case \"hired\":
+        return <Badge className=\"bg-green-100 text-green-800\" />Hired</Badge>,
+      case \"rejected\":
+        return <Badge className=\"bg-red-100 text-red-800\" />Rejected</Badge>
+      default:) => {
+  return $3;}
+}
+        return <Badge variant=\"outline\" />{status}</Badge>
+    }
+  }
+  },
+  if (isLoading) {
+    return (
+      <div className=\"flex justify-center items-center p-8\" />
+        <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />
+      </div>}
+    )}
+  }
+  if (error) {
+    return (}
+      <div className=\"text-center p-6 border rounded-md bg-red-50 text-red-800\" />}
+        <p />{error}</p>
+      </div>
+    )
+  }
+  if (applications.length === 0) {
+    return (
+      <Card className=\"bg-muted/30\" />
+        <CardContent className=\"pt-6 text-center\" />
+          <p className=\"text-muted-foreground\" />
+            You haven't submitted any applications yet.
+          </p>
+          <Button className=\"mt-4\" asChild />
+            <Link to=\"/jobs\" />Browse Jobs</Link>
+          </Button>
+        </CardContent>
+      </Card>}
+    )}
+  }      case \"new\": return <Badge variant=\"secondary\" />New</Badge>;
+      case \"viewed\":;
+        return <Badge variant=\"outline\" />Viewed</Badge>;
+      case \"shortlisted\":;
+  },
+  if (isLoading) {
+        return <Badge className=\"bg-red-100 text-red-800\" />Rejected</Badge>,;}
+      default:;}
+        return <Badge variant=\"outline\" />{status}</Badge>;
+    }
+  };
+  if (isLoading) {;
+    return (
+      <div className=\"flex justify-center items-center p-8\" />;
+        <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />;
+      </div>;}
+    );}
+  }
+  if (error) {;
+    return (}
+      <div className=\"text-center p-6 border rounded-md bg-red-50 text-red-800\" />;}
+        <p />{error}</p>;
+      </div>;
+    );
+  }
+  if (applications && applications.length === 0) {;
+    return (
+      <Card className=\"bg-muted/30\" />;
+        <CardContent className=\"pt-6 text-center\" />;
+          <p className=\"text-muted-foreground\" />;
+            You haven't submitted any applications yet.;
+          </p>;
+          <Button className=\"mt-4\" asChild />;
+            <Link to=\"/jobs\" />Browse Jobs</Link>;
+          </Button>;
+        </CardContent>;
+      </Card>;}
+    );}
+  }
 import { useJobApplications } from \"@/hooks/useJobApplications\";
 import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\",;
 import { Badge } from \"@/components/ui/badge\",;

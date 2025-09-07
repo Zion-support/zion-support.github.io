@@ -62,7 +62,35 @@ export const real2026Q2Additions = [
 
 export const real2026Q2Additions = [
   {
-    ];
+
+    id: 'ai - synthetic - data - factory',
+  name: 'AI Synthetic Data Factory',
+    category: 'AI & Data',
+  tagline:;
+      'Generate high - quality, private, and balanced datasets for ML training.',
+    description:;
+      'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.',
+    features: [;
+      'Differential privacy and k - anonymity options',
+      'Data schema import and auto - profiling',
+      'Class balancing, minority class boosters',
+      'Bias and fairness testing with reports',
+      'Evaluation dashboard with KS / JS metrics',
+      'SDKs for Python / JS and API access',
+    ],
+    use_cases: [;
+      'MSPs and IT providers',
+      'Internal IT for SMBs',
+      'BYOD governance',
+    ],
+    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
+    competitors: ['Atera', 'NinjaOne'],
+    price: '$4',
+  roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;}
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;}
+  },;
+
+];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
 use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];

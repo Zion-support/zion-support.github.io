@@ -347,8 +347,6 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
 
-  }
-
 ];
 ;
 }

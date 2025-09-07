@@ -202,5 +202,3 @@ main().catch(error => {})
   log(`Security Audit Process failed: ${error.message});
   process.exit(1);
 }
-
-'

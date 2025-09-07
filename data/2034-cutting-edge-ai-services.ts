@@ -86,7 +86,21 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
 
-
+id: 'ai - product - spec - writer',
+  name: 'AI Product Spec Writer',
+    description:;
+      'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',}
+    category: 'AI Business Management',}
+    pricing: { starter: '$79 / mo' },
+    features: [;
+      'PRD templates',
+      'Story generation',
+      'Acceptance criteria',
+      'Analytics alignment'
+    ],
+    integrations: ['Jira', 'Linear'],
+    use_cases: ['Faster planning', 'Better alignment'],
+    link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
 
 
 

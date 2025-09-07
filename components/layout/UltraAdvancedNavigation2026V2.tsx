@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 
@@ -150,7 +149,6 @@ const contactInfo = {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
-
 
   useEffect(() => {
 }
@@ -478,8 +476,6 @@ key={dropdownItem.name}
               </Link>
             </div>
 
-
-
             </div>;
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4' />;
@@ -742,8 +738,6 @@ className='flex items-center space-x-3 text-gray-300 hover: text-white transitio
                   </div>;
                 ))}
 
-
-
 <div className='pt-6 border-t border-white/10' />
                   <Link href='/contact' onClick={() = /> setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300' />
@@ -808,7 +802,6 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden'
     </>);
 }
 
-
           className='fixed inset-0 bg-black/50 z-40 lg: hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
@@ -821,6 +814,5 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden'
 <div className='h-32' /></div>
     </>
   );
-
 
 "

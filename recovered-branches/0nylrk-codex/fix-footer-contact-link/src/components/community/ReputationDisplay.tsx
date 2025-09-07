@@ -115,5 +115,16 @@ interface ReputationDisplayProps {
 </div>
       </div>;
     </div>;
-  </div> </div>) "
-
+size = 'md' 
+}: ReputationDisplayProps) => {
+  //Calculate next milestone const currentLevel = Math.floor (reputation / 100);
+const nextMilestone = (currentLevel + 1) * 100;
+const progress = ( (reputation % 100) /100) * 100;
+sm: {}
+  </div> </div>) }
+};
+export default ReputationDisplay;
+  )
+};
+},
+export default ReputationDisplay;

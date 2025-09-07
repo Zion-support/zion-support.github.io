@@ -220,6 +220,5 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 </TalentCard>
 }</div>) 
 }</div> <Footer /> </>) 
-
-</Footer>'
-
+}
+;

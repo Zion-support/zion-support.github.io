@@ -130,12 +130,7 @@ const terms = readJsonFile ('deal / terms.json', {
 
 }
 
-
-
-
 }
-
-
 
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -172,6 +167,4 @@ const terms = readJsonFile('deal/terms.json', {
 }
 
 }
-
-
 

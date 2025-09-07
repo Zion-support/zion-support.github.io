@@ -200,5 +200,7 @@ export function MobileProjects() {
  <MobileHeader title="Project Details" showBack /> <main className="py-4"> <MobileProjectView project= {"
 </MobileHeader>
 }/> </main> <BottomNavigation /> </div>) 
-</BottomNavigation>"
-
+}
+}
+};
+;
