@@ -1,20 +1,20 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import * as React from 'react';
 import App from './App';
 
 describe('App', () => {
   it('renders without crashing', () => {
-    render(<App />);}
-    expect(screen.getByRole('main')).toBeInTheDocument();}
+    render(React.createElement(App));
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('displays correct content', () => {
-    render(<App />);}
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();}
+    render(React.createElement(App));
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {
-    render(<App />);}
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();}
+    render(React.createElement(App));
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
 });
