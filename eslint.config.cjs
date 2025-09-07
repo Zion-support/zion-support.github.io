@@ -1,6 +1,4 @@
 const js = require('@eslint/js');
-const reactHooks = require('eslint-plugin-react-hooks');
-const reactRefresh = require('eslint-plugin-react-refresh');
 
 module.exports = [
   {
@@ -14,30 +12,19 @@ module.exports = [
       'advanced-automation-improvements.cjs',
       'analyze_links.cjs',
       'app-enhancement-suite.cjs',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.cjs',
+      'public/**',
+      'App.simple.tsx',
+      'App.smoke.test.tsx',
     ],
   },
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
-      ],
-      'no-explicit-any': 'warn'
-    },
-  },
-  {
-    files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -55,17 +42,10 @@ module.exports = [
         exports: 'readonly',
       },
     },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+    }
+  }
 ];

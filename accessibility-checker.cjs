@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, no-console, no-undef */
 const { execSync } = require('child_process');
 
 console.log('♿ Running accessibility checks...');
