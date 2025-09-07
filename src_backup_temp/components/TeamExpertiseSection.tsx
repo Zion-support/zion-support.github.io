@@ -4,7 +4,6 @@ import {  import { motion  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function TeamExpertiseSection("props": "any) {];
-;
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
@@ -15,7 +14,6 @@ function TeamExpertiseSection("props": "any) {];
           whileInView = {;
   { "opacity": "1",;
   "y": "0;
-"}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
         >";
@@ -27,20 +25,12 @@ function TeamExpertiseSection("props": "any) {];
             in cutting - edge technologies and proven methodologies.</p>;
         </motion.div>;
           initial = {;
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
           transition = {;
   { "duration": "0.6",;
   "delay": "0.1;
 "}}";
           className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
         > {stats.map ( (stat", index) => {;
-            ;
             return (";
               <div key = {stat.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
@@ -49,24 +39,19 @@ function TeamExpertiseSection("props": "any) {];
                 </div>";
                 <div className="text-3xl font-bold text-gray-900 mb-2">;
                   {stat.value}
-                </div>";
                 <div className="text-gray-600">{stat.label}</div>";
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16">;
           {teamExpertise.map((expertise", index) => (;
-            <motion.div;
               key={expertise.title}";
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25 group";
               initial={{ "opacity": 0", "y": "3 0 "}}
               whileInView={{ "opacity": "1", "y": "0 "}}
-              viewport={{ "once": "tru e "}}
               transition={{ "duration": "0.6", "delay": "inde x * 0.1 "}}
-            >";
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-"hover": "scal e-110 transition-transform duration-300">";
                 <span className="text-3xl">{expertise.icon"}</span>;
               </div>;
               <div className="text-4xl font - bold text-blue - 400 mb-3 group - "hover": "tex t-blue - 300 transition - colors duration -200">;
                 {expertise.count"}
-              </div>;
               <h3 className="text-xl font - bold text-white mb-3 group - "hover": "tex t-blue - 400 transition - colors duration -200">;
                 {expertise.title"}
               </h3>;
@@ -75,22 +60,9 @@ function TeamExpertiseSection("props": "any) {];
               <p className="text-gray - 400 text-sm leading -relaxed">                {expertise.description}
               </p>;
             </motion.div>) ) }
-        </div>;
-        <motion.div;
           className="text-center mb-12"          initial = {;
   { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
   "delay": "0.3;
-"}}
-        >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;
               Ready to Work with Experts?;
@@ -106,9 +78,6 @@ function TeamExpertiseSection("props": "any) {];
               <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200">;
                 View Team Profiles";
                 <Users className="ml-2 h-5 w-5"   />              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
@@ -127,20 +96,12 @@ function TeamExpertiseSection("props": "any) {];
                 View Team Profiles"
                 <Users className="ml-2 h-5 w-5"   />              </button>
             </div>
-          </div>
         </motion.div>
-      </div>;
     </section>;) "};
-;
 export default TeamExpertiseSection;";
             <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
     </section>;) }
 export default TeamExpertiseSection;
-export default TeamExpertiseSection;
 '";
-</motion>;
 </motion>;
 </motion>

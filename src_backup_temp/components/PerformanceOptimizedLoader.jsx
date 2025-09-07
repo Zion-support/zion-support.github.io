@@ -6,9 +6,6 @@ export function PerformanceOptimizedLoader("props": "any) {;
         "md": 'w-12 h-12',;
   "lg": 'w-16 h-16';
     ;
-;
-;
-;
 };
     const colorClasses = {"primary": 'text-zion-purple',;
         "secondary": 'text-zion-cyan',;
@@ -20,15 +17,8 @@ export function PerformanceOptimizedLoader("props": "any) {;
                 "duration": 1",;
                 "repeat": "Infinity",;
   "ease": "linear";
-            ;
-;
-;
-;
 }
-        }
-    };
     const pulseVariants = {;
-;
 export default PerformanceOptimizedLoader;
 export function PerformanceOptimizedLoader($1) {
     const sizeClasses = {
@@ -38,7 +28,6 @@ export function PerformanceOptimizedLoader($1) {
 };';';
     const colorClasses = {"primary": 'text-zion-purple',
         "secondary": 'text-zion-cyan',
-  "white": 'text-white'};
     const spinnerVariants = {
   "animate": {
             rotate: 360,
@@ -46,9 +35,6 @@ export function PerformanceOptimizedLoader($1) {
                 duration: 1,
                 "repeat": Infinity,
   "ease": "linear"
-}
-        }
-    };
     const pulseVariants = {
 export default PerformanceOptimizedLoader;';';
 import {motion} from 'framer-motion'; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16' };;';'; const colorClasses = {primary: 'text-zion-purple',secondary: 'text-zion-cyan',white: 'text-white'};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: "linear" } } };; const pulseVariants = { export default PerformanceOptimizedLoader;';';

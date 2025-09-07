@@ -12,4 +12,3 @@ export default function InnovativeMicroSAASServices2025({ }: InnovativeMicroSAAS
       <p>This component is currently under development.</p>
     </div>
   );
-}

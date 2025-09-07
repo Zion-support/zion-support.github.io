@@ -6,7 +6,6 @@ export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-export function AdminHeader() {
   const { company } = useCompanyWorkspace(),
 
 import React from "react";
@@ -77,7 +76,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
           <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
-      
+
               src={company?.logoUrl |"/placeholder.svg"}
               alt={company?.name |"Company"}
 

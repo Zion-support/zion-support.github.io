@@ -16,29 +16,21 @@ export default function Page("props": "any) {;
             0, y;
             20}
     };
-;
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
-;
-  const scrollToTop = ("props": "any) => {;
-    window.scrollTo({;
-      "top": 0",;
       "behavior": 'smooth'});
   const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'}
     );
-  };
-;
   return ();
     <AnimatePresence>;
       {isVisible && (;
         <motion.button;
           onClick={scrollToTop}";
           className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg "hover": "shadow-xl transform "hover":-translate-y-1 transition-all duration-300 "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":ring-offset-2";
-          ;
           initial = {;
   { "opacity": 0", "scale": "0",;
   "y": "20;
@@ -46,11 +38,8 @@ export default function Page("props": "any) {;
           animate = {;
   { "opacity": "1", "scale": "1",;
   "y": "0;
-"}}
           exit = {;
   { "opacity": "0", "scale": "0",;
-  "y": "20;
-"}}
           whileHover = {;
   {;
             "scale": "1.1",;
@@ -60,39 +49,20 @@ export default function Page("props": "any) {;
 }}
           whileTap={{ "scale": "0.95 "}}
           transition = {;
-  {;
 ";
             "type": "spring",;
             "stiffness": "400",;
   "damping": "17;
-"}}
         >";
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />;
           </svg>;
         </button>) }
     </>;
-;
-export default ScrollToTop;
-;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
 export default ScrollToTop;
 '";
 </motion>;
 </AnimatePresence>
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
 '"
 </motion>
-</AnimatePresence>
 import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """

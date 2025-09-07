@@ -22,4 +22,3 @@ export default function ErrorModal(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

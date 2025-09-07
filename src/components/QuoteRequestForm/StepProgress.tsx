@@ -34,7 +34,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
-    
+
     if (stepOrder < currentStepOrder) return "complete",
     if (stepOrder === currentStepOrder) return "current",
     return "upcoming"
@@ -61,7 +61,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 )}              >
                 {status === 'complete' ? (
                   <CheckIcon className='h-4 w-4' />
-      
+
       <div className="flex justify-between relative">
         {steps.map((step) => {
           const status = getStepStatus(step.id),
@@ -109,7 +109,6 @@ import { QuoteRequestSteps } from "../QuoteRequestForm",;
 import { CheckIcon } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 interface StepProgressProps {;
-export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;

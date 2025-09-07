@@ -31,9 +31,7 @@ interface NotificationListProps {;
   onMarkAsRead: (id: string,) => Promise<void>,;
   onDismiss: (id: string,) => Promise<void>,;
   onRetry: () => void;
-}
 
-  return (
     <div className="space-y-3">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold">Notifications</h3>
@@ -43,16 +41,12 @@ interface NotificationListProps {;
           >
             Mark all as read
           </Button>
-          <Button
             variant="outline"
             size="sm"
             onClick={onClearAll}
-          >
             Clear all
-          </Button>
         </div>
-      </div>
-      
+
       <ScrollArea className="h-96">
         <div className="space-y-2">
           {notifications.map((notification) => (
@@ -64,7 +58,6 @@ interface NotificationListProps {;
                   : 'bg-blue-50 border-blue-200'
               }`}
               onClick={() => onMarkAsRead(notification.id)}
-            >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h4 className="text-sm font-medium text-gray-900">
@@ -75,18 +68,13 @@ interface NotificationListProps {;
                   </p>
                   <p className="text-xs text-gray-500 mt-2">
                     {new Date(notification.timestamp).toLocaleString()}
-                  </p>
-                </div>
                 <div className={`w-2 h-2 rounded-full ${
                   notification.type === 'error' ? 'bg-red-500' :
                   notification.type === 'warning' ? 'bg-yellow-500' :
                   notification.type === 'success' ? 'bg-green-500' :
                   'bg-blue-500'
                 }`} />
-              </div>
-            </div>
           ))}
-        </div>
 
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
@@ -100,8 +88,6 @@ interface NotificationListProps {;
           </Button>;
         </div>) : loading ? (
         <div className="p - 4 space - y-4">;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
         </div>) : notifications.length === 0 ? (
         <div className="p - 8">;
@@ -121,11 +107,6 @@ interface NotificationListProps {;
             on_dismiss = {on_dismiss, }
           />)))}
     </ScrollArea>);
-}
-";
-
-  );
-};
 ";
 
   );

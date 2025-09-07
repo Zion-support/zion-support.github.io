@@ -15,7 +15,6 @@ export default function Page("props": "any) {;
         ],;
         benefits = [';
             'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency';
-        ],;
         useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],;
         "rating": "4.6",;
         "projects": "90",;
@@ -27,12 +26,8 @@ export default function Page("props": "any) {;
         "icon": "<Smartphone className="w-8 h-8" />",;
         "color": 'from-zion-purple to-zion-cyan',;
         "bgColor": 'from-zion-purple/20 to-zion-cyan/20',;
-        features = [';
             'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment';
-        ],;
-        benefits = [';
             'Reach customers on all devices',Improve user engagement',Increase brand visibility';
-        ],;
         useCases['Retail',Entertainment',Education',Healthcare'],;
         "rating": "4.8",;
         "projects": "250",;
@@ -52,7 +47,6 @@ interface TechSolutionsSection.jsProps {
         ],
         benefits = ['
             'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'
-        ],
         useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],
         rating: 4.6,
         projects: 90,
@@ -64,12 +58,8 @@ interface TechSolutionsSection.jsProps {
         icon: <Smartphone className="w-8 h-8" />,
         color: 'from-zion-purple to-zion-cyan',
         bgColor: 'from-zion-purple/20 to-zion-cyan/20',
-        features = ['
             'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'
-        ],
-        benefits = ['
             'Reach customers on all devices',Improve user engagement',Increase brand visibility'
-        ],
         useCases['Retail',Entertainment',Education',Healthcare'],
         rating: 4.8,
         projects: 250,
@@ -82,7 +72,6 @@ const industries = ['";
     {"name": 'Manufacturing', "icon": "<Cpu className="w-5 h-5" />", "projects": "75"},";
     {"name": 'Education', "icon": "<Users className="w-5 h-5" />", "projects": "60"},";
     {"name": 'Government', "icon": "<Lock className="w-5 h-5" />", "projects": "45"}
-];
     const [selectedSolution, setSelectedSolution] = useState(null);
     const [hoveredSolution, setHoveredSolution] = useState(null);
     const containerVariants = {;
@@ -93,33 +82,19 @@ const industries = ['";
                 "staggerChildren": 0.15",;
                 "delayChildren": "0.1;
             "}
-        }
     };
     const itemVariants = {;
   "hidden": "{ "y": 30",;
   "opacity": "0;
 "},;
-        "visible": "{;
             "y": 0",;
             "opacity": "1",;
-            "transition": "{;
                 "duration": 0.6",";
                 "ease": "easeOut";
-            }
-        }
-    };
     const cardVariants = {;
   "hidden": "{ "scale": 0.95",;
-  "opacity": "0;
-"},;
-        "visible": "{;
             "scale": 1",;
-            "opacity": "1",;
-            "transition": "{;
                 "duration": 0.4",";
-                "ease": "easeOut";
-            }
-        }
     };";
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">;
       {/* Background decorative elements */}";
@@ -144,14 +119,12 @@ const industries = ['";
   { "opacity": "0",;
   "scale": "0.8;
 "}} whileInView = {;
-  { "opacity": "1",;
   "scale": "1;
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.4",;
   "delay": "index * 0.1;
 "}} className="text-center p - 3 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">;
                 <div className="text-zion - cyan mb-2 flex justify -center">                  {industry.icon}
-                </div>";
                 <div className="text-white font-semibold text-sm mb-1">{industry.name}</div>";
                 <div className="text-zion-slate-light text-xs">{industry.projects} projects</div>;
               </motion.div>))}
@@ -170,8 +143,6 @@ const industries = ['";
                   <div className={`inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br ${solution.color} mb-6 shadow-lg group - "hover": "shadow-xl transition - all duration - 300 group - "hover":scale - 110`"}>;
                     <div className="text-white">;
                       {solution.icon}
-                    </div>;
-                  </div>;
                   <h3 className="text-2xl font - bold text-white mb-3 group - "hover": "text-zion - cyan transition -colors">                    {solution.title"}
                   </h3>";
                   <p className="text-zion-slate-light leading-relaxed mb-4">;
@@ -185,16 +156,11 @@ const industries = ['";
                     <div className="flex items-center gap-1">";
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />";
                       <span className="text-white text-sm font-semibold">{solution.rating}</span>;
-                    </div>";
                     <div className="text-zion-slate-light text-sm">;
                       {solution.projects} projects;
-                    </div>;
-                  </div>;
                   {/* Category badge */}`;
                   <div className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${solution.bgColor} border border-zion-cyan/30 mb-4`}>";
                     <span className="text-zion-cyan text-xs font-medium">{solution.category}</span>;
-                  </div>;
-                </div>;
                 {/* Features preview */}";
                 <div className="space-y-2 mb-6">";
                   {solution.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">";
@@ -204,66 +170,41 @@ const industries = ['";
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">;
                       +{solution.features.length-3} more features;
                     </div>) }
-                </div>;
                 {/* CTA */}";
                 <div className="flex items-center justify-between">";
                   <span className="text-zion-purple-light font-medium text-sm group-"hover": "text-zion-purple transition-colors">;
                     Learn More;
                   </span>";
                   <ArrowRight className="w-5 h-5 text-zion-purple-light group-"hover":text-zion-purple group-"hover":translate-x-1 transition-all duration-300" />;
-                </div>;
                 {/* Expanded details */"}
                 <AnimatePresence>";
                   {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {;
   { "opacity": "0", "height": "0",;
   "y": "10;
 "}} animate = {;
-";
   { "opacity": "1", "height": "auto",;
-  "y": "0;
 "}} exit = {;
-  { "opacity": "0", "height": "0",;
-  "y": "10;
 "}} transition={{ "duration": "0.3 "}}>";
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key "Benefits": "</h4>";
                       <div className="space-y-2 mb-4">";
                         {solution.benefits.map((benefit", idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial = {;
-  { "opacity": "0",;
   "x": "-10;
-"}} animate = {;
-  { "opacity": "1",;
   "x": "0;
 "}} transition={{ "delay": "idx * 0.1 "}}>";
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
                             <span>{benefit}</span>;
                           </motion.div>) ) }
-                      </div>;
-";
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Use "Cases": "</h4>";
                       <div className="flex flex-wrap gap-2">";
                         {solution.useCases.map((useCase", idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial = {;
-  { "opacity": "0",;
-  "scale": "0.8;
-"}} animate = {;
-  { "opacity": "1",;
-  "scale": "1;
 "}} transition={{ "delay": "idx * 0.1 "}}>;
                             {useCase}
                           </motion.span>) ) }
-                      </div>;
                     </motion.div>) }
                 </AnimatePresence>;
-              </div>;
-            </motion.div>) ) }
-        </motion.div>;
         {/* Call to action */}";
         <motion.div className="text-center" initial = {;
-  { "opacity": "0",;
   "y": "20;
-"}} whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.5;
 "}}>";
@@ -271,7 +212,6 @@ const industries = ['";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
               <h3 className="text-2xl font-bold text-white mb-4">;
                 Ready to Transform Your Business?;
-              </h3>";
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">;
                 Let our technology experts help you implement the right solutions for your business needs.</p>";
               <div className="flex flex-col "sm": "flex-row gap-4 justify-center">";
@@ -281,18 +221,8 @@ const industries = ['";
                 <button className="px-8 py-3 bg-zion-blue-light/20 "hover":bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 "hover":border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">;
                   View Case Studies;
                 </button>;
-              </div>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
     </section>)"}
 '"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
 </motion>;
 </motion>
 }}>"
@@ -300,7 +230,6 @@ const industries = ['";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
-              "
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Let our technology experts help you implement the right solutions for your business needs.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -311,24 +240,12 @@ const industries = ['";
                   View Case Studies
                 </button>
               </div>
-            </div>
-          </div>
         </motion.div>
-      </div>
     </section>)}
 '"`
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 export default function TechSolutionsSection.js({ }: TechSolutionsSection.jsProps) {
   return (
     <div>
       <h1>TechSolutionsSection.js</h1>
       <p>This component is currently under development.</p>
-    </div>
   );
-}

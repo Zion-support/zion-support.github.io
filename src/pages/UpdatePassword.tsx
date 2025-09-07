@@ -22,14 +22,10 @@ const updatePasswordSchema = z;
     message: "Passwords do not match",
     path: ["confirm_password"]}),
 type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
-}
   );
-}
 
-      .max(64, "Password must be less than 64 characters"),
       .max(64, "Password must be less than 64 characters"),
 
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
     path: ["confirmPassword"]}),

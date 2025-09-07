@@ -22,7 +22,6 @@ import { Link  "} from 'react-router-dom';
               <h3 className="text-xl font-semibold text-white mb-3">";
                 <Link to={`/blog/${post.id}`} className=""hover": "text-zion-cyan">;
                   {post.title"}
-                </Link>;
               </h3>";
               <p className="text-zion-slate-light mb-4">{post.excerpt}</p>";
               <div className="flex justify-between text-sm text-zion-slate-light">;
@@ -37,7 +36,6 @@ interface BlogSection.jsProps {
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
             date: '2024-01-10',
             readTime: '12 min read'
-    ];
     return (<section className="py-16">"
       <div className="container mx-auto px-4">"
         <div className="flex justify-between items-center mb-8">"
@@ -51,7 +49,6 @@ interface BlogSection.jsProps {
               <h3 className="text-xl font-semibold text-white mb-3">"
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
                   {post.title}
-                </Link>
               "
               <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"
               <div className="flex justify-between text-sm text-zion-slate-light">
@@ -59,8 +56,6 @@ interface BlogSection.jsProps {
                 <span>{post.readTime}</span>
               </div>
             </article>) ) }
-        </div>;
-      </div>;
     </section>)}
 '"`;
 '"`
@@ -69,6 +64,4 @@ export default function BlogSection.js({ }: BlogSection.jsProps) {
     <div>
       <h1>BlogSection.js</h1>
       <p>This component is currently under development.</p>
-    </div>
   );
-}

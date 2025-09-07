@@ -4,7 +4,6 @@ import { AppHeader } from '../../layout/AppHeader';
 type LayoutProps = {;
   "children": "React.ReactNode;
 "};
-;
 export default function Layout("props": "any) {;
   return (;
     <div className="min-h-screen flex flex-col bg-black">;
@@ -20,9 +19,7 @@ export default function Layout("props": "any) {;
               <a className=""hover":text-white" href="/contact">Contact</a>;
             </nav>;
           </div>;
-        </div>;
       </footer>;
-    </div>;
   );
 "}
 type LayoutProps = {
@@ -43,8 +40,5 @@ export default function Layout(props: any) {
               <a className="hover:text-white" href="/contact">Contact</a>
             </nav>
           </div>
-        </div>
       </footer>
-    </div>
-    );
 }

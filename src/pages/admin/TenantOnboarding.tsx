@@ -18,9 +18,9 @@ const [formData, setFormData] = useState({
   );
 
   }),
-  
+
   const isAdmin = user?.role === "admin",
-  
+
   if (!isAdmin) {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
@@ -29,26 +29,26 @@ const [formData, setFormData] = useState({
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
-  
+
   const handleSelectChange = (name: string, value: string) => {
-  
+
   const handleSwitchChange = (name: string, checked: boolean) => {
     setFormData(prev => ({ ...prev, [name]: checked }))
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-    
+
     try {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-      
+
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
-      
+
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -66,12 +66,12 @@ const [formData, setFormData] = useState({
           email_template_override: null
         .select('id, brand_name, subdomain')
         .single(),
-      
+
       if (error) throw error,
-      
+
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      
+
       // Reset form
       setFormData({
         brand_name: "",
@@ -82,7 +82,7 @@ const [formData, setFormData] = useState({
         company_size: "",
         industry: "",
         custom_domain: "",
-      
+
     } catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
       toast.error("Failed to create tenant", {
@@ -121,7 +121,7 @@ const [formData, setFormData] = useState({
                     <TabsTrigger value="branding">Branding</TabsTrigger>
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
                   </TabsList>
-                  
+
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
@@ -132,7 +132,7 @@ const [formData, setFormData] = useState({
                         onChange={handleInputChange}
                         placeholder="Acme Corporation"
                         required
-                    
+
                       <Label htmlFor="industry">Industry</Label>
                       <Select 
                         name="industry" 
@@ -153,7 +153,7 @@ const [formData, setFormData] = useState({
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
-                    
+
                       <Label htmlFor="company_size">Company Size</Label>
                         name="company_size" 
                         value={formData.company_size} 
@@ -166,7 +166,7 @@ const [formData, setFormData] = useState({
                           <SelectItem value="501-1000">501-1000 employees</SelectItem>
                           <SelectItem value="1000+">1000+ employees</SelectItem>
                   </TabsContent>
-                  
+
                   <TabsContent value="branding" className="space-y-4">
                       <Label htmlFor="logo_url">Logo URL</Label>
                         id="logo_url"
@@ -175,7 +175,7 @@ const [formData, setFormData] = useState({
                         placeholder="https://example.com/logo.png"
                       <p className="text-xs text-muted-foreground">
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
-                    
+
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
                           id="primary_color"
@@ -184,7 +184,7 @@ const [formData, setFormData] = useState({
                           value={formData.primary_color}
                           className="w-12 p-1 h-10"
                           placeholder="#9b87f5"
-                    
+
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                         name="theme_preset" 
                         value={formData.theme_preset} 
@@ -195,7 +195,7 @@ const [formData, setFormData] = useState({
                           <SelectItem value="corporate">Corporate</SelectItem>
                           <SelectItem value="startup">Startup</SelectItem>
                           <SelectItem value="neon">Neon</SelectItem>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
@@ -204,7 +204,7 @@ const [formData, setFormData] = useState({
                         id="is_co_branded"
                         checked={formData.is_co_branded}
                         onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}
-                  
+
                   <TabsContent value="domain" className="space-y-4">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
@@ -215,7 +215,7 @@ const [formData, setFormData] = useState({
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         Leave blank to auto-generate from company name
-                    
+
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
                         id="custom_domain"
                         name="custom_domain"
@@ -223,7 +223,7 @@ const [formData, setFormData] = useState({
                         placeholder="hire.yourcompany.com"
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.
                 </Tabs>
-                
+
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
                     Cancel

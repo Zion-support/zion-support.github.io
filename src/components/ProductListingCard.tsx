@@ -3,17 +3,17 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import React, { useState, useMemo } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
@@ -405,7 +405,7 @@ const ProductListingCardComponent = ({;
                 e.stopPropagation(); // Prevent card click event
                 addToCart() }}
               <span className="text-foreground/80">
-          
+
           <div className="flex gap-2">
               size="sm"
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
@@ -432,7 +432,7 @@ const ProductListingCardComponent = ({;
                     price: listing.price ?? 0
                   })
                 )
-            
+
               variant="default"
               className="bg-green-600 hover: bg-green-700 text-white"
                 // Add to cart first, then redirect to checkout
@@ -581,14 +581,7 @@ ProductListingCard.displayName = 'ProductListingCard';
 export default React.memo (ProductListingCard);
 
 export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
 '"`;
 
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
-export const ProductListingCard = React.memo(ProductListingCardComponent);

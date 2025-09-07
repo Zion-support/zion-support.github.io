@@ -34,9 +34,6 @@ import { ;
 import { PricingSuggestionBox } from "./PricingSuggestionBox";
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react';
-interface TalentRateRecommenderProps {;
-  skills: string[],;
-  yearsExperience: number,;
   location?: string,;
   onSuggestionApplied: (value: number,) => void,;
   rateType: "hourly" | "fixed";
@@ -54,12 +51,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {;
     if (skills && skills.length === 0 || yearsExperience <= 0) {;
       return;
-    }
 
     setIsLoading(true);
     try {;
       const params: TalentRateParams = {;
-        skills;
         yearsExperience,;
         location};
 
@@ -69,7 +64,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       logErrorToProduction('Error generating rate suggestion:', { data: error });
     } finally {;
       setIsLoading(false);
-    }
   };
 
   const handleApplySuggestion = () => {;
@@ -92,26 +86,14 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     // Check condition
 if ( {) {
   $2
-}
-      // We'll use the middle of the range as the suggested rate;
       const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2);
       onSuggestionApplied (suggested_rate);
-      // Track this suggestion application;
-      // Check condition
-if ( {) {
-  $2
-}
         trackPricingSuggestion ({
           user_id: user.id,
           suggestion_type: "talent",
           suggested_min: suggestion.min_rate,
           suggested_max: suggestion.max_rate,
           actual_value: suggested_rate,
-          accepted: true;
-        });
-      }
-    }
-  }
   },
 
   return (
@@ -140,9 +122,7 @@ if ( {) {
   rateType 
 }/>) 
 }</div> </div>) ;
-};
 '"};
-};
 
             suggestion={suggestion}
             isLoading={isLoading}
@@ -152,9 +132,7 @@ if ( {) {
         )}
 
       </div>;
-    </div>;
   );
-};
 
     <div className="space - y-4">;
       <div>;
@@ -174,9 +152,7 @@ if ( {) {
             onApplySuggestion = {handleApplySuggestion, }
             rate_type = {rate_type, }
           />)}
-      </div>;
     </div>);
-}
 return (<div className="space - y-4" > <div> {";
   !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
   generate_suggestion ";
@@ -190,6 +166,4 @@ return (<div className="space - y-4" > <div> {";
   rate_type;
 }/>);
 }</div> </div>);
-}
 '"},
-}

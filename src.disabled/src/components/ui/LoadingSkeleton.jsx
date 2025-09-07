@@ -11,4 +11,3 @@ export default function LoadingSkeleton({ }: LoadingSkeletonProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

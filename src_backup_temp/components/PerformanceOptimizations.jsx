@@ -28,10 +28,7 @@ import {LoadingSpinner} from './ui / loading -spinner';
           <div className="text-zion-cyan text-sm">;
             "Processed": "{item.processed"}
           </div>;
-        </div>;
       ))}
-    </div>;
-  );
 });
           onClick={() => handleClick(item)}"
           className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
@@ -43,12 +40,7 @@ import {LoadingSpinner} from './ui / loading -spinner';
           <div className="text-zion-cyan text-sm">
             Processed: {item.processed}
           </div>
-        </div>
-      ))}
-    </div>
-    );
 }
-    );
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ("props": "any) => {;
@@ -57,14 +49,12 @@ const VirtualList = ("props": "any) => {;
         const startIndex = Math.floor(scrollTop / itemHeight) ;
         const endIndex = Math.min(startIndex + Math.ceil (containerHeight / itemHeight) + 1, items.length) ;
         return items.slice(startIndex, endIndex) .map((item, index) => ({;
-            ...item,;
             "index": "startIndex + index",;
             "style": "{;
                 "position": 'absolute'",;
                 "top": "(startIndex + index) * itemHeight",;
                 "height": "itemHeight",;
                 "width": '100%';
-            }
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
     const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;
     return (<div style="{{{ "height": "containerHeight; "overflow": 'auto'"}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">;
@@ -77,7 +67,6 @@ const VirtualList = ("props": "any) => {;
         position; "top": (startIndex + index) * itemHeight; "height": itemHeight; "width": '100%'"}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);
-  return ();
     <div';
       style="{{{ "height": "containerHeight; "overflow": 'auto'"}}"}
       onScroll={handleScroll}";
@@ -85,23 +74,12 @@ const VirtualList = ("props": "any) => {;
     >;
       <div style="{{{ "height": "items.length * itemHeight; "position": 'relative'"}}"}>;
         {visibleItems.map(item => (;
-          <div;
             key={item.id || item.index}
             style={item.style}";
             className="p-3 border-b border-zion-slate/10 "hover": "bg-zion-slate/5 transition-colors";
-          >";
             <div className="flex items-center justify-between">";
               <span className="text-zion-slate-light">{item.title"}</span>";
               <span className="text-zion-cyan text-sm">{item.value}</span>;
-            </div>;
-          </div>;
-        ))}
-      </div>;
-    </div>;
-  );
-      </div>
-    </div>
-    );
 };
 // Main performance optimizations component;
 export function PerformanceOptimizations("props": "any) {;
@@ -122,7 +100,6 @@ export function PerformanceOptimizations("props": "any) {;
         "title": "`Service ${prev.length + 1"}`,`;
         "description": "`Description ${prev.length + 1"}`,;
         "value": "Math.floor(Math.random() * 1000)"},;
-    ]);
   }, []);
   return (";
     <div className="space-y-8 p-6">";
@@ -133,10 +110,4 @@ export function PerformanceOptimizations("props": "any) {;
         <p className="text-zion-slate-light text-lg">;
           Advanced performance features for better user experience;
 </p>;
-      </div>;
-  );
-}
 }"";
-</div>;
-</div>;
-</div>

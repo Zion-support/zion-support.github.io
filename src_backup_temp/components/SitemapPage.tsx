@@ -16,17 +16,11 @@ const sitemapData = [{;
         { "name": 'Cloud Solutions', "url": '/services / cloud' },;
         { "name": 'Cybersecurity', "url": '/services / cybersecurity' },;
         { "name": 'Digital Transformation', "url": '/services / digital - transformation' },;
-      ];
-    },;
-    {;
       "title": 'Solutions',;
       "links": "[{ "name": 'Enterprise'", "url": '/solutions / enterprise' },;
         { "name": 'Healthcare', "url": '/solutions / healthcare' },;
         { "name": 'Financial Services', "url": '/solutions / financial' },;
         { "name": 'Manufacturing', "url": '/solutions / manufacturing' },;
-      ];
-    },;
-    {;
       "title": 'Resources',;
       "links": "[{ "name": 'Case Studies'", "url": '/case - studies' }, { "name": 'White Papers', "url": '/white - papers' }, { "name": 'Webinars', "url": '/webinars' }, { "name": 'Documentation', "url": '/docs' }, { "name": 'API Reference', "url": '/api' },;
       ]} { "name": 'Case Studies', "url": '/case-studies' },;';
@@ -51,17 +45,11 @@ const sitemapData = [{
         { name: 'Cloud Solutions', url: '/services / cloud' },
         { name: 'Cybersecurity', url: '/services / cybersecurity' },
         { name: 'Digital Transformation', url: '/services / digital - transformation' },
-      ]
-    },
-    {
       title: 'Solutions',
       links: [{ name: 'Enterprise', url: '/solutions / enterprise' },
         { name: 'Healthcare', url: '/solutions / healthcare' },
         { name: 'Financial Services', url: '/solutions / financial' },
         { name: 'Manufacturing', url: '/solutions / manufacturing' },
-      ]
-    },
-    {
       title: 'Resources',
       links: [{ name: 'Case Studies', url: '/case - studies' }, { name: 'White Papers', url: '/white - papers' }, { name: 'Webinars', url: '/webinars' }, { name: 'Documentation', url: '/docs' }, { name: 'API Reference', url: '/api' },;
       ]} { name: 'Case Studies', url: '/case-studies' },;'
@@ -69,7 +57,6 @@ const sitemapData = [{
         { name: 'Webinars', url: '/webinars' },;'
         { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
       ]};
-  ];
 ;
   return (<div className="min - h-screen bg-slate - 900 text-white py-16">;
       <SEO title="Sitemap - Zion Tech Group";
@@ -116,8 +103,6 @@ const sitemapData = [{
                   </li>) ) }
               </ul>;
             </div>) ) }
-        </div>;
-";
         <div className="mt-16 text-center">";
           <p className="text-zinc-400">;
             Can't find what you're looking for?{' '}";
@@ -126,8 +111,6 @@ const sitemapData = [{
             </a>{' '"};
             for assistance.;
           </p>;
-        </div>;
-      </div>;
     </div>;) }
 '";
 </SEO>

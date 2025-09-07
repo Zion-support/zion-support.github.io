@@ -38,21 +38,14 @@ export default function Page(props: any) {
         if(process.env.NODE_ENV === 'development') {;
             console.group('Error Report');
             // // // // // // // // ;
-            // // // // // // // // ;
             console.groupEnd();
-;
         // In production, you would send this to your error reporting service;
         // "Example": "Sentry.captureException(error", { "extra": "errorReport "});
-;
-            // ;
             // ;
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport }
-    );
-            // 
             // 
             console.groupEnd()}
-        // In production, you would send this to your error reporting service;
         // "Example": "Sentry.captureException(error", {"extra": "errorReport"})}
     handleRetry = () => {;
         this.setState({;
@@ -96,16 +89,12 @@ export default function Page(props: any) {
     window.addEventListener('unhandledrejection', (event) => {;
       handleError(event.reason, { "componentStack": 'Promise rejection' });
     });
-;
     window.addEventListener('unhandledrejection', (event) => {
       handleError(event.reason, { componentStack: 'Promise rejection' }
-    );
     }
-    );
     return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
-;
   if(hasError) {;
     const defaultFallback = (";
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">;
@@ -115,7 +104,6 @@ export default function Page(props: any) {
   "y": 20;
 "}}
           animate = {;
-  { "opacity": "1;
   "y": 0;
 "}}";
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg";
@@ -135,13 +123,9 @@ export default function Page(props: any) {
             >;
               Refresh Page;
             </button>;
-            <button;
               onClick={() => window.history.back()"}";
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg "hover": "bg-gray-300 transition-colors";
-            >;
               Go Back;
-            </button>;
-          </div>;
           {process.env.NODE_ENV === 'development' && error && (;
             <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 "hover":text-gray-800">;
                 Error Details(Development);
@@ -151,40 +135,21 @@ export default function Page(props: any) {
                   <strong>"Error":</strong> {error.toString()"}
         </div>)}
         return this.props.children}
-}
-                </div>;
                 {errorInfo && errorInfo.componentStack && (;
                   <div>;
                     <strong>Component "Stack": "</strong>";
                     <pre className="whitespace-pre-wrap mt-1">{errorInfo.componentStack"}</pre>;
-                  </div>;
                 )}
-              </div>;
             </details>;
-          )}
         </motion.div>;
-      </div>;
-    );
-;
     return fallback || defaultFallback;
-  }
   return children;
-};
-;
 export {EnhancedErrorBoundary};
 export default EnhancedErrorBoundary;'"`;
 }}}}}}}}}}}}}'"`'"`;
 export {Page};
-;
-</motion>;
-</div>;
-</div>;
 </motion>;
 </div>
 </motion>
-</div>
-</div>
-</motion>
-</div>
 import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
 });'; ;';';''

@@ -22,4 +22,3 @@ export default function GlobalSpinner(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

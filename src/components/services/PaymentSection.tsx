@@ -21,7 +21,6 @@ function PaymentSection() {
   // Handle successful payment;
   const handlePaymentInitiated = () =>: any {
     toast ({
-      title: 'Processing your request',
       description:;
         "You'll be redirected to our secure payment portal momentarily.",
     });
@@ -34,13 +33,10 @@ interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
 
 export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {;
-  // Handle successful payment;
   const handlePaymentInitiated = () => {;
     toast({;
       title: 'Processing your request',;
-      description:;
         "You'll be redirected to our secure payment portal momentarily.",;
-    });
   };
 
   return (
@@ -63,7 +59,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
         ${selectedCountry.pricePerIncident.toFixed(2)}
-      </p>;
       <PaymentButton;
 
         amount={selectedCountry.pricePerIncident}
@@ -79,5 +74,4 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       </p>
     </div>
   )
-}
 ;

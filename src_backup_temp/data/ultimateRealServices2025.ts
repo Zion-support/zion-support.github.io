@@ -12,32 +12,21 @@ export default function Page() {
     "icon": "📡",
     "description": "Internet of Things and edge computing solutions",
     "count": 1
-  },
   "Compliance": {
     "icon": "📋",
     "description": "Regulatory compliance and data governance solutions",
-    "count": 1
-  },
   "DevOps": {
     "icon": "🔄",
     "description": "Development operations and microservices management",
-    "count": 1
-  },
   "Fintech": {
     "icon": "💳",
     "description": "Financial technology and payment processing solutions",
-    "count": 1
-  },
   "Healthcare AI": {
     "icon": "🏥",
     "description": "AI-powered healthcare and medical diagnostic solutions",
-    "count": 1
-  },
   "Smart Cities": {
     "icon": "🏙️",
     "description": "Smart city infrastructure and urban management solutions",
-    "count": 1
-  },
   "Augmented Reality": {
     "icon": "👁️",
     "description": "AR/VR solutions and immersive technology platforms",
@@ -48,8 +37,6 @@ export default function Page() {
 export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
 "
   "Chatbots": { "icon": "💬",
-  "count": 1
-},
   "Threat Intelligence": { "icon": "🛡️", "count": 1 },
   "Migration": { "icon": "🚀", "count": 1 },
   "Supply Chain": { "icon": "📦", "count": 1 },
@@ -72,7 +59,6 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
     "description": "Essential solutions for small to medium businesses",
     "features": ["Basic functionality", "Standard support", "Core integrations",
   "Documentation"]
-},
   "Professional": {
     "range": "$15,000 - $30,000",
     "description": "Advanced solutions with enhanced features and support",
@@ -82,7 +68,6 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
     "description": "Comprehensive solutions for large organizations",
     "features": ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"]}};
 export const ULTIMATE_CONTACT_INFO_2025 = {
-"
   "phone": "+1 302 464 0950","
   "email": "kleber@ziontechgroup.com","
   "website": "https://ziontechgroup.com","

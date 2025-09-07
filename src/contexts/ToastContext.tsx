@@ -12,13 +12,11 @@ export const useToast = () => {
   const context = useContext(ToastContext);
   if (!context) {
     throw new Error('useToast must be used within a ToastProvider');
-  }
   return context;
 };
 
 interface ToastProviderProps {
   children: ReactNode;
-}
 
 export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
@@ -29,14 +27,11 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
       ...toast,
       id,
       onClose: hideToast
-    };
-    
+
     setToasts(prev => [...prev, newToast]);
-  };
 
   const hideToast = (id: string) => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
-  };
 
   return (
     <ToastContext.Provider value={{ showToast, hideToast }}>
@@ -48,4 +43,3 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
       </div>
     </ToastContext.Provider>
   );
-};

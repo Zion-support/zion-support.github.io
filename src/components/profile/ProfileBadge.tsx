@@ -26,11 +26,8 @@ interface ProfileBadgeProps {
   type: BadgeType,
 
   className?: string
-}
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
-  const badgeConfig = {
-    verified: {
       icon: BadgeCheck,
 
       icon: Star,
@@ -46,14 +43,10 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>;
     </div>);
   type, class_name;
-}: ProfileBadgeProps) {
   const badge_config = {
-  verified: {
-  const {
   icon: Icon,  text, colors;
 }= badge_config[type];
 }> <Icon className="w - 3 h - 3" /> <span> {
   text;
 }</span>;
 }'"  );
-}

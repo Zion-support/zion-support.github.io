@@ -12,4 +12,3 @@ export default function InnovativeITInfrastructure2025({ }: InnovativeITInfrastr
       <p>This component is currently under development.</p>
     </div>
   );
-}

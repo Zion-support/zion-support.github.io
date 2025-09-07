@@ -5,7 +5,6 @@ export default function Page("props": "any) {;
 import { Avatar", AvatarFallback } from '@/components/ui/avatar';";
 import {Card, CardContent} from '@/components/ui/card';";
 import {Separator} from '@/components/ui/separator';
-export default function Page("props": "any) {;
 ;";
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">";
       <div className="flex items-center gap-3 mb-4">";
@@ -38,7 +37,6 @@ export default function Page(props: any) {
         <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>"
           {showNew ? "Cancel" : "New Post"}
         </Button>;
-      </div>";
       {showNew && (<Card className="mb-6 animate-scale-in">";
           <CardContent className="py-5">";
             <Input placeholder="Title(e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black "placeholder": "text-zion-slate" value={newTitle"} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>'";
@@ -49,7 +47,6 @@ export default function Page(props: any) {
               </Button>";
               <Button size="sm" className="bg-zion-cyan text-zion-blue "hover": "bg-zion-cyan-light hover-scale" onClick={handleAddPost"} disabled={!newTitle.trim() || !newBody.trim()}>;
                 Post;
-              </Button>;
             </div>;
           </CardContent>;
         </Card>)}";
@@ -70,24 +67,19 @@ export default function Page(props: any) {
                 <div className="flex gap-2 items-center">";
                   <span className="font-semibold text-white">{post.author}</span>";
                   <span className="text-xs text-zion-slate-light">{post.time}</span>;
-                </div>";
                 <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>";
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
-              </div>;
-            </CardContent>;
                 </AvatarFallback>
               </Avatar>
               <div>"
                 <div className="flex gap-2 items-center">"
                   <span className="font-semibold text-white">{post.author}</span>"
                   <span className="text-xs text-zion-slate-light">{post.time}</span>
-                </div>"
                 <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}"
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
               </div>
             </CardContent>
           </Card>))}
-      </div>";
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>;
     </div>)};
@@ -98,10 +90,7 @@ interface CommunityDiscussion.jsProps {
   // Add props here as needed
 }
 export default function CommunityDiscussion.js({ }: CommunityDiscussion.jsProps) {
-  return (
     <div>
       <h1>CommunityDiscussion.js</h1>
       <p>This component is currently under development.</p>
-    </div>
   );
-}

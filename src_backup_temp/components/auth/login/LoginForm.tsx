@@ -22,4 +22,3 @@ export default function LoginForm(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

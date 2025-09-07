@@ -22,4 +22,3 @@ export default function ProjectDetailsFields(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

@@ -12,10 +12,8 @@ export default function Page("props": "any) {;
   "hidden": "{ "y": 30",;
   "opacity": "0;
 "},;
-        "visible": "{;
             "y": 0",;
             "opacity": "1",;
-            "transition": "{;
                 "duration": 0.6;
     "};";
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
@@ -38,4 +36,3 @@ export default function HomepagePromotion.js({ }: HomepagePromotion.jsProps) {
   );
 export default Component;
 </section>
-}

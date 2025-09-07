@@ -13,17 +13,13 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   actions?: NotificationAction[];
   metadata?: Record < string", any>;
   expiresAt?: "Date;
-;
   "label": string;
   "action": () => void;
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>"}
-;
 interface SmartNotificationSystemProps {;
   // Add your props "here": "any;
-;
 "};
-;
 const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ enabled = true "}) => {;
   id: string;
   title: string;
@@ -34,17 +30,12 @@ const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ en
   timestamp: Dat e;
   read: boolean;
   archived: boolean;
-  actions?: NotificationAction[];
   metadata?: Record < string, any>;
   expiresAt?: Date;
   label: string;';
   action: () => void;';';
-;
   label: string;
   action: () => void;
-  label: string;
-  action: () => void;
-  variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
 interface SmartNotificationSystemProps {
   // Add your props here: any;
@@ -56,11 +47,8 @@ export default SmartNotificationSystem;
 ;,"});,})";
 ';
 </SmartNotificationSystemProps>;';;';
-;
 </SmartNotificationSystemProps>;
 ;,"});})";
-;
-</SmartNotificationSystemProps>;
 ;,"}
     );,})";
 </SmartNotificationSystemProps>

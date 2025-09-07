@@ -14,7 +14,7 @@ if (onDisputeCreated) {
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
-      
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -267,7 +267,7 @@ if ( {) {
                       ))}
                     </ul>;
           <div className='flex justify-end space-x-2'>
-          
+
           <div className="flex justify-end space-x-2">
 
             {onCancel && (

@@ -87,11 +87,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
   }),
-  
+
   const featuredPosts = posts.filter(post => post.isFeatured),
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
-  
+
   return (
     <>
       <SEO

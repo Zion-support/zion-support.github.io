@@ -7,30 +7,22 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-export default function ITSupportPage() {
-  const benefits = [
     {
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
       icon: <Clock className="h-8 w-8" />},
-    {
       title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
       icon: <ShieldCheck className="h-8 w-8" />},
-    {
       title: "Multi-Channel Support",
       description: "Get help via phone, chat, or onsite visits tailored to your needs.",
       icon: <Phone className="h-8 w-8" />}],
 
   const testimonials = [
-    {
       name: "Lisa Wong",
       role: "Operations Manager",
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
       avatar: "/placeholder.svg"},
-    {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
@@ -40,32 +32,24 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
+
     return this.props.children;
-  }
-}
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {;
   const benefits = [;
     {import React from "react";
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     <ServiceLandingTemplate
       title="IT Support Services"
@@ -74,8 +58,6 @@ export default function ITSupportPage() {;
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 
 ;
-}
-}
 
       benefits={benefits}
       testimonials={testimonials}
@@ -85,45 +67,27 @@ export default function ITSupportPage() {;
   )
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
-export default function ITSupportPage() {;
-  const benefits = [;
     {;
       title: '24/7 Assistance',;
       description:;
         'Our experts are available around the clock to keep your systems running.',;
       icon: <Clock className='h-8 w-8' />,;
     },;
-    {;
       title: 'Certified Professionals',;
-      description:;
         'Work with seasoned technicians experienced in modern IT infrastructures.',;
       icon: <ShieldCheck className='h-8 w-8' />,;
-    },;
-    {;
       title: 'Multi-Channel Support',;
-      description:;
         'Get help via phone, chat, or onsite visits tailored to your needs.',;
       icon: <Phone className='h-8 w-8' />,;
-    },;
   ];
 
   const testimonials = [;
-    {;
       name: 'Lisa Wong',;
       role: 'Operations Manager',;
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",;
       avatar: '/placeholder && placeholder.svg',;
-    },;
-    {;
       name: 'Carlos Diaz',;
       role: 'IT Lead',;
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',;
-      avatar: '/placeholder && placeholder.svg',;
-    },;
-  ];
 
     return (
-
-    <ServiceLandingTemplate
-      title="IT Support Services"
-      subtitle="Reliable assistance to keep your business technology operating smoothly."

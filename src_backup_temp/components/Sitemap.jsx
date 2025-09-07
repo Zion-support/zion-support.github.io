@@ -14,7 +14,6 @@ export default function Page("props": "any) {;
             {"path": '/services/infrastructure', "label": 'Infrastructure', "description": 'IT Infrastructure & Management'},;
             {"path": '/services/consulting', "label": 'Consulting', "description": 'Strategic Technology Consulting'},;
             {"path": '/services/transformation', "label": 'Digital Transformation', "description": 'Business Process Transformation'}
-        ],;
         aiAutonomous[;
             {"path": '/ai-autonomous-analytics', "label": 'AI Analytics', "description": 'Advanced data analytics powered by AI'},;
             {"path": '/ai-autonomous-automation', "label": 'AI Automation', "description": 'Intelligent process automation'},;
@@ -26,16 +25,13 @@ export default function Page("props": "any) {;
             {"path": '/ai-autonomous-data', "label": 'AI Data', "description": 'AI data processing and management'},;
             {"path": '/ai-autonomous-engineering', "label": 'AI Engineering', "description": 'AI engineering solutions'},;
             {"path": '/ai-autonomous-integration', "label": 'AI Integration', "description": 'AI system integration services'}
-        ],;
         pricing[;
             {"path": '/comprehensive-pricing-2025', "label": 'Pricing 2025', "description": 'Current year pricing plans'},;
             {"path": '/comprehensive-pricing', "label": 'Comprehensive Pricing', "description": 'Detailed pricing information'}
-        ],;
         showcase[;
             {"path": '/services-showcase', "label": 'Services Showcase', "description": 'Showcase of our services'},;
             {"path": '/comprehensive-services-showcase', "label": 'Comprehensive Services Showcase', "description": 'Complete overview of all services'},;
             {"path": '/innovative-services-2025', "label": 'Innovative Services 2025', "description": 'Latest innovative services'}
-        ],;
         legal[;
             {"path": '/privacy', "label": 'Privacy Policy', "description": 'Our privacy policy and data handling'},;
             {"path": '/terms', "label": 'Terms of Service', "description": 'Terms and conditions of service'}
@@ -61,22 +57,18 @@ export default function Page("props": "any) {;
                     <div className="text-sm text-slate-600">{item.description}</div>;
                   </Link>;
                 </li>) ) }
-;
             </ul>";
           </div>"";
           {/* comment */}""""";
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Core Services</h3>"""";
               {sitemapData.services.map((item) => (<li key={item.path}" >"""";
-          {/* comment */}""""";
             <h3 className="text-xl font-semibold text-slate-900 mb-4">AI Autonomous Services</h3>"""";
               {sitemapData.aiAutonomous.map((item) => (<li key={item.path}" >"""";
-          {/* comment */}""""";
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Pricing & Showcase</h3>"""";
               {sitemapData.pricing.map((item) => (<li key={item.path}" >""""";
                   </Link>"";
                 </li>))}""""";
               {sitemapData.showcase.map((item) => (<li key={item.path}" >"""";
-          {/* comment */}""""";
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Legal & Resources</h3>"""";
               {sitemapData.legal.map((item) => (<li key={item.path}" >"""";
               <li>""""";
@@ -88,7 +80,6 @@ export default function Page("props": "any) {;
                   <div className="font-medium text-slate-900">AI Consumer Insights</div>"""";
                   <div className="text-sm text-slate-600">Consumer insights for AI products</div>;
               </li>"",;
-          {/* comment */}"""";
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">"""";
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links</h3>"""";
             <div className="space-y-3">"""";
@@ -100,7 +91,6 @@ export default function Page("props": "any) {;
               <Link to="/services" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold "hover":bg-slate-50 transition-all duration-300 border border-slate-200">;
                 Explore Services",;
             </div>",;
-        {/* comment */}"""";
         <div className="mt-12">"""";
           <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services</h3>"""";
 <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-4">';
@@ -126,22 +116,18 @@ export default function Page("props": "any) {;
                     <div className="font-medium text-slate-900">{item.label}</div>""""
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
-                </li>) ) }
             </ul>"
           </div>""
           {/* comment */}"""""
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Core Services""""
               {sitemapData.services.map((item) => (<li key={item.path}" >""""
-          {/* comment */}"""""
             <h3 className="text-xl font-semibold text-slate-900 mb-4">AI Autonomous Services""""
               {sitemapData.aiAutonomous.map((item) => (<li key={item.path}" >""""
-          {/* comment */}"""""
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Pricing & Showcase""""
               {sitemapData.pricing.map((item) => (<li key={item.path}" >"""""
                   </Link>""
                 </li>))}"""""
               {sitemapData.showcase.map((item) => (<li key={item.path}" >""""
-          {/* comment */}"""""
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Legal & Resources""""
               {sitemapData.legal.map((item) => (<li key={item.path}" >""""
               <li>"""""
@@ -153,7 +139,6 @@ export default function Page("props": "any) {;
                   <div className="font-medium text-slate-900">AI Consumer Insights</div>""""
                   <div className="text-sm text-slate-600">Consumer insights for AI products</div>
               </li>",
-          {/* comment */}""""
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">""""
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links""""
             <div className="space-y-3">""""
@@ -165,7 +150,6 @@ export default function Page("props": "any) {;
               <Link to="/services" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200">
                 Explore Services,
             </div>",
-        {/* comment */}""""
         <div className="mt-12">""""
           <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services""""
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">'
@@ -178,39 +162,17 @@ export default function Page("props": "any) {;
                   <div className="font-medium text-slate-900 text-sm">{service"}</div>;
                 </Link>)})}
           </div>;
-        </div>;
-      </div>;
     </div>)};
-export default Sitemap;
-;
 export {Sitemap};
-;
-export {Sitemap};
-;
-export {Sitemap};
-;
-export {Sitemap};
-;
 export {Page, Sitemap};
-;
 </li>;
-</li>;
-</li>;
-</div>;
 </div>
 </li>
-</li>
-</li>
-</div>
-</div>
 interface Sitemap.jsProps {
   // Add props here as needed
 }
 export default function Sitemap.js({ }: Sitemap.jsProps) {
-  return (
     <div>
       <h1>Sitemap.js</h1>
       <p>This component is currently under development.</p>
-    </div>
   );
-}

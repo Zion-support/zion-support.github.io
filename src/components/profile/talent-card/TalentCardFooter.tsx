@@ -30,7 +30,7 @@
           </Button>
 
             onClick = {handleViewProfile,}
-          
+
             variant="outline" 
             onClick={handleViewProfile}
 

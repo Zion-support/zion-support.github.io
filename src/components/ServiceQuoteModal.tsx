@@ -350,11 +350,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 onClick={prevStep}
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light"
                 Previous
-            
+
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
                 onClick={() => onOpenChange(false)}
                 Cancel
-              
+
               {currentStep !== 'contact' ? (
                   onClick={nextStep}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"

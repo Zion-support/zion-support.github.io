@@ -11,7 +11,6 @@ import { extraServices } from '../data/extra-services',;
 export default function MDMPage() {;
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management')),;
   if (!service) return null,;
-;
   return (;
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -34,27 +33,18 @@ export default function MDMPage() {;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>;
                 ))}
               </ul>;
-            </div>;
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>;
                   <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` :''}Setup:{service.setupTime}</div>;
-                </div>;
-              </div>;
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
               <div className="mt-6 space-y-3 text-sm text-slate-300">;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
-:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
 import React from "react";
 import Head from "next/head";
 import {
@@ -65,10 +55,6 @@ import {
   ArrowRight
   Shield
   Star
-:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
-import React from "react";
-import Head from "next/head";
-import {
   Phone,
   Mail,
   MapPin,
@@ -123,9 +109,7 @@ export default function QuantumInternetSecurityPage() {
                     <Check className="w-5 h-5 text-emerald-400 mt-0.5" />
                     <span>{feat}</span>
                   </li>
-                ))}
               </ul>
-            </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
@@ -134,23 +118,17 @@ export default function QuantumInternetSecurityPage() {
                     <span className="text-slate-400 text-base">
                       {service.period}
                     </span>
-                  </div>
                   <div className="text-slate-400">
                     {service.trialDays}-day free trial • Setup:{" "}
                     {service.setupTime}
-                  </div>
-                </div>
                 <div className="flex items-center text-yellow-400">
                   <Star className="w-4 h-4 mr-1" />
                   {service.rating.toFixed(1)}
-                </div>
-              </div>
               <Button
                 href="/contact"
                 variant="quantum"
                 size="lg"
                 className="w-full"
-              >
                 Request a Security Demo
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -158,27 +136,10 @@ export default function QuantumInternetSecurityPage() {
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-purple-400" />
                   <span>{service.contactInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 text-green-400" />
                   <span className="text-xs">{service.contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </UltraAdvancedFuturisticBackground>
-  );
-:pages-disabled/quantum-metaverse.tsx
 }
 main:pages-disabled/quantum-metaverse.tsx
-main:pages-disabled/quantum-metaverse.tsx
-:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
-}
-;
-:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx

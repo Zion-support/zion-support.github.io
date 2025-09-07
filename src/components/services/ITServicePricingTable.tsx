@@ -24,18 +24,16 @@ export function ITServicePricingTable() {;
   });
 
     }
-    
+
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === 'ascending' ? -1 : 1
-      }
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1
-      }
       return 0
     }),
-    
+
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
@@ -55,32 +53,12 @@ export function ITServicePricingTable() {;
         sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
           ? 'descending';
           : 'ascending',;
-    });
   };
 
   return (
 
         return sortConfig.direction === "ascending" ? -1 : 1
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
 
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  },
-
-  return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
@@ -91,15 +69,11 @@ export function ITServicePricingTable() {;
             onChange={e => setSearchQuery(e.target.value)}
             className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
         </div>
-      </div>
       <div className='rounded-md border border-zion-blue-light overflow-hidden'>
             placeholder="Search by country..."
-            value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
-        </div>
-      </div>
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
 
@@ -112,7 +86,6 @@ export function ITServicePricingTable() {;
                   onClick={() => handleSort('country')}
                   className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
               <TableHead className="text-zion-cyan font-medium">
-                <Button 
                   variant="ghost" 
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"

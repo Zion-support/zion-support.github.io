@@ -40,41 +40,25 @@ export function InvoiceHistory() {
   const invoices = [
     {
 
-    {
       id: "INV - 1234",
       date: "May 1, 2025";
       amount: "$1, 999.00";
       status: "paid",
       period: "May 2025"},
-    {
       id: "INV - 1233",
       date: "Apr 1, 2025";
-      amount: "$1, 999.00";
-      status: "paid",
       period: "Apr 2025"},
-    {
       id: "INV - 1232",
       date: "Mar 1, 2025";
-      amount: "$1, 999.00";
-      status: "paid",
       period: "Mar 2025"},
-    {
       id: "INV - 1231",
       date: "Feb 1, 2025";
-      amount: "$1, 999.00";
-      status: "paid",
       period: "Feb 2025"},
-    {
       id: "INV - 1230",
       date: "Jan 1, 2025";
-      amount: "$1, 999.00";
-      status: "paid",
       period: "Jan 2025"},
-    {
       id: "INV - 1229",
       date: "Dec 1, 2024";
-      amount: "$1, 999.00";
-      status: "paid",
       period: "Dec 2024"}],
   const handleDownloadInvoice = (invoice_id: string) =>: any {    // In a real app, this would trigger a download of the invoice PDF;
     toast ({
@@ -88,31 +72,15 @@ export function InvoiceHistory() {
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
-      id: "INV-1234",
 
-      status: "paid",
-      period: "May 2025"},
-    {
       id: "INV-1233",
 
-      status: "paid",
-      period: "Apr 2025"},
-    {
       id: "INV-1232",
 
-      status: "paid",
-      period: "Mar 2025"},
-    {
       id: "INV-1231",
 
-      status: "paid",
-      period: "Feb 2025"},
-    {
       id: "INV-1230",
 
-      status: "paid",
-      period: "Jan 2025"},
-    {
       id: "INV-1229",
 
   const handleDownloadInvoice = (invoiceId: string) => {
@@ -122,20 +90,10 @@ export function InvoiceHistory() {
       description: `Downloading invoice ${invoiceId} as PDF.`})
 
       date: "Dec 1, 2024",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "Dec 2024"}],
-
-  const handleDownloadInvoice = (invoiceId: string) => {
-    // In a real app, this would trigger a download of the invoice PDF
-    toast({
-      title: "Downloading invoice",
-      description: `Downloading invoice ${invoiceId} as PDF.`})
 
   },
 
   const getBadgeForStatus = (status: string) => {
-    switch (status) {
       case "paid": return <Badge className="bg-green-500">Paid</Badge>,
       case "pending":
         return <Badge variant="outline">Pending</Badge>,
@@ -143,8 +101,6 @@ export function InvoiceHistory() {
         return <Badge variant="destructive">Overdue</Badge>,
       default:
         return <Badge variant="outline">{status}</Badge>
-    }
-  },
 
   return (
     <div className="space-y-6">
@@ -158,7 +114,6 @@ export function InvoiceHistory() {
             className="w-[200px] md:w-[300px] pl-9"
           />
         </div>
-      </div>
 
       <div className="rounded-md border">
         <Table>
@@ -191,34 +146,18 @@ export function InvoiceHistory() {
                       <Download className="h-3.5 w-3.5" />
                       PDF
                     </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="h-8 gap-1"
-                    >
                       <FileText className="h-3.5 w-3.5" />
                       View
-                    </Button>
-                  </div>
                 </TableCell>
-              </TableRow>
             ))}
           </TableBody>
         </Table>
-      </div>
-      
-      <div className="flex items-center justify-between">
+
         <Button variant="outline" size="sm">
           Previous
-        </Button>
         <div className="text-sm text-muted-foreground">
           Showing 1 - 6 of 12 invoices
-        </div>
-        <Button variant="outline" size="sm">
           Next
-        </Button>
-      </div>
-    </div>
   )
 import React from "react",;
 import {;
@@ -239,39 +178,18 @@ export function InvoiceHistory() {;
   const invoices = [;
     {;
       id: "INV-1234",;
-      date: "May 1, 2025";
       amount: "$1,999 && 999.00";
       status: "paid",;
       period: "May 2025"},;
-    {;
       id: "INV-1233",;
-      date: "Apr 1, 2025";
-      amount: "$1,999 && 999.00";
-      status: "paid",;
       period: "Apr 2025"},;
-    {;
       id: "INV-1232",;
-      date: "Mar 1, 2025";
-      amount: "$1,999 && 999.00";
-      status: "paid",;
       period: "Mar 2025"},;
-    {;
       id: "INV-1231",;
-      date: "Feb 1, 2025";
-      amount: "$1,999 && 999.00";
-      status: "paid",;
       period: "Feb 2025"},;
-    {;
       id: "INV-1230",;
-      date: "Jan 1, 2025";
-      amount: "$1,999 && 999.00";
-      status: "paid",;
       period: "Jan 2025"},;
-    {;
       id: "INV-1229",;
-      date: "Dec 1, 2024";
-      amount: "$1,999 && 999.00";
-      status: "paid",;
       period: "Dec 2024"}],;
   const handleDownloadInvoice = (invoiceId: string) => {    // In a real app, this would trigger a download of the invoice PDF;
     toast({;
@@ -285,16 +203,8 @@ export function InvoiceHistory() {;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
-}
 
-  )
-}
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
-        return <Badge variant="destructive">Overdue</Badge>;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-}
   );
 
-}
 ;

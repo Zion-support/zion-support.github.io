@@ -35,17 +35,6 @@ export default function PrivacyPolicy("props": "any) {"}
 }
 ;
 export {PrivacyPolicy};
-;
-export {PrivacyPolicy};
-;
-export {PrivacyPolicy};
-;
-export {PrivacyPolicy};
-;
-export {PrivacyPolicy};
 ';
 </SEO>;';;';
-;
-</SEO>;
-;
 </SEO>;

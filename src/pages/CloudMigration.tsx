@@ -16,79 +16,55 @@ const CloudMigration: React.FC = () => {
       price: "$5,000 - $50,000",
       duration: "2-12 weeks"
     },
-    {
       title: "Azure Migration",
       description: "Seamless migration to Microsoft Azure cloud platform",
-      features: [
         "Hybrid cloud setup",
         "Active Directory integration",
         "DevOps integration",
         "Monitoring setup",
         "Backup & disaster recovery"
-      ],
       price: "$4,500 - $45,000",
       duration: "2-10 weeks"
-    },
-    {
       title: "Google Cloud Migration",
       description: "Migration to Google Cloud Platform with advanced analytics",
-      features: [
         "BigQuery integration",
         "AI/ML services",
         "Kubernetes migration",
         "Data analytics setup",
         "Performance optimization"
-      ],
       price: "$4,000 - $40,000",
       duration: "2-8 weeks"
-    },
-    {
       title: "Multi-Cloud Strategy",
       description: "Distributed cloud architecture across multiple providers",
-      features: [
         "Multi-cloud architecture",
         "Cloud governance",
         "Cost management",
         "Disaster recovery",
         "Vendor management"
-      ],
       price: "$8,000 - $80,000",
       duration: "4-16 weeks"
     }
   ];
 
   const benefits = [
-    {
       title: "Cost Reduction",
       description: "Reduce infrastructure costs by up to 40%",
       icon: "💰"
-    },
-    {
       title: "Scalability",
       description: "Scale resources based on demand",
       icon: "📈"
-    },
-    {
       title: "Security",
       description: "Enterprise-grade security and compliance",
       icon: "🔒"
-    },
-    {
       title: "Performance",
       description: "Improved application performance and reliability",
       icon: "⚡"
-    },
-    {
       title: "Flexibility",
       description: "Access to latest cloud technologies and services",
       icon: "🔄"
-    },
-    {
       title: "Disaster Recovery",
       description: "Automated backup and disaster recovery",
       icon: "🛡️"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
@@ -107,15 +83,10 @@ const CloudMigration: React.FC = () => {
             >
               Get Migration Assessment
             </Link>
-            <Link
               to="/pricing"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg"
-            >
               View Pricing
-            </Link>
           </div>
-        </div>
-      </div>
 
       {/* Services Section */}
       <div className="py-20">
@@ -123,7 +94,6 @@ const CloudMigration: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Migration Services</h2>
             <p className="text-xl text-gray-600">Choose the right cloud platform for your business</p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
@@ -145,79 +115,42 @@ const CloudMigration: React.FC = () => {
                     <div>
                       <div className="text-2xl font-bold text-gray-900">{service.price}</div>
                       <div className="text-sm text-gray-500">{service.duration}</div>
-                    </div>
-                    <Link
-                      to="/contact"
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                    >
                       Get Started
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Benefits Section */}
       <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Cloud Migration?</h2>
             <p className="text-xl text-gray-600">Transform your business with cloud technology</p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center p-6">
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Process Section */}
       <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Migration Process</h2>
             <p className="text-xl text-gray-600">Our proven methodology ensures successful migration</p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-cyan-600">1</span>
-              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Assessment</h3>
               <p className="text-gray-600">Analyze current infrastructure and plan migration strategy</p>
-            </div>
-            <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">2</span>
-              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Planning</h3>
               <p className="text-gray-600">Create detailed migration plan with timeline and resources</p>
-            </div>
-            <div className="text-center">
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-indigo-600">3</span>
-              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Migration</h3>
               <p className="text-gray-600">Execute migration with zero downtime and minimal disruption</p>
-            </div>
-            <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-purple-600">4</span>
-              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Optimization</h3>
               <p className="text-gray-600">Optimize performance and costs for maximum efficiency</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
@@ -225,24 +158,8 @@ const CloudMigration: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>
           <p className="text-xl text-cyan-100 mb-8">
             Get a free migration assessment and discover how cloud can transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-            >
               Get Free Assessment
-            </Link>
-            <Link
-              to="/pricing"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg"
-            >
               View Migration Packages
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

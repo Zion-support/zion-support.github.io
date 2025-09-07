@@ -10,17 +10,17 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -131,7 +131,6 @@ export default /**
 function Tutorial() {
   const router = use_router ();
   const tutorial = initial_tutorial || TUTORIALS.find (t => t.slug === slug);interface TutorialPageProps {
-export default /**
   const router = use_router (),
   const slug = router.query.slug as string | undefined,
   const tutorial = initial_tutorial || TUTORIALS.find ((t, ) => t.slug === slug),

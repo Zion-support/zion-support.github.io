@@ -29,7 +29,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
   Star,
 },
 
-export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
   return (
@@ -41,7 +40,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 export default UserBadges;
 
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
-        
+
           <TooltipProvider key={badge.id}>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -82,4 +81,3 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     <div className="flex flex - wrap gap - 2">;
       {badges.map ((badge, ) => {
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
-export default UserBadges;

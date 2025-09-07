@@ -51,7 +51,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     onClose: onSubmitSuccess || onClose, 
     initialJobTitle,
   }),
-  
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -87,7 +87,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ProjectDetailsField } from "./ProjectDetailsField";
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
-export interface HireRequestFormProps {
   onClose: () => void, initialJobTitle?: string,
   };
 
@@ -152,7 +151,6 @@ import { Button } from '@/components / ui / button';
 import { DialogFooter } from '@/components / ui / dialog';
 import { Form } from '@/components / ui / form';
 import { TalentProfile } from '@/types / talent';
-export interface HireRequestFormProps {
   on_close: () => void;
   user_details?: {
     id?: string;
@@ -178,7 +176,6 @@ function HireRequestForm() {
             className='bg - zion - purple hover:bg - zion - purple - dark text - white'            disabled={is_submitting}
             {is_submitting ? (
                 <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />                Submitting...  onSubmitSuccess?: () => void;
-export /**
     user_details;
       <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;

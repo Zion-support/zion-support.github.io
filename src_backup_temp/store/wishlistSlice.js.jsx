@@ -9,12 +9,10 @@ export const loadWishlistFromDB = createAsyncThunk('',',';';
   async (userId) => {'';';
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);`';';';
   async (userId) => {const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);',';';
-    ';';';
     if (!res.ok) throw new Error('Failed to load');';
     return await res.json();';';
   }';';';
 );',';';
-    ';';';
 const wishlistSlice = createSlice({';
   "name": 'wishlist';
   initialState;
@@ -26,16 +24,11 @@ const wishlistSlice = createSlice({';
       if (!exists) state.items.push(action.payload);
     }
     removeFromWishlist(state, action) {state.items = state.items.filter(item => item.id !== action.payload.id);}
-  }
   "extraReducers": "builder => {builder.addCase(loadWishlistFromDB.fulfilled", (state, action) => {;
       state.items = action.payload});
   },
   extraReducers: builder => {builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload}
-    );
-  }
-}
-    );
 export const {addToWishlist, removeFromWishlist} = wishlistSlice.actions;';
 export {wishlistSlice};';';
 export default wishlistSlice.reducer;';';';

@@ -50,7 +50,6 @@ export function CollaborationPlatform("props": "any) {;
                 "user": 'You',;
                 "message": "newMessage",;
   "timestamp": "new Date();
-"};
             setChatMessages(prev => [...prev, message]);
             setNewMessage('')}
     };

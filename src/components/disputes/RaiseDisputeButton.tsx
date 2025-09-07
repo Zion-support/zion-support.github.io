@@ -28,10 +28,7 @@ export function RaiseDisputeButton({
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
-  className?: string
 }
-
-export function RaiseDisputeButton({ 
 
   projectId,
   milestoneId, 
@@ -65,11 +62,7 @@ export function RaiseDisputeButton({
         className={class_name}
         on_click={() => setIsDialogOpen (true)}      >;
         <ShieldAlert className='h - 4 w - 4 mr - 2' />;
-        Raise Dispute;
-      </Button>;
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className='sm:max - w-[550px]'>;
-          <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
 
             <DialogDescription>;
@@ -83,7 +76,6 @@ export function RaiseDisputeButton({
       </Dialog>;
     </>;
   );
-}
 
           <DisputeForm;
             project_id={project_id}
@@ -94,7 +86,6 @@ export function RaiseDisputeButton({
       </Dialog>
     </>
   )
-}
 
           <DisputeForm 
 import React, { useState } from "react",;
@@ -114,7 +105,6 @@ interface RaiseDisputeButtonProps {;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
   size?: "default" | "sm" | "lg" | "icon",;
   className?: string;
-}
 ;
 export function RaiseDisputeButton({;
   projectId,;
@@ -130,33 +120,13 @@ export function RaiseDisputeButton({;
     router.push(`/dashboard/disputes/${disputeId}`);
   };
   return (;
-    <>;
-      <Button;
         variant={variant} ;
         size={size} ;
         className={className} ;
         onClick={() => setIsDialogOpen(true)}
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
-        Raise Dispute;
-      </Button>;
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className="sm:max-w-[550px]">;
-          <DialogHeader>;
-            <DialogTitle>Raise a Dispute</DialogTitle>;
-            <DialogDescription>;
               Please provide details about the issue you're experiencing with this project.;
-            </DialogDescription>;
-          </DialogHeader>;
-          <DisputeForm;
             projectId={projectId}
             milestoneId={milestoneId}
-            onDisputeCreated={handleDisputeCreated}
-            onCancel={() => setIsDialogOpen(false)}          />
-        </DialogContent>
-      </Dialog>;
-    </>;
-  );
-};
-}
-;

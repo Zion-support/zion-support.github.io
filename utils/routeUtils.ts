@@ -16,12 +16,10 @@ export function getBreadcrumbsForPath(path: string): BreadcrumbItem[] {
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
-    
+
     breadcrumbs.push({
       name,
       url: currentPath
     });
-  });
 
   return breadcrumbs;
-}

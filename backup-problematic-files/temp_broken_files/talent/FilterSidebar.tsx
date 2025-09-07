@@ -1,4 +1,3 @@
-
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
@@ -48,13 +47,10 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-      ;
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
-      ;
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-      ;
       {/* Skills */}
       <SkillsFilter ;
         selectedSkills={selectedSkills} ;
@@ -63,50 +59,34 @@ export function FilterSidebar({;
         toggleSection={() => toggleSection('skills')}
         isMobileFilterOpen={isMobileFilterOpen}
       />;
-      ;
       {/* Availability */}
       <AvailabilityFilter ;
         selectedAvailability={selectedAvailability} ;
         toggleAvailability={toggleAvailability} ;
         expanded={expandedSections.availability} ;
         toggleSection={() => toggleSection('availability')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      ;
       {/* Region */}
       <RegionFilter ;
         selectedRegions={selectedRegions} ;
         toggleRegion={toggleRegion} ;
         expanded={expandedSections.region} ;
         toggleSection={() => toggleSection('region')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      ;
       {/* Years of Experience */}
       <ExperienceFilter ;
         experienceRange={experienceRange} ;
         setExperienceRange={setExperienceRange} ;
         expanded={expandedSections.experience} ;
         toggleSection={() => toggleSection('experience')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      ;
       {/* Price Range */}
       <PriceFilter ;
         priceRange={priceRange} ;
         setPriceRange={setPriceRange} ;
         expanded={expandedSections.price} ;
         toggleSection={() => toggleSection('price')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      ;
       {isMobileFilterOpen && (;
-        <Button ;
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-        >;
           Apply Filters;
-        </Button>;
       )}
     </>;
   ),;}
@@ -143,7 +123,6 @@ isMobileFilterOpen ;
   sortOption ;
 }setSortOption= {;
   setSortOption ;
-}/> {;
   /* Skills */ ;
 }<SkillsFilter selectedSkills= {;
   selectedSkills ;
@@ -154,56 +133,35 @@ isMobileFilterOpen ;
 }toggleSection= {;
   () => toggleSection ('skills') ;
 }isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> {;
   /* Availability */ ;
 }<AvailabilityFilter selectedAvailability= {;
   selectedAvailability ;
 }toggleAvailability= {;
   toggleAvailability ;
-}expanded= {;
   expandedSections.availability ;
 }toggleSection= {';
   () => toggleSection ('availability') ;
-}isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> {;
   /* Region */ ;
 }<RegionFilter selectedRegions= {;
   selectedRegions ;
 }toggleRegion= {;
   toggleRegion ;
-}expanded= {;
   expandedSections.region ;
-}toggleSection= {';
   () => toggleSection ('region') ;
-}isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> {;
   /* Years of Experience */ ;
 }<ExperienceFilter experienceRange= {;
   experienceRange ;
 }setExperienceRange= {;
   setExperienceRange ;
-}expanded= {;
   expandedSections.experience ;
-}toggleSection= {';
   () => toggleSection ('experience') ;
-}isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> {;
   /* Price Range */ ;
 }<PriceFilter priceRange= {;
   priceRange ;
 }setPriceRange= {;
   setPriceRange ;
-}expanded= {;
   expandedSections.price ;
-}toggleSection= {';
   () => toggleSection ('price') ;
-}isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> {;
 :temp_broken_files/talent/FilterSidebar.tsx
   isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
 }</>) ;"}'"

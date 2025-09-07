@@ -26,7 +26,6 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 
   Breadcrumb,
 
-export default function CaseStudy() {;
   const router = useRouter(),;
   const slug = router && router.query.slug as string,;
   const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
@@ -44,7 +43,6 @@ export default function CaseStudy() {;
       </div>
     )
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
-export default function CaseStudy() {;
   const slug = router && router.query.slug as string;
   const study = CASE_STUDIES && CASE_STUDIES.find((s) => s && s.slug === slug);
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
@@ -137,7 +135,6 @@ function CaseStudy() {
   const router = use_router ();
   const study = CASE_STUDIES.find (string => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`);  Breadcrumb,
   BreadcrumbSeparator} from '@/components / ui / breadcrumb',
-export default /**
   const router = use_router (),
   const study = CASE_STUDIES.find ((s, ) => s.slug === slug),
   const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`),
@@ -145,7 +142,6 @@ export default /**
 if ( {) {
   $2
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>        Case study not found.import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd';
-export default /**
   const study = CASE_STUDIES.find ((s) => s.slug === slug);
   const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`);
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className="min - h-screen bg - zion - blue flex items - center justify - center text - white">;

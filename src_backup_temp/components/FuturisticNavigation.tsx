@@ -3,15 +3,11 @@ import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
 export default function Page("props": "any) {;
 ", [location.pathname]);
 e.preventDefault();
-e.preventDefault();
 if(searchQuery.trim()) {;
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   ;
     setActiveDropdown(activeDropdown === dropdown ? null : "dropdown) "};
-  ;
-    setActiveDropdown(activeDropdown === dropdown ? null : "dropdown) "};
   // Enhanced service categories with better organization;
-  ;
         { "name": 'AI Autonomous Trading', "href": '/ai-services/autonomous-trading', "icon": "DollarSig n", "description": 'AI-powered financial trading platform' },;
         { "name": 'AI Consciousness Simulator', "href": '/ai-services/consciousness-simulator', "icon": "Brai n", "description": 'Quantum AI consciousness research' },;
         { "name": 'AI Business Operations', "href": '/ai-services/business-operations', "icon": "Buildin g", "description": 'Autonomous business management' },;
@@ -40,39 +36,28 @@ if(searchQuery.trim()) {;
         { "name": "Industry Solutions", "href": "/micro-saas/industry" },";
         { "name": "Custom Development", "href": "/micro-saas/custom" },";
         { "name": "Marketplace", "href": "/marketplace" }
-      ];
-    }, {;
-";
       "name": "IT Infrastructure",;
       "icon": "Serve r",;
-      services[;";
         { "name": "IT Services", "href": "/it-services" },";
         { "name": "Cloud Solutions", "href": "/it-services/cloud" },";
         { "name": "Cybersecurity", "href": "/it-services/cybersecurity" },";
         { "name": "DevOps & Automation", "href": "/it-services/devops" },";
         { "name": "Data Management", "href": "/it-services/data" },";
         { "name": "Network Security", "href": "/it-services/network-security" }
-      ];
-    }, {;
-";
       "name": "Emerging Technologies",;
       "icon": "Rocke t",;
-      services[;";
         { "name": "Quantum Computing", "href": "/emerging-tech/quantum" },";
         { "name": "Blockchain & Web3", "href": "/emerging-tech/blockchain" },";
         { "name": "Edge Computing", "href": "/emerging-tech/edge" },";
         { "name": "IoT Solutions", "href": "/emerging-tech/iot" },";
         { "name": "Green Technology", "href": "/green-it" },";
         { "name": "Space Technology", "href": "/emerging-tech/space" }
-      ];
-    }, {;
       "name": '2028 Services',;
       "href": '/innovative-services-2028',;
       "icon": "Crow n",;
       "color": 'from-zion-cyan to-zion-purple',;
       dropdown[ { "name": 'Innovative Services 2028', "href": '/innovative-services-2028', "icon": "Crow n", "description": 'Latest innovative services for 2028' }, { "name": 'Micro SAAS 2028', "href": '/micro-saas-2028', "icon": "Za p", "description": 'Advanced micro SAAS solutions' }, { "name": 'IT Services 2028', "href": '/it-services-2028', "icon": "Serve r", "description": 'Next-generation IT services' }, { "name": 'Pricing Guide 2028', "href": '/comprehensive-pricing-guide-2028', "icon": "Calculato r", "description": 'Complete pricing and ROI analysis' };
       ]};
-  ];
   return ();
     <>`;
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled';
@@ -91,9 +76,7 @@ if(searchQuery.trim()) {;
               animate = {;
   { "opacity": "1",;
   "x": "0;
-"}}
               transition={{ "duration": "0.5 "}}
-";
               <Link to="/" className="flex items-center space-x-3 group">";
                 <div className="relative">";
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-"hover": "scal e-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">";
@@ -101,7 +84,6 @@ if(searchQuery.trim()) {;
                   </div>";
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-"hover": opacit y-75 transition-opacity duration-300"></div>";
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-xl opacity-25 group-"hover": opacit y-50 transition-opacity duration-300"></div>;
-                </div>";
                 <div className="hidden "sm": bloc k">";
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">;
                     ZION TECH GROUP;
@@ -114,69 +96,30 @@ if(searchQuery.trim()) {;
             <nav className="hidden "lg": "flex items-center space-x-1">;
               {/* Main Navigation Links */"}
               <motion.div;
-                initial = {;
-  { "opacity": "0",;
   "y": "-20;
-"}}
-                animate = {;
-  { "opacity": "1",;
   "y": "0;
-"}}
                 transition = {;
   { "duration": "0.5",;
   "delay": "0.1;
-"}}
               >;
                 <Link ";
                   to="/about";
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group "hover": "tex t-zion-cyan "hover": b g-zion-cyan/5 "hover": shado w-lg "hover": shado w-zion-cyan/10";
-";
                   <Users className="w-4 h-4 group-"hover": scal e-110 transition-transform duration-300"    />"                  <span className="font-medium">About</span>;
-                </Link>;
-              </motion.div>;
-              <motion.div;
-                initial = {;
   { "opacity": 0",;
-  "y": "-20;
-"}}
-                animate = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-                transition = {;
-  { "duration": "0.5",;
   "delay": "0.15;
-"}}
-              >;
-                <Link ";
                   to="/partners";
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group "hover": "tex t-zion-cyan "hover": b g-zion-cyan/5 "hover": shado w-lg "hover": shado w-zion-cyan/10";
-";
                   <Handshake className="w-4 h-4 group-"hover": scal e-110 transition-transform duration-300"    />"                  <span className="font-medium">Partners</span>;
-                </Link>;
-              </motion.div>;
               {/* Service Categories */"}
               {serviceCategories.map((category, index) => (";
                 <div key={category.name} className="relative">;
                   <motion.button;
-                    initial = {;
-  { "opacity": "0",;
-  "y": "-20;
-"}}
-                    animate = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-                    transition = {;
-  { "duration": "0.5",;
   "delay": "(index + 2) * 0.1;
-"}}
                     onClick={() => toggleDropdown(category.name)}`;
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${activeDropdown === category.name';
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'';
                         : '"hover": "tex t-zion-cyan "hover": b g-zion-cyan/5 "hover": shado w-lg "hover": shado w-zion-cyan/10'`;
                     "}`}
-";
                     <category.icon className="w-4 h-4 group-"hover": "scal e-110 transition-transform duration-300" />";
                     <span className="font-medium">{category.name"}</span>`;
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === category.name ? 'rotate-180' : ''`;
@@ -184,30 +127,19 @@ if(searchQuery.trim()) {;
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === category.name && ;
-                      <motion.div;
-                        initial = {;
   { "opacity": "0", "y": "-10",;
   "scale": "0.95;
-"}}
-                        animate = {;
   { "opacity": "1", "y": "0",;
   "scale": "1;
-"}}
                         exit = {;
-  { "opacity": "0", "y": "-10",;
-  "scale": "0.95;
-"}}
                         transition={{ "duration": "0.2 "}}";
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
-";
                         <div className="p-4">";
                           <div className="mb-4">";
                             <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>";
                             <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>;
-                          </div>";
                           <div className="space-y-2">;
                             {category.services.map((service, subIndex) => (;
-                              <motion.div;
 }}
                         transition={{ duration: 0.2 }}"
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
@@ -221,34 +153,17 @@ if(searchQuery.trim()) {;
                             {category.services.map((service, subIndex) => (
                               <motion.div
                                 key={service.name}
-                                initial = {;
-  { "opacity": "0",;
-  "x": "-20;
-"}}
-                                animate = {;
-  { "opacity": "1",;
-  "x": "0;
-"}}
-                                transition = {;
   { "duration": "0.3",;
   "delay": "subInde x * 0.05;
-"}}
-                              >;
                                 <Link;
                                   to={service.href}";
                                   className="flex items-start space-x-3 p-3 rounded-lg "hover": "b g-zion-cyan/10 transition-all duration-300 group";
-";
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-"hover": scal e-110 transition-transform duration-300">";
                                     <Brain className="w-4 h-4 text-zion-cyan"   /> {/* Using Brain icon for consistency */"}
-                                  </div>";
                                   <div className="flex-1">"                                    <h4 className="font-medium text-white group-"hover": "tex t-zion-cyan transition-colors duration-300">;
                                       {service.name"}
                                     </h4>;
-                                  </div>;
-                                </Link>;
                               </motion.div>;) ) }
-                          </div>;
-                        </div>;
                       </motion.div>) }
                   </AnimatePresence>;
                 </div>) ) }
@@ -268,55 +183,24 @@ if(searchQuery.trim()) {;
               </form>;
               {/* User actions */"}";
               <div className="flex items-center space-x-2">;
-                <motion.button;
                   whileHover={{ "scale": "1.05 "}}
                   whileTap={{ "scale": "0.95 "}}";
                   className="p-2 text-zion-slate-light "hover": "tex t-zion-cyan "hover": b g-zion-cyan/10 rounded-lg transition-all duration-300";
-";
                   <Bell className="w-5 h-5"   />                </motion.button>;
-                <motion.button;
                   whileHover={{ "scale": 1.05 "}}
-                  whileTap={{ "scale": "0.95 "}}";
-                  className="p-2 text-zion-slate-light "hover": "tex t-zion-cyan "hover": b g-zion-cyan/10 rounded-lg transition-all duration-300";
-";
                   <User className="w-5 h-5"   />                </motion.button>;
-                <motion.button;
-                  whileHover={{ "scale": 1.05 "}}
-                  whileTap={{ "scale": "0.95 "}}";
-                  className="p-2 text-zion-slate-light "hover": "tex t-zion-cyan "hover": b g-zion-cyan/10 rounded-lg transition-all duration-300";
-";
                   <ShoppingCart className="w-5 h-5"   />                </motion.button>;
-              </div>;
               {/* Mobile Sidebar Toggle */"}
               <MobileSidebarToggle  />;
-            </div>;
-          </div>;
-        </div>;
       </header>;
     </>;
   )};
 '"`;
 ;,"});})";
-;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
 </motion>;
 </ChevronDown>;
-</motion>;
-</motion>;
-</motion>;
 '"`
 ;,"}
     );,})";
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </ChevronDown>
-</motion>
-</motion>
-</motion>
-</motion>

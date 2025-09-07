@@ -89,10 +89,6 @@ export function FilterSidebar({
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 
-export function FilterSidebar({
-
-export function FilterSidebar({
-
   isMobileFilterOpen
 }: FilterSidebarProps) {
       <div className="flex items-center justify-between mb-6">
@@ -105,7 +101,7 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-      
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { SearchFilter } from "./filters/SearchFilter",;

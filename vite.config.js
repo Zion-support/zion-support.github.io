@@ -25,7 +25,7 @@ export default defineConfig({
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
-    exclude: [],
+    exclude: []
   },
   build: {
     target: 'esnext',
@@ -43,7 +43,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true,
+    open: true
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']

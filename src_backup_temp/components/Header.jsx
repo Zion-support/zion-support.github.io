@@ -12,13 +12,9 @@ export function Header(props) {return (
               </Link>
             </div>
             <MainNavigation  />
-          </div>
-        </div>
       </header>
     );}';
 ;';;';
-import {Link} from 'react-router-dom';
-import MainNavigation from './header/MainNavigation';
 ;
 export function Header(props) {return (;
       <header className="bg-white shadow-sm border-b border-gray-200">;
@@ -30,7 +26,5 @@ export function Header(props) {return (;
               </Link>;
             </div>;
             <MainNavigation  />;
-          </div>;
-        </div>;
       </header>;
     );"}

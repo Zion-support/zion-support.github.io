@@ -25,10 +25,9 @@ import { useTranslation } from "react-i18next",
 import { useLanguage } from "@/context/LanguageContext",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 
-export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
-  
+
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -211,7 +210,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 href={feature.link}
                 className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
-          
+
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">

@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from './react';
 ;
 
@@ -16,17 +15,7 @@ export const useAuth = () => {;
     // Simulate auth check
     setLoading(false);
   }, []);
-=======
-export const use_auth = () =>: any {
-  const [user, set_user] = useState < User | null>(null);
-  const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
-    // Simulate auth check;
-    set_loading (false);
-  }, []);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return {
     user
     loading
@@ -37,8 +26,3 @@ export const use_auth = () =>: any {
     },
     logout: () => {
       set_user (null);
-    },
-  }
-}
-;
-

@@ -9,7 +9,6 @@ export default function Wishlistslice("props": "any) {;
           This is a placeholder component for wishlistslice.;
         </p>;
       </div>;
-    </div>;
   );
 "}
 export default function Wishlistslice(props: any) {
@@ -21,6 +20,4 @@ export default function Wishlistslice(props: any) {
           This is a placeholder component for wishlistslice.
         </p>
       </div>
-    </div>
-    );
 }

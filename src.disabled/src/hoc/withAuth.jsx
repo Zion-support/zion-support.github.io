@@ -11,4 +11,3 @@ export default function WithAuth({ }: WithAuthProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

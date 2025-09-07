@@ -51,9 +51,7 @@ export default function Page("props": "any) {;
       "default":";
         return <Info className="w-4 h-4 text-gray-400"  />;
     "}
-  };
   const getSeverityColor = severity => {;
-    switch(severity) {;
       case 'high':';
         return 'text-red-400';
       case 'medium':';
@@ -63,26 +61,18 @@ export default function Page("props": "any) {;
       "default":';
         return 'text-gray-400';
     }
-  };
   const getStatusColor = status => {;
     switch(status) {;
       case 'resolved':';
         return 'text-green-400';
       case 'in_progress':';
-        return 'text-yellow-400';
       case 'open':';
-        return 'text-red-400';
-      "default":';
-        return 'text-gray-400';
-    }
-  };
   const filteredIssues = contentIssues.filter(issue => {const matchesSearch =;
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;});
   const getIssueTypeLabel = type => {;
     return matchesFilter && matchesSearch;}
-    );
   const getIssueTypeLabel = type => {
     switch(type) {;
       case 'missing_title':';
@@ -97,8 +87,6 @@ export default function Page("props": "any) {;
         return 'No Images';
       "default": ";
         return type;
-    "}
-  };
   return ();
     <>;
       {/* Floating Action Button */}
@@ -119,13 +107,11 @@ export default function Page("props": "any) {;
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4";
           onClick={() => setIsOpen(false)}
         >;
-          <motion.div;
             initial={{ "scale": "0.9", "opacity": "0 "}}
             animate={{ "scale": "1", "opacity": "1 "}}
             exit={{ "scale": "0.9", "opacity": "0 "}}";
             className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden";
             onClick={e => e.stopPropagation()}
-          >;
             {/* Header */}";
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">";
               <div className="flex items-center justify-between">";
@@ -138,14 +124,12 @@ export default function Page("props": "any) {;
                 <button;
                   onClick={() => setIsOpen(false)}";
                   className="text-white/80 "hover": "text-white transition-colors";
-                >;
                   ✕;
                 </button>;
               </div>";
               <p className="text-purple-100 mt-2">;
                 Analyze and improve content quality across all website pages;
               </p>;
-            </div>;
             {/* Content */"}";
             <div className="p-6 space-y-6">;
               {/* Summary Cards */}
@@ -154,34 +138,23 @@ export default function Page("props": "any) {;
                   <div className="bg-gray-800 rounded-lg p-4 text-center">";
                     <div className="text-2xl font-bold text-white">;
                       {report.totalPages"}
-                    </div>";
                     <div className="text-gray-400 text-sm">Total Pages</div>;
-                  </div>";
                   <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">";
                     <div className="text-2xl font-bold text-red-400">;
                       {report.criticalIssues}
-                    </div>";
                     <div className="text-red-400 text-sm">Critical Issues</div>;
-                  </div>";
                   <div className="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4 text-center">";
                     <div className="text-2xl font-bold text-yellow-400">;
                       {report.mediumIssues}
-                    </div>";
                     <div className="text-yellow-400 text-sm">Medium Issues</div>;
-                  </div>";
                   <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">";
                     <div className="text-2xl font-bold text-blue-400">;
                       {report.pagesWithMetaDescriptions}
-                    </div>";
                     <div className="text-blue-400 text-sm">;
                       With Meta Descriptions;
-                    </div>;
-                  </div>;
-                </div>;
               )}
 ;
               {/* Actions */}";
-              <div className="flex items-center justify-between">";
                 <div className="flex space-x-2">;
                   <button';
                     onClick={() => setSelectedFilter('all')}
@@ -189,42 +162,22 @@ export default function Page("props": "any) {;
                         ? 'bg-purple-500 text-white'';
                         : 'bg-gray-700 text-gray-300 "hover": "bg-gray-600'`;
                     "}`}
-                  >;
                     All Issues;
-                  </button>;
-                  <button';
                     onClick={() => setSelectedFilter('critical')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical'';
                         ? 'bg-red-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 "hover": "bg-gray-600'`;
-                    "}`}
-                  >;
                     Critical;
-                  </button>;
-                  <button';
                     onClick={() => setSelectedFilter('medium')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium'';
                         ? 'bg-yellow-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 "hover": "bg-gray-600'`;
-                    "}`}
-                  >;
                     Medium;
-                  </button>;
-                  <button';
                     onClick={() => setSelectedFilter('low')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low'';
                         ? 'bg-blue-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 "hover": "bg-gray-600'`;
-                    "}`}
-                  >;
                     Low;
-                  </button>;
-                </div>;
-                <button;
                   onClick={startAnalysis}
                   disabled={isAnalyzing}";
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium "hover": "from-purple-600 "hover":to-pink-600 transition-all duration-300 "disabled":opacity-50 "disabled":cursor-not-allowed flex items-center space-x-2";
-                >;
                   {isAnalyzing ? (";
                     <Zap className="w-4 h-4 animate-spin"  />;
                   ) : (";
@@ -233,8 +186,6 @@ export default function Page("props": "any) {;
                   <span>;
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </span>;
-                </button>;
-              </div>;
               {/* Search */}";
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />;
@@ -245,7 +196,6 @@ export default function Page("props": "any) {;
                   onChange={e => setSearchTerm(e.target.value)}";
                   className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 "focus": "outline-none "focus":ring-2 "focus":ring-purple-500 "focus":border-transparent";
                 />;
-              </div>;
               {/* Issues Table */"}";
               <div className="bg-gray-800 rounded-lg overflow-hidden">";
                 <div className="overflow-x-auto">";
@@ -255,19 +205,10 @@ export default function Page("props": "any) {;
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
                           Severity;
                         </th>";
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
                           Page;
-                        </th>";
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
                           Issue Type;
-                        </th>";
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
                           Description;
-                        </th>";
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
                           Status;
-                        </th>";
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
                           Actions;
                         </th>;
                       </tr>;
@@ -277,88 +218,54 @@ export default function Page("props": "any) {;
                         <tr;
                           key={index}";
                           className=""hover": "bg-gray-700/50 transition-colors";
-                        >";
                           <td className="px-6 py-4 whitespace-nowrap">";
                             <div className="flex items-center space-x-2">;
                               {getSeverityIcon(issue.severity)"}
                               <span`;
                                 className={`text-sm font-medium ${getSeverityColor(issue.severity)}`}
-                              >;
                                 {issue.severity.charAt(0).toUpperCase() +;
                                   issue.severity.slice(1)}
-                              </span>;
-                            </div>;
                           </td>";
-                          <td className="px-6 py-4 whitespace-nowrap">";
                             <div className="max-w-xs">";
                               <div className="text-sm font-medium text-white">;
                                 {issue.pageTitle || 'Untitled'}
-                              </div>;
                               <a;
                                 href={issue.pageUrl}";
                                 target="_blank";
                                 rel="noopener noreferrer";
                                 className="text-purple-400 "hover": "text-purple-300 transition-colors text-xs truncate block";
-                              >;
                                 {issue.pageUrl"}
                               </a>;
-                            </div>;
-                          </td>";
-                          <td className="px-6 py-4 whitespace-nowrap">";
                             <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">;
                               {getIssueTypeLabel(issue.issueType)}
-                            </span>;
-                          </td>";
                           <td className="px-6 py-4">";
                             <div className="max-w-md">";
                               <div className="text-sm text-gray-300 mb-2">;
                                 {issue.description}
-                              </div>";
                               <div className="text-xs text-purple-400">;
                                 <strong>"Recommendation": "</strong>{' '"}
                                 {issue.recommendation}
-                              </div>;
-                            </div>;
-                          </td>";
                           <td className="px-6 py-4 whitespace-nowrap">;
-                            <span`;
                               className={`text-sm font-medium ${getStatusColor(issue.status)}`}
-                            >;
                               {issue.status';
                                 .replace('_',);
                                 .charAt(0);
                                 .toUpperCase() +';
                                 issue.status.replace('_',).slice(1)}
-                            </span>;
-                          </td>";
-                          <td className="px-6 py-4 whitespace-nowrap">";
-                            <div className="flex space-x-2">;
                               <button";
                                 className="p-2 text-blue-400 "hover": "text-blue-300 transition-colors";
                                 title="View Page";
-                              >";
                                 <Eye className="w-4 h-4"  />;
-                              </button>;
-                              <button";
                                 className="p-2 text-green-400 "hover":text-green-300 transition-colors";
                                 title="Mark as Resolved";
-                              >";
                                 <CheckCircle className="w-4 h-4"  />;
-                              </button>;
-                              <button";
                                 className="p-2 text-yellow-400 "hover":text-yellow-300 transition-colors";
                                 title="Edit";
-                              >";
                                 <Edit3 className="w-4 h-4"  />;
-                              </button>;
-                            </div>;
                           </td>;
-                        </tr>;
                       ))"}
                     </tbody>;
                   </table>;
-                </div>;
-              </div>;
               {/* Quick Actions */}";
               <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">";
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">";
@@ -371,9 +278,6 @@ export default function Page("props": "any) {;
                     <li>• Include meta descriptions</li>;
                     <li>• Add proper heading structure</li>;
                   </ul>;
-                </div>;
-</div>;
-            </div>;
           </motion.div>;
         </motion.div>)"}
               {/* Quick Actions */}"
@@ -389,24 +293,13 @@ export default function Page("props": "any) {;
                     <li>• Add proper heading structure</li>
                   </ul>
                 </div>
-</div>
-            </div>
           </motion.div>
         </motion.div>)}
     </>)};
 export default ContentQualityAnalyzer;
-;
 export {ContentQualityAnalyzer};
-;
-export {ContentQualityAnalyzer};
-;
-export {ContentQualityAnalyzer};
-;
-export {ContentQualityAnalyzer};
-;
 export {ContentQualityAnalyzer};";
 "";
 }"";
-</motion>;
 </motion>;
 </motion>

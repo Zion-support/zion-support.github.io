@@ -11,4 +11,3 @@ export default function CartItem({ }: CartItemProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -1,4 +1,3 @@
-
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
@@ -12,7 +11,6 @@ interface ProjectActionsProps {;
   isTalent:boolean,;
   onAddMilestone:() => void;
 }
-;
 export function ProjectActions({;
   projectId,;
   isUnderDispute,;
@@ -38,8 +36,6 @@ export function ProjectActions({;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
-        </Button>;
-      )}
     </div>;
   ),;}
  {;

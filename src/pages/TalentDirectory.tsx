@@ -6,7 +6,6 @@
                 </div>
               )}
             </ErrorBoundary>
-          </div>
 
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
@@ -23,7 +22,6 @@
                     <X className="h-4 w-4" />
                     <span className="sr-only">Close</span>
                   </Button>
-                </div>
                 <FilterSidebar
                   searchTerm={searchTerm}
                   setSearchTerm={setSearchTerm}
@@ -43,28 +41,13 @@
                   setSortOption={setSortOption}
                   clearFilters={clearFilters}
                   isMobileFilterOpen={isMobileFilterOpen}
-                />
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
   )
 }
   );
-}
 
   const is_admin = user?.user_type === 'admin';
   const paginated_talents = filtered_talents;
   const page_key = `talent - directory-${route_key}-${router.as_path}`);
-}
-  );
-}
 
         </div>;
-      </div>;
-    </div>;
-  );
-}
 ;

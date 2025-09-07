@@ -130,7 +130,7 @@ function TalentDashboardContent() {
                   <Button className='w-full' asChild>
                     <Link href='/messages'>
                       <MessageSquare className='h-4 w-4 mr-2' />
-                
+
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
@@ -329,7 +329,7 @@ import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInte
               <TabsList className='mb-6'>
                 <TabsTrigger value='job-matches' className='flex items-center'>
                   <BriefcaseIcon className='h-4 w-4 mr-2' />
-          
+
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -345,9 +345,9 @@ import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInte
                 <SuggestedJobs />
               </TabsContent>
               <TabsContent value='applications' className='mt-0'>
-              
+
               <TabsContent value="job-matches" className="mt-0">
-              
+
               <TabsContent value="applications" className="mt-0">
 
                 <MyApplications />
@@ -357,7 +357,7 @@ import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInte
                 <Card className='bg-muted/30'>
                   <CardContent className='pt-6 text-center'>
                     <p className='text-muted-foreground'>
-              
+
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">

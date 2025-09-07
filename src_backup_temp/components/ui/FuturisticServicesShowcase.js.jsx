@@ -59,7 +59,6 @@ export default function FuturisticServicesShowcase()() {
         {"id": 'cybersecurity', "name": 'Cybersecurity', "icon": "<Shield className="w-4 h-4" />"}
         {"id": 'quantum-computing', "name": 'Quantum Computing', "icon": "<Rocket className="w-4 h-4" />"}
         {"id": 'blockchain-web3', "name": 'Blockchain & Web3', "icon": "<Star className="w-4 h-4" />"}
-    ];
     const filteredServices = selectedCategory === 'all';
         ? services;
         : "services.filter(service => service.id === selectedCategory);
@@ -93,12 +92,6 @@ export default function FuturisticServicesShowcase()() {
           </p>;
         </motion.div>;
         {/* Category Filter */"}
-        <motion.div initial = {;
-  { "opacity": "0;
-  "y": 30 ;
-"}} whileInView = {;
-  { "opacity": "1;
-  "y": 0 ;
 "}} transition = {;
   { "duration": "0.8;
   "delay": 0.2 ;
@@ -109,7 +102,6 @@ export default function FuturisticServicesShowcase()() {
               {category.icon}
               <span>{category.name}</span>;
             </button>))}
-        </motion.div>;
         {/* Services Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8">;
           <AnimatePresence mode="wait">;
@@ -121,8 +113,6 @@ export default function FuturisticServicesShowcase()() {
   "scale": 1 ;
 "}} exit = {;
   { "opacity": "0", "y": "-30;
-  "scale": 0.9 ;
-"}} transition = {;
   { "duration": "0.5;
   "delay": index * 0.1 ;
 "}} onHoverStart={() => setHoveredService(service.id)} onHoverEnd={() => setHoveredService(null)} className={`relative group cursor-pointer ${service.popular ? 'ring-2 ring-cyan-500/50' : ''}`}>;
@@ -132,14 +122,11 @@ export default function FuturisticServicesShowcase()() {
                   {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">;
                         Most Popular;
-                      </div>;
                     </div>)}
                   {/* Service Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-"hover": "scale-110 transition-transform duration-300`"}>;
                     <div className="text-white">;
                       {service.icon}
-                    </div>;
-                  </div>;
                   {/* Service Content */}
                   <h3 className="text-xl font-bold text-white mb-3 group-"hover": "text-cyan-400 transition-colors duration-300">;
                     {service.name"}
@@ -149,11 +136,9 @@ export default function FuturisticServicesShowcase()() {
                     {service.name}
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {service.description}
-                  </p>;
                   {/* Price */}
                   <div className="text-2xl font-bold text-cyan-400 mb-4">;
                     {service.price}
-                  </div>;
                   {/* Features */}
                   <ul className="space-y-2 mb-6">;
                     {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
@@ -168,70 +153,31 @@ export default function FuturisticServicesShowcase()() {
                   </button>;
                   {/* Hover Effects */"}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-"hover": "opacity-100 transition-opacity duration-300" />;
-                </div>;
                 {/* Floating Elements */"}
                 <AnimatePresence>;
                   {hoveredService === service.id && (<>;
                       <motion .div initial = {;
-  { "opacity": "0;
-  "scale": 0 ;
-"}} animate = {;
-  { "opacity": "1;
-  "scale": 1 ;
-"}} exit = {;
-  { "opacity": "0;
   "scale": 0 ;
 "}} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping" />;
-                      <motion .div initial = {;
-  { "opacity": "0;
-  "scale": 0 ;
-"}} animate = {;
-  { "opacity": "1;
-  "scale": 1 ;
-"}} exit = {;
-  { "opacity": "0;
-  "scale": 0 ;
 "}} className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />;
                     </>)}
                 </AnimatePresence>;
               </motion.div>))}
-          </AnimatePresence>;
-        </div>;
         {/* Bottom CTA */}
-        <motion.div initial = {;
-  { "opacity": "0;
-  "y": 30 ;
-"}} whileInView = {;
-  { "opacity": "1;
-  "y": 0 ;
-"}} transition = {;
-  { "duration": "0.8;
   "delay": 0.4 ;
 "}} className="text-center mt-16">;
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">;
             <h3 className="text-2xl "md": "text-3xl font-bold text-white mb-4">;
               Ready to Transform Your Business?;
-            </h3>;
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Join thousands of companies already leveraging our revolutionary technology solutions ;
               to accelerate growth and innovation.;
-            </p>;
             <div className="flex flex-col "sm":flex-row gap-4 justify-center">;
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 "hover":from-cyan-600 "hover":to-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg "hover":shadow-cyan-500/25">;
                 View All Services;
-              </button>;
               <button className="border-2 border-cyan-500/50 "hover":border-cyan-400 text-cyan-400 "hover":text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 "hover":bg-cyan-500/10">;
                 Schedule Demo;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
     </section>)"}
-</motion>;
-</motion>;
-</motion>;
-</motion>;
 </motion>;
 }} className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">
@@ -247,15 +193,7 @@ export default function FuturisticServicesShowcase()() {
               </button>
               <button className="border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500/10">
                 Schedule Demo
-              </button>
             </div>
-          </div>
         </motion.div>
-      </div>
     </section>)}
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </motion>

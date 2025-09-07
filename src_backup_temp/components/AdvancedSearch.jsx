@@ -28,7 +28,6 @@ export function AdvancedSearch("props": "any) {;
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    useEffect(() => {;
         if (query.trim()) {;
             const filtered = mockSuggestions;
                 .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()) ||;
@@ -41,7 +40,6 @@ export function AdvancedSearch("props": "any) {;
             setShowSuggestions(false);}
     }, [query]);
     const handleSuggestionClick = ("props": "any) => {setQuery(suggestion.text);
-        setShowSuggestions(false);
         // Here you would typically trigger a search"};
     const toggleFilter = ("props": "any) => {setSelectedFilters(prev => prev.includes(category);
             ? prev.filter(f => f !== category);
@@ -54,17 +52,12 @@ export function AdvancedSearch("props": "any) {;
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald" />;
             case 'recent': return <Clock className="w-4 h-4 text-zion-gold" />;
             "default": return <Search className="w-4 h-4 text-zion-slate" />;
-        "}
-    };
     const getSuggestionColor = ("props": "any) => {;
-        switch (type) {;
             case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
             case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';
             case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
             "default": return 'bg-zion-slate/10 border-zion-slate/20';
-        "}
-    };
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>;
     return (
         <div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
@@ -78,8 +71,6 @@ export function AdvancedSearch("props": "any) {;
           <button onClick={() => setIsExpanded(!isExpanded)"} className="p-2 text-zion-slate-light "hover": "text-zion-slate transition-colors" title="Advanced Filters">;
             <Filter className="h-5 w-5" />;
           </button>;
-        </div>;
-      </div>;
       {/* Advanced Filters */"}
       {isExpanded && (<div className="mt-4 p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">;
           <div className="flex items-center justify-between mb-3">;
@@ -87,7 +78,6 @@ export function AdvancedSearch("props": "any) {;
             {selectedFilters.length > 0 && (<button onClick={clearFilters"} className="text-xs text-zion-cyan "hover": "text-zion-cyan-light transition-colors">;
                 Clear All;
               </button>)"}
-          </div>;
       {/* Advanced Filters */}
       {isExpanded && (<div className="mt-4 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">
           <div className="flex items-center justify-between mb-3">
@@ -102,50 +92,31 @@ export function AdvancedSearch("props": "any) {;
                     : 'bg-transparent text-zion-slate border-zion-slate-light "hover": "border-zion-cyan "hover":text-zion-cyan'"}`}>;
                 {category}
               </button>))}
-          </div>;
         </div>)}
-;
       {/* Search Suggestions */}
       {showSuggestions && suggestions.length > 0 && (<div className="absolute top-full left-0 right-0 mt-2 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">;
           {suggestions.map(suggestion => (<button key={suggestion.id"} onClick={() => handleSuggestionClick(suggestion)} className="w-full p-3 text-left "hover": "bg-zion-slate-light/10 transition-colors border-b border-zion-slate-light "last":border-b-0">;
               <div className="flex items-center gap-3">;
                 <div className={`p-2 rounded-lg ${getSuggestionColor(suggestion.type)"}`}>;
                   {getSuggestionIcon(suggestion.type)}
-                </div>;
                 <div className="flex-1">;
                   <div className="flex items-center gap-2">;
                     <span className="font-medium text-zion-slate">{suggestion.text}</span>;
                     <span className="text-xs text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded">;
                       {suggestion.category}
                     </span>;
-                  </div>;
                   <div className="flex items-center gap-2 mt-1">;
                     <span className="text-xs text-zion-slate-light">;
                       {suggestion.type.charAt(0).toUpperCase() + suggestion.type.slice(1)}
-                    </span>;
                     <span className="text-xs text-zion-emerald">;
                       {suggestion.relevance}% relevant;
-                    </span>;
-                  </div>;
-                </div>;
-              </div>;
-            </button>))}
-;
           <div className="p-3 bg-zion-slate-light/5 border-t border-zion-slate-light">;
             <div className="flex items-center gap-2 text-xs text-zion-slate-light">;
               <Sparkles className="w-3 h-3" />;
               AI-powered suggestions based on your query;
-            </div>;
-          </div>;
-        </div>)}
-;
       {/* No Results */}
       {showSuggestions && query.trim() && suggestions.length === 0 && (<div className="absolute top-full left-0 right-0 mt-2 p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 text-center">;
           <div className="text-zion-slate-light mb-2">No results found for "{query"}"</div>;
           <div className="text-xs text-zion-slate-light">;
             Try different keywords or browse our categories;
-          </div>;
-        </div>)}
-    </div>)}
-;
 export default AdvancedSearch;

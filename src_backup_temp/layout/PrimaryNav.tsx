@@ -3,22 +3,18 @@ import React from 'react';
       router.push(`/search/${slugify(query)}`);
       setQuery('');
       // // // // // `;
-      router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
 ;
   const [isDark, setIsDark] = useState<typeof false>(false);
-;
   const toggleTheme = (..."args": "unknow n[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here;
   "};
-;
   return ();
     <>;
       <header;
         className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
         role="navigation";
-        ;
         data-testid="header";
 ";
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 "sm": "p x-6">;
@@ -27,7 +23,6 @@ import React from 'react';
           <div className="hidden "md": "block order-1 flex-shrink-0">;
             <ResponsiveNavigation  />;
           </div>;
-                  // // // // // // // // ;
                 onSelectSuggestion = {;
   (sugg) => {;
                   // // // // // ;
@@ -43,8 +38,6 @@ import React from 'react';
                     router.push(`/blog/${sugg.slug}`)} else {;
                     // "Default": "search results page with slug;`;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)"}`)};
-                  setQuery('');
-;
                   // Track analytics event';
                   if(typeof window !== 'null' && window.gtag) {;
                     window.gtag('event',search_suggestion_click', {;
@@ -78,43 +71,28 @@ import React from 'react';
                 <HoverCardContent>";
                   <div className="p-4">";
                     <p className="text-sm text-muted-foreground">Cart preview</p>;
-                  </div>;
                 </HoverCardContent>;
               </HoverCard>;
-            </div>;
             {/* Compact controls group */}";
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
               <ModeToggle  />;
               <LanguageSelector  />;
-            </div>;
             {/* Auth links - flex wrap for very small screens */}";
             <div className="flex items-center gap-1 flex-wrap">;
               {!isLoggedIn && (;
-                <>;
-                  <Link";
                     href="/auth/login";
                     className="text-sm "hover": "tex t-primary whitespace-nowrap";
                     data-testid="login-link";
                     {t('auth.login')"}
-                  </Link>;
-                  <Link";
                     href="/signup";
-                    className="text-sm "hover": "tex t-primary whitespace-nowrap";
                     {t('auth.signup')"}
-                  </Link>;
                 </>;
-              )}
               {isLoggedIn && <UserMenu  />}
-            </div>;
-          </div>;
-          ;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsOpen(!isOpen)}";
             className=""lg": "hidden text-white "hover": tex t-cyan-400 transition-colors duration-200";
-          >";
             {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />"}          </button>;
-        </div>;
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isOpen && ;
@@ -126,14 +104,9 @@ import React from 'react';
               animate = {;
   { "opacity": "1",;
   "height": 'auto';
-}}
               exit = {;
-  { "opacity": "0",;
-  "height": "0;
-"}}
               transition={{ "duration": "0.3 "}}";
               className=""lg": "hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10";
-            >";
               <div className="px-4 py-6 space-y-4">;
                 {services.map((category", index) => (;
                   <div key={index}>";
@@ -158,45 +131,22 @@ import React from 'react';
                           onClick={( setIsOpen(false)}
                         >
                           {service.name}
-                        </Link>;
                       ))}
-                    </div>;
-                  </div>;
-                ))}
-;
                 <div className="pt-4 border-t border-white/10 space-y-2">;
                   <Link                    to="/solutions";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
                     onClick={: unknown setIsOpen(false)"}
-                  >;
                     Solutions;
-                  </Link>;
                   <Link                    to="/about";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
                     About;
-                  </Link>;
                   <Link                    to="/blog";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
                     Blog;
-                  </Link>;
                   <Link                    to="/contact";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
                     Contact;
-                  </Link>;
-                </div>;
-              </div>;
             </motion.div>;
           )};
         </AnimatePresence>;
       </nav>;
     </header>;
-  )}
 '"`;
 </motion>;
 </typeof>

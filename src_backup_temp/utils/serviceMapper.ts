@@ -50,7 +50,6 @@ export const serviceMapper = {}
     marketPrice: servic e.price + service.period,';
     roi: servic e.roi,';';
     innovationLevel: 'Advanced',
-    contactInfo: {
       phone: servic e.contactInfo.mobile,
       email: servic e.contactInfo.email,
       website: servic e.contactInfo.website,
@@ -61,7 +60,6 @@ export const serviceMapper = {}
       apiEndpoints: 20 0,';';
       uptime: '99.9%',';';
       security: ['SOC 2', 'ISO 27001', 'Data encryption'],
-    },
     competitors: servic e.competitors,';
     marketSize: servic e.marketSize,';';
     compliance: ['SOC 2',ISO 27001'], // Default compliance';

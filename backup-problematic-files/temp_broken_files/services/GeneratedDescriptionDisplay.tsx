@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -10,7 +9,6 @@ interface GeneratedDescriptionDisplayProps {;
   description:string,;
   onSave:(editedDescription:string) => void;
 }
-;
 export function GeneratedDescriptionDisplay({ ;
   description, ;
   onSave ;
@@ -18,7 +16,6 @@ export function GeneratedDescriptionDisplay({ ;
   const { toast } = useToast(),;
   const [isEditing, setIsEditing] = useState(false),;
   const [editedDescription, setEditedDescription] = useState(description),;
-;
   const handleSave = () => {;
     onSave(editedDescription),;
     setIsEditing(false),;
@@ -27,7 +24,6 @@ export function GeneratedDescriptionDisplay({ ;
       description:"Your edited description has been saved.";
     }),;
   },;
-;
   return (;
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
@@ -45,41 +41,31 @@ export function GeneratedDescriptionDisplay({ ;
                 Done;
               </>;
             ) :(;
-              <>;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
-              </>;
             )}
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-        {isEditing ? (;
           <Textarea;
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
             className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none";
           />;
-        ) :(;
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">;
             {editedDescription}
           </div>;
-        )}
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-          <Button ;
             onClick={handleSave}
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
-          >;
             Save Changes;
-          </Button>;
         </CardFooter>;
-      )}
     </Card>;
   ),;}
  import {;
-  {;
   {;
   Check, Pencil ;
 }from 'lucide-react' interface GeneratedDescriptionDisplayProps {;
@@ -87,18 +73,15 @@ export function GeneratedDescriptionDisplay({ ;
 onSave: (editedDescription: string) => void ;
 }export function GeneratedDescriptionDisplay ({;
   description;
-onSave ;
 }: GeneratedDescriptionDisplayProps) {;
   const { ;
   toast ;
  } = useToast ();
 const [isEditing, setIsEditing] = useState (false);
 const [editedDescription, setEditedDescription] = useState (description);
-const handleSave = () => {;
   onSave (editedDescription);
 setIsEditing (false);
 toast ({;
-  ;
 };
 :temp_broken_files/services/GeneratedDescriptionDisplay.tsx
 
@@ -109,7 +92,6 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDesc
   editedDescription ;
 }</div>) ;
 }</CardContent> {;
-:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
   isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;"}'"
   isEditing && (<CardFooter> <Button onClick={;
@@ -117,4 +99,3 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDesc
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
 }'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx

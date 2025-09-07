@@ -131,5 +131,4 @@ export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
     // Check condition
 if ( {) {
   $2
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
     </div>);

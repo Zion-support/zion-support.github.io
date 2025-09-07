@@ -121,7 +121,7 @@ function ApiKeysManager() {
       description: 'Create and manage quotes'
 
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
-    
+
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
     setKeyName("");
@@ -129,11 +129,11 @@ function ApiKeysManager() {
 
     await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null)
-  
+
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId);
     setShowDeleteConfirm(null)
-  
+
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
@@ -366,24 +366,24 @@ export function ApiKeysManager() {;
 
     clearNewApiKey
   } = useApiKeys(),
-  
+
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
+
   // Create key form state
   const [keyName, setKeyName] = useState(""),
 
   }),
-  
+
     if (keyName.trim() === "" || selectedScopes.length === 0) return,
-    
+
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
 
     await regenerateApiKey(keyId),
-  
+
     await revokeApiKey(keyId),
 
                   <Label>Scopes</Label>
@@ -580,7 +580,7 @@ export function ApiKeysManager() {;
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-                
+
                   {key.scopes.map((scope) => (
 
                       {scope}

@@ -19,23 +19,18 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
+
     return this.props.children;
-  }
-}
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -56,7 +51,6 @@ import { Button } from '@/components / ui / button';
   TooltipTrigger,
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
-interface EmptyStateProps {
   title: string;
   subtitle: string;
   cta: string;
@@ -76,7 +70,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
 
-interface EmptyStateProps {
   title: string,
   subtitle: string,
   cta: string,
@@ -91,7 +84,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
   href,;
   hasSession,;
 
-}) => {  return (
     <div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
@@ -114,7 +106,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
     <div className="text-center py-16">
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
         <MessageSquare className="h-10 w-10 text-zion-purple" />
-      </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
 
       <p className="text-muted-foreground mb-6">{subtitle}</p>
@@ -133,14 +124,11 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 
         </Tooltip>;
       </TooltipProvider>;
-    </div>;
   );
 
 export default EmptyState;
 
 };
-
-export default EmptyState;
 
   has_session: boolean;
 const EmptyState: React.FC < EmptyStateProps> = ({
@@ -149,28 +137,17 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   cta,
   href,
   has_session,
-}) => {  return (
     <div className='text - center py - 16'>;
       <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
-      </div>;
       <h2 className='text - xl font - medium mb - 2'>{title}</h2>;
       <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text - xl font - medium mb - 2">{title}</h2>;
       <p className="text - muted - foreground mb - 6">{subtitle}</p>;
-      <TooltipProvider>;
-        <Tooltip>;
           <TooltipTrigger as_child>;
             {has_session ? (
               <Button as_child>;
-                <Link href={href}>{cta}</Link>;
               </Button>) : (
               <Button disabled>{cta}</Button>)}
-          </TooltipTrigger>;
           {!has_session && <TooltipContent > Login required</TooltipContent>}
-        </Tooltip>;
-      </TooltipProvider>;
     </div>);
-}
-export default EmptyState;
 },;
-export default EmptyState;

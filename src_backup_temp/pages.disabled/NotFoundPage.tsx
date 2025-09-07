@@ -8,7 +8,6 @@ const "NotFoundPage": React.FC = () => {
         </h1>
         <p className="text-xl text-gray-600 text-center">The page you're looking for doesn't exist.</p>
       </div>
-    </div>
   );
 };
 export { NotFoundPage };

@@ -23,7 +23,6 @@ export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
           Type a name or skill to filter results;
         </p>;
       </div>;
-    </div>;
   ),;}
  export function SearchFilter ({;
   searchTerm, setSearchTerm ;

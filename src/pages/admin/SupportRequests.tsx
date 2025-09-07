@@ -205,13 +205,13 @@ export default function SupportRequests() {;
           </div>
           <div className='mt-4 md:mt-0'>
             <Button className='bg-zion-purple hover:bg-zion-purple-light'>
-          
+
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
 
               New Support Case
             </Button>
-        
+
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -220,17 +220,17 @@ export default function SupportRequests() {;
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
-          
+
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
-          
+
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
-          
+
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
               <CardDescription>Total Requests</CardDescription>
         <Tabs defaultValue='all' className='mb-8'>
-        
+
         <Tabs defaultValue="all" className="mb-8">
 
           <TabsList>
@@ -295,7 +295,7 @@ export default function SupportRequests() {;
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
-              
+
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
@@ -310,7 +310,7 @@ export default function SupportRequests() {;
               </Select>
 
                   <SelectValue placeholder='Priority' />
-              
+
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                   <SelectValue placeholder="Priority" />
 
@@ -320,7 +320,7 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
 
                   <SelectValue placeholder='Category' />
-              
+
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                   <SelectValue placeholder="Category" />
 
@@ -341,7 +341,7 @@ export default function SupportRequests() {;
 
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
-            
+
             {/* Support Requests Table */}
               <CardContent className="p-0">
                 <Table>
@@ -507,11 +507,11 @@ export default function SupportRequests() {;
               <p className="text-zion-slate-light">
                 This tab will show support requests that have been escalated by agents or the system.
           </TabsContent>
-          
+
           <TabsContent value="ai-flagged" className="mt-6">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
                 This tab shows issues that our AI system has identified as requiring human attention.
-          
+
           <TabsContent value="need-response" className="mt-6">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
                 These support requests have been waiting for an agent response for over 24 hours.

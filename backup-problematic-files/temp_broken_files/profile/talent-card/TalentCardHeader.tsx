@@ -1,4 +1,3 @@
-
 import React from "react",;
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from "./TalentCardAvatar",;
@@ -11,7 +10,6 @@ interface TalentCardHeaderProps {;
   availabilityType:string,;
   yearsExperience:number;
 }
-;
 export function TalentCardHeader({ ;
   fullName,;
   professionalTitle, ;
@@ -22,7 +20,6 @@ export function TalentCardHeader({ ;
   return (;
     <div className="flex items-start gap-4 mb-4">;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
-      ;
       <div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
@@ -32,15 +29,10 @@ export function TalentCardHeader({ ;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
           </h3>;
-          ;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-        ;
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
-      </div>;
-    </div>;
   ),;}
- interface TalentCardHeaderProps {;
   fullName: string;
 professionalTitle: string;
 profilePicture?: string;

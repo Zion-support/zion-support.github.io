@@ -107,7 +107,6 @@ export function ReferralLeaderboard() {;
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 ;
-export function ReferralLeaderboard() {;
     { rank: 1, name: "Alex Johnson", referrals: 24 },;
     { rank: 4, name: "Casey Brown", referrals: 12 };
     { rank: 5, name: "Jordan Lee", referrals: 10 }];

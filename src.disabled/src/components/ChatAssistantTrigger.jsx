@@ -11,4 +11,3 @@ export default function ChatAssistantTrigger({ }: ChatAssistantTriggerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

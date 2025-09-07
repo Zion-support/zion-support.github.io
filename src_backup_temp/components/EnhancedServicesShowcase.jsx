@@ -23,27 +23,16 @@ export default function Page("props": "any) {;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
 }
     return matchesCategory && matchesSearch});
-}
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-}
-    return matchesCategory && matchesSearch});
-}
   const containerVariants = {}
-;
     "hidden": "{"opacity": 0"},;
     "visible": "{"}
-;
       "opacity": "1",;
 "transition": "{"}
-;
         "staggerChildren": "0.1","delayChildren": "0.2"}}}
-;
   const itemVariants = {}
-;
     "hidden": "{"opacity": 0", "y": "20"},;
       "y": "0",;
 "transition": "{"duration": 0.5"}}}
-;
   return();";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""{/* comment */}"";";
       <section className="py-20 px-4 "sm": "px-6 "lg":px-8">""",";
@@ -56,7 +45,6 @@ export default function Page("props": "any) {;
           >"";
             Comprehensive"";";
             <span className = "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"{" "}
-;
               Technology Solutions;
             </span>;
           </motion.h1>"";
@@ -83,7 +71,6 @@ export default function Page("props": "any) {;
           </motion.div> {/* comment */}"";";
             className = "flex flex-col "md": "flex-row gap-4 justify-center items-center mb-12"",";
             transition="{{" "duration": "0.6", "delay": "0.6 "}}
-;
             <input"";
               type = "text"",;
               placeholder = "Search services..."">;
@@ -93,14 +80,9 @@ export default function Page("props": "any) {;
             <div className="flex flex-wrap gap-2"> {categories.map(category => (,;
     "hidden": "{ opacit","y": "0 "},;
     "hidden": "{"opacity": 0"}, "visible": "{"}
-;
-      "opacity": "1",;
         "staggerChildren": "0.1", "delayChildren": "0.2"}}}
-;
     "hidden": "{opacit","y": "0", "y": "20"},;
-      "y": "0",;
       "transition": "{duratio","n": "0.5"}}}
-;
   return()";
     <;<div className="&apos;min-h-screen" bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white&apos;>"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,";
       <section className="&apos;py-20" px-4 "sm": "px-6 "lg":px-8&apos",>"&apos,&apos,&apos;&apos;";
@@ -111,14 +93,12 @@ export default function Page("props": "any) {;
           >&apos;&apos,;
             Comprehensive&apos;&apos,&apos;&apos,";
             <span className="&apos;text-transparent" bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400&apos;>&apos {&apos; &apos}
-;
               Technology Solutions&apos;&apos;
             </span>";
           </motion.h1>&apos;&apos,&apos;&apos,;
           <motion.p&apos;&apos,&apos;";
             className="&apos;text-xl" text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos>;
     "hidden": "{"opacity": 0", "y": "20"}, "visible": "{"}
-;
       "y": "0", "transition": "{"duration": 0.5"}}}";
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""{/* comment */}""""";
       <section className="py-20 px-4 "sm": "px-6 "lg":px-8">"""";
@@ -132,8 +112,6 @@ export default function Page("props": "any) {;
           </motion.h1>""""";
           <motion.p"""";
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-          >;
-            Discover our extensive portfolio of innovative micro SAAS services,;
             enterprise IT solutions, cutting-edge AI services, and emerging,;
 technology solutions designed to transform your business.&apos;&apos;</motion.p>";
           {/* comment */}&apos;&apos,&apos;&apos,;
@@ -161,7 +139,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
               className="&apos;px-6" py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": "outline-none "focus":border-blue-400 "focus":ring-2 "focus":ring-blue-400/20 w-full m","d": "w-80&apos",&apos,&apos;/>&apos;&apos,&apos;&apos,",;
             <div className = "&apos,flex" flex-wrap gap-2&apos,>;
               {categories.map(category => (&apos}
-;
             technology solutions designed to transform your business.</motion.p>";
           {/* comment */}"""";
           <motion.div"""";";
@@ -176,7 +153,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className="text-gray-300">kleber@ziontechgroup.com</div>"""";
                 <div className="text-blue-400 font-semibold">🌐 Website</div>"""";
                 <div className="text-gray-300">ziontechgroup.com</div>"",;
-          {/* comment */}"""";
             className="flex flex-col "md": "flex-row gap-4 justify-center items-center mb-12""",;
             <input"""",">;
               type = "text"""","";
@@ -189,7 +165,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <button key="{category.id}"";
                   onClick="{()" => setSelectedCategory(category.id)}";
                   className="{"px-4" py-2 rounded-lg border transition-all duration-300 ${}
-;
                     selectedCategory == = category.id",;
                       ? "bg - blue-600 border-blue-400 text-white""",;
                       : "bg-white/10 border-white/20 text-gray-300 "hover": "bg-white/20 "hover":border-white/40""""}"}"">"";";
@@ -203,10 +178,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                       : "bg-white/10 border-white/20 text-gray-300 "hover": "bg-white/20 "hover":border-white/40""""}"}""">""""";
                   <span className = "mr-2">{category.icon}</span>;
                   {category.name}
-;
                 </button>;
               ))}
-;
           </motion.div>;
       </section>;
 ""{/* comment */}"";";
@@ -216,7 +189,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
             initial = "hidden"",;
             whileInView="visible"";";
             viewport = "{{" "once": "true "}}
-;
           >{filteredServices.map((service, index) => (;
               <motion.div,;
                 key = {service.id}"">;
@@ -249,12 +221,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",
                   "";"
                   <p className = "text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}
-;
                   </p>;
-""{/* comment */}"";";
                 <p className = "text-gray-300 text-sm mb-4 text-center"> {service.tagline}
-;
-""{/* comment */}"";";
                 <div className="bg-white/5 rounded-lg p-4 mb-4">"";";
                   <h4 className = "text - sm font-semibold text-green-400 mb-2">,;
                     Pricing"",;
@@ -262,10 +230,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <div className="space-y-1 text-xs text-gray-300">;
                     <div>"Monthly": "{service.pricing.monthly"}</div>;
   );
-}
                     <div>"Yearly": "{service.pricing.yearly"}</div>;
                     <div>"Setup": "{service.pricing.setup"}</div>;
-""{/* comment */}"";";
                 <div className="mb-4">"";";
                   <h4 className="text - sm font-semibold text-blue-400 mb-2">,;
                     Key Features"";";
@@ -300,10 +266,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     {service.name}&apos;&apos,&apos;&apos,;
                   </h3>&apos;&apos,&apos;&apos,";
                   <p className="&apos;text-sm" text-blue-400 font-medium&apos;>&apos {service.category.replace(&apos;-&apos).toUpperCase()}&apos;&apos,;
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <p className="&apos;text-gray-300" text-sm mb-4 text-center&apos;>;
                   {service.tagline}&apos,;
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <div className="&apos;bg-white/5" rounded-lg p-4 mb-4&apos;>"&apos;&apos,&apos;&apos;";
                   <h4 className="&apos;text-sm" font-semibold text-green-400 mb-2&apos;>";
                     Pricing&apos;&apos,&apos;&apos,;
@@ -321,32 +285,22 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 """{/* comment */}""""";
                 <p className="text-gray-300 text-sm mb-4 text-center">;
                   {service.tagline}";
-"""{/* comment */}""""";
                 <div className="bg-white/5 rounded-lg p-4 mb-4">"""";
                   <h4 className="text-sm font-semibold text-green-400 mb-2">";
                     Pricing""""";
                   </h4>"""";
-                  <div className="space-y-1 text-xs text-gray-300">;
-                    <div>"Monthly": "{service.pricing.monthly"}</div>;
-                    <div>"Yearly": "{service.pricing.yearly"}</div>;
-                    <div>"Setup": "{service.pricing.setup"}</div>;
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;";
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>";
                     Key Features&apos;&apos,&apos;&apos;";
                   <ul className="&apos;space-y-1&apos;">;
-""{/* comment */}"";"
                 <div className="bg-white/5 rounded-lg p-4 mb-4">"";"
                   <h4 className = "text - sm font-semibold text-green-400 mb-2">,
                     Pricing"",
                   </h4>"";"
                   <div className="space-y-1 text-xs text-gray-300">
                     <div>Monthly: {service.pricing.monthly}</div>
-    );
-}
                     <div>Yearly: {service.pricing.yearly}</div>
                     <div>Setup: {service.pricing.setup}</div>
-""{/* comment */}"";"
                 <div className="mb-4">"";"
                   <h4 className="text - sm font-semibold text-blue-400 mb-2">,
                     Key Features"";"
@@ -381,10 +335,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     {service.name}&apos;&apos,&apos;&apos,
                   &apos;&apos,&apos;&apos,"
                   <p className="&apos;text-sm" text-blue-400 font-medium&apos;>&apos {service.category.replace(&apos;-&apos).toUpperCase()}&apos;&apos,
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <p className="&apos;text-gray-300" text-sm mb-4 text-center&apos;>
                   {service.tagline}&apos,
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;bg-white/5" rounded-lg p-4 mb-4&apos;>"&apos;&apos,&apos;&apos;"
                   <h4 className="&apos;text-sm" font-semibold text-green-400 mb-2&apos;>"
                     Pricing&apos;&apos,&apos;&apos,
@@ -402,27 +354,19 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 """{/* comment */}"""""
                 <p className="text-gray-300 text-sm mb-4 text-center">
                   {service.tagline}"
-"""{/* comment */}"""""
                 <div className="bg-white/5 rounded-lg p-4 mb-4">""""
                   <h4 className="text-sm font-semibold text-green-400 mb-2">"
                     Pricing"""""
                   </h4>""""
-                  <div className="space-y-1 text-xs text-gray-300">
-                    <div>Monthly: {service.pricing.monthly}</div>
-                    <div>Yearly: {service.pricing.yearly}</div>
-                    <div>Setup: {service.pricing.setup}</div>
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;"
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>"
                     Key Features&apos;&apos,&apos;&apos;"
                   <ul className="&apos;space-y-1&apos;">
                     {service.features.slice(0, 4).map((feature, idx) => (&apos}
-;
                       <li&apos;&apos>;
                         key={idx}&apos;&apos,";";
                         className="&apos;text-xs" text-gray-300 flex items-center&apos;&apos,&apos;>"&apos;&apos,&apos;&apos;";
                         <span className="&apos;w-1.5" h-1.5 bg-blue-400 rounded-full mr-2&apos;>&apos,</span>";
-"""{/* comment */}""""";
                 <div className = "mb-4">"""";
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">";
                     Key Features"""";
@@ -431,47 +375,34 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                       <li""";"";
                         key={idx}"""";";
                         className = "text-xs text-gray-300 flex items-center""">""""";
-                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
                         {feature}
-;
                       </li>;
                   </ul>;
-""{/* comment */}"";";
                   <h4 className="text - sm font-semibold text-yellow-400 mb-2">,;
                     Key Benefits"";";
                   <ul className="space-y-1"> {service.benefits.slice(0, 3).map((benefit, idx) => (;";
                         <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
                   </ul>";
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                   <h4 className="&apos;text-sm" font-semibold text-yellow-400 mb-2&apos;>";
                     Key Benefits&apos;&apos,&apos;&apos;
                     {service.benefits.slice(0, 3).map((benefit, idx) => (&apos}";
                         <span className="&apos;w-1.5" h-1.5 bg-yellow-400 rounded-full mr-2&apos;>&apos,</span>";
-"""{/* comment */}""""";
                   <h4 className = "text-sm font-semibold text-yellow-400 mb-2">";
                     Key Benefits"""";
                     {service.benefits.slice(0, 3).map((benefit, idx) => (";
-                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
                         {benefit}
-;
-""{/* comment */}"";";
                 <div className="bg-white/5 rounded-lg p-3 mb-4">"";";
                   <div className="text-xs text-gray-300">""";";
                     <div className="mb-1">""";";
                       <span className = "text-green-400 font-medium">"ROI": "</span>{" ""}
-;
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <div className="&apos;bg-white/5" rounded-lg p-3 mb-4&apos;>"&apos;&apos,&apos;&apos;";
                   <div className="&apos;text-xs" text-gray-300&apos;>"&apos;&apos,&apos;&apos,";
                     <div className="&apos;mb-1&apos;">"&apos;&apos,&apos;&apos,";
                       <span className="&apos;text-green-400" font-medium&apos;>"ROI": "&apos",</span>{&apos, &apos}
-;
                       {service.roi}&apos;&apos,;
                     <div>&apos;&apos,&apos;&apos,&apos;&apos;";
                       <span className="&apos;text-blue-400" font-medium&apos;>"Setup": "&apos",</span>{&apos, &apos}
-;
                       {service.setupTime}&apos;&apos,;
-&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <div className="&apos;text-center&apos;">&apos,";
                   <Link&apos;&apos,";
                     to={service.link}&apos;&apos,";";
@@ -487,20 +418,14 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                         strokeLinejoin=&apos;round&apos;&apos,"",";
                         strokeWidth={2}&apos;&apos,";";
                         d="&apos;M9" 5l7 7-7 7&apos;&apos,/>&apos;&apos,;
-"""{/* comment */}""""";
                 <div className = "bg-white/5 rounded-lg p-3 mb-4">"""";
                   <div className="text-xs text-gray-300">"""""";
                     <div className="mb-1">"""""";
                       <span className="text-green-400 font-medium">"ROI": "</span>{" ""}
-;
                       {service.roi}
-;
                     <div>""";";
                       <span className = "text-blue-400 font-medium">"Setup": "</span>{" ""}
-;
                       {service.setupTime}
-;
-""{/* comment */}"";";
                 <div className = "text - center">,;
                   <Link"">;
                     to={service.link}"";";
@@ -518,7 +443,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                         d="M9 5l7 7-7 7"" />;
                     </svg>;
                   </Link>;
-"""{/* comment */}""""";
                 <div className = "text-center">";
                   <Link"""">;
                     to={service.link}"""";";
@@ -534,10 +458,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                         strokeLinejoin="round"""",">;
                         strokeWidth = {2}"""",;
                         d = "M9 5l7 7-7 7""" />;
-                    </svg>;
-                  </Link>;
           </motion.div> {/* comment */}
-;
           {filteredServices.length === 0 && ("";"";
               className="text-center py-12";";
               initial = "{{" "opacity": "0 "}}";
@@ -545,12 +466,10 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
               <p className="text-gray-400 text-lg">;
                 No services found matching your criteria.</p>;";
                 onClick = "{()" => {}
-;
                   setSelectedCategory("all")";
                   setSearchTerm(")";"}}"";";
                 className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg "hover": "bg-blue-700 transition-colors duration-300 ">",;
                 View All Services,;
-""{/* comment */}"";";
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";";
         <div className="max - w-4xl mx-auto text-center">"",;
           <motion.h2"";";
@@ -565,7 +484,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 "","";
             className = "flex flex-col "sm": "flex-row gap-4 justify-center mb-8"",";
             transition="{{" "duration": "0.6", "delay": "0.4 "}}
-;
               to="/contact"";";
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300 ">",;
               Contact Us Today,;
@@ -597,7 +515,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 View All Services&apos,&apos {filteredServices.length = == 0 && ("""";
               className="text-center py-12"","";
               animate="{{" "opacity": "1 "}}""">""""";
-              <p className="text-gray-400 text-lg">;
                 No services found matching your criteria.</p>;
                   setSelectedCategory("all")";"";
                   setSearchTerm("")";"}}"""";
@@ -638,11 +555,9 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 Expert AI & Technology Specialists&apos;&apos,&apos;&apos,;
                 Proven ROI & Performance Metrics&apos;&apos,&apos;&apos,",;
                 24/7 Support & Maintenance&apos;&apos,&apos,&apos,";
-"""{/* comment */}""""";
       <section className = "py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"""";
         <div className="max-w-4xl mx-auto text-center">""""";
           <motion.h2"""";
-            className="text-3xl "md": "text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Business?";
           </motion.h2>""""";
           <motion.p""""","";
@@ -677,7 +592,6 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
             className="mt-8 text-sm text-gray-400"";";
             whileInView = "{{" "opacity": "1 "}}";
             transition="{{" "duration": "0.6", "delay": "0.8 "}}
-;
 }} whileInView = {;
   { "opacity": "1",;
   "y": "0;
@@ -690,10 +604,6 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
           <motion.div className="flex flex - col "sm": "flex - row gap-4 justify - center mb-8" initial = {  { "opacity": 0",;
   "y": "20;
 "}} whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}} transition = {;
-  { "duration": "0.6",;
   "delay": "0.4;
 "}}>";
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300">;
@@ -702,40 +612,19 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
             <a href=""tel":+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover":bg-gray-800 transition-all duration-300">;
               "Call": +1 302 464 0950;
             </a>;
-          </motion.div>;
-";
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {;
   { "opacity": 0",;
-  "y": "20;
-"}} whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}} transition = {;
-  { "duration": "0.6",;
   "delay": "0.6;
-"}}>";
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>";
             <div className="grid grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300">";
               <div className="flex items-center">";
                 <span className="text-green-400 mr-2">✓</span>;
                 Expert AI & Technology Specialists;
               </div>";
-              <div className="flex items-center">";
-                <span className="text-green-400 mr-2">✓</span>;
                 Proven ROI & Performance Metrics;
-              </div>";
-              <div className="flex items-center">";
-                <span className="text-green-400 mr-2">✓</span>;
                 24/7 Support & Maintenance;
-              </div>";
-              <div className="flex items-center">";
-                <span className="text-green-400 mr-2">✓</span>;
                 Custom Solutions & Integration;
               </div>;
-            </div>;
-          </motion.div>;
-</div>;
-      </section>;
     </div>)"};
   { opacity: 1,
   y: 0
@@ -749,34 +638,12 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
                 <span className="text-green-400 mr-2">✓</span>
                 Expert AI & Technology Specialists
               </div>"
-              <div className="flex items-center">"
-                <span className="text-green-400 mr-2">✓</span>
                 Proven ROI & Performance Metrics
-              </div>"
-              <div className="flex items-center">"
-                <span className="text-green-400 mr-2">✓</span>
                 24/7 Support & Maintenance
-              </div>"
-              <div className="flex items-center">"
-                <span className="text-green-400 mr-2">✓</span>
                 Custom Solutions & Integration
               </div>
-            </div>
-          </motion.div>
-</div>
-      </section>
     </div>)};
-export default EnhancedServicesShowcase;
 }}}
-;
-export {EnhancedServicesShowcase};
-;
-export {EnhancedServicesShowcase};
-;
-export {EnhancedServicesShowcase};
-;
-export {EnhancedServicesShowcase};
-;
 export {EnhancedServicesShowcase};
 <p>"Address": "364 E Main St STE 1008", Middletown DE 19709</p>";
             <p>""";
@@ -785,198 +652,22 @@ export {EnhancedServicesShowcase};
                 className="text-blue-400 "hover": text-blue-300 ">",;
 "https": "// comment;
     </div>)"}
-;
 export default EnhancedServicesShowcaseexport {EnhancedServicesShowcase}
-;
 export {EnhancedServicesShowcase}
-;
 '";
 `"";
-</p>;
-</motion>;
 </motion>;
 </h3>;
-</a>;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</h3>;
-</motion>;
-</motion>;
-</div>;
-</section>;
-</div>;
-</div>;
-</h3>;
-</motion>;
-</div>;
-</section>;
 </path>;
-</div>;
-</path>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</path>;
-</svg>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
 </h4>;
-</h4>;
-</h4>;
-</h4>;
-</div>;
-</li>;
-</ul>;
-</h4>;
-</div>;
-</div>;
-</div>;
-</p>;
-</p>;
-</div>;
-</div>;
-</div>;
-</p>;
-</p>;
-</div>;
-</div>;
-</motion>;
-</div>;
-</motion>;
-</div>;
-</li>;
-</ul>;
-</h4>;
-</div>;
-</div>;
-</div>;
-</p>;
-</div>;
-</div>;
-</motion>;
-</div>;
-</div>;
-</div>;
-</motion>;
-</div>;
-</div>;
-</motion>;
-</motion>;
-</span>;
-</motion>;
-</div>;
-</div>;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</div>;
-</motion>;
-</motion>;
-</motion>;
-</div>;
-</section>;
 '"
 `""
 </p>
 </motion>
-</motion>
 </a>
-</motion>
-</motion>
-</div>
-</div>
-</motion>
-</motion>
-</div>
-</section>
-</div>
-</div>
-</motion>
-</div>
-</section>
-</path>
-</div>
-</path>
-</div>
-</div>
-</div>
-</div>
-</div>
 </path>
 </svg>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </h4>
-</h4>
-</h4>
-</h4>
-</div>
 </li>
 </ul>
-</h4>
-</div>
-</div>
-</div>
-</p>
-</p>
-</div>
-</div>
-</div>
-</p>
-</p>
-</div>
-</div>
-</motion>
-</div>
-</motion>
-</div>
-</li>
-</ul>
-</h4>
-</div>
-</div>
-</div>
-</p>
-</div>
-</div>
-</motion>
-</div>
-</div>
-</div>
-</motion>
-</div>
-</div>
-</motion>
-</motion>
 </span>
-</motion>
-</div>
-</div>
-</motion>
-</motion>
-</div>
-</div>
-</div>
-</motion>
-</motion>
-</motion>
-</div>
-</section>
-</div>

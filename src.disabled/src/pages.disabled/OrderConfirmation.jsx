@@ -11,4 +11,3 @@ export default function OrderConfirmation({ }: OrderConfirmationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -14,4 +14,3 @@ export default function ContactSection.js({ }: ContactSection.jsProps) {
     </div>
   );
 export default Component;
-}

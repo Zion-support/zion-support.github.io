@@ -11,38 +11,14 @@ import React from 'react';
 interface EnhancedLoading.jsProps {
   // Add props here as needed
 }
-export {EnhancedLoading};
-;
-export {EnhancedLoading};
-;
-export {EnhancedLoading};
-;
-export {EnhancedLoading};
 });
-}
-  });
-}
-  });
-}
   }) export {EnhancedLoading};";
   });,"}) ;,"});
   }) export {EnhancedLoading};"
-  }
     );,"}
     );,"})
-}
   }) export {EnhancedLoading}
-;
-  });
-}
-  });
-}
-  });
-}
-  }) export {EnhancedLoading};";
   });,"}) ";
-  }) export {EnhancedLoading};"
-  }
     );,"}) "
 export default function EnhancedLoading.js({ }: EnhancedLoading.jsProps) {
   return (
@@ -51,4 +27,3 @@ export default function EnhancedLoading.js({ }: EnhancedLoading.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

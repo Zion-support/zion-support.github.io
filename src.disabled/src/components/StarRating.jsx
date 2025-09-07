@@ -11,4 +11,3 @@ export default function StarRating({ }: StarRatingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

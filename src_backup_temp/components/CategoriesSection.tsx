@@ -16,45 +16,29 @@ const categories = [{;
     "icon": "☁️",;
     "link": "/micro - saas",;
     "color": "from - cyan - 500 to - blue - 600",;
-  },;
-  {;
     "title": "IT Services",;
     "description": "Infrastructure, security, and technical consulting",;
     "icon": "⚡",;
     "link": "/all - services",;
     "color": "from - amber - 500 to - orange - 600",;
-  },;
-  {;
     "title": "Digital Transformation",;
     "description": "Business modernization and digital strategy",;
     "icon": "📈",;
-    "link": "/all - services",;
     "color": "from - emerald - 500 to - green - 600",;
-  },;
 ];
 ;
 const specialServices = [{;
     "title": "IT Onsite Services",;
     "link": "/it - onsite - services";
-  },;
-  {;
     "title": "Comprehensive Services",;
     "link": "/comprehensive - services";
-  },;
-  {;
     "title": "Services Comparison",;
     "link": "/services - comparison";
   }
-];
 interface CategoriesSectionProps {;
   // Add your props "here": "any;
-;
   showTitle?: boolean;
 "}
-;
-;
-;
-;
 export function CategoriesSection("props": "any) {;
   return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">;
@@ -77,12 +61,10 @@ export function CategoriesSection("props": "any) {;
               Discover our comprehensive ecosystem of tech services", talent, equipment, and innovation;
             </p>;
           </motion.div>;) }
-;
         <motion.div;
           className="grid grid - cols - 1 "sm": "gri d - cols - 2 "lg": gri d - cols - 4 gap-6";
           variants={containerVariants"}          initial="hidden";
           whileInView="visible";
-          viewport={{ "once": "tru e "}}
         >;
           {categories.map((category, index) => (<motion.div;
               key={category.title}
@@ -94,26 +76,19 @@ export function CategoriesSection("props": "any) {;
                   <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color"} flex items-center justify-center mb-6 group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <div className="text-white text-2xl">;
                       {category.icon}
-                    </div>;
                   </div>";
                   <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>";
                   <p className="text-gray-300 text-sm">{category.description}</p>;
-                </div>;
               </Link>;
                     </div>
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-3">{category.title}"
                   <p className="text-gray-300 text-sm">{category.description}</p>
-                </div>
               </Link>
             </motion.div>) ) }
         </motion.div>;
-        <motion.div;
           className="mt-12"          initial={{ "opacity": "0", "y": "2 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6", "delay": "0.4 "}}
-        >";
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>";
           <div className="flex flex-wrap justify-center gap-4">;
             {specialServices.map((service) => (;
@@ -131,36 +106,20 @@ export function CategoriesSection("props": "any) {;
                 key={service.title}
                 to={service.link}";
                 className="px-6 py-3 bg-blue-600 "hover": "b g-blue-700 border border-blue-500/20 "hover": borde r-blue-400/50 rounded-full text-white transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25 flex items-center gap-2";
-              >;
                 {service.title"}";
                 <span className="text-sm">→</span>;
-              </Link>;
             ))}
-          </div>;
-        </motion.div>;
-        >;
           <Link ";
             to="/services";
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan "hover": "borde r-zion-cyan-light transition-colors text-lg font-medium py-2";
             View All Services < ArrowRight className="w-5 h-5 ml-2 group - "hover": translat e - x-1 transition -transform"  />;
-        <motion.div;
           className="mt-12 flex justify -center"          initial={{ "opacity": 0", "y": "2 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6", "delay": "0.6 "}}
-        >;
-          <Link;
             to="/categories";
             className="text-cyan - 400 border-b border-cyan - 400 "hover": "borde r-cyan - 300 transition - colors flex items - center gap-2"          >;
             View All Categories";
             <span className="text-sm group-"hover": translat e-x-1 transition-transform duration-300">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
     </section>;
   )"}}}}}}}}}}'"`;
-</motion>;
-</motion>;
-</motion>;
 </motion>;
 </motion>

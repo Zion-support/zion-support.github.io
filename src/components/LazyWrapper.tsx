@@ -24,13 +24,10 @@ export const withLazyLoading = <P extends object>(
 ) => {
   const LazyComponent = lazy(() => 
     Promise.resolve({ default: Component })
-  );
 
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...props} />
     </LazyWrapper>
-  );
-};
 
 export default LazyWrapper;

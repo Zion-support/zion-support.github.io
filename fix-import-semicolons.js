@@ -1,4 +1,3 @@
-
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
 files && files.forEach((file) => {
@@ -7,20 +6,10 @@ files && files.forEach((file) => {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
-<<<<<<< HEAD
-    // Fix import statements missing semicolons
 
-    // Fix import statements missing semicolons;
-=======
-
-
-    // Fix import statements missing semicolons;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);
-
 
     if (matches) {
       matches && matches.forEach((match) => {
@@ -34,34 +23,24 @@ import { glob  } from './glob';
 ;
 // Find all TypeScript and JavaScript files;
 const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () });
-;
 let total_fixed = 0;
-;
 files.for_each ((file) => {
-  try {
     const file_path = path.join (process.cwd (), file);
     let content = fs.readFileSync (file_path, "utf8");
-    let modified = false;
-;
     // Fix import statements missing semicolons;
     const import_regex = /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm;
     const matches = content.match (import_regex);
-;
     // Check condition
 if ( {) {
   $2
 }
       matches.for_each ((match) => {
-        // Check condition
 if (.ends_with (") {
-  $2
 }")) {
           const fixed_match = match.trim () + ";";
           content = content.replace (match, fixed_match);
           modified = true;
-        }
       });
-    }
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
@@ -89,10 +68,7 @@ if (.ends_with (") {
     content = content.replace (
       /(\w+)\s*=\s*[^;]+(?!)\s*$/gm,
       (match, var_name) => {
-        // Check condition
 if (&&) {
-  $2
-}
           !match.includes ("if") &&;
           !match.includes ("for") &&;
           !match.includes ("while") &&;
@@ -108,28 +84,14 @@ if (&&) {
           !match.includes ("export") &&;
           !match.includes ("import")) {
           return match + ";";
-        }
         return match;
-      }
     );
-
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
-=======
-;
-    // Check condition
-if ( {) {
-  $2
-}
       fs.writeFileSync (file_path, content, "utf8");
       console.log (`Fixed: ${file}`);
       total_fixed++;
-    }
   } catch (error) {
     console.error (`Error processing ${file}:`, error.message);
-  }
-});
-;
 console.log (`\n_total files fixed: ${total_fixed}`);
-;

@@ -45,8 +45,6 @@ const Loading: React.FC<LoadingProps> = ({
           </motion.p>
         )}
       </div>
-    </div>
   );
-};
 
 export default Loading;

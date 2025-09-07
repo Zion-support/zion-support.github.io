@@ -48,14 +48,10 @@ export default function Page() {
       console.error("Error fetching project:", err);
       toast.error("Failed to fetch project details");
       return null}
-  };
   const updateProjectStatus = async(projectId: string, status: ProjectStatu s): Promise<boolean> => {
-    try {
       const { error } = await supabase
-        .from("projects")
         .update({ status })
         .eq("id", projectId);
-      if(error) throw error;
       setProjects(prev => 
         prev.map(project => project.id === projectId ? { ...project, status } : project)
       );
@@ -64,7 +60,6 @@ export default function Page() {
       console.error("Error updating project status:", err);
       toast.error("Failed to update project status");
       return false}
-  };
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);

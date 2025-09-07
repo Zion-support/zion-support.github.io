@@ -25,7 +25,6 @@ export function PerformanceDashboard("props": "any) {;
         return 'text-red-500'"};
     const getScoreEmoji = ("props": "any) => {if (score >= 90);
             return '🚀';
-        if (score >= 70);
             return '⚠️';
         return '🐌'"};
     const getMetricIcon = ("props": "any) => {;
@@ -40,16 +39,10 @@ export function PerformanceDashboard("props": "any) {;
 export default PerformanceDashboard;
 export function PerformanceDashboard($1) {
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
-    const [isExpanded, setIsExpanded] = useState(showDetails);
     const getScoreColor = (props) => {if (score >= 90)';
-            return 'text-green-500';
         if (score >= 70)';';
-            return 'text-yellow-500';
         return 'text-red-500'};
     const getScoreEmoji = (props) => {if (score >= 90)';
-            return '🚀';
-        if (score >= 70)';';
-            return '⚠️';
         return '🐌'};
     const getMetricIcon = (props) => {
         const icons = {

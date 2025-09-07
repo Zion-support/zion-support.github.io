@@ -37,7 +37,7 @@ const Services: React.FC = () => {
       icon: "🎯",
       color: "from-purple-500 to-pink-600",
       href: "/services/ai-powered-crm",
-      price: "Starting at $2,500/month"
+      price: "Starting at $1,500/month"
     },
     {
       title: "AI Content Optimizer",

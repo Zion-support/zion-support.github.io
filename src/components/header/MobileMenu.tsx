@@ -16,19 +16,9 @@
       </nav>
       <div className="mt-6 px-6">
         <ModeToggle />
-      </div>
-    </div>
   )
-}
   );
-}
-
-
 
 name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
-}
-  );
-}
 
-}
 ;

@@ -81,7 +81,6 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
       </div>);
 );
 SidebarGroup.display_name = 'SidebarGroup';
-export { SidebarGroup }
 
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
@@ -94,4 +93,3 @@ export { SidebarGroup },
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
 ),;
 SidebarGroup.displayName = "SidebarGroup",;
-export { SidebarGroup };

@@ -16,10 +16,8 @@ return (
         ? 'Item has been removed from your wishlist'
         : 'Item has been added to your wishlist'
     })
-  }
   const active = isWishlisted(itemId)
 
-  return (
     <>
       <TooltipProvider>
         <Tooltip>
@@ -38,7 +36,6 @@ return (
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
                 )}              />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                 )}              />;
             </button>;
@@ -49,12 +46,10 @@ return (
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
-}
       // Add to favorites`;
       // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
   return ();
 
-    <button
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
           ? 'bg-red-500 hover:bg-red-600 text-white''
@@ -72,11 +67,9 @@ return (
   )};`
 className: {`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : '';`
-}`}
       />
     </button>;) }
 '`
-}
 
           <TooltipTrigger as_child>;
 
@@ -92,11 +85,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
   },;
   const active = isWishlisted(itemId),;
   return (;
-    <>;
-      <TooltipProvider>;
-        <Tooltip>;
           <TooltipTrigger asChild>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             <button;
               class_name = {cn (
@@ -107,24 +96,15 @@ className: {`w-4 h-4 transition-all duration-300 ${
                 active ? 'Remove from favorites' : 'Save to favorites';
               }            >;
               <Heart;
-                class_name = {cn (
                   'h - 4 w - 4 transition - transform duration - 200',
                   active;
                     ? 'fill - red - 500 text - red - 500 scale - 110';
                     : 'text - zion - slate')}              />;
-            </button>;
-          </TooltipTrigger>;
           {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
-        </Tooltip>;
-      </TooltipProvider>;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
-}
 
-      // Add to favorites`;
       // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
-  return ();
-    <button;
       on_click = {handleToggleFavorite}`;
       className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
           ? 'bg - red - 500 hover:bg - red - 600 text - white'';
@@ -135,19 +115,9 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <Heart`;
         className={`w - 4 h - 4 transition - all duration - 300 ${
           is_favorited ? 'fill - current' : ''`;
-}`}
       />    </button>)}`;
 class_name: {`w - 4 h - 4 transition - all duration - 300 ${
           is_favorited ? 'fill - current' : '';`;
-}`}
       />;
     </button>) }
 '`;
-}
-
-  return (
-    <>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <button

@@ -36,7 +36,6 @@ function SecurityEnhancer("props": "any) {;
   Activity,;
   ChevronUp,;
   ChevronDown} from 'lucide-react';
-;
 interface SecurityStatus {;
   "csp": "boolean;
   "hsts": boolean;
@@ -72,7 +71,6 @@ export function SecurityEnhancer("props": any) {;
   const [isScanning, setIsScanning] = useState<any>(false);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState<any>('');
-;
   // Initialize security monitoring;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
@@ -84,19 +82,12 @@ export function SecurityEnhancer("props": any) {;
       initializeSecurityMonitoring();
       runSecurityScan()}
   }, [isVisible]) ;
-;
-  // Initialize security monitoring;
-  ;
     // Initialize event listeners for security monitoring;
     setupSecurityEventListeners();
-;
     // Start periodic security checks;
-    ;
     }, 30000); // Check every 30 seconds;
     return () => clearInterval(interval)}, []);
-;
   // Set security headers;
-  ;
     cspMeta.httpEquiv = 'Content-Security-Policy';
     const cspMeta = document.createElement('meta');'    cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = [';
@@ -112,13 +103,10 @@ export function SecurityEnhancer("props": any) {;
       "form-action 'self'",";
       "frame-ancestors 'none'",upgrade-insecure-requests',;
     ].join('; ');
-;
     // Remove existing CSP meta tag if present;
-    ;
     if(existingCSP) {;
       existingCSP.remove()}
     document.head.appendChild(cspMeta);
-;
     // Add security-related meta tags;
     const securityMetaTags = [';
       { "name": 'X-Content-Type-Options', "content": 'nosniff' },;
@@ -129,14 +117,11 @@ export function SecurityEnhancer("props": any) {;
         "name": 'Permissions-Policy',;
         "content": 'camera=(), microphone=(), geolocation=(), interest-cohort=()},;
     ];
-;
     securityMetaTags.forEach(tag => {;
       metaTag.name = tag.name;
       metaTag.content = tag.content;
       document.head.appendChild (metaTag) }) }, []) ;
-;
   // Setup security event listeners;
-  ;
     Element.prototype.innerHTML = function("value": "string) {;
       if(';
         typeof value === 'string' &&';
@@ -146,47 +131,29 @@ export function SecurityEnhancer("props": any) {;
           'warning'",Potential XSS attempt detected',DOM Manipulation',medium';
         )}
       return originalInnerHTML.call(this, value) };
-;
     // Monitor for suspicious network requests;
-    ;
     window.fetch = function("input": "RequestInf o | URL", init?: "RequestInit) {;
       if(url.includes('"javascript":') || url.includes('"data": tex t/html')) {;
-        logSecurityEvent(';
           'error'",Suspicious fetch request blocked',Network Request',high';
-        );
         return Promise.reject(new Error('Suspicious request blocked'))}
       return originalFetch.call(this, input, init) };
-;
     // Monitor for console access attempts;
-    ;
     console.log = function(..."args": "an y[]) {;
-      if(';
         args.some(arg => typeof arg === 'string' && arg.includes('password'));
-      ) {;
-        logSecurityEvent(';
           'warning'",Potential sensitive data logging detected',Console Access',medium';
-        )}
       return originalConsoleLog.apply(this, args) }}, []) ;
-;
   // Log security events;
-  ;
       setSecurityEvents(prev => [event, ...prev.slice(0, 99)]); // Keep last 100 events;
     },;
     [];
-  );
-;
   // Check security status;
-  ;
       setSecurityStatus(status)} catch(error) {;
       // console.error('Failed to check security "status":', error)}
   }, []) ;
-;
   // Run security scan;
-  ;
     try {;
       // Simulate security scan;
       await new Promise(resolve => setTimeout(resolve, 2000));
-;
       // Generate mock security metrics;
       const "metrics": "SecurityMetric s = {;
         "totalRequests": Mat h.floor(Math.random() * 1000) + 500",;
@@ -195,31 +162,21 @@ export function SecurityEnhancer("props": any) {;
         "lastScan": "new Date()",;
         "vulnerabilities": "Mat h.floor(Math.random() * 10) + 2",;
         "complianceScore": "Mat h.floor(Math.random() * 20) + 80"};
-;
       setSecurityMetrics(metrics);
-;
       // Log scan completion;
-      logSecurityEvent(';
         'success',Security scan completed successfully',Security Scanner',low';
       )} catch(error) {;
-      logSecurityEvent(';
         'error',Security scan failed',Security Scanner',high';
       )} finally {;
       setIsScanning(false)}
   }, [logSecurityEvent]) ;
-;
   // Filter events;
     return matchesSearch && matchesFilter}) ;
-;
   // Get status icon;
-  ;
     return matchesSearch && matchesFilter}
-    );
   // Get status icon
   };
-;
   // Get event icon;
-  ;
       case 'warning':";
         return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
       case 'error':";
@@ -228,10 +185,7 @@ export function SecurityEnhancer("props": any) {;
         return <CheckCircle className="w-4 h-4 text-green-500"   />;
       "default":";
         return <Info className="w-4 h-4 text-gray-500"   />}
-  };
-;
   // Get severity color;
-  ;
       case 'high':';
         return 'border-red-500 bg-red-50 "dark": "b g-red-900/20';
       case 'medium':';
@@ -240,7 +194,6 @@ export function SecurityEnhancer("props": any) {;
         return 'border-blue-500 bg-blue-50 "dark": b g-blue-900/20';
       "default":';
         return 'border-gray-500 bg-gray-50 "dark": b g-gray-900/20'"}  };
-;
   return ();
     <>;
       {/* Floating Action Button */}
@@ -250,7 +203,6 @@ export function SecurityEnhancer("props": any) {;
         whileHover={{ "scale": "1.1 "}}
         whileTap={{ "scale": "0.9 "}}";
         title="Security Panel";
-        ;
       >";
         <Shield className="w-6 h-6"   />      </motion.button>;
       {/* Security Panel */}
@@ -261,8 +213,6 @@ export function SecurityEnhancer("props": any) {;
             exit={{ "opacity": "0", "x": "30 0 "}}";
             className="fixed top-0 right-0 h-full w-96 bg-white "dark": "b g-gray-900 shadow-2xl z-40 overflow-y-auto";
             role="dialog";
-            ;
-          >";
             <div className="p-6">;
               {/* Header */"}";
               <div className="flex items-center justify-between mb-6">";
@@ -282,14 +232,10 @@ export function SecurityEnhancer("props": any) {;
                     ) : "(";
                       <ChevronDown className="w-4 h-4"   />;
                     )"}                  </button>;
-                  <button;
                     onClick={() => setIsVisible(false)}";
                     className="p-1 text-gray-500 "hover": "tex t-gray-700 "dark": tex t-gray-400 "dark": hove "r":text-gray-200";
-                    ;
-                  >";
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
-              </div>;
               {/* Security Status */"}
               {securityStatus && (";
                 <div className="mb-6">";
@@ -309,7 +255,6 @@ export function SecurityEnhancer("props": any) {;
                       <div;
                         key={item.key}";
                         className="flex items-center justify-between p-2 bg-gray-50 "dark": "b g-gray-800 rounded-lg";
-                      >";
                         <span className="text-sm text-gray-700 "dark": tex t-gray-300">;
                           {item.label"}
                         </span>;
@@ -340,18 +285,11 @@ export function SecurityEnhancer("props": any) {;
                         </span>
                         {getStatusIcon()
                           securityStatus[item.key as keyof SecurityStatus]
-                        )}
-                      </div>;
                     ))}
-                  </div>;
                 </div>) }
-;
               {/* Security Metrics */}
               {securityMetrics && (";
-                <div className="mb-6">";
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
                     Security Metrics;
-                  </h3>";
                   <div className="grid grid-cols-2 gap-3">";
                     <div className="p-3 bg-blue-50 "dark": b g-blue-900/20 rounded-lg">";
                       <p className="text-xs text-blue-600 "dark": tex t-blue-400">;
@@ -360,37 +298,23 @@ export function SecurityEnhancer("props": any) {;
                       <p className="text-lg font-bold text-blue-800 "dark": tex t-blue-200">;
                         {securityMetrics.totalRequests.toLocaleString()"}
                       </p>;
-                    </div>";
                     <div className="p-3 bg-red-50 "dark": "b g-red-900/20 rounded-lg">";
                       <p className="text-xs text-red-600 "dark": tex t-red-400">;
                         Blocked Requests;
-                      </p>";
                       <p className="text-lg font-bold text-red-800 "dark": tex t-red-200">;
                         {securityMetrics.blockedRequests.toLocaleString()"}
-                      </p>;
-                    </div>";
                     <div className="p-3 bg-yellow-50 "dark": "b g-yellow-900/20 rounded-lg">";
                       <p className="text-xs text-yellow-600 "dark": tex t-yellow-400">;
                         Suspicious Activity;
-                      </p>";
                       <p className="text-lg font-bold text-yellow-800 "dark": tex t-yellow-200">;
                         {securityMetrics.suspiciousActivity.toLocaleString()"}
-                      </p>;
-                    </div>";
                     <div className="p-3 bg-green-50 "dark": "b g-green-900/20 rounded-lg">";
                       <p className="text-xs text-green-600 "dark": tex t-green-400">;
                         Compliance Score;
-                      </p>";
                       <p className="text-lg font-bold text-green-800 "dark": tex t-green-200">;
                         {securityMetrics.complianceScore"}%;
-                      </p>;
-                    </div>;
-                  </div>;
               {securityMetrics && ("
-                <div className="mb-6">"
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                     Security Metrics
-                  "
                   <div className="grid grid-cols-2 gap-3">"
                     <div className="p-3 bg-blue-50 dark: b g-blue-900/20 rounded-lg">"
                       <p className="text-xs text-blue-600 dark: tex t-blue-400">
@@ -403,60 +327,41 @@ export function SecurityEnhancer("props": any) {;
                     <div className="p-3 bg-red-50 dark: b g-red-900/20 rounded-lg">"
                       <p className="text-xs text-red-600 dark: tex t-red-400">
                         Blocked Requests
-                      </p>"
                       <p className="text-lg font-bold text-red-800 dark: tex t-red-200">
                         {securityMetrics.blockedRequests.toLocaleString()}
-                      </p>
-                    </div>"
                     <div className="p-3 bg-yellow-50 dark: b g-yellow-900/20 rounded-lg">"
                       <p className="text-xs text-yellow-600 dark: tex t-yellow-400">
                         Suspicious Activity
-                      </p>"
                       <p className="text-lg font-bold text-yellow-800 dark: tex t-yellow-200">
                         {securityMetrics.suspiciousActivity.toLocaleString()}
-                      </p>
-                    </div>"
                     <div className="p-3 bg-green-50 dark: b g-green-900/20 rounded-lg">"
                       <p className="text-xs text-green-600 dark: tex t-green-400">
                         Compliance Score
-                      </p>"
                       <p className="text-lg font-bold text-green-800 dark: tex t-green-200">
                         {securityMetrics.complianceScore}%
-                      </p>
                     </div>
-                  </div>
-                </div>) }
-;
               {/* Security Events */}";
-              <div className="mb-6">";
                 <div className="flex items-center justify-between mb-3">";
                   <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
                     Security Events;
                   </h3>;
-                  <button;
                     onClick={runSecurityScan"}
                     disabled={isScanning}";
                     className="flex items-center space-x-2 px-3 py-1 bg-zion-blue "hover": "b g-zion-blue-dark text-white text-sm rounded-lg transition-colors "disabled": opacit y-50";
-                  >;
                     {isScanning ? (;
                       <>";
                         <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"  />;
                         <span>Scanning...</span>;
                       </>;
                     ) : (;
-                      <>";
                         <ShieldCheck className="w-4 h-4"   />                        <span>Scan</span>;
-                      </>;
                     )"}
                   </button>;
-                </div>;
                 {/* Filters and Search */}";
                 <div className="mb-3 space-y-2">";
                   <div className="flex space-x-2">;
                     {['info',warning',error',success'].map(type => (;
-                      <button;
               {/* Security Events */}"
-              <div className="mb-6">"
                 <div className="flex items-center justify-between mb-3">"
                   <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                     Security Events
@@ -471,17 +376,12 @@ export function SecurityEnhancer("props": any) {;
                         <span>Scanning...</span>
                       </>
                     ) : (
-                      <>"
                         <ShieldCheck className="w-4 h-4"   />                        <span>Scan</span>
-                      </>
-                    )}
                   </button>
-                </div>
                 {/* Filters and Search */}"
                 <div className="mb-3 space-y-2">"
                   <div className="flex space-x-2">
                     {['info',warning',error',success'].map(type => (
-                      <button
                         key={type}
                         onClick={() => {;
                           setActiveFilters(prev =>;
@@ -492,10 +392,8 @@ export function SecurityEnhancer("props": any) {;
                             ? 'bg-zion-blue text-white'';
                             : 'bg-gray-200 "dark": "b g-gray-700 text-gray-700 "dark": tex t-gray-300'`;
                         "}`}
-                      >;
                         {type}
                       </button>) ) }
-                  </div>;
                   <input";
                     type="text";
                     placeholder="Search events...";
@@ -503,128 +401,79 @@ export function SecurityEnhancer("props": any) {;
                     onChange={e => setSearchTerm(e.target.value)}";
                     className="w-full px-3 py-2 text-sm border border-gray-300 "dark": "borde r-gray-600 rounded-lg bg-white "dark": b g-gray-800 text-gray-900 "dark": tex t-white";
                   />;
-                </div>;
                 {/* Events List */"}";
                 <div className="space-y-2 max-h-64 overflow-y-auto">;
                   {filteredEvents.length > 0 ? (;
                     filteredEvents.map(event => (;
-                      <div;
                         key={event.id}`;
                         className={`p-3 rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
-                      >";
                         <div className="flex items-start space-x-2">;
                           {getEventIcon(event.type)}";
                           <div className="flex-1 min-w-0">";
                             <p className="text-sm font-medium text-gray-900 "dark": "tex t-white">;
                               {event.message"}
-                            </p>";
                             <div className="flex items-center space-x-2 mt-1 text-xs text-gray-600 "dark": "tex t-gray-400">;
                               <span>{event.source"}</span>;
                               <span>•</span>;
                               <span>;
                                 {event.timestamp.toLocaleTimeString()}
-                              </span>;
                               <span>•</span>";
                               <span className="capitalize">;
                                 {event.severity}
-                              </span>;
-                            </div>;
                             {event.details && (";
                               <p className="text-xs text-gray-500 "dark": "tex t-gray-500 mt-1">;
                                 {event.details"}
                               </p>) }
-                          </div>;
-                        </div>;
-                      </div>;
                     ));
-                  ) : "(";
                     <div className="text-center py-4 text-gray-500 "dark": tex t-gray-400">;
                       No events found;
                     </div>) "}
-                </div>;
-              </div>;
               {/* Quick Actions */}";
-              <div className="mb-6">";
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
                   Quick Actions;
-                </h3>";
                 <div className="grid grid-cols-2 gap-3">;
-                  <button;
                     onClick={() =>;
-                      logSecurityEvent(';
                         'info'",Manual security check initiated',User Action',low';
-                      );
                     }";
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 "dark": "b g-blue-900/20 text-blue-700 "dark": tex t-blue-300 rounded-lg "hover": b g-blue-100 "dark": hove "r":bg-blue-900/40 transition-colors";
-                  >";
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>;
-                  </button>;
               {/* Quick Actions */}"
-              <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                   Quick Actions
-                "
                 <div className="grid grid-cols-2 gap-3">
-                  <button
                     onClick={() =>
                       logSecurityEvent('
                         'info',Manual security check initiated',User Action',low'
                       )
                     }"
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 dark: b g-blue-900/20 text-blue-700 dark: tex t-blue-300 rounded-lg hover: b g-blue-100 dark: hove r:bg-blue-900/40 transition-colors"
-                  >"
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>
-                  </button>
-                  <button;
                     onClick={() => setSecurityEvents([])"}";
                     className="flex items-center justify-center space-x-2 p-3 bg-gray-50 "dark": "b g-gray-800 text-gray-700 "dark": tex t-gray-300 rounded-lg "hover": b g-gray-100 "dark": hove "r":bg-gray-700 transition-colors";
-                  >";
                     <Trash2 className="w-4 h-4"  />";
                     <span className="text-sm">Clear Events</span>;
-                  </button>;
-                </div>;
-              </div>;
               {/* Security Tips */"}";
-              <div className="mb-6">";
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
                   Security Tips;
-                </h3>";
                 <div className="space-y-2 text-sm text-gray-600 "dark": tex t-gray-400">;
                   <p>• Keep your browser and extensions updated</p>;
                   <p>• Use strong", unique passwords for each account</p>;
                   <p>• Enable two - factor authentication when available</p>;
                   <p>• Be cautious of suspicious links and downloads</p>;
                   <p>• Regularly review your security settings</p>;
-                </div>;
-              </div>;
-            </div>;
               {/* Security Tips */}"
-              <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                   Security Tips
-                "
                 <div className="space-y-2 text-sm text-gray-600 dark: tex t-gray-400">
                   <p>• Keep your browser and extensions updated</p>
                   <p>• Use strong, unique passwords for each account</p>
                   <p>• Enable two - factor authentication when available</p>
                   <p>• Be cautious of suspicious links and downloads</p>
                   <p>• Regularly review your security settings</p>
-                </div>
-              </div>
-            </div>
           </motion.div>) }
       </AnimatePresence>;
-    </>;
-  )}
 '"`;
-</motion>;
 </motion>;
 </script>;
 </any>;
 </string>;
-</any>;
 </SecurityMetrics>;
 </SecurityEvent>;
 </SecurityStatus>;
-</any>;
 </any>

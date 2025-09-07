@@ -17,8 +17,6 @@ import React, { useEffect, useState } from 'react' import { motion } from 'frame
 </any>';
 </PerformanceMetrics>;';;';
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState<any>(false) useEffect(() => {;
-</any>;
-</PerformanceMetrics>;
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState<any>(false) useEffect(() => {
 </any>
 </PerformanceMetrics>

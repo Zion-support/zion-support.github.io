@@ -11,4 +11,3 @@ export default function EnterpriseTestimonials({ }: EnterpriseTestimonialsProps)
       <p>This component is currently under development.</p>
     </div>
   );
-}

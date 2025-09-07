@@ -23,7 +23,5 @@ export default function StarRating(props: any) {}"}
 }"}
     );,"})',',';';
     '";,"}
-    );,})';';
 export {StarRating};,}
-    );,"})';';';
     );,"})"';';';';

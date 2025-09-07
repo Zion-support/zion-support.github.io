@@ -36,9 +36,9 @@ type Message = {
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
       timestamp: new Date()},
-    
+
     setMessages((prev) => [...prev, escalationMessage]),
-    
+
     // Log this interaction for the support team
     logSupportEscalation()
   },
@@ -73,7 +73,7 @@ type Message = {
         id: `bot-${Date.now()}`,
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
     ]),
-    
+
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted",
@@ -148,14 +148,14 @@ type Message = {
               timestamp={message.timestamp}
             />;
           ))}
-          
+
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
             </div>
           )}
       </ScrollArea>
-      
+
       {messages.length === 1 && (
         <div className="px-4 py-3">
           <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -168,7 +168,7 @@ type Message = {
                 text={reply.text}
                 onClick={() => handleQuickReply(reply.text)}
           </div>;
-      
+
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -184,7 +184,7 @@ type Message = {
               onClick={handleEmailSupport}
               variant="outline"
               Email Support
-      
+
       <div className={cn(
         "p-4 border-t", 
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
@@ -260,7 +260,7 @@ type Message = {
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
-      
+
       if (!response.ok) {
         return {
           success: false,

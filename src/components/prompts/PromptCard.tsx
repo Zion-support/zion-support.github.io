@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -19,12 +17,7 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     const encoded = encodeURIComponent(prompt && prompt.text);
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
     setTimeout(() => setCopied(false), 2000);
-    setTimeout(() => setCopied(false), 2000);
   };
-
-  const handleSend = () => {;
-    const encoded = encodeURIComponent(prompt && prompt.text);
-    window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
@@ -38,10 +31,6 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
 }
   );
 
-}
-
 import { Copy, Send } from 'lucide-react';
-
-}
 
 ;

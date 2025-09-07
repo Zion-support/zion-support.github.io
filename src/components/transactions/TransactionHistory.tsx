@@ -64,7 +64,6 @@ interface Transaction {
   service?: {
     title?: string
 
-export function TransactionHistory() {
   const { user } = useAuth()
   const { toast } = useToast()
     () => (safeStorage.getItem('transaction_filter') as any) || 'all'
@@ -147,20 +146,20 @@ export function TransactionHistory() {;
       const { data, error } = await supabase.functions.invoke('manage-transaction', {;
         body: { transactionId, action }
       }),
-      
+
       if (error) throw error,
-      
+
       toast({
         title: "Success",
         description: (data as any)?.message || "Transaction updated successfully"}),
-      
+
       refetch()
     } catch (error) {
       logErrorToProduction('Error managing transaction:', { data: error }),
         title: "Error",
         description: error instanceof Error ? error.message : "Failed to update transaction",
         variant: "destructive"})
-  
+
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'in_escrow':
@@ -212,7 +211,7 @@ export function TransactionHistory() {;
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-white">Transaction History</h2>
-          
+
           <div className="flex space-x-2">
             <Button 
               size="sm" 
@@ -233,7 +232,7 @@ export function TransactionHistory() {;
               onClick={() => setFilter('escrow')}
               className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
               Escrow
-        
+
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
             <div key={i} className="mb-4">
@@ -263,7 +262,7 @@ export function TransactionHistory() {;
               const canRelease = !isClient && isPending && isInEscrow,
               const canCancel = isClient && isPending,
               const canRefund = isClient && transaction.status === 'released',
-              
+
                 : 'Client',
 
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
@@ -397,13 +396,13 @@ export function TransactionHistory() {;
                       <span className="text-white font-medium text-lg">
                         {formatCurrency(transaction.amount)}
                       </span>
-                    
+
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-zion-slate-light">Date:</span>
                       <span className="text-zion-slate-light">
                         {new Date(transaction.created_at).toLocaleDateString()} 
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
-                    
+
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                           {transaction.completed_at ? 'Completed:' : 

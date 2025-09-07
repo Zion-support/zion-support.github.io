@@ -16,7 +16,6 @@ import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
-export default function TalentProfilePage() {
   const router = useRouter(),
   // Get id from Next.js router query params
   const { id } = router.query as { id?: string },
@@ -138,17 +137,17 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -361,7 +360,6 @@ import { useAuth } from "@/hooks/useAuth",;
 import { UserProfile } from "@/types/auth",;
 import { toast } from "@/hooks/use-toast",;
 import { SEO } from "@/components/SEO",;
-export default function TalentProfilePage() {;
   const router = useRouter(),;
   // Get id from Next.js router query params;
   const { id } = router.query as { id?: string },;

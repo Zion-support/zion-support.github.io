@@ -32,7 +32,6 @@ export function TalentResults({
   handleMessage,
   isAuthenticated
 }) {
-  return (
     <div className="min-h-screen bg-white">
       <ActiveFilters {...activeFiltersProps} />
       <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
@@ -48,4 +47,3 @@ export function TalentResults({
     </div>
   );
 }
-export default TalentResults;

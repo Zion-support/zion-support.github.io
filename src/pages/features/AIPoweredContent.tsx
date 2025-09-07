@@ -100,7 +100,6 @@ function AIPoweredContent() {
     "description": "Generate SEO - optimized content using ZionGPT to boost your online visibility.",
     "url": "https://app.ziontechgroup.com / features / ai - content - generation";
   },
-export default /**
   useFeatureUsage ('ZionGPT');
     '@context': 'https://schema.org',
     '@type': 'WebPage',

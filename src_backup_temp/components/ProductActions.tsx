@@ -22,4 +22,3 @@ export default function ProductActions(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

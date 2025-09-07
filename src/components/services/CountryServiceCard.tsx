@@ -3,7 +3,7 @@
   const getRegionEmoji = (countryName: string | undefined): string => {
 
     if (!countryName) return "🌐",
-    
+
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -22,17 +22,16 @@
       // Default if no flag is found
       "default": "🌐"
     },
-    
+
     return emojiMap[countryName] || "🌐"
-  },
-  
+
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
     if (!countryName) return "8-24 hours",
-    
+
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-    
+
     if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
@@ -40,8 +39,7 @@
     } else {
       return "8-24 hours"
     }
-  },
-  
+
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
@@ -58,7 +56,6 @@
           {isPopular && (
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>
           )}
-        </div>
       </CardHeader>
       <CardContent className="pb-4">
         <p className="text-3xl font-bold text-zion-cyan mb-4">
@@ -70,26 +67,18 @@
             <span>
               Typical response time: {getResponseTime(country.country)}
             </span>
-        
+
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
 
-          </div>
-          <div className="flex items-start">
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Service available in major cities</span>
-          </div>
-          <div className="flex items-start">
             <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Hardware & network support</span>
-          </div>
-          <div className="flex items-start">
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>First hour included</span>
-          </div>
-        </div>
       </CardContent>
 
 import {;
@@ -108,7 +97,6 @@ interface CountryServiceCardProps {;
   onSelect: (country: CountryPricing) => void,;
   onQuote?: (country: CountryPricing) => void,;
   isPopular?: boolean;
-}
 ;
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {;
   // Get region flag based on country name (for demo purposes);
@@ -133,7 +121,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       "default": "🌐";
     },;
     return emojiMap[countryName] || "🌐";
-  },;
   // Get response time estimate based on country;
   const getResponseTime = (countryName: string | undefined): string => {;
     if (!countryName) return "8-24 hours",;
@@ -145,7 +132,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       return "6 hours";
     } else {;
       return "8-24 hours";
-    }
   };
   return (;
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
@@ -161,37 +147,25 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>;
           {isPopular && (;
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>;
-          )}
-        </div>;
       </CardHeader>;
       <CardContent className="pb-4">;
         <p className="text-3xl font-bold text-zion-cyan mb-4">;
-          ${country.pricePerIncident.toFixed(2)}
         </p>;
         <div className="space-y-2 text-zion-slate-light">;
           <div className="flex items-start">;
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>Typical response time: {getResponseTime(country.country)}</span>;
-          </div>;
-          <div className="flex items-start">;
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>Service available in major cities</span>;
-          </div>;
-          <div className="flex items-start">;
             <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>Hardware & network support</span>;
-          </div>;
-          <div className="flex items-start">;
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>First hour included</span>;
-          </div>;
-        </div>;
       </CardContent>;
       <CardFooter className='flex flex-col space-y-2'>;
         <Button
           onClick = {() => onSelect(country),}
           className={`w-full ${;
-            isPopular;
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple';
               : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light';
     >;
@@ -204,38 +178,24 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             <h3 className='text - lg font - semibold text - white truncate'>;
               {country.country || 'Unknown Country'}
             </h3>;
-          </div>;
           {is_popular && (
             <Badge className='bg - zion - purple text - white border - none'>;
               Popular;
             </Badge>)}
-        </div>;
-      </CardHeader>;
       <CardContent className='pb - 4'>;
         <p className='text - 3xl font - bold text - zion - cyan mb - 4'>;
           ${country.pricePerIncident.to_fixed (2)}
-        </p>;
         <div className='space - y-2 text - zion - slate - light'>;
           <div className='flex items - start'>;
             <Clock className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
             <span>;
               Typical response time: {getResponseTime (country.country)}
-            </span>;
-          </div>;
-          <div className='flex items - start'>;
             <MapPin className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
             <span > Service available in major cities</span>;
-          </div>;
-          <div className='flex items - start'>;
             <Server className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
             <span > Hardware & network support</span>;
-          </div>;
-          <div className='flex items - start'>;
             <Check className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
             <span > First hour included</span>;
-          </div>;
-        </div>;
-      </CardContent>;
       <CardFooter className='flex flex - col space - y-2'>;
         <Button;
           on_click = {() => on_select (country), }
@@ -244,63 +204,43 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
               ? 'bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
               : 'bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light';
           }`}
-        >;
           Select Service;
         </Button>;
 
           className='w-full text-zion-cyan hover:text-zion-purple'>;
           <Link href='/contact'>Contact Sales</Link>;
-        </Button>;
       </CardFooter>;
     </Card>;
   );
-}
 
-        <Button;
           variant='outline';
           className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
           on_click={() => on_quote?.(country)}        >;
           Get Quote;
-        </Button>;
-        <Button;
           as_child;
           variant='ghost';
           className='w - full text - zion - cyan hover:text - zion - purple';
-        >;
-          <Link href='/contact'>Contact Sales</Link>;
-        </Button>;
-      </CardFooter>;
     </Card>);
-}
       <CardFooter className="flex flex-col space-y-2">
-        <Button
           onClick={() => onSelect(country)}
           className={`w-full ${
-            isPopular
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
-          }`}
         >
           Select Service
         </Button>
-        <Button
           variant='outline'
           className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
           onClick={() => onQuote?.(country)}        >
           variant="outline"
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={() => onQuote?.(country)}
-        >
 
           Get Quote
-        </Button>
-        <Button
           asChild
           variant="ghost"
           className="w-full text-zion-cyan hover: text-zion-purple"
-        >
           <Link href="/contact">Contact Sales</Link>
-        </Button>
 
       </CardFooter>
     </Card>

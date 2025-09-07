@@ -3,23 +3,18 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
+
     return this.props.children;
-  }
-}
 import React from 'react';
   const pageKey = `search-${routeKey}-${router && router.asPath}`;
 import { useRouter } from 'next/router';
@@ -28,7 +23,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 
 import { Loader2 } from 'lucide-react'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
@@ -61,7 +55,6 @@ interface SearchResult {
   title: string
 
   description: string
-}
 function highlight(text: string, term: string) {
 
   },;
@@ -69,7 +62,6 @@ function highlight(text: string, term: string) {
     e.preventDefault(),;
     if (query.trim()) {;
       router.push(`/search?q=${encodeURIComponent(query.trim())}`);
-    }
   },
 
   return (
@@ -89,7 +81,6 @@ function highlight(text: string, term: string) {
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-            }}
             searchSuggestions={suggestions}
 
             placeholder="Search talent, jobs, and projects..."
@@ -99,11 +90,8 @@ function highlight(text: string, term: string) {
           <div className="flex justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
-            onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion && suggestion.text.trim();
               setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-            }}
-            searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
@@ -121,14 +109,9 @@ function highlight(text: string, term: string) {
                 <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
                   <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>
                   <p className="text-zion-slate-light">{highlight(r.description, query)}</p>
-                </div>
               ))}
-            </div>
-          </div>
-        )}
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
           <p className="text-zion-slate-light">No results found for "{query}".</p>
-        )}
 
         {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
           <Tabs defaultValue="products" className="space-y-4">;
@@ -138,13 +121,10 @@ function highlight(text: string, term: string) {
               </TabsTrigger>;
               <TabsTrigger value="talent">;
                 Talent ({talentResults && talentResults.length});
-              </TabsTrigger>;
               <TabsTrigger value="docs">;
                 Docs ({docResults && docResults.length});
-              </TabsTrigger>;
               <TabsTrigger value="blog">;
                 Blog ({blogResults && blogResults.length});
-              </TabsTrigger>;
             </TabsList>;
             <TabsContent value="products" className="space-y-4">;
               {results;
@@ -164,62 +144,18 @@ function highlight(text: string, term: string) {
                     <p className="text-zion-slate-light">
                       {highlight(r.description, query)}
                     </p>
-                  </div>
-                ))}
             </TabsContent>
             <TabsContent value="talent" className="space-y-4">
               {results
                 .filter((r) => r.type === "talent")
-                .map((r) => (
-                  <div
                     key={`talent-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
-                ))}
-            </TabsContent>
             <TabsContent value="docs" className="space-y-4">
-              {results
                 .filter((r) => r.type === "doc")
-                .map((r) => (
-                  <div
                     key={`doc-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
-                ))}
-            </TabsContent>
             <TabsContent value="blog" className="space-y-4">
-              {results
                 .filter((r) => r.type === "blog")
-                .map((r) => (
-                  <div
                     key={`blog-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
-                ))}
-            </TabsContent>
           </Tabs>
-        )}
 
 }setLoading (true)
 try {
@@ -231,22 +167,14 @@ if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
   // Add key prop to force re - render when route changes;
   const page_key = `search-${route_key}-${router.as_path}`;
-  return (
     <div key={page_key}>;
       <main className="container mx - auto px - 4 py - 8">;
         <form on_submit={handle_submit} className="mb - 6">;
           <EnhancedSearchInput;
-            value={query}
             on_change={set_query}
-            onSelectSuggestion={(suggestion) => {
               const search_term = suggestion.text.trim ();
               set_query (search_term);              router.push (`/search?q=${encodeURIComponent (search_term)}`);
-            }}
             search_suggestions = {suggestions, }
-            placeholder="Search talent, jobs, and projects...";
-          />;
-        </form>;
-        {loading && (
           <div className="flex justify - center py - 8">;
             <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple" />;
           </div>)}
@@ -259,32 +187,19 @@ if (data && data.results && Array.isArray (data.results) ) {
                   <h3 className="text - lg font - bold text - white">{highlight (r.title, query)}</h3>;
                   <p className="text - zion - slate - light">{highlight (r.description, query)}</p>;
                 </div>))}
-            </div>;
-          </div>)}
         {!loading && marketplace_results.length === 0 && blog_results.length === 0 && query && (
           <p className="text - zion - slate - light">No results found for "{query}".</p>)}
         {!loading && marketplace_results.length > 0 && (
           <Tabs default_value="products" className="space - y-4">;
             <TabsList className="mb - 4">;
-              <TabsTrigger value="products">;
                 Products ({product_results.length});
-              </TabsTrigger>;
-              <TabsTrigger value="talent">;
                 Talent ({talent_results.length});
-              </TabsTrigger>;
-              <TabsTrigger value="docs">;
                 Docs ({doc_results.length});
-              </TabsTrigger>;
-              <TabsTrigger value="blog">;
                 Blog ({blog_results.length});
-              </TabsTrigger>;
-            </TabsList>;
             <TabsContent value="products" className="space - y-4">;
-              {results;
                 .filter ((r, ) => r.type === "product" || r.type === "service");
                 .map ((r, ) => (
                   <div;
-                    key={`${r.type}-${r.id}`}
                     className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4";
                   >;
                     <h3 className="text - lg font - bold text - white">;
@@ -293,56 +208,13 @@ if (data && data.results && Array.isArray (data.results) ) {
                     <p className="text - zion - slate - light">;
                       {highlight (r.description, query)}
                     </p>;
-                  </div>))}
             </TabsContent>;
             <TabsContent value="talent" className="space - y-4">;
-              {results;
                 .filter ((r, ) => r.type === "talent");
-                .map ((r, ) => (
-                  <div;
-                    key={`talent-${r.id}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4";
-                  >;
-                    <h3 className="text - lg font - bold text - white">;
-                      {highlight (r.title, query)}
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      {highlight (r.description, query)}
-                    </p>;
-                  </div>))}
-            </TabsContent>;
             <TabsContent value="docs" className="space - y-4">;
-              {results;
                 .filter ((r, ) => r.type === "doc");
-                .map ((r, ) => (
-                  <div;
-                    key={`doc-${r.id}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4";
-                  >;
-                    <h3 className="text - lg font - bold text - white">;
-                      {highlight (r.title, query)}
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      {highlight (r.description, query)}
-                    </p>;
-                  </div>))}
-            </TabsContent>;
             <TabsContent value="blog" className="space - y-4">;
-              {results;
                 .filter ((r, ) => r.type === "blog");
-                .map ((r, ) => (
-                  <div;
-                    key={`blog-${r.id}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4";
-                  >;
-                    <h3 className="text - lg font - bold text - white">;
-                      {highlight (r.title, query)}
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      {highlight (r.description, query)}
-                    </p>;
-                  </div>))}
-            </TabsContent>;
           </Tabs>)}
       </main>;
     </div>);
@@ -351,30 +223,18 @@ if (data && data.results && Array.isArray (data.results) ) {
   // Check condition
 if (return) {
   $2
-}
 if () {) {
-  $2
-}
   fetch_results (query.trim () );
 }else {
   set_results ([]);
 }, [router.is_ready, query]), //Fixed dependency array const fetch_results = async (term: string) => {
-  if () {) {
-  $2
-}
-  set_results ([]);
 return;
 }set_loading (true);
-try {
   const res = await fetch (`/api / search?query=$ {
   encodeURIComponent (term);
 }`);
 const data = await res.json ();
-if () {) {
-  $2
-}
   set_results (data.results);
-}else {
   set_results ([]);';
 logErrorToProduction ('Search API response structure is not as expected:', {
 
@@ -383,19 +243,14 @@ logErrorToProduction ('Search API response structure is not as expected:', {
 }catch (error) {';
   logErrorToProduction ('Search failed:', {
   data: error;
-});
-set_results ([]);
 }finally {
   set_loading (false);
 
-}
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ()
 router.push (`/search?q=$ {
 
   encodeURIComponent (query.trim () );
-}`);
-}
 //Add key prop to force re - render when route changes </div>);
 }{
   !loading && marketplace_results.length === 0 && blog_results.length > 0 && (<div> <p className="text - zion - slate - light mb - 2" >No marketplace results found. Related blog posts:</p> <div className="space - y-4" > {
@@ -407,16 +262,8 @@ router.push (`/search?q=$ {
   r.id;
 }` ";
 }className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4" > </p> </div>) );
-}</TabsContent> <div key= {
   `doc-$ {
-  r.id;
-}` ";
-}className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4" > </p> </div>) );
-}</TabsContent> <div key= {
   `blog-$ {
-  r.id;
-}` ";
-}className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4" > </p> </div>) );
 }</TabsContent> </Tabs>);
 }</main> </div>);
 }'"  );
@@ -432,7 +279,6 @@ router.push (`/search?q=$ {
                   <option value="date">Date</option>
                   <option value="popularity">Popularity</option>
                 </select>
-              </div>
               {/* Filter Options */}
               <div  className="space - y-3">
                 {filterOptions.map(filter => (<button     key={filter.id}
@@ -440,16 +286,11 @@ router.push (`/search?q=$ {
                     className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200'
                         : 'hover:bg-gray - 50'
 }`}
-                  >
                     <div  className="flex items - center space - x-3">
                       <filter.icon className="h-5 w-5 text-gray -600" />
                       <span className="text-sm font - medium text-gray -700">{filter.name}</span>
-                    </div>
                     <span className="text-sm text-gray -500">{filter.count}</span>
                   </button>) ) }
-              </div>
-            </div>
-          </div>
         </motion.div>
         {/* Search Results */}
         <motion.div
@@ -461,14 +302,11 @@ router.push (`/search?q=$ {
 
 ;
 
-      </main>;
-    </div>;
   );
 
           <div  className="mb - 6">;
             <p className="text - slate -300">;
               {search_query ? `Found ${filtered_results.length} results for "${search_query}"` : `Showing ${filtered_results.length} items`}
-            </p>;
             <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
               <div className="bg - white p - 6 rounded - lg shadow - md">;
                 <h2 className="text - 2xl font - semibold mb - 4">Our Services</h2>;
@@ -478,17 +316,12 @@ router.push (`/search?q=$ {
                   <li>• 24 / 7 Support</li>;
                   <li>• Custom Development</li>;
                 </ul>;
-              </div>;
-              <div className="bg - white p - 6 rounded - lg shadow - md">;
                 <h2 className="text - 2xl font - semibold mb - 4">Why Choose Us</h2>;
-                <ul className="text - gray - 600 space - y-2">;
 
                   <li>• Industry Expertise</li>;
                   <li>• Proven Results</li>;
                   <li>• Scalable Solutions</li>;
                   <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
@@ -496,9 +329,4 @@ router.push (`/search?q=$ {
               </Link>;
               <Link href="/contact/" className="bg - gray - 600 text - white px - 6 py - 3 rounded - lg hover:bg - gray - 700 transition - colors">;
                 Contact Us;
-              </Link>;
-            </div>;
     </>);
-}
-}
-;

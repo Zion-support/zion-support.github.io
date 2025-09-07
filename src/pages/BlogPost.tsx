@@ -122,7 +122,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 import { BLOG_POSTS } from "@/data/blog-posts",;
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',;
 import { fetchWithRetry } from '@/utils/fetchWithRetry',;
-export default function BlogPost() {;
   const router = useRouter(),;
   const { slug } = router.query as { slug: string },;
   const [post, setPost] = useState<BlogPostType | null>(null),;
@@ -162,7 +161,7 @@ export default function BlogPost() {;
 
     fetchPost(),
   }, [slug, router]),
-  
+
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -421,7 +420,7 @@ if (return '') {
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="flex items-center text-zion-slate-light">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -437,7 +436,7 @@ if (return '') {
                     <Share2 className="h-4 w-4 mr-1" />
                     <span className="text-sm">Share</span>
                   </Button>
-                  
+
                     <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
                         target="_blank"
                         rel="noopener noreferrer"
@@ -497,9 +496,9 @@ if (return '') {
                           {relatedPost && relatedPost.title}
                         </h4>;
             <Separator className='my-12 bg-zion-blue-light' />
-            
+
             <Separator className="my-12 bg-zion-blue-light" />
-            
+
             {relatedPosts.length > 0 && (
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
@@ -532,13 +531,13 @@ if (return '') {
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
                 src={post.featuredImage}
                 alt={post.featuredImageAlt || post.title}
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert max-w-none">
               <ReactMarkdown>
                 {post.content}
               </ReactMarkdown>;
-            
+
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
@@ -882,7 +881,6 @@ export default function Page() {;
                 className="px - 8 py - 3 border border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - white transition - all duration -300">;
     </div>);
 
-export default /**
 function BlogPost() {return (";
     <div class_name = "min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">";
       <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />";

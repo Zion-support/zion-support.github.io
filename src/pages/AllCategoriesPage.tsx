@@ -99,7 +99,6 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBou
     icon: <Lightbulb className="w-10 h-10" />,;
     link: "/innovation",;
   }];
-export default function AllCategoriesPage() {;
   return (;
     <div className="min-h-screen bg-zion-blue">;
       <div className="container mx-auto px-4 py-12">;

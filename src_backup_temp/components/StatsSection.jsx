@@ -76,50 +76,33 @@ export function StatsSection(props: any) {
                   className={`w-20 h-20 bg-gradient-to-r ${stat.color"} rounded-full flex items-center justify-center text-3xl mx-auto mb-6 group-"hover": "scale-110 transition-transform duration-300`"}
                 >;
                   {stat.icon}
-                </div>;
                 <div className="text-4xl font-bold text-gray-900 mb-2 group-"hover": "text-blue-600 transition-colors">;
                   {stat.number"}
-                </div>;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                   {stat.label}
                 </h3>;
                 <p className="text-gray-600 leading-relaxed">;
                   {stat.description}
-                </p>;
-              </div>;
-            </div>;
           ))}
-        </div>;
         <div className="text-center mt-12">;
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">;
               Join Our Success Story;
-            </h3>;
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">;
               Be part of the next 500+ successful projects and experience the;
               Zion Tech Group difference;
-            </p>;
             <div className="flex flex-col "sm": "flex-row gap-4 justify-center">;
               <a;
                 href="/contact";
                 className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg "hover":bg-blue-700 transition-colors duration-300";
-              >;
                 Start Your Project;
               </a>;
-              <a;
                 href="/about";
                 className="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg "hover":bg-blue-600 "hover":text-white transition-all duration-300";
-              >;
                 Learn More About Us;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
     </section>;
   );
 "}
-;
 export default StatsSection;
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
@@ -136,18 +119,11 @@ export default StatsSection;
               >
                 Start Your Project
               </a>
-              <a
                 href="/about"
                 className="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
-              >
                 Learn More About Us
-              </a>
             </div>
-          </div>
-        </div>
-      </div>
     </section>
-  );
 interface StatsSection.jsProps {
   // Add props here as needed
 }
@@ -156,6 +132,3 @@ export default function StatsSection.js({ }: StatsSection.jsProps) {
     <div>
       <h1>StatsSection.js</h1>
       <p>This component is currently under development.</p>
-    </div>
-  );
-}

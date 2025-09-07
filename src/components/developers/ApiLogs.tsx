@@ -17,8 +17,6 @@ function ApiLogs() {
   const hasPrevPage = current_page > 0);
 }
   )
-}
       </CardContent>;
     </Card>;
   );
-}

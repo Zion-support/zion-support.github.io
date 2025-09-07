@@ -31,15 +31,11 @@ export default [
         beforeAll: "readonly",
         afterAll: "readonly",
       },
-    },
     rules: {
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
       "no-var": "error",
-    },
-  },
-  {
     ignores: [
       "node_modules/",
       ".next/",
@@ -82,5 +78,4 @@ export default [
       "temp_conflicts/",
       "recovered-branches/",
     ],
-  },
 ];

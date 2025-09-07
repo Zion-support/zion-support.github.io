@@ -22,4 +22,3 @@ export default function LanguageDetectionPopup(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

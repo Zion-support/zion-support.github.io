@@ -29,7 +29,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <Link
                 to="/"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
-                onClick={onClose}
               >
                 Home
               </Link>
@@ -38,7 +37,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <Link
                 to="/about"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
-                onClick={onClose}
               >
                 About
               </Link>
@@ -47,7 +45,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <Link
                 to="/services"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
-                onClick={onClose}
               >
                 Services
               </Link>
@@ -56,7 +53,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <Link
                 to="/pricing"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
-                onClick={onClose}
               >
                 Pricing
               </Link>
@@ -65,7 +61,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <Link
                 to="/contact"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
-                onClick={onClose}
               >
                 Contact
               </Link>

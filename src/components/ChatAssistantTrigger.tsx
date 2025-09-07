@@ -17,9 +17,8 @@
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
-      
+
       if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant")
 import { useState } from "react",;
 import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -42,27 +41,16 @@ export function ChatAssistantTrigger() {;
 
   const [isOpen, setIsOpen] = useState(false);
 
-  // Handle sending messages to the AI chat assistant;
-  const handleSendMessage = async (message: string): Promise<void> => {;
-    try {;
       const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {;
-        method: "POST",;
-        headers: {;
           "Content-Type": "application/json"};
         body: JSON && JSON.stringify({ ;
-          messages: [{ role: "user", content: message }] ;
-        })});
 
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';      if (!response && response.ok) {;
-        throw new Error("Failed to get response from AI assistant");
-      }
 
       return Promise && Promise.resolve();
     } catch (error) {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
-      return Promise && Promise.resolve();
-    }
 
   },;
   return (;
@@ -81,12 +69,9 @@ export function ChatAssistantTrigger() {;
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat:', { data: error }),
-      return Promise.resolve()
-    }
   },
 
   return (
-    <>;
       <Button
         onClick = {(,) => setIsOpen(true),}
 
@@ -101,7 +86,6 @@ export function ChatAssistantTrigger() {;
           recipient={{;
             id: 'ai-assistant',;
             name: 'AI Assistant',;
-            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
 
           }}
@@ -110,7 +94,6 @@ export function ChatAssistantTrigger() {;
       )}
     </>
   )
-}
 
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
@@ -121,32 +104,18 @@ export /**
  */
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
-  // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise < void> => {
-    try {
       const response = await fetch ("https://ziontechgroup.functions.supabase.co / functions / v1 / ai - chat", {
         method: "POST",
-        headers: {
           "Content - Type": "application / json"}
         body: JSON.stringify ({
-          messages: [{ role: "user", content: message }];
-        })});
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';      // Check condition
 if ( {) {
   $2
-}
         throw new Error ("Failed to get response from AI assistant");
-      }
       return Promise.resolve ();
-    } catch (error) {
       logErrorToProduction ('Error in AI chat:', { data: error }),
-      return Promise.resolve ();
-    }
-  },
-  return (
-    <>;
-      <Button;
         on_click = {(, ) => setIsOpen (true), }
         size="icon";
         variant="outline";
@@ -162,19 +131,10 @@ if ( {) {
           recipient={{
             id: 'ai - assistant',
             name: 'AI Assistant',
-            avatar_url: 'https://placehold.co / 64x64?text = AI',
-            role: 'Virtual Assistant';
-          }}
           onSendMessage = {handleSendMessage, }
         />)}
     </>);
-}
-
-=======
 
     </>;
   );
-}
-;
-
 ;

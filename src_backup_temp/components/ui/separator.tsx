@@ -20,15 +20,10 @@ const Separator = React.forwardRef<;
   className;
       );
 ;
-;
-;
 }
       {...props};
     />;
-  );
-);
 Separator.displayName = SeparatorPrimitive.Root.displayName;
-;
 export { Separator };
 </SeparatorPrimitive>
 </typeof>';
@@ -37,5 +32,3 @@ export { Separator }
 </SeparatorPrimitive>;
 </typeof>;
 </typeof>
-export { Separator }
-export { Separator }

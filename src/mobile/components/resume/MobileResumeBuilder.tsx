@@ -95,7 +95,7 @@ export function MobileResumeBuilder() {
       {renderStepContent()}
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
-      
+
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
   )

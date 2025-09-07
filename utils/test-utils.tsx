@@ -11,14 +11,11 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
     </ThemeProvider>
   );
 }
-;
 const custom_render = (
   ui: React.ReactElement,
   options?: Omit < RenderOptions, 'wrapper'>) =>: any render (ui, { wrapper: AllTheProviders, ...options });
-;
 export * from '@testing - library / react';
 export { custom_render as render }
-;
 export const mockNextRouter = () =>: any ({
   push: jest.fn (),
   replace: jest.fn (),
@@ -26,31 +23,7 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
-<<<<<<< HEAD
-    on: jest.fn()
-    off: jest.fn()
-    emit: jest.fn()
-  }
-  isFallback: false
-  isLocale: false
-  isReady: true
-  defaultLocale: 'en'
-  domainLocales: []
-  isPreview: false
-=======
-    on: jest.fn (),
-    off: jest.fn (),
-    emit: jest.fn ();
-  },
-  is_fallback: false,
-  is_locale: false,
-  is_ready: true,
-  default_locale: 'en',
-  domain_locales: [],
-  is_preview: false;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
   isFallback: false,
   isLocale: false,
@@ -58,20 +31,8 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
-<<<<<<< HEAD
-});
-export const createMockProps = (overrides = {}) => ({
-  ...overrides
-=======
 
-});
-export const createMockProps = (overrides = {}) => ({
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </ThemeProvider>;
-  );
 },;
 const customRender = (;
   ui: React.ReactElement,;
@@ -89,23 +50,13 @@ export const mockNextRouter = () => ({;
     on: jest.fn(),;
     off: jest.fn(),;
     emit: jest.fn();
-  },;
   isFallback: false,;
   isLocale: false,;
   isReady: true,;
   defaultLocale: 'en',;
   domainLocales: [],;
-  isPreview: false;
 
 });
 export const createMockProps = (overrides = {}) => ({;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   ...overrides;
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-});

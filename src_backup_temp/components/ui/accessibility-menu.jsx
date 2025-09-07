@@ -44,9 +44,7 @@ export function AccessibilityMenu($1) {
     useEffect(() => {// Apply settings to document
         applySettings(settings);';
         // Save to localStorage
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
     const applySettings = (props) => {
-        const root = document.documentElement;
         // Font size
         root.style.setProperty('--font-size-multiplier', newSettings.fontSize === 'small' ? '0.875' :';
             newSettings.fontSize === 'large' ? '1.125' : '1');
@@ -67,7 +65,6 @@ export function AccessibilityMenu($1) {
         setSettings(prev => ({ ...prev", "fontSize": "size "}))};
     const resetSettings = ("props": "any) => {;
         const defaultSettings = {;
-  "fontSize": 'medium';
             "highContrast": false;
             "reducedMotion": false"
     const toggleSetting = (props) => {
@@ -79,8 +76,5 @@ export function AccessibilityMenu($1) {
         setSettings(prev => ({ ...prev, "fontSize": size }))};
     const resetSettings = (props) => {
         const defaultSettings = {
-  "fontSize": 'medium',
-            "highContrast": false,
-            "reducedMotion": false,
 ;';';
 import React,{useState,useEffect} from 'react'; import {motion,AnimatePresence} from 'framer-motion'; import {Settings,FileText,Eye,Zap,Volume2,VolumeX} from 'lucide-react'; import {Button} from "button.tsx"; export function AccessibilityMenu($1) { const [isOpen,setIsOpen] = useState(false); const [settings,setSettings] = useState({ fontSize: 'medium',highContrast: false,reducedMotion: false,soundEnabled: true };); useEffect(() => { const savedSettings = localStorage.getItem('accessibility-settings'); if (savedSettings) { setSettings(JSON.parse(savedSettings))} },[]); useEffect(() => { applySettings(settings);'; localStorage.setItem('accessibility-settings',JSON.stringify(settings))},[settings]); const applySettings = (props) => { const root = document.documentElement; root.style.setProperty('--font-size-multiplier',newSettings.fontSize === 'small' ? '0.875' :'; newSettings.fontSize === 'large' ? '1.125' : '1'); if (newSettings.highContrast) { root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')} if (newSettings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')} }; const toggleSetting = (props) => { setSettings(prev => ({ ...prev,[key]: !prev[key] }))};; const updateFontSize = (props) => { setSettings(prev => ({ ...prev,fontSize: size }))};; const resetSettings = (props) => { const defaultSettings = { fontSize: 'medium',highContrast: false,reducedMotion: false,;';';

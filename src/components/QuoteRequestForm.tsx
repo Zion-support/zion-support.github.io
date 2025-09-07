@@ -38,14 +38,12 @@ const serviceStepSchema = z.object({
       email: ""
       phone: ""
       company: ""
-    }
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev;
 
   )
-}
 
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
@@ -87,22 +85,16 @@ function QuoteRequestForm() {
     start_date: undefined,
     end_date: undefined,
     timeline: "flexible",
-    budget: {
       amount: 0,
       type: "fixed";
-    }
     contact_info: {
       name: "",
       email: "",
       phone: "",
       company: "";
-    }
   });
   const updateFormData = (data: Partial < QuoteFormData>, ) =>: any {
     setFormData (prev => ({
-      ...prev;
-}
   );
-}
 
 ;

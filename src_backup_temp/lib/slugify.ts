@@ -13,21 +13,16 @@ export function slugify("text": unknownstring): string {
     .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
     .replace(/^-+|-+$/g, "); // Remove leading/trailing hyphens
 }
-/**
  * Convert a slug back to a readable string
  * @param slug - The slug to convert
  * @returns A readable string
- */
 export function deslugify("slug": string): string {
   return slug
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (char)  => char.toUpperCase())}
-/**
  * Generate a unique slug by appending a number if the slug already exists
- * @param text - The text to convert to a slug
  * @param existingSlugs - Array of existing slugs to check against
  * @returns A unique slug
- */
 export function generateUniqueSlug("text": string, "existingSlugs": string[]): string {
   let slug = slugify(text);
   let counter = 1;

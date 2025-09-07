@@ -101,7 +101,6 @@ interface ChatMessageProps {;
   isUser: boolean,;
   timestamp: Date;
 ;
-export const ChatMessage: React.FC<ChatMessageProps> = ({;
   timestamp}: ChatMessageProps) => {;
   const { theme } = useTheme(),;
   const sanitizedHtml = useMemo<{ __html: string}>(;

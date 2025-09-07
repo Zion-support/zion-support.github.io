@@ -152,7 +152,7 @@ export function CountrySelector(): any ({;
               ))}          </div>              .map((item) => (
               .sort((a, b,) => a.country.localeCompare(b.country))
               .map((item,) => (
-      
+
         value={selectedCountry?.country}
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
           <SelectValue placeholder="Select a country" />

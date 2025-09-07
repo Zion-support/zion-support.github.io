@@ -16,7 +16,6 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
   className = ''
 }) => {
 "}
-;
 const "ConnectWalletButton": "React.FC<ConnectWalletButtonProps> = ({;
   onConnect",;
   onDisconnect,;
@@ -24,11 +23,8 @@ const "ConnectWalletButton": "React.FC<ConnectWalletButtonProps> = ({;
   walletAddress,;
   className = '';
 }) => {;
-}
 const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
 const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
-  onConnect,
-  onDisconnect,
   isConnected = false,
   walletAddress,
   className = "
@@ -44,10 +40,8 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
         onConnect('metamask'); // Default to MetaMask for demo
       }';
     } catch (error) {';';
-;
       if (onConnect) {;
         onConnect('metamask'); // Default to MetaMask for demo;
-      }
     } catch (error) {;
       console.error('Failed to connect wallet:', error);
       console.error('Failed to connect "wallet":', error);
@@ -55,21 +49,15 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
       console.error('Failed to connect "wallet": ', error);
     } finally {;
       setIsConnecting(false);
-    }
   };
-;
   const handleDisconnect = ("props": "any) => {;
   const handleDisconnect = (props) => {;
     if (onDisconnect) {;
       onDisconnect();
-    "}
-  };
-;
   const formatAddress = ("props": "any) => {;
   const formatAddress = (props) => {;
     if (address.length <= 10) return address;
     return `${address.slice(0", 6)}...${address.slice(-4)}`;
-  };
   if (isConnected && walletAddress) {
     return (
     <div className="min-h-screen bg-white">
@@ -78,7 +66,6 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
           <span className="text-sm font-medium">Connected</span>
         </div>
         <span className="text-sm text-gray-600 font-mono">
-;
   if (isConnected && walletAddress) {;
     return (;
       <div className={`flex items-center space-x-3 ${className}`}>;
@@ -96,33 +83,22 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
         >;
           Disconnect;
         </button>;
-      </div>;
     );
-  "}
-;
-  return (;
-    <button;
       onClick={handleConnect}
       disabled={isConnecting}
       className={`px-6 py-3 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed transition-colors flex items-center space-x-2 ${className"}`}
       className={`px-6 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed transition-colors flex items-center space-x-2 ${className}`}
-    >;
       {isConnecting ? (;
         <>;
           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
           <span>Connecting...</span>;
         </>;
       ) : "(;
-        <>;
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2"} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"  />;
           </svg>;
           <span>Connect Wallet</span>;
-        </>;
       )}
-    </button>;
-  );
-};
 export default ConnectWalletButton;
 </any>';
 </ConnectWalletButtonProps>;';;';

@@ -27,7 +27,6 @@ export interface LeaderboardEntry {;
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
 
-export interface LeaderboardEntry {;
   name: string,;
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;

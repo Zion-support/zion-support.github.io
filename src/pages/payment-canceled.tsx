@@ -10,7 +10,7 @@ import { XCircle } from 'lucide-react'
 
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
-  
+
   return (
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
         <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -21,7 +21,7 @@ export default function PaymentCanceled() {
         <p className="text-zion-slate-light mb-6">
           Your payment process was canceled. No charges have been made to your account.
         </p>
-        
+
         <div className="flex flex-col space-y-3">
           <Button
             onClick={() => router.push('/payments')} // Changed to router.push
@@ -51,7 +51,7 @@ export default function PaymentCanceled() {;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
             Return to Dashboard
   );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-        
+
             variant="outline"
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 
@@ -60,17 +60,17 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 
 import { useRouter } from 'next/router'; // Changed from useNavigate;
@@ -81,7 +81,6 @@ import { XCircle } from 'lucide-react';
 
 import React from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
-export default function PaymentCanceled() {;
   const router = useRouter(), // Changed from navigate;
   return (;
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">;
@@ -102,7 +101,6 @@ export default function PaymentCanceled() {;
 
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push;
 
-export default function PaymentCanceled() {;
   const router = useRouter(); // Changed from navigate;
 
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>;
@@ -140,7 +138,6 @@ function PaymentCanceled() {
             onClick={() => router.push('/payments')} // Changed to router.push;
             on_click={() => router.push ('/dashboard')} // Changed to router.push;
             className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
-export default /**
   const router = use_router (); // Changed from navigate;
     <div className='flex flex - 1 bg - zion - blue items - center justify - center p - 4'>;
       <div className='max - w-md w - full bg - zion - blue - dark rounded - xl p - 8 border border - zion - blue - light shadow - lg text - center'>;

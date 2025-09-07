@@ -15,7 +15,6 @@ export default function SignInPage() {const [email, setEmail] = useState("");
     } catch (error) {setError(error instanceof Error ? error.message : "Login failed");
     } finally {setIsLoading(false);
     }
-  }
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -29,14 +28,10 @@ export default function SignInPage() {;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault(),;
     setIsLoading(true),;
-    setError("");
-    try {;
-      await login(email, password);
     } catch (error) {;
       setError(error instanceof Error ? error.message : "Login failed");
     } finally {;
       setIsLoading(false);
-    }
   };
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
@@ -52,7 +47,6 @@ export default function SignInPage() {;
             {error && (;
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">;
                 <p className="text-red-400 text-sm">{error}</p>;
-              </div>;
             )}
 ;
             <div>;
@@ -68,21 +62,13 @@ export default function SignInPage() {;
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
                 placeholder="Enter your email";
               />;
-            </div>;
-            <div>;
               <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Password;
-              </label>;
-              <input;
                 id="password";
                 type="password";
-                required;
                 value={password}
                 on_change={(e) => set_password (e.target.value)}
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
                 placeholder="Enter your password";
-              />;
-            </div>;
             <button;
               type="submit";
               disabled={is_loading}
@@ -97,9 +83,6 @@ export default function SignInPage() {;
               <Link href="/auth / signup" className="text - blue - 400 hover:text - blue - 300 font - medium">;
                 Sign up for free;
               </Link>;
-            </p>;
-          </div>;
-        </div>;
         <div className="text - center">;
           <p className="text - zinc - 500 text - xs">;
             By signing in, you agree to our{" "}
@@ -109,9 +92,4 @@ export default function SignInPage() {;
             and{" "}
             <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
               Privacy Policy;
-            </Link>;
-          </p>;
-        </div>;
-      </div>;
     </div>);
-}

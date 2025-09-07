@@ -18,7 +18,6 @@ import React from 'react';
             animate = {;
   { "opacity": "1",;
   "scale": "1;
-"}}
             transition={{ "duration": "0.5 "}}";
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20";
 ";
@@ -37,53 +36,32 @@ import React from 'react';
           </motion.div>;
         </div>;
       </section>;) "}
-  return (";
-    <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">";
       <div className="max-w-7xl mx-auto px-6">";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-12 items-center">;
           {/* Left Column - Content */"}
-          <motion.div;
-            initial = {;
-  { "opacity": "0",;
   "x": "-30;
-"}}
             whileInView = {;
-  { "opacity": "1",;
   "x": "0;
-"}}
             transition={{ "duration": "0.6 "}}
-";
             <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;
               Stay Ahead with Zion Tech Group;
             </h2>";
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
               Get exclusive access to the latest technology insights", service updates, and industry trends.Join thousands of professionals who trust us to keep them informed.</p>;
-";
             <div className="space-y-4 mb-8">;
               {benefits.map((benefit, index) => (;
-                <motion.div;
                   key={index}
-                  initial = {;
-  { "opacity": "0",;
   "x": "-20;
-"}}
-                  whileInView = {;
-  { "opacity": "1",;
-  "x": "0;
-"}}
                   transition = {;
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
 "}}";
                   className="flex items-start";
-";
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">";
                     <benefit.icon className="w-6 h-6 text-white" />;
-                  </div>;
                   <div>";
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>";
                     <p className="text-gray-400">{benefit.description}</p>;
-                  </div>;
 }}"
                   className="flex items-start"
 "
@@ -93,39 +71,20 @@ import React from 'react';
                   <div>"
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}"
                     <p className="text-gray-400">{benefit.description}</p>
-                  </div>
                 </motion.div>;) ) }
-            </div>;
-";
             <div className="flex items-center text-sm text-gray-400">";
               <CheckCircle className="w-5 h-5 text-green-400 mr-2"   />              <span>No spam, unsubscribe at  time</span>;
-            </div>;
-          </motion.div>;
           {/* Right Column - Newsletter Form */}
-          <motion.div;
-            initial = {;
-  { "opacity": "0",;
   "x": "3 0;
-"}}
-            whileInView = {;
-  { "opacity": "1",;
-  "x": "0;
-"}}
-            transition = {;
   { "duration": "0.6",;
   "delay": "0.2;
-"}}
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
               <div className="text-center mb-6">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">";
                   <Mail className="w-8 h-8 text-white"   />;
-                </div>";
                 <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>;
-              </div>;
-";
               <form onSubmit={handleSubmit} className="space-y-4">;
-                <div>";
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">;
                     Email Address;
                   </label>;
@@ -140,10 +99,7 @@ import React from 'react';
                   <Mail className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
-              </div>
-"
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>"
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address
                   </label>
@@ -156,7 +112,6 @@ import React from 'react';
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 "focus": "outlin e-none "focus": rin g-2 "focus": rin g-cyan-500 "focus": borde r-transparent transition-all duration-300";
                     required;
                   />;
-                </div>;
                 <button";
                   type="submit";
                   disabled={isLoading || !email"}";
@@ -165,15 +120,12 @@ import React from 'react';
                     <div className="flex items-center">";
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>;
                       Subscribing...;
-                    </div>;
                   ) : (;
                     <>;
                       Subscribe Now";
                       <ArrowRight className="ml-2 w-5 h-5"   />                    </>;
                   )"}
-                </button>;
               </form>;
-";
               <div className="mt-6 text-center">";
                 <p className="text-xs text-gray-400">;
                   By subscribing, you agree to our{' '}";
@@ -185,15 +137,7 @@ import React from 'react';
                     Terms of Service;
                   </a>;
                 </p>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
     </section>;) "};
-;
 export default NewsletterSection}}}'";
-</motion>;
-</motion>;
 </motion>;
 </motion>

@@ -1,19 +1,8 @@
- 
 }else {
   console.warn ('Missing artifact for', name) 
 
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}else {
-  console.warn ('Missing artifact for', name)
 }main ();
 
-=======
-const fs = require('fs'),
-const path = require('path'),
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function main() {
 
   const outDir = path && path.join(__dirname, '../abi'),
@@ -37,8 +26,6 @@ function main() {
     } else {
       console && console.warn('Missing artifact for', name)
     }
-  }
-}
 
 }main ();main()
 

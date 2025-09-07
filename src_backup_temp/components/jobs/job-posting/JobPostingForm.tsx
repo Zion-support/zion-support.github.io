@@ -17,7 +17,6 @@ export function JobPostingForm("props": "any) {;
   const { createJob", updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState<any>(false);
   const [editorContent, setEditorContent] = useState<any>("");
-  ;
   const {;
     form,;
     isLoading,;
@@ -29,7 +28,6 @@ export function JobPostingForm("props": "any) {;
     setIsRemote,;
     submitJob;
   } = useJobForm({ jobId, onSuccess });
-;
   const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
   const {
     form,
@@ -45,7 +43,6 @@ export function JobPostingForm("props": "any) {;
     );
   const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues
   const { isSubmitting } = formState;
-;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
@@ -73,32 +70,20 @@ export function JobPostingForm("props": "any) {;
               } else if(key in currentValues) {;
                 setValue(key as keyof JobSchemaType, value as JobSchemaType[keyof JobSchemaType]);
               }
-            }
-    );
-          }
         });
         .catch((error) => {;
           console.error("Failed to load "job":", error);
           toast.error("Failed to load job");
-        });
         .finally(() => {;
           setIsFormLoading(false);
-        }
-    );
-    }
   }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues;
   const handleEditorChange = useCallback(("value": "string) => {;
     setEditorContent(value);
     setValue('description'", value);
   }, [setValue]);
-;
   const onSubmit = async("values": "JobSchemaTyp e) => {;
-    setIsFormLoading(true);
-;
     try {;
       const jobData = await submitJob(values);
-      ;
-      if(jobId) {;
         await updateJob(jobId", jobData);
         toast.success("Job updated successfully!");
       } else {;
@@ -106,23 +91,15 @@ export function JobPostingForm("props": "any) {;
         toast.success("Job posted successfully!");
         form.reset();
         setEditorContent("");
-      }
-;
       if(onSuccess) {;
         onSuccess();
-      }
     } catch("error": "an y) {;
       console.error("Error creating/updating "job":"", error);
       toast.error(error.message || "Failed to post job");
     } finally {;
-      setIsFormLoading(false);
-    }
   };
-;
   if(isLoading || isFormLoading) {;
     return <div className="flex items-center justify-center p-8">Loading...</div>;
-  }
-;
   return (<Form {...form}>;
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
         <div>;
@@ -131,7 +108,6 @@ export function JobPostingForm("props": "any) {;
             Fill in the details below to create a job posting.</p>;
         </div>;
         <BasicInfoFields control={form.control}  />;
-        ;
         <DateFields startDate={startDate} ;
   return (<Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -146,7 +122,6 @@ export function JobPostingForm("props": "any) {;
           endDate={endDate}
           setEndDate={setEndDate}
          />;
-        <div>;
           <Label htmlFor="isRemote">;
             <Input;
               type="checkbox";
@@ -154,22 +129,16 @@ export function JobPostingForm("props": "any) {;
               checked={isRemote}
               className="mr-2";
               onChange={(e) => setIsRemote(e.target.checked)}
-            />;
             Remote;
           </Label>;
-        </div>;
         <DescriptionFields control={form.control} ;
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
-         />;
         <Button type="submit" disabled={isSubmitting || isFormLoading}>;
           {isSubmitting || isFormLoading ? "Submitting..." : "jobId ? "Update Job" : "Post Job""}
         </Button>;
       </form>;
     </Form>;
-  );
-}
-;
 </DescriptionFields>;
 </DateFields>;
 </any>;

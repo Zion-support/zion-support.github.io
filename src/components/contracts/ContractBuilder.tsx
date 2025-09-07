@@ -47,7 +47,7 @@ isOpen;
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
+
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -122,7 +122,7 @@ isOpen;
 }currentValues= {
 }/> </DialogContent> </Dialog>)
 }"}
-          
+
           <TabsContent value="form" className="pt-4">
               talent={talent}
               clientName={clientName}
@@ -130,7 +130,7 @@ isOpen;
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
           </TabsContent>
-          
+
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
                 contractContent={generatedContract}

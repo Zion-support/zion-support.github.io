@@ -122,7 +122,7 @@ export interface TalentCardProps {
               {talent.availability_type && (
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-            
+
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
                 <div className="flex items-center text-zion-slate-light">
 

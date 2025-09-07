@@ -28,4 +28,3 @@ export default function Listings({ }: ListingsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

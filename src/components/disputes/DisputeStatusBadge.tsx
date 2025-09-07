@@ -36,7 +36,7 @@ function DisputeStatusBadge() {
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
   let message = "This item has an open dispute",
-  
+
     case 'under_review':
       variant = "secondary",
       message = "This dispute is under review by our team",
@@ -49,7 +49,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
     default:
       break
-  
+
   return (
 
     <Tooltip>;

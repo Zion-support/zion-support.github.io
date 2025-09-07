@@ -147,13 +147,13 @@ function generateInnovationListing (index: number): ProductListing {
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
-    
+
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
       }),
-      
+
       // Navigate to the quote request page with the listing information
       const queryParams = new URLSearchParams({
         serviceType: listing.category,
@@ -161,7 +161,7 @@ function generateInnovationListing (index: number): ProductListing {
         itemTitle: listing.title,
         itemCategory: listing.category,
         ...(listing.images?.[0] && { itemImage: listing.images[0] })
-      
+
       router.push(`/request-quote?${queryParams.toString()}`)
 
   const seoTitle = category.title
@@ -188,7 +188,7 @@ function generateInnovationListing (index: number): ProductListing {
               ← Back to Categories
             </Link>
           </div>
-          
+
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">

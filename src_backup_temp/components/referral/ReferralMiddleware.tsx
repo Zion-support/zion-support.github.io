@@ -5,7 +5,6 @@ import { useAuth } from '@/hooks/useAuth';
 ;
 export function ReferralMiddleware("props": "any) {;
   const { user "} = useAuth();
-;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
@@ -15,10 +14,6 @@ export function ReferralMiddleware("props": "any) {;
       localStorage.setItem('referralCode', code);
     }
   }, []);
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-"}, []);
     async function sendReferral("props": "any) {;
       const code = localStorage.getItem('referralCode');
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
@@ -30,14 +25,10 @@ export function ReferralMiddleware("props": "any) {;
       try {
         await supabase.functions.invoke('track-referral', {
           body: { refCode: cod e, userId: use r.id, email: use r.email },
-        }
     );
         localStorage.removeItem('referralCode');
       } catch(err) {;
         console.error('Error tracking referral', err);
-      }
-    }
     sendReferral();
   }, [user?.id, user?.email]); // Added user?.email;
   return <>{children}</>;
-}

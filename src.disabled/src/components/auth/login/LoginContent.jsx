@@ -11,4 +11,3 @@ export default function LoginContent({ }: LoginContentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

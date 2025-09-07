@@ -30,14 +30,7 @@ export default function TranslationPreview() {
             <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>
               {translations[lng] || (lng === 'en' ? text : '')}            </div>
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-          </div>
         ))}
-      </div>
-    </div>
   )}
-:components/admin/TranslationPreview.tsx
   );
 };
-  )}
-:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx

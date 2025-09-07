@@ -13,5 +13,3 @@ export default function GovernancePrivacy() {
   )}
 :backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
 ;
-  )}
-:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx

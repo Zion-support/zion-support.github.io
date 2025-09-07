@@ -7,39 +7,28 @@ if (!id) return;
       } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
-      }
 
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
 
-    }
-
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
 
     return <div className="p-6 text-white">Loading product details...</div>;
-  }
   if (!product) {
 
         if (res && res.ok) {;
           const data = await res && res.json();
           setProduct(data);
-        }
       } catch (err) {;
         // Fail silently and fall back to local data;
         logErrorToProduction('Error fetching product', { data: err });
-      }
     };
 
     // Only fetch if id is available (from router);
     if (id) {;
-      fetchProduct();
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-    }
   }, [id]), // id is now from router && router.query;
 
   return (
@@ -52,13 +41,9 @@ if (!id) return;
   }, [id]), // id is now from router.query;
 
   if (!product && !id) { // If no id from router yet, it might still be loading;
-    return <div className="p-6 text-white">Loading product details...</div>;
-  }
 ;
   if (!product) {;
     return <div className="p-6 text-white">Product not found</div>;
-  }
-;
   const inCart = items.some(i => i.id === product.id),;
   const handleAdd = () => {;
     if (inCart) return,;
@@ -69,13 +54,9 @@ if (!id) return;
     });
     toast && toast.success(`1× ${product && product.title} added`);
     setTimeout(() => setAdding(false), 500);
-  };
     setTimeout(() => setAdding(false), 500)
-  }
 
-  return (
     <>;
-      <SEO
 
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
@@ -90,7 +71,6 @@ if (!id) return;
               alt={product.title}
 
               className="object-cover rounded-md"
-            />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
@@ -102,10 +82,7 @@ if (!id) return;
     </>;
   );
 
-}
 //Only fetch if id is available (from router) ;
-
-}
 
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
@@ -130,44 +107,25 @@ function ProductPage() {
     // Check condition
 if ( {) {
   $2
-}
       const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
       set_product (found_product || null);
-    }
   }, [id]);
-;
 
-        </Button>;
-      </div>;
-    </>;
-  );
-}
-;
-}
-//Only fetch if id is available (from router) ;
 }const in_cart = items.some (index => i.id === product.id);
 const handle_add = () =>: any {
-  // Check condition
 if (return) {
-  $2
-}
 set_adding (true);
 dispatch ({
   type: 'ADD ITEM';
 payload: {
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-;
-});
 toast.success (`1× $ {
   product.title ;
 }added`);
 set_timeout ( () => set_adding (false), 500) ;
-}
-product.title ;
 }description= {
   product.description ;
 }og_image= {
   product.images?.[0] ;
 }/> </Button> </div> </>) ;
 }';
-}

@@ -74,7 +74,7 @@ key={language.code}
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
-        
+
         <div className="flex gap-3 mt-4">
 
             onClick={() => setTheme('light')}

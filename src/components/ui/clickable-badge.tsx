@@ -67,7 +67,6 @@ import React from './react';
 import { cn  } from '@/lib / utils';
 import { badge_variants  } from '@/components / ui / badge - variants';
 export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
-export /**
   return (
       className={cn (
         badge_variants ({ variant });

@@ -33,21 +33,13 @@ export default function Page() {
       return false}
   };
   const deleteJob = async(jobId: string) => {
-    if(!clientId) return false;
-    try {
       const { error: deleteErro r } = await supabase
-        .from("jobs")
         .delete()
-        .eq("id", jobId)
-        .eq("client_id", clientId); 
       if(deleteError) throw deleteError;
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
-      return true} catch(err: an y) {
       console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
-      return false}
-  };
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);

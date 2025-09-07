@@ -21,11 +21,6 @@ export default function EquipmentRecommendations() {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
   useEffect(() => {
-export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth()
-  const [listings, setListings] = useState<ProductListing[]>([])
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<boolean>(false)
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components/ProductListingCard';
 import {useAuth} from '@/hooks/useAuth';
@@ -46,7 +41,6 @@ export default function EquipmentRecommendations() {;
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   useEffect(() => {;
-export default function EquipmentRecommendations() {;
   const { isAuthenticated, user } = useAuth(),;
   const [listings, setListings] = useState<ProductListing[]>([]),;
   const [loading, setLoading] = useState<boolean>(false),;
@@ -66,7 +60,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
   const [ loading, setLoading ] = useState<boolean>(false),
   const [ error, setError ] = useState<boolean>(false),
 
-  useEffect(() => {
     if (isAuthenticated && user?.id) {
 
       setLoading(true);
@@ -111,14 +104,10 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         </DialogContent>;
       </Dialog>;
     );
-  }
-  return (
 
         ))}
 
       </div>;
-    </div>;
-  );
 
 import {ProductListingCard} from '@/components / ProductListingCard';
 import {use_auth} from '@/hooks / use_auth';
@@ -141,10 +130,6 @@ function EquipmentRecommendations() {
   const [loading, set_loading] = useState < boolean>(false);
   const [error, set_error] = useState < boolean>(false);
   useEffect (() => {
-export default /**
- * EquipmentRecommendations - Function description
- */
-function EquipmentRecommendations() {
   const { is_authenticated, user } = use_auth (),
   const [listings, set_listings] = useState < ProductListing[]>([]),
   const [loading, set_loading] = useState < boolean>(false),
@@ -153,7 +138,6 @@ function EquipmentRecommendations() {
     // Check condition
 if ( {) {
   $2
-}
       set_loading (true);
       fetch_recommendations (user.id);
         .then (set_listings);
@@ -161,35 +145,22 @@ if ( {) {
         .finally (() => set_loading (false)) }        .catch ((, ) => set_error (true));
         .finally ((, ) => set_loading (false));
         .finally (() => set_loading (false));
-    }
   }, [is_authenticated, user]);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
       <Dialog open>;
         <DialogContent className='bg - zion - blue border - zion - blue - light text - white'>          <DialogHeader>;
             <DialogTitle > Authentication required</DialogTitle>;
           </DialogHeader>;
           <p > Please sign in to get personalized AI picks.</p>        <DialogContent className="bg - zion - blue border - zion - blue - light text - white">;
           <DialogHeader>;
-            <DialogTitle > Authentication required</DialogTitle>;
-          </DialogHeader>;
           <p > Please sign in to get personalized AI picks.</p>;
           <Button;
             as_child;
             className='mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white';
           >;
             <Link href='/auth / login?return_to=/equipment / recommendations'>;
-              Sign In;
             </Link>          </Button>          <Button as_child className="mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white">;
             <Link href="/auth / login?return_to=/equipment / recommendations">Sign In</Link>;
-          </Button>;
-        </DialogContent>;
       </Dialog>);
-  }
-  return (
     <div className='min - h-screen bg - zion - blue py - 8 px - 4'>;
       <h1 className='text - 2xl font - bold text - white mb - 6'>;
         AI Equipment Recommendations;
@@ -205,9 +176,6 @@ if ( {) {
         {listings.map ((listing, ) => (
           <div key={listing.id} className="break - inside - avoid mb - 4">;
           </div>))}
-      </div>;
     </div>);
-}
 
-}
 ;

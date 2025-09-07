@@ -45,7 +45,7 @@ function InterviewsContent() {
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
           <TabsContent value='upcoming' className='space-y-6'>
-          
+
           <TabsContent value="upcoming" className="space-y-6">
 
             {isLoading ? (
@@ -61,7 +61,7 @@ function InterviewsContent() {
                 <p className="text-muted-foreground mb-6">You don't have any scheduled interviews coming up.</p>
           </TabsContent>
           <TabsContent value='pending' className='space-y-6'>
-          
+
           <TabsContent value="pending" className="space-y-6">
 
             ) : pendingInterviews.length > 0 ? (
@@ -70,7 +70,7 @@ function InterviewsContent() {
                 <h3 className="text-xl font-medium mb-2">No pending interviews</h3>
                 <p className="text-muted-foreground mb-6">You don't have any interview requests that need your attention.</p>
           <TabsContent value='past' className='space-y-6'>
-          
+
           <TabsContent value="past" className="space-y-6">
 
             ) : pastInterviews.length > 0 ? (

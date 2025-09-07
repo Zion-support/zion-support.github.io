@@ -2,7 +2,7 @@ function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
-  
+
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -87,7 +87,7 @@ function ReviewsModerationContent() {;
 
                 />
               </TabsContent>
-              
+
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />

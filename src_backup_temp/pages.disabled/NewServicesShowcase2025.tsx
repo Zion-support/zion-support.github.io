@@ -8,7 +8,6 @@ const "NewServicesShowcase2025": React.FC = () => {
         </h1>
         <p className="text-xl text-gray-600 text-center">Coming soon...</p>
       </div>
-    </div>
   );
 };
 export { NewServicesShowcase2025 };

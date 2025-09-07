@@ -22,4 +22,3 @@ export default function index(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

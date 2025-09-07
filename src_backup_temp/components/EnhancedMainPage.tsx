@@ -22,4 +22,3 @@ export default function EnhancedMainPage(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

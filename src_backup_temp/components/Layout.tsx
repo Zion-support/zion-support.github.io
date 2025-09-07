@@ -8,9 +8,7 @@ import { FuturisticFooter } from './FuturisticFooter';
 ;
 interface LayoutProps {;
   "children": "React.ReactNode;
-;
 "}
-;
 const "Layout": "React.FC<LayoutProps> = ({ children "}) => {;
   return (;
     <>;
@@ -19,7 +17,6 @@ const "Layout": "React.FC<LayoutProps> = ({ children "}) => {;
         <meta name="theme-color" content="#0ea5e9"  />;
         <link rel="icon" href="/favicon.ico"  />;
       </Head>;
-      ;
       <div className="min-h-screen bg-slate-50">;
         <AppHeader />;
         <main className="flex-1">;
@@ -30,7 +27,6 @@ const "Layout": "React.FC<LayoutProps> = ({ children "}) => {;
     </>;
   );
 };
-;
 export default Layout;
 </LayoutProps>
 import Header from './Header';
@@ -66,10 +62,7 @@ export default function Layout({
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
-          {children}
         </main>
         <Footer />
       </div>
     </>
-  );
-}

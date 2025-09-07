@@ -42,7 +42,6 @@ const {applications, isLoading, updateApplicationStatus} =;
         acc[column.id] = applications.filter(app => app.status === column.id);
         return acc;
       }, {}
-    );
       setColumns(groupedApplications);
     }
   }, [applications]);
@@ -71,11 +70,9 @@ const {applications, isLoading, updateApplicationStatus} =;
     // Update status in the database;
     try {;
     destColumn.splice(destination.index, 0, {...removed, status: newStatus}
-    );
     setColumns({...columns,
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}
-    );
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus);
@@ -84,21 +81,17 @@ const {applications, isLoading, updateApplicationStatus} =;
         "description": "`Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title"}`});
     } catch(error) {;
       // Revert the UI changes if the database update fails;
-      toast({;
         "title": 'Failed to update status',;
         "description": 'Please try again',;
         "variant": 'destructive'});
         title: 'Status updated',
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}
-    );
     } catch(error) {
       // Revert the UI changes if the database update fails
       toast({
         title: 'Failed to update status',
         description: 'Please try again',
         variant: 'destructive'}
-    );
-    }
   };
   if(isLoading) {;
     return ();
@@ -116,16 +109,11 @@ const {applications, isLoading, updateApplicationStatus} =;
           </Card>;
         ))}
       </div>;
-    );
-  }
   if(!applications || applications.length === 0) {return (";
       <Card className="text-center py-16">;
-        <CardContent>";
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>";
           <p className="text-muted-foreground mb-6">;
             You haven't received applications for this job yet.</p>;
-        </CardContent>;
-      </Card>;
   if(!applications || applications.length === 0) {return ("
       <Card className="text-center py-16">
         <CardContent>"
@@ -135,11 +123,8 @@ const {applications, isLoading, updateApplicationStatus} =;
         </CardContent>
       </Card>
     );}
-  return ();
     <DragDropContext onDragEnd={handleDragEnd}>;
-      <div'`;
         className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 "md": "grid-cols-3 "lg":grid-cols-5 gap-4'"} overflow-x-auto`}
-      >;
         {COLUMNS.map(column => (;
           <KanbanColumn key={column.id}
             id={column.id}
@@ -148,10 +133,6 @@ const {applications, isLoading, updateApplicationStatus} =;
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
            />;
-        ))}
-      </div>;
     </DragDropContext>;
-  );
-}
 '"`;
 </KanbanColumn>

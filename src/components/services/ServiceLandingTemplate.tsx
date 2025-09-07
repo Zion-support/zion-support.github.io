@@ -21,7 +21,6 @@ export interface Benefit {
   description: string,
   icon?: React.ReactNode
 import React from 'react';
-export interface Benefit {
   icon?: React.ReactNode;
 export interface Testimonial {
 
@@ -43,9 +42,6 @@ export interface Benefit {;
   description: string,;
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
 
-export interface Benefit {
-
-export interface Benefit {;
 ;
 export interface Testimonial {;
   name: string,;

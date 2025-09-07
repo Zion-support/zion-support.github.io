@@ -17,14 +17,12 @@ export const securityConfig = {
 
       upgradeInsecureRequests: []
     }
-  }
   // Security Headers
   headers: {
     'X-Frame-Options': 'DENY'
     'X-Content-Type-Options': 'nosniff'
     'Referrer-Policy': 'strict-origin-when-cross-origin'
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  }
   // Rate Limiting
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -40,19 +38,15 @@ export const securityConfig = {
       base_uri: ["'self'"],
       form_action: ["'self'"],
       upgradeInsecureRequests: [];
-    }
   },
   // Security Headers;
-  headers: {
     'X - Frame - Options': 'DENY',
     'X - Content - Type - Options': 'nosniff',
     'Referrer - Policy': 'strict - origin - when - cross - origin',
     'Permissions - Policy': 'camera=(), microphone=(), geolocation=()';
-  },
   // Rate Limiting;
   rate_limit: {
     window_ms: 15 * 60 * 1000, // 15 minutes;
     max: 100 // limit each IP to 100 requests per window_ms;
-  }
 };
 export default securityConfig;

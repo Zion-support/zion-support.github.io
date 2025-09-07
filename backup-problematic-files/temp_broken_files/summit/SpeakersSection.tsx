@@ -8,7 +8,6 @@ interface Speaker {;
   twitter?:string,;
   linkedin?:string;
 }
-;
 const speakers:Speaker[] = [;
   {;
     name:'Alex Zion',;
@@ -16,7 +15,6 @@ const speakers:Speaker[] = [;
     avatar:'https://placehold.co/100x100',;
     twitter:'#',;
     linkedin:'#'}],;
-;
 export function SpeakersSection() {;
   return (;
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">;
@@ -48,26 +46,16 @@ export function SpeakersSection() {;
                   </a>;
                 )}
                 {sp.linkedin && (;
-                  <a;
                     href={sp.linkedin}
                     aria-label="LinkedIn";
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items-center";
-                  >;
                     <Linkedin className="h-4 w-4" aria-hidden="true" />;
                     <span className="sr-only">LinkedIn</span>;
                   </a>;                )}
               </div>;
-            </div>;
           ))}
-        </div>;
-      </div>;
     </section>;
   ),;}
  import {;
-  {;
-  {;
   Twitter, Linkedin ;
 }from 'lucide-react' interface Speaker {;
   name: string;

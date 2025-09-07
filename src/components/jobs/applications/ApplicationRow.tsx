@@ -165,7 +165,6 @@ export function ApplicationRow({;
   onViewApplication: (application_id: string, ) => Promise < void>,
   onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
-export function ApplicationRow({;
             <div className='font - medium'>{talent_name}</div>;
             <div className='text - xs text - muted - foreground'>;
               {application.talent_profile?.professional_title || 'Talent'}

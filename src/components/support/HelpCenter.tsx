@@ -44,17 +44,17 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -70,14 +70,14 @@ import { HELP_CATEGORIES } from './help-content';
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
-          
+
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList 
@@ -174,7 +174,7 @@ export default function HelpCenter() {;
 
                     onClick={handleBackToArticles}
                     className='mb-4'                  >
-              
+
                     variant="ghost"
                     className="mb-4"
                     searchQuery={searchQuery}
@@ -189,20 +189,20 @@ export default function HelpCenter() {;
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
                     </p>
-                  
+
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
-                  
+
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                       Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent.
-                  
+
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab.
 
@@ -280,7 +280,7 @@ export default function HelpCenter() {;
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
                   <p className="text-zion-slate-light mb-4">
                     Our support team is available 24/7 to assist you with any questions or issues.
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -300,7 +300,7 @@ export default function HelpCenter() {;
                           viewBox='0 0 20 20'
                           fill='currentColor'
                           <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
-                    
+
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
 
                       <span className="text-zion-slate-light">+1 302 464 0950</span>
@@ -314,12 +314,12 @@ export default function HelpCenter() {;
                     We value your input and are constantly looking to improve
                     our platform.
                   <form className='space-y-4'>
-                  
+
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
-                
+
                   <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2>
                     We value your input and are constantly looking to improve our platform.
-                  
+
                   <form className="space-y-4">
 
                         placeholder="Your email"
@@ -328,7 +328,7 @@ export default function HelpCenter() {;
                         className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black"
                         placeholder="Your feedback or suggestion"
                     <Button className='w-full bg-zion-cyan hover:bg-zion-cyan/80'>
-                    
+
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 
                       Submit Feedback

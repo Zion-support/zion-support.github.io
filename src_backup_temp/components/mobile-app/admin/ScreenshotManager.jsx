@@ -12,8 +12,6 @@ export const ScreenshotManager = ("props": "any) => {;
         if (e.target.files) {;
 export const ScreenshotManager = (props) => {
     const [screenshots, setScreenshots] = useState([]);
-    const [isDragging, setIsDragging] = useState(false);
-    const fileInputRef = useRef(null);
     const handleFileSelect = (props) => {
         if (e.target.files) {
             addScreenshots(Array.from(e.target.files));
@@ -27,13 +25,11 @@ export const ScreenshotManager = (props) => {
         if (imageFiles.length === 0) {;
             toast.error("Please select valid image files");
             return;
-        "}
         // Limit the number of screenshots;
         const maxScreenshots = platform === "ios" ? 10 : "8;
         const availableSlots = maxScreenshots - screenshots.length;
         if (availableSlots <= 0) {;
             toast.error(`Maximum ${maxScreenshots"} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-            return;
         }
         const filesToAdd = imageFiles.slice(0, availableSlots);
         const newScreenshots = filesToAdd.map(file => ({"id": "Math.random().toString(36).substring(2", 9),;
@@ -45,8 +41,6 @@ export const ScreenshotManager = (props) => {
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {;
             toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-        }
-    };
     const removeScreenshot = ("props": "any) => {;
         setScreenshots(prev => {;
     const removeScreenshot = (props) => {
@@ -56,11 +50,8 @@ export const ScreenshotManager = (props) => {
             const removed = prev.find(screenshot => screenshot.id === id);
             if (removed) {;
                 URL.revokeObjectURL(removed.url);
-            "}
             return filtered;
-        }
     );
-    };
     const handleDragOver = ("props": "any) => {e.preventDefault();
         setIsDragging(true);"};
     const handleDragLeave = ("props": "any) => {setIsDragging(false);"};
@@ -73,8 +64,6 @@ export const ScreenshotManager = (props) => {
         setIsDragging(false);
         if (e.dataTransfer.files) {;
             addScreenshots(Array.from(e.dataTransfer.files));
-        "}
-    };
     return (<Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
@@ -96,8 +85,6 @@ export const ScreenshotManager = (props) => {
           {platform === "ios";
             ? "Recommended "size": "1290x2796 pixels for iPhone. Max 10 screenshots.";
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.""}
-        </div>;
-        ;
         <div className="grid grid-cols-2 gap-3">;
           {screenshots.map((screenshot) => (<div key={screenshot.id} className="relative group">;
               <img loading="lazy" src={screenshot.url} alt="App screenshot" className="w-full h-auto rounded border border-zion-purple/20"  />;
@@ -105,7 +92,6 @@ export const ScreenshotManager = (props) => {
                 <Trash2 className="h-3 w-3" />;
               </button>;
             </div>))"}
-        </div>;
       </CardContent>;
     return (<Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -127,7 +113,6 @@ export const ScreenshotManager = (props) => {
           {platform === "ios"
             ? "Recommended "size": 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."}
-        </div>
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot) => (<div key={screenshot.id} className="relative group">
               <img loading="lazy" src={screenshot.url} alt="App screenshot" className="w-full h-auto rounded border border-zion-purple/20"  />
@@ -135,7 +120,6 @@ export const ScreenshotManager = (props) => {
                 <Trash2 className="h-3 w-3" />
               </button>
             </div>))}
-        </div>
       </CardContent>
     </Card>);
 };';';';

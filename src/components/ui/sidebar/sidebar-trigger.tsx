@@ -22,7 +22,6 @@ import { use_sidebar } from &quot;./sidebar - context & quot;
 export const SidebarTrigger = React.forward_ref<;
   React.ElementRef < typeof Button>,
   React.ComponentProps < typeof Button>;
->((props, ref) => {
   const { toggle_sidebar } = use_sidebar ();
 
   return (
@@ -35,10 +34,7 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
-  return (
 
-    <Button
-      ref={ref}
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
@@ -55,7 +51,5 @@ export const SidebarTrigger = React.forward_ref<;
     </Button>);
 });
 SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
-;
-
 
 SidebarTrigger.displayName = "SidebarTrigger"

@@ -14,5 +14,3 @@ describe('Button', () => {
     render(<Button onClick={handleClick}>Click Me</Button>);
     fireEvent.click(screen.getByText('Click Me'));
     expect(handleClick).toHaveBeenCalledTimes(1);
-  });
-});

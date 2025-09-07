@@ -39,9 +39,7 @@ export const Link = (props: any) =>: any {
   return React.create_element ('a', props);
 }
 
-export const NavLink = Link;
 export const Navigate = ({ to }: { to: string }) =>: any null;
-export const MemoryRouter = BrowserRouter;
 export const Outlet = () =>: any null;
 export const use_navigate = () =>: any (url: string) => {}
 export const use_location = () =>: any ({ pathname: '/' });

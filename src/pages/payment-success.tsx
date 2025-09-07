@@ -19,11 +19,11 @@ export default function PaymentSuccess() {
         </p>
         <div className='flex flex-col space-y-3'>
           <Button
-        
+
         <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
-        
+
         <p className="text-zion-slate-light mb-6">
-        
+
         <div className="flex flex-col space-y-3">
 
             onClick={() => router.push('/dashboard')} // Changed to router.push
@@ -42,14 +42,14 @@ class ErrorBoundary extends React.Component {
 
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>;

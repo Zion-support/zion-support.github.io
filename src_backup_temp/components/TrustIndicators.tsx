@@ -8,7 +8,6 @@ const "TrustIndicators": "React.FC = () => {;
       "icon": Shiel d", "";
       "title": "Enterprise Security","";
       "description": "SOC 2 Type II Certified", "";
-  {;
       "icon": "Shiel d",";
       "title": "Enterprise Security,;
       "description": "SOC 2 Type II Certified,;
@@ -17,15 +16,12 @@ const "TrustIndicators": "React.FC = () => {;
       "title": "Industry Recognition", "";
       "description": "Top 100 Tech Companies 2026","";
       "color": "text-blue-500"},;
-    {;
       "icon": "User s", "";
       "title": "Expert Team","";
       "description": "50+ Certified Professionals", "";
       "icon": "Awar d",";
       "title": "Industry Recognition,;
       "description": "Top 100 Tech Companies 2026,;
-      "color": "text-blue-500"},;
-    {;
       "icon": "User s",";
       "title": "Expert Team,;
       "description": "50+ Certified Professionals,;
@@ -34,7 +30,6 @@ const "TrustIndicators": "React.FC = () => {;
       "title": "24/7 Support", "";
       "description": "Round-the-clock assistance","";
       "color": "text-orange-500"},;
-    {;
       "icon": "CheckCircl e", "";
       "title": "Quality Assurance","";
       "description": "99.9% Uptime Guarantee", "";
@@ -46,17 +41,13 @@ const "TrustIndicators": "React.FC = () => {;
       "icon": "Cloc k",";
       "title": "24/7 Support,;
       "description": "Round-the-clock assistance,;
-      "color": "text-orange-500"},;
-    {;
       "icon": "CheckCircl e",";
       "title": "Quality Assurance,;
       "description": "99.9% Uptime Guarantee,;
       "color": "text-cyan-500"},;
-    {;
       "icon": "Sta r",";
       "title": "Client Satisfaction,;
       "description": "98% Customer Rating,;
-      "color": "text-yellow-500"}
   ];
   return ("";
     <section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">"";
@@ -86,7 +77,6 @@ const TrustIndicators: React.FC = () => {
       icon: Shiel d, ""
       title: "Enterprise Security",""
       description: "SOC 2 Type II Certified", ""
-  {
       icon: Shiel d,"
       title: "Enterprise Security,
       description: "SOC 2 Type II Certified,
@@ -95,15 +85,12 @@ const TrustIndicators: React.FC = () => {
       title: "Industry Recognition", ""
       description: "Top 100 Tech Companies 2026",""
       color: "text-blue-500"},
-    {
       icon: User s, ""
       title: "Expert Team",""
       description: "50+ Certified Professionals", ""
       icon: Awar d,"
       title: "Industry Recognition,
       description: "Top 100 Tech Companies 2026,
-      color: "text-blue-500"},
-    {
       icon: User s,"
       title: "Expert Team,
       description: "50+ Certified Professionals,
@@ -112,7 +99,6 @@ const TrustIndicators: React.FC = () => {
       title: "24/7 Support", ""
       description: "Round-the-clock assistance",""
       color: "text-orange-500"},
-    {
       icon: CheckCircl e, ""
       title: "Quality Assurance",""
       description: "99.9% Uptime Guarantee", ""
@@ -124,17 +110,13 @@ const TrustIndicators: React.FC = () => {
       icon: Cloc k,"
       title: "24/7 Support,
       description: "Round-the-clock assistance,
-      color: "text-orange-500"},
-    {
       icon: CheckCircl e,"
       title: "Quality Assurance,
       description: "99.9% Uptime Guarantee,
       color: "text-cyan-500"},
-    {
       icon: Sta r,"
       title: "Client Satisfaction,
       description: "98% Customer Rating,
-      color: "text-yellow-500"}
   ]
   return (""
     <section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">""
@@ -159,36 +141,21 @@ const TrustIndicators: React.FC = () => {
               </div>""
               <h3 className="text-sm font-semibold text-white mb-1">
                 {indicator.title}
-              ""
               <p className="text-xs text-slate-400">
                 {indicator.description}
-              </p>
-            </div>
           ))
       )}
-    </div>
     );
 }
-        </div>
         {/* Additional Trust Elements */}""
         <div className="mt-16 text-center">""
           <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400">""
             <div className="flex items-center gap-2">""
               <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">SSL Secured</span>
-            </div>""
-            <div className="flex items-center gap-2">""
-              <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">GDPR Compliant</span>
-            </div>""
-            <div className="flex items-center gap-2">""
-              <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">ISO 27001 Certified</span>
-            </div>""
-            <div className="flex items-center gap-2">""
-              <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">HIPAA Compliant</span>
-            </div>
           </div>';
         </div>';';
       </div>';';';
@@ -198,42 +165,18 @@ export default TrustIndicators;"`""';';';';
 </CheckCircle>
 </CheckCircle>';
 </indicator>;';;';
-        </div>;
         {/* Additional Trust Elements */}"";
         <div className="mt-16 text-center">"";
           <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400">"";
             <div className="flex items-center gap-2">"";
               <CheckCircle className="w-5 h-5 text-green-500" /" >";
               <span className="text-sm">SSL Secured</span>;
-            </div>"";
-            <div className="flex items-center gap-2">"";
-              <CheckCircle className="w-5 h-5 text-green-500" /" >";
               <span className="text-sm">GDPR Compliant</span>;
-            </div>"";
-            <div className="flex items-center gap-2">"";
-              <CheckCircle className="w-5 h-5 text-green-500" /" >";
               <span className="text-sm">ISO 27001 Certified</span>;
-            </div>"";
-            <div className="flex items-center gap-2">"";
-              <CheckCircle className="w-5 h-5 text-green-500" /" >";
               <span className="text-sm">HIPAA Compliant</span>;
-            </div>;
-          </div>;
-        </div>;
-          </div>
-        </div>
-      </div>';
     </section>';';
   );};';';';
 export default TrustIndicators;"`"";
 </CheckCircle>;
-</CheckCircle>;
-</CheckCircle>;
-</CheckCircle>;
 </indicator>;
-export default TrustIndicators;"`""';';';';
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
 </indicator>

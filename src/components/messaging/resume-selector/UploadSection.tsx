@@ -21,8 +21,6 @@ interface UploadSectionProps {
               <span className="text-white">{customFile.name}</span>
             </div>
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
-          </div>
-        </div>
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -42,7 +40,6 @@ export function UploadSection({
   onProcessFile,
   isProcessing,
 }: UploadSectionProps) {
-  return (
     <div className="space-y-4">
       <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">
         <div className="text-center">
@@ -54,7 +51,6 @@ export function UploadSection({
               </span>
               <span className="mt-1 block text-sm text-gray-500">
                 PDF, DOC, or DOCX files only
-              </span>
             </label>
             <input
               id="file-upload"
@@ -64,11 +60,7 @@ export function UploadSection({
               accept=".pdf,.doc,.docx"
               onChange={onFileUpload}
             />
-          </div>
-        </div>
-      </div>
 
-      {customFile && (
         <div className="bg-gray-50 rounded-lg p-4">
           <div className="flex items-center space-x-3">
             <FileText className="h-8 w-8 text-gray-400" />
@@ -77,7 +69,6 @@ export function UploadSection({
               <p className="text-sm text-gray-500">
                 {(customFile.size / 1024 / 1024).toFixed(2)} MB
               </p>
-            </div>
             <Button
               variant="outline"
               size="sm"
@@ -86,18 +77,9 @@ export function UploadSection({
             >
               Remove
             </Button>
-          </div>
-        </div>
       )}
 
-      {customFile && (
-        <Button
           onClick={onProcessFile}
-          disabled={isProcessing}
           className="w-full"
-        >
           {isProcessing ? 'Processing...' : 'Process Resume'}
-        </Button>
-      )}
-    </div>
   );

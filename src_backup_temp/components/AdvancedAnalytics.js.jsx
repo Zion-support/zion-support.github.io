@@ -27,7 +27,6 @@ export function AdvancedAnalytics(props: any) {
     );
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
-;
     useEffect(() => {;
         // Simulate API call;
         const fetchData = async () => {;
@@ -51,7 +50,6 @@ export function AdvancedAnalytics(props: any) {
                     {"source": 'Direct', "percentage": "25"},;
                     {"source": 'Social Media', "percentage": "20"},;
                     {"source": 'Referral', "percentage": "10"}
-                ],;
                 "deviceTypes": "[;
                     {"device": 'Desktop'", "percentage": "60"},;
                     {"device": 'Mobile', "percentage": "35"},;
@@ -76,38 +74,30 @@ export function AdvancedAnalytics(props: any) {
                     {source: 'Direct', percentage: 25},
                     {source: 'Social Media', percentage: 20},
                     {source: 'Referral', percentage: 10}
-                ],
                 deviceTypes: [
                     {device: 'Desktop', percentage: 60},
                     {device: 'Mobile', percentage: 35},
                     {device: 'Tablet', percentage: 5}
                 ]
-            }
-    );
             setIsLoading(false);
         };
         fetchData();
     }, [timeRange]);
-;
     const formatNumber = ("props": "any) => {if (num >= 1000000);
             return (num / 1000000).toFixed(1) + 'M';
         if (num >= 1000);
             return (num / 1000).toFixed(1) + 'K';
         return num.toString();"};
-;
     const formatCurrency = ("props": "any) => {;
         return new Intl.NumberFormat('en-US'", {;
             "style": 'currency',;
             "currency": 'USD';
         }).format(num);
-    };
-;
     if (isLoading) {return (;
             <div className="flex items-center justify-center h-64">;
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>;
             </div>;
         );}
-;
     return (;
         <div className="space-y-6 p-6">;
             <div className="text-center">;
@@ -117,12 +107,10 @@ export function AdvancedAnalytics(props: any) {
                 <p className="text-gray-600 text-lg">;
                     Real-time insights and performance metrics;
                 </p>;
-                ;
     if (isLoading) {return (
             <div className="flex items-center justify-center h-64">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
             </div>
-    );}
     return (
         <div className="space-y-6 p-6">
             <div className="text-center">
@@ -147,8 +135,6 @@ export function AdvancedAnalytics(props: any) {
                             {range}
                         </button>;
                     ))}
-                </div>;
-            </div>;
             {/* Key Metrics */}
             <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-6">;
                 <motion.div ;
@@ -156,59 +142,37 @@ export function AdvancedAnalytics(props: any) {
                     animate={{ "opacity": "1", "y": "0 "}} ;
                     transition={{ "delay": "0.1 "}} ;
                     className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl";
-                >;
                     <div className="text-2xl font-bold text-blue-600">;
                         {formatNumber(analyticsData.visitors)}
-                    </div>;
                     <div className="text-gray-600 text-sm">Total Visitors</div>;
                     <div className="text-green-500 text-xs mt-2">+12.5% vs last period</div>;
                 </motion.div>;
-                <motion.div ;
                     initial={{ "opacity": "0", "y": "20 "}} ;
-                    animate={{ "opacity": "1", "y": "0 "}} ;
                     transition={{ "delay": "0.2 "}} ;
                     className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl";
-                >;
                     <div className="text-2xl font-bold text-purple-600">;
                         {formatNumber(analyticsData.conversions)}
-                    </div>;
                     <div className="text-gray-600 text-sm">Conversions</div>;
                     <div className="text-green-500 text-xs mt-2">+8.3% vs last period</div>;
-                </motion.div>;
-                <motion.div ;
-                    initial={{ "opacity": "0", "y": "20 "}} ;
-                    animate={{ "opacity": "1", "y": "0 "}} ;
                     transition={{ "delay": "0.3 "}} ;
                     className="p-6 bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-xl";
-                >;
                     <div className="text-2xl font-bold text-green-600">;
                         {formatCurrency(analyticsData.revenue)}
-                    </div>;
                     <div className="text-gray-600 text-sm">Revenue</div>;
                     <div className="text-green-500 text-xs mt-2">+15.7% vs last period</div>;
-                </motion.div>;
-                <motion.div ;
-                    initial={{ "opacity": "0", "y": "20 "}} ;
-                    animate={{ "opacity": "1", "y": "0 "}} ;
                     transition={{ "delay": "0.4 "}} ;
                     className="p-6 bg-gradient-to-br from-gray-50 to-blue-50 border border-gray-200 rounded-xl";
-                >;
                     <div className="text-2xl font-bold text-gray-700">;
                         {analyticsData.bounceRate.toFixed(1)}%;
-                    </div>;
                     <div className="text-gray-600 text-sm">Bounce Rate</div>;
                     <div className="text-red-500 text-xs mt-2">-2.1% vs last period</div>;
-                </motion.div>;
-            </div>;
             {/* Detailed Analytics */}
             <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">;
                 {/* Top Pages */"}
-                <motion.div ;
                     initial={{ "opacity": "0", "x": "-20 "}} ;
                     animate={{ "opacity": "1", "x": "0 "}} ;
                     transition={{ "delay": "0.5 "}} ;
                     className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm";
-                >;
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">;
                         Top Pages;
                     </h3>;
@@ -241,25 +205,12 @@ export function AdvancedAnalytics(props: any) {
                                         index === 2 ? 'bg-amber-600 text-white' : 'bg-gray-200 text-gray-600'
                                     }`}>
                                         {index + 1}
-                                    </div>;
                                     <span className="text-gray-700">{page.page}</span>;
-                                </div>;
                                 <span className="text-gray-600 font-medium">{formatNumber(page.views)}</span>;
-                            </div>;
-                        ))}
-                    </div>;
-                </motion.div>;
                 {/* Traffic Sources */}
-                <motion.div ;
                     initial={{ "opacity": "0", "x": "20 "}} ;
-                    animate={{ "opacity": "1", "x": "0 "}} ;
                     transition={{ "delay": "0.6 "}} ;
-                    className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm";
-                >;
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">;
                         Traffic Sources;
-                    </h3>;
-                    <div className="space-y-3">;
                         {analyticsData.trafficSources.map((source, index) => (;
                             <div key={source.source} className="flex items-center justify-between">;
                                 <span className="text-gray-700">{source.source}</span>;
@@ -269,19 +220,10 @@ export function AdvancedAnalytics(props: any) {
                                             className="bg-blue-500 h-2 rounded-full" ;
                                             style="{{{ "width": "`${source.percentage"}}"%` }}
                                         ></div>;
-                                    </div>;
                                     <span className="text-gray-600 font-medium w-8">{source.percentage}%</span>;
-                                </div>;
-                            </div>;
-                <motion.div 
                     initial={{ opacity: 0, x: 20 }} 
-                    animate={{ opacity: 1, x: 0 }} 
                     transition={{ delay: 0.6 }} 
-                    className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm"
-                >
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">
                         Traffic Sources
-                    <div className="space-y-3">
                         {analyticsData.trafficSources.map((source, index) => (
                             <div key={source.source} className="flex items-center justify-between">
                                 <span className="text-gray-700">{source.source}</span>
@@ -291,29 +233,7 @@ export function AdvancedAnalytics(props: any) {
                                             className="bg-blue-500 h-2 rounded-full" 
                                             style="{{{ width: `${source.percentage}}"%` }}
                                         ></div>
-                                    </div>
                                     <span className="text-gray-600 font-medium w-8">{source.percentage}%</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>;
-                </motion.div>;
-            </div>;
-        </div>;
-    );
-}
-;
 export default AdvancedAnalytics;
-;
 </motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </motion>

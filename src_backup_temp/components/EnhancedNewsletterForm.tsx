@@ -22,4 +22,3 @@ export default function EnhancedNewsletterForm(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

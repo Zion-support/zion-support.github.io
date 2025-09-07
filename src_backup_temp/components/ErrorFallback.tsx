@@ -21,9 +21,7 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
           <button'
             onClick={() => window.location.href = '/'}"
             className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: b g-gray-300 transition-colors"
-          >
             Go Home
-          </button>
         </div>
         {process.env.NODE_ENV === 'development' && ("
           <details className="mt-6 text-left">"

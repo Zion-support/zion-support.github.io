@@ -20,20 +20,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
 }, []);, []);
 ;
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
-    useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-;
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
-    useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
@@ -94,7 +81,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />";
                 <Input type="text" placeholder="Search listings..." value={searchQuery"} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>;
-              </div>;
               <Select value={selectedSort} onValueChange={setSelectedSort}>";
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">";
                   <div className="flex items-center">'";
@@ -102,7 +88,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                     <span>;
                       {sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
                     </span>;
-                  </div>;
                 </SelectTrigger>";
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">";
                   {sortOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">;
@@ -111,29 +96,15 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                 </SelectContent>;
               </Select>;
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>";
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">";
                   <div className="flex items-center">";
                     <Filter className="mr-2 h-4 w-4" />;
-                    <span>;
                       {filterOptions.find(option => option.value === selectedFilter)?.label || 'Filter'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>";
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">";
                   {filterOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">;
-                      {option.label}
-                    </SelectItem>) ) }
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
           {/* Results Count */}";
           <div className="mb-6">";
             <p className="text-zion-slate-light">;
               Showing {processedListings.length} results";
               {searchQuery && ` for "${searchQuery}"`}
-            </p>;
-          </div>;
           {/* Listings Grid */}";
           {isLoading ? (<div className="flex justify-center py-20">";
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />";
@@ -149,8 +120,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                 Clear all filters;
               </Button>;
             </div>) "}
-        </div>;
-      </div>;
       <Footer  />;
           {/* Listings Grid */}"
           {isLoading ? (<div className="flex justify-center py-20">"
@@ -168,7 +137,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               </Button>
             </div>) }
         </div>
-      </div>
       <Footer  />
     </>)}
 '"`;

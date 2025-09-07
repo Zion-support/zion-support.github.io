@@ -5,7 +5,6 @@ export function ZapierIntegration() {
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Zap } from 'lucide-react'
-export function ZapierIntegration() {
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey)
     setCopied(true)
@@ -60,7 +59,6 @@ function ZapierIntegration() {
   const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Zap } from 'lucide-react';
-export /**
   const handleCopyApiKey = () =>: any {
     navigator.clipboard.write_text (api_key);
     set_copied (true);
@@ -72,7 +70,7 @@ export /**
     toast.success ("API key copied to clipboard");
 
   },
-  
+
     <div className='space - y-6'>;
       <div className='grid md:grid - cols - 3 gap - 6'>;
         <Card className='md:col - span - 2'>;
@@ -135,7 +133,7 @@ export /**
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a new job is published on your account.
               <Button size="sm" variant="outline">Set Up Trigger</Button>
-            
+
               <h4 className="font-medium mb-2">New Application</h4>
 
                 Triggers when a talent applies to your job.
@@ -157,7 +155,6 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "sonner",;
-export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false),;
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;
     navigator.clipboard.writeText(apiKey),;

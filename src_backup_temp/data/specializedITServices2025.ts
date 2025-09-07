@@ -12,4 +12,3 @@ export default function SpecializedITServices2025({ }: SpecializedITServices2025
       <p>This component is currently under development.</p>
     </div>
   );
-}

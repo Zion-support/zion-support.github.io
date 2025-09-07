@@ -12,13 +12,10 @@ interface SecurityThreat {;
   "status": 'active' | 'resolved' | 'investigating';
   "affectedSystems": string[];
   "recommendations": string[]"}
-;
 interface VulnerabilityAssessment {;
-  "id": "string;
   "category": 'network' | 'application' | 'infrastructure' | 'data';
   "risk": 'critical' | 'high' | 'medium' | 'low';
   "score": number;
-  "description": string;
   cveId?: string;
   "affectedComponents": string[];
   "remediation": string;
@@ -26,7 +23,6 @@ interface VulnerabilityAssessment {;
 interface ComplianceStatus {;
   "framework": "string;
   "status": 'compliant' | 'non-compliant' | 'partial';
-  "score": number;
   "lastAudit": Dat e;
   "nextAudit": Dat e;
   "requirements": {;
@@ -36,7 +32,6 @@ interface ComplianceStatus {;
     "pending": number"}}
 interface SecurityMonitoringSystemProps {;
   // Add your props "here": "any;
-;
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
@@ -59,7 +54,6 @@ interface SecurityMonitoringSystemProps {;
   const [showAdvanced, setShowAdvanced] = useState<any>(false);
   const [securityScore, setSecurityScore] = useState<any>(0);
   const [targetScore, setTargetScore] = useState<any>(95);
-;
   // Generate sample security threats;
     const "newThreats": "SecurityThrea t[] = threatTypes.map((type", index) => ({;
       "id": "`threat-${index"}`,;
@@ -77,9 +71,7 @@ interface SecurityMonitoringSystemProps {;
       "recommendations": "[';
         'Implement additional authentication layers'",Update security policies',Conduct security training',Review access controls',;
       ]}));
-;
     setThreats(newThreats)}, []);
-;
   // Generate vulnerability assessments;
     const "newVulnerabilities": "VulnerabilityAssessmen t[] = categories.map();
       (category", index) => ({;
@@ -98,12 +90,8 @@ interface SecurityMonitoringSystemProps {;
         ),`;
         "remediation": "`Update ${category"} security configurations and apply latest patches`,`;
         "estimatedTime": "`${Math.floor(Math.random() * 4) + 1"} hours`});
-    );
-;
     setVulnerabilities(newVulnerabilities)}, []);
-;
   // Generate compliance status;
-  ;
     const "newCompliance": "ComplianceStatu s[] = frameworks.map();
       (framework", index) => {;
         return {;
@@ -121,13 +109,9 @@ interface SecurityMonitoringSystemProps {;
             compliant,;
             "nonCompliant": "tota l - compliant",;
             "pending": "Mat h.floor(Math.random() * 10)"}}}
-    );
-;
     setComplianceStatus(newCompliance)}, []);
   // Start security scan;
-  ;
     setScanComplete(false);
-;
     // Simulate scan process;
     setTimeout(() => {;
       generateSecurityThreats();
@@ -135,7 +119,6 @@ interface SecurityMonitoringSystemProps {;
       generateComplianceStatus();
       setIsScanning(false);
       setScanComplete(true);
-;
       // Calculate overall security score;
       setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats,;
     generateVulnerabilities,;
@@ -155,18 +138,9 @@ interface SecurityMonitoringSystemProps {;
       startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
   // Setup real - time updates;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
     if(showRealTime && isOpen && scanComplete) {;
       scanIntervalRef.current = setInterval(() => {;
-        generateSecurityThreats();
-        generateVulnerabilities();
         generateComplianceStatus()}, 60000); // Update every minute;
-      return () => {;
         if(scanIntervalRef.current) {;
           clearInterval(scanIntervalRef.current)}
       }}
@@ -174,14 +148,8 @@ interface SecurityMonitoringSystemProps {;
     isOpen,;
     scanComplete,;
     generateSecurityThreats,;
-    generateVulnerabilities,;
-    generateComplianceStatus,;
-  ]);
-;
   // Get threat color;
-  ;
     return colors[type as keyof typeof colors] || colors.low};
-;
   // Get status icon;
   const getStatusIcon = ("props": "any) => {;
     const icons = {;
@@ -189,12 +157,9 @@ interface SecurityMonitoringSystemProps {;
       "investigating": "<Eye className="w-4 h-4 text-yellow-500"   />",";
       "resolved": "<CheckCircle className="w-4 h-4 text-green-500"   />"};";
     return icons[status as keyof typeof icons] || <Info className="w-4 h-4"   />};
-;
   // Get compliance color;
-  ;
     return colors[status as keyof typeof colors] || colors.partial};
   if(!enabled) return null;
-;
   return ();
     <>;
       {/* Floating Security Monitoring Button */}
@@ -225,7 +190,6 @@ interface SecurityMonitoringSystemProps {;
               animate={{ "scale": "1", "opacity": "1 "}}
               exit={{ "scale": "0.9", "opacity": "0 "}}
               transition={{ "type": 'spring', "damping": "2 5", "stiffness": "30 0 "}}
-            >;
               {/* Header */}";
               <div className="flex items-center justify-between p-6 border-b border-gray-200 "dark": "borde r-gray-700 bg-gradient-to-r from-red-50 to-orange-50 "dark": fro m-red-900/20 "dark": t o-orange-900/20">";
                 <div className="flex items-center space-x-3">";
@@ -238,34 +202,24 @@ interface SecurityMonitoringSystemProps {;
                       monitoring;
                     </p>;
                   </div>;
-                </div>;
 ";
                 <div className="flex items-center space-x-2">;
                   <button;
                     onClick={startSecurityScan"}
                     disabled={isScanning}";
                     className="p-2 text-gray-600 "hover": "tex t-red-600 "dark": tex t-gray-400 "dark": hove "r":text-red-400 transition-colors";
-                  >;
                     <RefreshCw'`;
                       className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''"}`}
                     />                  </button>;
-                  <button;
                     onClick={() => setIsFullscreen(!isFullscreen)}";
-                    className="p-2 text-gray-600 "hover": "tex t-red-600 "dark": tex t-gray-400 "dark": hove "r":text-red-400 transition-colors";
-                  >;
                     {isFullscreen ? (";
                       <Minimize2 className="w-5 h-5"  />;
                     ) : (";
                       <Maximize2 className="w-5 h-5"  />;
                     )"}
                   </button>;
-                  <button;
                     onClick={() => setIsOpen(false)}";
-                    className="p-2 text-gray-600 "hover": "tex t-red-600 "dark": tex t-gray-400 "dark": hove "r":text-red-400 transition-colors";
-                  >";
                     <X className="w-5 h-5"   />                  </button>;
-                </div>;
-              </div>;
               {/* Content */"}";
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">;
                 {isScanning ? (";
@@ -274,10 +228,7 @@ interface SecurityMonitoringSystemProps {;
                     <h3 className="text-xl font-semibold text-gray-900 "dark": "tex t-white mb-2">;
                       Security scan in progress...;
                     </h3>";
-                    <p className="text-gray-600 "dark": tex t-gray-400">;
                       Analyzing systems for threats and vulnerabilities;
-                    </p>;
-                  </div>;
                 ) : scanComplete ? (";
                   <div className="space-y-6">;
                     {/* Overall Security Score */"}";
@@ -285,9 +236,7 @@ interface SecurityMonitoringSystemProps {;
                       <div className="flex items-center justify-between mb-4">";
                         <h3 className="text-lg font-semibold text-gray-900 "dark": tex t-white">;
                           Overall Security Score;
-                        </h3>";
                         <Shield className="w-6 h-6 text-red-600"   />                      </div>;
-";
                       <div className="flex items-center space-x-6">";
                         <div className="text-center">;
                           <div`;
@@ -296,38 +245,24 @@ interface SecurityMonitoringSystemProps {;
                                 : securityScore >= 70';
                                   ? 'text-yellow-600'';
                                   : 'text-red-600'`;
-                            "}`}
-                          >;
                             {securityScore}/100;
                           </div>";
                           <div className="text-sm text-gray-600 "dark": "tex t-gray-400">;
                             Security Score;
-                          </div>;
-                        </div>;
-";
                         <div className="flex-1">";
                           <div className="flex items-center justify-between text-sm text-gray-600 "dark": tex t-gray-400 mb-2">;
                             <span>"Target": {targetScore"}/100</span>;
                             <span>;
                               {Math.round((securityScore / targetScore) * 100)}%;
                             </span>;
-                          </div>";
                           <div className="w-full bg-gray-200 "dark": "b g-gray-700 rounded-full h-3">;
-                            <div`;
                               className={`h-3 rounded-full transition-all duration-500 ${securityScore >= 90';
                                   ? 'bg-green-500';
-                                  : securityScore >= 70';
                                     ? 'bg-yellow-500'';
                                     : 'bg-red-500'`;
-                              "}`}
                               style="{{{;
-`;
                                 "width": "`${Math.min((securityScore / targetScore) * 100"}}"%`}}
                             ></div>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </div>;
               {/* Content */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isScanning ? ("
@@ -347,9 +282,7 @@ interface SecurityMonitoringSystemProps {;
                       <div className="flex items-center justify-between mb-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Overall Security Score
-                        "
                         <Shield className="w-6 h-6 text-red-600"   />                      </div>
-"
                       <div className="flex items-center space-x-6">"
                         <div className="text-center">
                           <div`
@@ -364,32 +297,21 @@ interface SecurityMonitoringSystemProps {;
                           </div>"
                           <div className="text-sm text-gray-600 dark: tex t-gray-400">
                             Security Score
-                          </div>
-                        </div>
-"
                         <div className="flex-1">"
                           <div className="flex items-center justify-between text-sm text-gray-600 dark: tex t-gray-400 mb-2">
                             <span>Target: {targetScore}/100</span>
                             <span>
                               {Math.round((securityScore / targetScore) * 100)}%
                             </span>
-                          </div>"
                           <div className="w-full bg-gray-200 dark: b g-gray-700 rounded-full h-3">
-                            <div`
                               className={`h-3 rounded-full transition-all duration-500 ${securityScore >= 90'
                                   ? 'bg-green-500'
-                                  : securityScore >= 70'
                                     ? 'bg-yellow-500''
                                     : 'bg-red-500'`
-                              }`}
                               style="{{{
 `
                                 width: `${Math.min((securityScore / targetScore) * 100}}"%`}}
                             ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 "dark": "b g-gray-800 rounded-lg p-1">;
                       {[{;
@@ -402,26 +324,20 @@ interface SecurityMonitoringSystemProps {;
                           "label": 'Vulnerabilities',;
                           "icon": "Za p",;
                           "count": "vulnerabilitie s.length"},;
-                        {;
                           "key": 'compliance',;
                           "label": 'Compliance',;
                           "icon": "CheckCircl e",;
                           "count": "complianceStatu s.length"},;
                       ].map(({ key, label, "icon": "Ico n", count }) => (;
-                        <button;
                           key={key}
                           onClick={() => setSelectedView(key as any)}`;
                           className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${selectedView === key';
                               ? 'bg-white "dark": "b g-gray-700 text-red-600 "dark": tex t-red-400 shadow-sm'';
                               : 'text-gray-600 "dark": tex t-gray-400 "hover": tex t-gray-900 "dark": hove "r":text-white'`;
-                          "}`}
-                        >";
                           <Icon className="w-4 h-4"   />;
                           <span>{label}</span>"                          <span className="bg-gray-200 "dark": "b g-gray-600 text-gray-700 "dark": tex t-gray-300 px-2 py-1 rounded-full text-xs">;
                             {count"}
-                          </span>;
                         </button>) ) }
-                    </div>;
                     {/* Threats View */}
                     {selectedView === 'threats' && (";
                       <div className="space-y-4">";
@@ -429,14 +345,9 @@ interface SecurityMonitoringSystemProps {;
                           <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
                             Active Security Threats;
                           </h3>;
-                          <button;
                             onClick={() => setShowAdvanced(!showAdvanced)"}";
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md "hover": "b g-red-700 transition-colors";
-                          >;
                             {showAdvanced ? 'Hide' : 'Show'"} Advanced;
-                          </button>;
-                        </div>;
-";
                         <div className="grid gap-4">;
                           {threats.map((threat, index) => (;
                             <motion.div;
@@ -444,26 +355,18 @@ interface SecurityMonitoringSystemProps {;
                               className="bg-white "dark": "b g-gray-800 p-4 rounded-xl border border-gray-200 "dark": borde r-gray-700 "hover": shado w-lg transition-all duration-300";
                               whileHover={{ "y": -2 "}}
                               initial={{ "opacity": "0", "y": "2 0 "}}
-                              animate={{ "opacity": "1", "y": "0 "}}
                               transition={{ "delay": "inde x * 0.1 "}}
-                            >";
                               <div className="flex items-start justify-between">";
-                                <div className="flex-1">";
                                   <div className="flex items-center space-x-3 mb-2">;
-                                    <div`;
                     {selectedView === 'threats' && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
-                          <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                             Active Security Threats
                           <button
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover: b g-red-700 transition-colors"
-                          >
                             {showAdvanced ? 'Hide' : 'Show'} Advanced
                           </button>
-                        </div>
-"
                         <div className="grid gap-4">
                           {threats.map((threat, index) => (
                             <motion.div
@@ -475,33 +378,20 @@ interface SecurityMonitoringSystemProps {;
                               transition={{ delay: inde x * 0.1 }}
                             >"
                               <div className="flex items-start justify-between">"
-                                <div className="flex-1">"
                                   <div className="flex items-center space-x-3 mb-2">
-                                    <div`
                                       className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(threat.type)}`}
-                                    >;
                                       {threat.type.toUpperCase()}
-                                    </div>";
-                                    <div className="flex items-center space-x-2">;
                                       {getStatusIcon(threat.status)}";
                                       <span className="text-sm text-gray-500 "dark": "tex t-gray-400">;
                                         {threat.status"}
-                                      </span>;
-                                    </div>;
-                                  </div>;
-";
                                   <h4 className="font-medium text-gray-900 "dark": "tex t-white mb-2">;
                                     {threat.description"}
                                   </h4>;
-";
                                   <div className="flex items-center space-x-4 text-sm text-gray-500 "dark": "tex t-gray-400 mb-3">;
                                     <span>"Source": {threat.source"}</span>;
                                     <span>"Severity": "{threat.severity"}/100</span>;
-                                    <span>;
                                       "Affected": "{threat.affectedSystems.length"}{' '}
                                       systems;
-                                    </span>;
-                                  </div>;
                                   {showAdvanced && (";
                                     <div className="bg-gray-50 "dark": "b g-gray-700 rounded-lg p-3">";
                                       <h5 className="font-medium text-gray-900 "dark": tex t-white mb-2">;
@@ -513,172 +403,61 @@ interface SecurityMonitoringSystemProps {;
                                             <li;
                                               key={idx}";
                                               className="text-sm text-gray-600 "dark": "tex t-gray-400 flex items-center space-x-2";
-                                            >";
                                               <CheckCircle className="w-3 h-3 text-green-500"   />;
                                               <span>{rec"}</span>;
                                             </li>;
-                                          );
                                         )}                                      </ul>;
                                     </div>) }
-                                </div>;
-";
                                 <div className="text-right text-sm text-gray-500 "dark": "tex t-gray-400">;
                                   <div>;
                                     {threat.timestamp.toLocaleTimeString()"}
-                                  </div>;
-                                  <div>;
                                     {threat.timestamp.toLocaleDateString()}
-                                  </div>;
-                                </div>;
-                              </div>;
                             </motion.div>) ) }
-                        </div>;
-                      </div>) }
-;
                     {/* Vulnerabilities View */}
                     {selectedView === 'vulnerabilities' && (";
-                      <div className="space-y-4">";
-                        <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
                           Vulnerability Assessment;
-                        </h3>;
-";
-                        <div className="grid gap-4">;
                           {vulnerabilities.map((vuln", index) => (;
-                            <motion.div;
                               key={vuln.id}";
-                              className="bg-white "dark": "b g-gray-800 p-4 rounded-xl border border-gray-200 "dark": borde r-gray-700 "hover": shado w-lg transition-all duration-300";
-                              whileHover={{ "y": -2 "}}
-                              initial={{ "opacity": "0", "y": "2 0 "}}
-                              animate={{ "opacity": "1", "y": "0 "}}
-                              transition={{ "delay": "inde x * 0.1 "}}
-                            >";
-                              <div className="flex items-start justify-between">";
-                                <div className="flex-1">";
-                                  <div className="flex items-center space-x-3 mb-2">;
-                                    <div`;
                     {selectedView === 'vulnerabilities' && ("
-                      <div className="space-y-4">"
-                        <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Vulnerability Assessment
-"
-                        <div className="grid gap-4">
                           {vulnerabilities.map((vuln, index) => (
-                            <motion.div
                               key={vuln.id}"
-                              className="bg-white dark: b g-gray-800 p-4 rounded-xl border border-gray-200 dark: borde r-gray-700 hover: shado w-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 2 0 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: inde x * 0.1 }}
-                            >"
-                              <div className="flex items-start justify-between">"
-                                <div className="flex-1">"
-                                  <div className="flex items-center space-x-3 mb-2">
-                                    <div`
                                       className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(vuln.risk)}`}
-                                    >;
                                       {vuln.risk.toUpperCase()}
-                                    </div>";
                                     <div className="text-sm text-gray-500 "dark": "tex t-gray-400">;
                                       "CVSS": {vuln.score"}/10;
-                                    </div>;
-                                  </div>;
-";
-                                  <h4 className="font-medium text-gray-900 "dark": "tex t-white mb-2">;
                                     {vuln.description"}
-                                  </h4>;
-";
-                                  <div className="flex items-center space-x-4 text-sm text-gray-500 "dark": "tex t-gray-400 mb-3">;
                                     <span>"Category": {vuln.category"}</span>;
                                     <span>"CVE": "{vuln.cveId"}</span>;
-                                    <span>;
                                       Time to "fix": "{vuln.estimatedTime"}
-                                    </span>;
-                                  </div>;
-";
-                                  <div className="bg-gray-50 "dark": "b g-gray-700 rounded-lg p-3">";
-                                    <h5 className="font-medium text-gray-900 "dark": tex t-white mb-2">;
                                       "Remediation":;
-                                    </h5>";
                                     <p className="text-sm text-gray-600 "dark": tex t-gray-400">;
                                       {vuln.remediation"}
-                                    </p>;
-                                  </div>;
-                                </div>;
-                              </div>;
-                            </motion.div>) ) }
-                        </div>;
-                      </div>) }
-;
                     {/* Compliance View */}
                     {selectedView === 'compliance' && (";
-                      <div className="space-y-4">";
-                        <h3 className="text-lg font-semibold text-gray-900 "dark": "tex t-white">;
                           Compliance Status;
-                        </h3>;
-";
-                        <div className="grid gap-4">;
                           {complianceStatus.map((compliance", index) => (;
-                            <motion.div;
                               key={compliance.framework}";
-                              className="bg-white "dark": "b g-gray-800 p-4 rounded-xl border border-gray-200 "dark": borde r-gray-700 "hover": shado w-lg transition-all duration-300";
-                              whileHover={{ "y": -2 "}}
-                              initial={{ "opacity": "0", "y": "2 0 "}}
-                              animate={{ "opacity": "1", "y": "0 "}}
-                              transition={{ "delay": "inde x * 0.1 "}}
-                            >";
-                              <div className="flex items-center justify-between mb-4">";
                                 <h4 className="text-lg font-medium text-gray-900 "dark": "tex t-white">;
                                   {compliance.framework"}
-                                </h4>;
-                                <div`;
                     {selectedView === 'compliance' && ("
-                      <div className="space-y-4">"
-                        <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Compliance Status
-"
-                        <div className="grid gap-4">
                           {complianceStatus.map((compliance, index) => (
-                            <motion.div
                               key={compliance.framework}"
-                              className="bg-white dark: b g-gray-800 p-4 rounded-xl border border-gray-200 dark: borde r-gray-700 hover: shado w-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 2 0 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: inde x * 0.1 }}
-                            >"
-                              <div className="flex items-center justify-between mb-4">"
                                 <h4 className="text-lg font-medium text-gray-900 dark: tex t-white">
                                   {compliance.framework}
                                 </h4>
-                                <div`
                                   className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
-                                >;
                                   {compliance.status.replace('-',)}
-                                </div>;
-                              </div>;
-";
                               <div className="grid grid-cols-2 gap-4 mb-4">";
                                 <div className="text-center">";
                                   <div className="text-2xl font-bold text-gray-900 "dark": "tex t-white">;
                                     {compliance.score"}%;
-                                  </div>";
-                                  <div className="text-sm text-gray-500 "dark": "tex t-gray-400">;
                                     Compliance Score;
-                                  </div>;
-                                </div>;
-";
-                                <div className="text-center">";
                                   <div className="text-2xl font-bold text-gray-900 "dark": tex t-white">;
                                     {compliance.requirements.compliant"}/;
                                     {compliance.requirements.total}
-                                  </div>";
-                                  <div className="text-sm text-gray-500 "dark": "tex t-gray-400">;
                                     Requirements Met;
-                                  </div>;
-                                </div>;
-                              </div>;
-";
                               <div className="space-y-2">";
                                 <div className="flex items-center justify-between text-sm">";
                                   <span className="text-gray-600 "dark": tex t-gray-400">;
@@ -686,88 +465,46 @@ interface SecurityMonitoringSystemProps {;
                                   </span>";
                                   <span className="text-gray-900 "dark": tex t-white">;
                                     {compliance.lastAudit.toLocaleDateString()"}
-                                  </span>;
-                                </div>";
-                                <div className="flex items-center justify-between text-sm">";
                                   <span className="text-gray-600 "dark": "tex t-gray-400">;
                                     Next "Audit":;
-                                  </span>";
-                                  <span className="text-gray-900 "dark": tex t-white">;
                                     {compliance.nextAudit.toLocaleDateString()"}
-                                  </span>;
-                                </div>;
-                              </div>;
-                            </motion.div>) ) }
-                        </div>;
-                      </div>) }
-;
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg "hover": "b g-red-700 transition-colors">";
                         <Download className="w-4 h-4"   />;
                         <span>Export Report</span>;
-                      </button>;
-";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg "hover": b g-green-700 transition-colors">";
                         <Shield className="w-4 h-4"   />                        <span>Run Full Scan</span>;
-                      </button>;
-";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors">";
                         <Share2 className="w-4 h-4"  />;
                         <span>Share Report</span>;
-                      </button>;
-                    </div>;
-                  </div>;
-                ) : (";
-                  <div className="text-center py-12">";
                     <Shield className="w-16 h-16 text-red-600 mx-auto mb-4"   />"                    <h3 className="text-xl font-semibold text-gray-900 "dark": tex t-white mb-2">;
                       Ready to monitor security?;
-                    </h3>";
                     <p className="text-gray-600 "dark": tex t-gray-400 mb-6">;
                       Click the scan button to start security monitoring;
-                    </p>;
-                    <button;
                       onClick={startSecurityScan"}";
                       className="px-6 py-3 bg-red-600 text-white rounded-lg "hover": "b g-red-700 transition-colors";
-                    >;
                       Start Security Scan;
-                    </button>;
                   </div>) "}
-              </div>;
             </motion.div>;
                     {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg hover: b g-red-700 transition-colors">"
                         <Download className="w-4 h-4"   />
                         <span>Export Report</span>
-                      </button>
-"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors">"
                         <Shield className="w-4 h-4"   />                        <span>Run Full Scan</span>
-                      </button>
-"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors">"
                         <Share2 className="w-4 h-4"  />
                         <span>Share Report</span>
-                      </button>
-                    </div>
-                  </div>
                 ) : ("
-                  <div className="text-center py-12">"
                     <Shield className="w-16 h-16 text-red-600 mx-auto mb-4"   />"                    <h3 className="text-xl font-semibold text-gray-900 dark: tex t-white mb-2">
                       Ready to monitor security?
-                    "
                     <p className="text-gray-600 dark: tex t-gray-400 mb-6">
                       Click the scan button to start security monitoring
-                    </p>
-                    <button
                       onClick={startSecurityScan}"
                       className="px-6 py-3 bg-red-600 text-white rounded-lg hover: b g-red-700 transition-colors"
-                    >
                       Start Security Scan
-                    </button>
-                  </div>) }
-              </div>
             </motion.div>
           </motion.div>) }
       </AnimatePresence>;
@@ -775,18 +512,8 @@ interface SecurityMonitoringSystemProps {;
   )}
 '"`;
 </motion>;
-</motion>;
-</motion>;
 </RefreshCw>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
 </any>;
 </ComplianceStatus>;
 </SecurityThreat>;
-</any>;
-</any>;
-</any>;
 </any>

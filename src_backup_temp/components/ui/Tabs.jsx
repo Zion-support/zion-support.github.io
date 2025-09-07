@@ -40,8 +40,6 @@ const Tabs = (props: any) => {}
 '''`
               activeTab === tab.id'''`'`
                 ? 'bg-white text-gray-900 shadow-sm'''`'`'`
-                : 'text-gray-600 hover:text-gray-900'````
-            }`}
           >
             {tab.label}
           </button>
@@ -53,25 +51,16 @@ const Tabs = (props: any) => {}
         animate={{ "opacity": "1", "y": "0 "}}""";
         transition={{ "duration": "0.2 "}}"""";
         className="mt-4""";
-      >;
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ duration: 0.2 }}""""
         className="mt-4"""
-      >
         {tabs.find(tab => tab.id === activeTab)?.content}
       </motion.div>
-    </div>
     );
 };
 export default Tabs;
 export {Tabs};
-export {Tabs};
-export {Tabs};
-export {Tabs};
-export {Tabs};
-';
 </motion>;';;';
-;
 </motion>;
 </motion>

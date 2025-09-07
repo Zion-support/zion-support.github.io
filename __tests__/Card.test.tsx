@@ -13,5 +13,3 @@ describe('Card', () => {
   test('renders with icon', () => {
     render(<Card title="Test Title" description="Test Description" icon="🚀" />);
     expect(screen.getByText('🚀')).toBeInTheDocument();
-  });
-});

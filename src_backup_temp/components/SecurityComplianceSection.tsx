@@ -4,7 +4,6 @@ import {  import { motion  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function SecurityComplianceSection("props": "any) {];
-;
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
@@ -15,7 +14,6 @@ function SecurityComplianceSection("props": "any) {];
           whileInView = {;
   { "opacity": "1",;
   "y": "0;
-"}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
         >";
@@ -26,20 +24,12 @@ function SecurityComplianceSection("props": "any) {];
             Enterprise-grade security with industry-leading compliance certifications.Your data and systems are protected by the highest security standards.</p>;
         </motion.div>;
           initial = {;
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
           transition = {;
   { "duration": "0.6",;
   "delay": "0.1;
 "}}";
           className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
         > {securityMetrics.map ( (metric", index) => {;
-            ;
             return (";
               <div key = {metric.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
@@ -47,23 +37,10 @@ function SecurityComplianceSection("props": "any) {];
                     <IconComponent className="h-8 w-8 text-white"   />;
         {/* Security Certifications */}"        <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-6 mb-16">;
           {securityFeatures.map((feature", index) => (;
-            <motion.div;
               key={feature.title}";
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 "hover": "borde r-blue-500/50 transition-all duration-300";
-              initial = {;
-  { "opacity": 0",;
   "y": "3 0;
-"}}
-              whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-              viewport={{ "once": "tru e "}}
-              transition = {;
-  { "duration": "0.6",;
   "delay": "inde x * 0.1;
-"}}
-            >";
               <div className="flex items-start gap-4">;
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>";
                   <span className="text-xl">{feature.icon}</span>;
@@ -77,14 +54,11 @@ function SecurityComplianceSection("props": "any) {];
                     }`}></div>";
                     <span className="text-gray-300 text-sm font-medium">{feature.status}</span>;
                   </div>;
-                </div>;
-              </div>;
 }}
               viewport={{ once: tru e }}
               transition = {
   { duration: 0.6,
   delay: inde x * 0.1
-}}
             >"
               <div className="flex items-start gap-4">
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>"
@@ -99,31 +73,14 @@ function SecurityComplianceSection("props": "any) {];
                     }`}></div>"
                     <span className="text-gray-300 text-sm font-medium">{feature.status}</span>
                   </div>
-                </div>
-              </div>
             </motion.div>) ) }
-        </div>;
         {/* Compliance Features */}
-        <motion.div;
           className="mb-16"          initial = {;
   { "opacity": "0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
   "delay": "0.4;
-"}}
-        >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
             Comprehensive Security Features;
           </h3>;
-}}
-        >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
           <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-8">;
@@ -139,34 +96,15 @@ function SecurityComplianceSection("props": "any) {];
                   ))}
                 </ul>;
               </div>) ) }
-          </div>;
-        </motion.div>;
         {/* Security Metrics */}
-        <motion.div;
-          className="mb-16"          initial = {;
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
   "delay": "0.6;
-"}}
-        >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-8">;
               Security Performance Metrics;
-            </h3>;
             ;";
             <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-6">;";
               <div className="text-center">;";
                 <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;";
-}}
-        >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Security Performance Metrics
@@ -176,37 +114,16 @@ function SecurityComplianceSection("props": "any) {];
                 <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;"
                 <div className="text-gray-400 text-sm">Uptime SLA</div>;
               </div>;";
-              <div className="text-center">;";
                 <div className="text-4xl font-bold text-green-400 mb-2">&lt;1s</div>";
                 <div className="text-gray-400 text-sm">Response Time</div>;
-              </div>";
               <div className="text-center">";
                 <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>";
                 <div className="text-gray-400 text-sm">Monitoring</div>;
-              </div>";
-              <div className="text-center">";
                 <div className="text-4xl font-bold text-orange-400 mb-2">0</div>";
                 <div className="text-gray-400 text-sm">Security Breaches</div>;
-              </div>;
-            </div>;
-          </div>;
-        </motion.div>;
         {/* Call to Action */"}
-        <motion.div;
           className="text-center"          initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
   "delay": "0.8;
-"}}
-        >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold mb-4">;
               Secure Your Business Today;
@@ -221,11 +138,6 @@ function SecurityComplianceSection("props": "any) {];
               <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200">;
                 Compliance Review";
                 <FileText className="ml-2 h-5 w-5"   />              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-}}
-        >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold mb-4">
               Secure Your Business Today
@@ -240,24 +152,11 @@ function SecurityComplianceSection("props": "any) {];
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Compliance Review"
                 <FileText className="ml-2 h-5 w-5"   />              </button>
-            </div>
-          </div>
         </motion.div>
-      </div>;
     </section>;) "};
-;
 export default SecurityComplianceSection;";
             <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
     </section>;) }
-export default SecurityComplianceSection;
 export default SecurityComplianceSection;
 '"`;
 </motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</div>

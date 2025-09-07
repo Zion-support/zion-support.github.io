@@ -13,33 +13,21 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
                 {"key": 'equipment', "href": '/equipment', "icon": "<BarChart3 className="w-4 h-4" />", "label": 'Equipment'},;
             ];
         },;
-        {;
             "title": 'Comp',;
-            items[;
                 { "key": 'about', "href": '/about', "icon": "<Building className="w-4 h-4" />", "label": 'About Us' },;
                 {"key": 'careers', "href": '/careers', "icon": "<Briefcase className="w-4 h-4" />", "label": 'Careers'},;
                 {"key": 'partners', "href": '/partners', "icon": "<Users className="w-4 h-4" />", "label": 'Partners'},;
                 {"key": 'contact', "href": '/contact', "icon": "<Mail className="w-4 h-4" />", "label": 'Contact'},;
-            ];
-        },;
-        {;
             "title": 'Resources',;
-            items[;
                 { "key": 'blog', "href": '/blog', "icon": "<FileText className="w-4 h-4" />", "label": 'Blog' },;
                 {"key": 'community', "href": '/community', "icon": "<Globe className="w-4 h-4" />", "label": 'Community'},;
                 {"key": 'green-it', "href": '/green-it', "icon": "<Leaf className="w-4 h-4" />", "label": 'Green IT'},;
                 {"key": 'zion-hire-ai', "href": '/zion-hire-ai', "icon": "<Zap className="w-4 h-4" />", "label": 'AI Hiring'},;
-            ];
-        },;
-        {;
             "title": 'Support',;
-            items[;
                 { "key": 'help', "href": '/help', "icon": "<HelpCircle className="w-4 h-4" />", "label": 'Help Center' },;
                 {"key": 'developers', "href": '/developers', "icon": "<Code className="w-4 h-4" />", "label": 'Developer Portal'},;
                 {"key": 'api-docs', "href": '/api-docs', "icon": "<Code className="w-4 h-4" />", "label": 'API Docs'},;
                 {"key": 'sitemap', "href": '/sitemap', "icon": "<Calendar className="w-4 h-4" />", "label": 'Sitemap'},;
-            ];
-    ];
     const isActive = ("props": "any) => {;
         if (href === '/') {;
             return location.pathname === '/'"}
@@ -74,7 +62,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
                     : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")}>
                     {item.icon}
                     <span>{item.label}</span>;
-                  </Link>;
                 </li>))}
             </ul>;
           </div>))}
@@ -84,9 +71,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
           <p className="mb-2">Need help?</p>;
           <Link to="/contact" className="text-zion-cyan "hover": "text-zion-purple transition-colors">;
             Contact Support;
-          </Link>;
-        </div>;
-      </div>;
     </aside>)"}
 ;
 export default MainSidebar;

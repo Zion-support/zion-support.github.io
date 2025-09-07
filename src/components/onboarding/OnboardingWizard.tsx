@@ -105,7 +105,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
-  
+
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -209,7 +209,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
         >;
-        
+
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}

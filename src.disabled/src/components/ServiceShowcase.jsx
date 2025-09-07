@@ -11,4 +11,3 @@ export default function ServiceShowcase({ }: ServiceShowcaseProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

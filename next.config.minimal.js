@@ -1,4 +1,3 @@
-
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -11,19 +10,9 @@ const next_config = {
   output: 'standalone'
   trailingSlash: false
   distDir: '.next'
-}
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
   trailingSlash: false,
   distDir: '.next',
 };
-<<<<<<< HEAD
-module.exports = nextConfig;
-
-module.exports = nextConfig;
-module.exports = nextConfig;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -126,7 +126,7 @@ export default function Dashboard() {
   const { logout } = useAuth(),
   const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
   const { toast } = useToast(),
-  
+
   const userId = user?.id,
   const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
   const { favorites } = useFavorites(),
@@ -299,7 +299,6 @@ const NotificationBell = dynamic(() => import("@/components/NotificationBell").t
   loading: () => <Bell size={16} className="text-zion-cyan" />,;
 const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {;
 const loadNotificationFunctions = () => import("@/utils/notifications"),;
-export default function Dashboard() {;
   const { logout } = useAuth(),;
   const { user, loading } = useRequireAuth(), // This will handle authentication and redirects;
   const { toast } = useToast(),;
@@ -361,13 +360,13 @@ export default function Dashboard() {;
                     {userWithExtendedProps?.displayName?.split(' ').map((name: string) => name[0]).join('') || userWithExtendedProps?.email?.charAt(0).toUpperCase()}
                   <h2 className="text-xl font-bold text-white">{userWithExtendedProps?.displayName || userWithExtendedProps?.email}</h2>
                   <p className="text-zion-slate-light mb-2">{user?.email}</p>
-                  
+
                   <Badge
                     className="bg-zion-purple text-white mb-4"
                   >
                     {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
                   </Badge>
-                  
+
                   <Button
                     id="profile-link"
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -439,7 +438,7 @@ export default function Dashboard() {;
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>Points</span>
-                  
+
                     <span className="text-zion-slate-light">Points</span>
 
                     <PointsBadge />
@@ -479,7 +478,7 @@ export default function Dashboard() {;
 
                     <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
-                  
+
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
                       className="w-full flex items-center justify-center gap-2"
@@ -711,7 +710,7 @@ export default function Dashboard() {;
                         <Bell size={24} className="text-zion-slate-light" />
                       <span className="text-xs text-center text-zion-slate-light">Locked</span>
                         <span className="text-zion-slate-light text-xl">?</span>
-                
+
                 <div id="community-section">
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
                   <CommunityDiscussion />

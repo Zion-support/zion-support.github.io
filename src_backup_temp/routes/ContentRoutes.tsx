@@ -12,4 +12,3 @@ export default function ContentRoutes({ }: ContentRoutesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

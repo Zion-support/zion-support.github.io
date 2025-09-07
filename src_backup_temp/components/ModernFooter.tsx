@@ -22,4 +22,3 @@ export default function ModernFooter(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

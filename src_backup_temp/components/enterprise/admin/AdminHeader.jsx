@@ -18,46 +18,29 @@ export function AdminHeader("props": "any) {;
             <Settings className="h-4 w-4" />;
             Settings;
           </Button>;
-          <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
             Export Data;
-          </Button>;
-        </div>;
-      </div>;
       <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Subscription Plan</div>;
           <div className="text-xl font-medium">{company?.plan || "Enterprise""}</div>;
-        </div>;
-        <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Team Members</div>;
           <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
-        </div>;
-        <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Billing Cycle</div>;
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>;
-        </div>;
-      </div>;
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
             <img loading="lazy" src={company?.logoUrl || "/placeholder.svg"} alt={company?.name || "Comp"} className="max-h-10 max-w-10"  />;
-          </div>;
-          <div>;
             <h2 className="font-medium">{company?.name || "Comp Name"}</h2>;
             <p className="text-sm text-muted-foreground">;
               Workspace "URL": "{company?.workspaceUrl || "loading...""}
-            </p>;
-          </div>;
-        </div>;
         <Button>Customize Workspace</Button>;
-      </div>;
     </div>)}
 ;
 export default AdminHeader;
 export function AdminHeader($1) {
     // const { user } = useAuth(); // Unused but available
-    const {comp} = useCompWorkspace();
     return (
         <div className="space-y-4">
     <div className="min-h-screen bg-white">
@@ -73,41 +56,24 @@ export function AdminHeader($1) {
             <Settings className="h-4 w-4" />
             Settings
           </Button>
-          <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
-          </Button>
-        </div>
-      </div>
       <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
-        </div>
-        <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
           <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>
-        </div>
-        <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Billing Cycle</div>
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
-        </div>
-      </div>
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img loading="lazy" src={company?.logoUrl || "/placeholder.svg"} alt={company?.name || "Comp"} className="max-h-10 max-w-10"  />
-          </div>
-          <div>
             <h2 className="font-medium">{company?.name || "Comp Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace "URL": {company?.workspaceUrl || "loading..."}
-            </p>
-          </div>
-        </div>
         <Button>Customize Workspace</Button>
-      </div>
-        </div>
   );
 }
 export default AdminHeader;';';

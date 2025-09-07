@@ -26,43 +26,32 @@ export default function AutomationSolutionsPage() {
             price="$15k–$50k"
             icon="🤖"
           />
-          <AutomationServiceCard
             title="Workflow Automation"
             description="End-to-end workflow automation with intelligent decision making"
             features={["Workflow design", "Integration management", "Approval processes", "Notification systems", "Performance analytics"]}
             price="$10k–$35k"
             icon="⚡"
-          />
-          <AutomationServiceCard
             title="AI-Powered Automation"
             description="Intelligent automation using AI and machine learning for complex tasks"
             features={["AI decision making", "Natural language processing", "Predictive automation", "Learning algorithms", "Cognitive automation"]}
             price="$25k–$80k"
             icon="🧠"
-          />
-          <AutomationServiceCard
             title="Document Processing Automation"
             description="Automated document handling, extraction, and processing"
             features={["OCR & text extraction", "Document classification", "Data validation", "Workflow routing", "Compliance checking"]}
             price="$12k–$40k"
             icon="📄"
-          />
-          <AutomationServiceCard
             title="Customer Service Automation"
             description="Automated customer support with chatbots and intelligent routing"
             features={["Chatbot development", "Ticket routing", "Response automation", "Sentiment analysis", "Escalation management"]}
             price="$18k–$60k"
             icon="💬"
-          />
-          <AutomationServiceCard
             title="Financial Process Automation"
             description="Automated financial processes including invoicing, payments, and reporting"
             features={["Invoice processing", "Payment automation", "Financial reporting", "Reconciliation", "Compliance automation"]}
             price="$20k–$70k"
             icon="💰"
-          />
         </div>
-      </section>
 
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Automation Technology Stack</h2>
@@ -77,35 +66,23 @@ export default function AutomationSolutionsPage() {
               "Exception handling and error recovery",
               "Performance monitoring and analytics"
             ]} 
-          />
-          <Item 
             title="AI & Machine Learning" 
-            details={[
               "Natural language processing (NLP)",
               "Computer vision and image recognition",
               "Predictive analytics and forecasting",
               "Decision trees and rule engines",
               "Machine learning model integration",
               "Cognitive automation platforms"
-            ]} 
-          />
-          <Item 
             title="Integration & Orchestration" 
-            details={[
               "API management and integration",
               "Workflow orchestration engines",
               "Event-driven automation",
               "Microservices architecture",
               "Cloud-native automation",
               "Real-time monitoring and alerting"
-            ]} 
-          />
-        </div>
-      </section>
 
       <Pricing />
       <ContactSection />
-    </div>
   );
 }
 
@@ -116,7 +93,6 @@ function AutomationServiceCard({ title, description, features, price, icon }: {
   price: string; 
   icon: string; 
 }) {
-  return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
@@ -130,31 +106,17 @@ function AutomationServiceCard({ title, description, features, price, icon }: {
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
 
 function Item({ title, details }: { title: string; details: string[] }) {
-  return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
         {details.map((detail, index) => (
           <li key={index} className="flex items-start text-gray-600">
             <span className="text-blue-500 mr-2 mt-1">•</span>
             {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 function Pricing() {
-  return (
-    <section className="py-12">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Automation Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
           name="Process Assessment" 
           price="$5k–$15k" 
@@ -166,70 +128,43 @@ function Pricing() {
             "Technology recommendations",
             "Implementation roadmap",
             "Pilot process selection"
-          ]} 
-        />
-        <Plan 
           name="Automation Implementation" 
           price="$20k–$80k" 
           duration="8–16 weeks"
-          features={[
             "End-to-end automation development",
             "Integration with existing systems",
             "Testing and quality assurance",
             "User training and documentation",
             "Deployment and go-live support",
             "Performance monitoring setup"
-          ]} 
-        />
-        <Plan 
           name="Managed Automation" 
           price="$3k+/mo" 
           duration="Ongoing"
-          features={[
             "24/7 monitoring and maintenance",
             "Continuous optimization",
             "Exception handling and support",
             "Performance reporting",
             "Process improvements",
             "Scalability management"
-          ]} 
-        />
-      </div>
-    </section>
-  );
-}
 
 function Plan({ name, price, duration, features }: { 
   name: string; 
-  price: string; 
   duration: string;
-  features: string[]; 
-}) {
-  return (
     <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
       <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
       <div className="text-gray-600 mb-6">{duration}</div>
       <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
       <a 
         href="tel:+13024640950" 
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
       >
         Get Started
       </a>
-    </div>
-  );
-}
 
 function ContactSection() {
-  return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -238,25 +173,11 @@ function ContactSection() {
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Let's identify automation opportunities and implement solutions that save time and reduce costs. 
           Our automation experts have delivered 150+ successful automation projects.
-        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
             Call +1 302 464 0950
-          </a>
-          <a
             href="mailto:kleber@ziontechgroup.com"
             className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
             Email Us
-          </a>
-        </div>
         <div className="mt-8 text-sm text-gray-500">
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </div>
-    </section>
-  );
-}

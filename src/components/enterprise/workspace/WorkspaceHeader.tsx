@@ -95,7 +95,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
             <Users className="h-4 w-4" />
           <Button variant="outline" size="icon" aria-label="Workspace settings">
             <Settings className="h-4 w-4" />
-      
+
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -146,7 +146,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <div className="text-sm text-muted-foreground">Interviews Scheduled</div>;
           <div className="text-2xl font-medium">12</div>;
 
-export /**
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <div className="flex items - center gap - 4">;

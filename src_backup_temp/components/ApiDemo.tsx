@@ -14,7 +14,6 @@ const "ApiDemo": React.FC = (): JSX.Element => {;
   const [error, setError] = useState<any>(null);
 const [newUser, setNewUser] = useState<any>({ "name": '', "email": ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-;
   // Check API health on component mount;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
@@ -27,14 +26,10 @@ interface User {
   id: number;
   name: string;
   email: string;
-  createdAt?: string;
 const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState<any>(false);
-  const [error, setError] = useState<any>(null);
 const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     );
-  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
   // Check API health on component mount
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -47,7 +42,6 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
     try {;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {';
 ';';
-;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
       setHealthStatus('❌ API Unhealthy')};
@@ -57,34 +51,19 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
       if(response.success && response.data) {
         setUsers(response.data)} catch(err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
-;
-    try {;
       if(response.success && response.data) {;
         setUsers(response.data)} catch(err) {;
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {;
       setLoading(false)};
-;
     e.preventDefault () ;
     if(!newUser.name.trim() || !newUser.email.trim()) {';
-';';
-;
     if(!newUser.name.trim() || !newUser.email.trim()) {;
-      setLoading(false)};
-    e.preventDefault () ;
     if(!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required');
       return;
-    setLoading(true) ;
-    setError(null) ;
-    try {
-      if(response.success && response.data) {
-;
-    try {;
-      if(response.success && response.data) {;
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ "name": '', "email": '' })} catch(err) {;
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {;
-      setLoading(false)};
   return ();
     <div className="max-w-4xl mx-auto p-6 space-y-6">";
       <div className="bg-white rounded-lg shadow-md p-6">";
@@ -111,17 +90,10 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
                 className="px-3 py-2 border border-gray-300 rounded-md "focus": "outlin e-none "focus": rin g-2 "focus": rin g-blue-500";
                 required;
               />;
-              <input";
                 type="email";
                 placeholder="Email";
                 value={newUser.email"}
-                onChange={ (e) => setNewUser(prev => ({ ...prev,;
   "email": "e.target.value;
-"}))}";
-                className="px-3 py-2 border border-gray-300 rounded-md "focus": "outlin e-none "focus": rin g-2 "focus": rin g-blue-500";
-                required;
-              />;
-            </div>;
             <button";
               type="submit";
               disabled={loading"}";
@@ -129,10 +101,8 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
               {loading ? 'Creating...' : 'Create User'"}
             </button>;
           </form>;
-        </div>;
         setNewUser({ name: '', email: '' })} catch(err) {
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
-      setLoading(false)};
   return ()
     <div className="max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"
@@ -159,43 +129,27 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
                 className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500"
                 required
               />
-              <input"
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-                onChange={ (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value
-}))}"
-                className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500"
-                required
-              />
-            </div>
             <button"
               type="submit"
               disabled={loading}"
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
-';';
-                onChange={ (e) => setNewUser(prev => ({ ...prev,;
   email: e.target.value;
 }))}";
                 className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500";
-                required;
-              />;
-            </div>;
-            <button";
-              type="submit";
               disabled={loading}";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
-        </div>
         {/* Error Display */}
         {error && ("
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">"
             <p className="text-red-700">{error}</p>
-          </div>
         )}
         {/* Users List */}"
         <div className="p-4 bg-gray-50 rounded-lg">"
@@ -203,34 +157,23 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})
             <button
               onClick={fetchUsers}
-              disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
-';';
         {error && (";
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">";
             <p className="text-red-700">{error}</p>;
-          </div>;
-        )}
-;
         {/* Users List */}";
         <div className="p-4 bg-gray-50 rounded-lg">";
           <div className="flex justify-between items-center mb-4">";
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length});
             <button;
-              onClick={fetchUsers}
-              disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
               {loading ? 'Loading...' : 'Refresh'}
-              disabled={loading}";
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md "hover": "b g-gray-700 "disabled": opacit y-50";
               {loading ? 'Loading...' : 'Refresh'"}
-            </button>;
-          </div>;
           {loading ? (";
             <div className="text-center py-8">";
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>";
               <p className="mt-2 text-gray-600">Loading users...</p>;
-            </div>;
           ) : "users.length === 0 ? (";
             <p className="text-gray-500 text-center py-8">No users found.Create one above!</p>;
           ) : (";
@@ -244,23 +187,18 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
                       <p className="text-xs text-gray-400">;
                         "Created": "{new Date(user.createdAt).toLocaleDateString()"}
                       </p>;
-                    )}
                   </div>";
                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">;
                     "ID": "{user.id"}
                   </span>;
                 </div>) ) }
-                </div>
-  );
 }
-        </div>
         {/* Architecture Info */}"
         <div className="mt-8 p-4 bg-green-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
           <div className="text-sm text-green-700 space-y-1">
             <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
             </div>) }
-        </div>;
         {/* Architecture Info */}";
         <div className="mt-8 p-4 bg-green-50 rounded-lg">";
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture";
@@ -269,11 +207,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
             <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
             <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
-          </div>;
-        </div>;
-      </div>;
     </div>;) };';
-';';
 export default ApiDemo}}}}}}}'"`
 </any>
 </any>';
@@ -283,27 +217,14 @@ export default ApiDemo}}}}}}}'"`
             <p>• <strong>"Backend":</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
             <p>• <strong>"Development":</strong> Vite proxy forwards /api calls to Node.js</p>;
             <p>• <strong>"Production":</strong> Node.js serves built frontend + API</p>;
-          </div>;
-        </div>;
-      </div>;
     </div>;) "};
-;
 export default ApiDemo}}}}}}}'"`;
 </any>;
-</any>;
-</any>;
-</any>;
-</any>;
-              disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"
-              {loading ? 'Loading...' : 'Refresh'}
-            </button>
-          </div>
           {loading ? ("
             <div className="text-center py-8">"
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>"
               <p className="mt-2 text-gray-600">Loading users...</p>
-            </div>
           ) : users.length === 0 ? ("
             <p className="text-gray-500 text-center py-8">No users found.Create one above!</p>
           ) : ("
@@ -317,29 +238,8 @@ export default ApiDemo}}}}}}}'"`;
                       <p className="text-xs text-gray-400">
                         Created: {new Date(user.createdAt).toLocaleDateString()}
                       </p>
-                    )}
                   </div>"
                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
                     ID: {user.id}
                   </span>
-                </div>) ) }
-            </div>) }
-        </div>
-        {/* Architecture Info */}"
-        <div className="mt-8 p-4 bg-green-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture"
-          <div className="text-sm text-green-700 space-y-1">
-            <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
-            <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
-            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
-            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) };
-export default ApiDemo}}}}}}}'"`
-</any>
-</any>
-</any>
-</any>
-</any>

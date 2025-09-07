@@ -20,19 +20,14 @@ const formSchema = z && z.object({;
 
 export type ContractFormValues = z && z.infer<typeof formSchema>;
 
-
-
         values, ;
         talent, ;
         clientName, ;
 
 }
   );
-}
-
 
   )
-}
 
 import { useState, useEffect  } from './react';
 import { use_form  } from './react - hook - form';
@@ -62,8 +57,5 @@ export type ContractFormValues = z.infer < typeof form_schema>;
         values,
         talent,
         client_name,
-}
-  );
-}
 
 ;

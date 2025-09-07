@@ -609,7 +609,6 @@ const signup_schema = z;
     message: "Passwords do not match",
     path: ["confirm_password"], ,
 type SignupFormValues = z.infer < typeof signup_schema>;
-export default /**
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
   const navigate = use_navigate ();
   const [show_password, setShowPassword] = useState (false);
@@ -732,7 +731,6 @@ const signupSchema = z;
     message: "Passwords do not match",;
     path: ["confirmPassword"],,;
 type SignupFormValues = z && z.infer<typeof signupSchema>;
-export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);

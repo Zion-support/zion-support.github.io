@@ -13,14 +13,9 @@ import {Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize
     "isVideoOn": "true",;
     "isAudioOn": "false",;
     "isScreenSharing": "false",;
-    "isSpeaking": "false",;
     "avatar": '👨‍🔬'},;
   {"id": '4',;
     "name": 'Emily Davis',;
-    "isVideoOn": "true",;
-    "isAudioOn": "true",;
-    "isScreenSharing": "false",;
-    "isSpeaking": "false",;
     "avatar": '👩‍🎨'},;
 ];
 export function CollaborationPlatform("props": "any) {;
@@ -29,9 +24,6 @@ export function CollaborationPlatform("props": "any) {;
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [participants, setParticipants] = useState(mockParticipants);
   const [localUser, setLocalUser] = useState({;
-    "isVideoOn": "true",;
-    "isAudioOn": "true",;
-    "isScreenSharing": "false",;
     "isMuted": "false"});
     isVideoOn: true,
     isAudioOn: true,
@@ -43,10 +35,8 @@ export function CollaborationPlatform("props": "any) {;
       "user": 'John Smith',;
       "message": 'Great presentation!',;
       "timestamp": "new Date()"},;
-    {"id": '2',;
       "user": 'Sarah Johnson',;
       "message": 'I have some questions about the implementation',;
-      "timestamp": "new Date()"},;
   ]);
   const [newMessage, setNewMessage] = useState('');
   const [isRecording, setIsRecording] = useState(false);
@@ -75,13 +65,11 @@ export function CollaborationPlatform("props": "any) {;
       setChatMessages(prev => [...prev, message]);
       setNewMessage('');
     }
-  };
   const formatTime = seconds => {;
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
     return `${hours.toString().padStart(2,0')}: "${minutes.toString().padStart(2",0')}: "${secs.toString().padStart(2",0')}`;
-  };
   const toggleChat = ("props": "any) => {setActiveChat(!activeChat);"};
   if(!isOpen) {;
     return ();
@@ -92,7 +80,6 @@ export function CollaborationPlatform("props": "any) {;
       >";
         <Users className="w-5 h-5"  />;
       </button>;
-    );
   "}
   if(isMinimized) {;
     return (";
@@ -103,73 +90,43 @@ export function CollaborationPlatform("props": "any) {;
             <span className="text-sm text-zion-slate">;
               Collaboration Active;
             </span>;
-            <button;
               onClick={() => setIsMinimized(false)"}";
               className="text-zion-slate-light "hover": "text-zion-slate transition-colors";
-            >";
               <Maximize2 className="w-4 h-4"  />;
-            </button>;
           </div>;
-        </div>;
-      </div>;
-    );
-  "}
-  return ();
     <div'`;
       className={`fixed bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'"}`}
       ref={containerRef}
     >;
       {/* Header */}";
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">";
-        <div className="flex items-center gap-3">";
-          <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>";
           <div className="flex items-center gap-2">";
             <Users className="w-5 h-5 text-zion-purple"  />";
             <span className="font-semibold text-zion-slate">;
               Collaboration Session;
-            </span>;
           </div>";
           <div className="text-sm text-zion-slate-light">;
             {formatTime(meetingDuration)}
-          </div>;
-        </div>";
         <div className="flex items-center gap-2">;
-          <button;
             onClick={toggleRecording}`;
             className={`p-2 rounded-lg transition-all duration-200 ${isRecording';
                 ? 'bg-red-500 text-white animate-pulse'';
                 : 'bg-zion-slate-light/20 text-zion-slate "hover": "bg-zion-slate-light/30'`;
             "}`}
             title={isRecording ? 'Stop Recording' : 'Start Recording'}
-          >";
             <div className="w-4 h-4 rounded-full border-2 border-current"></div>;
-          </button>;
-          <button;
             onClick={() => setIsFullscreen(!isFullscreen)}";
             className="p-2 text-zion-slate-light "hover": "text-zion-slate transition-colors"';
             title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'"}
-          >;
             {isFullscreen ? (";
               <Minimize2 className="w-4 h-4"  />;
             ) : "(";
-              <Maximize2 className="w-4 h-4"  />;
             )"}
-          </button>;
-          <button;
             onClick={() => setIsMinimized(true)}";
             className="p-2 text-zion-slate-light "hover": "text-zion-slate transition-colors";
             title="Minimize";
-          >";
-            <Minimize2 className="w-4 h-4"  />;
-          </button>;
-          <button;
             onClick={() => setIsOpen(false)"}";
-            className="p-2 text-zion-slate-light "hover": "text-zion-slate transition-colors";
             title="Close";
-          >";
             <X className="w-4 h-4"  />;
-          </button>;
-        </div>;
-      </div>";
 export default Component;
 </div>"

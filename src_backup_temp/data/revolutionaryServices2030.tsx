@@ -12,4 +12,3 @@ export default function RevolutionaryServices2030({ }: RevolutionaryServices2030
       <p>This component is currently under development.</p>
     </div>
   );
-}

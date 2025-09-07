@@ -41,7 +41,6 @@ export function TemplateSaveForm(): any ({;
       title: editTemplate?.title || '',;
       isDefault: editTemplate?.is_default || false,;
     },;
-  });
 
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {;
       return;
@@ -56,14 +55,9 @@ export function TemplateSaveForm(): any ({;
           title: values && values.title,;
           templateData: editTemplate && editTemplate.template_data,;
           isDefault: values && values.isDefault,;
-        });
       } else if (currentValues) {;
         await createTemplate && createTemplate.mutateAsync({;
-          title: values && values.title,;
           templateData: currentValues,;
-          isDefault: values && values.isDefault,;
-        });
-      }
 
       onComplete();
     } finally {;
@@ -90,7 +84,6 @@ import { Switch } from '@/components / ui / switch';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required'),
   is_default: z.boolean (),
-});
 type FormValues = z.infer < typeof form_schema>;
 interface TemplateSaveFormProps {
   on_cancel: () => void;
@@ -109,41 +102,23 @@ function TemplateSaveForm() {
       title: edit_template?.title || '',
       is_default: edit_template?.is_default || false,
     },
-  });
   const on_submit = async (values: FormValues) => {    // Check condition
 if ( {) {
   $2
-}
-      return;
-    }
     set_saving (true);
     try {
       // Check condition
-if ( {) {
-  $2
-}
         await update_template.mutate_async ({
           template_id: edit_template.id,
           title: values.title,
           template_data: edit_template.template_data,
           is_default: values.is_default,
-        });
       } else // Check condition
-if ( {) {
-  $2
-}
         await create_template.mutate_async ({
-          title: values.title,
           template_data: current_values,
-          is_default: values.is_default,
-        });
-      }
       on_complete ();
     } finally {
       set_saving (false);
-
-    }
-  }
 
   return (
     <Form {...form}>;
@@ -157,18 +132,10 @@ if ( {) {
             field
           }: {
 
-    }
-  },
-  
-  return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
-          control={form.control}
           name='title'
-          render={({
-            field
-          }: {
             field: ControllerRenderProps<FormValues, 'title'>
           }) => (            <FormItem>
           name="title"
@@ -186,7 +153,6 @@ if ( {) {
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
             field: ControllerRenderProps < FormValues, 'title'>;
-          }) => (            <FormItem>;
               <FormLabel > Template Name</FormLabel>;
 
               <FormControl>;
@@ -196,13 +162,7 @@ if ( {) {
 
             </FormItem>)}
         />;
-        <FormField;
-          control={form.control}
           name='is_default';
-
-          render={({
-            field
-          }: {
 
             field: ControllerRenderProps<FormValues, 'isDefault'>;
           }) => (;
@@ -210,7 +170,6 @@ if ( {) {
               <FormLabel className='cursor-pointer'>;
                 Set as default template;
               </FormLabel>;
-              <FormControl>;
 
                 <Switch
                   aria-label='Default template'
@@ -219,47 +178,29 @@ if ( {) {
 
   };
   return (;
-    <Form {...form}>;
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
           name="title";
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (;
             <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-              <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
-              </FormControl>;
-              <FormMessage />;
             </FormItem>;
           )}
-        />;
-        <FormField;
-          control={form.control}
           name="isDefault"
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (
             <FormItem className="flex items-center justify-between">
               <FormLabel className="cursor-pointer">Set as default template</FormLabel>
-              <FormControl>
-                <Switch
                   aria-label="Default template"
           name="isDefault";
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (;
             <FormItem className="flex items-center justify-between">;
               <FormLabel className="cursor-pointer">Set as default template</FormLabel>;
-              <FormControl>;
                 <Switch;
                   aria-label="Default template";
                   checked={field.value}
                   onCheckedChange={field.onChange}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
 
         />
-        
+
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
 
@@ -270,17 +211,8 @@ if ( {) {
           }) => (
             <FormItem className='flex items - center justify - between'>;
               <FormLabel className='cursor - pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-                <Switch;
                   aria - label='Default template';
-                  checked={field.value}
                   onCheckedChange={field.on_change}                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
         <div className='flex gap - 2 justify - end'>;
           <Button type='button' variant='outline' on_click={on_cancel}>;
             Cancel;
@@ -288,13 +220,8 @@ if ( {) {
           <Button type='submit' disabled={saving}>;
             {saving ? (
 
-        />;
-
         <div className='flex gap-2 justify-end'>;
           <Button type='button' variant='outline' onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
             {saving ? (;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
@@ -315,18 +242,11 @@ if ( {) {
 
               `${editTemplate ? "Update" : "Save"} Template`
 
-            )}
-          </Button>;
         </div>;
       </form>;
     </Form>;
   );
 
-  // Check condition
-if ( {) {
-  $2
-}
-  await update_template.mutate_async ({
   <FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {
   ...field ";
 }placeholder="Enter template name" />;
@@ -336,5 +256,4 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
-}
 ;

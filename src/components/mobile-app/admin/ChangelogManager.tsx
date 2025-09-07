@@ -21,23 +21,23 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       date: "2025-05-15",
       changes: "Initial release of the Zion AI Marketplace app."
   ]),
-  
+
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({
     version: "",
     date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
     changes: ""
   }),
-  
+
   const handleAddEntry = () => {
     if (!newEntry.version || !newEntry.changes) return,
-    
+
     const entry: ChangelogEntry = {
       ...newEntry,
       id: Math.random().toString(36).substring(2, 9)
-    
+
     setEntries([entry, ...entries]),
     setNewEntry({
-  
+
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
@@ -160,7 +160,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 key = {entry.id,}
             value={newEntry.changes}
             rows={3}
-          
+
             {entries.map((entry) => (
                 key={entry.id}
 

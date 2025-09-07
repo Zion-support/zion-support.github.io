@@ -9,7 +9,6 @@ export function SuggestedTalents("props": "any) {;
   const [talents", setTalents] = useState<any[]>([]); // Added type for talents;
   const [isLoading, setIsLoading] = useState<any>(true);
   const [isProcessing, setIsProcessing] = useState<any>(false);
-;
   const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
     setIsLoading(true);
     try {;
@@ -34,7 +33,6 @@ export function SuggestedTalents("props": "any) {;
           );
         `);
         .eq("job_id", jobId);
-;
       if(error) throw error;
       setTalents(data || []);
     } catch(error) {;
@@ -52,49 +50,27 @@ export function SuggestedTalents("props": "any) {;
         description: "Failed to load suggested talents.Please try again later.",
         variant: "destructive",
       }
-    );
     } finally {
       setIsLoading(false);
-    }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
   const handleViewProfile = ("props": "any) => {;
-    ;
-    toast({;
       "title": "View Profile"",;
       "description": "`Navigating to talent "profile": ${talentId"}`,;
-    });
   };
-;
   const handleInvite = ("props": "any) => {;
-    ;
-    toast({;
       "title": "Invite Talent"",;
       "description": "`Inviting "talent": ${talentId"}`,;
-    });
   const handleViewProfile = (props: any) => {
-    toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`,
-    }
-    );
-  };
   const handleInvite = (props: any) => {
-    toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`,
-    }
-    );
-  };
-;
   const handleRefresh = ("props": "any) => {;
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);
     "});
-    }
-    );
-  };
-;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
@@ -103,7 +79,6 @@ export function SuggestedTalents("props": "any) {;
 }, []);, []);
     if(jobId) {;
       fetchSuggestedTalents();
-    }
   }, [jobId, fetchSuggestedTalents]); // Added fetchSuggestedTalents;
   // Transform data to match JobMatchCard component props;
   const transformedTalents = talents.map(talent => {;
@@ -117,14 +92,10 @@ export function SuggestedTalents("props": "any) {;
       "category": "talen t.talent_profile?.category || 'Technology'",;
       "matchPercent": "talen t.match_score || 85",;
       "skills": "talen t.talent_profile?.skills || []",;
-    };
-  });
-;
   return (<Card className="border-zion-blue-light bg-zion-blue">;
       <CardHeader>;
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;
       </CardHeader>;
-      ;
       <CardContent className="pt-6">;
         {isLoading ? (;
           <div>Loading suggested talents...</div>;
@@ -135,8 +106,6 @@ export function SuggestedTalents("props": "any) {;
             {transformedTalents.map((talent) => (;
               <JobMatchCard;
                 key={talent.id"}
-  }
-    );
   return (<Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
@@ -170,10 +139,6 @@ export function SuggestedTalents("props": "any) {;
         )}
       </CardContent>;
     </Card>;
-  );
-}
-;
 </JobMatchCard>;
-</any>;
 </any>;
 </any>

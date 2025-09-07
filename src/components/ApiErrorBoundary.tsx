@@ -14,13 +14,10 @@
       logErrorToProduction ('Retry failed:', { data: retry_error });
       Sentry.capture_exception (retry_error);
       this.set_state ({ is_retrying: false });
-    }
-  }
   render () {
     // Check condition
 if ( {) {
   $2
-}
       // Check if it's a network - related error;
       const isNetworkError =;
         this.state.error?.message?.includes ('fetch') ||;
@@ -28,13 +25,7 @@ if ( {) {
         this.state.error?.message?.includes ('timeout') ||;
         !this.state.is_online;
       // Use custom fallback if provided;
-      // Check condition
-if ( {) {
-  $2
-}
         return this.props.fallback;
-      }
-      return (
         <div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className='w - full max - w-md space - y-4'>;
             <Alert variant='destructive'>;
@@ -56,7 +47,6 @@ if ( {) {
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
-                {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
                   <RefreshCw className='h-4 w-4' />
@@ -64,24 +54,17 @@ if ( {) {
                 <AlertTitle>
                   {isNetworkError
                     ? 'Connection Problem'
-                    : 'Something went wrong'}
                   <RefreshCw className="h-4 w-4" />
-                )}
-                <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
-                {isNetworkError ? (
                   !this.state.isOnline ? (
                     'You appear to be offline. Please check your internet connection.'
-                  ) : (
                     'Unable to connect to our servers. This might be a temporary network issue.'
                   )
-                ) : (
                   'An unexpected error occurred while loading the page.'
-                )}
               </AlertDescription>
             </Alert>
             <div className='flex flex-col gap-2'>
@@ -91,10 +74,7 @@ if ( {) {
                 className='w-full'              >
 
             <div className='flex flex-col gap-2'>;
-              <Button
 
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
                 className="w-full"
               >
 
@@ -103,39 +83,23 @@ if ( {) {
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                     Retrying...
                   </>
-                ) : (
-                  <>
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
-                  </>
-                )}
               </Button>
-              <Button
                 variant='outline'
                 onClick={() => window.location.reload()}
-                className='w-full'              >
                 variant="outline"
-                onClick={() => window.location.reload()}
-                className="w-full"
-              >
 
                 Reload Page
-              </Button>
-            </div>
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
                 <span>Offline</span>
-              </div>
-            )}
               <AlertDescription className='mt - 2'>;
-                {isNetworkError;
                   ? !this.state.is_online;
                     ? 'You appear to be offline. Please check your internet connection.';
                     : 'Unable to connect to our servers. This might be a temporary network issue.';
                   : 'An unexpected error occurred while loading the page.'}
-              </AlertDescription>;
-            </Alert>;
             <div className='flex flex - col gap - 2'>;
               <Button;
                 on_click={this.handle_retry}
@@ -146,18 +110,13 @@ if ( {) {
                     <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
                     Retrying...;
                   </>) : (
-                  <>;
                     <RefreshCw className='mr - 2 h - 4 w - 4' />;
                     Try Again;
                   </>)}
               </Button>;
-              <Button;
                 variant='outline';
                 on_click={() => window.location.reload ()}
-                className='w - full'              >;
                 Reload Page;
-              </Button>;
-            </div>;
             {!this.state.is_online && (
               <div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
                 <WifiOff className='h - 4 w - 4' />;
@@ -166,7 +125,6 @@ if ( {) {
             {process.env.NODE_ENV === 'development' && this.state.error && (
 
     return this.props.children;
-  }
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () =>: any {
   const handleApiError = (error: Error) =>: any {
@@ -174,29 +132,16 @@ export const useApiErrorHandler = () =>: any {
       scope.set_tag ('source', 'useApiErrorHandler');
       scope.set_level ('error');
       Sentry.capture_exception (error);
-    });
 
-  }
-  return { handleApiError }
-}
   return { handleApiError }
 
-              </Button>;
-
-              <Button
-                variant='outline'
                 onClick={() => window && window.location.reload()}
                 className='w-full'              >;
-                Reload Page;
-              </Button>;
-            </div>;
 
             {!this && this.state.isOnline && (;
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
                 <WifiOff className='h-4 w-4' />;
                 <span>Offline</span>;
-              </div>;
-            )}
 
             {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
               <details className='mt-4 rounded border p-2 text-xs'>;
@@ -208,7 +153,6 @@ export const useApiErrorHandler = () =>: any {
                   {this && this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
-            )}
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
@@ -220,32 +164,20 @@ export const useApiErrorHandler = () =>: any {
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
-            )}
 
 }, ;
   return { handleApiError };
 
-          </div>;
-        </div>;
       );
-    }
 
     return this && this.props.children;
-  }
 
-// Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
     Sentry && Sentry.withScope(scope => {;
       scope && scope.setTag('source', 'useApiErrorHandler');
       scope && scope.setLevel('error');
       Sentry && Sentry.captureException(error);
-    });
   };
-  return { handleApiError }
 
 },
-  return { handleApiError }
-},
-
-};

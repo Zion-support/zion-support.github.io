@@ -78,7 +78,7 @@ function App() {
           <Header />
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
           
-          <main className="pt-20">
+          <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />

@@ -145,7 +145,7 @@ export default function AccountSettings() {;
         <div className='grid gap-6 md:grid-cols-2'>
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
+
         <div className="grid gap-6 md:grid-cols-2">
 
           <Card>
@@ -198,7 +198,7 @@ export default function AccountSettings() {;
                   disabled
                   className="bg-gray-100"
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
                 <div className="flex gap-2">
@@ -228,14 +228,14 @@ export default function AccountSettings() {;
               <Separator />
                   <Label htmlFor='backup' className='flex items-center gap-1'>
                     <Database className='h-4 w-4' />
-              
+
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
                   id="displayWeb3"
                   onCheckedChange={setDisplayWeb3}
-              
+
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
 
@@ -259,7 +259,7 @@ export default function AccountSettings() {;
 
                   id="backup"
                   onCheckedChange={setEnableBackup}
-              
+
               {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
                   Data will be backed up to decentralized storage. This feature is in beta.
@@ -270,7 +270,7 @@ export default function AccountSettings() {;
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
             </CardContent>
           </Card>
-          
+
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>Manage your Web3 connections and features</CardDescription>
             <CardContent className="space-y-6">

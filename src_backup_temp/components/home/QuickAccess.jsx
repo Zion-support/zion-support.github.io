@@ -13,4 +13,3 @@ export default function QuickAccess({ }: QuickAccessProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

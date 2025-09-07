@@ -11,4 +11,3 @@ export default function Aichatassistant({ }: AichatassistantProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

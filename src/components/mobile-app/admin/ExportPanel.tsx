@@ -12,12 +12,8 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
 
-      }
-
 interface ExportPanelProps {;
   platform: AppPlatform,;
-  metadata: AppMetadataValues;
-}
 
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },) => {;
   const handleExport = (format: 'json' | 'csv',) => {;
@@ -44,7 +40,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         content += '\n\nKeywords:\n' + metadata && metadata.keywords.join();
 
 };        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.csv`;
-      }
 
       // Create download link;
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),;
@@ -61,13 +56,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     } catch (error) {;
       logErrorToProduction('Export failed:', { data: error }),;
       toast && toast.error(`Failed to export ${format && format.toUpperCase()} file`);
-    }
   },;
 
   const trackAnalytics = () => {;
     logInfo("Tracking app installation analytics..."),;
     toast && toast.success("Analytics tracking enabled");
-  },;
 
   return (
 

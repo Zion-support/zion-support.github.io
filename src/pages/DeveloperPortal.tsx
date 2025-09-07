@@ -1,5 +1,5 @@
 const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
+
   // Define the tabs
   const tabs: TabDefinition[] = [
 
@@ -38,7 +38,7 @@ interface TabDefinition {
 
 export function DeveloperPortal() {
   const { user } = useAuth(),
-  
+
     { id: 'documentation', label: 'Documentation', icon: BookOpen }
     { id: 'api-keys', label: 'API Keys', icon: Key }
     { id: 'webhooks', label: 'Webhooks', icon: Webhook }
@@ -69,7 +69,7 @@ export function DeveloperPortal() {
         {activeTab === 'logs' && <ApiLogs />}
                 onClick={() => setActiveTab(tab.id)}
                 <Icon size={16} className="mr-2" />
-      
+
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">

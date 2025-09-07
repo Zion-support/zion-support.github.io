@@ -77,7 +77,6 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
       "Brain MRI interpretation","
       "Lung CT screening","
       "Emergency radiology"
-    ],"
     technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]}, {
     "id": 2,"
     "name": "GenomicAI Platform","
@@ -85,8 +84,6 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     "description": "Comprehensive genomic analysis platform using AI to identify genetic variants, predict disease risk, and provide personalized medicine insights","
     "pricing": "Premium",
     "price": 649 9,"
-    "pricingModel": "monthly",
-    features[;"
       "AI-powered variant calling","
       "Disease risk prediction","
       "Drug response analysis","
@@ -95,15 +92,11 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
       "Research collaboration tools","
       "Data security compliance","
       "Scalable processing"
-    ],
-    benefits[;"
       "50% faster genomic analysis","
       "Improved variant detection","
       "Personalized treatment plans","
       "Enhanced research capabilities","
-      "Cost optimization","
       "Clinical decision support"
-    ],"
     targetAudience["Genomic labs", "Research institutions", "Pharmaceutical companies", "Healthcare systems"],"
     tags["Genomics", "AI", "Personalized Medicine", "Genetic Testing", "Research"],"
     "marketPrice": "$5,500 - $8,500/month","
@@ -113,12 +106,10 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     compliance["HIPAA", "CLIA", "CAP", "GDPR"],"
     fdaApproval["LDT regulations", "Clinical validation", "Quality assurance"],"
     clinicalValidation["Clinical studies", "Validation studies", "Peer-reviewed research"],
-    useCases[;"
       "Genetic disease diagnosis","
       "Cancer genomics","
       "Pharmacogenomics","
       "Population genomics"
-    ],"
     technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]}, {
     "id": 3,"
     "name": "HealthTech Analytics Suite","
@@ -126,8 +117,6 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     "description": "Comprehensive healthcare analytics platform providing insights into patient outcomes, operational efficiency, and population health management","
     "pricing": "Professional",
     "price": 399 9,"
-    "pricingModel": "monthly",
-    features[;"
       "Patient outcome analytics","
       "Operational efficiency metrics","
       "Population health insights","
@@ -136,15 +125,12 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
       "Custom reporting","
       "Data integration","
       "Performance benchmarking"
-    ],
-    benefits[;"
       "Improved patient outcomes","
       "Operational cost reduction","
       "Enhanced decision making","
       "Population health optimization","
       "Quality improvement","
       "Risk management"
-    ],"
     targetAudience["Healthcare systems", "Hospitals", "Clinics", "Health plans"],"
     tags["Healthcare Analytics", "Data Science", "Population Health", "Performance Metrics", "BI"],"
     "marketPrice": "$3,500 - $5,500/month","
@@ -154,21 +140,15 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     compliance["HIPAA", "HITECH", "SOC 2", "GDPR"],"
     fdaApproval["Not required", "Data analytics platform", "Clinical decision support"],"
     clinicalValidation["Performance metrics", "User validation", "Clinical outcomes"],
-    useCases[;"
       "Performance analytics","
-      "Quality improvement","
       "Population health","
       "Operational efficiency"
-    ],"
     technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]}, {
     "id": 4,"
     "name": "TeleMed AI Platform","
     "category": "AI-Powered Telemedicine","
     "description": "Intelligent telemedicine platform with AI-powered symptom assessment, virtual consultations, and automated follow-up care","
-    "pricing": "Premium",
     "price": 549 9,"
-    "pricingModel": "monthly",
-    features[;"
       "AI symptom assessment","
       "Virtual consultations","
       "Automated follow-up","
@@ -177,15 +157,12 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
       "Mobile applications","
       "Secure messaging","
       "Analytics dashboard"
-    ],
-    benefits[;"
       "Improved access to care","
       "Reduced healthcare costs","
       "Enhanced patient engagement","
       "Automated care coordination","
       "24/7 availability","
       "Scalable operations"
-    ],"
     targetAudience["Healthcare systems", "Telemedicine providers", "Clinics", "Health plans"],"
     tags["Telemedicine", "AI", "Virtual Care", "Healthcare", "Mobile Health"],"
     "marketPrice": "$4,500 - $7,000/month","
@@ -195,21 +172,16 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     compliance["HIPAA", "HITECH", "State regulations", "Telemedicine laws"],"
     fdaApproval["Not required", "Telemedicine platform", "Clinical decision support"],"
     clinicalValidation["Clinical outcomes", "User satisfaction", "Quality metrics"],
-    useCases[;"
       "Primary care consultations","
       "Specialist referrals","
       "Follow-up care","
       "Chronic disease management"
-    ],"
     technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]}, {
     "id": 5,"
     "name": "PharmaAI Research Platform","
     "category": "AI-Powered Drug Discovery","
     "description": "Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization using machine learning and predictive modeling","
-    "pricing": "Enterprise",
     "price": 999 9,"
-    "pricingModel": "monthly",
-    features[;"
       "AI-powered drug discovery","
       "Target identification","
       "Molecule optimization","
@@ -218,15 +190,12 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
       "Outcome prediction","
       "Safety assessment","
       "Regulatory compliance"
-    ],
-    benefits[;"
       "50% faster drug discovery","
       "Improved success rates","
       "Reduced research costs","
       "Enhanced safety profiles","
       "Optimized trials","
       "Regulatory efficiency"
-    ],"
     targetAudience["Pharmaceutical companies", "Biotech firms", "Research institutions", "CROs"],"
     tags["Drug Discovery", "AI", "Pharmaceuticals", "Clinical Trials", "Research"],"
     "marketPrice": "$8,500 - $12,500/month","
@@ -236,21 +205,16 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     compliance["FDA regulations", "GCP", "GLP", "International standards"],"
     fdaApproval["Research platform", "Clinical decision support", "Regulatory tools"],"
     clinicalValidation["Preclinical studies", "Clinical trials", "Real-world evidence"],
-    useCases[;"
       "Drug discovery","
       "Target validation","
       "Clinical trial optimization","
       "Safety assessment"
-    ],"
     technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]}, {
     "id": 6,"
     "name": "MentalHealth AI Companion","
     "category": "AI-Powered Mental Health","
     "description": "Intelligent mental health platform providing AI-powered therapy, mood tracking, and crisis intervention with clinical validation and safety protocols","
-    "pricing": "Professional",
     "price": 299 9,"
-    "pricingModel": "monthly",
-    features[;"
       "AI-powered therapy sessions","
       "Mood tracking and analysis","
       "Crisis intervention","
@@ -259,15 +223,10 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
       "Integration with providers","
       "Safety protocols","
       "Clinical reporting"
-    ],
-    benefits[;"
       "Improved access to mental health care","
       "24/7 support availability","
-      "Personalized treatment plans","
-      "Enhanced patient engagement","
       "Crisis prevention","
       "Cost optimization"
-    ],"
     targetAudience["Mental health providers", "Healthcare systems", "Employers", "Health plans"],"
     tags["Mental Health", "AI", "Therapy", "Wellness", "Digital Health"],"
     "marketPrice": "$2,500 - $4,500/month","
@@ -277,12 +236,10 @@ export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
     compliance["HIPAA", "Mental health regulations", "State laws", "Privacy standards"],"
     fdaApproval["Digital therapeutic", "Clinical validation", "Safety protocols"],"
     clinicalValidation["Clinical studies", "Safety validation", "Outcome measures"],
-    useCases[;"
       "Depression management","
       "Anxiety treatment","
       "Stress reduction","
       "Crisis intervention"
-    ],"
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]}
 ];
 export default specializedHealthcareAIServices2025}}"

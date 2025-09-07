@@ -1,4 +1,3 @@
-
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -12,7 +11,6 @@ interface AIEnhancementButtonProps {;
   buttonText?:string,;
   className?:string;
 }
-;
 export function AIEnhancementButton({;
   currentContent,;
   enhancementType,;
@@ -23,25 +21,17 @@ export function AIEnhancementButton({;
 } AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),;
   const [error, setError] = useState<string | null>(null),;
-  ;
   const handleEnhance = async () => {;
     if (!currentContent || currentContent.trim().length < 10) {;
       setError('Please enter at least some basic content before enhancing'),;
       return,;
-    }
-    ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
-      currentContent,;
-      enhancementType,;
       context;
     ),;
-    ;
     if (enhancedContent) {;
       onEnhanced(enhancedContent),;
-    }
   },;
-  ;
   return (;
     <Button;
       type="button";

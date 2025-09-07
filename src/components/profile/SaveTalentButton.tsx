@@ -12,17 +12,13 @@ export function SaveTalentButton({
       variant={isSaved ? 'default' : 'outline'}
       size='sm'
       className={
-        isSaved
           ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
           : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10'
       }    >
 import { Button } from "@/components/ui/button"
-interface SaveTalentButtonProps {
 
-  talentId: string
   onSave: (talentId: string,) => void
 
-  isSaved: boolean
 }
 export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
 import { Button } from '@/components/ui/button';
@@ -39,8 +35,6 @@ export function SaveTalentButton(): any ({;
   isSaved,;
 }: SaveTalentButtonProps) {;
 
-      onClick={() => onSave(talentId)}
-      variant={isSaved ? 'default' : 'outline'}
       size='sm';
       className={;
         isSaved;
@@ -50,11 +44,8 @@ export function SaveTalentButton(): any ({;
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
-interface SaveTalentButtonProps {;
   talentId: string,;
   onSave: (talentId: string,) => void,;
-  isSaved: boolean;
-}
 
 export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTalentButtonProps) {;
   return (
@@ -64,9 +55,7 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
     </Button>
   );
 
-}
 import { Button } from '@/components / ui / button';
-interface SaveTalentButtonProps {
   talent_id: string;
   on_save: (talent_id: string) => void;
   is_saved: boolean;
@@ -76,23 +65,12 @@ export /**
 function SaveTalentButton() {
       on_click={() => on_save (talent_id)}
       variant={is_saved ? 'default' : 'outline'}
-      size='sm';
-      className={
         is_saved;
           ? 'bg - yellow - 500 hover:bg - yellow - 600 text - white';
           : 'text - yellow - 500 border - yellow - 500 hover:bg - yellow - 500 / 10';
-      }    >;
 import { Button  } from '@/components / ui / button';
-interface SaveTalentButtonProps {
   talent_id: string,
   on_save: (talent_id: string, ) => void,
-  is_saved: boolean;
-}
-export /**
- * SaveTalentButton - Function description
- */
-function SaveTalentButton() {
-  return (
     <Button;
       on_click = {(, ) => on_save (talent_id), }
       variant = {is_saved ? "default" : "outline", }
@@ -102,8 +80,6 @@ function SaveTalentButton() {
       {is_saved ? 'Saved' : 'Save'}
     </Button>);
 }}
-}
 
   talentId: string,
   onSave: (talentId: string,) => void,
-  isSaved: boolean

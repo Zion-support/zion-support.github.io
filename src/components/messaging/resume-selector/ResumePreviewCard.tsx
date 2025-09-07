@@ -19,7 +19,6 @@ interface ResumePreviewCardProps {
   isSelected: boolean;
   onSelect: (resume: Resume) => void;
   onDownload: (resume: Resume) => void;
-}
 
 export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
   resume,
@@ -37,7 +36,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
         return 'bg-gray-100 text-gray-800';
       default:
         return 'bg-blue-100 text-blue-800';
-    }
   };
 
   return (
@@ -60,7 +58,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
             </p>
           </div>
 
-          >
             <Download className="h-4 w-4 mr-2" />
             Download
           </Button>
@@ -72,13 +69,9 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
               onSelect(resume);
             }}
             className="flex-1"
-          >
             {isSelected ? 'Selected' : 'Select'}
-          </Button>
-        </div>
 
             {resume.basic_info.summary}
-          </p>
         )}
 
         {resume.skills && resume.skills.length > 0 && (
@@ -90,22 +83,13 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
           </Button>;
         </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {resume.skills && resume.skills.length > 0 && (
           <div className='flex flex-wrap gap-1 mt-2'>
-            {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key={index}
                 variant='outline'
 
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
 
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge 
-                key={index} 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
 
@@ -114,9 +98,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
             ))}
             {resume.skills.length > 5 && (
 
-              <Badge 
-
-              >
                 variant='outline';
                 className='bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs'              >          <div className="flex flex - wrap gap - 1 mt - 2">;
             {resume.skills.slice (0, 5).map ((skill, index) => (
@@ -124,13 +105,9 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
                 key = {index, }
                 variant="outline";
                 className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
-                {skill.name}
               </Badge>))}
-            {resume.skills.length > 5 && (
 
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
     </Card>;
   );
-};
-}

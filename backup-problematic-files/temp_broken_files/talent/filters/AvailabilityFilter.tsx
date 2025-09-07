@@ -1,4 +1,3 @@
-
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -8,7 +7,6 @@ const AVAILABILITY_OPTIONS = [;
   { id:"part_time", label:"Part-time" },;
   { id:"project", label:"Project-based" }
 ],;
-;
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen } AvailabilityFilterProps) {;
   return (;
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -23,7 +21,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
       </button>;
-      ;
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {AVAILABILITY_OPTIONS.map(option => (;
@@ -37,13 +34,10 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               <label;
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-              >;
                 {option.label}
               </label>;
             </div>;          ))}
         </div>;
-      )}
-    </div>;
   ),;}
  ];
 :temp_broken_files/talent/filters/AvailabilityFilter.tsx
@@ -56,8 +50,5 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/Availab
   option.label ;
 }</label> </div>) ) ;
 }</div>) ;
-:temp_broken_files/talent/filters/AvailabilityFilter.tsx
 }</div>) ;"}"
-}</div>) ;
 }"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx

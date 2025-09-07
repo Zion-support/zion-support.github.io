@@ -18,7 +18,6 @@ export function DynamicListingPage("props": "any) {;
   const [selectedRating, setSelectedRating] = useState(null);
   const [currentPriceFilter, setCurrentPriceFilter] = useState([0, initialPrice.max]);
   const itemsPerPage = 12;
-;
   useEffect(() => {;
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {;
@@ -29,31 +28,23 @@ export function DynamicListingPage("props": "any) {;
       setCurrentPriceFilter([0, max]);
     }
   }, [allListings]);
-;
   const handleSliderChange = ("props": "any) => {setCurrentPriceFilter([values[0]", values[1]]);};
-;
   const filteredListings = allListings.filter(listing => {const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          listing.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
     const matchesPrice = listing.price >= currentPriceFilter[0] && listing.price <= currentPriceFilter[1];
     const matchesRating = selectedRating === null ||;
                          (listing.rating !== null && listing.rating >= selectedRating);
-    ;
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;});
-;
   const totalPages = itemsPerPage;
     ? Math.ceil(filteredListings.length / itemsPerPage);
     : "1;
-;
   const paginatedListings = itemsPerPage;
     ? filteredListings.slice((currentPage - 1) * itemsPerPage", currentPage * itemsPerPage);
     : "filteredListings;
-;
   useEffect(() => {setCurrentPage(1);"}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
-;
   const handleRequestQuote = ("props": "any) => {;
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;}
-    );
   const totalPages = itemsPerPage
     ? Math.ceil(filteredListings.length / itemsPerPage)
     : 1;
@@ -64,7 +55,6 @@ export function DynamicListingPage("props": "any) {;
   const handleRequestQuote = (props: any) => {
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
-    ;
     setTimeout(() => {;
       setIsLoading(false);
       if (listing) {;
@@ -72,7 +62,6 @@ export function DynamicListingPage("props": "any) {;
           "title": "Quote Requested";
           "description": `Your quote request for ${listing.title"} has been sent.`;
         });
-        ;
         navigate("/request-quote", {;
           "state": "{;
             "serviceType": categorySlug;
@@ -86,8 +75,6 @@ export function DynamicListingPage("props": "any) {;
         toast({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`
-        }
-    );
         navigate("/request-quote", {
           state: {
             serviceType: categorySlug,
@@ -96,14 +83,8 @@ export function DynamicListingPage("props": "any) {;
               title: listing.title,
               category: listing.category,
               image: listing.images?.[0]
-            }
-          }
-        }
-    );
-      }
     }, 500);
   };
-;
   return (;
     <div className="min-h-screen bg-blue-900 py-12 px-4">;
       <div className="container mx-auto">;
@@ -129,8 +110,6 @@ export function DynamicListingPage("props": "any) {;
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10";
               />;
-            </div>;
-            ;
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
               <SelectTrigger>;
                 <SelectValue placeholder="Category"  />;
@@ -145,16 +124,11 @@ export function DynamicListingPage("props": "any) {;
               </SelectContent>;
             </Select>;
             <Select value={selectedRating?.toString() || ""} onValueChange={(value) => setSelectedRating(value ? parseInt(value) : "null)"}>;
-              <SelectTrigger>;
                 <SelectValue placeholder="Rating"  />;
-              </SelectTrigger>;
-              <SelectContent>;
                 <SelectItem value="">Any Rating</SelectItem>;
                 <SelectItem value="4">4+ Stars</SelectItem>;
                 <SelectItem value="3">3+ Stars</SelectItem>;
                 <SelectItem value="2">2+ Stars</SelectItem>;
-              </SelectContent>;
-            </Select>;
             <div className="flex gap-2">;
               <Button;
                 variant={view === "grid" ? "default" : "outline"}
@@ -163,15 +137,9 @@ export function DynamicListingPage("props": "any) {;
               >;
                 <LayoutGrid className="w-4 h-4"  />;
               </Button>;
-              <Button;
                 variant={view === "list" ? "default" : "outline"}
-                size="sm";
                 onClick={() => setView("list")}
-              >;
                 <List className="w-4 h-4"  />;
-              </Button>;
-            </div>;
-          </div>;
           {/* Price Range Slider */}
           <div className="space-y-2">;
             <label className="text-sm font-medium text-white">Price Range</label>;
@@ -184,11 +152,7 @@ export function DynamicListingPage("props": "any) {;
                 value={currentPriceFilter[1]}
                 onChange={(e) => setCurrentPriceFilter([currentPriceFilter[0], parseInt(e.target.value)])}
                 className="flex-1";
-              />;
               <span className="text-white">${currentPriceFilter[1]}</span>;
-            </div>;
-          </div>;
-        </div>;
         {/* Listings Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-6">;
           {paginatedListings.map((listing) => (;
@@ -201,8 +165,6 @@ export function DynamicListingPage("props": "any) {;
                 <div className="flex items-center gap-1">;
                   <Star className="w-4 h-4 text-yellow-400 fill-current"  />;
                   <span className="text-white text-sm">{listing.rating || 0}</span>;
-                </div>;
-              </div>;
               <Button ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {paginatedListings.map((listing) => (
@@ -215,38 +177,17 @@ export function DynamicListingPage("props": "any) {;
                 <div className="flex items-center gap-1">
                   <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                   <span className="text-white text-sm">{listing.rating || 0}</span>
-                </div>
-              </div>
               <Button 
                 onClick={() => handleRequestQuote(listing.id)}
                 disabled={isLoading}
                 className="w-full";
-              >;
                 {isLoading ? "Requesting..." : "Request Quote"}
-              </Button>;
-            </div>;
-          ))}
-        </div>;
         {/* Pagination */}
         {totalPages > 1 && (;
           <div className="flex justify-center mt-8">;
-            <div className="flex gap-2">;
               {Array.from({ "length": "totalPages "}, (_, i) => (;
-                <Button;
                   key={i + 1}
                   variant={currentPage === i + 1 ? "default" : "outline"}
                   onClick={() => setCurrentPage(i + 1)}
-                >;
                   {i + 1}
-                </Button>;
-              ))}
-            </div>;
-          </div>;
         )}
-      </div>;
-    </div>;
-  );
-      </div>
-    </div>
-    );
-}

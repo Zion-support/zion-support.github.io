@@ -11,4 +11,3 @@ export default function CandidateCard({ }: CandidateCardProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

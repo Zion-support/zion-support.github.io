@@ -118,7 +118,7 @@ function MobileConversationList() {
                   <h3 className="font-medium truncate">{conversation.name}</h3>
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
                     {conversation.timestamp}
-                
+
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
                     {conversation.isTyping 

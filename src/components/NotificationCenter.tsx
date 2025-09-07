@@ -31,7 +31,7 @@ export const NotificationCenter: React.FC = () => {
     setFilter,
     fetchNotifications
   } = useNotifications(),
-  
+
   const [open, setOpen] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [loadedOnce, setLoadedOnce] = useState(false),
@@ -70,7 +70,6 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFilter
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
-        />;
 
         <NotificationList
 
@@ -81,14 +80,10 @@ export const NotificationCenter: React.FC = () => {
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
 
-        />;
-
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
-
-},;
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
@@ -104,11 +99,9 @@ export const NotificationCenter: React.FC = () => {
         <NotificationHeader;
           unread_count = {unread_count, }
           onMarkAllAsRead = {handleMarkAllAsRead, }
-        />;
         <NotificationFilter;
           filter = {filter as FilterType, }
           onFilterChange = {handleFilterChange, }
-        />;
         <NotificationList;
           loading = {loading, }
           error = {error, }
@@ -116,11 +109,7 @@ export const NotificationCenter: React.FC = () => {
           onMarkAsRead = {markAsRead, }
           on_dismiss = {dismiss_notification, }
           on_retry = {fetch_notifications, }
-        />;
         <NotificationFooter on_close={() => set_open (false)} />;
-      </PopoverContent>;
     </Popover>);
 },
 ;
-
-        <NotificationHeader

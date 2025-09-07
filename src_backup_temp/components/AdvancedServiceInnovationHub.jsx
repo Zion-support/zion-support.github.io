@@ -4,7 +4,6 @@ import {Badge} from './ui / badge';
 export default function Page("props": "any) {;
  from './ui/badge';";
 import { Input "} from './ui/input';
-export default function Page("props": "any) {;
 ",;
         {;
             "id": 'synthetic-biology',;
@@ -19,12 +18,9 @@ export default function Page("props": "any) {;
             technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;
             "status": 'Growing';
         },;
-        {;
             "id": 'brain-computer-interfaces',;
             "title": 'Brain-Computer Interface Revolution',;
             "description": 'Direct neural control of computers and digital systems for enhanced human capabilities.',;
-            "category": 'biotech-ai',;
-            "impact": 'High',;
             "timeline": '2030-2040',;
             "adoption": "40",;
             "investment": '$80B+',;
@@ -50,8 +46,6 @@ export default function Page("props": "any) {;
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Disruptive': return 'bg-purple-100 text-purple-800';
-            "default": return 'bg-gray-100 text-gray-800'"}
-    };
     const getCategoryIcon = ("props": "any) => {;
         switch(category) {;
 '";
@@ -61,7 +55,6 @@ export default function Page("props": "any) {;
             case 'green-tech': return <Leaf className="w-5 h-5" />;'";
             case 'biotech-ai': return <Dna className="w-5 h-5" />;";
             "default": return <Cpu className="w-5 h-5" />"}
-    };
     const categories = ['";
         {"id": 'all', "name": 'All Categories', "icon": "<Globe className="w-4 h-4" />"},";
         {"id": 'quantum', "name": 'Quantum Technology', "icon": "<Atom className="w-4 h-4" />"},";
@@ -166,7 +159,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             keyPlayers[&apos;Neuralink&apos,Kernel&apos,Medical Device Companies&apos],";
             technologies[&apos;Neural Interfaces&apos,Signal Processing&apos,AI/ML&apos],;
             "status": "&apos",Emerging&apos}
-;
     ]&apos;&apos,"""""""""";
 """;"";
     const [selectedCategory, setSelectedCategory] = useState("all")";
@@ -174,8 +166,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
     const [selectedStatus, setSelectedStatus] = useState("all")";
     const [searchTerm, setSearchTerm] = useState(")";
     const [viewMode, setViewMode] = useState("trends");
-}
-    // comment;
             "id": "quantum-supremacy","",;
             "title": "Quantum Supremacy & Commercialization","";
             "description": "The transition from quantum research to practical commercial applications across industries.","";
@@ -283,19 +273,11 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             keyPlayers["Neuralink", Kernel",Medical Device Companies"], ";
             technologies["Neural Interfaces", Signal Processing",AI / ML"], ",;
             "status": "Emerging"}
-;
     ]    const filteredTrends = useMemo(() => {}
-;
         return innovationTrends.filter(trend => {}
-;
             const;const;const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                trend.description.toLowerCase().includes(searchTerm.toLowerCase());
-}
-            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
 }    const getImpactColor = ("props": "any) => {"}
-;
         switch (impact) {}
-;
             case "High": "return "bg-red-100 text-red-800";
             case "Medium": return "bg-yellow-100 text-yellow-800";
             case "Low": return "bg-green-100 text-green-800;
@@ -303,18 +285,13 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             case &apos;Medium&apos;: return &apos;bg-yellow-100 text-yellow-800&apos;
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos;
             "default": return &apos",bg-gray-100 text-gray-800&apos}
-;
     }&apos;&apos    const getStatusColor = ("props": "any) => {"}
-;
         switch (status) {}
-;
             case &apos;Emerging&apos;: "return &apos;bg-blue-100 text-blue-800&apos;
             case &apos;Growing&apos;: return &apos;bg-green-100 text-green-800&apos;
             case &apos;Mature&apos;: return &apos;bg-orange-100 text-orange-800&apos;
             case &apos;Disruptive&apos;: return &apos;bg-purple-100 text-purple-800&apos    const getCategoryIcon = ("props": any) => {"}
-;
         switch(category) {}
-;
 &apos;&apos,";
 &apos;&apos,&apos;&apos,";
             case &apos;quantum&apos;: "return&apos;&apos; <Atom className="&apos;w-5" h-5&apos;        />&apos;&apos;&apos",";
@@ -323,7 +300,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             case &apos;green-tech&apos;: "return&apos;&apos; <Leaf className="&apos;w-5" h-5&apos;        />&apos;&apos;&apos",";
             case &apos;biotech-ai&apos;: "return&apos;&apos; <Dna className="&apos;w-5" h-5&apos;        />";&apos;&apos;";
             "default": return&apos",&apos, <Cpu className = "&apos,w-5" h-5&apos,        />}
-;
     }&apos;&apos;&apos,";
     const categories = []";&apos;&apos;";
     return (&apos;&apos;<div className="&apos;max-w-7xl" mx-auto p-6&apos;>;
@@ -332,9 +308,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             case "Medium": "return "bg - yellow-100 text-yellow-800""",;
             case "Low": "return "bg - green-100 text-green-800""",;
             "default": "return "bg-gray-100 text-gray-800""}
-;
-    }
-;
             case "Emerging": "return "bg-blue-100 text-blue-800";
             case "Growing": return "bg-green-100 text-green-800";
             case "Mature": return "bg-orange-100 text-orange-800";
@@ -351,7 +324,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             case "green - tech": "return <Leaf className="w-5 h-5"   />"",";
             case "biotech-ai": "return <Dna className="w-5 h-5"   />";";
             "default": return <Cpu className = "w-5 h-5"   />"}
-;
     }";";
     const categories = [];
     return (";
@@ -365,15 +337,11 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             case "biotech-ai": return <Dna className="w-5 h-5"   />"""";
 "}"""";
     const categories = []"""";
-    return (";
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}
-;
       <motion.div initial = {}
-;
   {"opacity": "0>;
 "y": 20"}} animate = {}
-;
   {"opacity": "1",;
 "y": "0 """,">;
 ""}} className="mb-8">"";";
@@ -384,22 +352,16 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
             </h1>"",";
             <p className = "text-zion-slate-light">,;
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services;
-            </p>;
           </div>"";";
           <div className = "flex gap-2">"""{["trends",roadmap",insights"].map((mode) => (<Button key="{mode}" variant="{viewMode" === mode ? "default" : "outline"} size="sm" onClick="{()" => setViewMode(mode)}>"""{mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"   />}"""{mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"   />}"""{mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"   />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
-;
               </Button>))}
-;
-          </div>;
       </motion.div>";
 "{/* comment */}""{viewMode = == "trends" && (<>{/* comment */}";
 ""}} transition="{{" "delay": "0.1 "}} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";";
             <div className = "grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-4">""",";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"","                <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}"> {category.name}
-;
                     </option>) ) }
-;
                 </select>;";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>"";";
                 <select value = "{selectedImpact}" onChange="{(e)" => setSelectedImpact(e.target.value)} className="w - full p-2 border border-zion-slate-light rounded-md">"",;
@@ -418,7 +380,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                 <Input placeholder="Search trends..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full" />;
           </motion.div> {/* comment */}";
 ""}} transition = "{{" "delay": "0.2 "}} className="grid grid-cols-1 "lg": "grid-cols-2 gap-6 mb-8">{filteredTrends.map((trend", index) => (<motion.div key="{trend.id}" initial = {}
-;
   "x": "index % 2 === 0 ? -20 : 20"}} animate = {}">;
   "x": "0"","}} transition="{{" "delay": "0.1 * index "}}>"";";
                 <Card className="h-full "hover": "shadow-lg transition-shadow">""",;
@@ -432,11 +393,9 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                             <Badge className="{getImpactColor(trend.impact)}"> {trend.impact} Impact;
                             </Badge>;";
                             <Badge className = "{getStatusColor(trend.status)"}> {trend.status}
-;
                   </CardHeader>;
                   <CardContent>"";";
                     <p className = "text-zion-slate-light mb-4"> {trend.description}
-;
                     </p>"";";
                     <div className="space-y-3">"";";
                       <div className="flex justify-between items-center">"";";
@@ -451,12 +410,9 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>;";
                         <span className = "text-sm text-zion-slate-light">Key "Technologies": "</span>""",";
                         <div className="flex flex-wrap gap-1 mt-1">""{trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key="{idx}" variant="outline" className="text-xs"> {tech}
-;
                             </Badge>) ) }";
                         <span className="text-sm text-zion-slate-light">Key "Players": "</span>""",";
                         <div className="flex flex-wrap gap-1 mt-1">""{trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key="{idx}" variant="outline" className="text-xs"> {"opacity": "0", "y": "20"}} animate = {}
-;
-  {"opacity": "1",;
   "y": "0 &apos",&apos,",;
 &apos,&apos,"&apos}} className="&apos;mb-8&apos;">"&apos;&apos,&apos;&apos;";
         <div className="&apos;flex" flex-col "lg": "flex-row "lg":items-center l","g": "justify-between gap-4&apos",>"&apos,&apos,"";
@@ -469,7 +425,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
           </div>&apos;&apos,;
           &apos;&apos,&apos;&apos,"";
           <div className="&apos;flex" gap-2&apos;>"&apos;&apos,&apos;&apos {[&apos;trends&apos,roadmap&apos,insights&apos].map((mode) => (&apos}&apos;<Button key="{mode}" variant="{viewMode" === mode ? &apos;default&apos; : "&apos;outline&apos"} size="&apos;sm&apos;" onClick="{()" => setViewMode(mode)}>&apos;&apos,&apos;&apos,{mode === &apos;trends&apos; &&"}&apos; <TrendingUp className="&apos;w-4" h-4 mr-2&apos;        />}&apos;&apos,&apos;&apos,{mode === &apos;roadmap&apos; &&"}&apos; <Rocket className="&apos;w-4" h-4 mr-2&apos;        />}&apos;&apos,&apos;&apos,{mode === &apos;insights&apos; &&"}&apos; <Lightbulb className="&apos;w-4" h-4 mr-2&apos;        />}
-;
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}&apos;
       </motion.div>&apos,;
 "&apos {/* comment */}&apos;&apos,{viewMode === &apos;trends&apos; && (&apos}&apos;<>{/* comment */}";
@@ -496,7 +451,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>""""",;
                 <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}">;
                       {category.name}
-;
                 </select>;
               &apos;&apos,&apos;&apos;";
                 <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Impact&apos;</label>&apos;&apos,&apos;&apos,";
@@ -528,11 +482,9 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                   <option value="Mature">Mature</option>""""";
                   <option value="Disruptive">Disruptive</option>";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>"""";
-                <Input placeholder="Search trends..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full" />;
           </motion.div>;
           {/* comment */}";
 &apos;&apos,&apos}} transition="{{" "delay": "0.2 "}} className="&apos;grid" grid-cols-1 "lg": "grid-cols-2 gap-6 mb-8&apos",>{filteredTrends.map((trend, index) => (&apos}&apos;<motion.div key = "{trend.id}" initial = {}
-;
   {"opacity": "0",">;
   "x": "0"",&apos}} transition="{{" "delay": "0.1 * index "}}>&apos;&apos,&apos;&apos,";
                 <Card className="&apos;h-full" "hover": "shadow-lg transition-shadow&apos",>"&apos,&apos,"";
@@ -547,7 +499,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                           </CardTitle>&apos;&apos,&apos;&apos,";
                           <div className="&apos;flex" gap-2 mt-2&apos;>&apos,";
 """"}} transition = "{{" "delay": "0.2 "}} className="grid grid-cols-1 "lg": "grid-cols-2 gap-6 mb-8">{filteredTrends.map((trend", index) => (<motion.div key="{trend.id}" initial = {}
-;
   {"opacity": "0", "x": "index % 2 === 0 ? -20 : 20"}} animate = {}";
   "x": "0"","}} transition="{{" "delay": "0.1 * index "}}>"""";
                 <Card className="h-full "hover": "shadow-lg transition-shadow">""""";
@@ -565,8 +516,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                             </Badge>";
                             <Badge className="{getStatusColor(trend.status)"}>;
                               {trend.status}
-;
-                  </CardHeader>;
                   <CardContent>&apos;&apos,&apos;&apos,";
                     <p className="&apos;text-zion-slate-light" mb-4&apos;>;
                       {trend.description}&apos;
@@ -610,16 +559,12 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                         <span className="text-sm text-zion-slate-light">Key "Players": "</span>""""",;
                         <div className="flex flex-wrap gap-1 mt-1">""""{trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key="{idx}" variant="outline" className="text-xs">;
                               {player}
-;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
-          </motion.div>;
         </>) }";
       {/* comment */}"{viewMode = == "roadmap" && (<motion.div initial = {}";
 ""}} transition="{{" "delay": "0.1 "}} className="space-y-6">{futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}
-;
   "x": "-20"}} animate = {}">;
               <Card className=""hover": "shadow-lg transition-shadow">""",";
                   <div className="flex items-start justify-between">"",",;
@@ -641,9 +586,7 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                         Key Milestones"",";
                       </h4>"",";
                       <ul className="space-y-2">""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"                            <div className = "w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div> {milestone}
-;
                           </li>) ) }
-;
                       </ul>;";
                         <Shield className="w - 4 h-4 text-orange-500"   />,;
                         Challenges"";";
@@ -672,9 +615,7 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                           "Investment": "{roadmap.investment"}&apos;&apos,&apos;&apos;";
                         <Badge className="&apos;bg-zion-purple/10" text-zion-purple&apos;>;
                           {roadmap.category.toUpperCase()}&apos,;
-      {/* comment */}"{viewMode = == "roadmap" && (<motion.div initial = {}";
 """"}} transition="{{" "delay": "0.1 "}} className="space-y-6">{futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}
-;
   {"opacity": "0", "x": "-20"}} animate = {}";
               <Card className=""hover": "shadow-lg transition-shadow">"""";
                   <div className="flex items-start justify-between">"""";
@@ -708,7 +649,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                       <ul className="space-y-2">""""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"""";
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
                             {milestone}
-;
                       </ul>";
                         <Shield className="&apos;w-4" h-4 text-orange-500&apos;        />";
                         Challenges&apos;&apos,&apos;&apos;";
@@ -726,9 +666,7 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                         <Star className = "w-4 h-4 text-yellow-500"   />";
                         Opportunities"""";
                       <ul className="space-y-2">""""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"""";
-                            <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
                             {opportunity}
-;
         </motion.div>) }";
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">;
 ""}} transition="{{" "delay": "0.1 "}} className="space-y-6">"";";
@@ -785,7 +723,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                       Build quantum internet infrastructure"",",;
                       Develop synthetic biology capabilities"",;
                       Invest in fusion energy research,;
-      {/* comment */}";
 ""}} transition="{{" "delay": "0.4 "}} className="mt-12 text-center">"";";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";";
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"";";
@@ -795,7 +732,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
           <div className = "flex flex-col "sm": "flex-row gap-4 justify-center">""",";
             <Button className="bg-white text-zion-purple "hover": "bg-zion-slate-light" onClick = {"}">;
 " () => window.open();
-}
 ""}>"";";
               <Users className = "w - 5 h-5 mr-2"   />,;
               Get Innovation Strategy"",;
@@ -817,7 +753,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                 <div className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;";
                     <span className="&apos;text-zion-slate-light&apos;">Quantum Technology&apos;</span>&apos;&apos,&apos;&apos,";
                     <span className="&apos;font-semibold" text-zion-cyan&apos;>$150B+&apos;</span>&apos;&apos,&apos;&apos,;
-                  </div>&apos;&apos,&apos;&apos,";
                   <div className="&apos;w-full" bg-zion-slate-light/20 rounded-full h-2&apos;>"&apos;&apos,&apos;&apos,"",;
                     <div className="&apos,bg-zion-cyan" h-2 rounded-full&apos, style="{{" widt,"h": "&apos",85%&apos}}>&apos;</div>";
                     <span className="&apos;text-zion-slate-light&apos;">AI & Machine Learning&apos;</span>&apos;&apos,&apos;&apos,";
@@ -834,7 +769,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
           <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">";
             <Card>"""";
                 <CardTitle className="flex items-center gap-2">"""";
-                  <TrendingUp className="w-5 h-5 text-zion-green"   />;
                   Investment Trends";
               </CardHeader>"""";
                 <div className="space-y-4">"""";
@@ -852,7 +786,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                     <span className="text-zion-slate-light">Biotech AI</span>"""";
                     <span className="font-semibold text-zion-green">$100B+</span>"""";
                     <div className="bg-zion-green h-2 rounded-full" style="{{" "width": "60%" }}></div>;
-              </CardContent>;
             </Card>";
                   <Users className="&apos;w-5" h-5 text-zion-blue&apos;        />;
                   Market Adoption&apos;";
@@ -923,8 +856,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
           </p>&apos;&apos,&apos;&apos,";
           <div className="&apos;flex" flex-col "sm": "flex-row gap-4 justify-center&apos",>"&apos,&apos,&apos,&apos,";
             <Button className = "&apos,bg-white" text-zion-purple hove,"r": "bg-zion-slate-light&apos", onClick = {}">;
-" () => window.open();
-}
 &apos;&apos}>&apos;&apos,&apos;&apos,";
               <Users className="&apos;w-5" h-5 mr-2&apos;        />";
               Get Innovation Strategy&apos;&apos,&apos;&apos,;
@@ -936,7 +867,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
 """"}} transition = "{{" "delay": "0.4 "}} className="mt-12 text-center">"""";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"""";
-          <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Our innovation hub provides the insights and strategies you need to stay ahead,";
 of emerging technologies and capitalize on future opportunities."""";
           <div className="flex flex-col "sm": "flex-row gap-4 justify-center">""""",;
@@ -949,10 +879,6 @@ of emerging technologies and capitalize on future opportunities."""";
   () => window.open(""tel": "+13024640950"", _blank")";
               <Zap className="w-5 h-5 mr-2"   />"";
               Speak with an Expert,;
-            </Button>;
-</div>;
-        </div>;
-      </motion.div>;
         </motion.div>) }"
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">
 ""}} transition="{{" delay: 0.1 }} className="space-y-6">"";"
@@ -1019,7 +945,6 @@ of emerging technologies and capitalize on future opportunities."""";
           <div className = "flex flex-col sm: flex-row gap-4 justify-center">"","
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}">
 " () => window.open()
-}
 ""}>"";"
               <Users className = "w - 5 h-5 mr-2"   />,
               Get Innovation Strategy"",
@@ -1058,7 +983,6 @@ of emerging technologies and capitalize on future opportunities."""";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">"
             <Card>""""
                 <CardTitle className="flex items-center gap-2">""""
-                  <TrendingUp className="w-5 h-5 text-zion-green"   />
                   Investment Trends"
               </CardHeader>""""
                 <div className="space-y-4">""""
@@ -1147,8 +1071,6 @@ of emerging technologies and capitalize on future opportunities."""";
           </p>&apos;&apos,&apos;&apos,"
           <div className="&apos;flex" flex-col sm: flex-row gap-4 justify-center&apos,>"&apos,&apos,&apos,&apos,"
             <Button className = "&apos,bg-white" text-zion-purple hove,r: bg-zion-slate-light&apos, onClick = {}">
-" () => window.open()
-}
 &apos;&apos,}>&apos;&apos,&apos;&apos,"
               <Users className="&apos;w-5" h-5 mr-2&apos;        />"
               Get Innovation Strategy&apos;&apos,&apos;&apos,
@@ -1160,7 +1082,6 @@ of emerging technologies and capitalize on future opportunities."""";
 """"}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""""
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?""""
-          <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our innovation hub provides the insights and strategies you need to stay ahead,"
 of emerging technologies and capitalize on future opportunities.""""
           <div className="flex flex-col sm: flex-row gap-4 justify-center">"""",
@@ -1173,162 +1094,14 @@ of emerging technologies and capitalize on future opportunities.""""
   () => window.open("tel: +13024640950", _blank")"
               <Zap className="w-5 h-5 mr-2"   />""
               Speak with an Expert,
-            </Button>
 </div>
-        </div>
       </motion.div>
     </div>)};
-export default AdvancedServiceInnovationHub;
 }}}}}}
-;
 export {AdvancedServiceInnovationHub};
-;
-export {AdvancedServiceInnovationHub};
-;
-export {AdvancedServiceInnovationHub};
-;
-export {AdvancedServiceInnovationHub};
-;
-export {AdvancedServiceInnovationHub};
-;
-</p>;
-</div>;
 </ul>;
-</div>;
-</ul>;
-</div>;
-</div>;
 </CardTitle>;
-</div>;
-</motion>;
-</div>;
-</Card>;
-</div>;
-</motion>;
-</div>;
-</p>;
-</div>;
-</ul>;
-</div>;
-</div>;
-</Card>;
-</div>;
-</motion>;
-</ul>;
-</ul>;
-</li>;
-</ul>;
-</li>;
-</ul>;
-</li>;
-</div>;
-</li>;
-</ul>;
-</div>;
-</Badge>;
-</Badge>;
-</div>;
-</CardTitle>;
-</div>;
-</div>;
-</div>;
-</div>;
-</Card>;
-</motion>;
-</motion>;
-</Badge>;
-</Badge>;
-</div>;
-</CardTitle>;
-</div>;
-</div>;
-</div>;
-</div>;
-</Card>;
-</motion>;
 </motion>;
 </li>;
-</ul>;
-</li>;
-</ul>;
-</div>;
 </Badge>;
-</Badge>;
-</div>;
-</CardTitle>;
-</div>;
-</div>;
-</div>;
-</div>;
-</Card>;
-</motion>;
-</motion>;
-</Badge>;
-</div>;
-</Badge>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</Badge>;
-</div>;
-</Badge>;
-</div>;
-</div>;
-</div>;
-</div>;
-</Badge>;
-</div>;
-</div>;
-</div>;
-</div>;
-</motion>;
-</div>;
-</div>;
-</div>;
-</Card>;
-</motion>;
-</select>;
-</select>;
-</select>;
-</select>;
 </option>;
-</div>;
-</option>;
-</select>;
-</div>;
-</Button>;
-</div>;
-</p>;
-</div>;
-</Button>;
-</div>;
-</p>;
-</div>;
-</Badge>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</CardContent>;
-</Badge>;
-</div>;
-</div>;
-</div>;
-</div>;
-</Card>;
-</motion>;
-</select>;
-</select>;
-</div>;
-</div>;
-</motion>;
-</div>;
-</div>;
-</div>;
-</div>;
-</motion>;
-</div>

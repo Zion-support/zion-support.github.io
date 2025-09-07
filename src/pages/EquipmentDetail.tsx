@@ -28,7 +28,6 @@ export default function EquipmentDetail() {
         setLoading(false)
         setError('No equipment ID provided')
         return;
-      }
       try {
         setLoading(true)
         setError(null)
@@ -36,17 +35,12 @@ export default function EquipmentDetail() {
         const equipmentFromSample = SAMPLE_EQUIPMENT[id]
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample)
-          setLoading(false)
-          return;
-        }
 
         // Try to get from session_storage (for dynamically generated equipment);
         // Check condition
 if ( {) {
   $2
-}
 
-          try {
             const stored = sessionStorage.getItem(`equipment:${id}`)
             if (stored) {
               const storedData = JSON.parse(stored)
@@ -97,7 +91,6 @@ interface EquipmentSpecification {;
 value: string ;
 }interface EquipmentDetails {;
   id: string;
-name: string;
 description: string;
 brand: string;
 category: string;
@@ -149,14 +142,10 @@ function convertProductListingToEquipmentDetails(): any (;
     returnPolicy: '30-day return policy',;
   };
 
-// Build sample data from the shared equipment listings;
-export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipmentListings && equipmentListings.reduce(;
     (acc, item) => {;
       acc[item && item.id] = convertProductListingToEquipmentDetails(item);
-      return acc;
     },;
-    {} as { [key: string]: EquipmentDetails }
   );
 export default function EquipmentDetail() {;
   const router = useRouter();
@@ -177,8 +166,6 @@ export default function EquipmentDetail() {;
       if (!id) {;
         setLoading(false);
         setError('No equipment ID provided');
-        return;
-      }
 
       try {;
         setLoading(true);
@@ -188,13 +175,9 @@ export default function EquipmentDetail() {;
         const equipmentFromSample = SAMPLE_EQUIPMENT[id];
         if (equipmentFromSample) {;
           setEquipment(equipmentFromSample);
-          setLoading(false);
-          return;
-        }
 
         // Try to get from sessionStorage (for dynamically generated equipment);
         if (typeof window !== 'undefined') {;
-          try {;
             const stored = sessionStorage && sessionStorage.getItem(`equipment:${id}`);
             if (stored) {;
               const storedData = JSON && JSON.parse(stored);
@@ -208,37 +191,22 @@ export default function EquipmentDetail() {;
                 // It's a ProductListing, convert it;
                 equipmentData = convertProductListingToEquipmentDetails(;
                   storedData as ProductListing;
-                );
-              }
               setEquipment(equipmentData)
-              setLoading(false)
-              return;
-            }
 
-                // It's a ProductListing, convert it;
                 equipment_data = convertProductListingToEquipmentDetails (
                   stored_data as ProductListing);
-              }
               set_equipment (equipment_data);
               set_loading (false);
-              return;
-            }
           } catch (storage_error) {
             logErrorToProduction ('Error reading from session_storage:', {
               data: storage_error,
             });
-          }
-        }
         // If not found anywhere, set error;
         set_error ('Equipment not found');
-        set_loading (false);
 
       } catch (error) {
         logErrorToProduction('Error loading equipment:', { data: error })
         setError('Failed to load equipment details')
-        setLoading(false)
-      }
-    }
 
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -278,14 +246,11 @@ import { ProductListing } from '@/types/listings',;
 import { motion } from 'framer-motion',;
 import { useCurrency } from '@/hooks/useCurrency',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-interface EquipmentSpecification {;
   name: string,;
   value: string;
-}
 ;
 interface EquipmentDetails {;
   id: string,;
-  name: string,;
   description: string,;
   brand: string,;
   category: string,;
@@ -301,11 +266,7 @@ interface EquipmentDetails {;
   features: string[],;
   warranty?: string,;
   returnPolicy?: string;
-}
-;
-// Convert ProductListing to EquipmentDetails format;
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
-  return {;
     id: item.id,;
     name: item.title,;
     description: item.description,;
@@ -320,22 +281,13 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     inStock: item.availability === 'In Stock' || !item.availability,;
     expectedShipping: item.availability || 'In Stock',;
     specifications: (item.specifications || []).map((spec) => ({;
-      name: spec,;
       value: '';
     })),;
     features: item.tags || [],;
-    warranty: '1 Year Manufacturer Warranty',;
     returnPolicy: '30-day return policy';
-  }
-}
-;
-// Build sample data from the shared equipment listings;
-export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipmentListings.reduce((acc, item) => {;
     acc[item.id] = convertProductListingToEquipmentDetails(item),;
-    return acc;
   }, {} as { [key: string]: EquipmentDetails }),;
-export default function EquipmentDetail() {;
   const router = useRouter(),;
   const { id } = router.query as { id?: string },;
   const { isAuthenticated, user } = useAuth(),;
@@ -348,64 +300,27 @@ export default function EquipmentDetail() {;
   const [error, setError] = useState<string | null>(null),;
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
   useEffect(() => {;
-    async function loadEquipment() {;
-      if (!id) {;
         setLoading(false),;
         setError('No equipment ID provided'),;
-        return;
-      }
-;
-      try {;
         setLoading(true),;
         setError(null),;
-        // Try to find in static data first;
         const equipmentFromSample = SAMPLE_EQUIPMENT[id],;
-        if (equipmentFromSample) {;
           setEquipment(equipmentFromSample),;
-          setLoading(false),;
-          return;
-        }
-;
-        // Try to get from sessionStorage (for dynamically generated equipment);
-        if (typeof window !== 'undefined') {;
-          try {;
             const stored = sessionStorage.getItem(`equipment:${id}`),;
-            if (stored) {;
               const storedData = JSON.parse(stored),;
-              // Check if it's already in EquipmentDetails format or needs conversion;
               let equipmentData: EquipmentDetails,;
               if (storedData.name) {;
-                // Already in EquipmentDetails format;
-                equipmentData = storedData;
-              } else {;
-                // It's a ProductListing, convert it;
                 equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
-              }
-;
               setEquipment(equipmentData),;
-              setLoading(false),;
-              return;
-            }
           } catch (storageError) {;
             logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
-          }
-        }
-;
-        // If not found anywhere, set error;
         setError('Equipment not found'),;
-        setLoading(false);
       } catch (error) {;
         logErrorToProduction('Error loading equipment:', { data: error }),;
         setError('Failed to load equipment details'),;
-        setLoading(false);
-      }
-    }
 
     loadEquipment()
   }, [id]),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
@@ -416,50 +331,28 @@ export default function EquipmentDetail() {;
         variant: 'destructive',
 
       })
-      return;
-    }
 
     setIsAdding(true),
 
-    try {
       dispatch({
         type: 'ADD_ITEM'
         payload: {
 
     load_equipment ();
   }, [id]);
-  const handleAddToCart = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
       toast ({
-        title: 'Authentication Required',
-        description: 'Please log in to add items to cart',
-        variant: 'destructive',
-      });
-      return;
-    }
 
-    } catch (error) {
-      toast ({
         title: 'Error',
         description: 'Failed to add item to cart. Please try again.',
-        variant: 'destructive',
-      });
 
     } finally {
       setIsAdding(false)
-    }
 
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
 
           quantity}}),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   // Loading state
   if (loading) {
@@ -472,18 +365,9 @@ if ( {) {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
               <p className="text-zion-slate-light">Loading equipment details...</p>
             </div>
-          </div>
-        </div>
       </>
-    )
-  }
   const in_cart = items.some (item => item.id === equipment?.id);
   // Loading state;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
       <>;
         <NextSeo title='Loading Equipment...' />;
         <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
@@ -494,30 +378,16 @@ if ( {) {
                 Loading equipment details...;
               </p>;
             </div>;
-          </div>;
-        </div>;
       </>);
-  }
 
-          } catch (storageError) {;
             logErrorToProduction('Error reading from sessionStorage:', {;
               data: storageError,;
-            });
-          }
-        }
 
-        // If not found anywhere, set error;
         setError('Equipment not found');
-        setLoading(false);
-      } catch (error) {;
         logErrorToProduction('Error loading equipment:', { data: error });
         setError('Failed to load equipment details');
-        setLoading(false);
-      }
-    }
 
     loadEquipment();
-  }, [id]);
 
   const handleAddToCart = async () => {;
     if (!equipment || !isAuthenticated) {;
@@ -525,12 +395,8 @@ if ( {) {
         title: 'Authentication Required',;
         description: 'Please log in to add items to cart',;
         variant: 'destructive',;
-      });
-      return;
-    }
 
     setIsAdding(true);
-    try {;
       dispatch({;
         type: 'ADD_ITEM',;
         payload: {;
@@ -538,56 +404,31 @@ if ( {) {
           name: equipment && equipment.name,;
           price: equipment && equipment.price,;
           quantity,;
-        },;
-      });
 
-      toast({;
         title: 'Added to Cart',;
         description: `${equipment && equipment.name} has been added to your cart.`,;
-      });
-    } catch (error) {;
-      toast({;
         title: 'Error',;
         description: 'Failed to add item to cart. Please try again.',;
-        variant: 'destructive',;
-      });
     } finally {;
       setIsAdding(false);
-    }
-  };
 
   const inCart = items && items.some(item => item && item.id === equipment?.id);
 
-  // Loading state;
   if (loading) {;
-    return (
-      <>;
-        <NextSeo title='Loading Equipment...' />;
         <div className='min-h-screen bg-zion-blue py-12 px-4'>;
           <div className='container mx-auto'>;
             <div className='text-center py-20'>;
               <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>;
               <p className='text-zion-slate-light'>;
-                Loading equipment details...;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
       </>;
-    );
-  }
 
   // Error state;
   if (error || !equipment) {;
 
-    return (
-      <>;
         <NextSeo
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
         />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
             <motion.div 
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
@@ -599,7 +440,6 @@ if ( {) {
                   : error ||;
 
                     "We couldn't load the equipment details. Please try again."}
-              </p>;
               <div className='space-x-4'>;
                 <Button
                   onClick={() => router && router.back()}
@@ -608,7 +448,6 @@ if ( {) {
                   <ArrowLeft className='h-4 w-4 mr-2' />;
                   Go Back;
                 </Button>;
-                <Button
 
               animate={{ opacity: 1, y: 0 }}
             >
@@ -619,16 +458,7 @@ if ( {) {
 
                   Browse Equipment
                 </Button>
-              </div>
             </motion.div>
-          </div>
-        </div>
-      </>
-    )
-  }
-  return (
-    <>
-      <NextSeo
         title={`${equipment.name} - Zion Marketplace`}
         description = {equipment.description,}
         openGraph={{
@@ -639,35 +469,25 @@ if ( {) {
             equipment && equipment.images.length> 0 && equipment && equipment.images[0];
               ? [{ url: equipment && equipment.images[0] }];
               : undefined,;
-=======
+
           title: `${equipment.name} - Zion Marketplace`
           description: equipment.description
-          images:
             equipment.images.length > 0 && equipment.images[0]
               ? [{ url: equipment.images[0] }]
 
         }}
-      />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
-        <div className="container mx-auto">
           {/* Breadcrumb */}
           <motion.nav
             className='flex mb-8'
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
             <button
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
-          <motion.nav 
             className="flex mb-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
           >;
             <button;
-              onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
-            >
 
               Equipment
             </button>
@@ -688,19 +508,16 @@ if ( {) {
           <div className="grid lg:grid-cols-2 gap-12">
 
             {/* Images */}
-            <motion.div 
               className="space-y-4"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-            >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
                   src={
                     equipment.images[selectedImageIndex] |
                     equipment.images[0] |
                     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-                  }
                   alt={equipment && equipment.name}
                   className='object-cover'                />;
               </AspectRatio>;
@@ -715,13 +532,11 @@ if ( {) {
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
                   className="object-cover"
-                />
               </AspectRatio>
-              
+
               {equipment.images.length > 1 && (
                 <div className="grid grid-cols-4 gap-2">
                   {equipment.images.map((image, index) => (
-                    <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${;
@@ -729,41 +544,30 @@ if ( {) {
                           ? 'border-zion-cyan';
                           : 'border-transparent hover:border-zion-slate-light';
                       }`}
-                    >;
 
                       <ImageWithRetry;
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
-                        className="object-cover"
 
-                      />
-                    </button>
                   ))}
-                </div>;
               )}
 
             </motion && motion.div>;
 
             {/* Product Details */}
-            <motion.div
               className='space-y-6'
-            <motion.div 
               className="space-y-6"
 
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-            >
               {/* Header */}
 
                     className='border-zion-slate-light text-zion-slate-light'>;
                     {equipment && equipment.brand}
                   </Badge>;
-                </div>;
 
                 <h1 className='text-3xl font-bold text-white'>;
                   {equipment && equipment.name}
-                </h1>;
 
                 {equipment && equipment.rating && (;
                   <div className='flex items-center gap-2'>;
@@ -784,24 +588,14 @@ if ( {) {
                   </Badge>
                   <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
                     {equipment.brand}
-                  </Badge>
-                </div>
                 <h1 className='text-3xl font-bold text-white'>
                   {equipment.name}
-                </h1>
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (                        <Star
-                          key = {i,}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(equipment.rating!)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-zion-slate-light'
-                
+
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
-                
-                {equipment.rating && (
+
                   <div className="flex items-center gap-2">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
@@ -812,18 +606,11 @@ if ( {) {
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
 
-                          }`}
                         />;
-                      ))}
-                    </div>;
                     <span className='text-sm text-zion-slate-light'>;
                       {equipment && equipment.rating?.toFixed(1)} ({equipment && equipment.reviewCount}{' '}
                       reviews);
                     </span>;
-                  </div>;
-                )}
-
-              </div>;
 
               {/* Price */}
 
@@ -831,15 +618,6 @@ if ( {) {
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
-;
-
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
 
                 {/* Warranty */}
                 {equipment.warranty && (
@@ -848,25 +626,10 @@ if ( {) {
                     <div>;
                       <p className='text - white text - sm font - medium'>Warranty</p>;
                       <p className='text - xs'>{equipment.warranty}</p>;
-                    </div>;
                   </div>)}
                 {/* Return Policy */}
                 {equipment.return_policy && (
-                  <div className='flex gap - 3 text - zion - slate - light'>;
                     <RotateCcw className='h - 5 w - 5 text - zion - cyan flex - shrink - 0' />;
-                    <div>;
                       <p className='text - white text - sm font - medium'>Returns</p>;
                       <p className='text - xs'>{equipment.return_policy}</p>;
-                    </div>;
-                  </div>)}
-              </div>;
             </motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
-}
-;

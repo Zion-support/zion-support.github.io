@@ -7,7 +7,5 @@ export default function Jest.setup({ }: Jest.setupProps) {;
       <p>This component is currently under development.</p>,
     </div>)
 };
-};
-};
 }}};
 main:jest.config.jsx

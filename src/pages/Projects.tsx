@@ -5,23 +5,18 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
+
     return this.props.children;
-  }
-}
 import React from 'react';
 import { useProjects } from '@/hooks/useProjects';
 import { SEO } from '@/components/SEO';
@@ -59,7 +54,6 @@ import { Clock, Briefcase } from 'lucide-react'
   CardFooter
   CardHeader
   CardTitle
-} from '@/components/ui/card'
 
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
@@ -88,7 +82,6 @@ import { Star } from 'lucide-react';
 
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),
 
-  return (
     <>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
       <main className="container mx-auto px-4 py-8">
@@ -102,10 +95,5 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <p>You don't have any projects yet.</p>
         ) : (
 
-          <div className="grid gap-6">
-            {projects.map((project) => (
-
-          <div className="grid gap-6">
-            {projects.map((project) => (
           <div className="grid gap-6">
             {projects.map((project) => (

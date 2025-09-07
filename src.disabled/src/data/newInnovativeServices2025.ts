@@ -11,7 +11,4 @@ export default function NewInnovativeServices2025({ }: NewInnovativeServices2025
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de

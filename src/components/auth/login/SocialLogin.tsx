@@ -91,7 +91,6 @@ import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
 import { useState } from "react",;
 import { openAuthPopup } from "@/api/authSocial",;
-export function SocialLogin() {;
   const [isLoading, setIsLoading] = useState(false),;
     window.location.href = '/auth/google';
   return (;

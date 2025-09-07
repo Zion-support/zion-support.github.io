@@ -113,7 +113,7 @@ import { Label } from "@/components/ui/label",
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
               <div className='py-6 space-y-6'>
-              
+
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
@@ -127,7 +127,7 @@ import { Label } from "@/components/ui/label",
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     <div className='space-y-2'>
-                    
+
                       <Label>Experience Level</Label>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
@@ -147,7 +147,7 @@ import { Label } from "@/components/ui/label",
                         step={1}
                         className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
-                    
+
                         aria-label="Years of experience"
                         className="my-4"
                       />
@@ -156,7 +156,7 @@ import { Label } from "@/components/ui/label",
                         <span>0+ years</span>
                         <span>20+ years</span>
                 )}
-                
+
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
@@ -169,13 +169,13 @@ import { Label } from "@/components/ui/label",
                       <SelectItem value="asia">Asia</SelectItem>
                     </SelectContent>
                   </Select>
-                
+
                   <Label>Salary Range</Label>
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
                     <span>to</span>
                     <Input placeholder="Max" type="number" className="w-full" />
-                
+
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
 
@@ -206,14 +206,14 @@ import { Label } from "@/components/ui/label",
 
                   <Label>Only show verified profiles</Label>
                   <Switch />
-              
+
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
-          
+
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
               <SelectItem value="newest">Newest</SelectItem>

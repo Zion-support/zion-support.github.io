@@ -15,4 +15,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 export default MyApp,
 :backup-problematic-files/temp_broken_files/components/_app.tsx
-:backup-problematic-files/temp_broken_files/components/_app.tsx

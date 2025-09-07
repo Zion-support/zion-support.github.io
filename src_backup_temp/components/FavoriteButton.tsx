@@ -12,7 +12,6 @@ export function FavoriteButton({ talentId, isFavorite, onToggle, className }: "F
     e.preventDefault();
     e.stopPropagation();
     onToggle(talentId);
-  "}
   return (;
     <Button;
       variant="ghost";

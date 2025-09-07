@@ -32,13 +32,13 @@ interface ActiveFiltersProps {
     priceRange[0] !== 50 ||
 
     priceRange[1] !== 200,
-  
+
   if (!hasActiveFilters) return null,
 
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
-      
+
       {selectedSkills.map(skill => (
         <ClickableBadge 
           key={skill}

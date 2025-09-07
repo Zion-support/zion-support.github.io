@@ -10,7 +10,6 @@ export function getStripe(): Promise<Stripe | null> {
     );
   }
   return stripePromise;
-}
 export default getStripe;
     stripePromise = loadStripe(key, { "advancedFraudSignals": false })}
   return stripePromise}

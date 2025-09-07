@@ -12,4 +12,3 @@ export default function InnovativeBlockchainWeb3Services2025({ }: InnovativeBloc
       <p>This component is currently under development.</p>
     </div>
   );
-}

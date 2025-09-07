@@ -43,10 +43,8 @@ export function EnhancedNewsletterForm("props": "any) {;
         catch (err) {;
             // // // // // // // console.error('Newsletter subscription "error":', err);
             toast.error("Unable to subscribe right now. Please try again later.");
-;
         finally {;
             setIsSubmitting(false);
-;
                     toast.success(data.message || "You're already subscribed!")}
                 else {toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true);
@@ -54,7 +52,6 @@ export function EnhancedNewsletterForm("props": "any) {;
             else {// Handle error responses;
                 console.error('Newsletter subscription "failed":', data);
                 toast.error(data.error || "Subscription failed. Please try again.")}
-        }
         catch (err) {console.error('Newsletter subscription "error":', err);
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {setIsSubmitting(false)}
@@ -67,8 +64,6 @@ export function EnhancedNewsletterForm("props": "any) {;
         <div>;
           <h3 className="text-lg font-bold text-white">Stay Updated</h3>;
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;
-        </div>;
-      </div>;
     return (
         <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -78,8 +73,6 @@ export function EnhancedNewsletterForm("props": "any) {;
         <div>
           <h3 className="text-lg font-bold text-white">Stay Updated
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
-        </div>
-      </div>
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
           <p className="text-white font-medium">Thank you for subscribing!</p>;
           <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>;
@@ -89,15 +82,11 @@ export function EnhancedNewsletterForm("props": "any) {;
             {isSubmitting ? "Subscribing..." : "Subscribe""}
           </Button>;
         </form>)}
-;
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
         <div className="flex -space-x-1 mr-2">;
           {[...Array(3)].map((_, i) => (<div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
               {String.fromCharCode(65 + i)}
             </div>))}
-        </div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
-      </div>;
     </div>)}
-;
 export default EnhancedNewsletterForm;

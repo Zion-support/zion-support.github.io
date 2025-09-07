@@ -102,7 +102,7 @@ export function ListingCard(): any ({;
               >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
-        
+
           <div className="flex flex-wrap gap-2 mb-4">
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}

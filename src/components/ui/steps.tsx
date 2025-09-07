@@ -96,24 +96,23 @@ interface StepsProps {;
   className?: string,;
   children: React.ReactNode;
 
-export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
-  
+
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
 
           if (!React.isValidElement(child)) return null,
-          
+
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
-          
+
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
-      
+
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
             className="h-full bg-zion-purple transition-all"
@@ -184,7 +183,6 @@ function Step() {
           <p className="text - sm text - zion - slate - light">{description}</p>)}
     </li>);
   current_step: number,
-export /**
  * Steps - Function description
 function Steps() {
   const children_array = React.Children.to_array (children);

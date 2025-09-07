@@ -34,16 +34,13 @@ export function BlogSection(...args[]):  {
               <h3 className="text-xl font-semibold text-white mb-3">
                 <Link to={`/blog/${post.id}`} className="hover: tex t-zion-cyan">
                   {post.title}
-                </Link>
               <p className="text-zion-slate-light mb-4">{post.excerpt}</p>
               <div className="flex justify-between text-sm text-zion-slate-light">
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
-              </div>
             </article>;
           ))};
         </div>;
-      </div>;
     </section>;
   );
 }

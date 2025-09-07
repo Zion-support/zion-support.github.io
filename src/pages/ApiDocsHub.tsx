@@ -11,17 +11,17 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import React from 'react';
 import Link from 'next/link';
@@ -161,7 +161,6 @@ import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-export function ApiDocsHub() {;
       title: "Getting Started",;
       description: "Learn how to authenticate and make your first API request",;
       path: "/developers/docs/getting-started",;

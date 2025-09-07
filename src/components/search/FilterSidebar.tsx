@@ -105,4 +105,3 @@ interface FilterSidebarProps {;
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
 }) => {;
   return (;
-export default FilterSidebar;

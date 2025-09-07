@@ -10,7 +10,6 @@ interface Stat {;
   "color": string;
   "gradient": string;
 "}
-;
 const "stats": "Sta t[] = [{;
     "id": 'clients'",;
     "icon": "User s",;
@@ -28,8 +27,6 @@ const "stats": "Sta t[] = [{;
     "description": 'Enterprise-grade reliability and performance',;
     "color": 'zion-purple',;
     "gradient": 'from-zion-purple to-zion-cyan';
-  },;
-  {;
     "id": 'roi',;
     "icon": "TrendingU p",;
     "value": '600%',;
@@ -37,43 +34,31 @@ const "stats": "Sta t[] = [{;
     "description": 'Proven business impact and cost savings',;
     "color": 'zion-blue',;
     "gradient": 'from-zion-blue to-zion-purple';
-  },;
-  {;
     "id": 'satisfaction',;
     "icon": "Sta r",;
     "value": '4.9/5',;
     "label": 'Client Satisfaction',;
     "description": 'Consistently exceeding expectations',;
-    "color": 'zion-cyan',;
     "gradient": 'from-zion-cyan to-zion-purple';
-  },;
-  {;
     "id": 'innovation',;
     "icon": "Za p",;
     "value": '50+',;
     "label": 'Patents & Innovations',;
     "description": 'Leading edge technology development',;
-    "color": 'zion-purple',;
     "gradient": 'from-zion-purple to-zion-blue';
-  },;
-  {;
     "id": 'growth',;
     "icon": "Rocke t",;
     "value": '300%',;
     "label": 'Annual Growth',;
     "description": 'Rapidly expanding global presence',;
-    "color": 'zion-blue',;
     "gradient": 'from-zion-blue to-zion-cyan';
 ];
-;
 export default function EnhancedStatsSection(...args[]): "{;
   const [countedValues", setCountedValues] = useState<any>({});
-;
   const [ref, inView] = useInView({;
     "threshold": "0.3",;
     "triggerOnce": "tru e;
   "}) ;
-;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
@@ -87,7 +72,6 @@ interface Stat {
   color: string;
   gradient: string
 }
-;
 const stats: Sta t[] = [{';
 ';';
     id: 'clients',';
@@ -113,8 +97,6 @@ const stats: Sta t[] = [{
     description: 'Enterprise-grade reliability and performance',
     color: 'zion-purple',
     gradient: 'from-zion-purple to-zion-cyan'
-  },
-  {
     id: 'roi',
     icon: TrendingU p,
     value: '600%',
@@ -122,32 +104,23 @@ const stats: Sta t[] = [{
     description: 'Proven business impact and cost savings',
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-purple'
-  },
-  {
     id: 'satisfaction',
     icon: Sta r,
     value: '4.9/5',
     label: 'Client Satisfaction',
     description: 'Consistently exceeding expectations',
-    color: 'zion-cyan',
     gradient: 'from-zion-cyan to-zion-purple'
-  },
-  {
     id: 'innovation',
     icon: Za p,
     value: '50+',
     label: 'Patents & Innovations',
     description: 'Leading edge technology development',
-    color: 'zion-purple',
     gradient: 'from-zion-purple to-zion-blue'
-  },
-  {
     id: 'growth',
     icon: Rocke t,
     value: '300%',
     label: 'Annual Growth',
     description: 'Rapidly expanding global presence',
-    color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
 const stats: Sta t[] = [{;
     id: 'clients',;
@@ -157,8 +130,6 @@ const stats: Sta t[] = [{;
     description: 'Serving businesses across 50+ countries',;
     color: 'zion-cyan',;
     gradient: 'from-zion-cyan to-zion-blue';
-  },;
-  {;
     id: 'uptime',;
     icon: Shiel d,;
     value: '99.99%',;
@@ -166,8 +137,6 @@ const stats: Sta t[] = [{;
     description: 'Enterprise-grade reliability and performance',;
     color: 'zion-purple',;
     gradient: 'from-zion-purple to-zion-cyan';
-  },;
-  {;
     id: 'roi',;
     icon: TrendingU p,;
     value: '600%',;
@@ -175,48 +144,34 @@ const stats: Sta t[] = [{;
     description: 'Proven business impact and cost savings',;
     color: 'zion-blue',;
     gradient: 'from-zion-blue to-zion-purple';
-  },;
-  {;
     id: 'satisfaction',;
     icon: Sta r,;
     value: '4.9/5',;
     label: 'Client Satisfaction',;
     description: 'Consistently exceeding expectations',;
-    color: 'zion-cyan',;
     gradient: 'from-zion-cyan to-zion-purple';
-  },;
-  {;
     id: 'innovation',;
     icon: Za p,;
     value: '50+',;
     label: 'Patents & Innovations',;
     description: 'Leading edge technology development',;
-    color: 'zion-purple',;
     gradient: 'from-zion-purple to-zion-blue';
-  },;
-  {;
     id: 'growth',;
     icon: Rocke t,;
     value: '300%',;
     label: 'Annual Growth',;
     description: 'Rapidly expanding global presence',;
-    color: 'zion-blue',;
     gradient: 'from-zion-blue to-zion-cyan';
-];
 export default function EnhancedStatsSection(...args[]):  {
   const [countedValues, setCountedValues] = useState<any>({}
     );
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: tru e
-  }
-    );
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(inView) {';
-';';
-    if(inView) {;
     if(inView) {
       controls.start('visible')}
   }, [controls, inView]);
@@ -229,13 +184,7 @@ export default function EnhancedStatsSection(...args[]):  {
 setCountedValues("prev": "> ({;
         ...prev",;
         [target]: "Math.floor (current) "}) ) }, 16) ;
-;
     return timer};
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-"}, []);
-    if(inView) {;
       stats.forEach((stat) => {;
           animateCount(stat.value)}, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer)})}
@@ -259,17 +208,13 @@ setCountedValues("prev": "> ({;
 "}}
           animate={controls}
           variants = {;
-  {;
             "visible": "{;
               "opacity": 1",;
               "y": "0",;
   "transition": "{;
                 "duration": 0.6;
-"}
-            }
           }}";
           className="text-center mb-16";
-";
           <h2 className="text-4xl "sm": "tex t-5xl font-bold text-white mb-6">;
             Proven Results & Global Impact;
           </h2>";
@@ -280,24 +225,9 @@ setCountedValues("prev": "> ({;
         {/* Stats Grid */"}";
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8">;
           {stats.map((stat", index)  => (;
-            <motion.div;
               key={stat.id}
-              initial = {;
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-              animate={controls}
-              variants = {;
-  {;
-                "visible": "{;
-                  "opacity": 1",;
-                  "y": "0",;
-                  "transition": "{;
                     "duration": 0.6",;
   "delay": "inde x * 0.1;
-"}
-                }
-              }}";
               className="group relative";
               <motion.div";
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden";
@@ -308,50 +238,34 @@ setCountedValues("prev": "> ({;
   0.5)`;
 }}
                 transition={{ "duration": "0.3 "}}
-;
                 {/* Background gradient overlay */}`;
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-"hover": "opacit y-10 transition-opacity duration-300`"}></div>;
                 {/* Icon */}
                 <motion.div`;
 "className": "{`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient"} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
-                  whileHover={{;
                     "rotate": "36 0",;
   "scale": "1.1;
-"}}
                   transition={{ "duration": "0.6 "}}
 `;
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />;
-                </motion.div>;
                 {/* Value */}
-                <motion.div";
                   className="mb-4 relative z-10";
                   initial={{ "scale": "0.8 "}}
                   animate={{ "scale": "1 "}}
                   transition = {;
   { duration: 0.5,;
   delay: inde x * 0.1;
-}}
                 >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">';
                     {countedValues[stat.value] || 0}';';
                     {stat.value.includes('%') && '%'}';';
   { "duration": "0.5",;
-  "delay": "inde x * 0.1;
-"}}
                 >";
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
-    return timer};
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    if(inView) {
       stats.forEach((stat) => {
-          animateCount(stat.value)}, stats.indexOf(stat) * 200);
-        return () => clearTimeout(timer)})}
-  }, [inView]) ;
   return ()
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}"
@@ -364,24 +278,17 @@ setCountedValues(prev:  > ({;
       <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          ref={ref}
           initial = {
   { opacity: 0,
   y: 3 0
-}}
-          animate={controls}
           variants = {
-  {
             visible: {
               opacity: 1,
               y: 0,
   transition: {
                 duration: 0.6
-}
-            }
           }}"
           className="text-center mb-16"
-"
           <h2 className="text-4xl sm: tex t-5xl font-bold text-white mb-6">
             Proven Results & Global Impact
           </h2>"
@@ -392,24 +299,8 @@ setCountedValues(prev:  > ({;
         {/* Stats Grid */}"
         <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
           {stats.map((stat, index)  => (
-            <motion.div
-              key={stat.id}
-              initial = {
-  { opacity: 0,
-  y: 3 0
-}}
-              animate={controls}
-              variants = {
-  {
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: {
                     duration: 0.6,
   delay: inde x * 0.1
-}
-                }
-              }}"
               className="group relative"
               <motion.div"
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
@@ -418,172 +309,91 @@ setCountedValues(prev:  > ({;
                   scale: 1.02,
                   borderColor: `rgba(34, 221, 210,`
   0.5)`
-}}
                 transition={{ duration: 0.3 }}
                 {/* Background gradient overlay */}`
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover: opacit y-10 transition-opacity duration-300`}></div>
-                {/* Icon */}
                 <motion.div`
 className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
-                  whileHover={{
                     rotate: 36 0,
   scale: 1.1
-}}
                   transition={{ duration: 0.6 }}
 `
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />
-                </motion.div>
-                {/* Value */}
-                <motion.div"
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
                   transition = {
   { duration: 0.5,
-  delay: inde x * 0.1
-}}
-                >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0}
                     {stat.value.includes('%') && '%'}
                     {stat.value.includes('/') && stat.value.split('/')[1]}
                   </span>
-                </motion.div>
                 {/* Label */}"
                 <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
                   {stat.label}
                 {/* Description */}"
                 <p className="text-gray-300 leading-relaxed relative z-10">
                   {stat.description}
-                </p>
                 {/* Hover effect overlay */}
-                <motion.div";
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-"hover": "opacit y-100 transition-opacity duration-300";
                   initial={false"}
                 />;
-              </motion.div>;
-                <motion.div"
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover: opacit y-100 transition-opacity duration-300"
                   initial={false}
                 />
-              </motion.div>
             </motion.div>;) ) }
-        </div>
         {/* Bottom Achievement Section */}
-        <motion.div;
-          initial = {;
-  { "opacity": "0",;
   "y": "3 0 "}}          animate={controls}
-          variants = {;
-  {;
-            "visible": "{;
-              "opacity": 1",;
-              "y": "0",;
-              "transition": "{;
-                "duration": 0.6",;
   "delay": "0.6"}            }
-          }}";
           className="mt-16";
-";
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 "lg": "p-12 text-center">;
-            <motion.div";
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6";
               whileHover={{ "rotate": 36 0 "}}
-              transition={{ "duration": "0.6 "}}
-";
               <Award className="w-10 h-10 text-white"   />            </motion.div>;
-";
             <h3 className="text-3xl font-bold text-white mb-4">;
               Industry Recognition & Awards;
-            ";
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>;
-";
             <div className="grid grid-cols-1 "md": "gri d-cols-3 gap-6 max-w-4xl mx-auto">";
               <div className="text-center">";
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>";
                 <div className="text-gray-300">Industry Awards</div>;
               </div>";
-              <div className="text-center">";
                 <div className="text-3xl font-bold text-zion-purple mb-2">Top 10</div>";
                 <div className="text-gray-300">Global Tech Companies</div>;
-              </div>";
-              <div className="text-center">";
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>";
                 <div className="text-gray-300">Client Retention</div>;
-              </div>;
-        <motion.div
-          initial = {
-  { opacity: 0,
   y: 3 0 }}          animate={controls}
-          variants = {
-  {
-            visible: {
-              opacity: 1,
               y: 0,;
-              transition: {
-                duration: 0.6,
   delay: 0.6}            }
-          }}"
           className="mt-16"
-"
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">;
-            <motion.div"
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 36 0 }}
-              transition={{ duration: 0.6 }}
-"
               <Award className="w-10 h-10 text-white"   />            </motion.div>
-"
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards
-            "
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>
-"
             <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 max-w-4xl mx-auto">"
               <div className="text-center">"
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>"
                 <div className="text-gray-300">Industry Awards</div>
               </div>"
-              <div className="text-center">"
                 <div className="text-3xl font-bold text-zion-purple mb-2">Top 10</div>"
                 <div className="text-gray-300">Global Tech Companies</div>
-              </div>"
-              <div className="text-center">"
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>"
                 <div className="text-gray-300">Client Retention</div>
-              </div>
-            </div>;
-          </div>;
-        </motion.div>;
       </div>;';
     </section>;) }';';
 '"`
 </motion>
-</motion>
 </motion>';
 </any>;';;';
-      </div>;
     </section>;) "}
 '"`;
 </motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
 </any>;
     </section>;) }
-'"`
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </any>

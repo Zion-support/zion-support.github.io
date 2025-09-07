@@ -14,14 +14,10 @@ export default function Playwright.config({ }: Playwright.configProps) {
     </div>
   );
 origin/automation-improvements-final
-}}},
-}
 }}};
 }}},}}};
 ursor/fix-lint-push-and-merge-to-main-ae4e
-}
 ursor/add-new-services-and-deploy-updates-0462
-}}};
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 export default function Playwright.config({ }: Playwright.configProps) {;
@@ -30,13 +26,6 @@ export default function Playwright.config({ }: Playwright.configProps) {;
       <h1>Playwright.config</h1>,
       <p>This component is currently under development.</p>,
     </div>)
-};
-};
-};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-}}}
-}
 }}}
 origin/main

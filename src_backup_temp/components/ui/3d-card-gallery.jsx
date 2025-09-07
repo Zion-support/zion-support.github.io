@@ -3,7 +3,6 @@ import React, {useState, useRef, useEffect, useCallback} from 'react';'''; impor
 import React, {useState, useRef, useEffect, useCallback} from 'react';; import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';; import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function Card3DGallery(props: any) {}; const [selectedItem, setSelectedItem] = useState(null);'; const [viewMode, setViewMode] = useState('grid'); const [filters, setFilters] = useState({}; category[],; status[],; complexity[],; verified: false,; featured: false; });'; const [searchQuery, setSearchQuery] = useState('');'; const [sortBy, setSortBy] = useState('rating');'; const [sortOrder, setSortOrder] = useState('desc'); const [isPlaying, setIsPlaying] = useState(autoPlay); const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0); const galleryRef = useRef(null);
 ;
 import React, {useState, useRef, useEffect, useCallback} from 'react';; import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';; import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function Card3DGallery("props": "any) {"}; const [selectedItem, setSelectedItem] = useState(null);'; const [viewMode, setViewMode] = useState('grid'); const [filters, setFilters] = useState({}; category[],; status[],; complexity[],; "verified": "false",; "featured": "false; "});'; const [searchQuery, setSearchQuery] = useState('');'; const [sortBy, setSortBy] = useState('rating');'; const [sortOrder, setSortOrder] = useState('desc'); const [isPlaying, setIsPlaying] = useState(autoPlay); const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0); const galleryRef = useRef(null);
-;
 import React, {useState, useRef, useEffect, useCallback} from 'react';'''; import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';'''; import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function Card3DGallery(props: any) {}; const [selectedItem, setSelectedItem] = useState(null);'; const [viewMode, setViewMode] = useState('grid'); const [filters, setFilters] = useState({}; category[],; status[],; complexity[],; verified: false,; featured: false; }
     );'; const [searchQuery, setSearchQuery] = useState('');'; const [sortBy, setSortBy] = useState('rating');'; const [sortOrder, setSortOrder] = useState('desc'); const [isPlaying, setIsPlaying] = useState(autoPlay); const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0); const galleryRef = useRef(null);
 import React, {useState, useRef, useEffect, useCallback} from 'react';''
@@ -44,11 +43,9 @@ export function Card3DGallery($1) {}
             case 'downloads':'
                 aValue = a.metadata.downloads;'
                 bValue = b.metadata.downloads;';''
-                break;';';''
             case 'lastUpdated':'
                 aValue = new Date(a.metadata.lastUpdated);'
                 bValue = new Date(b.metadata.lastUpdated);';''
-                break;';';''
             case 'title':'
                 aValue = a.title.toLowerCase();
                 bValue = b.title.toLowerCase();
@@ -56,8 +53,6 @@ export function Card3DGallery($1) {}
             "default": return 0}""
         if (sortOrder === 'asc') {return aValue > bValue ? 1 : -1}'
         else {return aValue < bValue ? 1 : -1};
-    }
-});
     // Auto-play carousel;
     useEffect(() => {'}
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)'
@@ -88,16 +83,10 @@ export function Card3DGallery($1) {}
     const getComplexityColor = (props) => {}
         switch (complexity) {'}
             case 'beginner':''
-                return 'border-green-500/50 bg-green-500/10 text-green-400';''
             case 'intermediate':';''
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';''
             case 'advanced':';''
                 return 'border-orange-500/50 bg-orange-500/10 text-orange-400';''
             case 'expert':';''
-                return 'border-red-500/50 bg-red-500/10 text-red-400';''
-            "default": ';''
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}'
-    };
     // Get category icon;
     const getCategoryIcon = (props) => {}
         const iconMap = {'}
@@ -108,7 +97,6 @@ export function Card3DGallery($1) {}
             'Analytics': Zap,''
             'Infrastructure': Settings,''
   'Research': TrendingUp;'
-};
         return iconMap[category] || Globe};
     if (!enabled || filteredAndSortedItems.length === 0);
         return null;
@@ -118,14 +106,10 @@ export function Card3DGallery($1) {}
       <div className="flex items-center justify-between mb-6">"
 </div>
         <div>
-</div>"
           <h3 className="text-xl font-semibold text-white mb-2">3D Card Gallery</h3>""
           <p className="text-zinc-300 text-sm">"
 </p>
-          </p>
-        </div>"
         <div className="flex items-center gap-2">"
-</div>"
           <divclassName="flex bg-zion-blue/20 rounded-lg p-1">"
 </divclassName>)"
             {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode';';'`}
@@ -137,52 +121,36 @@ export function Card3DGallery($1) {}
                     <Play className="w-4 h-4" />}"
 </Play>
               </button>))};
-          </div>"
           {viewMode === 'carousel' && (<div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">"})
 </div>)"
               <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-400 "hover": text-white p-2">"
 </Button>"
                 {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}"
 </Pause>
-              </Button>"
               <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-400 "hover": text-white p-2">"
-</Button>"
                 <RotateCcw className="w-4 h-4" />"
 </RotateCcw>
               </Button>
-                </div>"
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">"
 </select>"
             <option value="rating">Sort by Rating</option>""
             <option value="downloads">Sort by Downloads</option>""
             <option value="lastUpdated">Sort by Date</option>""
             <option value="title">Sort by Title</option>"
-          </select>"
           <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 "hover": text-white">';';'
-</Button>
-          </Button>
-        </div>
       </div>'
       {showFilters && (<div className="mb-6 space-y-4">"})
-</div>"
           <div className="relative">"
-</div>"
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />"
 </Search>)"
             <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>"
 </input>
-          </div>"
           <div className="flex flex-wrap gap-2">"
-</div>"
             <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={"}
   () => setFilters(prev => ({ ...prev,})
-</Button>"
               <Shield className="w-4 h-4 mr-1" />"
 </Shield>
-            </Button>"
             <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={");}
-  () => setFilters(prev => ({ ...prev,})
-</Button>"
               <Star className="w-4 h-4 mr-1" />"
 </Star>
             </Button>)"
@@ -190,15 +158,11 @@ export function Card3DGallery($1) {}
   () => setFilters(prev => ({})
 </Button>);
               </Button>))};
-          </div>
-            </div>"
       {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 "md": grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>``)
 </div>);
           {filteredAndSortedItems.map((item, index) => (<Card3D key={item.id} item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon}/>))};
 </Card3D>
-            </div>'
       {viewMode === 'list' && (<div className="space-y-4">"})
-</div>)"
           {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 "hover": border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {"})
   { opacity: 0,"}
   "y": 20;"
@@ -211,47 +175,32 @@ export function Card3DGallery($1) {}
 }} onClick={() => handleCardClick(item)}>
 </motion>"
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">"
-</div>"
                     return <CategoryIcon className="w-8 h-8 text-white" />})()}"
 </CategoryIcon>
-              </div>"
               <div className="flex-1">"
-</div>"
                 <div className="flex items-center gap-3 mb-1">"
-</div>"
                   <h4 className="text-white font-medium">{item.title}</h4>""
                   <Badge variant="outline" className={`text-xs ${getStatusColor(item.status)}`}>
 </Badge>
                   </Badge>"
                   <Badge variant="outline" className={`text-xs ${getComplexityColor(item.metadata.complexity)}`}>
-</Badge>
-                  </Badge>
-                </div>"
                 <p className="text-zinc-400 text-sm line-clamp-2">{item.description}</p>""
                 <div className="flex items-center gap-4 mt-2 text-xs text-zinc-500">"
-</div>"
                   <span className="flex items-center gap-1">"
 </span>"
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />"
-</Star>
                   </span>
                   <span>({item.reviews} reviews)</span>
                   <span>•</span>
                   <span>{item.metadata.downloads.toLocaleString()} downloads</span>
-                </div>
-              </div>"
               <divclassName="flex items-center gap-2">"
 </divclassName>"
                 {item.actions?.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {'}
 </Button>'
                     <action .icon className="w-3 h-3 mr-1" />"
 </action>
-                  </Button>))};
-              </div>
             </motion.div>))};
-            </div>"
       {viewMode === 'carousel' && (<divclassName="relative">"})
-</divclassName>"
           <divclassName="overflow-hidden rounded-lg">';'
 </divclassName>'
             <motion.div className="flex" animate={{ "x": -currentCarouselIndex * 100 + '%' }} transition = {''}
@@ -260,24 +209,16 @@ export function Card3DGallery($1) {}
 }}>
 </motion>)"
               {filteredAndSortedItems.map((item, index) => (<div key={item.id} className="w-full flex-shrink-0">")
-</div>);
                   <Card3D item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon} isCarousel={true}/>
-</Card3D>
                 </div>))};
             </motion.div>
-          </div>"
           <divclassName="flex items-center justify-center gap-2 mt-4">';'
-</divclassName>'
             {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-600 "hover": bg-zinc-500'}`}/>))}
 </button>
-          </div>
-            </div>
       <AnimatePresence>
 </AnimatePresence>'
         {selectedItem && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ "opacity": 0 }} animate={{ "opacity": 1 }} exit={{ "opacity": 0 }}>")
-</motion>)"
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedItem(null)}/>"
-</div>"
             <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto" initial = {""}
   { "scale": 0.9,""}
   "opacity": 0;"
@@ -285,177 +226,71 @@ export function Card3DGallery($1) {}
   { "scale": 1,""}
   "opacity": 1;"
 }} exit = {"}
-  { "scale": 0.9,""}
   "opacity": 0;""
 }} transition={{ "duration": 0.2 }}>"
-</motion>"
               <div className="flex items-center justify-between mb-4">"
-</div>"
                 <h3 className="text-xl font-semibold text-white">{selectedItem.title}</h3>""
                 <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-400 "hover": text-white">"
-</Button>"
                   <X className="w-4 h-4" />"
 </X>
-                </Button>
-              </div>"
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
-</div>
-                <div>
-</div>"
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">"
-</div>"
                 return <CategoryIcon className="w-24 h-24 text-white" />})()}"
-</CategoryIcon>
-                  </div>"
                   <div className="space-y-3">"
-</div>"
-                    <div className="flex items-center gap-2">"
-</div>"
                       <Badge variant="outline" className={getStatusColor(selectedItem.status)}>"
-</Badge>
-                      </Badge>"
                       <Badge variant="outline" className={getComplexityColor(selectedItem.metadata.complexity)}>"
-</Badge>
-                      </Badge>"
                       {selectedItem.metadata.verified && (<Badge variant="outline" className="border-green-500/30 text-green-400">"})
 </Badge>);
                         </Badge>)};
-                    </div>"
                     <div className="flex items-center gap-4 text-sm text-zinc-400">"
-</div>"
-                      <span className="flex items-center gap-1">"
-</span>"
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />"
-</Star>
-                      </span>
-                      <span>•</span>
                       <span>{selectedItem.metadata.downloads.toLocaleString()} downloads</span>
-                    </div>"
                     {selectedItem.price && (<div className="text-lg font-semibold text-zion-cyan">{selectedItem.price}    </div>")
-                  </div>
-                </div>"
                 <div className="space-y-4">"
-</div>"
                   <p className="text-zinc-300">{selectedItem.description}</p>"
-                  <div>
-</div>"
                     <h4 className="text-white font-medium mb-2">Features</h4>""
                     <div className="space-y-1">"
-</div>)"
                       {selectedItem.features.map((feature, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zinc-300">")
-</div>"
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />"
-</div>);
-                        </div>))};
-                    </div>
-                  </div>
-                  <div>
-</div>"
                     <h4 className="text-white font-medium mb-2">Tags</h4>""
-                    <div className="flex flex-wrap gap-2">"
-</div>"
                       {selectedItem.tags.map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">")
-</Badge>);
                         </Badge>))};
-                    </div>
-                  </div>
                   {selectedItem.actions && (<div>})
-</div>"
                       <h4 className="text-white font-medium mb-2">Actions</h4>""
                       <divclassName="flex flex-wrap gap-2">';'
 </divclassName>)'
                         {selectedItem.actions.map((action, index) => (<Button key={index} size="sm" variant={action.variant || 'outline'} onClick={action.action} disabled={action.disabled}>')
-</Button>'
                             <action .icon className="w-4 h-4 mr-2" />"
 </action>);
-                          </Button>))};
-                      </div>
-                        </div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>)};
       </AnimatePresence>
-        </div>"
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : "}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {``}
-</motion>"
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style="{{{""}
             "transformStyle": 'preserve-3d'; transform: isHovered ? 'translateZ(20px)'}}"} transition={{ "duration": 0.3 }}>"
-</motion>"
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />"
-</div>"
         <div className="relative z-10 p-6 h-full flex flex-col">"
-</div>"
           <div className="flex items-start justify-between mb-4">"
-</div>"
             <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">"
-</div>"
               <CategoryIcon className="w-6 h-6 text-white" />"
-</CategoryIcon>
-            </div>"
-            <div className="flex items-center gap-2">"
-</div>"
-              <Badge variant="outline" className={`text-xs ${getStatusColor(item.status)}`}>
-</Badge>
-              </Badge>"
-              <Badge variant="outline" className={`text-xs ${getComplexityColor(item.metadata.complexity)}`}>
-</Badge>
-              </Badge>
-            </div>
-          </div>"
-          <div className="flex-1">"
-</div>"
             <h4 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-"hover": text-zion-cyan transition-colors duration-200">"
 </h4>
             </h4>"
             <p className="text-zinc-300 text-sm line-clamp-3">"
-</p>
-            </p>
-          </div>"
-          <div className="space-y-3">"
-</div>"
             <div className="flex items-center justify-between text-xs text-zinc-400">"
-</div>"
-              <span className="flex items-center gap-1">"
-</span>"
-                <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />"
-</Star>
-              </span>
-              <span>{item.metadata.downloads.toLocaleString()} downloads</span>
-            </div>"
             <div className="flex flex-wrap gap-1">"
-</div>"
               {item.tags.slice(0, 3).map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 "hover": text-white">")
-</Badge>);
-                </Badge>))};
-            </div>"
             <divclassName="flex items-center gap-2">';'
-</divclassName>'
               <Buttonsize="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 "hover": text-red-300' : 'text-zinc-400 hover:text-white'}`}>';'
 </Buttonsize>'
                 <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : "}`} />
 </Heart>
-              </Button>"
               <Button size="sm" variant="ghost" className="p-2 text-zinc-400 "hover": text-white text-xs">"
-</Button>"
                 <Share2 className="w-4 h-4" />"
 </Share2>
-              </Button>"
               <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">"
-</Button>"
                 <Eye className="w-4 h-4" />"
 </Eye>
-              </Button>
-            </div>
-          </div>
-        </div>"
         <motion .div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-"hover": opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ "opacity": 1 }} />"
-</motion>
-      </motion.div>
-    </motion.div>)};
-</motion>
-</button>
-</Card3D>
 </motion>
 </Card3D>"
 </div>;';';''

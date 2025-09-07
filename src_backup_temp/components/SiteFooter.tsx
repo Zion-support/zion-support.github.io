@@ -14,29 +14,19 @@ export function SiteFooter("props": "any) {';
     ';';' { "label": 'Contact', "href": '/contact' }';
 ]';';
 },';';' {',';';
-    ';';';
       "title": 'Services',';';';
-      "links": "['",';';
     ';';' { "label": 'All Services', "href": '/services' },',';';
     ';';' { "label": 'AI Services', "href": '/services/ai-services' },',';';
     ';';' { "label": 'IT Services', "href": '/services/it-services' },',';';
     ';';' { "label": 'Micro SaaS', "href": '/services/micro-saas' },',';';
     ';';' { "label": 'Pricing', "href": '/pricing' }';
-]';';
-},';';' {',';';
-    ';';';
       "title": 'Resources',';';';
-      "links": "['",';';
     ';';' { "label": 'Blog', "href": '/blog' },',';';
     ';';' { "label": 'Case Studies', "href": '/case-studies' },',';';
     ';';' { "label": 'White Papers', "href": '/white-papers' },',';';
     ';';' { "label": 'Webinars', "href": '/webinars' },',';';
     ';';' { "label": 'Documentation', "href": '/documentation' }';
-]';';
-},';';' {',';';
-    ';';';
       "title": 'Legal',';';';
-      "links": "['",';';
     ';';' { "label": 'Privacy Policy', "href": '/privacy' },',';';
     ';';' { "label": 'Terms of Service', "href": '/terms' },',';';
     ';';' { "label": 'Sitemap', "href": '/sitemap' }
@@ -61,10 +51,7 @@ export function SiteFooter("props": "any) {';
               <div>;
                 <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   ZION;
-                </div>;
                 <div className="text-xs text-blue-400 font-medium">TECH GROUP</div>;
-              </div>;
-            </div>;
             <p className="text-gray-300 mb-6 max-w-md">;
               Leading technology solutions provider specializing in AI", cybersecurity;
               cloud infrastructure, and digital transformation services.;
@@ -74,8 +61,6 @@ export function SiteFooter("props": "any) {';
               <div>kleber@ziontechgroup.com</div>;
               <div>364 E Main St STE 1008</div>;
               <div>Middletown DE 19709</div>;
-            </div>;
-          </div>;
           {/* Navigation Sections */}
           { navSections.map((section) => (;
             <div key={section.title}>;
@@ -99,27 +84,15 @@ export function SiteFooter("props": "any) {';
                   </li>;
                 ));
       )}
-    </div>;
   );
     </div>
-    );
 }
               </ul>;
-            </div>;
-          ));
-      )}
-    </div>;
-  );
-    </div>
-    );
-}
-        </div>;
         {/* Bottom Section */}
         <div className="border-t border-slate-800 mt-12 pt-8">;
           <div className="flex flex-col "md": "fle x-row justify-between items-center">;
             <div className="text-gray-400 text-sm mb-4 "md": m b-0">;
               © {currentYear"} Zion Tech Group. All rights reserved.;
-            </div>;
             <div className="flex space-x-6">;
               { social.map((item) => (;
                 <a;
@@ -128,20 +101,8 @@ export function SiteFooter("props": "any) {';
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text-gray-400 "hover": "tex t-white transition-colors";
-                >;
                   {item.label"}
                 </a>;
-              ));
-      )}
-    </div>;
-  );
-    </div>
-    );
-}
-            </div>;
-          </div>;
-        </div>;
-      </div>;
     </footer>';
   );';';
 }';';';

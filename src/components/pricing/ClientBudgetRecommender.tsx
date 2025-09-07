@@ -5,10 +5,6 @@ if ( {) {
 }
       onSuggestionApplied (suggestion.min_rate, suggestion.max_rate);
       // Track this suggestion application;
-      // Check condition
-if ( {) {
-  $2
-}
         trackPricingSuggestion ({
           user_id: user.id,
           suggestion_type: 'client',
@@ -16,9 +12,6 @@ if ( {) {
           suggested_max: suggestion.max_rate,
           accepted: true,
         });
-      }
-    }
-  }
   return (
 
 import { Sparkles } from 'lucide-react'
@@ -38,10 +31,6 @@ interface ClientBudgetRecommenderProps {
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-  return (
     <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
@@ -54,7 +43,6 @@ interface ClientBudgetRecommenderProps {
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
             type="button"
             variant="outline"
-            onClick={generateSuggestion}
             disabled={!jobTitle || !category}
             className="w-full"
           >
@@ -62,7 +50,6 @@ interface ClientBudgetRecommenderProps {
 
           </Button>
         ) : (
-            disabled={!jobTitle || !category}
             className='w-full'>;
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
           </Button>;
@@ -86,14 +73,10 @@ interface ClientBudgetRecommenderProps {
             rateType='hourly'          />
         )}
       </div>
-    </div>
   )
-}
 if (scope) params.scope = scope
 if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
-  trackPricingSuggestion ({
-=======
 
 },
 
@@ -102,6 +85,4 @@ return (<div className="space - y-4" > <div> {";
   generate_suggestion ";
 }> <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />);
 }</div> </div>);
-}
 '"  );
-},

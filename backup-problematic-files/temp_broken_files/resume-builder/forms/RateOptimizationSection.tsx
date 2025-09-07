@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",;
 import { Control, UseFormSetValue } from "react-hook-form",;
 import {;
@@ -21,7 +20,6 @@ interface RateOptimizationSectionProps {;
   location?:string,;
   rateType:"hourly" | "fixed";
 }
-;
 export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({;
   control,;
   setValue,;
@@ -33,7 +31,6 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
   const handleSuggestionApplied = (rate:number) => {;
     setValue("hourlyRate", rate),;
   },;
-;
   return (;
     <div className="space-y-4">;
       <FormField;
@@ -56,8 +53,6 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
             <FormMessage />;
           </FormItem>;
         )}
-      />;
-;
       <Card>;
         <CardContent className="pt-4">;
           <TalentRateRecommender;
@@ -65,7 +60,6 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
             rateType={rateType}
-          />;
         </CardContent>;
       </Card>;
     </div>;

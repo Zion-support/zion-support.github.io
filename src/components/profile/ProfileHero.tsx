@@ -62,8 +62,6 @@ export function ProfileHero({
   reviewCount;
   aiScore;
 
-export function ProfileHero({
-
   name,
   title,
   avatarUrl,
@@ -167,7 +165,7 @@ export function ProfileHero({;
                 >;
 
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
-              
+
               <div className="flex flex-wrap items-center gap-3 mt-2">
 
                 {location && (

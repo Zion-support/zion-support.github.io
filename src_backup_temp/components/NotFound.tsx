@@ -22,4 +22,3 @@ export default function NotFound(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

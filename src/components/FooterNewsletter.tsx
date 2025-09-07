@@ -17,15 +17,10 @@
 
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
-        tabIndex={-1}
 
         autoComplete="off"
-        style={{ display: 'none' }}
       />
-      <Button
-        type="submit"
         aria-label="Subscribe to newsletter"
-        disabled={isSubmitting}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
       >;
         {isSubmitting ? (;
@@ -39,8 +34,6 @@
       </Button>;
     </form>;
   );
-
-} ;
 
 } ;
 
@@ -69,20 +62,14 @@ if (return) {
   $2
 } // ignore bots;
     const now = Date.now ();
-    // Check condition
-if (return) {
-  $2
 }
     last_submit.current = now;
     const trimmed_email = email.trim ();
     if () {) {
-  $2
-}
       setEmailError ('Please enter a valid email address.');
       return;
     } else {
       setEmailError ('');
-    }
     setIsSubmitting (true);
     const uniqueToastIdBase = `newsletter - toast-${Date.now ()}`; // Generate a base for unique ID;
     try {
@@ -92,42 +79,23 @@ if (return) {
         body: JSON.stringify ({ email: trimmed_email }),
       });
       const data = await res.json ().catch (() => ({})); // Ensure data is an object even on parse error;
-      // Check condition
 if ( {) {
-  $2
-}
-        // Check condition
-if ( {) {
-  $2
-}
           toast.success (data.message || "You're already subscribed!", {
             id: `${uniqueToastIdBase}-already - subscribed`,
-          });
-        } else {
           toast.success (
             data.message || 'Successfully subscribed to newsletter!',
             { id: `${uniqueToastIdBase}-success` }
-          );
-        }
         set_email ('');
         // setEmailError (''); // Already cleared if regex passed;
-      } else {
         logErrorToProduction ('Newsletter subscription failed:', { data: data });
         // Use a more specific error message if available from API, otherwise generic;
         const error_message =;
           data.error || 'Subscription failed. Please try again.';
         toast.error (error_message, { id: `${uniqueToastIdBase}-api - error` });
-      }
     } catch (err: any) {
       logErrorToProduction ('Newsletter subscription error:', { data: err });
       toast.error ('Unable to subscribe right now. Please try again later.', {
         id: `${uniqueToastIdBase}-catch - error`,
-      });
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-      >;
       <label html_for='newsletter - email' className='sr - only'>;
         Email address for newsletter subscription;
       </label>;
@@ -140,30 +108,19 @@ if ( {) {
         value={email}
         on_change={e => set_email (e.target.value)}
         auto_complete='email'        required;
-      />;
       {email_error && <p className='text - red - 500 text - sm mt - 1'>{email_error}</p>}
-      {/* Honeypot field */}
       <input;
         type='text';
-        value={honeypot}
         on_change={e => set_honeypot (e.target.value)}
         tab_index={-1}
         auto_complete='off';
-        style={{ display: 'none' }}
-      />;
       <Button;
         type='submit';
         aria - label='Subscribe to newsletter';
         disabled={is_submitting}
         className='bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white hover:from - zion - purple - light hover:to - zion - purple'      >;
         {is_submitting ? (
-          <>;
             <Loader2 className='h - 4 w - 4 mr - 2 animate - spin' />;
-            Subscribing...;
           </>) : (
           'Subscribe')}
-      </Button>;
     </form>);
-}
-}
-}

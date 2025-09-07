@@ -144,7 +144,6 @@ export function IntegrationCards() {
     <div className='grid md:grid-cols-3 gap-6'>;
       <IntegrationCard
 
-export function IntegrationCards() {
     <div className="grid md:grid-cols-3 gap-6">
 
         title="Slack"
@@ -228,7 +227,6 @@ function IntegrationCard() {
   title: string,
   description: string,
   icon: React.ReactNode,
-export /**
     <Card className="overflow - hidden">;
       <CardHeader className="pb - 2">;
         <div className="flex justify - between items - start">;
@@ -249,7 +247,6 @@ export /**
           <Button variant="default" className="w - full" on_click={on_connect}>;
           </Button>)}
     </Card>);
-export /**
  * IntegrationCards - Function description
 function IntegrationCards() {
     <div className='grid md:grid - cols - 3 gap - 6'>;

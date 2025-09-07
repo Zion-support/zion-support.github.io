@@ -13,9 +13,6 @@ function TalentOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -23,19 +20,16 @@ function TalentOnboardingSteps() {
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
       action: "Update"},
-    {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
       action: "Add Skills"},
-    {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
       action: "Set"},
-    {
 
       id: "match",
       label: "Receive your first job match",

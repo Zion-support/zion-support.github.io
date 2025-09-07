@@ -11,4 +11,3 @@ export default function KanbanBoard({ }: KanbanBoardProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

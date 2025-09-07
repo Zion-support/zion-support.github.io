@@ -11,4 +11,3 @@ export default function KanbanColumn({ }: KanbanColumnProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

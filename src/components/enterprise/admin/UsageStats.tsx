@@ -29,21 +29,21 @@ return (
             </Button>
           </CardFooter>
         </Card>
-        
+
             <CardTitle>Candidate Contacts</CardTitle>
               Limit the number of direct candidate contacts per month
                   Monthly contact credits
                 <Badge variant='outline'>178 / 500</Badge>
               <Progress value={35.6} className='h-2' />
                   <Input type='number' min='1' defaultValue='500' />
-        
+
             <CardTitle>AI Features</CardTitle>
               Set the AI usage limits for matching and content generation
                 <div className='text-sm font-medium'>AI matching credits</div>
                 <Badge variant='outline'>435 / 1000</Badge>
               <Progress value={43.5} className='h-2' />
                   <Input type='number' min='1' defaultValue='1000' />
-        
+
             <CardTitle>Budget Controls</CardTitle>
               Set spending caps for premium features and services
                 <div className='text-sm font-medium'>Monthly budget</div>
@@ -62,7 +62,7 @@ return (
         <div className='flex items-center gap-4'>
           <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>
             <Sparkles className='h-5 w-5 text-primary' />
-      
+
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">

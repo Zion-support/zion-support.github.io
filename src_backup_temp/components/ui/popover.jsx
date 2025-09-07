@@ -13,4 +13,3 @@ export default function Popover.js({ }: Popover.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

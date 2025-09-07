@@ -24,13 +24,9 @@ import { FileText export function ProfileProjects(props: any) {
                       {tag}
                     </Badge>))}
                 </div>)}
-;
               <div className="text-xs text-zion-slate-light mt-2">;
                 {project.date}
               </div>;
             </CardContent>;
           </Card>))}
-      </div>;
-    </div>)}
-;
 export default ProfileProjects;

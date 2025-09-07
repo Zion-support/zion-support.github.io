@@ -27,8 +27,6 @@ interface Listing {
   price?: number | null;
   created_at: string;
 interface CategoryListingPageProps {
-  title: string;
-  description: string;
   listings: Listing[];
   sort_options?: { label: string; value: string }[];
   filter_options?: { label: string; value: string }[];
@@ -43,7 +41,6 @@ function CategoryListingPage() {
       sort_options[0]?.value ||;
       'newest');
   const [selected_filter, setSelectedFilter] = useState (
-    () =>;
       safe_storage.get_item ('category_selected_filter') ||;
       filter_options[0]?.value ||;
       'all');
@@ -51,10 +48,8 @@ function CategoryListingPage() {
   useEffect (() => {
     safe_storage.set_item ('category_selected_sort', selected_sort);
   }, [selected_sort]);
-  useEffect (() => {
     safe_storage.set_item ('category_selected_filter', selected_filter);
   }, [selected_filter]);
-  useEffect (() => {
     let mounted = true;
     setIsLoading (true);
     const timeout = set_timeout (() => {
@@ -63,11 +58,7 @@ function CategoryListingPage() {
 
 }
 
-interface CategoryListingPageProps {
-  category: string;
-  listings: Listing[];
   loading?: boolean;
-}
 
 export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
   category,
@@ -92,19 +83,14 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
             tag.toLowerCase().includes(searchTerm.toLowerCase())
           )
       );
-    }
 
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
-          return (
 
   createdAt: string;
 
 interface CategoryListingPageProps {;
-  title: string;
-  description: string;
-  listings: Listing[];
   sortOptions?: { label: string; value: string }[];
   filterOptions?: { label: string; value: string }[];
 
@@ -124,33 +110,25 @@ export function CategoryListingPage(): any ({;
     { label: 'All', value: 'all' },;
     { label: 'Highly Rated', value: 'high-rating' },;
     { label: 'Best AI Match', value: 'best-match' },;
-  ],;
 }: CategoryListingPageProps) {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSort, setSelectedSort] = useState(;
-    () =>;
       safeStorage && safeStorage.getItem('category_selected_sort') ||;
       sortOptions[0]?.value ||;
       'newest';
-  );
   const [selectedFilter, setSelectedFilter] = useState(;
-    () =>;
       safeStorage && safeStorage.getItem('category_selected_filter') ||;
       filterOptions[0]?.value ||;
       'all';
-  );
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {;
     safeStorage && safeStorage.setItem('category_selected_sort', selectedSort);
   }, [selectedSort]);
 
-  useEffect(() => {;
     safeStorage && safeStorage.setItem('category_selected_filter', selectedFilter);
   }, [selectedFilter]);
 
-  useEffect(() => {;
-    let mounted = true;
     setIsLoading(true);
     const timeout = setTimeout(() => {;
       if (mounted) setIsLoading(false);
@@ -185,13 +163,8 @@ export function CategoryListingPage(): any ({;
       // Apply sorting;
       switch (selectedSort) {;
         case 'newest':;
-          return (
             new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
-          );
-        case 'oldest':;
-          return (
             new Date(a && a.createdAt).getTime() - new Date(b && b.createdAt).getTime();
-          );
         case 'rating-high':;
           return (b && b.rating || 0) - (a && a.rating || 0);
         case 'ai-match':;
@@ -212,11 +185,6 @@ export function CategoryListingPage(): any ({;
           return a.title.locale_compare (b.title);
         case 'z - a':;
           return b.title.locale_compare (a.title);
-        default:;
-
-          return 0;
-      }
-    });
 
     setFilteredListings(filtered);
   }, [listings, searchTerm, sortBy, filterBy]);
@@ -224,15 +192,10 @@ export function CategoryListingPage(): any ({;
   const categories = Array.from(new Set(listings.map(listing => listing.category)));
 
   if (loading) {
-    return (
       <div className="container mx-auto px-4 py-8">
         <GradientHeading text={`${category} Listings`} />
         <ListingGridSkeleton />
       </div>
-    );
-  }
-
-  return (
 
           <Select value={filterBy} onValueChange={setFilterBy}>
             <SelectTrigger className="w-full sm:w-48">
@@ -248,18 +211,12 @@ export function CategoryListingPage(): any ({;
               ))}
             </SelectContent>
           </Select>
-        </div>
-      </div>
 
       {/* Results */}
       <div className="mb-4">
         <p className="text-gray-600">
           Showing {filteredListings.length} of {listings.length} listings
         </p>
-      </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               {description}
 
@@ -269,7 +226,6 @@ export function CategoryListingPage(): any ({;
           {/* Filters and Search */}
 
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
-              </div>;
 
               <Select value={selectedSort} onValueChange={setSelectedSort}>;
                 <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
@@ -286,12 +242,7 @@ export function CategoryListingPage(): any ({;
           <div className='text - center mb - 12'>;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-              {description}
 
-            </p>;
-          </div>;
-
-          {/* Filters and Search */}
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               <div className='relative'>
@@ -302,78 +253,53 @@ export function CategoryListingPage(): any ({;
                   value={searchQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSearchQuery(e.target.value)
-                  }
                   className='pl - 10 bg - zion - blue border border - zion - blue - light text - white'                />;
-              </div>;
               <Select value={selected_sort} onValueChange={setSelectedSort}>;
                 <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
                   <div className='flex items - center'>;
                     {selected_sort === 'a - z' ? (
                       <ArrowDownAZ className='mr - 2 h - 4 w - 4' />) : selected_sort === 'z - a' ? (
                       <ArrowUpZA className='mr - 2 h - 4 w - 4' />) : null}
-                    <span>;
                       {sort_options.find (option => option.value === selected_sort);
 
                         ?.label || 'Sort By'}
                     </span>;
-                  </div>;
                 </SelectTrigger>;
 
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
-                <Input
                   type="text"
                   placeholder="Search listings..."
-                  value={searchQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
-              </div>;
-              <Select value={selectedSort} onValueChange={setSelectedSort}>;
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                   <div className="flex items-center">;
-                    {selectedSort === 'a-z' ? (;
                       <ArrowDownAZ className="mr-2 h-4 w-4" />;
-                    ) : selectedSort === 'z-a' ? (;
                       <ArrowUpZA className="mr-2 h-4 w-4" />;
-                    ) : null}
-                    <span>;
                       {sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                   {sortOptions.map((option) => (;
                     <SelectItem key={option.value} value={option.value} className="text-white">;
                       {option.label}
                     </SelectItem>;
-                  ))}
 
                 </SelectContent>;
               </Select>;
 
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>;
-                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
-                  <div className='flex items-center'>;
                     <Filter className='mr-2 h-4 w-4' />;
-                    <span>;
                       {filterOptions && filterOptions.find(;
                         option => option && option.value === selectedFilter;
                       )?.label || 'Filter'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>;
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
                   {filterOptions && filterOptions.map(option => (;
                     <SelectItem
                       key={option && option.value}
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
-                    </SelectItem>;
-
-                  ))}
 
                 <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                   {sort_options.map (option => (
@@ -383,40 +309,17 @@ export function CategoryListingPage(): any ({;
                       className='text - white';
                     >                      {option.label}
                     </SelectItem>))}
-                </SelectContent>;
-              </Select>;
               <Select value={selected_filter} onValueChange={setSelectedFilter}>;
-                <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
-                  <div className='flex items - center'>;
                     <Filter className='mr - 2 h - 4 w - 4' />;
-                    <span>;
                       {filter_options.find (
                         option => option.value === selected_filter)?.label || 'Filter'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>;
-                <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                   {filter_options.map (option => (
-                    <SelectItem;
-                      key={option.value}
-                      value={option.value}
-                      className='text - white';
-                    >                      {option.label}
-                    </SelectItem>))}
-
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
 
           <div className="mb-6">
             <p className="text-zion-slate-light">
 
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
-
-            </p>;
-          </div>;
 
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
@@ -436,7 +339,6 @@ export function CategoryListingPage(): any ({;
                     aiScore = {listing && listing.aiScore,}
                     rating = {listing && listing.rating,}
                     reviewCount = {listing && listing.reviewCount,}
-                  />;
 
                   variant="outline"
                   onClick={() => {
@@ -448,9 +350,7 @@ export function CategoryListingPage(): any ({;
                 >
                   Clear all filters
                 </Button>
-              </div>
 
-              </div>;
             ) : (;
               <div className="text-center py-20">;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
@@ -465,10 +365,5 @@ export function CategoryListingPage(): any ({;
                 >;
                   Clear all filters;
                 </Button>;
-              </div>;
             )}
-          </div>;
-        </div>;
-      </div>;
     </>;
-  );

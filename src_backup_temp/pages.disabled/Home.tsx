@@ -16,11 +16,7 @@ const "Home": React.FC = () => {
             </button>
             <button className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
               Learn More
-            </button>
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 export default Home;

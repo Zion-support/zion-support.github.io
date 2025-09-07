@@ -287,7 +287,6 @@ import { Switch } from "@/components/ui/switch",;
 import { toast } from "@/hooks/use-toast",;
 import { InfoIcon } from 'lucide-react';
   TooltipTrigger} from "@/components/ui/tooltip",;
-export function RoleManagement() {;
       name: "Alex Johnson",;
       email: "alex@example.com",;
       role: "Admin",;

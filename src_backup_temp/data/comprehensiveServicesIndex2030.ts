@@ -54,7 +54,6 @@ export const SERVICE_CATEGORIES_2030 = [;
   "BioDigital Twins",
   "Metaverse Development",
   "Autonomous Systems"
-];
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
   "totalServices": COMPREHENSIVE_SERVICES_INDEX_2030.length,
@@ -75,11 +74,9 @@ export const SERVICE_STATISTICS_2030 = {
   ).length,
   "microSaasServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
     service.price < 1000
-  ).length,
   "enterpriseServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
     service.price > 5000
   ).length
-  ).length,
   ;';
   "emergingTechServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;';';
     service.category === 'Emerging Technology';
@@ -101,30 +98,21 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
   if (typeof setupTime = == 'string') {;';';
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     return weeks < 8}
-  return false}
-    );
-  return false});
 // Affordable Services (< $500)
 export const AFFORDABLE_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
   service.price < 500
-);
 // Premium Services (> $2000)
 export const PREMIUM_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
   service.price > 2000
-);
 // Industry-Specific Services
 export const HEALTHCARE_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ';
   service.category.includes('Healthcare') || service.tags.includes('Healthcare')
-);
 export const FINANCIAL_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ';
   service.category.includes('FinTech') || service.tags.includes('Financial')
-);
 export const MANUFACTURING_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ';
   service.category.includes('Manufacturing') || service.tags.includes('Manufacturing')
-);
 export const RETAIL_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ';
   service.category.includes('Retail') || service.tags.includes('Retail')
-);
 // Export individual service arrays for specific use cases
 export {
   COMPREHENSIVE_INNOVATIVE_SERVICES_2030,

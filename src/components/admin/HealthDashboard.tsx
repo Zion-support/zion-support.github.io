@@ -3,17 +3,17 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -146,7 +146,7 @@ const HealthDashboard: React.FC = () => {;
     if (autoRefresh) {;
       const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds;
       return () => clearInterval(interval);
-    
+
     return undefined
   }, [autoRefresh]),
 
@@ -647,6 +647,4 @@ if (return null) {
                 </p>)}
       </Tabs>;
 
-export default HealthDashboard;
-export default HealthDashboard,
 export default HealthDashboard,

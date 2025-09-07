@@ -19,7 +19,6 @@ export default function Page() {
             setIsLoading(false);
             return}
         }
-      }
       const { data, error: fetchErro r } = await query;
       if(fetchError) throw fetchError;
       const transformedData = data.map((app: an y) => ({
@@ -61,7 +60,6 @@ export default function Page() {
         if(error.code === '23505') { 
           toast.error("You have already applied to this job")} else {
           throw error}
-        return false}
       const newApplication = data as JobApplication;
       // Optimistically update or refetch
       // For simplicity, refetching; could also add to state directly if data matches full type
@@ -70,12 +68,9 @@ export default function Page() {
       return true} catch(err: an y) {
       console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message);
-      return false}
   };
   const updateApplicationStatus = async(applicationId: string, status: ApplicationStatu s) => {
-    try {
       const { error } = await supabase
-        .from("job_applications")
         .update({ status })
         .eq("id", applicationId);
       if(error) throw error;
@@ -83,31 +78,19 @@ export default function Page() {
         prev.map(app => app.id === applicationId ? { ...app, status } : app)
       );
       toast.success(`Application status updated to ${status}`);
-      return true} catch(err: an y) {
       console.error("Error updating application status:", err);
       toast.error("Failed to update application status: " + err.message);
-      return false}
-  };
   const markApplicationAsViewed = async(applicationId: string) => {
-    try {
-      const { error } = await supabase
-        .from("job_applications")
         .update({ 
           status: "viewed", 
           viewed_at: new Date().toISOString() 
-        })
         .eq("id", applicationId)
         .is("viewed_at", null); 
-      if(error) throw error;
-      setApplications(prev => 
         prev.map(app => app.id === applicationId ? 
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
         )
-      );
       return true} catch(err) {
       console.error("Error marking application as viewed:", err);
-      return false}
-  };
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);

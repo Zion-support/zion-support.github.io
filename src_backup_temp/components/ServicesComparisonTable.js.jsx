@@ -12,8 +12,6 @@ export function ServicesComparisonTable(props: any) {}';';
 '''';';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
-import React from 'react';
-;
 import {Badge} from "./ui/badge";
 import {Button} from "./ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';
@@ -49,7 +47,6 @@ export function ServicesComparisonTable("props": "any) {"}
   const getFeatureIcon = hasFeature => {"}";
     return hasFeature ? (""";
       <Check className="w-4 h-4 text-green-500" /" >"""";
-    ) : "("""";
       <X className="w-4 h-4 text-red-500" /" >"";
     );"", ";
 }";
@@ -83,13 +80,11 @@ return()"";
                     variant="outline""""";
                     className="w-full border-blue-500 text-blue-600 "hover":bg-blue-500 "hover":text-white ">",;
                     View {category}
-;
                   </Button>;
                 </CardContent>;
               </Card>;
             )})}";
         </div>"";
-""""";
         {/* comment */}""""";
         <div className="bg-white "dark": "bg-slate-800 rounded-xl shadow-lg overflow-hidden">"""";
           <div className="overflow-x-auto">"";
@@ -101,10 +96,7 @@ return()"";
                   </TableHead>"""";
                   <TableHead className="text-center text-slate-900 "dark":text-white font-semibold">"";
                     AI Services""""";
-                  </TableHead>"""";
-                  <TableHead className="text-center text-slate-900 "dark":text-white font-semibold">"";
                     IT Services""""";
-                  </TableHead>"""";
                   <TableHead className="text-center text-slate-900 "dark":text-white font-semibold">;
                     Micro SAAS",;
                   </TableHead>;
@@ -121,8 +113,6 @@ return()"";
                   </TableCell>"""";
                   <TableCell className="text-center">$199 - $799</TableCell>"";
                 </TableRow>""""";
-                <TableRow>"""";
-                  <TableCell className="font-medium">"";
                     Implementation Time""""";
                   </TableCell>""""";
                   <TableCell className="text-center">1-6 weeks</TableCell>"""";
@@ -130,92 +120,22 @@ return()"";
                   <TableCell className="text-center">;
                     Immediate - 3 weeks";
                   </TableCell>"";
-                </TableRow>""""";
                 <TableRow>""""";
                   <TableCell className="font-medium">24/7 Support</TableCell>"""";
-                  <TableCell className="text-center">"";
                     {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">;
                     {getFeatureIcon(false)}";
-                  </TableCell>"";
-                </TableRow>""""";
-                <TableRow>"""";
-                  <TableCell className="font-medium">"";
                     Custom Development""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">;
-                    {getFeatureIcon(false)}";
-                  </TableCell>"";
-                </TableRow>""""";
-                <TableRow>""""";
                   <TableCell className="font-medium">API Access</TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">;
                     {getFeatureIcon(true)}";
-                  </TableCell>"";
-                </TableRow>""""";
-                <TableRow>"""";
-                  <TableCell className="font-medium">"";
                     Training & Documentation""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">;
-                    {getFeatureIcon(false)}";
-                  </TableCell>"";
-                </TableRow>""""";
-                <TableRow>"""";
-                  <TableCell className="font-medium">"";
                     Compliance Certifications""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">;
-                    {getFeatureIcon(false)}";
-                  </TableCell>"";
-                </TableRow>""""";
-                <TableRow>""""";
                   <TableCell className="font-medium">Scalability</TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">"";
-                    {getFeatureIcon(true)}""""";
-                  </TableCell>"""";
-                  <TableCell className="text-center">;
                     {getFeatureIcon(true)}
-;
                   </TableCell>;
                 </TableRow>;
               </TableBody>;
             </Table>;
           </div>";
-        </div>"";
-""""";
-        {/* comment */}""""";
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 "dark": "from-blue-900/20 "dark":to-indigo-900/20 rounded-2xl p-8 border border-blue-200 "dark":border-blue-800">"""";
           <div className="text-center mb-8">"""";
             <h3 className="text-2xl font-bold text-slate-900 "dark":text-white mb-4">"";
@@ -226,7 +146,6 @@ return()"";
 your business needs";
             </p>"";
           </div>""""";
-""""";
           <div className="grid grid-cols-1 "md": "grid-cols-3 gap-6 mb-6">"""";
             <div className="text-center">"""";
               <Phone className="w-8 h-8 text-blue-600 "dark":text-blue-400 mx-auto mb-2" /" >""""";
@@ -235,47 +154,26 @@ your business needs";
               </h4>"""";
               <p className="text-blue-600 "dark":text-blue-400">"",;
                 {CONTACT_INFO.mobile}"";
-              </p>""""";
-            </div>""""";
-            <div className="text-center">"""";
               <Mail className="w-8 h-8 text-blue-600 "dark": "text-blue-400 mx-auto mb-2" /" >""""";
-              <h4 className="font-semibold text-slate-900 "dark":text-white mb-1">"";
                 Email Us""""";
-              </h4>"""";
-              <p className="text-blue-600 "dark":text-blue-400">"",;
                 {CONTACT_INFO.email}"";
-              </p>""""";
-            </div>""""";
-            <div className="text-center">"""";
               <Clock className="w-8 h-8 text-blue-600 "dark": "text-blue-400 mx-auto mb-2" /" >""""";
-              <h4 className="font-semibold text-slate-900 "dark":text-white mb-1">"";
                 Response Time""""";
-              </h4>"""";
               <p className="text-blue-600 "dark":text-blue-400">",;
                 {CONTACT_INFO.responseTime}
-;
               </p>";
-            </div>"";
-          </div>""""";
-""""";
           <div className="text-center">""""";
             <Button """"";
               size="lg""""";
               className="bg-gradient-to-r from-blue-600 to-indigo-600 "hover": "from-blue-700 "hover":to-indigo-700""" >"""""";
               <Phone className="w-4 h-4 mr-2" /" >";
-              size="lg""""";
               className="bg-gradient-to-r from-blue-600 to-indigo-600 "hover":from-blue-700 "hover":to-indigo-700"" >"""";
               <Phone className="w-4 h-4 mr-2" /" >;
               Schedule Free Consultation",;
-            </Button>;
-          </div>";
-        </div>"";
 """"",;
-        {/* comment */}""""";
         <div className="mt-16">"""";
           <h3 className="text-3xl font-bold text-slate-900 "dark": "text-white text-center mb-12">"";
             Service Highlights""""";
-          """";
           <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-6">;
             {COMPREHENSIVE_SERVICES.filter(service => service.featured).map()";
               service => ("";
@@ -293,43 +191,28 @@ your business needs";
                         <span className="text-sm font-medium">",;
                           {service.rating}";
                         </span>"";
-                      </div>""""";
-                    </div>"""";
                     <CardTitle className="text-slate-900 "dark": "text-white text-lg">""",;
                       {service.title}""""";
-                    </CardTitle>"""";
                     <CardDescription className="text-slate-600 "dark": "text-slate-300 text-sm">"",;
                       {service.description.substring(0, 100)}..."";
-                    </CardDescription>""""";
-                  </CardHeader>""""";
                   <CardContent className="pt-0">"""";
                     <div className="flex items-center justify-between mb-4">"""";
                       <div className="text-2xl font-bold text-blue-600 "dark": "text-blue-400">",;
                         {service.currency}";
                         {service.price?.toLocaleString()}"";
-                      </div>""""";
                       <Badge""""";
-                        variant="outline""""";
                         className="border-blue-500 text-blue-600 ">";
                         {service.category}"";
-                      </Badge>""""";
-                    </div>"""";
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 "hover": "from-blue-700 "hover":to-indigo-700">;
                       Learn More",;
-                    </Button>;
-                  </CardContent>;
-                </Card>;
               ),;
 export function ServicesComparisonTable(props: any) {}
 ''
 '''
-  const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
-  const getFeatureIcon = hasFeature => {}
     return hasFeature ? (
       <Check className="w-4 h-4 text-green-500"  />"""
     ) : (""""
       <X className="w-4 h-4 text-red-500"  />
-    );
   };"""
   return (""""
     <div className="py-16 bg-slate-50 dark:bg-slate-900">""""
@@ -339,8 +222,6 @@ export function ServicesComparisonTable(props: any) {}
             Services Comparison"""
           </h2>""""
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Compare our comprehensive service offerings to find the perfect;
-            solution for your business needs;
           </p>
         </div>
 """
@@ -349,14 +230,12 @@ export function ServicesComparisonTable(props: any) {}
   const getFeatureIcon = hasFeature => {}"
     return hasFeature ? ("""
       <Check className="w-4 h-4 text-green-500" /" >""""
-    ) : (""""
       <X className="w-4 h-4 text-red-500" /" >""
     );", "
 }"
       <X className = "w-4 h-4 text-red-500" /" >"
     );"}"
   return()
-}
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) /
               services.length,"
 return()""
@@ -382,13 +261,11 @@ return()""
                   <Button"""""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
-                    View {category}
                   </Button>
                 </CardContent>
               </Card>
             )})}"
         </div>""
-"""""
         {/* comment */}"""""
         <div className="bg-white dark: bg-slate-800 rounded-xl shadow-lg overflow-hidden">""""
           <div className="overflow-x-auto">""
@@ -400,10 +277,7 @@ return()""
                   </TableHead>""""
                   <TableHead className="text-center text-slate-900 dark:text-white font-semibold">""
                     AI Services"""""
-                  </TableHead>""""
-                  <TableHead className="text-center text-slate-900 dark:text-white font-semibold">""
                     IT Services"""""
-                  </TableHead>""""
                   <TableHead className="text-center text-slate-900 dark:text-white font-semibold">
                     Micro SAAS,
                   </TableHead>
@@ -420,8 +294,6 @@ return()""
                   </TableCell>""""
                   <TableCell className="text-center">$199 - $799</TableCell>""
                 </TableRow>"""""
-                <TableRow>""""
-                  <TableCell className="font-medium">""
                     Implementation Time"""""
                   </TableCell>"""""
                   <TableCell className="text-center">1-6 weeks</TableCell>""""
@@ -429,91 +301,21 @@ return()""
                   <TableCell className="text-center">
                     Immediate - 3 weeks"
                   </TableCell>""
-                </TableRow>"""""
                 <TableRow>"""""
                   <TableCell className="font-medium">24/7 Support</TableCell>""""
-                  <TableCell className="text-center">""
                     {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">
                     {getFeatureIcon(false)}"
-                  </TableCell>""
-                </TableRow>"""""
-                <TableRow>""""
-                  <TableCell className="font-medium">""
                     Custom Development"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">
-                    {getFeatureIcon(false)}"
-                  </TableCell>""
-                </TableRow>"""""
-                <TableRow>"""""
                   <TableCell className="font-medium">API Access</TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">
                     {getFeatureIcon(true)}"
-                  </TableCell>""
-                </TableRow>"""""
-                <TableRow>""""
-                  <TableCell className="font-medium">""
                     Training & Documentation"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">
-                    {getFeatureIcon(false)}"
-                  </TableCell>""
-                </TableRow>"""""
-                <TableRow>""""
-                  <TableCell className="font-medium">""
                     Compliance Certifications"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">
-                    {getFeatureIcon(false)}"
-                  </TableCell>""
-                </TableRow>"""""
-                <TableRow>"""""
                   <TableCell className="font-medium">Scalability</TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">""
-                    {getFeatureIcon(true)}"""""
-                  </TableCell>""""
-                  <TableCell className="text-center">
-                    {getFeatureIcon(true)}
                   </TableCell>
                 </TableRow>
               </TableBody>
             </Table>
           </div>"
-        </div>""
-"""""
-        {/* comment */}"""""
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark: from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">""""
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">""
@@ -524,7 +326,6 @@ return()""
 your business needs"
             </p>""
           </div>"""""
-"""""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">""""
             <div className="text-center">""""
               <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" /" >"""""
@@ -533,46 +334,25 @@ your business needs"
               </h4>""""
               <p className="text-blue-600 dark:text-blue-400">",
                 {CONTACT_INFO.mobile}""
-              </p>"""""
-            </div>"""""
-            <div className="text-center">""""
               <Mail className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /" >"""""
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-1">""
                 Email Us"""""
-              </h4>""""
-              <p className="text-blue-600 dark:text-blue-400">",
                 {CONTACT_INFO.email}""
-              </p>"""""
-            </div>"""""
-            <div className="text-center">""""
               <Clock className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /" >"""""
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-1">""
                 Response Time"""""
-              </h4>""""
               <p className="text-blue-600 dark:text-blue-400">,
-                {CONTACT_INFO.responseTime}
               </p>"
-            </div>""
-          </div>"""""
-"""""
           <div className="text-center">"""""
             <Button """""
               size="lg"""""
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700""" >""""""
               <Phone className="w-4 h-4 mr-2" /" >"
-              size="lg"""""
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"" >""""
               <Phone className="w-4 h-4 mr-2" /" >
               Schedule Free Consultation,
-            </Button>
-          </div>"
-        </div>""
 """"",
-        {/* comment */}"""""
         <div className="mt-16">""""
           <h3 className="text-3xl font-bold text-slate-900 dark: text-white text-center mb-12">""
             Service Highlights"""""
-          """"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {COMPREHENSIVE_SERVICES.filter(service => service.featured).map()"
               service => (""
@@ -590,35 +370,22 @@ your business needs"
                         <span className="text-sm font-medium">,
                           {service.rating}"
                         </span>""
-                      </div>"""""
-                    </div>""""
                     <CardTitle className="text-slate-900 dark: text-white text-lg">"",
                       {service.title}"""""
-                    </CardTitle>""""
                     <CardDescription className="text-slate-600 dark: text-slate-300 text-sm">",
                       {service.description.substring(0, 100)}...""
-                    </CardDescription>"""""
-                  </CardHeader>"""""
                   <CardContent className="pt-0">""""
                     <div className="flex items-center justify-between mb-4">""""
                       <div className="text-2xl font-bold text-blue-600 dark: text-blue-400">,
                         {service.currency}"
                         {service.price?.toLocaleString()}""
-                      </div>"""""
                       <Badge"""""
-                        variant="outline"""""
                         className="border-blue-500 text-blue-600 ">"
                         {service.category}""
-                      </Badge>"""""
-                    </div>""""
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700">
                       Learn More,
-                    </Button>
-                  </CardContent>
-                </Card>
               ),
             )}
-          </div>
     );"
 }""""
 """""";"
@@ -629,17 +396,12 @@ your business needs"
 "
 export default Component
 </Star>
-</div>
-</Phone>
 </Phone>
 </Clock>
 </Mail>
-</Phone>
 </X>
 </Check>';
 </div>;';;';
-;
-          </div>;
   );";
 }"""";
 """""";";
@@ -650,16 +412,9 @@ export default Component
 ";
 export default Component;
 </Star>;
-</div>;
-</Phone>;
 </Phone>;
 </Clock>;
 </Mail>;
-</Phone>;
-</X>;
 </X>;
 </Check>;
-</div>;
-</X>
 </Check>
-</div>

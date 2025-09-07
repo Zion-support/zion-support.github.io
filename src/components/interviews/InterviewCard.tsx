@@ -18,6 +18,4 @@ interface InterviewCardProps {
 
       default:;
         return <Badge>{interview.status}</Badge>;
-}
   );
-}

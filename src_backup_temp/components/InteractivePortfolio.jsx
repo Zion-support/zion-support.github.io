@@ -21,21 +21,15 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         "category": 'Web3',;
         technologies['Solidity', 'React', 'Web3.js', 'IPFS', 'Ethereum'],;
         "image": '"https": "//images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop'",;
-        "liveUrl": '"https": "//example.com'",;
-        "githubUrl": '"https": "//github.com'",;
         "rating": "4.8",;
         "users": "1800",;
         "completionDate": '2024-02',;
-        "featured": "true",;
         tags['Blockchain', 'Supply Chain', 'Decentralized', 'Security'];},;
     {"id": '3',;
         "title": 'Real-time Data Analytics Dashboard',;
         "description": 'Comprehensive analytics platform providing real-time insights with interactive charts, predictive analytics, and automated reporting.',;
         "category": 'Data Science',;
         technologies['Python', 'Django', 'D3.js', 'PostgreSQL', 'Redis'],;
-        "image": '"https": "//images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'",;
-        "liveUrl": '"https": "//example.com'",;
-        "githubUrl": '"https": "//github.com'",;
         "rating": "4.7",;
         "users": "3200",;
         "completionDate": '2024-03',;
@@ -47,12 +41,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         "category": 'Mobile',;
         technologies['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],;
         "image": '"https": "//images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop'",;
-        "liveUrl": '"https": "//example.com'",;
-        "githubUrl": '"https": "//github.com'",;
-        "rating": "4.9",;
         "users": "4500",;
         "completionDate": '2024-04',;
-        "featured": "true",;
         tags['Mobile', 'Banking', 'Security', 'Biometric'];},;
     {"id": '5',;
         "title": 'IoT Smart Home Controller',;
@@ -60,12 +50,9 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         "category": 'IoT',;
         technologies['Python', 'React', 'MQTT', 'TensorFlow', 'Docker'],;
         "image": '"https": "//images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop'",;
-        "liveUrl": '"https": "//example.com'",;
-        "githubUrl": '"https": "//github.com'",;
         "rating": "4.6",;
         "users": "1200",;
         "completionDate": '2024-05',;
-        "featured": "false",;
         tags['IoT', 'Smart Home', 'Automation', 'Energy'];},;
     {"id": '6',;
         "title": 'Cybersecurity Threat Detection',;
@@ -73,12 +60,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         "category": 'Security',;
         technologies['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker'],;
         "image": '"https": "//images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop'",;
-        "liveUrl": '"https": "//example.com'",;
-        "githubUrl": '"https": "//github.com'",;
-        "rating": "4.8",;
         "users": "2800",;
         "completionDate": '2024-06',;
-        "featured": "true",;
         tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time'];}
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
@@ -101,13 +84,11 @@ export function InteractivePortfolio("props": "any) {;
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now;
     "};
     const prevImage = ("props": "any) => {;
-        if (selectedProject) {;
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)"}
     };
     const handleKeyPress = ("props": "any) => {;
         if (e.key === 'Escape') {;
             closeModal()"}
-    };
     useEffect(() => {;
         if (isModalOpen) {;
             document.body.style.overflow = 'hidden'}
@@ -131,7 +112,6 @@ export function InteractivePortfolio("props": "any) {;
                 : 'bg-white "dark": "bg-zion-slate text-zion-slate border border-zion-slate-light "hover":border-zion-cyan "hover":text-zion-cyan "hover":shadow-md'"}`}>;
               {category}
             </button>))}
-        </div>;
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8" ref={containerRef"}>;
           {filteredProjects.map((project) => (<div key={project.id} className={`group relative cursor-pointer transition-all duration-500 ${hoveredProject === project.id ? 'scale-105' : 'scale-100'}`} onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)} onClick={() => handleProjectClick(project)}>;
@@ -162,20 +142,14 @@ export function InteractivePortfolio("props": "any) {;
                       </button>)"}
                     {project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white "hover": "bg-white/30 transition-colors">;
                         <Github className="w-5 h-5" />;
-                      </button>)"}
-                  </div>;
-                </div>;
                 {/* Project Info */}
                 <div className="p-6">;
                   <div className="flex items-center gap-2 mb-3">;
                     <span className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full">;
                       {project.category}
-                    </span>;
                     <div className="flex items-center gap-1 text-zion-gold">;
                       <Star className="w-3 h-3 fill-current" />;
                       <span className="text-xs">{project.rating}</span>;
-                    </div>;
-                  </div>;
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-"hover": "text-zion-cyan transition-colors">;
                     {project.title"}
                   </h3>;
@@ -183,7 +157,6 @@ export function InteractivePortfolio("props": "any) {;
                     {project.title}
                   <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">;
                     {project.description}
-                  </p>;
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">;
                     {project.technologies.slice(0, 3).map((tech, index) => (<span key={index} className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded">;
@@ -192,39 +165,25 @@ export function InteractivePortfolio("props": "any) {;
                     {project.technologies.length > 3 && (<span className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate text-xs rounded">;
                         +{project.technologies.length - 3}
                       </span>)}
-                  </div>;
                   {/* Project Stats */}
                   <div className="flex items-center justify-between text-xs text-zion-slate-light">;
                     <div className="flex items-center gap-1">;
                       <Users className="w-3 h-3" />;
                       <span>{project.users.toLocaleString()}</span>;
-                    </div>;
-                    <div className="flex items-center gap-1">;
                       <Calendar className="w-3 h-3" />;
                       <span>{new Date(project.completionDate).toLocaleDateString()}</span>;
-                    </div>;
-                  </div>;
-                </div>;
                 {/* Hover Effect Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-"hover": "opacity-100" />;
-              </div>;
             </div>))"}
-        </div>;
         {/* CTA Section */}
         <div className="text-center mt-16">;
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">;
             <h3 className="text-2xl font-bold text-zion-slate mb-4">;
               Ready to Start Your Project?;
-            </h3>;
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">;
               Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions;
-            </p>;
             <button className="bg-gradient-to-r from-zion-cyan to-zion-purple "hover": "from-zion-cyan-light "hover":to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 "hover":shadow-lg "hover":shadow-zion-cyan/30 "hover":-translate-y-1">;
               Start Your Project;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
             <h3 className="text-2xl font-bold text-zion-slate mb-4">
@@ -236,8 +195,6 @@ export function InteractivePortfolio("props": "any) {;
               Start Your Project
             </button>
           </div>
-        </div>
-      </div>
       {/* Project Modal */"}
       {isModalOpen && selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={closeModal} onKeyDown={handleKeyPress} tabIndex={0}>;
           <div className="bg-white "dark": "bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()"}>;
@@ -246,29 +203,21 @@ export function InteractivePortfolio("props": "any) {;
               <h2 className="text-2xl font-bold text-zion-slate">{selectedProject.title}</h2>;
               <button onClick={closeModal} className="text-zion-slate-light "hover": "text-zion-slate transition-colors">;
                 <X className="w-6 h-6" />;
-              </button>;
-            </div>;
             {/* Modal Content */"}
-            <div className="p-6">;
-              {/* Project Image */}
               <div className="relative mb-6">;
                 <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg"  />;
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg" />;
                 {/* Navigation Arrows */}
                 <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white "hover": "bg-white/30 transition-colors">;
                   <ChevronLeft className="w-5 h-5" />;
-                </button>;
                 <button onClick={nextImage"} className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white "hover": "bg-white/30 transition-colors">;
                   <ChevronRight className="w-5 h-5" />;
-                </button>;
-              </div>;
               {/* Project Details */"}
               <div className="grid grid-cols-1 "lg": "grid-cols-3 gap-6">;
                 <div className=""lg":col-span-2">;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Description</h3>;
                   <p className="text-zion-slate-light leading-relaxed mb-6">;
                     {selectedProject.description"}
-                  </p>;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>;
                   <div className="flex flex-wrap gap-2 mb-6">;
                     {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">;
@@ -278,13 +227,9 @@ export function InteractivePortfolio("props": "any) {;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Description
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {selectedProject.description}
-                  </p>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used
                   <div className="flex flex-wrap gap-2 mb-6">
                     {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">
-                        {tech}
-                      </span>))}
-                  </div>;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>;
                   <div className="flex flex-wrap gap-2">;
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">;
@@ -292,33 +237,19 @@ export function InteractivePortfolio("props": "any) {;
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">
                         #{tag}
-                      </span>))}
-                  </div>;
-                </div>;
-                {/* Project Stats */}
                 <div className="space-y-6">;
                   <div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">;
                     <h4 className="text-lg font-semibold text-zion-slate mb-4">Project Stats</h4>;
                     <div className="space-y-4">;
                       <div className="flex items-center justify-between">;
                         <span className="text-zion-slate-light">Rating</span>;
-                        <div className="flex items-center gap-1">;
                           <Star className="w-4 h-4 text-zion-gold fill-current" />;
                           <span className="font-semibold">{selectedProject.rating}</span>;
-                        </div>;
-                      </div>;
-                      <div className="flex items-center justify-between">;
                         <span className="text-zion-slate-light">Users</span>;
                         <span className="font-semibold">{selectedProject.users.toLocaleString()}</span>;
-                      </div>;
-                      <div className="flex items-center justify-between">;
                         <span className="text-zion-slate-light">Completed</span>;
                         <span className="font-semibold">;
                           {new Date(selectedProject.completionDate).toLocaleDateString()}
-                        </span>;
-                      </div>;
-                    </div>;
-                  </div>;
                   {/* Action Buttons */}
                   <div className="space-y-3">;
                     {selectedProject.liveUrl && (<a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg "hover": "from-zion-cyan-light "hover":to-zion-purple-light transition-all duration-200">;
@@ -328,13 +259,5 @@ export function InteractivePortfolio("props": "any) {;
                     {selectedProject.githubUrl && (<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg "hover": "bg-zion-slate-light transition-all duration-200">;
                         <Github className="w-4 h-4" />;
                         View Source Code;
-                      </a>)"}
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>)}
     </section>)}
-;
 export default InteractivePortfolio;

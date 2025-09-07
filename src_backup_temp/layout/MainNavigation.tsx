@@ -2,7 +2,6 @@ import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brai
 ;
 export default function Page("props": "any) {;
 ", []);
-;
   const "baseLinks": "NavigationLin k[] = [{;
       "key": 'home'",;
       "href": '/',;
@@ -38,52 +37,36 @@ export default function Page("props": "any) {;
         { "key": 'mobile-survey', "href": '/services/mobile-survey', "name": 'Mobile Survey', "matches": "("p": string) => p.startsWith('/services/mobile-survey') "}
       ];
     },;
-    {;
       "key": 'ai-services',;
       "href": '/ai-services',;
       "name": 'AI Services',;
       "matches": "("path": string)  => path.startsWith('/ai-services');
-    "},;
-    {;
       "key": 'it-services',;
       "href": '/it-services',;
       "name": 'IT Services',;
       "matches": "("path": string)  => path.startsWith('/it-services');
-    "},;
-    {;
       "key": 'micro-saas',;
       "href": '/micro-saas',;
       "name": 'Micro SAAS',;
       "matches": "("path": string)  => path.startsWith('/micro-saas');
-    "},;
-    {;
       "key": 'marketplace',;
       "href": '/marketplace',;
       "name": 'Marketplace',;
       "matches": "("path": string)  => path.startsWith('/marketplace');
-    "},;
-    {;
       "key": 'about',;
       "href": '/about',;
       "name": 'About',;
       "matches": "("path": string)  => path.startsWith('/about');
-    "},;
-    {;
       "matches": "("path": string)  => path.startsWith('/contact');
     "};
       "key": 'contact',;
       "href": '/contact',;
       "name": 'Contact',;
       "matches": "("path": string) => path.startsWith('/contact')"};
-  ];
-;
               </div>;
             </motion.div>;
           )};
         </AnimatePresence>;
-      </div>;
-    )};
-;
   return ();
     <nav className = {`${className}`}>;
       {/* Desktop Navigation */}
@@ -103,13 +86,10 @@ export default function Page("props": "any) {;
                     ? 'bg-zion-cyan text-white'';
                     : 'text-zion-slate-light "hover": "tex t-white "hover": b g-white/10'`;
                 "}`}
-;
                 {link.name}
               </Link>;
             )}
-          </div>;
         ))}
-      </div>;
       {/* Mobile Menu Button */}
       <button;
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}";
@@ -129,72 +109,32 @@ export default function Page("props": "any) {;
   "x": "0;
 "}}
             exit = {;
-  { "opacity": "0",;
-  "x": '100%';
-}}
             transition={{ "duration": "0.3 "}}";
             className=""lg": "hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50";
-";
             <div className="p-6">";
               <div className="flex justify-between items-center mb-8">";
                 <h2 className="text-xl font-bold text-white">Menu</h2>;
-                <button;
                   onClick={() => setIsMobileMenuOpen(false)"}";
                   className="p-2 text-zion-slate-light "hover": "tex t-white "hover": b g-white/10 rounded-md transition-colors";
-";
                   <X className="w-6 h-6"   />                </button>;
-              </div>;
-";
               <div className="space-y-2">;
                 {baseLinks.map("link": unknow n <div key={link.key"}>;
-                    {link.children ? (;
                       <div>;
-                        <button;
                           onClick={() => setActiveDropdown(activeDropdown === link.key ? null : "link.key)"}`;
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link);
-                              ? 'bg-zion-cyan text-white'';
-                              : 'text-zion-slate-light "hover": "tex t-white "hover": b g-white/10'`;
-                          "}`}
-;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}   />                        </button>;
                         {activeDropdown === link.key && (;";
                           <div className="ml-4 mt-2 space-y-1">;
                             {link.children.map(("child": "unknow n (;
-                              <Link;
                                 key={child.key"}
                                 to={child.href}`;
                                 className={`block px-4 py-2 text-sm text-zion-slate-light "hover": "tex t-white "hover": b g-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`;
-                                "}`}
                                 onClick={: "unknown setIsMobileMenuOpen(false)"}
-;
                                 {child.name}
-                              </Link>;
-                            ))}
-                          </div>;
-                        )}
-                      </div>;
                     ) : "(;
-                      <Link;
-                        to={link.href"}`;
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link);
-                            ? 'bg-zion-cyan text-white'';
-                            : 'text-zion-slate-light "hover": "tex t-white "hover": b g-white/10'`;
-                        "}`}
-                        onClick={: "unknown setIsMobileMenuOpen(false)"}
-;
-                        {link.name}
-                      </Link>;
-                    )}
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-          </motion.div>;
-        )};
-      </AnimatePresence>;
     </nav>;
-  )}
 '"`;
 </motion>
 import { ChevronDown,Menu,X,Home,Settings,Users,Building,Globe,Zap,Brain,Shield,Cloud,Code,BarChart3&apos; } from &apos;lucide-react&apos;; export default function Page($1) { ,[]); const baseLinks: NavigationLin k[] = [{ key: &apos;home&apos;,href: &apos;/&apos;,name: &apos;Home&apos;,matches: (path: string) => path = == &apos;/&apos; },{ key: &apos;services&apos;,href: &apos;/services&apos;,name: &apos;Services&apos;,matches: (path: string) => path.startsWith(&apos;/services&apos;),children: [&apos; { key: &apos;cloud-devops&apos;,href: &apos;/services/cloud-devops&apos;,name: &apos;Cloud & DevOps&apos;,matches: (p: string) => p.startsWith(&apos;/services/cloud-devops&apos;) },{ key: &apos;digital-twin&apos;,href: &apos;/services/digital-twin&apos;,name: &apos;Digital Twin&apos;,matches: (p: string) => p.startsWith(&apos;/services/digital-twin&apos;) },{ key: &apos;data-analytics&apos;,href: &apos;/services/data-analytics&apos;,name: &apos;Data Analytics&apos;,matches: (p: string) => p.startsWith(&apos;/services/data-analytics&apos;) },{ key: &apos;it-infrastructure&apos;,href: &apos;/services/it-infrastructure&apos;,name: &apos;IT Infrastructure&apos;,matches: (p: string) => p.startsWith(&apos;/services/it-infrastructure&apos;) },{ key: &apos;ai-business-intelligence&apos;,href: &apos;/services/ai-business-intelligence&apos;,name: &apos;AI Business Intelligence&apos;,matches: (p: string) => p.startsWith(&apos;/services/ai-business-intelligence&apos;) },{ key: &apos;ai-sales-copilot&apos;,href: &apos;/services/ai-sales-copilot&apos;,name: &apos;AI Sales Copilot&apos;,matches: (p: string) => p.startsWith(&apos;/services/ai-sales-copilot&apos;) },{ key: &apos;cloud-finops-optimizer&apos;,href: &apos;/services/cloud-finops-optimizer&apos;,name: &apos;Cloud FinOps Optimizer&apos;,matches: (p: string) => p.startsWith(&apos;/services/cloud-finops-optimizer&apos;) },{ key: &apos;ai-compliance-assistant&apos;,href: &apos;/services/ai-compliance-assistant&apos;,name: &apos;AI Compliance Assistant&apos;,matches: (p: string) => p.startsWith(&apos;/services/ai-compliance-assistant&apos;) },{ key: &apos;ai-auto-email-responder&apos;,href: &apos;/services/ai-auto-email-responder&apos;,name: &apos;AI Auto Email Responder&apos;,matches: (p: string) => p.startsWith(&apos;/services/ai-auto-email-responder&apos;) },{ key: &apos;mobile-feedback-surveys&apos;,href: &apos;/services/mobile-feedback-surveys&apos;,name: &apos;Feedback Surveys&apos;,matches: (p: string) => p.startsWith(&apos;/services/mobile-feedback-surveys&apos;) },{ key: &apos;ai-compliance-copilot&apos;,href: &apos;/services/ai-compliance-copilot&apos;,name: &apos;AI Compliance Copilot&apos;,matches: (p: string) => p.startsWith(&apos;/services/ai-compliance-copilot&apos;) },{ key: &apos;llm-content-studio&apos;,href: &apos;/services/llm-content-studio&apos;,name: &apos;LLM Content Studio&apos;,matches: (p: string) => p.startsWith(&apos;/services/llm-content-studio&apos;) },{ key: &apos;finops-advisor&apos;,href: &apos;/services/finops-advisor&apos;,name: &apos;FinOps Advisor&apos;,matches: (p: string) => p.startsWith(&apos;/services/finops-advisor&apos;) },{ key: &apos;returns-management&apos;,href: &apos;/services/returns-management&apos;,name: &apos;Returns Management&apos;,matches: (p: string) => p.startsWith(&apos;/services/returns-management&apos;) },{ key: &apos;email-sequencer&apos;,href: &apos;/services/email-sequencer&apos;,name: &apos;Email Sequencer&apos;,matches: (p: string) => p.startsWith(&apos;/services/email-sequencer&apos;) },{ key: &apos;podcast-transcription&apos;,href: &apos;/services/podcast-transcription&apos;,name: &apos;Podcast Transcription&apos;,matches: (p: string) => p.startsWith(&apos;/services/podcast-transcription&apos;) },{ key: &apos;micro-crm&apos;,href: &apos;/services/micro-crm&apos;,name: &apos;Micro CRM&apos;,matches: (p: string) => p.startsWith(&apos;/services/micro-crm&apos;) },{ key: &apos;website-analytics&apos;,href: &apos;/services/website-analytics&apos;,name: &apos;Website Analytics&apos;,matches: (p: string) => p.startsWith(&apos;/services/website-analytics&apos;) },{ key: &apos;it-helpdesk&apos;,href: &apos;/services/it-helpdesk&apos;,name: &apos;IT Helpdesk&apos;,matches: (p: string) => p.startsWith(&apos;/services/it-helpdesk&apos;) },{ key: &apos;affiliate-tracking&apos;,href: &apos;/services/affiliate-tracking&apos;,name: &apos;Affiliate Tracking&apos;,matches: (p: string) => p.startsWith(&apos;/services/affiliate-tracking&apos;) },{ key: &apos;mobile-survey&apos;,href: &apos;/services/mobile-survey&apos;,name: &apos;Mobile Survey&apos;,matches: (p: string) => p.startsWith(&apos;/services/mobile-survey&apos;) } ] },{ key: &apos;ai-services&apos;,href: &apos;/ai-services&apos;,name: &apos;AI Services&apos;,matches: (path: string) => path.startsWith(&apos;/ai-services&apos;) },{ key: &apos;it-services&apos;,href: &apos;/it-services&apos;,name: &apos;IT Services&apos;,matches: (path: string) => path.startsWith(&apos;/it-services&apos;) },{ key: &apos;micro-saas&apos;,href: &apos;/micro-saas&apos;,name: &apos;Micro SAAS&apos;,matches: (path: string) => path.startsWith(&apos;/micro-saas&apos;) },{ key: &apos;marketplace&apos;,href: &apos;/marketplace&apos;,name: &apos;Marketplace&apos;,matches: (path: string) => path.startsWith(&apos;/marketplace&apos;) },{ key: &apos;about&apos;,href: &apos;/about&apos;,name: &apos;About&apos;,matches: (path: string) => path.startsWith(&apos;/about&apos;) };,{ matches: (path: string) => path.startsWith(&apos;/contact&apos;)&apos;};&apos;;&apos;; key: &apos;contact&apos;,href: &apos;/contact&apos;,name: &apos;Contact&apos;,matches: (path: string) => path.startsWith(&apos;/contact&apos;)}; ]; </div>; </motion.div>; )}; </AnimatePresence>; </div>; )}; return () <nav className = {`${className}`}> {} <div className=&quot;hidden lg: flex items-center space-x-1&quot;> {baseLinks.map((link ( <div key={link.key}> {link.children ? ( renderDropdown()&apos;; link,link.key === &apos;services&apos; ? isServicesOpen : isCompOpen,link.key === &apos;services&apos; ? setIsServicesOpen : setIsCompOpen ) ) : ( <Link to={link.href}` className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)&apos;;&apos;; ? &apos;bg-zion-cyan text-white&quot; : &apos;text-zion-slate-light hover: tex t-white hover: b g-white/10&apos;` }`} {link.name} </Link> )} </div> ))} </div> {} <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}&quot; className=&quot;lg: hidden p-2 text-zion-slate-light hover: tex t-white hover: b g-white/10 rounded-md transition-colors&quot; &quot; {isMobileMenuOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />} </button> {} <AnimatePresence> {isMobileMenuOpen && <motion.div initial = { { opacity: 0,x: &apos;100%&apos; }} animate = { { opacity: 1,x: 0 }} exit = { { opacity: 0,x: &apos;100%&apos; }} transition={{ duration: 0.3 }}&quot; className=&quot;lg: hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50&quot; &quot; <div className=&quot;p-6&quot;>&quot; <div className=&quot;flex justify-between items-center mb-8&quot;>&quot; <h2 className=&quot;text-xl font-bold text-white&quot;>Menu</h2> <button onClick={() => setIsMobileMenuOpen(false)}&quot; className=&quot;p-2 text-zion-slate-light hover: tex t-white hover: b g-white/10 rounded-md transition-colors&quot; &quot; <X className=&quot;w-6 h-6&quot; /> </button> </div> &quot; <div className=&quot;space-y-2&quot;> {baseLinks.map(link: unknow n <div key={link.key}> {link.children ? ( <div> <button onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}` className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)&apos;;&apos;; ? &apos;bg-zion-cyan text-white&quot; : &apos;text-zion-slate-light hover: tex t-white hover: b g-white/10&apos;` }`} {link.name}&apos;` <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? &apos;rotate-180&apos; : &quot;}`} /> </button> {activeDropdown === link.key && (;&quot; <div className=&quot;ml-4 mt-2 space-y-1&quot;> {link.children.map((child: unknow n ( <Link key={child.key} to={child.href}` className={`block px-4 py-2 text-sm text-zion-slate-light hover: tex t-white hover: b g-white/10 rounded-md transition-colors ${isActive(child) ? &apos;text-zion-cyan bg-zion-cyan/10&apos; : &quot;` }`} onClick={: unknown setIsMobileMenuOpen(false)} {child.name} </Link> ))} </div> )} </div> ) : (; <Link to={link.href}` className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)&apos;;&apos;; ? &apos;bg-zion-cyan text-white&quot; : &apos;text-zion-slate-light hover: tex t-white hover: b g-white/10&apos;` }`} onClick={: unknown setIsMobileMenuOpen(false)} {link.name} </Link> )} </div> ))} </div> </div>; </motion.div>; )}; </AnimatePresence>; </nav>;&apos;; )} &quot;` </motion>;&apos;;&apos;;

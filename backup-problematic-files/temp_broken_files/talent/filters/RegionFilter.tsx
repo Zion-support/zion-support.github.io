@@ -1,4 +1,3 @@
-
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
@@ -11,7 +10,6 @@ const REGION_OPTIONS = [;
   { id:"Australia", label:"Australia" },;
   { id:"Africa", label:"Africa" }
 ],;
-;
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen } RegionFilterProps) {;
   return (;
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -26,7 +24,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
       </button>;
-      ;
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {REGION_OPTIONS.map(region => (;
@@ -40,13 +37,10 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               <label;
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-              >;
                 {region.label}
               </label>;
             </div>;          ))}
         </div>;
-      )}
-    </div>;
   ),;}
  ];
 :temp_broken_files/talent/filters/RegionFilter.tsx
@@ -59,8 +53,5 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionF
   region.label ;
 }</label> </div>) ) ;
 }</div>) ;
-:temp_broken_files/talent/filters/RegionFilter.tsx
 }</div>) ;"}"
-}</div>) ;
 }"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx

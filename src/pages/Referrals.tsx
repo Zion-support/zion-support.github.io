@@ -136,7 +136,7 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
 
           />
-          
+
           <Tabs defaultValue="referrals" className="w-full">
             <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="referrals" className="flex items-center gap-2">
@@ -176,7 +176,6 @@ import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
 import { Share, Users } from 'lucide-react';
 import { useRouter } from 'next/router', // Changed from useNavigate;
-export default function ReferralsPage() {;
   const router = useRouter(), // Changed from navigate;
   const { isAuthenticated } = useAuth(),;
   const {;

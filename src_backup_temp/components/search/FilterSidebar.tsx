@@ -5,7 +5,6 @@ import React from 'react';
 ";
             <X className="w-5 h-5 text-zion-slate-light"   />          </button>;
         </div>;
-";
         <div className="p-4 space-y-6">;
           {/* Clear all button */"}";
           <div className="flex justify-between items-center">";
@@ -16,13 +15,11 @@ import React from 'react';
             >;
               Clear all;
             </button>;
-          </div>;
           <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"
 "
             <X className="w-5 h-5 text-zion-slate-light"   />          </button>
         </div>
-"
         <div className="p-4 space-y-6">
           {/* Clear all button */}"
           <div className="flex justify-between items-center">"
@@ -33,7 +30,6 @@ import React from 'react';
             >
               Clear all
             </button>
-          </div>
           {/* Filter groups */"}
           {filters.map((group) => (;";
             <div key={group.key} className="space-y-3">;";
@@ -50,9 +46,6 @@ import React from 'react';
                         onChange={;
   (e) => onFilterChange(group.key, option.value,;
   e.target.checked);
-;
-;
-;
 }";
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded "focus": "rin g-zion-cyan "focus": rin g-2";
                       />";
@@ -72,14 +65,9 @@ import React from 'react';
     );
                           </span>;
                         )};
-                      </span>;
                     </label>;
                   )})}
-              </div>;
-            </div>;
           ))}
-        </div>;
-      </div>;
     </>;
   )}
 '"`

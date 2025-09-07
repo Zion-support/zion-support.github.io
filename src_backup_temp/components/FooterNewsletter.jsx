@@ -21,17 +21,13 @@ export function FooterNewsletter("props": "any) {;
 export default FooterNewsletter;
 export function FooterNewsletter($1) {
     const [email, setEmail] = useState(");
-    const [isSubscribed, setIsSubscribed] = useState(false);
     const handleSubmit = (props) => {
-        e.preventDefault();
         // Here you would typically send the email to your newsletter service
-        setIsSubscribed(true);
         setEmail('')};
     if (isSubscribed) {return (
         <div className="text-green-400 text-sm">
         setIsSubscribed(true);';';
         setEmail(")};
-    if (isSubscribed) {return (
     <div className="min-h-screen bg-white">
         Thank you for subscribing!
           </div>

@@ -4,7 +4,6 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 }
 interface InteractiveFeaturesProps {
   class_name?: string;
-  style?: React.CSSProperties;
 export /**
  * InteractiveFeatures - Function description
  */
@@ -20,58 +19,41 @@ function InteractiveFeatures() {
       icon: <Search className='h - 8 w - 8 text - blue - 700' />,
       link: '/match',
     },
-    {
       title: 'Talent Directory',
       description: 'Browse a verified database of AI and tech specialists.',
-      details:;
         'Every profile is vetted for quality and authenticity so you can hire with confidence.',
       icon: <Users className='h - 8 w - 8 text - purple - 700' />,
       link: '/talent',
-    },
-    {
       title: 'Services Marketplace',
-      description:;
         'Discover professional tech and AI services for your business.',
-      details:;
         'From on - demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.',
       icon: <Zap className='h - 8 w - 8 text - cyan - 700' />,
       link: '/services',
-    },
-    {
       title: 'Equipment Catalog',
       description: 'Find specialized hardware for development and research.',
-      details:;
         'Access cutting - edge technology with flexible options to buy, rent or lease the gear you need.',
       icon: <Settings className='h - 8 w - 8 text - amber - 700' />,
       link: '/equipment',
-    },
   ];
   const handle_toggle = (index: number) =>: any {
     setOpenIndex (prev => (prev === index ? null : index));
-  }
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
+
     return this.props.children;
-  }
-}
 import React from 'react';
 import {;
   Card,;
@@ -85,11 +67,9 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
   className?: string,;
   style?: React && React.CSSProperties;
-}
 
 interface InteractiveFeaturesProps {;
   className?: string;
-  style?: React && React.CSSProperties;
 
 export function InteractiveFeatures(): any ({;
   className,;
@@ -97,42 +77,28 @@ export function InteractiveFeatures(): any ({;
 }: InteractiveFeaturesProps) {;
   const [openIndex, setOpenIndex] = React && React.useState<number | null>(null);
 
-  const features = [;
     {;
       title: 'AI Talent Matching',;
-      description:;
         'Connect with the perfect talent using intelligent matching.',;
-      details:;
         'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.',;
       icon: <Search className='h-8 w-8 text-blue-700' />,;
       link: '/match',;
     },;
-    {;
       title: 'Talent Directory',;
       description: 'Browse a verified database of AI and tech specialists.',;
-      details:;
         'Every profile is vetted for quality and authenticity so you can hire with confidence.',;
       icon: <Users className='h-8 w-8 text-purple-700' />,;
       link: '/talent',;
-    },;
-    {;
       title: 'Services Marketplace',;
-      description:;
         'Discover professional tech and AI services for your business.',;
-      details:;
         'From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.',;
       icon: <Zap className='h-8 w-8 text-cyan-700' />,;
       link: '/services',;
-    },;
-    {;
       title: 'Equipment Catalog',;
       description: 'Find specialized hardware for development and research.',;
-      details:;
         'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.',;
       icon: <Settings className='h-8 w-8 text-amber-700' />,;
       link: '/equipment',;
-    },;
-  ];
 
   const handleToggle = (index: number) => {;
     setOpenIndex(prev => (prev === index ? null : index));
@@ -184,7 +150,6 @@ export function InteractiveFeatures(): any ({;
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
-              >
                 <CardContent className="text-sm text-zion-slate-light p-0">
 
                   <p>{feature.details}</p>
@@ -194,25 +159,15 @@ export function InteractiveFeatures(): any ({;
                     </Link>
                   </Button>
                 </CardContent>
-              </div>
             </Card>
           ))}
 
 export default InteractiveFeatures;
 ;
-}
-}
 
         </div>;
-      </div>;
     </section>;
   );
 
             </Card>))}
-        </div>;
-      </div>;
     </section>);
-export default InteractiveFeatures;
-}
-;
-export default InteractiveFeatures;

@@ -29,20 +29,7 @@ export default function Page("props": "any) {;
 }, []);, []);
 ;
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
-    useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-;
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
-    useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
@@ -103,8 +90,6 @@ export default function Page("props": "any) {;
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />";
                 <Input type="text" placeholder="Search listings..." value={searchQuery"} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>;
-              </div>;
-              ;
               <Select value={selectedSort} onValueChange={setSelectedSort}>";
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">";
                   <div className="flex items-center">'";
@@ -112,7 +97,6 @@ export default function Page("props": "any) {;
                     <span>;
                       {sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
                     </span>;
-                  </div>;
                 </SelectTrigger>";
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">";
                   {sortOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">;
@@ -121,29 +105,15 @@ export default function Page("props": "any) {;
                 </SelectContent>;
               </Select>;
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>";
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">";
                   <div className="flex items-center">";
                     <Filter className="mr-2 h-4 w-4" />;
-                    <span>;
                       {filterOptions.find(option => option.value === selectedFilter)?.label || 'Filter'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>";
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">";
                   {filterOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">;
-                      {option.label}
-                    </SelectItem>) ) }
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
           {/* Results Count */}";
           <div className="mb-6">";
             <p className="text-zion-slate-light">;
               Showing {processedListings.length} results";
               {searchQuery && ` for "${searchQuery}"`}
-            </p>;
-          </div>;
           {/* Listings Grid */}";
           {isLoading ? (<div className="flex justify-center py-20">";
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />";
@@ -153,14 +123,11 @@ export default function Page("props": "any) {;
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>";
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>";
               <Button variant="outline" onClick={() => {;
-";
                 setSearchQuery("");";
                 setSelectedFilter(filterOptions[0].value)"}} className="border-zion-purple text-zion-purple "hover": "bg-zion-purple/10">;
                 Clear all filters;
               </Button>;
             </div>) "}
-        </div>;
-      </div>;
       <Footer  />;
           {/* Listings Grid */}"
           {isLoading ? (<div className="flex justify-center py-20">"
@@ -178,7 +145,6 @@ export default function Page("props": "any) {;
               </Button>
             </div>) }
         </div>
-      </div>
       <Footer  />
     </>)}
 '"`;

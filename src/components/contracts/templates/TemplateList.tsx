@@ -166,7 +166,7 @@ export function TemplateList(): any ({;
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
-              
+
               <div className="flex items-center gap-2">
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
@@ -199,7 +199,7 @@ export function TemplateList(): any ({;
                     <StarOff className="h-4 w-4" />;
 
             <Separator className="my-3" />
-            
+
               onClick={() => onSelect(template)} 
               variant="outline" 
               className="w-full"

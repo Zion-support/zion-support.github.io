@@ -193,17 +193,17 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    
+
     return this.props.children;
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
@@ -226,7 +226,6 @@ const getSteps = (t: any,) => [;
     description: t('how_it_works && how_it_works.done_desc'),;
     icon: Check,;
 import React, { useState, useMemo } from 'react';
-export /**;
 const Component = React && React.memo(function Page() {;
     icon: <FileText className="w-8 h-8"  />,";
     title: "Plan",";
@@ -311,7 +310,6 @@ export function HowItWorksSection(): any ({
     <section className="py - 20 bg - gradient - to - br from - zion - blue via - zion - slate - dark to - zion - blue - dark relative overflow - hidden">;
       <div className="absolute inset - 0 opacity - 5">";
         <div className="absolute inset - 0" style = {
-export /**
  * HowItWorksSection - Function description
 function HowItWorksSection() {
   const { t } = use_translation ();
@@ -358,7 +356,7 @@ function HowItWorksSection() {
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
+
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
                 key={step.title}

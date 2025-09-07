@@ -21,14 +21,14 @@ export function Web3Login() {;
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum
       setIsLoading(true),
-      
+
       const ethereum = (window as any).ethereum,
 
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
-      
+
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})

@@ -17,7 +17,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
       <LazyLoadedComponent {...props} />;
     </Suspense>;
   );
-}
 export default LazyComponent;
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
@@ -34,5 +33,4 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 },
 
 export default LazyComponent,
-:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
 :backup-problematic-files/temp_broken_files/components/LazyComponent.tsx

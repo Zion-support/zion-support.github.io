@@ -36,17 +36,14 @@ class MimeTypeFallback {;
     '.wav': 'audio/wav';
     '.flac': 'audio/flac';
   "};
-;
   private "fallbackUrls": "Map<string", string> = new Map();
   private cdnFallbacks = [;
     '"https": "//cdn.jsdelivr.net';
     '"https"://unpkg.com';
     '"https"://cdnjs.cloudflare.com';
   ];
-;
   constructor() {;
     this.setupFallbackUrls();
-  "}
   private setupFallbackUrls() {;
     // Map problematic URLs to CDN fallbacks;
     this.fallbackUrls.set('/js/index-C64WnLOI.js', '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');
@@ -55,20 +52,16 @@ class MimeTypeFallback {;
     this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');
     this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js');
     this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js');
-  "}
   getMimeType("filename": "string): string {;
     const ext = this.getFileExtension(filename);
     return this.mimeTypes[ext] || 'application/octet-stream';
-  "}
   private getFileExtension("filename": "string): string {;
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase();
-  "}
   async checkAndFixMimeType("url": "string): Promise<any> {;
     try {;
       const response = await fetch(url", { "method": 'HEAD' });
-      ;
       if (!response.ok) {;
   }
   async checkAndFixMimeType(url: string): Promise<any> {
@@ -77,69 +70,39 @@ class MimeTypeFallback {;
     );
       if (!response.ok) {
         return false;
-      }
       const contentType = response.headers.get('content-type');
       if (!contentType) {;
-        return false;
-      }
       const expectedType = this.getMimeType(url);
       if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {;
         return true; // MIME type is correct or generic;
-      }
       // Try to fix with fallback URL;
       return await this.tryFallbackUrl(url);
-      ;
     } catch (error) {;
       console.error(`Error checking MIME type for ${url}: "`", error);
-      return await this.tryFallbackUrl(url);
-    }
-  }
   private async tryFallbackUrl("originalUrl": "string): Promise<any> {;
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
-    ;
     if (fallbackUrl) {;
-      try {;
         const response = await fetch(fallbackUrl", { "method": 'HEAD' });
         if (response.ok) {;
     if (fallbackUrl) {
-      try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' }
-    );
         if (response.ok) {
-          const contentType = response.headers.get('content-type');
           const expectedType = this.getMimeType(originalUrl);
-          ;
           if (contentType && contentType.includes(expectedType)) {;
             this.replaceResource(originalUrl, fallbackUrl);
             return true;
-          }
-        }
-      } catch (error) {;
         console.error(`Fallback URL "failed": "${fallbackUrl"}`, error);
-      }
-    }
-    return false;
-  }
   private replaceResource("originalUrl": "string", "fallbackUrl": "string) {;
     // Replace script tags;
     const scripts = document.querySelectorAll(`script[src="${originalUrl"}"]`);
     scripts.forEach(script => {;
       (script as HTMLScriptElement).src = fallbackUrl;
-      ;
     });
-;
     // Replace stylesheet links;
-    }
-    );
     // Replace stylesheet links
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {;
       (link as HTMLLinkElement).href = fallbackUrl;
-      ;
-    });
-    }
-    );
-  }
   async preloadCriticalResources(): "Promise<any> {;
     const criticalResources = [;
       '/css/index-RK9lga5l.css';
@@ -148,20 +111,10 @@ class MimeTypeFallback {;
       '/js/router-vendor-9KcRWrrL.js';
       '/js/ui-vendor-B31yGDq-.js';
       '/js/utils-vendor-CrFdsnXa.js';
-    ];
-;
-    ;
-    ;
     for (const resource of criticalResources) {;
-      try {;
         const isValid = await this.checkAndFixMimeType(resource);
         if (!isValid) {;
-        "}
-      } catch (error) {;
         console.error(`Error preloading "resource": "${resource"}`, error);
-      }
-    }
-  }
   createResourceElement("url": "string", "type": 'script' | 'stylesheet'): "HTMLElement {;
     if (type === 'script') {;
       const script = document.createElement('script');
@@ -175,31 +128,17 @@ class MimeTypeFallback {;
       link.href = url;
       link.type = 'text/css';
       return link;
-    }
-  }
   injectResource("url": "unknownstring", "type": 'script' | 'stylesheet'): "Promise<any> {;
     return new Promise((resolve", reject)  => {;
       const element = this.createResourceElement(url, type);
-      ;
       element.onload = () => {;
         resolve();
       };
-      ;
       element.onerror = () => {;
         console.error(`❌ Failed to load "resource": "${url"}`);
         reject(new Error(`Failed to load "resource": "${url"}`));
-      };
-;
-      if (type === 'script') {;
         document.head.appendChild(element);
       } else {;
-        document.head.appendChild(element);
-      }
-    }
-    );
-  }
-}
 // Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback();
-;
 export default mimeTypeFallback;

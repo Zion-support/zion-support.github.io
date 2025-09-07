@@ -22,4 +22,3 @@ export default function ModernNavigation(props: any) {return (
         </p>
       </div>
     );"}"
-</div>

@@ -115,9 +115,7 @@ InputOTPSeparator.display_name = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 
 InputOTPSeparator.displayName = 'InputOTPSeparator';
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;

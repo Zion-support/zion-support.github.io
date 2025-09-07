@@ -12,7 +12,6 @@ export default function ProductCard("props": "any) {;
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const {enqueueSnackbar} = useSnackbar();
-  ;
   if (!product || ;
       typeof product.id !== "string" || ;
       typeof product.title !== "string" || ;
@@ -40,8 +39,5 @@ export default function ProductCard("props": "any) {;
           Product information unavailable.
         </p>
       </div>
-    );
-  }
-  ;
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
