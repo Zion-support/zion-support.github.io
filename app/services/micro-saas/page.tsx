@@ -1,6 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-import Link from 'next/link';
+
+export const metadata = { 
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'End-to-end micro SaaS development with billing, auth, analytics, and growth features. From MVP to scale.'
+};
 
 interface PricingTierProps {
   name: string;
@@ -10,55 +13,6 @@ interface PricingTierProps {
   features: string[];
   popular?: boolean;
   cta: string;
-=======
-
-export const metadata = { 
-  title: 'Micro SaaS Development | Zion Tech Group',
-  description: 'End-to-end micro SaaS development with billing, auth, analytics, and growth features. From MVP to scale.'
-};
-
-export default function MicroSaaSPage() {
-  return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">Micro SaaS Development</h1>
-      <p className="text-xl text-gray-600 mb-12">We design, build, launch and operate revenue-generating micro SaaS products end-to-end.</p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <Item 
-          title="Core Features" 
-          details={[
-            "Multi-tenant architecture",
-            "Auth (email, OAuth)",
-            "Billing (Stripe)",
-            "Admin + analytics",
-            "In-app onboarding"
-          ]} 
-        />
-        <Item 
-          title="Growth Stack" 
-          details={[
-            "SEO-ready marketing site",
-            "Blog + docs",
-            "Email campaigns",
-            "Referral + affiliates"
-          ]} 
-        />
-        <Item 
-          title="Ops & Reliability" 
-          details={[
-            "CI/CD",
-            "Observability",
-            "Error budgets",
-            "SLOs",
-            "On-call setup"
-          ]} 
-        />
-      </div>
-      
-      <Pricing />
-    </section>
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 }
 
 function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
@@ -89,7 +43,6 @@ function PricingTier({ name, price, period, description, features, popular = fal
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Quote Request - {name}"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -99,75 +52,11 @@ function PricingTier({ name, price, period, description, features, popular = fal
         }`}
       >
         {cta}
-=======
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP Sprint" 
-          price="$8k–$20k" 
-          features={[
-            "2–4 weeks",
-            "MVP scope",
-            "Stripe billing",
-            "Basic analytics"
-          ]} 
-        />
-        <Plan 
-          name="Growth" 
-          price="$20k–$60k" 
-          features={[
-            "6–10 weeks",
-            "SEO + content",
-            "CRM + email",
-            "Observability"
-          ]} 
-        />
-        <Plan 
-          name="Scale" 
-          price="$60k+" 
-          features={[
-            "Custom roadmap",
-            "SRE + security",
-            "Multi-region",
-            "SLAs"
-          ]} 
-        />
-      </div>
-    </div>
-  );
-}
-
-function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map(f => (
-          <li key={f} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span> {f}
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950"
-        className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
-      >
-        Get Started
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
       </a>
     </div>
   );
 }
 
-<<<<<<< HEAD
 interface ServiceFeatureProps {
   icon: string;
   title: string;
@@ -193,16 +82,32 @@ function ServiceFeature({ icon, title, description, benefits }: ServiceFeaturePr
   );
 }
 
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function MicroSaaSPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Micro SaaS Solutions
+          Micro SaaS Development
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Complete SaaS development from concept to deployment. We build scalable, secure, and user-friendly micro SaaS applications that drive business growth.
+          We design, build, launch and operate revenue-generating micro SaaS products end-to-end. From MVP to scale.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -220,86 +125,43 @@ export default function MicroSaaSPage() {
         </div>
       </section>
 
-      {/* What We Build */}
+      {/* Core Features */}
       <section className="py-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">What We Build</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From simple tools to complex platforms, we create micro SaaS solutions that solve real business problems.
+            Complete micro SaaS solutions with all the essential features your business needs.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceFeature
-            icon="📊"
-            title="Analytics Dashboards"
-            description="Real-time data visualization and business intelligence tools"
-            benefits={[
-              "Custom metrics & KPIs",
-              "Real-time data processing",
-              "Interactive charts & graphs",
-              "Export capabilities",
-              "Mobile-responsive design"
-            ]}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Item 
+            title="Core Features" 
+            details={[
+              "Multi-tenant architecture",
+              "Auth (email, OAuth)",
+              "Billing (Stripe)",
+              "Admin + analytics",
+              "In-app onboarding"
+            ]} 
           />
-          <ServiceFeature
-            icon="🔐"
-            title="User Management"
-            description="Complete authentication and authorization systems"
-            benefits={[
-              "Multi-factor authentication",
-              "Role-based permissions",
-              "Social login integration",
-              "Password management",
-              "Session management"
-            ]}
+          <Item 
+            title="Growth Stack" 
+            details={[
+              "SEO-ready marketing site",
+              "Blog + docs",
+              "Email campaigns",
+              "Referral + affiliates"
+            ]} 
           />
-          <ServiceFeature
-            icon="💳"
-            title="Payment Processing"
-            description="Secure billing and subscription management"
-            benefits={[
-              "Stripe integration",
-              "Multiple payment methods",
-              "Subscription management",
-              "Invoice generation",
-              "Tax calculation"
-            ]}
-          />
-          <ServiceFeature
-            icon="🔌"
-            title="API Development"
-            description="RESTful APIs and webhook integrations"
-            benefits={[
-              "RESTful API design",
-              "GraphQL implementation",
-              "API documentation",
-              "Rate limiting",
-              "Webhook support"
-            ]}
-          />
-          <ServiceFeature
-            icon="📱"
-            title="Mobile Apps"
-            description="Cross-platform mobile applications"
-            benefits={[
-              "iOS & Android support",
-              "Offline functionality",
-              "Push notifications",
-              "App store optimization",
-              "Performance optimization"
-            ]}
-          />
-          <ServiceFeature
-            icon="☁️"
-            title="Cloud Deployment"
-            description="Scalable cloud infrastructure and deployment"
-            benefits={[
-              "AWS/Azure/GCP deployment",
-              "Auto-scaling",
-              "CDN integration",
-              "SSL certificates",
-              "Monitoring & logging"
-            ]}
+          <Item 
+            title="Ops & Reliability" 
+            details={[
+              "CI/CD",
+              "Observability",
+              "Error budgets",
+              "SLOs",
+              "On-call setup"
+            ]} 
           />
         </div>
       </section>
@@ -346,31 +208,31 @@ export default function MicroSaaSPage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <PricingTier
-            name="Starter"
-            price="$5,000"
+            name="MVP Sprint"
+            price="$8k–$20k"
             period="project"
             description="Perfect for MVPs and simple applications"
             features={[
-              "Up to 5 pages/screens",
-              "Basic user authentication",
-              "Simple database design",
-              "Basic API endpoints",
+              "2–4 weeks development",
+              "MVP scope",
+              "Stripe billing",
+              "Basic analytics",
               "Deployment setup",
               "3 months support"
             ]}
             cta="Get Started"
           />
           <PricingTier
-            name="Professional"
-            price="$15,000"
+            name="Growth"
+            price="$20k–$60k"
             period="project"
             description="Most popular for growing businesses"
             features={[
-              "Up to 15 pages/screens",
-              "Advanced user management",
-              "Payment integration",
-              "Admin dashboard",
-              "API documentation",
+              "6–10 weeks development",
+              "SEO + content",
+              "CRM + email",
+              "Observability",
+              "Advanced features",
               "6 months support",
               "Analytics integration"
             ]}
@@ -378,16 +240,16 @@ export default function MicroSaaSPage() {
             cta="Get Started"
           />
           <PricingTier
-            name="Enterprise"
-            price="$50,000"
+            name="Scale"
+            price="$60k+"
             period="project"
             description="For complex, scalable applications"
             features={[
-              "Unlimited pages/screens",
-              "Multi-tenant architecture",
-              "Advanced security features",
-              "Custom integrations",
-              "Performance optimization",
+              "Custom roadmap",
+              "SRE + security",
+              "Multi-region",
+              "SLAs",
+              "Advanced integrations",
               "12 months support",
               "Dedicated project manager"
             ]}
@@ -438,53 +300,6 @@ export default function MicroSaaSPage() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses transform their ideas into successful SaaS applications.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "E-commerce Analytics Platform",
-              description: "Built a comprehensive analytics dashboard for an e-commerce business, resulting in 40% increase in conversion rates.",
-              metrics: "40% conversion increase",
-              tech: "React, Node.js, PostgreSQL"
-            },
-            {
-              title: "Project Management Tool",
-              description: "Developed a custom project management solution with team collaboration features and time tracking.",
-              metrics: "50% productivity boost",
-              tech: "Next.js, MongoDB, Stripe"
-            },
-            {
-              title: "Customer Support Portal",
-              description: "Created an AI-powered customer support platform with chatbot integration and ticket management.",
-              metrics: "60% faster response time",
-              tech: "React, Python, OpenAI API"
-            }
-          ].map((caseStudy, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{caseStudy.title}</h3>
-              <p className="text-gray-600 mb-4">{caseStudy.description}</p>
-              <div className="space-y-2">
-                <div className="text-sm">
-                  <span className="font-semibold text-green-600">Result: </span>
-                  <span className="text-gray-700">{caseStudy.metrics}</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-semibold text-blue-600">Tech Stack: </span>
-                  <span className="text-gray-700">{caseStudy.tech}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Build Your SaaS?</h2>
@@ -513,5 +328,3 @@ export default function MicroSaaSPage() {
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
