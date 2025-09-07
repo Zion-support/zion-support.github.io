@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -71,3 +72,29 @@ export default [
     ],
   },
 ];
+=======
+module.exports = {
+  extends: [
+    'next/core-web-vitals',
+    'eslint:recommended',
+    '@typescript-eslint/recommended'
+  ],
+  rules: {
+    'no-unused-vars': 'warn',
+    'no-console': 'warn',
+    'prefer-const': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn'
+  },
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/']
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-6af4
