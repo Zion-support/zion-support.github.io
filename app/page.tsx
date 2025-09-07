@@ -1,76 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Home() {
-  return (
-    <div>
-      <h1>Zion Tech Group</h1>
-      <p>AI, Micro SaaS, and IT Services</p>
-=======
-import React from 'react';
-import Link from 'next/link';
-import {
-  CpuChipIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ArrowRightIcon,
-  StarIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
-
-
-const stats = [
-  { label: 'Companies Served', value: '500+' },
-  { label: 'Projects Completed', value: '1,200+' },
-  { label: 'Years of Experience', value: '10+' },
-  { label: 'Countries', value: '25+' },
-];
-
-const features = [
-  {
-    name: 'AI Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence solutions including machine learning, NLP, and computer vision.',
-    href: '/services/ai-services',
-    icon: CpuChipIcon,
-    color: 'blue',
-  },
-  {
-    name: 'Micro SaaS Development',
-    description: 'Build and launch your next micro SaaS product with our full-stack development expertise and rapid deployment capabilities.',
-    href: '/services/micro-saas',
-    icon: RocketLaunchIcon,
-    color: 'green',
-  },
-  {
-    name: 'Enterprise IT',
-    description: 'Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation solutions.',
-    href: '/services/it-services',
-    icon: ShieldCheckIcon,
-    color: 'purple',
-  },
-];
-
-const testimonials = [
-  {
-    content: "Zion Tech Group transformed our AI infrastructure completely. Their solutions increased our efficiency by 300%.",
-    author: "Sarah Johnson",
-    role: "CTO, TechCorp",
-    rating: 5,
-  },
-  {
-    content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services.",
-    author: "Michael Chen",
-    role: "Founder, StartupXYZ",
-    rating: 5,
-  },
-  {
-    content: "Outstanding IT services and support. They helped us migrate to the cloud seamlessly.",
-    author: "Emily Rodriguez",
-    role: "IT Director, GlobalCorp",
-    rating: 5,
-  },
-];
-=======
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -147,7 +74,6 @@ function ServiceCard({
     </Link>
   );
 }
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 
 export default function HomePage() {
   return (
@@ -454,12 +380,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
       </section>
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
     </div>
   );
 }

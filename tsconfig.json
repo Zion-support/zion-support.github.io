@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
     "target": "ES2020",
     "lib": [
       "dom",
@@ -19,20 +17,8 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-=======
-    "esModuleInterop": true,
-    "module": "ESNext",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
     "esModuleInterop": true,
     "module": "esnext",
-    "module": "ESNext",
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -42,23 +28,6 @@
       {
         "name": "next"
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
-=======
-=======
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
     ],
     "baseUrl": ".",
     "paths": {
@@ -106,12 +75,5 @@
     "pm2-automation*",
     "automation/logs*",
     "automation/backup*"
-  ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-<<<<<<< HEAD
+  ]
 }
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
-}
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
