@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-09-07T08:59:48.559Z",
+  "duration": "3s",
+  "results": {
+    "tests": {
+      "passed": 0,
+      "failed": 2,
+      "errors": [
+        "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Identifier 'nextConfig' has already been declared\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
+        "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ]
+    },
+    "builds": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Identifier 'nextConfig' has already been declared]\n"
+      ]
+    },
+    "linting": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1757235555085:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n"
+      ]
+    },
+    "security": {
+      "issues": [],
+      "fixed": 0
+    },
+    "improvements": [
+      "Created performance monitoring script"
+    ]
+  },
+  "summary": {
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": false,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+  }
+}

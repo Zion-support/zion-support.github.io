@@ -1,37 +1,19 @@
 {
-  "timestamp": "2025-09-07T09:42:29.025Z",
-  "duration": 87558,
-  "summary": {
-    "successful": 2,
-    "errors": 6,
-    "warnings": 2
-  },
+  "timestamp": "2025-09-07T08:59:42.685Z",
+  "totalDuration": 27602,
+  "successfulTasks": 2,
+  "totalTasks": 3,
   "results": {
-    "success": [
-      "Pre-automation checks passed",
-      "Build check passed"
-    ],
-    "errors": [
-      "comprehensive-error-fixer.cjs failed",
-      "auto-fixer.js failed",
-      "advanced-build-optimizer.js failed",
-      "optimize-build.js failed",
-      "performance-monitor-enhanced.js failed",
-      "performance-optimizer.js failed"
-    ],
-    "warnings": [
-      "ESLint had issues",
-      "TypeScript had issues"
-    ],
-    "metrics": []
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": false,
+    "Execute All Scripts": true
   },
-  "recommendations": [
-    "Address all errors before deployment",
-    "Review and address warnings for better code quality",
-    "Implement continuous integration for automated testing",
-    "Set up automated deployment pipeline",
-    "Monitor performance metrics in production",
-    "Regular security audits and dependency updates"
+  "errors": [
+    {
+      "command": "node final-automation-suite-fixed.cjs",
+      "description": "Final Automation Suite",
+      "error": "Command failed: node final-automation-suite-fixed.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/final-automation-suite-fixed.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
+    }
   ],
   "nextSteps": [
     "Review the comprehensive automation report",
