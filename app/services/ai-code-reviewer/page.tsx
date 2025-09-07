@@ -3,15 +3,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
-<<<<<<< HEAD
-  title: "AI Code Reviewer | Zion Tech Group",
-  description:
-"Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.",
 
-=======
-  title: 'Ai Code Reviewer - Zion Tech Group',
-  description: 'Advanced ai code reviewer solutions for modern businesses.',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
 };
 
 export default function ServicePage() {
@@ -82,109 +74,7 @@ Automated code review and quality analysis powered by advanced AI.
               View All Services
             </Link>
           </div>
-<<<<<<< HEAD
 
-        <div>
-<h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              plan="Starter"
-              price="$29"
-              period="per month"
-              description="Perfect for small teams and individual developers"
-              features={[
-                "Up to 5 repositories",
-                "Basic code analysis",
-                "Standard bug detection",
-                "Email support",
-                "GitHub/GitLab integration",
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              plan="Professional"
-              price="$99"
-              period="per month"
-              description="Ideal for growing teams and mid-size projects"
-              features={[
-                "Up to 25 repositories",
-                "Advanced AI analysis",
-                "Custom rules engine",
-                "Priority support",
-                "All integrations",
-                "Team analytics dashboard",
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              plan="Enterprise"
-              price="$299"
-              period="per month"
-              description="For large organizations with complex needs"
-              features={[
-                "Unlimited repositories",
-                "Advanced security scanning",
-                "Custom AI model training",
-                "Dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-              ]}
-              popular={false}
-            />
-          </div>
-        </div>
-      </div>
-
-<div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          How It Works
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StepCard
-            step="1"
-            title="Connect Your Repository"
-            description="Integrate with GitHub, GitLab, or Bitbucket in just a few clicks. No complex setup required."
-          />
-          <StepCard
-            step="2"
-            title="AI Analysis"
-            description="Our AI analyzes your code for quality issues, bugs, security vulnerabilities, and adherence to best practices."
-          />
-          <StepCard
-            step="3"
-            title="Get Actionable Insights"
-            description="Receive detailed reports with specific recommendations to improve your code quality and team productivity."
-          />
-        </div>
-      </div>
-
-      <div className="text-center">
-<h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Ready to Improve Your Code Quality?
-        </h2>
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of developers who trust our AI-powered code review
-          platform to maintain high-quality codebases.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-4 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
         </div>
       </div>
     </div>

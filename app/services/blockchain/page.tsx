@@ -1,17 +1,7 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-export const metadata = { 
-title: 'Blockchain Services | Zion Tech Group',
-  description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
-  keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
-=======
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Blockchain Solutions - Zion Tech Group',
-  description: 'Advanced blockchain solutions and services for modern businesses.',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
+
 };
 
 export default function ServicePage() {
@@ -162,7 +152,6 @@ export default function ServicePage() {
       </section>
 
       <Pricing />
-      
       <section className="mt-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Blockchain Services?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -217,7 +206,6 @@ export default function BlockchainPage() {
           Build the future with blockchain technology. From smart contracts to DeFi applications, 
           we create secure, scalable blockchain solutions that drive innovation and value.
         </p>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <BlockchainServiceCard
             title="Smart Contract Development"

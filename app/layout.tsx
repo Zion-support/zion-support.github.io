@@ -224,26 +224,4 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-}
-}
 
-      <body className="min-h-screen bg-gray-50">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
-
-
-}
-=======
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
-  );
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
