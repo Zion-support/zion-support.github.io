@@ -1,5 +1,4 @@
 import React from 'react';
-import ServiceCard from './src/components/ServiceCard';
 
 const services = [
   {
