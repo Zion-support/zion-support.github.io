@@ -2,21 +2,21 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Smartphone, 
-  Globe, 
-  Lock, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  DollarSign, 
-  Clock, 
+import {
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Smartphone,
+  Globe,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  DollarSign,
+  Clock,
   Award,
   Users,
   Building,
@@ -33,13 +33,11 @@ import {
   HardDrive,
   Network
 } from 'lucide-react';
-
 const contactInfo = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
-
 const itServices = [
   {
     id: 1,
@@ -274,7 +272,6 @@ const itServices = [
     popular: false
   }
 ];
-
 const industries = [
   {
     title: "Healthcare & Medical",
@@ -313,7 +310,6 @@ const industries = [
     useCases: ["Citizen services", "Document management", "Security compliance", "Digital transformation"]
   }
 ];
-
 export default function ITServicesPage() {
   return (
     <>
@@ -323,32 +319,31 @@ export default function ITServicesPage() {
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, network management, DevOps, IT consulting, infrastructure, managed services" />
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 IT Services & Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation. 
+                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation.
                 From cloud migration to cybersecurity, we deliver enterprise-grade solutions at competitive prices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get IT Consultation
                 </Link>
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
@@ -358,16 +353,15 @@ export default function ITServicesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our IT Services
@@ -376,17 +370,16 @@ export default function ITServicesPage() {
                 End-to-end IT solutions designed to modernize your infrastructure, enhance security, and drive business growth.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 30 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  viewport={{ once: true }
+                  whileHover={{ y: -5 }
                 >
                   {service.popular && (
                     <div className="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
@@ -394,7 +387,6 @@ export default function ITServicesPage() {
                       Popular
                     </div>
                   )}
-                  
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
@@ -407,9 +399,7 @@ export default function ITServicesPage() {
                       </div>
                     </div>
                   </div>
-                  
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-2xl font-bold text-blue-600">{service.price}</span>
@@ -419,7 +409,6 @@ export default function ITServicesPage() {
                       Save up to 50% vs market rate
                     </div>
                   </div>
-
                   {/* ROI and Popularity */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-sm">
@@ -435,7 +424,6 @@ export default function ITServicesPage() {
                       </div>
                     )}
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -447,7 +435,6 @@ export default function ITServicesPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -459,250 +446,11 @@ export default function ITServicesPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <div className="text-sm text-gray-600">
                       <strong>Target Users:</strong> {service.targetUsers}
                     </div>
-<<<<<<< HEAD
                   </div>
-=======
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-}
-        'Micro-segmentation and network isolation',
-        'Continuous security monitoring and analytics',
-        'Privileged access management (PAM)',
-        'Security orchestration and automation'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Enhanced security posture',
-        'Reduced attack surface',
-        'Improved compliance and governance',
-        'Automated threat response'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Database,
-      name: 'Blockchain & Distributed Ledger Solutions',
-      description: 'Blockchain infrastructure, smart contract development, and decentralized application deployment.',
-      features: [
-        'Blockchain infrastructure setup and management',
-        'Smart contract development and auditing',
-        'DeFi and NFT platform development',
-        'Cryptocurrency wallet and exchange integration',
-        'Blockchain analytics and monitoring',
-        'Regulatory compliance and governance'
-      ],
-      pricing: '$75,000 – $750,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Enhanced transparency and trust',
-        'Reduced transaction costs',
-        'Improved data integrity',
-        'Decentralized system architecture'
-      ],
-      category: 'Blockchain'
-    },
-    {
-      icon: Cloud,
-      name: 'Multi-Cloud & Hybrid Cloud Management',
-      description: 'Comprehensive multi-cloud and hybrid cloud strategy with unified management and optimization.',
-      features: [
-        'Multi-cloud architecture design and implementation',
-        'Hybrid cloud integration and management',
-        'Cloud cost optimization and FinOps',
-        'Cross-cloud data migration and synchronization',
-        'Unified monitoring and management platform',
-        'Disaster recovery and business continuity'
-      ],
-      pricing: '$150,000 – $1,500,000 project',
-      projectPricing: '$15,000 – $150,000/month managed',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Reduced vendor lock-in',
-        'Optimized cloud costs',
-        'Enhanced flexibility and scalability',
-        'Improved disaster recovery capabilities'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Smartphone,
-      name: '5G Network Infrastructure & Optimization',
-      description: '5G network deployment, optimization, and application development for next-generation connectivity.',
-      features: [
-        '5G network infrastructure deployment',
-        'Network slicing and optimization',
-        '5G application development and testing',
-        'Edge computing integration with 5G',
-        'Network performance monitoring and analytics',
-        'IoT and smart city connectivity solutions'
-      ],
-      pricing: '$200,000 – $2,000,000 project',
-      projectPricing: '$20,000 – $200,000/month managed',
-      timeline: '20–40 weeks',
-      benefits: [
-        'Ultra-low latency connectivity',
-        'Massive IoT device support',
-        'Enhanced mobile broadband',
-        'Next-generation application capabilities'
-      ],
-      category: 'Network Infrastructure'
-    },
-    {
-      icon: Brain,
-      name: 'AI/ML Infrastructure & MLOps',
-      description: 'Complete AI/ML infrastructure setup with MLOps pipelines, model deployment, and monitoring.',
-      features: [
-        'AI/ML infrastructure design and deployment',
-        'MLOps pipeline development and automation',
-        'Model training and deployment platforms',
-        'AI model monitoring and governance',
-        'Data pipeline and feature store setup',
-        'AI ethics and bias monitoring'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Accelerated AI model development',
-        'Automated ML operations',
-        'Scalable AI infrastructure',
-        'Enhanced model performance and reliability'
-      ],
-      category: 'AI Infrastructure'
-    },
-    {
-      icon: Server,
-      name: 'Serverless & Microservices Architecture',
-      description: 'Serverless architecture implementation with microservices design and API management.',
-      features: [
-        'Serverless architecture design and implementation',
-        'Microservices development and deployment',
-        'API gateway and management platform',
-        'Container orchestration and management',
-        'Event-driven architecture implementation',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$75,000 – $750,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced infrastructure costs',
-        'Improved scalability and performance',
-        'Faster development and deployment',
-        'Enhanced system reliability'
-      ],
-      category: 'Architecture'
-    },
-    {
-      icon: Database,
-      name: 'Data Mesh & Data Fabric Architecture',
-      description: 'Modern data architecture with data mesh and data fabric implementation for enterprise data management.',
-      features: [
-        'Data mesh architecture design and implementation',
-        'Data fabric platform development',
-        'Data governance and cataloging',
-        'Real-time data streaming and processing',
-        'Data quality and lineage management',
-        'Self-service analytics platform'
-      ],
-      pricing: '$200,000 – $2,000,000 project',
-      projectPricing: '$20,000 – $200,000/month managed',
-      timeline: '20–40 weeks',
-      benefits: [
-        'Improved data accessibility and democratization',
-        'Enhanced data quality and governance',
-        'Faster time-to-insight',
-        'Scalable data architecture'
-      ],
-      category: 'Data Architecture'
-    },
-    {
-      icon: Shield,
-      name: 'DevSecOps & Security Automation',
-      description: 'Integrated security into DevOps pipelines with automated security testing and compliance.',
-      features: [
-        'DevSecOps pipeline integration',
-        'Automated security testing and scanning',
-        'Infrastructure as Code security',
-        'Compliance automation and reporting',
-        'Security monitoring and alerting',
-        'Vulnerability management and remediation'
-      ],
-      pricing: '$50,000 – $500,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '8–16 weeks',
-      benefits: [
-        'Enhanced security throughout SDLC',
-        'Automated compliance and reporting',
-        'Reduced security vulnerabilities',
-        'Faster and more secure deployments'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Globe,
-      name: 'Green IT & Sustainable Technology',
-      description: 'Sustainable IT infrastructure with energy optimization, carbon footprint reduction, and green computing.',
-      features: [
-        'Energy-efficient infrastructure design',
-        'Carbon footprint monitoring and reduction',
-        'Green data center optimization',
-        'Sustainable software development practices',
-        'Renewable energy integration',
-        'Environmental impact assessment and reporting'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced environmental impact',
-        'Lower energy costs',
-        'Enhanced corporate sustainability',
-        'Compliance with environmental regulations'
-      ],
-      category: 'Sustainability'
-    },
-    {
-      icon: Cpu,
-      name: 'High-Performance Computing (HPC)',
-      description: 'High-performance computing infrastructure for scientific research, simulations, and data-intensive applications.',
-      features: [
-        'HPC cluster design and deployment',
-        'Parallel computing optimization',
-        'GPU computing and acceleration',
-        'Scientific computing software stack',
-        'High-speed networking and storage',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$500,000 – $5,000,000 project',
-      projectPricing: '$50,000 – $500,000/month managed',
-      timeline: '24–48 weeks',
-      benefits: [
-        'Massive computational power',
-        'Accelerated research and development',
-        'Complex simulation capabilities',
-        'Advanced data processing and analysis'
-      ],
-      category: 'High-Performance Computing'
-    }
-  ];
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-f122
-
                   <div className="flex flex-col sm:flex-row gap-2">
                     <Link
                       href="/contact"
@@ -722,16 +470,15 @@ export default function ITServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -740,16 +487,15 @@ export default function ITServicesPage() {
                 Our IT services are tailored to meet the unique requirements and compliance needs of various industries.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  viewport={{ once: true }
                 >
                   <div className="text-4xl mb-4">{industry.icon}</div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{industry.title}</h3>
@@ -770,16 +516,15 @@ export default function ITServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our IT Services?
@@ -788,7 +533,6 @@ export default function ITServicesPage() {
                 We combine deep technical expertise with business acumen to deliver IT solutions that drive real business value.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -815,10 +559,10 @@ export default function ITServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  viewport={{ once: true }
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-8 h-8 text-blue-600" />
@@ -830,38 +574,36 @@ export default function ITServicesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              viewport={{ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Modernize Your IT Infrastructure?
               </h2>
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity, 
+                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity,
                 we'll help you build a robust, secure, and scalable IT environment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link 
+                <Link
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get IT Assessment
                 </Link>
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
                 >
                   Call {contactInfo.phone}
                 </a>
               </div>
-              
               {/* Contact Information */}
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <div className="flex items-center justify-center">

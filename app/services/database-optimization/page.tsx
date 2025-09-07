@@ -1,515 +1,68 @@
-<<<<<<< HEAD
+import React from 'react';
+
 export const metadata = {
   title: 'Database Optimization | Zion Tech Group',
-  description: 'Maximize your database performance with expert optimization services, query tuning, and performance monitoring.',
-=======
-<<<<<<< HEAD
-export const metadata = {
-  title: "Database Optimization | Zion Tech Group",
-  description:
-    "Maximize your database performance with expert optimization services, query tuning, and performance monitoring.",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+  description: 'Professional database optimization solutions for modern businesses. Transform your operations with our advanced database optimization technology.'
 };
 
-export default function DatabaseOptimizationPage() {
+export default function ServicePage() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-<<<<<<< HEAD
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">Database Optimization</h1>
-      <p className="text-xl text-gray-600 mb-12">Maximize your database performance with expert optimization services, query tuning, and performance monitoring.</p>
-=======
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">
-        Database Optimization
-      </h1>
-      <p className="text-xl text-gray-600 mb-12">
-        Maximize your database performance with expert optimization services,
-        query tuning, and performance monitoring.
-      </p>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Database Optimization
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional database optimization solutions for modern businesses. Transform your operations with our advanced database optimization technology.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard
-          title="Performance Tuning"
-          features={[
-<<<<<<< HEAD
-            'Query optimization',
-            'Index optimization',
-            'Schema design',
-            'Connection pooling',
-=======
-            "Query optimization",
-            "Index optimization",
-            "Schema design",
-            "Connection pooling",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-        <FeatureCard
-          title="Database Platforms"
-          features={[
-<<<<<<< HEAD
-            'MySQL optimization',
-            'PostgreSQL tuning',
-            'MongoDB optimization',
-            'SQL Server tuning',
-=======
-            "MySQL optimization",
-            "PostgreSQL tuning",
-            "MongoDB optimization",
-            "SQL Server tuning",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-        <FeatureCard
-          title="Monitoring & Maintenance"
-          features={[
-<<<<<<< HEAD
-            'Performance monitoring',
-            'Automated backups',
-            'Health checks',
-            'Capacity planning',
-=======
-            "Performance monitoring",
-            "Automated backups",
-            "Health checks",
-            "Capacity planning",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature 1</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Feature 1.1</li>
+              <li>• Feature 1.2</li>
+              <li>• Feature 1.3</li>
+              <li>• Feature 1.4</li>
+            </ul>
+          </div>
 
-      <div className="bg-gradient-to-r from-lime-50 to-green-50 border border-lime-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Why Choose Our Database Optimization?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-start">
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Performance Boost</h3>
-              <p className="text-gray-600">
-                Average 300% improvement in query performance and response times
-              </p>
-            </div>
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature 2</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Feature 2.1</li>
+              <li>• Feature 2.2</li>
+              <li>• Feature 2.3</li>
+              <li>• Feature 2.4</li>
+            </ul>
           </div>
-          <div className="flex items-start">
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Cost Reduction</h3>
-              <p className="text-gray-600">
-                Optimize resource usage to reduce database costs by up to 50%
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Expert Knowledge</h3>
-              <p className="text-gray-600">
-                Database specialists with 15+ years of optimization experience
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">
-                Proactive Monitoring
-              </h3>
-              <p className="text-gray-600">
-                24/7 monitoring to prevent performance issues before they occur
-              </p>
-            </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature 3</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Feature 3.1</li>
+              <li>• Feature 3.2</li>
+              <li>• Feature 3.3</li>
+              <li>• Feature 3.4</li>
+            </ul>
           </div>
         </div>
-      </div>
-<<<<<<< HEAD
 
-      <Pricing />
-=======
-<<<<<<< HEAD
-=======
-export const metadata = {}
-  title: "Database Optimization | Zion Tech Group",
-  description:"
-    "Maximize your database performance with expert optimization services, query tuning, and performance monitoring.",;
-};
-
-export default function DatabaseOptimizationPage() {}
-  return ("
-    <section className="max-w-6xl mx-auto px-4 py-16">"
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">;
-        Database Optimization;
-      </h1>"
-      <p className="text-xl text-gray-600 mb-12">
-        Maximize your database performance with expert optimization services,
-        query tuning, and performance monitoring.
-      </p>
-"
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard"
-          title="Performance Tuning"
-          features={["
-            "Query optimization","
-            "Index optimization","
-            "Schema design","
-            "Connection pooling",
-          ]}
-        />
-        <FeatureCard"
-          title="Database Platforms"
-          features={["
-            "MySQL optimization","
-            "PostgreSQL tuning","
-            "MongoDB optimization","
-            "SQL Server tuning",
-          ]}
-        />
-        <FeatureCard"
-          title="Monitoring & Maintenance"
-          features={["
-            "Performance monitoring","
-            "Automated backups","
-            "Health checks","
-            "Capacity planning",
-          ]}
-        />
-      </div>
-"
-      <div className="bg-gradient-to-r from-lime-50 to-green-50 border border-lime-200 rounded-xl p-8 mb-16">"
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Why Choose Our Database Optimization?
-        </h2>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-          <div className="flex items-start">"
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>"
-              <h3 className="font-semibold text-gray-900">Performance Boost</h3>"
-              <p className="text-gray-600">
-                Average 300% improvement in query performance and response times;
-              </p>
-            </div>
-          </div>"
-          <div className="flex items-start">"
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>"
-              <h3 className="font-semibold text-gray-900">Cost Reduction</h3>"
-              <p className="text-gray-600">
-                Optimize resource usage to reduce database costs by up to 50%
-              </p>
-            </div>
-          </div>"
-          <div className="flex items-start">"
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>"
-              <h3 className="font-semibold text-gray-900">Expert Knowledge</h3>"
-              <p className="text-gray-600">
-                Database specialists with 15+ years of optimization experience;
-              </p>
-            </div>
-          </div>"
-          <div className="flex items-start">"
-            <span className="text-lime-500 mr-3 text-xl">✓</span>
-            <div>"
-              <h3 className="font-semibold text-gray-900">
-                Proactive Monitoring;
-              </h3>"
-              <p className="text-gray-600">
-                24/7 monitoring to prevent performance issues before they occur;
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Pricing />
-"
-      <div className="mt-16 text-center">"
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Optimize Your Database?
-        </h2>"
-        <p className="text-gray-600 mb-6">
-          Start with a free database performance audit and optimization plan.
-        </p>"
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a"
-            href="tel:+13024640950""
-            className="bg-lime-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-lime-700 transition-colors"
-          >
-            Call +1 302 464 0950;
-          </a>
-          <a"
-            href="mailto:kleber@ziontechgroup.com""
-            className="border-2 border-lime-600 text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-lime-600 hover:text-white transition-colors"
-          >
-            Email Us;
-=======
-
-      <Pricing />
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Optimize Your Database?
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Start with a free database performance audit and optimization plan.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="bg-blue-50 rounded-2xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Let's discuss how our database optimization can help your business
+          </p>
           <a
-            href="tel:+13024640950"
-            className="bg-lime-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-lime-700 transition-colors"
+            href="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
           >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-lime-600 text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-lime-600 hover:text-white transition-colors"
-          >
-            Email Us
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            Get Started Today
           </a>
         </div>
       </div>
-    </section>
-  );
-}
-
-<<<<<<< HEAD
-function FeatureCard({}
-  title,
-  features,
-}: {}
-  title: string;
-  features: string[];
-}) {}
-  return ("
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">"
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
-      <ul className="space-y-2 text-gray-600">
-        {features.map((f) => ("
-          <li key={f} className="flex items-center">"
-=======
-function FeatureCard({
-  title,
-  features,
-}: {
-  title: string;
-  features: string[];
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {features.map((f) => (
-          <li key={f} className="flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <span className="text-lime-500 mr-2">•</span> {f}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
-
-<<<<<<< HEAD
-function Pricing() {}
-  return ("
-    <div className="mt-16">"
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Pricing Plans;
-      </h2>"
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan"
-          name="Audit""
-          price="$1,999"
-          features={["
-            "Performance analysis","
-            "Optimization report","
-            "Recommendations","
-            "Implementation guide",
-          ]}
-        />
-        <Plan"
-          name="Optimization""
-          price="$4,999"
-          features={["
-            "Query tuning","
-            "Index optimization","
-            "Schema improvements","
-=======
-function Pricing() {
-  return (
-    <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Pricing Plans
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan
-          name="Audit"
-          price="$1,999"
-          features={[
-<<<<<<< HEAD
-            'Performance analysis',
-            'Optimization report',
-            'Recommendations',
-            'Implementation guide',
-=======
-            "Performance analysis",
-            "Optimization report",
-            "Recommendations",
-            "Implementation guide",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-        <Plan
-          name="Optimization"
-          price="$4,999"
-          features={[
-<<<<<<< HEAD
-            'Query tuning',
-            'Index optimization',
-            'Schema improvements',
-            '2 weeks support',
-          ]}
-          popular={true}
-        />
-=======
-            "Query tuning",
-            "Index optimization",
-            "Schema improvements",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            "2 weeks support",
-          ]}
-          popular={true}
-        />
-<<<<<<< HEAD
-        <Plan"
-          name="Managed""
-          price="$2,999/mo"
-          features={["
-            "Continuous monitoring","
-            "Regular optimization","
-            "24/7 support","
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-        <Plan
-          name="Managed"
-          price="$2,999/mo"
-          features={[
-<<<<<<< HEAD
-            'Continuous monitoring',
-            'Regular optimization',
-            '24/7 support',
-            'Performance reports',
-=======
-            "Continuous monitoring",
-            "Regular optimization",
-            "24/7 support",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            "Performance reports",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-          ]}
-        />
-      </div>
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-function Plan({}
-=======
-function Plan({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  name,
-  price,
-  features,
-  popular = false,
-<<<<<<< HEAD
-}: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  name: string;
-  price: string;
-  features: string[];
-  popular?: boolean;
-<<<<<<< HEAD
-}) {}
-  return (
-    <div"
-      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-lime-500 ring-2 ring-lime-200" : "border-gray-200"}`}
-    >
-      {popular && ("
-        <div className="bg-lime-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular;
-        </div>
-      )}"
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
-      <div className="text-3xl font-bold text-lime-600 mb-4">{price}</div>"
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map((f) => ("
-          <li key={f} className="flex items-center">"
-=======
-}) {
-  return (
-    <div
-      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-lime-500 ring-2 ring-lime-200" : "border-gray-200"}`}
-    >
-      {popular && (
-        <div className="bg-lime-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular
-        </div>
-      )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-lime-600 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map((f) => (
-          <li key={f} className="flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <span className="text-green-500 mr-2">✓</span> {f}
-          </li>
-        ))}
-      </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <a"
-        href="tel:+13024640950"`
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
-          popular"
-            ? "bg-lime-600 text-white hover:bg-lime-700""
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
-        }`}
-      >
-        Get Started;
-      </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    </div>
-  );
-}
-"`
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-      <a
-        href="tel:+13024640950"
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular
-<<<<<<< HEAD
-            ? 'bg-lime-600 text-white hover:bg-lime-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-=======
-            ? "bg-lime-600 text-white hover:bg-lime-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172

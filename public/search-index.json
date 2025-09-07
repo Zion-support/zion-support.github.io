@@ -1,65 +1,83 @@
-<<<<<<< HEAD
 {
   "pages": [
     {
-      "title": "Home",
       "url": "/",
-      "content": "Zion Holdings - Technology Solutions"
+      "title": "Home",
+      "description": "Zion Tech Group - AI and IT Solutions",
+      "keywords": [
+        "home",
+        "zion",
+        "tech",
+        "group",
+        "solutions"
+      ]
     },
     {
-      "title": "Services",
-      "url": "/services",
-      "content": "Our comprehensive technology services"
-    },
-    {
-      "title": "About",
       "url": "/about",
-      "content": "About Zion Holdings"
+      "title": "About Us",
+      "description": "Learn about Zion Tech Group and our mission",
+      "keywords": [
+        "about",
+        "learn",
+        "zion",
+        "tech",
+        "group",
+        "our",
+        "mission"
+      ]
+    },
+    {
+      "url": "/services",
+      "title": "Services",
+      "description": "Our AI and IT services",
+      "keywords": [
+        "services",
+        "our"
+      ]
+    },
+    {
+      "url": "/solutions",
+      "title": "Solutions",
+      "description": "Technology solutions for your business",
+      "keywords": [
+        "solutions",
+        "technology",
+        "your",
+        "business"
+      ]
+    },
+    {
+      "url": "/products",
+      "title": "Products",
+      "description": "Our technology products",
+      "keywords": [
+        "products",
+        "our",
+        "technology"
+      ]
+    },
+    {
+      "url": "/contact",
+      "title": "Contact",
+      "description": "Get in touch with us",
+      "keywords": [
+        "contact",
+        "get",
+        "touch"
+      ]
+    },
+    {
+      "url": "/blog",
+      "title": "Blog",
+      "description": "Latest news and insights",
+      "keywords": [
+        "blog",
+        "latest",
+        "news",
+        "insights"
+      ]
     }
   ],
-  "generated": "2025-09-06T20:25:06.960Z"
+  "generated": "2025-09-07T08:47:50.014Z",
+  "total": 7
 }
-=======
-[
-  {
-    "title": "Home",
-    "url": "/",
-    "content": "Zion Tech Group - Leading technology solutions provider",
-    "keywords": [
-      "home",
-      "technology",
-      "solutions"
-    ]
-  },
-  {
-    "title": "About",
-    "url": "/about",
-    "content": "Learn about Zion Tech Group and our mission",
-    "keywords": [
-      "about",
-      "company",
-      "mission"
-    ]
-  },
-  {
-    "title": "Services",
-    "url": "/services",
-    "content": "Our comprehensive technology services",
-    "keywords": [
-      "services",
-      "technology",
-      "solutions"
-    ]
-  },
-  {
-    "title": "Contact",
-    "url": "/contact",
-    "content": "Get in touch with Zion Tech Group",
-    "keywords": [
-      "contact",
-      "reach",
-      "support"
-    ]
-  }
-]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

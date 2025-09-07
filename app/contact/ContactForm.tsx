@@ -1,7 +1,6 @@
 'use client';
-
 import React, { useState } from 'react';
-import { 
+import {
   Mail,
   Phone,
   MapPin,
@@ -9,7 +8,6 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
-
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -19,10 +17,8 @@ export default function ContactForm() {
     budget: '',
     message: ''
   });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -30,11 +26,9 @@ export default function ContactForm() {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -51,9 +45,7 @@ export default function ContactForm() {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-    }
-  };
-
+    };
   return (
     <div className="max-w-4xl mx-auto">
       {/* Hero Section */}
@@ -62,11 +54,10 @@ export default function ContactForm() {
           Get in Touch
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business with cutting-edge technology? 
+          Ready to transform your business with cutting-edge technology?
           Let&apos;s discuss your project and create a custom solution.
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Information */}
         <div className="space-y-8">
@@ -74,7 +65,6 @@ export default function ContactForm() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
             </h2>
-            
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-600" />
@@ -83,7 +73,6 @@ export default function ContactForm() {
                   <p className="text-gray-600">+1 302 464 0950</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-600" />
                 <div>
@@ -91,7 +80,6 @@ export default function ContactForm() {
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-600" />
                 <div>
@@ -99,7 +87,6 @@ export default function ContactForm() {
                   <p className="text-gray-600">364 E Main St STE 1008 <br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-600" />
                 <div>
@@ -109,7 +96,6 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-
           {/* Quick Response Promise */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <div className="flex items-center space-x-3 mb-3">
@@ -117,19 +103,17 @@ export default function ContactForm() {
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
             </div>
             <p className="text-blue-800">
-              We respond to all inquiries within one business day. 
+              We respond to all inquiries within one business day.
               For urgent matters, call us directly.
             </p>
           </div>
         </div>
-
         {/* Contact Form */}
         <div>
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Send us a Message
             </h2>
-
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
                 <div className="flex items-center">
@@ -140,7 +124,6 @@ export default function ContactForm() {
                 </div>
               </div>
             )}
-
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
                 <div className="flex items-center">
@@ -151,7 +134,6 @@ export default function ContactForm() {
                 </div>
               </div>
             )}
-
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -169,7 +151,6 @@ export default function ContactForm() {
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -186,7 +167,6 @@ export default function ContactForm() {
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company Name
@@ -201,7 +181,6 @@ export default function ContactForm() {
                   placeholder="Your company name"
                 />
               </div>
-
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service Interest
@@ -224,7 +203,6 @@ export default function ContactForm() {
                   <option value="other">Other</option>
                 </select>
               </div>
-
               <div>
                 <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Budget
@@ -245,7 +223,6 @@ export default function ContactForm() {
                   <option value="discuss">Prefer to discuss</option>
                 </select>
               </div>
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
@@ -261,7 +238,6 @@ export default function ContactForm() {
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                 />
               </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting}
