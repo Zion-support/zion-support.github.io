@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const Analytics = dynamic(() => import(\"./Analytics\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Analytics\' ,const Analytics = dynamic(() => import("./Analytics"),{"; loading: () => <p>Loading.</p,>}) export: "default Analytics" ,""";
 const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Analytics' ,';
 </p>';
@@ -37,7 +35,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Analytics' ,'
 </p>'
 </p>'

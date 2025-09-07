@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -182,4 +180,3 @@ interface SidebarItem  {name: string;
       </motion.div>;
     </>;
   )}export default EnhancedSidebar2025;
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

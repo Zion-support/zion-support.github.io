@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const EnhancedAnalytics = dynamic(() => import(\"./EnhancedAnalytics\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedAnalytics\' ,const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedAnalytics" ,""";
 const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedAnalytics' ,';
 </p>';
@@ -37,7 +35,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedAnalytics' ,'
 </p>'
 </p>'

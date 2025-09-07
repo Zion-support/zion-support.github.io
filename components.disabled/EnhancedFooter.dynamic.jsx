@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedFooter\' ,const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedFooter" ,""";
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,';
 </p>';
@@ -37,7 +35,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
 </p>'
 </p>'
