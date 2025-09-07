@@ -107,7 +107,8 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can help you achieve your technology goals
+            Join 500+ businesses already using our AI and IT solutions. 
+            Get a free consultation and see how we can help you achieve your technology goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -120,8 +121,12 @@ export default function HomePage() {
               href="mailto:kleber@ziontechgroup.com"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Email Us
+              Email kleber@ziontechgroup.com
             </a>
+          </div>
+          <div className="mt-8 text-blue-200">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p className="mt-2">🕒 Available 24/7 for Enterprise Support</p>
           </div>
         </div>
       </div>
