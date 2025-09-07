@@ -129,21 +129,21 @@ export default function HomePage() {
           
           {/* Stats Section */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-sm md:text-base text-gray-600">Services</div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-sm md:text-base text-gray-600 group-hover:text-blue-600 transition-colors duration-300">Services</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">1000+</div>
-              <div className="text-sm md:text-base text-gray-600">Projects</div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">1000+</div>
+              <div className="text-sm md:text-base text-gray-600 group-hover:text-purple-600 transition-colors duration-300">Projects</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-indigo-600 mb-2">99.9%</div>
-              <div className="text-sm md:text-base text-gray-600">Uptime</div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-indigo-600 mb-2 group-hover:scale-110 transition-transform duration-300">99.9%</div>
+              <div className="text-sm md:text-base text-gray-600 group-hover:text-indigo-600 transition-colors duration-300">Uptime</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-600 mb-2">24/7</div>
-              <div className="text-sm md:text-base text-gray-600">Support</div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-cyan-600 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+              <div className="text-sm md:text-base text-gray-600 group-hover:text-cyan-600 transition-colors duration-300">Support</div>
             </div>
           </div>
         </div>
@@ -306,6 +306,80 @@ export default function HomePage() {
               <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg leading-relaxed">
                 Round-the-clock technical support and maintenance from our expert team
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
+        <div className="text-center mb-16">
+          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Client testimonials">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-blue-100 animate-stagger-1">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
+              ))}
+            </div>
+            <p className="text-gray-700 mb-6 italic text-lg leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+              &ldquo;Zion Tech Group transformed our business with their AI-powered solutions. The team&apos;s expertise and dedication exceeded our expectations.&rdquo;
+            </p>
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                JS
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">John Smith</div>
+                <div className="text-gray-500 text-sm">CEO, TechCorp</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-purple-100 animate-stagger-2">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
+              ))}
+            </div>
+            <p className="text-gray-700 mb-6 italic text-lg leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+              &ldquo;Outstanding micro SaaS development! They delivered exactly what we needed, on time and within budget. Highly recommended!&rdquo;
+            </p>
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                MJ
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Maria Johnson</div>
+                <div className="text-gray-500 text-sm">Founder, StartupXYZ</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-green-100 animate-stagger-3">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-yellow-400 text-xl group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
+              ))}
+            </div>
+            <p className="text-gray-700 mb-6 italic text-lg leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+              &ldquo;The blockchain solutions they developed for us are cutting-edge. Their technical knowledge and attention to detail are exceptional.&rdquo;
+            </p>
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                DR
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">David Rodriguez</div>
+                <div className="text-gray-500 text-sm">CTO, FinanceFlow</div>
+              </div>
             </div>
           </div>
         </div>
