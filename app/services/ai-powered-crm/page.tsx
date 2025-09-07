@@ -5,8 +5,6 @@ export const metadata = {
   title: 'AI-Powered CRM Platform | Zion Tech Group',
   description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
-  description: 'Revolutionary CRM with AI-driven insights, predictive analytics, and automated lead scoring. Boost sales by 40% with intelligent customer relationship management.',
-  keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence'
 };
 
 interface FeatureCardProps {
@@ -108,6 +106,9 @@ export default function AIPoweredCRMPage() {
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Get Free Demo
+          </a>
+        </div>
+        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
           Revolutionize your sales process with intelligent CRM that learns from your data, predicts customer behavior, 
           and automates follow-ups. Boost sales by 40% with AI-driven insights and automation.
         </p>

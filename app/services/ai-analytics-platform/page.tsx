@@ -8,11 +8,6 @@ export const metadata = { title: "AI Analytics Platform | Zion Tech Group" };
 >>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
 
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Ai Analytics Platform - Zion Tech Group',
-  description: 'Advanced ai analytics platform solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (

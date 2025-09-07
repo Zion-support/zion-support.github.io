@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Ai Content Generator - Zion Tech Group',
-  description: 'Advanced ai content generator solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (

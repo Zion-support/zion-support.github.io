@@ -192,37 +192,37 @@ export default function AIDataAnalyticsPage() {
             icon="🏦"
             title="Financial Services"
             description="Risk assessment, fraud detection, and regulatory compliance analytics."
-            features={["Fraud detection", "Risk modeling", "Compliance reporting", "Market analysis"]
+            features={["Fraud detection", "Risk modeling", "Compliance reporting", "Market analysis"]}
           />
           <IndustryCard
             icon="🛒"
             title="E-commerce"
             description="Customer behavior analysis, inventory optimization, and sales forecasting."
-            features={["Customer segmentation", "Inventory optimization", "Sales forecasting", "Conversion analysis"]
+            features={["Customer segmentation", "Inventory optimization", "Sales forecasting", "Conversion analysis"]}
           />
           <IndustryCard
             icon="🏥"
             title="Healthcare"
             description="Patient outcomes analysis, resource optimization, and clinical research insights."
-            features={["Patient analytics", "Resource optimization", "Clinical insights", "Outcome prediction"]
+            features={["Patient analytics", "Resource optimization", "Clinical insights", "Outcome prediction"]}
           />
           <IndustryCard
             icon="🏭"
             title="Manufacturing"
             description="Quality control, predictive maintenance, and supply chain optimization."
-            features={["Quality analytics", "Predictive maintenance", "Supply chain optimization", "Production insights"]
+            features={["Quality analytics", "Predictive maintenance", "Supply chain optimization", "Production insights"]}
           />
           <IndustryCard
             icon="🎓"
             title="Education"
             description="Student performance analysis, learning outcomes, and institutional effectiveness."
-            features={["Student analytics", "Learning outcomes", "Performance tracking", "Resource optimization"]
+            features={["Student analytics", "Learning outcomes", "Performance tracking", "Resource optimization"]}
           />
           <IndustryCard
             icon="🏠"
             title="Real Estate"
             description="Market analysis, property valuation, and investment opportunity identification."
-            features={["Market analysis", "Property valuation", "Investment insights", "Trend forecasting"]
+            features={["Market analysis", "Property valuation", "Investment insights", "Trend forecasting"]}
           />
         </div>
       </section>
