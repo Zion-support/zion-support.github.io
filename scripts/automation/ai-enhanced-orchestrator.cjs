@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**
@@ -9,27 +5,6 @@
  * Advanced intelligent system for PM2 process management with ML capabilities;
  * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-const pm2 = require('pm2');
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const os = require('os');
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
-    this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
-    this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
-      learningEnabled: process.env.LEARNING_ENABLED === 'true'
-      autoScaling: process.env.AUTO_SCALING === 'true'
-      predictiveMode: process.env.PREDICTIVE_MODE === 'true'
-      securityMode: process.env.SECURITY_MODE === 'true'
-      performanceMode: process.env.PERFORMANCE_MODE === 'true'
-      deploymentMode: process.env.DEPLOYMENT_MODE === 'true'
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -47,12 +22,5 @@ const config = await fs.readFile(this.configFile, 'utf8');
         '1min'
         '5min'
         '15min'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const result = execSync('top -bn1 | grep "Cpu(s)";

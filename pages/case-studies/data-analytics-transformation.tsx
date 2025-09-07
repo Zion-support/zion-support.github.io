@@ -6,7 +6,6 @@ export default function dataanalyticstransformation() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
         <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
@@ -64,8 +63,6 @@ export default function dataanalyticstransformation() {
                     <div className="text-3xl font-bold text-purple-400">$200M+</div>
                     <div className="text-white/70">Annual Budget</div>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Challenge */}
@@ -136,8 +133,6 @@ export default function dataanalyticstransformation() {
                       and resource requirements.
                     </p>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Results */}
@@ -164,8 +159,6 @@ export default function dataanalyticstransformation() {
                         <span className="text-white/90">Predictive Accuracy</span>
                         <span className="text-2xl font-bold text-green-400">85%</span>
                       </div>
-                    </div>
-                  </div>
                   
                   <div>
                     <h3 className="text-2xl font-semibold text-green-400 mb-6">Additional Benefits</h3>
@@ -188,8 +181,6 @@ export default function dataanalyticstransformation() {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Technologies */}
@@ -203,7 +194,6 @@ export default function dataanalyticstransformation() {
                     </div>
                   ))}
                 </div>
-              </div>
             </section>
 
             {/* Implementation */}
@@ -217,7 +207,6 @@ export default function dataanalyticstransformation() {
                       <h4 className="text-lg font-semibold text-white">Data Assessment & Planning (Months 1-2)</h4>
                       <p className="text-white/70">Comprehensive data audit and system architecture design</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
@@ -225,7 +214,6 @@ export default function dataanalyticstransformation() {
                       <h4 className="text-lg font-semibold text-white">Infrastructure Development (Months 3-6)</h4>
                       <p className="text-white/70">Building big data infrastructure and ML model development</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
@@ -233,7 +221,6 @@ export default function dataanalyticstransformation() {
                       <h4 className="text-lg font-semibold text-white">Integration & Testing (Months 7-9)</h4>
                       <p className="text-white/70">System integration and comprehensive testing with real data</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">4</div>
@@ -241,9 +228,6 @@ export default function dataanalyticstransformation() {
                       <h4 className="text-lg font-semibold text-white">Deployment & Training (Month 10)</h4>
                       <p className="text-white/70">Full deployment and staff training on new analytics platform</p>
                     </div>
-                  </div>
-                </div>
-              </div>
             </section>
 
             {/* Call to Action */}
@@ -268,27 +252,10 @@ export default function dataanalyticstransformation() {
                     View All Case Studies
                   </Link>
                 </div>
-              </div>
             </section>
           </div>
         </main>
       </div>
     </>
   )
-=======
-        <title>Data Analytics Transformation - Zion Tech Group</title>
-        <meta name="description" content="Data Analytics Transformation solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Data Analytics Transformation</h1>
-          <p className="text-lg text-gray-600">
-            Professional data analytics transformation solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -236,7 +236,6 @@ AI, automation, and emerging technologies
                 )
 }
               </div>;
-            </div>;
                       href={`/blog/${trend && trend.id}`}`                      className='inline-flex items-center text-cyan-400 "hover":text-cyan-300 transition-colors'>;'
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;"
         <main className="container mx-auto px-6 py-12">;"
@@ -268,8 +267,6 @@ AI, automation, and emerging technologies
                   </div>;
                 ))}
               </div>;
-            </div>;
-            {/* Research Areas */}
             {/* Research Areas */}
 <div className='mb-16'>;'
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;'
@@ -354,7 +351,6 @@ key={focusIndex}
                   </div>;
                 ))}
               </div>;
-            </div>;
 
 
             {/* Whitepapers */}
@@ -396,7 +392,6 @@ href={paper.downloadUrl}
                   </div>
                 ))}
               </div>
-            </div>
 
             {/* Innovation Lab *
 }
@@ -429,7 +424,6 @@ href={paper.downloadUrl}
                   </div>
                 ))}
               </div>
-            </div>
 
             {/* Innovation Lab */}
             <div className="mb-16">
@@ -462,9 +456,6 @@ state of the art.
                     <div className='text-6xl mb-4'>🧪</div>'
                     <p className='text-white/60 text-sm'>Innovation Lab</p>'
                   </div>
-                </div>
-              </div>
-            </div>
 
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>'
@@ -489,7 +480,6 @@ href='/blog''
                   Read Our Blog
                 </Link>
               </div>
-            </div>
           </section>
         </main>
       </div>
@@ -529,13 +519,6 @@ href='/blog''
                     <div className='text-6xl mb-4'>🧪</div>;
                     <p className='text-white/60 text-sm'>Innovation Lab</p>;
                   </div>;
-                </div>;
-              </div>;
-            </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
                 <Link;
                   href="/contact";
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105";
@@ -560,7 +543,6 @@ href='/blog''
                   Read Our Blog;
                 </Link>;
               </div>;
-            </div>;
           </section>;
         </main>;
       </div>;
@@ -574,7 +556,6 @@ href='/blog''
                   Read Our Blog;
                 </Link>;
               </div>;
-            </div>;
           </section>;
         </main>;
       </div>;
@@ -583,14 +564,11 @@ href='/blog''
                   Read Our Blog;
                 </Link>;
               </div>;
-            </div>;
           </section>;
         </main>;
       </div>;
   );
 }
-}
-<<<<<<< HEAD
     </>);
 }
   );
@@ -600,6 +578,3 @@ href='/blog''
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

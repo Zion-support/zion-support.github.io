@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from 'react';'
@@ -46,7 +45,6 @@ const scrollToTop = () => {
     window.addEventListener($2);
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, []),
->>>>>>> origin/main
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -98,7 +96,6 @@ strokeLinecap='round''
     </>
   );
 }
-}
 export default ScrollToTop;
   )
 };
@@ -109,11 +106,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 }
 export default ScrollToTop;
-<<<<<<< HEAD
   )}export default ScrollToTop;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
-}
 }
 export default ScrollToTop;  )}
 export default ScrollToTop;origin/main;
@@ -171,7 +166,3 @@ export default ScrollToTop;
     </>)}export default ScrollToTop)}export default ScrollToTop;)}export default ScrollToTop;
           onClick = $2;
 export default ScrollToTop,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

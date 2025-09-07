@@ -269,7 +269,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-}
 import React from 'react';
  const SolutionsPage: React.FC = () => {;
   const industrySolutions = [ {;
@@ -366,9 +365,7 @@ import React from 'react';
 }</div> </div> </section> <motion&& motion.div initial= {
   {
 export default Solutions;
-<<<<<<< HEAD
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -379,6 +376,3 @@ export default Solutions;
             whileInView={{ opacity: 1, y: 0}}
             transition = $2;
 export default Solutions,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

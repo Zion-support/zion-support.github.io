@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**;
@@ -92,12 +88,5 @@ const path = require("path");
       "timestamp"
       "enhancements"
       "totalEnhancements"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const reportPath = path.join(this.projectRoot, ");

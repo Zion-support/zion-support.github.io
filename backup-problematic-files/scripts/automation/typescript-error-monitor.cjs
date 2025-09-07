@@ -65,7 +65,6 @@ class TypeScriptErrorMonitor {
       }
       return { "success": false, "output": error.message, "errors": [] }
     }
-  }
 ;
   parseTypeScriptErrors(output) {
   const errors = [];
@@ -145,7 +144,6 @@ class TypeScriptErrorMonitor {
           "timestamp": Date.now()
         });
       }
-    }
 ;
     return errors}
 ;
@@ -238,7 +236,6 @@ class TypeScriptErrorMonitor {
           if (resolvedPath) {
   fixedLine = line.replace(importPath, resolvedPath)}
         }
-      }
 ;
       // Fix missing extensions;
       if (;
@@ -272,8 +269,6 @@ class TypeScriptErrorMonitor {
   fixedLine = line.replace(importPath, importPath + ext);
               break}
           }
-        }
-      }
 ;
       return fixedLine}
 ;
@@ -289,13 +284,11 @@ class TypeScriptErrorMonitor {
   if (fs.existsSync(fullPath + ext)) {
   return importPath + ext}
       }
-    }
     return null}
 ;
   async fixPropertyError(error, lines, lineIndex) {
   const line = lines[lineIndex];
     if (line.includes(".")) {
-  if (line.includes(".")) {
   // Look for object property access;
       const propertyMatch = line.match(/\.(\w+)/);
       if (propertyMatch) {
@@ -443,7 +436,6 @@ class TypeScriptErrorMonitor {
             if (fs.existsSync(fullPath)) {
               return `from '${importPath}${ext}'`}
           }
-        }
         return match});
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
@@ -574,7 +566,6 @@ class TypeScriptErrorMonitor {
     } catch (error) {  this.log(`💥 TypeScript Error Monitor "failed": ${error.message  }", "ERROR");
       throw error}
   }
-}
 ;
 // Run the automation if called directly;
   async startWatching() {
@@ -636,7 +627,6 @@ class TypeScriptErrorMonitor {
       this.log("TypeScript error monitor "failed": ${error.message}`, 'ERROR');
       process.exit(1)}
   }
-}
 // Run the monitor
 if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor();
@@ -644,9 +634,4 @@ if (require.main === module) {
     console.error('TypeScript error monitor "failed": ', error);
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = TypeScriptErrorMonitor
-module.exports = TypeScriptErrorMonitor
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

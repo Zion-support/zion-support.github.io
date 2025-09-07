@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -46,7 +44,6 @@ function resolveMergeConflicts(filePath) {
       } else {
         resolvedLines.push(line);
       }
-    }
     
     const resolvedContent = resolvedLines.join('\n');
     
@@ -59,9 +56,6 @@ function resolveMergeConflicts(filePath) {
     return modified;
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -74,10 +68,9 @@ function removeMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?    content = content.replace(/=======[\s\S]*?    
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
+    content = content.replace(//g, '');
     content = content.replace(/    
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -87,17 +80,10 @@ function removeMergeConflicts(filePath) {
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return false;
   }
-}
 
 // Function to find all files with merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -123,13 +109,8 @@ function findFilesWithConflicts(dir) {
           } catch (error) {
             // Skip files that can't be read
           }
-        }
-      }
     } catch (error) {
       // Skip directories that can't be read
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
   
@@ -149,36 +130,20 @@ function findConflictedFiles(dir) {
         // Check if file has merge conflict markers
         try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(filePath);
           }
         } catch (error) {
           // Skip files that can't be read
         }
-      }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    }
-  }
   
   scanDirectory(dir);
-<<<<<<< HEAD
-<<<<<<< HEAD
   return files;
-=======
   return conflictedFiles;
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  return conflictedFiles;
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }
 
 // Main execution
 try {
-<<<<<<< HEAD
-<<<<<<< HEAD
   console.log('🔍 Scanning for files with merge conflicts...');
   const conflictFiles = findFilesWithConflicts('.');
   
@@ -193,7 +158,6 @@ try {
       if (resolveMergeConflicts(file)) {
         resolvedCount++;
       }
-    }
     
     console.log(`\n🎉 Resolved conflicts in ${resolvedCount} files!`);
     
@@ -205,16 +169,12 @@ try {
     } catch (error) {
       console.error('❌ Error adding files to git:', error.message);
     }
-  }
 } catch (error) {
   console.error('❌ Fatal error:', error.message);
   process.exit(1);
 }
 
 console.log('🎯 Merge conflict resolution completed!');
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const conflictedFiles = findConflictedFiles('.');
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
   
@@ -223,7 +183,6 @@ console.log('🎯 Merge conflict resolution completed!');
     if (removeMergeConflicts(file)) {
       fixedCount++;
     }
-  }
   
   console.log(`Successfully fixed ${fixedCount} out of ${conflictedFiles.length} files`);
   
@@ -243,7 +202,3 @@ console.log('🎯 Merge conflict resolution completed!');
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

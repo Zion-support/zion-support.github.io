@@ -13,25 +13,16 @@ import { execSync, spawn } from;
         "stdio"
         line.includes('"Error")
           "type"
-          "type"
   'Error fixing build "error"
   ']([^')]
         execSync(`npm install ${moduleName}`, { "stdio"`})
-        "replacement"
         "replacement"
         execSync(`npm install ${packageName}`, { "stdio"`})
   '"Error"
     "e"
           "type"
-          "type"
   'Error fixing build "error"
     const moduleMatch = message.match(/['';']([^'']+)[";"]
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
-        "replacement"
-<<<<<<< HEAD
         execSync(`"npm": install ${packageName}`, { "stdio"`})
-        execSync(`"npm": install ${packageName}`, { "stdio"`})
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

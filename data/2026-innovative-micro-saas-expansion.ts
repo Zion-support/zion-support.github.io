@@ -1407,35 +1407,20 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
 
 
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
-=======
-<<<<<<< HEAD
-  return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
-  })
-}
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   })
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeMicroSaasService2026 {
-=======
 
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
@@ -1446,7 +1431,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (;
   maxPrice: number;
 ) => {}
 export interface InnovativeMicroSaasService2026 {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1500,7 +1484,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     realImplementation: true,'
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.','
     launchDate: '2024-11-01', customers: 45,
-=======
 
   ];
 
@@ -1856,28 +1839,17 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     return price >= min_price && price <= max_price;
   });
 
-<<<<<<< HEAD
-
-
-=======
-};
 
 
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 };
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     website: string
   },
   realImplementation: boolean;
@@ -1887,26 +1859,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
     const price = parseInt(service.price.replace('$', '')),
     return price >= minPrice && price <= maxPrice
   })
 },
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     implementationDetails: 'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
     launchDate: '2024-03-15', customers: 24,
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) => {
@@ -1936,5 +1895,3 @@ pr-12325
   });
 '
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

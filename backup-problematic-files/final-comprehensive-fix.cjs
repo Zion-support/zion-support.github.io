@@ -45,7 +45,7 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
 
 
 
@@ -78,7 +78,7 @@ const talentFixed = talentContent
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
 
 
 
@@ -95,7 +95,7 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
 
 
 
@@ -119,7 +119,7 @@ const servicesFixed = servicesContent
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
 
 
 main
@@ -134,21 +134,18 @@ const authFixed = authContent
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
 
 
 
 
 
 ) {
-    ) {
     if (processFile(file)) {
       totalFixed++}
   }
-}
-}
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
 
 
 
@@ -161,7 +158,7 @@ if ( {
      {
 console.log('✨ Final comprehensive fixes completed!');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
   }} else {
   }
 
@@ -219,7 +216,7 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
-<<<<<<< HEAD:final-comprehensive-fix.cjs
+:final-comprehensive-fix.cjs
   .replace(/"isLoading": fals e/g, '"isLoading")
 
   .replace(/"isLoading": fals e/g, '"isLoading")

@@ -28,7 +28,7 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
-<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
+:pages_backup/api/disputes/[id].ts
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -62,7 +62,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(405).end("Method Not Allowed");"
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -73,4 +72,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ dispute: { id: req.query.id } });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

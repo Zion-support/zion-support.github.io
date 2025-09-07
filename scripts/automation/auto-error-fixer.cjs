@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -8,7 +7,6 @@ const path = require("path");
 const { execSync } = require("child_process");
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
-  this.log("� Stopping Auto Error Fixer...")
   this.log("� Stopping Auto Error Fixer...")
   this.log(" Checking for errors...")
   this.log(` Error during auto-"fix"`)
@@ -77,7 +75,6 @@ let content = fs.readFileSync(file, "utf8");
         content = content.replace(/[\t]+$/gm, ")
         content = content.replace(/([^])\n/g, "$1;\n"
         content = content.replace(/([^]*)"/g, $1
-        if (content !== fs.readFileSync(file, "utf8")
         if (content !== fs.readFileSync(file, "utf8")
           this.errorsFixed.push({ file, "type": "eslint"})
   this.log(" Checking for syntax errors...")
@@ -149,40 +146,10 @@ const exts = extensions.split(",");
       "lastCheck"
       "logFile"
   process.on("SIGINT")
-  process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   process.on(")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  process.on(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  process.on(")
-<<<<<<< HEAD
-  process.on(")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -33,7 +33,6 @@ class $1 {}
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status   };
     };
-  };
 ;
   async checkSecurityVulnerabilities() {}
   this.log("Checking for security vulnerabilities...");
@@ -59,7 +58,6 @@ class $1 {}
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status };
     };
-  };
 ;
   async checkSecurityVulnerabilities() {}
   this.log("Checking for security vulnerabilities...");
@@ -112,11 +110,9 @@ class $1 {}
   for (const license of problematicLicenses) {}
   if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`)};
               };
-            };
             if (info.dependencies) {}
   checkLicenses(info.dependencies)};
           };
-        };
         ;
         checkLicenses(depsData.dependencies || {}
 });
@@ -156,11 +152,6 @@ class $1 {}
                   key.toLowerCase().includes("token")) {}
   if (value.length < 10) {securityIssues.push(`Weak ${key} in ${envFile}`)};
               };
-            };
-          };
-        };
-      };
-    };
     ;
     if (securityIssues.length > 0) {this.log(`Found ${securityIssues.length} potential environment variable security issues`, "warn");
       this.errorsFound.push(...securityIssues)} else {}
@@ -222,14 +213,8 @@ class $1 {}
       this.log("Security monitoring completed", "success")} catch (error) {  this.log(`Error during security "monitoring": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);
       await this.generateReport()};
   };
-};
 ;
 
 // Run the security monitor;
 const monitor = new SecurityMonitor();
-<<<<<<< HEAD
 monitor.run().catch(console.error);
-monitor.run().catch(console.error);
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

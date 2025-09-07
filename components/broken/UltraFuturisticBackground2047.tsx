@@ -17,30 +17,23 @@ return (;
     return (
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
     )
-=======
-<<<<<<< HEAD
   if (!isClient) {;
     return (
 <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
     );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 return (;
     <>
-<<<<<<< HEAD
 
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;'
   return (<>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
   return (
     <>;
       {/* Background Gradient */}
-<<<<<<< HEAD
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;'
         {/* Animated Hexagons */}
@@ -83,16 +76,6 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';'
         </motion && motion.div>;
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
           animate={{
-=======
-          animate={{
-=======
-        >;"
-          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 to - blue - 500 clip - hexagon" />;
-        </motion.div>;
-        <motion.div;"
-          className="absolute top - 40 right - 32 w - 24 h - 24 opacity - 15";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             rotate: [360, 0]
             scale: [1, 0 && 0.8, 1]}}
           transition={{}
@@ -100,7 +83,6 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';'
             ease: 'easeInOut',
           }}>;'
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
-<<<<<<< HEAD
         </motion && motion.div>;
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />
         </motion.div>
@@ -211,10 +193,8 @@ key={i}
         </motion.div>
 
         {/* Neon Glow Effects */}
-<<<<<<< HEAD
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
-=======
 
 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>'
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />'
@@ -304,7 +284,6 @@ ease: 'easeInOut',}}}}/>;
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />;
         </div>;
         {/* Scanning Lines */}
-<<<<<<< HEAD
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';'
           animate={{"y": [0, 1000]}}
@@ -382,10 +361,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             ease: "ease_out";
           }}
       {/* CSS for hexagon clip */}
-<<<<<<< HEAD
-=======
       <style jsx>{`
-<<<<<<< HEAD
         .clip-hexagon {
 
       <style jsx>{``        .clip-hexagon {
@@ -404,7 +380,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 export default UltraFuturisticBackground2047;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
       <style jsx>{`;
         .clip-hexagon {clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%;

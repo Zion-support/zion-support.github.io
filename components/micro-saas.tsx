@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-=======
-const microSaasServices = [ {
- ;
-  }
-  return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Specialized Business Solutions</title> <meta name="description" content="Discover our 20 specialized micro SaaS solutions for content creation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, video generation, e-commerce analytics, HR management, legal automation, inventory management, customer support, financial planning, learning management, and real estate management. Competitive pricing with 14-day free trials." /> <meta property=""og":title" content="Micro SaaS Services | Zion Tech Group" /> <meta property=""og":description" content="Specialized business solutions with competitive pricing and free trials." /> <meta name=""twitter":card" content="summary large image" /> </Head> <div className="relative z-10 max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" /> Comprehensive Micro SaaS Guide </div> <h1 className="text-4xl "sm":text-5xl "lg":text-6xl font-bold text-white mb-8 leading-tight" > Micro SaaS Services </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > Real solutions with comprehensive market research, competitive analysis, and proven business models. Each service is designed to solve specific business problems with AI-powered automation. </p> <div className="grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto" > <div className="text-center" > <div className="text-3xl font-bold text-blue-400 mb-2" >6+</div> <div className="text-sm text-gray-400" >Services</div> </div> <h1 className="text-4xl "sm":text-5xl "lg":text-6xl font-bold text-white mb-8 leading-tight" > Specialized Tools for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400" > Every Business Need</span> </h1> <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12" > 65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring;"
-
-SEO automation, chatbots, business intelligence, email marketing, social media management;
-customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation;
-HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics;
-market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards;
-meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization;
-predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization;
-email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
-product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection;
-
-inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Unified dashboard</span> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Integrated billing</span> </div> </div> </div> <div className="flex flex-col "sm": flex-row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 "hover":from-green-600 "hover":to-emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-green-500 text-green-400 "hover":bg-green-500 "hover":text-white" > View All 75 Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing. </p> </div> Popular </span>)"
-}</div> </li>) )
-}</ul> </div> </div> </div> <div className="flex flex-col gap-3" > <a > Visit {"
-  }
-  service.link.replace ('"https"://', '')'
-}</a> </div> </div>) )
-}</div> </div> </section> Ready to Get Started? </h2> <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Choose from our portfolio of 20 specialized solutions. All services include comprehensive documentation;"
-dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution and add more as your business grows. </p> <div className = "flex flex-col "sm": flex-row gap-6 justify-center" > <Button href="/contact" variant="secondary" size="lg" className="bg-white text-green-600 "hover":bg-gray-100 shadow-2xl" > Contact Sales <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-white text-white "hover":bg-white "hover":text-green-600 shadow-2xl" > View All Pricing </Button> </div> </div> <Card key= {"
-  }
-  index
-}className="border-gradient-blue "hover":bg-gray-800/50 transition-all duration-300" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400" > <TrendingUp className="w-6 h-6" /> </div> </div> </div> </div> </Card>) )"
-}</div> </div> </section> Our Competitive Advantages </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > What sets us apart from traditional SaaS providers and market leaders. </p> </div> key= {"
-  }
-  index
-}className="border-gradient-blue "hover":bg-gray-700/50 transition-all duration-300" > </div>) )"
-}</div> </Card>) )
-}</div> </div> </section> Comprehensive Service Breakdown </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Detailed analysis of each micro SaaS service with market data, pricing, and use cases. </p> </div> <div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <Zap className="w-5 h-5 mr-2 text-blue-400" /> Key Features </h4> </li>) )"
-}</ul> </div> {
-  /* Pricing */
-}<div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <DollarSign className="w-5 h-5 mr-2 text-green-400" /> Pricing Plans </h4> </li>) )
-}</ul> </div>) )
-}</div> </div> </div> Market Analysis </h4> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <div> </div> </div> </div> </span>) )
-}</div> </div> > View Pricing & Start Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div>) )
-}</div> </div> </section> <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> View Pricing <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> </>) import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items - center text-green-400" > <Check className="w - 4 h-4 mr-2" /> <span > Unified dashboard</span> </div> <div className="flex items - center text-green-400" > <Check className="w - 4 h-4 mr-2" /> <span > Integrated billing</span> </div> </div> </div> <div className="flex flex - col sm:flex - row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w - 5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border - green - 500 text - green - 400 hover:bg - green-500 hover:text-white" > View All 75 Services <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing. </p> </div> Popular </span>);
 }</div> </li>) );
@@ -1391,7 +1350,6 @@ export default function MicroSaasPage() {
                 View All Pricing;
               </Button>;
             </div>;
-          </div>;
           <div className="grid grid-cols-1 "md":grid-cols-2 gap-8">;"
             {marketTrends.map((trend, index) => (<Card;
                 }
@@ -1411,8 +1369,6 @@ export default function MicroSaasPage() {
                       <h4 className="text-green-400 font-semibold mb-2">Our Opportunity</h4>;"
                       <p className="text-gray-300 text-sm">{trend.opportunity}</p>;"
                     </div>;
-                  </div>;
-                </div>;
               </Card>;
             ))}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
@@ -1479,8 +1435,6 @@ export default function MicroSaasPage() {
                   <Check className="w-4 h-4 mr-2" />
                   <span>Integrated billing</span>
                 </div>
-              </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
@@ -1502,7 +1456,6 @@ export default function MicroSaasPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
-          </div>
         </section>
 
         {/* Services Section */}
@@ -1561,7 +1514,6 @@ export default function MicroSaasPage() {
                     <div className="text-sm text-gray-300">
                       <strong>Setup Time:</strong> {service.setupTime}
                     </div>
-                  </div>
                   
                   <div className="flex flex-col gap-3">
                     <a
@@ -1582,10 +1534,8 @@ export default function MicroSaasPage() {
                       Visit {service.link.replace('https://', '')}
                     </a>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -1620,7 +1570,6 @@ export default function MicroSaasPage() {
                 View All Pricing
               </Button>
             </div>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {marketTrends.map((trend, index) => (
@@ -1641,12 +1590,9 @@ export default function MicroSaasPage() {
                       <h4 className="text-green-400 font-semibold mb-2">Our Opportunity</h4>
                       <p className="text-gray-300 text-sm">{trend.opportunity}</p>
                     </div>
-                  </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Competitive Advantages */}
@@ -1664,7 +1610,6 @@ export default function MicroSaasPage() {
             {competitiveAdvantages.map((advantage, index) => (
 
           </div>;
-        </div>;
       </section>;
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">;"
@@ -1709,7 +1654,6 @@ export default function MicroSaasPage() {
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Detailed Services */}
@@ -1737,7 +1681,6 @@ export default function MicroSaasPage() {
                     <p className="text-xl text-gray-300 mb-4">{service.description}</p>
                     <p className="text-gray-400 leading-relaxed">{service.longDescription}</p>
                   </div>
-                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Features */}
@@ -1780,8 +1723,6 @@ export default function MicroSaasPage() {
                         </div>
                       ))}
                     </div>
-                  </div>
-                </div>
 
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
@@ -1806,8 +1747,6 @@ export default function MicroSaasPage() {
                       <div className="text-sm text-gray-400">Our Advantage</div>
                       <div className="text-sm text-blue-400">{service.marketData.ourAdvantage}</div>
                     </div>
-                  </div>
-                </div>
 
                 {/* Use Cases */}
                 <div className="mt-8">
@@ -1822,7 +1761,6 @@ export default function MicroSaasPage() {
                       </span>
                     ))}
                   </div>
-                </div>
 
                 {/* CTA */}
                 <div className="mt-8 text-center">
@@ -1835,10 +1773,8 @@ export default function MicroSaasPage() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -1866,12 +1802,10 @@ export default function MicroSaasPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
-<<<<<<< HEAD
             >
               Contact Sales
             </Button>
           </div>
-        </div>
       </section>
     </>
             <Button;
@@ -1886,7 +1820,6 @@ export default function MicroSaasPage() {
                     <p className="text - xl text - gray-300 mb-4">{service.description}</p>;
                     <p className="text - gray-400 leading-relaxed">{service.long_description}</p>;
                   </div>;
-                </div>;
                 <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
                   {/* Features */}
                   <div>;
@@ -1921,8 +1854,6 @@ export default function MicroSaasPage() {
                           </ul>;
                         </div>))}
                     </div>;
-                  </div>;
-                </div>;
                 {/* Market Data */}
                 <div className="mt - 8 bg - blue - 900 / 20 border border - blue - 500 / 20 rounded-lg p-6">;
                   <h4 className="text - xl font - bold text - blue - 400 mb-4 flex items-center">;
@@ -1946,8 +1877,6 @@ export default function MicroSaasPage() {
                       <div className="text - sm text-gray-400">Our Advantage</div>;
                       <div className="text - sm text-blue-400">{service.market_data.our_advantage}</div>;
                     </div>;
-                  </div>;
-                </div>;
                 {/* Use Cases */}
                 <div className="mt-8">;
                   <h4 className="text - xl font - bold text - white mb-4 flex items-center">;
@@ -1959,7 +1888,6 @@ export default function MicroSaasPage() {
                         {use_case}
                       </span>))}
                   </div>;
-                </div>;
                 {/* CTA */}
                 <div className="mt-8 text-center">;
                   <Button;
@@ -1973,7 +1901,6 @@ export default function MicroSaasPage() {
                 </div>;
               </div>))}
           </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
       <section className="py - 20 bg - gradient - to - r from - blue - 600 to - blue-700 relative overflow-hidden">;
@@ -2003,7 +1930,6 @@ export default function MicroSaasPage() {
             >;Contact Sales;
             </Button>;
           </div>;
-        </div>;
       </section>;
 }
   )}
@@ -2053,7 +1979,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
                       Visit {service && service.link.replace('https://', '')}
                     </a>;
                   </div>;
-                </div>;
               ))}
               <Button;
                 href="/contact";
@@ -2070,7 +1995,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
                 View All Pricing;
               </Button>;
             </div>;
-          </div>;
               <Card;
                 key={index}
                 className="border-gradient-blue hover:bg-gray-800/50 transition-all duration-300">;
@@ -2087,8 +2011,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
                       <h4 className="text-green-400 font-semibold mb-2">Our Opportunity</h4>;
                       <p className="text-gray-300 text-sm">{trend && trend.opportunity}</p>;
                     </div>;
-                  </div>;
-                </div>;
               </Card>;
             ))}
               <Card;
@@ -2199,8 +2121,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
                       <div className="text-sm text-gray-400">Our Advantage</div>;"
                       <div className="text-sm text-blue-400">{service.marketData.ourAdvantage}</div>;"
                     </div>;
-                  </div>;
-                </div>;
                 {/* Use Cases */}
                 <div className="mt-8">;"
                   <h4 className="text-xl font-bold text-white mb-4 flex items-center">;"
@@ -2224,7 +2144,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
                     <ArrowRight className="w-5 h-5 ml-2" />;"
                   </Button>;
                 </div>;
-              </div>;
             ))}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">;"
@@ -2256,7 +2175,6 @@ variant="outline";"
               Contact Sales
             </Button>
           </div>
-        </div>
       </section>
     </>
 );
@@ -2264,6 +2182,3 @@ variant="outline";"
 )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

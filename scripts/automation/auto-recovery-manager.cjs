@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -226,7 +222,6 @@ this.log( Unreadable file "recovered")
   this.log( Failed to recover unreadable file ${filePath}: ${error.message}")
         "ERROR"
       this.log( Failed to recover unreadable file ${filePath}: ${error.message}")
-        "ERROR"
         "ERROR"
   this.log(" Generating auto-recovery report...")
   "timestamp"

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -150,7 +149,6 @@ export default function GetStarted() {
                 <CheckCircle className="w-6 h-6" />
                 <span>Proven Results</span>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -192,7 +190,6 @@ export default function GetStarted() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Technology Paths */}
@@ -230,7 +227,6 @@ export default function GetStarted() {
                         </h3>
                         <p className="text-gray-300 leading-relaxed">{path.description}</p>
                       </div>
-                    </div>
                     
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
@@ -257,8 +253,6 @@ export default function GetStarted() {
                             </span>
                           ))}
                         </div>
-                      </div>
-                    </div>
                     
                     <div className="flex items-center justify-between pt-6 border-t border-gray-800/50">
                       <div className="flex gap-4 text-sm text-gray-400">
@@ -275,12 +269,9 @@ export default function GetStarted() {
                         <span className="font-medium">Select Path</span>
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
-                    </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
       )}
 
@@ -332,7 +323,6 @@ export default function GetStarted() {
                         <option>$500K+</option>
                       </select>
                     </div>
-                  </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
@@ -357,10 +347,6 @@ export default function GetStarted() {
                       Next Step
                     </button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
       )}
 
@@ -410,7 +396,6 @@ export default function GetStarted() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Contact CTA */}
@@ -449,28 +434,3 @@ export default function GetStarted() {
     </div>
   )
 }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function getstarted() {
-  return (
-    <Layout>
-      <Head>
-        <title>Get Started - Zion Tech Group</title>
-        <meta name="description" content="Get Started solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Get Started</h1>
-          <p className="text-lg text-gray-600">
-            Professional get started solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

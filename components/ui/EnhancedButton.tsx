@@ -129,7 +129,6 @@ const "sizeStyles": Record<NonNullable<EnhancedButtonProps["size"]>, string> = {
   "lg": "text-base px-5 py-3","
 };
 
-<<<<<<< HEAD
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]',
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
   sm: 'text-sm px-3 py-2',
@@ -178,18 +177,9 @@ export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> 
 };
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 pr-12243
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -207,11 +197,7 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }import React from 'react';
-=======
-import React from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
 import React from "react";
@@ -270,23 +256,6 @@ variantStyles[variant];
         className
       )}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    />);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 }
 
@@ -335,7 +304,6 @@ function EnhancedButton() {
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
-}
 
 
 
@@ -348,7 +316,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 );
 }
 
-<<<<<<< HEAD
     />
   );
 ursor/fix-website-loading-errors-and-merge-6662
@@ -372,39 +339,16 @@ return (;
   )
 };
 
-<<<<<<< HEAD
 export default EnhancedButton;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
 
-=======
-pr-12243
-=======
-
-
-}
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default EnhancedButton;
-}
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     />;
 );
 />
@@ -413,7 +357,6 @@ export default EnhancedButton;
   );
 main
 pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     />;
 );
 }
@@ -425,23 +368,11 @@ const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
     <div className={className || ''} />
       <h1 />EnhancedButton</h1>
       <p />This component is under development.</p>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </div>
-=======
     />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   );
 };
 export default EnhancedButton;
 }
 
-<<<<<<< HEAD
 
->>>>>>> origin/main
-=======
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

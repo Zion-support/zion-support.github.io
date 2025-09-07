@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -38,7 +34,6 @@ this.testResults.unit.status = "success"
   "stdio": "inherit"
         "cwd"
 const output = execSync(npm run "test": integration || echo "No integration tests found");
-const output = execSync(npm run "test": integration || echo "No integration tests found");
   "encoding": "utf8"
           "cwd"
 const output = execSync(npm run "test": integration || echo "No integration tests found");
@@ -50,7 +45,6 @@ const output = execSync(npm run "test": integration || echo "No integration test
   this.testResults.integration.status = "failure"
 // console.log(" Integration tests "failed": ")
   console.log("� Running End-to-End Tests...")
-        path.join(process.cwd(), "playwright.config.js"
         path.join(process.cwd(), "playwright.config.js"
         path.join(process.cwd() "cypress.config.js"
   console.log("� Running Playwright tests...")
@@ -74,7 +68,6 @@ const output = execSync(npm run "test": e2e || npx cypress run || echo "No Cypre
         path.join(process.cwd(), "lighthouserc.json"
         path.join(process.cwd() "lighthouserc.json"
   console.log(" Running Lighthouse performance tests...")
-const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found");
 const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found");
   "encoding": "utf8"
             "cwd"
@@ -121,7 +114,6 @@ const output = execSync("npm run lint");
     console.log(" Generating Coverage Report...")
 const hasCoverage = fs.existsSync(path.join(process.cwd(), "coverage";
   console.log(" Coverage data found generating report...")
-const output = execSync(npm run "test": coverage || echo "No coverage script found");
 const output = execSync(npm run "test": coverage || echo "No coverage script found");
   "encoding": "utf8"
             "cwd"
@@ -177,41 +169,10 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
     console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(" Testing automation "failed": ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Testing automation "failed": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Testing automation "failed": ")
-<<<<<<< HEAD
-  console.error(" Testing automation "failed": ")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -224,7 +224,6 @@ this.log( Unreadable file "recovered")
         "ERROR"
       this.log( Failed to recover unreadable file ${filePath}: ${error.message}")
         "ERROR"
-        "ERROR"
   this.log(" Generating auto-recovery report...")
   "timestamp"
       "summary"
@@ -238,9 +237,4 @@ this.log( Unreadable file "recovered")
         "recoveredIssues"
         "recoveryRate"
       "recoveryResults"
-<<<<<<< HEAD
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
-      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

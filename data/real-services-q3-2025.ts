@@ -26,7 +26,6 @@ export interface Q3Service  {"id": string, "name": string,"tagline": string, "pr
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
-<<<<<<< HEAD
 
   category: string, realService: boolean,
 
@@ -38,67 +37,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   integrations?: string[];
 
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
   category: string, realService: boolean,
 
 category: string;
-=======
-  id: string;,
-  name: string;
-  tagline: string;,
-
-  price: string;
-  period: string;,
-  description: string;
-  features: string[];
-  popular?: boolean;
-
-  icon: string;,
-
-  color: string;
-pr-12325
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-  category: string, realService: boolean,
-
-category: string;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   realService: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
   technology?: string[];
   integrations?: string[];
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   useCases?: string[];
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -396,16 +350,13 @@ export const "realServicesQ32025": Q3Service[] = [
   },{"id": 'digital-product-commerce-stack',"name": 'Digital Product Commerce Stack';'
     }
     "name": 'Digital Product Commerce Stack';'
-    "name": 'Digital Product Commerce Stack';'
     ],"icon": '🛒',"color": 'from-cyan-600 to-blue-700',"textColor": 'text-cyan-300',"link": '"https"://ziontechgroup.com/services/digital-product-commerce-stack',"targetAudience": 'Indie SaaS, creators, agencies launching digital products',"setupTime": '5–7 days',"category": 'Developer Tools',"realService": true,"customers": 12,"rating": 4.8,"reviews": 18,// @ts-expect-error augment common shape for UI components that expect contactInfo;'
   },{"id": 'wordpress-internal-linking-automation',"name": 'WordPress Internal Linking Automation';'
     }
     "name": 'WordPress Internal Linking Automation';'
-    "name": 'WordPress Internal Linking Automation';'
     ],"icon": '🔗',"color": 'from-purple-600 to-pink-600',"textColor": 'text-purple-200',"link": '"https"://ziontechgroup.com/services/wordpress-internal-linking-automation',"targetAudience": 'Content sites, ecommerce, publishers on WordPress',"trialDays": 7,"setupTime": '2–4 days',"category": 'Growth & Marketing',"realService": true,"customers": 30,"rating": 4.7,"reviews": 22,// @ts-expect-error augment common shape for UI components that expect contactInfo;'
   },{"id": 'reviews-ugc-activation',"name": 'Ecommerce Reviews & UGC Activation';'
     }
-    "name": 'Ecommerce Reviews & UGC Activation';'
     "name": 'Ecommerce Reviews & UGC Activation';'
     ],"icon": '⭐',"color": 'from-amber-600 to-rose-600',"textColor": 'text-amber-200',"link": '"https"://ziontechgroup.com/services/ecommerce-reviews-ugc-activation',"targetAudience": 'Shopify and custom ecommerce brands',"setupTime": '3–6 days',"category": 'Quality & Monitoring',"realService": true,"customers": 10,"rating": 4.8,"reviews": 12,// @ts-expect-error augment common shape for UI components that expect contactInfo;'
   }
@@ -456,7 +407,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
   }
 ];}
 ];
-    "contactInfo": contact;
     "contactInfo": contact;
   }];    "contactInfo": contact;
     "contactInfo": contact;
@@ -862,21 +812,13 @@ export const "realServicesQ32025": Q3Service[] = [
 
     contactInfo: contact}
 ],
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     contactInfo: contact
     contactInfo: contact,
   },];    contactInfo: contact
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
     contactInfo: contact;,
   contactInfo: contact,
@@ -885,5 +827,3 @@ export const "realServicesQ32025": Q3Service[] = [
 ];
 '
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

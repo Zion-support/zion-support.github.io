@@ -10,15 +10,8 @@ const path = require('path')
         "hostname"
       console.error(' Error fetching "PRs")
         return { "status": 'skipped', "message"}
-        return { "status": 'skipped', "message"}
         "commit_message"
         "merge_method"
         return { "status": 'merged', "message"}
         return { "status"}
-      return { "status"}
-<<<<<<< HEAD
     console.error('Bulk PR merger "failed")
-    console.error('Bulk PR merger "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

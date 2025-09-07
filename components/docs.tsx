@@ -153,12 +153,7 @@ const formatDate = ("dateString": string) => {
 
       day: 'numeric'
     })
-<<<<<<< HEAD
   };
-=======
-
-  },
->>>>>>> origin/main
 
 return (;
 
@@ -271,7 +266,6 @@ href='/contact''
               <a className="text-cyan-400" href={`"tel":${contact && contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact && contact.mobile}</a>;`              <a className="text-purple-400" href={`"mailto": ${contact && contact.email}`}>{contact && contact.emai,`}</a>;
           </Card>;
         </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>;
                       </a>                    </li>      </Head>;
       <div className="min - h-screen pt - 24 pb - 20 px - 4 "sm":px - 6 "lg":px - 8">;"
@@ -361,11 +355,9 @@ href='/contact''
             </div>
           </Card>
         </div>
-      </div>
     </UltraAdvancedFuturisticBackground>
   )
 }
-<<<<<<< HEAD
                 {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
                 {contact.email}
               </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
@@ -378,7 +370,6 @@ href='/contact''
               <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
           </Card>;
         </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>)}}))}
             </ul>;
           </Card>;
@@ -386,7 +377,6 @@ href='/contact''
             </div>;
           </Card>;
         </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>;
     </UltraAdvancedFuturisticBackground>);
 }
@@ -399,6 +389,3 @@ href='/contact''
             </ul>
           </Card>
   )}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

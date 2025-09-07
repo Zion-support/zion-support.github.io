@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 }export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
@@ -776,7 +775,6 @@ export const "cuttingEdgeEnterpriseSolutions": UnifiedService[] = [;
   }
 ];
     contactInfo: contact
-<<<<<<< HEAD
 
     market_size: '$15.2B enterprise content management market';
     growth_rate: '28% annual growth';
@@ -787,16 +785,12 @@ export const "cuttingEdgeEnterpriseSolutions": UnifiedService[] = [;
     reviews: 41,
 
 ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
 ;
     rating: 4.6;
     reviews: 41
     contactInfo: contact
-<<<<<<< HEAD
   }
 ];
 ;
@@ -807,16 +801,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
-=======
-<<<<<<< HEAD
-=======
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { UnifiedService } from '../types/unified-service-types',;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
@@ -962,7 +948,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     rating: 4.6,;
     reviews: 41;
     contactInfo: contact;
-<<<<<<< HEAD
 
 
   }
@@ -993,14 +978,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     useCases: ['Knowledge discoveryDocument managementResearch collaborationDecision supportTraining and onboarding'],
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
     competitors: ['Microsoft SharePointConfluenceNotionSlackBox'],
-=======
-<<<<<<< HEAD
-  }
-];
-    contactInfo: contact
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     market_size: '$15.2B enterprise content management market';
     growth_rate: '28% annual growth';
@@ -1021,7 +998,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 
-=======
 
   }
 ];
@@ -1031,7 +1007,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 41;
     contactInfo: contact;
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;'
   mobile: '+1 302 464 0950',;'
@@ -1178,44 +1153,20 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     rating: 4.6,;
     reviews: 41;
     contactInfo: contact;
-<<<<<<< HEAD
   }
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$15.2B enterprise content management market',
     growthRate: '28% annual growth',
     customers: 29,
     rating: 4.6,
     reviews: 41,
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 
     contactInfo: contact}
 ],
-=======
-    contactInfo: contact,
-  },
-];
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-
-
   }
 ];
 
 
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

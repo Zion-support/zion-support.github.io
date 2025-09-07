@@ -56,7 +56,6 @@ href=""https"://github.com/ziontechgroup""
                 </svg>
               </a>
             </div>
-          </div>
 
           {/* Company Links */}
           <div>
@@ -111,7 +110,6 @@ href=""https"://github.com/ziontechgroup""
               </li>
             </ul>
           </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">"
@@ -130,8 +128,6 @@ href=""https"://github.com/ziontechgroup""
                 Cookie Policy
               </Link>
             </div>
-          </div>
-=======
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
@@ -163,16 +159,9 @@ href=""https"://github.com/ziontechgroup""
               <li><Link href="/contact" className="text-gray-400 hover:text-white transition duration-300">Contact Us</Link></li>
             </ul>
           </div>
-        </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </div>
-      </div>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

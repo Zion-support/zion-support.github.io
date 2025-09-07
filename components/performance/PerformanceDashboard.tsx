@@ -11,7 +11,6 @@ interface PerformanceMetrics  {"load_time": number;
 }
     return "text-red-600";"
   }
-<<<<<<< HEAD
   if (!metrics) return null;
   return (<div className="fixed bottom-4 right-4 z-50">;"
       <button;
@@ -41,16 +40,12 @@ interface PerformanceMetrics  {"load_time": number;
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { "good": 0 && 0.1, "needsImprovement": 0 && 0.25 })}`}>`
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </span>;
               </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             )}
-      )}
     </div>
   )}
 export default PerformanceDashboard;
-<<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {}
   const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
   const [is_visible, setIsVisible] = useState (false);
@@ -72,31 +67,10 @@ if ( {) {}
             // Check condition;
 if ( {) {}
   $2;
-=======
-
-const "PerformanceDashboard": React.FC = () => {const [metrics, set_metrics] =;
-  }
-  useState < PerformanceMetrics | null>(null;
-  const [is_visible, setIsVisible]  = useState (false)useEffect (() => {// Check condition;
-}
-if ( {) {$2;
-}
-
-const observer = new PerformanceObserver ((list) => {const entries = list.get_entries (;
-  }
-  const "new_metrics": Partial < PerformanceMetrics> = 
-}entries.for_each ((entry) => {// Check condition;
-}
-if ( {) {$2;
-}
-            // Check condition;
-if ( {) {$2;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
               new_metrics.firstContentfulPaint = entry.start_time;
             }
           } else // Check condition;
-<<<<<<< HEAD
 if ( {) {}
   $2;
 }
@@ -104,18 +78,10 @@ if ( {) {}
           } else // Check condition;
 if ( {) {}
   $2;
-=======
-if ( {) {$2;}
-}
-            new_metrics.largestContentfulPaint = entry.start_time;
-          } else // Check condition;
-if ( {) {$2;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
             new_metrics.cumulativeLayoutShift =;
               (new_metrics.cumulativeLayoutShift || 0) + (entry as any).value;
           }
-<<<<<<< HEAD
         });
 ;
         // Check condition;
@@ -146,7 +112,6 @@ if (return null) {$2;
         className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg "hover":bg - blue-700 transition-colors">"
 
         📊 Performance;
-<<<<<<< HEAD
       </button>;
       {is_visible && (<div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;"
           <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;"
@@ -202,13 +167,10 @@ if (return null) {$2;
               Core Web Vitals monitoring in real - time;
             </div>;
           </div>
-    </div>
   );
 }
-<<<<<<< HEAD
 ;
 export default PerformanceDashboard;
 '"`
-=======
     </div>)}
 export default PerformanceDashboard;"

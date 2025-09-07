@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -67,7 +63,6 @@ const { execSync, spawn } = require("child_process");
       "errorRate"
       "recommendations"
   console.error(" Error during performance "measurement": ")
-  console.error(" Error during performance "measurement": ")
 this.logError("Performance measurement failed")
   console.error(" Error during performance "measurement": ")
       this.logError("Performance measurement failed")
@@ -79,7 +74,6 @@ this.logError("Performance measurement failed")
   "type": "build"
           "severity": "warning","message"
           "suggestion": "Consider optimizing build configuration, using build caching, or parallel builds"
-  console.error("Error measuring build "performance": ")
   console.error("Error measuring build "performance": ")
   // Check if it"
       if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")
@@ -126,8 +120,6 @@ const buildDirs = ["dist", "build", ".next", "out"];
           "severity": "warning","message"
           "suggestion": "Consider code splitting, tree shaking, or removing unused dependencies"}"
   console.error("Error measuring bundle "size": ")
-  console.error("Error measuring bundle "size": ")
-const fullPath = path.join(dirPath, ");
 const fullPath = path.join(dirPath, ");
     } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)
   if (bytes === 0) return "0 Bytes"
@@ -148,7 +140,6 @@ return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
   "type": "cpu"
           "severity": "warning","message"
           "suggestion": "Optimize algorithms, implement caching, or use worker threads for heavy operations"
-  console.error("Error measuring runtime "performance": ")
   console.error("Error measuring runtime "performance": ")
   console.error("Error getting system "metrics": ")
       return { "memory": 0, "cpu"}
@@ -232,14 +223,12 @@ return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
       "optimizations"
   fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"
   console.error("Error logging performance "results": ")
-  console.error("Error logging performance "results": ")
   "timestamp"
       "error"
   "timestamp"
       "error"
       "stack"
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
-  console.error("Error logging "error": ")
   console.error("Error logging "error": ")
   console.log("� Setting up build monitoring...")
     process.on("message")
@@ -255,41 +244,10 @@ return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     this.logError("Unhandled rejection")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-    this.logError("Unhandled rejection")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    this.logError("Unhandled rejection")
-<<<<<<< HEAD
-    this.logError("Unhandled rejection")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

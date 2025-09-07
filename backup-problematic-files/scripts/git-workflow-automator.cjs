@@ -39,9 +39,4 @@ const { execSync } = require('child_process')
         "impact"
       this.log(` Current "branch"`)
       console.log(` Current "branch"`)
-<<<<<<< HEAD
       console.error('\n� Git Workflow Automator "failed")
-      console.error('\n� Git Workflow Automator "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

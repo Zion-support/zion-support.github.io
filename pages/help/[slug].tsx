@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -38,31 +37,6 @@ export default function HelpArticlePage({ article }: { article: HelpArticle}) {
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
         </div>
-      </div>
     </article>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function HelpSlug() {
-  return (
-    <Layout>
-      <Head>
-        <title>Help - Zion Tech Group</title>
-        <meta name="description" content="Help solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Help</h1>
-          <p className="text-lg text-gray-600">
-            Professional help solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

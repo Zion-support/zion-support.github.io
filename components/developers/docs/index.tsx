@@ -29,34 +29,8 @@ export default function ApiDocsPage() {
       }
       nav={docs.sections.map(s => ({ "id": s.id, "title": s.title }))}
     >
-<<<<<<< HEAD
       {docs.sections.map(section => ('
         <section key={section.id} id={section.id} className='scroll-mt-24'>'
-=======
-      {docs.sections.map(section => (
-        <section key={section.id} id={section.id} className='scroll-mt-24'>'
-
-          <h2 className='text-2xl font-semibold'>{section.title}</h2>'
-          {section.html && (
-            <div dangerouslySetInnerHTML={{ "__html": section.html }} />
-          
-}
-          {section.code && section.code.length > 0 && (
-
-<div className='space-y-4 mt-4'>'
-              {section.code.map((c, idx) => (
-                <CodeBlock key={idx} language={c.language}>
-                  {c.content}
-                </CodeBlock>
-              ))}
-            </div>
-          )}
-          {section.code && section.code.length > 0 && (
-<<<<<<< HEAD
-              ))};
-=======
-              ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           )}
         </section>;

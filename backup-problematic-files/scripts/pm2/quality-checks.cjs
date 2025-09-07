@@ -29,7 +29,6 @@ const runCommand = (command, description) => {}
     log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
-};
 
 const runLinting = () => {}
   log('Running linting checks');
@@ -149,7 +148,6 @@ const generateQualityReport = (results) => {}
       failed: results.linting.failed + results.typeChecking.failed + 
               results.codeQuality.failed + results.coverage.failed;
     };
-  };
   
   // Save report;
   const reportPath = 'logs/pm2/quality-report.json';
@@ -216,9 +214,4 @@ main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

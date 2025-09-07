@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -487,7 +486,6 @@ setSubmitSuccess (true);
                           className="w - full px - 4 py - 3 bg - gray - 800 / 50 border border - cyan - 500 / 20 rounded - xl text - white placeholder - gray - 400 "focus":outline - none "focus":border - cyan - 400 / 40 "focus":ring - 2 "focus":ring-cyan-500 / 20";"
                           placeholder="Enter your email address";" />;
                       </div>;
-                    </div>;
                     <div className="grid grid - cols - 1 "md":grid - cols-2 gap-6">;"
                       <div>;
                         <label html_for="company" className="block text - sm font - medium text - gray-300 mb-2" html_for="input-;"
@@ -519,7 +517,6 @@ setSubmitSuccess (true);
                           className="w - full px - 4 py - 3 bg - gray - 800 / 50 border border - cyan - 500 / 20 rounded - xl text - white placeholder - gray - 400 "focus":outline - none "focus":border - cyan - 400 / 40 "focus":ring - 2 "focus":ring-cyan-500 / 20";"
                           placeholder="Enter your phone number";" />;
                       </div>;
-                    </div>;
                     <div>;
                       <label html_for="service" className="block text - sm font - medium text - gray-300 mb-2" html_for="input-;"
                         Service of Interest;
@@ -649,7 +646,6 @@ setSubmitSuccess (true);
                       <span className="text-sm text-gray-400">"Trial": {service && service.trialDay,"
 } days</span>;
                     </div>;
-                  </div>;
                 </motion && motion.div>;
               ))}
         {/* Why Choose Us Section */}
@@ -670,10 +666,8 @@ setSubmitSuccess (true);
                       <span className="text - sm text-gray-400">"Trial": {service.trial_day,"
 } days</span>;
                     </div>;
-                  </div>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* Why Choose Us Section */}
         <section className="py - 20 px - 4 "sm":px-6 "lg":px-8">;"
@@ -750,7 +744,6 @@ setSubmitSuccess (true);
                           placeholder="Enter your email address"
                         />
                       </div>
-                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -782,7 +775,6 @@ setSubmitSuccess (true);
                           placeholder="Enter your phone number"
                         />
                       </div>
-                    </div>
 
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -911,11 +903,9 @@ setSubmitSuccess (true);
                       <span className="text-sm text-gray-400">Setup: {service.setupTime}</span>
                       <span className="text-sm text-gray-400">Trial: {service.trialDays} days</span>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Why Choose Us Section */}
@@ -956,7 +946,6 @@ setSubmitSuccess (true);
                   <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>"
                   <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>"
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -968,7 +957,4 @@ setSubmitSuccess (true);
 }
 
   )}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -31,8 +31,6 @@ const suggestion =;
       supportedLocales.includes(normalized as any) && normalized !== "en";"
         ? normalized;
         : null;
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (suggestion) setSuggested(suggestion);
   }, []);
   if (!suggested) return null;
@@ -47,7 +45,6 @@ localStorage.setItem('langPromptShown', '1');'
       isRtl(suggested!) ? "rtl" : "ltr""
     );
     document && document.documentElement.setAttribute("lang", suggested!);"
-    setSuggested(null);
     setSuggested(null);
   }
 
@@ -67,29 +64,8 @@ const decline = () => {
           <button className="px-3 py-1 rounded bg-amber-600 text-white" onClick={accept}>{t('lang.switch_accept')}</button>
           <button className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700" onClick={decline}>{t('lang.switch_decline')}</button>
         </div>
-      </div>
-    </div>
   )
 }
-=======
-  const [suggested, setSuggested] = useState<string | null>(null),
-
-  useEffect(() => {
-    const key = null;
-const localeLabelKey: Record<string, string> = {
-
-  en: "lang.english"
-  pt: "lang.portuguese"
-  es: "lang.spanish"
-  ar: "lang.arabic"
-}
-export default function LanguageSwitchPrompt() {
-const localeLabelKey: Record<string, string> = {
-  en: "lang.english",
-  pt: "lang.portuguese",
-  es: "lang.spanish",
-  ar: "lang.arabic",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 };
 export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
@@ -99,14 +75,10 @@ export default function LanguageSwitchPrompt() {;
     if (suggestion) setSuggested(suggestion);
   }, []);
   if (!suggested) return null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
-    setSuggested(null);
   }
-<<<<<<< HEAD
   const decline = () => {
     localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
@@ -147,37 +119,19 @@ return (;
             onClick={accept}>;
             {t("lang && lang.switch_accept")}"
           </button>;
-<<<<<<< HEAD
           <button;
             className="px-3 py-1 rounded border border-amber-300 "dark":border-amber-700";"
             onClick={decline}>;
             {t("lang && lang.switch_decline")}"
           </button>;
         </div>;
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
 
   );
-<<<<<<< HEAD
 }'
 import React, { useEffect, useState } from './react';'
 import { use_translation  } from './react - i18next';"
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>;)}
   )}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    </div>;)}
-  )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useEffect, useState } from './react';
 import { use_translation   } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from '../../utils / i18n';
@@ -215,10 +169,8 @@ if (return null) {$2;
     <div className="bg - amber - 50 dark:bg - amber - 900 / 20 border - b border - amber - 200 dark:border - amber - 800 text - amber - 900 dark:text-amber-200">;
       <div className="container mx - auto px - 4 py - 2 flex items - center justify - between gap-4 text-sm">;
         <div>{t ("lang.switch_prompt", { language: t (localeLabelKey[suggested]) })}
-=======
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
 const localeLabelKey: Record < string, string> = {"
   en: "lang.english","
@@ -276,18 +228,15 @@ if (return null) {}
     set_suggested (null);
   }
 ;
-<<<<<<< HEAD
   return (
     <div className="bg - amber - 50 dark:bg - amber - 900 / 20 border - b border - amber - 200 dark:border - amber - 800 text - amber - 900 dark:text-amber-200">;
       <div className="container mx - auto px - 4 py - 2 flex items - center justify - between gap-4 text-sm">;
         <div>;
           {t ("lang.switch_prompt", { language: t (localeLabelKey[suggested]) })}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </div>;
         <div className="flex items-center gap-2">;
           <button;
             className="px - 3 py - 1 rounded bg - amber-600 text-white";
-<<<<<<< HEAD
             on_click={accept}
           >;
             {t ("lang.switch_accept")}
@@ -297,42 +246,18 @@ if (return null) {}
             className="px - 3 py - 1 rounded border border - amber - 300 dark:border-amber-700";
             on_click={decline}
           >;
-=======
-=======
-  return ("
-    <div className="bg - amber - 50 dark:bg - amber - 900 / 20 border - b border - amber - 200 dark:border - amber - 800 text - amber - 900 dark:text - amber - 200">;"
-      <div className="container mx - auto px - 4 py - 2 flex items - center justify - between gap - 4 text - sm">;
-        <div>;"
-          {t ("lang.switch_prompt", { language: t (localeLabelKey[suggested]) })}
-        </div>;"
-        <div className="flex items - center gap - 2">;
-          <button;"
-            className="px - 3 py - 1 rounded bg - amber - 600 text - white";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             on_click={accept}
           >;"
             {t ("lang.switch_accept")}
           </button>;
-<<<<<<< HEAD
           <button;
             className="px - 3 py - 1 rounded border border - amber - 300 dark:border-amber-700";
-=======
-          <button;"
-            className="px - 3 py - 1 rounded border border - amber - 300 dark:border - amber - 700";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             on_click={decline}
           >;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             {t ("lang.switch_decline")}
           </button>;
         </div>;
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
 
 "

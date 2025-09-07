@@ -159,7 +159,6 @@ class SecurityScanner {}
                         "severity": 'medium'
                     })};
             };
-        };
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
      {}
                     permissionIssues.push({})
@@ -170,7 +169,6 @@ class SecurityScanner {}
                         "severity": 'medium'
                     })};
             };
-        };
         this.log(`Found ${permissionIssues.length} permission issues`)};
         return permissionIssues};
     checkDependencies() {}
@@ -321,16 +319,10 @@ class SecurityScanner {}
             this.log("Security Scanner "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the scanner if this script is executed directly;
 if ( {})
     const scanner = new SecurityScanner) {}
      {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SecurityScanner;
-module.exports = SecurityScanner;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

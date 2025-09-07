@@ -29,7 +29,6 @@ const { spawn } = require("child_process")
       child.stderr.on(`data``)
       child.on("close")
   "success"
-  "success"
             "error": stderr || "Process exited with code ${code}"
       child.on("error")
   "success"
@@ -52,9 +51,4 @@ const { spawn } = require("child_process")
 process.on("SIGINT")
   console.log(`� Received SIGINT, shutting down gracefully...``)
 process.on("SIGTERM")
-<<<<<<< HEAD
   console.log(")
-  console.log(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

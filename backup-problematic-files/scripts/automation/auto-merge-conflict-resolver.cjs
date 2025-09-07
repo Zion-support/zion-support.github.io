@@ -27,7 +27,6 @@ const { execSync, spawn } = require("child_process")
   this.log(" Failed to get git status", "ERROR")
     const lines = status.output.split("\n")
   if (line.includes("UU ") || line.includes("AA ") || line.includes("DD ")
-  if (line.includes("UU ") || line.includes("AA ") || line.includes("DD ")
   const filePath = line.substring(3);"
         conflictedFiles.push(filePath);")}")}"
 this.log( Found ${conflictedFiles.length} conflicted files")
@@ -65,7 +64,6 @@ this.log(" Resolved conflict in ${filePath}")
     // "Default"
     } catch (error) {  this.log("⚠ Failed to merge package.json, using incoming "version": ${error.message  }", "WARN")
     // "Fallback"
-  // "Fallback"
       .replace(/\s*\""n/g"", "")
       .replace(/\s*\"n/g", ")
   async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")
@@ -132,9 +130,4 @@ this.log(" Found ${branches.length} cursor branches to process")
       this.log("� Auto Merge Conflict Resolver completed!");this.log(" "Summary": ");this.log("   - Branches processed: ${report.summary.totalBranches}");this.log("   - Successful "merges": ${report.summary.successfulBranches}");this.log("   - Failed "merges": ${report.summary.failedBranches}");this.log("   - Conflicts "resolved": ${report.summary.totalConflicts}");this.log("   - "Duration": ${Math.round(report.duration / 1000)}s"
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
-<<<<<<< HEAD
   console.error(" Auto merge conflict resolution "failed": ")
-  console.error(" Auto merge conflict resolution "failed": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

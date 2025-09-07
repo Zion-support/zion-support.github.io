@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -145,20 +144,12 @@ export default function Pricing2033Page() {
     }
   ],
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function pricing2033() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Pricing 2033 - Zion Tech Group</title>
         <meta name="description" content="Pricing 2033 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
         {/* Header */}
@@ -215,11 +206,8 @@ export default function pricing2033() {
                   <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
                     Save 20%
                   </span>
-                </span>
               </motion.div>
             </div>
-          </div>
-        </div>
 
         {/* Pricing Tiers */}
         <div className="relative py-20">
@@ -241,7 +229,6 @@ export default function pricing2033() {
                       <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
                         Most Popular
                       </div>
-                    </div>
                   )}
 
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
@@ -284,8 +271,6 @@ export default function pricing2033() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
 
         {/* Service Categories Pricing */}
         <div className="relative py-20">
@@ -315,7 +300,6 @@ export default function pricing2033() {
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                       <p className="text-sm text-gray-400">{category.description}</p>
                     </div>
-                  </div>
 
                   <div className="mb-6">
                     <div className="text-3xl font-bold text-purple-400 mb-2">{category.avgPrice}</div>
@@ -339,8 +323,6 @@ export default function pricing2033() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
 
         {/* Popular Services */}
         <div className="relative py-20">
@@ -369,12 +351,10 @@ export default function pricing2033() {
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
                         {service.category}
                       </div>
-                    </div>
                     <div className="text-right ml-4">
                       <div className="text-2xl font-bold text-purple-400">{service.price}</div>
                       <div className="text-green-400 text-xs">{service.savings}</div>
                     </div>
-                  </div>
 
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
@@ -398,8 +378,6 @@ export default function pricing2033() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="relative py-20">
@@ -443,25 +421,6 @@ export default function pricing2033() {
                     <MapPin className="w-4 h-4 text-purple-400" />
                     <span>{contactInfo.address}</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Pricing 2033</h1>
-          <p className="text-lg text-gray-600">
-            Professional pricing 2033 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T04:25:47.740Z",
   "stats": {
     "totalFiles": 8,
@@ -7,21 +6,6 @@
     "functions": 7,
     "classes": 0,
     "comments": 5
-=======
-<<<<<<< HEAD
-  ]
-}
-  ]
-}
-ursor/automate-test-improve-and-merge-code-646c
-  ]
-}
-  "timestamp": "2025-09-07T09:43:35.163Z",
-  "summary": {
-    "passed": 1,
-    "failed": 2,
-    "warnings": 0
->>>>>>> origin/main
   },
   "issues": [
     {
@@ -45,7 +29,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "Consider using TypeScript for better type safety"
   ]
 }
-=======
   "timestamp": "2025-09-07T10:14:30.109Z",
   "issues": [
     {
@@ -64,6 +47,5 @@ ursor/automate-test-improve-and-merge-code-646c
   "summary": {
     "totalIssues": 2
   }
-}
   ]
 }

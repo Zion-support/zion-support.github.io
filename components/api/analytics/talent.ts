@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { createServerClient  } from '../../../utils/supabase/server';'
       supabase;
-      supabase;
 
 export default async function handler() {try {const supabase = null;
         { "label": 'ai', "value": 1 },'
@@ -62,9 +61,7 @@ const views =;
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
-<<<<<<< HEAD
     });
-<<<<<<< HEAD
   } catch (e) {
       }
       "topTags": [
@@ -74,8 +71,6 @@ const views =;
 }
         { "label": 'ai', "value": 1 }'
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
 
    
@@ -85,15 +80,12 @@ pr-12243
   }
 
 }
-<<<<<<< HEAD
-}
 origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
   }
 
   }
-<<<<<<< HEAD
 
 }
 
@@ -173,5 +165,3 @@ const "tag_counts": Record < string, number> = {}
 }
 }}
   }
-}
-}

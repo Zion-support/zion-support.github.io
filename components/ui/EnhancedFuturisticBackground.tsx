@@ -5,8 +5,6 @@ import React, { useEffect, useRef } from 'react';'
 import { motion  } from 'framer-motion';'
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
@@ -16,35 +14,8 @@ interface EnhancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high';'
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';'
   particleCount?: number;
-<<<<<<< HEAD
   animationSpeed?: number;
 }const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({children;
-=======
-  animationSpeed?: number
-}
-
-const "EnhancedFuturisticBackground": React.FC<EnhancedFuturisticBackgroundProps> = ({children;
-  }
-  className;
-
-const colorSchemes = {"quantum": {resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Wrap around edges if (this.x < 0) this.x = canvas.width;'
-}
-if (this.x > canvas.width) this.x = 0;
-if (this.y < 0) this.y = canvas.height;
-if (this.y > canvas.height) this.y = 0;
-
-<<<<<<< HEAD
-=======
-=======
-const colorSchemes = {
-  quantum: {
-  resizeCanvas ()
-window.addEventListener ('resize', resizeCanvas)
-// Wrap around edges if (this.x < 0) this.x = canvas.width
-if (this.x > canvas.width) this.x = 0
-if (this.y < 0) this.y = canvas.height
-if (this.y > canvas.height) this.y = 0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 // Fade out near end of life if (this.life < 20) {
   
 
@@ -258,7 +229,6 @@ if (this.life < 20) {
 
 this.opacity *= 0.95;
         }
-      }
 
           this.opacity *= 0.95;        }
 
@@ -277,7 +247,6 @@ this.opacity *= 0.95;
         this.y += this.vy,
         this.life--,
 
-=======
   background: 'rgba(10, 10, 30, 0.9)',
 particles: [
         '#ff6b6b',
@@ -337,7 +306,6 @@ this.color =
         this.x += this.vx
         this.y += this.vy
         this.life--
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         // Wrap around edges
         if (this.x < 0) this.x = $2;
         if (this.x > canvas.width) this.x = $2;
@@ -347,7 +315,6 @@ this.color =
         if (this.life < 20) {
           this.opacity *= 0.95
         }
-      }
 
       draw() {
         }
@@ -369,12 +336,10 @@ this.size
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
         ctx.save($2);
         ctx.globalAlpha = $2;
         // Create gradient for particle
         const gradient = ctx.createRadialGradient($2);
-        gradient.addColorStop($2);
         gradient.addColorStop($2);
         ctx.fillStyle = $2;
         ctx.beginPath($2);
@@ -387,7 +352,6 @@ this.size
         }
         return this.life <= 0 || this.opacity < 0.01;
       }
-    }
 
     // Connection lines between particles,
 class Connection {
@@ -459,11 +423,8 @@ if ( {) {
           ctx.stroke ();
           ctx.restore ();        }
       }
-    }
           ctx.restore ();
         }
-      }
-    }
     let "particles": Particle[] = [];
     let "connections": Connection[] = [];
 
@@ -514,7 +475,6 @@ const text =;
           }
           drops[i]++;
         }
-=======
         ctx.restore();
       }
       isDead() {
@@ -584,10 +544,8 @@ particles.push(new Particle());
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-=======
 particles.push(new Particle());}
 
       // Create connections between nearby particles,
@@ -635,10 +593,8 @@ if ( {) {$2;
           ctx.line_width = 0.5;
           ctx.begin_path ()ctx.move_to (this.p1.x, this.p1.y)ctx.line_to (this.p2.x, this.p2.y)ctx.stroke ()ctx.restore ()}
       }
-    }
           ctx.restore ()ctx.restore()}
       }
-    }
     let particles: Particle[] = [];
     let connections: Connection[]  = [];drops[i] = 1;
 // Initialize particles;
@@ -754,8 +710,6 @@ ctx.stroke();
           if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]))
           }
-        }
-      }
 
       // Draw connections
       connections.forEach(connection = $2;
@@ -823,7 +777,6 @@ cancelAnimationFrame(animationRef.current);
 };
 
         ctx && ctx.restore();
-      }
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);

@@ -356,9 +356,4 @@ if (require.main === module) {}
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = BuildErrorAutoFixer;
-module.exports = BuildErrorAutoFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

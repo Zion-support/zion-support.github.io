@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -94,7 +93,6 @@ className='text-center'>'
               <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center'>;'
                 <Atom className='w-10 h-10 text-white' />;'
               </div>;
-            </div>;
             <h1 className='text-5xl "md":text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent'>;'
               Quantum AI Neural Network Platform 2045;
             </h1>;
@@ -205,7 +203,6 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Benefits Section */}
       <section className='py-20'>;
@@ -231,7 +228,6 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
                 <h3 className="text - lg font - semibold mb - 2">{feature}</h3>;
               </motion.div>))}
           </div>;
-        </div>;
       </section>;
       {/* Benefits Section */}
       <section className='py - 20'>;
@@ -252,7 +248,6 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
             )
 }
           </div>;
-        </div>;
       </section>;
       {/* Benefits Section */}
 <section className='py-20'>;'
@@ -312,10 +307,8 @@ className='text-center''
             )
 }
           </div>;
-        </div>;
       </section>;
           </div>;
-        </div>;
       </section>;{/* Pricing Section */}
       <section className='py-20 bg-gray-900/50'>;'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;"
@@ -367,7 +360,6 @@ journey.
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object.entries(pricing).map(([plan, price], index) => (          >
             ))}
           </div>
-        </div>
       </section>
 
       {/* Pricing Section */}
@@ -457,7 +449,6 @@ plan === 'professional''
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
                 viewport={{ once: true }}
@@ -497,7 +488,6 @@ className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-
 };
 
 
-export default QuantumAINeuralNetworkPlatform;
 export default QuantumAINeuralNetworkPlatform;
 
 };
@@ -588,7 +578,6 @@ export default QuantumAINeuralNetworkPlatform;}{/* CTA Section */}
                 </motion.button>;
               </motion.div>))}
           </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
       <section className='py - 20'>;
@@ -634,7 +623,6 @@ export default QuantumAINeuralNetworkPlatform;
 ;
     </div>)}export default QuantumAINeuralNetworkPlatform)}export default QuantumAINeuralNetworkPlatform;)}export default QuantumAINeuralNetworkPlatform;
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -661,12 +649,3 @@ export default QuantumAINeuralNetworkPlatform;
 };
 
 export default QuantumAINeuralNetworkPlatform;
-=======
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            viewport = $2;
-export default QuantumAINeuralNetworkPlatform,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

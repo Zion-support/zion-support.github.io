@@ -51,8 +51,7 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
-<<<<<<< HEAD:src/components/mobile-app/AppFeatures.tsx
-=======
+:src/components/mobile-app/AppFeatures.tsx
 
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
@@ -117,15 +116,12 @@ const features = [;
               <CardContent>;
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>;</CardContent>;
             </Card>;
->>>>>>> origin/main:src_disabled_1757239864/components/mobile-app/AppFeatures.tsx
           ))}
         </div>
-      </div>
     </section>
   )
 };
-<<<<<<< HEAD:src/components/mobile-app/AppFeatures.tsx
-=======
+:src/components/mobile-app/AppFeatures.tsx
 
 "
 
@@ -148,7 +144,6 @@ const features = [;
               </CardContent>;
             </Card>))}
         </div>;
-      </div>;
     </section>)}
 {";
   icon: <Clock className="h - 10 w - 10 text - zion - cyan" />;";
@@ -175,4 +170,3 @@ export const AppFeatures: React.FC = () => {";
 }
 
 
->>>>>>> origin/main:src_disabled_1757239864/components/mobile-app/AppFeatures.tsx

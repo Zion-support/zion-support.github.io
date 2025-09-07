@@ -75,13 +75,7 @@ class QualityAssuranceMonitor {}
       this.log(`Error during quality "check": ${error.message}`, 'error');
       return { "success": false, "error": error.message }};
   };
-};
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = QualityAssuranceMonitor;
-module.exports = QualityAssuranceMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -46,9 +46,4 @@ const newContent = lines.join(');
 const varMatch = message.match(/'(.+?)';
     if (line.includes('console.')
     if (message.includes('single quotes')
-<<<<<<< HEAD
       lines[lineIndex] = line.replace(/"/g, ")
-      lines[lineIndex] = line.replace(/"/g, ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

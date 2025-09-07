@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const EnhancedTestimonialsSection: React.FC = () => {
-  const testimonials: Testimonial[] = [ {
-  const renderStars = (rating: number) => {
-  return Array.from ({
-  length: 5 
-}, (, i) => (<Star key= {
-  i 
-}className= {
-  `w-4 h-4 $ {
-  i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400' 
-}` 
-}/>) ) 
-}
-return (What Our Clients Say </span> </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" > Discover why leading companies trust Zion Tech Group to transform their business with cutting-edge technology solutions </p> </div> </div>) ) 
-}</div> <div key= {
-  testimonial.id 
-}className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > </span> </div> </div> </div>) ) 
-}</div> Ready to Join Our Success Stories? </h3> <p className="text-white/70 mb-6 max-w-2xl mx-auto" > Experience the same transformative results that our clients have achieved. Let's discuss how Zion Tech Group can accelerate your innovation journey. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Start Your Success Story </a> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule a Call </a> </div> </div> </div> <span>Enterprise-grade security</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-4 h-4 text-blue-400" /> <span>Proven ROI</span> </div> <div className="flex items-center gap-2" > <Users className="w-4 h-4 text-purple-400" /> <span>Global support</span> </div> </div> </div> </div> </section>) 
-}
-export default EnhancedTestimonialsSection
-=======
-import React from 'react';
-import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
-import {
-  Star
-  Quote
-  Users
-  Award
-  TrendingUp
-  CheckCircle;
-} from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 ;
 import React from 'react';
@@ -151,7 +116,6 @@ return Array.from({ "length": 5,;
                     <div className="text-sm text-white/70">{testimonial.title}</div>;"
                     <div className="text-xs text-blue-400">{testimonial.company}</div>;"
                   </div>;
-                </div>;
                 {/* Category Badge */}<div className="mt-4">;"
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">;"
                     {testimonial.category}
@@ -240,14 +204,11 @@ return Array.from({ "length": 5,;
                     <div className='text-xs text-blue-400'>;'
                       {testimonial.company}
                     </div>;
-                  </div>;
-                </div>;
                 {/* Category Badge */}
 <div className='mt-4'>;'
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>;'
                     {testimonial.category}{testimonial.category}</span>;
                 </div>;
-              </div>;
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">;"
                   "{testimonial && testimonial.content}";"
@@ -282,7 +243,6 @@ return Array.from({ "length": 5,;
                     {testimonial && testimonial.category}
                   </span>;
                 </div>;
-              </div>;
               {/* Hover Effect */}{/* CTA Section */}
         <div className='text-center mt-16'>;'
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;'
@@ -341,11 +301,6 @@ href='"tel":+13024640950';'
                 Schedule a Call;
               </a>;
             </div>;
-          </div>;
-        </div>;
-            </div>;
-          </div>;
-        </div>;
       </div>;export default EnhancedTestimonialsSection;
     </section>)}export default EnhancedTestimonialsSection)}export default EnhancedTestimonialsSection;)export default EnhancedTestimonialsSection;  )}
 export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSection;{/* Trust Indicators */}
@@ -368,15 +323,10 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
               <Users className='w-4 h-4 text-purple-400' />;'
               <span>Global support</span>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
     </section>;
-)}export default EnhancedTestimonialsSection;
 )}export default EnhancedTestimonialsSection;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
-<<<<<<< HEAD
             <div key={index} className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-10 h-10 text-blue-400" />
@@ -421,7 +371,6 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
                     <div className="text-sm text-white/70">{testimonial.title}</div>
                     <div className="text-xs text-blue-400">{testimonial.company}</div>
                   </div>
-                </div>
 
                 {/* Category Badge */}
                 <div className="mt-4">
@@ -429,7 +378,6 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
                     {testimonial.category}
                   </span>
                 </div>
-              </div>
 
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -461,8 +409,6 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
                 Schedule a Call
               </a>
             </div>
-          </div>
-        </div>
 
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
@@ -478,40 +424,12 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-purple-400" />
               <span>Global support</span>
-=======
-            <div key = $2;
-export default EnhancedTestimonialsSection,
-=======
-<div className='mt-16 text-center'    />
-          <div className='inline-flex items-center gap-8 text-white/60 text-sm'    />
-            <div className='flex items-center gap-2'    />
-              <CheckCircle className='w-4 h-4 text-green-400'    />
-              <span    />Enterprise-grade security</span>
-            </div>              <span    />Enterprise-grade security</span>
             </div>
-            <div className=\"flex items-center gap-2\"    />
-              <TrendingUp className=\"w-4 h-4 text-blue-400\"    />
-              <span    />Proven ROI</span>
-            </div>
-            <div className='flex items-center gap-2'    />
-              <TrendingUp className='w-4 h-4 text-blue-400'    />
-              <span    />Proven ROI</span>
-            </div>
-            <div className='flex items-center gap-2'    />
-              <Users className='w-4 h-4 text-purple-400'    />
-              <span    />Global support</span>
->>>>>>> origin/main
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-<<<<<<< HEAD
   )
 };
 
 export default EnhancedTestimonialsSection;
-=======
   );
 }
 export default EnhancedTestimonialsSection;  )
@@ -538,9 +456,6 @@ export default EnhancedTestimonialsSection;{/* Trust Indicators */}
               <Users className='w-4 h-4 text-purple-400' />;'
               <span>Global support</span>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
     </section>;
 )}
 

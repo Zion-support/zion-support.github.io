@@ -503,7 +503,6 @@ export interface MarketValidatedService {
 		address: string,
 		website?: string
 	}
-}
 
 const contactInfo = $2;
 	email: 'kleber@ziontechgroup.com',
@@ -643,31 +642,6 @@ export const "marketValidatedServices": MarketValidatedService[] = [;
   "trial_days": 14;
   "setup_time": '2 hours';'
   contact_info;
-<<<<<<< HEAD
-=======
-}];
-;
-;
-
-
-		contactInfo
-	}
-];
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-const contactInfo = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }}
   "mobile": "+1 302 464 0950","
 	"email": "kleber@ziontechgroup && ziontechgroup.com","

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 import { Button } from "@/components/ui/button",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { TableRow, TableCell } from "@/components/ui/table",
@@ -10,7 +9,7 @@ import { ApplicationActions } from "./ApplicationActions";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 interface ApplicationRowProps {
   application: JobApplication;
   processingId: string | null;
@@ -34,7 +33,7 @@ interface ApplicationRowProps {
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
@@ -58,7 +57,7 @@ export function ApplicationRow({
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
 ;
 interface ApplicationRowProps  {import { Button } from "@/components/ui/button",import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
@@ -81,7 +80,7 @@ interface ApplicationRowProps {;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
   onViewScore: (application: JobApplication) => void;
 import { Button  } from '@/components/ui/button';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict;
@@ -90,7 +89,7 @@ import { JobApplication, ApplicationStatus  } from '@/types/jobs';
 import { StatusBadge  } from './StatusBadge';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
 
 
@@ -123,7 +122,7 @@ interface ApplicationRowProps  {application: JobApplication;
   onViewScore: (application: JobApplication,) => void;
   onViewScore: (application: JobApplication) => void,
 }
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
 export function ApplicationRow(): any ({;
   application,;
@@ -135,8 +134,7 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
     applicationId: string
     newStatus: ApplicationStatus
   ) => Promise<void>
@@ -165,7 +163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const talentName = application.talent_profile?.full_name |'Unknown'
 
   const talentName = application.talent_profile?.full_name || 'Unknown'
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
   return (
 
 
@@ -176,9 +174,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
 
                 src={application.talent_profile.profile_picture_url} 
@@ -188,8 +186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 height={36} // Corresponds to h-9 w-9
                 className="rounded-full object-cover" // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
                 priority={false}
               />
 
@@ -214,20 +211,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div>
 
             </div>
-          </div>
-        </div>
       </TableCell>
       <TableCell>
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
 
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
         </div>
       </TableCell>
@@ -235,8 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
 
 
@@ -308,7 +302,6 @@ export function ApplicationRow() {const [avatarError, setAvatarError] = useState
             <div className="text-xs text-muted-foreground">;
               {application.talent_profile?.professional_title || "Talent"}</div>;
           </div>;
-        </div>;
       </TableCell>;
       <TableCell>;
         <div className="flex items-center gap-1">;
@@ -386,14 +379,12 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
             <div className='text - xs text - muted - foreground'>;
               {application.talent_profile?.professional_title || 'Talent'}
             </div>;
-          </div>;
-        </div>;
       </TableCell>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
       <TableCell>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
         <div className='flex items - center gap - 1'>;
       <TableCell>;<div className='flex items - center gap - 1'>;
@@ -410,17 +401,16 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
           size='sm';
           on_click={() => onViewScore (application)}
           className='flex items - center gap - 1'        >;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
           <BarChart className='h - 4 w - 4 mr - 1' />;
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
 
               href={application && application.resume.file_url || '#'}
 
@@ -438,7 +428,7 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
           </Button>;
         ) : (<span className="text-muted-foreground text-sm">No resume</span>;
         )}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
       </TableCell>;
 
             </a>;
@@ -448,14 +438,14 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
         )}
       </TableCell>;
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
       <TableCell className='text-right'>;
         <ApplicationActions
           application = {application,}
           processingId = {processingId,}
           onViewApplication = {onViewApplication,}
           onStatusChange = {onStatusChange,}
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
         />
       </TableCell>
     </TableRow>
@@ -490,7 +480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onStatusChange = {onStatusChange }
         />;
       </TableCell>;
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationRow.tsx
+:src_backup/components/jobs/applications/ApplicationRow.tsx
     </TableRow>)}/>;
       </TableCell>;
     </TableRow>;

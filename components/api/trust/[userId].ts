@@ -41,7 +41,6 @@ const heuristic =;
     };
   }
 
-<<<<<<< HEAD
   try {
     }
     const { OpenAI } = await import('openai');'
@@ -122,7 +121,6 @@ const { data } = await supabase;
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data && data.values as TrustMetricInputs;
       } catch {}
-<<<<<<< HEAD
       if (!inputs) {
         inputs = {
         if (data) inputs = data.values as TrustMetricInputs;
@@ -236,7 +234,6 @@ await supabase
     } catch ("e": any) {
       }
       return res;
-<<<<<<< HEAD
         .status (500);
         .json ({ "error": e?.message || 'Failed to compute trust score','
 });
@@ -254,7 +251,6 @@ await supabase
 return res.status (500).json ({ "error": e?.message || 'Failed to compute trust score',;'
 });
     }
-  }
 
   res.setHeader('Allow', 'GET, POST');'
 return res.status(405).json({ "error": 'Method not allowed',;'

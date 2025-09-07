@@ -19,15 +19,11 @@ class CICDAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.report.steps.push({})
       timestamp,
       type,
@@ -61,7 +57,6 @@ class CICDAutomation {}
       this.report.summary.tests = 'failed';
       // Don't throw, continue with other steps;
     };
-  };
   async runLinting() {}
     try {}
       await this.runCommand('npm run lint', 'Run linting');
@@ -69,7 +64,6 @@ class CICDAutomation {}
       this.report.summary.linting = 'failed';
       // Don't throw, continue with other steps;
     };
-  };
   async buildApplication() {}
     try {}
       await this.runCommand('npm run build', 'Build application');
@@ -107,16 +101,10 @@ class CICDAutomation {}
       this.log(`CI/CD Pipeline "failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()};
   };
-};
 // Run the automation;
 if ( {})
   const automation = new CICDAutomation) {}
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = CICDAutomation;
-module.exports = CICDAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -11,15 +10,9 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 export default function security() {
   return (
-<<<<<<< HEAD
     <Layout
       title="Security - Zion Tech Group"
       description="Learn about our comprehensive security measures and how we protect your data and systems."
@@ -171,7 +164,6 @@ export default function Security() {
         {/* Security Stats */}
 
             </div>;
-          </div>;
         </section>;
 
         {/* Security Features */}
@@ -286,7 +278,6 @@ function SecurityPage() {
                   </div>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* Security Features */}
         <section className="py - 16">;
@@ -358,7 +349,6 @@ function SecurityPage() {
               ))}
 
             </div>;
-          </div>;
         </section>;
 
         {/* Compliance Section */}
@@ -432,7 +422,6 @@ function SecurityPage() {
                   </div>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* Compliance Section */}
         <section className="py - 16 bg - white">;
@@ -480,8 +469,6 @@ function SecurityPage() {
                 <p className="text - gray - 600 text - sm">Health Insurance Portability and Accountability Act</p>;
 
               </div>;
-            </div>;
-          </div>;
         </section>;
 
         <section className="py-16 bg-white">
@@ -573,8 +560,6 @@ function SecurityPage() {
                       <li>• Recovery time objectives (RTO)</li>
                     </ul>
                   </div>
-                </div>
-              </div>
             </motion.div>
 
             {/* Vulnerability Management */}
@@ -614,8 +599,6 @@ function SecurityPage() {
                     <h4 className="text-white font-semibold mb-2">Rapid Remediation</h4>
                     <p className="text-gray-300 text-sm">Quick patching and vulnerability resolution</p>
                   </div>
-                </div>
-              </div>
             </motion.div>
 
             {/* Contact Security Team */}
@@ -640,7 +623,6 @@ function SecurityPage() {
                     <p className="text-white font-semibold">Security Email</p>
                     <p className="text-gray-300">security@ziontechgroup.com</p>
                   </div>
-                </div>
                 
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-red-400 mr-3" />
@@ -648,7 +630,6 @@ function SecurityPage() {
                     <p className="text-white font-semibold">Emergency Hotline</p>
                     <p className="text-gray-300">+1 (555) 123-HELP</p>
                   </div>
-                </div>
                 
                 <div className="flex items-center">
                   <Key className="w-5 h-5 text-red-400 mr-3" />
@@ -656,14 +637,9 @@ function SecurityPage() {
                     <p className="text-white font-semibold">PGP Key</p>
                     <p className="text-gray-300">Available on request</p>
                   </div>
-                </div>
-                  </div>
-                </div>
 ursor/integrate-build-improve-and-re-verify-8f7d
 </Link>
-</Link>
                   </div>
-                </div>
 </Link>
               </div>
             </motion.div>
@@ -690,7 +666,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   )
 }
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -700,22 +675,3 @@ ursor/integrate-build-improve-and-re-verify-b76c
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
-=======
-    <Layout>
-      <Head>
-        <title>Security - Zion Tech Group</title>
-        <meta name="description" content="Security solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Security</h1>
-          <p className="text-lg text-gray-600">
-            Professional security solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
@@ -47,14 +46,12 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             </>
           )}
         </div>
-      </div>
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
       <div className="mx-auto">
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
-    </div>
   )
 }
 
@@ -95,28 +92,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   return { props: { initialData, versions } }
 },
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function preview() {
-  return (
-    <Layout>
-      <Head>
-        <title>Preview - Zion Tech Group</title>
-        <meta name="description" content="Preview solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Preview</h1>
-          <p className="text-lg text-gray-600">
-            Professional preview solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

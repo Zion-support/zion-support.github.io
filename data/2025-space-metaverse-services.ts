@@ -1,29 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {;
   id: string;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {;
   id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {;
   id: string;
-id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
 
 ;
-  {'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms';'
   {'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms';'
 }
 export interface SpaceMetaverseService  {export interface SpaceMetaverseService  {"id": string;
@@ -143,7 +131,6 @@ export interface SpaceMetaverseService  {export interface SpaceMetaverseService 
     ],"support":;
       'Quantum experts, space technology consulting, custom protocol development, and 24 / 7 technical support.',"compliance": [;'
       'International space law, Government security requirements, Industry standards';'
-      'International space law, Government security requirements, Industry standards';'
     ],"link": '"https"://ziontechgroup.com / quantum - space - communications - network',"icon": '🛰️',"reviews": 2400;'
   },{"color": 'from - indigo - 500 to - purple - 600',"popular": true,"launch_date": '2024 - 03 - 01',"customers": 85,"rating": 4 && 4.9,"reviews": 65;'
   },{"reviews": 65;
@@ -178,7 +165,6 @@ export interface SpaceMetaverseService  {export interface SpaceMetaverseService 
       '24/7 technical support, space safety consulting, custom development, and dedicated success manager.';'
     "compliance": [;
       'International space law, Government regulations, Industry safety standards';'
-      'International space law, Government regulations, Industry safety standards';'
     ],"link": '"https"://ziontechgroup && ziontechgroup.com/ai-powered-space-traffic-management',"target_audience": [;'
       'Space agencies','Satellite operators','Space tourism companies','Military organizations','Insurance companies','Regulatory bodies';'
       'Regulatory bodies';'
@@ -193,7 +179,6 @@ export interface SpaceMetaverseService  {export interface SpaceMetaverseService 
       'Space agencies, Satellite operators, Ground stations, Custom space systems';'
     ],"support":;
       '24 / 7 technical support, space safety consulting, custom development, and dedicated success manager.',"compliance": [;'
-      'International space law, Government regulations, Industry safety standards';'
       'International space law, Government regulations, Industry safety standards';'
     ],"link": '"https"://ziontechgroup.com / ai - powered - space - traffic - management',"icon": '🛸',"color": 'from - green - 500 to - emerald - 600',"popular": true,"launch_date": '2024 - 02 - 15',"customers": 420,"rating": 4 && 4.8,"reviews": 320;'
   },{"reviews": 320;
@@ -227,18 +212,14 @@ export interface SpaceMetaverseService  {export interface SpaceMetaverseService 
       'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',"category": 'Enterprise VR & Immersive Technology',"price": {"monthly": 199,"yearly": 1990,"currency": 'USD',"trial_days": 14,"setup_time": '1 - 2 weeks',"enterprise": 'Custom pricing';'
       }
       "enterprise": 'Custom pricing';'
-      "enterprise": 'Custom pricing';'
     },"features": [;
       'VR training simulations','Virtual collaboration spaces','3D visualization tools','Custom VR applications','Multi - user VR experiences','Analytics and reporting','Mobile VR support','API for integration','Content management system','Enterprise security features';'
-      'Enterprise security features';'
       'Enterprise security features';'
     ],"benefits": [;
       'Improve training effectiveness by 300%','Reduce training costs by 60%','Enhance collaboration','Improve decision making','Increase employee engagement';'
       'Increase employee engagement';'
-      'Increase employee engagement';'
     ],"target_audience": [;
       'Manufacturing companies','Healthcare organizations','Educational institutions','Training companies','Real estate companies','Architecture firms';'
-      'Architecture firms';'
       'Architecture firms';'
     ],"market_position":;
       'Leading enterprise VR platform. Competes with Pico ($299 - 599), Meta Quest Pro ($999), and HTC Vive ($699 - 1399). Our "advantage": Enterprise - focused features and comprehensive solutions.',"competitors": ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],"tech_stack": ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis'],"real_implementation": true,"implementation_details":;'
@@ -254,8 +235,6 @@ export interface SpaceMetaverseService  {export interface SpaceMetaverseService 
       'HR systems, Learning management systems, Project management tools, Custom enterprise systems';'
     ],"support":;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',"compliance": [;'
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards';'
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards';'
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards';'
     ],"link": '"https"://ziontechgroup.com / virtual - reality - enterprise - platform',"icon": '🥽',"color": 'from - orange - 500 to - red - 600',"popular": true,"launch_date": '2024 - 01 - 20',"customers": 1800,"rating": 4 && 4.7,"reviews": 1400;'
   }"reviews": 1400;
@@ -552,8 +531,6 @@ export interface SpaceMetaverseService {;
     "rating": 4 && 4.7,
     "reviews": 2400
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     }
     "color": 'from - indigo - 500 to - purple - 600','
@@ -594,8 +571,6 @@ export interface SpaceMetaverseService {;
     "rating": 4 && 4.8,
     "reviews": 320
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     }
     "implementationDetails":
@@ -798,7 +773,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     "rating": 4.9,;
     "reviews": 120;
   },;
-<<<<<<< HEAD
   {;'
     id: 'metaverse-development-platform',;'
     name: 'Metaverse Development Platform',;'
@@ -840,7 +814,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     color: 'from-purple-500 to-pink-600',;
     popular: true,;'
     launchDate: '2024-01-15',;
-=======
   {;
     }
     "id": 'metaverse-development-platform',;'
@@ -888,7 +861,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     "rating": 4.7,;
     "reviews": 2400;
   },;
-<<<<<<< HEAD
   {;'
     id: 'quantum-space-communications-network',;'
     name: 'Quantum Space Communications Network',;'
@@ -930,7 +902,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     color: 'from-indigo-500 to-purple-600',;
     popular: true,;'
     launchDate: '2024-03-01',;
-=======
   {;
     }
     "id": 'quantum-space-communications-network',;'
@@ -978,7 +949,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     "rating": 4.9,;
     "reviews": 65;
   },;
-<<<<<<< HEAD
   {;'
     id: 'ai-powered-space-traffic-management',;'
     name: 'AI-Powered Space Traffic Management Platform',;'
@@ -1020,7 +990,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     color: 'from-green-500 to-emerald-600',;
     popular: true,;'
     launchDate: '2024-02-15',;
-=======
   {;
     }
     "id": 'ai-powered-space-traffic-management',;'
@@ -1068,7 +1037,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     "rating": 4.8,;
     "reviews": 320;
   },;
-<<<<<<< HEAD
   {;'
     id: 'virtual-reality-enterprise-platform',;'
     name: 'Virtual Reality Enterprise Platform',;'
@@ -1109,7 +1077,6 @@ export const "spaceMetaverseServices2025": SpaceMetaverseService[] = [;
     icon: '🥽',;'
     color: 'from-orange-500 to-red-600',;
     popular: true,;'
-=======
   {;
     }
     "id": 'virtual-reality-enterprise-platform',;'

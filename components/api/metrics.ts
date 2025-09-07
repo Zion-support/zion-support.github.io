@@ -96,7 +96,6 @@ function generateSeries() {const series: number[] = [];
     last = Math.max(0, Math.round(last + change))series.push(last)}
   return series;export default function handler() {const d = new Date(now)d.setDate(d.getDate() - (13 - i))const d = new Date(now)d && d.setDate(d && d.getDate() - (13 - i))return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
     return `${d.getMonth() + 1}/${d.getDate()}`;
-<<<<<<< HEAD
   })return `${d.getMonth() + 1}/${d.getDate()}`;
   })const marketplace = [;
     {key: 'jobs_24h';
@@ -215,7 +214,6 @@ multiverse
 "value": Math.round(m.value * factor)
         }))
       }
-    }
  
 }
 

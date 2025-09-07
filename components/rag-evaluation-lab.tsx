@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react','
@@ -42,7 +41,6 @@ title='RAG Evaluation Lab''
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>;
 						<span className="text-gray-400">Call: +1 302 464 0950</span>;
 					</div>;
-				</div>;
 			</section>;
 		</>;
 	)}
@@ -83,17 +81,14 @@ title='RAG Evaluation Lab''
                 </p>
                 <p className='mt-4 text-3xl font-bold'>Custom</p>'
               </div>
-            </div>
             <p className='mt-4 text-sm text-gray-400'>'
 
               Market "references": {' ,'
 }
-<<<<<<< HEAD
     </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
       <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
       <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
       <span className="text-gray-400">Call: +1 302 464 0950</span>;
-    </div>;
     </div>;
   </section>;
   </>)}</div>;
@@ -131,7 +126,6 @@ title='RAG Evaluation Lab''
                 </p>;
                 <p className='mt-4 text-3xl font-bold'>Custom</p>;
               </div>;
-            </div>;
             <p className='mt-4 text-sm text-gray-400'>;
               Market references:{' '}
               <a;
@@ -179,7 +173,6 @@ href='"mailto":kleber@ziontechgroup.com''
             </a>
             <span className='text-gray-400'>"Call": +1 302 464 0950</span>'
           </div>
-        </div>
       </section>
     </>
   );

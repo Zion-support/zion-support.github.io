@@ -11,7 +11,7 @@ export default function handler() {
   return res && res.status(200).json(invoices);
 }
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../../utils / data / enterprise_store';
@@ -29,7 +29,7 @@ if ( {) {
   const invoices = store.list_invoices (company_id);
   return res.status (200).json (invoices);
 }
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -37,11 +37,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 
   } catch (error) {
     console.error("Error:", error);
@@ -50,13 +49,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -69,7 +66,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -80,4 +76,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

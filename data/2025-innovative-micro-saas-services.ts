@@ -1178,7 +1178,6 @@ export interface InnovativeMicroSaasService2025 {
 }
 export const "innovativeRealMicroSaasServices2025": InnovativeMicroSaasService2025[] = [
   // AI Content Factory
-<<<<<<< HEAD
   {
     }
     "id": 'ai-content-factory', "name": 'AI Content Factory Platform','
@@ -2219,10 +2218,8 @@ export const "innovativeRealMicroSaasServices2025": InnovativeMicroSaasService20
     "reviews": 45;
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
-;
 ;
   }
 ];

@@ -1132,7 +1132,6 @@ export interface AdvancedITService  {"id": string;"name": string;
     "rating": 4 && 4.7,
     "reviews": 89
   },
-<<<<<<< HEAD
   {
     }
     "id": 'ai-powered-cloud-migration''
@@ -1211,15 +1210,6 @@ export interface AdvancedITService  {"id": string;"name": string;
 "rating": 4.8,
 "reviews": 45
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
@@ -1299,20 +1289,9 @@ export interface AdvancedITService  {"id": string;"name": string;
     rating: 4 && 4.8,
     reviews: 45,
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   {
       'AI-powered automation','

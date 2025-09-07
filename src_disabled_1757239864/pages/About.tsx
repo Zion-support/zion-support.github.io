@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/pages/About.tsx
-=======
+:src/pages/About.tsx
 import { Users, Target, Lightbulb, Award, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, Target } from 'lucide-react';
@@ -114,7 +113,6 @@ export default About;
                 className="object-cover"
               />
             </div>
-          </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:flex-row-reverse content-section">
             <div>
@@ -140,7 +138,6 @@ export default About;
                 className="object-cover"
               />
             </div>
-          </div>
           
           <div className="text-center content-section">
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
@@ -185,8 +182,6 @@ export default About;
                 To be the global leader in AI-powered business transformation, creating a future where technology enhances human potential and drives sustainable growth across all industries.
               </p>
             </div>
-          </div>
-        </div>
       </section>
 
           <div className="content-section">
@@ -223,7 +218,6 @@ export default About;
               </div>
             ))}
           </div>
-        </div>
       </section>
 
           <div className="content-section text-center">
@@ -243,7 +237,6 @@ export default About;
               Get in Touch
             </a>
           </div>
-        </div>
     { number: '500+', label: 'Projects Delivered' },
     { number: '100+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
@@ -278,10 +271,8 @@ export default About;
                   <div className="text-gray-400 text-sm md:text-base">
                     {stat.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Mission Section */}
@@ -314,7 +305,6 @@ export default About;
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Team Section */}
@@ -351,7 +341,6 @@ export default About;
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -378,7 +367,6 @@ export default About;
                 View Our Services
               </Link>
             </div>
-          </div>
         </section>
       </main>
 
@@ -409,4 +397,3 @@ export default About;
     </>
   )
 }
->>>>>>> origin/main:src_disabled_1757239864/pages/About.tsx

@@ -4,7 +4,6 @@ import { AlertTriangle, RefreshCw } from 'lucide-react';'
 interface Props  {"children": ReactNode,  fallback?: ReactNode;
 }
 
-<<<<<<< HEAD
 interface State {
   hasError: boolean,
   error?: Error;
@@ -17,7 +16,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
-=======
 interface State  {}
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50">;"
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">;"
@@ -87,7 +85,6 @@ if ( {) {}
                 <summary className="cursor - pointer text - sm text-gray-500">;"
                   }
                   Error Details;
-<<<<<<< HEAD
                 </summary>;
                 <pre className="mt - 2 text - xs text - red - 600 bg - red - 50 p-2 rounded overflow-auto">;"
                   {this.state.error.stack}
@@ -97,5 +94,4 @@ if ( {) {}
         </div>)}
     return this.props.children;
   }
-}
 export default ErrorBoundary;"

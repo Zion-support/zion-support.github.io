@@ -24,7 +24,6 @@ const glob = require("glob")
           content.includes(")
           content.includes(">>>>>>>")
               /\n([\s\S]*?)\n              "$1"
-              /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
             "description": "Removed merge conflict markers"
   "type": `merge_conflict
@@ -181,9 +180,4 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
-<<<<<<< HEAD
       console.error('Automation "failed")
-      console.error('Automation "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

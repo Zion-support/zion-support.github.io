@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/pricing/PricingSuggestionBox.tsx
-=======
+:src/components/pricing/PricingSuggestionBox.tsx
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import {TooltipProvider,Tooltip,TooltipTrigger,TooltipContent} from '@/components/ui/tooltip';
@@ -29,7 +28,6 @@ interface PricingSuggestionBoxProps {
           <div className='text-center'>
             <Loader2 className='h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4' />
             <p className='text-sm text-muted-foreground'>              Generating optimal pricing suggestion...      <Card className="border border-dashed border-muted">
->>>>>>> origin/main:src_disabled_1757239864/components/pricing/PricingSuggestionBox.tsx
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -80,8 +78,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
           <Badge variant="outline" className={confidenceColor}>
-<<<<<<< HEAD:src/components/pricing/PricingSuggestionBox.tsx
-=======
+:src/components/pricing/PricingSuggestionBox.tsx
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   suggestion,;
@@ -135,7 +132,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
                   variant='default'            ${suggestion && suggestion.minRate.toFixed(0)} - ${suggestion && suggestion.maxRate.toFixed(0)}
           </span>;
           <span className="text-sm text-muted-foreground ml-1">;
->>>>>>> origin/main:src_disabled_1757239864/components/pricing/PricingSuggestionBox.tsx
             {suggestion.confidence} confidence
           </Badge>
         </div>
@@ -154,8 +150,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <p>{suggestion.explanation}</p>
         </div>
 
-<<<<<<< HEAD:src/components/pricing/PricingSuggestionBox.tsx
-=======
+:src/components/pricing/PricingSuggestionBox.tsx
           </span>;
         </div>;
         <div className="bg-muted/50 rounded-md p-3 text-center">;
@@ -197,7 +192,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 variant='default';
                   onClick={onApplySuggestion}
 
->>>>>>> origin/main:src_disabled_1757239864/components/pricing/PricingSuggestionBox.tsx
         <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
@@ -224,8 +218,7 @@ variant='default';
     </Card>
   )
 };
-<<<<<<< HEAD:src/components/pricing/PricingSuggestionBox.tsx
-=======
+:src/components/pricing/PricingSuggestionBox.tsx
 "  );
 };
 
@@ -415,4 +408,3 @@ if ( {) {
 }
 "  );
 }
->>>>>>> origin/main:src_disabled_1757239864/components/pricing/PricingSuggestionBox.tsx

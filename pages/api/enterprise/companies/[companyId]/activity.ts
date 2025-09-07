@@ -12,7 +12,7 @@ export default function handler() {
   return res.status(200).json(company.activity);
 }
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
+:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
@@ -33,7 +33,7 @@ if ( {) {
 }
   return res.status (200).json (company.activity);
 }
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
+:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -41,10 +41,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   const company = store.getCompanyById(companyId);
 
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
+:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   } catch (error) {
@@ -54,13 +53,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
+:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -73,7 +70,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -84,4 +80,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

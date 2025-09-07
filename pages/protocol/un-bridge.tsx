@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export default function UNBridge() {
   const [form, setForm] = useState($2);
@@ -108,7 +107,6 @@ export default function UNBridge() {
           <div className="flex gap-3">
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
-        </div>
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -146,31 +144,5 @@ export default function UNBridge() {
             </div>
           )}
         </div>
-      </div>
-    </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function unbridge() {
-  return (
-    <Layout>
-      <Head>
-        <title>Un Bridge - Zion Tech Group</title>
-        <meta name="description" content="Un Bridge solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Un Bridge</h1>
-          <p className="text-lg text-gray-600">
-            Professional un bridge solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

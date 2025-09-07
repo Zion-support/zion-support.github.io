@@ -9,7 +9,6 @@ const fs = require('fs')
 const path = require('path')
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
-  log(message, level = 'INFO')
     const logFile = path.join(this.logDir, 'comprehensive-test-suite.log')
     fs.appendFileSync(logFile, logMessage + '\n')
         "encoding"
@@ -48,9 +47,4 @@ const path = require('path')
         "name"
         "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx"
         "description"
-<<<<<<< HEAD
       this.log(` Test suite "failed"`)
-      this.log(` Test suite "failed"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

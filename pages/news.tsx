@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/main
 import { 
   Newspaper;
   Calendar, 
@@ -427,7 +422,6 @@ export default function NewsPage() {
                           Featured
                         </span>
                       </div>
-                    </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                     <p className="text-white/70 mb-6">{item.excerpt}</p>
@@ -441,7 +435,6 @@ export default function NewsPage() {
                         <Newspaper className="w-4 h-4" />
                         <span>{item.source}</span>
                       </div>
-                    </div>
                     
                     <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                       Read Full Article
@@ -451,7 +444,6 @@ export default function NewsPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
       )}
 
@@ -473,7 +465,6 @@ export default function NewsPage() {
               </button>
             ))}
           </div>
-        </div>
       </section>
 
       {/* News Grid */}
@@ -524,7 +515,6 @@ export default function NewsPage() {
                       <Newspaper className="w-3 h-3" />
                       <span>{item.source}</span>
                     </div>
-                  </div>
                   
                   <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105">
                     Read More
@@ -533,7 +523,6 @@ export default function NewsPage() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Press Kit CTA */}
@@ -597,7 +586,6 @@ export default function NewsPage() {
                       <Clock className="w-4 h-4" />
                       {article.readTime}
                     </div>
-                  </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
                     Read More
                     <ArrowRight className="w-4 h-4" />
@@ -605,7 +593,6 @@ export default function NewsPage() {
                 </motion.article>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Newsletter Signup */}
@@ -666,7 +653,6 @@ export default function NewsPage() {
                 </motion.article>
               ))}
             </div>
-          </div>
         </section>
 
         {/* News Categories */}
@@ -701,7 +687,6 @@ export default function NewsPage() {
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
                       {category.icon}
                     </div>
-                  </div>
                   <h3 className="text-sm font-semibold text-white mb-1">
                     {category.name}
                   </h3>
@@ -709,7 +694,6 @@ export default function NewsPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Recent News */}
@@ -761,11 +745,9 @@ export default function NewsPage() {
                       <Calendar className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-400 text-sm">{news.date}</span>
                     </div>
-                  </div>
                 </motion.article>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Media Contact */}
@@ -936,7 +918,6 @@ export default function NewsPage() {
                       <span>{formatDate(news.date)}</span>
                       <span>{news.author}</span>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
@@ -1003,7 +984,6 @@ export default function NewsPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Media Resources */}
@@ -1057,7 +1037,6 @@ export default function NewsPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -1107,107 +1086,3 @@ export default function NewsPage() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-}
-            >;
-              <h2 className="text-4xl font-bold text-white mb-6">;
-                Stay Updated;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-                Get the latest news, product updates, and industry insights delivered to your inbox. Never miss a breakthrough announcement.;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                <a;
-                  href="/contact";
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105";
-                >;
-                  Subscribe to Updates;
-                </a>;
-                <a;
-                  href="/contact";
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300";
-                >;
-                  Media Inquiries;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-};
-;
-}
-
-}
-
-}
-    <div className="min - h-[60vh] px - 6 py - 24">;
-      <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
-      <div className="max - w-3xl mx - auto">;
-        <h1 className="text - 4xl font - bold text - white mb - 4">News & Press</h1>;
-        <p className="text - gray - 300">Press releases and announcements will appear here.</p>;
-      </div>;
-      <EnhancedFooter />;
-    </div>);
-}
-
-;
-
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function NewsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>News | Zion Tech Group</title>
-        <meta name="description" content="Professional news solutions for your business." />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            News
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional news solutions for your business.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300">
-              Professional solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300">
-              Advanced technology solutions.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300">
-              Scalable and reliable solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

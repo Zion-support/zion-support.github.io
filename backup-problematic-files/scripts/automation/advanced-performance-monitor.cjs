@@ -57,7 +57,6 @@ class $1 {}
   };
 ;
   log(message, level = "INFO") {}
-  log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
@@ -267,7 +266,6 @@ class $1 {}
     } catch (error) {}
   return { "total": 0, "used": 0, "free": 0, "usage": 0 };
     };
-  };
 ;
   parseSize(sizeStr) {}
   const units = { "K": 1024, "M": 1024 * 1024, "G": 1024 * 1024 * 1024 };
@@ -301,7 +299,6 @@ class $1 {}
     } catch (error) {}
   return { "processes": 0, "memory": 0, "cpu": 0, "status": "error"   };
     };
-  };
 ;
   async getBuildMetrics() {}
   try {}
@@ -528,7 +525,6 @@ class $1 {}
           "ERROR";
         )};
     };
-  };
 ;
   async applyAutoFix(issue) {}
   switch (issue.type) {}
@@ -543,7 +539,6 @@ class $1 {}
   success: false,
           "message": "No auto-fix available for this issue"};
     };
-  };
 ;
   async fixDiskSpace() {}
   try {}
@@ -566,7 +561,6 @@ class $1 {}
     } catch (error) {}
   return { "success": false, "message": error.message   };
     };
-  };
 ;
   async fixMemoryUsage() {}
   try {}
@@ -578,7 +572,6 @@ class $1 {}
       const metrics =} catch (error) {}
   return { "success": false, "message": error.message };
     };
-  };
 ;
   async fixMemoryUsage() {}
   try {}
@@ -601,7 +594,6 @@ class $1 {}
     } catch (error) {}
   return { "success": false, "message": error.message   };
     };
-  };
 ;
   async fixCPUUsage() {}
   try {}
@@ -609,7 +601,6 @@ class $1 {}
       const metrics =} catch (error) {}
   return { "success": false, "message": error.message };
     };
-  };
 ;
   async fixCPUUsage() {}
   try {}
@@ -638,7 +629,6 @@ if (metrics.system.cpu.usage > 95) {}
     } catch (error) {}
   return { "success": false, "message": error.message };
     };
-  };
 ;
   async saveMetrics(metrics) {}
   try {}
@@ -711,9 +701,4 @@ if (require.main === module) {}
   console.error("Advanced Performance Monitor "failed": ", error);
       process.exit(1)})};
 ;
-<<<<<<< HEAD
 module.exports = AdvancedPerformanceMonitor;
-module.exports = AdvancedPerformanceMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

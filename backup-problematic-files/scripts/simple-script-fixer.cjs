@@ -42,7 +42,6 @@ class SimpleScriptFixer {}
         { "from": "require('child_process')", "to": "require('child_process')" },
         // Fix malformed shebang;
         { "from": '#!/usr/bin/env node', "to": '#!/usr/bin/env node' },
-        { "from": '#!/usr/bin/env node', "to": '#!/usr/bin/env node' },
         // Fix trailing commas in object literals;
         { "from": ',\n}', "to": '\n}' },
         { "from": '}', "to": '}' },
@@ -103,9 +102,4 @@ class SimpleScriptFixer {}
 if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SimpleScriptFixer;
-module.exports = SimpleScriptFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

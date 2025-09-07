@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 ;
@@ -19,9 +18,6 @@ import { emergingTechnologyServices  } from '../data/2025-emerging-technology-se
 const ComprehensiveServicesShowcase2025  = null;// All services combined const allServices = [ ...advancedAIMLServices;
 
 // All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
-// All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
 
  // All services combined const allServices = [ ...advancedAIMLServices;
 
@@ -229,9 +225,6 @@ const filteredServices = activeTab === 'all';'
                 <MapPin className="w-4 h-4" />;"
                 <span>Middletown DE 19709</span>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Category Tabs */}
       <section className="py-12 bg-white">;"
@@ -250,7 +243,6 @@ const filteredServices = activeTab === 'all';'
               </button>
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">;"
@@ -288,9 +280,6 @@ const filteredServices = activeTab === 'all';'
                           Micro SAAS;
                         </span>;
                       </div>;
-                    </div>;
-                  </div>;
-                </div>;
                 {/* Service Content */}
                 <div className="p-6">;"
                   <p className="text-gray-700 mb-4 line-clamp-3">;"
@@ -309,7 +298,6 @@ const filteredServices = activeTab === 'all';'
                       <div className="text-xs text-gray-500">;"
                         {(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''} • {(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}'                      </div>;
                     </div>;
-                  </div>;
                   {/* Key Features */}
                   <div className="mb-4">;"
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>;"
@@ -320,7 +308,6 @@ const filteredServices = activeTab === 'all';'
                         </div>;
                       ))}
                     </div>
-                  </div>
 
                   {/* Market Info */}
                   <div className="mb-4 text-sm">;"
@@ -332,7 +319,6 @@ const filteredServices = activeTab === 'all';'
                       <span className="text-gray-600">Target "Audience":</span>;"
                       <span className="font-semibold text-gray-900">{service.targetAudience}</span>;"
                     </div>;
-                  </div>;
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;"
                     <a;
@@ -340,7 +326,6 @@ const filteredServices = activeTab === 'all';'
 }// All services combined;
   const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
-// All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices  = [ ...advancedAIMLServices;// All services combined const allServices  = [ ...advancedAIMLServices;...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -426,7 +411,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                       Call Now;
                     </a>;
                   </div>;
-                </div>;
               </motion.div>;
             ))}
           </div>;
@@ -448,7 +432,6 @@ href={`"tel":${(service as any).mobile || '+1 302 464 0950'}`}`                 
                       Call Now
                     </a>
                   </div>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -480,7 +463,6 @@ href={`"tel":${(service as any).mobile || '+1 302 464 0950'}`}`                 
                       Call Now;
                     </a>;
                   </div>;
-                </div>;
               </motion && motion.div>;
             ))}
           </div>;{/* Services Display */}
@@ -537,7 +519,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                           {getServicePricing (service)}
                         </span>;
                       </div>;
-                    </div>;
                     {/* Service Content */}
                     <div className="p - 6">;"
                       <p className="text - gray - 600 mb - 4 line - clamp - 3">{service.description}</p>;"
@@ -607,7 +588,6 @@ key={service.id}
                           {getServicePricing(service)}
                         </span>
                       </div>
-                    </div>
 
                     {/* Service Content */}
                     <div className="p-6">;"
@@ -665,7 +645,6 @@ key={service.id}
                           {getServicePricing (service)}
                         </span>;
                       </div>;
-                    </div>;
                     {/* Service Content */}
                     <div className="p - 6">;"
                       <p className="text - gray - 600 mb - 4 line - clamp - 3">{service.description}</p>;"
@@ -735,7 +714,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                           <span className="font-medium">"Trial": </span> {getServiceTrialDays(service,"
 } days;
                         </div>;
-                      </div>;
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">;"
                         <div className="text-sm">;"
@@ -748,7 +726,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                             <Star className="w-4 h-4 fill-current" />;"
                             <span className="text-sm font-medium">Popular</span>;"
                           </div>;
-                        </div>;
                         {/* Price and Features */}
                         <div className=""lg":w-1/3">;"
                           <div className="text-right mb-4">;"
@@ -809,7 +786,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                           <span className="font-medium">"Trial": </span> {getServiceTrialDays(service,"
 } days;
                         </div>;
-                      </div>;
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">;"
                         <div className="text-sm">;"
@@ -840,7 +816,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                               ))}
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -875,9 +850,6 @@ href={service.link}
                               <ArrowRight className="w-4 h-4 ml-2" />;"
                             </a>;
                           </div>;
-                        </div>;
-                      </div>;
-                    </div>;
                   </motion.div>;
                 ))}
               </motion.div>;
@@ -943,9 +915,6 @@ href={service.link}
                               <ArrowRight className="w - 4 h - 4 ml - 2" />;"
                             </a>;
                           </div>;
-                        </div>;
-                      </div>;
-                    </div>;
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (<div className="text-center py-12">;"
               <div className="text-gray-400 mb-4">;"
@@ -972,9 +941,6 @@ href={service.link}
                               <ArrowRight className="w-4 h-4 ml-2" />;"
                             </a>;
                           </div>;
-                        </div>;
-                      </div>;
-                    </div>;
                   </motion.div>;
                 ))}
               </motion.div>;
@@ -1072,7 +1038,6 @@ initial={{ "opacity": 0, "y": 20
               </p>
             </motion.div>
           </div>
-        </div>
       </section>
 ursor/fix-netlify-build-and-merge-to-main-9571
 
@@ -1106,9 +1071,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571
               <h3 className="text-lg font-semibold mb-2">Visit Us</h3>"
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>"
             </div>
-          </div>
 
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">"
           <div className="flex flex-col "sm":flex-row gap-4 justify-center">"
       {/* Why Choose Us *
 }
@@ -1175,7 +1138,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               </p>;
             </motion.div>;
           </div>;
-        </div>;
       </section>;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -1208,10 +1170,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <h3 className="text-lg font-semibold mb-2">Visit Us</h3>;"
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>;"
             </div>;
-          </div>;
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
           <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;"
@@ -1282,7 +1240,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               </p>;
             </motion.div>;
           </div>;
-        </div>;
       </section>;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -1315,10 +1272,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <h3 className="text-lg font-semibold mb-2">Visit Us</h3>;"
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>;"
             </div>;
-          </div>;
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
-          <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
           <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;"
@@ -1383,7 +1336,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               </p>;
             </motion && motion.div>;
           </div>;
-        </div>;
       </section>;{/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">;"
         <div className="max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 text-center">;"
@@ -1454,7 +1406,6 @@ href=""https"://ziontechgroup.com""
               Visit Website
             </a>
           </div>
-        </div>
       </section>
     </div>
   )
@@ -1465,7 +1416,6 @@ export default ComprehensiveServicesShowcase2025;
               Visit Website;
             </a>;
           </div>;
-        </div>;
       </section>;
     </div>;
   )}export default ComprehensiveServicesShowcase2025;
@@ -1475,7 +1425,6 @@ export default ComprehensiveServicesShowcase2025;
               Visit Website;
             </a>;
           </div>;
-        </div>;
       </section>;
 export default ComprehensiveServicesShowcase;</div>)}
 
@@ -1489,23 +1438,6 @@ export default ComprehensiveServicesShowcase2025;
 
 export default ComprehensiveServicesShowcase;
 }
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
 }ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -1518,7 +1450,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               Visit Website;
             </a>;
           </div>;
-        </div>;
       </section>;
     </div>;
   )}export default ComprehensiveServicesShowcase2025;ursor/automate-test-improve-and-merge-code-646c;
@@ -1543,7 +1474,6 @@ export default ComprehensiveServicesShowcase
               Visit Website
             </a>
           </div>
-        </div>
       </section>
     </div>
   )
@@ -1561,6 +1491,3 @@ main
 export default ComprehensiveServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

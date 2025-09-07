@@ -235,7 +235,6 @@ serverProcess.kill();
   const content = fs.readFileSync(filePath", "utf8");
             // Simple parsing for common test result formats;
             if (file.endsWith(".xml")) {}
-  if (file.endsWith(".xml")) {}
   const testMatches = content.match(/tests=(\d+)"/);
               if (testMatches) testCount = parseInt(testMatches[1])} else if (file.endsWith(".json")) {}
   const testData = JSON.parse(content);
@@ -254,7 +253,6 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
   "success": false,
         "error": error.message};
     };
-  };
 ;
   async generateTestReport(results) {}
   const report = {}
@@ -312,7 +310,6 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
       "timestamp": new Date().toISOString()}
 });
     if (buildResult) {}
-  if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
       results.push({})
@@ -346,7 +343,6 @@ this.log("Test automation completed. "Status": ${report.status}");this.log(""Pas
       process.exit(1)} else {}
   this.log("All tests passed successfully!", "INFO")};
   };
-};
 ;
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
@@ -357,9 +353,4 @@ if (require.main === module) {}
   console.error("Test automation "failed": ", error);
     process.exit(1)})};
 ;
-<<<<<<< HEAD
 module.exports = TestAutomation;
-module.exports = TestAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
@@ -55,7 +54,6 @@ export default function DisputeDetailPage() {
               <div className="font-medium text-gray-500">Talent</div>
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
-          </div>
 
           <div className="border-b mb-4 flex gap-4 text-sm">
             {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (
@@ -97,7 +95,6 @@ export default function DisputeDetailPage() {
                   )}
                 </ol>
               </div>
-            </div>
           )}
 
           {activeTab === 'Messages' && (
@@ -156,7 +153,6 @@ export default function DisputeDetailPage() {
                     <button onClick={() => resolve('Under Review')} className="px-3 py-2 rounded border">Mark Under Review</button>
                     <button onClick={() => resolve('Resolved')} className="px-3 py-2 rounded bg-green-600 text-white">Resolve</button>
                   </div>
-                </div>
               )}
             </div>
           )}
@@ -164,28 +160,4 @@ export default function DisputeDetailPage() {
       )}
     </EnhancedLayout>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function DisputesId() {
-  return (
-    <Layout>
-      <Head>
-        <title>Dispute - Zion Tech Group</title>
-        <meta name="description" content="Dispute solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Dispute</h1>
-          <p className="text-lg text-gray-600">
-            Professional dispute solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

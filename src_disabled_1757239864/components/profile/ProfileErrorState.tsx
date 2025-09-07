@@ -1,7 +1,6 @@
 
 
-<<<<<<< HEAD:src/components/profile/ProfileErrorState.tsx
-=======
+:src/components/profile/ProfileErrorState.tsx
     </div>
 return (import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -21,7 +20,6 @@ import { ArrowLeft  } from 'lucide-react';
           <ArrowLeft className="mr - 2 h - 4 w - 4" />;
 import { Button   } from '@/components / ui / button';
 import Link from './next / link';
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileErrorState.tsx
 interface ProfileErrorStateProps {
   error: string | null
 }
@@ -37,9 +35,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-<<<<<<< HEAD:src/components/profile/ProfileErrorState.tsx
+:src/components/profile/ProfileErrorState.tsx
   )
-=======
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -72,7 +69,6 @@ interface ProfileErrorStateProps  {error: string | null;
       </Button>;
     </div>;
   )}
-  )}
 export /**;
  * ProfileErrorState - Function description;
  */;
@@ -85,6 +81,4 @@ function ProfileErrorState() {return (<div className="min - h-screen bg - zion -
         </Link>;
       </Button>;
     </div>);
-}
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileErrorState.tsx
 }

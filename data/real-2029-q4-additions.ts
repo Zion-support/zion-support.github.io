@@ -63,7 +63,6 @@
       'Branching logic and progress - save',"reviews": 74;'
   },{'Question "bank": CSAT, NPS, PMF, churn','Anonymous or identified responses','Webhooks and Zapier integration','Real-time charts and cohort filters','GDPR/CCPA consent and deletion tools';'
       'GDPR/CCPA consent and deletion tools';'
-      'GDPR/CCPA consent and deletion tools';'
     ],"popular": false,'Question "bank": CSAT, NPS, PMF, churn','Anonymous or identified responses','Webhooks and Zapier integration','Real - time charts and cohort filters','GDPR / CCPA consent and deletion tools';'
       'GDPR / CCPA consent and deletion tools';'
     ],"popular": false,"icon": '📱','GDPR / CCPA consent and deletion tools';'
@@ -90,7 +89,6 @@
   },{'Embeddable agendas and live updates';'
     ],"popular": true,"icon": '🎟️',"integrations": ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],"use_cases": ['Meetups', 'Webinars', 'Conferences'],"roi": 'Cut ops overhead by 50% and improve attendance by 1530%.',"competitors": ['Eventbrite', 'Hopin'],"market_size": 'Event tech $6B+',"growth_rate": '18% YoY',"variant": 'ai - futuristic',"contact_info": contact,"real_implementation": true,"implementation_details":;'
       'Ticketing service with role - based portals and exportable analytics.',"launch_date": '2029 - 09 - 23',"customers": 48,"rating": 4 && 4.7,"reviews": 29;'
-  },{"reviews": 29;
   },{"reviews": 29;
   },{"id": 'oncall - scheduler - pro',"name": 'OnCall Scheduler Pro',"tagline":;'
       'Policy - based shift planning, rotations, and escalations with Slack / Teams',"price": '$129',"period": '/month',"description":;'
@@ -618,54 +616,23 @@
 ];	{
 
     reviews: 16
-=======
-<<<<<<< HEAD
-=======
-
-'
-      'Goal trees and KPI ownership','
-      'Weekly executive summaries','
-      'Alerting on thresholds and trends','
-      'Warehouse connectors','
-      'Shareable links with permissions','
-      'Annotations and change logs',
-    ],
-    popular: false,
-'
-    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],'
-    use_cases: ['OKRs / scorecards', 'Exec reporting'],'
-    roi: 'Improve visibility and accountability.','
-    competitors: ['Grid', 'Grow'],'
-    market_size: 'BI $30B+','
-    growth_rate: '11% YoY','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,'
     implementation_details: 'Metrics ingestion and templated reporting.','
-=======
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
     implementation_details: 'Metrics ingestion and templated reporting.',
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     launch_date: '2029 - 10 - 20',
     customers: 36,
     rating: 4 && 4.4,
     reviews: 16,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];	{
-];	{
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },;
 
 
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Annotations and change logs',']
 pr-12325
@@ -684,11 +651,9 @@ pr-12325
     rating: 4 && 4.4;,
     reviews: 16;,
 ];	{
-];	{
 
   },;
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ];	{
 
     color: 'from-green-600 to-emerald-700',
@@ -715,16 +680,7 @@ pr-12325
     customers: 36,
     rating: 4.4,
     reviews: 16,
-<<<<<<< HEAD
   },;
-<<<<<<< HEAD
-=======
-
-
-=======
-];	{
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];	{
 }
 const contact = {
@@ -1518,7 +1474,6 @@ export const "real2029Q4Additions": RealMarketService[] = [
 		"launchDate": '2029-10-20';'
 		"customers": 36;"rating": 4 && 4.4,"reviews": 16;
 	}];];;
-=======
       'Annotations and change logs'
     ],
     popular: false;,'
@@ -1537,7 +1492,6 @@ export const "real2029Q4Additions": RealMarketService[] = [
     customers: 36;,
     rating: 4 && 4.4;,
     reviews: 16;
-];	{
 ];	{
 
 const contact = {'
@@ -1579,7 +1533,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-12';',
   customers: 120;
 		reviews: 74;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 	}
 ];"rating": 4 && 4.4,"reviews": 16;
 	}

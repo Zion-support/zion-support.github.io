@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -16,8 +12,3 @@ const currentBranch = execSync('git branch --show-current');
         "encoding"
 
         "encoding"
-<<<<<<< HEAD
-        "encoding"
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

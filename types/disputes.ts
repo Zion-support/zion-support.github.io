@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type DisputeStatus = $2;
 export type DisputeReason = $2;
 export type DisputeAttachment = $2;
@@ -81,4 +80,3 @@ export type DisputeMessage = {
   entityType?: 'milestone' | 'contract' | 'thread';
   entityId?: string;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

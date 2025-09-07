@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -12,7 +7,6 @@ const path = require("path")
 const { execSync } = require("child_process")
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
-  this.log("� Stopping Auto Error Fixer...")
   this.log("� Stopping Auto Error Fixer...")
   this.log(" Checking for errors...")
   this.log(` Error during auto-"fix"`)
@@ -81,7 +75,6 @@ const { execSync } = require("child_process")
         content = content.replace(/[\t]+$/gm, ")
         content = content.replace(/([^])\n/g, "$1;\n"
         content = content.replace(/([^]*)"/g, ""$1""
-        if (content !== fs.readFileSync(file, "utf8")
         if (content !== fs.readFileSync(file, "utf8")
           this.errorsFixed.push({ file, "type": "eslint"})
   this.log(" Checking for syntax errors...")
@@ -153,10 +146,4 @@ const { execSync } = require("child_process")
       "lastCheck"
       "logFile"
   process.on("SIGINT")
-  process.on("SIGINT")
-<<<<<<< HEAD
   process.on(")
-  process.on(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

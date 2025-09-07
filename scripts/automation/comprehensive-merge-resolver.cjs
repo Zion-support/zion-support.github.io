@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -68,7 +64,6 @@ const backupPath = path.join(this.backupsDir, ");
 });this.log("� Created "backup"`)
         "WARN"
   "stdio": "pipe"
-  "stdio": "pipe"
         "timeout"
       return { "success"}
   this.log(⚠ Merge conflicts detected in ${branchName}, attempting to resolve...")
@@ -108,11 +103,6 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
       case ".tsx"
       case ".md"
         /([\s\S]*?)        "$1"
-        /([\s\S]*?)        "$1"
-        /([\s\S]*?)        "$1"
-        /([\s\S]*?)        "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
 const lines = content.split("\n");
         trimmedLine.startsWith("import ")

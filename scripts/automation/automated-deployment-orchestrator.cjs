@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;"
 /**;
@@ -65,34 +61,9 @@ const result = execSync(command, {});
       "encoding": "utf8",
       "stdio": options.silent ? "pipe" : "inherit","
       ...options}
-<<<<<<< HEAD
 });"
     return { "success": true, "output": result };"
   } catch (error) {}"
-=======
-});
-    return { "success": true, "output": result };
-  } catch (error) {}
-  return { "success": false, "error": error.message, "output": error.stdout || ""   };
-  };
-};
-} catch (error) {}
-  return { "success": false, "error": error.message, "output": error.stdout || "" };")}")};");
-`);
-const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`)};
-;
-const npmCommand = (command, options = {}) => {return executeCommand(`npm ${command}`, options)};
-// Deployment State Management;
-class $1 {}
-  constructor() {}
-  this.stateFile = path.join(CONFIG.LOG_DIR, "deployment-state.json");
-    this.state = this.loadState()};
-  ;
-  loadState() {}
-  try {}
-  if (fs.existsSync(this.stateFile)) {}
-  return JSON.parse(fs.readFileSync(this.stateFile, "utf8"));
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 // Deployment State Management;
 class $1 {}
@@ -368,12 +339,7 @@ const main = async () => {}"
     // Check for deployment requests;
 
     throw error};
-<<<<<<< HEAD
   
-=======
-};
-const checkDeploymentRequests = async () => {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 } else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
           // Consider automatic rollback;
           if (CONFIG.ROLLBACK_ENABLED && request.environment !== "production") {log(`Initiating automatic rollback for ${request.environment}`);
@@ -409,20 +375,13 @@ const generateDeploymentReport = async (deploymentSystem) => {}
   return report};
 // Handle process signals;"
 process.on("SIGINT", () => {}
-<<<<<<< HEAD
 
-=======
-  log("Received SIGINT. Shutting down gracefully...");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Handle process signals;
 process.on("SIGINT", () => {}
   log("Received SIGINT. Shutting down gracefully...");
   process.exit(0)}
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   log("Received SIGINT. Shutting down gracefully...");"
 // Handle process signals;"
 
@@ -441,42 +400,11 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-<<<<<<< HEAD
   main};
 
   main};
-  main};
-  main};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  main};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  main};
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  main};
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   main};
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   main};
 

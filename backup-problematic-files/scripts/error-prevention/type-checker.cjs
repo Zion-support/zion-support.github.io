@@ -17,13 +17,9 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -45,11 +41,8 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -69,13 +62,9 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -112,9 +101,4 @@ if ( {})
 });
   
   checker.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = TypeChecker;
-module.exports = TypeChecker;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

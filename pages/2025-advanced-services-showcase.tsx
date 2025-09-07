@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -65,7 +64,6 @@ export default function AdvancedServicesShowcase2025() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -76,7 +74,6 @@ export default function AdvancedServicesShowcase2025() {
       transition: {
         duration: 0.5
       }
-    }
   },
 
   const getCategoryIcon = (category: string) => {
@@ -84,20 +81,12 @@ export default function AdvancedServicesShowcase2025() {
     return categoryData?.icon || '🚀'
   },
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function 2025advancedservicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>2025 Advanced Services Showcase - Zion Tech Group</title>
         <meta name="description" content="2025 Advanced Services Showcase solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <EnhancedNavigation />
 
@@ -135,7 +124,6 @@ export default function 2025advancedservicesshowcase() {
                 <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-white/70">Expert Support</div>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -161,7 +149,6 @@ export default function 2025advancedservicesshowcase() {
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
-            </div>
 
             {/* Filters Row */}
             <div className="flex flex-col lg:flex-row gap-6">
@@ -215,7 +202,6 @@ export default function 2025advancedservicesshowcase() {
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                   />
                 </div>
-              </div>
 
               {/* View Mode Toggle */}
               <div className="flex items-end">
@@ -237,8 +223,6 @@ export default function 2025advancedservicesshowcase() {
                     <List className="w-5 h-5" />
                   </button>
                 </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -289,7 +273,6 @@ export default function 2025advancedservicesshowcase() {
                           <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
                           <p className="text-white/70 text-sm">{service.tagline}</p>
                         </div>
-                      </div>
                       {service.popular && (
                         <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
                           Popular
@@ -312,13 +295,11 @@ export default function 2025advancedservicesshowcase() {
                           <UsersIcon className="w-4 h-4 text-blue-400" />
                           <span className="text-white/70">{service.customers}+ customers</span>
                         </div>
-                      </div>
                       <div className="flex items-center gap-1">
                         <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-white font-medium">{service.rating}</span>
                         <span className="text-white/60">({service.reviews})</span>
                       </div>
-                    </div>
 
                     {/* Features */}
                     <div className="mb-6">
@@ -336,7 +317,6 @@ export default function 2025advancedservicesshowcase() {
                           </div>
                         )}
                       </div>
-                    </div>
 
                     {/* Category and Technology */}
                     <div className="flex items-center justify-between mb-6">
@@ -349,7 +329,6 @@ export default function 2025advancedservicesshowcase() {
                         {service.technology.slice(0, 2).join()}
                         {service.technology.length > 2 && '...'}
                       </div>
-                    </div>
 
                     {/* ROI and Benefits */}
                     <div className="mb-6">
@@ -363,8 +342,6 @@ export default function 2025advancedservicesshowcase() {
                             </span>
                           ))}
                         </div>
-                      </div>
-                    </div>
 
                     {/* Action Buttons */}
                     <div className="flex gap-3">
@@ -385,7 +362,6 @@ export default function 2025advancedservicesshowcase() {
                         Contact
                       </a>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -453,17 +429,4 @@ export default function 2025advancedservicesshowcase() {
       <EnhancedFooter />
     </div>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">2025 Advanced Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional 2025 advanced services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

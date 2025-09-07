@@ -13,13 +13,10 @@
                 "local"
             this.log(`Failed to get branch "info"`)
             await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
                 "args"
             const status = await this.executeCommand('git', { "args"})
             await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
                 "severity"
-            await this.executeCommand('git', { "args"})
             await this.executeCommand('git', { "args"})
                 "severity"
             const eslintResult = await this.executeCommand('npm', { "args"})
@@ -27,7 +24,6 @@
                 "overall"
             this.log(`Failed to assess code "quality"`)
             return { "overall"}
-            "severity"
             "severity"
             const files = await this.executeCommand('find', { "args"})
                 "riskLevel"
@@ -51,12 +47,7 @@
             this.log(`Auto-fixes completed for "branch"`)
             this.log(`Failed to auto-fix "issues"`)
             await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-                    await this.executeCommand('git', { "args"})
-                    await this.executeCommand('git', { "args"})
                 "default": await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
             await this.executeCommand('git', { "args"})
             this.log(`Cleaned up "branch"`)
             this.log(`Repository health monitoring completed. Overall "health"`)
@@ -72,9 +63,4 @@
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
-<<<<<<< HEAD
     console.error('Failed to start Intelligent Repository "Manager")
-    console.error('Failed to start Intelligent Repository "Manager")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

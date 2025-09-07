@@ -21,7 +21,7 @@ interface CountryTabsProps {
   setSearchQuery: (query: string) => void
 }
 
-<<<<<<< HEAD:src/components/services/PageSections/CountryTabs.tsx
+:src/components/services/PageSections/CountryTabs.tsx
 export function CountryTabs({
   popularCountries;
   filteredCountries;
@@ -32,7 +32,6 @@ export function CountryTabs({
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
-=======
 
   setSearchQuery: (query: string) => void;
 export function CountryTabs(): any ({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1)const countriesPerPage  = 50;useEffect(() => {setCurrentPage(1)}, [searchQuery])const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage)const paginatedCountries = filteredCountries && filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
@@ -50,7 +49,6 @@ export function CountryTabs({
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState($2);
   const countriesPerPage = $2;
->>>>>>> origin/main:src_disabled_1757239864/components/services/PageSections/CountryTabs.tsx
   useEffect(() => {
     setCurrentPage(1)
   }, [searchQuery]);
@@ -111,7 +109,6 @@ export function CountryTabs({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {paginatedCountries.map((country) => (
@@ -121,8 +118,7 @@ export function CountryTabs({
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
-<<<<<<< HEAD:src/components/services/PageSections/CountryTabs.tsx
-=======
+:src/components/services/PageSections/CountryTabs.tsx
             />;
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -171,7 +167,6 @@ export function CountryTabs({
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
->>>>>>> origin/main:src_disabled_1757239864/components/services/PageSections/CountryTabs.tsx
             />
           ))}
         </div>
@@ -220,8 +215,7 @@ export function CountryTabs({
     </Tabs>
   )
 }
-<<<<<<< HEAD:src/components/services/PageSections/CountryTabs.tsx
-=======
+:src/components/services/PageSections/CountryTabs.tsx
   );
 }
 
@@ -305,7 +299,6 @@ function CountryTabs() {
               value={search_query}
               on_change={e => setSearchQuery (e.target.value)}            />;
           </div>;
-        </div>;
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 4'>;
           {paginated_countries.map (country => (            <CountryServiceCard;
               key = {country.country, }
@@ -375,4 +368,3 @@ function CountryTabs() {
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
->>>>>>> origin/main:src_disabled_1757239864/components/services/PageSections/CountryTabs.tsx

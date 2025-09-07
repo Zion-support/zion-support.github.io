@@ -22,14 +22,8 @@ const { execSync } = require("child_process")
           "created"
 // console.log("\n� Available "Backups": ")
     console.log("=")
-    console.log("=")
   case "create"
   case "restore"
       console.error("Please specify backup name to restore")
   case "list"
-<<<<<<< HEAD
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
-  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

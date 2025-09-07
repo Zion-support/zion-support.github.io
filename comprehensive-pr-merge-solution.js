@@ -20,7 +20,6 @@ function execGitCommand(command, options = {}) {
     console.error(`Error: ${error.message}`);
     return null;
   }
-}
 
 // Function to get current branch
 function getCurrentBranch() {
@@ -36,7 +35,6 @@ function getRepoInfo() {
       if (match) {
         return { owner: match[1], repo: match[2] };
       }
-    }
   } catch (error) {
     console.log('❌ Could not determine repository information');
   }
@@ -65,22 +63,18 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    
+    // Remove all merge conflict markers and keep the main branch version (after )
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)    
     // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)(?=\n|$)/g, '$1');
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)(?=\n|$)/g, '$1');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======/g, '$1');
+    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(/\n([\s\S]*?)    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)/g, '$1');
     
     // Remove any remaining conflict markers
     content = content.replace(/<<<<<<< [^\n]+/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(//g, '');
+    content = content.replace(/    
     // Clean up multiple consecutive newlines
     content = content.replace(/\n{3,}/g, '\n\n');
     
@@ -95,7 +89,6 @@ function resolveMergeConflicts(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Function to find and resolve all merge conflicts
 function resolveAllConflicts() {
@@ -122,16 +115,12 @@ function resolveAllConflicts() {
         if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.css')) {
           try {
             const content = fs.readFileSync(file, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               conflictFiles.push(file);
             }
           } catch (error) {
             // Skip files that can't be read
           }
-        }
-      }
-    }
-  }
   
   const uniqueFiles = [...new Set(conflictFiles)];
   console.log(`Found ${uniqueFiles.length} files with potential conflicts`);
@@ -142,8 +131,6 @@ function resolveAllConflicts() {
       if (resolveMergeConflicts(file)) {
         resolvedCount++;
       }
-    }
-  }
   
   console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
   return resolvedCount > 0;
@@ -163,7 +150,6 @@ function getAllFiles(dir) {
     } else {
       files.push(fullPath);
     }
-  }
   
   return files;
 }
@@ -179,7 +165,6 @@ function mergePR(prNumber) {
     console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`);
     return false;
   }
-}
 
 // Function to check if a PR has conflicts
 function checkPRConflicts(prNumber) {
@@ -209,7 +194,6 @@ function switchToMainAndPull() {
     console.error('❌ Failed to switch to main or pull latest changes:', error.message);
     return false;
   }
-}
 
 // Function to create a new branch for improvements
 function createImprovementBranch() {
@@ -222,7 +206,6 @@ function createImprovementBranch() {
     console.error('❌ Failed to create improvement branch:', error.message);
     return null;
   }
-}
 
 // Main execution function
 async function main() {
@@ -280,13 +263,11 @@ async function main() {
             console.log(`❌ Could not resolve conflicts for PR #${pr.number}`);
             continue;
           }
-        }
         
         // Try to merge
         if (mergePR(pr.number)) {
           mergedCount++;
         }
-      }
       
       console.log(`\n📈 Summary:`);
       console.log(`✅ Successfully merged: ${mergedCount}/${openPRs.length} PRs`);
@@ -296,7 +277,6 @@ async function main() {
       } else {
         console.log('⚠️  Some PRs could not be merged due to conflicts or other issues');
       }
-    }
     
     // Step 4: Create improvement branch
     console.log('\n🔄 Step 4: Creating improvement branch...');
@@ -312,7 +292,6 @@ async function main() {
     console.error('❌ Error during execution:', error.message);
     process.exit(1);
   }
-}
 
 // Run the main function
 main();

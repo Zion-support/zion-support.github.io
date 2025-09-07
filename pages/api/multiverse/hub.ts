@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -28,7 +27,7 @@ if ( {) {
       route: "/multiverse / hub"
       instance_id: state.config.instance_id
 
-<<<<<<< HEAD:pages_backup/api/multiverse/hub.ts
+:pages_backup/api/multiverse/hub.ts
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -47,12 +46,10 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState } from "../../../utils/sync/storage"
 export default async function handler(req, res) {
@@ -65,7 +62,7 @@ export default async function handler(req, res) {
 
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
-<<<<<<< HEAD:pages_backup/api/multiverse/hub.ts
+:pages_backup/api/multiverse/hub.ts
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -73,7 +70,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       scope: state.config.scope,
       optIn: state.config.optIn,
       paused: state.config.paused,
-<<<<<<< HEAD:pages_backup/api/multiverse/hub.ts
+:pages_backup/api/multiverse/hub.ts
       peers: state.config.peers
       scope: state.config.scope
       opt_in: state.config.opt_in
@@ -85,15 +82,3 @@ main
 
   return res.status(405).json({ error: "Method not allowed" })
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

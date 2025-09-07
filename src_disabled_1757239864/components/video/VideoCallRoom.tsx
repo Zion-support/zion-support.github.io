@@ -94,7 +94,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       if (onToggleVideo) {
         onToggleVideo(false)
       }
-    }
   };
 
   const handleLeaveCall = () => {
@@ -166,7 +165,6 @@ import './video-call.css';interface Participant  {id: string;
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
                   {participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
                 </div>
-              </div>
             ))
           ) : (
             <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">
@@ -233,9 +231,8 @@ import './video-call.css';interface Participant  {id: string;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src/components/video/VideoCallRoom.tsx
+:src/components/video/VideoCallRoom.tsx
 };
-=======
   isHost?: boolean;
 }
 interface VideoCallRoomProps  {)}</Badge> </div> </CardHeader> {/* Placeholder for actual video stream */ ;
@@ -248,4 +245,3 @@ interface VideoCallRoomProps  {)}</Badge> </div> </CardHeader> {/* Placeholder f
 }</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>)}'";
 },
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/video/VideoCallRoom.tsx

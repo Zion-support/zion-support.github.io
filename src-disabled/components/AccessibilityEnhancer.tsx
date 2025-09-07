@@ -1,7 +1,4 @@
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -77,7 +74,7 @@ interface AccessibilitySettings  {highContrast: boolean;
   focusIndicator: boolean;
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'normal' | 'large' | 'xlarge';
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
 }
 
 export function AccessibilityEnhancer({ 
@@ -188,7 +185,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
         if (navigation) {
           (navigation as HTMLElement).focus();
         }
-      }
 
       // Skip to footer
       if (e.key === 'Tab' && e.ctrlKey) {
@@ -197,7 +193,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
         if (footer) {
           (footer as HTMLElement).focus();
         }
-      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -238,7 +233,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       element.addEventListener('blur', () => {
         element.classList.remove('focus-ring');
       });
-    });
   }, [settings.focusIndicator, announceToScreenReader]);
 
   // Apply settings when they change
@@ -299,10 +293,10 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
   useEffect(() => {localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [settings])// Load settings from localStorage on mount;
   useEffect(() => {const savedSettings = localStorage.getItem('zion-accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)} catch (error) {console.warn('Failed to parse accessibility settings:', error)}
     }
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
   }, []);
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -377,8 +371,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   return (
     <>
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
       <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
         <div className="space-y-2">
@@ -413,8 +406,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               A+
             </button>
           </div>
-        </div>
-      </div>
       
       {/* Skip to main content link */}
       <a
@@ -469,8 +460,6 @@ export default AccessibilityEnhancer;
               A+;
             </button>;
           </div>;
-        </div>;
-      </div>;
       {/* Skip to main content link */}
       <a;
         href="#main-content";
@@ -599,7 +588,6 @@ export default AccessibilityEnhancer;
                       </button>;
                     ))}
                   </div>;
-                </div>;
                 {/* Color Blindness Support */}
                 <div className="space-y-3">;
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Color Vision</h3>;
@@ -625,8 +613,6 @@ export default AccessibilityEnhancer;
                     <div>• <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-600 rounded text-xs">Alt + Shift + Tab</kbd> Skip to navigation</div>;
                     <div>• <kbd className="px-1 py-0.5 bg-slate-200 dark:bg-slate-600 rounded text-xs">Ctrl + Tab</kbd> Skip to footer</div>;
                   </div>;
-                </div>;
-              </div>;
               {/* Footer */}
               <div className="p-6 border-t border-slate-200 dark:border-slate-700">;
                 <button;
@@ -638,9 +624,8 @@ export default AccessibilityEnhancer;
                 </button>;
               </div>;
             </motion.div>;
-          </motion.div>;
         )}
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
       </AnimatePresence>
     </>
   );
@@ -650,13 +635,13 @@ import React, { useState, useEffect } from 'react' interface AccessibilityEnhanc
   children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true })  useEffect ( () => {'';""
 }}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
       </AnimatePresence>;
     </>;
   )}import React, { useState, useEffect } from 'react' interface AccessibilityEnhancerProps {"";
   children: React.ReactNode} const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState ({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true })  useEffect ( () => {'';"";
 }}
-<<<<<<< HEAD:src_backup/components/AccessibilityEnhancer.tsx
+:src_backup/components/AccessibilityEnhancer.tsx
       <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
         <div className="space-y-2">
@@ -691,8 +676,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               A+
             </button>
           </div>
-        </div>
-      </div>
       
       {/* Skip to main content link */}
       <a

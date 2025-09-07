@@ -19,15 +19,11 @@ class BuildTestAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.report.steps.push({})
       timestamp,
       type,
@@ -57,7 +53,6 @@ class BuildTestAutomation {}
       await this.runCommand('rm -rf .next dist build', 'Clean previous builds')} catch (error) {}
       // Ignore if directories don't exist;
     };
-  };
   async installDependencies() {}
     await this.runCommand('npm ci', 'Install dependencies')};
   async runTests() {}
@@ -67,7 +62,6 @@ class BuildTestAutomation {}
       this.report.summary.tests = 'failed';
       // Continue with build even if tests fail;
     };
-  };
   async runLinting() {}
     try {}
       await this.runCommand('npm run lint', 'Run linting');
@@ -75,7 +69,6 @@ class BuildTestAutomation {}
       this.report.summary.linting = 'failed';
       // Continue with build even if linting fails;
     };
-  };
   async buildApplication() {}
     try {}
       await this.runCommand('npm run build', 'Build application');
@@ -142,16 +135,10 @@ class BuildTestAutomation {}
       this.log(`Build and Test Automation "failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()};
   };
-};
 // Run the automation;
 if ( {})
   const automation = new BuildTestAutomation) {}
      {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = BuildTestAutomation;
-module.exports = BuildTestAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

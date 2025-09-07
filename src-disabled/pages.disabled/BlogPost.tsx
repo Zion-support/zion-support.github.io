@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
+:src_backup/pages/BlogPost.tsx
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -60,7 +60,7 @@ default:
     }
   };
 
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
+:src_backup/pages/BlogPost.tsx
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -73,7 +73,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       '@type': 'Person'
       name: post.author.name
     }
-  }
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
@@ -139,7 +138,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-white font-medium">{post.author.name}</p>
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>
                 </div>
-              </div>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center text-zion-slate-light">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -338,9 +336,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                   ))}
                 </div>;
-              </div>;
-            </div>;
-          </div>;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
@@ -351,7 +346,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 fallbackSrc="/images/blog-placeholder.svg"
               />
             </div>
-          </div>
           {/* Article content */}
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert max-w-none">
@@ -402,13 +396,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                   ))}
                 </div>;
-              </div>;
             )}
                       </div>
                     </Link>
                   ))}
                 </div>
-              </div>
             )}
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
@@ -447,11 +439,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </Button>
             </div>
-          </div>
-        </div>
-      </div>
     </>
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
+:src_backup/pages/BlogPost.tsx
 
   );
 
@@ -470,6 +459,5 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
+:src_backup/pages/BlogPost.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533

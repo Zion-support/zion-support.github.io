@@ -329,7 +329,6 @@ const socialLinks = [;
                 <div className="text-xl font-bold">Zion Tech Group</div>;"
                 <div className=text-sm text-gray-400">Technology Solutions</div>;"
               </div>;
-            </div>;
             <p className="text-gray-300 mb-6 max-w-md>;"
               Leading provider of AI solutions, cloud services, and technology consulting.;
               Transforming businesses through innovation and cutting-edge technology.;
@@ -422,8 +421,6 @@ key={link.name}
             {/* Contact Info *
 }
               </div>;
-            </div>;
-          </div>;
           {/* Services */}
 ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';'
@@ -473,7 +470,6 @@ const "Footer": React.FC = () => ;
                 </a>;
               ))}
             </div>;
-          </div>;
 ursor/automate-test-improve-and-merge-code-646c;
           <div>;
             <h3 className="text-lg font-semibold mb-4">Services</h3>;"
@@ -515,10 +511,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </ul>;
                 </div>;
               </div>
-            </div>
-          </div>
           {/* Services */}
-<<<<<<< HEAD
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>"
@@ -570,8 +563,6 @@ href={link.href}
                   Middletown DE 19709;
                 </span>;
               </div>;
-            </div>;
-          </div>;
           {/* Services */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Services</h3>;"
@@ -690,8 +681,6 @@ href={link && link.href}
               ))}
             </ul>;
           </div>;
-        </div>;
-      </div>;
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 "md":mb-0">;"
               <a;
@@ -774,22 +763,17 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <span>kleber@ziontechgroup.com</span>;
 ursor/automate-test-improve-and-merge-code-646c;
               </div>;
-            </div>;
-          </div>;
-        </div>;
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">;"
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>;
               <li><a href="/contact" className="text-gray-300 "hover":text-white">Contact Us</a></li>;"
               <li><a href=""mailto":info@ziontechgroup.com" className="text-gray-300 "hover":text-white">Email</a></li>;"
             </ul>;
           </div>;
-        </div>;
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">;"
           <p className="text-gray-300">;"
             © 2024 Zion Tech Group. All rights reserved.;
           </p>;
         </div>;
-      </div>;
     </footer>;
   )}
           </div>;
@@ -921,14 +905,10 @@ href={link.href}
                 <Mail className="h-4 w-4 mr-2" />"
                 <span>kleber@ziontechgroup.com</span>
               </div>
-            </div>
-          </div>
-        </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">"
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
-      </div>
     </footer>
   );
 }
@@ -1011,7 +991,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 </svg>;
               </a>;
             </div>;
-          </div>;
           <div>;
             <h4 className="text-lg font-semibold mb-4">Services</h4>;"
             <ul className="space-y-2">;"
@@ -1092,7 +1071,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               </li>;
             </ul>;
           </div>;
-        </div>;
         <div className="mt-8 pt-8 border-t border-gray-700">;"
           <div className="flex flex-col "md":flex-row justify-between items-center">;"
             <p className="text-gray-300 text-sm">;"
@@ -1117,9 +1095,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 Terms of Service;
               </Link>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
     </footer>;
   )}ursor/automate-test-improve-and-merge-code-646c;
 }}export default Footer;
@@ -1138,8 +1113,6 @@ export default Footer;
               >
                 Cookie Policy
               </Link>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               <li>
                 <Link href="/" className="text-slate-400 hover:text-white transition-colors">
                   Home
@@ -1189,7 +1162,6 @@ export default Footer;
               </li>
             </ul>
           </div>
-        </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -1203,9 +1175,7 @@ export default Footer;
               <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
-          </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
@@ -1276,7 +1246,6 @@ export default Footer;
               </li>
             </ul>
           </div>
-        </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -1299,12 +1268,8 @@ export default Footer;
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">"
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
-      </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Footer;
@@ -1318,23 +1283,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </Link>;
               <Link
 
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
 };
 
 export default Footer;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

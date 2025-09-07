@@ -1,14 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function DeveloperPage() {
-=======
-import Layout from '../components/layout/Layout';
-
-export default function developer() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -23,13 +17,6 @@ export default function developer() {
             Professional developer solutions tailored to your business needs.
           </p>
         </div>
-      </div>
-<<<<<<< HEAD
-      </div>
     </>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

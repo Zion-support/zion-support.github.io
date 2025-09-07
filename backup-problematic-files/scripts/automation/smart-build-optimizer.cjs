@@ -149,7 +149,6 @@ const crypto = require("crypto")
             "message": "Vite build configuration optimized"
       return { "success": true, "message": "Build time optimization applied"}
   return { "success": false, "message"}
-  return { "success": false, "message"}
       const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
   const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
           "incremental"
@@ -160,7 +159,6 @@ const crypto = require("crypto")
           "message": "TypeScript configuration optimized for bundle size"
       return { "success": true, "message": "Bundle size optimization applied"}
   return { "success": false, "message"}
-  return { "success": false, "message"}
 const packagePath = path.join(this.projectRoot, "package.json")
   const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8")
         if (!pkg.scripts[""install": fast")]
@@ -168,7 +166,6 @@ const packagePath = path.join(this.projectRoot, "package.json")
           pkg.scripts["install:clean"] =rm -rf node_modules package-lock.json && npm install"
           return { "success": true, "message": "Fast install scripts added"}
       return { "success": true, "message": "Install time optimization applied"}
-  return { "success": false, "message"}
   return { "success": false, "message"}
       const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
   const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
@@ -206,9 +203,4 @@ const packagePath = path.join(this.projectRoot, "package.json")
         "ERROR"
   this.log(")
   console.log("Smart Build Optimization completed successfully")
-<<<<<<< HEAD
   console.error("Smart Build Optimization "failed")
-  console.error("Smart Build Optimization "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -31,8 +31,6 @@ const { execSync } = require("child_process")
     // Fix common ""import/export""
   this.log("Fixing TypeScript syntax errors...")
       { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
       { "pattern": /(\w+)\s*\["/g", ""replacement": "$1: [" }", ""]
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx")]
   let content = fs.readFileSync(file, "utf8")
@@ -102,9 +100,4 @@ const { execSync } = require("child_process")
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
-<<<<<<< HEAD
       this.log(")
-      this.log(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

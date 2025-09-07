@@ -16,8 +16,6 @@ const UltraFuturisticBackground2034: React.FC;
     resizeCanvas()window.addEventListener('resize', resizeCanvas)// Particle system;
     class Particle {x: number;
       y: number;vx: number;
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2034: React.FC;
     resizeCanvas();
@@ -40,28 +38,19 @@ class Particle {
       constructor() {
         }
         this.x = Math.random() * canvas.width;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.size = Math.random() * 2 + 1;
         this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;`        this.alpha = Math.random() * 0.5 + 0.3;
         this.life = Math.random() * 100 + 50;
-<<<<<<< HEAD
       life: number;
-=======
-this.maxLife = this.life;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
       update() {
         }
         this.x += this.vx;
-<<<<<<< HEAD
 this.maxLife = this.life;}
       update() {this.x += this.vx;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         this.y += this.vy;
         this.life--;
         if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
@@ -71,18 +60,13 @@ this.maxLife = this.life;}
           }
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           this.y = Math.random() * canvas.height;        }
 
         }
 
       }
 
-<<<<<<< HEAD
       draw() {
-=======
-      draw() {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -113,13 +97,7 @@ this.maxLife = this.life;}
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 
-<<<<<<< HEAD
-=======
-this.y = Math.random() * canvas.height;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         }
-      }
 
       draw() {;
         }
@@ -131,9 +109,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
         ctx && ctx.restore();      }
-    }
-<<<<<<< HEAD
-      }
     }
     // Create particles,
 const "particles": Particle[] = [];
@@ -172,7 +147,6 @@ ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';'
 
     // Create particles        ctx && ctx.restore();
       }
-    }
 
     // Create particles;
     const particles: Particle[] = [];
@@ -219,7 +193,6 @@ ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';'
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }
         }
-      }
 
       requestAnimationFrame(animate);    };            ctx && ctx.stroke();
 import React, { useEffect, useRef } from 'react';
@@ -277,7 +250,6 @@ const UltraFuturisticBackground2034: React.FC = $2;
         ctx.fill($2);
         ctx.restore()
       }
-    }
 
     // Create particles
     const particles: Particle[] = [],
@@ -311,34 +283,6 @@ const UltraFuturisticBackground2034: React.FC = $2;
             ctx.moveTo($2);
             ctx.lineTo($2);
             ctx.stroke()
-=======
-        ctx.save();
-        ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-ctx.restore();
-origin/cursor/automate-test-improve-and-merge-code-2533
-      }
-    }
-    // Create particles;
-    const particles: Particle[] = [];
-    for (let i = 0, i < 100, i++) {}
-      particles.push(new Particle())
-for (let i = 0; i < 100; i++) {
-      particles.push(new Particle());
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-    // Animation loop;
-    const animate = () => {}
-      if (!ctx) return;
-<<<<<<< HEAD
-
-      // Clear canvas with gradient
-=======
-      // Clear canvas with gradient;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');'
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.05)');
@@ -361,7 +305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     // Create particles        ctx && ctx.restore();
       }
-    }
 
     // Create particles;
     const particles: Particle[] = [];
@@ -408,7 +351,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }
         }
-      }
 
       requestAnimationFrame(animate);    };            ctx && ctx.stroke();
 for (let i = 0; i < particles.length; i++) {
@@ -425,10 +367,7 @@ const distance = Math.sqrt(dx * dx + dy * dy);
             ctx.lineTo(particles[j].x, particles[j].y);
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }
-        }
-      }
 
 requestAnimationFrame(animate)
 };
@@ -499,7 +438,6 @@ return (;
         }
       }}animate()requestAnimationFrame(animate)}animate()return () => {window.removeEventListener('resize', resizeCanvas)}}, [])return (<div className='fixed inset-0 -z-10 overflow-hidden'>;
       max_life: number,this.coordinate_x = Math.random () * canvas.width;
-=======
     animate();
 
 requestAnimationFrame(animate);
@@ -515,7 +453,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         this.coordinate_y = Math.random () * canvas.height;
         this.vx = (Math.random () - 0.5) * 0.5;
         this.vy = (Math.random () - 0.5) * 0.5;
@@ -527,7 +464,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       update () {this.x += this.vx;
         }
         this.y += this.vy;
-<<<<<<< HEAD
         this.life--;// Check condition;
 if (this.vx *= -1) {$2;
 }
@@ -536,37 +472,14 @@ if (this.vy *= -1) {$2;
 }
         // Check condition;
 if ( {) {$2;
-=======
-        this.life--;
-;
-        // Check condition;
-if (this.vx *= -1) {}
-  $2;
-}
-        // Check condition;
-if (this.vy *= -1) {}
-  $2;
-}
-        // Check condition;
-if ( {) {}
-  $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
           this.life = this.max_life;
           this.coordinate_x = Math.random () * canvas.width;
           this.coordinate_y = Math.random () * canvas.height;        }          this.coordinate_y = Math.random () * canvas.height;
         }
-      }
-<<<<<<< HEAD
       draw () {// Check condition;
 }
 if (return) {$2;
-=======
-      draw () {}
-        // Check condition;
-if (return) {}
-  $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
         ctx.save ();
         ctx.global_alpha = this.alpha * (this.life / this.max_life);
@@ -578,7 +491,6 @@ if (return) {}
     }
     // Create particles        ctx.restore ();
       }
-    }
     // Create particles;
 
 const "particles": Particle[] = [];
@@ -607,11 +519,8 @@ const distance = Math.sqrt (dx * dx + dy * dy)for (let index = 0, i < particles.
 
 const distance = Math.sqrt (dx * dx + dy * dy)ctx.begin_path ()ctx.move_to (particles[i].x, particles[i].y)ctx.line_to (particles[j].x, particles[j].y)ctx.stroke ()}
         }
-      }
       requestAnimationFrame (animate);    }            ctx.stroke ();
           }
-        }
-      }
       requestAnimationFrame (animate)requestAnimationFrame (animate)}animate ()return () => {window.removeEventListener ('resize', resize_canvas)}'
   }, [];
   return (<div className='fixed inset - 0 -z - 10 overflow - hidden'>;'
@@ -685,7 +594,6 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
       />
 
       {/* Energy Orbs */}
-<<<<<<< HEAD
         style={{<div;
           className='absolute inset-0';
           style={{backgroundImage: `;
@@ -748,19 +656,10 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
         transition={{
           duration: 4
           repeat: Infinity
-=======
-      <motion&& motion.div'
-        className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
-        animate={{}
-        transition={{}
-          duration: 4;
-          repeat: Infinity'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           ease: 'easeInOut',        }}
         }}
       />;
       {/* Energy Orbs */}
-<<<<<<< HEAD
             className='absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent';
             style={{left: `${(i + 1) * 12.5}%`;
               top: '20%';
@@ -820,7 +719,6 @@ className='absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-4
               "repeat": Infinity
             }} />;
         ))}
-<<<<<<< HEAD
       {/* Holographic Rings */}<motion&& motion.div;
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full';
         animate={{rotate: 360,scale: [1, 1 && 1.1, 1],opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],        }}
@@ -836,18 +734,6 @@ className='absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-4
           rotate: 360,
           scale: [1, 1 && 1.1, 1],
           opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],        }}
-=======
-      {/* Holographic Rings */}
-
-      <motion.div,
-className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full''
-        animate={{
-          }
-          "rotate": 360,
-          "scale": [1, 1.1, 1],
-          "opacity": [0.1, 0.3, 0.1]
-        }}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         transition={{
           }
           "duration": 30,
@@ -897,7 +783,6 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.3, 0.8, 0.3]
-=======
         transition={{}
           duration: 25,
           repeat: Infinity,'"
@@ -1138,7 +1023,6 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
         }} />
       />;
       {/* AI Consciousness Waves */}
-<<<<<<< HEAD
       </div>;
       {/* Quantum Entanglement Effect */}<motion&& motion.div;
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full';
@@ -1171,7 +1055,6 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           repeat: Infinity;
           ease: 'easeInOut';
         }}/>;
-        }}/>;
           delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full";
         animate={{boxShadow: [;
             '0 0 10px rgba(0, 255, 255, 0 && 0.5)0 0 30px rgba(0, 255, 255, 0 && 0.8)0 0 10px rgba(0, 255, 255, 0 && 0.5)';
@@ -1202,7 +1085,6 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
         animate={{rotate: 360,scale: [1, 1.05, 1],opacity: [0.05, 0.15, 0.05],}}
         transition={{duration: 40,repeat: Infinity,ease: 'linear',}}
       />;
-      />;
       {/* AI Consciousness Waves */}<div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (<motion.div;
 
@@ -1222,17 +1104,6 @@ key={i}
     </div>;
   )export default UltraFuturisticBackground2034;  )}
 export default UltraFuturisticBackground2034;export default UltraFuturisticBackground2034;}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
 }
 export default UltraFuturisticBackground2034;
 }export default UltraFuturisticBackground2034;  )}export default UltraFuturisticBackground2034;
@@ -1267,23 +1138,10 @@ export default UltraFuturisticBackground2034;
 
         ))}
       </div>
-    </div>
 )
 };
 export default UltraFuturisticBackground2034;
 
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
 }
 export default UltraFuturisticBackground2034;
 };
@@ -1291,93 +1149,17 @@ export default UltraFuturisticBackground2034;
 export default UltraFuturisticBackground2034;  );
 };
 
-<<<<<<< HEAD
 export default UltraFuturisticBackground2034;
               ease: 'easeInOut',
-=======
-export default UltraFuturisticBackground2034;'
-              ease: 'easeInOut',"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               delay: i * 0.8,              ease: "easeInOut",
               delay: i * 0.8;
             }}
           />))}
       </div>;
-<<<<<<< HEAD
     </div>)}export default UltraFuturisticBackground2034)}export default UltraFuturisticBackground2034;</div>;
     </div>;
 )}export default UltraFuturisticBackground2034;
 export default UltraFuturisticBackground2034,
-=======
-<<<<<<< HEAD
-
-"
-=======
-constructor () {
-  this.x = Math.random () * canvas.width
-this.y = Math.random () * canvas.height
-this.vx = (Math.random () - 0.5) * 0.5
-this.vy = (Math.random () - 0.5) * 0.5
-this.size = Math.random () * 2 + 1
-this.color = `hsl ($ {
-  Math.random () * 60 + 180 
-}, 70%, 60%) `
-this.alpha = Math.random () * 0.5 + 0.3
-this.life = Math.random () * 100 + 50
-this.maxLife = this.life 
-}if (this.x < 0 || this.x > canvas.width) this.vx *= -1
-if (this.y < 0 || this.y > canvas.height) this.vy *= -1
-if (this.life <= 0) {
-  // Draw connecting lines ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) '
-ctx.lineWidth = 0.5
-}
-}requestAnimationFrame (animate) 
-}
-animate ()
-backgroundImage: ` linear-gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
-}
-}/> </div> {
-  /* Floating Geometric Shapes */ 
-}<motion.div /> {
-  /* Energy Orbs */ 
-}<motion.div />) ) 
-}</div> {
-  /* Holographic Rings */ 
-}<motion.div 
-}
-}animate= {
-  {
-  scale: [1, 1.5, 1], opacity: [0.3, 0.8, 0.3] 
-}
-}transition= {
-  {
-  duration: 2 + Math.random () * 2, repeat: Infinity, ease: "easeInOut", delay: Math.random () * 2 
-}
-}/>) ) 
-}</div> />) ) 
-}</div> {
-  /* Quantum Entanglement Effect */ 
-}<motion.div /> {
-  /* Metaverse Portal Effect */ 
-}<motion.div 
-}
-}animate= {
-  {
-  scale: [0.8, 1.2, 0.8], opacity: [0.1, 0.3, 0.1] 
-}
-}transition= {
-  {
-  duration: 6 + i * 0.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.8 
-}
-}/>) ) 
-}</div> </div>) 
-}
-export default UltraFuturisticBackground2034
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
     </div>);
 }
 ;
@@ -1386,18 +1168,10 @@ export default UltraFuturisticBackground2034);
 ;
 export default UltraFuturisticBackground2034;
 ;
-<<<<<<< HEAD
       </div>
-    </div>
 );
 };
 
 export default UltraFuturisticBackground2034;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

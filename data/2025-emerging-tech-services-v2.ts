@@ -84,7 +84,6 @@ export interface EmergingTechService  {"id": string;"name": string;
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.';'
     "compliance": [;
       'Research ethics, Data privacy, Scientific standards, Industry regulations';'
-      'Research ethics, Data privacy, Scientific standards, Industry regulations';'
     ],"link": '"https"://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',"id": 'quantum - bio - computing - platform',"name": 'Quantum Bio - Computing Platform',"tagline": 'Quantum computing meets biological systems',"description":;'
       'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',"category": 'Quantum & Emerging Tech',"price": {"monthly": 599,"yearly": 5990,"currency": 'USD',"trial_days": 14,"setup_time": '8 hours',"enterprise": 2499;'
       }
@@ -117,7 +116,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     ],"support":;
       '24 / 7 research support, dedicated bio - quantum specialist, training programs, and quarterly research reviews.',"compliance": [;'
       'Research ethics, Data privacy, Scientific standards, Industry regulations';'
-      'Research ethics, Data privacy, Scientific standards, Industry regulations';'
     ],"link": '"https"://ziontechgroup.com / quantum - bio - computing - platform',"icon": '🧬',"color": 'from - green - 500 to - emerald - 600',"popular": true,"launch_date": '2024 - 02 - 01',"customers": 280,"rating": 4 && 4.8,"reviews": 85,"market_size": '$12B quantum bio - computing market',"growth_rate": '65% annually';'
   },{'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware';'
     ],"realImplementation": true,"growth_rate": '65% annually';'
@@ -141,7 +139,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     "support":;
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.';'
     "compliance": [;
-      'Medical device regulations, Data privacy, Ethical guidelines, Industry standards';'
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards';'
     ],"link": '"https"://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',"id": 'brain - computer - interface - platform',"name": 'Brain - Computer Interface Platform',"tagline": 'Direct neural interface for human - computer interaction',"description":;'
       'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',"category": 'Emerging Tech',"price":  {"monthly": 399,"yearly": 3990,"currency": 'USD',"trial_days": 21,"setup_time": '6 hours',"enterprise": 1599;'
@@ -175,7 +172,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     ],"support":;
       '24 / 7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',"compliance": [;'
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards';'
-      'Medical device regulations, Data privacy, Ethical guidelines, Industry standards';'
     ],"link": '"https"://ziontechgroup.com / brain - computer - interface - platform',"icon": '🧠',"color": 'from - blue - 500 to - indigo - 600',"popular": true,"launch_date": '2024 - 01 - 15',"customers": 450,"rating": 4 && 4.7,"reviews": 120,"market_size": '$18B BCI market',"growth_rate": '55% annually';'
   },{'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems';'
     ],"realImplementation": true,"growth_rate": '55% annually';'
@@ -199,7 +195,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     "support":;
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.';'
     "compliance": [;
-      'Energy regulations, Safety standards, Environmental regulations, Industry standards';'
       'Energy regulations, Safety standards, Environmental regulations, Industry standards';'
     ],"link": '"https"://ziontechgroup && ziontechgroup.com/quantum-energy-platform',"id": 'quantum - energy - platform',"name": 'Quantum Energy Platform',"tagline": 'Quantum - enhanced energy optimization and fusion simulation',"description":;'
       'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',"category": 'Quantum & Emerging Tech',"price": {"monthly": 499,"yearly": 4990,"currency": 'USD',"trial_days": 14,"setup_time": '6 hours',"enterprise": 1999;'
@@ -233,7 +228,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     ],"support":;
       '24 / 7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',"compliance": [;'
       'Energy regulations, Safety standards, Environmental regulations, Industry standards';'
-      'Energy regulations, Safety standards, Environmental regulations, Industry standards';'
     ],"link": '"https"://ziontechgroup.com / quantum - energy - platform',"icon": '⚡',"color": 'from - yellow - 500 to - orange - 600',"popular": true,"launch_date": '2024 - 02 - 10',"customers": 320,"rating": 4 && 4.8,"reviews": 95,"market_size": '$25B quantum energy market',"growth_rate": '45% annually';'
   },{'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems';'
     ],"realImplementation": true,"growth_rate": '45% annually';'
@@ -257,8 +251,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     "support":;
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';'
     "compliance": [;
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';'
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';'
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';'
     ],"link": '"https"://ziontechgroup.com/autonomous-vehicle-ai-platform',"icon": '🚗',"color": 'from-red-500 to-pink-600',"popular": true,"launchDate": '2024-01-25',"customers": 180,"rating": 4.9,"reviews": 65,"marketSize": '$35B autonomous vehicle market',"growthRate": '75% annually';'
   },"growthRate": '75% annually';'
@@ -505,9 +497,7 @@ export interface EmergingTechService  {"id": string;"name": string;
     },'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';'
     ],"link": '"https"://ziontechgroup.com / autonomous - vehicle - ai - platform',"icon": '🚗',"color": 'from - red - 500 to - pink - 600',"popular": true,"launch_date": '2024 - 01 - 25',"customers": 180,"rating": 4 && 4.9,"reviews": 65,"market_size": '$35B autonomous vehicle market',"growth_rate": '75% annually';'
   },"growth_rate": '75% annually';'
-  },"growth_rate": '75% annually';'
   }
-    ];
     ];
     "integrations": ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],"support": '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',"compliance": ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],"link": '"https"://ziontechgroup.com/autonomous-vehicle-ai-platform';'
     "integrations": ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];'
@@ -521,7 +511,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     "compliance": ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];"icon": '🚗';'
     "growthRate": '85% annually''
   },
-<<<<<<< HEAD
   {
     }
     "id": 'quantum-bio-computing-platform';'
@@ -552,18 +541,9 @@ export interface EmergingTechService  {"id": string;"name": string;
 
     growth_rate: '75% annually'
   }
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: '🚗',
-=======
 '
     icon: '🚗','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - red - 500 to - pink - 600',
     popular: true,'
     launch_date: '2024 - 01 - 25',
@@ -573,13 +553,6 @@ export interface EmergingTechService  {"id": string;"name": string;
     market_size: '$35B autonomous vehicle market','
     growth_rate: '75% annually',
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    price: {
-];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology]
@@ -589,20 +562,11 @@ export interface EmergingTechService  {"id": string;"name": string;
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   id: string, name: string,
   tagline: string, description: string,
@@ -636,51 +600,10 @@ export interface EmergingTechService  {"id": string;"name": string;
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    ];
-    ];
-    "integrations": ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],'
-    "support": '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.','
-    "compliance": ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],'
-    "link": '"https"://ziontechgroup.com/autonomous-vehicle-ai-platform';'
-    "integrations": ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];'
-    "support": '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';'
-    "compliance": ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];'
-    "link": '"https"://ziontechgroup.com / autonomous - vehicle - ai - platform';'
-    "icon": '🚗';'
-    "color": 'from - red - 500 to - pink - 600';'
-    "popular": true;
-    "launch_date": '2024 - 01 - 25';'
-    "customers": 180;
-    "rating": 4 && 4.9;
-    "reviews": 65;
-  }
-  }"market_size": '$35B autonomous vehicle market',"growth_rate": '75% annually';}];"id": string,"name": string,"tagline": string,"description": string,"category": string,"price": {"monthly": number,"yearly": number,"currency": string,"trialDays": number,"setupTime": string,"enterprise": number;'
-  },"features": string[],"benefits": string[],"targetAudience": string[],"marketPosition": string,"competitors": string[],"techStack": string[],"realImplementation": boolean,"implementationDetails": string,"roi": string,"useCases": string[],"integrations": string[],"support": string,"compliance": string[],"link": string,"icon": string,"color": string,"popular": boolean,"launchDate": string,"customers": number,"rating": number,"reviews": number,"marketSize": string,"growthRate": string;
-}export interface EmergingTechService  {"id": string,"name": string,"tagline": string,"description": string,"category": string,"price": {"monthly": number,"yearly": number,"currency": string,"trialDays": number,"setupTime": string,"enterprise": number;
-  },"features": string[],"benefits": string[],"targetAudience": string[],"marketPosition": string,"competitors": string[],"techStack": string[],"realImplementation": boolean,"implementationDetails": string,"roi": string,"useCases": string[],"integrations": string[],"support": string,"compliance": string[],"link": string,"icon": string,"color": string,"popular": boolean,"launchDate": string,"customers": number,"rating": number,"reviews": number,"marketSize": string,"growthRate": string;
-}}
-];;
-export interface EmergingTechService  {}
-];
-ursor/fix-website-loading-errors-and-merge-6662;
-    "marketSize": '$35B autonomous vehicle market';'
-    "growthRate": '75% annually';'
-  }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
-<<<<<<< HEAD
   }
 
 ];
@@ -767,45 +690,24 @@ export interface EmergingTechService {;
   }
 ];
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export interface EmergingTechService {;
 
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   }
 ];
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     marketSize: '$35B autonomous vehicle market';
     growthRate: '75% annually';
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
 
 export interface EmergingTechService {;
@@ -824,7 +726,6 @@ pr-12325
     trialDays: number,;
     setupTime: string,;}
     enterprise: number;}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },;
   features: string[],;
   benefits: string[],;
@@ -903,7 +804,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface EmergingTechService {;
 
   }
-<<<<<<< HEAD
 ];
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -921,10 +821,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 ],
-=======
-
-];
-'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

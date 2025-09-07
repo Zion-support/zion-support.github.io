@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+:src_backup/pages/Unauthorized.tsx
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/Header';
@@ -25,14 +25,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="bg-zion-purple/20 p-4 rounded-full">
               <ShieldAlert className="h-12 w-12 text-zion-purple" />
             </div>
-          </div>
           <h1 className="text-3xl font-bold text-white mb-3">{t('errors.access_denied')}</h1>
           <p className="text-zion-slate-light mb-6">
             {t('errors.no_permission')}
           </p>
           <div className="flex flex-col gap-3">
             <Link
-<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+:src_backup/pages/Unauthorized.tsx
 
               href='/'
 :src/pages/Unauthorized.tsx
@@ -49,7 +48,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {t('errors.return_home')}
             </Link>
             <Link
-<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+:src_backup/pages/Unauthorized.tsx
 :src/pages/Unauthorized.tsx
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
@@ -77,7 +76,6 @@ export default function Unauthorized() {;
             <div className="bg-zion-purple/20 p-4 rounded-full">;
               <ShieldAlert className="h-12 w-12 text-zion-purple" />;
             </div>;
-          </div>;
           <h1 className="text-3xl font-bold text-white mb-3">{t('errors.access_denied')}</h1>;
           <p className="text-zion-slate-light mb-6">;
             {t('errors.no_permission')}'
@@ -112,12 +110,10 @@ export default function Unauthorized() {;
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
             >;
               {t('errors.login_different_account')}
-<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+:src_backup/pages/Unauthorized.tsx
 
             </Link>
           </div>
-        </div>
-      </div>
     </>
 :src/pages/Unauthorized.tsx
   )

@@ -319,7 +319,6 @@ visible: {
 
   staggerChildren: 0.1
 }
-}
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
 export default AIConsciousnessEvolutionPlatform;
@@ -357,11 +356,6 @@ export default AIConsciousnessEvolutionPlatform;
 
 
 }
-}
-}
-}
-}
-}
   "opacity": 0, "coordinate_y": 20;
 }animate= {
   {
@@ -377,8 +371,6 @@ export default AIConsciousnessEvolutionPlatform;
 const containerVariants = {"hidden": {"opacity": 0;
 }"visible": {"opacity": 1, "transition": {"staggerChildren": 0.1;
 }
-}
-}
 
 export default AIConsciousnessEvolutionPlatform;
 
@@ -388,10 +380,6 @@ export default AIConsciousnessEvolutionPlatform;"staggerChildren": 0.1;
 export default AIConsciousnessEvolutionPlatform;
 
 export default AIConsciousnessEvolutionPlatform;}
-}
-}
-}
-}
 }
   "opacity": 0, "coordinate_y": 20;
 }animate= {{"opacity": 1, "coordinate_y": 0;
@@ -425,7 +413,6 @@ export default AIConsciousnessEvolutionPlatform;}
 }
 ursor/fix-website-loading-errors-and-merge-6662;
 }
-}
   "staggerChildren": 0.1;
 }}}
 
@@ -442,7 +429,6 @@ export default AIConsciousnessEvolutionPlatform;
 
 
 }
-}
 
   staggerChildren: 0.1 
 
@@ -453,15 +439,9 @@ export default AIConsciousnessEvolutionPlatform;
 
 };
 export default AIConsciousnessEvolutionPlatform;
-<<<<<<< HEAD
 
-}
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-}
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

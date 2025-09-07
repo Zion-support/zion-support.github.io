@@ -295,15 +295,9 @@ class ComprehensiveTestAutomation {}
       this.log(`Comprehensive Test Automation "failed": ${error.message}`, 'ERROR');
       throw error};
   };
-};
 if ( {})
   const testAutomation = new ComprehensiveTestAutomation) {}
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ComprehensiveTestAutomation;
-module.exports = ComprehensiveTestAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

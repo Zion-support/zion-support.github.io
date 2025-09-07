@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
 const { execSync } = require("child_process");
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing code complexity...")
 const srcDir = path.join(this.projectRoot, "src");
@@ -62,39 +54,10 @@ const reportFile = path.join(this.reportsDir, "code-quality-report.json");
 // console.log(`� Complex "files"`)
     console.log(` "Recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-      console.log("\n� High Priority "Recommendations": ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      console.log("\n� High Priority "Recommendations": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      console.log("\n� High Priority "Recommendations": ")
-<<<<<<< HEAD
       console.log("\n� High Priority "Recommendations": ")
       hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")","
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")","
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

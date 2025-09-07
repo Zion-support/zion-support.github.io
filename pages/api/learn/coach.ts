@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
-
-;
->>>>>>> origin/main
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -33,43 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
-<<<<<<< HEAD
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
   }
-}
-=======
-
-  };
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-
-import type { NextApiRequest, NextApiResponse } from 'next'
-
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ coach: 'available' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

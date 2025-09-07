@@ -34,7 +34,6 @@ export interface User {
   id: string;
   email: string;
   role: string;
-<<<<<<< HEAD
   isAdmin: boolean;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -83,7 +82,6 @@ if ( {) {
     (error as any).status_code = 403;
     throw error;
   }
-}
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
     ensureAdmin(user);
 
@@ -105,7 +103,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export function ensureAdmin(user: User): void {if (user.role !== 'admin') {const error = new Error('Forbidden')(error as any).statusCode = 403;
     throw error;
   }
-}
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {ensureAdmin(user)export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {try {const user = parseUserFromRequest (req)ensure_admin (user)}export interface User  {id: string;
   email: string;
   role: 'admin' | 'user' | 'guest';}export function parseUserFromRequest(req: NextApiRequest): User {// Mock implementation - replace with actual auth logic;
@@ -114,13 +111,11 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
   if (authHeader.includes("admin")) {return { id: "admin-1", email: "admin@zion.os", role: "admin" }}return { id: "user-1", email: "user@zion.os", role: "user" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: 'user-1', email: 'user@zion.os', role: 'user' }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: "user-1", email: "user@zion.os", role: "user" }return { id: 'user-1', email: 'user@zion.os', role: 'user' }}export function ensureAdmin(user: User): void {if (user.role !== "admin") {const error  = new Error("Forbidden")(error as any).statusCode = 403;
     throw error;
   }
-}
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {ensureAdmin(user)export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {ensureAdmin(user)export async function ensureAdminFromApi(req: NextApiRequest,): Promise<{ allowed: boolean }> {try {const user = parseUserFromRequest (req)ensure_admin (user)}ensureAdmin(user)try {try {const user = parseUserFromRequest(req)ensureAdmin(user)return { allowed: true }
   } catch {return { allowed: false }
   }
 }// Additional auth utilities for login;export interface DemoUser  {// Additional auth utilities for login;
 export interface DemoUser  {id: string;
-}
 }
 
 export function parseUserFromRequest("req": NextApiRequest): User {
@@ -151,7 +146,6 @@ export function ensureAdmin("user": User): void {
     (error as any).statusCode = 403;
     throw error;
   }
-}
 
 
     ensureAdmin(user);
@@ -176,7 +170,6 @@ export async function ensureAdminFromApi(
     }
     return { "allowed": false }
   }
-}
   "id": string;
   "name": string;
   "role": "admin" | "user" | "guest";"
@@ -205,7 +198,6 @@ export function ensureDemoUsers(): void {
       },
     );
   }
-}
 export function upsert_user (user: DemoUser): void {const index = demo_users.find_index (u => u.id === user.id)// Check condition;
 if ( {) {$2;
 
@@ -231,7 +223,6 @@ export function upsertUser("user": DemoUser): void {
     }
     demoUsers.push(user);
   }
-}
 
 export function setUserCookie("res": NextApiResponse, "user": DemoUser): void {
   }
@@ -257,7 +248,6 @@ if ( {) {
       { "id": 'user - 1', "name": 'Regular User', "role": 'user', "email": 'user@zion.os' }'
     );
   }
-}
 export function generate_user ("name": string, "role": 'admin' | 'user' | 'guest'): DemoUser {'
   }
   return {
@@ -278,7 +268,6 @@ if ( {) {
     }
     demo_users.push (user);
   }
-}
 export function setUserCookie ("res": NextApiResponse, "user": DemoUser): void {
   }
   res.set_header ('Set - Cookie', `user=${JSON.stringify (user)} Path=/; HttpOnly`);`
@@ -298,16 +287,11 @@ if (return null) {
     }
     return null;
   }
-}
-}
 
-}
-}
 }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-}
 }
 
 
@@ -356,7 +340,6 @@ export class AuthError extends Error {
     this.name = 'AuthError';
     this.statusCode = statusCode;
   }
-}
 
 export function parseUserFromRequest(req: NextApiRequest): User | null {
   // Mock implementation: In a real app, this would parse a JWT or session cookie
@@ -372,7 +355,6 @@ export function ensureAdmin(user: User | null): asserts user is User & { isAdmin
   if (!user || !user.isAdmin) {
     throw new AuthError('Forbidden: Admin access required', 403);
   }
-}
 
 export async function ensureAdminFromApi(req: NextApiRequest, res: NextApiResponse): Promise<{ allowed: boolean }> {
   const user = parseUserFromRequest(req);
@@ -383,7 +365,6 @@ export async function ensureAdminFromApi(req: NextApiRequest, res: NextApiRespon
     res.status(e.statusCode || 403).json({ error: 'Forbidden' });
     return { allowed: false };
   }
-}
 
 export function getSessionFromReq(req: NextApiRequest): any {
   // Mock implementation
@@ -417,30 +398,4 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   if (!email) return false,
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter($2);
   return admins.includes(email.toLowerCase())
-=======
-}
-
-export function getRequestUserEmail(req: NextApiRequest): string | null {
-  const emailHeader = req.headers['x-user-email'];
-  if (typeof emailHeader === 'string') {
-    return emailHeader;
-  }
-  return null;
-}
-
-export function parseUserFromRequest(req: NextApiRequest): User | null {
-  const email = getRequestUserEmail(req);
-  if (!email) return null;
-  
-  return {
-    id: email,
-    email: email,
-    role: isAdmin(email) ? 'admin' : 'user'
-  };
-}
-
-export function isAdmin(email: string): boolean {
-  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
-  return admins.includes(email.toLowerCase());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

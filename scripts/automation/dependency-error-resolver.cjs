@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 #!/usr/bin/env node;"
@@ -166,11 +162,6 @@ throw error}
     this.resolutionsApplied = 0;
     this.dependencyHistory = []}"
   log(message, level = 'INFO') {
-<<<<<<< HEAD
-=======
-    const timestamp = new Date().toISOString();
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async runDependencyCheck() {
@@ -211,18 +202,8 @@ throw error}
 
     return resolutionsApplied}
   async checkPackageLockIssues() {
-<<<<<<< HEAD
       return { 
         "success": false, 
-=======
-    try {
-      this.log('Checking package-lock.json integrity...', 'INFO');
-      execSync('npm ci --dry-run', { "stdio": 'pipe' });
-      return { "success": true, "issues": [] }} catch (error) {
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return {
-        "success": false,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
@@ -241,27 +222,8 @@ throw error}
       if (fs.existsSync('node_modules')) {
 
   async checkDuplicateDependencies() {
-<<<<<<< HEAD
       return { 
         "success": false, 
-=======
-    try {
-      this.log('Checking for duplicate dependencies...', 'INFO');
-      const output = execSync('npm ls --depth=0', { "stdio": 'pipe' }).toString();
-      const duplicates = [];
-      const lines = output.split('\n');
-      for (const line of lines) {
-        if (line.includes('UNMET PEER DEPENDENCY') || line.includes('npm ERR!')) {
-          duplicates.push({
-            "type": 'peer-dependency',
-            "message": line.trim()
-          })}
-      }
-      return { "success": duplicates.length === 0, duplicates }} catch (error) {
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return {
-        "success": false,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
@@ -285,14 +247,7 @@ const totalIssues = vulnCheck.count + outdatedCheck.count +;
       // Resolve issues;
       // Fix vulnerabilities and outdated dependencies;
       resolutionsApplied += await this.resolveDependencyIssues(
-<<<<<<< HEAD
         vulnCheck.vulnerabilities, 
-=======
-        vulnCheck.vulnerabilities,
-        outdatedCheck.outdated
-      );
-      // Fix package-lock issues
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         outdatedCheck.outdated;)
       // Fix package-lock issues;
       if (!packageLockCheck.success) {
@@ -342,42 +297,10 @@ if (require.main === module) {
   // Start resolver;
 
     process.exit(1)})}
-<<<<<<< HEAD
-module.exports = DependencyErrorResolver
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = DependencyErrorResolver
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = DependencyErrorResolver
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = DependencyErrorResolver
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = DependencyErrorResolver
 
 module.exports = DependencyErrorResolver
 
-<<<<<<< HEAD
 module.exports = DependencyErrorResolver
+
 module.exports = DependencyErrorResolver
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

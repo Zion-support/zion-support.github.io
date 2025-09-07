@@ -1,4 +1,4 @@
-<<<<<<< HEAD:deployment-automation.cjs
+:deployment-automation.cjs
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -17,7 +17,7 @@ const { execSync } = require('child_process')
       "status"
   console.log(' Deployment report "generated")
   console.error(' Deployment automation "failed")
-<<<<<<< HEAD:deployment-automation.cjs
+:deployment-automation.cjs
 
 #!/usr/bin/env node
 // Run deployment automation
@@ -50,10 +50,7 @@ class DeploymentAutomation {
         console.log(`❌ ${step.name} failed: ${error.message}`);
         break;
       }
-    }
-  }
-}
-<<<<<<< HEAD:deployment-automation.cjs
+:deployment-automation.cjs
 
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);

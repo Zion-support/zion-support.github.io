@@ -60,9 +60,4 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "impact"
-<<<<<<< HEAD
       console.error('\n� Resource Optimizer "failed")
-      console.error('\n� Resource Optimizer "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

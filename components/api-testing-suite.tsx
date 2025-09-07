@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 
@@ -352,7 +351,6 @@ variant='outline';'
               Schedule Demo
             </Button>
           </div>
-        </div>
       </section>
       {/* Features Section *
 }
@@ -427,7 +425,6 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
                 className="card-hover group border-gradient-indigo"
                     </p>
                   </div>
-                </div>
               </Card>
             ))}
 
@@ -476,7 +473,6 @@ key={index}
                     <li key={testIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />;
           </div>
-        </div>
       </section>
 
                       className='flex items-center text-gray-300''
@@ -503,7 +499,6 @@ key={index}
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Demo Test Results */}
@@ -546,7 +541,6 @@ key={index}
                       {testResults.statusCode}
                     </span>;
                   </div>;
-                </div>;
               </Card>;
               {/* Test Results */}
 <Card className='border-gradient-indigo'>;'
@@ -591,7 +585,6 @@ key={index}
                     <span className="text-gray-400">Status Code</span>
                     <span className="text-green-400 font-bold">{testResults.statusCode}</span>
                   </div>
-                </div>
               </Card>
 
                         </span>
@@ -623,7 +616,6 @@ key={index}
                         </span>
                         <span className="text-xs text-gray-400">{test.value}</span>
                       </div>
-                    </div>
                   ))}
                 </div>
               </Card>
@@ -649,7 +641,6 @@ key={index}
 
                     <span className='text-green-400 font-bold'>24/7</span>'
                   </div>
-                </div>
               </Card>
             </div>
 
@@ -693,7 +684,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-green-400 font-bold">24/7</span>;
                     <span className='text-green-400 font-bold'>24/7</span>;
                   </div>;
-                </div>;
               </Card>;
             </div>;
             <Card className='border-gradient-indigo'>;
@@ -844,12 +834,10 @@ href='/contact''
             )
 }
           </div>;
-        </div>;
       </section>;
               </Card>;
             ))}
           </div>;
-        </div>;
       </section>;
               </Card>;
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 "hover": from-indigo-600 "hover":to-purple-700' : 'bg-gray-700 "hover":bg-gray-600'} text-white,'
@@ -865,7 +853,6 @@ href='/contact''
                   <ArrowRight className="w-5 h-5 ml-2" />;"
               </Card>;
             ))}
-      {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-["size":20px_20px] opacity-10' />;'
@@ -901,10 +888,8 @@ variant='outline';'
               Schedule Demo
             </Button>
           </div>
-        </div>
       </section>
     </>
 })}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

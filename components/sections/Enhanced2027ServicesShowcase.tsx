@@ -22,7 +22,6 @@ const "Enhanced2027ServicesShowcase": React.FC;
 const matchesCategory =;
         selectedCategory === 'all' || service.category === selectedCategory;'
       return matchesSearch && matchesCategory;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     })
 origin/cursor/automate-test-improve-and-merge-code-2533
     .sort((a, b) => {
@@ -115,7 +114,6 @@ className='text-center mb-16''
             Discover our cutting-edge portfolio of 500+ innovative services;
             spanning AI consciousness, quantum computing, synthetic biology, and;
             beyond. Each service delivers measurable ROI and transforms your;
-<<<<<<< HEAD
             business into a future-ready powerhouse.;
           </p>;
         </motion.div>;
@@ -142,7 +140,6 @@ type='text''
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 "focus": outline-none "focus":border-cyan-500/50 "focus":ring-1 "focus":ring-cyan-500/50''
                   />
                 </div>
-              </div>
 
               {/* Category Filter *
 }
@@ -153,7 +150,6 @@ type='text''
                     onChange={e => setSelectedCategory(e.target.value)}
                   <select
                     value={selectedCategory}
-                    value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
                   >
@@ -162,7 +158,6 @@ type='text''
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50"
                   />
                 </div>
-              </div>
 
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white "focus": outline-none "focus":border-cyan-500/50 "focus":ring-1 "focus":ring-cyan-500/50 pr-10''
                   >
@@ -182,12 +177,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </select>;'
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </select>
 <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />'
                 </div>
-<<<<<<< HEAD
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10';
                   >;
                     {categories.map(category => (<option key={category} value={category}>;
@@ -251,8 +243,6 @@ onClick={() => setViewMode('list')}'
                   >
                     <List className='w-5 h-5' />'
                   </button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
@@ -274,33 +264,17 @@ onClick={() => setViewMode('list')}'
                     <List className="w-5 h-5" />
                   </button>
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
-              </div>
-            </div>
-          </div>
         </motion.div>
-<<<<<<< HEAD
                   >;
                     <List className='w-5 h-5' />;
                   </button>;
                   >;
                     <List className='w-5 h-5' />;
                   </button>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>;
-              </div>;
-            </div>;
-          </div>;
         </motion.div>;
-<<<<<<< HEAD
                 </div>;
-              </div>;
-            </div>;
-          </div>;
         </motion.div>;
         {/* Results Count */}<motion.div;
         {/* Results Count */}
@@ -403,8 +377,6 @@ className='group''
                           "ROI": {service.ro
 }
                         </div>;
-                      </div>;
-                    </div>;
                     {/* Content */}
 <h3 className='text-xl font-bold text-white mb-3 group-"hover":text-cyan-400 transition-colors'>;'
                       {service.name}
@@ -423,7 +395,6 @@ className='group''
                         <div className="text-2xl font-bold text-cyan-400">{service && service.price}</div>;"
                         <div className="text-sm text-gray-400">ROI: {service && service.roi}</div>;
                       </div>;
-                    </div>;
                     {/* Content */}'
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>;
                       {service && service.name}
@@ -474,30 +445,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           }
                           key={idx}
 
-<<<<<<< HEAD
                     {/* Tags */}
-<<<<<<< HEAD
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50";
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >;
                         >;
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50';
                         >;
-=======
-                    <div className='flex flex-wrap gap-2 mb-6'>
-                      {service.tags.slice(0, 3).map((tag, idx) => (
-                        <span
-                          key={idx}'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className="flex flex-wrap gap-2 mb-6">
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
-<<<<<<< HEAD
                         >
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                           {tag}
                         </span>
                       ))}
@@ -526,14 +486,8 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 && 0.95 }}
               transition={{ duration: 0 && 0.3 }}
-=======
-<<<<<<< HEAD
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-6'>
-=======
-                    {/* Tags */}'
-                    <div className='flex flex-wrap gap-2 mb-6'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span;
                           key={idx}'"
@@ -557,7 +511,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
                     {/* CTA */}
-<<<<<<< HEAD
                     <Link
                       href={service.link}
 className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
@@ -565,17 +518,6 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
                       <span>Learn More</span>
                       <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
                     </Link>
-=======
-                    <Link;
-                      href={service.link}'
-                      className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
-                    >
-                      <span>Learn More</span>'"
-                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                    </Link>                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                    >
-                      <span>Learn More</span>"
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -630,8 +572,6 @@ className='group''
                           <div className="text-sm text-gray-400">{service && service.category}</div>;"
                           <div className="text-2xl font-bold text-cyan-400">{service && service.price}</div>;
                         </div>;
-                      </div>;
-<<<<<<< HEAD
                       {/* Content */}
 <div className='flex-1'>;'
                         <h3 className='text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>;'
@@ -641,7 +581,6 @@ className='group''
                         </h3>
                         <p className='text-gray-300 mb-3 leading-relaxed'>'
                           {service.description}
-<<<<<<< HEAD
                         </p>;
                         <div className="flex flex - wrap gap - 2 mb - 3">;"
                           {service.tags.slice (0, 4).map ((tag, idx) => (
@@ -672,7 +611,6 @@ className='group''
                           <div className="text-sm text-gray-400">{service.category}</div>
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                         </div>
-                      </div>
 
                       {/* Content */}
                       <div className="flex-1">
@@ -698,7 +636,6 @@ className='group''
                           <div className='text-lg font-bold text-green-400'>;'
                             {service && service.roi}
                           </div>;
-                        </div>;
                       {/* Stats and CTA */}
 <div className='flex flex-col items-end space-y-3'>;'
                         <div className='text-right'>;'
@@ -722,8 +659,6 @@ href={service.link}
                           <ArrowRight className='w-4 h-4 ml-2 group-"hover":translate-x-1 transition-transform' />;'
                         </Link>;
                       </div>;
-                    </div>;
-                  </div>;
                 </motion && motion.div>;
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
@@ -746,66 +681,6 @@ href={service.link}
                         >;
                           <span>Learn More</span>;
                           <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />;
-=======
-
-className='group'
-                >
-                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
-                    <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>
-                      {/* Icon and Category */}
-                      <div className='flex items-center space-x-4'>
-                        <div
-                          className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}
-                        >
-                          {getCategoryIcon(service.category)}
-                        </div>
-                        <div>
-                          <div className='text-sm text-gray-400'>
-                            {service.category}
-                          </div>
-                          <div className='text-2xl font-bold text-cyan-400'>
-                            {service.price}
-                          </div>
-                        </div>
-                      </div>
-                      {/* Content */}
-<div className='flex-1'>
-                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-                          {service.name}
-                        </h3>
-                        <p className='text-gray-300 mb-3 leading-relaxed'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                          {service.description}
-                        </p>;"
-                        <div className="flex flex - wrap gap - 2 mb - 3">;
-                          {service.tags.slice (0, 4).map ((tag, idx) => (
-                            <span;
-                              key={idx}
-                              className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
-                            >
-origin/cursor/automate-test-improve-and-merge-code-2533
-                              {tag}
-                            </span>
-                          ))}
-                      {/* Stats and CTA */}'
-                      <div className='flex flex-col items-end space-y-3'>;'
-                        <div className='text-right'>;'
-                          <div className='text-sm text-gray-400'>ROI</div>;'
-                          <div className='text-lg font-bold text-green-400'>;
-                            {service && service.roi}
-                          </div>;
-                        </div>;
-<<<<<<< HEAD
-                      {/* Stats and CTA */}
-<div className='flex flex-col items-end space-y-3'>
-                        <div className='text-right'>
-                          <div className='text-sm text-gray-400'>ROI</div>
-=======
-                      {/* Stats and CTA */}'
-                      <div className='flex flex-col items-end space-y-3'>'
-                        <div className='text-right'>'
-                          <div className='text-sm text-gray-400'>ROI</div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <div className='text-lg font-bold text-green-400'>
                             {service.roi}
                           </div>
@@ -821,14 +696,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25">;
                           <span>Learn More</span>;"
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         </Link>;
                       </div>;
-                    </div>;
-                  </div>;
                 </motion && motion.div>;
         {/* No Results */}
-<<<<<<< HEAD
         {filteredServices.length === 0 && (<motion.div;
             }
             className='text-center py-20';'
@@ -856,110 +727,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 setSelectedCategory('all')
               }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-=======
-        {filteredServices && filteredServices.length === 0 && (;
-          <motion&& motion.div'
-            className='text-center py-20'            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}"
-            className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0 && 0.6 }}>;'
-            <h3 className='text-2xl font-bold text-white mb-4'>;
-              No services found;
-            </h3>;'
-            <p className='text-gray-400 mb-8'>;
-              Try adjusting your search terms or category filter to find what;'
-              you're looking for.            </p>;'
-                setSelectedCategory('all')
-              }}"
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                          href={service.link}
-                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
-                        >
-                          <span>Learn More</span>
-                          <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-        {/* No Results */}
-        {filteredServices.length === 0 && (
-<motion.div
-            className='text-center py-20'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-<div className='text-6xl mb-4'>🔍</div>'
-            <h3 className='text-2xl font-bold text-white mb-4'>'
-              No services found
-            </h3>
-            <p className='text-gray-400 mb-8'>'
-              Try adjusting your search terms or category filter to find what,
-you're looking for.'
-            </p>
-            <button,
-onClick={() => {
-                }
-                setSearchTerm('');'
-setSelectedCategory('all');'
-              }}
-              className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl "hover": from-cyan-600 "hover":to-purple-700 transition-all duration-300''
-            >
-              Clear Filters
-            </button>
-<<<<<<< HEAD
-          </motion.div>
-          >;
-<div className='text-6xl mb-4'>🔍</div>;
-            <h3 className='text-2xl font-bold text-white mb-4'>;
-              No services found;
-            </h3>;
-            <p className='text-gray-400 mb-8'>;
-              Try adjusting your search terms or category filter to find what;
-              you're looking for.;
-            </p>;
-            <button;
-              onClick={() => {setSearchTerm('')setSelectedCategory('all')}}
-              className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
-            >;
-              Clear Filters;
-            </button>;
-          </motion.div>;
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div;
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div;
-        {/* CTA Section */}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-20 text-center";
-          className="mt-20 text-center";
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
-        )}
-        {/* CTA Section *
-}
-<motion.div,
-className='mt-20 text-center''
-
-          initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 
-}
-          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.8 
-}>;
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;'
-            <h3 className='text-3xl "md":text-4xl font-bold text-white mb-6'>;'
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;'
-                              className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50">"
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
           </motion.div>'
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div'
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div;
@@ -984,23 +751,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;"
                               className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                               {tag}
                             </span>))}
                         </div>;
-                      </div>;
-<<<<<<< HEAD
                       {/* Stats and CTA */}
                       <div className='flex flex - col items - end space - y-3'>;'
                         <div className='text - right'>;'
                           <div className='text - sm text - gray - 400'>ROI</div>;'
                           <div className='text - lg font - bold text - green - 400'>;'
                             {service.roi}
-<<<<<<< HEAD
                           </div>;
-                        </div>;
                         <Link;
-<<<<<<< HEAD
                           href={service.link}
                           className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl "hover":from - cyan - 600 "hover":to - purple - 700 transition - all duration - 300 group - "hover":shadow - lg group - "hover":shadow - cyan - 500 / 25'>'
 
@@ -1014,33 +775,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <ArrowRight className="w - 4 h - 4 ml - 2 group - "hover":translate - x-1 transition - transform" />;"
                         </Link>;
                       </div>;
-                    </div>;
-                  </div>;
-=======
-                          </div>
-                        </div>
-                        <Link
-                          href={service.link}
-                          className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25'    />
-
-                          <span     /> Learn More</span>
-                          <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform'    />                        </Link>                        </div>
-                        <Link
-                          href={service.link}"
-                          className=\"inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25\"    />
-
-                          <span     /> Learn More</span>;"
-                          <ArrowRight className=\"w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform\"    />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </motion.div>))}
             </motion.div>)}
         </AnimatePresence>;
         {/* No Results */}
-<<<<<<< HEAD
         {filtered_services.length === 0 && (<motion.div;
             }
             className='text - center py - 20'            initial={{ "opacity": 0 }}'
@@ -1075,39 +813,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               Clear Filters;
             </button>;
-<<<<<<< HEAD
-=======
-            transition={{ duration: 0.6 }
-
-              />          <motion.div;"
-            className=\'text - center py - 20\'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }
-
-              />
-            <div className='text - 6xl mb - 4'    />🔍</div>
-            <h3 className='text - 2xl font - bold text - white mb - 4'    />
-              No services found
-            </h3>
-            <p className='text - gray - 400 mb - 8'    />
-              Try adjusting your search terms or category filter to find what
-              you're looking for.            </p>
-            <button
-              on_click={() =    /> {setSearchTerm ('')setSelectedCategory ('all')}}"
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className=\"text - 6xl mb - 4\"    />🔍</div>;"
-            <h3 className=\"text - 2xl font - bold text - white mb - 4\"    />No services found</h3>;"
-            <p className=\"text - gray - 400 mb - 8\"    />
-              Try adjusting your search terms or category filter to find what you're looking for.
-            <button
-              on_click={() =    /> {setSearchTerm ('')setSelectedCategory ('all')}}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all')
-}"
-              className=\"px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300\">
-
-              Clear Filters
-            </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           </motion.div>)}
         {/* CTA Section */}
         <motion.div;
@@ -1120,7 +825,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <span     /> View Pricing</span>;"
                 <TrendingUp className=\"w - 5 h - 5\"    />
-=======
           </motion.div>)}
         {/* CTA Section */}
         <motion.div;'
@@ -1157,7 +861,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>;
               <Link"
                 href="/pricing"
-<<<<<<< HEAD
         >
 <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>'
             <h3 className='text-3xl "md":text-4xl font-bold text-white mb-6'>'
@@ -1184,7 +887,6 @@ href='/pricing''
                 <TrendingUp className='w-5 h-5' />'
               </Link>
             </div>
-          </div>
         </motion.div>
       </div>
     </section>
@@ -1192,13 +894,6 @@ href='/pricing''
 };
 
 export default Enhanced2027ServicesShowcase;
-=======
-          <div className = $2;
-export default Enhanced2027ServicesShowcase,
-=======
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     </section>)
 }
 /* Search and Filters */
@@ -1265,7 +960,6 @@ export default Enhanced2027ServicesShowcase,
                 <TrendingUp className="w-5 h-5" />;"
               </Link>;
             </div>;
-          </div>;
         </motion && motion.div>;
       </div>;
     </section>;
@@ -1307,7 +1001,6 @@ export default Enhanced2027ServicesShowcase;
                 <TrendingUp className="w - 5 h - 5" />;"
               </Link>;
             </div>;
-          </div>;
         </motion.div>;
       </div>;
 
@@ -1375,7 +1068,6 @@ export default Enhanced2027ServicesShowcase;
 }
 export default Enhanced2027ServicesShowcase;  )
 }
-export default Enhanced2027ServicesShowcase;
 export default Enhanced2027ServicesShowcase;
 
 "

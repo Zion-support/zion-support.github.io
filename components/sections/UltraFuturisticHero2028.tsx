@@ -1,8 +1,5 @@
 import React from 'react';,
-=======
 import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -236,7 +233,6 @@ className='mb-8''
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>'
                 Here
               </span>
-            </span>
           </h1>
 <p className='text-xl "md":text-2xl "lg":text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'>'
             Experience revolutionary 2028 technology with AI Consciousness,
@@ -246,7 +242,6 @@ Civilization. We're building tomorrow's solutions today.'
         </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Buttons */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -259,28 +254,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileTap={{ scale: 0.95 }}
             <span>Explore 2028 Services</span>"
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-=======
-        <motion&& motion.div
-          initial={{ opacity: 0;, y: 30 ;}}
-          animate={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0.8;, delay: 0.4 ;}}
-className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 ;}}
-            whileTap={{ scale: 0.95 ;}}
-            <span>Explore 2028 Services</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-
-        {/* CTA Buttons */}
-        <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
-}
-
-          animate={{ "opacity": 1, "y": 0 
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
           transition={{ "duration": 0.8, "delay": 0.4 }}
 className='flex flex-col "sm":flex-row gap-4 justify-center items-center mb-16''
@@ -374,16 +347,13 @@ className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-c
                     {feature.text}
                   <h3 className='text-lg font-semibold text-white text-center group-"hover": text-cyan-400 transition-colors'>                    {feature.text}{feature.tex,'
 }</h3>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>;
               </motion.div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
           </div>;
         </motion.div>;
             ))}
         {/* Stats */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
 }
@@ -421,7 +391,6 @@ className='text-center group''
 
           transition={{ duration: 0.8;, delay: 1.0 ;}
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mb-16'
          />
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto' />
@@ -438,43 +407,22 @@ className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>
-<<<<<<< HEAD
-=======
-              >'
-                <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <stat.icon className='w-10 h-10 text-cyan-400' />
                 </div>'
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                   {stat.value}
-<<<<<<< HEAD
                 </div>
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>
                   {stat.label}
-=======
-                </div>'
-                <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}              >"
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300">"
-                  <stat.icon className="w-10 h-10 text-cyan-400" />
-                </div>"
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  {stat.value}
-                </div>"
-                <div className="text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors">
-                  {stat.label}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}
-=======
                />
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300' />
                   <stat.icon className='w-10 h-10 text-cyan-400' />
                 </div>
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   {stat.valu}
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>;
                 <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                   {stat.value}
@@ -483,14 +431,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {stat.label}
                 <div className='text-sm text-cyan-400/70 group-"hover": text-cyan-300 transition-colors'>                  {stat.label}{stat.labe,'
 }</div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </motion.div>;
             ))}
           </div>;
         </motion.div>;
             ))}
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
 }
@@ -531,7 +477,6 @@ className='mb-16';
               </div>;
               <div className='text-purple-400 font-semibold'>;
                 Research Institutions;
-<<<<<<< HEAD
               </div>;
               <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">;
 
@@ -570,18 +515,13 @@ className='mb-16';
           </div>;
         </motion && motion.div>;<div className='text-emerald-400 font-semibold'>Startups</div>;
             </div>;
-          </div>;
         </motion.div>;
         </motion && motion.div>;
 
         {/* Bottom CTA */}
-=======
-              </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
               <div className='text-emerald-400 font-semibold'>Startups</div>'
             </div>
-          </div>
         </motion.div>
 
         {/* Bottom CTA *
@@ -610,7 +550,6 @@ href='/contact''
               className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold "hover":shadow-lg "hover":shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 "hover":border-purple-300''
             >
               Get Started
-=======
         {/* Bottom CTA *}
 }
         <motion&& motion.div;
@@ -627,13 +566,6 @@ className='text-center'
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm' />
             <div className='flex items-center space-x-2' />
               <Star className='w-5 h-5 text-yellow-400' />
-<<<<<<< HEAD
-=======
-        >'
-          <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>'
-            <div className='flex items-center space-x-2'>'
-              <Star className='w-5 h-5 text-yellow-400' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='text-white font-semibold'>
                 Ready to transform your business?
               </span>
@@ -648,7 +580,6 @@ className='text-center'
             </div>;
 
           transition={{ duration: 0.8, delay: 1.6 }}"
-=======
               <span className='text-white font-semibold' />
                 Ready to transform your business?
               </span>
@@ -663,7 +594,6 @@ className='text-center'
             </div>;
 
           transition={{ duration: 0.8;, delay: 1.6 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className="text-center"
         >"
           <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm">"
@@ -678,17 +608,7 @@ className='text-center'
               className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-<<<<<<< HEAD
-=======
-              Get Started
-            <Link;
-href='/contact'
-
-              className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300'
-             />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Get Started;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </Link>
           </div>
         </motion.div>
@@ -724,9 +644,7 @@ animate={{ "y": [0, 10, 0] }}
 
             className='w-1 h-3 bg-cyan-400 rounded-full mt-2'' />
         </motion.div>
-      </motion.div>
     </section>
-<<<<<<< HEAD
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           animate={{ y: [0, 10, 0] }}
@@ -827,57 +745,15 @@ animate={{ "y": [0, 10, 0] }}
             className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
           />;
         </motion.div>;
-      </motion.div>;
     </section>)}className='w-1 h-3 bg-cyan-400 rounded-full mt-2';
           />;
         </motion.div>;
-      </motion.div>;
     </section>;
     </section>);
 }
-<<<<<<< HEAD
   )}
   )
 }
-=======
-);
-}
-}
-<<<<<<< HEAD
-
-"
-=======
-> <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm" > <Rocket className="w-5 h-5 text-cyan-400" /> <span className="text-cyan-400 font-mono text-sm" >2028 Future Technology</span> <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" /> </div> </motion.div> {
-  /* Main Heading */ 
-}<motion.div > <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent" > The Future of </span> <br /> Here </span> </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed" > Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation
-and Autonomous AI Civilization. We're building tomorrow's solutions today. </p> </motion.div> {
-  /* CTA Buttons */ 
-}<motion.div > <span>Explore 2028 Services</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </motion.div> {
-  /* Features Grid */ 
-}<motion.div </h3> </div> </motion.div>) ) 
-}</div> </motion.div> {
-  /* Stats */ 
-}<motion.div > <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300" > <stat.icon className="w-10 h-10 text-cyan-400" /> </div> </div> </motion.div>) ) 
-}</div> </motion.div> {
-  /* Trust Indicators */ 
-}<motion.div > <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm" > <h3 className="text-2xl font-bold text-white mb-6" > Trusted by Industry Leaders </h3> <div className="flex flex-wrap justify-center items-center gap-8 opacity-70" > <div className="text-cyan-400 font-semibold" >Fortune 500 Companies</div> <div className="text-blue-400 font-semibold" >Government Agencies</div> <div className="text-purple-400 font-semibold" >Research Institutions</div> <div className="text-emerald-400 font-semibold" >Startups</div> </div> </div> </motion.div> {
-  /* Bottom CTA */ 
-}<motion.div > <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm" > <div className="flex items-center space-x-2" > <Star className="w-5 h-5 text-yellow-400" /> <span className="text-white font-semibold" >Ready to transform your business?</span> </div> <Link href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300" > Get Started </a> </div> </motion.div> </div> {
-  /* Scroll Indicator */ 
-}<motion.div /> </motion.div> </motion.div> </section>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -130,7 +129,6 @@ const SpaceTechnologyPage: React.FC = $2;
               </div>
             </motion.div>
           </div>
-        </div>
       </section>
 
         {/* Space Capabilities */}
@@ -171,7 +169,6 @@ const SpaceTechnologyPage: React.FC = $2;
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Space Services */}
@@ -224,7 +221,6 @@ const SpaceTechnologyPage: React.FC = $2;
                       {service.price}
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
-                  </div>
                   
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
@@ -244,7 +240,6 @@ const SpaceTechnologyPage: React.FC = $2;
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -256,25 +251,3 @@ const SpaceTechnologyPage: React.FC = $2;
               transition = $2;
 export default SpaceTechnologyPage,
 
-=======
-
-export default function spacetechnology() {
-  return (
-    <Layout>
-      <Head>
-        <title>Space Technology - Zion Tech Group</title>
-        <meta name="description" content="Space Technology solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Space Technology</h1>
-          <p className="text-lg text-gray-600">
-            Professional space technology solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -7,15 +6,6 @@ import Link from 'next/link';
 const BusinessIntelligenceChat: NextPage = () => {return (<div>;
 
 
-=======
-<<<<<<< HEAD
-<div> <Head> <title>BusinessIntelligenceChat - Zion Tech Solutions</title> <meta name="description" content="BusinessIntelligenceChat blog post" /> </Head> <main> <h1>BusinessIntelligenceChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default BusinessIntelligenceChat
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const BusinessIntelligenceChat: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -45,7 +35,6 @@ const BusinessIntelligenceChat: NextPage = () => {;
   );
 }
 export default BusinessIntelligenceChat;
-<<<<<<< HEAD
 
 
 
@@ -65,8 +54,6 @@ const BusinessIntelligenceChat: NextPage = () => {
     <div>
       <Head>
 
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
@@ -130,8 +117,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

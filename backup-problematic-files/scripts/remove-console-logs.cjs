@@ -60,11 +60,8 @@ function processFile(filePath) {
     return 0}
 }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -80,18 +77,11 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
       if (extensions.includes(ext)) {
         results.push(filePath);
       }
-    }
   });
   
   return results;
 }
-<<<<<<< HEAD
 function main() {
-=======
-
-function main() {
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -111,7 +101,6 @@ function main() {
         totalRemoved += removed;
         filesProcessed++}
     }
-  }
 
   console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
@@ -122,16 +111,8 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-}
 
 if (require.main === module) {
   main().catch(console.error)}
 
-<<<<<<< HEAD
 module.exports = { removeConsoleStatements, processFile };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

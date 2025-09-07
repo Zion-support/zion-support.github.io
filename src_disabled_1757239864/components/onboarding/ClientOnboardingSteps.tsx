@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/components/onboarding/ClientOnboardingSteps.tsx
+:src_backup/components/onboarding/ClientOnboardingSteps.tsx
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks/ useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
@@ -10,7 +10,7 @@ function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
 
-<<<<<<<< HEAD:src_backup/components/onboarding/ClientOnboardingSteps.tsx
+<:src_backup/components/onboarding/ClientOnboardingSteps.tsx
 import React from "react",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
@@ -52,7 +52,7 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
-<<<<<<<< HEAD:src_backup/components/onboarding/ClientOnboardingSteps.tsx
+<:src_backup/components/onboarding/ClientOnboardingSteps.tsx
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
 ;
@@ -84,10 +84,10 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",import { Onboa
     {id: "post-job",label: "Post your first job",completed: onboardingStatus.jobPosted,link: "/post-job",action: "Post Job"},{id: "invite",label: "Send invitation to talent",completed: onboardingStatus.inviteSent,link: "/talent",action: "Find Talent"},{id: "response",label: "Receive your first application",completed: onboardingStatus.responseReceived,link: "/client-dashboard";
       action: "Check Dashboard"}];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
-<<<<<<< HEAD:src_backup/components/onboarding/ClientOnboardingSteps.tsx
+:src_backup/components/onboarding/ClientOnboardingSteps.tsx
 }
 
-<<<<<<<< HEAD:src_backup/components/onboarding/ClientOnboardingSteps.tsx
+<:src_backup/components/onboarding/ClientOnboardingSteps.tsx
 
 
 =>  const steps: OnboardingStep[] = [
@@ -106,7 +106,7 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",import { Onboa
     {
       id: "response",
       label: "Receive your first application",
-<<<<<<<< HEAD:src_backup/components/onboarding/ClientOnboardingSteps.tsx
+<:src_backup/components/onboarding/ClientOnboardingSteps.tsx
       completed: onboardingStatus.responseReceived,
 
   const onboardingStatus = null;

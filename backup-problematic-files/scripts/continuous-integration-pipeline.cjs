@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -81,9 +76,4 @@ const path = require("path")
       this.log(` Fatal error in CI "pipeline"`)
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
-<<<<<<< HEAD
     console.error(" CI pipeline "failed": ")
-    console.error(" CI pipeline "failed": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

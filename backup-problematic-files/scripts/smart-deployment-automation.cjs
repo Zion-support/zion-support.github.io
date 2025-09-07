@@ -1,22 +1,14 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
 console.log(' Starting Smart Deployment Automation...')
   "environment"
   "status"
-      "status"
-      "status"
     "HOST"
     execSync('npm install --production', { "stdio"})
       "encoding"
       "stdio"
-    return { "dependenciesInstalled": true, "securityAudit"}
     return { "dependenciesInstalled": true, "securityAudit"}
     execSync('npm run build', { "stdio"})
   const buildStats = execSync('du -sh .next', { "encoding"})
@@ -44,9 +36,4 @@ console.log(' Starting Smart Deployment Automation...')
     "logsDirectory"
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
-<<<<<<< HEAD
   console.log('� Application should be running on "http")
-  console.log('� Application should be running on "http")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

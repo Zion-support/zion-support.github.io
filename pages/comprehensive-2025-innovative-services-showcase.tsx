@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -70,7 +69,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -81,7 +79,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       transition: {
         duration: 0.5
       }
-    }
   },
 
   const contactInfo = $2;
@@ -133,7 +130,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <MapPin className="w-5 h-5" />
                 <span>{contactInfo.address}</span>
               </div>
-            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -153,7 +149,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>
                 <div className="text-white/60">Top Rated</div>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -179,7 +174,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
-            </div>
 
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -254,8 +248,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     <List className="w-4 h-4" />
                   </button>
                 </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -321,7 +313,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                             </h3>
                             <p className="text-sm text-white/60">{service.tagline}</p>
                           </div>
-                        </div>
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
                             Popular
@@ -350,7 +341,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                             </div>
                           )}
                         </div>
-                      </div>
 
                       {/* Price and Rating */}
                       <div className="flex items-center justify-between mb-4">
@@ -363,7 +353,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           <span className="text-sm text-white/70">{service.rating}</span>
                           <span className="text-xs text-white/50">({service.reviews})</span>
                         </div>
-                      </div>
 
                       {/* Action Buttons */}
                       <div className="flex gap-2">
@@ -402,9 +391,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                             <span className="block text-white/70">ROI:</span>
                             <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
                           </div>
-                        </div>
-                      </div>
-                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -453,7 +439,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <span>{contactInfo.email}</span>
                 <span>{contactInfo.address}</span>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -461,28 +446,4 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <EnhancedFooter />
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensive2025innovativeservicesshowcase() {
-  return (
-    <Layout>
-      <Head>
-        <title>Comprehensive 2025 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive 2025 Innovative Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive 2025 Innovative Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive 2025 innovative services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

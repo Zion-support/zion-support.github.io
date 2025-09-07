@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
 import React from 'react';
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 import Layout from '../components/Layout';
 const About = ({ className }) => {return (<Layout;
@@ -20,7 +14,6 @@ const About = ({ className }) => {return (<Layout;
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
         <main className="container mx-auto px-4 py-12">;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const About = ({ className }) => {
   return (
     <Layout 
@@ -98,7 +91,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 a more connected and efficient world.;
               </p>;
             </div>;
-          </div>;
           {/* Our Story */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-16">;
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">;
@@ -152,7 +144,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               </p>;
                 to excellence, innovation, and client success continues to drive everything we do.              </p>;
             </div>;
-          </div>;
           {/* Values */}
           <div className="mb-16">;
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">;
@@ -233,25 +224,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                   to final delivery, ensuring exceptional results every time.;
                 </p>;
               </div>;
-            </div>;
-          </div>;
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
               <div className="text-4xl mb-4"></div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
               <p className="text-gray-600 text-lg">
-<<<<<<< HEAD
-=======
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>              <p className="text-gray-600 text-lg">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 To empower businesses with cutting-edge technology solutions that drive growth, 
                 efficiency, and innovation. We believe in delivering exceptional value through 
                 personalized service and world-class expertise.
@@ -259,26 +238,15 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="text-4xl mb-4"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
               <div className="text-4xl mb-4"></div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
               <p className="text-gray-600 text-lg">
-<<<<<<< HEAD
-=======
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>              <p className="text-gray-600 text-lg">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 To be the global leader in technology transformation, helping businesses 
                 harness the power of AI, cloud computing, and digital innovation to create 
                 a more connected and efficient world.
               </p>
             </div>
-          </div>
 
           {/* Our Story */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
@@ -299,23 +267,12 @@ ursor/automate-test-improve-and-merge-code-646c;
               <p className="text-lg text-gray-600">
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 to excellence, innovation, and client success continues to drive everything we do.
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
                 to excellence, innovation, and client success continues to drive everything we do.
               </p>
-<<<<<<< HEAD
-=======
-                to excellence, innovation, and client success continues to drive everything we do.              </p>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             </div>
-          </div>
 
           {/* Values */}
           <div className="mb-16">
@@ -332,31 +289,17 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div className="text-center">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className="text-gray-600">
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-                <p className="text-gray-600">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   We believe in building long-term relationships with our clients, working as 
                   an extension of their team to achieve shared success.
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
                 <p className="text-gray-600">
-=======
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>                <p className="text-gray-600">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
                 <p className="text-gray-600">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   We believe in building long-term relationships with our
                   clients, working as an extension of their team to achieve
                   shared success.
@@ -365,23 +308,11 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div className="text-center">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <div className="text-4xl mb-4">⭐</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Excellence
-                </h3>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <p className="text-gray-600">
                   We maintain the highest standards in everything we do, from project planning 
                   to final delivery, ensuring exceptional results every time.
                 </p>
               </div>
-            </div>
-          </div>
 
           {/* Team Section */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-16">;
@@ -449,8 +380,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
                 </p>;
               </div>;
-            </div>;
-          </div>;
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">;
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>;
@@ -479,7 +408,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 Get in Touch;
               </a>;
               <a;
-              <a;
 ursor/automate-test-improve-and-merge-code-646c;
               <a;
                 href="/services";
@@ -488,7 +416,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 View Our Services;
               </a>;
             </div>;
-          </div>;
         </main>;
       </div>;
     </Layout>;
@@ -500,19 +427,10 @@ export default About;
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Let&apos;s discuss how we can help transform your business with our technology solutions.
               Let&apos;s discuss how we can help transform your business with our technology solutions.
             </p>
-=======
-              Let&apos;s discuss how we can help transform your business with our technology solutions.            </p>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-              Let&apos;s discuss how we can help transform your business with our technology solutions.
               Let&apos;s discuss how we can help transform your business with our technology solutions.
             </p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
                 href="/contact"
@@ -527,19 +445,10 @@ export default About;
                 View Our Services
               </a>
             </div>
-          </div>
         </main>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  )
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-  );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 export default About;

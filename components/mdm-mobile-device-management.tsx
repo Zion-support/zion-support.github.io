@@ -81,8 +81,6 @@ rel='canonical''
                     "Setup": {service && service.setupTim
 }
                   </div>;
-                </div>;
-              </div>;
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -174,8 +172,6 @@ if (return null) {$2;
                       : ''}
                     Setup: {service.setup_time}
                   </div>;
-                </div>;
-              </div>;
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -203,9 +199,6 @@ if (return null) {$2;
                 <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -232,11 +225,6 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-reac
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{service.contactInfo.address}</span>;
                 </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>;
 }
 import React from 'react';
@@ -272,23 +260,14 @@ variant='quantum';'
                   <MapPin className='w-4 h-4 text-green-400' />'
                   <span className='text-xs'>{service.contactInfo.address}</span>'
                 </div>
-              </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </UltraAdvancedFuturisticBackground>
 }</UltraAdvancedFuturisticBackground>)})}
   )
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -181,7 +181,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               can help you achieve your goals.
             </p>
           </div>
-        </div>
       </section>
       {/* Contact Information */}
       <section className=\"py-20\">
@@ -208,7 +207,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Contact Form & Office Locations */}
       <section className=\"py-20 bg-gray-50\">
@@ -223,7 +221,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
                     </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
+:pages.disabled/pages/contact.tsx
 
 
 
@@ -244,7 +242,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               can help you achieve your goals.;
             </p>;
           </div>;
-        </div>;
       </section>;
       {/* Contact Information */}
       <section className=\"py-20\">;
@@ -270,7 +267,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Contact Form & Office Locations */}
       <section className=\"py-20 bg-gray-50\">;
@@ -305,7 +301,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
                     />
                   </div>
-                </div>
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
@@ -409,13 +404,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           {office.email}
                         </a>
                       </div>
-                    </div>
-                  </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* FAQ Section */}
       <section className=\"py-20\">
@@ -466,8 +456,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 to ensure high-quality deliverables.
               </p>
             </div>
-          </div>
-        </div>
       </section>
     </MainLayout>
   );
@@ -519,7 +507,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion.div>
                 ))}
               </div>
-            </div>
           </section>
           {/* Contact Form */}
           <section className=\"bg-gray-50 py-20\">
@@ -551,7 +538,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
+:pages.disabled/pages/contact.tsx
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -611,8 +598,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 to ensure high-quality deliverables.;
               </p>;
             </div>;
-          </div>;
-        </div>;
       </section>;
     </MainLayout>;
 
@@ -667,7 +652,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion && motion.div>;
                 ))}
               </div>;
-            </div>;
           </section>;
           {/* Contact Form */}
           <section className=\"bg-gray-50 py-20\">;
@@ -720,18 +704,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
-                  </div>
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
+:pages.disabled/pages/contact.tsx
 
                         placeholder=\"your && your.email@example && example.com\"
                        />;
                     </div>;
-                  </div>;
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
                     <div>;
@@ -758,7 +740,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         placeholder=\"Your company name\"
                        />
                     </div>
-                  </div>
 
 
                       Service Interest
@@ -780,12 +761,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
                       Message *
                     </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
+:pages.disabled/pages/contact.tsx
 
 
                        />;
                     </div>;
-                  </div>;
                   <div className=\"mb-6\">;
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                   <div className="mb-6">;
@@ -848,7 +828,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.
               </p>
             </div>
-          </div>
         </section>
         {/* Contact Form & Info Section */}
         <section className=\"py-16 px-4\">
@@ -889,7 +868,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.;
               </p>;
             </div>;
-          </div>;
         </section>;
         {/* Contact Form & Info Section */}
         <section className=\"py-16 px-4\">;
@@ -951,19 +929,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           placeholder=\"your@email.com\"
                         />
                       </div>
-                    </div>
 
 
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
+:pages.disabled/pages/contact.tsx
 
                           placeholder=\"your@email && email.com\"
                         />;
                       </div>;
-                    </div>;
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                       <div>;
@@ -996,7 +972,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           placeholder=\"+1 (555) 123-4567\"
                         />
                       </div>
-                    </div>
                     <div>
                       <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                         Service Interest
@@ -1069,14 +1044,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>
                         <p className=\"text-gray-400 text-sm\">{info.description}</p>
                       </div>
-                    </div>
                   ))}
                 </div>
-              </div>
-            </div>
 
 
-<<<<<<< HEAD:pages.disabled/pages/contact.tsx
+:pages.disabled/pages/contact.tsx
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
@@ -1106,7 +1078,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion && motion.div>;
                 ))}
               </div>;
-            </div>;
           </section>;
         </main>;
       </PageTransition>;
@@ -1130,7 +1101,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 }
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de

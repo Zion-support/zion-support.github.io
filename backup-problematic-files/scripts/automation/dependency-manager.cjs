@@ -32,7 +32,6 @@ class $1 {}
   };
 ;
   log(message, level = "INFO") {}
-  log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
@@ -147,7 +146,6 @@ class $1 {}
                   "dependency": dep,
                   "current": version})};
             };
-          };
 ;
           if (packageJson.devDependencies) {}
   for (const ["dep", "version"] of Object.entries(;)
@@ -159,7 +157,6 @@ class $1 {}
                   "dependency": dep,
                   "current": version})};
             };
-          };
         } catch (error) {}
   status.packageJsonIssues.push({})
   "type": "PARSE_ERROR",
@@ -328,7 +325,6 @@ class $1 {}
               "dependency": issue.dependency,"action": `Fixed invalid version for ${issue.dependency}`,`
               "timestamp": new Date().toISOString()})};
         };
-      };
 ;
       if (modified) {}
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
@@ -427,7 +423,6 @@ class $1 {}
                 "timestamp": new Date().toISOString()})};
           } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, "WARN")};
         };
-      };
     } catch (error) {  this.log(`Failed to update "dependencies": ${error.message  }`, "WARN")};
 ;
     return actions};
@@ -479,7 +474,6 @@ this.log(`Dependency report "generated": ${reportFile}");
 });
       this.log("Dependency changes committed successfully")} catch (error) {  this.log(`Failed to commit dependency "changes": ${error.message  }`, "WARN")};
   };
-};
 ;
 // Main execution;
 async function $1() {}
@@ -501,9 +495,4 @@ async function $1() {}
 if (require.main === module) {}
   main()};
 ;
-<<<<<<< HEAD
 module.exports = DependencyManager;
-module.exports = DependencyManager;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

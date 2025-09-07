@@ -320,7 +320,6 @@ return 'text-gray-400';'
                 <Search className='w-4 h-4 mr-2' />'
                 Smart Tool Selection
               </div>
-            </div>
             <h1 className='text-4xl "sm":text-5xl "md":text-6xl "lg":text-7xl font-black mb-8 text-white leading-tight tracking-tight'>'
               Tool Comparison
             </h1>
@@ -345,7 +344,6 @@ variant='outline';'
                 Get Expert Advice
               </Button>
             </div>
-          </div>
 
 <div,
 className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in''
@@ -375,8 +373,6 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-5xl mx-auto animate-fad
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>'
             </div>
-          </div>
-        </div>
       </section>
 
 
@@ -455,8 +451,6 @@ value={sortBy}
                 <option value='name'>Sort by Name</option>;'
               </select>;
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Comparison Table */}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -467,8 +461,6 @@ value={sortBy}
                 <option value="name">Sort by Name</option>
               </select>
             </div>
-          </div>
-        </div>
       </section>
 
 <section id='comparison' className='py-24 bg-black'>'
@@ -524,8 +516,6 @@ key={index}
                           <div className='font-semibold text-white'>;'
                             {tool && tool.name}
                           </div>;
-                        </div>;
-                      </div>;
                     </td>;
                     <td className='py-4 px-6'>;'
                       <span className='px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300'>;'
@@ -707,9 +697,6 @@ className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${
                         <Star className='w-4 h-4 text-yellow-400 fill-current' />'
                         <span>{tool.rating}</span>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
 <div className='mb-4'>'
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>'
@@ -755,7 +742,6 @@ key={conIndex}
                       ))}
                     </ul>
                   </div>
-                </div>
 
 <div className='flex items-center justify-between'>'
                   <span,
@@ -844,9 +830,6 @@ variant='outline';'
                         <Star className='w-4 h-4 text-yellow-400 fill-current' />;'
                         <span>{tool.rating}</span>;
                       </div>;
-                    </div>;
-                  </div>;
-                </div>;
 <div className='mb-4'>;'
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>;'
                     Best "For":;
@@ -888,7 +871,6 @@ variant='outline';'
                       ))}
                     </ul>;
                   </div>;
-                </div>;
 <div className='flex items-center justify-between'>;'
                   <span;
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>`
@@ -945,7 +927,6 @@ variant='outline';'
               Explore All Tools
             </Button>
           </div>
-        </div>
       </section>
     </>
             <Button;
@@ -959,7 +940,6 @@ variant='outline';'
               Explore All Tools;
             </Button>;
           </div>;
-        </div>;
       </section>;
   )}
     </>)}
@@ -972,21 +952,13 @@ variant='outline';'
               Explore All Tools;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
 })}
 }
-}
-<<<<<<< HEAD
 
   );
-}
-}
 }
 })}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

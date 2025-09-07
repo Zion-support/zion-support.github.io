@@ -121,7 +121,6 @@ export function EnhancedSearchInput({
         setIsFocused(false);
         // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
-    }
     
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
@@ -147,7 +146,6 @@ export function EnhancedSearchInput({
       } else {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
       }
-    }
     setIsFocused(false);
     inputRef.current?.blur();
     setHighlightedIndex(-1)
@@ -267,8 +265,7 @@ export function EnhancedSearchInput({
     </div>
   )
 }
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-=======
+:src/components/search/EnhancedSearchInput.tsx
   };
 
   return (<div
@@ -387,7 +384,6 @@ break;
       default:;
         break;
 }
-  }
   return (<div;
       className="relative w - full";
       ref={container_ref}
@@ -431,4 +427,3 @@ break;
       />;
     </div>);
 }
->>>>>>> origin/main:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx

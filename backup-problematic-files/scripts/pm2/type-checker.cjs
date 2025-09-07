@@ -16,7 +16,6 @@ class TypeChecker {}
       fs.mkdirSync(logDir, { recursive: true }
 });
     };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
@@ -48,7 +47,6 @@ class TypeChecker {}
       
       return { success: false, errors: errors.length, errorDetails: errors };
     };
-  };
   parseTypeScriptErrors(output) {}
     const errors = [];
     const lines = output.split('\n');
@@ -65,7 +63,6 @@ class TypeChecker {}
         }
 });
       };
-    };
     return errors;
   };
   async fixTypeScriptErrors(errors) {}
@@ -85,11 +82,9 @@ class TypeChecker {}
           if (fixed) {}
             fixedCount++;
           };
-        };
       } catch (err) {}
         this.error(`Error fixing file ${filePath}: ${err.message}`);
       };
-    };
     this.log(`Fixed TypeScript errors in ${fixedCount} files`);
     return fixedCount;
   };
@@ -105,7 +100,6 @@ class TypeChecker {}
           modified = true;
           this.log(`Fixed error in ${filePath} at line ${error.line}: ${error.message}`);
         };
-      };
       if (modified) {}
         fs.writeFileSync(filePath, content);
         return true;
@@ -115,7 +109,6 @@ class TypeChecker {}
       this.error(`Error fixing file ${filePath}: ${err.message}`);
       return false;
     };
-  };
   getFixForError(error, content) {}
     const lines = content.split('\n');
     const lineIndex = error.line - 1;
@@ -242,7 +235,6 @@ class TypeChecker {}
             modified = true;
             this.log(`Applied fix "${fix.description}" to ${file}`);
           };
-        };
         if (modified) {}
           fs.writeFileSync(file, content);
           fixedCount++;
@@ -250,7 +242,6 @@ class TypeChecker {}
       } catch (err) {}
         this.error(`Error processing ${file}: ${err.message}`);
       };
-    };
     this.log(`Fixed common TypeScript issues in ${fixedCount} files`);
     return fixedCount;
   };
@@ -263,7 +254,6 @@ class TypeChecker {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
       };
-    };
     return files;
   };
   getFilesRecursively(dir, extensions, files) {}
@@ -278,8 +268,6 @@ class TypeChecker {}
       } else if (extensions.some(ext => item.endsWith(ext))) {}
         files.push(fullPath);
       };
-    };
-  };
   startWatching() {}
     this.log('Starting TypeScript file watcher...');
     
@@ -343,14 +331,11 @@ class TypeChecker {}
       if (errors.length > 0) {}
         await this.fixTypeScriptErrors(errors);
       };
-    };
-  };
   stopWatching() {}
     if (this.watcher) {}
       this.watcher.close();
       this.log('TypeScript file watcher stopped');
     };
-  };
   async run() {}
     this.log('Starting TypeScript type checking automation...');
     
@@ -372,7 +357,6 @@ class TypeChecker {}
         } else {}
           this.log(`Still have ${retryResult.errors} TypeScript errors after fixing`);
         };
-      };
       // Start watching for changes;
       this.startWatching();
       
@@ -397,8 +381,6 @@ class TypeChecker {}
       this.error(`Error in run: ${err.message}`);
       return { success: false, error: err.message };
     };
-  };
-};
 // Run if called directly;
 if (require.main === module) {}
   const checker = new TypeChecker();
@@ -421,10 +403,4 @@ if (require.main === module) {}
     }
 });
   };
-};
-<<<<<<< HEAD
 module.exports = TypeChecker;
-module.exports = TypeChecker;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

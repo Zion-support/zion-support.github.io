@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-import { BaseConnector, IntegrationConfig } from './types';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
-<<<<<<< HEAD
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
@@ -17,8 +12,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-export const PROVIDERS: IntegrationProviderMeta[] = [;
-export const PROVIDERS: IntegrationProviderMeta[] = [;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
 import { IntegrationProviderMeta    } from './types';export const PROVIDERS: IntegrationProviderMeta[]  = [;export const PROVIDERS: IntegrationProviderMeta[] = [;
   {id: "salesforce";
@@ -70,7 +63,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description: "Recruiting software";
   }
   {}
-  {}
   {id: "bamboohr";
     name: "BambooHR";
     category: "ats";
@@ -82,7 +74,6 @@ export function getProviderById(}export const PROVIDERS: IntegrationProviderMeta
 ];{ id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];;
 export function getProviderById (id: string,): IntegrationProviderMeta | undefined {return PROVIDERS.find ((p) => p.id === id)}id: "bamboohr",name: "BambooHR",category: "ats",description: "HRIS & ATS";
-    description: "HRIS & ATS";
     description: "HRIS & ATS";
   }];
 export function getProviderById(id: string,): IntegrationProviderMeta | undefined {return PROVIDERS.find((p) => p.id === id)}
@@ -117,7 +108,6 @@ import { IntegrationProviderMeta } from './types';
 import { IntegrationProviderMeta  } from './types';
 
 }
-import { IntegrationProviderMeta } from './types';
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
@@ -183,31 +173,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id)
 }
-=======
-  registerConnector(type: string, connector: BaseConnector): void {
-    this.connectors.set(type, connector);
-  }
-
-  getConnector(type: string): BaseConnector | undefined {
-    return this.connectors.get(type);
-  }
-
-  createConnector(config: IntegrationConfig): BaseConnector {
-    const connector = this.getConnector(config.type);
-    if (!connector) {
-      throw new Error(`Unknown connector type: ${config.type}`);
-    }
-    return connector;
-  }
-}
-
-export const defaultConnectors = [
-  {
-    id: "hubspot",
-    name: "HubSpot",
-    category: "crm",
-    description: "HubSpot CRM integration",
-    icon: "hubspot-icon"
-  }
-];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

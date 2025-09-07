@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -53,7 +52,6 @@ export default function Comprehensive2025ServicesShowcase() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -64,20 +62,11 @@ export default function Comprehensive2025ServicesShowcase() {
       transition: {
         duration: 0.5
       }
-    }
   },
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensive2025servicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
         <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
@@ -114,7 +103,6 @@ export default function comprehensive2025servicesshowcase() {
               <div className="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-lg font-semibold">
                 Quantum-Ready Technology
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -184,8 +172,6 @@ export default function comprehensive2025servicesshowcase() {
                 <option value="newest">Newest First</option>
               </select>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -223,7 +209,6 @@ export default function comprehensive2025servicesshowcase() {
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                   </div>
-                </div>
 
                 {/* Price and Rating */}
                 <div className="flex items-center justify-between mb-4">
@@ -236,7 +221,6 @@ export default function comprehensive2025servicesshowcase() {
                     <span className="text-white font-semibold">{service.rating}</span>
                     <span className="text-white/60 text-sm">({service.reviews})</span>
                   </div>
-                </div>
 
                 {/* Description */}
                 <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
@@ -257,7 +241,6 @@ export default function comprehensive2025servicesshowcase() {
                       </div>
                     )}
                   </div>
-                </div>
 
                 {/* Market Info */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
@@ -269,7 +252,6 @@ export default function comprehensive2025servicesshowcase() {
                     <span className="text-white/60">Growth Rate:</span>
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
-                </div>
 
                 {/* ROI and Setup */}
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
@@ -278,7 +260,6 @@ export default function comprehensive2025servicesshowcase() {
                   <div className="mt-2 text-white/60 text-sm">
                     Setup Time: {service.setupTime} | Trial: {service.trialDays} days
                   </div>
-                </div>
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -307,7 +288,6 @@ export default function comprehensive2025servicesshowcase() {
                       ✉️ {service.contactInfo.email}
                     </a>
                   </div>
-                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -370,20 +350,4 @@ export default function comprehensive2025servicesshowcase() {
       <EnhancedFooter />
     </div>
   )
-=======
-        <title>Comprehensive 2025 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive 2025 Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive 2025 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive 2025 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

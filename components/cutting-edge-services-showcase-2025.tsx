@@ -1,182 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-]
-
-import React, { useState } from 'react';'
-import Head from 'next/head';'
-import { motion } from 'framer-motion';'
-import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-  }
-  CheckCircle, ArrowRight, Zap, Target, Microscope;
-
-;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Star;
-  Award;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Zap;
-  Target;
-  Microscope;
-  Lock;
-  Cloud;
-  BarChart3;
-  Settings;
-  Eye;
-  Code;
-  Palette;
-  Search;
-  Filter;
-  Grid;
-  List;
-  ExternalLink;
-  Phone;
-  Mail;
-  MapPin;} from 'lucide-react';import { Brain,Atom,Shield,Rocket,Star,Award,TrendingUp,CheckCircle,ArrowRight,Zap,Target,Microscope,Lock,Cloud,BarChart3,Settings,Eye,Code,Palette,Search,Filter,Grid,List,ExternalLink,Phone,Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;import React, { useState  } from 'react';
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;CheckCircle, ArrowRight, Zap, Target, Microscope;
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-  CheckCircle, ArrowRight, Zap, Target, Microscope;
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
- } from 'lucide-react';'
-import Layout from '../components/layout/Layout';'
-
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';'
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';'
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';'
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';'
-
-const contactInfo = null;
-];
-
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
-    count: cuttingEdgeAIServices2025.length
-  };
-  {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    services: cuttingEdgeQuantumServices2025,
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
-    count: cuttingEdgeQuantumServices2025.length
-  };
-  {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeEnterpriseITServices2025,
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
-    count: cuttingEdgeEnterpriseITServices2025.length
-  };
-  {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaasServices2025,
-    icon: Rocket,
-
-    ...cuttingEdgeAIServices2025;
-    ...cuttingEdgeQuantumServices2025;
-    ...cuttingEdgeEnterpriseITServices2025;
-    color: 'from-teal-500 to-emerald-600',
-    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
-    count: cuttingEdgeMicroSaasServices2025.length
-  }
-];
-
-export default function CuttingEdgeServicesShowcase2025() {
-  }
-  const [searchTerm, setSearchTerm] = useState('');'
-
-const [selectedCategory, setSelectedCategory] = useState('all');'
-
-const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');'
-
-const allServices = [;
-
-...cuttingEdgeAIServices2025,
-    ...cuttingEdgeQuantumServices2025,
-    ...cuttingEdgeEnterpriseITServices2025,
-    ...cuttingEdgeMicroSaasServices2025
-  ];
-
-const filteredServices = allServices.filter((service) => {
-
-   ;
-}
-const matchesSearch =;
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tags.some(tag => { return tag.toLowerCase().includes(searchTerm.toLowerCase())
-      ); }
-
-const matchesCategory =;
-      selectedCategory === 'all' || service.category === selectedCategory;'
-    return matchesSearch && matchesCategory;
-  });
-
-const containerVariants = {
-    }
-    "hidden": { "opacity": 0
-}
-;
-
-export default /**
- * CuttingEdgeServicesShowcase2025 - Function description
- */
-function CuttingEdgeServicesShowcase2025() {
-  }
-  const [search_term, setSearchTerm] = useState ('');'
-
-const [selected_category, setSelectedCategory] = useState ('all');'
-
-const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');'
-;
-
-const all_services = [;
-  ...cuttingEdgeAIServices2025,
-    ...cuttingEdgeQuantumServices2025,
-    ...cuttingEdgeEnterpriseITServices2025,
-    ...cuttingEdgeMicroSaasServices2025
-  ];
-;
-
-const filtered_services = all_services.filter ((service) => {
-   ;
-  }
-  const matches_search =;
-
-      service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.tags.some (tag =>;
-        tag.toLowerCase ().includes (search_term.toLowerCase ()))const matches_category =;
-      selected_category === 'all' || service.category === selected_category;'
-    return matches_search && matches_category;  })const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                        service.tags.some (tag = > tag.toLowerCase ().includes (search_term.toLowerCase ());
-  const matches_category = selected_category === 'all' || service.category === selected_category;'
-    return matches_search && matches_category;
-  }),
->>>>>>> origin/main
 
 const container_variants = {
     }
@@ -191,7 +13,6 @@ const container_variants = {
 
 "staggerChildren": 0.1
       }
-    }
   };
 
 const itemVariants = {
@@ -206,7 +27,6 @@ const itemVariants = {
 }
 "duration": 0.5
       }
-    }
   };
 
 return (;
@@ -286,7 +106,6 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto mb-12''
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>;'
                         {stat.icon}
                       </div>;
-                    </div>;
                     <div className='text-2xl "md":text-3xl font-bold text-white mb-1'>;'
                       {stat.value}
 
@@ -342,7 +161,6 @@ href='/contact''
                   Get Started
                 </a>
               </motion.div>
-            </motion.div>
           </div>
         </section>
         {/* Search and Filter Section *
@@ -489,16 +307,12 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                         <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center'>'
                           <Star className='w-6 h-6 text-cyan-400' />'
                         </div>
-                      </div>
-                    </div>
                         </p>;
                       </div>;
                       <div className="ml-4">;
                         <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">;
                           <Star className="w-6 h-6 text-cyan-400" />;
                         </div>;
-                      </div>;
-                    </div>;
                     className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='flex-1'>;
@@ -521,7 +335,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                         <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">;
                           <Star className="w-6 h-6 text-cyan-400" />;
                         </div>;
-                      </div>;
                     </div>;className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >;
                         >;
                         </p>;
@@ -530,8 +343,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                         <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center'>;
                           <Star className='w-6 h-6 text-cyan-400' />;
                         </div>;
-                      </div>;
-                    </div>;
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-4'>;'
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (<span;
@@ -571,7 +382,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
 
                       <span className='text-cyan-400'>{service.category}</span>'
                     </div>
-                  </div>
 
                   {/* Service Details *
 }
@@ -607,7 +417,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                           ))}                      </ul>;
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
-                  </div>
 
                     </div>;
 
@@ -624,7 +433,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
 
                         </span>
                       </div>
-                    </div>
 
                     {/* Pricing */}
                     <div className="mb-6">
@@ -635,7 +443,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                         ${service.pricing.starter.price}
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
                       </div>
-                    </div>
                     </div>;{/* Pricing */}{/* Pricing */}
                     <div className='mb - 6'>;
                       <h4 className='text - sm font - semibold text - cyan - 400 mb - 3 uppercase tracking - wider'>;
@@ -654,7 +461,6 @@ className={`p-6 ${viewMode === 'list' ? '"lg":w-1/3' : ''}`}`                  >
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>;
                         </span>;
                       </div>;
-                    </div>;
                     {/* CTA */}
 <div className='flex items-center justify-between'>;'
                       <a;
@@ -686,13 +492,11 @@ href='/contact''
                         <ArrowRight className='ml-2 w-4 h-4' />'
                       </a>
                     </div>
-                  </div>
 
                   {/* Service Details *
 }
 
                       </div>
-                    </div>
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium';
                       >;
                         Learn More;
@@ -706,9 +510,7 @@ href='/contact''
                         <ArrowRight className='ml-2 w-4 h-4' />;
                       </a>;
                     </div>;
-                  </div>;
                   {/* Service Details */}</div>;
-                    </div>;
                     </div>;
                     {/* Pricing */}
                     <div className='mb-6'>;'
@@ -884,7 +686,6 @@ href={`"tel": ${contactInfo.mobile},`}
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -921,6 +722,3 @@ const itemVariants = {"hidden": {"y": 20, "opacity": 0;
 }
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

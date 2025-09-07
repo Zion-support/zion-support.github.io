@@ -33,7 +33,6 @@ class $1 {}
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status   };
     };
-  };
 ;
   async checkDependencies() {}
   this.log("Checking dependencies...");
@@ -69,7 +68,6 @@ class $1 {}
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status };
     };
-  };
 ;
   async checkDependencies() {}
   this.log("Checking dependencies...");
@@ -139,14 +137,8 @@ class $1 {}
       this.log("Dependency monitoring completed", "success")} catch (error) {  this.log(`Error during dependency "monitoring": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);
       await this.generateReport()};
   };
-};
 ;
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
 monitor.run().catch(console.error);
-monitor.run().catch(console.error);
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

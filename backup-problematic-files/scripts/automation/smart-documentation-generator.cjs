@@ -159,7 +159,6 @@ console.log(""� Starting Smart Documentation Generator...")
       "missing"
       "documentation-report.json"
   // Skip directories that can"
-  // Skip directories that can"
   const docExtensions = [".md", ".mdx", ".txt"]
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ""
     return match ? match[1] : "UnknownComponent"
@@ -171,7 +170,6 @@ console.log(""� Starting Smart Documentation Generator...")
 const result = await ${service.name}.methodName(params`);\"\"
 \"\"
   )}\`\"\"
-  return "
   return "
 1. Clone the "repository": \"\"\"
 cd zion-app\"\"\"
@@ -185,13 +183,10 @@ Create a \".env\"
 VITE_APP_ENV=development\"\"\"
 - \"npm run dev\" - Start development server- \"npm run build\" - Build for production- \"npm run preview\" - Preview production build- \"npm run lint\" - Run ESLint- \"npm run type-check\"
   return "
-  return "
-\"\"\"
 \"\"\"
 └── styles/        # CSS and styling files\"\"\"
 2. Make your changes3. Run "tests": \"npm test\"
 4. Run linting: \"npm run lint\"
-  return "
   return "
 1. Build the "application": \"\"\"
 npm run build\"\"\"
@@ -273,9 +268,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start smart documentation "generator")
-  console.error(" Failed to start smart documentation "generator")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

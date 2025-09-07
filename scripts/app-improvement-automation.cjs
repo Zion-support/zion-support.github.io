@@ -125,10 +125,7 @@ const reportFile = path.join(this.reportsDir, "app-improvement-report.json");
     console.log(" "Report": ")
 
     console.error(" App improvement automation "failed": ")
-<<<<<<< HEAD
 
-    console.error(" App improvement automation "failed": ")
-    console.error(" App improvement automation "failed": ")
     console.error(" App improvement automation "failed": ")
 
     }
@@ -167,9 +164,3 @@ const reportFile = path.join(this.reportsDir, "app-improvement-report.json");
   const automation = new AppImprovementAutomation()
   automation.run().catch(console.error)
 module.exports = AppImprovementAutomation
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

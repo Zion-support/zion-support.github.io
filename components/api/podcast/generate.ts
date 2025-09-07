@@ -101,7 +101,6 @@ return res && res.status(500).json({ "error": 'Failed to generate structured con
       }
         "closing": '"14":30';'
       }
-    }
 
 const episodes = readEpisodes()const episode = {writeEpisodes(episodes)return res && res.status(200).json({ episode })} catch ("error": any) {console && console.error(error;
 }
@@ -147,50 +146,10 @@ function writeEpisodes() {
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')'
 }
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
-=======
-
-const id = uuidv4();
-
-const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. "Produce":;'
-export default async function handler() {
-
-}
-
-export default async function handler() {;
-  }
-  if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed','
-});
-
-const { persona, invitee, topic, operatorPrompt } = req.body |{}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-}
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
-
-
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
-  const id = uuidv4();
-=======
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' })
-function readEpisodes(): any[] {
-  ensureStorage()
-  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
-
-function writeEpisodes(episodes: any[]) {}
-  ensureStorage();'
-  fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {}
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {}
-  const id = uuidv4()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -247,8 +206,6 @@ const EPISODES_PATH = path.join (;
 /**
  * ensure_storage - Function description
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 function ensure_storage() {
   }
   const dir = path.dirname (EPISODES_PATH);
@@ -269,7 +226,6 @@ function handler() {if (return res.status (405).json ({ "error": 'Method not all
 function read_episodes (): any[] {ensure_storage ()return JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8'))}'
 /**;
  * write_episodes - Function description;
-<<<<<<< HEAD
  */;
 function write_episodes() {ensure_storage ()fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')}'
 
@@ -288,7 +244,6 @@ const id = uuidv4 (;
 2) Time markers "for": Intro, segment transitions, Closing CTA for Zion;
 3) Full 15 - minute script / transcript approximating 1800 - 2200 words, clearly indicating Host and Guest;
 4) YouTube and Spotify descriptions;
-<<<<<<< HEAD
 5) A single - sentence Best Quote;
 Return a strict JSON object with "keys": title, questions (array), time_markers { intro, segments, closing }, transcript, youtube_description, spotify_description, best_quote.`;`
 const user  = `"Guest": ${invitee?.name || ''}\"n_bio": ${invitee?.bio || ''}\"n_topic": ${topic || ''}\n_operator "Prompt": ${operator_prompt || ''}\n_style "Sample": ${persona?.cloneStyleText || ',;'
@@ -428,7 +383,6 @@ invitee
 
 const match = content.match (/\{[\s\S]*\}$/)if (generated = JSON.parse (match[0])) {$2;
 }
-    }
     // Check condition;
 if ( {) {$2;
 }
@@ -482,7 +436,6 @@ const match = content.match(/\{[\s\S]*\}$/)if (match) generated = JSON.parse(mat
 }
 
 const episodes  = readEpisodes()const episode = {"transcript": generated.transcript,"youtube_description": generated.youtube_description || '',"spotify_description": generated.spotify_description || '',"best_quote": generated.best_quote || '',"audio": {}'
-      "audio": {}
       "audio": {}
     }
     episodes.unshift (episode)write_episodes (episodes)return res.status (200).json ({ episode })} catch ("error": any) {console.error (error)return res.status (500).json ({ "error": error?.message || 'Unknown error' })}    episodes.unshift (episode)write_episodes (episodes)return res.status (200).json ({ episode },'
@@ -552,7 +505,6 @@ const episode = {}
       if (generated = JSON.parse (match[0])) {
   $2
 }
-    }
     // Check condition
 if ( {) {
   $2
@@ -646,17 +598,12 @@ time_markers: generated.time_markers || {
 
 
     const episode = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
-}
 }
 
 
@@ -681,32 +628,14 @@ id,
     episodes.unshift(episode);
     writeEpisodes(episodes);
     return res.status(200).json({ episode });
-<<<<<<< HEAD
   } catch (error: any) {
-=======
- 
-} catch (error: any) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     console.error(error);
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
-}
-}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-<<<<<<< HEAD
     const episode = {}
-=======
-<<<<<<< HEAD
-=======
-    const episode = {}
-      transcript: generated.transcript,'
-      youtube_description: generated.youtube_description || '','
-      spotify_description: generated.spotify_description || '','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       best_quote: generated.best_quote || '',
       audio: {},
     }
@@ -720,7 +649,6 @@ const episode = {}
 id,"createdAt": new Date().toISOString(),persona,invitee,topic,"title": generated.title,"questions": generated.questions || [],"timeMarkers": generated.timeMarkers || {"intro": '"00":00',"segments": [],"closing": '"14":30';'
       },"transcript": generated.transcript,"youtubeDescription": generated.youtubeDescription || '',"spotifyDescription": generated.spotifyDescription || '',"bestQuote": generated.bestQuote || '',"audio": {}'
     }episodes.unshift(episode)writeEpisodes(episodes)return res.status(200).json({ episode })} catch ("error": any) {console.error(error)return res.status(500).json({ "error": error?.message || 'Unknown error' })}'
-}
 }
 
 const episode = {},;

@@ -13,7 +13,6 @@ const fetcher = $2;
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean} {
   const { data, error } = useSWR($2);
   const hasActiveDispute = $2;
->>>>>>> origin/main
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
@@ -57,23 +56,14 @@ return (;
 return (;
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">"
       Under Dispute
-=======
   return (
     <span className=\"inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs\" />
       Under Dispute;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </span>
 );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -120,21 +110,4 @@ if (return null) {
 )}
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
 "
-=======
-import useSWR from 'swr'
-const fetcher = (url: string) => fetch (url) .then (r => r.json () )
-return (<span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs" > Under Dispute </span>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

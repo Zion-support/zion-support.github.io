@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
@@ -135,7 +134,6 @@ export default function QuantumCybersecurityServices() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Why Quantum Security Section */}
@@ -193,7 +191,6 @@ export default function QuantumCybersecurityServices() {
                 </ul>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Security Features Section */}
@@ -261,7 +258,6 @@ export default function QuantumCybersecurityServices() {
                 <p className="text-gray-400 text-sm">Comprehensive security insights and reporting.</p>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Contact Section */}
@@ -305,7 +301,6 @@ export default function QuantumCybersecurityServices() {
                     Middletown DE 19709
                   </p>
                 </div>
-              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -327,26 +322,4 @@ export default function QuantumCybersecurityServices() {
       </UltraFuturisticBackground2026>
     </>
   )
-=======
-import Layout from '../components/layout/Layout';
-
-export default function quantumcybersecurityservices() {
-  return (
-    <Layout>
-      <Head>
-        <title>Quantum Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Quantum Cybersecurity Services solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Quantum Cybersecurity Services</h1>
-          <p className="text-lg text-gray-600">
-            Professional quantum cybersecurity services solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

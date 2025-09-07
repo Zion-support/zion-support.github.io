@@ -103,7 +103,6 @@ console.log(""� Starting Predictive Maintenance Monitor...")
   "type": "security_vulnerabilities"
           "severity": "high","description": Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities"
           "timestamp": new Date(")
-          "timestamp": new Date(")
 // console.log(` Dependency "health"`)
   console.log("⚠ Dependency health analysis "failed": ")
 // console.log(` Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities"`)
@@ -289,19 +288,11 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       this.reportDir,maintenance-${Date.now()}.json"
       "maintenance-history.json"
   // Skip directories that can"
-  // Skip directories that can"
-  // Skip directories that can"
   "memoryUsage"
       "cpuUsage"
       "diskUsage"
 process.on("SIGINT")
-process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start predictive maintenance "monitor": ")
-  console.error(" Failed to start predictive maintenance "monitor": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

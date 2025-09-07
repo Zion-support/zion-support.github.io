@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/api/integrations/providers.ts
+:pages_backup/api/integrations/providers.ts
 
 
 
@@ -19,10 +18,10 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
-<<<<<<< HEAD:pages_backup/api/integrations/providers.ts
+:pages_backup/api/integrations/providers.ts
 
 
-<<<<<<< HEAD:pages_backup/api/integrations/providers.ts
+:pages_backup/api/integrations/providers.ts
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -51,25 +50,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD:pages_backup/api/integrations/providers.ts
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+:pages_backup/api/integrations/providers.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 
-<<<<<<< HEAD:pages_backup/api/integrations/providers.ts
+:pages_backup/api/integrations/providers.ts
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   res.status(200).json({ providers: PROVIDERS })
 }
@@ -79,8 +71,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ providers: PROVIDERS })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

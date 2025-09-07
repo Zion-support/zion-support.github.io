@@ -13,7 +13,6 @@ const { moduleTitle, moduleContent } = req.body || {},;
       }
       "summary": `Summary for ${moduleTitl,`}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.``    });
 
-<<<<<<< HEAD
   if (!apiKey) return fallback();
   try {
     }
@@ -46,6 +45,5 @@ return res.status(200).json({ "summary": text.trim() });
   } catch (err) {
 }
 return fallback();
-}
 }
 

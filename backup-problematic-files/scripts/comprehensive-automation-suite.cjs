@@ -5,8 +5,6 @@ const { execSync } = require('child_process')
   console.log(' Starting Comprehensive Automation Suite...')
     "overallStatus"
       "status"
-          "status"
-          "status"
 // console.log(`   - "Successful"`)
     console.log(`   - "Failed"`)
       "name"
@@ -43,15 +41,8 @@ const { execSync } = require('child_process')
         execSync('node scripts/dependency-updater.cjs', { "stdio"})
       "name"
         "type"
-        "type"
         "message"
-        "type"
         "type"
         "message"
     console.log('\n "Recommendations")
-<<<<<<< HEAD
     console.error(' Automation suite "failed")
-    console.error(' Automation suite "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

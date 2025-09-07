@@ -52,8 +52,6 @@ const enabled =;
       console.warn('Screen share failed', e);'
     }
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 return (;
 <div className = 'flex items-center gap-3'>'
@@ -89,7 +87,5 @@ onClick={toggleMic}
         Leave
       </button>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );

@@ -377,7 +377,6 @@ key={category}
               </button>
             ))}
           </div>
-        </div>
       </section>
 
       {/* API Tools Grid */}
@@ -431,7 +430,6 @@ key={category}
                           {tool.status}
                         </span>;
                       </div>;
-                    </div>;
 <p className='text-gray-400 leading-relaxed mb-6'>;'
                       {tool.description}
 
@@ -501,8 +499,6 @@ variant='ghost';'
                         GitHub;
                       </Button>;
                     </div>;
-                  </div>;
-                </div>;
               </Card>;
             ))}
                       <Button
@@ -533,12 +529,9 @@ variant='ghost';'
                         GitHub
                       </Button>
                     </div>
-                  </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Developer Resources */}
@@ -604,7 +597,6 @@ languages and frameworks.
               </Button>
             </Card>
           </div>
-        </div>
       </section>
 
       {/* CTA Section *
@@ -637,11 +629,9 @@ variant='outline';'
               View Documentation
             </Button>
           </div>
-        </div>
       </section>
     </>
           </div>;
-        </div>;
       </section>;
       {/* Developer Resources */}
 <section className='py-24 bg-gray-800'>;
@@ -704,7 +694,6 @@ variant='outline';'
               </Button>;
             </Card>;
           </div>;
-        </div>;
       </section>;
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
@@ -736,12 +725,10 @@ variant='outline';'
               </Button>;
             </Card>;
           </div>;
-        </div>;
       </section>;
               View Documentation;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>)}
   )}
@@ -775,18 +762,12 @@ variant='outline';'
               View Documentation;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
   );
 }
-}
-<<<<<<< HEAD
     </>);
 }
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

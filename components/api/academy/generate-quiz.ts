@@ -26,7 +26,6 @@ const fallback = () => {
       }
       "questions": [
         {
-<<<<<<< HEAD
 
 }
 
@@ -87,7 +86,6 @@ const fallback = () => {
         }
       ]
     })
-<<<<<<< HEAD
 };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
   const apiKey = $2;
@@ -141,7 +139,6 @@ const completion = await client.chat.completions.create({
 
       "temperature": 0.2
     });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const text = completion.choices?.[0]?.message?.content ?? '';'
     try {
@@ -190,24 +187,11 @@ return res.status(200).json(json);
     return fallback()
 }return fallback()}
   }
-}
-=======
-      const json = JSON.parse(text);
-return res.status(200).json(json);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch {
-=======
     } catch {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return fallback ();
     }
-<<<<<<< HEAD
   } catch (err) {}
-=======
-  } catch (err) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return fallback ();
   }    } catch {}
       return fallback()
@@ -221,15 +205,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
     return fallback();
   }
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

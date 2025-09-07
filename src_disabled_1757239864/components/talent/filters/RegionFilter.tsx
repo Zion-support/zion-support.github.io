@@ -49,7 +49,5 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>
   )
 }
-<<<<<<< HEAD:src/components/talent/filters/RegionFilter.tsx
-=======
+:src/components/talent/filters/RegionFilter.tsx
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/talent/filters/RegionFilter.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import { getBadgeLabels } from '../utils/kyc';
@@ -78,23 +77,11 @@ export default function VerifyPage() {
     setBusy(false)
   }
 
-<<<<<<< HEAD
   const labels = getBadgeLabels(profile || undefined);
 
-=======
-  const labels = getBadgeLabels($2);
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function verify() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Verify Identity - Zion</title>
         <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -154,7 +141,6 @@ export default function verify() {
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
               </div>
-            </div>
 
             <section>
               <h2 className="font-semibold mb-2">Required documents</h2>
@@ -204,20 +190,4 @@ export default function verify() {
       </main>
     </>
   )
-=======
-        <title>Verify - Zion Tech Group</title>
-        <meta name="description" content="Verify solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Verify</h1>
-          <p className="text-lg text-gray-600">
-            Professional verify solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

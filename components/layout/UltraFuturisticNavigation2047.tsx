@@ -136,14 +136,11 @@ import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;Menu;
 interface NavigationItem  {name: string;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}
 import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
   ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
-  ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 interface NavigationItem  {name: string;
   href: string;  icon?: React.ReactNode;import { href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, ArrowRight;Brain, Rocket, Target, Atom, Shield;
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Menu
@@ -204,7 +201,6 @@ import {
   Github
   Youtube
   MapPin;
-=======
 import {};
   Menu;
   ChevronDown;
@@ -264,7 +260,6 @@ import {};
   Github;
   Youtube;
   MapPin;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 interface NavigationItem {}
   name: string;
@@ -427,17 +422,13 @@ interface NavigationItem {}
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain, Rocket, Target, Atom, Shield;
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
   Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
-<<<<<<< HEAD
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin;
   } from 'lucide-react';
 interface NavigationItem  {name: string;
@@ -508,16 +499,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
-=======
-  Youtube,
-  MapPin,;'
-} from 'lucide-react'
-interface NavigationItem {}
-  name: string
-  href: string;  icon?: React.ReactNode;import {}
-  href: string;  icon?: React.ReactNode;import {
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
 
@@ -582,7 +563,6 @@ import {
   MapPin,;
 } from 'lucide-react';
 interface NavigationItem {
-=======
 
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
@@ -605,7 +585,6 @@ description?: string;
   title?: string;
   featured?: boolean;
   category?: string;
-<<<<<<< HEAD
   color?: string
 }
   color?: string;
@@ -646,17 +625,6 @@ setActiveDropdown(activeDropdown === name ? null : name)
         }
         setIsOpen(false);
 
-=======
-  const handleDropdownToggle = (name: string) => {
-setActiveDropdown(activeDropdown === name ? null : name);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  };
-
-  useEffect(() => {}
-    const handleResize = () => {}
-      if (window.innerWidth >= 1024) {}
-        setIsOpen(false);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 setActiveDropdown(null);
       }
     };
@@ -739,21 +707,17 @@ className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-sla
                                 <span className="font-medium text-white">{child.name}</span>
                                 {child.featured && (
                                   <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
-=======
 className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
-=======
                 <button;
                     >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className='space-y-4'>
                         {item.children?.map(child => (
                       transition={{ duration: 0 && 0.2 }}'
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;'
                       <div className='space-y-4'>;
                         {item && item.children?.map(child => (;
-<<<<<<< HEAD
                           <Link
                             <div
                               className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-slate-500'}`}
@@ -782,20 +746,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
                               <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
-=======
-                                {child.description}
-                              </p>
-=======
-                          <Link;
-                            <div;
-                              </div>'
-                              <p className='text-sm text-gray-400 mt-1'>
-                                {child.description}"
-                              </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                            </div>
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                           </Link>
                         ))}
                       </div>
@@ -804,7 +755,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </AnimatePresence>
               </div>
             ))}
-<<<<<<< HEAD
           {/* Contact Info & CTA */}
 
 <div className='hidden "lg": flex "lg":items-center "lg":space-x-4'>'
@@ -851,15 +801,10 @@ href='/contact''
 }
             </button>;
           </div>;
-        </div>;
-      </div>;
             </button>;
           </div>;
-        </div>;
-      </div>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
-<<<<<<< HEAD
         {isOpen && (<motion&& motion.div;
             }
             initial={{ "opacity": 0, "height": 0 
@@ -901,7 +846,6 @@ onClick={() => handleDropdownToggle(item && item.name)}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`} />;`                  </button>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
-<<<<<<< HEAD
         {is_open && (<motion.div;
             }
             initial={{ "opacity": 0, "height": 0 
@@ -935,7 +879,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
 {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>;'
                 <div className='px-3 py-2 text-sm text-gray-400'>;'
@@ -962,7 +905,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <MapPin className='w-4 h-4' />'
                     <span>{contactInfo.address}</span>
                   </div>
-                </div>
                 <div className='px-3 pt-2'>'
                   <Link,
 href='/contact''
@@ -973,8 +915,6 @@ href='/contact''
                     <ArrowRight className='ml-2 w-4 h-4' />'
                   </Link>
                 </div>
-              </div>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -983,13 +923,7 @@ href='/contact''
 };
 export default UltraFuturisticNavigation2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 const navigationItems: NavigationItem[] = [
   {
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

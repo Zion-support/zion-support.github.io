@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:src_backup/components/Sidebar.tsx
+:src_backup/components/Sidebar.tsx
 interface SidebarProps  {isOpen: boolean;
   onClose: () => void;
 }const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {if (!isOpen) return null;return (<div className="fixed inset-0 z-50 lg:hidden">;
@@ -34,10 +34,8 @@ interface SidebarProps  {isOpen: boolean;
           </div>;
         </nav>;
       </div>;
-    </div>;
   )</nav>;
       </div>;
-    </div>;
   )}export default Sidebar;
 
 interface SidebarProps {
@@ -79,7 +77,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
         </nav>
       </div>
-    </div>
   );
 };
 export default Sidebar;

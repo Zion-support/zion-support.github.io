@@ -32,7 +32,6 @@ return { "hasError": true,;
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-=======
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;}
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette}
@@ -53,7 +52,6 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary: ';, error, errorInfo);}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
   render() {
@@ -61,11 +59,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
-=======
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
 
     return this.props.children;
@@ -76,7 +71,6 @@ import { import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shiel
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}
 import React, { useState, useEffect } from 'react';'
 import Layout from './layout / Layout';'
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';'
@@ -227,8 +221,6 @@ const background_variants = {
     "animate": {        "delay_children": 0.2;
 
       }
-    }
-  }
 
 const background_variants = {"initial": { "opacity": 0, "scale": 0.8,;
 },"animate": {"opacity": 1,"scale": 1,"transition": { "duration": 1.5, "ease": 'ease_out' as const,'
@@ -277,7 +269,6 @@ if (return () {$2;
         })// Check condition;
 if ( {) {$2;
 }
-  }
   }return (<Layout>;
       <UltraFuturisticBackground2035>;
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
@@ -328,7 +319,6 @@ const Homepage2035: React.FC = () => {
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
-    }
   };
 
   const backgroundVariants = {
@@ -684,7 +674,6 @@ deliver exceptional results
                   "icon": <Brain className='w-12 h-12' />'
                   "title": 'AI-Powered Solutions''
                   "description":
-                  "description":
                     'Military-grade security protocols and compliance standards to protect your business''
 
                
@@ -767,13 +756,11 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
 
 
             </div>;
-          </div>;
         </section>;{/* CTA Section */}
         <section className='py-20 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 "sm":px-6 "lg":px-8">;"
           <div className="max-w-4xl mx-auto text-center">;"
             <motion&& motion.div;
-=======
                   </h3>
                   <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
@@ -784,9 +771,7 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* CTA Section */}
 <section className='py-20 px-4 "sm":px-6 "lg":px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>;'
@@ -835,7 +820,6 @@ className='border border-cyan-400 text-cyan-400 "hover":bg-cyan-400 "hover":text
 )
 };
 
-=======
 > <div className="relative" > <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" /> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse" ></div> </div> <p className="text-xl text-gray-300 mb-2" >Loading Zion Tech Group...</p> <p className="text-sm text-gray-500" >Preparing your digital transformation journey</p> </motion.div> </div>)
 return () => clearTimeout (timer) 
 }, [])
@@ -848,13 +832,9 @@ return () => clearTimeout (timer)
   "staggerChildren": 0.1, "delayChildren": 0.2
 
 }
-}
-}
-<<<<<<< HEAD
 ];
 ...innovative2025ITEnterpriseBatch;
 ...innovative2025AIServicesBatch ];
-<<<<<<< HEAD
 
 const filteredServices = activeCategory === 'all' ? allServices;'
   return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl "sm":text-5xl "lg":text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center" > <motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </div> </motion.div> {/* Stats */;"
@@ -1073,7 +1053,6 @@ export default Homepage2035;className='text - center'>'
                   <p className="text - gray - 300">{feature.description}</p>;"
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}
         <section className='py - 20 px - 4 "sm":px - 6 "lg":px - 8'>;'
@@ -1189,27 +1168,5 @@ const filtered_services = active_category === 'all' ? all_services;'
 export default Homepage2035)
 };
 export default Homepage2035;
-=======
-              initial={{ opacity: 0, y: 30}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default Homepage2035,
-=======
-"
-=======
-}viewport= {
-  {
-  once: true 
-}
-}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
-}
-export default Homepage2035
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-export default Homepage2035;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 
 "

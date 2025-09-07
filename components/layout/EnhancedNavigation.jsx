@@ -4,22 +4,15 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
   return <div>Something went wrong.</div>;
     }return this.props.children;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-}
 import React, { useState } from 'react';'
 
 const EnhancedNavigation = () => {
  ;
   }
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-<<<<<<< HEAD
 
 import Link from 'next/link';
-=======
-'
-import Link from 'next / link';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 const EnhancedNavigation = () =>: any {}
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
@@ -95,7 +88,6 @@ return (;
             </div>
             <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>"
           </Link>
-<<<<<<< HEAD
 const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState(false)import Link from 'next/link';const EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState (false)return (<nav className='bg - white shadow - lg sticky top - 0 z - 50'>;
       <div className='container mx - auto px - 4'>;
         <div className='flex justify - between items - center py - 4'>;
@@ -108,7 +100,6 @@ const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen] 
               Zion Tech Group;
             </span>;
           </Link>;
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items - center space - x-8'>;
             <Link;
@@ -188,66 +179,6 @@ const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen] 
               Get Started;
             </Link>;
           </div>;
-=======
-          {/* Desktop Navigation */}'
-          <div className='hidden lg:flex items - center space - x-8'>;
-            <Link;'
-              href='/';'
-              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
-            >;
-              Home;
-            </Link>;
-            <Link;'
-              href='/services';'
-              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
-            >;
-              Services;
-            </Link>;
-            <Link;'
-              href='/products';'
-              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
-            >;
-              Products;
-            </Link>;
-            <Link;'
-              href='/about';'
-              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
-            >;
-              About;
-            </Link>;
-            <Link;'
-              href='/blog';'
-              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
-            >;
-              Blog;
-            </Link>;
-            <Link;'
-              href='/talent';'
-              className='text - gray - 600 hover:text - blue - 600 font - medium transition - colors';
-            >;
-              Careers;
-            </Link>;
-            <Link;'
-              href='/contact';'
-              className='bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - medium hover:bg - blue - 700 transition - colors';
-            >              Get Startedconst EnhancedNavigation = () =>: any {}
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
-            >
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-
-          {/* Logo */}
-
-          <Link href=\"/\" className=\"flex items-center space-x-2\"    />
-            <div className=\"w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center\"    />
-              <span className=\"text-white font-bold text-xl\"    />Z</span>
-            </div>
-            <span className=\"text-xl font-bold text-gray-800\"    />Zion Tech Group</span>
-          </Link>
-          {/* Desktop Navigation */}
-=======
-          {/* Desktop Navigation */}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
               Home
@@ -271,8 +202,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started
             </Link>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           {/* Mobile menu button */}
           <button;
 className='"lg":hidden p-2 rounded-md text-gray-600 "hover":text-gray-900 "hover":bg-gray-100';'
@@ -292,7 +221,6 @@ className='"lg":hidden p-2 rounded-md text-gray-600 "hover":text-gray-900 "hover
                 d='M4 6h16M4 12h16M4 18h16'' />
             </svg>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </button>
         </div>
         {/* Mobile Navigation */}
@@ -343,18 +271,11 @@ href='/contact''
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Contact
-=======
-                Contact;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
-          </div>
         )}
       </div>
     </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 d='M4 6h16M4 12h16M4 18h16';
               />;
             </svg>;
@@ -423,13 +344,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Contact;
               </Link>;
             </div>;
-          </div>;
         )}
       </div>;
     </nav>;
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   )
 };

@@ -9,9 +9,7 @@ const canvasRef = null;
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-<<<<<<< HEAD
     if (ctx) {
-<<<<<<< HEAD
 
 }
 
@@ -32,9 +30,6 @@ export default function UltraFuturisticBackground2035() {
     canvas.height = $2;
     if (ctx) {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
-=======
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
 
     let "animationFrameId": number;
@@ -74,7 +69,6 @@ const particleCount = prefersReducedMotion;
         });
 origin/cursor/automate-test-improve-and-merge-code-2533
       }
-    }
     // Update and draw particles,
 const updateParticles = () => {
       }
@@ -106,7 +100,6 @@ const maxDistance = prefersReducedMotion;
             ? 90
             : 140;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         if (maxDistance > 0) {
           }
           particles.forEach((otherParticle, otherIndex) => {
@@ -116,16 +109,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               const dy = particle.y - otherParticle.y;
 
 const distance = Math.sqrt(dx * dx + dy * dy);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               if (distance < maxDistance) {
                 }
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
   const canvasRef = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
     if (!canvas) return;import React, { useEffect, useRef } from 'react';
@@ -157,35 +147,21 @@ const particleCount = prefersReducedMotion;
             Math.floor(Math.random() * 4)],})}
       for (let index = 0; i < particle_count; i++) {
         particles.push ({
-=======
-      for (let index = 0; i < particle_count; i++) {}
-        particles.push ({}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           coordinate_x: (Math.random () * canvas.width) / (window.devicePixelRatio || 1),
           coordinate_y: (Math.random () * canvas.height) / (window.devicePixelRatio || 1),          vx: prefersReducedMotion ? 0 : (Math.random () - 0.5) * 0.4,
           vy: prefersReducedMotion ? 0 : (Math.random () - 0.5) * 0.4,
           size: Math.random () * (isSmallScreen ? 1.5 : 2) + 0.8,
-<<<<<<< HEAD
           opacity: Math.random () * 0.35 + 0.08,
-=======
-          opacity: Math.random () * 0.35 + 0.08,'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][;
             Math.floor (Math.random () * 4);
           ],
         });      }      const particle_count = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
-<<<<<<< HEAD
       for (let index = 0, i < particle_count, i++) {
         particles.push ({
-=======
-      for (let index = 0, i < particle_count, i++) {}
-        particles.push ({}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           coordinate_x: Math.random () * canvas.width / (window.devicePixelRatio || 1),
           coordinate_y: Math.random () * canvas.height / (window.devicePixelRatio || 1),
           vy: prefersReducedMotion ? 0 : (Math.random () - 0.5) * 0.4,
           size: Math.random () * (isSmallScreen ? 1.5 : 2) + 0.8,
-<<<<<<< HEAD
           opacity: Math.random () * 0.35 + 0.08,
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][;
             Math.floor (Math.random () * 4);
@@ -193,7 +169,6 @@ const particleCount = prefersReducedMotion;
         });          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor (Math.random () * 4)];
         });
       }
-    }
     // Update and draw particles;
     const updateParticles = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)particles.forEach((particle, index) => {particle.x += particle.vx;
         particle.y += particle.vy;
@@ -261,10 +236,8 @@ if ( {) {$2;
                 ctx.stroke ()}
             }
           })}
-      })}
             }
           })}
-      })}
     }
   }, [])return (}}
           transition={{duration: 8,repeat: Infinity,}}
@@ -325,15 +298,6 @@ className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transfor
           transition={{
             duration: 10
             repeat: Infinity
-=======
-          animate={{}
-            scale: [1, 1.3, 1]
-            rotate: [45, 225, 405]
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{}
-            duration: 10;
-            repeat: Infinity'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ease: 'easeInOut',          }}
             opacity: [0.4, 0.7, 0.4],          }}
         />;
@@ -398,7 +362,6 @@ className='absolute inset-0''
 
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
-<<<<<<< HEAD
           <motion&& motion.div
 }
 key={i}
@@ -501,21 +464,14 @@ className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent
               "rotate": [0, 360];
             }}
         />;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <motion&& motion.div
             key={`quantum-${i}`}
 className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'
             style={{
-<<<<<<< HEAD
         {/* Quantum Dots */}
         {[...Array (15)].map ((_, i) => (
           <motion.div;
@@ -676,7 +632,6 @@ className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 round
 
             }} />
         </div>
-<<<<<<< HEAD
         {/* Data Streams */}
 <div className='absolute right-0 top-0 w-32 h-full opacity-30'>;'
           {[...Array(20)].map((_, i) => (<motion.div;
@@ -713,12 +668,8 @@ className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 round
 
               }} />
           ))}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
-      </div>
     </>
-<<<<<<< HEAD
               style={{right: `${Math.random() * 32}px`;
                 top: `${i * 5}%`;
         <div className='absolute right - 0 top - 0 w - 32 h - full opacity - 30'>;
@@ -733,7 +684,6 @@ className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 round
               animate={{transition={{duration: 2 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',              }}ease: 'easeInOut',}}}}/>;
           ))}
         </div>;
-      </div>;
     </>;
 ))height: [8, 32, 8];
                 opacity: [0 && 0.3, 1, 0 && 0.3];
@@ -742,70 +692,27 @@ className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 round
                 opacity: [0 && 0.3, 1, 0 && 0.3]
               }}
               transition={{ease: 'easeInOut',              }}                ease: "easeInOut";
-=======
-);  )
-                height: [8;, 32, 8]
-                opacity: [0 && 0.3;, 1, 0 && 0.3]
-              }}
-<<<<<<< HEAD
-              transition={{'"
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-=======
-              transition={{
-                ease: 'easeInOut';,              }}                ease: "easeInOut";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               }}
             />;
           ))}
         </div>;
-      </div>;
     </>;
-<<<<<<< HEAD
   ))}
   )}
                 delay: Math.random () * 2,ease: 'easeInOut',              }}                ease: "easeInOut";
-=======
-  );  );
-}
-  )
-}
-<<<<<<< HEAD
-                delay: Math.random () * 2,'"
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-=======
-                delay: Math.random () * 2;,
-                ease: 'easeInOut';,              }}                ease: "easeInOut";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               }}
             />))}
         </div>;
-      </div>;
     </>));
 }
-<<<<<<< HEAD
 
   );
     </>))}))
   )
 }
-=======
-
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 );
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

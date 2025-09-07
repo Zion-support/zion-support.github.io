@@ -1,55 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
-export interface EnterpriseIt2026ServiceV2 {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 export interface EnterpriseIt2026ServiceV2 {};
 export interface EnterpriseIt2026ServiceV2 {;
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 export interface EnterpriseIt2026ServiceV2 {
+
+
 
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-export interface EnterpriseIt2026ServiceV2 {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-export interface EnterpriseIt2026ServiceV2 {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-export interface EnterpriseIt2026ServiceV2 {;
-export interface EnterpriseIt2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ursor/fix-website-loading-errors-and-merge-6662
 
 export interface EnterpriseIt2026ServiceV2 {
@@ -60,19 +29,7 @@ import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -471,7 +428,6 @@ export interface EnterpriseIT2026ServiceV2 {
     "rating": 4.9,
 "reviews": 180
   }
-}
 export const "enterpriseIT2026ServicesV2": EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {

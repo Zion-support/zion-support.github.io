@@ -51,8 +51,6 @@ class ComprehensiveErrorFixer {}
         if (extensions.includes(ext)) {}
           files.push(fullPath)};
       };
-    };
-  };
   async fixFileErrors(filePath) {}
     try {}
       let content = fs.readFileSync(filePath, "utf8");
@@ -128,14 +126,8 @@ class ComprehensiveErrorFixer {}
       this.log("Error fixer "failed": ${error.message}`, "error");
       throw error};
   };
-};
 // Run the error fixer;
 if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ComprehensiveErrorFixer;
-module.exports = ComprehensiveErrorFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

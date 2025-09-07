@@ -26,7 +26,6 @@ const path = require("path")
   "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/", "automation/"]};"
       "
       await fs.writeFile(eslintPath, fixedConfig")
-      await fs.writeFile(eslintPath, fixedConfig")
 await this.log(" ESLint configuration fixed")
   "type": "eslint-config-fix"
         "file": ".eslintrc.js"
@@ -63,9 +62,4 @@ await this.log(" ESLint configuration fixed")
             "file": file,"
             "timestamp": new Date().toISOString()")}
 });")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
-<<<<<<< HEAD
   await this.log(")
-  await this.log(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

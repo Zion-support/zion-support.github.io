@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -98,7 +97,6 @@ export default function EnhancedServicesShowcase2025() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -109,7 +107,6 @@ export default function EnhancedServicesShowcase2025() {
       transition: {
         duration: 0.5
       }
-    }
   },
 
   return (
@@ -172,7 +169,6 @@ export default function EnhancedServicesShowcase2025() {
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -226,8 +222,6 @@ export default function EnhancedServicesShowcase2025() {
                   ))}
                 </select>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Services Grid */}
@@ -271,7 +265,6 @@ export default function EnhancedServicesShowcase2025() {
                         <Users className="w-4 h-4" />
                         <span>{service.customers}</span>
                       </div>
-                    </div>
 
                     {/* Key Features */}
                     <div className="mb-6">
@@ -292,7 +285,6 @@ export default function EnhancedServicesShowcase2025() {
                       <div className="text-sm text-gray-300 line-clamp-2">
                         {service.marketPosition}
                       </div>
-                    </div>
 
                     {/* ROI and Setup Time */}
                     <div className="flex items-center justify-between mb-6 text-sm">
@@ -304,7 +296,6 @@ export default function EnhancedServicesShowcase2025() {
                         <Clock className="w-4 h-4" />
                         <span>{service.setupTime}</span>
                       </div>
-                    </div>
 
                     {/* Action Buttons */}
                     <div className="flex gap-3">
@@ -329,7 +320,6 @@ export default function EnhancedServicesShowcase2025() {
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
-                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>
@@ -383,7 +373,6 @@ export default function EnhancedServicesShowcase2025() {
                   </div>
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
-              </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -404,28 +393,4 @@ export default function EnhancedServicesShowcase2025() {
       </div>
     </EnhancedFuturisticBackground>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function EnhancedServicesShowcase2025() {
-  return (
-    <Layout>
-      <Head>
-        <title>Enhanced Services Showcase 2025 - Zion Tech Group</title>
-        <meta name="description" content="Enhanced Services Showcase 2025 solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Enhanced Services Showcase 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional enhanced services showcase 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

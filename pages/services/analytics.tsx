@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   BarChart3, Database, Zap, Shield, Rocket, Cpu, 
@@ -49,15 +48,9 @@ export default function AnalyticsServicesPage() {
     { number: "300%", label: "ROI Improvement", icon: TrendingUp}
   ],
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function analytics() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Data Analytics Services - Zion Tech Group</title>
         <meta name="description" content="Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services." />
         <meta property="og:title" content="Data Analytics Services - Zion Tech Group" />
@@ -123,7 +116,6 @@ export default function analytics() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -174,7 +166,6 @@ export default function analytics() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -207,20 +198,4 @@ export default function analytics() {
       <EnhancedFooter />
     </div>
   )
-=======
-        <title>Analytics - Zion Tech Group</title>
-        <meta name="description" content="Analytics solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Analytics</h1>
-          <p className="text-lg text-gray-600">
-            Professional analytics solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

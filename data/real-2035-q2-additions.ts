@@ -40,7 +40,6 @@
     "competitors": ['Superhuman AI', 'Front AI', 'Gmail add - ons'],"market_size": '$10B+ email productivity',"growth_rate": '15% CAGR',"variant": 'network - futuristic',"contact_info": contact,"real_implementation": true,"implementation_details":;'
       'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',"launch_date": '2025 - 08 - 20',"customers": 48,"rating": 4 && 4.7,"reviews": 12;'
   },"reviews": 12;
-  },"reviews": 12;
   },{{{'Branching logic + A/B prompts','SMS/WhatsApp/web delivery','Real-time analytics','CSV/Sheets export',"id": 'mobile - survey - studio',"name": 'Mobile Survey Studio',"tagline":;'
       'Adaptive, mobile - first surveys with branching logic and analytics',"price": '$19',"period": '/month',"description":;'
       'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.',"features": [;'
@@ -49,7 +48,6 @@
     ],"popular": false,"icon": '📱',"color": 'from - emerald - 600 to - teal - 700',"text_color": 'text - emerald - 300',"link": '"https"://ziontechgroup.com / services / mobile - survey - studio',"market_position": 'Faster than legacy survey tools; better mobile UX',"target_audience": 'Product, CX, research teams',"trial_days": 7,"setup_time": '15 minutes',"category": 'Developer Tools',"real_service": true,"technology": ['Twilio', 'Next.js', 'Vercel / Netlify'],'Webhooks + API';'
     ],"popular": false,"icon": '📱',"integrations": ['HubSpot', 'Sheets', 'Slack'],"use_cases": ['NPS', 'Feature feedback', 'Onboarding'],"roi": '24x higher completion on mobile',"competitors": ['Typeform', 'SurveyMonkey'],"market_size": '$7B research tooling',"growth_rate": '9% CAGR',"variant": 'holographic - matrix',"contact_info": contact,"real_implementation": true,"implementation_details":;'
       'Survey builder + delivery channels + analytics + export',"launch_date": '2025 - 08 - 20',"customers": 22,"rating": 4 && 4.6,"reviews": 9;'
-  },{"reviews": 9;
   },{"reviews": 9;
   },{"id": 'niche - productivity - planner',"name": 'Niche Productivity Planner',"tagline":;'
       'Industry - specific planners with templates, rituals, and benchmarks',"price": '$12',"period": '/month',"description":;'
@@ -298,7 +296,6 @@
     ],"popular": false,"icon": '🧪',"color": 'from - cyan - 700 to - blue - 800',"text_color": 'text - cyan - 300',"link": '"https"://ziontechgroup.com / services / synthetic - journey - monitor',"market_position": 'Affordable synthetic monitoring',"target_audience": 'QA, SRE, growth',"trial_days": 7,"setup_time": '30 minutes','Reports';'
     ],"popular": false,"icon": '🧪',"category": 'Observability',"real_service": true,"technology": ['Playwright'],"integrations": ['Checkly (export)', 'Slack'],"use_cases": ['Regression checks', 'SLO monitoring'],"roi": 'Prevent broken funnels',"competitors": ['Checkly', 'Datadog Synthetics'],"market_size": '$2B testing / obs',"growth_rate": '10% CAGR',"variant": 'holographic - matrix',"contact_info": contact,"real_implementation": true,"implementation_details": 'Recorder + runner + alerts',"launch_date": '2025 - 08 - 20',"customers": 21,"rating": 4 && 4.5,"reviews": 6;'
   },{"reviews": 6;
-  },{"reviews": 6;
   },{"id": 'iam - permission - analyzer',"name": 'IAM Permission Analyzer',"tagline":;'
       'Detect over - privileged access and propose least - privilege policies',"price": '$79',"period": '/month',"description":;'
       'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',"features": [;'Policy inventory','Usage analysis','Recommendations','PR generation','Alerting';'
@@ -392,7 +389,6 @@
     "rating": 4 && 4.7,
     "reviews": 12
   },
-  {
   {
       'Branching logic + A/B prompts','
       'SMS/WhatsApp/web delivery','
@@ -969,7 +965,6 @@
     "reviews": 3
   },
   {
-  {
     }
     "id": 'postgres-index-advisor-pro''
     "name": 'Postgres Index Advisor Pro''
@@ -1098,7 +1093,6 @@
 "rating": 4.6,
 "reviews": 5
   }
-  {
   {
     }
     "id": 'synthetic - journey - monitor','
@@ -2503,7 +2497,6 @@
 		"launchDate": '2025-08-20';'
 		"customers": 24;"rating": 4 && 4.6,"reviews": 6;
 	}];];;
-=======
 ];	{'
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs''
 		];
@@ -2531,7 +2524,6 @@
   launchDate: '2025-08-20';'
 		customers: 48;,
   reviews: 12;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 	}
 ];"rating": 4 && 4.6,"reviews": 6;
 	}
@@ -3902,7 +3894,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.7,;
 		"reviews": 12;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'mobile-survey-studio',;'
@@ -3941,7 +3932,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 9;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'niche-productivity-planner',;'
@@ -3980,7 +3970,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 7;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'event-management-dashboard',;'
@@ -4019,7 +4008,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.7,;
 		"reviews": 11;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'affiliate-tracking-suite',;'
@@ -4056,7 +4044,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 5;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'smb-analytics-lite',;'
@@ -4093,7 +4080,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 8;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'it-helpdesk-portal',;'
@@ -4130,7 +4116,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.7,;
 		"reviews": 6;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'ecommerce-returns-manager',;'
@@ -4167,7 +4152,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 5;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'automated-email-followups',;'
@@ -4204,7 +4188,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 8;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'podcast-transcription-service',;'
@@ -4241,7 +4224,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 6;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'ai-seo-content-optimizer',;'
@@ -4278,7 +4260,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.7,;
 		"reviews": 10;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'social-scheduler-ai',;'
@@ -4315,7 +4296,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 7;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'lead-enrichment-api',;'
@@ -4352,7 +4332,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.4,;
 		"reviews": 4;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'consent-management-cmp',;'
@@ -4389,7 +4368,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.7,;
 		"reviews": 10;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'cookie-scanner-pro',;'
@@ -4426,7 +4404,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 5;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'statuspage-sla-tracker',;'
@@ -4463,7 +4440,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.4,;
 		"reviews": 3;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'agentic-lead-qualifier',;'
@@ -4500,7 +4476,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 7;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'gdpr-dsar-portal-lite',;'
@@ -4537,7 +4512,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 4;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'feature-flag-auditor',;'
@@ -4574,7 +4548,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.4,;
 		"reviews": 3;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'postgres-index-advisor-pro',;'
@@ -4611,7 +4584,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 5;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 's3-lifecycle-optimizer',;'
@@ -4648,7 +4620,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 4;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'pii-discovery-scanner',;'
@@ -4685,7 +4656,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 5;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'api-breaking-change-watcher',;'
@@ -4722,7 +4692,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 3;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'synthetic-journey-monitor',;'
@@ -4759,7 +4728,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 6;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'iam-permission-analyzer',;'
@@ -4796,7 +4764,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.6,;
 		"reviews": 3;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'warehouse-cost-optimizer',;'
@@ -4833,7 +4800,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 3;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'email-warmup-monitor',;'
@@ -4870,7 +4836,6 @@ export const "real2035Q2Additions": EnhancedRealMicroSaasService[] = [;
 		"rating": 4.5,;
 		"reviews": 4;
 	},;
-<<<<<<< HEAD
 	{;
 		}
 		"id": 'ai-meeting-to-ticket',;'

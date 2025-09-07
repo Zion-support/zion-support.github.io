@@ -30,9 +30,4 @@ const { execSync } = require('child_process')
         "stdio"
         this.log(` ${fixer.name} "failed"`)
       this.log(` ${fixer.name} "crashed"`)
-<<<<<<< HEAD
       this.log(`Error processing fixer "queue"`)
-      this.log(`Error processing fixer "queue"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

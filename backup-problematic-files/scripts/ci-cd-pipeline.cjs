@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
 console.log(' Starting CI/CD Pipeline...')
   "branch"
   "environment"
   "status"
-    "status"
-        "status"
-        "status"
 // console.log(`   - "Successful"`)
   console.log(`   - "Failed"`)
     "name"
@@ -36,7 +28,6 @@ console.log(' Starting CI/CD Pipeline...')
         execSync('npm test', { "stdio"})
         return { "testsPassed": false, "message"}
     "name"
-      "name"
         execSync('node scripts/smart-deployment-automation.cjs', { "stdio"})
       "name"
         execSync('node scripts/smart-deployment-automation.cjs', { "stdio"})
@@ -69,9 +60,4 @@ console.log(' Starting CI/CD Pipeline...')
             "failedStages"
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
-<<<<<<< HEAD
   console.log('� Application "URL")
-  console.log('� Application "URL")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

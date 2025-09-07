@@ -20,7 +20,6 @@ function execGitCommand(command, options = {}) {
     console.error(`Error: ${error.message}`);
     return null;
   }
-}
 
 // Function to get current status
 function getCurrentStatus() {
@@ -54,16 +53,12 @@ function resolveMergeConflicts() {
         if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.css')) {
           try {
             const content = fs.readFileSync(file, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               conflictFiles.push(file);
             }
           } catch (error) {
             // Skip files that can't be read
           }
-        }
-      }
-    }
-  }
   
   const uniqueFiles = [...new Set(conflictFiles)];
   console.log(`Found ${uniqueFiles.length} files with potential conflicts`);
@@ -74,8 +69,6 @@ function resolveMergeConflicts() {
       if (resolveMergeConflictsInFile(file)) {
         resolvedCount++;
       }
-    }
-  }
   
   console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
   return resolvedCount > 0;
@@ -87,22 +80,18 @@ function resolveMergeConflictsInFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    
+    // Remove all merge conflict markers and keep the main branch version (after )
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)    
     // Handle incomplete conflicts
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)(?=\n|$)/g, '$1');
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)(?=\n|$)/g, '$1');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======/g, '$1');
+    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(/\n([\s\S]*?)    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)/g, '$1');
     
     // Remove any remaining conflict markers
     content = content.replace(/<<<<<<< [^\n]+/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(//g, '');
+    content = content.replace(/    
     // Clean up multiple consecutive newlines
     content = content.replace(/\n{3,}/g, '\n\n');
     
@@ -117,7 +106,6 @@ function resolveMergeConflictsInFile(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Function to get all files in a directory recursively
 function getAllFiles(dir) {
@@ -133,7 +121,6 @@ function getAllFiles(dir) {
     } else {
       files.push(fullPath);
     }
-  }
   
   return files;
 }
@@ -169,7 +156,6 @@ function mergePRToMain() {
     console.error('❌ Failed to merge PR into main:', error.message);
     return false;
   }
-}
 
 // Function to check and process GitHub PRs
 function checkAndProcessGitHubPRs() {
@@ -219,7 +205,6 @@ function checkAndProcessGitHubPRs() {
           console.log(`❌ Could not resolve conflicts for PR #${pr.number}`);
           continue;
         }
-      }
       
       // Try to merge the PR
       try {
@@ -230,7 +215,6 @@ function checkAndProcessGitHubPRs() {
       } catch (error) {
         console.log(`❌ Failed to merge PR #${pr.number}: ${error.message}`);
       }
-    }
     
     console.log(`\\n📈 Summary: Merged ${mergedCount}/${prs.length} PRs`);
     return true;
@@ -238,7 +222,6 @@ function checkAndProcessGitHubPRs() {
     console.error('❌ Error processing GitHub PRs:', error.message);
     return false;
   }
-}
 
 // Function to implement improvements
 function implementImprovements() {
@@ -290,7 +273,6 @@ function implementImprovements() {
     console.error('❌ Error implementing improvements:', error.message);
     return false;
   }
-}
 
 // Function to merge improvements back to main
 function mergeImprovementsToMain() {
@@ -318,7 +300,6 @@ function mergeImprovementsToMain() {
     console.error('❌ Error merging improvements to main:', error.message);
     return false;
   }
-}
 
 // Improvement functions (simplified versions)
 function enhanceHomepage() {
@@ -409,7 +390,6 @@ async function main() {
     console.error('❌ Error during workflow execution:', error.message);
     process.exit(1);
   }
-}
 
 // Run the main function
 main();

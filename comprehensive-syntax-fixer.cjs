@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
@@ -97,7 +96,6 @@ const path = require('path');
         lines[i] = line;
         modified = true;
       }
-    }
 
     if (modified) {
       fs.writeFileSync(filePath, lines.join('\n'));
@@ -134,8 +132,6 @@ for (const file of files) {
     if (fixFile(file)) {
       fixedCount++;
     }
-  }
-}
 
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Comprehensive syntax fixing complete!');
@@ -169,7 +165,6 @@ class ComprehensiveSyntaxFixer {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-<<<<<<< HEAD
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`, 'PROGRESS');
     try {
@@ -189,12 +184,7 @@ class ComprehensiveSyntaxFixer {
         output: error.stdout || error.stderr,
       };
     }
-  }
 
-=======
-  async fixAllSyntaxErrors() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
->>>>>>> origin/main
   async findFilesWithErrors() {
     this.log('🔍 Finding files with syntax errors...', 'PROGRESS');
     
@@ -225,7 +215,6 @@ class ComprehensiveSyntaxFixer {
       this.log(`Error finding files: ${error.message}`, 'ERROR');
       return [];
     }
-  }
 
   async fixCommonSyntaxErrors(filePath) {
     try {
@@ -265,12 +254,10 @@ class ComprehensiveSyntaxFixer {
         },
         // Fix merge conflict markers
         {
-          pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-          replacement: ''
+          pattern: /[\s\S]*?[\s\S]*?          replacement: ''
         },
         {
-          pattern: /=======[\s\S]*?>>>>>>> [^\n]+/g,
-          replacement: ''
+          pattern: /[\s\S]*?          replacement: ''
         },
         // Fix malformed JSX attributes
         {
@@ -291,7 +278,6 @@ class ComprehensiveSyntaxFixer {
             }
             return match;
           }
-        }
       ];
 
       for (const fix of fixes) {
@@ -300,68 +286,9 @@ class ComprehensiveSyntaxFixer {
           content = newContent;
           modified = true;
         }
-      }
 
-<<<<<<< HEAD
       if (modified) {
         fs.writeFileSync(filePath, content);
-=======
-  hasSyntaxIssues(content) {
-    // Check for common syntax issues
-    const issues = [
-      /<<<<<<< HEAD/,  // Merge conflict markers
-      /=======/,       // Merge conflict markers
-      /      /succes: s:/,    // Malformed object properties
-      /duratio: n:/,   // Malformed object properties
-      /error: s:/,     // Malformed object properties
-      /warning: s:/,   // Malformed object properties
-      /timestam: p:/,  // Malformed object properties
-      /result: s:/,    // Malformed object properties
-      /recommendation: s:/, // Malformed object properties
-      /Erro: r:/,      // Malformed strings
-      /Warnin: g:/,    // Malformed strings
-      /Runnin: g:/,    // Malformed strings
-      /faile: d:/,     // Malformed strings
-      /outpu: t:/,     // Malformed strings
-      /erro: r:/,      // Malformed strings
-      /Fatal: error:/, // Malformed strings
-      /Total: Duration:/, // Malformed strings
-      /Successful: Tasks:/, // Malformed strings
-      /Successful: Tasks:/, // Malformed strings
-      /fea: t:/,       // Malformed strings
-    ];
-    
-    return issues.some(pattern => pattern.test(content));
-  }
-
-  fixFile(filePath) {
-    try {
-      this.log(`Fixing: ${filePath}`, 'PROGRESS');
-      
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-      
-      // Fix common syntax issues
-      content = this.fixCommonIssues(content);
-      
-      // Fix merge conflicts
-      content = this.fixMergeConflicts(content);
-      
-      // Fix malformed object properties
-      content = this.fixObjectProperties(content);
-      
-      // Fix malformed strings
-      content = this.fixMalformedStrings(content);
-      
-      // Fix JSX issues
-      content = this.fixJSXIssues(content);
-      
-      // Fix TypeScript issues
-      content = this.fixTypeScriptIssues(content);
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8');
->>>>>>> origin/main
         this.fixedFiles.push(filePath);
         this.log(`Fixed syntax errors in: ${filePath}`, 'SUCCESS');
         return true;
@@ -373,98 +300,9 @@ class ComprehensiveSyntaxFixer {
       this.errors.push(`${filePath}: ${error.message}`);
       return false;
     }
-  }
 
-<<<<<<< HEAD
   async fixTypeScriptErrors() {
     this.log('🔧 Fixing TypeScript errors...', 'PROGRESS');
-=======
-  fixCommonIssues(content) {
-    // Fix common syntax patterns
-    const fixes = [
-      // Fix malformed object properties
-      { pattern: /succes: s:/g, replacement: 'success:' },
-      { pattern: /duratio: n:/g, replacement: 'duration:' },
-      { pattern: /error: s:/g, replacement: 'errors:' },
-      { pattern: /warning: s:/g, replacement: 'warnings:' },
-      { pattern: /timestam: p:/g, replacement: 'timestamp:' },
-      { pattern: /result: s:/g, replacement: 'results:' },
-      { pattern: /recommendation: s:/g, replacement: 'recommendations:' },
-      
-      // Fix malformed strings
-      { pattern: /Erro: r:/g, replacement: 'Error:' },
-      { pattern: /Warnin: g:/g, replacement: 'Warning:' },
-      { pattern: /Runnin: g:/g, replacement: 'Running:' },
-      { pattern: /faile: d:/g, replacement: 'failed:' },
-      { pattern: /outpu: t:/g, replacement: 'output:' },
-      { pattern: /erro: r:/g, replacement: 'error:' },
-      { pattern: /Fatal: error:/g, replacement: 'Fatal error:' },
-      { pattern: /Total: Duration:/g, replacement: 'Total Duration:' },
-      { pattern: /Successful: Tasks:/g, replacement: 'Successful Tasks:' },
-      { pattern: /fea: t:/g, replacement: 'feat:' },
-      
-      // Fix semicolon issues
-      { pattern: /npm run: build:analyze/g, replacement: 'npm run build:analyze' },
-      { pattern: /npm run build;/g, replacement: 'npm run build' },
-      { pattern: /npm run clean;/g, replacement: 'npm run clean' },
-      { pattern: /npm install;/g, replacement: 'npm install' },
-      { pattern: /npx tsc --noEmit --skipLibCheck;/g, replacement: 'npx tsc --noEmit --skipLibCheck' },
-      { pattern: /npx eslint \. --max-warnings 1000;/g, replacement: 'npx eslint . --max-warnings 1000' },
-      { pattern: /npx eslint \. --fix --max-warnings 1000;/g, replacement: 'npx eslint . --fix --max-warnings 1000' },
-      { pattern: /npm audit --audit-level moderate;/g, replacement: 'npm audit --audit-level moderate' },
-      { pattern: /npm audit --json;/g, replacement: 'npm audit --json' },
-      { pattern: /node scripts\/generate-sitemap\.cjs;/g, replacement: 'node scripts/generate-sitemap.cjs' },
-      { pattern: /node scripts\/generate-search-index\.cjs;/g, replacement: 'node scripts/generate-search-index.cjs' },
-      { pattern: /ls -la \.next;/g, replacement: 'ls -la .next' },
-    ];
-    
-    for (const fix of fixes) {
-      content = content.replace(fix.pattern, fix.replacement);
-    }
-    
-    return content;
-  }
-
-  fixMergeConflicts(content) {
-    // Remove merge conflict markers
-    return content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-      .replace(/=======[\s\S]*?  }
-
-  fixObjectProperties(content) {
-    // Fix malformed object property syntax
-    return content
-      .replace(/(\w+): s: /g, '$1: ')
-      .replace(/(\w+): n: /g, '$1: ')
-      .replace(/(\w+): p: /g, '$1: ');
-  }
-
-  fixMalformedStrings(content) {
-    // Fix malformed string patterns
-    return content
-      .replace(/(\w+): (\w+): /g, '$1: ')
-      .replace(/(\w+): (\w+): /g, '$1: ');
-  }
-
-  fixJSXIssues(content) {
-    // Fix common JSX issues
-    return content
-      .replace(/jsx-a11y\/alt-tex: t: warn/g, 'jsx-a11y/alt-text: warn')
-      .replace(/jsx-a11y\/aria-rol: e: warn/g, 'jsx-a11y/aria-role: warn')
-      .replace(/jsx-a11y\/tabindex-no-positiv: e: warn/g, 'jsx-a11y/tabindex-no-positive: warn');
-  }
-
-  fixTypeScriptIssues(content) {
-    // Fix common TypeScript issues
-    return content
-      .replace(/const (\w+) = require\(/g, 'const $1 = require(')
-      .replace(/module\.exports = /g, 'module.exports = ');
-  }
-
-  async run() {
-    this.log('🚀 Starting Comprehensive Syntax Fixer', 'PROGRESS');
-    this.log('='.repeat(60));
->>>>>>> origin/main
     
     try {
       // Run TypeScript check
@@ -489,7 +327,6 @@ class ComprehensiveSyntaxFixer {
       this.log(`TypeScript fix failed: ${error.message}`, 'ERROR');
       return false;
     }
-  }
 
   async runESLintFix() {
     this.log('🔧 Running ESLint auto-fix...', 'PROGRESS');
@@ -511,7 +348,6 @@ class ComprehensiveSyntaxFixer {
       this.log(`ESLint fix failed: ${error.message}`, 'ERROR');
       return false;
     }
-  }
 
   async cleanCorruptedFiles() {
     this.log('🧹 Cleaning corrupted files...', 'PROGRESS');
@@ -529,7 +365,7 @@ class ComprehensiveSyntaxFixer {
             const content = fs.readFileSync(file, 'utf8');
             
             // Check if file is severely corrupted
-            if (content.length < 100 || content.includes('<<<<<<< HEAD') || content.includes('=======')) {
+            if (content.length < 100 || content.includes('') || content.includes('')) {
               this.log(`Removing corrupted file: ${file}`, 'WARNING');
               fs.unlinkSync(file);
               this.warnings.push(`Removed corrupted file: ${file}`);
@@ -537,12 +373,9 @@ class ComprehensiveSyntaxFixer {
           } catch (error) {
             this.log(`Error processing ${file}: ${error.message}`, 'WARNING');
           }
-        }
       } catch (error) {
         this.log(`Error cleaning files: ${error.message}`, 'WARNING');
       }
-    }
-  }
 
   async findFilesByPattern(pattern) {
     const { execSync } = require('child_process');
@@ -555,7 +388,6 @@ class ComprehensiveSyntaxFixer {
     } catch (error) {
       return [];
     }
-  }
 
   async runBuildTest() {
     this.log('🏗️ Testing build after fixes...', 'PROGRESS');
@@ -595,10 +427,8 @@ class ComprehensiveSyntaxFixer {
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
-=======
 const fs = require('fs');
 const path = require('path');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -647,7 +477,6 @@ function fixSyntaxErrors(filePath) {;
     console.error(`Error processing ${filePath} `, error.message);
     return false;
   }
-}
 ;
 function findFilesWithErrors(dir) {;
   const files = [];
@@ -669,9 +498,6 @@ function findFilesWithErrors(dir) {;
         if (extensions.includes(ext)) {;
           files.push(fullPath);
         }
-      }
-    }
-  }
   ;
   traverse(dir);
   return files;
@@ -688,10 +514,8 @@ for (const file of files) {;
   if (fixSyntaxErrors(file)) {;
     fixedCount++;
   }
-}
 
   }
-}
 
 
 
@@ -770,8 +594,6 @@ for (const file of files) {;
     } finally {
       this.generateReport();
     }
-  }
-}
 
 // Run the syntax fixer
 if (require.main === module) {

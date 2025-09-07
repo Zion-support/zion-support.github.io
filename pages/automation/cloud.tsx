@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
@@ -9,11 +8,6 @@ export default function CloudAutomationHub() {
       .then((d) => setLogs(d.logs || []))
       .catch(() => setLogs([]))
   }, []),
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 export default function cloud() {
   return (
@@ -30,8 +24,6 @@ export default function cloud() {
             Professional cloud solutions tailored to your business needs.
           </p>
         </div>
-      </div>
-<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark: hover: bg-gray-900">
@@ -65,10 +57,5 @@ export default function cloud() {
         <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
-    </div>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

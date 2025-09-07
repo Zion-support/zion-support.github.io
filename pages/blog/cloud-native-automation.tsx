@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -11,7 +8,6 @@ export default function cloudnativeautomation() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>
           Building Cloud-Native Automation Infrastructure | Zion Tech Group
         </title>
@@ -225,7 +221,6 @@ export default function cloudnativeautomation() {
                     View Case Studies
                   </Link>
                 </div>
-              </div>
             </article>
           </div>
         </main>
@@ -233,20 +228,3 @@ export default function cloudnativeautomation() {
     </>
   )
 }
-=======
-        <title>Cloud Native Automation - Zion Tech Group</title>
-        <meta name="description" content="Cloud Native Automation solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud Native Automation</h1>
-          <p className="text-lg text-gray-600">
-            Professional cloud native automation solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

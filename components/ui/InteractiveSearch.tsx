@@ -38,17 +38,5 @@ className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 "hover":text-
   );
 }
 
-<<<<<<< HEAD
 "
-=======
-/> {
-  value && (<button onClick= {
-  () => setValue ('') 
-}className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" > ✕ </button>) 
-}</motion.div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

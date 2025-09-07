@@ -147,7 +147,6 @@ export default function Status() {;
       } catch (err) {;
         logWarn('Failed to fetch uptime', { data: err });
       }
-    }
     fetchUptime()
   }, []),
   const getStatusIcon = (status: ServiceStatus['status']) => {',
@@ -196,7 +195,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
   const formatUptime = (seconds:,  number) => {,
 
-<<<<<<< HEAD:src_backup/pages/Status.tsx
+:src_backup/pages/Status.tsx
   )
 import { SEO } from '@/components/SEO';
 import { useState, useEffect } from 'react';
@@ -236,6 +235,5 @@ default: return (<> <SEO title="API Status" description="View real-time service 
 }'"
   )
 }
-<<<<<<< HEAD:src_backup/pages/Status.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
+:src_backup/pages/Status.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -72,8 +72,6 @@ const ServicesPage: React.FC = () => {
               Learn More →
             </a>
           </div>
-        </div>
-      </div>
     )
   }
 
@@ -331,6 +329,5 @@ const ServicesPage: React.FC = () => {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-<<<<<<< HEAD:src_backup/pages/ServicesPage.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
+:src_backup/pages/ServicesPage.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533

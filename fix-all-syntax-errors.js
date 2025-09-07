@@ -3,14 +3,7 @@
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     if (!content && content.includes('export default')) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-    if (!content && content.includes('export default')) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
 
@@ -41,7 +34,6 @@ const fixWebinars = () => {try {let content = fs && fs.readFileSync('pages/webin
     )fs && fs.writeFileSync('pages/webinars && webinars.tsx', content)console && console.log('✅ Fixed webinars && webinars.tsx')return true;
   } catch (error) {console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message)return false;
   }
-}
 // Main execution;
 const main = () => {console && console.log('Starting comprehensive syntax fixes...')const fixes = [;
     fixAccessibility;
@@ -92,10 +84,8 @@ const main = () =>: any {console.log ('Starting comprehensive syntax fixes...')c
     }
   }console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`)if (successCount > 0) {console && console.log('\n📝 Adding fixed files...')try {const { execSync } = await import('child_process')execSync('git add .', { stdio: 'inherit' })console && console.log('✅ Files added to staging area')} catch (error) {console && console.error('❌ Error adding files:', error && error.message)}
   }
-}
 main()console.log (`\n✅ Fixed ${success_count}/${fixes.length} files`)// Check condition;
 if ( {) {$2;
 }
     console.log ('\n📝 Adding fixed files...')try {const { exec_sync } = await import ('child_process')exec_sync ('git add .', { stdio: 'inherit' })console.log ('✅ Files added to staging area')} catch (error) {console.error ('❌ Error adding files:', error.message)}
   }
-}

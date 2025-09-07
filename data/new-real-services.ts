@@ -1487,8 +1487,6 @@ export const "newRealServices": EnhancedRealMicroSaasService[] = [
     useCases: ['LLM app monitoringCost controlPolicy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['LangfuseArizeWeights & Biases'],
-=======
-=======
   {}
 '
       'Questionnaire templates','
@@ -1504,7 +1502,6 @@ export const "newRealServices": EnhancedRealMicroSaasService[] = [
     competitors: ['Whistic', 'OneTrust'],'
     market_size: '$4B Third - party Risk','
     growth_rate: 'High','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'quantum - cyberpunk',
     contact_info: contact,
     real_implementation: true,'
@@ -1514,25 +1511,16 @@ export const "newRealServices": EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
-<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
-=======
 '
     id: 'llm-observability-suite', name: 'LLM Observability Suite','
     tagline: 'Track latency, cost, quality and drift across all prompts','
     price: '$199', period: '/month','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
     features: ['
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
@@ -1553,92 +1541,51 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 22;
   }
-<<<<<<< HEAD
     useCases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$5B+ AI Ops and Observability',
     growthRate: 'Rapid growth with LLM adoption',
     variant: 'quantum-holographic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launchDate: '2025-01-10',
     customers: 32,
     rating: 4.8,
 
     reviews: 22},
-=======
-    implementationDetails:
-      'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
-    launchDate: '2025-01-10',
-    customers: 32,
-    rating: 4.8,
-    reviews: 22,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi-touch outbound with real-time enrichment',
     price: '$129',
     period: '/month',
-<<<<<<< HEAD
     description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
     features: [
       'Prospect enrichment via public sourcesPersonalized email generationSequence and follow-up schedulingA/B testing and analyticsSPF/DKIM/DMARC checksInbox rotation support'
-=======
-    description:
-      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
-    features: [
-    reviews: 58
-  }
-      'Prospect enrichment via public sources',
-      'Personalized email generation',
-      'Sequence and follow-up scheduling',
-      'A/B testing and analytics',
-      'SPF/DKIM/DMARC checks',
-      'Inbox rotation support',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: false,
     icon: '✉️',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-sales-email-copilot',
-<<<<<<< HEAD
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
-=======
-    marketPosition:
-      'Lower cost with better personalization vs. Jasper and constant-contact tools.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'B2B startups, agencies, SDR teams',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'Sales & Marketing',
     realService: true,
-<<<<<<< HEAD
     technology: ['Next.jsWorkersPostgreSQL'],
     integrations: ['HubSpotSalesforceApolloLemlist'],
     useCases: ['Outbound sequencesUpsell campaignsReactivation'],
     roi: 'Increase replies 2–5x with hyper-personalization',
     competitors: ['Copy.aiLavenderInstantly'],
-=======
-    technology: ['Next.js', 'Workers', 'PostgreSQL'],
-    integrations: ['HubSpot', 'Salesforce', 'Apollo', 'Lemlist'],
-    useCases: ['Outbound sequences', 'Upsell campaigns', 'Reactivation'],
-    roi: 'Increase replies 2–5x with hyper-personalization',
-    competitors: ['Copy.ai', 'Lavender', 'Instantly'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$15B Sales Engagement',
     growthRate: 'Strong growth',
     variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.',
     launchDate: '2024-12-20',
     customers: 120,
@@ -1646,74 +1593,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 58
   }
     reviews: 58},
-=======
-    implementationDetails:
-      'Sequencer, enrichment adapters, and warm-up utilities.',
-    launchDate: '2024-12-20',
-    customers: 120,
-    rating: 4.7,
-    reviews: 58,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'security-posture-as-code',
     name: 'Security Posture as Code',
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation',
     price: '$399',
     period: '/month',
-<<<<<<< HEAD
     description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
     features: [
       'Policy packs for CIS/NISTKubernetes and cloud postureAuto-remediation PRsEvidence collection and reportsSOC2/ISO 27001 export'
-=======
-    description:
-      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
-    features: [
-    reviews: 14
-  }
-      'Policy packs for CIS/NIST',
-      'Kubernetes and cloud posture',
-      'Auto-remediation PRs',
-      'Evidence collection and reports',
-      'SOC2/ISO 27001 export',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/security-posture-as-code',
-<<<<<<< HEAD
     marketPosition: 'Brings policy-as-code and compliance automation into one product.',
-=======
-    marketPosition:
-      'Brings policy-as-code and compliance automation into one product.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Platform teams, security engineers, compliance leads',
     trialDays: 21,
     setupTime: '1–3 days',
     category: 'Cybersecurity',
     realService: true,
-<<<<<<< HEAD
     technology: ['OPAKyvernoTerraformGitHub Actions'],
     integrations: ['AWSAzureGCPGitHubGitLab'],
     useCases: ['Baseline enforcementAudit readinessDrift detection'],
     roi: 'Reduce audit prep time by 70%',
     competitors: ['WizPrisma CloudSnyk'],
-=======
-    technology: ['OPA', 'Kyverno', 'Terraform', 'GitHub Actions'],
-    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab'],
-    useCases: ['Baseline enforcement', 'Audit readiness', 'Drift detection'],
-    roi: 'Reduce audit prep time by 70%',
-    competitors: ['Wiz', 'Prisma Cloud', 'Snyk'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$30B Cloud Security',
     growthRate: 'High growth',
     variant: 'neural-quantum',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
     customers: 18,
@@ -1721,73 +1631,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 14
   }
     reviews: 14},
-=======
-    implementationDetails:
-      'Policy engine plus cloud/K8s scanners and fix generators.',
-    launchDate: '2025-01-05',
-    customers: 18,
-    rating: 4.6,
-    reviews: 14,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'etl-observability-starter',
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
     price: '$99',
     period: '/month',
-<<<<<<< HEAD
     description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [
       'Freshness and volume checksSchema drift detectionSLA and SLO trackingIncident routing to Slack/Teams'
-=======
-    description:
-      'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
-    features: [
-    reviews: 12
-  }
-      'Freshness and volume checks',
-      'Schema drift detection',
-      'SLA and SLO tracking',
-      'Incident routing to Slack/Teams',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: false,
     icon: '🗄️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/etl-observability-starter',
-<<<<<<< HEAD
     marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
-=======
-    marketPosition:
-      'Simpler and faster to adopt vs. enterprise data observability tools.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Analytics engineers, data teams',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Data & Analytics',
     realService: true,
-<<<<<<< HEAD
     technology: ['DebeziumAirflowdbt'],
     integrations: ['BigQuerySnowflakeRedshiftPostgres'],
     useCases: ['Pipeline healthData qualitySLA tracking'],
     roi: 'Reduce data incidents 30–60%',
     competitors: ['Monte CarloBigeye'],
-=======
-    technology: ['Debezium', 'Airflow', 'dbt'],
-    integrations: ['BigQuery', 'Snowflake', 'Redshift', 'Postgres'],
-    useCases: ['Pipeline health', 'Data quality', 'SLA tracking'],
-    roi: 'Reduce data incidents 30–60%',
-    competitors: ['Monte Carlo', 'Bigeye'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$3B Data Observability',
     growthRate: 'Growing',
     variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Light agents and metadata collectors with warehouse connectors.',
     launchDate: '2025-01-12',
     customers: 25,
@@ -1795,37 +1669,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 12
   }
     reviews: 12},
-=======
-    implementationDetails:
-      'Light agents and metadata collectors with warehouse connectors.',
-    launchDate: '2025-01-12',
-    customers: 25,
-    rating: 4.5,
-    reviews: 12,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'api-performance-shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
     price: '$149',
     period: '/month',
-<<<<<<< HEAD
     description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
     features: [
       'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
-=======
-    description:
-      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
-    features: [
-    reviews: 9
-  }
-      'Global CDN edge caching',
-      'Dynamic rate limiting',
-      'Anomaly and abuse detection',
-      'Zero-downtime deploys with shadow traffic',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     icon: '🛰️',
@@ -1838,41 +1690,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: 'Same day',
     category: 'DevOps & Automation',
     realService: true,
-<<<<<<< HEAD
     technology: ['WorkersRustRedis'],
     integrations: ['CloudflareFastlyAkamai'],
     useCases: ['API accelerationAbuse protectionCost control'],
     roi: 'Reduce p99 latency up to 60%',
     competitors: ['Cloudflare EnterpriseAkamai API Acceleration'],
-=======
-    technology: ['Workers', 'Rust', 'Redis'],
-    integrations: ['Cloudflare', 'Fastly', 'Akamai'],
-    useCases: ['API acceleration', 'Abuse protection', 'Cost control'],
-    roi: 'Reduce p99 latency up to 60%',
-    competitors: ['Cloudflare Enterprise', 'Akamai API Acceleration'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$10B API Security',
     growthRate: 'Strong',
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.',
     launchDate: '2025-01-15',
     customers: 14,
     rating: 4.7,
     reviews: 9
   }
-=======
-    implementationDetails:
-      'Managed edge configs and anomaly ML with safe rollout tools.',
-    launchDate: '2025-01-15',
-    customers: 14,
-    rating: 4.7,
-    reviews: 9,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
@@ -1883,7 +1716,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
     features: [
-<<<<<<< HEAD
     reviews: 9},
   {
     id: 'ai-product-analytics',
@@ -1894,44 +1726,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
     features: [
       'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
-=======
-    reviews: 20
-  }
-      'Auto-segmentation and cohorts',
-      'LLM query interface',
-      'Retention and churn signals',
-      'Anomaly alerts to Slack/Teams',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: false,
     icon: '📊',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-product-analytics',
-<<<<<<< HEAD
     marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
-=======
-    marketPosition:
-      'Brings AI querying and anomaly detection without vendor lock-in.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Product teams, founders, analysts',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Analytics & Business Intelligence',
     realService: true,
-<<<<<<< HEAD
     technology: ['Next.jsPostHogClickHouse'],
     integrations: ['SegmentRudderStackSnowplow'],
     useCases: ['Growth analyticsRetentionExperimentation'],
     roi: 'Find growth levers 2x faster',
     competitors: ['AmplitudeMixpanel'],
-=======
-    technology: ['Next.js', 'PostHog', 'ClickHouse'],
-    integrations: ['Segment', 'RudderStack', 'Snowplow'],
-    useCases: ['Growth analytics', 'Retention', 'Experimentation'],
-    roi: 'Find growth levers 2x faster',
-    competitors: ['Amplitude', 'Mixpanel'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$8B Product Analytics',
     growthRate: 'Growing',
     variant: 'holographic-advanced',
@@ -1941,36 +1752,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-02',
     customers: 41,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 20
   }
     reviews: 20},
-=======
-    reviews: 20,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
     tagline: 'Self-serve answers with RAG, forms, and secure handoff',
     price: '$99',
     period: '/month',
-<<<<<<< HEAD
     description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
     features: [
       'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
-=======
-    description:
-      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
-    features: [
-    reviews: 48
-  }
-      'Multi-channel widgets',
-      'Grounded answers with citations',
-      'Secure human handoff',
-      'Analytics and CSAT tracking',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     icon: '💬',
@@ -1983,19 +1776,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: 'Same day',
     category: 'Customer Support & Success',
     realService: true,
-<<<<<<< HEAD
     technology: ['RAGVector DBNext.js'],
     integrations: ['ZendeskIntercomFreshdesk'],
     useCases: ['Self-serve supportTicket reductionCSAT improvement'],
     roi: 'Reduce tickets 30–50%',
     competitors: ['Intercom FinAda'],
-=======
-    technology: ['RAG', 'Vector DB', 'Next.js'],
-    integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
-    useCases: ['Self-serve support', 'Ticket reduction', 'CSAT improvement'],
-    roi: 'Reduce tickets 30–50%',
-    competitors: ['Intercom Fin', 'Ada'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$10B Support Tech',
     growthRate: 'Strong',
     variant: 'quantum-cyberpunk',
@@ -2005,36 +1790,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2024-12-15',
     customers: 75,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 48
   }
     reviews: 48},
-=======
-    reviews: 48,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
     price: '$249',
     period: '/month',
-<<<<<<< HEAD
     description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [
       'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
-=======
-    description:
-      'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
-    features: [
-    reviews: 11
-  }
-      'Rightsizing recommendations',
-      'Anomaly detection',
-      'Savings plan/RIs planning',
-      'Tag hygiene and showback',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     icon: '💸',
@@ -2047,19 +1814,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: '2–5 days',
     category: 'Cloud & Infrastructure',
     realService: true,
-<<<<<<< HEAD
     technology: ['AWS Cost ExplorerAzure CostGCP Billing'],
     integrations: ['AWSAzureGCP'],
     useCases: ['Cost controlAnomaly responseBudgeting'],
     roi: 'Save 15–35% on cloud spend',
     competitors: ['CloudZeroKubecost'],
-=======
-    technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
-    integrations: ['AWS', 'Azure', 'GCP'],
-    useCases: ['Cost control', 'Anomaly response', 'Budgeting'],
-    roi: 'Save 15–35% on cloud spend',
-    competitors: ['CloudZero', 'Kubecost'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$6B FinOps',
     growthRate: 'Growing',
     variant: 'quantum-neural',
@@ -2069,66 +1828,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-03',
     customers: 19,
     rating: 4.5,
-<<<<<<< HEAD
     reviews: 11
   }
     reviews: 11},
-=======
-    reviews: 11,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'privacy-vault',
     name: 'Privacy Vault',
     tagline: 'Tokenize PII and control access with audit trails',
     price: '$179',
     period: '/month',
-<<<<<<< HEAD
     description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [
       'Field-level encryptionTokenization APIsConsent enforcementAudit trail and reporting'
-=======
-    description:
-      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
-    features: [
-    reviews: 7
-  }
-      'Field-level encryption',
-      'Tokenization APIs',
-      'Consent enforcement',
-      'Audit trail and reporting',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: false,
     icon: '🔏',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/privacy-vault',
-<<<<<<< HEAD
     marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
-=======
-    marketPosition:
-      'Developer-first alternative to heavy enterprise privacy suites.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Developers, privacy and legal teams',
     trialDays: 14,
     setupTime: '1–3 days',
     category: 'Security & Compliance',
     realService: true,
-<<<<<<< HEAD
     technology: ['KMSHSMPostgreSQL'],
     integrations: ['AWS KMSHashiCorp Vault'],
     useCases: ['PCI/PII protectionConsent managementData sharing'],
     roi: 'Reduce breach risk and compliance effort',
     competitors: ['SkyflowVery Good Security'],
-=======
-    technology: ['KMS', 'HSM', 'PostgreSQL'],
-    integrations: ['AWS KMS', 'HashiCorp Vault'],
-    useCases: ['PCI/PII protection', 'Consent management', 'Data sharing'],
-    roi: 'Reduce breach risk and compliance effort',
-    competitors: ['Skyflow', 'Very Good Security'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$4B Privacy Tech',
     growthRate: 'Growing',
     variant: 'holographic-neural',
@@ -2138,36 +1866,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-07',
     customers: 9,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 7
   }
     reviews: 7},
-=======
-    reviews: 7,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'ai-fraud-detection-lite',
     name: 'AI Fraud Detection Lite',
     tagline: 'Graph-based anomalies with explainability for SMBs',
     price: '$159',
     period: '/month',
-<<<<<<< HEAD
     description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [
       'Graph-based anomaly detectionExplainability reportsRisk scoring APIWorkflow actions and webhooks'
-=======
-    description:
-      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
-    features: [
-    reviews: 8
-  }
-      'Graph-based anomaly detection',
-      'Explainability reports',
-      'Risk scoring API',
-      'Workflow actions and webhooks',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: false,
     icon: '🧠',
@@ -2180,25 +1890,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: '2–5 days',
     category: 'Financial Technology',
     realService: true,
-<<<<<<< HEAD
     technology: ['Graph DBPythonKafka'],
     integrations: ['StripeAdyenPlaid'],
     useCases: ['Chargeback reductionAccount takeoverAbuse prevention'],
     roi: 'Lower chargebacks by 30–60%',
     competitors: ['SiftSEON'],
-=======
-    technology: ['Graph DB', 'Python', 'Kafka'],
-    integrations: ['Stripe', 'Adyen', 'Plaid'],
-    useCases: ['Chargeback reduction', 'Account takeover', 'Abuse prevention'],
-    roi: 'Lower chargebacks by 30–60%',
-    competitors: ['Sift', 'SEON'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$10B Fraud Prevention',
     growthRate: 'High',
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.',
     launchDate: '2025-01-09',
     customers: 11,
@@ -2206,67 +1907,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 8
   }
     reviews: 8},
-=======
-    implementationDetails:
-      'Streaming and batch detectors with human-in-the-loop review.',
-    launchDate: '2025-01-09',
-    customers: 11,
-    rating: 4.5,
-    reviews: 8,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
     price: '$199',
     period: '/month',
-<<<<<<< HEAD
     description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
     features: [
       'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
-=======
-    description:
-      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
-    features: [
-    reviews: 5
-  }
-      'HA with automatic failover',
-      'Continuous backups and PITR',
-      'Slow query insights and indexing',
-      'Encryption and access controls',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     icon: '🗃️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/managed-postgres-ha',
-<<<<<<< HEAD
     marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
-=======
-    marketPosition:
-      'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     targetAudience: 'Startups, SMBs, data teams',
     trialDays: 14,
     setupTime: '1–2 days',
     category: 'Observability',
     realService: true,
-<<<<<<< HEAD
     technology: ['PostgreSQLPatroniWal-G'],
     integrations: ['GrafanaDatadog'],
     useCases: ['Reliable databasesComplianceScaling'],
     roi: 'Avoid outages and accelerate teams',
     competitors: ['CrunchyDataAiven'],
-=======
-    technology: ['PostgreSQL', 'Patroni', 'Wal-G'],
-    integrations: ['Grafana', 'Datadog'],
-    useCases: ['Reliable databases', 'Compliance', 'Scaling'],
-    roi: 'Avoid outages and accelerate teams',
-    competitors: ['CrunchyData', 'Aiven'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$12B DBaaS',
     growthRate: 'High',
     variant: 'quantum',
@@ -2276,36 +1942,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-16',
     customers: 8,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 5
   }
     reviews: 5},
-=======
-    reviews: 5,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
     price: '$79',
     period: '/month',
-<<<<<<< HEAD
     description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [
       'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
-=======
-    description:
-      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
-    features: [
-    reviews: 6
-  }
-      'Core Web Vitals dashboards',
-      'Session replay and heatmaps',
-      'Error tracking and sourcemaps',
-      'A/B test impact analysis',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: true,
     icon: '⚡',
@@ -2318,19 +1966,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: '30 minutes',
     category: 'Quality & Monitoring',
     realService: true,
-<<<<<<< HEAD
     technology: ['JS SDKClickHouse'],
     integrations: ['PostHogSegment'],
     useCases: ['UX improvementsConversion lift'],
     roi: 'Lift conversion 2–10% by fixing performance',
     competitors: ['SentryNew Relic Browser'],
-=======
-    technology: ['JS SDK', 'ClickHouse'],
-    integrations: ['PostHog', 'Segment'],
-    useCases: ['UX improvements', 'Conversion lift'],
-    roi: 'Lift conversion 2–10% by fixing performance',
-    competitors: ['Sentry', 'New Relic Browser'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$5B APM',
     growthRate: 'Growing',
     variant: 'holographic',
@@ -2340,36 +1980,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-17',
     customers: 12,
     rating: 4.5,
-<<<<<<< HEAD
     reviews: 6
   }
     reviews: 6},
-=======
-    reviews: 6,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
     price: '$99',
     period: '/month',
-<<<<<<< HEAD
     description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [
       'Site audits and fixesSchema and sitemapsProgrammatic pagesInternal linking graph'
-=======
-    description:
-      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
-    features: [
-    reviews: 4
-  }
-      'Site audits and fixes',
-      'Schema and sitemaps',
-      'Programmatic pages',
-      'Internal linking graph',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ],
     popular: false,
     icon: '🔎',
@@ -2382,19 +2004,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setupTime: 'Same day',
     category: 'Developer Tools',
     realService: true,
-<<<<<<< HEAD
     technology: ['Node.jsHeadless Chrome'],
     integrations: ['Search Console'],
     useCases: ['Traffic growthTech SEO'],
     roi: 'Increase organic traffic 20–100%',
     competitors: ['AhrefsSemrush'],
-=======
-    technology: ['Node.js', 'Headless Chrome'],
-    integrations: ['Search Console'],
-    useCases: ['Traffic growth', 'Tech SEO'],
-    roi: 'Increase organic traffic 20–100%',
-    competitors: ['Ahrefs', 'Semrush'],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     marketSize: '$6B SEO Tools',
     growthRate: 'Stable',
     variant: 'neural',
@@ -2404,197 +2018,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-18',
     customers: 10,
     rating: 4.4,
-<<<<<<< HEAD
     reviews: 4
   }
     reviews: 4},
-=======
-    reviews: 4,
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     id: 'webhook-relay-replay-pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
     price: '$59',
     period: '/month',
-<<<<<<< HEAD
-=======
-    description:
-      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
-    features: [
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
 
-];
 ];
 ;
 
 
 
-<<<<<<< HEAD
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  {'
-    id: 'ai-sales-email-copilot''
-    name: 'AI Sales Email Copilot''
-    tagline: 'Personalized multi-touch outbound with real-time enrichment''
-    price: '$129''
-    period: '/month'
-    description:'
-      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
-    features: []
-    reviews: 58;
-  }
-  {'
-    id: 'security-posture-as-code''
-    name: 'Security Posture as Code''
-    tagline: 'CIS/NIST/Kyverno policy packs with drift remediation''
-    price: '$399''
-    period: '/month'
-    description:'
-      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
-    features: []
-    reviews: 14;
-  }
-  {'
-    id: 'etl-observability-starter''
-    name: 'ETL Observability Starter''
-    tagline: 'Data pipeline health with schema change and freshness alerts''
-    price: '$99''
-    period: '/month'
-    description:'
-      'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
-    features: []
-    reviews: 12;
-  }
-  {'
-    id: 'api-performance-shield''
-    name: 'API Performance Shield''
-    tagline: 'Global edge caching, rate limiting, and anomaly detection''
-    price: '$149''
-    period: '/month'
-    description:'
-      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
-    features: []
-    reviews: 9;
-  }
-  {'
-    id: 'ai-product-analytics''
-    name: 'AI Product Analytics'
-    tagline:'
-      'Session insights, funnel auto-segmentation, and LLM-based insights''
-    price: '$129''
-    period: '/month'
-    description:'
-      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
-    features: []
-    reviews: 20;
-  }
-  {'
-    id: 'ai-support-deflection''
-    name: 'AI Support Deflection''
-    tagline: 'Self-serve answers with RAG, forms, and secure handoff''
-    price: '$99''
-    period: '/month'
-    description:'
-      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
-    features: []
-    reviews: 48;
-  }
-  {'
-    id: 'cloud-cost-autopilot''
-    name: 'Cloud Cost Autopilot''
-    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning''
-    price: '$249''
-    period: '/month'
-    description:'
-      'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
-    features: []
-    reviews: 11;
-  }
-  {'
-    id: 'privacy-vault''
-    name: 'Privacy Vault''
-    tagline: 'Tokenize PII and control access with audit trails''
-    price: '$179''
-    period: '/month'
-    description:'
-      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
-    features: []
-    reviews: 7;
-  }
-  {'
-    id: 'ai-fraud-detection-lite''
-    name: 'AI Fraud Detection Lite''
-    tagline: 'Graph-based anomalies with explainability for SMBs''
-    price: '$159''
-    period: '/month'
-    description:'
-      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.'
-    features: []
-    reviews: 8;
-  }
-  {'
-    id: 'managed-postgres-ha-pro''
-    name: 'Managed Postgres HA Pro''
-    tagline: 'Turnkey HA, backups, PITR, and query tuning''
-    price: '$199''
-    period: '/month'
-    description:'
-      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
-    features: []
-    reviews: 5;
-  }
-  {'
-    id: 'browser-performance-monitor-pro''
-    name: 'Browser Performance Monitor Pro''
-    tagline: 'RUM, Core Web Vitals, and session replay''
-    price: '$79''
-    period: '/month'
-    description:'
-      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
-    features: []
-    reviews: 6;
-  }
-  {'
-    id: 'seo-automation-studio''
-    name: 'SEO Automation Studio''
-    tagline: 'Programmatic SEO, audits, and internal linking automation''
-    price: '$99''
-    period: '/month'
-    description:'
-      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
-    features: []
-    reviews: 4;
-  }
-  {'
-    id: 'webhook-relay-replay-pro''
-    name: 'Webhook Relay & Replay Pro''
-    tagline: 'Reliable webhooks with DLQ and replays''
-    price: '$59''
-    period: '/month'
-    description:'
-      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
-    features: []
-];
-
-<<<<<<< HEAD
-
-
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
   {
     }
     "id": 'ai-sales-email-copilot''
@@ -2750,7 +2193,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "description":
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.''
     "features": [
-];
 ];
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;'
 const contact = {;

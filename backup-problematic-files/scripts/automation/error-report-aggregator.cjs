@@ -128,13 +128,7 @@ class $1 {}
       this.log("Error report aggregation completed", "success")} catch (error) {this.log(`Error during "aggregation": ${error.message}`, "error");this.errorsFound.push(`Process "error": ${error.message}`);
       await this.generateSummary()};
   };
-};
 ;
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
-<<<<<<< HEAD
 aggregator.run().catch(console.error);
-aggregator.run().catch(console.error);
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

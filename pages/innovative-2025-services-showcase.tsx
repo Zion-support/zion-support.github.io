@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -46,20 +45,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   },
 
   const staggerContainer = $2;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function innovative2025servicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Innovative 2025 Services Showcase - Zion Tech Group</title>
         <meta name="description" content="Innovative 2025 Services Showcase solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Animated Background */}
@@ -81,7 +72,6 @@ export default function innovative2025servicesshowcase() {
               />
             ))}
           </div>
-        </div>
 
         {/* Content */}
         <div className="relative z-10">
@@ -128,7 +118,6 @@ export default function innovative2025servicesshowcase() {
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
-              </div>
 
               {/* Category Filters */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -150,7 +139,6 @@ export default function innovative2025servicesshowcase() {
                   </button>
                 ))}
               </div>
-            </div>
           </motion.section>
 
           {/* Services Grid */}
@@ -227,7 +215,6 @@ export default function innovative2025servicesshowcase() {
                             <div className="text-lg font-bold text-white">{(service as any).reviews || '500'}</div>
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
-                        </div>
 
                         {/* CTA Button */}
                         <Link
@@ -303,7 +290,6 @@ export default function innovative2025servicesshowcase() {
                   <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
                   <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -319,7 +305,6 @@ export default function innovative2025servicesshowcase() {
                   View All Services
                 </Link>
               </div>
-            </div>
           </motion.section>
 
           {/* Footer */}
@@ -331,17 +316,3 @@ export default function innovative2025servicesshowcase() {
           >
             <div className = $2;
 export default Innovative2025ServicesShowcase,
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Innovative 2025 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional innovative 2025 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

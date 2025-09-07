@@ -177,16 +177,10 @@ class SmartPerformanceOptimizer {}
             this.log(`Smart Performance Optimizer "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the optimizer if this script is executed directly;
 if ( {})
     const optimizer = new SmartPerformanceOptimizer) {}
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SmartPerformanceOptimizer;
-module.exports = SmartPerformanceOptimizer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

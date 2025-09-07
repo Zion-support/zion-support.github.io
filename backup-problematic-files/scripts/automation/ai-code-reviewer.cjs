@@ -19,7 +19,6 @@ const crypto = require("crypto")
   this.learningDataObj = { "patterns": {}, "suggestions": {}, "performance"
   log(message, level = "INFO")
   this.log("🤖 Starting AI-powered code quality analysis...")
-  this.log("🤖 Starting AI-powered code quality analysis...")
       this.log( AI Code Review "completed": ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied")
       )} catch (error) {  this.log("AI Code Review "failed": ${error.message  }", "ERROR")
       const tsFiles = this.findFilesByExtension(".ts", ".tsx")
@@ -84,10 +83,8 @@ const crypto = require("crypto")
       "renderOptimization"
       "memoryUsage"
       if (fs.existsSync("dist")
-      if (fs.existsSync("dist")
       performance.renderOptimization = perfIssues} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "ERROR"`)
   const distPath = path.join(this.projectRoot, "dist")
-          stats.warning =Bundle size is large - consider code splitting and optimization"
           stats.warning =Bundle size is large - consider code splitting and optimization"
     } catch (error) {  this.log("Bundle size analysis "failed": ${error.message  }", "ERROR")
   const tsFiles = this.findFilesByExtension(".ts", ".tsx")
@@ -196,9 +193,4 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
-<<<<<<< HEAD
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

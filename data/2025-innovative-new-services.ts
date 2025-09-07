@@ -714,30 +714,16 @@ export const "innovativeNewServices2025": InnovativeNewService[] = [;
     "reviews": 6;
   }
 ];
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ];
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   }
 ];
 
@@ -787,7 +773,6 @@ ursor/fix-website-loading-errors-and-merge-6662
     customers: 12;,;
     rating: 4.9;,
   reviews: 6;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ];
   }
@@ -810,13 +795,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 ;
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 6;
   }
 ];
-<<<<<<< HEAD
 
 ;
 
@@ -833,18 +816,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     reviews: 6}
 ],
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';,;
     launchDate: '2025-01-08';,;
     customers: 12;,;
@@ -855,5 +826,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

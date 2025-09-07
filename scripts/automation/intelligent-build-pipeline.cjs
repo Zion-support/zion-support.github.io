@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -14,7 +10,6 @@ const crypto = require("crypto");
       this.projectRoot,logs"
       "build-optimizations.json"
   fs.mkdirSync(logsDir, { "recursive"})
-  log(message, level = "INFO")
   log(message, level = "INFO")
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}``)
         this.projectRoot,build-pipeline.config.json"
@@ -51,9 +46,7 @@ return JSON.parse(fs.readFileSync(configPath, "utf8");
         "dependencyOptimization"
         "bundleSplitting"
         this.projectRoot,build-pipeline.config.json"
-        this.projectRoot,build-pipeline.config.json"
       )} catch (error) {  this.log("Failed to save pipeline "config": ${error.message  }", "ERROR")
-return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8");
 return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8");
     } catch (error) {  this.log("Failed to load build "history": ${error.message  }", "WARN")
   "builds"
@@ -140,7 +133,6 @@ const memoryInfo = execSync("free -m", { "encoding": "utf8"});
   "cpuCores"
         "memoryInfo"
   return { "error"}
-  return { "error"}
       execSync("npm ci --only=production", { "encoding": "utf8", "stdio": "pipe"})
 const packageLockPath = path.join(this.projectRoot, "package-lock.json");
           fs.readFileSync(packageLockPath, "utf8")
@@ -149,7 +141,6 @@ const outdatedResult = execSync("npm outdated --json");
           "stdio": "
   this.log(Failed to measure dependency "performance")
         "WARN"
-    for (const ["name", "dep")]
     for (const ["name", "dep")]
   this.log(Failed to measure optimization "opportunities": ${error.message  }")
         "WARN"
@@ -304,13 +295,11 @@ let viteConfig = fs.readFileSync(viteConfigPath, "utf8");
   },"
       return { "success": true, "message": "Bundle optimization enabled"}
   return { "success": false, "message"}
-  return { "success": false, "message"}
 const packageJsonPath = path.join(this.projectRoot, "package.json");
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
       if (!packageJson.scripts[""build": optimized")]
   packageJson.scripts["build:optimized"] =NODE_OPTIONS="--max-old-space-size=4096" vite build"
       return { "success": true, "message": "Memory optimization enabled"}
-  return { "success": false, "message"}
   return { "success": false, "message"}
   this.log("Executing optimized build...")
   "timestamp"
@@ -324,7 +313,6 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
           "delta"
             "heapTotal"
         "success"
-const distPath = path.join(this.projectRoot, "dist");
 const distPath = path.join(this.projectRoot, "dist");
       this.log("Optimized build completed successfully")
   "success"
@@ -429,41 +417,10 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(" Intelligent Build Pipeline "failed": ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Intelligent Build Pipeline "failed": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Intelligent Build Pipeline "failed": ")
-<<<<<<< HEAD
-  console.error(" Intelligent Build Pipeline "failed": ")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

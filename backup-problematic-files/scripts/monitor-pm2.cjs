@@ -78,9 +78,4 @@ const path = require("path")"
     case "help"
     "default"
   process.on("SIGINT")
-<<<<<<< HEAD
   process.on(")
-  process.on(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

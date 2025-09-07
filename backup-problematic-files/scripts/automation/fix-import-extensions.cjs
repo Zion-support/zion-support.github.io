@@ -43,7 +43,6 @@ class ImportExtensionFixer {}
       if (modified) {}
         this.fixesApplied++};
     };
-  };
   async run() {}
     this.log('Starting Import Extension Fixer...');
     
@@ -55,7 +54,6 @@ class ImportExtensionFixer {}
       this.log(`Error in Import Extension "Fixer": ${error.message}`);
       throw error};
   };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ImportExtensionFixer();
@@ -67,9 +65,4 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ImportExtensionFixer;
-module.exports = ImportExtensionFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -16,7 +16,6 @@ class ContinuousLinter {}
       fs.mkdirSync(logDir, { "recursive": true }
 });
     };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
@@ -43,7 +42,6 @@ class ContinuousLinter {}
       this.error(`ESLint fix "failed": ${err.message}`);
       return false;
     };
-  };
   async runPrettierFix() {}
     try {}
       this.log('Running Prettier format...');
@@ -58,7 +56,6 @@ class ContinuousLinter {}
       this.error(`Prettier format "failed": ${err.message}`);
       return false;
     };
-  };
   async fixCommonIssues(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
@@ -124,7 +121,6 @@ class ContinuousLinter {}
           modified = true;
           this.log(`Applied fix "${fix.description}" to ${filePath}`);
         };
-      };
       if (modified) {}
         fs.writeFileSync(filePath, content);
         this.log(`Fixed common issues in ${filePath}`);
@@ -135,7 +131,6 @@ class ContinuousLinter {}
       this.error(`Error fixing issues in ${filePath}: ${err.message}`);
       return false;
     };
-  };
   async processFile(filePath) {}
     this.log(`Processing "file": ${filePath}`);
     
@@ -153,7 +148,6 @@ class ContinuousLinter {}
     } catch (err) {}
       this.log(`Lint fix had issues with ${filePath}: ${err.message}`);
     };
-  };
   startWatching() {}
     this.log('Starting file watcher...');
     
@@ -205,7 +199,6 @@ class ContinuousLinter {}
       this.watcher.close();
       this.log('File watcher stopped');
     };
-  };
   async runFullLint() {}
     this.log('Running full project lint...');
     
@@ -218,7 +211,6 @@ class ContinuousLinter {}
       this.error(`Full project lint "failed": ${err.message}`);
       return false;
     };
-  };
   async run() {}
     this.log('Starting continuous linting automation...');
     
@@ -250,8 +242,6 @@ class ContinuousLinter {}
       this.error(`Error in "run": ${err.message}`);
       return { "success": false, "error": err.message };
     };
-  };
-};
 // Run if called directly;
 if (require.main === module) {}
   const linter = new ContinuousLinter();
@@ -269,10 +259,4 @@ if (require.main === module) {}
     console.log('"Usage": node continuous-linter.cjs [watch|fix]');
     process.exit(1);
   };
-};
-<<<<<<< HEAD
 module.exports = ContinuousLinter;
-module.exports = ContinuousLinter;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

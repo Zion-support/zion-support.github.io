@@ -45,7 +45,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     const particles: Particle[] = [];,
     const particleCount = 50;
 
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
+:src/components/ParticleBackground.tsx
     const createParticles = () => {
       particles.length = 0;
       for (let i = 0; i < particleCount; i++) {
@@ -98,7 +98,7 @@ particles.forEach((particle) => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
+:src/components/ParticleBackground.tsx
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -108,7 +108,6 @@ particles.forEach((particle) => {
             ctx.stroke();
           }
         });
-      });
     };
             if (distance < 100) {
               ctx.beginPath();
@@ -121,7 +120,6 @@ particles.forEach((particle) => {
 
           }
         });
-      });
       animationId = requestAnimationFrame(animate);
 
     const animate = () => {
@@ -140,7 +138,7 @@ particles.forEach((particle) => {
     });
 
     return () => {
-<<<<<<< HEAD:src/components/ParticleBackground.tsx
+:src/components/ParticleBackground.tsx
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resizeCanvas);
     };

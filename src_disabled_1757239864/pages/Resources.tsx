@@ -36,11 +36,7 @@ import {
   Bookmark,
   Share2
 } from 'lucide-react';
-<<<<<<< HEAD
 import SEO from '@/components/SEO';
-=======
-// import SEO from '@/components/SEO';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
 
 interface Resource {
   id: number;
@@ -270,7 +266,6 @@ export default function Resources() {
                   className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
                 />
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -297,7 +292,6 @@ export default function Resources() {
               </button>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Featured Resources */}
@@ -356,7 +350,6 @@ export default function Resources() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* All Resources */}
@@ -411,7 +404,6 @@ export default function Resources() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}

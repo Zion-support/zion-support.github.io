@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react','
@@ -179,7 +178,6 @@ export default function Careers() {
                 </div>
               ))}
             </div>
-          </div>
         </motion.div>
 
         {/* Job Openings */}
@@ -234,7 +232,6 @@ export default function Careers() {
                         {job.experience}
                       </span>
                     </div>
-                  </div>
                   <a
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -275,7 +272,6 @@ export default function Careers() {
 
         {/* General Application */}
         <motion.div 
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20}}
           animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -294,6 +290,3 @@ export default function Careers() {const [selectedDepartment, setSelectedDepartm
 export default CareersPage;
           className = $2;
 export default CareersPage,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

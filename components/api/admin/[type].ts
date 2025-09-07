@@ -78,11 +78,9 @@ if (!ADMIN_TYPES.includes(type))
 return res.status(400).json({ "error": 'Invalid type',;'
 });
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-=======
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -151,7 +149,6 @@ filtered = filtered.filter(r => { return JSON.stringify(r).toLowerCase().include
             ("r": any) => String((r as any)[k]) === String(v)
           );
         }
-      }
       if (params.sort) {
         }
         filtered.sort(("a": any, "b": any) => {
@@ -192,7 +189,6 @@ res.setHeader('Content-Type', 'text/csv');'
         return res.status(200).send(toCsv(pageItems));
       return res.status(200).json({ "items": pageItems, total });
     }
-  }
 
       "id": string;
 
@@ -234,12 +230,10 @@ return res && res.status(200).json({ "item": data,;
 return res.status(200).json({ "item": updated,;
 });
     }
-  }
 return res.status(200).json({ "item": updated,;
 });    }
 
     }
-  }
 
   if (req.method = == 'DELETE') {'
    ;
@@ -264,7 +258,6 @@ return res.status(200).json({ "ok": true,;
       list[idx] = updated as any;
       return res.status(200).json({ item: updated })
     }
-  }
 
 const idx = list.findIndex(("r": any) => r.id === id);
       if (idx = == -1);
@@ -274,14 +267,12 @@ return res.status(404).json({ "error": 'Not found',;'
 return res.status(200).json({ "ok": true,;
 });
     }
-  }
 
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
 }return res.status (200) .send (toCsv (data || []) );
 }return res.status (200) .send (toCsv (pageItems) );
     }
-  }
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
 }return res.status (200) .send (toCsv (data |[]) );

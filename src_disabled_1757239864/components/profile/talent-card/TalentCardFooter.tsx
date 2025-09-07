@@ -97,7 +97,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
-      </div>
       
       {/* Hire Request Modal */}
       <HireRequestModal
@@ -153,7 +152,6 @@ export function TalentCardFooter() {const [isHireModalOpen, setIsHireModalOpen] 
             <ExternalLink className="h-3 w-3 ml-1" />;
           </Button>;
         </div>;
-      </div>;
       {/* Hire Request Modal */}
       <HireRequestModal;
         talent = {profile}
@@ -175,7 +173,5 @@ profile.id || '' ;
     </>
   )
 }
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardFooter.tsx
-=======
+:src/components/profile/talent-card/TalentCardFooter.tsx
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/talent-card/TalentCardFooter.tsx

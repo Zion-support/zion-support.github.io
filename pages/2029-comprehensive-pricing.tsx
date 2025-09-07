@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -46,20 +45,10 @@ export default function ComprehensivePricing2029() {
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
       
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function 2029comprehensivepricing() {
-  return (
-    <Layout>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <Head>
         <title>2029 Comprehensive Pricing - Zion Tech Group</title>
         <meta name="description" content="2029 Comprehensive Pricing solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <UltraFuturisticNavigation2029 />
 
@@ -124,7 +113,6 @@ export default function 2029comprehensivepricing() {
               </motion.button>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -173,7 +161,6 @@ export default function 2029comprehensivepricing() {
                         <span className="text-green-400">Save 20% with annual billing</span>
                       )}
                     </div>
-                  </div>
 
                   {/* Categories */}
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
@@ -221,7 +208,6 @@ export default function 2029comprehensivepricing() {
                       <div className="text-gray-400 text-xs mb-1">ROI</div>
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
-                  </div>
 
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
@@ -234,11 +220,9 @@ export default function 2029comprehensivepricing() {
                       Get Started
                     </Link>
                   </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Enterprise Solutions */}
@@ -303,7 +287,6 @@ export default function 2029comprehensivepricing() {
                   Contact Sales
                 </Link>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -338,7 +321,6 @@ export default function 2029comprehensivepricing() {
                 <MapPin className="w-6 h-6 text-green-400" />
                 <span>{contactInfo.address}</span>
               </div>
-            </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
@@ -368,17 +350,4 @@ export default function 2029comprehensivepricing() {
       <UltraFuturisticFooter2029 />
     </div>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">2029 Comprehensive Pricing</h1>
-          <p className="text-lg text-gray-600">
-            Professional 2029 comprehensive pricing solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

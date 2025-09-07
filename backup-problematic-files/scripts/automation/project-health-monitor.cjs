@@ -165,8 +165,6 @@ class ProjectHealthMonitor {}
                         outdatedCount = Object.keys(outdated).length} catch (parseError) {}
                         // No outdated packages;
                     };
-                };
-            };
             const score = Math.max(0, 20 - (outdatedCount * 2;););
             
             return {;}
@@ -276,16 +274,10 @@ class ProjectHealthMonitor {}
             this.log(`Project Health Monitor "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the monitor if this script is executed directly;
 if ( {})
     const monitor = new ProjectHealthMonitor) {}
      {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ProjectHealthMonitor;
-module.exports = ProjectHealthMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

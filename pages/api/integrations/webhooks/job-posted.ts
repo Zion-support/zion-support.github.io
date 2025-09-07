@@ -9,7 +9,7 @@ export default async function handler() {
   const { job } = req.body as { job?: Record<string, any> };
   if (!job) return res.status(400).json({ "error": "Missing job payload" });"
 
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
+:pages_backup/api/integrations/webhooks/job-posted.ts
   const state = readState();
 const crms = state.connections.filter(;
     (c) =>
@@ -46,11 +46,10 @@ writeState((s) => {
       "timestamp": Date.now(),
       "payload": { job }
     });
-  });
 
   res.status(200).json({ "ok": true, results });
 }
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
+:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 
@@ -74,12 +73,10 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 ;
   // record Zapier event;
   writeState(s => {;
@@ -93,13 +90,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
+:pages_backup/api/integrations/webhooks/job-posted.ts
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -114,7 +109,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -125,4 +119,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

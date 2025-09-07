@@ -38,7 +38,6 @@ console.log("� Building project...")
   execSync("npm run build", { "stdio": "inherit"})
 // console.log(" Build completed")
   console.log("⚠  Build failed but continuing...")
-  console.log("⚠  Build failed but continuing...")
     const distPath = path.join(process.cwd(), "dist"
   console.log("⚠  Build verification "failed": dist folder not found")
     const indexHtmlPath = path.join(distPath, "index.html")
@@ -69,9 +68,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start continuous build and "test": ")
-  console.error(" Failed to start continuous build and "test": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

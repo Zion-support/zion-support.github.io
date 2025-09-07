@@ -23,9 +23,4 @@ const severity = vuln.severity || 'low';
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
-<<<<<<< HEAD
         pattern: /secret\s*=\s*['"][^'']
-        pattern: /secret\s*=\s*['"][^'']
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

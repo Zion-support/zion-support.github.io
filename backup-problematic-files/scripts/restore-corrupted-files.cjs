@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const path = require("path");
 class FileRestorer {}
   constructor() {}
@@ -21,14 +16,11 @@ class FileRestorer {}
       let fixedContent = content;
         // Remove extra semicolons and quotes at end of lines;
         .replace(/;"$/gm, "");
-        .replace(/;"$/gm, "");
         .replace(/;$/gm, "");
         // Fix unterminated strings;
         .replace(/from "([^"]*);$/gm, "from "$1"");
-        .replace(/from "([^"]*);$/gm, "from "$1"");
         // Fix malformed imports;
         .replace(/import type { AppProps } from "next \/ app",/g, "import type { AppProps } from "next/app"");
-        .replace(/import "([^"]*);$/gm, "import "$1"");
         .replace(/import "([^"]*);$/gm, "import "$1"");
         // Fix malformed JSX returns;
         .replace(/return \(/g, "return (");
@@ -82,8 +74,6 @@ class FileRestorer {}
           } catch (error) {}
             // Skip files that can"t be read};
         };
-      };
-    };
     scanDir(dir);
     return corruptedFiles};
   async restoreCorruptedFiles() {}
@@ -114,9 +104,4 @@ class FileRestorer {}
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
-<<<<<<< HEAD
 module.exports = FileRestorer;
-module.exports = FileRestorer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

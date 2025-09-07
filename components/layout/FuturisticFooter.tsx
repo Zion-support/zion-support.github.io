@@ -1,6 +1,4 @@
 import React from 'react';,
-=======
-=======
 import {};
   Mail;
   Phone;
@@ -15,7 +13,6 @@ import {};
 
 export default function FuturisticFooter() { return null; }
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 export default function FuturisticFooter() {
 
 import React from 'react','
@@ -93,7 +90,6 @@ return (;
               Leading provider of AI-powered micro SaaS solutions, helping;
               businesses automate, optimize, and scale their operations with;
               cutting-edge technology.;
-<<<<<<< HEAD
             </p>;
             <div className='flex space-x-4'>;'
               {socialLinks && socialLinks.map(social => { return (<a; }
@@ -193,7 +189,6 @@ return (;
                     {link && link.name}
                   </Link>;
                 </li>;
-<<<<<<< HEAD
                     href={link.href}
                     className="text - gray - 400 "hover": text - white transition - colors duration - 200 "hover":translate-x-1 inline-block">"
 
@@ -220,7 +215,6 @@ return (;
                     {service && service.name}
                   </Link>;
                 </li>;
-<<<<<<< HEAD
                     href={service.href}
                     className="text - gray - 400 "hover": text - white transition - colors duration - 200 "hover":translate-x-1 inline-block">"
 
@@ -258,7 +252,6 @@ href={`"tel": ${contactInfo.mobile}`}`                    className='text-gray-4
                     {contactInfo.mobile}
                   </a>
                 </div>
-              </div>
 
 <div className='flex items-start space-x-3'>'
                 <Mail className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />'
@@ -271,17 +264,12 @@ href={`"mailto":${contactInfo.email}`}`
                     {contactInfo.email}
                   </a>;
                 </div>;
-              </div>;
 <div className='flex items-start space-x-3'>;
                 <MapPin className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />;
                 <div>;
                   <p className='text-white font-medium'>Address</p>;
                   <p className='text-gray-400 text-sm'>{contactInfo.address}</p>;
                 </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
         {/* Bottom section */}<div className='pt-8 border-t border-gray-800'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             <div className='text-gray-400 text-sm'>;
@@ -293,47 +281,15 @@ href={`"mailto":${contactInfo.email}`}`
                 className='text-gray-400 hover:text-white transition-colors duration-200'>;
                 Privacy Policy;
               </Link>;
-<<<<<<< HEAD
               <Link'
                 href='/terms''
                 className='text-gray-400 hover:text-white transition-colors duration-200'>;
-=======
-              <Link;
-                href='/terms';
-<<<<<<< HEAD
-                className='text-gray-400 hover:text-white transition-colors duration-200'>;
-                Terms of Service;
-              </Link>;
-            </div>
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Cookie Policy
-=======
-                className='text-gray-400 hover:text-white transition-colors duration-200' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Terms of Service;
               </Link>;
               <Link'
                 href='/cookies'
-<<<<<<< HEAD
             </div>"
             <div className="flex space-x-6 text-sm">"
-=======
-            </div>
-            <div className="flex space-x-6 text-sm">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Privacy Policy;
               </Link>"
@@ -341,19 +297,10 @@ href={`"mailto":${contactInfo.email}`}`
                 Terms of Service;
               </Link>"
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='text-gray-400 hover:text-white transition-colors duration-200'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Cookie Policy
-<<<<<<< HEAD
-=======
-                Cookie Policy;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 <div className='flex items-start space-x-3'>'
                 <MapPin className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />'
@@ -361,13 +308,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-white font-medium'>Address</p>'
                   <p className='text-gray-400 text-sm'>{contactInfo.address}</p>'
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link;
                 href='/cookies';
             </div>;
@@ -381,21 +321,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">;
                 className='text-gray-400 hover:text-white transition-colors duration-200';
               >;
-=======
-      {/* Floating elements */}
-
-);
-<<<<<<< HEAD
-}'
-                className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
-            </div>;"
-            <div className="flex space-x-6 text-sm">;"
-=======
-}
-                className='text-gray-400 hover: text-white transition-colors duration-200'>                Cookie Policy              © {currentYear;} Zion Tech Group. All rights reserved.;
-            </div>;
-            <div className="flex space-x-6 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
                 Privacy Policy;
               </Link>;"
@@ -403,14 +328,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Terms of Service;
               </Link>;"
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 Cookie Policy;
               </Link>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
       {/* Floating elements */})}
 
 );
@@ -428,9 +348,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Cookie Policy;
               </Link>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
       {/* Floating elements */}
       <div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />;
       <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />;
@@ -472,7 +389,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {contact_info.mobile}
                   </a>;
                 </div>;
-              </div>;
               <div className='flex items - start space - x-3'>;
                 <Mail className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
                 <div>;
@@ -488,7 +404,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {contact_info.email}
                   </a>;
                 </div>;
-              </div>;
               <div className='flex items - start space - x-3'>;
                 <MapPin className='w - 5 h - 5 text - purple - 400 mt - 1 flex - shrink - 0' />;
                 <div>;
@@ -498,9 +413,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {contact_info.address}
                   </p>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
         {/* Bottom section */}
 
 <div className='pt-8 border-t border-gray-800'>'
@@ -537,9 +449,6 @@ href='/privacy''
                 Cookie Policy;
               </Link>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
       {/* Floating elements */}
       <div className='absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse' />;
       <div className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000' />;
@@ -575,9 +484,6 @@ href='/cookies''
                 Cookie Policy
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
       {/* Floating elements *
 }
 
@@ -585,55 +491,13 @@ href='/cookies''
       <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />'
       <div className='absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500' />'
     </footer>
-<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-      {/* Floating elements */}'
-      <div className='absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse' />;'
-      <div className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000' />;'
-      <div className='absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500' />;"
-    </footer>);      <div className="absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse" />;"
-      <div className="absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000" />;"
-      <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
-    </footer>);
-}
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
-<<<<<<< HEAD
-=======
-</div> <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" > Zion Tech Group </span> </div> </a>) ) 
-}</div> </div> {
-  /* Quick Links */ 
-}<div> <h3 className="text-lg font-semibold text-white mb-6 flex items-center" > <ArrowRight className="w-5 h-5 text-blue-400 mr-2" /> Quick Links </h3> </li>) ) 
-}</ul> </div> {
-  /* Services */ 
-}<div> <h3 className="text-lg font-semibold text-white mb-6 flex items-center" > <Cloud className="w-5 h-5 text-green-400 mr-2" /> Services </h3> </li>) ) 
-}</ul> </div> {
-  /* Contact Info */ 
-}<div> <h3 className="text-lg font-semibold text-white mb-6 flex items-center" > <Shield className="w-5 h-5 text-purple-400 mr-2" /> Contact Us </h3> <div className="space-y-4" > <div className="flex items-start space-x-3" > <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> <div> <p className="text-white font-medium" >Phone</p> <a > {
-  contactInfo.mobile 
-}</a> </div> </div> <div className="flex items-start space-x-3" > <Mail className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> <div> <p className="text-white font-medium" >Email</p> <a > {
-  contactInfo.email 
-}</a> </div> </div> <div className="flex items-start space-x-3" > <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> <div> </p> </div> </div> </div> </div> </div> </div> <div className="flex space-x-6 text-sm" > <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> </div> </div> </div> </footer>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   );      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

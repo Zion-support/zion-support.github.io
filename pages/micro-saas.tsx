@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -177,7 +176,6 @@ export default function MicroSaaS() {
                   </button>
                 ))}
               </div>
-            </div>
           </section>
 
           {/* Products Grid */}
@@ -222,7 +220,6 @@ export default function MicroSaaS() {
                   </div>
                 ))}
               </div>
-            </div>
           </section>
 
           {/* Features Section */}
@@ -272,8 +269,6 @@ export default function MicroSaaS() {
                   <h3 className="text-xl font-bold mb-2">Easy Integration</h3>
                   <p className="text-slate-400">Seamless integration with your existing tools and workflows</p>
                 </div>
-              </div>
-            </div>
           </section>
 
           {/* CTA Section */}
@@ -307,35 +302,9 @@ export default function MicroSaaS() {
                   Email Us
                 </a>
               </div>
-            </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
 }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function microsaas() {
-  return (
-    <Layout>
-      <Head>
-        <title>Micro Saas - Zion Tech Group</title>
-        <meta name="description" content="Micro Saas solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Micro Saas</h1>
-          <p className="text-lg text-gray-600">
-            Professional micro saas solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

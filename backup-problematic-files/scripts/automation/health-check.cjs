@@ -51,7 +51,6 @@ class HealthChecker {}
                     "heapUsed": Math.round(memUsage.heapUsed / 1024 / 1024) + 'MB',
                     "heapTotal": Math.round(memUsage.heapTotal / 1024 / 1024) + 'MB'
                 };
-            };
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
 
             // Check disk space;
@@ -129,14 +128,8 @@ class HealthChecker {}
             this.log(`Fatal "error": ${error.message}`);
             process.exit(1)};
     };
-};
 // Run if called directly;
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
-<<<<<<< HEAD
 module.exports = HealthChecker;
-module.exports = HealthChecker;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -47,11 +46,6 @@ export default function InnovativeServicesShowcase2029() {
     }
   ];
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function 2029innovativeservicesshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -59,7 +53,6 @@ export default function 2029innovativeservicesshowcase() {
         <meta name="description" content="2029 Innovative Services Showcase solutions and services." />
       </Head>
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-black text-white">
         <UltraFuturisticNavigation2029 />
 
@@ -129,11 +122,9 @@ export default function 2029innovativeservicesshowcase() {
                     <div className="text-sm text-gray-400">
                       Starting from ${Math.min(...category.services.map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))}/month
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Featured Services */}
@@ -173,7 +164,6 @@ export default function 2029innovativeservicesshowcase() {
                       <div className="text-gray-400 text-sm mb-1">Market Size</div>
                       <div className="text-lg font-semibold text-blue-400">{service.marketSize}</div>
                     </div>
-                  </div>
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
@@ -243,7 +233,6 @@ export default function 2029innovativeservicesshowcase() {
                   <MapPin className="w-6 h-6 text-green-400" />
                   <span>{contactInfo.address}</span>
                 </div>
-              </div>
 
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -264,16 +253,4 @@ export default function 2029innovativeservicesshowcase() {
       </div>
     </>
   )
-=======
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">2029 Innovative Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional 2029 innovative services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

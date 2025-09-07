@@ -380,7 +380,6 @@ export const "spaceColonization2029Services": SpaceColonization2029Service[] = [
     },"realImplementation": true,"implementationDetails": 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',"launchDate": '2029-03-01',"customers": 18,"rating": 4.8;'
     "reviews": 52;
   }
-  }
 ];"popular": true;
     "icon": '🚀';'
     "color": 'from-red-600 to-orange-600';'
@@ -670,25 +669,9 @@ pr-12325
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     ];
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-    popular: true, icon: '🚀',
-    color: 'from-red-600 to-orange-600', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/mars-colonization-automation-platform', marketPosition: 'First Mars colonization automation platform. No direct competitors. Comparable to space infrastructure platforms ($80K+/month) but specialized in Mars colonization.',
-    targetAudience: 'Space agencies, Private space companies, Government organizations, Research institutions, Space mining companies, Colonization initiatives',
-    trialDays: 180, setupTime: '6-12 months',
-    category: 'Space Colonization & Mining', realService: true,
-    technology: ['AI & RoboticsSpace TechnologyAutonomous Systems3D PrintingLife Support SystemsSatellite Communication'], integrations: ['NASA systemsSpaceX platformsSatellite networksGround control systemsResearch databasesSpace monitoring tools'],
-    useCases: ['Mars colonizationSpace habitat constructionResource extractionLife support managementColony expansionSpace research'], roi: 'Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development.',
-    competitors: ['Space infrastructure platformsSpace research toolsGovernment space programs'], marketSize: '$100B space economy market',
-    growthRate: '500% annual growth', variant: 'space-futuristic',
-=======
-    description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI;, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     features: [
       'Autonomous habitat constructionAI-powered resource managementLife support system automationColony expansion planningRobotic workforce managementEnvironmental monitoring AISupply chain automationEmergency response systems';
       'Colony health monitoringSustainable development AI'
@@ -708,7 +691,6 @@ pr-12325
     useCases: ['Mars colonizationSpace habitat constructionResource extractionLife support managementColony expansionSpace research'];, roi: 'Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development.';,
     competitors: ['Space infrastructure platformsSpace research toolsGovernment space programs'];, marketSize: '$100B space economy market';,
     growthRate: '500% annual growth';, variant: 'space-futuristic';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     contactInfo: {
       mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
 
@@ -758,9 +740,6 @@ pr-12325
     reviews: 52;
 
 ];
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     "realImplementation": true;
     "implementationDetails": "implementationDetails","

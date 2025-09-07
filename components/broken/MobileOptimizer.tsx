@@ -6,8 +6,6 @@ import { motion, AnimatePresence  } from 'framer-motion';'
 import { Smartphone, Tablet, Monitor, RotateCcw;
   }
   Wifi, WifiOff, Signal, SignalHigh;
-<<<<<<< HEAD
-<<<<<<< HEAD
   Mouse, Hand;
   } from 'lucide-react';'
 // TouchEvent types are already defined in DOM;
@@ -154,42 +152,10 @@ if ;
   }
   showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) )"
 }</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>)
-=======
-  Mouse, Hand
- } from 'lucide-react';
-// TouchEvent types are already defined in DOM
-
-<<<<<<< HEAD
-setIsMobile (isMobileDevice);
-setIsTablet (isTabletDevice);
-//Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
-  checkDevice ();
-window.addEventListener ('resize', checkDevice);
-}, [enableMobileLayout, enablePerformanceMode]);
-//Detect orientation changes checkOrientation ();
-window.addEventListener ('orientationchange', checkOrientation);
-window.addEventListener ('resize', checkOrientation);
-const handleTouchStart = (e: TouchEvent) => {
-  if (e.touches.length === 1) {
-  touchStartRef.current = {
-}
-if (!showPanel || !isVisible) return null
-}
-const getStatusIcon = (status: string) => {
-  switch($2) {
-}
-children
-}{
-  /* Mobile Optimization Panel */
-}<AnimatePresence> {;"
-  showMobilePanel && (<motion && motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) )
-}</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion && motion.div>)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }</AnimatePresence> {
   /* Mobile Toggle Button */
 }<button </svg> </button> {
   /* Global Mobile Styles */
-<<<<<<< HEAD
 }<style jsx global> {
   `.mobile-optimized * {`
   
@@ -198,9 +164,3 @@ children
 };
 export default MobileOptimizer;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -21,7 +19,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     inputRef.current?.focus() }, [])
     inputRef.current?.focus()
 interface ChatInputProps {
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 import React, {;
   useState,;
   useRef,;
@@ -53,8 +51,7 @@ import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
 
 interface ChatInputProps {;
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   onSend: (message: string) => void;
@@ -74,16 +71,15 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     inputRef && inputRef.current?.focus();  }, []);
     inputRef && inputRef.current?.focus();
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
 interface ChatInputProps {;
   onSend: (message: string) => void,;
   disabled?: boolean;
 }
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
 
 
@@ -104,10 +100,9 @@ interface ChatInputProps {
   disabled?: boolean,
 }
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 export function ChatInput({ onSend, disabled;
     }
-  }
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
@@ -135,11 +130,10 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   },
 
       }
-    }
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
   };
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 return (
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -174,7 +168,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 }export function ChatInput() {const [ message, setMessage ] = useState(''),const inputRef = useRef<HTMLTextAreaElement>(null),useEffect(() => {// Focus input when component mounts;
     inputRef.current?.focus()}, [])const handleSubmit = (e: FormEvent<HTMLFormElement>) => {e && e.preventDefault()if (message && message.trim() && !disabled) {onSend(message)}export function ChatInput({ onSend, disabled;
     }
-  }
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {if (e.key === 'Enter' && !e.shiftKey) {e.preventDefault()if (message.trim() && !disabled) {onSend(message)setMessage('')}
     }
   }return (return (<form on_submit={handle_submit} className='flex items - end gap - 2'>;
@@ -182,9 +175,9 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         ref={input_ref}
         className='flex - 1 min - h-[40px] max - h-[120px] px - 3 py - 2 bg - zion - blue - dark border border - zion - blue - light rounded - md focus:outline - none focus:ring - 2 focus:ring - zion - purple focus:border - transparent resize - none text - black placeholder:text - zion - slate - light';
         placeholder='Type your message...';
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
         value={message}
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -201,7 +194,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -211,8 +204,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         placeholder="Type your message...",
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
         onChange={e => setMessage(e.target.value)}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -222,7 +214,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         disabled={disabled}
       />
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
       >
         <Send className="h-5 w-5" />
 
@@ -242,7 +234,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center",
         disabled={!message.trim() || disabled}
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
       </Button>
     </form>
@@ -258,9 +250,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
         value={message}on_change={e => set_message (e.target.value)}        onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -310,10 +302,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       >;
         <Send className="h - 5 w - 5" />;
       </Button>;
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
     </form>);
 }
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatInput.tsx
+:src_backup/components/ChatAssistant/ChatInput.tsx
 
 <Button
         type='submit'

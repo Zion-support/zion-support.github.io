@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -49,7 +48,6 @@ export default function NewDisputePage() {
     } finally {
       setSubmitting(false)
     }
-  }
 
   return (
     <EnhancedLayout>
@@ -69,7 +67,6 @@ export default function NewDisputePage() {
               <label className="block text-sm font-medium">Talent User ID</label>
               <input value={talentUserId} onChange={e => setTalentUserId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
             </div>
-          </div>
           <div>
             <label className="block text-sm font-medium">Reason</label>
             <select value={reason} onChange={e => setReason(e.target.value as ReasonType)} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black">
@@ -104,28 +101,4 @@ function toBase64(file: File): Promise<string> {
     reader.onerror = $2;
     reader.readAsDataURL(file)
   })
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function DisputesNew() {
-  return (
-    <Layout>
-      <Head>
-        <title>New Dispute - Zion Tech Group</title>
-        <meta name="description" content="New Dispute solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">New Dispute</h1>
-          <p className="text-lg text-gray-600">
-            Professional new dispute solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

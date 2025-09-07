@@ -75,8 +75,6 @@ return (;
               Round-the-clock support to ensure your devops automation solutions run smoothly.
             </p>
           </div>
-        </div>
-<<<<<<< HEAD
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -87,8 +85,6 @@ return (;
             Contact Sales
           </button>
         </div>
-      </div>
-    </div>
   )
 }
     <div className="animate-fade-in">"
@@ -129,8 +125,6 @@ return (;
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>"
               <p className="text-gray-600">Description of feature 3</p>"
             </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center py-16 bg-blue-50 rounded-lg">"
@@ -154,8 +148,6 @@ href=""mailto":kleber@ziontechgroup.com?subject=Service Inquiry""
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   );
 }
@@ -197,8 +189,6 @@ href=""mailto":kleber@ziontechgroup.com?subject=Service Inquiry""
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>"
               <p className="text-gray-600">Description of feature 3</p>"
             </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center py-16 bg-blue-50 rounded-lg">"
@@ -260,8 +250,6 @@ href=""mailto":kleber@ziontechgroup.com?subject=Service Inquiry""
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>"
               <p className="text-gray-600">Description of feature 3</p>"
             </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center py-16 bg-blue-50 rounded-lg">"

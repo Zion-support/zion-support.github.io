@@ -29,7 +29,6 @@ const runCommand = (command, description) => {}
     log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
-};
 
 const runSecurityAudit = () => {}
   log('Running npm security audit');
@@ -52,8 +51,6 @@ const runSecurityAudit = () => {}
       log('Some vulnerabilities could not be fixed automatically');
       return { success: false, vulnerabilities: 1, fixed: false };
     };
-  };
-};
 
 const runDependencyCheck = () => {}
   log('Checking for outdated dependencies');
@@ -67,7 +64,6 @@ const runDependencyCheck = () => {}
     log('Outdated dependencies found');
     return { success: false, outdated: 1 };
   };
-};
 
 const checkForSecrets = () => {}
   log('Checking for exposed secrets');
@@ -109,7 +105,6 @@ const checkForSecrets = () => {}
     log('No exposed secrets found');
     return { success: true, secrets: 0 };
   };
-};
 
 const checkFilePermissions = () => {}
   log('Checking file permissions');
@@ -133,7 +128,6 @@ const checkFilePermissions = () => {}
     log('File permission check completed');
     return { success: true, permissiveFiles: 0 };
   };
-};
 
 const generateSecurityReport = (results) => {}
   const report = {}
@@ -152,7 +146,6 @@ const generateSecurityReport = (results) => {}
               (results.secrets.secrets || 0) + 
               (results.filePermissions.permissiveFiles || 0) === 0 ? 'PASS' : 'FAIL'
     };
-  };
   
   // Save report;
   const reportPath = 'logs/pm2/security-report.json';
@@ -218,9 +211,4 @@ main().catch(error => {})
   log(`Security Audit Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

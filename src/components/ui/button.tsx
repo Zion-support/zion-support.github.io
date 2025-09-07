@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 import React from 'react';'
@@ -129,7 +127,6 @@ if ( {) {$2;
   return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}
 
 interface ButtonProps {
   }

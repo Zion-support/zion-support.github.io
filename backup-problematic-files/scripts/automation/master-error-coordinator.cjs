@@ -97,7 +97,6 @@ const path = require("path")
   "fix"
           "error"
           "timestamp"
-  "timestamp"
       "duration"
       "processes"
       "errors"
@@ -122,14 +121,8 @@ const path = require("path")
         if (restartResult.success) {await this.log(" ${process.name} restarted successfully")} else {await this.log(" Failed to restart ${process.name}")
       } catch (error) {  await this.log(" Error restarting ${process.name  }: ${error.message}")
   await this.log(" Starting Master Error Coordinator")
-  await this.log(" Starting Master Error Coordinator")
       await this.log(" Master Error Coordinator completed");await this.log(" "Summary": ${report.summary.successfulProcesses}/${report.summary.totalProcesses} processes successful");await this.log(" "Errors": ${report.summary.totalErrors}, "Fixes": ${report.summary.totalFixes}")
       return report} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")} catch (error) {await this.log(" Master Error Coordinator "failed": ${error.message}")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
-<<<<<<< HEAD
   console.error("Master error coordinator "failed")
-  console.error("Master error coordinator "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

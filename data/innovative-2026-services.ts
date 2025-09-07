@@ -45,17 +45,11 @@ export const "innovative2026Services": Innovative2026Service[] = [
   rating: number;,
 
   reviews: number;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
   reviews: number}
 
 export const innovative2026Services: Innovative2026Service[] = [
-<<<<<<< HEAD
   // AI Consciousness & Neural Interface Services
-=======
-  // AI Consciousness & Neural Interface Services;
-pr-12325
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     }
     "id": 'ai-consciousness-simulation-pro','
@@ -668,7 +662,6 @@ export const "innovative2026Services": Innovative2026Service[] = [
     "reviews": 89;
   },;
   // Quantum Neural Interface Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-neural-interface-platform',;'
@@ -715,7 +708,6 @@ export const "innovative2026Services": Innovative2026Service[] = [
     "reviews": 45;
   },;
   // AI Time Series Prediction Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-time-series-prediction-elite',;'
@@ -762,7 +754,6 @@ export const "innovative2026Services": Innovative2026Service[] = [
     "reviews": 156;
   },;
   // Quantum Internet Security Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-internet-security-platform',;'
@@ -809,7 +800,6 @@ export const "innovative2026Services": Innovative2026Service[] = [
     "reviews": 78;
   },;
   // AI Emotional Intelligence Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-emotional-intelligence-platform',;'

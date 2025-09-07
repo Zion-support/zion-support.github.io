@@ -60,18 +60,12 @@ return (;
       </div>
       {/* Progress Bar */}'
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
-<<<<<<< HEAD
         <div
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel)
-=======
-        <div;
-          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}'
-export default function OnboardingProgressCard() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 
 function computePercentage(steps: OnboardingStep[]): number {}
@@ -131,7 +125,6 @@ return (;
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`;`          }
           style={{ "width": `${percentage}%` }}` />
       </div>
-<<<<<<< HEAD
       {allDone ? (
 <div className='mt-4 flex items-center gap-2 text-green-600 "dark":text-green-400'>'
           <PartyPopper size={18} />
@@ -139,7 +132,6 @@ return (;
         </div>
       ) : null}
       <ul className='mt-4 space-y-2'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Checklist */}
 <ul className='mt-4 space-y-2'>'
         {steps.map(step => (
@@ -158,19 +150,13 @@ className='text-green-600 "dark":text-green-400''
               </span>
             </div>
             {!step.completed && step.ctaHref && step.ctaLabel ? (
-<<<<<<< HEAD
               <Link href={step.ctaHref}>'"
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-=======
-              <Link href={step.ctaHref}>
-                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark: border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel;}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 "dark": border-gray-700 "hover":bg-gray-50 "dark":"hover":bg-gray-900 transition'>'
 
                   {step.ctaLabe
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </a>;
               </Link>;
             ) : null}
@@ -182,7 +168,6 @@ className='text-green-600 "dark":text-green-400''
           </li>;
         ))}
       {/* Primary CTA for next step */}
-<<<<<<< HEAD
       {!allDone && firstIncomplete ? (<div className='mt-5'>;
           <Link href={firstIncomplete && firstIncomplete.ctaHref!}>;
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>              {firstIncomplete && firstIncomplete.ctaLabel}        <div className="mt-5">;
@@ -196,33 +181,6 @@ className='text-green-600 "dark":text-green-400''
           <Link href={firstIncomplete.ctaHref!}>;
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">;
               {firstIncomplete.ctaLabel}
-=======
-<<<<<<< HEAD
-      {!allDone && firstIncomplete ? ("
-=======
-      {!allDone && firstIncomplete ? (
-
-<div className='mt-5'>'
-          <Link href={firstIncomplete.ctaHref!}>
-            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black "dark": text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue "hover":opacity-90 transition'>'
-
-              {firstIncomplete.ctaLabe
-}
-}
-  );
-}
-  )
-
-      {!allDone && firstIncomplete ? (
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<div className='mt-5' />}
-          <Link href={firstIncomplete.ctaHref!} />
-            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark: text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition' />
-
-              {firstIncomplete.ctaLabe}
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </a>;
           </Link>;
         </div>;
@@ -288,7 +246,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="text-sm opacity-75">{percentage}% complete</div>
       </div>
-<<<<<<< HEAD
 
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
@@ -352,8 +309,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
                 <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark: hover: bg-gray-900 transition">
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -395,7 +350,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
     </div>;
     </div>
 }
-}
   );
 }
   )
@@ -404,23 +358,12 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 
   );
 }
-<<<<<<< HEAD
-}
   )}
   )})}
     </div>;
-}
 }
   )}
   )})}
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-'"`
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

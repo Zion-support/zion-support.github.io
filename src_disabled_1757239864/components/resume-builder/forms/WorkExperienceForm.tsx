@@ -164,7 +164,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       <Trash2 className="h-4 w-4" />
                     </Button>
                   </div>
-                </div>
                 {work.description && (
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
                 )}
@@ -269,7 +268,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   />
                 )}
               </div>
-            </div>
 
             <FormField
               control={form.control}
@@ -347,15 +345,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   </Button>
                 )}
               </div>
-            </div>
           </form>
         </Form>
       </div>
-    </div>
   )
 }
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-=======
+:src/components/resume-builder/forms/WorkExperienceForm.tsx
                     setEditingId (null);
                     form.reset ({
                       company_name: '',
@@ -383,7 +378,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     Next;
                   </Button>)}
               </div>;
-            </div>;
           </form>;
         </Form>;
       </div>;
@@ -401,4 +395,3 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 }'"  );
 }
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/resume-builder/forms/WorkExperienceForm.tsx

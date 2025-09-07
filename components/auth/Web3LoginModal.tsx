@@ -7,7 +7,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }
     return this.props.children;
   }
-}
 import React, { useCallback, useEffect, useState } from 'react';'
 
 
@@ -28,20 +27,7 @@ function ModalInner() {
     }
 
     if (!isOpen) {
-<<<<<<< HEAD
       setError(null);
-=======
-
-      }
-
-      setError(null);
-setLoading(false);
-      setError($2);
-=======
-import dynamic from 'next/dynamic'
-const isClient = typeof window !== 'undefined'
-  }) => void
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
     setError(null)
     setLoading(true)
@@ -63,38 +49,13 @@ const isClient = typeof window !== 'undefined'
       console.error(e);'
       setError(e?.message |'Wallet connection failed')
     } finally {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
       setLoading(false)
     }
   }, [isOpen]);
 
   const handleEvmConnect = useCallback(async () => {
-<<<<<<< HEAD
     setError(null);
     setLoading(true);
-=======
-
-    setError(null);
-    setLoading(true);
-    try {;
-      const Web3ModalCtor = (await import('web3modal')).default;
-
-      const provider = await web3Modal.connect();
-      const ethers = await import('ethers');
-      const web3Provider = new ethers.providers.Web3Provider(provider as any);
-      const signer = web3Provider.getSigner();
-      const address = (await signer.getAddress()).toLowerCase();
-      const network = await web3Provider.getNetwork();
-      const nonceRes = await fetch('/api/auth/nonce');
-      const { nonce } = await nonceRes.json();
-      const domain = window.location.host;
-      const origin = window.location.origin;
-      const statement = 'Sign in to Zion with your wallet. No gas required.';
-      const issuedAt = new Date().toISOString();
-    setError($2);
-    setLoading($2);
->>>>>>> origin/main
     try {
       const Web3ModalCtor = (await import('web3modal')).default;
       const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
@@ -108,9 +69,7 @@ const isClient = typeof window !== 'undefined'
               rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
 
       const provider = await web3Modal.connect();
-=======
 
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
@@ -148,22 +107,14 @@ const web3Modal = new Web3ModalCtor({
 }
 "rpc": { "1": '"https"://cloudflare-eth.com','
 }
-            }
-          }
-        }
       });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       const provider = await web3Modal.connect();
-=======
-      const provider = await web3Modal.connect();'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
       const signer = web3Provider.getSigner();
       const address = (await signer.getAddress()).toLowerCase();
-<<<<<<< HEAD
       const network = await web3Provider.getNetwork();
 
 const ethers = await import('ethers');'
@@ -234,7 +185,6 @@ const handlePhantomConnect = useCallback(async () => {;
       const nonceRes = await fetch('/api/auth/nonce');
       const statement =;'
         'Sign in to Zion with your Solana wallet. No gas required.';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
 
@@ -244,7 +194,6 @@ const provider = (window as any)?.solana;
 
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })}),
       if (!verifyRes.ok) throw new Error($2);
->>>>>>> origin/main
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
       onClose()
     } catch (e: any) {
@@ -252,66 +201,6 @@ const provider = (window as any)?.solana;
       setError(e?.message || 'Phantom connection failed')
     } finally {
       setLoading(false)
-=======
-'
-      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
-      onClose()
-    } catch (e: any) {}
-      console.error(e);'
-      setError(e?.message |'Phantom connection failed')
-    } finally {}
-      setLoading(false)
-      if (!provider || !provider.isPhantom) {
-}
-throw new Error('Phantom not found. Install the Phantom extension');'
-      }
-      const resp = await provider.connect();
-      const publicKey: string = resp.publicKey.toString();
-
-const resp = await provider.connect();
-
-const "publicKey": string = resp.publicKey.toString();
-
-const nonceRes = await fetch('/api/auth/nonce');'
-
-const { nonce } = await nonceRes.json();
-
-const statement =;
-        'Sign in to Zion with your Solana wallet. No gas required.';'
-
-const message = `Sign-in with Solana\n\n${statement}\"nNonce": ${nonce}\"nAddress": ${publicKey}\nIssued "At": ${new Date().toISOString(,;`}`;`
-
-const encodedMessage = new TextEncoder().encode(message);
-
-const { signature } = await provider.signMessage(encodedMessage, 'utf8');'
-
-const bs58 = (await import('bs58')).default;'
-
-const verifyRes = await fetch('/api/auth/verify-sol', {'
-        }
-        "method": 'POST','
-        "headers": { 'Content-Type': 'application/json','
-},
-"body": JSON.stringify({
-          }
-          message,
-          "signature": bs58.encode(signature),
-          publicKey
-        })
-      });
-      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');'
-      onLoggedIn?.({ "address": publicKey, "chain": 'sol','
-});
-      onClose();
-    } catch ("e": any) {
-      }
-      console.error(e);
-      setError(e?.message |'Phantom connection failed');'
-    } finally {
-      }
-      setLoading(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -325,7 +214,6 @@ return (;
             No gas needed. We will verify your ownership with a signed message.
           </p>
         </div>
-<<<<<<< HEAD
         {error && (
           <div className='mb-3 rounded-md bg-red-50 "dark":bg-red-900/30 px-3 py-2 text-sm text-red-700 "dark":text-red-300'>'
             {error}
@@ -343,8 +231,6 @@ return (;
         </div>;
         <div className="mt-4 flex justify-end">;"
         </div>;
-      </div>;
-    </div>;
   )}
 
 export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props} />;        </div>;
@@ -359,12 +245,9 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}'
 
           </button>
-<<<<<<< HEAD
         </div>
         <div className = "mt-4 flex justify-end">"
         </div>
-      </div>
-    </div>
   );
   return <ModalInner {...props} />;        </div>
         {error && (
@@ -380,19 +263,14 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
         </div>"
         <div className="mt-4 flex justify-end">
         </div>
-      </div>
-    </div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   )
 }
 
 export default function Web3LoginModal() {;
   }
   if (!isClient) return null;
-<<<<<<< HEAD
   return <ModalInner {...props} />;        </div>
         {error && (
->>>>>>> origin/main
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
         )}
         <div className="space-y-3">
@@ -404,15 +282,9 @@ export default function Web3LoginModal() {;
           </button>
         </div>
         <div className="mt-4 flex justify-end">
-<<<<<<< HEAD
           <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
-=======
->>>>>>> origin/main
-=======
-=======
 
 export default function Web3LoginModal() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return <ModalInner {...props} />;        </div>
         {error && ("
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
@@ -426,67 +298,30 @@ export default function Web3LoginModal() { return null; }
           </button>
         </div>"
         <div className="mt-4 flex justify-end">
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </div>
-      </div>
-    </div>
   )
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
-=======
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;
-=======
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;
-=======
-
-export default function Web3LoginModal() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return <ModalInner {...props} />;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return <ModalInner {...props} />
 }
           </button>;
         </div>;
         <div className="mt-4 flex justify-end">;
         </div>;
-      </div>;
-    </div>;
   )}export default function Web3LoginModal() {if (!isClient) return null;
-  return <ModalInner {...props} />;
   return <ModalInner {...props} />;
 }
   return <ModalInner {...props} />;return <ModalInner {...props} />;
   return <ModalInner {...props} />;
-  return <ModalInner {...props} />;
 
-<<<<<<< HEAD
 }
     <div className = $2;
->>>>>>> origin/main
   return <ModalInner {...props} />
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return <ModalInner {...props} />;
-return <ModalInner {...props} />;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

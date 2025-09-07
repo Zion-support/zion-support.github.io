@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react";
 import Head from "next/head";
@@ -480,7 +479,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </p>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* Guides Grid */}
         <section id="guides" className="py - 16 bg - gray - 50">;
@@ -530,7 +528,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         <Download className="w-4 h-4" />;
                       </Link>;
                     </div>;
-                  </div>;
                 </motion && motion.div>;
               ))}
         {/* CTA Section */}
@@ -572,7 +569,6 @@ export default function GuidesPage() {
                 Comprehensive guides and tutorials for our services
               </p>
             </div>
-          </div>
         </section>
       </div>
     </Layout>
@@ -589,7 +585,6 @@ export default function GuidesPage() {
   );
                       </span>;
                     </div>;
-                  </div>;
                   <div className="p - 6">;
                     <div className="flex items - center justify - between text - sm text - gray - 500 mb - 4">;
                       <div className="flex items - center">;
@@ -600,14 +595,12 @@ export default function GuidesPage() {
                         <User className="w - 4 h - 4 mr - 1" />;
                         {guide.author}
                       </div>;
-                    </div>;
                     <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
                       {guide.title}
                     </h3>;
                     <p className="text - gray - 600 mb - 4">{guide.description}</p>;
                     <div className="flex items - center justify - between mb - 4">;
                       <div className="flex items - center">;
-                        <div className="flex items - center">;
                           {[...Array (5)].map ((_, i) => (
                             <Star;
                               key={i}
@@ -623,7 +616,6 @@ export default function GuidesPage() {
                           {guide.rating} ({guide.students} students);
                         </span>;
                       </div>;
-                    </div>;
                     <div className="flex flex - wrap gap - 2 mb - 6">;
                       {guide.tags.map ((tag) => (
                         <span;
@@ -648,10 +640,8 @@ export default function GuidesPage() {
                         <Download className="w - 4 h - 4" />;
                       </Link>;
                     </div>;
-                  </div>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
@@ -692,52 +682,3 @@ export default function GuidesPage() {
     </Layout>);
 }
 
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function GuidesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Guides | Zion Tech Group</title>
-        <meta name="description" content="Professional guides solutions for your business." />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Guides
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional guides solutions for your business.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300">
-              Professional solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300">
-              Advanced technology solutions.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300">
-              Scalable and reliable solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

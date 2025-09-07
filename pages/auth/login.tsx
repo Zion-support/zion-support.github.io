@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -78,7 +77,6 @@ const LoginPage = () => {
           setSessionChecked(true);
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
         }
-      }
 
       // Listener for auth state changes
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),
@@ -129,7 +127,6 @@ const LoginPage = () => {
           logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo }),
           returnTo = '/dashboard'
         }
-      }
       
       // Prevent redirecting back to auth pages or creating loops
       const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password'];
@@ -316,7 +313,6 @@ const LoginPage = () => {
           <p className="text-gray-600">Checking authentication...</p>
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
-      </div>
     )
   }
 
@@ -331,7 +327,6 @@ const LoginPage = () => {
           <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
         </div>
-      </div>
     )
   }
 
@@ -346,19 +341,10 @@ const LoginPage = () => {
     return null, // Or a minimal loader/empty div
   }
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function Login() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-<<<<<<< HEAD
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
@@ -427,24 +413,3 @@ export default function Login() {
 };
 
 export default LoginPage;
-=======
-        <meta name = $2;
-export default LoginPage,
-=======
-        <title>Login - Zion Tech Group</title>
-        <meta name="description" content="Login page." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Login</h1>
-          <p className="text-lg text-gray-600">
-            Login functionality coming soon.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

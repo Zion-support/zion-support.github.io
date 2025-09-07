@@ -416,7 +416,6 @@ class ErrorPreventionMonitor {
             "comment": lines[i].trim()
           })}
       }
-    }
     return todos}
   findConsoleStatements() {
     const consoleStatements = [];
@@ -432,7 +431,6 @@ class ErrorPreventionMonitor {
             "statement": lines[i].trim()
           })}
       }
-    }
     return consoleStatements}
   findHardcodedValues() {
     const hardcodedValues = [];
@@ -457,8 +455,6 @@ class ErrorPreventionMonitor {
               "type": 'hardcoded'
             })}
         }
-      }
-    }
     return hardcodedValues}
   async takePreventiveActions(issues) {
     if (!this.preventiveActionsEnabled) {
@@ -642,9 +638,4 @@ if (require.main === module) {
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
-<<<<<<< HEAD
 monitor.run();
-monitor.run();
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -78,7 +78,6 @@ const regionLc = (region |'').toString().toLowerCase();'
   if (regionLc.includes('apac') |regionLc.includes('asia')) {'
     }
     candidates =
-<<<<<<< HEAD
       stake > 5000
         ? ['arbitrum', 'optimism', 'avalanche']'
         : ['bnb', 'avalanche', 'polygon'];'
@@ -193,7 +192,6 @@ if (||) {$2;
         ? ['arbitrum', 'optimism', 'ethereum'];'
         : ['polygon', 'arbitrum', 'optimism'];'
   }
-<<<<<<< HEAD
   const ranked = candidates.map (key => ({ key: k, chain: (CHAINS as any)[k] }));
   res;
     .status (200);
@@ -201,7 +199,6 @@ if (||) {$2;
   const region_lc = (region || '').to_string ().toLowerCase ();
   if (|| region_lc.includes ('asia')) {) {
   $2
-=======
 
 const ranked = candidates.map (key => ({ "key": k, "chain": (CHAINS as any)[k]
 }))res;

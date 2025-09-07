@@ -30,7 +30,6 @@ const { execSync } = require("child_process")
 // console.log("" PM2 ecosystem configuration created")
     console.log(" PM2 ecosystem configuration created")
   console.error(" Error in prevention "loop": ")
-  console.error(" Error in prevention "loop": ")
   console.log("" Running error prevention checks...")
     // Check "1"
 // console.log("" Prevention checks completed")
@@ -87,7 +86,6 @@ const { execSync } = require("child_process")
         "stdio": "inherit"
       console.log(" TypeScript errors auto-fixed")
   console.error(" Failed to auto-fix TypeScript "errors": ")
-  console.error(" Failed to auto-fix TypeScript "errors": ")
   console.log(" Auto-fixing import issues...")
       execSync("node ""scripts/automation/fix-imports.cjs""")
   "cwd"
@@ -96,7 +94,6 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "inherit"
       console.log(" Import issues auto-fixed")
-  console.error(" Failed to auto-fix import "issues": ")
   console.error(" Failed to auto-fix import "issues": ")
   console.log(" Auto-fixing syntax issues...")
       execSync("node ""scripts/automation/fix-syntax.cjs""")
@@ -107,7 +104,6 @@ const { execSync } = require("child_process")
         "stdio": "inherit"
       console.log(" Syntax issues auto-fixed")
   console.error(" Failed to auto-fix syntax "issues": ")
-  console.error(" Failed to auto-fix syntax "issues": ")
   console.log(" Auto-fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
@@ -116,7 +112,6 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "inherit"
       console.log(" Unused imports auto-fixed")
-  console.error(" Failed to auto-fix unused "imports": ")
   console.error(" Failed to auto-fix unused "imports": ")
           !item.startsWith(".")
           item !== "node_modules"
@@ -128,9 +123,4 @@ const { execSync } = require("child_process")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
-<<<<<<< HEAD
   console.log("� Received SIGTERM, shutting down gracefully...")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

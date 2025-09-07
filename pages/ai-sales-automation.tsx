@@ -1,16 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AISalesAutomationPage() {
   const service = $2;
   if (!service) return null,
 
-=======
-
-export default function aisalesautomation() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -25,11 +20,6 @@ export default function aisalesautomation() {
             Professional ai sales automation solutions tailored to your business needs.
           </p>
         </div>
-      </div>
     </Layout>
-<<<<<<< HEAD
   )
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

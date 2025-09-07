@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
@@ -69,7 +68,6 @@ export default function AdminIntegrationsPage() {
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
             </div>
-          </div>
           <StatusIcon status={conn.status} />
         </div>
         <div className="flex items-center gap-2">
@@ -84,7 +82,6 @@ export default function AdminIntegrationsPage() {
             </>
           )}
         </div>
-      </div>
     )
   }
 
@@ -106,7 +103,6 @@ export default function AdminIntegrationsPage() {
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
                   </div>
-                </div>
               </>
             ) : (
               <>
@@ -119,28 +115,9 @@ export default function AdminIntegrationsPage() {
             <button className="px-3 py-1.5 rounded border text-sm" onClick={() => setSelected(null)}>Close</button>
             <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id), setSelected(null) }}>Save</button>
           </div>
-        </div>
-      </div>
     )
   }
 
-=======
-import React, { useState } from 'react'
-import Head from 'next/head'
-interface ProviderMeta {
-  id: string
-  name: string
-  status: string
-}
-
-interface ConnectionMap {
-  [key: string]: boolean
-}
-
-const AdminIntegrationsPage: React.FC = () => {
-  const [providers, setProviders] = useState<ProviderMeta[]>([])
-  const [connections, setConnections] = useState<ConnectionMap>({})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <>
       <Head><title>Admin Integrations • Zion</title></Head>
@@ -205,12 +182,5 @@ function ManualOverrideForm() {
           <button onClick={save} className="px-3 py-1.5 rounded bg-black text-white text-sm">Save Override</button>
           <div className="text-sm text-gray-500">{message}</div>
         </div>
-      </div>
-    </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
-export default AdminIntegrationsPage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

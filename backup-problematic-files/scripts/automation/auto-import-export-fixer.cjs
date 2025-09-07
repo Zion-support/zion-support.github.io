@@ -10,9 +10,4 @@ console.log(' Starting auto import/export fixer...')
         content = content.replace(/from\s+['"]src\/([^'"]+)['"]/g, "
         content = content.replace(/from\s+['"]@\/([^'"]+)['"]/g, "
         content = content.replace(/from\s+['"]([^'')]
-<<<<<<< HEAD
   console.error(' Auto import/export fixer failed to "start")
-  console.error(' Auto import/export fixer failed to "start")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

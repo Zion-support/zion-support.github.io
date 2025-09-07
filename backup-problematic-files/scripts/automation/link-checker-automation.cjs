@@ -152,7 +152,6 @@ class LinkCheckerAutomation {}
                     "statusText": error.message,
                     "valid": false;
                 })};
-        })};
     async checkAllLinks(links) {}
         this.log(`Checking ${links.length} links...`);
         
@@ -225,16 +224,10 @@ class LinkCheckerAutomation {}
             this.log(`Link Checker Automation "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the automation if this script is executed directly;
 if ( {})
     const automation = new LinkCheckerAutomation) {}
      {}
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = LinkCheckerAutomation;
-module.exports = LinkCheckerAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

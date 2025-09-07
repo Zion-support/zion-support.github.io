@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -126,7 +125,6 @@ export default function QuantumSecureCommunication() {
                         Start Free Trial
                       </Button>
                     </div>
-                  </div>
                 </motion.div>
 
                 <motion.div
@@ -145,7 +143,6 @@ export default function QuantumSecureCommunication() {
                     </span>
                   </Button>
                 </motion.div>
-              </motion.div>
 
               {/* Key Benefits */}
               <motion.div
@@ -167,7 +164,6 @@ export default function QuantumSecureCommunication() {
                   <div className="text-gray-300">Active customers worldwide</div>
                 </div>
               </motion.div>
-            </motion.div>
           </div>
         </section>
 
@@ -213,7 +209,6 @@ export default function QuantumSecureCommunication() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Use Cases Section */}
@@ -258,7 +253,6 @@ export default function QuantumSecureCommunication() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Technology & Integrations */}
@@ -323,7 +317,6 @@ export default function QuantumSecureCommunication() {
                 </div>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Market Position & ROI */}
@@ -369,7 +362,6 @@ export default function QuantumSecureCommunication() {
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-200">Compliance tools</span>
                   </div>
-                </div>
               </motion.div>
 
               <motion.div
@@ -397,10 +389,8 @@ export default function QuantumSecureCommunication() {
                     <TrendingUpIcon className="w-5 h-5 text-green-400" />
                     <span className="text-gray-200">Future-proof security</span>
                   </div>
-                </div>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -466,26 +456,4 @@ export default function QuantumSecureCommunication() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-=======
-import Layout from '../components/layout/Layout';
-
-export default function quantumsecurecommunication() {
-  return (
-    <Layout>
-      <Head>
-        <title>Quantum Secure Communication - Zion Tech Group</title>
-        <meta name="description" content="Quantum Secure Communication solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Quantum Secure Communication</h1>
-          <p className="text-lg text-gray-600">
-            Professional quantum secure communication solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -26,7 +26,7 @@ class QuickSyntaxFixer {;
 
 
         .replace(/^>>>>>>>.*$/gm, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
+        .replace(/[\s\S]*?[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -55,7 +55,6 @@ class QuickSyntaxFixer {;
       this.log(`Error fixing ${filePath}: ${error.message}`);
       return false;
     }
-  }
 ;
   async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
@@ -77,12 +76,10 @@ class QuickSyntaxFixer {;
       if (this.fixFile(file)) {;
         fixedCount++;
       }
-    }
 ;
     this.log(`✅ Fixed ${fixedCount} critical files`);
     return { "fixedFiles": this.fixedFiles };
   }
-}
 ;
 // Run the fixer;
 if (require.main === module) {;

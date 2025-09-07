@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import useSWR from 'swr';
 import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
@@ -46,34 +45,7 @@ export default function ClientDashboard() {
                 <Link href={`/client/jobs/${job.id}/edit`}><a className="px-2 py-1 text-sm border rounded">Edit Job</a></Link>
                 <button className="px-2 py-1 text-sm border rounded" onClick={() => closeJob(job.id)}>Close Job</button>
               </div>
-            </div>
-          </div>
         ))}
       </div>
-    </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function dashboard() {
-  return (
-    <Layout>
-      <Head>
-        <title>Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Dashboard solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Dashboard</h1>
-          <p className="text-lg text-gray-600">
-            Professional dashboard solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

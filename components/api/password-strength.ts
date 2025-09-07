@@ -24,7 +24,6 @@ if (entropy < 30) feedback.push ('Password is too predictable');'
   "suggestions": string[];
 }
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest,
   res: NextApiResponse<PasswordStrengthResult | { error: string}>
 ) {
@@ -72,31 +71,6 @@ const commonPatterns = [;
       (hasLowercase ? 26 : 0) +;
       (hasNumbers ? 10 : 0) +;
       (hasSymbols ? 32 : 0)const entropy =;
-=======
-    ];
-=======
-    // Check for common patterns;
-    const commonPatterns = ['
-      '123''
-      'abc''
-      'qwe''
-      'password''
-      'admin''
-      'user''
-      'test''
-      '123456''
-      'password123''
-      'admin123''
-      'qwerty''
-      'asdf'
-    ];
-    const hasCommonPatterns = commonPatterns.some(pattern =>      password.toLowerCase().includes(pattern)
-    );
-    // Calculate entropy (simplified)    // Check for common patterns;
-    const commonPatterns = ['
-      '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf'
-    ];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
     );
@@ -107,7 +81,6 @@ const charsetSize =
       (hasNumbers ? 10 : 0) +
       (hasSymbols ? 32 : 0);
     const entropy =
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
     // Calculate score;
     let score = 0;
@@ -162,11 +135,8 @@ const "result": PasswordStrengthResult = {password;
   }
     res.status(500).json({ "error": 'Internal server error' })'
   }
-}
   }}
     res.status(500).json({ error: 'Internal server error' })}
-}
-  }
 }
     const length = $2;
     const hasUppercase = /[A-Z]/.test($2);
@@ -210,7 +180,6 @@ const "result": PasswordStrengthResult = {password;
     const suggestions: string[] = [],
     if (score < 50) {
       suggestions.push($2);
-      suggestions.push($2);
       suggestions.push('Avoid personal information and common words')
     }
     if (hasCommonPatterns) {
@@ -241,36 +210,13 @@ const "result": PasswordStrengthResult = {password;
     console.error($2);
     res.status(500).json({ error: 'Internal server error' })
   }
-}
-=======
     res.status(200).json(result);
   } catch (error) {'
     console.error('Password strength check error:', error);'
     res.status(500).json({ error: 'Internal server error' });
   }
-}
-  }
-<<<<<<< HEAD
-  }
-=======
-
-
-      return res.status(400).json({ error: 'Password is required' });
-    }
-    // Password analysis
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
-}
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

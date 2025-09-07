@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -10,16 +6,12 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 console.log('🛡️ Starting error prevention monitor...');
 #!/usr/bin/env node;"
 
 class ErrorPreventionMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 console.log('🛡️ Starting error prevention monitor...');
 #!/usr/bin/env node;"
 
@@ -146,19 +138,9 @@ class ErrorPreventionMonitor {
       // Generate report;
 
       throw error}
-<<<<<<< HEAD
       execSync('bash start-simple-error-prevention.sh', { 
         "cwd": this.projectRoot, 
         "stdio": 'pipe' 
-=======
-}
-  triggerAutoFix() {
-    this.log('Triggering auto-fix process...');
-    try {
-      execSync('bash start-simple-error-prevention.sh', {
-        "cwd": this.projectRoot,
-        "stdio": 'pipe'
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       });
       this.log('Auto-fix process completed')} catch (error) {
       this.log(`Auto-fix process "failed": ${error.message}`)}
@@ -166,15 +148,9 @@ class ErrorPreventionMonitor {
   checkBuildStatus() {
     try {
       this.log('Checking build status...');
-<<<<<<< HEAD
       execSync('yarn build', { 
         "cwd": this.projectRoot, 
         "stdio": 'pipe' 
-=======
-      execSync('yarn build', {
-        "cwd": this.projectRoot,
-        "stdio": 'pipe'
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       });
       this.log('Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
@@ -198,11 +174,6 @@ class ErrorPreventionMonitor {
     this.preventionHistory = [];
     this.riskFactors = new Map()}"
   log(message, level = 'INFO') {
-<<<<<<< HEAD
-=======
-    const timestamp = new Date().toISOString();
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
@@ -251,7 +222,6 @@ const maxSize = 1024 * 1024; // 1MB;
               vulnerabilities.push({"
 
     const performanceIssues = [];
-<<<<<<< HEAD
       const foundFrameworks = cssFrameworks.filter(framework => 
         packageJson.dependencies && packageJson.dependencies[framework]
       );
@@ -262,27 +232,6 @@ const maxSize = 1024 * 1024; // 1MB;
       if (foundFrameworks.length > 1) {
 
     const qualityIssues = []
-=======
-    try {
-      // Check for large bundle size indicators
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      // Check for heavy dependencies
-      const heavyDeps = ['lodash', 'moment', 'date-fns', 'ramda', 'underscore'];
-      for (const dep of heavyDeps) {
-        if (packageJson.dependencies && packageJson.dependencies[dep]) {
-          performanceIssues.push({
-            "type": 'heavy-dependency',
-            "dependency": dep,
-            "severity": 'medium',
-            "recommendation": `Consider using lighter alternatives for ${dep}`
-          })}
-      }
-      // Check for multiple CSS frameworks
-      const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
-      const foundFrameworks = cssFrameworks.filter(framework =>
-        packageJson.dependencies && packageJson.dependencies[framework]
-      );
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // TODO: Implement
 
       const foundFrameworks = cssFrameworks.filter(framework => 
@@ -429,46 +378,9 @@ if (require.main === module) {
     this.checkProjectHealth();
     // Schedule periodic health checks;
     setInterval(() => {
-<<<<<<< HEAD
 monitor.run();
-=======
-      this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
-    this.log('Monitoring active - health checks every 15 minutes')}
-}
-// Start the monitor
-const monitor = new ErrorPreventionMonitor();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 monitor.run();
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-monitor.run();
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-monitor.run();
-<<<<<<< HEAD
-monitor.run();
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
 
 // Start the monitor;

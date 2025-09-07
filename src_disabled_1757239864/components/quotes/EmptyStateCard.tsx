@@ -32,8 +32,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src/components/quotes/EmptyStateCard.tsx
-=======
+:src/components/quotes/EmptyStateCard.tsx
 }
 
         </h3>;
@@ -70,5 +69,4 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
     </Card>);
 }
 
->>>>>>> origin/main:src_disabled_1757239864/components/quotes/EmptyStateCard.tsx
 };

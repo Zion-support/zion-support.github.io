@@ -210,9 +210,4 @@ if (require.main === module) {}
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ErrorDetectionMonitor;
-module.exports = ErrorDetectionMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

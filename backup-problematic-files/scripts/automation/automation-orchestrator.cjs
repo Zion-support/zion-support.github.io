@@ -14,7 +14,6 @@ const path = require("path")
       bus.on(""log": err")
       bus.on(""log": out")
   case "start"
-  case "start"
         this.processes.set(process.name, { ...process, "status": `online``})
       case "stop`:console.log(⏸  Process ${process.name} stopped```)
         this.processes.set(process.name, { ...process, "status": "})
@@ -25,7 +24,6 @@ const path = require("path")
       case "exit":console.log(" Process ${process.name} exited")
         this.processes.set(process.name, { ...process, "status": "errored"})
   const { process, log } = data;console.error(" Error in ${process.name}:")
-  this.processes.get(process.name).status = "errored"
   this.processes.get(process.name).status = "errored"
     if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {console.log(" ${process.name}:")
 // console.log("� Critical process ${processName} failed, attempting recovery...")
@@ -144,11 +142,5 @@ const path = require("path")
         "reports",automation-report.json"
       await fs.mkdir(path.dirname(reportPath), { "recursive"}
   console.error(" Failed to save "report": ")
-  console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
-<<<<<<< HEAD
   console.error(" Orchestrator "error")
-  console.error(" Orchestrator "error")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -56,7 +56,6 @@ href=""tel":+13024640950""
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-white">"
@@ -78,8 +77,6 @@ key={svc.id}
                       From ${svc.pricing.starter}/
                       {svc.pricing.currency === 'USD' ? 'mo' : ''}'
                     </div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
@@ -106,10 +103,8 @@ href="/contact""
                     Get started
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-gray-50">"
@@ -130,8 +125,6 @@ key={svc.id}
                     <div className="text-green-600 font-semibold">"
                       Starts at ${svc.pricing.starter.toLocaleString()}
                     </div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
@@ -158,10 +151,8 @@ href="/contact""
                     Request quote
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-white">"
@@ -182,8 +173,6 @@ key={svc.id}
                     <div className="text-purple-600 font-semibold">"
                       From ${svc.pricing.starter.toLocaleString()}
                     </div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
@@ -210,10 +199,8 @@ href="/contact""
                     Book consult
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-gray-50">"
@@ -305,8 +292,6 @@ className="underline""
 compliance requirements.
               </p>
             </div>
-          </div>
-        </div>
       </section>
     </MainLayout>
   );
@@ -352,7 +337,6 @@ href=""tel":+13024640950""
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-white">"
@@ -374,8 +358,6 @@ key={svc.id}
                       From ${svc.pricing.starter}/
                       {svc.pricing.currency === 'USD' ? 'mo' : ''}'
                     </div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
@@ -402,10 +384,8 @@ href="/contact""
                     Get started
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-gray-50">"
@@ -426,8 +406,6 @@ key={svc.id}
                     <div className="text-green-600 font-semibold">"
                       Starts at ${svc.pricing.starter.toLocaleString()}
                     </div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
@@ -454,10 +432,8 @@ href="/contact""
                     Request quote
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-white">"
@@ -478,8 +454,6 @@ key={svc.id}
                     <div className="text-purple-600 font-semibold">"
                       From ${svc.pricing.starter.toLocaleString()}
                     </div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
@@ -506,10 +480,8 @@ href="/contact""
                     Book consult
                   </Link>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-gray-50">"
@@ -601,8 +573,6 @@ className="underline""
 compliance requirements.
               </p>
             </div>
-          </div>
-        </div>
       </section>
     </MainLayout>
   );
@@ -650,7 +620,6 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
               Call +1 302 464 0950;
             </a>;
           </div>;
-        </div>;
       </section>;
       <section className="py-16 bg-white">;"
         <div className="container mx-auto px-4">;"
@@ -670,8 +639,6 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                       From ${svc.pricing.starter}/;
                       {svc.pricing.currency === 'USD' ? 'mo' : ''}'
                     </div>;
-                  </div>;
-                </div>;
                 <h3 className="text-xl font-bold text-gray-900 mb-2">;"
                   {svc.name}
                 </h3>;
@@ -697,10 +664,8 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                     Get started;
                   </Link>;
                 </div>;
-              </div>;
             ))}
           </div>;
-        </div>;
       </section>;
       <section className="py-16 bg-gray-50">;"
         <div className="container mx-auto px-4">;"
@@ -719,8 +684,6 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                     <div className="text-green-600 font-semibold">;"
                       Starts at ${svc.pricing.starter.toLocaleString()}
                     </div>;
-                  </div>;
-                </div>;
                 <h3 className="text-xl font-bold text-gray-900 mb-2">;"
                   {svc.name}
                 </h3>;
@@ -746,10 +709,8 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                     Request quote;
                   </Link>;
                 </div>;
-              </div>;
             ))}
           </div>;
-        </div>;
       </section>;
       <section className="py-16 bg-white">;"
         <div className="container mx-auto px-4">;"
@@ -768,8 +729,6 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                     <div className="text-purple-600 font-semibold">;"
                       From ${svc.pricing.starter.toLocaleString()}
                     </div>;
-                  </div>;
-                </div>;
                 <h3 className="text-xl font-bold text-gray-900 mb-2">;"
                   {svc.name}
                 </h3>;
@@ -795,10 +754,8 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                     Book consult;
                   </Link>;
                 </div>;
-              </div>;
             ))}
           </div>;
-        </div>;
       </section>;
       <section className="py-16 bg-gray-50">;"
         <div className="container mx-auto px-4">;"
@@ -889,18 +846,6 @@ const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCateg
                 compliance requirements.;
               </p>;
             </div>;
-          </div>;
-        </div>;
       </section>;
     </MainLayout>;
   )}export default ExpandedServicesPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

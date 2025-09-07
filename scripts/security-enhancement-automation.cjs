@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -57,42 +42,15 @@ console.log('� Starting Security Enhancement Automation...')
     "recommendations"
     "nextSteps"
   console.log('� Security improvements "applied")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-  console.error(' Security enhancement automation "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(' Security enhancement automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(' Security enhancement automation "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(' Security enhancement automation "failed")
+
   console.error(' Security enhancement automation "failed")
 /**
  * Security Enhancement Automation
  * Comprehensive security improvements and monitoring
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -151,7 +109,6 @@ class SecurityEnhancementAutomation {
       this.log(`Security enhancement failed: ${error.message}`, 'error');
       this.errors.push(error.message);
     }
-  }
 
   async runSecurityAudit() {
     this.log('🔍 Running security audit...', 'info');
@@ -179,7 +136,6 @@ class SecurityEnhancementAutomation {
     } catch (error) {
       this.errors.push(`Security audit failed: ${error.message}`);
     }
-  }
 
   async checkDependencySecurity() {
     this.log('📦 Checking dependency security...', 'info');
@@ -202,7 +158,6 @@ class SecurityEnhancementAutomation {
           this.vulnerabilities.push(`Potentially vulnerable package: ${packageVersion}`);
           foundVulnerable = true;
         }
-      }
       
       if (!foundVulnerable) {
         this.securityImprovements.push('No known vulnerable packages detected');
@@ -211,7 +166,6 @@ class SecurityEnhancementAutomation {
     } catch (error) {
       this.errors.push(`Dependency security check failed: ${error.message}`);
     }
-  }
 
   async addSecurityHeaders() {
     this.log('🛡️ Adding security headers...', 'info');
@@ -306,12 +260,10 @@ class SecurityEnhancementAutomation {
           fs.writeFileSync(nextConfigPath, updatedConfig);
           this.securityImprovements.push('Added comprehensive security headers');
         }
-      }
       
     } catch (error) {
       this.errors.push(`Security headers addition failed: ${error.message}`);
     }
-  }
 
   async secureEnvironment() {
     this.log('🔐 Securing environment...', 'info');
@@ -350,12 +302,10 @@ SENTRY_DSN=your_sentry_dsn_here
           fs.appendFileSync(gitignorePath, '\n# Environment files\n.env.local\n.env.production\n');
           this.securityImprovements.push('Updated .gitignore for environment files');
         }
-      }
       
     } catch (error) {
       this.errors.push(`Environment security failed: ${error.message}`);
     }
-  }
 
   async implementCSP() {
     this.log('🛡️ Implementing Content Security Policy...', 'info');
@@ -395,7 +345,6 @@ SENTRY_DSN=your_sentry_dsn_here
     } catch (error) {
       this.errors.push(`CSP implementation failed: ${error.message}`);
     }
-  }
 
   async implementRateLimiting() {
     this.log('⏱️ Implementing rate limiting...', 'info');
@@ -440,7 +389,6 @@ SENTRY_DSN=your_sentry_dsn_here
     } catch (error) {
       this.errors.push(`Rate limiting implementation failed: ${error.message}`);
     }
-  }
 
   async implementInputValidation() {
     this.log('✅ Implementing input validation...', 'info');
@@ -477,7 +425,6 @@ SENTRY_DSN=your_sentry_dsn_here
     } catch (error) {
       this.errors.push(`Input validation implementation failed: ${error.message}`);
     }
-  }
 
   async generateSecurityReport() {
     this.log('📊 Generating security report...', 'info');
@@ -507,28 +454,7 @@ SENTRY_DSN=your_sentry_dsn_here
     score -= this.errors.length * 5;
     return Math.max(0, score);
   }
-}
 
 // Run the security enhancement
 const securityEnhancer = new SecurityEnhancementAutomation();
 securityEnhancer.runSecurityEnhancement().catch(console.error);
-=======
-  console.error(' Security enhancement automation "failed")
-    "file"""
-    "issue"""
-    "severity"""
-    "line"""
-        content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY")""
-    "key"""
-    "value"""
-    "value": """
-    "high"""
-    "medium"""
-    "low"""
-      "securityHeaders"""
-      "validationScript"""
-    "recommendations"""
-    "nextSteps"""
-  console.log('� Security improvements "applied")""');
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

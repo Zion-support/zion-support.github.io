@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -29,7 +28,6 @@ export default function ProjectPage() {
       } finally {
         setLoading(false)
       }
-    }
     load()
   }, [projectId]),
 
@@ -45,7 +43,6 @@ export default function ProjectPage() {
       setNote($2);
       setShowFeedback(true)
     }
-  }
 
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
@@ -57,7 +54,6 @@ export default function ProjectPage() {
       setProject($2);
       setShowFeedback(true)
     }
-  }
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -145,7 +141,6 @@ export default function ProjectPage() {
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
             )}
           </div>
-        </div>
       )}
       <FeedbackModal
         isOpen={showFeedback}
@@ -155,28 +150,4 @@ export default function ProjectPage() {
       />
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function [projectId]() {
-  return (
-    <Layout>
-      <Head>
-        <title>[ProjectId] - Zion Tech Group</title>
-        <meta name="description" content="[ProjectId] solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">[ProjectId]</h1>
-          <p className="text-lg text-gray-600">
-            Professional [projectid] solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

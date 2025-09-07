@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -23,7 +19,6 @@ const { execSync } = require("child_process");
 // console.log("" Starting Smart Dependency Analysis...")
       console.log("" Smart Dependency Analysis completed successfully")
   console.log(" Smart Dependency Analysis completed successfully")
-  console.error(" Smart Dependency Analysis "failed": ")
   console.error(" Smart Dependency Analysis "failed": ")
   console.log("� Loading current dependencies...")
 const packageJsonPath = path.join(process.cwd(), "package.json";
@@ -106,7 +101,6 @@ const depcheckOutput = execSync("npx depcheck --json");
     this.analysis.recommendations = recommendations;console.log(" Generated ${recommendations.length} recommendations")
 // console.log("" Applying smart updates...")
   console.log(""�  Applying security fixes...")
-  console.log(""�  Applying security fixes...")
         execSync("npm audit fix", { "stdio": "inherit"})
 // console.log(""⚠  Security fixes "failed": ")
         console.log("�  Applying security fixes...")
@@ -114,7 +108,6 @@ const depcheckOutput = execSync("npx depcheck --json");
   console.log(""⚠  Security fixes "failed": ")
       try {console.log(� Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { "stdio": "pipe" }")
         updatesApplied++} catch (error) {  console.log("⚠  Failed to update ${pkg.name  }:")
-  try {console.log("�  Removing unused dependency ${pkg}...");execSync("npm uninstall ${pkg}", { "stdio": "pipe"})
   try {console.log("�  Removing unused dependency ${pkg}...");execSync("npm uninstall ${pkg}", { "stdio": "pipe"})
           updatesApplied++} catch (error) {  console.log("⚠  Failed to remove ${pkg  }:")
 console.log(" Applied ${updatesApplied} smart updates")
@@ -139,41 +132,10 @@ const latestMajor = latest.split(".");
       "dependencies"
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(` Smart Dependency Manager "failed": "`)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(` Smart Dependency Manager "failed": "`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(` Smart Dependency Manager "failed": "`)
-<<<<<<< HEAD
-  console.error(` Smart Dependency Manager "failed": "`)
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

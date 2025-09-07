@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
 export default function CloudPlatformPage() {
   const features = $2;
@@ -25,18 +24,12 @@ export default function CloudPlatformPage() {
   ],
 
   const benefits = $2;
-=======
-import Layout from '../components/layout/Layout';
-
-export default function cloudplatform() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Cloud Platform - Zion Tech Group</title>
         <meta name="description" content="Cloud Platform solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
@@ -52,7 +45,6 @@ export default function cloudplatform() {
                 <Cloud className="w-4 h-4 mr-2" />
                 Enterprise Cloud Infrastructure
               </div>
-            </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Cloud Platform
@@ -72,7 +64,6 @@ export default function cloudplatform() {
                 View Documentation
               </a>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -103,7 +94,6 @@ export default function cloudplatform() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -124,7 +114,6 @@ export default function cloudplatform() {
                     </div>
                   ))}
                 </div>
-              </div>
               
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
@@ -140,11 +129,6 @@ export default function cloudplatform() {
                       <Globe className="w-4 h-4 mr-2" />
                       15+ regions worldwide
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -166,22 +150,8 @@ export default function cloudplatform() {
                 Contact Sales
               </a>
             </div>
-          </div>
         </section>
       </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud Platform</h1>
-          <p className="text-lg text-gray-600">
-            Professional cloud platform solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

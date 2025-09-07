@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
@@ -20,20 +19,12 @@ const ResumeBuilder: NextPage = () => {
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   ),
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function resumebuilder() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Resume Builder - Zion Tech Group</title>
         <meta name="description" content="Resume Builder solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
 
@@ -74,7 +65,6 @@ export default function resumebuilder() {
               authorizationToken={operatorToken}
             />
           </div>
-        </div>
         <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
 
@@ -101,17 +91,3 @@ export default function resumebuilder() {
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
             onAccept = $2;
 export default ResumeBuilder,
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Resume Builder</h1>
-          <p className="text-lg text-gray-600">
-            Professional resume builder solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -20,7 +20,6 @@ const { execSync } = require("child_process")
 // console.log("" Starting AI Code Optimization...")
       console.log(" AI Code Optimization completed successfully")
   console.error(" AI Code Optimization "failed": ")
-  console.error(" AI Code Optimization "failed": ")
   console.log(" Analyzing codebase for optimization opportunities...")
     const srcDir = path.join(process.cwd(), "
   console.log(" Analyzing codebase for optimization opportunities...")
@@ -96,8 +95,6 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
   console.log(` Applying optimizations...``)
   if (optimization.priority === "critical")
   if (optimization.priority === "high")
-  if (optimization.priority === "high")
-  if (optimization.priority === "high")
         appliedCount++;")}")}"
       const content = await fs.readFile(filePath, "utf8")
         this.backupDir,${path.basename(filePath)}.backup.${Date.now()}"
@@ -156,9 +153,4 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push("� Memory optimization opportunities available")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
-<<<<<<< HEAD
   console.error(" AI Code Optimizer "failed")
-  console.error(" AI Code Optimizer "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

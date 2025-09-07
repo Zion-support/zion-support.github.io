@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require("$1")
 const fs = require("fs")
       "timestamp"
@@ -35,9 +30,4 @@ const fs = require("fs")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log("=")
-<<<<<<< HEAD
     console.log(`� Report saved "to"`)
-    console.log(`� Report saved "to"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

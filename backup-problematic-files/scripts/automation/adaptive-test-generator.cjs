@@ -134,7 +134,6 @@ console.log("🧪 Starting Adaptive Test Generator...")
         "cypress"
   const content = fs.readFileSync(testFile, "utf8")
       if (content.includes("describe(") && content.includes("it(")
-      if (content.includes("describe(") && content.includes("it(")
       if (content.includes("cy.") || content.includes("cypress")
       if (content.includes("integration") || content.includes("user flow")
       if (content.includes("jest") || content.includes("expect(")
@@ -191,7 +190,6 @@ console.log("🧪 Starting Adaptive Test Generator...")
       this.reportDir,test-generation-${Date.now()}.json"
       "test-generation-report.json"
 console.log(")
-  // Skip directories that can"
   // Skip directories that can"
   const testExtensions = [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx"]
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ""
@@ -264,9 +262,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start adaptive test "generator")
-  console.error(" Failed to start adaptive test "generator")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

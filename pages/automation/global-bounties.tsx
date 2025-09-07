@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
+:pages_backup/automation/global-bounties.tsx
   const items: any[] = (data?.items || []).slice(0, 100);
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/global-bounties.json',
@@ -19,7 +18,7 @@ export default function GlobalBountiesPage() {
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
               </div>
-<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
+:pages_backup/automation/global-bounties.tsx
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
@@ -29,32 +28,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </EnhancedLayout>
   )
-<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
+:pages_backup/automation/global-bounties.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function globalbounties() {
-  return (
-    <Layout>
-      <Head>
-        <title>Global Bounties - Zion Tech Group</title>
-        <meta name="description" content="Global Bounties solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Global Bounties</h1>
-          <p className="text-lg text-gray-600">
-            Professional global bounties solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

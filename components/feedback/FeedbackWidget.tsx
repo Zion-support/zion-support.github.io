@@ -7,7 +7,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }
     return this.props.children;
   }
-}
 import React, { useMemo, useState } from 'react';'
 
 import { v4 as uuidv4 } from 'uuid';'
@@ -66,14 +65,12 @@ const [comment, setComment] = useState('');'
         </div>;
       ) : (<div className='space-y-3'>;
           <div className='flex items-center gap-2'>;
-=======
   return (
 
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">"
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
     }
-  }
   };
 
 const effectiveResponseId = useMemo(;
@@ -129,7 +126,6 @@ aiModel
       }
       setSubmitting(false);
     }
-  }
 return (;
 <div className='mt-6 rounded-lg border p-4 bg-white/60 "dark":bg-neutral-900/60'>'
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>'
@@ -163,106 +159,8 @@ type='button''
             </button>;
           </div>;
           <textarea;
-<<<<<<< HEAD
-            </button>;
-=======
-<<<<<<< HEAD
             </button>;
           </div>;
-        </div>;
-      )}
-
-export type FeedbackWidgetProps = {response_id?: string;
-  }
-  ai_model?: string;
-}
-}
-export default /**;
- * FeedbackWidget - Function description;
- */
-function FeedbackWidget() { return null; }
-  const submit = async () => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      set_error ('Please choose 👍 or 👎');
-      return;    }  const effectiveResponseId = useMemo (() => response_id || uuidv4 (), [response_id]);
-;
-  const submit = async () => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      set_error ('Please choose 👍 or 👎');
-      return;      return;
-    }
-    set_error (null);
-    set_submitting (true);
-    try {'
-      const res = await fetch ('/api / feedback / submit', {'
-        method: 'POST','
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({}
-          response_id: effectiveResponseId,
-          rating,
-          comment: comment.trim (),
-          page_path:;'
-            typeof window !== 'undefined';
-              ? window.location.pathname;
-              : undefined,
-          ai_model,
-        }),
-      });'
-      if (throw new Error ('Failed to submit feedback')) {}
-  $2;
-}
-      set_submitted (true);
-    } catch (e: any) {'
-      set_error (e?.message || 'Something went wrong');
-    } finally {}
-      set_submitting (false);    }
-  }
-;
-  return ('
-    <div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60'>;'
-      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>          comment: comment.trim (),'
-          page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
-          ai_model})});'
-      if (throw new Error ('Failed to submit feedback')) {}
-  $2;
-}
-      set_submitted (true);
-    } catch (e: any) {'
-      set_error (e?.message || 'Something went wrong');
-    } finally {}
-      set_submitting (false);
-    }
-  }
-;
-  return ('
-    <div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60'>;'
-      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>;
-      {submitted ? ('
-        <div className='text - sm text - emerald - 700 dark:text - emerald - 300'>;
-          Thanks for your feedback!;
-        </div>) : ('
-        <div className='space - y-3'>;'
-          <div className='flex items - center gap - 2'>;
-<<<<<<< HEAD
-            <button;
-              type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (
-        <div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (
-        <div className="space-y-3">;
-          <div className="flex items-center gap-2">;
-            <button;
-              type="button";
-              on_click={() => set_rating (rating === 'up' ? null : 'up')}
-=======
-            </button />;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          </div>;
-        </div>;
       )}export type FeedbackWidgetProps = {response_id?: string;
   ai_model?: string;
 }
@@ -317,7 +215,6 @@ if ( {) {$2;
               <span>👍</span>;
               <span > Yes</span>;
             </button>;
-<<<<<<< HEAD
             <button;
               type='button'              on_click={() => set_rating (rating === 'down' ? null : 'down')}              type="button";"
               on_click={() => set_rating (rating === 'down' ? null : 'down')}'
@@ -351,7 +248,6 @@ if ( {) {$2;
               {submitting ? 'Submitting…' : 'Submit feedback'}'
             </button>;
           </div>
-    </div>
   );
 }
     </div>)const _submit = async () => {if (!rating) {setError('Please choose 👍 or 👎');'
@@ -431,7 +327,6 @@ if ( {) {$2;
               onClick={() => setRating(rating === 'up' ? null : 'up')}'`
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}'
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               aria-pressed={_rating === 'up'}
         <div className="space-y-3">
           <div className="flex items-center gap-2">
@@ -467,7 +362,6 @@ placeholder='Optional feedback (what worked, what didn’t)''
             <button;
               onClick={submit}
               disabled={submitting}
-<<<<<<< HEAD
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
             >;
             placeholder="Optional feedback (what worked, what didn’t)"
@@ -482,76 +376,22 @@ placeholder='Optional feedback (what worked, what didn’t)''
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
-        </div>
       )}
-=======
-              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
-            >
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <textarea'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
-        </div>
-<<<<<<< HEAD
-=======
-
-              className='rounded-md bg-black text-white "dark": bg-white "dark":text-black px-3 py-1.5 text-sm''
-            >
-
-              {submitting ? 'Submitting…' : 'Submit feedback,'
-}
-            </button>;
-          </div>;
-        </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       )}
     </div>
-}
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
 
   );
-    </div>;
     </div>;
 }
 })}
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-})}"
-=======
-const submit = async () => {
-  if (!rating) {
-  <button type="button" onClick= {
-  () => setRating (rating === 'up' ? null : 'up') 
-}className= {
-  `inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm $ {
-  rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : '' 
-}` 
-}aria-pressed= {
-  rating === 'up' 
-}> <span>👍</span> <span>Yes</span> </button> <button > <span>👎</span> <span>No</span> </button> </div> <textarea </button> </div> </div>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
 '"`
-=======
-})}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

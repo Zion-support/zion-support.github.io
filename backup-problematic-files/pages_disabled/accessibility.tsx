@@ -1,13 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 interface AccessibilityProps {
   className?: string;
 }
@@ -99,11 +92,9 @@ interface AccessibilityProps  {className?: string;
                           ))}
                         </ul>;
                       </div>;
-                    </div>;
                   </motion.div>;
                 )})}
             </div>;
-          </div>;
         </section>;
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -148,11 +139,9 @@ interface AccessibilityProps  {className?: string;
                       <div className="text-sm text-gray-500">;
                         Coverage: {standard.coverage}
                       </div>;
-                    </div>;
                   </motion.div>;
                 )})}
             </div>;
-          </div>;
         </section>;
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -195,11 +184,9 @@ interface AccessibilityProps  {className?: string;
                         {tool.description}
                       </p>;
                     </div>;
-                  </div>;
                 </motion.div>;
               ))}
             </div>;
-          </div>;
         </section>;
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -239,7 +226,6 @@ interface AccessibilityProps  {className?: string;
                 </motion.div>;
               ))}
             </div>;
-          </div>;
         </section>;
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -269,7 +255,6 @@ interface AccessibilityProps  {className?: string;
 >:pages-disabled/accessibility.tsx.disabled;
               </motion.div>;
             </div>;
-          </div>;
         </section>;
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -318,15 +303,7 @@ interface AccessibilityProps  {className?: string;
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  )
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-  );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 export default Accessibility;

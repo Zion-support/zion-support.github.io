@@ -9,11 +9,8 @@ const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -22,13 +19,9 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -47,15 +40,11 @@ class ErrorDetectionService {}
       level,
       message,
       data,
-<<<<<<< HEAD
       "service": 'error-detection-service'
     };
 
 
 
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -86,13 +75,9 @@ class ErrorDetectionService {}
       this.startFileWatching();
       
       this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
       
       
       
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -108,11 +93,8 @@ class ErrorDetectionService {}
       'temp'
     ];
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -278,11 +260,8 @@ class ErrorDetectionService {}
         'tailwind.config.js'
       ];
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -305,7 +284,6 @@ class ErrorDetectionService {}
               "error": error.message;
             })};
         };
-      };
       this.log('info', `Configuration scan completed. Found ${this.errorTypes.configuration.length} errors`)} catch (error) {`}
       this.log('error', 'Error during configuration scan', error)};
   };
@@ -314,11 +292,8 @@ class ErrorDetectionService {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -362,13 +337,9 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -539,7 +510,6 @@ class ErrorDetectionService {}
         if (content.includes('export default') || content.includes('module.exports')) {}
           return false; // Looks like valid config;
         };
-      };
       return false} catch (error) {}
       return true};
   };
@@ -578,13 +548,9 @@ class ErrorDetectionService {}
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
-<<<<<<< HEAD
       
       
       
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -749,9 +715,4 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

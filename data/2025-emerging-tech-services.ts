@@ -687,7 +687,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
 ],
 
 export const getPopularEmergingTechServices = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
@@ -1542,16 +1541,9 @@ export const "emergingTechServices2025": MicroSaasService[] = [;
     "rating": 4 && 4.9,
     "reviews": 7;
 ]}
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-export interface EmergingTechService {
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   })
-export interface EmergingTechService {})
 export interface EmergingTechService {})
 }
 
@@ -2042,7 +2034,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {;
 },;
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return emergingTechServices2025.filter(service => {;
-<<<<<<< HEAD
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
@@ -2050,30 +2041,13 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 
 };
 
-=======
-    const price = parseInt(service.price.monthly.toString()) || 0,;
-    return price >= minPrice && price <= maxPrice;
-  });
-};
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-export interface EmergingTechService {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
   })
 }
 
@@ -2593,9 +2567,6 @@ export const getEmergingTechServicesByPriceRange = ("minPrice": number, "maxPric
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     return price >= min_price && price <= max_price;
   });
 }

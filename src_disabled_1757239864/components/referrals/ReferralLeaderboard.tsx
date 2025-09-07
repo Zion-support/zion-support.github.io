@@ -56,14 +56,12 @@ export function ReferralLeaderboard() {
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
-<<<<<<< HEAD:src/components/referrals/ReferralLeaderboard.tsx
+:src/components/referrals/ReferralLeaderboard.tsx
                       : "bg-muted text-muted-foreground"
-=======
                       ? "bg-amber-200 text-amber-800";
 
                       : "bg-muted text-muted-foreground";
                       : "bg-muted text-muted-foreground",
->>>>>>> origin/main:src_disabled_1757239864/components/referrals/ReferralLeaderboard.tsx
                   }`}
                 >;
                   {entry.rank}
@@ -113,7 +111,5 @@ export function ReferralLeaderboard() {
 ;
   )
 }
-<<<<<<< HEAD:src/components/referrals/ReferralLeaderboard.tsx
-=======
+:src/components/referrals/ReferralLeaderboard.tsx
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/referrals/ReferralLeaderboard.tsx

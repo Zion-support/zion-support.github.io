@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/pages/Pricing.tsx
-=======
+:src/pages/Pricing.tsx
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -8,7 +7,6 @@
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the perfect plan for your business needs. All plans include our core services with flexible options.
->>>>>>> origin/main:src_disabled_1757239864/pages/Pricing.tsx
 import React from 'react';
 
 const Pricing: React.FC = () => {
@@ -95,7 +93,6 @@ const Pricing: React.FC = () => {
                   <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
                   <span className="text-gray-600 ml-2">{plan.period}</span>
                 </div>
-              </div>
 
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
@@ -127,14 +124,11 @@ const Pricing: React.FC = () => {
             Contact Sales
           </button>
         </div>
-      </div>
-    </div>
   );
 };
 
-<<<<<<< HEAD:src/pages/Pricing.tsx
+:src/pages/Pricing.tsx
 export default Pricing;
-=======
 export default function PricingPage() {
   return (
     <div className="space-y-16">
@@ -341,9 +335,7 @@ export default function PricingPage() {
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>📧 kleber@ziontechgroup.com</p>
           </div>
-        </div>
       </section>
     </div>
   );
 }
->>>>>>> origin/main:src_disabled_1757239864/pages/Pricing.tsx

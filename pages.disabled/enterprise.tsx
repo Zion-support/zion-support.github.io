@@ -46,7 +46,6 @@ const EnterpriseSolutions: NextPage = () => {
               </a>
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Enterprise Solutions Overview */}
@@ -172,8 +171,6 @@ const EnterpriseSolutions: NextPage = () => {
                 <li>• Compliance Management</li>
               </ul>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Enterprise Challenges */}
@@ -208,7 +205,6 @@ const EnterpriseSolutions: NextPage = () => {
                       integrate with modern technologies.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-red-600 text-sm font-bold">2</span>
@@ -222,7 +218,6 @@ const EnterpriseSolutions: NextPage = () => {
                       demands effectively.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-red-600 text-sm font-bold">3</span>
@@ -236,7 +231,6 @@ const EnterpriseSolutions: NextPage = () => {
                       compliance standards.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-red-600 text-sm font-bold">4</span>
@@ -248,9 +242,6 @@ const EnterpriseSolutions: NextPage = () => {
                       unified insights.
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
 
             <div>
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
@@ -270,7 +261,6 @@ const EnterpriseSolutions: NextPage = () => {
                       architectures.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-green-600" />
@@ -284,7 +274,6 @@ const EnterpriseSolutions: NextPage = () => {
                       and performance.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-green-600" />
@@ -298,7 +287,6 @@ const EnterpriseSolutions: NextPage = () => {
                       standards and regulations.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-green-600" />
@@ -312,11 +300,6 @@ const EnterpriseSolutions: NextPage = () => {
                       insights and analytics.
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Enterprise Process */}
@@ -376,8 +359,6 @@ const EnterpriseSolutions: NextPage = () => {
                 success.
               </p>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Industries We Serve */}
@@ -448,8 +429,6 @@ const EnterpriseSolutions: NextPage = () => {
                 sector organizations.
               </p>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Why Choose Our Enterprise Solutions */}
@@ -479,7 +458,6 @@ const EnterpriseSolutions: NextPage = () => {
                       solutions.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                   <div>
@@ -491,7 +469,6 @@ const EnterpriseSolutions: NextPage = () => {
                       increased demands.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                   <div>
@@ -503,7 +480,6 @@ const EnterpriseSolutions: NextPage = () => {
                       the ground up.
                     </p>
                   </div>
-                </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                   <div>
@@ -513,9 +489,6 @@ const EnterpriseSolutions: NextPage = () => {
                       enterprise systems.
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
 
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform?</h3>
@@ -529,8 +502,6 @@ const EnterpriseSolutions: NextPage = () => {
                 </a>
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -556,25 +527,13 @@ const EnterpriseSolutions: NextPage = () => {
               </a>
             </Link>
           </div>
-        </div>
       </section>
     </Layout>
   );
 };
 
 export default EnterpriseSolutions;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
@@ -611,7 +570,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
               </a>;
             </Link>;
           </div>;
-        </div>;
       </section>;
       {/* Enterprise Solutions Overview */}
       <section className="py-20 bg-gray-50">;
@@ -729,8 +687,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                 <li>• Compliance Management</li>;
               </ul>;
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Enterprise Challenges */}
       <section className="py-20 bg-white">;
@@ -763,7 +719,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       integrate with modern technologies.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">;
                     <span className="text-red-600 text-sm font-bold">2</span>;
@@ -777,7 +732,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       demands effectively.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">;
                     <span className="text-red-600 text-sm font-bold">3</span>;
@@ -791,7 +745,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       compliance standards.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">;
                     <span className="text-red-600 text-sm font-bold">4</span>;
@@ -803,9 +756,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       unified insights.;
                     </p>;
                   </div>;
-                </div>;
-              </div>;
-            </div>;
             <div>;
               <h3 className="text-2xl font-bold mb-6 text-gray-900">;
                 Our Solutions;
@@ -824,7 +774,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       architectures.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">;
                     <CheckCircle className="w-4 h-4 text-green-600" />;
@@ -838,7 +787,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       and performance.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">;
                     <CheckCircle className="w-4 h-4 text-green-600" />;
@@ -852,7 +800,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       standards and regulations.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">;
                     <CheckCircle className="w-4 h-4 text-green-600" />;
@@ -866,11 +813,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       insights and analytics.;
                     </p>;
                   </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Enterprise Process */}
       <section className="py-20 bg-gray-50">;
@@ -925,8 +867,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                 success.;
               </p>;
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Industries We Serve */}
       <section className="py-20 bg-white">;
@@ -995,8 +935,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                 sector organizations.;
               </p>;
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Why Choose Our Enterprise Solutions */}
       <section className="py-20 bg-gray-50">;
@@ -1024,7 +962,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       solutions.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />;
                   <div>;
@@ -1036,7 +973,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       increased demands.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />;
                   <div>;
@@ -1048,7 +984,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       the ground up.;
                     </p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />;
                   <div>;
@@ -1058,9 +993,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                       enterprise systems.;
                     </p>;
                   </div>;
-                </div>;
-              </div>;
-            </div>;
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
               <h3 className="text-2xl font-bold mb-4">Ready to Transform?</h3>;
               <p className="mb-6 text-blue-100">;
@@ -1073,8 +1005,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
                 </a>;
               </Link>;
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
       <section className="py-20 bg-gray-900 text-white">;
@@ -1099,17 +1029,6 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
               </a>;
             </Link>;
           </div>;
-        </div>;
       </section>;
     </Layout>;
   )}export default EnterpriseSolutions;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

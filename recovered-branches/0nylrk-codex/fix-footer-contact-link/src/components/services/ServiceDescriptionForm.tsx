@@ -152,7 +152,7 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
+:src_backup/components/services/ServiceDescriptionForm.tsx
 import { Loader, Sparkles } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
@@ -297,9 +297,9 @@ control={form && form.control}
                   <Sparkles className="h-4 w-4 mr-2" />;"
                   Generate Description;
                 </>;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
+:src_backup/components/services/ServiceDescriptionForm.tsx
               )}
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
+:src_backup/components/services/ServiceDescriptionForm.tsx
             />
             <Button
               type="submit"
@@ -322,7 +322,7 @@ control={form && form.control}
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
+:src_backup/components/services/ServiceDescriptionForm.tsx
   );
 
 }catch (error) {';
@@ -355,7 +355,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Form>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
+:src_backup/components/services/ServiceDescriptionForm.tsx
   )}catch (error) {';
   logErrorToProduction ('Error generating description:', {data: error ;
 })toast ({}finally {setIsLoading (false)}>Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";

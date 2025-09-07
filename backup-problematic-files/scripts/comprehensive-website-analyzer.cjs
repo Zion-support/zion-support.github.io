@@ -62,9 +62,4 @@ const path = require("path")
       this.log("� Website analysis completed successfully")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
-<<<<<<< HEAD
       return { "success": false, "error"}
-      return { "success": false, "error"}
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

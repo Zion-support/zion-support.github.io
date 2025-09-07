@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-
-#!/usr/bin/env node;
-/**
- * Intelligent Repository Manager;
- *
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 /**
  * Intelligent Repository Manager;
@@ -22,13 +13,10 @@ const localBranches = await this.executeCommand('git', { "args"});
                 "local"
             this.log(`Failed to get branch "info"`)
             await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
                 "args"
 const status = await this.executeCommand('git', { "args"});
             await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
                 "severity"
-            await this.executeCommand('git', { "args"})
             await this.executeCommand('git', { "args"})
                 "severity"
 const eslintResult = await this.executeCommand('npm', { "args"});
@@ -36,7 +24,6 @@ const tscResult = await this.executeCommand('npx', { "args"});
                 "overall"
             this.log(`Failed to assess code "quality"`)
             return { "overall"}
-            "severity"
             "severity"
 const files = await this.executeCommand('find', { "args"});
                 "riskLevel"
@@ -60,12 +47,7 @@ return { "vulnerabilities": {}, "riskLevel";
             this.log(`Auto-fixes completed for "branch"`)
             this.log(`Failed to auto-fix "issues"`)
             await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-                    await this.executeCommand('git', { "args"})
-                    await this.executeCommand('git', { "args"})
                 "default": await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
             await this.executeCommand('git', { "args"})
             this.log(`Cleaned up "branch"`)
             this.log(`Repository health monitoring completed. Overall "health"`)
@@ -81,43 +63,11 @@ return { "vulnerabilities": {}, "riskLevel";
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     console.error('Failed to start Intelligent Repository "Manager")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-    console.error('Failed to start Intelligent Repository "Manager")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.error('Failed to start Intelligent Repository "Manager")
-<<<<<<< HEAD
-    console.error('Failed to start Intelligent Repository "Manager")
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node
 /**
  * Intelligent Repository Manager;
  * 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

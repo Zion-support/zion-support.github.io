@@ -84,8 +84,6 @@ try {
       setIsSubmitting(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
-  }
-<<<<<<< HEAD
   const services = [
 'AI Development',
     'Cloud Architecture',
@@ -94,16 +92,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Blockchain Solutions',
     'Data Analytics',
     'Other',
-=======
-  const services = ['
-    'AI Development''
-    'Cloud Architecture''
-    'Digital Transformation''
-    'IoT Platforms''
-    'Blockchain Solutions''
-    'Data Analytics''
-    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
 const services = [;
@@ -275,7 +263,6 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                     </p>;
                   </div>;
                 </motion && motion.a>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             {/* Additional Info */}
             <motion&& motion.div;
@@ -311,8 +298,6 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
                 </li>
               </ul>
             </motion.div>
-          </motion.div>
-<<<<<<< HEAD
               viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
               viewport={{ once: true }}
               className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
@@ -378,7 +363,6 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
                 </li>;
               </ul>;
             </motion.div>;
-          </motion.div>;
           </motion && motion.div>;
 
           {/* Contact Form *
@@ -419,7 +403,6 @@ onClick={() => setSubmitStatus('idle')}'
                   Send Another Message
                 </button>
               </motion.div>
-<<<<<<< HEAD
             ) : (
 
 <form onSubmit={handleSubmit} className='space-y-6'>'
@@ -448,7 +431,6 @@ type='email''
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors';'
                       placeholder='Enter your email';' />;
                   </div>;
-                </div>;
 <div className='grid grid-cols-1 "md":grid-cols-2 gap-6'>;'
                   <div>;
                     <label;
@@ -471,34 +453,6 @@ type='email''
                   <div>;
                     <label;
                       htmlFor='phone';
-=======
-            ) : ("
-              <form onSubmit={handleSubmit} className="space-y-6">"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>"
-                    <label htmlFor="name" className="block text-white font-medium mb-2" htmlFor="input-
-                      Full Name *"
-                    ">
-                      Full Name *
-                    </label>
-                    <input"
-                      type="text""
-                      id="name""
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required"
-                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
-                      placeholder="Enter your full name"
-<<<<<<< HEAD
-                    />
-              <form onSubmit={handleSubmit} className='space-y-6'>
-<form onSubmit={handleSubmit} className='space-y-6'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                    />'
-              <form onSubmit={handleSubmit} className='space-y-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label'
@@ -525,8 +479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       placeholder="Enter your email";
                     />;
                   </div>;
-                </div>;
-<<<<<<< HEAD
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -534,7 +486,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       placeholder='Enter your email'
                     />
                   </div>
-                </div>
 
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-blue-500 transition-colors''
                       placeholder='Enter company name' />'
@@ -551,14 +502,12 @@ htmlFor='phone''
                       id='phone';'
                       name='phone';'
                       value={formData && formData.phone}
-<<<<<<< HEAD
                       onChange={handleChange}
 
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none "focus":border-blue-500 transition-colors''
 
                       placeholder='Enter phone number'' />
                   </div>
-                </div>
                 <div>
 <label,
 htmlFor='service''
@@ -653,7 +602,6 @@ type='submit';'
               </form>;
             )}
 
-<<<<<<< HEAD
 
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -674,17 +622,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>;
                   <label;
                     html_for='service';
-=======
-export default ContactForm;
-                <div>;
-                  <label;'
-                    html_for='service';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     className='block text - white font - medium mb - 2';
                   >;
                     Service of Interest;
                   </label>;
-<<<<<<< HEAD
                   <select;
                     id='service';
                     name='service';
@@ -703,81 +644,31 @@ export default ContactForm;
                     id="service";
                     name="service";
                     value={form_data.service}
-=======
-                  <select;'
-                    id='service';'
-                    name='service';
-                    value={form_data.service}
-                    on_change={handle_change}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors';
-                  >;'
-                    <option value=''>Select a service</option>;
-                    {services.map (service => (
-                      <option;
-                        key={service}
-                        value={service}'
-                        className='bg - gray - 800 text - white';
-                      >                        {service}                    Service of Interest;
-                  </label>;
-                  <select;"
-                    id="service";"
-                    name="service";
-                    value={form_data.service}
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     on_change={handle_change}
                     className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
                   >;
                     <option value="">Select a service</option>;
-<<<<<<< HEAD
                     {services.map ((service) => (<option key={service} value={service} className="bg - gray-800 text-white">;
-=======
-                    {services.map ((service) => (
-                      <option key={service} value={service} className="bg - gray-800 text-white">;
-=======
-                    on_change={handle_change}"
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors";
-                  >;"
-                    <option value="">Select a service</option>;
-                    {services.map ((service) => ("
-                      <option key={service} value={service} className="bg - gray - 800 text - white">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         {service}
                       </option>))}
                   </select>;
                 </div>;
                 <div>;
-<<<<<<< HEAD
                   <label;
                     html_for='message';
-=======
-                  <label;'
-                    html_for='message';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     className='block text - white font - medium mb - 2';
                   >;
                     Message *;
                   </label>;
-<<<<<<< HEAD
                   <textarea;
                     id='message';
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required;
-=======
-                  <textarea;'
-                    id='message';'
-                    name='message'                    value={form_data.message}
-                    on_change={handle_change}
-                    required;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
                     placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font-medium mb-2" html_for="input-;
                     Message *;
-<<<<<<< HEAD
                   ">;
                     Message *;
                   </label>;
@@ -796,13 +687,6 @@ export default ContactForm;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-=======
-=======
-                    rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font - medium mb - 2" html_for="input-;
-                    Message *;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   ">;
                     Message *;
                   </label>;
@@ -811,15 +695,9 @@ export default ContactForm;
                     name="message";
                     on_change={handle_change}
                     required;
-<<<<<<< HEAD
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
                     placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
-=======
-                    rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     placeholder="Tell us about your project or inquiry...";
                   />;
                 </div>;'
@@ -828,13 +706,10 @@ export default ContactForm;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   >;
                     <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
                   >;
                     <AlertCircle className="w-5 h-5" />;
-<<<<<<< HEAD
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;
@@ -853,13 +728,6 @@ export default ContactForm;
                       <span > Sending...</span>;
                     </>) : (<>;
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
-=======
-                  >;'"
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4";
-                  >;"
-                    <AlertCircle className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;'
@@ -871,7 +739,6 @@ export default ContactForm;
                     <>;'
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (
-<<<<<<< HEAD
                     <>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
                   className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
@@ -883,35 +750,16 @@ export default ContactForm;
                     </>) : (
                     <>;
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
-                    <>;'
-                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}"
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2";
-                >;
-                  {is_submitting ? (
-                    <>;"
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
-                      <span > Sending...</span>;
-                    </>) : (
-                    <>;'"
-                      <Send className='w - 5 h - 5' />                      <Send className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       <span > Send Message</span>;
                     </>)}
                 </button>;
               </form>)}
           </motion.div>;
         </div>;
-      </div>;
-<<<<<<< HEAD
     </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
 export default ContactForm;export default ContactForm;</motion.div>;
         </div>;
-      </div>;
     </section>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </section>);
 }
 ;
@@ -926,7 +774,6 @@ export default ContactForm;  )
 export default ContactForm;
 
 export default ContactForm;
-<<<<<<< HEAD
 )}export default ContactForm;
                     id="service"
                     name="service"
@@ -961,160 +808,22 @@ export default ContactForm;
 
                 {submitStatus === 'error' && (
                   <motion.div
-<<<<<<< HEAD
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0}}
                     className = $2;
 export default ContactForm,
-=======
-                     />
-                </div>
-                {submitStatus === 'error' && (<motion.div
-                     />
-                </div>;{submitStatus === 'error' && (<motion&& motion.div;}
-                    initial={{ opacity: 0, y: -10 }
-
-                    animate={{ opacity: 1, y: 0 }}
-
-className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
-                      />
-                    <AlertCircle className='w-5 h-5'    />
-                    <span    />Something went wrong. Please try again.</span>
-                  </motion.div>
-
-                <button
-type='submit'
-                  disabled={isSubmitting}
-
-                  className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2'
-                    />
-                  {isSubmitting ? (
-                    <>
-                      <div className='w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin'    />
-                      <span    />Sending...</span>
-                    <   />
-                  ) : (
-                    <>
-<Send className='w-5 h-5'    />
-                      <span    />Send Message</span>
-                    <   />}
-
-                </button>
-              </form>
-            )}
-
-export default ContactForm
-                <div>
-                  <label;'
-                    html_for='service';'
-                    className='block text - white font - medium mb - 2'
-                  >
-                    Service of Interest
-                  </label>
-                  <select;'
-                    id='service';'
-                    name='service'
-                    value={form_data.service}
-                    on_change={handle_change}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors'
-                  >;'
-                    <option value=''>Select a service</option>
-                    {services.map (service => (
-                      <option
-                        key={service}
-                        value={service}'
-                        className='bg - gray - 800 text - white'
-                      >                        {service}                    Service of Interest
-                  </label>
-                  <select;"
-                    id="service";"
-                    name="service"
-                    value={form_data.service}
-
-                        {service}
-                      </option>))}
-                  </select>
-                </div>
-                <div>
-                  <label;'
-                    html_for='message';'
-                    className='block text - white font - medium mb - 2'
-                  >
-                    Message *
-                  </label>
-                  <textarea;'
-                    id='message';'
-                    name='message'                    value={form_data.message}
-                    on_change={handle_change}
-                    required
-                  ">
-                    Message *
-                  </label>
-                  <textarea;"
-                    id="message";"
-                    name="message"
-                    on_change={handle_change}
-                    required
-                    placeholder="Tell us about your project or inquiry..."
-                  />
-                </div>;'
-                {submit_status === 'error' && (
-                  <motion.div
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}'
-                    className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4'
-                    <span > Something went wrong. Please try again.</span>
-                  </motion.div>)}
-                <button;'
-                  type='submit'
-                  disabled={is_submitting}'
-                  className='w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2'
-                >
-                  {is_submitting ? (
-                    <>;'
-                      <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>
-                    </>) : (
-
-                      <span > Send Message</span>
-                    </>)}
-                </button>
-              </form>)}
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </motion.div>
         </div>
-      </div>
     </section>
-<<<<<<< HEAD
   );
 }
 export default ContactForm;  )
 }
 export default ContactForm;
-<<<<<<< HEAD
 
 "
-=======
-}className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4" > <AlertCircle className="w-5 h-5" /> <span>Something went wrong. Please try again.</span> </motion.div>) 
-}<button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2" > {
-  isSubmitting ? (<> <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> <span>Sending...</span> </>) : (<> <Send className="w-5 h-5" /> <span>Send Message</span> </>) 
-}</button> </form>) 
-}</motion.div> </div> </div> </section>) 
-}
-export default ContactForm
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 );
 };
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

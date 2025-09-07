@@ -111,9 +111,4 @@ return Math.random() > 0.5 ? 'blue' : 'green';
       this.log(' Intelligent Deployment Automation is ready')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
-<<<<<<< HEAD
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
-      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

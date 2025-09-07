@@ -55,15 +55,10 @@ function cleanFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
     // Clean up any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(//g, '');
+    content = content.replace(/    
     // Remove empty lines and clean up syntax
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     content = content.replace(/;\s*;/g, ';');
@@ -85,7 +80,6 @@ export default function ${componentName}() {
 }
 `;
       }
-    }
     
     fs.writeFileSync(filePath, content);
     console.log(`✅ Cleaned: ${filePath}`);
@@ -93,7 +87,6 @@ export default function ${componentName}() {
   } catch (error) {
     console.error(`❌ Error cleaning ${filePath}:`, error.message);
   }
-}
 
 // Clean all files
 filesToClean.forEach(cleanFile);

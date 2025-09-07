@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string },
@@ -30,13 +29,6 @@ export default function DaoMetrics() {
   if (loading) return <div>Loading...</div>;
   if (!data) return <div>Error loading data</div>;
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function DaoIndex() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -51,8 +43,6 @@ export default function DaoIndex() {
             Professional DAO solutions tailored to your business needs.
           </p>
         </div>
-      </div>
-<<<<<<< HEAD
 
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
@@ -67,10 +57,8 @@ export default function DaoIndex() {
                 <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
-              </div>
             ))}
           </div>
-        </div>
 
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
@@ -118,8 +106,4 @@ export default function DaoIndex() {
       </section>
     </div>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

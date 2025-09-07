@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 import { Button } from "@/components/ui/button",
 
 
@@ -22,8 +20,7 @@ import { X } from 'lucide-react'
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
 import { Button } from '@/components / ui / button';
 import { Button } from '@/components/ui/ button';
@@ -42,14 +39,13 @@ import { X } from 'lucide-react';
   // TODO: Add dependencies if needed;,
   return () => {
     // Cleanup function;
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
 }
 
 
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
 
 }
@@ -61,7 +57,7 @@ import Link from "next/link",;
 import { useState, useEffect } from "react",;
 import { X } from 'lucide-react'
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
 
 
@@ -106,9 +102,9 @@ export function FloatingCTA() {,
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
 }, []); []);
@@ -179,7 +175,7 @@ function FloatingCTA() {const [ is_visible, setIsVisible ] = useState (false),co
       // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
         setIsVisible (true);
 
 
@@ -234,8 +230,7 @@ if ( {) {}
 
 import { X } from 'lucide-react';
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
     },
 
@@ -247,8 +242,7 @@ import { X } from 'lucide-react';
       if (scrollPosition > threshold && !isClosed) {;
         setIsVisible(true);
       } else {;
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -264,7 +258,7 @@ export function FloatingCTA() {
     setIsClosed(true);
     setIsVisible(false);  };      if (scrollPosition > threshold && !isClosed) {;
         setIsVisible(true);
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
       } else {
 origin/cursor/automate-test-improve-and-merge-code-2533
       } else {;
@@ -279,8 +273,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [isClosed]),
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -294,7 +287,7 @@ setIsVisible(false);
 
   if (!isVisible) return null;
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 return (
 origin/cursor/automate-test-improve-and-merge-code-2533
     window && window.addEventListener('scroll', handleScroll);
@@ -343,11 +336,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link href="/signup">Register Now</Link>
           </Button>
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
 
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
           <button 
             onClick={handleClose}
             className='text-zion-slate hover:text-white p-1'
@@ -372,10 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </button>
         </div>
-      </div>
-    </div>
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
   )
 
 import { Button } from "@/components/ui/button",;
@@ -422,8 +412,7 @@ export function FloatingCTA() { return null; }
 
             <X className="w-5 h-5" />;
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 ;
 
 ;
@@ -489,8 +478,6 @@ export function FloatingCTA() {;
             <X className='w-5 h-5' />;
           </button>;
         </div>;
-      </div>;
-    </div>;
   )aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;;export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false),const [isClosed, setIsClosed] = useState(false),useEffect(() => {const handleScroll = () => {const scrollPosition = window.scrollY,const threshold = 600, // Show CTA after scrolling 600px;
@@ -516,21 +503,18 @@ export function FloatingCTA() {;
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
           >;
 
             <X className="w-5 h-5" />;
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
           >;<X className="w-5 h-5" />;
 
           </button>;
         </div>;
-      </div>;
-    </div>;
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
   );
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 
   }, [is_closed]);
   const handle_close = () =>: any {}
@@ -541,7 +525,7 @@ export function FloatingCTA() {;
 if (return null) {}
   $2;
 }
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
   return (
     <div className='fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in'>;
   )}}, [is_closed])const handle_close = () =>: any {setIsClosed (true)setIsVisible (false)setIsVisible (false)}
@@ -571,8 +555,7 @@ if (return null) {$2;
             <X className="w - 5 h - 5" />;
           </button>;
         </div>;
-      </div>;
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
     </div>)}
 }, [is_closed])return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in" > <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between" > <div className="mr - 4" > <p className="text - white font - medium" >Ready to explore Zion?</p> <p className="text - zion - slate - light text - sm" >Register today to access all features!</p> </div> <div className="flex items - center gap - 2" > <Button variant="default" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap" as_child > <Link href="/signup" >Register Now</Link> </Button> <button aria - label="Close" w - 5 h - 5" /> </button> </div> </div> </div>)}'";
       {/* Backdrop */}
@@ -610,8 +593,7 @@ pr-12325
     </>)}'"
 '";
 }
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 }
 ;
 
@@ -623,7 +605,7 @@ pr-12325
 }, [isClosed]);
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
 }'"
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
+:src_backup/components/FloatingCTA.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 })}}, [isClosed])return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)}'";
 

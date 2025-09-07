@@ -6,21 +6,7 @@ const { execSync } = require('child_process');
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -44,18 +30,12 @@ function resolveConflicts(filePath) {
     const conflictCount = (content.match(//g) || []).length;
     
     // Replace merge conflict markers with incoming changes (choose the incoming version)
-    content = content.replace(/[\s\S]*?([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    
+    content = content.replace(/[\s\S]*?([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
     // Clean up any remaining markers
     content = content.replace(//g, '');
-    content = content.replace(//g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/    
     // Write the resolved content back
     fs.writeFileSync(filePath, content);
     
@@ -65,7 +45,6 @@ function resolveConflicts(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return { success: false, reason: error.message };
   }
-}
 
 // Get all files with merge conflicts
 console.log('🔍 Finding files with merge conflicts...');
@@ -110,21 +89,6 @@ function pushChanges() {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> main
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> main
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
@@ -145,16 +109,10 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 ursor/automate-test-improve-and-merge-code-646c
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 console.log(`Found ${conflictFiles.length} files with merge conflicts`);
@@ -176,7 +134,6 @@ for (const file of conflictFiles) {
     errorCount++;
     console.error(`Failed to resolve ${file}: ${result.reason}`);
   }
-}
 
 console.log(`\n📊 Conflict Resolution Summary:`);
 console.log(`✅ Successfully resolved: ${resolvedCount} files`);
@@ -225,21 +182,5 @@ try {
 
 console.log('\n🚀 Ready to proceed with improvements!');
 module.exports = { resolveConflicts, commitMerge, pushChanges };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 

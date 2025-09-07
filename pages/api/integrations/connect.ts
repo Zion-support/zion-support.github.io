@@ -44,30 +44,10 @@ const existingIdx = state.connections.findIndex(;
       "action": "connect","
       "details": { syncRules }
     });
-  });
   res.status(200).json({
     }
     "ok": true,
     "connection": updated.connections.find((c) => c.providerId === providerId)
   });
-<<<<<<< HEAD
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 }
-=======
-
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ connected: true });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

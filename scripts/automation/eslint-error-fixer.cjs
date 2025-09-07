@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync, spawn } = require("child_process");
@@ -23,20 +16,10 @@ class $1 {}
       this.projectRoot,"automation/logs/eslint-error-fixer.log";"
     );
     this.errorLogFile = path.join(;)
-<<<<<<< HEAD
       this.projectRoot,"
 
     this.reportFile = path.join(;)"
       this.projectRoot,eslint-error-fixer-report.json";"
-=======
-      this.projectRoot,
-      ""automation/logs/eslint-error-fixer-error.log""";
-    );
-    this.reportFile = path.join(;)
-      this.projectRoot,eslint-error-fixer-report.json";
-    );
-    this.ensureLogsDirectory();
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     this.ensureLogsDirectory();
 
@@ -62,7 +45,6 @@ const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`;
   fs.appendFileSync(this.errorLogFile, logMessage)};
 console.log(`[${type.toUpperCase()}] ${message}`)};
 ;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async runCommand(command, options = {}) {}
   return new Promise((resolve, reject) => {}
 const child = spawn(command, options.args || [], {});
@@ -70,53 +52,20 @@ const child = spawn(command, options.args || [], {});
         "shell": true,
         "cwd": this.projectRoot,"
         ...options}
-<<<<<<< HEAD
 });"
       let stdout = ;
       let stderr = ;
       child.stdout.on("data", data => {})"
-=======
-});
-      let stdout = "";
-      let stderr = "";
-      child.stdout.on("data", data => {})
-  async runCommand(command, options = {}) {}
-  return new Promise((resolve, reject) => {}
-const child = spawn(command, options.args || [], {});
-  "stdio": "pipe",
-        "shell": true,
-        "cwd": this.projectRoot,
-        ...options}
-});
-      let stdout = ";
-      let stderr = ";
-      child.stdout.on("data", data => {})
-  stdout += data.toString()}
-});
-      child.stderr.on("data", data => {})
-  stderr += data.toString()}
-});
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
   stdout += data.toString()}
       child.stderr.on("data", data => {})"
   stderr += data.toString()}
-<<<<<<< HEAD
       child.on("close", code => {})"
-=======
-});
-
-      child.on("close", code => {})
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   if (code === 0) {}
   resolve({ stdout, stderr, code })} else {}
   reject({ stdout, stderr, code })};
       }
-<<<<<<< HEAD
 
-=======
-});
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       child.on("error", error => {})
   reject({ error, stdout, stderr })})})};
 ;
@@ -136,10 +85,7 @@ const child = spawn(command, options.args || [], {});
     for (const line of lines) {}
   if (line.includes("error")) {}
   const lines = stderr.split("\n");
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     for (const line of lines) {}
   if (line.includes("error")) {}
       child.on("error", error => {})"
@@ -184,14 +130,7 @@ const child = spawn(command, options.args || [], {});
     for (const error of errors) {}
   try {}
   // First try auto-fix;
-<<<<<<< HEAD
 
-=======
-    try {}
-  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] }
-});
-      this.log("ESLint auto-fix completed");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Check if auto-fix resolved all issues;
       errors = remainingErrors} catch (error) {}"
   this.log("ESLint auto-fix failed, applying manual fixes", "warn")};"
@@ -223,12 +162,7 @@ const child = spawn(command, options.args || [], {});
       error.message.includes("console");"
   await this.fixConsoleError(error, lines)} else if (;)"
       error.rule === "prefer-const" ||;
-<<<<<<< HEAD
   
-=======
-      error.message.includes("prefer const");
-    ) {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 } else if (;)
       error.rule === "prefer-const" ||;
       error.message.includes("prefer const");
@@ -240,7 +174,6 @@ const child = spawn(command, options.args || [], {});
   await this.fixGenericESLintError(error, lines)};
   async fixUnusedVariableError(error, lines) {}
   if (error.line > lines.length) return;
-<<<<<<< HEAD
 
     const targetLine = lines[error.line - 1];
 const varMatch = error.message.match(;);
@@ -262,30 +195,12 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
   const varName = varMatch[1];
 
         ";"
-=======
-    const targetLine = lines[error.line - 1];
-    const varMatch = error.message.match(;)
-      /[""]([^"]+)["] is defined but never used/    );
-    if (varMatch) {}
-  const varName = varMatch[1];
-      // Remove unused variable declaration;
-      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
-        "";
-      // Remove unused variable declaration;
-      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
-        ";
-      );
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       if (fixedLine !== targetLine) {}
   lines[error.line - 1] = fixedLine;"
         fs.writeFileSync(error.file, lines.join("\n"))};"
   async fixMissingSemicolonError(error, lines) {}
-<<<<<<< HEAD
 
-=======
-  if (error.line > lines.length) return;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
     // Add missing semicolon if line doesn"t end with one;
     if (;)
@@ -304,10 +219,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
 ;
   async fixQuotesError(error, lines) {}
   if (error.line > lines.length) return;
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
     // Convert single quotes to double quotes or vice versa;
     if (error.message.includes("single quotes")) {}
@@ -323,11 +235,9 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
   lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join("\n"))};
     };
-  };
 ;
   async fixIndentError(error, lines) {}
   if (error.line > lines.length) return;
-<<<<<<< HEAD
 
     const targetLine = lines[error.line - 1];"
     // Add missing semicolon if line doesn"t end with one;"
@@ -341,13 +251,6 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
   // Convert single quotes to double quotes or vice versa;"
 
   async fixIndentError(error, lines) {}
-=======
-    const targetLine = lines[error.line - 1];
-    const expectedIndent = error.message.match(/Expected (\d+) spaces/);
-    if (expectedIndent) {}
-  const expectedSpaces = parseInt(expectedIndent[1]);
-      const currentIndent = targetLine.match(/^(\s*)/)[1].length;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     const expectedIndent = error.message.match(/Expected (\d+) spaces/);
 
@@ -355,19 +258,11 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
   const expectedSpaces = parseInt(expectedIndent[1]);
       const currentIndent = targetLine.match(/^(\s*)/)[1].length;
 
-<<<<<<< HEAD
       if (currentIndent !== expectedSpaces) {}"
   const newIndent = " ".repeat(expectedSpaces);"
         const fixedLine = newIndent + targetLine.trimLeft();
   async fixConsoleError(error, lines) {}
 
-=======
-      if (currentIndent !== expectedSpaces) {}
-  const newIndent = " ".repeat(expectedSpaces);
-        const fixedLine = newIndent + targetLine.trimLeft();
-  async fixConsoleError(error, lines) {}
-  if (error.line > lines.length) return;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
     // Comment out console statements;
 
@@ -375,11 +270,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
     if (targetLine.includes("console.")) {}
   const fixedLine = "// " + targetLine;"
   async fixPreferConstError(error, lines) {}
-<<<<<<< HEAD
 
-=======
-  if (error.line > lines.length) return;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
     // Convert let to const;
 
@@ -389,11 +280,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
     if (targetLine.includes("let ")) {}
   const fixedLine = targetLine.replace(/let /g, "const ");"
   async fixGenericESLintError(error, lines) {}
-<<<<<<< HEAD
 
-=======
-  if (error.line > lines.length) return;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
 
     // Generic fixes for common ESLint issues;
@@ -405,11 +292,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
     // Fix missing spaces around operators;"
     fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, "$1 = $2");
     fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, "$1 == $2");
-<<<<<<< HEAD
 
-=======
-    fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, "$1 === $2");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (fixedLine !== targetLine) {}
   lines[error.line - 1] = fixedLine;
       fs.writeFileSync(error.file, lines.join("\n"))};
@@ -417,13 +300,9 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
 ;
   async updateESLintConfig() {}
   this.log("Updating ESLint configuration...");
-<<<<<<< HEAD
 
     const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
 
-=======
-    const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (fs.existsSync(eslintConfigPath)) {}
   let config = fs.readFileSync(eslintConfigPath, "utf8");
       // Update rules to be less strict for error fixing;
@@ -462,14 +341,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
         "fixesSkipped": this.fixes.skipped.length},
       "errors": this.errors,
       "fixes": this.fixes,
-<<<<<<< HEAD
 
-=======
-      "recommendations": this.generateRecommendations()};
-;
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log("Report "generated": ${this.reportFile}");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       "recommendations": this.generateRecommendations()};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
     this.log("Report "generated": ${this.reportFile}");"
@@ -480,11 +352,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
   recommendations.push({})"
   "priority": "high",
         "message": "Consider updating ESLint configuration",
-<<<<<<< HEAD
 
-=======
-        "action": "Review ESLint rules and update configuration",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (this.errors.length > 0) {}
   recommendations.push({})
   "priority": "high",
@@ -505,16 +373,7 @@ const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\
       // Detect ESLint errors;
       this.errors = await this.detectESLintErrors();
   // Fix ESLint errors;
-<<<<<<< HEAD
 
-=======
-        await this.fixESLintErrors(this.errors)} else {}
-  this.log("No ESLint errors detected")};
-;
-      const report = this.generateReport();
-      this.log("ESLint Error Fixer completed successfully");
-      this.log("ESLint Error Fixer completed successfully");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       return report} catch (error) {  this.log("ESLint Error Fixer "failed": ${error.message  }", "error");
         await this.fixESLintErrors(this.errors)} else {}"
   this.log("No ESLint errors detected")};"
@@ -527,10 +386,6 @@ if (require.main === module) {}
   const fixer = new ESLintErrorFixer();
   fixer;
     .run();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     .then(report => {})
   console.log("ESLint Error Fixer completed successfully`);
     .then(report => {})"`;
@@ -539,41 +394,8 @@ if (require.main === module) {}
     .catch(error => {})"
 
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ESLintErrorFixer;
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-module.exports = ESLintErrorFixer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = ESLintErrorFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ESLintErrorFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = ESLintErrorFixer;
 
 module.exports = ESLintErrorFixer;
-<<<<<<< HEAD
-module.exports = ESLintErrorFixer;
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

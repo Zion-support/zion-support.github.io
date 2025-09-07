@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -16,7 +12,6 @@ const crypto = require("crypto");
       this.projectRoot,logs"
       "issue-history.json"
   fs.mkdirSync(logsDir, { "recursive"})
-  log(message, level = "INFO")
   log(message, level = "INFO")
 return JSON.parse(fs.readFileSync(this.patternsLog, "utf8");
     } catch (error) {  this.log(`Failed to load issue "patterns": ${error.message  }`, "WARN"`)
@@ -164,7 +159,6 @@ const content1 = fs.readFileSync(files[i], "utf8");
 const content2 = fs.readFileSync(files[j], "utf8");
 const lines1 = content1.split("\n");
 const lines2 = content2.split("\n");
-const lines2 = content2.split("\n");
 const securityPatterns = [{ "pattern": /eval\s*\(/g, "penalty"})];
       { "pattern": /innerHTML\s*=/g, "penalty"}
       { "pattern": /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g, "penalty"}
@@ -185,7 +179,6 @@ const cpuInfo = execSync("top -bn1 | grep Cpu(s)";
   "memoryInfo"
         "cpuInfo"
   return { "error"}
-  return { "error"}
 const outdatedResult = execSync("npm outdated --json");
   "encoding": "utf8"
         "stdio": "pipe"
@@ -200,7 +193,6 @@ const packageLockPath = path.join(this.projectRoot, "package-lock.json");
   this.log(Failed to collect performance "metrics": ${error.message  }")
         "WARN"
       execSync("npm run build", { "encoding": "utf8", "stdio": "pipe"})
-      execSync("npm run build", { "encoding": "utf8", "stdio": "pipe"})
   "heapUsed"
         "heapTotal"
       const testFile = path.join(this.projectRoot, "temp-performance-test.txt")
@@ -212,11 +204,8 @@ const packageLockPath = path.join(this.projectRoot, "package-lock.json");
   this.log("Analyzing historical trends...")
   "buildTime": this.analyzeTrend(buildTime")
       "bundleSize"
-        "bundleSize"
       "codeComplexity": this.analyzeTrend(codeComplexity")
       "dependencies"
-        "dependencies"
-  return { "trend": "INSUFFICIENT_DATA", "confidence"}
   return { "trend": "INSUFFICIENT_DATA", "confidence"}
   "trend"
           ? "INCREASING"
@@ -226,7 +215,6 @@ const packageLockPath = path.join(this.projectRoot, "package-lock.json");
       "confidence"
       "prediction"
 const x = Array.from({ "length"});
-  this.log("Detecting anomalies...")
   this.log("Detecting anomalies...")
   "type": "STATISTICAL_ANOMALY"
         "metric": "buildTime"
@@ -261,7 +249,6 @@ const x = Array.from({ "length"});
         "threshold"
         "currentValue"
   this.log("Generating issue predictions...")
-  this.log("Generating issue predictions...")
     for (const ["metric", "trend")]
   if (trend.trend === "INCREASING")
   "type": "TREND_BASED_PREDICTION"
@@ -269,7 +256,6 @@ const x = Array.from({ "length"});
           "probability"
           "timeframe"
           "severity": "MEDIUM"
-  if (slope > 100) return "IMMEDIATE"
   if (slope > 100) return "IMMEDIATE"
     if (slope > 50) return "SHORT_TERM"
     if (slope > 10) return "MEDIUM_TERM"
@@ -304,7 +290,6 @@ return "LONG_TERM";
         "probability"
         "timeframe": "IMMEDIATE"
         "severity": "HIGH"
-    // For now, we"
     // For now, we"
   "type": "ML_PREDICTION"
         "metric": "codeQuality"
@@ -407,41 +392,10 @@ this.log("Prediction report "generated": ${reportPath}")
       return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR"`)
 // console.log(" Predictive Issue Detection completed")
   console.log(" Predictive Issue Detection completed")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(" Predictive Issue Detection "failed")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Predictive Issue Detection "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Predictive Issue Detection "failed")
-<<<<<<< HEAD
-  console.error(" Predictive Issue Detection "failed")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

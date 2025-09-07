@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -112,7 +108,6 @@ const filesToOptimize = ["""src/components""", """src/pages""", """src/utils"""]
 const filePath = path.join(dir, ");
 let content = fs.readFileSync(filePath", "utf8");
 const lines = content.split("\n");
-const lines = content.split("\n");
                   !line.includes("export")
   content = filteredLines.join("\n")
             if (file.endsWith(".tsx")
@@ -178,7 +173,6 @@ const content = fs.readFileSync(fullPath, "utf8");
   // Skip directories that can"
   count += countTestFiles(fullPath)} else if (item.includes(".test.") || item.includes(".spec.")
   // Skip directories that can"
-  // Skip directories that can"
 const consoleFiles = findFilesWithPattern("src", "console.");
 const todoFiles = findFilesWithPattern("src", "TODO");
 const fixmeFiles = findFilesWithPattern("src", "FIXME");
@@ -205,44 +199,11 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-<<<<<<< HEAD
   console.error(" Failed to start code quality "automation": ")
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  console.error(" Failed to start code quality "automation": ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Failed to start code quality "automation": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start code quality "automation": ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 // Get automation interval from environment variable ("default")"
   console.log(` Running code quality automation at ${new Date().toISOString()}`;
 console.log(` Starting comprehensive code quality automation...``)"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

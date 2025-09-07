@@ -4,7 +4,6 @@ import * as React from "react"
 
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
-<<<<<<< HEAD
 
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
@@ -30,18 +29,12 @@ const Breadcrumb = React.forwardRef<
   }
 >(({ className, separator, ...props }, ref) => (;
  
-=======
-import * as React from "react"
-import {Slot} from "@radix-ui/react-slot"
-import {ChevronRight} from "lucide-react"
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (
-<<<<<<< HEAD
 >(({ className, separator, ...props }, ref) => (;
   <nav
     ref={ref}
@@ -166,7 +159,6 @@ const BreadcrumbLink = React.forward_ref<;
 >(({ class_name, as_child = false, ...props }, ref) => {
   const Comp = as_child ? Slot : "a";
   return (
-  return (
 BreadcrumbItem.displayName = "BreadcrumbItem";
  ;
 const BreadcrumbLink = React.forwardRef<;
@@ -223,36 +215,24 @@ export {
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
-export {;
 export {
  
 export {;
-export {;
-=======
-    ref={ref}
-    aria-label="breadcrumb"
-    className={cn(export {;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-<<<<<<< HEAD
   BreadcrumbSeparator,
 
  
 
 
-  BreadcrumbEllipsis}
   BreadcrumbEllipsis}
     &#8230,;
   </span>;
@@ -283,7 +263,3 @@ return (<Comp ref= {
 ;
   BreadcrumbEllipsis}
 ;
-;
-=======
-  BreadcrumbSeparator,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

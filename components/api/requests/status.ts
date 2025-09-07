@@ -10,7 +10,6 @@ const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');'
     }
     return [];
   }
-}
 
 export default async function handler() {
   }
@@ -49,7 +48,6 @@ return res.status(404).json({ "error": 'Not found',;'
   res.status(200).json({ ok: true })}
   res: NextApiResponse;
 }
-<<<<<<< HEAD
 
   res.status(200).json({ "ok": true
 });

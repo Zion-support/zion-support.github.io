@@ -1,6 +1,6 @@
 // Test setup file for Jest
 import "@testing-library/jest-dom";
-<<<<<<< HEAD:src_backup/test/setup.ts
+:src_backup/test/setup.ts
 // Test setup file for Jest
 require("@testing-library/jest-dom");
 
@@ -138,5 +138,4 @@ afterAll(() => {
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
-});
 });

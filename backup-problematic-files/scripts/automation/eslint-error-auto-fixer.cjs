@@ -131,7 +131,6 @@ class ESLintErrorAutoFixer {}
             "description": `Commented out unused variable ${varName}
           }};
       };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixMissingSemicolons(lines, error) {}
     if (error.message.includes('Missing semicolon')) {}
@@ -165,8 +164,6 @@ class ESLintErrorAutoFixer {}
               "description": `Commented out unused import ${importName}
             }};
         };
-      };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixConsoleStatements(lines, error) {}
     if (error.message.includes('Unexpected console statement')) {}
@@ -306,9 +303,4 @@ if (require.main === module) {}
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ESLintErrorAutoFixer;
-module.exports = ESLintErrorAutoFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

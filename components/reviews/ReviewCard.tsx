@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -10,7 +8,6 @@ type Props = {
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
-<<<<<<< HEAD
     <div className="enhanced-card hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
@@ -20,24 +17,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         <button
           className="text-xs text-red-500 hover:underline"
           onClick={() => onReport && onReport(review.id)}
-=======
-    <div className = $2;
-export default ReviewCard,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-type Props = any;
-export default ReviewCard;
-      <div className='flex items-center justify-between mb-2' />;
-        <div className='flex items-center gap-2' />;
-          <StarRating;
-=======
-type Props = any
-export default ReviewCard
-      <div className='flex items-center justify-between mb-2'    />
-        <div className='flex items-center gap-2'    />
-          <StarRating
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
             value={review.rating}
             onChange={() =    /> {}}
             readOnly
@@ -50,12 +29,10 @@ export default ReviewCard
         <button
           className='text-xs text-red-500 hover:underline'
           onClick={() =    /> onReport && onReport(review.id)}
->>>>>>> origin/main
         >
           Report abuse
         </button>
       </div>
-<<<<<<< HEAD
       <div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-medium">{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
@@ -75,7 +52,6 @@ export default ReviewCard
           <span className="pill">Timeliness: {review.categories.timeliness}★</span>
         )}
       </div>
-    </div>
   )
 };
 
@@ -125,6 +101,5 @@ export default ReviewCard;
           </span>;
         )}
       </div>
-    </div>
   )}
 export default ReviewCard;

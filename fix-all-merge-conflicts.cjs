@@ -53,7 +53,6 @@ class MergeConflictResolver {
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
-    }
     
     return files;
   }
@@ -61,13 +60,12 @@ class MergeConflictResolver {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      return content.includes('<<<<<<< HEAD') || 
-             content.includes('=======') || 
+      return content.includes('') || 
+             content.includes('') || 
              content.includes('>>>>>>>');
     } catch (error) {
       return false;
     }
-  }
 
   resolveMergeConflicts(filePath) {
     try {
@@ -103,15 +101,14 @@ ursor/fix-lint-push-and-merge-to-main-28da
           fixedLines.push(line);
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
+        /\n(.*?)\n\n(.*?)\n        '$1'
       );
 
       // Clean up any remaining markers
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/\n/g, '');
       content = content.replace(/
       // Clean up any orphaned markers
-      content = content.replace(/<<<<<<< HEAD[^]*?=======[^]*?      content = content.replace(/<<<<<<< HEAD[^]*?      content = content.replace(/=======[^]*?
+      content = content.replace(/[^]*?[^]*?      content = content.replace(/[^]*?      content = content.replace(/[^]*?
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`);
@@ -125,7 +122,6 @@ ursor/fix-lint-push-and-merge-to-main-28da
       this.failedFiles.push({ file: filePath, error: error.message });
       return false;
     }
-  }
 
   async run() {
     this.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -144,8 +140,6 @@ ursor/fix-lint-push-and-merge-to-main-28da
         if (this.resolveMergeConflicts(file)) {
           resolvedCount++;
         }
-      }
-    }
     
     this.log(`\n📊 Resolution Summary:`);
     this.log(`   - Files with conflicts: ${conflictCount}`);
@@ -176,7 +170,6 @@ ursor/fix-lint-push-and-merge-to-main-28da
     
     this.log('🎉 Merge conflict resolution completed!');
   }
-}
 
 // Run the resolver
 const resolver = new MergeConflictResolver();

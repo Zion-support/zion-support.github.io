@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react';'
@@ -379,7 +378,6 @@ className='border-2 border-purple-500/50 text-purple-300 "hover":text-white "hov
             </div>;
           </motion.div>;
         </div>;
-      </div>;
       {/* Features Section */}
 
 <section className='py-20 bg-black'>'
@@ -410,7 +408,6 @@ className='text-center mb-16''
             </div>
           </motion.div>
         </div>
-      </div>
 
       {/* Features Section */}
       <section className="py-20 bg-black">
@@ -492,7 +489,6 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
           <motion&& motion.div
 
           </div>
-        </div>
       </section>
 
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>'
@@ -575,7 +571,6 @@ className='text-center''
                       {step.ste
 }
                     </div>;
-                  </div>;
                   <div className='absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30'></div>;'
                 </div>;
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400'>;'
@@ -593,7 +588,6 @@ className='text-center''
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
                 </h3>;
@@ -603,7 +597,6 @@ className='text-center''
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
               }
             ].map((step, index) => (<motion&& motion.div;
@@ -621,7 +614,6 @@ className='text-center''
                     <div className='text-white font-bold text-2xl'>;'
                       {step && step.step}
                     </div>;
-                  </div>;
                   <div className='absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30'></div>;'
                 </div>;
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400'>;'
@@ -654,7 +646,6 @@ className='text-center''
           <motion&& motion.div
 
           </div>
-        </div>
       </section>
       {/* Use Cases Section */}
 
@@ -753,7 +744,6 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
           <motion&& motion.div
 
           </div>
-        </div>
       </section>
       {/* Technology Section */}
 
@@ -810,7 +800,6 @@ className='text-center group''
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
       {/* Testimonials Section *
 }
@@ -903,7 +892,6 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
                       {testimonial.company}
                     </p>;
                   </div>;
-                </div>;
                 <div className='flex items-center mb-4'>;'
                   {[...Array(testimonial.rating)].map((_, i) => (<Star;
                       }
@@ -930,12 +918,9 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
             ))}
-            ))}
           </div>
-        </div>
       </section>
 
             ))}
@@ -1323,7 +1308,6 @@ className='text-center''
   )}
 );  )
 }
-<<<<<<< HEAD
   )
 }
                     </span>;
@@ -1357,7 +1341,6 @@ className='text-center''
                 </button>;
               </motion.div>))}
           </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 border - t border - purple - 500 / 20'>;
@@ -1438,6 +1421,3 @@ className='text-center''
     </Layout>))}))
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

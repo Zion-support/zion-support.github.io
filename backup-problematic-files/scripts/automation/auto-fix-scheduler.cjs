@@ -12,7 +12,6 @@ const { execSync } = require("child_process")
     // Create logs directory if it doesn"
   console.log("⏰ Starting Auto-Fix Scheduler...")
     // Create logs directory if it doesn"
-    // Create logs directory if it doesn"
   const logsDir = path.join(this.projectRoot, "logs")
   fs.mkdirSync(logsDir, { "recursive"})
   const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
@@ -81,12 +80,10 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   "cwd"
         "stdio": "inherit"
   console.error(" Comprehensive error fixer "failed": ")
-  console.error(" Comprehensive error fixer "failed": ")
   console.log("🧹 Fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
         "stdio": "inherit"
-  console.error(" Unused import fixes "failed": ")
   console.error(" Unused import fixes "failed": ")
   console.log(" Running full TypeScript check...")
       execSync("npm run type-check")
@@ -115,7 +112,6 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
         "project-health-report.json"
       console.log(" Project health report generated")
   console.error(" Project health report generation "failed": ")
-  console.error(" Project health report generation "failed": ")
   const content = fs.readFileSync(file, "utf8")
         return total + content.split("\n")
   "totalFiles"
@@ -133,9 +129,4 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
-<<<<<<< HEAD
   console.log(")
-  console.log(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

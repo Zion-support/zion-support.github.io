@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -160,10 +159,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <TrendingUp className="w-5 h-5 text-green-400" />
                   <span>Growing Rapidly</span>
                 </div>
-              </div>
             </motion.div>
           </div>
-        </div>
 
         {/* Search and Filters */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -225,9 +222,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <option value="customers" className="bg-gray-800 text-white">Sort by Customers</option>
                 </select>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -259,7 +253,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                       <p className="text-sm text-gray-300">{service.category}</p>
                     </div>
-                  </div>
                   {service.popular && (
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       Popular
@@ -278,7 +271,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <div className="text-sm text-gray-300">
                     {service.trialDays} days free trial
                   </div>
-                </div>
 
                 {/* Features */}
                 <div className="mb-4">
@@ -287,28 +279,3 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key = $2;
 export default ComprehensiveServicesShowcase2026,
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensiveservicesshowcase2026() {
-  return (
-    <Layout>
-      <Head>
-        <title>Comprehensive Services Showcase 2026 - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive Services Showcase 2026 solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive Services Showcase 2026</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive services showcase 2026 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

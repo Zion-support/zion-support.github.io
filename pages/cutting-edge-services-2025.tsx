@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
@@ -53,17 +52,12 @@ const serviceCategories = [
 ];
 
 export default function CuttingEdgeServices2025() {
-=======
-
-export default function cuttingedgeservices2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Cutting Edge Services 2025 - Zion Tech Group</title>
         <meta name="description" content="Cutting Edge Services 2025 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -170,7 +164,6 @@ export default function cuttingedgeservices2025() {
                             </div>
                             <div className="text-sm text-gray-400">/month</div>
                           </div>
-                        </div>
                         
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                         
@@ -184,7 +177,6 @@ export default function cuttingedgeservices2025() {
                               </div>
                             ))}
                           </div>
-                        </div>
 
                         <div className="mb-6">
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
@@ -195,7 +187,6 @@ export default function cuttingedgeservices2025() {
                             <span>Category:</span>
                             <span className="text-purple-400">{service.category}</span>
                           </div>
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
@@ -213,14 +204,12 @@ export default function cuttingedgeservices2025() {
                             Learn More
                           </a>
                         </div>
-                      </div>
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Pricing Comparison */}
@@ -297,7 +286,6 @@ export default function cuttingedgeservices2025() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Contact Section */}
@@ -333,7 +321,6 @@ export default function cuttingedgeservices2025() {
                 <div className="text-white font-semibold">Visit Us</div>
                 <div className="text-green-400 text-sm">{contactInfo.address}</div>
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
@@ -360,17 +347,4 @@ export default function cuttingedgeservices2025() {
       </section>
     </Layout>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cutting Edge Services 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional cutting edge services 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

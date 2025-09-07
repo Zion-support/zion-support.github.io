@@ -21,9 +21,7 @@ export default function handler() {
 
   }
 
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ensureStorage();
 
 const { id } = req.query as { id?: string };
@@ -35,7 +33,6 @@ const episode = episodes.find(e => { return e.id === id); }
 });
 
   return res.status(200).json({ episode });
-return res.status(200).json({ episode });
 }
   if ()) {}
   $2;
@@ -56,7 +53,6 @@ function ensure_storage() {}
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {}
   $2;
 }
-}
 export default /**;
  * handler - Function description;
  */
@@ -73,15 +69,10 @@ function handler() {}
   $2;
 }
   return res.status (200).json ({ episode });
-<<<<<<< HEAD
   return res.status(200).json({ episode });
   return res.status(200).json({ ok: true });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   return res.status(200).json({ episode })
 }

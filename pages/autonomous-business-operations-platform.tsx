@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -95,18 +94,12 @@ const AutonomousBusinessOperationsPlatform = () => {
     }
   ];
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function AutonomousBusinessOperationsPlatform() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Autonomous Business Operations Platform - Zion Tech Group</title>
         <meta name="description" content="Autonomous Business Operations Platform solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
@@ -122,7 +115,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
                   <Bot className="w-8 h-8 text-white" />
                 </div>
-              </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Autonomous Business
                 <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -182,7 +174,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Capabilities Section */}
@@ -218,7 +209,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -260,7 +250,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Industries Section */}
@@ -296,14 +285,12 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -333,23 +320,3 @@ export default function AutonomousBusinessOperationsPlatform() {
 };
 
 export default AutonomousBusinessOperationsPlatform;
-=======
-              initial={{ opacity: 0, y: 20}}
-              whileInView={{ opacity: 1, y: 0}}
-              transition = $2;
-export default AutonomousBusinessOperationsPlatform,
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Autonomous Business Operations Platform</h1>
-          <p className="text-lg text-gray-600">
-            Professional autonomous business operations platform solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

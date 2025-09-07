@@ -91,8 +91,6 @@ ${pages.map(page => `  <url>`})
                 if (pagePath !== '/index') {}
                     pages.push(pagePath)};
             };
-        };
-    };
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir) {}
      {}
@@ -100,8 +98,6 @@ ${pages.map(page => `  <url>`})
                 if (pagePath !== '/index') {}
                     pages.push(pagePath)};
             };
-        };
-    };
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir}
 });
@@ -119,7 +115,6 @@ ${pages.map(page => `  <url>`})
                 pagePath = pagePath.replace(/\\/g, '/');
                 pages.push(pagePath)};
         };
-    };
     generateRobotsTxt() {}
         this.log('Generating robots.txt...');
         
@@ -335,16 +330,10 @@ export default function SEO({})
             this.log("SEO Optimizer "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the optimizer if this script is executed directly;
 if ( {})
     const optimizer = new SEOOptimizer) {}
      {}
     const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SEOOptimizer;
-module.exports = SEOOptimizer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

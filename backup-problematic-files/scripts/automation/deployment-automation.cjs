@@ -320,15 +320,9 @@ class DeploymentAutomation {}
       this.log(`Deployment Automation "failed": ${error.message}`, 'ERROR');
       throw error};
   };
-};
 if ( {})
   const deployment = new DeploymentAutomation) {}
      {}
   const deployment = new DeploymentAutomation}(;);
   deployment.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = DeploymentAutomation;
-module.exports = DeploymentAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

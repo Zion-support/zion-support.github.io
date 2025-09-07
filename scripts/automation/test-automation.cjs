@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync, spawn } = require("child_process");
@@ -37,25 +30,15 @@ class $1 {}
 ;"
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
-<<<<<<< HEAD
 
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
 
-=======
-  log(message, level = "INFO") {}
-  const timestamp = new Date().toISOString();
-    const logEntry = "[${timestamp}] [${level}] ${message}";
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -72,30 +55,7 @@ class $1 {}
     fs.appendFileSync(this.logFile, logEntry + "\n");")}");
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
-<<<<<<< HEAD
 
-=======
-    return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-const child = spawn(command, [], {});
-  "shell": true,
-        cwd,
-        "stdio": ["pipe", "pipe", "pipe"]}
-});
-      let stdout = "";
-      let stderr = "";
-      child.stdout.on("data", data => {})
-  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
-});
-      child.stderr.on("data", data => {})
-  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
-});
-      child.on("close", code => {})
-  if (code === 0) {this.log("Command completed successfully with code ${code}");
-          resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
-      }
-});
-      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
       const child = spawn(command, [], {})"
@@ -114,16 +74,7 @@ const child = spawn(command, [], {});
       return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");"
       return false};
   };
-<<<<<<< HEAD
 
-=======
-;
-  async runBuild() {}
-  this.log("Building project for testing...");
-    try {}
-  await this.runCommand("npm run build");
-      this.log("Build completed successfully");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async runBuild() {}
   this.log("Building project for testing...");
     try {}
@@ -181,23 +132,7 @@ const serverProcess = spawn(npx",);
       // Wait a bit for server to start;
       await new Promise(resolve => setTimeout(resolve, 3000));
       // Test if server is responding;
-<<<<<<< HEAD
 
-=======
-      try {}
-const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";);
-        );
-        if (testResult.stdout.includes("200")) {}
-  this.log("Asset paths verification passed`);
-          serverProcess.kill();
-          return true} else {}
-  this.log(Asset paths verification "failed": HTTP ${testResult.stdout}`,`)
-            "ERROR";
-    try {}
-  // Start a simple HTTP server to test the build;
-      const httpServer = require("http-server");
-      const serverPath = path.join(this.projectRoot, "dist");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Check if http-server is available;
       try {}
   await this.runCommand("npx http-server --version")} catch (error) {}
@@ -212,59 +147,15 @@ const serverProcess = spawn(npx",);
           "cwd": this.projectRoot,
           "stdio": "pipe"};
       );
-<<<<<<< HEAD
 
             "ERROR";"
   // Start a simple HTTP server to test the build;"
 
-=======
-      // Wait a bit for server to start;
-      await new Promise(resolve => setTimeout(resolve, 3000));
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       // Wait a bit for server to start;
 
       // Test if server is responding;
-<<<<<<< HEAD
 
-=======
-      try {}
-const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";);
-        );
-        if (testResult.stdout.includes("200")) {}
-  this.log("Asset paths verification passed");
-          serverProcess.kill();
-          return true} else {}
-  this.log(Asset paths verification "failed": HTTP ${testResult.stdout}",)
-            "ERROR";
-          );
-          serverProcess.kill();
-          return false};
-      } catch (error) {}
-  this.log(Asset paths verification "failed": Could not connect to test server",)
-          "ERROR"} catch (error) {}
-  this.log(Asset paths verification "failed": Could not connect to test server",)
-          "ERROR";
-        );
-          "ERROR";
-        );
-serverProcess.kill();
-        return false};
-    } catch (error) {  this.log("Asset paths verification "failed": ${error.message  }", "ERROR");
-      return false};
-  };
-;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  async runTests() {}
-  this.log("Running tests...");
-    try {}
-  // Check if test script exists;
-const packageJson = JSON.parse(;);
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
-<<<<<<< HEAD
-      );
-
-=======
   async runTests() {}
   this.log("Running tests...");
     try {}
@@ -272,7 +163,7 @@ const packageJson = JSON.parse(;);
 const packageJson = JSON.parse(;);
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
       if (!packageJson.scripts.test) {}
   this.log("No test script found in package.json", "WARN");
         return {}
@@ -328,13 +219,7 @@ this.log("Tests completed successfully. Test "count": ${testCount}");"
       "buildInfo": {}"
   nodeVersion: process.version,"
         "platform": process.platform,
-<<<<<<< HEAD
 
-=======
-        "arch": process.arch}};
-;
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "arch": process.arch}};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");"
     return report};
@@ -349,26 +234,15 @@ this.log("Tests completed successfully. Test "count": ${testCount}");"
 
   async run() {}
   this.log("Starting test automation...");
-<<<<<<< HEAD
 
     const results = [];
       "timestamp": new Date().toISOString(),"
-=======
-    const results = [];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     // Install dependencies;
 
       "timestamp": new Date().toISOString()}"
 });
-<<<<<<< HEAD
 
-=======
-    if (!depsResult) {}
-  this.log(Skipping remaining steps due to dependency installation failure",)
-        "ERROR";
-      );
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (!depsResult) {}"
 
       await this.generateTestReport(results);
@@ -394,41 +268,8 @@ if (require.main === module) {}
   test.run().catch(error => {})"
   console.error("Test automation "failed": ", error);"
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = TestAutomation;
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-module.exports = TestAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = TestAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = TestAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = TestAutomation;
 
 module.exports = TestAutomation;
-<<<<<<< HEAD
-module.exports = TestAutomation;
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

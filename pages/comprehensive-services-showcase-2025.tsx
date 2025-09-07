@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -44,7 +43,6 @@ export default function ComprehensiveServicesShowcase2025() {
           priceMatch = $2;
           break
       }
-    }
     
     const searchMatch = $2;
     return categoryMatch && priceMatch && searchMatch
@@ -81,20 +79,12 @@ export default function ComprehensiveServicesShowcase2025() {
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function ComprehensiveServicesShowcase2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive Services Showcase 2025 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
@@ -144,7 +134,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
                   <div className="text-gray-400">Average ROI</div>
                 </div>
-              </div>
 
               {/* Contact CTA */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -248,8 +237,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   <option value="rating">Rating</option>
                 </select>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Services Grid/List */}
@@ -302,7 +289,6 @@ export default function ComprehensiveServicesShowcase2025() {
                           <span className="text-white font-semibold">{service.rating}</span>
                           <span className="text-gray-400">({service.reviews})</span>
                         </div>
-                      </div>
 
                       {/* Key Features */}
                       <div className="space-y-2 mb-6">
@@ -335,7 +321,6 @@ export default function ComprehensiveServicesShowcase2025() {
                             </div>
                           ))}
                         </div>
-                      </div>
 
                       {/* CTA Button */}
                       <Link
@@ -380,8 +365,6 @@ export default function ComprehensiveServicesShowcase2025() {
                               <span>Setup: {service.setupTime}</span>
                               <span>Trial: {service.trialDays} days</span>
                             </div>
-                          </div>
-                        </div>
 
                         {/* Price and Rating */}
                         <div className="text-right">
@@ -398,7 +381,6 @@ export default function ComprehensiveServicesShowcase2025() {
                             {getPriceRange(service.price)}
                           </span>
                         </div>
-                      </div>
 
                       {/* Features and Benefits */}
                       <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -412,7 +394,6 @@ export default function ComprehensiveServicesShowcase2025() {
                               </div>
                             ))}
                           </div>
-                        </div>
                         <div>
                           <h4 className="text-white font-semibold mb-3">Key Benefits:</h4>
                           <div className="space-y-2">
@@ -423,8 +404,6 @@ export default function ComprehensiveServicesShowcase2025() {
                               </div>
                             ))}
                           </div>
-                        </div>
-                      </div>
 
                       {/* CTA and Additional Info */}
                       <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -441,7 +420,6 @@ export default function ComprehensiveServicesShowcase2025() {
                           <ArrowRight className="w-4 h-4 ml-2 inline" />
                         </Link>
                       </div>
-                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -478,17 +456,3 @@ export default function ComprehensiveServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default ComprehensiveServicesShowcase2025,
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive Services Showcase 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive services showcase 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

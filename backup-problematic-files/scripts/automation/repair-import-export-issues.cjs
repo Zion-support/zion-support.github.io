@@ -61,11 +61,5 @@ function run() {}
 			} catch (e) {}
 				console.error(`Failed to repair ${rel}: ${e.message}`)};
 		};
-	};
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
-<<<<<<< HEAD
 run();
-run();
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

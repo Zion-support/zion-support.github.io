@@ -54,7 +54,6 @@ interface MainLayoutProps {
   keywords?: string;
   canonical?: string;}
 }
-}
 export default function MainLayout() {ursor/automate-test-improve-and-merge-code-646c;
   }
   return (<>;
@@ -199,7 +198,6 @@ interface MainLayoutProps {
   "children": ReactNode;
   title?: string;
   description?: string;}
-}
 }
 
 const "MainLayout": React.FC<MainLayoutProps> = ({ children, title, description    }) => {
@@ -420,16 +418,10 @@ return (;
         </main>
         <Footer />
       </div>
-=======
       <main className="min-h-screen bg-gray-50">
         {children}
       </main>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 export default MainLayout;"

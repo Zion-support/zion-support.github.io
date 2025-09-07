@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -56,7 +55,6 @@ class PerformanceMonitor {
         buildTime: Date.now() - startTime
       };
     }
-  }
 
   async checkBundleSize() {
     this.log('📦 Checking bundle size');
@@ -80,7 +78,6 @@ class PerformanceMonitor {
           } else {
             size += stat.size;
           }
-        }
         
         return size;
       };
@@ -96,7 +93,6 @@ class PerformanceMonitor {
     } catch (error) {
       return { error: error.message };
     }
-  }
 
   async checkDependencies() {
     this.log('📋 Checking dependencies');
@@ -119,7 +115,6 @@ class PerformanceMonitor {
         if (dependencies[dep] && dependencies[dep] !== version) {
           outdatedDeps.push({ dep, current: dependencies[dep], recommended: version });
         }
-      }
       
       return {
         totalDeps: Object.keys(dependencies).length,
@@ -129,7 +124,6 @@ class PerformanceMonitor {
     } catch (error) {
       return { error: error.message };
     }
-  }
 
   generateReport(results) {
     const report = {
@@ -171,8 +165,6 @@ class PerformanceMonitor {
       this.log(\`❌ Performance monitoring failed: \${error.message}\`);
       throw error;
     }
-  }
-}
 
 // Run the performance monitor
 const monitor = new PerformanceMonitor();
@@ -230,7 +222,6 @@ class HealthChecker {
       if (!results.directories[dir]) {
         results.issues.push(\`Missing directory: \${dir}\`);
       }
-    }
     
     for (const file of requiredFiles) {
       const filePath = path.join(this.projectRoot, file);
@@ -238,7 +229,6 @@ class HealthChecker {
       if (!results.files[file]) {
         results.issues.push(\`Missing file: \${file}\`);
       }
-    }
     
     return results;
   }
@@ -323,13 +313,11 @@ class HealthChecker {
         if (!dependencies[dep]) {
           results.missing.push(dep);
         }
-      }
       
       return results;
     } catch (error) {
       return { error: error.message };
     }
-  }
 
   generateReport(results) {
     const report = {
@@ -378,8 +366,6 @@ class HealthChecker {
       this.log(\`❌ Health check failed: \${error.message}\`);
       throw error;
     }
-  }
-}
 
 // Run the health checker
 const checker = new HealthChecker();
@@ -462,7 +448,6 @@ class SEOOptimizer {
       } catch (error) {
         results.issues.push(\`Error reading \${file}: \${error.message}\`);
       }
-    }
     
     return results;
   }
@@ -540,7 +525,6 @@ class SEOOptimizer {
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
-    }
 
     return files;
   }
@@ -592,8 +576,6 @@ class SEOOptimizer {
       this.log(\`❌ SEO optimization check failed: \${error.message}\`);
       throw error;
     }
-  }
-}
 
 // Run the SEO optimizer
 const optimizer = new SEOOptimizer();
@@ -657,18 +639,13 @@ class SecurityAuditor {
                 if (value.length < 10) {
                   results.issues.push(\`Weak \${key} in \${envFile}\`);
                 }
-              }
               
               if (value === '' || value === 'undefined') {
                 results.issues.push(\`Empty \${key} in \${envFile}\`);
               }
-            }
-          }
         } catch (error) {
           results.issues.push(\`Error reading \${envFile}: \${error.message}\`);
         }
-      }
-    }
     
     return results;
   }
@@ -713,7 +690,6 @@ class SecurityAuditor {
       } catch (error) {
         results.issues.push(\`Error reading \${file}: \${error.message}\`);
       }
-    }
     
     return results;
   }
@@ -742,7 +718,6 @@ class SecurityAuditor {
           results.issues.push(\`Potentially vulnerable package: \${pkg}\`);
           results.recommendations.push(\`Update \${pkg} to version \${minVersion} or higher\`);
         }
-      }
       
     } catch (error) {
       results.issues.push(\`Error reading package.json: \${error.message}\`);
@@ -764,7 +739,6 @@ class SecurityAuditor {
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
-    }
 
     return files;
   }
@@ -818,8 +792,6 @@ class SecurityAuditor {
       this.log(\`❌ Security audit failed: \${error.message}\`);
       throw error;
     }
-  }
-}
 
 // Run the security auditor
 const auditor = new SecurityAuditor();
@@ -863,8 +835,6 @@ auditor.run()
       );
       throw error;
     }
-  }
-}
 
 // Run the enhanced automation script creator
 const creator = new EnhancedAutomationScriptCreator();
@@ -882,32 +852,3 @@ creator
     process.exit(1);
   });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-    this.scriptsDir = path.join(this.projectRoot, 'scripts')
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-    this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')
-    this.log(' Checking build performance')
-      execSync('npm run build')
-        "stdio"
-        "status"
-        return { "error"}
-        "status"
-        "bundleStatus"
-    console.error(' Performance monitoring "failed")
-    console.error(' Health check "failed")
-          "hasTitle"
-          "hasDescription": content.includes('description') || content.includes('meta name="description")
-          "hasKeywords": content.includes('keywords') || content.includes('meta name="keywords")
-          "hasOpenGraph": content.includes('og:') || content.includes('property=')
-          "hasTwitterCard": content.includes('twitter:') || content.includes('name=')
-        results.valid = content.includes('User-"agent")
-    console.error(' SEO optimization check "failed")
-        "riskLevel"
-    console.error(' Security audit "failed")
-      ' Enhanced automation script creation "failed"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

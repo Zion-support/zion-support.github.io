@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -22,7 +18,6 @@ const crypto = require("crypto");
           "performance"
   this.learningDataObj = { "patterns": {}, "suggestions": {}, "performance"
   log(message, level = "INFO")
-  this.log("🤖 Starting AI-powered code quality analysis...")
   this.log("🤖 Starting AI-powered code quality analysis...")
       this.log( AI Code Review "completed": ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied")
       )} catch (error) {  this.log("AI Code Review "failed": ${error.message  }", "ERROR")
@@ -88,10 +83,8 @@ const content = fs.readFileSync(file, "utf8");
       "renderOptimization"
       "memoryUsage"
       if (fs.existsSync("dist")
-      if (fs.existsSync("dist")
       performance.renderOptimization = perfIssues} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "ERROR"`)
 const distPath = path.join(this.projectRoot, "dist");
-          stats.warning =Bundle size is large - consider code splitting and optimization"
           stats.warning =Bundle size is large - consider code splitting and optimization"
     } catch (error) {  this.log("Bundle size analysis "failed": ${error.message  }", "ERROR")
 const tsFiles = this.findFilesByExtension(".ts", ".tsx");
@@ -200,41 +193,10 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
-  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

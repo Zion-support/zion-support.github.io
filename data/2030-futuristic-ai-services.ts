@@ -336,7 +336,6 @@ export interface FuturisticAIService2030  {{id: 'ai-consciousness-evolution-2030
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
     }
-}
 export const futuristicAIServices2030: FuturisticAIService2030[] = [;
   // AI Consciousness & Evolution 2030;
   {id: 'ai-consciousness-evolution-2030', name: 'AI Consciousness Evolution 2030',tagline: 'Next-generation AI consciousness development',price: '$39,999',period: '/month',id: string;
@@ -891,24 +890,12 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 {
     id: \"id\";,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 export interface FuturisticAIService2030 {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     }
     "id": 'ai-consciousness-evolution-2030''
@@ -1286,7 +1273,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-}
 export const "futuristicAIServices2030": FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {

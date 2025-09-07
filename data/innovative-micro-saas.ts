@@ -88,7 +88,6 @@ export interface InnovativeMicroSaas  {"id": string;"name": string;
       'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.',"features": [;'
       'AI-powered sentiment analysis','Multi-channel feedback collection','Automatic categorization','Trend identification','Real-time alerts','Custom dashboards','Integration with CRM','Export capabilities','API access','Mobile app';'
     ],"popular": true,"icon": '💬','Mobile app';'
-    ],"popular": true,"icon": '💬','Mobile app';'
     ],"popular": true,"icon": '💬',"color": 'from - purple - 500 to - pink - 600',"text_color": 'text - purple - 400',"link": '"https"://ziontechgroup.com / ai - powered - customer - feedback - analyzer',"market_position":;'
       'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our "advantage": Better AI analysis, competitive pricing, and comprehensive features.',"target_audience":;'
       'Customer success teams, Product managers, Marketing teams, E - commerce businesses, SaaS companies, Service companies',"trial_days": 14,"setup_time": '15 minutes',"category": 'Micro SaaS & Customer Experience',"real_service": true,"technology": [;"color": 'from-purple-500 to-pink-600',"textColor": 'text-purple-400',"link": '"https"://ziontechgroup.com/ai-powered-customer-feedback-analyzer',"marketPosition":;'
@@ -311,7 +310,6 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     "reviews": 900
   },
   {
-  {
       'AI-powered sentiment analysis','
       'Multi-channel feedback collection','
     }
@@ -364,7 +362,6 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     "rating": 4 && 4.7,
     "reviews": 1400
   },
-  {
   {
       'AI-powered scheduling','
     }
@@ -532,13 +529,7 @@ export const "innovativeMicroSaas": InnovativeMicroSaas[] = [
     "rating": 4.8,
     "reviews": 1600;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface InnovativeMicroSaas {;
 ];
 export interface InnovativeMicroSaas {;

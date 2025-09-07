@@ -3,7 +3,6 @@ import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';'
 
 
-=======
 import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';
 
@@ -20,7 +19,6 @@ class ErrorBoundary extends React.Component {
     this.state = { "hasError": false
 };
   }
-<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
 }
@@ -38,11 +36,6 @@ return { "hasError": true,;
     if (this.state.hasError) {
       }
       return <div>Something went wrong.</div>;
-=======
-    if (this.state.hasError) {}
-      return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
 
     return this.props.children;
@@ -53,7 +46,6 @@ import { Zap  } from 'lucide-react';
 interface Feature  {icon: React.ReactNode;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}
 import React from 'react';'
   "title": string;
   "description": string;
@@ -118,7 +110,6 @@ className='text-center group bg-gray-900/50 border border-gray-800 "hover": bord
             </Card>;
           ))}
         </div>;
-      </div>;
     </section>;
 )}export default Features;
     </section>);
@@ -140,33 +131,10 @@ export default Features;
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
           {features.map((feature, index) => (
             <Card
-<<<<<<< HEAD
               key={index}
               className="text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
             >
-=======
-<<<<<<< HEAD
-              key = $2;
-export default Features,
-=======
-              key={index}
-              className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-              style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
-            >
-              <div className='relative'>
-                <div
-                  className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-                >
-                  {feature.icon}
-                </div>
-                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm' />
-              </div>
-              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
-                {feature.title}
-              </h3>
-              <p className='text-gray-400 leading-relaxed'>                {feature.description}            >
->>>>>>> origin/main
               <div className="relative">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
                   {feature.icon}
@@ -182,9 +150,7 @@ export default Features,
             </Card>
           ))}
         </div>
-      </div>
     </section>
-<<<<<<< HEAD
   )
 };
 export default Features;

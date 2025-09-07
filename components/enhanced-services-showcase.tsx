@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react','
@@ -57,7 +56,6 @@ import { realMarketServices   } from '../data/real-market-services';
 import { newVerifiedServicesQ22025   } from '../data/real-verified-services-q2-2025';
 export default function EnhancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [sortBy, setSortBy] = useState<string>('name'),const contactInfo  = null;//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
  //Combine all services for comprehensive showcase const allServices  = [ ...nextGenerationAIServices;//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 import React from 'react';'
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
@@ -231,7 +229,6 @@ const container_variants = {
 }</a>)
 }
 }> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   children
 }</button>)
 }
@@ -275,7 +272,6 @@ if ( {) {$2;
     </button>)}children;
 }</button>)}
   const contactInfo = $2;
->>>>>>> origin/main
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
@@ -286,8 +282,3 @@ if ( {) {$2;
   children 
 }</button>) 
 };
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

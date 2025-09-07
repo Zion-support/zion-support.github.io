@@ -1,5 +1,5 @@
-<<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
-<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+<:src_backup/components/talent/ActiveFilters.tsx
+:src_backup/components/talent/ActiveFilters.tsx
 import React from 'react';
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
@@ -13,14 +13,13 @@ import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
 
 interface ActiveFiltersProps {
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
+:src/components/talent/ActiveFilters.tsx
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
   selectedAvailability: string[],
   toggleAvailability: (status: string) => void,
   selectedRegions: string[],
   toggleRegion: (region: string) => void,
-=======
   selectedSkills: string[];
 
 import { X  } from 'lucide-react';
@@ -30,20 +29,17 @@ interface ActiveFiltersProps  {selectedSkills: string[];
   toggleAvailability: (status: string) => void;
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
->>>>>>> origin/main:src_disabled_1757239864/components/talent/ActiveFilters.tsx
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
+:src/components/talent/ActiveFilters.tsx
   clearFilters: () => void
 }
 
-=======
-<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+:src_backup/components/talent/ActiveFilters.tsx
   clearFilters: () => void
 }
->>>>>>> origin/main:src_disabled_1757239864/components/talent/ActiveFilters.tsx
 export function ActiveFilters({
   selectedSkills;
   toggleSkill;
@@ -58,7 +54,7 @@ export function ActiveFilters({
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
+:src/components/talent/ActiveFilters.tsx
   const hasActiveFilters = 
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
@@ -70,10 +66,8 @@ export function ActiveFilters({
   
   if (!hasActiveFilters) return null;
 
-=======
   const hasActiveFilters = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main:src_disabled_1757239864/components/talent/ActiveFilters.tsx
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
@@ -82,14 +76,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ClickableBadge 
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
+:src/components/talent/ActiveFilters.tsx
           onClick={() => toggleSkill(skill)}
         >
           {skill}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
-=======
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
@@ -126,7 +119,7 @@ interface ActiveFiltersProps {;
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
-<<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+<:src_backup/components/talent/ActiveFilters.tsx
     selectedRegions.length > 0 ||;
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
@@ -157,7 +150,6 @@ import React from "react",interface ActiveFiltersProps  {selectedSkills: string[
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters: </span>
->>>>>>> origin/main:src_disabled_1757239864/components/talent/ActiveFilters.tsx
       
       {selectedAvailability.map(status => (
         <ClickableBadge 
@@ -203,8 +195,7 @@ import React from "react",interface ActiveFiltersProps  {selectedSkills: string[
         </ClickableBadge>
       )}
       
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-=======
+:src/components/talent/ActiveFilters.tsx
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
 
           ${priceRange[0]}-${priceRange[1]}/hr
@@ -230,9 +221,8 @@ import React from "react",interface ActiveFiltersProps  {selectedSkills: string[
   );
 };
 >}
-<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+:src_backup/components/talent/ActiveFilters.tsx
 
->>>>>>> origin/main:src_disabled_1757239864/components/talent/ActiveFilters.tsx
       <Button 
         variant="ghost" 
         size="sm" 
@@ -242,10 +232,9 @@ import React from "react",interface ActiveFiltersProps  {selectedSkills: string[
         Clear All
       </Button>
     </div>
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
+:src/components/talent/ActiveFilters.tsx
   )
 }
-=======
 
 }
 
@@ -411,14 +400,13 @@ if (return null) {$2;
         className='h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent'      >;
         Clear All;
       </Button>;
-<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+:src_backup/components/talent/ActiveFilters.tsx
     </div>);
 }
-<<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+<:src_backup/components/talent/ActiveFilters.tsx
 ;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)})
 =;
 >
->>>>>>> origin/main:src_disabled_1757239864/components/talent/ActiveFilters.tsx

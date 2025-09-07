@@ -17,9 +17,7 @@ export default function UltraFuturisticBackground2035() {
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-<<<<<<< HEAD
     if (ctx) {
-<<<<<<< HEAD
 
 }
 
@@ -48,25 +46,8 @@ interface UltraFuturisticBackground2035Props {
   "children": React.ReactNode;
 
 }
-}
 export default /**
  * UltraFuturisticBackground2035 - Function description
-=======
-// Check condition;
-if ( {) {}
-  $2;
-}
-export default /**;
- * UltraFuturisticBackground2035 - Function description;
- */'
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2035Props {}
-  children: React.ReactNode;
-}
-export default /**;
- * UltraFuturisticBackground2035 - Function description;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
  */
 function UltraFuturisticBackground2035() {
   }
@@ -93,7 +74,6 @@ if (return) {
     // Check condition,
 if ( {) {
   $2
-=======
     // Check condition;
 if (return) {}
   $2;
@@ -110,11 +90,9 @@ if (return) {}
     // Check condition;
 if ( {) {}
   $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
       ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
 ;
-<<<<<<< HEAD
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null)import React, {;
   }
@@ -218,7 +196,6 @@ type,
           "life": maxLife,
           maxLife
         });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
     },
 
@@ -250,7 +227,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           return '#8b5cf6';'
       }
-    }
     // Update and draw particles with enhanced effects;
 
 const updateParticles = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)particles.forEach((particle, index) => {// Update particle life;
@@ -275,65 +251,6 @@ const maxDistance = prefersReducedMotion;
           ? 0;
           : window.innerWidth < 768;
             ? 120;
-=======
-            Math && Math.floor(Math && Math.random() * 3);
-          ];
-        default:;'
-          return '#8b5cf6';      }        case 'hologram':;'
-          return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];'
-        case 'neon':;'
-          return ['#f97316#eab308#a855f7'][Math && Math.floor(Math && Math.random() * 3)];'
-        case 'energy':;'
-          return ['#dc2626#7c3aed#059669'][Math && Math.floor(Math && Math.random() * 3)];'
-        default: return '#8b5cf6';
-      }
-            : 180;
-        if (maxDistance > 0) {;
-          drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
-      });
-      switch (particle && particle.type) {;'
-        case 'quantum':;
-        default:
-          return '#8b5cf6';
-      }
-    }
-    // Update and draw particles with enhanced effects
-    const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((particle, index) => {
-        // Update particle life
-        particle.life--;
-        if (particle.life <= 0) {
-          particle.life = particle.maxLife;
-particle.x =
-            (Math.random() * canvas.width) / (window.devicePixelRatio || 1);
-          particle.y =
-            (Math.random() * canvas.height) / (window.devicePixelRatio || 1);
-        }
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        // Wrap around edges
-if (particle.x < 0)
-          particle.x = canvas.width / (window.devicePixelRatio || 1);
-        if (particle.x > canvas.width / (window.devicePixelRatio || 1))
-          particle.x = 0;
-        if (particle.y < 0)
-          particle.y = canvas.height / (window.devicePixelRatio || 1);
-        if (particle.y > canvas.height / (window.devicePixelRatio || 1))
-          particle.y = 0;
-
-        // Calculate opacity based on life
-        const lifeRatio = particle.life / particle.maxLife;
-        const currentOpacity = particle.opacity * lifeRatio;
-        // Draw particle based on type
-        drawParticle(ctx, particle, currentOpacity);
-        // Draw connections with enhanced effects
-const maxDistance = prefersReducedMotion
-          ? 0
-          : window.innerWidth < 768
-            ? 120
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             : 180;
         if (maxDistance > 0) {
           drawConnections(ctx, particles, index, maxDistance, currentOpacity);
@@ -342,8 +259,6 @@ const maxDistance = prefersReducedMotion
       if (!prefersReducedMotion) {
 animationFrameId = requestAnimationFrame(updateParticles);
       }
-    }
-<<<<<<< HEAD
     // Enhanced particle drawing with different types;
 const drawParticle = (;
       "ctx": CanvasRenderingContext2D,
@@ -409,7 +324,6 @@ const distortion = Math.sin(time + particle.y * 0.02) * 2;
       ctx.fill();
       // Add holographic effect
       ctx.globalAlpha *= 0.5;
-<<<<<<< HEAD
       ctx.beginPath()ctx.arc(particle.x + distortion,particle.y,particle.size * 1.5,0,Math.PI * 2;
       )ctx.strokeStyle = particle.color;
       ctx.lineWidth = 1;
@@ -448,58 +362,6 @@ const drawConnections = ("ctx": CanvasRenderingContext2D;
     ) => {particles.forEach((otherParticle, otherIndex) => {if (currentIndex !== otherIndex) {const dx = particles[currentIndex].x - otherParticle.x;
           const dy = particles[currentIndex].y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy)if (distance < maxDistance) {const connectionOpacity =;
-=======
-      ctx.beginPath();
-ctx.arc(
-        particle.x + distortion,
-        particle.y,
-        particle.size * 1.5,
-        0,
-        Math.PI * 2
-      );
-      ctx.strokeStyle = particle.color;
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    };
-
-}
-
-    // Energy particle with pulsing effect
-    const drawEnergyParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
-    ) => {
-      const time = Date.now() * 0.003;
-      const pulse = Math.sin(time) * 0.3 + 0.7;
-      const size = particle.size * pulse;
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-      ctx.fill();
-      // Energy field effect
-      ctx.globalAlpha *= 0.3;
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-ctx.fill();
-    };
-
-    // Enhanced connection drawing with different effects
-    const drawConnections = (
-      ctx: CanvasRenderingContext2D
-      particles: any[]
-      currentIndex: number
-      maxDistance: number
-      opacity: number
-    ) => {
-      particles.forEach((otherParticle, otherIndex) => {
-        if (currentIndex !== otherIndex) {
-          const dx = particles[currentIndex].x - otherParticle.x;
-          const dy = particles[currentIndex].y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < maxDistance) {
-const connectionOpacity =
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ((maxDistance - distance) / maxDistance) * 0.15 * opacity;
             // Different connection styles based on particle types;
             if (particles[currentIndex].type === otherParticle.type) {// Same type - stronger connection;
@@ -507,7 +369,6 @@ const connectionOpacity =
               ctx.globalAlpha = connectionOpacity * 1.5;
               ctx.strokeStyle = particles[currentIndex].color;
 ctx.lineWidth = 2;
-<<<<<<< HEAD
             } else {// Different types - weaker connection;
               }
               ctx.globalAlpha = connectionOpacity * 0.7;
@@ -519,8 +380,6 @@ ctx.lineWidth = 1;
             ctx.lineTo(otherParticle.x, otherParticle.y);
 ctx.stroke();
           }
-        }
-<<<<<<< HEAD
         if (maxDistance > 0) {;
           drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
       });
@@ -537,100 +396,11 @@ ctx.stroke();
         case 'energy':;
           drawEnergyParticle(ctx, particle);
           }
-        }
       })
 };            ctx && ctx.stroke();
           }
-        }
-=======
-      });
-    };
-
-
-    // Handle window resize,
-const handleResize = () => {
-      }
-      canvas.width = window.innerWidth * (window.devicePixelRatio |1);
-      canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-      if (ctx) {
-}
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-      }
-      initParticles()
-};
-
-
-    window.addEventListener('resize', handleResize);'
-    initParticles();
-    updateParticles();
-    return () => {
-      }
-      window.removeEventListener('resize', handleResize);'
-      if (animationFrameId) {
-}
-cancelAnimationFrame(animationFrameId);
-      }
-
-    };
-  }, []);
-
-return (;
-
-    <>
-<div className='fixed inset-0 z-0 overflow-hidden'>'
-
-        {/* Enhanced background layers */}
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black' />;'
-        {/* Animated gradient overlay */}
-    };  }, []);
-  return (
-    <>;
-      <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
-      }
-    }
-  }, []);
-
-        <motion.div,
-className='absolute inset-0 opacity-30''
-          animate={{
-            }
-            "background": [
-              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)','
-              'radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)','
-              'radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)','
-              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)','
-            ]
-          }}
-          transition={{
-            }
-            "duration": 8,
-"repeat": Infinity,
-"ease": 'easeInOut''
-          }} />
-{/* Holographic grid effect *
-}
-        <div className='absolute inset-0 opacity-20'>'
-          <div,
-className='h-full w-full''
-            style={{
-              }
-              "backgroundImage": ``              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            ``
-              "backgroundSize": '50px 50px''
-            }} />
-        </div>
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-className='absolute inset-0 w-full h-full'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           style={{ filter: 'blur(0.5px)' }}
         />
-<<<<<<< HEAD
 
         {/* Canvas for animated particles *
 }
@@ -640,15 +410,9 @@ updateParticles ()
 {
   /* Animated gradient overlay */ 
 }<motion.div backgroundImage: ` linear-gradient (rgba (139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (139, 92, 246, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
         <motion.div;
-=======
-        {/* Floating neon orbs */}
-        <motion.div
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
         {/* Floating neon orbs */}
           animate={{}
             rotate: [0, 180, 360],          }}
@@ -674,11 +438,8 @@ updateParticles ()
 '
             ease: 'easeInOut',            ease: 'easeInOut'
         <motion.div
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
           animate={{
-<<<<<<< HEAD
             rotate: [0, 180, 360],          }}
           transition={{
           animate={{
@@ -729,12 +490,7 @@ className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r fr
 "ease": 'easeInOut','
           }} />;
 
-<<<<<<< HEAD
         {/* Quantum energy waves */}
-=======
-
-        {/* Quantum energy waves */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div'
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
@@ -802,7 +558,6 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
 "ease": 'easeInOut','
             }} />
         </div>
-      </div>
 className='absolute inset-0 w-full h-full';
           style={{ filter: 'blur(0.5px)' }}/>;
         {/* Floating neon orbs */}animate={{rotate: [0, 180, 360],          }}
@@ -862,7 +617,6 @@ className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r fro
             transition={{duration: 6,repeat: Infinity,ease: 'easeInOut',}}
           />;
         </div>;
-      </div>;
     </>)}</>;
   )
     </>); ;

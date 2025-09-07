@@ -125,7 +125,6 @@ const getIconAndColor = (
       case "success":
        ;
   return {
-=======
   action?: {label: string;
     onClick: () => void;
 }}interface ToastContextType  {toasts: Toast[];
@@ -293,13 +292,10 @@ return (;
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" />
                 <path;
 fillRule="evenodd"
-=======
           <div className="ml-4 flex-shrink-0 flex">;
             <button;
               onClick={handleRemove}
               className={`inline-flex ${titleColor} hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === "success" ? "green" : toast.type === "error" ? "red" : toast.type === "warning" ? "yellow" : "blue"}-50`}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >
               <span className="sr-only">Close</span>"
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">"
@@ -310,9 +306,6 @@ fillRule="evenodd""
               </svg>
             </button>
           </div>
-        </div>
-      </div>
-    </div>
   )
 };
 
@@ -339,19 +332,6 @@ export const useToastNotifications = () => {
 
 
   const { addToast } = useToast()
-=======
-  )
-};
-
-// Convenience hooks for different toast types
-export const useToastNotifications = () => {
-  const { addToast } = useToast();
-
-  return {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <span className="sr-only">Close</span>;
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">;
@@ -363,9 +343,6 @@ export const useToastNotifications = () => {
               </svg>;
             </button>;
           </div>;
-        </div>;
-      </div>;
-    </div>;
   )}// Convenience hooks for different toast types;
 export const useToastNotifications = () => {const { addToast }  = useToast()return {success: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: 'success', title, message, ...options }),error: (title: string, message?: string, options?: Partial<Toast>) =>;
@@ -376,22 +353,4 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: "success", title, message, ...options }),error: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "error", title, message, ...options }),warning: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "warning", title, message, ...options }),info: (title: string, message?: string, options?: Partial<Toast>) =>;
-<<<<<<< HEAD
       addToast({ type: "info", title, message, ...options }),}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-    success: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'success', title, message, ...options }),
-    error: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'error', title, message, ...options }),
-    warning: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'warning', title, message, ...options }),
-    info: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'info', title, message, ...options }),
-  }
-};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-      addToast({ type: "info", title, message, ...options }),}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
->>>>>>> origin/main

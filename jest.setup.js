@@ -22,7 +22,6 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-<<<<<<< HEAD
         emit: jest.fn()
       },
       isFallback: false

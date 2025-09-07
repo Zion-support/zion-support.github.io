@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -33,7 +29,6 @@ const { execSync } = require("child_process");
       this.projectRoot,ecosystem-error-prevention.config.cjs"
 // console.log("" PM2 ecosystem configuration created")
     console.log(" PM2 ecosystem configuration created")
-  console.error(" Error in prevention "loop": ")
   console.error(" Error in prevention "loop": ")
   console.log("" Running error prevention checks...")
     // Check "1"
@@ -91,7 +86,6 @@ const unusedImportCount = (result.match(/"unused/g");
         "stdio": "inherit"
       console.log(" TypeScript errors auto-fixed")
   console.error(" Failed to auto-fix TypeScript "errors": ")
-  console.error(" Failed to auto-fix TypeScript "errors": ")
   console.log(" Auto-fixing import issues...")
       execSync("node ""scripts/automation/fix-imports.cjs""")
   "cwd"
@@ -100,7 +94,6 @@ const unusedImportCount = (result.match(/"unused/g");
   "cwd"
         "stdio": "inherit"
       console.log(" Import issues auto-fixed")
-  console.error(" Failed to auto-fix import "issues": ")
   console.error(" Failed to auto-fix import "issues": ")
   console.log(" Auto-fixing syntax issues...")
       execSync("node ""scripts/automation/fix-syntax.cjs""")
@@ -111,7 +104,6 @@ const unusedImportCount = (result.match(/"unused/g");
         "stdio": "inherit"
       console.log(" Syntax issues auto-fixed")
   console.error(" Failed to auto-fix syntax "issues": ")
-  console.error(" Failed to auto-fix syntax "issues": ")
   console.log(" Auto-fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
@@ -120,7 +112,6 @@ const unusedImportCount = (result.match(/"unused/g");
   "cwd"
         "stdio": "inherit"
       console.log(" Unused imports auto-fixed")
-  console.error(" Failed to auto-fix unused "imports": ")
   console.error(" Failed to auto-fix unused "imports": ")
           !item.startsWith(".")
           item !== "node_modules"
@@ -132,41 +123,10 @@ const unusedImportCount = (result.match(/"unused/g");
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.log("� Received SIGTERM, shutting down gracefully...")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-  console.log("� Received SIGTERM, shutting down gracefully...")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

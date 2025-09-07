@@ -86,8 +86,6 @@ class $1 {
   this.processErrorReport(data)}
         } catch (error) {  this.log(Failed to parse report ${file  }: ${error.message}, "WARN"`)} catch (error) {this.log(Failed to parse report ${file}: ${error.message}, "WARN"`)}
       }
-    }
-  }
 ;
   async collectFromErrorReports() {
   if (!fs.existsSync(this.errorReportsPath)) return;
@@ -113,8 +111,6 @@ class $1 {
           this.log( `Failed to parse error report ${file  }: ${error.message}",WARN";
           )}
       }
-    }
-  }
 ;
   async collectFromLogs() {
   if (!fs.existsSync(this.logsPath)) return;
@@ -126,7 +122,6 @@ class $1 {
       if (fs.existsSync(logPath)) {
   await this.parseLogFile(logPath)}
     }
-  }
 ;
   async parseLogFile(logPath) {
   try {
@@ -646,7 +641,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         if (report.checks.Dependencies && !report.checks.Dependencies.success) {
           errorCounts[date].dependency += report.checks.Dependencies.count || 0}
       }
-    }
     for (const [date, counts] of Object.entries(errorCounts)) {
       trends.push({
         date,
@@ -692,7 +686,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         if (report.checks.Dependencies && !report.checks.Dependencies.success) {
           errorTypes.dependency += report.checks.Dependencies.count || 0}
       }
-    }
     return errorTypes}
   analyzeTimeDistribution(reports) {
     const timeDistribution = {
@@ -719,8 +712,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
             const fileName = path.basename(error.file);
             fileDistribution[fileName] = (fileDistribution[fileName] || 0) + 1}
         }
-      }
-    }
     // Sort by error count and take top 10
     return Object.entries(fileDistribution)
       .sort(([,a], [,b]) => b - a)
@@ -812,7 +803,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
                 <div class="stat-number">${analyticsData.errorTypes.eslint}</div>
                 <div class="stat-label">ESLint Errors</div>
             </div>
-        </div>
         <div class="chart-container">
             <div class="chart-title">Error Trends Over Time</div>
             <canvas id="trendsChart"></canvas>
@@ -828,7 +818,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         <div class="last-updated">
             Last "updated": ${new Date().toLocaleString()}
         </div>
-    </div>
     <script>
         // Error Trends Chart
         const trendsCtx = document.getElementById('trendsChart').getContext('2d');
@@ -850,8 +839,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
                     y: {
                         beginAtZero: true
                     }
-                }
-            }
         });
         // Error Types Chart
         const typesCtx = document.getElementById('typesChart').getContext('2d');
@@ -896,8 +883,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
                         beginAtZero: true,
                         "max": 100
                     }
-                }
-            }
         });
     </script>
 </body>
@@ -981,9 +966,4 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = ErrorAnalyticsDashboard
-module.exports = ErrorAnalyticsDashboard
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

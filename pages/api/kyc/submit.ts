@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '../../../utils/kyc';
@@ -15,7 +14,6 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {}
   }
-}
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -58,7 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // Compute simple risk score
-<<<<<<< HEAD
   let riskScore = 10; // base low risk
   if (flags.has('aml_alert')) riskScore += 50;
   if (flags.has('fraud_risk')) riskScore += 20;
@@ -77,31 +74,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   save(db);
 
   res.status(200).json({ ok: true, profile, aml: amlResult })
-=======
-  let riskScore = 10, // base low risk
-  if (flags.has('aml_alert')) riskScore += 50,
-  if (flags.has('fraud_risk')) riskScore += 20,
-  if (flags.has('duplicate_ip')) riskScore += 15,
-  riskScore = Math.min($2);
-  profile.flags = Array.from($2);
-  profile.riskScore = $2;
-  profile.status = $2;
-  const now = new Date().toISOString($2);
-  profile.lastUpdatedAt = $2;
-  profile.auditTrail.push($2);
-  db[userId] = profile,
-  save($2);
-  res.status(200).json({ ok: true, profile, aml: amlResult})
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ submitted: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
 }

@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 type Speaker = {
   name: string,
-=======
-<<<<<<< HEAD
-type Speaker = $2;
->>>>>>> origin/main
   title: string,
   avatarUrl: string,
   bio: string,
@@ -109,7 +104,6 @@ export default function SummitPage() {
         />
       )
     }
-<<<<<<< HEAD
     if (platform === 'twitch') {
       return (
         <iframe
@@ -130,22 +124,12 @@ export default function SummitPage() {
     )
   };
 
-=======
-    if (platform = $2;
-=======
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function summit() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   return (
     <Layout>
       <Head>
         <title>Summit - Zion Tech Group</title>
         <meta name="description" content="Summit solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
         <div className="max-w-4xl">
@@ -157,7 +141,6 @@ export default function summit() {
             <a href="#livestream" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Livestream</a>
             <a href="#agenda" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Agenda</a>
           </div>
-        </div>
       </section>
 
       <div className="grid md:grid-cols-3 gap-6 mt-8">
@@ -193,13 +176,11 @@ export default function summit() {
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
-              </div>
               <p className="mt-3 text-sm">{s.bio}</p>
               <div className="mt-3 flex gap-3 text-sm">
                 {s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
                 {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
               </div>
-            </div>
           ))}
         </div>
       </section>
@@ -245,7 +226,6 @@ export default function summit() {
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
           </div>
-        </div>
         <div className="mt-4">
           {livestreamEmbed()}
         </div>
@@ -311,17 +291,4 @@ export default function summit() {
       </section>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Summit</h1>
-          <p className="text-lg text-gray-600">
-            Professional summit solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

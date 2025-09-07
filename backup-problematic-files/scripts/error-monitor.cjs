@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require("child_process");
 class ErrorMonitor {}
   constructor() {}
@@ -36,7 +31,6 @@ class ErrorMonitor {}
       this.log("warn", `TypeScript errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async checkLintingErrors() {}
     try {}
       this.log("info", "Checking linting errors...");
@@ -49,7 +43,6 @@ class ErrorMonitor {}
       this.log("warn", `Linting errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async checkBuildErrors() {}
     try {}
       this.log("info", "Checking build errors...");
@@ -62,7 +55,6 @@ class ErrorMonitor {}
       this.log("warn", `Build errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async checkTestErrors() {}
     try {}
       this.log("info", "Checking test errors...");
@@ -75,7 +67,6 @@ class ErrorMonitor {}
       this.log("warn", `Test errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async scanLogFiles() {}
     this.log("info", "Scanning log files for errors...");
     const logFiles = [];
@@ -144,7 +135,6 @@ class ErrorMonitor {}
       return {"type": "build","hasErrors": true,"error": error.message;}
         timestamp: new Date().toISOString()};
     };
-  };
   async checkLintErrors() {}
     try {}
       const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1");
@@ -160,7 +150,6 @@ class ErrorMonitor {}
       return {"type": "lint","hasErrors": true,"error": error.message;}
         timestamp: new Date().toISOString()};
     };
-  };
   async checkTypeErrors() {}
     try {}
       const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1");
@@ -176,7 +165,6 @@ class ErrorMonitor {}
       return {"type": "typescript","hasErrors": true,"error": error.message;}
         timestamp: new Date().toISOString()};
     };
-  };
   async triggerFixes(errorTypes) {}
     for (const errorType of errorTypes) {}
       try {}
@@ -257,7 +245,6 @@ class ErrorMonitor {}
       this.log("info", "TypeScript fixer completed")} catch (error) {}
       this.log("warn", `TypeScript fixer "failed": ${error.message}`)};
   };
-};
 // Run error monitoring if this script is executed directly;
 if (require.main === module) {}
   const errorMonitor = new ErrorMonitor();
@@ -283,9 +270,4 @@ if (require.main === module) {}
   process.on("SIGINT", () => {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
-<<<<<<< HEAD
 module.exports = ErrorMonitor;
-module.exports = ErrorMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -18,13 +18,4 @@ describe('Signup Auto Login', () => {'
 
 
 module.exports = {};
-module.exports = {};
-module.exports = {};
-<<<<<<< HEAD
   });
-});
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
->>>>>>> origin/main
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

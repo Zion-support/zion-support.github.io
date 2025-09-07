@@ -12,7 +12,6 @@ export default function WebsitePerformanceMonitorPage() {
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = null;
             and AI-powered optimization recommendations. Never let performance issues impact your users again.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 } from 'lucide-react';
 
 import {
@@ -435,13 +434,11 @@ href='#pricing';'
                       {feature.description}
                     </p>
                   </div>
-                </div>
               </Card>
                     </h3>;
                     <p className='text-gray-400 leading-relaxed'>;
                       {feature.description}</p>;
                   </div>;
-                </div>;
               </Card>;
             ))}
       {/* Metrics Section */}
@@ -460,7 +457,6 @@ href='#pricing';'
             {metrics.map((metric, index) => (<Card;
                     </p>;
                   </div>;
-                </div>;
               </Card>;
                       {feature.icon}
                     </div>;
@@ -525,7 +521,6 @@ href='#pricing';'
 
             ))}
           </div>
-        </div>
       </section>
 
                   {metric.description}</h2>;
@@ -571,7 +566,6 @@ href='#pricing';'
               </Card>;
             ))}
           </div>;
-        </div>;
       </section>;
             ))}{/* Demo Analysis Section */}
       {analysisResults && (</div>;
@@ -591,7 +585,6 @@ href='#pricing';'
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;<section className='section-padding bg-gradient-cursor-accent'>;
 
           </div>;
-        </div>;
       </section>;
 
       {/* Demo Analysis Section */}
@@ -634,7 +627,6 @@ href='#pricing';'
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Demo Analysis Section */}
@@ -703,7 +695,6 @@ className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-4
                       {analysisResults.loadTime}
                     </span>
                   </div>
-                </div>
               </Card>
             </div>
                       className="text-blue-500"
@@ -729,7 +720,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {analysisResults.loadTime}
                     </span>;
                   </div>;
-                </div>;
               </Card>;
             </div>;
             {/* Recommendations */}
@@ -875,12 +865,10 @@ href='/contact''
             )
 }
           </div>;
-        </div>;
       </section>;
               </Card>;
             ))}
           </div>;
-        </div>;
       </section>;
               </Card>;
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 "hover": from-blue-600 "hover":to-cyan-700' : 'bg-gray-700 "hover":bg-gray-600'} text-white,'
@@ -912,7 +900,6 @@ href='/contact''
                 </Button>
               </Card>
             ))}
-      {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-["size":20px_20px] opacity-10' />;'
@@ -948,7 +935,6 @@ variant='outline';'
               Schedule Demo
             </Button>
           </div>
-        </div>
       </section>
     </>
             <Button;
@@ -964,24 +950,17 @@ variant='outline';'
               Schedule Demo;
             </Button>;
           </div>;
-        </div>;
       </section>;className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl';
             >;
   );
 }
-}
-<<<<<<< HEAD
   );
 }
               Schedule Demo;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

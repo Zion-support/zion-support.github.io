@@ -4,11 +4,8 @@
  * Automatically detects and recovers from various types of errors;
  */
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -25,9 +22,3 @@ const { execSync } = require('child_process')
                 "type"
                 "severity"
             execSync('npm run "lint")
-<<<<<<< HEAD
-            execSync('npm run "lint")
-            execSync('npm run "lint")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

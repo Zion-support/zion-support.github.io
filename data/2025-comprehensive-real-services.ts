@@ -1008,7 +1008,6 @@ export const "comprehensiveRealServices": ComprehensiveService[] = [;
     "customers": 950,;
     "rating": 4.9,;
     "reviews": 520;
-    "reviews": 520;
 export interface ComprehensiveService {;
 
   }
@@ -1511,7 +1510,6 @@ export interface ComprehensiveService {;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 30,
     setupTime: '2-4 weeks',
@@ -1568,8 +1566,6 @@ export interface ComprehensiveService {;
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trial_days: 21,
@@ -2363,42 +2359,3 @@ export const "comprehensiveRealServices": ComprehensiveService[] = [
   }
 ];
 ;
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-origin/cursor/automate-test-improve-and-merge-code-2533
-    reviews: 520,
-  competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements';',
-  launch_date: '2024 - 01 - 10';
-    customers: 950;,
-
-  // AI & Machine Learning Services;
-
-  // Customer Success & Support;
-
-  // Financial Technology;
-
-  // Healthcare & Biotech;
-
-  // E-commerce & Retail;
-
-  // Cybersecurity & Compliance;
-
-  // Data & Analytics;
-
-  // Human Resources;
-
-  // Legal & Compliance;
-
-  // Manufacturing & IoT;
-pr-12325
-
-;
-'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

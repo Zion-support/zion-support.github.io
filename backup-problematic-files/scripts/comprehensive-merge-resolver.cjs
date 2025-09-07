@@ -9,28 +9,17 @@ console.log('🚀 Comprehensive Merge Conflict Resolver');
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-<<<<<<< HEAD
 
     .replace(/
-    .replace(/
-    .replace(/
 
-    .replace(/
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    .replace(/
-    .replace(/
     .replace(/
 }
-<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 
     .replace(/    .replace(//g, '')
     .replace(/}
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -73,7 +62,6 @@ function fixSyntaxErrors(content) {
     
     // Fix quotes in strings
     .replace(/;\s*$/gm, '')
-    .replace(/;\s*$/gm, '')
     
     // Clean up extra semicolons
     .replace(/;;+/g, ';')
@@ -89,7 +77,6 @@ function fixSyntaxErrors(content) {
     .replace(/,\s*\)/g, ')')
     
     // Fix quotes in JSX
-    .replace(/;\s*$/gm, '')
     .replace(/;\s*$/gm, '')
     
     // Clean up whitespace
@@ -134,7 +121,6 @@ function processFile(filePath) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
     return false;
   }
-}
 // Function to find all files with merge conflicts
 function findFilesWithConflicts() {
   const files = [];
@@ -154,14 +140,10 @@ function findFilesWithConflicts() {
         } catch (error) {
           // Skip files that can't be read
         }
-      }
-    }
-  }
   
   searchDirectory('/workspace');
   return files;
       // Remove any remaining conflict markers;
-      content = content.replace(/\n/g, "")
       content = content.replace(/\n/g, "")
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, "utf8")
@@ -173,7 +155,6 @@ function findFilesWithConflicts() {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
 }
-  }
   cleanupBuildArtifacts() {
     this.log("🧹 Cleaning up build artifacts...")
     const artifactsToRemove = [
@@ -227,7 +208,6 @@ async function main() {
       if (processFile(file)) {
         totalFixed++;
       }
-    }
 
     console.log(`\n✅ Fixed ${totalFixed} files`);
 
@@ -248,6 +228,5 @@ async function main() {
     console.error('❌ Error:', error.message);
     process.exit(1);
   }
-}
 
 main();

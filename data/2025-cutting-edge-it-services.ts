@@ -51,7 +51,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Quantum IT''
     "tags": [
       'Quantum Computing''
@@ -140,7 +139,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Edge Computing''
     "tags": [
       'Edge Computing''
@@ -232,7 +230,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Cybersecurity''
     "tags": [
       'Zero Trust''
@@ -321,7 +318,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Blockchain''
     "tags": [
       'Blockchain''
@@ -413,7 +409,6 @@ export const cuttingEdgeITServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'DevOps''
     "tags": ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance']'
     "website": '"https"://ziontechgroup.com/ai-powered-devops-platform''
@@ -450,27 +445,10 @@ export const cuttingEdgeITServices2025 = [
       'Quality Assurance Protocols''
     ]
   }
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-      'DevOps Best Practices'
-      'Security Standards'
-      'Quality Assurance Protocols'
-    ]
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const cuttingEdgeITServices2025 = [
   {
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation''
@@ -509,7 +487,6 @@ export const cuttingEdgeITServices2025 = [
     ];
     "integrations": ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];'
 ;
-    "compliance": ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']'
     "compliance": ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']'
 export const cuttingEdgeITServices2025 = [;
   {;

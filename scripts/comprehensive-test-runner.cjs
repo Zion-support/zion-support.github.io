@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 console.log('\n Test Results "Summary")
 
-console.log('\n Test Results "Summary")
 console.log('\n Test Results "Summary")
 /**
  * Comprehensive Test Runner
@@ -58,7 +56,6 @@ function runUnitTests() {
       output: error.stdout || error.stderr
     };
   }
-}
 
 // Run integration tests
 function runIntegrationTests() {
@@ -81,7 +78,6 @@ describe('Integration Tests', () => {
     const nav = screen.getByRole('navigation');
     expect(nav).toBeInTheDocument();
   });
-});
 `;
     
     const testPath = path.join(__dirname, '..', '__tests__', 'integration.test.tsx');
@@ -99,7 +95,6 @@ describe('Integration Tests', () => {
       error: error.message
     };
   }
-}
 
 // Run accessibility tests
 function runAccessibilityTests() {
@@ -124,7 +119,6 @@ function runAccessibilityTests() {
       error: error.message
     };
   }
-}
 
 // Run performance tests
 function runPerformanceTests() {
@@ -149,7 +143,6 @@ function runPerformanceTests() {
       error: error.message
     };
   }
-}
 
 // Run security tests
 function runSecurityTests() {
@@ -174,7 +167,6 @@ function runSecurityTests() {
       error: error.message
     };
   }
-}
 
 // Run E2E tests
 function runE2ETests() {
@@ -227,7 +219,6 @@ export default e2eConfig;
       error: error.message
     };
   }
-}
 
 // Main test runner function
 function runComprehensiveTests() {
@@ -257,49 +248,11 @@ function runComprehensiveTests() {
       results.summary.failedTests++;
     }
   });
-=======
-
-#!/usr/bin/env node;
-const fs = require('fs');
-const { execSync } = require('child_process');
-console.log('🧪 Starting Comprehensive Test Runner...')
-  "overall"
-const output = execSync(command, { "encoding": 'utf8', "stdio"});
-    execSync('npx jest --version', { "stdio"})
-    addTest('Unit Tests', 'skipped', 0, { "reason"})
-    runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
-    addTest('Python Unit Tests', 'skipped', 0, { "reason"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 console.log('\n Test Results "Summary")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-console.log('\n Test Results "Summary")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-console.log('\n Test Results "Summary")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
   results.summary.testCoverage = Math.round((results.summary.successfulTests / results.summary.totalTests) * 100);
 
-<<<<<<< HEAD
   return results;
 }
 
@@ -328,9 +281,4 @@ try {
   console.error('❌ Comprehensive test suite failed:', error.message);
   process.exit(1);
 }
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

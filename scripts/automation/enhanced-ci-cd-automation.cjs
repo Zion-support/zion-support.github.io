@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -99,7 +95,6 @@ const lines = output.split("\n");
         "errors"
         "warnings"
   return { "total": 0, "errors": 0, "warnings"}
-  return { "total": 0, "errors": 0, "warnings"}
   console.log(""� Building project...")
 }")}"
 "
@@ -120,7 +115,6 @@ console.log( Build completed in ${duration}ms```)
       console.log("" Build "failed": ")
 const distDir = path.join(process.cwd(), "dist";
       if (!fs.existsSync(distDir)) return "0 B"
-const units = ["B", "KB", "MB", "GB"];
 const units = ["B", "KB", "MB", "GB"];
     } catch (error")
 return "Unknown";
@@ -262,10 +256,6 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.build.result?.duration || ""N/A""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ``
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || ""N/A""}
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     : "
 - **Status**: ${this.ciResults.quality.status === "success" ? " Passed" : " Failed"}
 ### Immediate Actions "Required"
@@ -290,44 +280,12 @@ const report = await this.generateCIReport();";
   console.log("\n Pipeline failed. Review failed checks above.")
   console.log("\n Pipeline passed successfully! Ready for deployment.")
   console.error(" Pipeline "failed": ")
-  console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 // Start the "
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-// Start the "
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-// Start the "
-<<<<<<< HEAD
-// Start the "
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

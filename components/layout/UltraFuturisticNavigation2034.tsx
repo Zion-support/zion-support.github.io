@@ -7,12 +7,9 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
@@ -20,12 +17,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
 
-<<<<<<< HEAD
   Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
-=======
-  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   Network, Server, HardDrive, Monitor;Laptop, Watch, Headphones, Speaker, Mic;
@@ -39,7 +32,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ShoppingCart, UserCheck, FileText, BarChart;
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
-<<<<<<< HEAD
   Handshake, LifeBuoy, Activity;
 
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
@@ -213,260 +205,6 @@ import {
 export default function UltraFuturisticNavigation2034() {;
 
 
-=======
-];
-const companyLinks = [
-  { name: 'About Us', href: '/about', icon: Users }
-  { name: 'Careers', href: '/careers', icon: Briefcase }
-  { name: 'News', href: '/news', icon: FileText }
-  { name: 'Partners', href: '/partners', icon: Handshake }
-  { name: 'Support', href: '/support', icon: LifeBuoy }
-  { name: 'Status', href: '/status', icon: Activity }
-=======
-{
-        name: 'Quantum Machine Learning',
-        href: '/quantum-machine-learning-platform',
-        description: 'Harness quantum computing for ML',
-        price: '$1,999/month',
-      },
-      {
-        name: 'Blockchain AI Platform'
-        href: '/blockchain-ai-platform'
-        description: 'Decentralized AI for the future'
-        price: '$899/month'
-      }
-      {
-        name: 'Edge AI Computing'
-        href: '/edge-ai-computing-platform'
-        description: 'AI at the edge for real-time processing'
-        price: '$599/month'
-      }
-      {
-        name: 'AI Climate Modeling',
-        href: '/ai-climate-modeling-platform',
-        description: 'Predict climate change with AI',
-        price: '$1,299/month',
-      },
-    ],
-  },
-  {
-    title: '🏙️ Enterprise IT Solutions',
-    icon: CpuIcon,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    description: 'Autonomous enterprise infrastructure',
-    services: [
-{
-        name: 'API Security & Monitoring',
-        href: '/api-security-monitoring-suite',
-        description: 'Protect and monitor your APIs',
-        price: '$399/month',
-      },
-      {
-        name: 'Customer Success Automation'
-        href: '/customer-success-automation'
-        description: 'Automate customer success workflows'
-        price: '$199/month'
-      }
-      {
-        name: 'HR Automation Suite'
-        href: '/hr-automation-suite'
-        description: 'Streamline HR processes with AI'
-        price: '$179/month'
-      }
-      {
-        name: 'Project Management AI',
-        href: '/project-management-ai-platform',
-        description: 'AI-powered project management',
-        price: '$199/month',
-      },
-    ],
-  },
-  {
-    title: '🛒 Business Automation',
-    icon: ShoppingCart,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
-    description: 'Streamline business operations',
-    services: [
-{
-        name: 'E-commerce Automation',
-        href: '/ecommerce-automation-platform',
-        description: 'Automate your entire e-commerce operation',
-        price: '$249/month',
-      },
-      {
-        name: 'Marketing Automation Suite'
-        href: '/marketing-automation-suite'
-        description: 'Automate your entire marketing operation'
-        price: '$279/month'
-      }
-      {
-        name: 'Financial Analytics Platform'
-        href: '/financial-analytics-platform'
-        description: 'Real-time financial insights'
-        price: '$349/month'
-      }
-      {
-        name: 'Legal Document Automation',
-        href: '/legal-document-automation',
-        description: 'Automate legal document creation',
-        price: '$399/month',
-      },
-    ],
-  },
-  {
-    title: '🤖 Robotics & Automation',
-    icon: RocketIcon,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
-    description: 'Intelligent automation solutions',
-    services: [
-{
-        name: 'Autonomous Robotics Platform',
-        href: '/autonomous-robotics-platform',
-        description: 'Build and deploy intelligent robots',
-        price: '$2,499/month',
-      },
-      {
-        name: 'AI Content Generator Elite'
-        href: '/ai-content-generator-elite'
-        description: 'Professional AI content creation'
-        price: '$49/month'
-      }
-      {
-        name: 'AI Guardrails Suite'
-        href: '/ai-guardrails-suite'
-        description: 'Policy and safety for LLM apps'
-        price: '$199/month'
-      }
-      {
-        name: 'AI Business Intelligence',
-        href: '/ai-business-intelligence-suite',
-        description: 'Intelligent business insights',
-        price: '$299/month',
-      },
-    ],
-  },
-  {
-    title: '🔬 Research & Development',
-    icon: MicroscopeIcon,
-    color: 'from-orange-600 via-red-600 to-pink-600',
-    description: 'Breakthrough research solutions',
-    services: [
-{
-        name: 'Quantum DNA Computing',
-        href: '/quantum-dna-computing-platform',
-        description: 'DNA-based quantum computation',
-        price: '$35,999/month',
-      },
-      {
-        name: 'Space Mining Automation'
-        href: '/space-mining-automation-platform'
-        description: 'Automated asteroid mining'
-        price: '$45,999/month'
-      }
-      {
-        name: 'Metaverse AI Development'
-        href: '/metaverse-ai-development-platform'
-        description: 'Build immersive virtual worlds'
-        price: '$2,999/month'
-      }
-      {
-        }
-        "name": 'Holographic Event Platform','
-        "href": '/holographic-event-platform','
-        "description": 'Immersive holographic experiences','
-        "price": '$2,999/month','
-      }
-    ]
-  }
-];
-
-const quickLinks = [;
-  { "name": 'Home', "href": '/', "icon": Home,'
-},
-  { "name": 'Services', "href": '/services', "icon": Briefcase,'
-},
-  { "name": 'Solutions', "href": '/solutions', "icon": Target,'
-},
-  { "name": 'Pricing', "href": '/pricing-2034', "icon": DollarSign,'
-},
-  { "name": 'Resources', "href": '/resources', "icon": BookOpen,'
-},
-  { "name": 'Case Studies', "href": '/case-studies', "icon": FileText,'
-},
-  { "name": 'Blog', "href": '/blog', "icon": MessageCircle,'
-},
-{ "name": 'Contact', "href": '/contact', "icon": MessageCircle,'
-}
-];
-
-const companyLinks = [;
-  { "name": 'About Us', "href": '/about', "icon": Users,'
-},
-  { "name": 'Careers', "href": '/careers', "icon": Briefcase,'
-},
-  { "name": 'News', "href": '/news', "icon": FileText,'
-},
-  { "name": 'Partners', "href": '/partners', "icon": Handshake,'
-},
-  { "name": 'Support', "href": '/support', "icon": LifeBuoy,'
-},
-
-{ "name": 'Status', "href": '/status', "icon": Activity,'
-}
-];
-
-const socialLinks = [;
-  {
-    }
-    "name": 'LinkedIn','
-    "href": '"https"://linkedin.com/company/ziontechgroup','
-    "icon": Linkedin
-  },
-  { "name": 'GitHub', "href": '"https"://github.com/Zion-Holdings', "icon": Github,'
-},
-  {
-    }
-    "name": 'Instagram','
-    "href": '"https"://instagram.com/ziontechgroup','
-    "icon": Instagram
-  },
-  {
-    }
-    "name": 'YouTube','
-    "href": '"https"://youtube.com/@ziontechgroup','
-    "icon": Youtube
-  },
-  { "name": 'Twitter', "href": '"https"://twitter.com/ziontechgroup', "icon": Twitter,'
-}
-];
-
-const certifications = [
-  'ISO 27001 Certified','
-  'SOC 2 Type II Compliant','
-  'GDPR Compliant','
-  'HIPAA Compliant','
-  'PCI DSS Level 1','
-  'FedRAMP Authorized','
-  'Quantum Security Certified','
-  'AI Ethics Compliant','
-];
-export default function UltraFuturisticNavigation2034() {
-  }
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-
-    }
-
-    const handleScroll = () => {
-    window.addEventListener('scroll', handleScroll);
-=======
-export default function UltraFuturisticNavigation2034() { return null; }
-  useEffect(() => {}
-    const handleScroll = () => {'
-    window.addEventListener('scroll', handleScroll);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
   const toggleDropdown = (category: string) => {}
@@ -550,9 +288,6 @@ const toggleDropdown = ("category": string) => {
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const closeDropdown = () => {
     }
@@ -581,7 +316,6 @@ return (;
             <div className='flex items-center space-x-2'>'
               <MapPin className='w-4 h-4 text-purple-400' />'
               <span className='hover:text-purple-400 transition-colors'>                {contactInfo.address}
-=======
             </div>
             <div className='flex items-center space-x-2'>'
               <MapPin className='w-4 h-4 text-purple-400' />'
@@ -590,15 +324,9 @@ return (;
                 {contactInfo.address}
               </span>
             </div>
-<<<<<<< HEAD
           </div>"
             <div className="flex items-center space-x-2">"
               <Star className="w-4 h-4 text-yellow-400" />"
-=======
-          </div>
-            <div className="flex items-center space-x-2">
-              <Star className="w-4 h-4 text-yellow-400" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <span className="text-yellow-400 font-semibold">5.0 Rating</span>
             </div>"
             <div className="flex items-center space-x-2">"
@@ -618,17 +346,10 @@ return (;
               <span className='hover:text-blue-400 transition-colors'>;
                 {contactInfo && contactInfo.email}
               </span>;
-<<<<<<< HEAD
             </div>;'
             <div className='flex items-center space-x-2'>;'
               <MapPin className='w-4 h-4 text-purple-400' />;'
               <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
-=======
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <MapPin className='w-4 h-4 text-purple-400' />;
-              <span className='hover: text-purple-400 transition-colors'>                {contactInfo && contactInfo.address;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </span>;
             </div>;
           </div>                {contactInfo && contactInfo.mobile}
@@ -665,8 +386,6 @@ return (;
               <Users className="w-4 h-4 text-green-400" />;"
               <span className="text-green-400 font-semibold">50K+ Customers</span>;
           </div>;
-        </div>;
-      </div>;
 
 <div className='flex items-center space-x-4'>'
             <div className='flex items-center space-x-2'>'
@@ -679,9 +398,6 @@ return (;
                 50K+ Customers
               </span>
             </div>
-          </div>
-        </div>
-      </div>
       {/* Main Navigation */}
 <nav,
 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`          }
@@ -715,10 +431,6 @@ className='flex items-center space-x-3''
                 </h1>
                 <p className='text-xs text-gray-400'>'
                   Future Technology Solutions
-<<<<<<< HEAD
-                </p>              </div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
@@ -726,17 +438,10 @@ className='flex items-center space-x-3''
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-<<<<<<< HEAD
             <motion.div;
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}"
-=======
-            <motion.div
-              initial={{ opacity: 0;, x: -20 ;}}
-              animate={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0.5 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="flex items-center space-x-3"
             >"
               <div className="relative">"
@@ -752,17 +457,10 @@ className='flex items-center space-x-3''
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.5 }}'
               className='flex items-center space-x-3'>;'
               <div className='relative'>;'
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;'
-=======
-              transition={{ duration: 0 && 0.5 ;}}
-              className='flex items-center space-x-3'>;
-              <div className='relative'>;
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Rocket className='w-7 h-7 text-white' />;
                 </div>;'
                 <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>;
@@ -837,7 +535,6 @@ className='flex items-center space-x-3''
                               className='block text-xs text-gray-300 "hover": text-cyan-400 transition-colors''
                             >
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       {/* Main Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -906,7 +603,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           )
 }
                         </div>;
-                      </div>;
 
                     ))}
 
@@ -920,8 +616,6 @@ href='/services''
                       <ArrowRight className='w-4 h-4 ml-2' />'
                     </Link>
                   </div>
-                </div>
-              </div>
 
               {/* Contact Button */}
               <Link,
@@ -929,7 +623,6 @@ href='/contact''
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200 font-medium''
               >
                 Get Started
-=======
               <Link;
 href='/contact'
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'
@@ -957,11 +650,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>;
             </div>;
-          </div>;
-        </div>;
                />
                 Get Started;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </Link>
             </div>
 
@@ -981,14 +671,8 @@ onClick={() => setIsOpen(!isOpen
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
-          </div>
-        </div>
-<<<<<<< HEAD
               </button>;
             </div>;
-          </div>;
-        </div>;
-        </div>;
 
 
         {/* Mobile Menu */}
@@ -1024,7 +708,6 @@ className='block text-gray-300 "hover":text-cyan-400 transition-colors duration-
                     key={category.title}
                     className='border-b border-cyan-500/20 pb-4'>'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     <button;
                       onClick={() => toggleDropdown(category.title)}
                       className='flex items-center justify-between w-full text-left text-gray-300 "hover": text-cyan-400 transition-colors duration-200 font-medium'>'
@@ -1038,7 +721,6 @@ className='block text-gray-300 "hover":text-cyan-400 transition-colors duration-
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-<<<<<<< HEAD
                       />;
                     </button>;
                     <AnimatePresence>;
@@ -1076,36 +758,8 @@ className='block text-sm text-gray-400 "hover":text-cyan-400 transition-colors'>
                               {service.name}
                             </Link>;
                           transition={{ duration: 0.2 }}
-=======
-
-                      />
-                    </button>
-                    <AnimatePresence />
-                      {activeDropdown === category.title && (
-                        <motion.div;
-        <AnimatePresence />;
-          {is_open && (<motion.div;}
-              initial={{ opacity: 0;, height: 0 ;,}
-}
-              animate={{ opacity: 1;, height: 'auto' ;,}
-}
-              exit={{ opacity: 0;, height: 0 ;}}
-              transition={{ duration: 0.3 ;,}
-}
-              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20' />
-
-                          initial={{ opacity: 0;, height: 0 ;,}
-}
-                          animate={{ opacity: 1;, height: 'auto' ;,}
-}
-                          exit={{ opacity: 0;, height: 0 ;}}
-
-                          transition={{ duration: 0.2 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
                               key={service.name}
-=======
         <AnimatePresence>
           {is_open && (
             <motion.div
@@ -1114,24 +768,14 @@ className='mt-3 ml-4 space-y-2'
                           {category.services.map(service => (}
                             <Link;}
 key={service.name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                               href={service.href}
                               onClick={() => setIsOpen(false)}
                               className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                             >
                               {service.name}
                             </Link>
-<<<<<<< HEAD
                           ))}
                         </motion.div>
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-                          ))}
-
-                          )
-}
-                        </motion && motion.div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       )}
                     </AnimatePresence>
                   </div>
@@ -1141,20 +785,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 href='/contact''
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-=======
-<<<<<<< HEAD
 <Link
-=======
-                <Link'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   href='/contact'
-<<<<<<< HEAD
                   onClick={() => setIsOpen(false)}'
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link"
-=======
-                  onClick={() => setIsOpen(false)}
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href="/contact"
                   onClick={() => setIsOpen(false)}"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";'
@@ -1228,7 +862,6 @@ href='/contact''
     </>
   )
 }
-=======
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>

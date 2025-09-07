@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -33,13 +32,6 @@ export default function EditJobPage() {
 
   if (!job) return <div>Loading…</div>;
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../../../components/layout/Layout';
-
-export default function ClientJobsIdEdit() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -54,8 +46,6 @@ export default function ClientJobsIdEdit() {
             Professional edit job solutions tailored to your business needs.
           </p>
         </div>
-      </div>
-<<<<<<< HEAD
       <div>
         <label className="block text-sm font-medium">Description</label>
         <textarea className="mt-1 w-full border rounded p-2" rows={6} value={description} onChange={(e) => setDescription(e.target.value)} />
@@ -67,10 +57,5 @@ export default function ClientJobsIdEdit() {
       <div className="pt-2">
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
-    </div>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

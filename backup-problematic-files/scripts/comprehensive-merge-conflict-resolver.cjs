@@ -38,7 +38,6 @@ class ComprehensiveMergeConflictResolver {}
       } catch (error) {}
         // Skip files that can't be read;
       };
-    };
     return filesWithConflicts};
   async getAllFiles(dir) {}
     const files = [];
@@ -57,7 +56,6 @@ class ComprehensiveMergeConflictResolver {}
           if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md', '.cjs', '.mjs'].includes(path.extname(entry.name))) {}
             files.push(fullPath)};
         };
-      };
     } catch (error) {}
       // Skip directories that can't be read;
     };
@@ -72,7 +70,6 @@ class ComprehensiveMergeConflictResolver {}
         return headContent.trim() + '\n'}
 });
       // Clean up any remaining conflict markers;
-      resolvedContent = resolvedContent.replace(/\s*\n?/g, '');
       resolvedContent = resolvedContent.replace(/\s*\n?/g, '');
       resolvedContent = resolvedContent.replace(/// Clean up extra whitespace;)
       resolvedContent = resolvedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -129,9 +126,4 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ComprehensiveMergeConflictResolver;
-module.exports = ComprehensiveMergeConflictResolver;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

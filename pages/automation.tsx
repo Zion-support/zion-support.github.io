@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next / head';
@@ -61,7 +60,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-}
 import React from 'react';
 import Head from 'next/head';
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
@@ -109,7 +107,6 @@ export default function AutomationPage() {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Intelligent Automation
               </div>
-            </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Automation Hub
@@ -128,7 +125,6 @@ export default function AutomationPage() {
                 View Demo
               </a>
             </div>
-          </div>
         </section>
 
                 Automation Features
@@ -153,7 +149,6 @@ export default function AutomationPage() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -174,7 +169,6 @@ export default function AutomationPage() {
                     </div>
                   ))}
                 </div>
-              </div>
               
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
@@ -190,11 +184,6 @@ export default function AutomationPage() {
                       <Zap className="w-4 h-4 mr-2" />
                       AI-powered optimization
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -217,7 +206,6 @@ export default function AutomationPage() {
                 Schedule Demo
               </a>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -244,9 +232,7 @@ export default function AutomationPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
                 </div>;
-              </div>;
 
               <div className='relative'>;
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>;
@@ -282,7 +268,6 @@ export default function AutomationPage() {
                 <RefreshCw className='w - 4 h - 4 mr - 2' />;
                 Intelligent Automation;
               </div>;
-            </div>;
             <h1 className='text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight'>;
               Automation Hub;
             </h1>;
@@ -301,7 +286,6 @@ export default function AutomationPage() {
               >                View Demo;
               </a>;
             </div>;
-          </div>;
         </section>;
         {/* Features Section */}
         <section className='py - 24'>;
@@ -329,7 +313,6 @@ export default function AutomationPage() {
                   </p>;
                 </div>))}
             </div>;
-          </div>;
         </section>;
         {/* Benefits Section */}
         <section className='py - 24 bg - gray - 900'>;
@@ -347,7 +330,6 @@ export default function AutomationPage() {
                       </div>;
                       <span className='text - gray - 300 text - lg'>{benefit}</span>                    </div>))}
                 </div>;
-              </div>;
               <div className='relative'>;
                 <div className='bg - gradient - to - br from - blue - 500 / 10 to - purple - 500 / 10 rounded - 3xl p - 8 border border - blue - 500 / 20'>;
                   <div className='text - center'>;
@@ -362,11 +344,6 @@ export default function AutomationPage() {
                     <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 20 text - blue - 400 text - sm'>;
                       <Zap className='w - 4 h - 4 mr - 2' />                      AI - powered optimization;
                     </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
         </section>;
 
               <a
@@ -378,7 +355,6 @@ export default function AutomationPage() {
 
               </a>;
             </div>;
-          </div>;
         </section>;
       </div>;
 
@@ -386,55 +362,4 @@ export default function AutomationPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AutomationPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Automation | Zion Tech Group</title>
-        <meta name="description" content="Professional automation solutions for your business." />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Automation Solutions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional automation solutions for your business.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Process Automation</h3>
-            <p className="text-gray-300">
-              Automate repetitive business processes.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Workflow Automation</h3>
-            <p className="text-gray-300">
-              Streamline workflows with intelligent automation.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">AI Automation</h3>
-            <p className="text-gray-300">
-              AI-powered automation solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

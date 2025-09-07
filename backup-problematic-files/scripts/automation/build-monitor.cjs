@@ -47,15 +47,11 @@ setupSignalHandlers() {}
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -182,7 +178,6 @@ setupSignalHandlers() {}
       if (installResult.success) {}
         this.fixesApplied.push('Installed missing modules')};
     };
-  };
   async fixSyntaxErrors() {}
     this.log('info', 'Checking for syntax errors...');
     
@@ -214,7 +209,6 @@ setupSignalHandlers() {}
         "totalErrors": this.errorsFound.length,
         "totalFixes": this.fixesApplied.length;
       };
-    };
 
     const reportFile = path.join(this.logDir, 'build-monitor-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -261,9 +255,4 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

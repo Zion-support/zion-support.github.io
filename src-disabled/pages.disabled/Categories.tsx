@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/Categories.tsx
+:src_backup/pages/Categories.tsx
 :src/pages/Categories.tsx
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
@@ -98,7 +98,6 @@ const fetcher = null;
           )}
         </ErrorBoundary>
       </div>
-    </div>
     </>
   )
 
@@ -253,13 +252,13 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
-<<<<<<< HEAD:src_backup/pages/Categories.tsx
+:src_backup/pages/Categories.tsx
 
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))
 }
-<<<<<<< HEAD:src_backup/pages/Categories.tsx
+:src_backup/pages/Categories.tsx
 :src/pages/Categories.tsx
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
@@ -355,7 +354,6 @@ export default function Categories({ categories: initialCategories = [] }: Categ
           )}
         </ErrorBoundary>;
       </div>;
-    </div>;
     </>;
   );
 }

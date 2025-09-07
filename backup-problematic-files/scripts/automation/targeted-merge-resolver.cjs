@@ -15,7 +15,6 @@ const { execSync } = require("child_process")
   this.log(" Starting Targeted Merge Conflict Resolver...")
   // Step "1": Ensure we"
       // Step "3"
-      // Step "3"
       // Step "4"
       await this.finalizeMerges()} catch (error) {  this.log(` Fatal "error": ${error.message  }`, "ERROR"`)
   this.log("� Ensuring we are on main branch...")
@@ -91,10 +90,8 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "ERROR"
     // "Strategy"
       /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
     if (fileExt === ".json")
   resolvedContent = this.cleanupJson(resolvedContent)} else if ([".js", ".jsx", ".ts", ".tsx")]
-      fixed = fixed.replace(/,(\s*[}\]])/g, "$1"
       fixed = fixed.replace(/,(\s*[}\]])/g, "$1"
     const lines = content.split("\n")
         trimmedLine.startsWith("import ")
@@ -132,9 +129,4 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "targeted-merge-report.json")
     this.log("� Targeted Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%")
 this.log("� Detailed report saved "to": ${reportPath}")
-<<<<<<< HEAD
   console.error(" Fatal "error")
-  console.error(" Fatal "error")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,19 +1,6 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 const { execSync } = require('child_process');
-=======
-#!/usr/bin/env node
-#!/usr/bin/env node
-#!/usr/bin/env node
-
-#!/usr/bin/env node
-
-
-const { execSync } = require('child_process');
-#!/usr/bin/env node
-
->>>>>>> origin/main
 const fs = require('fs');
 const path = require('path');
 function resolveMergeConflicts() {
@@ -69,7 +56,6 @@ function resolveMergeConflicts() {
             } catch (e) {
               // Skip files we can't read
             }
-          }
           fs.writeFileSync(file, resolvedContent);
           resolvedCount++;
         }
@@ -82,18 +68,15 @@ function resolveMergeConflicts() {
             } else if (!inConflict || keepContent) {
               resolvedContent += line + '\n';
             }
-          }
           fs.writeFileSync(file, resolvedContent);
           resolvedCount++;
         }
       } catch (error) {
         console.log(`Error processing ${file}: ${error.message}`);
       }
-    }
     console.log(`Resolved ${resolvedCount} conflicts and handled ${deletedCount} modify/delete conflicts`);
   } catch (error) {
     console.log(`⚠️  Manual resolution needed for: ${file}`);
     manualCount++;
   }
-}
 resolveMergeConflicts();

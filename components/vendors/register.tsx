@@ -6,7 +6,6 @@ export default function VendorRegisterPage() {
   }
   const [loading, setLoading] = useState(false);
 import { FormEvent, useState } from 'react';
-=======
 
 const [message, setMessage] = useState<string | null>(null),;
 
@@ -49,14 +48,6 @@ const data = await res.json();
     } finally {
       }
       setLoading(false)
-<<<<<<< HEAD
-=======
-      setLoading(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       form.reset()
     } catch (err: any) {}
       setMessage(err.message)
@@ -68,9 +59,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setMessage(err.message)}
     } finally {}
       setLoading(false)}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
-  }
 
 return (;
 <div className='max-w-2xl mx-auto space-y-6'>'

@@ -119,7 +119,6 @@ const featuredMicroSaas = realMicroSaasServices2025;
                 <div className='text-xl "md":text-2xl text-cyan-400 font-medium'>'
                   Revolutionary AI • Quantum Computing • Enterprise Solutions
                 </div>
-              </div>
               <p className='text-xl "md":text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed'>'
                 Transform your business with cutting-edge AI, quantum computing,
 and enterprise solutions. We deliver innovative technology that,
@@ -147,10 +146,7 @@ whileHover={{ "scale": 1.05 }}
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     Explore Services
-=======
                     Explore Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </motion.button>
                 </Link>
               </div>
@@ -371,7 +367,6 @@ className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 ro
                 </div>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Featured AI Services *
@@ -507,7 +502,6 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 <div className='text - xl "md":text - 2xl text - cyan - 400 font - medium'>;'
                   Revolutionary AI • Quantum Computing • Enterprise Solutions;
                 </div>;
-              </div>;
               <p className='text - xl "md":text - 2xl text - gray - 300 mb - 12 max - w-3xl mx - auto leading - relaxed'>;'
                 Transform your business with cutting - edge AI, quantum computing,and enterprise solutions. We deliver innovative technology that;
                 drives business transformation and shapes the future.;
@@ -530,7 +524,6 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 <div className="text - xl "md":text - 2xl text - cyan - 400 font - medium">;"
                   Revolutionary AI • Quantum Computing • Enterprise Solutions;
                 </div>;
-              </div>;
               <p className="text - xl "md":text - 2xl text - gray - 300 mb - 12 max - w-3xl mx - auto leading - relaxed">;"
                 Transform your business with cutting - edge AI, quantum computing, and enterprise solutions.;
                 We deliver innovative technology that drives business transformation and shapes the future.;
@@ -683,7 +676,6 @@ const featuredMicroSaas = realMicroSaasServices2025.filter (service => { return 
                 <div className="text - gray - 300 text - lg">Future Possibilities</div>;"
                 <div className="text - green - 400 text - sm mt - 2">Limitless Innovation</div>;"
             </div>;
-          </div>;
         </section>;
         {/* Featured AI Services */}
         <section className='py-24 px-4'>;'
@@ -885,7 +877,6 @@ service={{
             </div>                      popular: service.popular,
                       category: service.category,
                     }}
-                    }}
                     variant='enterprise'                  />;
                 </motion && motion.div>;
               ))}
@@ -1044,7 +1035,6 @@ service={{
                 </motion.div>))}
             </div>                      popular: service.popular,
                       category: service.category,
-                    }}
                     }}
                     variant='automation'                  />;
                 </motion && motion.div>;
@@ -1317,7 +1307,6 @@ and running quickly
                 </p>
               </motion.div>
             </div>
-          </div>
         </section>
         {/* Enhanced Call to Action *
 }
@@ -1364,10 +1353,6 @@ whileHover={{ "scale": 1.05 }}
                       whileTap={{ "scale": 0.95 }}
                       className='px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl "hover":bg-green-400 "hover":text-black transition-all duration-300 transform "hover":scale-105''
                     >
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       Request Demo
                     </motion.button>
                   </Link>
@@ -1396,17 +1381,13 @@ href='"mailto":kleber@ziontechgroup.com''
                   </p>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                     <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
       </main>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 };
 export default Homepage2037;
@@ -1415,7 +1396,6 @@ export default Homepage2037;
 };
 
 
-<<<<<<< HEAD
     </Layout>)}export default Homepage2037)}export default Homepage2037;export default Homepage2037;})}export default Homepage2037;
         <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
@@ -1424,34 +1404,8 @@ export default Homepage2037;
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default Homepage2037,
-=======
-  );
-}
-export default Homepage2037;  )
-}
-export default Homepage2037;
-<<<<<<< HEAD
-
-"
-=======
-}> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
-}</div> <motion.div > <Link href="/micro-saas" > <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25" > View All SAAS Solutions <ArrowRight className="w-5 h-5" /> </button> </a> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine cutting-edge technology with proven expertise to deliver exceptional results </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" > <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Brain className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >AI-First Approach</h3> <p className="text-gray-300 leading-relaxed" >Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Atom className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Quantum Innovation</h3> <p className="text-gray-300 leading-relaxed" >Next-generation quantum computing and security solutions that prepare you for the future</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Shield className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Enterprise Security</h3> <p className="text-gray-300 leading-relaxed" >Military-grade security and compliance solutions that protect your most valuable assets</p> </motion.div> <motion.div > <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" > <Zap className="w-10 h-10 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Rapid Deployment</h3> <p className="text-gray-300 leading-relaxed" >Fast implementation and continuous optimization to get you up and running quickly</p> </motion.div> </div> </div> </section> <div className="relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30" > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Join the future of technology with Zion Tech Group. Let's build something extraordinary together and shape the future of your industry. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <Link href="/contact" > <motion.button > Start Your Journey Today </motion.button> </a> <Link href="/demo" > <motion.button mt-8 text-gray-400"> <p className=" text-sm">Contact us: <a href=" tel:+13024640950"className=" text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p> <p className=" text-sm">Email: <a href=" mailto:kleber@ziontechgroup.com"className=" text-cyan-400 hover:text-cyan-300" >kleber@ziontechgroup.com</a></p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
-}
-export default Homepage2037
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
 );
 };
 
 export default Homepage2037;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

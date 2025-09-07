@@ -17,13 +17,9 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -46,11 +42,8 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -69,13 +62,9 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -103,11 +92,8 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -147,9 +133,4 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = DependencyMonitor;
-module.exports = DependencyMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

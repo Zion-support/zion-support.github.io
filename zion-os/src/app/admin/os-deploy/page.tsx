@@ -37,7 +37,6 @@ const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];'
   const labelFor = ("key": string) => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
-}
 'use client';const "labels": { ["key": string]: string } = {"ai": 'AI Integration';'
       }
       "blockchain": 'Blockchain Technology';'
@@ -71,7 +70,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-}
 'use client';'
     const "labels": { ["key": string]: string } = {
       }
@@ -158,7 +156,6 @@ const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];"
     return descriptions[key] || "Feature description";"
   };
 
-<<<<<<< HEAD
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
       ai: 'Advanced AI capabilities',
@@ -169,7 +166,6 @@ const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];"
     return descriptions[key] || 'Feature description';
   };
 
-=======
 
 
         {/* Header */}
@@ -387,7 +383,6 @@ name="domain""
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 "focus":border-blue-500 "focus":ring-2 "focus":ring-blue-500/20 transition-all";"
                   placeholder="North America";" />;
               </div>;
-            </div>;
           </div>;{/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -465,8 +460,6 @@ id="region""
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 "focus":border-blue-500 "focus":ring-2 "focus":ring-blue-500/20 transition-all""
                   placeholder="North America"" />;
               </div>;
-            </div>;
-          </div>;
 
           {/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">"
@@ -528,7 +521,6 @@ id="paymentGateway""
                   <option value="crypto">Crypto Payments</option>;"
                 </select>;
               </div>;
-            </div>;
           </div>;{/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -609,8 +601,6 @@ id="tokenSystem""
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 "focus":border - blue - 500 "focus":ring - 2 "focus":ring - blue - 500 / 20 transition - all";"
                   placeholder="North America";" />;
               </div>;
-            </div>;
-          </div>;
           {/* Economic Configuration */}
           <div className="glass - effect rounded - 2xl p - 8">;"
             <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;"
@@ -656,8 +646,6 @@ id="tokenSystem""
                   <option value="crypto">Crypto Payments</option>;"
                 </select>;
               </div>;
-            </div>;
-          </div>;
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -717,8 +705,6 @@ main
                   <option value="crypto">Crypto Payments</option>;"
                 </select>;
               </div>;
-            </div>;
-          </div>;
           {/* Feature Selection */}
           <div className="glass - effect rounded - 2xl p - 8">;"
             <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;"
@@ -750,11 +736,9 @@ main
                     <div className="text-sm text-white/60">;"
                       {getFeatureDescription(k)}
                     </div>;
-                  </div>;
                 </label>;
               ))}
             </div>;
-          </div>;
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -764,7 +748,6 @@ main
               Additional Features;
             </h2>;
             </div>;
-          </div>;
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -787,17 +770,14 @@ ursor/automate-test-improve-and-merge-code-646c; />;
                   <div className="text-sm text-white/60">;"
                     Manage community funds with transparency;
                   </div>;
-                </div>;
               </label>;
                     </div>
                     <div className="text-sm text-white/60">"
                       {getFeatureDescription(k)}
                     </div>
-                  </div>
                 </label>
               ))}
             </div>
-          </div>
 
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">"
@@ -821,7 +801,6 @@ id="treasury""
                   <div className="text-sm text-white/60">"
                     Manage community funds with transparency
                   </div>
-                </div>
               </label>
 
 main
@@ -850,7 +829,6 @@ ursor/automate-test-improve-and-merge-code-646c; />;
                   <div className="text-sm text-white/60">;"
                     Local + global decision making;
                   </div>;
-                </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 "hover":border-white/20 transition-colors cursor-pointer group">;"
 
@@ -867,7 +845,6 @@ id="governance""
                   <div className="text-sm text-white/60">"
                     Local + global decision making
                   </div>
-                </div>
               </label>
 
 main
@@ -896,7 +873,6 @@ ursor/automate-test-improve-and-merge-code-646c; />;
                   <div className="text-sm text-white/60">;"
                     Automated content and behavior monitoring;
                   </div>;
-                </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 "hover":border-white/20 transition-colors cursor-pointer group">;"
 
@@ -913,7 +889,6 @@ id="moderation""
                   <div className="text-sm text-white/60">"
                     Automated content and behavior monitoring
                   </div>
-                </div>
               </label>
 
 main
@@ -942,10 +917,8 @@ ursor/automate-test-improve-and-merge-code-646c; />;
                   <div className="text-sm text-white/60">;"
                     Institutional partnership management;
                   </div>;
-                </div>;
               </label>;
             </div>;
-          </div>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 "hover":border-white/20 transition-colors cursor-pointer group">;"
 
                 <input,
@@ -961,10 +934,8 @@ id="partnerships""
                   <div className="text-sm text-white/60">"
                     Institutional partnership management
                   </div>
-                </div>
               </label>
             </div>
-          </div>
 
           {/* Submit Button */}
           <div className="text-center">;"
@@ -995,7 +966,6 @@ id="partnerships""
                   </div>;
                 </label>))}
             </div>;
-          </div>;
           {/* Additional Features */}
           <div className="glass - effect rounded - 2xl p - 8">;"
             <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;"
@@ -1065,8 +1035,6 @@ id="partnerships""
                 className={`mt-6 p-4 rounded-lg ${messageType === 'success';'                    ? 'bg-green-900/20 border border-green-500/20 text-green-400';'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400';'
                 }`}`              >;
-                }`}`              >;
-                }`}`              >;
 "use client",import { useState } from "react",import { FeatureKeys } from "@/lib/zod",import LoadingSpinner from "@/app/components/LoadingSpinner",export default function AdminDeployPage() {const [loading, setLoading] = useState(false),const [message, setMessage] = useState<string | null>(null),const [messageType, setMessageType] = useState<'success' | 'error'>('success'),async function onSubmit() {event.preventDefault(),setLoading(true),setMessage(null),const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const "features": Record<string boolean> = {},FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),const payload = {"instanceName": String(formData.get("instanceName") || ""),"domain": String(formData.get("domain") || "" ) || undefined,"subdomain": String(formData.get("subdomain") || "" ) || undefined,"vertical": String(formData.get("vertical") || "GENERAL"),"defaultLanguage": String(formData.get("defaultLanguage") || "en"),"tokenSystem": String(formData.get("tokenSystem") || "SHARED"),"governanceType": String(formData.get("governanceType") || "ADMIN"),"region": String(formData.get("region") || "") || undefined,"country": String(formData.get("country") || "") || undefined,features,"addons": {"paymentGateway": String(formData.get("paymentGateway") || "") || undefined,"sovereignTreasury": formData.get("sovereignTreasury") === "on","dualGovernance": formData.get("dualGovernance") === "on","aiModeration": formData.get("aiModeration") === "on","affiliatePanel": formData.get("affiliatePanel") === "on"}},try {const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) })const res = await fetch("/api/deploy", { "method": "POST", "body": JSON.stringify(payload) }),const data = await res.json(),if (!res.ok) {setMessageType('error'),setMessage(data.error || "Deployment failed"),return;"
       }setMessageType('success'),setMessage(`✅ Deployment queued successfully! "ID": ${data.deploymentId}`),(event.target as HTMLFormElement).reset()} catch (error) {setMessageType('error'),setMessage("Network error occurred. Please try again.")} finally {setLoading(false)}"  }const getVerticalIcon = ("vertical": string) => {switch (vertical) {case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,case "GOV": return <Users className="w-5 h-5 text-red-400" />,"default": return <Globe className="w-5 h-5 text-gray-400" />;"
           <div className="text-center">"
@@ -1086,7 +1054,6 @@ className={`mt-6 p-4 rounded-lg ${`                  }
                 </div>;
               </label>;
             </div>;
-          </div>;
               <div,
 className={`mt-6 p-4 rounded-lg ${`                  }
                   messageType === 'success''
@@ -1279,8 +1246,6 @@ export default function AdminDeployPage() {;
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 "focus":border-blue-500 "focus":ring-2 "focus":ring-blue-500/20 transition-all";"
                   placeholder="North America";" />;
               </div>;
-            </div>;
-          </div>;
           {/* Economy Settings */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -1330,8 +1295,6 @@ export default function AdminDeployPage() {;
                   <option value="crypto">Crypto Payments</option>;"
                 </select>;
               </div>;
-            </div>;
-          </div>;
           {/* Feature Toggles */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -1350,7 +1313,6 @@ export default function AdminDeployPage() {;
                     <div className="text-sm text-white/60">;"
                       {getFeatureDescription(k)}
                     </div>;
-                  </div>;
                 </label>;
               </div>;
               <div className="space-y-2">;"
@@ -1365,7 +1327,6 @@ export default function AdminDeployPage() {;
                   </select>;
                 </label>;
               </div>;
-            </div>;
             <div className="grid grid-cols-1 "md":grid-cols-2 gap-6">;"
               <div className="space-y-2">;"
                 <label className="block text-white font-medium">;"
@@ -1385,7 +1346,6 @@ export default function AdminDeployPage() {;
                     placeholder="latam";" />;
                 </label>;
               </div>;
-            </div>;
             <div className="grid grid-cols-1 "md":grid-cols-3 gap-6">;"
               <div className="space-y-2">;"
                 <label className="block text-white font-medium">;"
@@ -1415,7 +1375,6 @@ export default function AdminDeployPage() {;
                   </select>;
                 </label>;
               </div>;
-            </div>;
             <div className="grid grid-cols-1 "md":grid-cols-2 gap-6">;"
               <div className="space-y-2">;"
                 <label className="block text-white font-medium">;"
@@ -1435,8 +1394,6 @@ export default function AdminDeployPage() {;
                     placeholder="United States";" />;
                 </label>;
               </div>;
-            </div>;
-          </div>;
           {/* Add-ons */}
           <div className="glass-effect rounded-2xl p-8">;"
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
@@ -1453,7 +1410,6 @@ export default function AdminDeployPage() {;
                   <div className="text-sm text-white/60">;"
                     Manage community funds with transparency;
                   </div>;
-                </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 "hover":border-white/20 transition-colors cursor-pointer group">;"
                 <input type="checkbox" name="dualGovernance" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded "focus":ring-blue-500 "focus":ring-2" />;"
@@ -1464,7 +1420,6 @@ export default function AdminDeployPage() {;
                   <div className="text-sm text-white/60">;"
                     Local + global decision making;
                   </div>;
-                </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 "hover":border-white/20 transition-colors cursor-pointer group">;"
                 <input type="checkbox" name="aiModeration" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded "focus":ring-blue-500 "focus":ring-2" />;"
@@ -1475,7 +1430,6 @@ export default function AdminDeployPage() {;
                   <div className="text-sm text-white/60">;"
                     Automated content and behavior monitoring;
                   </div>;
-                </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 "hover":border-white/20 transition-colors cursor-pointer group">;"
                 <input type="checkbox" name="affiliatePanel" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded "focus":ring-blue-500 "focus":ring-2" />;"
@@ -1486,10 +1440,8 @@ export default function AdminDeployPage() {;
                   <div className="text-sm text-white/60">;"
                     Institutional partnership management;
                   </div>;
-                </div>;
               </label>;
             </div>;
-          </div>;
           {/* Submit Section */}
           <div className="text-center">;"
             <button;
@@ -1553,9 +1505,6 @@ export default function AdminDeployPage() {;
                     className="input-field";"
                     placeholder="North America";" />;
                 </div>;
-              </div>;
-            </div>;
-          </div>;
 <div className="text-center">;"
             <button;
               type="submit";"
@@ -1567,14 +1516,12 @@ export default function AdminDeployPage() {;
           </div>;
         </form>;
       </div>;
-    </div>;
   )}}`}>;`                {message}
               </div>;
             )}
           </div>;
         </form>;
       </div>;
-    </div>;
   ){/* Submit Button */}
           <div className="text - center">;"
             <button;
@@ -1617,7 +1564,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
           </div>
         </form>
       </div>
-    </div>
   );
 }
 
@@ -1659,7 +1605,6 @@ function labelFor() {;
     case "multi_currency": return "Multi-Currency",;"
     "default": return key;
   }
-}
 ;
 function getFeatureDescription() {;
   }
@@ -1681,7 +1626,6 @@ function getFeatureDescription() {;
     case "multi_currency": return "Multi-currency support";"
     "default": return "Core platform feature";"
   }
-}
 }ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-website-loading-errors-and-merge-6662;

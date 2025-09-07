@@ -70,7 +70,6 @@ and drive growth. Our expert team delivers high-quality, scalable solutions.
                 Built to grow with your business and adapt to changing needs.
               </p>
             </div>
-          </div>
           {/* CTA Section */}
           <div className="text-center bg-white rounded-xl shadow-lg p-12">"
             <h2 className="text-3xl font-bold text-gray-900 mb-6">"
@@ -95,9 +94,6 @@ href="/services""
                 View All Services
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     <div className="animate-fade-in">"
       <div className="text-center mb-16">"
         <h1 className="text-4xl font-bold text-gray-900 mb-6">"
@@ -137,7 +133,6 @@ icon="🧹""
               description="Integrate data from disparate sources and ensure high data quality through cleansing, validation, and transformation processes.""
               benefits={["Unified data view", "Automated data pipelines", "Error reduction", "Improved data reliability"]}" />
           </div>
-        </div>
         <div className="text-center mt-16">"
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Unlock Your Data's Potential?</h2>'
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">"
@@ -157,8 +152,6 @@ href=""tel":+13024640950""
               Call +1 302 464 0950
             </a>
           </div>
-        </div>
-      </div>
       <div className="text-center mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Data Analytics Process</h2>"
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">"
@@ -178,7 +171,6 @@ step="3""
             title="Analysis & Visualization""
             description="Apply analytical techniques, build dashboards, and generate insights."" />
         </div>
-      </div>
       <CTA />
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">"
       <div className="container mx-auto px-4 py-16">"
@@ -203,14 +195,8 @@ step="3""
             <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>"
             <p className="text-gray-600">Get instant insights with our real-time data processing capabilities.</p>"
           </div>
-        </div>
-      </div>
 
       <ContactSection />
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     </div>
   );
 }
@@ -281,7 +267,6 @@ href=""mailto":kleber@ziontechgroup.com""
       <div className="mt-6 text-sm text-gray-600">"
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
-    </div>
   );
 }
 export const metadata = {

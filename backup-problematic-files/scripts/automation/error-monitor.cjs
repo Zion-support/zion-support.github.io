@@ -118,7 +118,6 @@ class $1 {}
                 "error": error.message,
                 "issues": ["read_error"]})};
           };
-        };
       } catch (error) {}
   this.log("error", "Error scanning directory ${dir}: ${error.message}")} catch (error) {}
   corruptedFiles.push({})
@@ -127,12 +126,10 @@ class $1 {}
                 "error": error.message,
                 "issues": ["read_error"]})};
           };
-        };
       } catch (error) {  this.log("error`, Error scanning directory ${dir  }:, error.message`);
                 "issues": ["read_error"]}
 });")}")}")}")} catch (error) {this.log("error", Error scanning directory ${dir}:, error.message")};
       };
-};
     ;
     if (fs.existsSync(srcDir)) {}
   scanDirectory(srcDir)};
@@ -141,7 +138,6 @@ class $1 {}
 ;
   analyzeFileIssues(content) {}
   const issues = [];
-    if (content.includes("Unterminated string literal")) issues.push("unterminated_string");
     if (content.includes("Unterminated string literal")) issues.push("unterminated_string");
     if (content.match(/^"[^"]*$/m)) issues.push("unclosed_single_quote");
     if (content.match(/^[^"]*$/m)) issues.push("unclosed_double_quote");
@@ -295,9 +291,4 @@ const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

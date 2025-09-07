@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/components/layout/Sidebar.tsx
+:src_backup/components/layout/Sidebar.tsx
 import React from 'react';
 main
 
@@ -31,7 +31,6 @@ const Sidebar: React.FC = () => {;,
           </Link>;
         </nav>;
       </div>;
-    </div>;
   );
 };
 export default Sidebar;
@@ -166,7 +165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};"
       transition={{ duration: 0.3, ease: 'easeInOut' }};
-<<<<<<< HEAD:src_backup/components/layout/Sidebar.tsx
+:src_backup/components/layout/Sidebar.tsx
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -212,7 +211,6 @@ main
               ),
             })};
           </div>,
-        </div>,
         {/* Navigation Sections */};
         <div className="space-y-6">,"
                   key={link.name},
@@ -229,7 +227,6 @@ main
               )
             })},
           </div>,
-        </div>,
         {/* Navigation Sections */},
         <div className="space-y-6">,
           {navigationSections.map((section) => {,
@@ -345,8 +342,6 @@ main
               <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />,"
               <span className="text-xs">{contactInfo.address}</span>,"
             </div>,
-          </div>,
-        </div>,
         {/* Trust Indicators */};
         <div className="mt-6 pt-6 border-t border-gray-200">,"
           <div className="grid grid-cols-2 gap-4">,"
@@ -399,8 +394,6 @@ main
               <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />,
               <span className="text-xs">{contactInfo.address}</span>,
             </div>,
-          </div>,
-        </div>,
         {/* Trust Indicators */},
         <div className="mt-6 pt-6 border-t border-gray-200">,
           <div className="grid grid-cols-2 gap-4">,
@@ -420,9 +413,6 @@ main
               <div className="text-lg font-bold text-yellow-600">24/7</div>,
               <div className="text-xs text-gray-500">Support</div>,
             </div>,
-          </div>,
-        </div>,
-      </div>,
                           key={item.name};
                           onClick={() => handleLinkClick(item.href)};
                           <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-400 group-hover: text-blue-600" />,"
@@ -499,7 +489,6 @@ export default Sidebar;
               );
             })};
           </div>;
-        </div>;
         {/* Navigation Sections */};
         <div className="space-y-6">;
           {navigationSections.map((section) => {;
@@ -564,8 +553,6 @@ export default Sidebar;
               <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />;
               <span className="text-xs">{contactInfo.address}</span>;
             </div>;
-          </div>;
-        </div>;
         {/* Trust Indicators */};
         <div className="mt-6 pt-6 border-t border-gray-200">;
           <div className="grid grid-cols-2 gap-4">;
@@ -585,12 +572,9 @@ export default Sidebar;
               <div className="text-lg font-bold text-yellow-600">24/7</div>;
               <div className="text-xs text-gray-500">Support</div>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
     </motion.aside>;
   );
-<<<<<<< HEAD:src_backup/components/layout/Sidebar.tsx
+:src_backup/components/layout/Sidebar.tsx
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 };

@@ -49,8 +49,6 @@ class BuildHealthCheck {;}
           "ERROR");
         return { "status": "failed", "error": error.message };
       };
-    };
-  };
 ;
   async checkConfigFiles() {;}
     const configs = [package.json",]
@@ -125,7 +123,6 @@ class BuildHealthCheck {;}
     } catch (error) {await this.log(`Build check "failed": ${error.message}`, "ERROR");
       return { "status": "failed", "error": error.message };
     };
-  };
 ;
   async performHealthActions(results) {;}
     const actions = [];
@@ -195,7 +192,6 @@ class BuildHealthCheck {;}
       await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)",
         "INFO"),} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR"),};
   };
-};
           ? "healthy"";          : healthScore >= 40;            ? "warning"";            : "critical"";      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
       await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)", ""INFO""),"} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR")}`}"};
 ;
@@ -209,9 +205,4 @@ if (require.main === module) {;}
   process.on("SIGINT", () => {;}
     checker.log("Build health checker shutting down", "INFO');
     process.exit(0),}),};
-<<<<<<< HEAD
 module.exports = BuildHealthCheck;
-module.exports = BuildHealthCheck;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

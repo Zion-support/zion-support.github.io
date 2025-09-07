@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 export interface CybersecurityQuantumService  {export interface CybersecurityQuantumService  {id: string;
@@ -34,7 +33,6 @@ id: string;name: string;
   reviews: number;
 }{'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],techStack: [;
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch';
-      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch';
     techStack: [;
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch';
     ],realImplementation: true,implementationDetails:;
@@ -55,7 +53,6 @@ id: string;name: string;
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.';
     compliance: [;
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA';
-      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA';
     ],link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',id: 'ai - powered - threat - hunting - platform',name: 'AI - Powered Threat Hunting Platform',tagline: 'Proactive threat detection with autonomous security intelligence',description:;
       'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.',category: 'AI Cybersecurity & Threat Intelligence',price: {monthly: 399,yearly: 3990,currency: 'USD',trial_days: 21,setup_time: '1 - 2 weeks',enterprise: 'Custom pricing';
       enterprise: 'Custom pricing';
@@ -71,7 +68,6 @@ id: string;name: string;
     ],market_position:;
       'Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our advantage: Autonomous threat hunting and AI intelligence.',competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],tech_stack: [;
       'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch';
-      'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch';
     ],real_implementation: true,implementation_details:;
       'Production - ready threat hunting platform with real - time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',use_cases: [;
       'Advanced persistent threat detection','Malware analysis and classification','Network security monitoring','Endpoint threat detection','Security incident investigation','Threat intelligence sharing';
@@ -82,7 +78,6 @@ id: string;name: string;
       'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools';
     ],support:;
       '24 / 7 security support, threat hunting training, custom development, and dedicated security manager.',compliance: [;
-      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA';
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA';
     ],link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',icon: '🕵️',color: 'from - purple - 500 to - indigo - 600',popular: true,launch_date: '2024 - 02 - 01',customers: 1200,rating: 4 && 4.8,reviews: 950;
   },{'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security';
@@ -118,7 +113,6 @@ id: string;name: string;
       'Remote workforces';
     ],market_position:;
       'Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our advantage: AI - powered risk assessment and continuous verification.',competitors: [;
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security';
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security';
     ],tech_stack: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes'],real_implementation: true,implementation_details:;
       'Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',use_cases: [;
@@ -163,7 +157,6 @@ id: string;name: string;
       'Custom quantum protocols, Classical encryption systems, Network infrastructure';
     ],support:;
       'Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support.',compliance: [;
-      'Highest security standards, Government security requirements, Industry - specific standards';
       'Highest security standards, Government security requirements, Industry - specific standards';
     ],link: 'https://ziontechgroup.com / quantum - key - distribution - network',icon: '🔮',reviews: 1400;
   },{color: 'from - purple - 500 to - pink - 600',popular: true,launch_date: '2024 - 03 - 01',customers: 120,rating: 4 && 4.9,reviews: 95;
@@ -301,18 +294,14 @@ id: string;name: string;
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',id: 'ai - powered - vulnerability - assessment',name: 'AI - Powered Vulnerability Assessment Platform',tagline: 'Intelligent security scanning with AI - driven risk analysis',description:;
       'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',category: 'Vulnerability Management & Security Testing',price: {monthly: 199,yearly: 1990,currency: 'USD',trial_days: 14,setup_time: '1 - 3 days',enterprise: 'Custom pricing';
       enterprise: 'Custom pricing';
-      enterprise: 'Custom pricing';
     },features: [;
       'AI - powered vulnerability scanning','Intelligent risk prioritization','Automated remediation guidance','Continuous security monitoring','Custom scan policies','Advanced reporting','Integration with security tools','Mobile app support','API for automation','Compliance reporting';
-      'Compliance reporting';
       'Compliance reporting';
     ],benefits: [;
       'Reduce false positives by 70%','Improve vulnerability detection by 40%','Speed up remediation by 60%','Reduce security assessment costs','Improve compliance posture';
       'Improve compliance posture';
-      'Improve compliance posture';
     ],target_audience: [;
       'Security teams','DevOps engineers','Compliance officers','IT managers','Security consultants','Penetration testers';
-      'Penetration testers';
       'Penetration testers';
     ],market_position:;
       'Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6, 570 / year), Qualys ($2, 000 - 5, 000 / year), and Rapid7 ($2, 000 - 8, 000 / year). Our advantage: AI intelligence and automated remediation.',competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],tech_stack: ['OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis'],real_implementation: true,implementation_details:;
@@ -412,24 +401,13 @@ export interface CybersecurityQuantumService  {id: string,name: string,tagline: 
 ];
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export interface CybersecurityQuantumService {
 
 export interface CybersecurityQuantumService {;
   id: string;
-<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export interface CybersecurityQuantumService {
 }
 export interface CybersecurityQuantumService {;
@@ -617,16 +595,11 @@ export interface CybersecurityQuantumService {;
     rating: 4.8,
     reviews: 1900;
   }
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
 
-<<<<<<< HEAD
     reviews: 1900
     rating: 4.8,
     reviews: 1900;
@@ -644,12 +617,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 export interface CybersecurityQuantumService {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
     rating: 4.8,
     reviews: 1900;
   }

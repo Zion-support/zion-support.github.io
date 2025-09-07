@@ -218,7 +218,6 @@ export const "comprehensiveInnovativeServices": ComprehensiveInnovativeService[]
     "period": '/month',"description": 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';'
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     capabilities: [;
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring';
     ],
@@ -228,15 +227,6 @@ export const "comprehensiveInnovativeServices": ComprehensiveInnovativeService[]
   // DevOps & Infrastructure Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   {
     }
     "id": 'ai - powered - devops - automation';'
@@ -314,7 +304,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "period": '/month',"description": 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.';'
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     capabilities: [;
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation';
     ],
@@ -324,15 +313,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Edge Computing Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   {
     }
     "id": 'iot - edge - intelligence - platform';'
@@ -520,7 +500,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "period": '/month';'
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     capabilities: [;
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting';
     ],
@@ -530,15 +509,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Education Technology Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   {
     }
     "id": 'ai - personalized - learning - platform';'
@@ -976,6 +946,5 @@ export default comprehensiveInnovativeServices;"marketAdvantage": string;const c
 export default comprehensiveInnovativeServices;
 ;
 export default comprehensiveInnovativeServices;
-;
 ;
 export default comprehensiveInnovativeServices;

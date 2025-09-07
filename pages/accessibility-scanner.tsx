@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 export default function AccessibilityScannerPage() {
@@ -13,34 +12,7 @@ export default function AccessibilityScannerPage() {
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
 					</div>
-				</div>
 			</section>
 		</>
 	)
 }
-=======
-import React from 'react'
-import Head from 'next/head'
-const AccessibilityScannerPage: React.FC = () => {
-  return (
-    <>
-      <Head>
-        <title>Accessibility Scanner - Zion Tech Group</title>
-        <meta name="description" content="Accessibility scanning tools and services" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Accessibility Scanner</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Comprehensive accessibility scanning and testing tools for your applications.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-export default AccessibilityScannerPage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

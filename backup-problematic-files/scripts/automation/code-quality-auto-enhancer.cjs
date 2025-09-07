@@ -69,7 +69,6 @@ class CodeQualityAutoEnhancer {}
             "type": checkType;
           })};
       };
-    };
     return issues};
   async applyCodeEnhancements(issues) {}
     if (!this.autoEnhanceEnabled) {}
@@ -208,7 +207,6 @@ class CodeQualityAutoEnhancer {}
             "description": `Commented out unused variable ${varName}
           }};
       };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixMissingSemicolons(lines, issue) {}
     if (issue.message.includes('Missing semicolon')) {}
@@ -242,8 +240,6 @@ class CodeQualityAutoEnhancer {}
               "description": `Commented out unused import ${importName}
             }};
         };
-      };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixConsoleStatements(lines, issue) {}
     if (issue.message.includes('Unexpected console statement')) {}
@@ -372,7 +368,6 @@ class CodeQualityAutoEnhancer {}
             "description": `Added type annotation for ${varName}
           }};
       };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixInterfaceIssues(lines, issue) {}
     if (issue.message.includes('Property') && issue.message.includes('does not exist on type')) {}
@@ -394,8 +389,6 @@ class CodeQualityAutoEnhancer {}
               "description": `Added missing property ${propName} to ${typeName}
             }};
         };
-      };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixGenericTypes(lines, issue) {}
     const lineIndex = issue.line - 1;
@@ -415,7 +408,6 @@ class CodeQualityAutoEnhancer {}
             "description": 'Added generic type parameter'
           }};
       };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixOptionalProperties(lines, issue) {}
     const lineIndex = issue.line - 1;
@@ -492,7 +484,6 @@ describe('${fileName}', () => {}
           walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {}
           sourceFiles.push(filePath)};
       };
-    };
     
     walkDir(srcDir);
     return sourceFiles};
@@ -530,7 +521,6 @@ describe('${fileName}', () => {}
           before: checkResult.results,
           "after": postCheckResult.results;
         };
-      };
       
       // Save report;
       const reportPath = path.join(this.reportsDir, `quality-enhancement-report-${Date.now()}.json`);
@@ -584,9 +574,4 @@ if (require.main === module) {}
   enhancer.startEnhancer().catch(error => {})
     enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = CodeQualityAutoEnhancer;
-module.exports = CodeQualityAutoEnhancer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

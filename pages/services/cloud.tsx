@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Cloud, Cpu, Database, Zap, Shield, Rocket, 
@@ -49,15 +48,9 @@ export default function CloudServicesPage() {
     { number: "100+", label: "Cloud Projects", icon: CheckCircle}
   ],
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function cloud() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Cloud Infrastructure Services - Zion Tech Group</title>
         <meta name="description" content="Scalable cloud infrastructure solutions from Zion Tech Group. Cloud migration, DevOps, edge computing, and security services." />
         <meta property="og:title" content="Cloud Infrastructure Services - Zion Tech Group" />
@@ -123,7 +116,6 @@ export default function cloud() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -174,7 +166,6 @@ export default function cloud() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -207,20 +198,4 @@ export default function cloud() {
       <EnhancedFooter />
     </div>
   )
-=======
-        <title>Cloud - Zion Tech Group</title>
-        <meta name="description" content="Cloud solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud</h1>
-          <p className="text-lg text-gray-600">
-            Professional cloud solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

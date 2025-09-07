@@ -1,45 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
-=======
 import React from 'react';
-import Link from 'next/link';
-ursor/automate-test-improve-and-merge-code-646c;
-
-=======
-
-<<<<<<< HEAD
-pr-12243
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
-      </div>;
-      <p className="text-sm text-gray-600 mb-4">{description}</p>;
-      <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
-=======
-import React from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   href: string, image?: string
 import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 pr-12243
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   image?: string;
   href: string;
   category?: string;
@@ -79,7 +51,6 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
               </span>
             )}
           </div>
-        </div>
 
         {/* Content */}
         <div className="p-4">
@@ -146,19 +117,11 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
               Learn More →
             </span>
           </div>
-        </div>
-      </div>
     </Link>
   );
 };
 
 export default EnhancedMarketplaceCard;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -166,15 +129,6 @@ pr-12243
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from 'next/link'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
@@ -182,10 +136,8 @@ interface EnhancedMarketplaceCardProps {
 import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface MarketplaceCardProps {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
@@ -201,8 +153,6 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
-  href: string, image?: string
->>>>>>> origin/main
 
 interface MarketplaceCardProps {
   title: string,
@@ -214,8 +164,6 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title;
   description;
@@ -223,18 +171,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   rating;
   image;
   onAddToCart;
-=======
-}
-export default EnhancedMarketplaceCard;
-=======
-<<<<<<< HEAD
-=======
-}
-export default EnhancedMarketplaceCard;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -242,11 +178,8 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   rating,
   image,
   onAddToCart,
-<<<<<<< HEAD
->>>>>>> origin/main
   onFavorite
 }) => {
-=======
   onFavorite
 }) => {
   return (
@@ -278,6 +211,5 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
-    </div>
   );
 }

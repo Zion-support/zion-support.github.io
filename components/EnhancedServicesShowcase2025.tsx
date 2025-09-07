@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect, useMemo } from 'react';'
@@ -79,7 +78,6 @@ interface Service {
 }
 
 interface ServiceCategory {
-  SiMicrosoftazure;
   SiMicrosoftazure;
   } from 'react-icons/si';
   FaBrain;
@@ -791,7 +789,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                       }
                     </p>;
                   </div>;
-                </div>;
                 <button;
                   onClick={closeModal}className='p-2 "hover":bg-white/10 rounded-lg transition-colors';'
                 >;
@@ -861,7 +858,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                         <div className='w-2 h-2 bg-green-500 rounded-full'></div>;'
                         {benefit}
                       </li>;
-                      </li>;
                     ))}
               {/* Technologies */}
 <div className='mt-8'>;'
@@ -916,9 +912,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                       </div>;
                     ))}
                 </div>;
-              </div>;
             </motion.div>;
-          </motion.div>;
         )}{/* Technologies */}
               <div className='mt-8'>;'
                 <h3 className='text-xl font-bold text-white mb-4'>;'
@@ -968,7 +962,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   ))}
               </div>;
             </motion && motion.div>;
-          </motion && motion.div>;
         )}
 }export default EnhancedServicesShowcase2025;  ))}export default EnhancedServicesShowcase2025;
               while_hover={{ "coordinate_y": -5, "scale": 1.02 }}
@@ -995,7 +988,6 @@ export default EnhancedServicesShowcase2025;
                     }
                   </p>;
                 </div>;
-              </div>;
               <p className='text - gray - 300 mb - 4 line - clamp - 3'>;'
                 {service.description}
               </p>;
@@ -1013,7 +1005,6 @@ export default EnhancedServicesShowcase2025;
                   <h3 className="text - xl font - bold text - white">{service.title}</h3>;"
                   <p className="text - sm text - gray - 400">{service_categories.find (c => { return c.id === service.category)?.name}</p>; }"
                 </div>;
-              </div>;
               <p className="text - gray - 300 mb - 4 line - clamp - 3">{service.description}</p>;"
               <div className="flex flex - wrap gap - 2 mb - 4">;"
                 {service.technologies.slice (0, 3).map ((tech) => (<span;
@@ -1125,7 +1116,6 @@ export default EnhancedServicesShowcase2025;
                     <h2 className="text - 3xl font - bold text - white mb - 2">{selected_service.title}</h2>;"
                     <p className="text - gray - 400">{service_categories.find (c => { return c.id === selected_service.category)?.name}</p>; }"
                   </div>;
-                </div>;
                 <button;
                   on_click={close_modal}
                   className='p - 2 "hover":bg - white / 10 rounded - lg transition - colors'>'
@@ -1184,7 +1174,6 @@ export default EnhancedServicesShowcase2025;
                       </li>))}
                   </ul>;
                 </div>;
-              </div>;
               {/* Technologies */}
               <div className='mt - 8'>;'
                 <h3 className='text - xl font - bold text - white mb - 4'>;'
@@ -1204,7 +1193,6 @@ export default EnhancedServicesShowcase2025;
                       {tech}
                     </span>))}
                 </div>;
-              </div>;
               {/* Pricing */}
               <div className='mt - 8'>;'
                 <h3 className='text - xl font - bold text - white mb - 4'>;'
@@ -1239,13 +1227,11 @@ export default EnhancedServicesShowcase2025;
     </div>)}export default EnhancedServicesShowcase2025)}export default EnhancedServicesShowcase2025;export default EnhancedServicesShowcase2025;}</AnimatePresence>;
     </div>;
 )}export default EnhancedServicesShowcase2025;
-)}export default EnhancedServicesShowcase2025;
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {Object.entries(selectedService.pricing).map(([plan, price]) => (
                     <div
-<<<<<<< HEAD
                       key={plan}
                       className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"
                     >
@@ -1255,411 +1241,16 @@ export default EnhancedServicesShowcase2025;
                         <span className="text-sm text-gray-400 font-normal">/month</span>
                       </div>
                       <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-=======
-                      key = $2;
-export default EnhancedServicesShowcase2025,
-=======
-
-<div className='mt-8'>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Pricing Plans
-                </h3>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                  {Object.entries(selectedService.pricing).map(
-                    ([plan, price]) => (
-                      <div
-                        key={plan}
-                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'
-                      >
-                        <h4 className='text-lg font-bold text-white capitalize mb-2'>
-                          {plan}
-                        </h4>
-                        <div className='text-3xl font-bold text-blue-400 mb-2'>
-                          ${price}
-                          <span className='text-sm text-gray-400 font-normal'>
-                            /month
-                          </span>
-                        </div>
-                        <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>
-                          Get Started
-                        </button>
-                      </div>
-                    )
-                  )}                </div>                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">
->>>>>>> origin/main
                         Get Started
                       </button>
                     </div>
                   ))}
-<<<<<<< HEAD
                 </div>
-=======
->>>>>>> origin/main
-              </div>
             </motion.div>
-          </motion.div>
         )}
-<<<<<<< HEAD
       </AnimatePresence>
     </div>
   )
 };
 
 export default EnhancedServicesShowcase2025;
-=======
-              {/* Technologies */}'
-              <div className='mt-8'>;'
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Technologies
-                </h3>
-                <div className='flex flex-wrap gap-3'    />
-                  {selectedService.technologies.map(tech => (<span;}
-                      key={tech}className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                        />              <div className=\"mt-8\"    />
-                <h3 className=\"text-xl font-bold text-white mb-4\"    />Technologies</h3>
-                <div className=\"flex flex-wrap gap-3\"    />
-                  {selectedService.technologies.map((tech) => (<span;}
-                      key={tech}
-                      className=\'px-3 py-2 bg-white/10 rounded-lg text-gray-300\'
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                        />
-                    >
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'
-                    >
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >>
-
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'>
-
-                      {tech}
-                    </span>
-                  ))}</div>
-              </div>;{/* Pricing */}<div className='mt-8'    />
-                <h3 className='text-xl font-bold text-white mb-4'    />
-                  Pricing Plans
-                </h3>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'    />
-                  {Object.entries(selectedService.pricing).map(([plan, price]) => (<div;}
-                        key={plan}
-                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'
-                          />
-                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'>
-
-                        <h4 className='text-lg font-bold text-white capitalize mb-2'    />
-                          {plan}
-                        </h4>
-                        <div className='text-3xl font-bold text-blue-400 mb-2'    />
-                          ${price}
-                          <span className='text-sm text-gray-400 font-normal'    />
-                            /month
-                          </span>
-                        </div>
-                        <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'    />
-                          Get Started
-                        </button>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}{/* Technologies */}
-              <div className='mt-8'    />
-                <h3 className='text-xl font-bold text-white mb-4'    />
-                  Technologies
-                </h3>
-                <div className='flex flex-wrap gap-3'    />
-                  {selectedService && selectedService.technologies.map(tech => (<span;}
-                      key={tech}
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'    />              <div className=\"mt-8\"    />
-                <h3 className=\"text-xl font-bold text-white mb-4\"    />Technologies</h3>
-                <div className=\"flex flex-wrap gap-3\"    />
-                  {selectedService && selectedService.technologies.map((tech) => (<span;}
-                      key={tech}
-                      className=\'px-3 py-2 bg-white/10 rounded-lg text-gray-300\'
-                      {tech}
-                    </span    />
-                  ))}
-              {/* Pricing */}
-              <div className='mt-8'    />
-                <h3 className='text-xl font-bold text-white mb-4'    />
-                  Pricing Plans
-                </h3>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'    />
-                  {Object && Object.entries(selectedService && selectedService.pricing).map(([plan, price]) => (<div;}
-                        key={plan}
-                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'    />
-                        <h4 className='text-lg font-bold text-white capitalize mb-2'    />
-                          {plan}
-                        </h4>
-                        <div className='text-3xl font-bold text-blue-400 mb-2'    />
-                          ${price}
-                          <span className='text-sm text-gray-400 font-normal'    />
-                            /month
-                          </span>
-                        </div>
-                        <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'    />
-                          Get Started
-                        </button>
-                      </div>
-                    ))}                </div>                      <button className=\"w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300\"    />
-                        Get Started
-                      </button>
-                    </div>
-                  ))}
-              </div>
-            </motion && motion.div>
-          </motion && motion.div>
-        )}
-}export default EnhancedServicesShowcase2025;  ))}export default EnhancedServicesShowcase2025
-              while_hover={{ coordinate_y: -5, scale: 1.02 }}
-
-export default EnhancedServicesShowcase2025;  ))}
-
-export default EnhancedServicesShowcase2025
-              while_hover={{ coordinate_y: -5, scale: 1.02 ,}
-
-              className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300'
-              on_click={() => handleServiceSelect (service)}
-            >
-              <div className='flex items - center gap - 3 mb - 4'    />
-                <div className='p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg'    />
-                  {service.icon}
-                </div>
-                <div    />
-                  <h3 className='text - xl font - bold text - white'    />
-                    {service.title}
-                  </h3>
-                  <p className='text - sm text - gray - 400'    />
-                    {service_categories.find (c => c.id === service.category)?.name;}
-
-                  </p>
-                </div>
-              </div>
-              <p className='text - gray - 300 mb - 4 line - clamp - 3'    />
-                {service.description}
-              </p>
-              <div className='flex flex - wrap gap - 2 mb - 4'    />
-                {service.technologies.slice (0, 3).map (tech => (<span;}
-                    key={tech}
-                    className='px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300'                      />              on_click={() => handleServiceSelect (service)}
-            >
-              <div className=\"flex items - center gap - 3 mb - 4\"    />
-                <div className=\"p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg\"    />
-                  {service.icon}
-                </div>
-                <div    />
-                  <h3 className=\"text - xl font - bold text - white\"    />{service.title}</h3>
-                  <p className=\"text - sm text - gray - 400\"    />{service_categories.find (c => c.id === service.category)?.name}</p>
-                </div>
-              </div>
-              <p className=\"text - gray - 300 mb - 4 line - clamp - 3\"    />{service.description}</p>
-              <div className=\"flex flex - wrap gap - 2 mb - 4\"    />
-                {service.technologies.slice (0, 3).map ((tech) => (<span;}
-                    key={tech}
-                    className=\"px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300\"    />
-
-                    {tech}
-                  </span>))}
-                {service.technologies.length > 3 && (<span className='px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300'    />                    +{service.technologies.length - 3} more
-                  </span>)}
-              </div>
-              <div className='flex items - center justify - between'    />
-                <div className='text - 2xl font - bold text - blue - 400'    />                  <span className=\"px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300\"    />
-                    +{service.technologies.length - 3} more
-                  </span>)}
-              </div>
-              <div className='flex items - center justify - between'    />
-                <div className='text - 2xl font - bold text - blue - 400'    />
-                  ${service.pricing.starter}
-                  <span className='text - sm text - gray - 400 font - normal'    />
-                    /month
-                  </span>
-                </div>
-                <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300'    />                  Learn More                  ${service.pricing.starte,}
-
-                  <span className=\"text - sm text - gray - 400 font - normal\"    />/month</span>
-                </div>
-                <button className=\"px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300\"    />
-                  Learn More
-                </button>
-              </div>
-            </motion.div>))}
-        </motion.div>
-        {/* No Results */}
-        {filtered_services.length === 0 && (<motion.div;}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 ,}
-
-            className='text - center py - 16'    />
-
-            <div className='text - 6xl mb - 4'    />🔍</div>
-            <h3 className='text - 2xl font - bold text - gray - 300 mb - 2'    />
-              No services found
-            </h3>
-            <p className='text - gray - 400'    />
-              Try adjusting your search terms or category filters
-            </p>          </motion.div>            className=\"text - center py - 16\">
-
-            <div className=\"text - 6xl mb - 4\"    />🔍</div>
-            <h3 className=\"text - 2xl font - bold text - gray - 300 mb - 2\"    />No services found</h3>
-            <p className=\"text - gray - 400\"    />Try adjusting your search terms or category filters</p>)}
-      </div>
-      {/* Service Detail Modal */}
-      <AnimatePresence    />
-        {selected_service && (<motion.div;}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'            on_click={close_moda,}
-}            className=\'fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4\'
-            on_click={close_modal}
-              />
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 ,}
-
-              animate={{ scale: 1, opacity: 1 ,}
-
-              exit={{ scale: 0.9, opacity: 0 ,}
-
-              className='bg - gray - 900 border border - white / 20 rounded - 2xl p - 8 max - w-4xl w - full max - h-[90vh] overflow - y-auto'
-              on_click={e =    /> e.stop_propagation ()}
-            >
-              <div className='flex items - start justify - between mb - 6'    />
-                <div className='flex items - center gap - 4'    />
-                  <div className='p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl'    />
-                    {selected_service.icon}
-                  </div>
-                  <div    />
-                    <h2 className='text - 3xl font - bold text - white mb - 2'    />
-                      {selected_service.title}
-                    </h2>
-                    <p className='text - gray - 400'    />
-                      {service_categories.find (c => c.id === selected_service.category)?.name;}
-
-                    </p>                  </div>
-                </div>
-                <button
-                  on_click={close_modal}
-                  className='p - 2 hover:bg - white / 10 rounded - lg transition - colors'                />
-              <div className=\"flex items - start justify - between mb - 6\"    />
-                <div className=\"flex items - center gap - 4\"    />
-                  <div className=\"p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl\"    />
-                    {selected_service.icon}
-                  </div>
-                  <div    />
-                    <h2 className=\"text - 3xl font - bold text - white mb - 2\"    />{selected_service.title}</h2>
-                    <p className=\"text - gray - 400\"    />{service_categories.find (c => c.id === selected_service.category)?.name}</p>
-                  </div>
-                </div>
-                <button
-                  on_click={close_modal}
-                  className='p - 2 hover:bg - white / 10 rounded - lg transition - colors'    />
-
-                  <span className='text - 2xl'    />×</span>
-                </button>
-              </div>
-              <p className='text - gray - 300 text - lg mb - 8'    />
-                {selected_service.description}
-              </p>
-              <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'    />
-                {/* Features */}
-                <div    />
-                  <h3 className='text - xl font - bold text - white mb - 4'    />
-                    Key Features
-                  </h3>
-                  <ul className='space - y-2'    />
-                    {selected_service.features.map ((feature, index) => (<li;}
-                        key={index}
-                        className='flex items - center gap - 2 text - gray - 300'    />
-
-                        <div className='w - 2 h - 2 bg - blue - 500 rounded - full'    /></div>                        {feature}                >
-                  <span className=\"text - 2xl\"    />×</span>
-                </button>
-              </div>
-              <p className=\"text - gray - 300 text - lg mb - 8\"    />{selected_service.description}</p>
-              <div className=\"grid grid - cols - 1 lg:grid - cols - 2 gap - 8\"    />
-                {/* Features */}
-                <div    />
-                  <h3 className=\"text - xl font - bold text - white mb - 4\"    />Key Features</h3>
-                  <ul className=\"space - y-2\"    />
-                    {selected_service.features.map ((feature, index) => (<li key={index} className=\"flex items - center gap - 2 text - gray - 300\"    />
-                        <div className=\"w - 2 h - 2 bg - blue - 500 rounded - full\"    /></div>
-                        {feature}
-                      </li>))}
-                  </ul>
-                </div>
-                {/* Benefits */}
-                <div    />
-                  <h3 className='text - xl font - bold text - white mb - 4'    />
-                    Key Benefits
-                  </h3>
-                  <ul className='space - y-2'    />
-                    {selected_service.benefits.map ((benefit, index) => (<li;}
-                        key={index}
-                        className='flex items - center gap - 2 text - gray - 300'    />
-
-                        <div className='w - 2 h - 2 bg - green - 500 rounded - full'    /></div>                        {benefit}                  <h3 className=\"text - xl font - bold text - white mb - 4\"    />Key Benefits</h3>
-                  <ul className=\"space - y-2\"    />
-                    {selected_service.benefits.map ((benefit, index) => (<li key={index} className=\"flex items - center gap - 2 text - gray - 300\"    />
-                        <div className=\"w - 2 h - 2 bg - green - 500 rounded - full\"    /></div>
-                      </li>))}
-                  </ul>
-                </div>
-              </div>
-              {/* Technologies */}
-              <div className='mt - 8'    />
-                <h3 className='text - xl font - bold text - white mb - 4'    />
-                  Technologies
-                </h3>
-                <div className='flex flex - wrap gap - 3'    />
-                  {selected_service.technologies.map (tech => (<span;}
-                      key={tech}
-                      className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                        />              <div className=\"mt - 8\"    />
-                <h3 className=\"text - xl font - bold text - white mb - 4\"    />Technologies</h3>
-                <div className=\"flex flex - wrap gap - 3\"    />
-                  {selected_service.technologies.map ((tech) => (<span;}
-                      key={tech}
-                      className=\'px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300\'
-                      {tech}
-                    </span    />))}
-                </div>
-              </div>
-              {/* Pricing */}
-              <div className='mt - 8'    />
-                <h3 className='text - xl font - bold text - white mb - 4'    />
-                  Pricing Plans
-                </h3>
-                <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'    />
-                  {Object.entries (selected_service.pricing).map (([plan, price]) => (<div;}
-                        key={plan}
-                        className='p - 4 bg - white / 5 border border - white / 20 rounded - lg text - center'    />
-
-                        <h4 className='text - lg font - bold text - white capitalize mb - 2'    />
-                          {plan}
-                        </h4>
-                        <div className='text - 3xl font - bold text - blue - 400 mb - 2'    />
-                          ${price}
-                          <span className='text - sm text - gray - 400 font - normal'    />
-                            /month
-                          </span>
-                        </div>
-                        <button className='w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300'    />
-                          Get Started
-                        </button>
-                      </div>))}                </div>                      <button className=\"w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300\"    />
-                        Get Started
-                      </button>
-                    </div>))}
-              </div>
-            </motion.div>
-          </motion.div>)}
-      </AnimatePresence>
-    </div>)
-export default EnhancedServicesShowcase2025)
-export default EnhancedServicesShowcase2025
-export default EnhancedServicesShowcase2025
-}
-export default EnhancedServicesShowcase2025;  )
-}
-export default EnhancedServicesShowcase2025;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -176,9 +176,4 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
-<<<<<<< HEAD
         "ERROR"
-        "ERROR"
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -19,7 +19,6 @@
         stderr: error.stderr || error.message 
       };
     }
-  }
 
   async runAutomation(scriptName, command) {
     this.log(`Running: ${scriptName}`);
@@ -102,7 +101,6 @@
     this.log(`📊 Report saved to ${reportFile}`);
     return report;
   }
-}
 
 // Handle command line arguments
 if (require.main === module) {
@@ -123,14 +121,7 @@ if (require.main === module) {
       console.log("Usage: node run-all-automations.cjs [run|report]");
       process.exit(1);
   }
-}
-<<<<<<< HEAD
 module.exports = RunAllAutomations;
-=======
-
-module.exports = RunAllAutomations;
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -163,9 +154,4 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
-<<<<<<< HEAD
         "impact"
-        "impact"
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

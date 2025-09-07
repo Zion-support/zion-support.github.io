@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';'
 import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
   }
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
-<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Home, Briefcase;
   DollarSign, BookOpen, Users, MessageCircle
 
@@ -284,31 +283,9 @@ export default function UltraFuturisticNavigation2033() {
     return () => document.removeEventListener('keydown', handleEscape)
   }, []),
 
-=======
-{
-  title: '🌌 Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [ {
-  name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9, 999/month' 
-}
-{
-  name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3, 999/month' 
-}
-{
-  name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month' 
-}] 
-}]
-</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion.div> > <span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {
-  /* Mega Menu */ 
-}<AnimatePresence> </div> </a>) ) 
-}</div> </div>) ) 
-}</div> </motion.div>) 
-}</AnimatePresence> </div> {
-  /* Quick Links */ 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }{
-=======
   /* Quick Links */
 }{}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   quickLinks.map ( (link) => (<Link key= {}
   link.name;
 }) )
@@ -560,7 +537,6 @@ const quickLinks = [;
 export default function UltraFuturisticNavigation2033() {
   }
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 export default function UltraFuturisticNavigation2033() {
   }
   const [isOpen, setIsOpen] = useState(false);
@@ -617,8 +593,6 @@ if (e.key === 'Escape') closeMenu(),'
     document.addEventListener('keydown', handleEscape);'
     return () => document.removeEventListener('keydown', handleEscape);'
   }, []);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 return (;
     <>
@@ -649,7 +623,6 @@ return (;
               <div className='relative group'>;
                 <button;
                   onMouseEnter={() => setActiveCategory('services')}
-<<<<<<< HEAD
                   onMouseLeave={() => setActiveCategory(null)}
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
               <div className="relative group">;
@@ -674,7 +647,6 @@ return (;
                 <Mail className="w-3 h-3 text-purple-400" />;"
                 <span>{contactInfo.email}</span>;
               </div>;
-            </div>;
             <div className="flex items-center space-x-4">;"
               <div className="flex items-center space-x-2">;"
                 <MapPin className="w-3 h-3 text-purple-400" />;"
@@ -684,7 +656,6 @@ return (;
                 <Mail className='w-3 h-3 text-purple-400' />;'
                 <span>{contactInfo.email}</span>;
               </div>;
-            </div>;
             <div className='flex items-center space-x-4'>;'
               <div className='flex items-center space-x-2'>;'
                 <MapPin className='w-3 h-3 text-purple-400' />;'
@@ -694,10 +665,6 @@ return (;
                 <Globe className='w-3 h-3 text-purple-400' />;'
                 <span>{contactInfo.website}</span>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
       {/* Main Navigation */}
 <nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50'>;'
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
@@ -748,11 +715,7 @@ return (;
 
                   className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-200 py-2 px-3 rounded-lg "hover":bg-gray-800/50''
                 >
-<<<<<<< HEAD
                   <span>Services</span>'
-=======
-                  <span>Services</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
 
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-"hover":rotate-180' />'
@@ -805,7 +768,6 @@ className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-c
                             <div className="space-y-3">;
                               {category.services.map((service) => (<Link;
 
-<<<<<<< HEAD
                       onMouseLeave={() => setActiveCategory(null)}
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
@@ -824,7 +786,6 @@ className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-c
 }
 key={service.name}
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                   href={service.href}
                                   className='block group'>'
 
@@ -839,7 +800,6 @@ key={service.name}
                                     </div>;
                                     <p className='text-sm text-gray-400'>;'
                                       {service.description}
-<<<<<<< HEAD
                                         {service.price}
                                 </Link>
                                     </p>;
@@ -848,8 +808,6 @@ key={service.name}
                                       </span>
                                     </div>
                                     <p className="text-sm text-gray-400">{service.description}</p>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                                   key={service.name}
                                   href={service.href}"
@@ -881,14 +839,11 @@ key={service.name}
                                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                                     </p>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                   </div>
                                 </Link>
                               ))}
                             </div>
-                          </div>
                         ))}
-<<<<<<< HEAD
                   )}key={link && link.name}
                   href={link && link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50";
@@ -897,33 +852,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                 </AnimatePresence>;
               </div>;
-=======
-                      </div>;
-                    </motion && motion.div>;
-
-                  )}
-                  key={link && link.name}
-                  href={link && link.href}"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
-              ))}'
-                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
-
-                >
-
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </AnimatePresence>
               </div>
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               {/* Quick Links */}
 {quickLinks.map(link => { return (<Link; }
                   }
                   key={link.name}
                   href={link.href}
-<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                 >;
                   )}
@@ -935,111 +871,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   className='text-gray-300 "hover": text-white transition-colors duration-200 py-2 px-3 rounded-lg "hover":bg-gray-800/50''
                 >
-=======
-                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
-                >
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  {link.name}
-                </Link>
-              ))}
-
-                  {link.nam
-}
-                </Link>;
-              ))}{/* Contact Button */}
-              <motion&& motion.div;
-                whileHover={{ "scale": 1 && 1.05 }}
-                whileTap={{ "scale": 0 && 0.95 
-}>;
-                <Link;
-                  className='text-gray-300 "hover": text-white transition-colors duration-200 py-2 px-3 rounded-lg "hover":bg-gray-800/50'                >>'
-
-                  {link.nam
-}
-                </Link>;
-              ))}{/* Contact Button */}
-              <motion.div;
-                whileHover={{ "scale": 1.05 }}
-                whileTap={{ "scale": 0.95 }}
-
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* Quick Links */}
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
-                >
-                  {link.name}
-                </Link>
-              ))}
-
-              {/* Contact Button */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link,
-href='/contact''
-                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg "hover":from-purple-700 "hover":to-cyan-700 transition-all duration-200 shadow-lg''
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            </div>
-
-<div className='"lg":hidden'>'
-              <button,
-onClick={toggleMenu}
-                className='text-gray-300 "hover":text-white transition-colors duration-200 p-2''
-              >
-                {isOpen ? (
-                  <X className='w-6 h-6' />'
-                ) : (
-                  <Menu className='w-6 h-6' />'
-
-<div className='lg:hidden' />
-              <button;
-onClick={toggleMenu}
-                className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
-               />
-                {isOpen ? (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <X className='w-6 h-6' />
                 ) : ('
                   <Menu className='w-6 h-6' />
-<<<<<<< HEAD
                 )}              </button>              <button;
                 onClick={toggleMenu}"
-=======
-                )}              </button>              <button
-                onClick={toggleMenu}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
               >"
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>;
             </div>;
-          </div>;
-        </div>;
 
-<<<<<<< HEAD
-=======
-                  <Menu className='w-6 h-6' />}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 )}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </button>
             </div>
-          </div>
-        </div>
-<<<<<<< HEAD
               >;
                 <Link;
                   href='/contact';
@@ -1071,8 +916,6 @@ href='/contact';
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>;
             </div>;
-          </div>;
-        </div>;
 
         {/* Mobile Menu *
 }
@@ -1110,11 +953,9 @@ href='/contact';
 
                             {service && service.nam
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           </Link>;
                         ))}
                       </div>;
-                    </div>;
                   ))}{/* Mobile Quick Links */}))}
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>;'
@@ -1153,7 +994,6 @@ className='"lg":hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-50
 
                         {category.title}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </h4>
                       <div className='ml-4 space-y-1'>'
                         {category.services.map(service => (
@@ -1168,19 +1008,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                            />
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                             {service.name}
                           </Link>)
 }
                       </div>;
                     </div>))}
                 </div>;
-<<<<<<< HEAD
                             {service.name}
                           </Link>
                         ))}
                       </div>
-                    </div>
                   ))}
                 </div>
 
@@ -1220,15 +1057,6 @@ className='text-sm text-gray-400 "hover": text-cyan-400 transition-colors''
                         on_click={close_menu}
                         className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
                       >;
-=======
-<<<<<<< HEAD
-                {/* Mobile Quick Links */}'
-                <div className='space - y-4'>;'
-=======
-
-                {/* Mobile Quick Links */}
-                <div className='space - y-4'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text - lg font - semibold text - white'>;
                     Quick Links;
                   </h3>;'
@@ -1266,70 +1094,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                        />
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         {link.name}
                       </Link>)
 }
                   </div>;
-                </div>;
-<<<<<<< HEAD
                 {/* Mobile Contact Button */}<div className='pt - 4'>;
                 {/* Mobile Contact Button */}
                 <div className='pt - 4'>;
                 {/* Mobile Contact Button */}<div className='pt - 4'>;
-=======
-<<<<<<< HEAD
-                {/* Mobile Contact Button */}'
-                <div className='pt - 4'>;
-                  <Link;'
-                    href='/contact';
-                    on_click={close_menu}'
-                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;"
-                    href="/contact";
-                    on_click={close_menu}"
-                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
-                  >;
-=======
-
-                {/* Mobile Contact Button */}
-                <div className='pt - 4'>;
-
-<div className='pt-4'>'
-                  <Link,
-href='/contact''
-
-                    onClick={closeMenu}
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center "hover":from-purple-700 "hover":to-cyan-700 transition-all duration-200'>'
-
                     Get Started;
                   </Link>;
                 </div>;
-              </div>;
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-    </>)}while_tap= {{<div className='pt-4'>;
-                  <Link;
-                    href='/contact';
-                    onClick={closeMenu}
-<<<<<<< HEAD
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200';
-                  >;
-=======
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200' />
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                    Get Started;
-                  </Link>;
-                </div>;
-              </div>;
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
     </>);
 ;
-<<<<<<< HEAD
 }while_tap= {
   {
 <div className='pt-4'>
@@ -1341,50 +1121,20 @@ href='/contact''
                     Get Started
                   </Link>
                 </div>
-              </div>
             </motion.div>
             </motion.div>;
           )}
-<<<<<<< HEAD
     </>);
 ;
 }while_tap= {
   {
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
-=======
-
-        </AnimatePresence>
-      </nav>
-    </>
-  );
-}whileTap= {
-  {
-  }
-  "scale": 0.95
-}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg "hover":from-purple-700 "hover":to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {"
-  /* Mobile Menu */ 
-}<AnimatePresence>) ) 
-}</div> </div>) ) 
-}</div>) ) 
-}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
-
-}</AnimatePresence> </nav> </>)
-
-<<<<<<< HEAD
-}</AnimatePresence> </nav> </>)
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   {}
   scale: 0.95;}"
 }> <Link href=\"/contact\" className=\"px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg\"  /> Get Started </a> </motion.div> </div> </button> </div> </div> </div> {;}
   /* Mobile Menu */ }
 }<AnimatePresence />) ) 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
@@ -1398,13 +1148,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</AnimatePresence> </nav> </>) }
 }</AnimatePresence> </nav> </>)
 
-<<<<<<< HEAD
 }</AnimatePresence> </nav> </>)}</AnimatePresence> </nav> </>)
                         {link.name}
                       </Link>
                     ))}
                   </div>
-                </div>
 
                 {/* Mobile Contact Button */}
                 <div className="pt-4">
@@ -1413,11 +1161,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
                   >
-<<<<<<< HEAD
                     Get Started
                   </Link>
                 </div>
-              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -1425,9 +1171,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

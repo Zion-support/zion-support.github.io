@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic';'
 import { motion  } from 'framer-motion';'
 import { Phone, Mail, MapPin, Clock, ArrowRight, Send  } from 'lucide-react';'
 ursor/automate-test-improve-and-merge-code-646c;
-ursor/automate-test-improve-and-merge-code-646c;
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })export default function ContactPage() {const [formData, setFormData] = useState({"name": '',"email": '',"company": '',"phone": '',"service": '',"message": '';'
   })const [isSubmitting, setIsSubmitting] = useState(false)const [isSubmitted, setIsSubmitted] = useState(false)const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value } = e.target;"
     setFormData(prev => ({...prev,[name]: value;
@@ -38,8 +37,6 @@ export default function ContactPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-<<<<<<< HEAD
-<<<<<<< HEAD
     }));
   };
   const handleSubmit = async ("e": React.FormEvent) => {"
@@ -51,8 +48,6 @@ setTimeout(() => {
       }
       setIsSubmitting(false);
       setIsSubmitted(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
     }, 2000);
   };
 const "ContactPage": React.FC = () => {"
@@ -175,7 +170,6 @@ const "ContactPage": React.FC = () => {"
                   </motion.div>;
                 ))}
               </div>;
-            </div>;
           </section>;
           {/* Contact Form */}
           <section className="bg-gray-50 py-20">;"
@@ -223,7 +217,6 @@ const "ContactPage": React.FC = () => {"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent";"
                         placeholder="your.email@example.com";" />;
                     </div>;
-                  </div>;
                   <div className="grid grid-cols-1 "md":grid-cols-2 gap-6 mb-6">;"
                     <div>;
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;"
@@ -245,7 +238,6 @@ const "ContactPage": React.FC = () => {"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent";"
                         placeholder="Your company name";" />;
                     </div>;
-                  </div>;
                   <div className="mb-6">;"
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;"
                       Service Interest;
@@ -286,7 +278,6 @@ const "ContactPage": React.FC = () => {"
                   </motion.button>;
                 </motion.form>;
               </div>;
-            </div>;
           </section>;
           {/* Services Overview */}
           <section className="py-20">;"
@@ -319,7 +310,6 @@ const "ContactPage": React.FC = () => {"
                   </motion.div>;
                 ))}
               </div>;
-            </div>;
           </section>;
         </main>;
       </PageTransition>;

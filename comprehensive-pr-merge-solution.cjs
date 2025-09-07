@@ -20,7 +20,6 @@ function runGitCommand(command, description) {
     console.log(`❌ ${description} failed: ${error.message}`);
     return null;
   }
-}
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflictsInFile(filePath) {
@@ -35,30 +34,16 @@ function resolveMergeConflictsInFile(filePath) {
     // Remove conflict markers
     const originalContent = content;
     content = content
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
       .replace(/
-=======
-      .replace(/[^\n]+\n/g, '')
-      .replace(/<<<<<<< [^\n]+\n/g, '')
-      .replace(/=======\n/g, '')
-      .replace(/[^\n]+\n/g, '');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-      .replace(/\n/g, '')
       .replace(/\n/g, '')
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
       .replace(/\n/g, '')
-=======
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       .replace(/
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -71,7 +56,6 @@ function resolveMergeConflictsInFile(filePath) {
     console.log(`❌ Failed to resolve conflicts in ${filePath}: ${error.message}`);
     return false;
   }
-}
 
 // Function to resolve all merge conflicts
 function resolveAllMergeConflicts() {
@@ -94,7 +78,6 @@ function resolveAllMergeConflicts() {
     if (resolveMergeConflictsInFile(file)) {
       resolvedCount++;
     }
-  }
 
   console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
 
@@ -165,7 +148,6 @@ function mergeSpecificPR(prNumber) {
       console.log(`❌ Error parsing merge result for PR #${prNumber}: ${error.message}`);
       return false;
     }
-  }
 
   return false;
 }
@@ -249,11 +231,9 @@ This comprehensive merge ensures the codebase is in a stable, working state with
           console.log(`✅ Successfully merged comprehensive PR #${pr.number}`);
           return true;
         }
-      }
     } catch (error) {
       console.log(`❌ Error creating/merging comprehensive PR: ${error.message}`);
     }
-  }
 
   return false;
 }
@@ -271,7 +251,6 @@ async function main() {
     if (mergeSpecificPR(prNumber)) {
       mergedCount++;
     }
-  }
 
   console.log(`\n📊 Merged ${mergedCount} out of ${prs.length} existing PRs`);
 
@@ -283,7 +262,6 @@ async function main() {
     } else {
       console.log('❌ Comprehensive merge failed');
     }
-  }
 
   // Update local main branch
   console.log('\n🔄 Updating local main branch...');

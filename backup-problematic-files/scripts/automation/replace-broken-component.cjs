@@ -86,7 +86,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
           "relatedServices": ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
           "estimatedResponseTime": 2;
         };
-      };
       setMessages([welcomeMessage])};
   }, [isOpen, messages.length]);
 
@@ -135,7 +134,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
         "relatedServices": randomResponse.relatedServices,
         "estimatedResponseTime": 1 + Math.random() * 2;
       };
-    };
 
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
@@ -181,12 +179,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
-<<<<<<< HEAD
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
@@ -224,7 +219,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
                       <p className="text-xs text-zinc-400">Powered by AI</p>
                     </div>
-                  </div>
                   <div className="flex items-center gap-2">
                     {showSettings && (})
                       <button;
@@ -243,8 +237,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                       <X className="w-4 h-4" />
                     </button>
                   </div>
-                </div>
-              </div>
             )};
             {/* Messages */};
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -330,7 +322,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                         </div>
                       )};
                     </div>
-                  </div>
                 </motion.div>
               ))};
               {/* Typing Indicator */};
@@ -410,8 +401,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                   <Clock className="w-3 h-3" />
                   <span>24/7 Available</span>
                 </div>
-              </div>
-            </div>
           </motion.div>
         )};
       </AnimatePresence>
@@ -430,7 +419,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       this.log(`Error in Component "Replacer": ${error.message}`);
       throw error};
   };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
@@ -442,9 +430,4 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ComponentReplacer;
-module.exports = ComponentReplacer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

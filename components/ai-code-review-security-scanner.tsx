@@ -106,7 +106,6 @@ className='text-center'>'
                   <CheckCircle className='w-5 h-5 text-green-400 mr-2' />;'
                   SOC2 & ISO27001 compliant;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -187,7 +186,6 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 "h
                 </motion.div>;
               ))}
             </div>;
-          </div>;
         </section>;
 
 
@@ -504,8 +502,6 @@ className='flex items-start'>'
                   </motion.div>
                 ))}
               </div>
-            </div>
-          </div>
         </section>
         {/* Use Cases Section */}
 
@@ -559,11 +555,9 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                 </motion.div>;
               ))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}
             <div className = $2;
->>>>>>> origin/main
                   title: "Multi-Language Support",
                   description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
                 };
@@ -608,7 +602,6 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
 <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>'
@@ -692,10 +685,7 @@ initial={{ "opacity": 0, "y": 20
                   </h4>
                   <p>"https"://ziontechgroup.com</p>
                 </div>
-<<<<<<< HEAD
                 
-=======
->>>>>>> origin/main
                 <div>
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>'
                     <Award className='w-6 h-6' />'
@@ -704,7 +694,6 @@ initial={{ "opacity": 0, "y": 20
                   <p>364 E Main St STE 1008</p>
                   <p>Middletown DE 19709</p>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -715,11 +704,9 @@ initial={{ "opacity": 0, "y": 20
 };
 
 export default AICodeReviewSecurityScanner;
-=======
 };
 
 export default AICodeReviewSecurityScanner;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -849,7 +836,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p>364 E Main St STE 1008</p>;
                   <p>Middletown DE 19709</p>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -874,7 +860,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text - white font - semibold">{use_case}</h3>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}
         <section className='py - 20 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20'>;
@@ -997,7 +982,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p > 364 E Main St STE 1008</p>;
                   <p > Middletown DE 19709</p>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -1020,7 +1004,3 @@ export default AICodeReviewSecurityScanner;
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default AICodeReviewSecurityScanner,
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

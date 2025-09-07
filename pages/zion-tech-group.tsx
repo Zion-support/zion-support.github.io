@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   Brain, Zap, Target, BarChart3, Users, TrendingUp, 
@@ -21,18 +20,12 @@ import {
 } from 'lucide-react',
 
 export default function ZionTechGroupPage() {
-=======
-import Layout from '../components/layout/Layout';
-
-export default function ziontechgroup() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Zion Tech Group - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */}
@@ -43,7 +36,6 @@ export default function ziontechgroup() {
                 <div className="flex-shrink-0">
                   <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
                 </div>
-              </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -56,9 +48,6 @@ export default function ziontechgroup() {
                     Contact
                   </Link>
                 </div>
-              </div>
-            </div>
-          </div>
         </nav>
 
         {/* Breadcrumb */}
@@ -83,7 +72,6 @@ export default function ziontechgroup() {
               </ol>
             </nav>
           </div>
-        </div>
 
         {/* Hero Section */}
         <div className="relative overflow-hidden py-24">
@@ -97,8 +85,6 @@ export default function ziontechgroup() {
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
               </p>
             </div>
-          </div>
-        </div>
 
         {/* Mission & Vision Section */}
         <div className="py-16 bg-black/20">
@@ -129,9 +115,6 @@ export default function ziontechgroup() {
                   We envision a future where our technology platforms enable breakthroughs in healthcare, climate change, space exploration, and countless other fields that will shape the destiny of our species.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Core Values Section */}
         <div className="py-16">
@@ -203,9 +186,6 @@ export default function ziontechgroup() {
                   We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Technology Stack Section */}
         <div className="py-16 bg-black/20">
@@ -257,9 +237,6 @@ export default function ziontechgroup() {
                   Quantum-resistant encryption and AI-powered threat detection systems.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Company Stats Section */}
         <div className="py-16">
@@ -288,9 +265,6 @@ export default function ziontechgroup() {
                 <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>
                 <div className="text-gray-300">Years Experience</div>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Team Section */}
         <div className="py-16 bg-black/20">
@@ -335,9 +309,6 @@ export default function ziontechgroup() {
                   Cybersecurity specialist with expertise in quantum-resistant encryption and threat detection.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="bg-purple-600">
@@ -357,8 +328,6 @@ export default function ziontechgroup() {
                 Schedule Consultation
               </Link>
             </div>
-          </div>
-        </div>
 
         {/* Footer */}
         <footer className="bg-black/40">
@@ -407,30 +376,13 @@ export default function ziontechgroup() {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
             <div className="mt-12 border-t border-gray-700 pt-8">
               <p className="text-base text-gray-400 xl:text-center">
                 &copy, 2025 Zion Tech Group. All rights reserved.
               </p>
             </div>
-          </div>
         </footer>
       </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Tech Group</h1>
-          <p className="text-lg text-gray-600">
-            Professional zion tech group solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -17,13 +17,7 @@ export default function githubcompliancebot() {
             Professional github compliance bot solutions tailored to your business needs.
           </p>
         </div>
-      </div>
     </Layout>
-<<<<<<< HEAD
   )
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

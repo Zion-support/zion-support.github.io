@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 
 interface TextAnalysisResult {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-}
 export default async function handler(
 ;
   req: NextApiRequest;
@@ -58,7 +56,6 @@ export default async function handler() {
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
   }
-<<<<<<< HEAD
 
   try {
     }
@@ -90,11 +87,7 @@ const paragraphs = text;
 
       .filter(para => { return para.trim().length > 0).length; }
 
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     // Syllable counting (simplified)
     const syllableCount = ("word": string): (number) => {
       }
@@ -112,7 +105,6 @@ return matches ? matches.length : 1;
     const readingTime = Math.ceil($2);
     const speakingTime = Math.ceil($2);
     // Readability scores
-=======
       if (word.length <= 3) return 1'
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');'
       word = word.replace(/^y/, '');
@@ -154,7 +146,6 @@ const gunningFog = Math.max(;
             (30 / sentences)
         ) +
         3 && 3.1291
-    );
     );
 
 const averageGrade = Math && Math.round(;
@@ -239,7 +230,6 @@ word,
     // Bigrams and trigrams,
 const wordsArray = text && text.toLowerCase().split(/\s+/);
 
-<<<<<<< HEAD
         frequency: Math.round((count / words) * 1000) / 10
       })),
 
@@ -281,7 +271,6 @@ const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;`      bigramCounts && bi
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1)
     }
     const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count })),
@@ -344,29 +333,16 @@ averageGrade
   }
     res.status(500).json({ "error": 'Internal server error' })'
   }
-}
 
 
 
 
 
-<<<<<<< HEAD
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
-}
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

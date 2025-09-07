@@ -10,7 +10,6 @@ function getUserId("req": NextApiRequest): string {
       limit = '50','
       offset = '0','
     } = req.query as Record<string, string>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     // If countOnly, return unread count quickly,
 if (countOnly = == 'true') {'
@@ -64,7 +63,6 @@ const { data, error } = await query.range(;
       parseInt(offset, 10)
       parseInt(offset, 10) + parseInt(limit, 10) - 1
     );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (error) {
@@ -72,8 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const "fallback": NotificationItem[] = [
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
           id: 'seed-1';
           user_id: userId;
           type: 'onboarding';
@@ -92,20 +88,6 @@ const "fallback": NotificationItem[] = [
           read_status: false;
           related_action: '/status'}];
       return res.status(200).json({ notifications: fallback })
-=======
-
-}
-
-"id": 'seed-1','
-          "user_id": userId,
-          "type": 'onboarding','
-          "title": 'Welcome to Zion AI Marketplace','
-          "body": 'Complete your profile to get personalized matches.','
-          "created_at": new Date().toISOString(),
-          "read_status": false,
-          "related_action": '/profile','
-        },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         {
           }
           "id": 'seed-2','
@@ -143,22 +125,17 @@ return res.status(500).json({ "error": 'Unexpected error',;'
   }}
           related_action: '/status'}],
       return res.status(200).json({ notifications: fallback})
->>>>>>> origin/main
     }
 
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
   }
-}
-=======
-<<<<<<< HEAD
     return res.status (200).json ({ notifications: data as NotificationItem[] });
   } catch (e) {'
 return res.status (500).json ({ error: 'Unexpected error' });'
   }    return res.status (500).json ({ error: 'Unexpected error' });'
 return res.status(500).json({ error: 'Unexpected error' });'
-=======
     return res.status (200).json ({ notifications: data as NotificationItem[],}
 });
   } catch (e) {}

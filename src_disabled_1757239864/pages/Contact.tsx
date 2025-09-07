@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/pages/Contact.tsx
+:src/pages/Contact.tsx
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -24,9 +24,7 @@ import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/main:src_disabled_1757239864/pages/Contact.tsx
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -71,7 +69,6 @@ export default function Contact() {
         if (err.path[0]) {
           fieldErrors[err.path[0] as string] = err.message;
         }
-      }
       setErrors(fieldErrors);
       const validationErrorMsg =
         result.error.errors[0]?.message ||
@@ -150,7 +147,6 @@ export default function Contact() {
               err.message || 'An unexpected error occurred during submission.',
             variant: 'destructive',
           });
-        });
     } catch (error) {
       // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
       // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
@@ -284,9 +280,8 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
-                </div>
 
-<<<<<<< HEAD:src/pages/Contact.tsx
+:src/pages/Contact.tsx
                 <div>
                   <label htmlFor='message' className='block text-white mb-2'>
                     Message
@@ -305,7 +300,6 @@ export default function Contact() {
                       {errors.message}
                     </p>
                   )}
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -358,7 +352,6 @@ export default function ContactPage() {
                     </a>
                     <p className="text-gray-600">Available 24/7 for urgent matters</p>
                   </div>
-                </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -371,7 +364,6 @@ export default function ContactPage() {
                     </a>
                     <p className="text-gray-600">We'll respond within 24 hours</p>
                   </div>
-                </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -385,8 +377,6 @@ export default function ContactPage() {
                     </p>
                     <p className="text-gray-600">United States</p>
                   </div>
-                </div>
-              </div>
 
               <div className="mt-12">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
@@ -413,7 +403,6 @@ export default function ContactPage() {
                   </li>
                 </ul>
               </div>
-            </div>
 
             {/* Contact Form */}
             <div>
@@ -489,7 +478,6 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or requirements..."
                   ></textarea>
->>>>>>> origin/main:src_disabled_1757239864/pages/Contact.tsx
                 </div>
 
                 <Button
@@ -519,7 +507,7 @@ export default function ContactPage() {
                   )}
                 </AnimatePresence>
               </form>
-<<<<<<< HEAD:src/pages/Contact.tsx
+:src/pages/Contact.tsx
             </div>
 
             <div>
@@ -567,7 +555,6 @@ export default function ContactPage() {
                           {office.email}
                         </a>
                       </div>
-                    </div>
                   </Card>
                 ))}
               </div>
@@ -599,7 +586,6 @@ export default function ContactPage() {
                         Get instant answers to your questions
                       </p>
                     </div>
-                  </div>
                   <Button
                     onClick={() => setIsChatOpen(true)}
                     className='w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
@@ -608,8 +594,6 @@ export default function ContactPage() {
                   </Button>
                 </Card>
               </div>
-            </div>
-          </div>
 
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
@@ -638,7 +622,6 @@ export default function ContactPage() {
                 </a>
               </Button>
             </div>
-          </div>
 
           <div className='mt-12 text-center'>
             <p className='text-zion-slate-light text-lg'>
@@ -653,7 +636,6 @@ export default function ContactPage() {
               for additional insights.
             </p>
           </div>
-        </div>
       </main>
 
       {/* Chat Assistant Modal */}
@@ -680,12 +662,8 @@ export default function ContactPage() {
     </>
   );
 
-=======
             </div>
-          </div>
-        </div>
       </section>
     </div>
   );
->>>>>>> origin/main:src_disabled_1757239864/pages/Contact.tsx
 }

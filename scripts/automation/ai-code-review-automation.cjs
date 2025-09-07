@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -12,7 +8,6 @@ const crypto = require("crypto");
       this.projectRoot,logs"
       "ai-suggestions.json"
   fs.mkdirSync(logsDir, { "recursive"})
-  log(message, level = "INFO")
   log(message, level = "INFO")
 return JSON.parse(fs.readFileSync(this.reviewsLog, "utf8");
     } catch (error) {  this.log(`Failed to load review "history": ${error.message  }`, "WARN"`)
@@ -80,7 +75,6 @@ const content = fs.readFileSync(file, "utf8");
     const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
 const regex = new RegExp(`\\b${keyword}\\b`, "g"`);
 const lines = content.split("\n");
-const lines = content.split("\n");
   "duplicateLines"
       "duplicateContent"
 const antiPatterns = ["];
@@ -108,7 +102,6 @@ const securityPatterns = ["];
   "pattern"
         "message": "Potential localStorage injection vulnerability"
         "severity": "MEDIUM"
-        "severity": "MEDIUM"
   "type": "SECURITY_VULNERABILITY"
           "severity"
           "message"
@@ -120,7 +113,6 @@ const securityPatterns = ["];
           "file"
           "occurrences"
   const severityScores = { "HIGH": 20, "MEDIUM": 10, "LOW"}
-  this.log("Generating intelligent suggestions...")
   this.log("Generating intelligent suggestions...")
   "HIGH_COMPLEXITY"
   title: "Reduce Function Complexity"
@@ -198,41 +190,10 @@ return summary.join(". ");
       this.log("AI Code Review completed successfully")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(" AI Code Review Automation "failed")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" AI Code Review Automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" AI Code Review Automation "failed")
-<<<<<<< HEAD
-  console.error(" AI Code Review Automation "failed")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

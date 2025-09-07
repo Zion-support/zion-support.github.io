@@ -18,7 +18,6 @@ import {
   Shield;
   BarChart3;
   ArrowRight;
-<<<<<<< HEAD
   Zap
   ArrowRight,
   Zap,;
@@ -140,7 +139,6 @@ return (;
 
         {/* Section Header */}
       }
-    }
  ;
 }
 
@@ -174,8 +172,6 @@ const card_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
 },"visible": { "opacity": 1, "coordinate_y": 0
 },        "stagger_children": 0.1;
       }
-    }
-  }
 
 const card_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
 },"visible": { "opacity": 1, "coordinate_y": 0
@@ -246,10 +242,8 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
 
 
         {/* Services Grid */}
-<<<<<<< HEAD
         <motion&& motion.div
           variants={containerVariants}
-<<<<<<< HEAD
           </p>
         </motion.div>
 
@@ -292,43 +286,10 @@ className='group relative''
                       <span className='text-sm'>{feature}</span>;'
                     </li>;
                   ))}
-=======
-className='group relative'
-            >
-              <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                {/* Background Gradient */}
-                <div;
-                {/* Content */}
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                {/* Icon */}`
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                </h3>;'
-                <p className='text - gray - 300 mb - 6 leading - relaxed'>                  {service.description}
-                </p>;
-                {/* Features */}            >;"
-              <div className="relative h - full bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 800 rounded - 2xl p - 8 hover:border - gray - 700 transition - all duration - 300 overflow - hidden">;
-                {/* Background Gradient */}`
-                <div className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 0 group - hover:opacity - 5 transition - opacity duration - 300`} />;
-                {/* Icon */}`
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;"
-                  <service.icon className="w - 8 h - 8 text - white" />;
-                </div>;
-                {/* Content */}"
-                <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 400 transition - colors duration - 300">;
-                  {service.title}"
-                  <span className="font-medium">Learn More</span>"
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </ul>;
 
                 {/* CTA */}
                 <Link;
-<<<<<<< HEAD
                   href={service.href}
 className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-300 transition-colors duration-300 group-"hover":translate-x-1'>'
 
@@ -348,17 +309,6 @@ className='inline-flex items-center space-x-2 text-blue-400 "hover":text-blue-30
               </div>;
             </motion && motion.div>;
           ))}
-=======
-
-          )
-
-        </motion.div>;"
-                <div className=\"absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300\"    />
-              </div>
-            </motion && motion.div>
-          ))}
-        </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         {/* Bottom CTA */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
@@ -396,10 +346,5 @@ href='/contact''
 };
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

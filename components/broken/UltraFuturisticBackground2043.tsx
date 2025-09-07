@@ -36,9 +36,6 @@ if (return) {$2;
     const particles: Array<{coordinate_x: number;
       coordinate_y: number;x: number;
       y: number;vx: number;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const resize_canvas = () =>: any {canvas.width = window.inner_width;
       }
@@ -79,7 +76,6 @@ const colors = [;
         'rgba(0, 255, 127, 0.8)', // Spring green'
         'rgba(255, 215, 0, 0.8)', // Gold'
       ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
       return {
         }
@@ -116,7 +112,6 @@ ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life;
         particle.life--;
-<<<<<<< HEAD
         if (particle.life <= 0) {
 
 }
@@ -193,7 +188,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return ('
     <div className='fixed inset - 0 -z - 10 overflow - hidden'>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Canvas background */}
       <canvas;
         ref={canvas_ref}
@@ -314,7 +308,6 @@ className='absolute inset-0''
             }
             "backgroundImage": ``              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-<<<<<<< HEAD
           style={{
             backgroundImage: `
 
@@ -325,8 +318,6 @@ className='absolute inset-0''
         />
       </div>
       {/* Floating geometric shapes */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           animate={{{/* Canvas background */}
       <canvas;
         ref={canvasRef}
@@ -415,43 +406,6 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
       </div>;
       {/* Floating geometric shapes */}<div className='absolute inset-0'>;
 
-=======
-
-<div className='absolute inset-0'>'
-
-        {/* Triangle */}
-        <motion&& motion.div;
-          className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45';' />;
-      </div>;
-<<<<<<< HEAD
-      {/* Enhanced grid pattern */}
-      <div className='absolute inset - 0 opacity - 10'>;'
-        <div;
-          className='absolute inset - 0';'
-          style={{"background_image": `;`              }
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,"background_size": '50px 50px'          }}          style={{"background_image": `;`              }
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;`            "background_size": '50px 50px';'
-          }} />;
-      </div>;
-      {/* Floating geometric shapes */}
-      <div className='absolute inset - 0'>;'
-        {/* Triangle */}
-        <motion.div;
-          className='absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45';'
-          animate={{<motion.div;
-            }
-            "rotate": [45, 405],"opacity": [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
-        <motion && motion.div;
-          className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45";"
-        <motion.div;
-          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";"
-
-          animate={{
-=======
-        <motion.div;"
-          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             rotate: [45, 405]
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
           transition={{}
@@ -489,7 +443,6 @@ className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20''
         />
 
         {/* Circle */}
-<<<<<<< HEAD
         <motion.div
           className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full"
           animate={{
@@ -552,7 +505,6 @@ key={i}
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Quantum particles */}
       <div className='absolute inset-0'>
 
@@ -581,7 +533,6 @@ key={i}
               "opacity": [0, 1, 0],
               "scale": [0, 1, 0]
             }}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             transition={{
               }
               "duration": 4 + Math.random() * 4,
@@ -591,74 +542,10 @@ key={i}
             }}
             style = $2;
               top: `${Math.random() * 100}%`}}
-=======
-ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
-            }}
-<<<<<<< HEAD
-            style={{
-              }
-              "left": `${Math.random() * 10,`}%`,`              "top": `${Math.random() * 10,`}%`,`
-            }} />
-        ))}
-      </div>;
-      {/* Consciousness energy field */}
-      <div className='absolute inset - 0'>;
-        <motion.div;
-          className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
-          animate={{
-            opacity: [0.3, 0.6, 0.3],        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
-          animate={{
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{
-<<<<<<< HEAD
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-};
-export default UltraFuturisticBackground2043;
-
-<div className='absolute inset-0'>'
-        <motion.div,
-className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5''
-          animate={{
-            }
-            "opacity": [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            }
-            "duration": 10,
-            "repeat": Infinity,
-            "ease": 'easeInOut','
-          }}
-          transition={{
-            }
-            "duration": 10,
-"repeat": Infinity,
-"ease": 'easeInOut'          }}' />
-      </div>
-    </div>
-);
-};
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default UltraFuturisticBackground2043;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
-}
-}
-}
-}
-<<<<<<< HEAD
-}
-}
-}
 }
 }<div className='absolute inset-0'>;
         <motion.div;
@@ -670,18 +557,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut',          }}
         />;
       </div>;
-    </div>;
 )}export default UltraFuturisticBackground2043;
   )
 },
 
 export default UltraFuturisticBackground2043,
-=======
-export default UltraFuturisticBackground2043
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

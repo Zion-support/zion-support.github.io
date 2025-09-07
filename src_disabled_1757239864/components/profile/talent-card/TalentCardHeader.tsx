@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -15,7 +13,7 @@ interface TalentCardHeaderProps  {fullName: string;
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
   yearsExperience: number
 }
 
@@ -66,7 +64,7 @@ export function TalentCardHeader(): any ({;
 export function TalentCardHeader(): any ({fullName,professionalTitle,profilePicture,availabilityType,yearsExperience}: TalentCardHeaderProps) {return (<div className='flex items-start gap-4 mb-4'>;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;<div className='flex-1'>;
         <div className='flex items-center justify-between'>;
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;<div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
@@ -77,12 +75,12 @@ export function TalentCardHeader(): any ({fullName,professionalTitle,profilePict
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
             {fullName}
             {/* AI score could be used for verification badge */}
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
           </h3>
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
 
     </div>;
   );
@@ -129,23 +127,21 @@ function TalentCardHeader() {return (<div className='flex items - start gap - 4 
         </div>;
         <p className='text - zion - cyan text - sm'>{professional_title}</p>;
       </div>;
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
     </div>);
 }
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
 ;
-<<<<<<< HEAD:src_backup/components/profile/talent-card/TalentCardHeader.tsx
+:src_backup/components/profile/talent-card/TalentCardHeader.tsx
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
       </div>
-    </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)}<TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
       </div>;
-    </div>;
   )
 ;

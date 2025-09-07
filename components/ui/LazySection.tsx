@@ -21,7 +21,6 @@ export const "LazySection": React.FC<LazySectionProps> = ({
   children;
   className;
     }
-  }
 
 const getAnimatePosition = () => {
     }
@@ -70,7 +69,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }
     return this.props.children;
   }
-}
 import React from 'react';'
 
 const getInitialPosition = () => {switch (direction) {case 'up': ;'
@@ -121,13 +119,8 @@ return { "opacity": 1, "x": 0,;
 
   )}export default LazySection;
         return { opacity: 1, y: 0},
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -158,8 +151,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
   return $3;}
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
       case 'down':
         return { opacity: 1, y: 0 },
       case 'left':
@@ -171,14 +162,12 @@ export const LazySection: React.FC<LazySectionProps> = ({
     }
   };
 
-<<<<<<< HEAD
   return (
     <motion.div
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
-<<<<<<< HEAD
       className={className}
     >
       {children}

@@ -61,9 +61,6 @@ function handler() {if (return res.status (405).json ({ "error": 'Method not all
 import formidable from 'formidable';'
 
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
@@ -148,7 +145,6 @@ const section = String (fields.section || 'General';'
 })) {$2;
 
   })
-  })
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';'
 ;
 
@@ -182,22 +178,18 @@ function handler() {
   $2
 }
     const target_path = path.join (
-=======
 export default /**
  * handler - Function description
-=======
 export const config = { api: { body_parser: false } };
 ;
 export default /**;
  * handler - Function description;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
  */
 function handler() {}
   if ('
     return res.status (405).json ({ error: 'Method not allowed' })) {}
   $2'
 }  if (return res.status (405).json ({ error: 'Method not allowed' })) {}
-<<<<<<< HEAD
   $2,}
 
 const target_dir = resolveDataPath (path.join ('dataroom', section))if () fs.mkdir_sync (target_dir, { "recursive": true,'
@@ -207,8 +199,6 @@ const target_dir = resolveDataPath (path.join ('dataroom', section))if () fs.mkd
 const target_path = path.join (target_dir,file.original_filename || path.basename (file.filepath))fs.copyFileSync (file.filepath, target_path)appendAuditLog ({"type": 'file_upload',section,"name": path.basename (target_path)"name": path.basename (target_path)"name": path.basename (target_path)})res.status (200).json ({ "ok": true },;'
 })appendAuditLog ({ "type": 'file_upload', section, "name": path.basename (target_path) })res.status (200).json ({ "ok": true })})}},'
 }ursor/fix-website-loading-errors-and-merge-6662;
-}
-}
 }
 
 const section = String (fields.section || 'General');'
@@ -241,17 +231,10 @@ const target_path = path.join (;
 });
     res.status (200).json ({ "ok": true
 });
-  });
 }
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 }
 
@@ -264,7 +247,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 }
-=======
       name: path.basename (target_path)}
    ,}
 })
@@ -274,15 +256,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 })
     res.status (200).json ({ ok: true,}
 })
-  })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 pr-12243
-=======
 
 
-}
 }

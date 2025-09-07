@@ -33,13 +33,9 @@ function removeBackupFiles(dir) {
             } catch (err) {
               console.log(`⚠️  Could not remove: ${fullPath}`);
             }
-          }
-        }
-      }
     } catch (error) {
       // Skip directories that can't be read
     }
-  }
   
   scanDirectory(dir);
   return removedCount;
@@ -51,31 +47,14 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (!content.includes('
-=======
-    if (!content.includes('') && !content.includes('') && !content.includes('
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    if (!content.includes('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return false;
     }
     
     console.log(`📝 Fixing merge conflicts in: ${filePath}`);
     
     // Strategy: Keep the newer version (after ) for most cases
-<<<<<<< HEAD
-<<<<<<< HEAD
     content = content.replace(/
-=======
-    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       // For version conflicts, prefer the newer version
       if (headContent.includes('"') && newContent.includes('"')) {
         return newContent.trim();
@@ -84,18 +63,9 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Clean up any remaining conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
     content = content.replace(/
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     content = content.replace(/[\s\S]*?
-    content = content.replace(/[\s\S]*?
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -103,7 +73,6 @@ function resolveMergeConflicts(filePath) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
@@ -126,27 +95,15 @@ function findConflictedFiles(dir) {
           // Check for merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (content.includes('
-=======
-            if (content.includes('') || content.includes('') || content.includes('
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-            if (content.includes('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               conflictedFiles.push(fullPath);
             }
           } catch (err) {
             // Skip files that can't be read
           }
-        }
-      }
     } catch (error) {
       // Skip directories that can't be read
     }
-  }
   
   scanDirectory(dir);
   return conflictedFiles;
@@ -168,7 +125,6 @@ try {
     if (resolveMergeConflicts(file)) {
       fixedCount++;
     }
-  }
   
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   
@@ -182,11 +138,8 @@ try {
     if (remainingConflicts.length > 10) {
       console.log(`   ... and ${remainingConflicts.length - 10} more`);
     }
-  }
   
 } catch (error) {
   console.error('❌ Error during cleanup:', error);
   process.exit(1);
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

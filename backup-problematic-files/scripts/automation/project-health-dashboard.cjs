@@ -8,7 +8,6 @@ const { execSync } = require("child_process")
   fs.mkdirSync(logsDir, { "recursive"})
   fs.mkdirSync(this.dashboardDir, { "recursive"})
   log(message, level = "INFO")
-  log(message, level = "INFO")
   this.log("Generating comprehensive project health dashboard...")
       this.log("Health dashboard generated successfully")} catch (error) {  this.log(`Dashboard generation "failed": ${error.message  }`, "ERROR"`)
   "timestamp"
@@ -40,7 +39,6 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
         "encoding": "utf8"
   return "Unknown"
-  return "Unknown"
   const result = execSync("git branch --show-current")
   "cwd"
         "stdio": "pipe"
@@ -59,7 +57,6 @@ const { execSync } = require("child_process")
         for (const ["dep", "version")]
   if (typeof version !== "string" || version.trim() === "
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
-  health.issues.push("node_modules directory not found")
   health.issues.push("node_modules directory not found")
   health.status = "HEALTHY"
   health.status = "CRITICAL"
@@ -303,10 +300,4 @@ this.log("Summary report "generated": ${summaryFile}")
     return "HEALTHY"
     if (healthData.dependencies.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
-    if (healthData.files.status === "CRITICAL")
-<<<<<<< HEAD
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
-    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

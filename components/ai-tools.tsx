@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react';'
@@ -192,7 +191,6 @@ const aiMarketStats = [;
       features: [;
         'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
       ];
-  ];
 
   const aiMarketStats = [;
     {;
@@ -393,7 +391,6 @@ reliability, and real-world value.
           <div className='grid grid-cols-1 "lg":grid-cols-2 gap-8'>'
             {aiTools.map((tool, index) => (
           </div>;
-        </div>;
       </section>;
       {/* AI Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>;'
@@ -445,7 +442,6 @@ reliability, and real-world value.
                       }
                       Most Popular
                     </div>
-                  </div>
                 )}
 
 <div className='flex items-start space-x-6'>'
@@ -487,7 +483,6 @@ className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-g
                           {tool.marketPrice}
                         </span>;
                       </div>;
-                    </div>;
                     <ul className='space-y-2 mb-6'>;'
                       {tool.features.map((feature, featureIndex) => (<li;
                           }
@@ -531,7 +526,6 @@ className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-g
                         <span className="text-sm text-gray-500">Market Average:</span>
                         <span className="text-sm text-gray-400">{tool.marketPrice}</span>
                       </div>
-                    </div>
 
                     <ul className="space-y-2 mb-6">
                       {tool.features.map((feature, featureIndex) => (
@@ -559,14 +553,9 @@ href={tool.website}
                           {tool.website}
 
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* AI Categories Overview */}
@@ -607,7 +596,6 @@ key={index}
                       {category.avgPrice}
                     </span>;
                   </div>;
-                </div>;
               </Card>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
             ))}
@@ -637,11 +625,9 @@ key={index}
                     <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
                   </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* AI Implementation Guide */}
@@ -700,7 +686,6 @@ and ensure quality output.
               </div>
             </Card>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -731,7 +716,6 @@ variant='outline';'
               Get AI Consultation
             </Button>
           </div>
-        </div>
       </section>
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
@@ -795,17 +779,14 @@ variant='outline';'
               </div>;
             </Card>;
           </div>;
-        </div>;
       </section>;
                 </ul>;
               </div>;
             </Card>;
           </div>;
-        </div>;
       </section>;
             </Button>;
           </div>;
-        </div>;
       </section>;
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas";
               variant="primary";
@@ -841,18 +822,15 @@ href='/contact';
               Get AI Consultation;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
                 </ul>;
               </div>;
             </Card>;
           </div>;
-        </div>;
       </section>;
             </Button>;
           </div>;
-        </div>;
       </section>;
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
               variant="primary"
@@ -864,4 +842,3 @@ href='/contact';
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

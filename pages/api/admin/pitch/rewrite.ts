@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
@@ -45,21 +39,4 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
     res.status(200).json({ title, content })
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Rewrite failed' })
-<<<<<<< HEAD
   }
-}
-=======
-
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Content rewritten' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

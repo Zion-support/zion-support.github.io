@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions2025 = [
   {
     }
@@ -100,7 +99,6 @@ export const innovativeMicroSaasSolutions2025 = [
           'White-label solution''
         ]
       }
-    }
     "category": 'Supply Chain''
     "tags": [
       'Inventory Management''
@@ -257,7 +255,6 @@ export const innovativeMicroSaasSolutions2025 = [
     "compliance": ['CAN - SPAMGDPRCCPAEmail marketing regulations'];'
   }
 ];
-    "compliance": ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']},;'
     "compliance": ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']},;'
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization''
     ];

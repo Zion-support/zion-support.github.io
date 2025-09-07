@@ -32,7 +32,6 @@ return (;
                   <div className="text-sm text-muted-foreground">"
                     In Progress • Due in 12 days
                   </div>
-                </div>
                 <Badge>3 Milestones</Badge>
               </div>
               <div className="space-y-1">"
@@ -46,7 +45,6 @@ className="h-full bg-primary rounded-full""
                     style={{ "width": "60%" }}"
                   ></div>
                 </div>
-              </div>
               <div className="flex justify-between items-center">"
                 <div className="flex -space-x-2">"
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">"
@@ -55,17 +53,15 @@ className="h-full bg-primary rounded-full""
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">"
                     <UserCheck className="h-4 w-4" />"
                   </div>
-                </div>
                 <Button size="sm" variant="outline">"
                   View Details
                 </Button>
               </div>
-            </div>
           </CardContent>
         </Card>
       </section>
-<<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
+<:src_backup/mobile/components/dashboard/ClientDashboard.tsx
+:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Suggested Talents</h2>
@@ -102,11 +98,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       UX Designer • 5 years exp
                     </p>
                   </div>
-                </div>
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">"
                   95% match
                 </div>
-              </div>
               <div className="mt-3 flex gap-1 flex-wrap">"
                 <Badge variant="outline" className="text-xs">"
                   UI/UX
@@ -139,11 +133,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Full Stack Dev • 8 years exp
                     </p>
                   </div>
-                </div>
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">"
                   89% match
                 </div>
-              </div>
               <div className="mt-3 flex gap-1 flex-wrap">"
                 <Badge variant="outline" className="text-xs">"
                   React
@@ -165,8 +157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
       </section>
-<<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
+<:src_backup/mobile/components/dashboard/ClientDashboard.tsx
+:src_backup/mobile/components/dashboard/ClientDashboard.tsx
 <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Recent Updates</h2>
@@ -193,7 +185,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <p className="text-xs text-muted-foreground">2 hours ago</p>"
               </div>
-            </div>
             <div className="flex gap-3 items-start">"
               <div className="bg-primary/10 p-2 rounded-full">"
                 <FileText className="h-5 w-5 text-primary" />"
@@ -205,7 +196,6 @@ your job post
                 </p>
                 <p className="text-xs text-muted-foreground">1 day ago</p>"
               </div>
-            </div>
             <Button variant="outline" className="w-full">"
               View All Notifications
             </Button>
@@ -259,11 +249,9 @@ import { Link } from "react-router-dom";"
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;"
                   <div className="h-full bg-primary rounded-full" style={{"width":'60%'}}></div>;'
                 </div>;
-              </div>;
               ;
                   <div className="h-full bg-primary rounded-full" style={{"width": '60%'}}></div>;'
                 </div>;
-              </div>;
               <div className="flex justify-between items-center">;"
                 <div className="flex -space-x-2">;"
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">;"
@@ -272,10 +260,8 @@ import { Link } from "react-router-dom";"
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;"
                     <UserCheck className="h-4 w-4" />;"
                   </div>;
-                </div>;
                 <Button size="sm" variant="outline">View Details</Button>;"
               </div>;
-            </div>;
           </CardContent>;
         </Card>;
       </section>;
@@ -336,7 +322,6 @@ import { Link } from "react-router-dom";"
                 </p>;
                 <p className="text-xs text-muted-foreground">2 hours ago</p>;
               </div>;
-            </div>;
             <div className="flex gap-3 items-start">;
               <div className="bg-primary/10 p-2 rounded-full">;
                 <FileText className="h-5 w-5 text-primary" />;
@@ -352,7 +337,6 @@ import { Link } from "react-router-dom";"
                 </p>;
                 <p className="text-xs text-muted-foreground">1 day ago</p>;
               </div>;
-            </div>;
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Recent Updates</h2>;
@@ -369,7 +353,6 @@ import { Link } from "react-router-dom";"
                 </p>;
                 <p className="text-xs text-muted-foreground">2 hours ago</p>;
               </div>;
-            </div>;
             <div className="flex gap-3 items-start">;
               <div className="bg-primary/10 p-2 rounded-full">;
                 <FileText className="h-5 w-5 text-primary" />;
@@ -380,7 +363,6 @@ import { Link } from "react-router-dom";"
                 </p>;
                 <p className="text-xs text-muted-foreground">1 day ago</p>;
               </div>;
-            </div>;
             <Button variant="outline" className="w-full">View All Notifications</Button>;
             <Button variant='outline' className='w-full'>;
               View All Notifications;
@@ -422,7 +404,6 @@ export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24"
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>;
                 </div>;
-              </div>;
               <div className="flex justify-between items-center">;
                 <div className="flex -space-x-2">;
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">;
@@ -466,7 +447,6 @@ function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                   <div className='text - sm text - muted - foreground'>;
                     In Progress • Due in 12 days;
                   </div>;
-                </div>;
                 <Badge > 3 Milestones</Badge>;
               </div>;
               <div className='space - y-1'>;
@@ -480,7 +460,6 @@ function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                     style={{ width: '60%' }}
                   ></div>;
                 </div>;
-              </div>;
               <div className='flex justify - between items - center'>;
                 <div className='flex -space - x-2'>;
                   <div className='w - 7 h - 7 rounded - full bg - primary / 20 flex items - center justify - center'>;
@@ -489,7 +468,6 @@ function ClientDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                   <div className='w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center'>;
                     <UserCheck className='h - 4 w - 4' />;
                   </div>;
-                </div>;
                 <Button size='sm' variant='outline'>;
                   View Details;
                 </Button>              </div > import { ChevronRight, Plus, UserCheck, FileText, Bell  } from 'lucide-react';
@@ -529,7 +507,6 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                 <div className="h - 2 bg - primary / 20 rounded - full overflow - hidden">;
                   <div className="h - full bg - primary rounded - full" style={{width: '60%'}}></div>;
                 </div>;
-              </div>;
               <div className="flex justify - between items - center">;
                 <div className="flex -space - x-2">;
                   <div className="w - 7 h - 7 rounded - full bg - primary / 20 flex items - center justify - center">;
@@ -540,7 +517,6 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
-            </div>;
           </CardContent>;
         </Card>;
       </section>;<section>;
@@ -568,7 +544,6 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                 </div>;<div className='bg - primary / 10 text - primary font - medium self - start rounded - full px - 2 py - 1 text - xs'>;
                   95% match;
                 </div>;
-              </div>;
               <div className='mt - 3 flex gap - 1 flex - wrap'>;
                 <Badge variant='outline' className='text - xs'>;
                   UI / UX;
@@ -600,7 +575,6 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
                 </div>;<div className='bg - primary / 10 text - primary font - medium self - start rounded - full px - 2 py - 1 text - xs'>;
                   89% match;
                 </div>;
-              </div>;
               <div className='mt - 3 flex gap - 1 flex - wrap'>;
                 <Badge variant='outline' className='text - xs'>;
                   React;
@@ -626,7 +600,7 @@ function ClientDashboard() {return (<div className="space - y-6 px - 4 pb - 24">
             </CardContent>;
           </Card>;
         </div>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
+:src_backup/mobile/components/dashboard/ClientDashboard.tsx
       </section>;
 
   );
@@ -649,7 +623,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <p className='text - xs text - muted - foreground'>2 hours ago</p>;
               </div>;
-            </div>;
             <div className='flex gap - 3 items - start'>;
               <div className='bg - primary / 10 p - 2 rounded - full'>;
                 <FileText className='h - 5 w - 5 text - primary' />;
@@ -661,7 +634,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <p className='text - xs text - muted - foreground'>1 day ago</p>;
               </div>;
-            </div>;
             <Button variant='outline' className='w - full'>;
               View All Notifications;
             </Button>          </CardContent>      <section>;
@@ -680,7 +652,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <p className="text - xs text - muted - foreground">2 hours ago</p>;
               </div>;
-            </div>;
             <div className="flex gap - 3 items - start">;
               <div className="bg - primary / 10 p - 2 rounded - full">;
                 <FileText className="h - 5 w - 5 text - primary" />;
@@ -691,17 +662,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <p className="text - xs text - muted - foreground">1 day ago</p>;
               </div>;
-            </div>;
             <Button variant="outline" className="w - full">View All Notifications</Button>;
           </CardContent>;
         </Card>;
       </section>;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/ClientDashboard.tsx
+:src_backup/mobile/components/dashboard/ClientDashboard.tsx
     </div>)})}
     </div>);
 }
 =  )
-}
 }
 ;
 >

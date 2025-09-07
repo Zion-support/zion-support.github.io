@@ -106,7 +106,6 @@ const { execSync, spawn } = require("child_process")
   recommendations.push(" High number of errors fixed - consider code review")
   recommendations.push("⚡ Consider performance optimizations")
   recommendations.push(" All systems operating optimally")
-  recommendations.push(" All systems operating optimally")
 // console.log(""\n ZION TECH AUTOMATION DASHBOARD")
     console.log(""==`);console.log( "Status": ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log( Errors "Fixed": ${dashboard.summary.totalErrorsFixed}`");console.log("⚡ "Optimizations": ${dashboard.summary.totalOptimizations}");console.log("� "Vulnerabilities": ${dashboard.summary.totalVulnerabilities}");console.log("� "Improvements": ${dashboard.summary.totalImprovements}"`)
 // console.log(""\n� "Recommendations": ")
@@ -129,9 +128,4 @@ const { execSync, spawn } = require("child_process")
   process.on("SIGINT")
   console.log("\n� Received SIGINT, shutting down gracefully...")
   process.on("SIGTERM")
-<<<<<<< HEAD
   console.log(")
-  console.log(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

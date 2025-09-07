@@ -1,29 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface BlockchainWeb3Service {
 export interface BlockchainWeb3Service {;
   id: string;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export interface BlockchainWeb3Service {
 export interface BlockchainWeb3Service {;
   id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 export interface BlockchainWeb3Service {
 export interface BlockchainWeb3Service {;
   id: string;
-id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
 
 ;
-  {'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis';'
   {'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis';'
 }
 export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service  {"id": string;
@@ -79,7 +67,6 @@ export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service 
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.';'
     "compliance": [;
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
-      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
     ],"link": '"https"://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',"id": 'ai - powered - defi - yield - optimizer',"name": 'AI - Powered DeFi Yield Optimizer',"tagline": 'Intelligent yield farming with AI - driven strategy optimization',"description":;'
       'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.',"category": 'DeFi & Yield Optimization',"price": {"monthly": 199,"yearly": 1990,"currency": 'USD',"trial_days": 14,"setup_time": '1 - 3 days',"enterprise": 'Custom pricing';'
       }
@@ -112,7 +99,6 @@ export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service 
     ],"support":;
       '24 / 7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.',"compliance": [;'
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
-      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
     ],"link": '"https"://ziontechgroup.com / ai - powered - defi - yield - optimizer',"icon": '🌾',"color": 'from - green - 500 to - emerald - 600',"popular": true,"launch_date": '2024 - 01 - 15',"customers": 8500,"rating": 4 && 4.9,"reviews": 6200;'
   },{"reviews": 6200;
   },{'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our "advantage": AI-powered valuation and predictive analytics.',"competitors": ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],"techStack": [;'
@@ -138,7 +124,6 @@ export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service 
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.';'
     "compliance": [;
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
-      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
     ],"link": '"https"://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',"id": 'nft - marketplace - intelligence - platform',"name": 'NFT Marketplace Intelligence Platform',"tagline": 'AI - powered NFT analytics, valuation, and trading insights',"description":;'
       'Comprehensive NFT intelligence platform that provides real - time analytics, AI - powered valuation models, and trading insights to maximize NFT investment returns.',"category": 'NFT & Digital Assets',"price": {"monthly": 149,"yearly": 1490,"currency": 'USD',"trial_days": 7,"setup_time": 'Immediate',"enterprise": 'Custom pricing';'
       }
@@ -155,7 +140,6 @@ export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service 
     ],"market_position":;
       'Leading NFT intelligence platform. Competes with NFTGo ($99 - 299 / month), Nifty Gateway (free), and OpenSea Pro ($0 - 2.5%). Our "advantage": AI - powered valuation and predictive analytics.',"competitors": ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],"tech_stack": [;'
       'OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js';'
-      'OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js';'
     ],"real_implementation": true,"implementation_details":;
       'Production - ready NFT intelligence platform with real - time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',"roi": 'NFT investors achieve 300% ROI through improved decision - making and optimized portfolio management.',"use_cases": [;'
       'NFT investment research','Portfolio optimization','Market trend analysis','Rarity and value assessment','Trading strategy development','Brand NFT strategy';'
@@ -166,7 +150,6 @@ export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service 
       'OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms';'
     ],"support":;
       '24 / 7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.',"compliance": [;'
-      'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance';'
     ],"link": '"https"://ziontechgroup.com / nft - marketplace - intelligence - platform',"icon": '🎨',"color": 'from - pink - 500 to - rose - 600',"popular": true,"launch_date": '2024 - 03 - 01',"customers": 3200,"rating": 4 && 4.7,"reviews": 2100;'
   },{'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our "advantage": Multi-industry focus and IoT integration.',"reviews": 2100;'
@@ -422,18 +405,14 @@ export interface BlockchainWeb3Service  {export interface BlockchainWeb3Service 
       'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',"category": 'Web3 & Social Media',"price": {"monthly": 0,"yearly": 0,"currency": 'USD',"trial_days": 0,"setup_time": 'Immediate',"enterprise": 'Custom pricing';'
       }
       "enterprise": 'Custom pricing';'
-      "enterprise": 'Custom pricing';'
     },"features": [;
       'Decentralized content ownership','Token - based reward system','Privacy - first design','Content monetization','Decentralized governance','Cross - platform content portability','AI - powered content discovery','NFT integration','Mobile and web apps','API for developers';'
-      'API for developers';'
       'API for developers';'
     ],"benefits": [;
       'Users own and monetize their content','Complete privacy and data control','Earn rewards for quality content','Censorship - resistant platform','Transparent and fair algorithms';'
       'Transparent and fair algorithms';'
-      'Transparent and fair algorithms';'
     ],"target_audience": [;
       'Content creators and influencers','Social media users','Brands and marketers','Developers and entrepreneurs','Privacy - conscious individuals','Web3 enthusiasts';'
-      'Web3 enthusiasts';'
       'Web3 enthusiasts';'
     ],"market_position":;
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our "advantage": True decentralization and content ownership.',"competitors": ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],"tech_stack": ['IPFS, Ethereum, Polygon, React, Node.js, PostgreSQL, Redis'],"real_implementation": true,"implementation_details":;'
@@ -627,7 +606,6 @@ export interface BlockchainWeb3Service {;
     "rating": 4 && 4.7,
     "reviews": 2100
   },
-<<<<<<< HEAD
   {
     }
     "competitors": [

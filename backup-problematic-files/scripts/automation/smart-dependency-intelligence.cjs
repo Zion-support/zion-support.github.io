@@ -11,7 +11,6 @@ const crypto = require("crypto")
       "dependency-predictions.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
-  log(message, level = "INFO")
   return JSON.parse(fs.readFileSync(this.intelligenceLog, "utf8")
     } catch (error) {  this.log(`Failed to load intelligence "data": ${error.message  }`, "WARN"`)
   "dependencyHistory"
@@ -91,7 +90,6 @@ const crypto = require("crypto")
         "packageLockExists"
         "lastUpdated"
       for (const ["name", "version")]
-      for (const ["name", "version")]
       return analysis} catch (error) {  this.log(`Failed to analyze "dependencies": ${error.message  }`, "ERROR"`)
       "currentVersion"
       "latestVersion"
@@ -152,7 +150,6 @@ const crypto = require("crypto")
   return JSON.parse(error.stdout || "{  }")
   return JSON.parse(error.stdout || "{}")
   return { "vulnerabilities"}
-      return { "vulnerabilities"}
   this.log("Predicting potential dependency issues...")
   "type": "SECURITY_ISSUE_PREDICTION"
           "package"
@@ -201,7 +198,6 @@ const crypto = require("crypto")
         "action"
         "estimatedImpact": "HIGH"
         "risk": "LOW"
-      p => p.probability === "MEDIUM"
       p => p.probability === "MEDIUM"
   "type": "PLANNED_OPTIMIZATION"
         "priority": "MEDIUM"
@@ -314,9 +310,4 @@ this.log("Intelligence report "generated": ${reportPath}")
   this.log(Smart Dependency Intelligence "failed": ${error.message}")
         "ERROR"
   console.log(` Smart Dependency Intelligence completed``)
-<<<<<<< HEAD
   console.error(" Smart Dependency Intelligence "failed": ")
-  console.error(" Smart Dependency Intelligence "failed": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

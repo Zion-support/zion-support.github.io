@@ -56,7 +56,6 @@ and drive growth. Our expert team delivers high-quality, scalable solutions.
                 Built to grow with your business and adapt to changing needs.
               </p>
             </div>
-          </div>
 
           {/* CTA Section */}
           <div className="text-center bg-white rounded-xl shadow-lg p-12">"
@@ -82,7 +81,6 @@ href="/services""
                 View All Services
               </Link>
             </div>
-          </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">🔧</div>
@@ -99,7 +97,6 @@ href="/services""
               Grow with your business with our flexible and scalable platform.
             </p>
           </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -110,19 +107,11 @@ href="/services""
             Contact Sales
           </button>
         </div>
-      </div>
-    </div>
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, cybersecurity, and infrastructure management. Enterprise-grade solutions for modern businesses.'
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import React from 'react';
 import Link from 'next/link';
 
@@ -227,7 +216,6 @@ href=""tel":+13024640950""
         </div>
 
         </div>
-      </div>
 
       <div className="text-center mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Process</h2>"
@@ -248,7 +236,6 @@ step="3""
             title="Management & Optimization""
             description="Provide ongoing support, monitoring, and continuous optimization for peak performance."" />
         </div>
-      </div>
 
       <CTA />
     </div>
@@ -326,18 +313,14 @@ href=""mailto":kleber@ziontechgroup.com""
       <div className="mt-6 text-sm text-gray-600">"
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
-    </div>
   );
 
 }
         </div>
-      </div>
-    </div>
   );
 }
 
         </div>
-      </div>
 
       <div className="text-center mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Process</h2>"
@@ -358,7 +341,6 @@ step="3""
             title="Management & Optimization""
             description="Provide ongoing support, monitoring, and continuous optimization for peak performance."" />
         </div>
-      </div>
 
       <CTA />
     </div>
@@ -436,7 +418,6 @@ href=""mailto":kleber@ziontechgroup.com""
       <div className="mt-6 text-sm text-gray-600">"
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
-    </div>
   );
 
       </section>
@@ -454,7 +435,6 @@ href=""mailto":kleber@ziontechgroup.com""
             Contact Us
           </a>
         </div>
-      </div>
 
       <div className="text-center mb-16">"
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Process</h2>"
@@ -477,8 +457,6 @@ step="3""
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Industry Solutions */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Solutions</h2>
@@ -628,13 +606,9 @@ href=""mailto":kleber@ziontechgroup.com""
       <div className="mt-6 text-sm text-gray-600">"
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
-    </div>
   );
 }
 
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Key IT Service Areas</h2>
@@ -680,8 +654,3 @@ href=""mailto":kleber@ziontechgroup.com""
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -21,7 +21,6 @@ const allowed = (process.env.CORS_ORIGINS || '');'
       cb(null, true);
 dotenv.config($2);
 const app = Fastify($2);
->>>>>>> origin/main
 await app.register(cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim());
@@ -53,14 +52,12 @@ app.post('/ai/ask', async (req, reply) => {
 app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) || {};
   const role = (body.role as string) || 'Engineer';
-=======
       cb(null, true);
       return;
     }'
     cb(new Error('Not allowed'), false)
   }'
   methods: ['GETPOSTOPTIONS']
-<<<<<<< HEAD
 });
   },
   "methods": ['GET', 'POST', 'OPTIONS'],'

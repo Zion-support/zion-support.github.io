@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  website: 'https://ziontechgroup.com'};
-=======
-  website: 'https://ziontechgroup.com',};
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-  website: 'https://ziontechgroup.com',};
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 const contact = {
   mobile: '+1 302 464 0950'
@@ -2332,7 +2314,6 @@ export const "newlyAddedServices": EnhancedRealMicroSaasService[] = [;
       'Branching logic and conditions_beautiful mobile templates_real‑time charts & exportsUTM and webhook integrationsNPS / CSAT / CES presets';'
     ];
     "popular": false;
-    "integrations": ['Slack, HubSpot, Zapier, Webhooks'];'
     "integrations": ['Slack, HubSpot, Zapier, Webhooks'];'
     "icon": '📱';"color": 'from - indigo - 600 to - purple - 700';'
     "text_color": 'text - indigo - 300';'
@@ -5277,7 +5258,6 @@ export const "newlyAddedServices": EnhancedRealMicroSaasService[] = [;
   },{"id": 'ai-code-migration-assistant-pro',"name": 'AI Code Migration Assistant',"tagline": 'Framework upgrades, typed refactors, and safe PR generation',"price": '$199',"period": '/month',"description": 'Automate upgrades across frameworks and libraries. Typed codemods, test-aware refactors, and PRs with diffs and rollback plans.',"features": [;'
       'Typed codemodsTest-aware refactors','Multi-repo orchestrationRisk scoring & rollbacks','CI validationChangelogs & docs';'
     ],"popular": false,"icon": '🧩',"color": 'from-amber-600 to-orange-700',"textColor": 'text-amber-400',"link": '"https"://ziontechgroup && ziontechgroup.com/services/ai-code-migration-assistant-pro',"marketPosition": 'Safer alternative to generic AI PR bots.',"targetAudience": 'Engineering leads, platform teams',"trialDays": 14,"setupTime": '1 day',"category": 'Developer Tools',"realService": true,"technology": ['TypeScript, AST, LLM'],"integrations": ['GitHub, GitLab, Bitbucket'],"useCases": [;'
-      'Next.js/React upgrades, Typescript migrations, Policy refactors';'
       'Next.js/React upgrades, Typescript migrations, Policy refactors';'
     ],"useCases": ['Next.js/React upgrades, Typescript migrations, Policy refactors'],"roi": 'Cut upgrade time by 60–80%',"competitors": ['Sourcegraph Cody, AWS CodeGuru'],"marketSize": '$9B DevTools AI',"growthRate": '24% CAGR',"variant": 'holographic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'AST-driven codemods with safety rails and CI checks.',"launchDate": '2025-02-18',"customers": 18,"rating": 4.5,"reviews": 10;'
   },{"id": 'incident-statuspage-automation-pro',"name": 'Incident StatusPage Automation',"tagline": 'SLO-aware updates, RCA templates, and subscriber comms',"price": '$79',"period": '/month',"description": 'Automate incident status updates based on SLO breaches. Standardize RCAs, postmortems, and subscriber communication.',"features": [;'

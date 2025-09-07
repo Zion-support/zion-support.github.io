@@ -19,7 +19,6 @@ class ComprehensiveSyntaxFixer {
     if (details) {
       console.log(`   ${details}`);
     }
-  }
 
   getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     const files = [];
@@ -36,7 +35,6 @@ class ComprehensiveSyntaxFixer {
         } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
         }
-      }
     };
     
     scanDirectory(dir);
@@ -45,10 +43,7 @@ class ComprehensiveSyntaxFixer {
 
   fixMergeConflicts(content) {
     return content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  }
+      .replace(/[\s\S]*?[\s\S]*?      .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?      .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?  }
 
   fixMalformedStrings(content) {
     // Fix unterminated string constants
@@ -116,7 +111,6 @@ class ComprehensiveSyntaxFixer {
       this.errors.push(`Failed to fix ${filePath}: ${error.message}`);
       return false;
     }
-  }
 
   async run() {
     this.log('Starting comprehensive syntax fixing...');
@@ -135,7 +129,6 @@ class ComprehensiveSyntaxFixer {
       if (this.fixFile(file)) {
         fixedCount++;
       }
-    }
     
     // Also fix specific problematic files
     const specificFiles = [
@@ -151,8 +144,6 @@ class ComprehensiveSyntaxFixer {
         if (this.fixFile(filePath)) {
           fixedCount++;
         }
-      }
-    }
     
     this.log(`Fixed ${fixedCount} files`);
     
@@ -167,7 +158,6 @@ class ComprehensiveSyntaxFixer {
       errors: this.errors
     };
   }
-}
 
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -106,15 +105,9 @@ export default function Revolutionary2025Pricing() {
     timeToValue: '< 30 days',
     globalReach: '150+ countries'
   },
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 export default function revolutionary2025pricing() {
   return (
-<<<<<<< HEAD
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
         <Head>
@@ -256,7 +249,6 @@ export default function revolutionary2025pricing() {
                       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
                   )}
 
                   <div className="text-center mb-8">
@@ -293,7 +285,6 @@ export default function revolutionary2025pricing() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Service Pricing Grid */}
@@ -353,7 +344,6 @@ export default function revolutionary2025pricing() {
                         </h3>
                         <p className="text-gray-400 text-sm">{service.tagline}</p>
                       </div>
-                    </div>
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
                         <Star className="w-3 h-3" />
@@ -378,7 +368,6 @@ export default function revolutionary2025pricing() {
                       <span className="text-white">{service.rating}</span>
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
-                  </div>
 
                   {/* Key Features */}
                   <div className="mb-4">
@@ -396,7 +385,6 @@ export default function revolutionary2025pricing() {
                         </div>
                       )}
                     </div>
-                  </div>
 
                   {/* Market Position */}
                   <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
@@ -420,7 +408,6 @@ export default function revolutionary2025pricing() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Contact Section */}
@@ -458,7 +445,6 @@ export default function revolutionary2025pricing() {
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-purple-400 text-sm">{contactInfo.address}</p>
                 </div>
-              </div>
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
@@ -476,22 +462,4 @@ export default function revolutionary2025pricing() {
       </div>
     </UltraQuantumHolographicBackground>
   )
-=======
-    <Layout>
-      <Head>
-        <title>Revolutionary 2025 Pricing - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary 2025 Pricing solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Revolutionary 2025 Pricing</h1>
-          <p className="text-lg text-gray-600">
-            Professional revolutionary 2025 pricing solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

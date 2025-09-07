@@ -50,17 +50,14 @@ const "SearchBar": React.FC = () => {
   }
   const [query, setQuery] = useState('');'
 
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 interface SearchResult {
   title: string
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 interface SearchResult {
   title: string
   description: string
   url: string
-<<<<<<< HEAD
   type: 'service' | 'page' | 'category'
 }
 
@@ -71,7 +68,6 @@ const SearchBar: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   // Mock search data - in a real app, this would come from an API,
 const "searchData": SearchResult[] = [;
@@ -210,7 +206,6 @@ const handleKeyDown = ("e": React.KeyboardEvent) => {if (e.key === 'Escape') {se
                         {result.description}
                       </p>;
                     </div>;
-                  </div>;
                 </Link>;
               ))}
             </div>;
@@ -314,67 +309,6 @@ const handleSubmit = ("e": React.FormEvent) => {
 }
 
 export default SearchBar
-=======
-  type: 'service' | 'page' | 'category';}
-
-const SearchBar: React.FC = () => {
-interface SearchResult {
-  title: string;, description: string;,
-  url: string;, type: 'service' | 'page' | 'category';,
-const SearchBar: React.FC = () => {interface SearchResult {
-  title: string, description: string,url: string, type: 'service' | 'page' | 'category;}
-
-const SearchBar: React.FC = () => {const [query, setQuery] =
-  useState('')
-  const [results, setResults] = useState<SearchResult[]    />([])const [isOpen, setIsOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const searchRef = useRef<HTMLDivElement    />(null
-  const inputRef  = useRef<HTMLInputElement    />(null)// Mock search data - in a real app, this would come from an API
-const searchData: SearchResult[] = [
-    {title: 'Micro SaaS Products',
-  description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',url: '/micro-saas',}
-  type: 'category';}
-    },{title: 'AI Services',
-  description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',url: '/ai-services',}
-  type: 'category';}
-    },{title: 'IT Services',
-  description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',url: '/it-services',}
-  type: 'category';}
-    },{title: 'Cloud Cost Guard',
-  description: 'FinOps Assistant for anomaly detection and cost optimization',url: '/services',}
-  type: 'service';}
-    },{title: 'Contact Us',
-  description: 'Get in touch with our experts for consultation and quotes',url: '/contact',}
-  type: 'page';}
-    },{title: 'Pricing',
-  description: 'View our transparent pricing for all services',url: '/pricing',
-  type: 'page'
-const SearchBar: React.FC = () => {
-
-  const [query, setQuery] = useState('')
-const [results, setResults] = useState<SearchResult[]    />([])
-const [isOpen, setIsOpen] = useState(false)
-const [isLoading, setIsLoading] = useState(false)
-const searchRef = useRef<HTMLDivElement    />(null)
-const inputRef = useRef<HTMLInputElement    />(null)
-  // Mock search data - in a real app, this would come from an API
-const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products',
-  description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-  type: 'category'}
-   ,}
-},
-    {
-      title: 'AI Services',
-  description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-  type: 'category'}
-   ,}
-},
-    {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
     {
       title: 'Cloud Cost Guard',
@@ -508,7 +442,6 @@ const searchData: SearchResult[] = [
                         {result.description}
                       </p>
                     </div>
-                  </div>
                 </Link>
               ))}
             </div>
@@ -524,7 +457,6 @@ const searchData: SearchResult[] = [
 };
 
 export default SearchBar;
-<<<<<<< HEAD
 
 const handleClear = () => {
     }
@@ -679,6 +611,3 @@ main
 
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

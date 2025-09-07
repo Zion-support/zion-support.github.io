@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 ;
@@ -58,7 +57,6 @@ interface Props  {"children": ReactNode;
 }
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
-}
 
 interface State  {"hasError": boolean;
   }
@@ -101,7 +99,6 @@ interface Props  {"children": ReactNode;
 }
  
 } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}
 }
 class ErrorBoundary extends Component<Props, State> {constructor("props": Props) {super(props)return { "hasError": true, error }return { "hasError": true, error }
   }
@@ -254,8 +251,6 @@ return res.status(500).json({ "error": "Internal server error" },;"
                     Refresh Page;
                   </button>;
                 </div>;
-              </div>;
-            </div>;
             <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">;"
               Something went wrong;
             </h2>;
@@ -440,7 +435,6 @@ return res.status(500).json({ "error": "Internal server error" })},;"
             </button>;
 ursor/automate-test-improve-and-merge-code-646c;
           </div>;
-        </div>;
       )}ursor/automate-test-improve-and-merge-code-646c;
     return this.props.children;
   }
@@ -499,7 +493,6 @@ if (process.env.NODE_ENV === 'development') {'
       console.error('Error "details":', error);'
       console.error('Error "info":', errorInfo);'
     }
-  }
 
   render() {
     }
@@ -550,7 +543,6 @@ onClick={() => this.setState({ "hasError": false })}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   public render() {
     if (this.state.hasError) {
       return (
@@ -565,13 +557,10 @@ onClick={() => this.setState({ "hasError": false })}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-<<<<<<< HEAD
               className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               Reload Page
@@ -588,7 +577,6 @@ main
             )}
 
           </div>
-        </div>
       );
     }
 
@@ -620,7 +608,6 @@ main
     }
     return this.props.children;
   }
-}
 class ErrorBoundary extends Component < Props, State> {constructor ("props": Props) {super (props)this.state = { "has_error": false }
 }
   static getDerivedStateFromError ("error": Error): State {return { "has_error": true, error }
@@ -699,12 +686,9 @@ if ( {) {$2;
                 Refresh Page;
               </button>;
             </div>;
-          </div>;
         </div>)}
         </div>;
       )} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}
-}
 }
   } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
 }
@@ -720,14 +704,11 @@ if ( {) {$2;
   }
 }export default ErrorBoundary;ursor/automate-test-improve-and-merge-code-646c;
           </div>
-    </div>
   );
 }
         </div>;
       )} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" },"
 } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}
-}
 }
  
 } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })},"
@@ -747,17 +728,12 @@ if ( {) {$2;
 } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })},"
 }return this.props.children;
   }
-}
 
     return this.props.children;
   }
-}
 
 main
 
 main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

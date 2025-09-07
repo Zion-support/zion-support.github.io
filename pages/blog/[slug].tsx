@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
 import AdvancedSEO from '@/components/seo/AdvancedSEO';
@@ -57,7 +56,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null),
         setError('Article not found')
       }
-    }
   }, [slug, initialPost]);
 
   if (error) {
@@ -101,7 +99,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
               </p>
             )}
           </div>
-        </div>
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
@@ -149,34 +146,5 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   if (!post) {
     return { notFound: true }
   }
-<<<<<<< HEAD
   return { props: { initialPost: post }, revalidate: 60 }
 };
-=======
-  return { props: { initialPost: post}, revalidate: 60}
-},
-=======
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function BlogSlug() {
-  return (
-    <Layout>
-      <Head>
-        <title>Blog Post - Zion Tech Group</title>
-        <meta name="description" content="Blog post content." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog Post</h1>
-          <p className="text-lg text-gray-600">
-            Blog post content coming soon.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

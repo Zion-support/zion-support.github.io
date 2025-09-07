@@ -112,99 +112,12 @@ localTracks = await createLocalTracks({
 });
     }
 
-<<<<<<< HEAD
     await r.connect(serverUrl, token, {
       autoSubscribe: true}),
 
-=======
-    await r.connect($2);
-=======
-localTracks = await createLocalTracks({
-<<<<<<< HEAD
-        audio: true,}
-        video: VideoPresets.h720,}
-      })
-    } else {;}
-      localTracks = await createLocalTracks({ audio: true, video: false,}
-})
-    setConnectedAt(Date && Date.now())
-    rebuild(r)
-    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {
-      localTracks = await createLocalTracks({ audio: true, video: false })
-    await r && r.connect(serverUrl, token, {
-      autoSubscribe: true}),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
     // publish local tracks
     for (const t of localTracks) {
       await r.localParticipant.publishTrack(t)
-    }
-<<<<<<< HEAD
-=======
-        audio: true,
-        video: VideoPresets.h720,
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-    } else {;
-      localTracks = await createLocalTracks({ audio: true, video: false });
-    }
-    setConnectedAt(Date && Date.now());
-    rebuild(r);
-    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
-      localTracks = await createLocalTracks({ audio: true, video: false });
-    }
-    await r && r.connect(serverUrl, token, {;
-      autoSubscribe: true}),;
-    // publish local tracks;
-    for (const t of localTracks) {;
-      await r && r.localParticipant.publishTrack(t);
-    }
-      }
-    }
-  }, [connect]);
-<<<<<<< HEAD
-  const handleLeave = () => {
-    if (room) {
-    await r.connect(serverUrl, token, {
-      }
-      "autoSubscribe": true
-   
-});
-    // publish local tracks,
-setRoom(r);
-    setConnectedAt(Date.now());
-    rebuild(r);
-<<<<<<< HEAD
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [serverUrl, token, startMode]);
-
-const rebuild = (current?: Room | null) => {
-   ;
-  }
-  const r = current |room;
-    if (!r) return;
-
-const "list": Array<RemoteParticipant | LocalParticipant> = [;
-      r.localParticipant,
-      ...Array.from(r.participants.values())
-    ];
-    setParticipants(list)) => {
-  return $3;}
-}
-};
-
-  useEffect(() => {
-
-    }
-
-    connect();
-    return () => {
-      }
-      if (room) {
-}
-room.disconnect();
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      }
     }
   }, [connect]);
 
@@ -214,11 +127,8 @@ const handleLeave = () => {
 }
 room.disconnect();
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   const handleLeave = () => {}
     if (room) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   }, [connect]);
 
@@ -231,7 +141,6 @@ const handleLeave = () => {;
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-<<<<<<< HEAD
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
   displayName;
@@ -253,7 +162,6 @@ export type StartMode = 'video' | 'audio';}export default function CallRoom() {c
     await r && r.connect(serverUrl, token, {autoSubscribe: true}),// publish local tracks;
     for (const t of localTracks) {await r && r.localParticipant.publishTrack(t)}
       }
-    }
   }, [connect])const handleLeave = () => {if (room) {await r.connect(serverUrl, token, {autoSubscribe: true;
     })// publish local tracks;
     setRoom(r)setConnectedAt(Date.now())rebuild(r)// eslint-disable-next-line react-hooks/exhaustive-deps;
@@ -268,7 +176,6 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000): 0;onLeave?.(durationSec)}room && room.disconnect()}onLeave?.(durationSec)}const gridCols = useMemo(() => {const count = participants.length |1;
         room.disconnect()
       }
-    }
   }, [connect]);
 
   const handleLeave = () => {
@@ -313,18 +220,14 @@ return (;
 key={String((p as any).sid || (p as any).identity) + idx}
             participant={p}
             is_local={p instanceof LocalParticipant}
-<<<<<<< HEAD
             display_name={}
               (p as any).name ||;'
               (p instanceof LocalParticipant ? 'You' : undefined);
-=======
             display_name={
-<<<<<<< HEAD
               (p as any).name ||;
               (p instanceof LocalParticipant ? 'You' : undefined);'
             } />
         ))}
       </div>
-    </div>
   );
 }

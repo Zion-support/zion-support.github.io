@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**;
@@ -23,7 +19,6 @@ class ComprehensiveTestingSuite {;}
     this.testReports = []};
 ;"
   log(message, type = "info") {;}"
-<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry),};
@@ -31,8 +26,6 @@ class ComprehensiveTestingSuite {;}
     console.log(logEntry)};
 ;
   log(message, type = "info") {;}
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const timestamp = new Date().toISOString();
 
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
@@ -137,63 +130,13 @@ class ComprehensiveTestingSuite {;}
       await this.runLintingTests();
       await this.runTypeChecking();
       await this.runBuildTests();
-<<<<<<< HEAD
 module.exports = ComprehensiveTestingSuite;
-=======
-      const report = await this.generateTestReport();
-      this.log("Comprehensive Testing Suite completed");
-      this.log(`"Summary": ${report.summary.totalPassed}/${report.summary.totalTests} tests passed`);
-      this.log(`Success "Rate": ${report.summary.successRate}%`);
-      if (report.summary.totalFailed > 0) {;}
-        this.log(`${report.summary.totalFailed} tests failed`, "error"),};
-      ;
-      return report,} catch (error) {;}
-      this.log(`Comprehensive testing suite "failed": ${error.message}`, "error");
-      throw error,};
-  };
-};
-;
-// Run the comprehensive testing suite;
-if (require.main === module) {;}
-  const testSuite = new ComprehensiveTestingSuite();
-  testSuite.run().catch(console.error),};
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-module.exports = ComprehensiveTestingSuite;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = ComprehensiveTestingSuite;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ComprehensiveTestingSuite;
-<<<<<<< HEAD
 module.exports = ComprehensiveTestingSuite;
       const report = await this.generateTestReport();"
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       const report = await this.generateTestReport();"
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 "`;
 

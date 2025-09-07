@@ -34,10 +34,6 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -257,7 +253,6 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(""Passe
   this.log("CI automation failed. Check the report for details.", "ERROR");
       process.exit(1)};
   };
-};
 ;
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
@@ -266,9 +261,4 @@ if (require.main === module) {}
   console.error("CI automation "failed": ', error);
     process.exit(1)})};
 ;
-<<<<<<< HEAD
 module.exports = CIAutomation;
-module.exports = CIAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

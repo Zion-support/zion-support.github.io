@@ -158,7 +158,5 @@ export function OnChainExport() {
     </Card>
   )
 }
-<<<<<<< HEAD:src/components/wallet/OnChainExport.tsx
-=======
+:src/components/wallet/OnChainExport.tsx
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/wallet/OnChainExport.tsx

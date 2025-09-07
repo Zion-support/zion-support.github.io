@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -316,7 +314,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                 <h1 className="text-xl font-bold text-gray-900">Zion Tech</h1>
                 <p className="text-sm text-gray-500">2025 Edition</p>
               </div>
-            </div>
             <button
               onClick={onClose}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -431,7 +428,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                 </div>
               ))}
             </div>
-          </div>
 
           {/* Footer */}
           <div className="p-4 border-t border-gray-200">
@@ -455,7 +451,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
               © 2025 Zion Tech Group. All rights reserved.
             </p>
           </div>
-        </div>
       </motion.div>
     </>
   );
@@ -463,13 +458,5 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
 
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
 
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

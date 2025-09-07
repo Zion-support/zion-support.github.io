@@ -3,7 +3,6 @@ import Link from 'next/link';'
 import { motion } from 'framer-motion';'
 
 import {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   Phone,
   Mail,
   MapPin,
@@ -21,20 +20,12 @@ import {}
   Facebook,
   Twitter,
   Linkedin,
-<<<<<<< HEAD
   Instagram,
   Youtube,;
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
   Instagram,;
   Youtube,;'
   Github,;} from 'lucide-react';import {};
@@ -47,8 +38,6 @@ const contactInfo = {'
   address: '364 E Main St STE 1008 Middletown DE 19709''
   website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   }
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
@@ -57,7 +46,6 @@ import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
 
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
-<<<<<<< HEAD
 import {
   Phone
   Mail
@@ -80,7 +68,6 @@ import {
   Youtube
   Github;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -132,7 +119,6 @@ const contactInfo = {
 {"name": 'Quantum Genomic Analysis', "href": '/quantum-genomic-analysis';'
 }
 {"name": 'AI Autonomous Clinical Trials', "href": '/ai-autonomous-clinical-trials';'
-}];
 }];
 {/* Background Effects */;
 }<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {{"title": 'AI & Automation';'
@@ -323,7 +309,6 @@ return (;
 }
         <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-6 gap-8 mb-12">;"
           {/* Company Info */}
-<<<<<<< HEAD
 
           <div className='"lg":col-span-2'>'
             <motion.div,
@@ -358,19 +343,11 @@ solutions. Transforming businesses with cutting-edge technology.
                 <div className='flex items-center text-gray-300'>'
                   <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.address}</span>
-<<<<<<< HEAD
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />
-=======
-                </div>'
-                <div className='flex items-center text-gray-300'>'"
-                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">"
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span>{contactInfo.website}</span>
                 </div>
-              </div>
             </motion.div>
           </div>
 
@@ -391,7 +368,6 @@ solutions. Transforming businesses with cutting-edge technology.
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />;'
                   <span>{contactInfo.website}</span>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
               </p>;
@@ -399,7 +375,6 @@ solutions. Transforming businesses with cutting-edge technology.
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />;"
                   <span>{contactInfo.website}</span>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
               <div className='space-y-3'>;'
@@ -419,7 +394,6 @@ solutions. Transforming businesses with cutting-edge technology.
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />;"
                   <span>{contactInfo && contactInfo.website}</span>;
                 </div>;
-              </div>;
             </motion && motion.div>;
           </div>;{/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;
@@ -451,7 +425,6 @@ solutions. Transforming businesses with cutting-edge technology.
                 {category.services.map((service, serviceIndex) => (<li key={serviceIndex}>;
                     <Link;
                       href={service.href}
-<<<<<<< HEAD
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group';
                     >;
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />;
@@ -479,13 +452,6 @@ solutions. Transforming businesses with cutting-edge technology.
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-=======
-
-                      className='text-gray-400 "hover": text-cyan-400 transition-colors duration-300 text-sm flex items-center group''
-                    >
-                      <ArrowRight className='w-3 h-3 mr-2 group-"hover":translate-x-1 transition-transform duration-300' />'
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       {service.name}
                 )
 }
@@ -519,7 +485,6 @@ solutions. Transforming businesses with cutting-edge technology.
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
               <Users className='w-5 h-5 mr-2 text-purple-400' />'
@@ -574,23 +539,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />'
               Follow Us
-=======
-          {/* Social Media *}
-}
-          <motion&& motion.div;
-            initial={{ opacity: 0;, y: 20 ;}
-}
-
-            whileInView={{ opacity: 1;, y: 0 ;}
-}
-
-            transition={{ duration: 0.6;, delay: 0.4 ;}
-}
-           />
-<h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
-              <Rocket className='w-5 h-5 mr-2 text-pink-400' />
-              Follow Us;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </h4>
             <div className='grid grid-cols-3 gap-4'>'
               {socialLinks.map((social, index) => (
@@ -602,7 +550,6 @@ className='w-12 h-12 bg-gray-800 "hover": bg-cyan-600 rounded-xl flex items-cent
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-"hover":text-white transition-colors duration-300' />'
                 </Link>
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.4 }}
           >;
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
@@ -618,9 +565,6 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />;
                 </Link>;
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             </div>
           </motion.div>
@@ -631,7 +575,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion.div>;
         </div>;
-            </div>;
           </motion && motion.div>;
         </div>;))}
         {/* Newsletter Signup */}
@@ -662,15 +605,9 @@ type='email''
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 "focus":outline-none "focus":border-cyan-500 "focus":ring-2 "focus":ring-cyan-500/20'' />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl "hover":shadow-2xl "hover":shadow-cyan-500/25 transition-all duration-300'>'
                 Subscribe
-<<<<<<< HEAD
-=======
-                Subscribe;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
               <input;
 type='email'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.5 }}
@@ -724,10 +661,8 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>;
                 Subscribe;
-<<<<<<< HEAD
               </button>;
             </div>;
-          </div>;
         </motion.div>;
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights. 
               Be the first to know about breakthrough solutions and industry trends.
@@ -740,24 +675,15 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
                 Subscribe
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </button>
             </div>
-          </div>
         </motion.div>
 
                 Subscribe;
               </button>;
             </div>;
-          </div>;
         {/* Bottom Bar */}
         <motion&& motion.div;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         </motion.div>;
         {/* Bottom Bar */}
         <motion.div;
@@ -787,17 +713,14 @@ href='/terms''
                 className='"hover":text-cyan-400 transition-colors duration-300''
               >
                 Terms of Service
-=======
               <span className='mx-2' />|</span>;
 
               <Link;
 href='/terms'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='hover:text-cyan-400 transition-colors duration-300'
                />
                 Terms of Service;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </Link>
             </div>
             <div className='flex items-center space-x-2'>'
@@ -808,24 +731,12 @@ href='/terms'
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>'
               <div className='text-cyan-400 text-sm font-semibold'>'
                 99.9% Uptime
-<<<<<<< HEAD
-=======
-                99.9% Uptime;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' /></div>
               <div className='text-cyan-400 text-sm font-semibold' />
                 99.9% Uptime;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
-            </div>
-          </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     </footer>;
   );
 }
@@ -874,7 +785,6 @@ href='/terms'
               </div>;"
               <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
               <div className="text - cyan - 400 text - sm font - semibold">;
-=======
 
     </footer>;
   )}className='border - t border - gray - 800 pt - 8'>'
@@ -923,8 +833,6 @@ href='/terms'
               <div className="text - cyan - 400 text - sm font - semibold">;"
                 99.9% Uptime;
               </div>;
-            </div>;
-          </div>;
         </motion.div>;
       </div>;
   )</footer>;

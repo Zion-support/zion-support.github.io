@@ -12,7 +12,7 @@ export default function handler() {
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
+:pages_backup/api/jobs/[id].ts
 
 
   if (idx === -1) {
@@ -74,9 +74,7 @@ export default function handler() {
   res.setHeader("Allow", "GET, PATCH");"
   res.status(405).end("Method Not Allowed");"
 }
-}
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
+:pages_backup/api/jobs/[id].ts
 
 
 
@@ -86,7 +84,6 @@ export default function handler() {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -97,4 +94,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ job: { id: req.query.id } });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

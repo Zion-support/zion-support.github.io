@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/components/Footer.tsx
+:src/components/Footer.tsx
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
@@ -9,8 +9,6 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
   }
   return envVar
 }
-=======
->>>>>>> origin/main:src_disabled_1757239864/components/Footer.tsx
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL;
@@ -35,14 +33,13 @@ const GITHUB_URL = resolveUrl(
 
 export function Footer() {
   return (
-<<<<<<< HEAD:src/components/Footer.tsx
+:src/components/Footer.tsx
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <div className="space-y-4">
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">ZION</span>
-=======
     <footer className="bg-slate-900 text-gray-300">
 import React from 'react';
 import { FooterNewsletter } from '@/components/FooterNewsletter';
@@ -75,7 +72,6 @@ const Footer: React.FC = () => {
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
->>>>>>> origin/main:src_disabled_1757239864/components/Footer.tsx
             </div>
             <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}>
               The world&apos,s first free marketplace dedicated to high-tech and artificial intelligence.
@@ -137,7 +133,6 @@ const Footer: React.FC = () => {
                 <span className="sr-only">GitHub</span>
               </a>
             </div>
-          </div>
 
           <div className="space-y-4">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Marketplace</h3>
@@ -197,17 +192,13 @@ const Footer: React.FC = () => {
             <div className="max-w-sm">
               <FooterNewsletter />
             </div>
-          </div>
-        </div>
 
-<<<<<<< HEAD:src/components/Footer.tsx
+:src/components/Footer.tsx
         <div className="mt-8 flex justify-end">
-=======
         <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
->>>>>>> origin/main:src_disabled_1757239864/components/Footer.tsx
           <button
             type="button"
             onClick={() => {
@@ -224,7 +215,7 @@ const Footer: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD:src/components/Footer.tsx
+:src/components/Footer.tsx
         <div className="mt-12 pt-8 border-t border-primary/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-foreground/80 text-sm">
@@ -250,13 +241,9 @@ const Footer: React.FC = () => {
                 API Status
               </Link>
             </div>
-          </div>
-        </div>
         <FeedbackWidget />
       </div>
     </footer>
   )
 }
-=======
 export default Footer;
->>>>>>> origin/main:src_disabled_1757239864/components/Footer.tsx

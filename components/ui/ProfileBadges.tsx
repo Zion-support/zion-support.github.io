@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 import React from 'react';'
 import type { KycProfile } from '../../utils / kyc';'

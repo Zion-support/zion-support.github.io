@@ -5,13 +5,9 @@ export default function PartnerDashboard() {
   }
   const [apiKey, setApiKey] = useState('');'
 
-<<<<<<< HEAD
   useEffect(() => {
     const saved = localStorage.getItem("zion_partner_token");
     if (saved) setToken(saved)
-=======
-export default function PartnerDashboard() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, []);
 
 
@@ -38,7 +34,6 @@ const data = await res.json();
       setToken(data.token);
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
-  }
 
   async function fetchUsage() {;
     }
@@ -52,7 +47,6 @@ const res = await fetch('/api/partners/usage', {'
 const data = await res.json();
     setUsage(data.summary |null);
     setLoading(false);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   async function regenerateKey() {
     }
@@ -95,9 +89,7 @@ onClick={getToken}
               >
                 Get JWT
               </button>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
-          </div>
         )}
 
 <div className='grid "md": grid-cols-3 gap-6'>'
@@ -121,7 +113,6 @@ onClick={fetchUsag
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;'
               {loading ? 'Loading...' : 'Refresh'}'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </button>
             {usage ? (
               <div className='text-sm'>'
@@ -138,12 +129,10 @@ onClick={fetchUsag
                         {k}: {v as any}
                       </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
-<<<<<<< HEAD
             {usage ? (
               <div className="text-sm">
                 <p>Total requests: <strong>{usage.totalRequests}</strong></p>
@@ -153,23 +142,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                   </ul>;
                 </div>;
-              </div>;
             ) : (<p className='text-gray-500 text-sm'>No usage yet.</p>            )}'
           </div>;
-        </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </ul>
                 </div>
-              </div>
             ) : (
 
 <p className='text-gray-500 text-sm'>No usage yet.</p>'
             )}
           </div>
-        </div>
 
 <div className='bg-white p-6 rounded-lg shadow mt-6'>'
           <h3 className='font-medium mb-2'>SDKs</h3>'
@@ -186,30 +169,7 @@ className='text-blue-600 underline''
             GraphQL SDK
           </a>
         </div>
-      </div>
-    </div>
-<<<<<<< HEAD
   );
-=======
-})
-const data = await res.json ()
-setUsage (data.summary || null)
-setLoading (false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-);
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

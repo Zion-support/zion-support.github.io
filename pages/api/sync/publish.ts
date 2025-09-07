@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
+:pages_backup/api/sync/publish.ts
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -9,8 +8,6 @@ import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
-  if (scope = $2;
-  if (scope = $2;
   if (scope = $2;
   return true
 }
@@ -28,7 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 export default async function handler(req, res) {
   try {
 
@@ -59,12 +55,11 @@ export default async function handler(req, res) {
     }
     const computed = computeMerkleRootFromVotes($2);
     if (computed !== providedRoot) {
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
+:pages_backup/api/sync/publish.ts
   if (scope;
 origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: "Merkle root mismatch" })
     }
-  }
 
   const alreadyPropagated = payload && payload.propagate === false;
 
@@ -94,7 +89,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature");
     const sig = baseSignature.signPayload(localBody);
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
+:pages_backup/api/sync/publish.ts
     const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature")
@@ -106,7 +101,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -114,12 +108,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   const entityId = getEntityId(event)
   const currentState = readState()
   upsertEvent(currentState, event)
@@ -132,7 +124,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .filter((p) => !p.paused)
         .map(async (peer) => {
 
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
+:pages_backup/api/sync/publish.ts
           const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 
           try {
@@ -171,7 +163,6 @@ if ( {) {
 }
       return res.status (400).json ({ error: "Merkle root mismatch" });
     }
-  }
   const entity_id = getEntityId (event);
   const current_state = read_state ();
   upsert_event (current_state, event);
@@ -199,7 +190,7 @@ if (headers["x - zion - signature"] = sig) {
           try {
             await axios.post (url, local_body, { headers, timeout: 5000 });
           } catch {
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
+:pages_backup/api/sync/publish.ts
             // ignore peer failure;
           }
         }));
@@ -222,22 +213,10 @@ if (headers["x - zion - signature"] = sig) {
     )
   }
 
-<<<<<<< HEAD:pages_backup/api/sync/publish.ts
+:pages_backup/api/sync/publish.ts
   return res.status(200).json({ status: 'accepted', entityId });
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "accepted", entityId })
 }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

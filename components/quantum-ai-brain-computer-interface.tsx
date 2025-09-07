@@ -84,13 +84,10 @@ rel='canonical''
                     {service.setupTim
 }
                   </div>;
-                </div>;
                 <div className='flex items-center text-yellow-400'>;'
                   <Star className='w-4 h-4 mr-1' />;'
                   {service.rating.toFixed(1)}
-<<<<<<< HEAD
                 </div>
-              </div>
               <Button,
 href='/contact''
 variant='quantum';'
@@ -115,67 +112,12 @@ variant='quantum';'
                   <span className='text-xs'>{service.contactInfo.address}</span>'
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </UltraAdvancedFuturisticBackground>
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                </div>;
-              </div>;
-              <Button;
-                href='/contact';
-                variant='quantum';
-                size='lg';
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
-                className='w-full';
-              >;
-                Book a Demo;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
-                  <span>{service.contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Mail className='w-4 h-4 text-purple-400' />;
-                  <span>{service.contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <MapPin className='w-4 h-4 text-green-400' />;
-                  <span className='text-xs'>{service.contactInfo.address}</span>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-  )}return (<UltraAdvancedFuturisticBackground>;
-<<<<<<< HEAD
-=======
-  return (
-    <UltraAdvancedFuturisticBackground>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name='description' content={service.description} />;
@@ -221,12 +163,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service.trial_days}-day free trial • Setup:{' '}
                     {service.setup_time}
                   </div>;
-                </div>;
                 <div className='flex items - center text - yellow - 400'>;
                   <Star className='w - 4 h - 4 mr - 1' />;
                   {service.rating.to_fixed (1)}
                 </div>;
-              </div>;
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -254,26 +194,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-    </UltraAdvancedFuturisticBackground>);
-}
-
-}
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    </UltraAdvancedFuturisticBackground>)}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

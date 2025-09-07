@@ -18,7 +18,6 @@ console.log(""[INFO]  Starting advanced syntax error fix automation...")
     const orphanedPatterns = ["/^\s*}", "\[\"]
   content = content.replace(pattern, ")
     content = content.replace(malformedJSXCloseRegex, "</>")
-    content = content.replace(malformedJSXCloseRegex, "</>")
   return "})"
     const orphanedImportRegex = /^\s*\} from "lucide-react"
     content = content.replace(orphanedImportRegex, "")
@@ -34,16 +33,10 @@ function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]
       if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
 const srcDir = path.join(process.cwd(), "src"
-const srcDir = path.join(process.cwd(), "src"
 console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fixes applied: ${totalFixes}");console.log("� Files "fixed": ${fixedFiles.length}");console.log("� Fixed "files": ${fixedFiles.join(", ")}"
   "timestamp"
   fixedFiles,"summary": "Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files"
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
-<<<<<<< HEAD
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
-console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

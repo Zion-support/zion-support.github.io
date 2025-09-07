@@ -45,13 +45,9 @@ class SmartDeploymentAutomation {}
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
-<<<<<<< HEAD
         
         
         
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -184,16 +180,10 @@ class SmartDeploymentAutomation {}
             this.log(`Smart Deployment Automation "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the automation if this script is executed directly;
 if ( {})
     const automation = new SmartDeploymentAutomation) {}
      {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SmartDeploymentAutomation;
-module.exports = SmartDeploymentAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

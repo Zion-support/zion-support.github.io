@@ -6,8 +6,6 @@ const path = require("path");
 const sitemapContent = `<?xml version="1.0" encoding="UTF-8";
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
     <loc>"https"
-    <loc>"https"
-    <loc>"https"
     fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml")
 // console.log(" Sitemap generated")
     console.log("🤖 Generating robots.txt...")
@@ -29,11 +27,6 @@ const metaConfig = ";
   "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions."}
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
-<<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
-    console.log(" SEO improvement completed!")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

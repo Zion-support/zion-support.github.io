@@ -118,16 +118,10 @@ class AICodeAnalyzer {}
             this.log(`AI Code Analyzer "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the analyzer if this script is executed directly;
 if ( {})
     const analyzer = new AICodeAnalyzer) {}
      {}
     const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = AICodeAnalyzer;
-module.exports = AICodeAnalyzer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

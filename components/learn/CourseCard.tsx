@@ -68,10 +68,7 @@ export default function CourseCard({ course }: { course: Course}) {
           <a className='text-blue-600 "hover":underline text-sm'>View course</a>'
         </Link>
       </div>
-    </div>
-<<<<<<< HEAD
   )
 }
-=======
   );
 }

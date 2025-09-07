@@ -16,11 +16,4 @@ class HealthMonitor {
         console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
         console.log(`❌ ${check.name}: ${error.message}`)}
     }
-  }
-}
-<<<<<<< HEAD
 new HealthMonitor().runChecks();
-new HealthMonitor().runChecks();
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

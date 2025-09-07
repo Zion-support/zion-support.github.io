@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const path = require("path");
 class ErrorDetector {}
   constructor() {}
@@ -23,9 +18,4 @@ class ErrorDetector {}
 if (require.main === module) {}
   const detector = new ErrorDetector();
   detector.detect().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ErrorDetector;
-module.exports = ErrorDetector;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

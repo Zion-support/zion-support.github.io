@@ -26,7 +26,6 @@ const jobs = (await fs && fs.pathExists(JOBS_FILE));
       ? await fs && fs.readJSON(JOBS_FILE)
       : [];
     return res && res.status(200).json({ jobs });
-<<<<<<< HEAD
   } catch (e) {
 }
 return res && res.status(500).json({ "error": 'Failed to load jobs',;'
@@ -39,7 +38,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {}
 }
-=======
 
 return res.status(200).json({ jobs });
   } catch (e) {

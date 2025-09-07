@@ -57,7 +57,6 @@ const has = null;
                   <a className='px-3 py-1.5 rounded-md border'>Browse Talent</a>;'
                 </Link>;
               </div>;
-            </div>;
           ) : (<div className='space-y-2'>;'
               <div className='text-base font-medium'>Next steps</div>;'
               <ul className='list-disc pl-5 space-y-1 text-sm'>;'
@@ -75,7 +74,6 @@ const has = null;
                   <a className='px-3 py-1.5 rounded-md border'>Browse Jobs</a>;'
                 </Link>;
               </div>;
-            </div>;
           )}
         </div>;
 <div className='p-4 border-t border-gray-200 "dark":border-gray-800 flex justify-end'>;'
@@ -86,8 +84,6 @@ const has = null;
             Done;
           </button>;
         </div>;
-      </div>;
-    </div>;
   )}
       </div>;
   )}
@@ -108,9 +104,7 @@ export default function OnboardingWizard() {
     try {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_has_onboarded1')
-=======
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       }
     } catch {}
     setOpen(false)
@@ -143,7 +137,6 @@ export default function OnboardingWizard() {
                 <Link href="/jobs/post"><a className="px-3 py-1.5 rounded-md bg-blue-600 text-white">Post a Job</a></Link>
                 <Link href="/talent"><a className="px-3 py-1.5 rounded-md border">Browse Talent</a></Link>
               </div>
-            </div>
           ) : (
             <div className="space-y-2">
               <div className="text-base font-medium">Next steps</div>
@@ -156,18 +149,13 @@ export default function OnboardingWizard() {
                 <Link href="/dashboard"><a className="px-3 py-1.5 rounded-md bg-blue-600 text-white">Go to Dashboard</a></Link>
                 <Link href="/talent"><a className="px-3 py-1.5 rounded-md border">Browse Jobs</a></Link>
               </div>
-            </div>
           )}
         </div>
-<<<<<<< HEAD
         <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
           <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
         </div>
-      </div>
-    </div>
   )
 }
-=======
 <div className='p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end'    />
           <button
             onClick={completeOnboarding}
@@ -177,7 +165,5 @@ export default function OnboardingWizard() {
             Done
           </button>
         </div>
-      </div>
-    </div>
   );
 }

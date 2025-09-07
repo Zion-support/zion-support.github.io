@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -150,7 +149,6 @@ export default function ServicesShowcase2028() {
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -206,11 +204,9 @@ export default function ServicesShowcase2028() {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Featured Services */}
@@ -245,7 +241,6 @@ export default function ServicesShowcase2028() {
                         <div className="text-2xl font-bold text-purple-400">{service.price}</div>
                         <div className="text-sm text-purple-300">{service.period}</div>
                       </div>
-                    </div>
 
                     <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-purple-300 mb-4">{service.description}</p>
@@ -262,7 +257,6 @@ export default function ServicesShowcase2028() {
                       <div className="text-sm text-purple-300">
                         <span className="font-medium">Growth Rate:</span> {service.growthRate}
                       </div>
-                    </div>
 
                     <div className="flex items-center justify-between">
                       <Link
@@ -275,13 +269,9 @@ export default function ServicesShowcase2028() {
                         <div className="text-sm text-purple-300">Setup Time</div>
                         <div className="text-white font-medium">{service.setupTime}</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Market Analysis */}
@@ -348,7 +338,6 @@ export default function ServicesShowcase2028() {
               <div className="text-pink-300">Market Share in Niche</div>
             </motion.div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -399,7 +388,6 @@ export default function ServicesShowcase2028() {
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>Money-Back Guarantee</span>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -407,26 +395,4 @@ export default function ServicesShowcase2028() {
       <UltraFuturisticFooter2028 />
     </>
   )
-=======
-import Layout from '../components/layout/Layout';
-
-export default function 2028servicesshowcase() {
-  return (
-    <Layout>
-      <Head>
-        <title>2028 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="2028 Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">2028 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional 2028 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

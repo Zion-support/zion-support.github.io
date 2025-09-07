@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 ;
   {'Quantum-secured space communication',"id": 'quantum - space - communications',"name": 'Quantum Space Communications',"tagline": 'Revolutionary quantum - secured space communication network',"price": '$75, 999',"period": '/month',"description":;'
       "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.","features": [;"
@@ -2054,7 +2053,6 @@ export const "emergingTechServices": EmergingTechService[] = [;
 ;
 export const "emergingTechServices": EmergingTechService[] = [;
   // Quantum Internet & Communication Services;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-internet-security-platform',;'
@@ -2887,8 +2885,6 @@ export interface EmergingTechService {
     "reviews": 28;
   }
 ];
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
       'Satellite quantum key distribution','
       'Interplanetary communication protocols','

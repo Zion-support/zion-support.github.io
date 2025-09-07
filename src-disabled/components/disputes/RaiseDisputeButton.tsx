@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 
 ;
 import React, { useState } from 'react';
@@ -8,7 +7,7 @@ import {Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle;
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
   DialogDescription} from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm";
 import { useRouter } from 'next/router';
@@ -36,7 +35,7 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { ShieldAlert } from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
@@ -100,10 +99,10 @@ export function RaiseDisputeButton({
   size,
   className 
 }: RaiseDisputeButtonProps) {
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 
 
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 }
 
 export function RaiseDisputeButton({ 
@@ -119,7 +118,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     router.push(`/dashboard/disputes/${disputeId}`)
   },
   
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 Dialog,
   DialogContent,
   DialogHeader,
@@ -191,7 +190,7 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 
   DialogDescription} from "@/components/ui/dialog",import { DisputeForm  } from './DisputeForm';
 import { useRouter  } from 'next/router';
@@ -248,7 +247,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className='sm:max - w-[550px]'>;,
           <DialogHeader>;
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
             <DialogTitle > Raise a Dispute</DialogTitle>;<DialogDescription>Please provide details about the issue you're experiencing with;
               this project.;
             </DialogDescription>;
@@ -272,10 +271,9 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
             onDisputeCreated={handleDisputeCreated}
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -292,7 +290,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
 :src/components/disputes/RaiseDisputeButton.tsx
   )
 }
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
           
 
             on_cancel={() => setIsDialogOpen (false)}          />;
@@ -383,7 +381,7 @@ export function RaiseDisputeButton({;
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
             onCancel={() => setIsDialogOpen(false)}          />;
 
             onCancel={() => setIsDialogOpen(false)}
@@ -391,10 +389,9 @@ export function RaiseDisputeButton({;
         </DialogContent>;
       </Dialog>;
     </>;
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
   );
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+:src_backup/components/disputes/RaiseDisputeButton.tsx
 
 }
 ;

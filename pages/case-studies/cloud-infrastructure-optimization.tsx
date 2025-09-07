@@ -6,7 +6,6 @@ export default function cloudinfrastructureoptimization() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
         <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
@@ -64,8 +63,6 @@ export default function cloudinfrastructureoptimization() {
                     <div className="text-3xl font-bold text-blue-400">$5M+</div>
                     <div className="text-white/70">Annual Revenue</div>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Challenge */}
@@ -136,8 +133,6 @@ export default function cloudinfrastructureoptimization() {
                       implement cost-saving opportunities.
                     </p>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Results */}
@@ -164,8 +159,6 @@ export default function cloudinfrastructureoptimization() {
                         <span className="text-white/90">Manual Intervention</span>
                         <span className="text-2xl font-bold text-green-400">0%</span>
                       </div>
-                    </div>
-                  </div>
                   
                   <div>
                     <h3 className="text-2xl font-semibold text-green-400 mb-6">Additional Benefits</h3>
@@ -188,8 +181,6 @@ export default function cloudinfrastructureoptimization() {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Technologies */}
@@ -203,7 +194,6 @@ export default function cloudinfrastructureoptimization() {
                     </div>
                   ))}
                 </div>
-              </div>
             </section>
 
             {/* Implementation */}
@@ -217,7 +207,6 @@ export default function cloudinfrastructureoptimization() {
                       <h4 className="text-lg font-semibold text-white">Infrastructure Analysis (Months 1-2)</h4>
                       <p className="text-white/70">Comprehensive analysis of current infrastructure and performance bottlenecks</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
@@ -225,7 +214,6 @@ export default function cloudinfrastructureoptimization() {
                       <h4 className="text-lg font-semibold text-white">System Design & Development (Months 3-6)</h4>
                       <p className="text-white/70">Design and development of auto-scaling and monitoring systems</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
@@ -233,9 +221,6 @@ export default function cloudinfrastructureoptimization() {
                       <h4 className="text-lg font-semibold text-white">Testing & Deployment (Months 7-8)</h4>
                       <p className="text-white/70">Comprehensive testing and gradual deployment to production</p>
                     </div>
-                  </div>
-                </div>
-              </div>
             </section>
 
             {/* Call to Action */}
@@ -260,27 +245,10 @@ export default function cloudinfrastructureoptimization() {
                     View All Case Studies
                   </Link>
                 </div>
-              </div>
             </section>
           </div>
         </main>
       </div>
     </>
   )
-=======
-        <title>Cloud Infrastructure Optimization - Zion Tech Group</title>
-        <meta name="description" content="Cloud Infrastructure Optimization solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud Infrastructure Optimization</h1>
-          <p className="text-lg text-gray-600">
-            Professional cloud infrastructure optimization solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -4,7 +4,7 @@
 
 
 import React, { useState } from 'react';
-<<<<<<<< HEAD:src_backup/components/ContactSection.tsx
+<:src_backup/components/ContactSection.tsx
 =
 
 >import React, { useState } from 'react';
@@ -52,7 +52,7 @@ const ContactSection: React.FC = () => {
     }
   };
 
-<<<<<<<< HEAD:src_backup/components/ContactSection.tsx
+<:src_backup/components/ContactSection.tsx
 =fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -145,7 +145,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                     <p className="text-blue-200">kleber@ziontechgroup.com</p>;
                     <p className="text-blue-200">support@ziontechgroup.com</p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">;
                     <Phone className="w-6 h-6" />;
@@ -155,7 +154,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                     <p className="text-blue-200">+1 (302) 464-0950</p>;
                     <p className="text-blue-200">+1 (555) 987-6543</p>;
                   </div>;
-                </div>;
                 <div className="flex items-start space-x-4">;
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">;
                     <MapPin className="w-6 h-6" />;
@@ -168,9 +166,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                       United States;
                     </p>;
                   </div>;
-                </div>;
-              </div>;
-            </div>;
             <div className="bg-blue-800/50 p-6 rounded-lg">;
               <div className="flex items-center space-x-3 mb-4">;
                 <Clock className="w-6 h-6 text-blue-300" />;
@@ -184,8 +179,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                   *24/7 emergency support available for critical issues;
                 </p>;
               </div>;
-            </div>;
-          </div>;
           {/* Contact Form */}
           <div>;
             <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>;
@@ -221,7 +214,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                     placeholder="your.email@example.com";
                   />;
                 </div>;
-              </div>;
               <div>;
                 <label htmlFor="company" className="block text-sm font-medium mb-2">;
                   Company;
@@ -258,7 +250,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                     <p className="text-blue-200">contact@ziontechgroup.com</p>
                     <p className="text-blue-200">support@ziontechgroup.com</p>
                   </div>
-                </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
@@ -269,7 +260,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                     <p className="text-blue-200">+1 (302) 464-0950</p>
                     <p className="text-blue-200">+1 (555) 987-6543</p>
                   </div>
-                </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
@@ -283,9 +273,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                       United States
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
 
             <div className="bg-blue-800/50 p-6 rounded-lg">
               <div className="flex items-center space-x-3 mb-4">
@@ -300,8 +287,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                   *24/7 emergency support available for critical issues
                 </p>
               </div>
-            </div>
-          </div>
 
           {/* Contact Form */}
           <div>
@@ -338,7 +323,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                     placeholder="your.email@example.com"
                   />
                 </div>
-              </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
@@ -387,15 +371,13 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
               )}
             </form>
           </div>
-        </div>
-      </div>
     </section>
   );
 };
 
 
 
-<<<<<<<< HEAD:src_backup/components/ContactSection.tsx
+<:src_backup/components/ContactSection.tsx
 export default ContactSection;
 =                  className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300";
                   placeholder="Your company name";
@@ -444,14 +426,8 @@ export default ContactSection;
               )}
             </form>;
           </div>;
-        </div>;
-      </div>;
-                </div>;
               </form>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
 
     </section>);
 }set_errors (field_errors);
@@ -484,9 +460,6 @@ description: err.message;
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 

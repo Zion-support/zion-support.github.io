@@ -64,7 +64,6 @@ console.log(" Running Lighthouse performance tests...")
   "path": path.relative(process.cwd()"
             "size"
   // Skip directories that can"
-  // Skip directories that can"
 process.on("SIGINT")
 // console.log(`� Received SIGINT, shutting down gracefully...``)
   console.log( Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
@@ -72,9 +71,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start continuous performance "monitoring")
-  console.error(" Failed to start continuous performance "monitoring")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

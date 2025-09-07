@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -73,20 +72,12 @@ export default function ComprehensiveServicesOverviewPage() {
 
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensiveservicesoverview2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Comprehensive Services Overview 2025 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive Services Overview 2025 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
@@ -122,7 +113,6 @@ export default function comprehensiveservicesoverview2025() {
                   <div className="text-3xl font-bold text-orange-400">{averageROI.toFixed(0)}%+</div>
                   <div className="text-white/60">Average ROI</div>
                 </div>
-              </div>
 
               {/* Key Benefits */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -141,7 +131,6 @@ export default function comprehensiveservicesoverview2025() {
                   <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
                   <p className="text-white/70 text-sm">Military-grade security with quantum-resistant encryption and AI threat detection</p>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -198,7 +187,6 @@ export default function comprehensiveservicesoverview2025() {
                     <List className="w-5 h-5" />
                   </button>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -262,7 +250,6 @@ export default function comprehensiveservicesoverview2025() {
                             <div className="text-2xl font-bold text-white">{service.price}</div>
                             <div className="text-white/60 text-sm">{service.period}</div>
                           </div>
-                        </div>
 
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                         <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
@@ -291,7 +278,6 @@ export default function comprehensiveservicesoverview2025() {
                             <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
                             <div className="text-xs text-white/60">Trial</div>
                           </div>
-                        </div>
 
                         {/* CTA */}
                         <a
@@ -343,7 +329,6 @@ export default function comprehensiveservicesoverview2025() {
                               <div className="text-3xl font-bold text-white">{service.price}</div>
                               <div className="text-white/60">{service.period}</div>
                             </div>
-                          </div>
 
                           {/* Features Grid */}
                           <div className="grid grid-cols-2 gap-2 mb-4">
@@ -369,8 +354,6 @@ export default function comprehensiveservicesoverview2025() {
                               <Clock className="w-4 h-4 text-green-400" />
                               <span>{service.setupTime} setup</span>
                             </div>
-                          </div>
-                        </div>
 
                         {/* Right Side - CTA and Category */}
                         <div className="flex-shrink-0 flex flex-col items-end gap-4">
@@ -380,7 +363,6 @@ export default function comprehensiveservicesoverview2025() {
                               <span>{getCategoryIcon(service.category)}</span>
                               <span className="text-sm">{service.category}</span>
                             </div>
-                          </div>
 
                           <a
                             href={service.link}
@@ -392,7 +374,6 @@ export default function comprehensiveservicesoverview2025() {
                             <ArrowRight className="w-4 h-4" />
                           </a>
                         </div>
-                      </div>
                     </motion.div>
                   ))}
                 </AnimatePresence>
@@ -446,24 +427,10 @@ export default function comprehensiveservicesoverview2025() {
                     Call +1 302 464 0950
                   </a>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive Services Overview 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive services overview 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

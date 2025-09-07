@@ -457,9 +457,4 @@ if (require.main === module) {}
       // Process is healthy;
     };
   }, 60000)};
-<<<<<<< HEAD
 module.exports = ImprovedPM2SyncAutomation;
-module.exports = ImprovedPM2SyncAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

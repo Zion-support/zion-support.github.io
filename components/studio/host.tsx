@@ -64,7 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       alert ('Failed to generate episode');'
     } finally {
       setGenerating(false);    }      const data = await res.json();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       setEpisode(data.episode)
     } catch (e) {
       console.error($2);
@@ -78,7 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       setGenerating(false);
     }
-  }
 
 const handleSynthesize = async () => {
     }
@@ -104,8 +102,6 @@ const handleSynthesize = async () => {
       }
       setSynthesizing(false);
     }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  }
 
 const handlePublishRss = async () => {
     }
@@ -126,7 +122,6 @@ const res = await fetch('/api/podcast/rss', { "method": 'POST',;'
       }
       setPublishing(false);
     }
-  }
 return (;
 <div className='space-y-8'>'
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>'
@@ -190,15 +185,8 @@ className='mt-1 w-full border rounded p-2''
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;'
             <label className='block text-sm font-medium'>Invitee Name</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </div>
-        </div>
       </section>
 
 <section className='space-y-3'>'
@@ -240,7 +228,6 @@ className='mt-1 w-full border rounded p-2''
               onChange={e => { return setOperatorPrompt(e && e.target.value)}
             />; }
           </div>;
-        </div>;
 
         <button,
 className='px-4 py-2 bg-blue-600 text-white rounded''
@@ -248,7 +235,6 @@ className='px-4 py-2 bg-blue-600 text-white rounded''
 
       {episode && (
         <button;
-<<<<<<< HEAD
           className='px-4 py-2 bg-blue-600 text-white rounded';
           onClick={handleGenerate}disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
           disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
@@ -278,12 +264,7 @@ className='px-4 py-2 bg-blue-600 text-white rounded''
             <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>;
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />;
           </div>;
-        </div>;
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>;
-=======
-className='px-4 py-2 bg-blue-600 text-white rounded'
-          onClick={handleGenerate}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
       <section className="space-y-3">;"
         <h2 className="text-xl font-semibold">AI Persona</h2>;"
@@ -308,8 +289,6 @@ className='px-4 py-2 bg-blue-600 text-white rounded'
             <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
           </div>
-<<<<<<< HEAD
-        </div>
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
           disabled={generating}
         >
@@ -380,7 +359,6 @@ className='px-4 py-2 bg-blue-600 text-white rounded'
                   {episode.transcript}
                 </pre>;
               </div>;
-            </div>;
             <div className='flex gap-3'>;'
               <button;
                 className='px-4 py-2 bg-purple-600 text-white rounded';'
@@ -398,7 +376,6 @@ className='px-4 py-2 bg-blue-600 text-white rounded'
                 {publishing ? 'Publishing…' : 'Update RSS'}'
               </button>
             </div>
-<<<<<<< HEAD
             {episode.audio && (
 <div className='flex gap-3'>'
                 {episode.audio.mp3Url && (
@@ -407,7 +384,6 @@ className='px-4 py-2 bg-blue-600 text-white rounded'
 href={episode.audio.mp3Url}
                     className='text-blue-600 underline'>'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     Download MP3;
                   </a>;
                 )}
@@ -428,7 +404,6 @@ href={episode.audio.mp3Url}
                   </a>;
                 )}
               </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             )}
           </div>;
         </section>;
@@ -448,7 +423,6 @@ href={episode.audio.mp3Url}
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
-            {episode.audio && (
             {episode.audio && (
               <div className="flex gap-3">
                 {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}

@@ -34,7 +34,6 @@ class $1 {}
   };
 ;
   log(message, type = "info") {}
-  log(message, type = "info") {}
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`
 
@@ -114,7 +113,6 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
             "rule": ruleMatch ? ruleMatch[1] : null,
             "type": "eslint"})};
       };
-    };
 ;
     return errors};
 ;
@@ -167,7 +165,6 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
           "fixError": fixError.message,
           "timestamp": new Date().toISOString()})};
     };
-  };
 ;
   async fixESLintError(error) {}
   if (!fs.existsSync(error.file)) {this.log(`File not "found": ${error.file}", "warn");
@@ -225,7 +222,6 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
   lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join("\n"))};
     };
-  };
 ;
   async fixMissingSemicolonError(error, lines) {}
   if (error.line > lines.length) return;
@@ -264,7 +260,6 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
   lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join("\n"))};
     };
-  };
 ;
   async fixIndentError(error, lines) {}
   if (error.line > lines.length) return;
@@ -282,7 +277,6 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join("\n"))};
     };
-  };
 ;
   async fixConsoleError(error, lines) {}
   if (error.line > lines.length) return;
@@ -308,7 +302,6 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
   lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join("\n"))};
     };
-  };
 ;
   async fixGenericESLintError(error, lines) {}
   if (error.line > lines.length) return;
@@ -411,12 +404,10 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
 ;
       const report = this.generateReport();
       this.log("ESLint Error Fixer completed successfully");
-      this.log("ESLint Error Fixer completed successfully");
 
       return report} catch (error) {  this.log("ESLint Error Fixer "failed": ${error.message  }", "error");
       throw error};
   };
-};
 ;
 // Run the ESLint error fixer;
 if (require.main === module) {}
@@ -431,9 +422,4 @@ if (require.main === module) {}
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
-<<<<<<< HEAD
 module.exports = ESLintErrorFixer;
-module.exports = ESLintErrorFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

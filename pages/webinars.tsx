@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 	return (
@@ -29,137 +28,9 @@ return (
   </>);
 }
 
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Play, ArrowRight, ExternalLink, Star } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-
-const upcomingWebinars = [
-  {
-    title: "AI Revolution in Healthcare: Real-World Applications",
-    description: "Join industry experts as they discuss how AI is transforming healthcare delivery, from diagnostic imaging to personalized medicine and patient care optimization.",
-    date: "2024-02-15",
-    time: "2:00 PM EST",
-    duration: "60 minutes",
-    speaker: "Dr. Sarah Johnson, CTO",
-    attendees: "500+",
-    category: "AI & Healthcare",
-    image: "/api/placeholder/600/400",
-    isLive: false,
-    registrationOpen: true
-  },
-  {
-    title: "Cloud Migration Strategies: Best Practices and Pitfalls",
-    description: "Learn from our cloud experts about successful migration strategies, common challenges, and how to optimize your cloud infrastructure for maximum efficiency and cost savings.",
-    date: "2024-02-22",
-    time: "3:00 PM EST",
-    duration: "45 minutes",
-    speaker: "Michael Chen, Cloud Architect",
-    attendees: "300+",
-    category: "Cloud & Infrastructure",
-    image: "/api/placeholder/600/400",
-    isLive: false,
-    registrationOpen: true
-  },
-  {
-    title: "Cybersecurity Trends 2024: Protecting Your Digital Assets",
-    description: "Stay ahead of emerging threats with insights from our security experts on the latest cybersecurity trends, threat landscape, and best practices for enterprise protection.",
-    date: "2024-02-28",
-    time: "1:00 PM EST",
-    duration: "50 minutes",
-    speaker: "David Kim, Security Lead",
-    attendees: "400+",
-    category: "Cybersecurity",
-    image: "/api/placeholder/600/400",
-    isLive: false,
-    registrationOpen: true
-  }
-];
-
-const pastWebinars = [
-  {
-    title: "Digital Transformation: A Strategic Approach",
-    description: "Comprehensive guide to digital transformation strategies, implementation best practices, and real-world success stories from industry leaders.",
-    date: "2024-01-20",
-    duration: "55 minutes",
-    speaker: "Kleber Santos, CEO",
-    attendees: "750+",
-    category: "Digital Transformation",
-    image: "/api/placeholder/600/400",
-    rating: 4.8,
-    views: "2.5K",
-    isLive: false,
-    registrationOpen: false
-  },
-  {
-    title: "Microservices Architecture: Design Patterns and Implementation",
-    description: "Deep dive into microservices architecture, design patterns, and practical implementation strategies for building scalable, maintainable systems.",
-    date: "2024-01-15",
-    duration: "65 minutes",
-    speaker: "Emily Rodriguez, Lead Developer",
-    attendees: "600+",
-    category: "Software Development",
-    image: "/api/placeholder/600/400",
-    rating: 4.9,
-    views: "3.2K",
-    isLive: false,
-    registrationOpen: false
-  },
-  {
-    title: "Data Analytics: From Insights to Action",
-    description: "Learn how to transform raw data into actionable business insights using modern analytics tools and techniques.",
-    date: "2024-01-10",
-    duration: "50 minutes",
-    speaker: "Lisa Wang, Data Scientist",
-    attendees: "450+",
-    category: "Data Analytics",
-    image: "/api/placeholder/600/400",
-    rating: 4.7,
-    views: "2.8K",
-    isLive: false,
-    registrationOpen: false
-  }
-];
-
-const liveWebinar = {
-  title: "Live: Building Scalable React Applications",
-  description: "Join us live as we demonstrate best practices for building scalable React applications with modern tools and techniques.",
-  time: "Now Live",
-  speaker: "Alex Thompson, Senior Developer",
-  attendees: "150+",
-  category: "Web Development",
-  image: "/api/placeholder/600/400",
-  isLive: true,
-  registrationOpen: false
-};
-
-const categories = [
-  "All",
-  "AI & Machine Learning",
-  "Cloud & Infrastructure",
-  "Cybersecurity",
-  "Software Development",
-  "Data Analytics",
-  "Digital Transformation",
-  "Web Development"
-];
-
-const stats = [
-  { value: "50+", label: "Webinars Hosted" },
-  { value: "10K+", label: "Total Attendees" },
-  { value: "4.8/5", label: "Average Rating" },
-  { value: "95%", label: "Satisfaction Rate" }
-];
-=======
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 
 export default function webinars() {
   return (
-<<<<<<< HEAD
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -204,7 +75,6 @@ export default function webinars() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Live Webinar */}
@@ -245,7 +115,6 @@ export default function webinars() {
                         Join Live
                       </button>
                     </div>
-                  </div>
                   <div className="md:w-1/2 p-8">
                     <div className="flex items-center mb-4">
                       <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-4">
@@ -270,14 +139,12 @@ export default function webinars() {
                       <div className="text-gray-600">
                         Speaker: {liveWebinar.speaker}
                       </div>
-                    </div>
 
                     <button className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 flex items-center justify-center">
                       <Play className="w-5 h-5 mr-2" />
                       Join Live Webinar
                     </button>
                   </div>
-                </div>
               </motion.div>
             </div>
           </section>
@@ -300,7 +167,6 @@ export default function webinars() {
                 </button>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Upcoming Webinars */}
@@ -345,7 +211,6 @@ export default function webinars() {
                         Registration Open
                       </span>
                     </div>
-                  </div>
                   
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{webinar.title}</h3>
@@ -370,7 +235,6 @@ export default function webinars() {
                       <div className="text-sm text-gray-500">
                         Speaker: {webinar.speaker}
                       </div>
-                    </div>
 
                     <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
                       Register Now
@@ -379,7 +243,6 @@ export default function webinars() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Past Webinars */}
@@ -425,7 +288,6 @@ export default function webinars() {
                         Watch Now
                       </button>
                     </div>
-                  </div>
                   
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-200">
@@ -453,7 +315,6 @@ export default function webinars() {
                         <ExternalLink className="w-4 h-4 mr-2" />
                         {webinar.views} views
                       </div>
-                    </div>
 
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
@@ -463,7 +324,6 @@ export default function webinars() {
                       <div className="text-sm text-gray-500">
                         Speaker: {webinar.speaker}
                       </div>
-                    </div>
 
                     <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center">
                       <Play className="w-4 h-4 mr-2" />
@@ -473,7 +333,6 @@ export default function webinars() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -503,23 +362,7 @@ export default function webinars() {
             </motion.div>
           </div>
         </section>
-=======
-    <Layout>
-      <Head>
-        <title>Webinars - Zion Tech Group</title>
-        <meta name="description" content="Webinars solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Webinars</h1>
-          <p className="text-lg text-gray-600">
-            Professional webinars solutions tailored to your business needs.
-          </p>
-        </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
       </div>
     </MainLayout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

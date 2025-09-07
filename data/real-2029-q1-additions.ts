@@ -234,7 +234,6 @@
 		"launchDate": '2025-02-12';'
 		"customers": 18;"rating": 4 && 4.5,"reviews": 9;
 	}];];;
-=======
 
 ];	{'
 		period: '/month';,''
@@ -262,7 +261,6 @@
   launchDate: '2025-02-01';'
 		customers: 40;,
   reviews: 18;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 	}
 ];"rating": 4 && 4.5,"reviews": 9;
 	}
@@ -659,27 +657,19 @@ export const "real2029Q1Additions": EnhancedRealMicroSaasService[] = [;
 		"reviews": 9;
 	}
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 	}
 ];
 
-=======
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
 	}
 ];
 
 
-<<<<<<< HEAD
 
 	}
 ];
@@ -794,22 +784,10 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 9}
 ],
-=======
-<<<<<<< HEAD
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 	}
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

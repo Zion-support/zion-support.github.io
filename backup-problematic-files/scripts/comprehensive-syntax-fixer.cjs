@@ -19,7 +19,6 @@
         stderr: error.stderr || error.message 
       };
     }
-  }
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
@@ -48,13 +47,8 @@
   fixSyntaxErrors(content) {
     let fixed = content;
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
 
     fixed = fixed.replace(/
-=======
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-    // Fix merge conflicts by keeping the HEAD version
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
     
     // Fix common syntax patterns
@@ -94,7 +88,6 @@
           this.fixedFiles.push(filePath);
           this.log(`Fixed syntax errors in: ${filePath}`);
         }
-      }
       
       return true;
     } catch (error) {
@@ -102,7 +95,6 @@
       this.log(`Error processing file ${filePath}: ${error.message}`);
       return false;
     }
-  }
 
   // Get all files to process
   async getAllFiles() {
@@ -131,7 +123,6 @@
         const dirFiles = await this.getFilesInDirectory(dir);
         files.push(...dirFiles);
       }
-    }
 
     return files;
   }
@@ -152,7 +143,6 @@
       } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         files.push(fullPath);
       }
-    }
     
     return files;
   }
@@ -289,7 +279,6 @@ class ComprehensiveSyntaxFixer {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`)
       return false;
     }
-  }
 
   fixSpecificPatterns(content) {
     // Fix specific malformed patterns
@@ -305,7 +294,6 @@ class ComprehensiveSyntaxFixer {
             .replace(/\[\s*;/g, '[')
             .replace(/\]\s*;/g, ']')
         }
-      }
     ]
 
     specificFixes.forEach(fix => {
@@ -326,7 +314,6 @@ class ComprehensiveSyntaxFixer {
       if (fs.existsSync(dirPath)) {
         await this.fixDirectory(dirPath, extensions)
       }
-    }
 
     // Fix root config files
     const configFiles = ['ecosystem.config.cjs', 'package.json']
@@ -335,7 +322,6 @@ class ComprehensiveSyntaxFixer {
       if (fs.existsSync(filePath)) {
         this.fixFile(filePath)
       }
-    }
 
     this.log(`✅ Fixed ${this.fixedFiles.length} files`)
     if (this.errors.length > 0) {
@@ -349,7 +335,6 @@ class ComprehensiveSyntaxFixer {
       fixedFiles: this.fixedFiles,
       errors: this.errors
     }
-  }
 
   async fixDirectory(dirPath, extensions) {
     const files = fs.readdirSync(dirPath)
@@ -365,9 +350,6 @@ class ComprehensiveSyntaxFixer {
         if (extensions.includes(ext)) {
           this.fixFile(filePath)
         }
-      }
-    }
-  }
 
   // Run TypeScript compiler to check for errors
   async runTypeCheck() {
@@ -380,7 +362,6 @@ class ComprehensiveSyntaxFixer {
       this.log(`TypeScript type check failed: ${result.stderr}`);
       return false;
     }
-  }
 
   // Run ESLint to check for linting errors
   async runLintCheck() {
@@ -393,7 +374,6 @@ class ComprehensiveSyntaxFixer {
       this.log(`ESLint check failed: ${result.stderr}`);
       return false;
     }
-  }
 
   // Generate report
   generateReport() {
@@ -459,7 +439,6 @@ class ComprehensiveSyntaxFixer {
 
     return report;
   }
-}
 
 // Handle command line arguments
 if (require.main === module) {
@@ -480,7 +459,6 @@ if (require.main === module) {
       console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]");
       process.exit(1);
   }
-}
 
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -515,14 +493,12 @@ class ComprehensiveSyntaxFixer {}
 });
           console.error(`❌ Error processing ${file}: ${error.message}`);
         };
-      };
       this.generateReport();
       console.log(`✅ Fixed ${this.fixedFiles.length} files out of ${this.processedFiles} processed`);
       
     } catch (error) {}
       console.error('❌ Comprehensive fix failed:', error);
     };
-  };
   getAllFiles(dir, extensions) {}
     const files = [];
     
@@ -545,8 +521,6 @@ class ComprehensiveSyntaxFixer {}
         if (extensions.includes(ext)) {}
           files.push(fullPath);
         };
-      };
-    };
     return files;
   };
   fixFile(filePath) {}
@@ -567,7 +541,6 @@ class ComprehensiveSyntaxFixer {}
         { pattern: /(['"])([^'"]*?)\s*$/gm, replacement: '$1$2$1' },
         
         // Fix merge conflict markers;
-        { pattern: /}
         { pattern: /}
         
         // Fix duplicate imports;
@@ -625,7 +598,6 @@ class ComprehensiveSyntaxFixer {}
           fixedContent = newContent;
           hasChanges = true;
         };
-      };
       if (hasChanges) {}
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         console.log(`✅ Fixed: ${filePath}`);
@@ -636,7 +608,6 @@ class ComprehensiveSyntaxFixer {}
       console.error(`❌ Error fixing ${filePath}: ${error.message}`);
       return false;
     };
-  };
   generateReport() {}
     const report = {}
       timestamp: new Date().toISOString(),
@@ -651,7 +622,6 @@ class ComprehensiveSyntaxFixer {}
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
   };
-};
 // Run if called directly;
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxFixer();

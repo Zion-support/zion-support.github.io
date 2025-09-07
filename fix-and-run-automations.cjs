@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -41,7 +40,6 @@ let fixedContent = content;
       this.errors.push({ file: filePath, error: error.message });
       return false;
     }
-  }
 
   fixSyntaxErrors(filePath) {
     try {
@@ -66,7 +64,6 @@ let fixedContent = content;
       this.errors.push({ file: filePath, error: error.message });
       return false;
     }
-  }
 
   getAllScriptFiles(dir) {
     let scriptFiles = [];
@@ -85,7 +82,6 @@ let fixedContent = content;
       ) {
         scriptFiles.push(fullPath);
       }
-    }
 
     return scriptFiles;
   }
@@ -104,7 +100,6 @@ let fixedContent = content;
       this.log(`❌ Failed to run: ${scriptPath} - ${error.message}`);
       return { success: false, error: error.message };
     }
-  }
 
   async run() {
     this.log('🎯 Starting Automation Script Fixer and Runner');
@@ -141,7 +136,6 @@ const keyScripts = [;
           const result = await this.runScript(scriptPath);
           results.push({ script, ...result });
         }
-      }
 
       // Create a comprehensive automation report
       const report = {
@@ -176,8 +170,6 @@ const reportFile = path.join(;
       );
       throw error;
     }
-  }
-}
 
 // Run the automation script fixer and runner
 const fixer = new AutomationScriptFixer();
@@ -195,22 +187,3 @@ fixer
     process.exit(1);
   });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-    this.scriptsDir = path.join(this.projectRoot, 'scripts')
-const content = fs.readFileSync(filePath, 'utf8');
-        content.includes('')
-        content.includes('')
-            '$1'
-            '$1'
-const content = fs.readFileSync(filePath, 'utf8');
-      if (content.includes("console.log(`"Checking"`)
-          "console.log(`"Checking"`)
-          'console.log(`"Checking"`)
-        "encoding"
-      ' Automation Script Fixer and Runner "failed"
-cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

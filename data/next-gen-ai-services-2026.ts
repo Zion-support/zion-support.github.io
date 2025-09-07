@@ -226,7 +226,6 @@ export interface NextGenAIService2026 {
     "popular": false,"icon": '🎤🎭',"color": 'from-orange-600 to-red-700',"textColor": 'text-orange-400',"link": '"https"://ziontechgroup.com/ai-voice-cloning',"targetAudience": 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',"trialDays": 7,"setupTime": '1 day',"category": 'AI & Voice Technology',"realService": true,"integrations": ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],"useCases": ['Podcast productionMarketing videosE-learning contentAudiobook narration'],"roi": 'Average 60% reduction in voice recording costs and 3x faster content production.',"competitors": ['ElevenLabsPlay.htResemble AIDescript'],"growthRate": '180% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',"launchDate": '2025-02-10',"customers": 156,"rating": 4.8,{"id": 'ai-code-review-assistant',"name": 'AI Code Review Assistant',"tagline": 'Automate code reviews and improve code quality',"price": '$299',"period": '/month',"description": 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',"features": [;'
       'Automated code quality analysis','Security vulnerability detection','Performance optimization suggestions','Code style and best practices','Integration with Git platforms','Custom rule configuration','Team collaboration tools','Code review analytics','Pull request automation','Multi-language support'    ],    "description": 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',"features": [;'
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics','Pull request automationMulti-language support';'
-      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics','Pull request automationMulti-language support';'
     ],"popular": true,"icon": '💻🔍',"color": 'from-indigo-600 to-blue-700',"textColor": 'text-indigo-400',"link": '"https"://ziontechgroup.com/ai-code-review',"targetAudience": 'Software development teams, DevOps engineers, Code quality managers, Open source projects',"trialDays": 14,"setupTime": '2-3 days',"category": 'AI & Development',"realService": true,"link": '"https"://ziontechgroup.com/ai-code-review',    "technology": [;'
       'Python','TensorFlow','React','Node.js','PostgreSQL','Redis','Docker';'
     ],"integrations": [;
@@ -1135,38 +1134,10 @@ export const "nextGenAIServices2026": NextGenAIService2026[] = [;
     rating: 4.7;,
 pr-12325
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    rating: 4.7,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 
 ';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     rating: 4.7,
 '
 
-<<<<<<< HEAD
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

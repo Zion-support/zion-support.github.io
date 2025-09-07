@@ -80,7 +80,6 @@ this.log(` Master error fixer completed successfully. Total "fixes"`)
         this.log("ESLint auto-fix completed")
         results.linting.status = "failed"
       this.log("   Checking TypeScript status...")
-      this.log("   Checking TypeScript status...")
 await this.runCommand("npm", { "args": ["audit", "fix"})]
         this.log("Dependency audit fix completed")
   "type": "dependency"
@@ -88,7 +87,6 @@ await this.runCommand("npm", { "args": ["audit", "fix"})]
           "timestamp"
         results.typescript.status = "failed"
 this.log("   Checking build status...")
-  this.log("No errors detected")
   this.log("No errors detected")
         this.log("Master Error Fixer completed successfully")
         return report} catch (error) {  this.log("Master Error Fixer "failed": ${error.message  }", "error")
@@ -125,9 +123,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start master error "fixer": ")
-  console.error(" Failed to start master error "fixer": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

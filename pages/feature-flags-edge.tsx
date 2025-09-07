@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Flag, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -45,34 +44,7 @@ export default function FeatureFlagsEdgePage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </Layout>
   )
 }
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function featureflagsedge() {
-  return (
-    <Layout>
-      <Head>
-        <title>Feature Flags Edge - Zion Tech Group</title>
-        <meta name="description" content="Feature Flags Edge solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Feature Flags Edge</h1>
-          <p className="text-lg text-gray-600">
-            Professional feature flags edge solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

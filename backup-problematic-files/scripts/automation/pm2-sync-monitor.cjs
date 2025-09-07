@@ -109,7 +109,6 @@ class $1 {}
   fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {}
   console.error("Failed to write to log "file": ", error.message)};
     };
-  };
 ;
   async initialize() {}
   try {}
@@ -124,7 +123,6 @@ class $1 {}
         fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {}
   console.error("Failed to write to log "file": ", error.message)};
     };
-  };
 ;
   async initialize() {}
   try {}
@@ -275,7 +273,6 @@ class $1 {}
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
 
       requiredProcesses.forEach(processName => {})
-  requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);
         if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};
       }
@@ -313,7 +310,6 @@ class $1 {}
           isHealthy = false};
       }
 });
-      // Check disk space;
       // Check disk space;
       const diskUsage = await this.getDiskUsage();
       if (diskUsage.usagePercent > 90) {}
@@ -435,7 +431,6 @@ class $1 {}
   issues.push("Some dependencies are outdated");
             isHealthy = false};
         };
-      };
 ;
       // Check package-lock.json;
       if (!fs.existsSync("package-lock.json")) {}
@@ -472,7 +467,6 @@ class $1 {}
   this.log(Failed to resolve issue "${issue  }": ${error.message}",ERROR";)
         )};
     };
-  };
 ;
   async restartProcess(issue) {}
   const processName = issue.match(/Process (.+) is not running/)?.[1];
@@ -522,7 +516,6 @@ class $1 {}
           "stdio": "pipe"})} catch (commitError) {}
   this.log("Failed to commit after conflict resolution", "ERROR")};
     };
-  };
 ;
   async restartProcess(issue) {}
   const processName = issue.match(/Process (.+) is not running/)?.[1];
@@ -551,8 +544,6 @@ class $1 {}
           "stdio": "pipe"})} catch (commitError) {}
   this.log("Failed to commit after conflict resolution", "ERROR")};
     };
-    };
-};
 ;
   async installDependencies() {}
   this.log("Installing dependencies...");
@@ -630,7 +621,6 @@ class $1 {}
         "disk": await this.getDiskUsage()}} catch (error) {}
   return { "cpu": 0, "memory": 0, "disk": 0   };
     };
-  };
 ;
   async getDiskUsage() {}
   try {}
@@ -639,7 +629,6 @@ class $1 {}
       if (!error.message.includes("timeout")) {}
   this.log(`Performance monitoring "failed": ${error.message}`, "ERROR")};
     };
-  };
 ;
   async getDiskUsage() {}
   try {}
@@ -656,7 +645,6 @@ class $1 {}
     } catch (error) {}
   return { "usagePercent": 0   };
     };
-  };
 ;
   async monitorPerformance() {}
   try {}
@@ -671,7 +659,6 @@ class $1 {}
 } catch (error) {}
   return { "usagePercent": 0 };
     };
-  };
 ;
   async monitorPerformance() {}
   try {}
@@ -691,7 +678,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   // Ignore timeout errors from pm2 monit;
       if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }`, "ERROR")};
     };
-  };
 ;
   async cleanupOldData() {}
   try {}
@@ -706,7 +692,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   // Ignore timeout errors from pm2 monit;
       if (!error.message.includes("timeout")) {this.log("Performance monitoring "failed": ${error.message}", "ERROR")};
     };
-  };
 ;
   async cleanupOldData() {}
   try {}
@@ -738,7 +723,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
         "total": 0,
         "usagePercent": 0};
     };
-  };
 ;
   async cleanup() {}
   try {}
@@ -924,9 +908,3 @@ if (require.main === module) {}
   }, 60000)};
 ;
 module.exports = PM2SyncMonitor;
-<<<<<<< HEAD
-module.exports = PM2SyncMonitor;
-module.exports = PM2SyncMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

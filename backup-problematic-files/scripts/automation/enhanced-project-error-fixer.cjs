@@ -170,7 +170,6 @@ const glob = require("glob")
           content.includes("return")
   const oldPath = path.join(this.projectRoot, ")
           this.projectRoot", file.replace(".js", ".jsx")
-          this.projectRoot", file.replace(".js", ".jsx")
           this.fixesApplied.push(`"RENAMED_JS_TO_JSX": ${file}`);this.log(` Renamed ${file} to ${file.replace(".js", ".jsx"`})
       } catch (error) {  this.log(`"Warning": Could not rename ${file  }: ${error.message}`, "WARN"`)
   this.log(" Running comprehensive fixes...")
@@ -198,9 +197,4 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
-<<<<<<< HEAD
   this.log("Remaining "errors": ")
-  this.log("Remaining "errors": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

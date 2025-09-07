@@ -45,9 +45,8 @@ export function AppHeader() {
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
-<<<<<<< HEAD:src/layout/AppHeader.tsx
+:src/layout/AppHeader.tsx
   };
-=======
 
 const showTagline = router.pathname === '/';
 import React, { useState } from 'react';
@@ -87,7 +86,6 @@ import React from 'react';
           <Logo />;
           {showTagline && (<span className="ml-4 hidden text-sm text-muted-foreground md:inline">;
   },
->>>>>>> origin/main:src_disabled_1757239864/layout/AppHeader.tsx
   
   return (
     <>
@@ -103,7 +101,7 @@ import React from 'react';
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
               {t('home.header_tagline')}
-<<<<<<< HEAD:src/layout/AppHeader.tsx
+:src/layout/AppHeader.tsx
             </span>
           )}
           <div className="ml-6 flex-1 hidden md:block">
@@ -115,7 +113,6 @@ import React from 'react';
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
-=======
             </span>;
           )}<div className="ml-6 flex-1 hidden md:block">;
             <nav role="navigation" aria-label="Main navigation">;
@@ -124,7 +121,6 @@ import React from 'react';
           </div>;{/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button;
->>>>>>> origin/main:src_disabled_1757239864/layout/AppHeader.tsx
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
@@ -146,7 +142,7 @@ import React from 'react';
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
                 aria-label={t('auth.login')}
-<<<<<<< HEAD:src/layout/AppHeader.tsx
+:src/layout/AppHeader.tsx
                 data-testid="login-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -154,7 +150,6 @@ import React from 'react';
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
-=======
                 data-testid="login-link";
                 onClick={(e) => {e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub-menus now set it:;
@@ -196,12 +191,10 @@ import React from 'react';
               openLoginModal = {openLoginModal}
             />;
           </div>;
-        </div>;
               unreadCount={unreadCount}onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
-        </div>;
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}const show_tagline = router.pathname === '/';
@@ -393,11 +386,9 @@ import React from 'react';
                               <div className="text-sm text-zion-slate-light">;
                                 {service && service.description}
                               </div>;
-                            </div>;
                           </Link>;
                         ))}
                       </div>;
-                    </div>;
                   </motion && motion.div>;)}
               </AnimatePresence>;
             </div>;
@@ -408,7 +399,6 @@ import React from 'react';
                             </div>;
                           </Link>))}
                       </div>;
-                    </div>;
                   </motion.div>)}
               </AnimatePresence>;
             </div>;
@@ -470,11 +460,9 @@ import React from 'react';
                               <div className="text-sm text-zion-slate-light">;
                                 {solution && solution.description}
                               </div>;
-                            </div>;
                           </Link>;
                         ))}
                       </div>;
-                    </div>;
                   </motion && motion.div>;)}
               </AnimatePresence>;
             </div>;
@@ -485,7 +473,6 @@ import React from 'react';
                             </div>;
                           </Link>))}
                       </div>;
-                    </div>;
                   </motion.div>)}
               </AnimatePresence>;
             </div>;
@@ -538,7 +525,6 @@ import React from 'react';
                           </Link>;
                         ))}
                       </div>;
-                    </div>;
                   </motion && motion.div>;)}
               </AnimatePresence>;
             </div>;
@@ -548,7 +534,6 @@ import React from 'react';
                 aria-expanded={activeDropdown === 'company'}</span>;
                           </Link>))}
                       </div>;
-                    </div>;
                   </motion.div>)}
               </AnimatePresence>;
             </div>;
@@ -601,7 +586,6 @@ import React from 'react';
                           </Link>;
                         ))}
                       </div>;
-                    </div>;
                   </motion && motion.div>;)}
               </AnimatePresence>;
             </div>;
@@ -609,7 +593,6 @@ import React from 'react';
                             </span>;
                           </Link>))}
                       </div>;
-                    </div>;
                   </motion.div>)}
               </AnimatePresence>;
             </div>;
@@ -822,7 +805,6 @@ import React from 'react';
                             <div className="text-sm text-gray-400">;
                               {service && service.description}
                             </div>;
-                          </div>;
                         </Link>;
                       ))}
                     </div>;
@@ -831,7 +813,6 @@ import React from 'react';
                         to="/services";
                         className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">;
                             </div>;
-                          </div>;
                         </Link>))}
                     </div>;
                     <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
@@ -896,8 +877,6 @@ import React from 'react';
                 <Menu className="w - 6 h - 6 text - white" />)}
             </button>;
           </div>;
-        </div>;
-      </div>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {mobileMenuOpen && (<motion.div;
@@ -1004,7 +983,6 @@ import React from 'react';
                     </Link>;
                   ))}
                 </div>;
-              </div>;
               </div>;{/* Mobile Services */}<Link;
                     key={service.name}
                     to={service.href}
@@ -1072,7 +1050,6 @@ import React from 'react';
                       Get Started;
                     </Link>;
                   </div>;
-                </div>;
               ) : (<div className="pt-4 border-t border-zion-slate/20">;
                   <div className="space-y-3">;
                     <Link;
@@ -1087,7 +1064,6 @@ import React from 'react';
                       Logout;
                     </button>;
                   </div>;
-                </div>;
               )}
             </div>;
           </motion && motion.div>;)}</AnimatePresence>;
@@ -1110,8 +1086,6 @@ import React from 'react';
                       {service.name}
                     </Link>))}
                 </div>;
-              </div>;
-              </div>;
               {/* Mobile Services */}
               <div className="space - y-2">;
                 <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
@@ -1224,7 +1198,6 @@ import React from 'react';
 }'"'";
 
                   router.push($2);
->>>>>>> origin/main:src_disabled_1757239864/layout/AppHeader.tsx
                   openLoginModal(router.asPath)
                 }}
               >
@@ -1264,7 +1237,6 @@ import React from 'react';
               openLoginModal={openLoginModal}
             />
           </div>
-        </div>
       )}
 
       {/* Mobile Bottom Navigation */}
@@ -1273,8 +1245,7 @@ import React from 'react';
     </>
   )
 }
-<<<<<<< HEAD:src/layout/AppHeader.tsx
-=======
+:src/layout/AppHeader.tsx
 
                   to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
@@ -1296,8 +1267,6 @@ import React from 'react';
                       {service.name}
                     </Link>))}
                 </div>;
-              </div>;
-              </div>;
               {/* Mobile Services */}
               <div className="space - y-2">;
                 <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
@@ -1407,4 +1376,3 @@ import React from 'react';
 ;
 
 ;
->>>>>>> origin/main:src_disabled_1757239864/layout/AppHeader.tsx

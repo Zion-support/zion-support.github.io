@@ -8,9 +8,4 @@ const path = require('path')
       this.log(' Component error fixing logic to be implemented')
         "successRate"
         "version"
-<<<<<<< HEAD
   console.error('Fatal "error")
-  console.error('Fatal "error")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

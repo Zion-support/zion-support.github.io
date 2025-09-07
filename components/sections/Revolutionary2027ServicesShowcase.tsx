@@ -6,174 +6,9 @@ import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Glo
 import Link from 'next/link';'
 
 const Revolutionary2027ServicesShowcase = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const containerVariants = {}
     hidden: { opacity: 0}
-=======
-const containerVariants = {
-    }
-    "hidden": { "opacity": 0
-}
-    "visible": {
-      }
-      "opacity": 1,
-"transition": {
-
-}
-
-"staggerChildren": 0.1
-      }
-    }
-  };
-
-const itemVariants = {
-    }
-    "hidden": { "opacity": 0, "y": 20
-}
-    "visible": {
-      }
-      "opacity": 1,
-"y": 0,
-"transition": {
-
-        }
-
-        "duration": 0.6,
-"ease": 'easeOut' as const,'
-      }
-    }
-  };
-
-return (;
-    <section className='py-24 px-4 "sm": px-6 "lg":px-8 relative overflow-hidden'>'
-
-      {/* Enhanced Background Effects *
-}
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>;'
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]'></div>;'
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0.1),transparent_50%)]'></div>;'
-      <div className='max-w-7xl mx-auto relative z-10'>;'
-        {/* Section Header */}
-
-        <motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0 && 0.8 }}
-          viewport={{ "once": true 
-}
-
-className='text-center mb-20''
-        >
-          <h2 className='text-5xl "md":text-6xl font-bold text-white mb-8'>'
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>'
-              2027 Revolutionary Services
-            </span>
-          </h2>
-          <p className='text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
-            Experience the future of technology with our cutting-edge AI,
-quantum computing, and emerging technology services. Transform your,
-business with solutions that were once science fiction.
-          </p>
-        </motion.div>
-
-          className='text-center mb-20'>;'
-          <h2 className='text-5xl "md":text-6xl font-bold text-white mb-8'>;'
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;'
-              2027 Revolutionary Services;
-            </span>;
-          </h2>;
-          <p className='text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;'
-            Experience the future of technology with our cutting-edge AI,quantum computing, and emerging technology services. Transform your;
-            business with solutions that were once science fiction.          </p>        >;
-          <h2 className="text-5xl "md":text-6xl font-bold text-white mb-8">;"
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;"
-              2027 Revolutionary Services;
-            </span>;
-          </h2>;
-          <p className="text-xl "md":text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;"
-            Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. ;
-            Transform your business with solutions that were once science fiction.;
-          </p>;
-        </motion && motion.div>;
-
-        {/* Category Overview */}
-<<<<<<< HEAD
-        <motion&& motion.div
-          variants={containerVariants}
-<<<<<<< HEAD
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
-          {categories && categories.map((category, index) => (<motion&& motion.div;
-              key={category && category.name}
-              variants={itemVariants}
-              className='relative group'>;
-              <div;
-                className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
-                <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>;
-                  <category && category.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <h3 className='text-lg font-semibold text-white mb-2'>;
-                  {category && category.name}
-                </h3>;
-                <p className='text-2xl font-bold text-white'>;
-                  {category && category.count}
-                </p>              </div>            >;
-              <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm">;
-                  <category && category.icon className="w-8 h-8 text-white" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-white mb-2">{category && category.name}</h3>;
-                <p className="text-2xl font-bold text-white">{category && category.count}</p>;
-              </div>;
-            </motion && motion.div>;
-        {/* Featured Services Grid */}
-        <motion&& motion.div;
-          variants={containerVariants}
-
-initial='hidden''
-          whileInView='visible''
-          viewport={{ "once": true 
-}
-
-          className='grid grid-cols-2 "md":grid-cols-4 gap-6 mb-16''
-        >
-          {categories.map((category, index) => (
-            <motion.div
-}
-key={category.name}
-              variants={itemVariants}
-className='relative group'>'
-
-              <div;
-                className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-"hover": shadow-xl "hover":shadow-cyan-500/30 group-"hover":shadow-2xl,`}>
-
-                <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>;'
-                  <category.icon className='w-8 h-8 text-white' />;'
-                </div>;
-                <h3 className='text-lg font-semibold text-white mb-2'>;'
-                  {category.name}
-                </h3>;
-                <p className='text-2xl font-bold text-white'>;'
-                  {category.count}
-                </p>;
-=======
-initial='hidden'
-=======
-        <motion&& motion.div;
-          variants={containerVariants}'
-          initial='hidden''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           whileInView='visible'
           viewport={{ once: true }}'"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";"
@@ -202,7 +37,6 @@ initial='hidden'
                 </div>;"
                 <h3 className="text-lg font-semibold text-white mb-2">{category && category.name}</h3>;"
                 <p className="text-2xl font-bold text-white">{category && category.count}</p>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>;
             </motion && motion.div>;
         {/* Featured Services Grid */}
@@ -257,7 +91,6 @@ className='group relative''
                   </h3>;
                   <p className='text-gray-300 leading-relaxed'>;'
                     {service.description}
-=======
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -421,8 +254,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },
     },  }        stagger_children: 0.1;
       }
-    }
-  }
 ;
   const item_variants = {}
     hidden: { opacity: 0, coordinate_y: 20 },
@@ -433,7 +264,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         duration: 0.6,'
         ease: 'ease_out' as const,
       },
-    },
   return ('
     <section className='py - 24 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden'>;
       {/* Enhanced Background Effects */}'
@@ -536,7 +366,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service.name}
                   </h3>;'
                   <p className='text - gray - 300 leading - relaxed'>                    {service.description}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </p>;
                   {/* Features */}            >;"
               <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 h - full transform transition - all duration - 500 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 20">;
@@ -558,7 +387,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div key={idx} className="flex items-center space-x-2">;"
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;"
                         <span className="text-sm text-gray-400">{feature}</span>;
-<<<<<<< HEAD
 className='group relative'
             >
               <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>
@@ -605,7 +433,6 @@ className='group relative'
                       </span>                    </div>;
                   </div>;
                     </div>
-                  </div>
 
                   {/* Price and CTA */}
                   <div className="pt-4 flex items-center justify-between">
@@ -619,22 +446,6 @@ className='group relative'
                     >
                       <span>Explore</span>
                       <ArrowRight className="w-4 h-4" />
-=======
-<div className='space-y-2'>
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className='flex items-center space-x-2'>
-                        <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
-                        <span className='text-sm text-gray-400'>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  {/* Market Info */}
-<div className='pt-4 border-t border-gray-700/50'>
-=======
-                  {/* Market Info */}'
-                  <div className='pt-4 border-t border-gray-700/50'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className='flex justify-between items-center text-sm text-gray-400'>
                       <span>Market: {service.marketSize}</span>'
                       <span className='text-green-400'>
@@ -656,7 +467,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ↑ {service.growthRate}
                       </span>
                     </div>
-                  </div>
                   {/* Price and CTA */}
 <div className='pt-4 flex items-center justify-between'>'
                     <div className='text-3xl font-bold text-white'>'
@@ -667,7 +477,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
-                  </div>
                   </div>;
 
                   </div>;
@@ -696,7 +505,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ↑ {service.growthRate}
                       </span>;
                     </div>;
-                  </div>;
                   {/* Price and CTA */}
 <div className='pt-4 flex items-center justify-between'>;'
                     <div className='text-3xl font-bold text-white'>;'
@@ -705,7 +513,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.period}
                       </span>;
                     </div>;
-                  </div>;
                   </div>;{/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>;'
                     <div className='flex justify-between items-center text-sm text-gray-400'>;'
@@ -733,7 +540,6 @@ href={`/services/${service.id}`}`
                       <ArrowRight className='w-4 h-4' />'
                     </Link>
                   </div>
-                </div>
 
                 {/* Hover Effect Overlay */}
 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300 pointer-events-none'></div>'
@@ -788,7 +594,6 @@ href='"tel":+13024640950''
                 <span>Call +1 302 464 0950</span>
               </a>
             </div>
-          </div>
         </motion.div>
       </div>
     </section>
@@ -797,43 +602,10 @@ href='"tel":+13024640950''
 
 
 export default Revolutionary2027ServicesShowcase;
-<<<<<<< HEAD
 
 "
-=======
-}
-}
-}
-return (> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > 2027 Revolutionary Services </span> </h2> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with solutions that were once science fiction. </p> </motion.div> {
-  /* Category Overview */ 
-}<motion.div > {
-  categories.map ( (category, index) => (<motion.div key= {
-  category.name 
-}</div> </motion.div>) ) 
-}</motion.div> {
-  /* Featured Services Grid */ 
-}<motion.div > {
-  featuredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
-}</div>) ) 
-}</div> > <span>Explore</span> <ArrowRight className="w-4 h-4" /> </a> </div> </div> </div> </motion.div>) ) 
-}</motion.div> {
-  /* Call to Action */ 
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our revolutionary 2027 services. Get in touch to discover how we can accelerate your digital transformation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="https://ziontechgroup.com/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <a href="tel:+13024640950" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl" > <span>Call +1 302 464 0950</span> </a> </div> </div> </motion.div> </div> </section>) 
-}
-export default Revolutionary2027ServicesShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 );
 };
 export default Revolutionary2027ServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

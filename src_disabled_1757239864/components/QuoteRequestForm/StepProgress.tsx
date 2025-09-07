@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -20,7 +19,7 @@ return (<div className='relative'>;
   const getStepStatus = (stepId: QuoteRequestSteps) => {const stepOrder = steps.findIndex(s => s.id === stepId)const currentStepOrder = steps.findIndex(s => s.id === currentStep)if (stepOrder < currentStepOrder) return 'complete';
     if (stepOrder === currentStepOrder) return 'current';
     return 'upcoming';
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
   };
 
   return (
@@ -34,10 +33,10 @@ return (
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
@@ -57,8 +56,7 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
 
 
@@ -89,8 +87,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
             width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`,;
           }}
@@ -113,9 +110,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
                 )}>;
                 {status === 'complete' ? (;
                   <CheckIcon className='h-4 w-4' />;
@@ -125,7 +122,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   </span>;
                 )}
               </div>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
               <span
                 className={cn(
@@ -134,7 +131,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     ? 'text-zion-cyan'
                     : status === 'current'
                       ? 'text-white'
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
 
 
@@ -142,7 +139,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
                       : 'text-zion-slate-light'
                   "text-zion-slate-light"
@@ -153,8 +150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 
 
                 ) : (
@@ -175,7 +171,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }"          )
         })}
       </div>
-    </div>
   )
 }
 
@@ -274,7 +269,6 @@ import { cn } from "@/lib/utils",interface StepProgressProps  {currentStep: Quot
 }</span>)}</div> <span)}> {step.label;
 }</span> </div>)})}</div> </div>)}"          )})}
       </div>;
-    </div>;
   )})}>;
                 {step && step.label}<span;
                 className={cn("text-xs mt-2 font-medium",status === "complete" ? "text-zion-cyan" :;
@@ -317,11 +311,9 @@ interface StepProgressProps  {currentStep: QuoteRequestSteps;
             </div>;
           )})}
       </div>;
-    </div>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
   );
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
   (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;
 
@@ -343,7 +335,6 @@ interface StepProgressProps  {currentStep: QuoteRequestSteps;
 }</span>)}</div> <span)}> {step && step.label ;
 }</span> </div>)})}</div> </div>)}"          )})}
       </div>;
-    </div>;
   )}const getStepStatus = (step_id: QuoteRequestSteps) =>: any {const step_order = steps.find_index (string => s.id === step_id)const currentStepOrder = steps.find_index (string => s.id === current_step)// Check condition;
 if (return 'complete') {$2;
 }
@@ -402,7 +393,7 @@ if (return "current", ) {$2;
 }</span>)}</div> <span)}> {step.label;
 }</span> </div>)})}</div> </div>)}"          )})}
       </div>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
     </div>);
 }
 ;
@@ -416,7 +407,6 @@ if (return "current", ) {$2;
 );
         })}
       </div>
-    </div>
   );
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 ;
 }%` ;
@@ -432,7 +422,7 @@ if (return "current", ) {$2;
 }) ;
 }</div> </div>) ;
 }"
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
+:src_backup/components/QuoteRequestForm/StepProgress.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)})}
               >;
@@ -441,7 +431,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 )})}
       </div>;
-    </div>;
   )(steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 ;
 }%` ;}/> </div>;
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {steps.findIndex (s => s.id === step.id) + 1 ;

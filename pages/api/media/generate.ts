@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,22 +19,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (_) {
         // fall through to template
       }
-    }
 
     const text = buildPressRelease($2);
     res.status(200).json({ ok: true, text, fallback: true})
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e ?.message || 'Unknown error' })
   }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}

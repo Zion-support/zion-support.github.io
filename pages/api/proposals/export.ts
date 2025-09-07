@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PDFDocument, StandardFonts } from 'pdf-lib',
 import crypto from 'crypto',
@@ -39,7 +38,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
         } else {
           current = test
         }
-      }
       if (current) wrapped.push($2);
       return wrapped.length ? wrapped : [' ']
     }),
@@ -93,15 +91,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     return res.status(500).json({ error: error ?.message || 'Export failed' })
   }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}

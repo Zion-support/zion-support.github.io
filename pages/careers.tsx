@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -159,7 +158,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 export default function Careers() {
   const openPositions = [
     {
@@ -248,7 +247,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     
     return this.props.children;
   }
-}
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
@@ -276,7 +274,7 @@ import {;
       keywords="careers, jobs, employment, technology careers, AI jobs, software development">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
@@ -299,8 +297,6 @@ import {;
                   </button>
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Company Values */}
@@ -326,7 +322,6 @@ import {;
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -352,7 +347,6 @@ import {;
                 </div>
               ))}
             </div>
-          </div>
         </section>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import Head from 'next/head';
@@ -360,23 +354,12 @@ import Layout from '../components/Layout';
 
 export default function CareersPage() {
   
-=======
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-export default function CareersPage() {
-  return (
-    <Layout 
-      title="Careers - Zion Tech Group"
-      description="Join our team of innovative developers, engineers, and designers building the future of technology."
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -605,8 +588,6 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
               </div>;
-            </div>;
-          </div>;
         </section>;
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
@@ -620,11 +601,9 @@ function CareersPage() {
                   </motion && motion.div>;
                 ))}
               </div>;
-            </div>;
-          </div>;
         </section>;
         {/* Open Positions */}
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
         <section id="positions" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -664,9 +643,6 @@ function CareersPage() {
                             <Award className="w-4 h-4 mr-1" />
                             {position.experience}
                           </div>
-                        </div>
-                      </div>
-                    </div>
                     <Link href="/contact">
                       <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                         Apply Now
@@ -686,10 +662,8 @@ function CareersPage() {
                       ))}
                     </ul>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -719,7 +693,6 @@ function CareersPage() {
                 </button>
               </Link>
             </div>
-          </div>
         </section>
       </main>
 </>
@@ -769,8 +742,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </motion && motion.div>;
                 ))}
               </div>;
-            </div>;
-          </div>;
         </section>;
 
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
@@ -793,28 +764,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
     </MainLayout>
-    </MainLayout>
     </Layout>
     </MainLayout>;
 ursor/integrate-build-improve-and-re-verify-8f7d
     </MainLayout>;
   );
 }
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 
 
 
-=======
-                Careers
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our team of innovative developers, engineers, and designers
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  )
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

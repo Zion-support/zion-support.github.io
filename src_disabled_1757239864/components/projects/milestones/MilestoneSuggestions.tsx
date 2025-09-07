@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD:src/components/projects/milestones/MilestoneSuggestions.tsx
-=======
+:src/components/projects/milestones/MilestoneSuggestions.tsx
 interface MilestoneSuggestionsProps {
 
   endDate?: Date;
@@ -59,7 +58,6 @@ startDate: startDate.toISOString(),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones);
 export function MilestoneSuggestions({
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/MilestoneSuggestions.tsx
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
@@ -103,8 +101,6 @@ export function MilestoneSuggestions({
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
       }
-    }
-  }
   };
 
   const formatDate = (dateString: string) => {
@@ -134,8 +130,7 @@ export function MilestoneSuggestions({
               <Sparkles className="mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
-<<<<<<< HEAD:src/components/projects/milestones/MilestoneSuggestions.tsx
-=======
+:src/components/projects/milestones/MilestoneSuggestions.tsx
           disabled={isGenerating || !scopeSummary || !startDate}
           className='w-full'>;
           {isGenerating ? (<>;
@@ -158,7 +153,6 @@ export function MilestoneSuggestions({
               Suggest Project Milestones with AI;
             </>;
 
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/MilestoneSuggestions.tsx
           )}
         </Button>
       )}
@@ -179,12 +173,11 @@ export function MilestoneSuggestions({
                     <div className="font-medium flex items-center">
                       {milestone.title}
                       <Badge variant="secondary" className="ml-2 text-xs">
-<<<<<<< HEAD:src/components/projects/milestones/MilestoneSuggestions.tsx
+:src/components/projects/milestones/MilestoneSuggestions.tsx
                         AI Suggested
                       </Badge>
                     </div>
                     <div className="text-sm text-muted-foreground">
-=======
 
                         AI Suggested
                       </Badge>
@@ -192,7 +185,6 @@ export function MilestoneSuggestions({
                     <div className='text-sm text-muted-foreground'>
                       Due: {formatDate(milestone.dueDate)}
                     </div>
-                  </div>
 
             <div className="space-y-3">
 
@@ -206,30 +198,25 @@ export function MilestoneSuggestions({
                       </Badge>;
                     </div>;
                     <div className="text-sm text-muted-foreground">;
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/MilestoneSuggestions.tsx
                       Due: {formatDate(milestone.dueDate)}
                     </div>
-                  </div>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
-                </div>
               ))}
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
               </div>
-            </div>
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD:src/components/projects/milestones/MilestoneSuggestions.tsx
+:src/components/projects/milestones/MilestoneSuggestions.tsx
     </div>
   )
 }
-=======
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
         <Card>;
@@ -257,7 +244,6 @@ export function MilestoneSuggestions({
                     <div className='text-sm text-muted-foreground'>;
                       Due: {formatDate(milestone && milestone.dueDate)}
                     </div>;
-                  </div>;
                   <p className='text-sm text-muted-foreground'>;
                     {milestone && milestone.description}
                   </p>;
@@ -275,18 +261,15 @@ export function MilestoneSuggestions({
                     <div className="text-sm text-muted-foreground">;
                       Due: {formatDate(milestone && milestone.dueDate)}
                     </div>;
-                  </div>;
                   <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
                   <div className="flex justify-between items-center mt-2 text-sm">;
                     <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
                   </div>;
-                </div>;
               ))}<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
                 <Check className="h-4 w-4 mr-1 text-green-500" />;
                 These milestones will be added to your contract;
               </div>;
-            </div>;
           </CardContent>;
         </Card>;
       )}
@@ -340,7 +323,6 @@ export function MilestoneSuggestions({
                     <div className='text - sm text - muted - foreground'>;
                       Due: {format_date (milestone.due_date)}
                     </div>;
-                  </div>;
                   <p className='text - sm text - muted - foreground'>;
                     {milestone.description}
                   </p>;
@@ -358,7 +340,6 @@ export function MilestoneSuggestions({
                     <div className="text - sm text - muted - foreground">;
                       Due: {format_date (milestone.due_date)}
                     </div>;
-                  </div>;
                   <p className="text - sm text - muted - foreground">{milestone.description}</p>;
                   <div className="flex justify - between items - center mt - 2 text - sm">;
                     <span > Estimated: {milestone.estimated_hours} hours</span>;
@@ -369,7 +350,6 @@ export function MilestoneSuggestions({
                 <Check className="h - 4 w - 4 mr - 1 text - green - 500" />;
                 These milestones will be added to your contract;
               </div>;
-            </div>;
           </CardContent>;
         </Card>)}
     </div>)}
@@ -391,5 +371,3 @@ export function MilestoneSuggestions({
   );
 }
 ;
-;
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/MilestoneSuggestions.tsx

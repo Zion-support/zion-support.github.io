@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 #!/usr/bin/env node;"
@@ -123,11 +119,6 @@ class ErrorAnalyticsDashboard {
       "fileDistribution": {}"
     }}"
   log(message, level = 'INFO') {
-<<<<<<< HEAD
-=======
-    const timestamp = new Date().toISOString();
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log("[${timestamp}] [${level}] ${message}")}
 
     console.log("[${timestamp}] [${level}] ${message}")}"
@@ -399,13 +390,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         ...counts;)
     return trends}
   analyzeFixSuccessRates(reports) {
-<<<<<<< HEAD
     const fixReports = reports.filter(report => 
-=======
-    const fixReports = reports.filter(report =>
-      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
-    );
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
     const successRates = [];
     for (const report of fixReports) {
@@ -437,8 +422,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
             const fileName = path.basename(error.file);
             fileDistribution[fileName] = (fileDistribution[fileName] || 0) + 1}
         }
-      }
-    }
     // Sort by error count and take top 10
 return Object.entries(fileDistribution);
       .sort(([,a], [,b]) => b - a)
@@ -460,12 +443,7 @@ const html = `;
     <title>Error Analytics Dashboard</title>"
     <script src=https": //cdn.jsdelivr.net/npm/chart.js"></script>"
     <style>
-<<<<<<< HEAD
-<<<<<<< HEAD
 </style>
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             "margin": 0;
@@ -516,10 +494,6 @@ const html = `;
             font-size: 0.9em;
             margin-top: 20px}
     </style>
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 </head>
 <body>
 </body>"
@@ -538,194 +512,11 @@ const html = `;
             <canvas id="successChart"></canvas>"
         <div class="last-updated">"
     <script>
-<<<<<<< HEAD
       const avgSuccessRate = fixSuccessRates.length > 0 
-=======
-        // Error Trends Chart
-        const trendsCtx = document.getElementById('trendsChart').getContext('2d');
-        new Chart(trendsCtx, {
-            "type": 'line',
-            "data": {
-                labels: ${JSON.stringify(analyticsData.errorTrends.map(t => t.date))},
-                "datasets": [{
-                    label: 'Total Errors',
-                    "data": ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
-                    "borderColor": '#667eea',
-                    "backgroundColor": 'rgba(102, 126, 234, 0.1)',
-                    "tension": 0.4
-                }]
-            },
-            "options": {
-                responsive: true,
-                "scales": {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        // Error Types Chart
-        const typesCtx = document.getElementById('typesChart').getContext('2d');
-        new Chart(typesCtx, {
-            "type": 'doughnut',
-            "data": {
-                labels: ['TypeScript', 'ESLint', 'Build', 'Dependency'],
-                "datasets": [{
-                    data: [
-                        ${analyticsData.errorTypes.typescript},
-                        ${analyticsData.errorTypes.eslint},
-                        ${analyticsData.errorTypes.build},
-                        ${analyticsData.errorTypes.dependency}
-                    ],
-                    "backgroundColor": ['#667eea',
-                        '#764ba2',
-                        '#f093fb',
-                        '#f5576c'
-                    ]
-                }]
-            },
-            "options": {
-                responsive: true
-            }
-        });
-        // Success Rates Chart
-        const successCtx = document.getElementById('successChart').getContext('2d');
-        new Chart(successCtx, {
-            "type": 'bar',
-            "data": {
-                labels: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => r.timestamp.split('T')[0]))},
-                "datasets": [{
-                    label: 'Success Rate (%)',
-                    "data": ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
-                    "backgroundColor": '#667eea'
-                }]
-            },
-            "options": {
-                responsive: true,
-                "scales": {
-                    y: {
-                        beginAtZero: true,
-                        "max": 100
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>`;
-    return html}
-  async generateAnalyticsReport() {
-    this.log('Generating analytics report...');
-    try {
-      const reports = await this.collectErrorReports();
-      if (reports.length === 0) {
-        this.log('No reports found for analytics', 'INFO');
-        return}
-      // Analyze data
-      const errorTrends = this.analyzeErrorTrends(reports);
-      const fixSuccessRates = this.analyzeFixSuccessRates(reports);
-      const errorTypes = this.analyzeErrorTypes(reports);
-      const timeDistribution = this.analyzeTimeDistribution(reports);
-      const fileDistribution = this.analyzeFileDistribution(reports);
-      // Calculate summary statistics
-      const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-const avgSuccessRate = fixSuccessRates.length > 0;
-        ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
-        : 0;
-      const analyticsData = {
-        totalErrors,
-        "fixSuccessRate": avgSuccessRate.toFixed(1),
-        errorTypes,
-        timeDistribution,
-        fileDistribution,
-        errorTrends,
-        fixSuccessRates,
-        "lastUpdated": new Date().toISOString()
-      };
-      // Save analytics data
-      const analyticsPath = path.join(this.dashboardDir, 'analytics-data.json');
-      fs.writeFileSync(analyticsPath, JSON.stringify(analyticsData, null, 2));
-      // Generate HTML dashboard
-      const html = this.generateDashboardHTML(analyticsData);
-      const dashboardPath = path.join(this.dashboardDir, 'index.html');
-      fs.writeFileSync(dashboardPath, html);
-      // Update analytics data
-      this.analyticsData = analyticsData;
-      this.log(`Analytics report "generated": ${dashboardPath}`, 'INFO')} catch (error) {
-      this.log(`Failed to generate analytics "report": ${error.message}`, 'ERROR')}
-  }
-  async startDashboard() {
-    this.log('Starting error analytics dashboard...');
-    // Generate initial report
-    await this.generateAnalyticsReport();
-    // Set up periodic updates
-    setInterval(async () => {
-      try {
-        await this.generateAnalyticsReport()} catch (error) {
-        this.log(`Error in periodic analytics "update": ${error.message}`, 'ERROR')}
-    }, this.updateInterval);
-    this.log(`Error analytics dashboard started. Updating every ${this.updateInterval / 1000} seconds.`);
-    this.log(`Dashboard available "at": ${path.join(this.dashboardDir, 'index.html')}`)}
-  getStatus() {
-    return {
-      "running": true,
-      "dashboardPath": path.join(this.dashboardDir, 'index.html'),
-      "updateInterval": this.updateInterval,
-      "analyticsEnabled": this.analyticsEnabled,
-      "lastUpdate": this.analyticsData.lastUpdated
-    }}
-}
-;
-// Run the automation if called directly;
-// Main execution
-if (require.main === module) {
-  const dashboard = new ErrorAnalyticsDashboard();
-  // Handle graceful shutdown
-  process.on('SIGINT', () => {
-    dashboard.log('Shutting down error analytics dashboard...');
-    process.exit(0)});
-  process.on('SIGTERM', () => {
-    dashboard.log('Shutting down error analytics dashboard...');
-    process.exit(0)});
-  // Start dashboard
-  dashboard.startDashboard().catch(error => {
-    dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
-    process.exit(1)})}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = ErrorAnalyticsDashboard
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = ErrorAnalyticsDashboard
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = ErrorAnalyticsDashboard
 
 module.exports = ErrorAnalyticsDashboard
 
-<<<<<<< HEAD
 module.exports = ErrorAnalyticsDashboard
+
 module.exports = ErrorAnalyticsDashboard
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

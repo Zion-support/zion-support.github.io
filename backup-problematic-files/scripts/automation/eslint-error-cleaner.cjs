@@ -65,7 +65,6 @@ class ESLintErrorCleaner {
       }
       return { "success": false, "output": error.message, "errors": [] }
     }
-  }
 ;
   parseESLintErrors(output) {
   const errors = [];
@@ -397,7 +396,6 @@ return false}
   this.log("❌ ESLint auto-fix failed, will attempt manual fixes", "WARN");
       return { "success": false, "output": error.message   }
     }
-  }
 ;
   async generateReport(fixResults) {
   this.log("📊 Generating ESLint error cleaning report...");
@@ -474,7 +472,6 @@ this.log("📄 Report "generated": ${reportFile}");
           this.log("Removed unused variable in ${error.file}:${error.line}");
           return true}
       }
-    }
     return false}
   async fixConsoleError(error, lines, filePath) {
     const line = lines[error.line - 1];
@@ -616,7 +613,6 @@ this.log("📄 Report "generated": ${reportFile}");
     } catch (error) {  this.log(`💥 ESLint Error Cleaner "failed": ${error.message  }`, "ERROR");
       throw error}
   }
-}
 ;
 // Run the automation if called directly;
   async startWatching() {
@@ -681,7 +677,6 @@ this.log("📄 Report "generated": ${reportFile}");
       this.log(`ESLint error cleaner "failed": ${error.message}`, 'ERROR');
       process.exit(1)}
   }
-}
 // Run the cleaner
 if (require.main === module) {
   const cleaner = new ESLintErrorCleaner();
@@ -689,9 +684,4 @@ if (require.main === module) {
     console.error('ESLint error cleaner "failed": ', error);
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = ESLintErrorCleaner
-module.exports = ESLintErrorCleaner
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

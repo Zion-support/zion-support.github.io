@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 })
       // Check condition
 if (?.error) {) {
@@ -17,15 +15,14 @@ if (?.error) {) {
       });
     } catch (error) {
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 
       })
@@ -67,7 +64,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 
 import {;
@@ -171,14 +168,14 @@ if ( {) {
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
             AI Listing Optimizer
           </CardTitle>
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
           <p className="text-sm text-zion-slate-light">
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
           </p>
         </CardHeader>
@@ -186,8 +183,7 @@ if ( {) {
           <div className="space-y-2">
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
             <Input
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 
               id="title"
@@ -265,7 +261,7 @@ if ( {) {$2;
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
             />
           </div>
           <div className="space-y-2">
@@ -284,14 +280,13 @@ if ( {) {$2;
               placeholder="e.g. AI Tool, Digital Product, Service";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
             />
           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 
 
@@ -307,7 +302,7 @@ if ( {) {$2;
               placeholder="Briefly describe the main features or benefits";
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
               disabled={isLoading}
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
             />
           </div>
           <div className="space-y-2">
@@ -329,15 +324,14 @@ if ( {) {$2;
       )if (error) {throw new Error(error && error.message)}if ((data as any)?.error) {throw new Error((data as any).error)}setGeneratedContent((data as any)?.generated || null)toast({title: 'Content Generated',description: 'AI has created optimized listing content for you.'})} catch (error) {logErrorToProduction('Error generating content:', { data: error })toast({title: 'Generation Failed',description:;
           error instanceof Error;
             ? error && error.message;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
             : 'Failed to generate content. Please try again.',;
         variant: 'destructive',;
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
   };
 
   const handleApply = () => {;
@@ -379,7 +373,7 @@ interface GeneratedContent  {description: string;
   initialValues?: {title?: string;
     category?: string;
     keyFeatures?: string;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
     targetAudience?: string
 origin/cursor/automate-test-improve-and-merge-code-2533
     targetAudience?: string;
@@ -451,14 +445,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               disabled={isLoading}
             />;
           </div>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
           <Button
             onClick={handleGenerate}
 
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 
 
@@ -475,8 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>
 
       {isLoading && (
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
         <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>
 
       )}
@@ -626,12 +619,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <Skeleton className='h - 8 w - 1/3 bg - zion - blue - light / 20' />;
             <div className='space - y-2'>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
               {[...Array (3)].map ((_, i) => (
                 <Skeleton;
                   key={i}
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
                   className='h - 6 w - full bg - zion - blue - light / 20';
                 />              ))}
             </div>;
@@ -665,14 +657,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>;
           </CardContent>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
         </Card>;
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
       )}
 
@@ -681,8 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardHeader>
             <CardTitle className="text-white">Generated Content</CardTitle>
           </CardHeader>
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
           <CardContent className="space-y-4">
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
@@ -729,7 +720,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Tags;
               </h3>;
               <div className='flex flex-wrap gap-2'>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
                 {generatedContent && generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>;
             
 
@@ -740,9 +731,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
             
             <div>
@@ -773,9 +764,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Key Selling Points;
               </h3>;
               <ul className='list-disc pl-5 text-white space-y-1'>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
                 ))}
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>;))}
@@ -798,7 +789,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex flex - wrap gap - 2'>;
                 {generated_content.tags.map ((tag, index) => (                  <Badge key={index}>{tag}</Badge>))}
               </div>;
-            </div>;
             <div>;
               <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
                 Suggested Price Range;
@@ -817,10 +807,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
           <CardFooter>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
             <Button;
               onClick={handleApply}
@@ -837,7 +826,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>,
       )}
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
   value: string ;
 }, field: string) => {;
@@ -851,9 +840,9 @@ case 'keyFeatures': setKeyFeatures (e.target.value)
 break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
             <Button;
           <CardFooter>;<Button;
               onClick={handleApply}
@@ -876,7 +865,7 @@ case 'targetAudience': const handleGenerate = async () => {if (!title |!category
             </Button>;
           </CardFooter>;
         </Card>)}
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
     </div>);
   target: {
   value: string;
@@ -893,7 +882,7 @@ case 'target_audience': const handle_generate = async () => {
 if ( {) {
   $2
 }
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
   toast ({
   return;
@@ -902,7 +891,7 @@ if ( {) {
   logErrorToProduction ('Error generating content:', {
 
     </div>;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
     </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
@@ -912,7 +901,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }, field: string) => {;
   switch (field) {;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
   case 'title': setTitle (e.target.value);
 break;';
 case 'category': setCategory (e.target.value);
@@ -935,7 +924,7 @@ case 'targetAudience': const handleGenerate = async () => {;
   data: error ;
 });
 toast ({;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -947,11 +936,11 @@ const handleApply = () => {;
   if (generatedContent && onApplyGenerated) {;
   onApplyGenerated (generatedContent);
 toast ({;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 
 };
 <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
@@ -959,7 +948,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) ;
 }</div> </CardContent> </Card>) ";
 }<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
   generatedContent.description ;
 origin/cursor/automate-test-improve-and-merge-code-2533
   generatedContent && generatedContent.description ;
@@ -967,7 +956,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> <div>) ) ";
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) ;
 }</div>) ;
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 toast ({
 }finally {
   setIsLoading (false);
@@ -1049,5 +1038,5 @@ if ( {) {$2;
   data: error;
 });
 
-<<<<<<< HEAD:src_backup/components/AIListingGenerator.tsx
+:src_backup/components/AIListingGenerator.tsx
 }'"

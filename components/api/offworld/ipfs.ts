@@ -51,9 +51,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
-<<<<<<< HEAD
       const { cid, provider } = await addJSON (body)if (return res.status (503).json ({ error: 'IPFS unavailable' })) {$2;
-}
 }
       const { cid, provider } = await addJSON (body)if (return res.status (503).json ({ error: 'IPFS unavailable' })) {$2;
 }
@@ -70,11 +68,7 @@ if ( {) {$2;
     return res.status (400).json ({ error: 'Unsupported action' })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
     return res.status(500).json({ error: e.message })
   }
-}
-=======
-<<<<<<< HEAD
 '
-=======
 
 const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '')return res.status (200).json ({ ok })}'
 return res.status (400).json ({ "error": 'Unsupported action' },;'

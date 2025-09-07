@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("$1");
 const path = require("$1");
@@ -14,7 +13,6 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
 const logMessage = `[${timestamp}] ${message}\n`;``;
       const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");";      if (fs.existsSync(configPath)) {"}
       throw new Error("ecosystem.config.cjs not found");"} catch (error) {this.log(" Failed to load ""config": ${error.message}");"
-const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");
 const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");
       throw new Error("ecosystem.config.cjs not found"),} catch (error) { this.log(` Failed to load "config"`})
 const output = execSync("pm2 jlist", { "encoding": "utf8"});
@@ -37,7 +35,6 @@ const scriptPath = path.resolve(__dirname, "..");
               "stdio": "pipe"
               "env": { ...process.env, ...process.env },}
 });this.log(` Started ${process.name})} else {this.log(` Script not "found"`})
-    this.log(" PM2 automation processes started")
     this.log(" PM2 automation processes started")
     this.log("� Stopping PM2 automation processes...")
         if (proc.name !== "pm2-logrotate") {execSync(`pm2 stop ${proc.name}, { "stdio": "pipe"`})
@@ -156,39 +153,10 @@ process.on("SIGINT")
       case "help":";      default
 
   } catch (error) {launcher.log(` Command failed``})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
-<<<<<<< HEAD
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

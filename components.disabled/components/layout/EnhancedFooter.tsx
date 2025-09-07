@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
@@ -86,7 +84,6 @@ const EnhancedFooter: React.FC = () => {
                 <Facebook className="w-6 h-6" />
               </a>
             </div>
-          </div>
 
           {/* Services */}
           <div>
@@ -157,9 +154,6 @@ const EnhancedFooter: React.FC = () => {
                   Middletown DE 19709
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
@@ -173,20 +167,11 @@ const EnhancedFooter: React.FC = () => {
             </Link>
           </p>
         </div>
-      </div>
     </footer>
   );
 };
 
 export default EnhancedFooter;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
 
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

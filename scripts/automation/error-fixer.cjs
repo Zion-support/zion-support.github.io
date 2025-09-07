@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -34,8 +30,6 @@ const output = error.stdout?.toString() || error.stderr?.toString() || "";
     // Fix common ""React/JSX""
     // Fix common ""import/export""
   this.log("Fixing TypeScript syntax errors...")
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
       { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
       { "pattern": /(\w+)\s*\["/g", ""replacement": "$1: [" }", ""]
 const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx")];
@@ -106,44 +100,11 @@ const reportPath = path.join(this.reportsDir, "error-fixer-report.json");
 const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`});
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-<<<<<<< HEAD
       this.log(")
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      this.log(")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      this.log(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         if (content.includes("<Helmet>") && !content.includes("<>")"
 "
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

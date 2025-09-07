@@ -61,11 +61,7 @@ this.log(" Resolved conflicts "in")
         "ERROR"
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"
-        "ERROR"
     // "Strategy"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
     if (fileExt === ".json")
   resolvedContent = this.cleanupJson(resolvedContent)} else if ([".js", ".jsx", ".ts", ".tsx")]
@@ -129,9 +125,4 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
-<<<<<<< HEAD
   console.error(" Fatal "error")
-  console.error(" Fatal "error")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

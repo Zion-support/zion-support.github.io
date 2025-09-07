@@ -47,7 +47,6 @@ class $1 {
       }
       return { "success": false, "output": error.message, "issues": [] }
     }
-  }
 ;
   parseDependencyIssues(output) {
   const issues = [];
@@ -315,7 +314,6 @@ throw error}
             "message": line.trim()
           })}
       }
-    }
     return vulnerabilities}
   async resolveDependencyIssues(vulnerabilities, outdated) {
     if (!this.autoUpdateEnabled) {
@@ -503,9 +501,4 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = DependencyErrorResolver
-module.exports = DependencyErrorResolver
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

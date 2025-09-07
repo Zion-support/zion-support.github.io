@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -33,7 +32,6 @@ class ComprehensiveAppImprover {
       console.log(`❌ ${description} - Failed: ${error.message}`);
       return { success: false, error: error.message };
     }
-  }
   async runBuild() {
     const result = await this.runCommand('npm run build', 'Production Build');
     this.results.build = result;
@@ -119,12 +117,6 @@ class ComprehensiveAppImprover {
       console.log(`❌ Comprehensive app improvements failed: ${error.message}`);
       process.exit(1);
     }
-  }
-}
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

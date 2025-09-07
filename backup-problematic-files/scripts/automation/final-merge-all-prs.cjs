@@ -19,7 +19,6 @@ const { execSync } = require("child_process")
       for (let i = 0; i < allBranches.length; i += batchSize) {"}
         const batch = allBranches.slice(i, i + batchSize);"
       // Step "4"
-  // Step "4"
   this.log( Fatal "error": ${error.message  }`, "ERROR""`)
       // Step "4"
       await this.finalizeMerges();"
@@ -87,9 +86,6 @@ this.log(" Resolved conflicts "in")
         "ERROR"
     // "Strategy"
       /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
   this.log(" Finalizing all merges...")
   execSync(git commit -m "Final merge of all remaining PRs and branches")
           { "stdio": "pipe"}
@@ -107,9 +103,4 @@ this.log(" Resolved conflicts "in")
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
-<<<<<<< HEAD
       "successRate"
-      "successRate"
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

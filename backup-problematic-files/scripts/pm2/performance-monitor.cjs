@@ -28,7 +28,6 @@ const runCommand = (command, description) => {}
     log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
-};
 
 const checkBuildPerformance = () => {}
   log('Checking build performance');
@@ -45,7 +44,6 @@ const checkBuildPerformance = () => {}
     buildTime: buildTime,
     performance: buildTime < 60000 ? 'GOOD' : buildTime < 120000 ? 'FAIR' : 'POOR'
   };
-};
 
 const checkMemoryUsage = () => {}
   log('Checking memory usage');
@@ -73,7 +71,6 @@ const checkMemoryUsage = () => {}
     log(`Memory check failed: ${error.message}`);
     return { success: false, error: error.message };
   };
-};
 
 const generatePerformanceReport = (results) => {}
   const report = {}
@@ -84,7 +81,6 @@ const generatePerformanceReport = (results) => {}
       status: 'GOOD',
       issues: 0;
     };
-  };
   
   // Calculate overall status;
   if (results.build && results.build.performance === 'POOR') {}
@@ -147,9 +143,4 @@ main().catch(error => {})
   log(`Performance Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

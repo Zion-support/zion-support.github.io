@@ -12,34 +12,16 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 export class HealthChecker {
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -48,36 +30,15 @@ export class HealthChecker {
     const results = {};
     for (const [name, check] of this.checks) {
       try {
-<<<<<<< HEAD
         const result = await check();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const result = await check();
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         results[name] = { status: 'healthy', result };
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
-    }
     this.results = results;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     return results;
   }
 
@@ -89,7 +50,6 @@ export class HealthChecker {
       timestamp: new Date().toISOString()
     };
   }
-}
 
 const healthChecker = new HealthChecker();
 module.exports = { HealthChecker, healthChecker };`,
@@ -117,7 +77,6 @@ class PerformanceTracker {
     if (entries.length > 1000) {
       entries.splice(0, entries.length - 1000);
     }
-  }
 
   getAverageMetric(name, timeWindow = 300000) { // 5 minutes
     const entries = this.metrics.get(name) || [];
@@ -144,11 +103,9 @@ class PerformanceTracker {
         }
 });
       }
-    }
     
     return alerts;
   }
-}
 
 const performanceTracker = new PerformanceTracker();
 module.exports = { PerformanceTracker, performanceTracker };`,
@@ -179,7 +136,6 @@ class ErrorTracker {
     if (this.errors.length > 1000) {
       this.errors.splice(0, this.errors.length - 1000);
     }
-  }
 
   getErrorSummary() {
     const recentErrors = this.errors.filter(e => 
@@ -194,7 +150,6 @@ class ErrorTracker {
         .slice(0, 10)
     };
   }
-}
 
 const errorTracker = new ErrorTracker();
 module.exports = { ErrorTracker, errorTracker };
@@ -222,7 +177,6 @@ class RedisCache {
       console.error('Cache get error:', error);
       return null;
     }
-  }
 
   async set(key, value, ttl = this.defaultTTL) {
     try {
@@ -232,7 +186,6 @@ class RedisCache {
       console.error('Cache set error:', error);
       return false;
     }
-  }
 
   async del(key) {
     try {
@@ -242,7 +195,6 @@ class RedisCache {
       console.error('Cache delete error:', error);
       return false;
     }
-  }
 
   async clear() {
     try {
@@ -252,8 +204,6 @@ class RedisCache {
       console.error('Cache clear error:', error);
       return false;
     }
-  }
-}
 
 const redisCache = new RedisCache();
 module.exports = { RedisCache, redisCache };`,
@@ -285,7 +235,6 @@ class MemoryCache {
     if (ttl > 0) {
       setTimeout(() => this.del(key), ttl);
     }
-  }
 
   del(key) {
     this.cache.delete(key);
@@ -301,18 +250,15 @@ class MemoryCache {
         oldestTime = time;
         oldestKey = key;
       }
-    }
     
     if (oldestKey) {
       this.del(oldestKey);
     }
-  }
 
   clear() {
     this.cache.clear();
     this.accessTimes.clear();
   }
-}
 
 const memoryCache = new MemoryCache();
 module.exports = { MemoryCache, memoryCache };
@@ -324,7 +270,6 @@ module.exports = { MemoryCache, memoryCache };
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
-});
 }
 
 // Create API optimization utilities
@@ -370,7 +315,6 @@ class RateLimiter {
     
     return Math.max(0, this.maxRequests - recentRequests.length);
   }
-}
 
 const rateLimiter = new RateLimiter();
 module.exports = { RateLimiter, rateLimiter };`,
@@ -421,7 +365,6 @@ class ResponseOptimizer {
     }
     return \`"\${Math.abs(hash).toString(16)}"\`;
   }
-}
 
 const responseOptimizer = new ResponseOptimizer();
 module.exports = { ResponseOptimizer, responseOptimizer };
@@ -433,7 +376,6 @@ module.exports = { ResponseOptimizer, responseOptimizer };
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
-});
 }
 
 // Create database optimization utilities
@@ -503,21 +445,13 @@ class QueryOptimizer {
     
     return recommendations;
   }
-}
 
 const queryOptimizer = new QueryOptimizer();
 module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
   }
-}
 
 export const healthChecker = new HealthChecker();`,
 
@@ -536,7 +470,6 @@ export class PerformanceMonitor {
       this.observeCLS();
       this.observeFCP();
     }
-  }
 
   observeLCP() {
     const observer = new PerformanceObserver((list) => {;
@@ -554,7 +487,6 @@ export class PerformanceMonitor {
       entries.forEach((entry) => {
         this.metrics.set('fid', entry.processingStart - entry.startTime);
       });
-    });
     observer.observe({ entryTypes: ['first-input'] });
     this.observers.push(observer);
   }
@@ -582,7 +514,6 @@ export class PerformanceMonitor {
           this.metrics.set('fcp', entry.startTime);
         }
       });
-    });
     observer.observe({ entryTypes: ['paint'] });
     this.observers.push(observer);
   }
@@ -595,7 +526,6 @@ export class PerformanceMonitor {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
-}
 
 export const performanceMonitor = new PerformanceMonitor();`,
 
@@ -638,7 +568,6 @@ export class ErrorTracker {
     };
 
   }
-}
 
 export const errorTracker = new ErrorTracker();
 
@@ -649,13 +578,11 @@ if (=> {
       lineno: event.lineno);
       colno: event.colno
     });
-  });
 
   window.addEventListener('unhandledrejection', (event) => {
     errorTracker.trackError(new Error(event.reason), {
       type: 'unhandledrejection'
     });
-  });
 }`,
 
     'monitoring/analytics.js': `// Analytics tracking system
@@ -703,11 +630,6 @@ export const queryOptimizer = new QueryOptimizer();`,
     
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -716,20 +638,7 @@ export class ConnectionPool {
     this.usedConnections = new Set();
   }
 
-<<<<<<< HEAD
   async getConnection() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async getConnection() {
-=======
-async getConnection() {
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
-async getConnection() {
->>>>>>> main
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -759,13 +668,6 @@ async getConnection() {
 });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -788,16 +690,9 @@ async getConnection() {
       max: this.maxConnections
     };
   }
-}
 
 const connectionPool = new ConnectionPool();
 module.exports = { ConnectionPool, connectionPool };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 
 export function debounce(func, wait) {
   let timeout = null;
@@ -858,11 +753,6 @@ export function preloadCriticalResources() {
 
 
 export const connectionPool = new ConnectionPool();
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
@@ -871,58 +761,25 @@ export const connectionPool = new ConnectionPool();
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
-});
-<<<<<<< HEAD
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> main
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Main execution
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
-<<<<<<< HEAD
     createAdvancedMonitoring();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    createAdvancedMonitoring();
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Main execution
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -966,12 +823,6 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
     console.log('  - Advanced monitoring system created');
@@ -981,32 +832,13 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     process.exit(1);
   }
-}
 
-<<<<<<< HEAD
 main();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-main();
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

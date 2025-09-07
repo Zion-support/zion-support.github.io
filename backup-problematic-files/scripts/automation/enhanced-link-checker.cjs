@@ -172,9 +172,4 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
-<<<<<<< HEAD
   console.error(" Link checker automation "failed")
-  console.error(" Link checker automation "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

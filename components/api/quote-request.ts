@@ -16,12 +16,9 @@ const supabaseKey =;
 const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-<<<<<<< HEAD
 
 const supabase =;
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const openai = openaiApiKey ? new OpenAI({ "apiKey": openaiApiKey,;
 }) : null;
@@ -53,11 +50,9 @@ return res.status(405).json({ "message": 'Method not allowed',;'
               .filter(Boolean)
           : [];
       }
-<<<<<<< HEAD
 const supabaseUrl = $2;
 const supabaseKey = $2;
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,
->>>>>>> origin/main
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
@@ -102,25 +97,9 @@ const tagsLine = (text.split('\n').find(l => { return l.toLowerCase().includes('
       console.error ("quote - request error", e);
       return res.status (500).json ({ message: "Server error" });
     }
-<<<<<<< HEAD
     return res.status (500).json ({ message: "Server error" });
-=======
-
-return res;
-      .status(200)
-      .json({ "ok": true, "summary": aiSummary, "tags": aiTags, "id": saved?.id
-});
-  } catch ("e": any) {
-    }
-    console.error('quote-request error', e);'
-return res.status(500).json({ "message": 'Server error',;'
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-}

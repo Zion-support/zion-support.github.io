@@ -897,7 +897,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 42
   };
-<<<<<<< HEAD
   // Edge Computing Orchestration Platform
   {
     }
@@ -929,7 +928,6 @@ export interface InnovativeITService2025 {
     "rating": 4.7,
     "reviews": 56
   };
-<<<<<<< HEAD
   // Blockchain Enterprise Platform
   {
     }
@@ -961,7 +959,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 31
   };
-<<<<<<< HEAD
   // AI-Powered DevOps Platform
   {
     }
@@ -992,7 +989,6 @@ export interface InnovativeITService2025 {
     "rating": 4.9,
     "reviews": 167
   };
-<<<<<<< HEAD
   // Quantum Networking Platform
   {
     }
@@ -1024,7 +1020,6 @@ export interface InnovativeITService2025 {
     "rating": 4.9,
     "reviews": 12
   };
-<<<<<<< HEAD
   // Autonomous IT Operations Platform
   {
     }
@@ -1056,7 +1051,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 52
   };
-<<<<<<< HEAD
   // Quantum Data Center Platform
   {
     }
@@ -1089,7 +1083,6 @@ export interface InnovativeITService2025 {
     "rating": 4.9,
     "reviews": 8
   };
-<<<<<<< HEAD
   // Quantum Cybersecurity Platform
   {
     }
@@ -1122,7 +1115,6 @@ export interface InnovativeITService2025 {
     "rating": 4.9,
     "reviews": 23
   };
-<<<<<<< HEAD
   // Quantum Cloud Migration Platform
   {
     }
@@ -1155,7 +1147,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 38
   };
-<<<<<<< HEAD
   // Cloud-Native Application Development Platform
   {
     }
@@ -1186,7 +1177,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 33
   };
-<<<<<<< HEAD
   // Zero-Trust Security Architecture Platform
   {
     }
@@ -1217,7 +1207,6 @@ export interface InnovativeITService2025 {
     "rating": 4.9,
     "reviews": 21
   };
-<<<<<<< HEAD
   // Edge Computing Orchestration Platform
   {
     }
@@ -1248,7 +1237,6 @@ export interface InnovativeITService2025 {
     "rating": 4.7,
     "reviews": 28
   };
-<<<<<<< HEAD
   // API Gateway and Management Platform
   {
     }
@@ -1279,7 +1267,6 @@ export interface InnovativeITService2025 {
     "rating": 4.6,
     "reviews": 39
   };
-<<<<<<< HEAD
   // Data Pipeline and ETL Platform
   {
     }
@@ -1310,7 +1297,6 @@ export interface InnovativeITService2025 {
     "rating": 4.7,
     "reviews": 29
   };
-<<<<<<< HEAD
   // Infrastructure as Code Platform
   {
     }
@@ -1341,7 +1327,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 35
   };
-<<<<<<< HEAD
   // Database Performance Optimization Platform
   {
     }
@@ -1372,7 +1357,6 @@ export interface InnovativeITService2025 {
     "rating": 4.7,
     "reviews": 31
   };
-<<<<<<< HEAD
   // Network Monitoring and Analytics Platform
   {
     }
@@ -1403,7 +1387,6 @@ export interface InnovativeITService2025 {
     "rating": 4.6,
     "reviews": 37
   };
-<<<<<<< HEAD
   // IT Asset Management and Discovery Platform
   {
     }
@@ -1434,7 +1417,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 43
   };
-<<<<<<< HEAD
   // Quantum-Secure Cloud Infrastructure
   {
     }
@@ -1466,7 +1448,6 @@ export interface InnovativeITService2025 {
     "rating": 4.9,
     "reviews": 12
   };
-<<<<<<< HEAD
   // Autonomous IT Operations Center
   {
     }
@@ -1498,7 +1479,6 @@ export interface InnovativeITService2025 {
     "rating": 4.8,
     "reviews": 45
   };
-<<<<<<< HEAD
   // Edge Computing Orchestration Platform
   {
     }
@@ -1530,7 +1510,6 @@ export interface InnovativeITService2025 {
     "rating": 4.7,
     "reviews": 56
   };
-<<<<<<< HEAD
   // Blockchain Infrastructure Platform
   {
     }
@@ -1658,7 +1637,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 15;
   },;
   // Zero Trust Security Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'zero-trust-security-platform',;'
@@ -1705,7 +1683,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 42;
   },;
   // Edge Computing Orchestration Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'edge-computing-orchestration',;'
@@ -1752,7 +1729,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 56;
   },;
   // Blockchain Enterprise Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'blockchain-enterprise-platform',;'
@@ -1799,7 +1775,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 31;
   },;
   // AI-Powered DevOps Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-powered-devops-platform',;'
@@ -1846,7 +1821,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 167;
   },;
   // Quantum Networking Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-networking',;'
@@ -1893,7 +1867,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 12;
   },;
   // Autonomous IT Operations Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'autonomous-it-operations',;'
@@ -1940,7 +1913,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 52;
   },;
   // Quantum Data Center Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-data-center',;'
@@ -1987,7 +1959,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 8;
   },;
   // Quantum Cybersecurity Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-cybersecurity',;'
@@ -2034,7 +2005,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 23;
   },;
   // Quantum Cloud Migration Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-cloud-migration',;'
@@ -2081,7 +2051,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 38;
   },;
   // Cloud-Native Application Development Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'cloud-native-app-development-platform',;'
@@ -2128,7 +2097,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 33;
   },;
   // Zero-Trust Security Architecture Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'zero-trust-security-architecture',;'
@@ -2175,7 +2143,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 21;
   },;
   // Edge Computing Orchestration Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'edge-computing-orchestration-platform',;'
@@ -2222,7 +2189,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 28;
   },;
   // API Gateway and Management Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'api-gateway-management-platform',;'
@@ -2269,7 +2235,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 39;
   },;
   // Data Pipeline and ETL Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'data-pipeline-etl-platform',;'
@@ -2316,7 +2281,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 29;
   },;
   // Infrastructure as Code Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'infrastructure-as-code-platform',;'
@@ -2363,7 +2327,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 35;
   },;
   // Database Performance Optimization Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'database-performance-optimization-platform',;'
@@ -2410,7 +2373,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 31;
   },;
   // Network Monitoring and Analytics Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'network-monitoring-analytics-platform',;'
@@ -2457,7 +2419,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 37;
   },;
   // IT Asset Management and Discovery Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'it-asset-management-discovery-platform',;'
@@ -2504,7 +2465,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 43;
   },;
   // Quantum-Secure Cloud Infrastructure;
-<<<<<<< HEAD
   {;
     }
     "id": 'quantum-secure-cloud-infrastructure',;'
@@ -2551,7 +2511,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 12;
   },;
   // Autonomous IT Operations Center;
-<<<<<<< HEAD
   {;
     }
     "id": 'autonomous-it-operations-center',;'
@@ -2598,7 +2557,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 45;
   },;
   // Edge Computing Orchestration Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'edge-computing-orchestration-platform',;'
@@ -2645,7 +2603,6 @@ export const "innovativeITServicesEnhanced2025": InnovativeITService[] = [;
     "reviews": 56;
   },;
   // Blockchain Infrastructure Platform;
-<<<<<<< HEAD
   {;
     }
     "id": 'blockchain-infrastructure-platform',;'

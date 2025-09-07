@@ -175,7 +175,6 @@ class EnhancedSecurityAutomation {}
                         "writableByOthers": isWritableByOthers;
                     })};
             };
-        };
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
      {}
                     permissionIssues.push({})
@@ -184,7 +183,6 @@ class EnhancedSecurityAutomation {}
                         "writableByOthers": isWritableByOthers;
                     })};
             };
-        };
         this.log(`Found ${permissionIssues.length} permission issues`)};
         return {;}
             "status": permissionIssues.length === 0 ? 'success' : 'warning',
@@ -233,16 +231,10 @@ class EnhancedSecurityAutomation {}
             this.log(`Enhanced Security Automation "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the automation if this script is executed directly;
 if ( {})
     const automation = new EnhancedSecurityAutomation) {}
      {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = EnhancedSecurityAutomation;
-module.exports = EnhancedSecurityAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

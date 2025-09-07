@@ -3,8 +3,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';'
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = any;
 type UserRole = 'talent' | 'client';
@@ -16,17 +14,8 @@ const AuthContext = createContext<AuthContextType>({
   role: 'talent'
   setRole: () => {}
 });  role: UserRole
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   setRole: (role: UserRole) => void
 },
-<<<<<<< HEAD
-=======
-})
-export function AuthProvider({ children }: { children: React.ReactNode,}
-}) {
-  const [role, setRoleState] = useState<UserRole    />('talent')
-  useEffect(() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
 
@@ -35,7 +24,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     try {
-<<<<<<< HEAD
       const stored = $2;
       if (stored === 'talent' || stored === 'client') {
       if (stored === 'talent' |stored === 'client') {
@@ -127,27 +115,3 @@ return useContext(AuthContext);
 export function useAuth() {
   return useContext(AuthContext)
 }
-<<<<<<< HEAD
-=======
-return useContext(AuthContext);
-}
-<<<<<<< HEAD
-}
-=======
-type UserRole = 'talent' | 'client'
-useEffect ( () => {
-  try {
-  
-}catch {
-  
-}
-}, [])
-}catch {
-  
-}
-}
-return (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -53,7 +53,6 @@ export interface TreeNode {"
   name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;
   children?: TreeNode[];}
 }
-}
 
 function NodeItem({ node, depth, onDeploy }: { "node": TreeNode, "depth": number, onDeploy?: ("path": string) => void
 }) {
@@ -68,7 +67,6 @@ const hasChildren = null;
       } as any,
       "body": JSON.stringify({ "path": node.path
 })
-    })
 };
 
 
@@ -171,7 +169,6 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
             Deploy;
           </button>;
         </div>;
-      </div>;
               node={child}
               depth={depth + 1}
               on_deploy={on_deploy}
@@ -232,53 +229,19 @@ export default Tree;
   child 
 }depth= {
   depth + 1 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }onDeploy= {
   onDeploy }
 }
 }/>) ) 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-  0;
-}onDeploy= {}
-  onDeploy;
-}/>) ) ;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }</div>) ;
 
 export default Tree;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <div className="w-full">
       {nodes.map((n) => (
 
 }export default Tree;}
 
-=======
-
-"
-=======
-}</div>) 
-}</div>) 
-}export function Tree ({
-  nodes, onDeploy 
-}: TreeProps) {
-  return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-  n.path 
-}node= {
-  n 
-}depth= {
-  0 
-}onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-}export default Tree
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   0
 }onDeploy= {}
   onDeploy
@@ -291,7 +254,6 @@ export default Tree
       ))}
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default Tree;
   child.path;
 }node= {
@@ -299,7 +261,6 @@ export default Tree;
 }depth= {
   depth + 1;
 }on_deploy= {
-=======
 "
     <div className="w-full">
       {nodes.map((n) => (
@@ -313,12 +274,9 @@ export default Tree;
 }depth= {}
   depth + 1;
 }on_deploy= {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   on_deploy;
 }/>) );
 }</div>);
-}</div>);
-<<<<<<< HEAD
 }export /**
  * Tree - Function description
  */
@@ -331,33 +289,17 @@ function Tree() {
 }depth= {
   0;
 }on_deploy= {
-=======
-}export /**;
- * Tree - Function description;
- */
-<<<<<<< HEAD
-function Tree() {
-  return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-=======
-function Tree() { return null; }
-  return (<div className="w - full"> {}
-  nodes.map ( (n) => (<NodeItem key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   n.path;
 }node= {}
   n;
 }depth= {}
   0;
 }on_deploy= {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   on_deploy;
 }/>) );
 }</div>);
 }export default Tree;}
 export default Tree;
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 export default Tree;}/>) )}</div>)}export default Tree;
     </div>
@@ -366,7 +308,6 @@ export default Tree;}/>) )}</div>)}export default Tree;
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
-<<<<<<< HEAD
     <div className="w-full">
       {nodes.map((n) => (
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
@@ -375,25 +316,9 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
   )
 }
 export default Tree;
-=======
-    <div className = $2;
-=======
-}export default Tree;}
-export default Tree;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
 ;
-<<<<<<< HEAD
 }/>) ) 
 }</div>) 
 }export default Tree;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

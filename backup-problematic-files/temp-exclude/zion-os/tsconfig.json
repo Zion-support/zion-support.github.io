@@ -19,17 +19,6 @@
       }
     ]
   },
-<<<<<<< HEAD
-=======
-
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-
-:clean-build/tsconfig.json
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-:backup-problematic-files/temp-exclude/zion-os/tsconfig.json
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
   "include": [
@@ -41,16 +30,9 @@
   "exclude": [
     "node_modules"
   ]
-<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
-=======
-:backup-problematic-files/temp-exclude/zion-os/tsconfig.json
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
->>>>>>> main:clean-build/tsconfig.json
 ursor/automate-test-improve-and-merge-code-646c
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }

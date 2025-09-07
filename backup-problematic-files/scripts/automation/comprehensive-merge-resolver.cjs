@@ -64,7 +64,6 @@ const { execSync, spawn } = require("child_process")
 });this.log("� Created "backup"`)
         "WARN"
   "stdio": "pipe"
-  "stdio": "pipe"
         "timeout"
       return { "success"}
   this.log(⚠ Merge conflicts detected in ${branchName}, attempting to resolve...")
@@ -106,11 +105,6 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
       case ".tsx"
       case ".md"
         /([\s\S]*?)        "$1"
-        /([\s\S]*?)        "$1"
-        /([\s\S]*?)        "$1"
-        /([\s\S]*?)        "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
     const lines = content.split("\n")
         trimmedLine.startsWith("import ")
@@ -127,9 +121,4 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "mergesSuccessful"
         "errors"
       "successRate"
-<<<<<<< HEAD
     const reportPath = path.join(this.logsDir, ")
-    const reportPath = path.join(this.logsDir, ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -19,7 +19,6 @@ function bad() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 export default async function handler(req, res) {
   try {
   const doc = {
@@ -44,12 +43,10 @@ function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok:
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -57,12 +54,10 @@ function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 async function tryWriteToFirestore(req, res) {
   try {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>
@@ -77,8 +72,6 @@ async function tryWriteToFirestore(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -104,15 +97,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ok: true,
       id: doc.id
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   } catch (error) {
     res.status(500).json({
       ok: false,
       error: 'Internal server error'
     });
   }
-<<<<<<< HEAD
-}
     const db = admin.firestore()
     await db.collection("interaction_feedback").doc(doc.id).set(doc)
     return true
@@ -125,12 +115,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -138,12 +126,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return bad(res, "Method not allowed", 405)
@@ -166,7 +152,6 @@ export default async function handler(req, res) {
   const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc.id })
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
@@ -202,7 +187,6 @@ const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =;
     }
     return false;
   }
-}
 
 export default async function handler() {
   }
@@ -235,27 +219,3 @@ const "k": FeedbackRecord["kind"] =;"
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { "id": doc.id });
 }
-=======
-  return ok(res, { id: doc.id });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD:pages_backup/api/feedback.ts
-  return ok(res, { id: doc.id });
-
-}}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

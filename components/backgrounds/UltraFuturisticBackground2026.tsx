@@ -69,7 +69,6 @@ const createParticle = () => {
 x = Math.random() * canvas.width;
 
           y = -10;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           vx = (Math.random() - 0.5) * 2;
           vy = Math.random() * 2 + 1;
           break;
@@ -105,7 +104,6 @@ const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update
         particle.y += particle.vy;
         vy;
         // Draw particle
-=======
       return {
         x,
         y,
@@ -117,14 +115,12 @@ const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update
         life: 0,
 maxLife: Math.random() * 200 + 100,
       };
-    };
 
     const initParticles = () => {
       particles = [];
 for (let i = 0; i < 100; i++) {
         particles.push(createParticle());
       }
-    }
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -187,7 +183,6 @@ for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
       for (let coordinate_y = 0, y < canvas.height, y += grid_size) {
         }
@@ -284,9 +279,7 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0''
             repeat: Infinity,
             ease: "linear"
           }}
-=======
             ease: 'linear',          }}          }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         />
         <motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12"
@@ -388,7 +381,6 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 tran
             "ease": 'linear',            "ease": "linear";"
           }} />;
       </div>;
-<<<<<<< HEAD
       {/* Energy Field Effects */}
       <div className='fixed inset - 0 pointer - events - none z - 20'>;'
         <motion.div;
@@ -494,7 +486,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />'
         <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />'
       </div>
-    </div>
   );
 export default UltraFuturisticBackground2026;
 

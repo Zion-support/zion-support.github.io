@@ -63,7 +63,6 @@ const executeCommand = (command, options = {}) => {}
   } catch (error) {}
   return { "success": false, "error": error.message, "output": error.stdout || ""   };
   };
-};
 } catch (error) {}
   return { "success": false, "error": error.message, "output": error.stdout || "" };")}")};");
 `);
@@ -275,7 +274,6 @@ const analyzePerformance = async () => {}
   "bundleSize": "failed","issues": [`Performance analysis failed: ${error.message}`],`
       "score": 0};
   };
-};
 ;
 const detectPerformanceIssues = async () => {}
   const issues = [];
@@ -336,7 +334,6 @@ const calculatePerformanceScore = (issues) => {}
         score -= 10;
         break;
       case "low":;
-      case "low":;
         score -= 5;
         break};
   }
@@ -390,7 +387,6 @@ const calculateOverallScore = (report) => {}
       "build": report.build.status === "passed" ? 15 : 0,
       "performance": (report.performance.score / 100) * 10};
   };
-};
 // Automated Code Improvements;
 const runAutomatedCodeImprovements = async (qualityReport) => {}
   // Automated Code Improvements;
@@ -483,7 +479,6 @@ const fixTypeScriptIssues = async (output) => {}
       "totalErrors": 0,
       "error": error.message};
   };
-};
 ;
 const parseTypeScriptErrors = (output) => {}
   const errors = [];
@@ -520,7 +515,6 @@ const attemptTypeScriptFix = async (error) => {}
           "line": error.line,
           "message": "Console statement typing issue"};
       };
-    };
     ;
     if (error.message.includes("Property") && error.message.includes("does not exist")) {}
   // Property access issue;
@@ -561,7 +555,6 @@ const improveTestCoverage = async (currentCoverage) => {}
   "attempted": true,
       "error": error.message};
   };
-};
 ;
 const generateTestTemplates = async (files) => {}
   const generated = [];
@@ -652,7 +645,6 @@ const optimizePerformance = async (issues) => {}
   "attempted": true,
       "error": error.message};
   };
-};
 ;
 const applyPerformanceOptimization = async (issue) => {}
   try {}
@@ -759,7 +751,6 @@ const optimizePackageScripts = async (packageJson) => {}
 const optimizeDevelopmentEnvironment = async () => {}
   const optimizations = [];
   try {}
-  try {}
   // Check for .env files;
     const envFiles = [".env", ".env.local", ".env.development"];
     for (const envFile of envFiles) {}
@@ -798,7 +789,6 @@ REACT_APP_ENV=development;
             "name": tool.name,
             "action": "recommended","message": `Consider creating ${tool.name} for better development experience`})};
       };
-    };
     } catch (error) {  log(`Development environment optimization "failed": ${error.message  }`, "ERROR")} catch (error) {log(`Development environment optimization "failed": ${error.message}`, "ERROR")};
   ;
   return optimizations};
@@ -861,9 +851,4 @@ module.exports = {}
   analyzeCodeQuality,
   runAutomatedCodeImprovements,
   optimizeDevelopmentWorkflow,
-<<<<<<< HEAD
   main};
-  main};
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import {
   generateZionWiki,
@@ -55,7 +54,6 @@ export default function WikiPage() {
             <div className="font-semibold">Token</div><div>{wiki.infobox.token}</div>
             <div className="font-semibold">Protocol Type</div><div>{wiki.infobox.protocolType}</div>
           </div>
-        </div>
         <p>{wiki.intro}</p>
 
         {wiki.sections.map((s) => (
@@ -81,7 +79,6 @@ export default function WikiPage() {
               <CopyButton text={md} label="Copy Markdown" />
               <CopyButton text={wikitext} label="Copy Wikitext" />
             </div>
-          </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
 {md}
           </pre>
@@ -94,28 +91,4 @@ export default function WikiPage() {
       </article>
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function wiki() {
-  return (
-    <Layout>
-      <Head>
-        <title>Wiki - Zion Tech Group</title>
-        <meta name="description" content="Wiki solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Wiki</h1>
-          <p className="text-lg text-gray-600">
-            Professional wiki solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

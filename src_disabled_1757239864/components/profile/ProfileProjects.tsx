@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/components/profile/ProfileProjects.tsx
+:src/components/profile/ProfileProjects.tsx
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +16,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-=======
 <img;
 <img
                   src={project && project.imageUrl}
@@ -39,7 +38,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                       variant='outline';
                       className='text-xs border-zion-slate-dark text-zion-slate-light'>                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                     >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileProjects.tsx
         {projects.map((project) => (
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
@@ -67,12 +65,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                       {tag}
                     </Badge>
-<<<<<<< HEAD:src/components/profile/ProfileProjects.tsx
+:src/components/profile/ProfileProjects.tsx
                   ))}
                 </div>
               )}
               
-=======
 ;
         {projects && projects.map((project) => (<Card key={project && project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
             {project && project.imageUrl ? (<AspectRatio ratio={16/9}>;import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
@@ -135,7 +132,6 @@ import { Card, CardContent } from "@/components/ui/card",import { Badge } from "
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileProjects.tsx
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>;
@@ -144,15 +140,13 @@ import { Card, CardContent } from "@/components/ui/card",import { Badge } from "
         ))}
       </div>;
       </div>
-<<<<<<< HEAD:src/components/profile/ProfileProjects.tsx
+:src/components/profile/ProfileProjects.tsx
     </div>
   )
 }
-=======
 
     </div>;
   )}}
-}
 }
 }}<div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}<div className="text-xs text-zion-slate-light mt-2">;
                 {project && project.date}
@@ -161,7 +155,6 @@ import { Card, CardContent } from "@/components/ui/card",import { Badge } from "
           </Card>;
         ))}
       </div>;
-    </div>;
   )})}<div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Projects</h3>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
@@ -221,5 +214,3 @@ import { Card, CardContent } from "@/components/ui/card",import { Badge } from "
     </div>);
 }
 ;
-;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileProjects.tsx

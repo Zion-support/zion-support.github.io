@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {innovativeRealMicroSaasServices2025 ;'
@@ -254,7 +253,6 @@ const staggerContainer = {"initial":  ,;
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   return (
@@ -317,7 +315,6 @@ const staggerContainer = {"initial":  ,;
                   {navigationSections.map((section) => (<div className='hidden "lg":flex space-x-8'>;'
                   {navigationSections.map(section => { return (<button; }
                   {navigationSections.map(section => { return (                    <button; }
-                    <button;
                     <button;
                       }
                       key={section.id}
@@ -451,7 +448,6 @@ href='"mailto":kleber@ziontechgroup.com';'
                           <span>kleber@ziontechgroup.com</span>;
                         </a>;
                       </div>;
-                    </div>;
                   </motion.div>;
                 )}
               </AnimatePresence>;
@@ -596,7 +592,6 @@ href='"mailto":kleber@ziontechgroup.com';'
                           <span > kleber@ziontechgroup.com</span>;
                         </a>;
                       </div>;
-                    </div>;
                   </motion.div>)}
               </AnimatePresence>;
             </div>;
@@ -775,8 +770,6 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400'>'
                   <span>Proven Results</span>;
                 </div>;
               </motion.div>;
-            </motion.div>;
-          </motion.div>;
         </div>;
       </section>;
       {/* Features Section */}
@@ -889,7 +882,6 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400'>'
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Enhanced Services Preview */}
 <section className='py-20 px-4'>;'
@@ -1152,7 +1144,6 @@ onClick={() => (window.location.href = service.link
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>;"
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>;"
             </div>;
-          </div>;
           <motion.div;
 href='/comprehensive-services-showcase-2026';'
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl "hover":from-purple-600 "hover":to-pink-700 transition-all duration-300 transform "hover":scale-105 shadow-lg shadow-purple-500/25';'
@@ -1225,7 +1216,6 @@ href='/comprehensive-services-showcase-2026';'
                 Round-the-clock assistance;
               </p>;
             </div>;
-          </div>;
           <motion.div;
 className='text-center';'
             initial={{ "opacity": 0, "y": 20 }}
@@ -1344,22 +1334,18 @@ href='"tel":+13024640950';'
               Website;
             </a>;
           </div>;
-        </div>;
       </footer>;
     </UltraFuturisticBackground2026>;
               Website;
             </a>;
           </div>;
-        </div>;
       </footer>;
     </UltraFuturisticBackground2026>;
               Website;
             </a>;
           </div>;
-        </div>;
       </footer>;
 export default Homepage2025;export default Homepage2025;}export default Homepage2025;
-    </UltraFuturisticBackground2026>)}export default Homepage2025)}export default Homepage2025;)}export default Homepage2025;
     </UltraFuturisticBackground2026>)}export default Homepage2025)}export default Homepage2025;)}export default Homepage2025;
             viewport={{ once: true}}
           >
@@ -1393,96 +1379,11 @@ export default Homepage2025;export default Homepage2025;}export default Homepage
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
             </div>
-          </div>
 
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20}}
             whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
             viewport = $2;
 export default Homepage2025,
-=======
-            viewport={{ once: true }}
-          >
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a
-                href='mailto:kleber@ziontechgroup.com'
-                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'              >
-                Email Us
-              </a>
-              <a
-                href='tel:+13024640950'
-                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'              >            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-              >
-                Email Us
-              </a>
-              <a
-                href='tel:+13024640950'
-                className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950"
-                className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
-              >
-                Call Us
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Footer */}
-      <footer className='py-12 px-4 border-t border-white/10'>
-        <div className='max-w-6xl mx-auto text-center'>
-          <div className='text-gray-400 mb-4'>
-            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
-            <p className='mt-2'>
-              Address: 364 E Main St STE 1008 Middletown DE 19709 | Phone: +1
-              302 464 0950 | Email: kleber@ziontechgroup.com
-            </p>
-          </div>
-          <div className='flex justify-center space-x-6'>
-            <a
-              href='/comprehensive-services-showcase-2026'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >
-              2026 Services
-            </a>
-            <a
-              href='/comprehensive-services-showcase-2025'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >
-              2025 Services
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >              Website            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
-            <p className="mt-2">
-              Address: 364 E Main St STE 1008 Middletown DE 19709
-              Phone: +1 302 464 0950
-              Email: kleber@ziontechgroup.com
-            </p>
-          </div>
-          <div className="flex justify-center space-x-6">
-            <a href="/comprehensive-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              2026 Services
-            </a>
-            <a href="/comprehensive-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              2025 Services
-            </a>
-            <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              Website
-            </a>
-          </div>
-        </div>
-      </footer>
-    </UltraFuturisticBackground2026>
-  );
-}
-export default Homepage2025;  )
-}
-export default Homepage2025;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

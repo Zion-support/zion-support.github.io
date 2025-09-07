@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react';'
@@ -93,17 +91,9 @@ interface FormData {
   "service": string;
   "message": string;
 
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import LoadingSpinner from './LoadingSpinner'
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 interface FormData {
   name: string;
   email: string;
@@ -127,10 +117,8 @@ const "ContactForm": React.FC = () => {
  
 });
 
-<<<<<<< HEAD
   service: string
   message: string
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -152,7 +140,6 @@ const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement | HTMLTextAre
       [name]: value
     }));
   };
-<<<<<<< HEAD
 
 
 const handleSubmit = async ("e": React.FormEvent) => {
@@ -233,7 +220,6 @@ type="text""
               required;
               className="w-full px-3 py-2 border border-gray-300 rounded-md "focus":outline-none "focus":ring-"2focus":ring-blue-"500focus":border-transparent";" />;
           </div>;
-        </div>;
         <div className="grid grid-cols-"1md":grid-cols-2gap-6">;"
           <div>;
             <label htmlFor="company" className="block text-sm font-mediumtext-gray-700mb-2">;"
@@ -259,7 +245,6 @@ type="text""
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md "focus":outline-none "focus":ring-"2focus":ring-blue-"500focus":border-transparent";" />;
           </div>;
-        </div>;
         <div>;
           <label htmlFor="service" className="block text-sm font-mediumtext-gray-700mb-2">;"
             Service Interest;
@@ -365,14 +350,12 @@ export default ContactForm;
                 <p className="font-medium text-gray-900">Email</p>;"
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>;"
               </div>;
-            </div>;
             <div className="flex items-center space-x-3">;"
               <Phone className="w-5 h-5 text-blue-600" />;"
               <div>;
                 <p className="font-medium text-gray-900">Phone</p>;"
                 <p className="text-gray-600">+1 (302) 464-0950</p>;"
               </div>;
-            </div>;
             <div className="flex items-center space-x-3">;"
               <MapPin className="w-5 h-5 text-blue-600" />;"
               <div>;
@@ -383,9 +366,6 @@ export default ContactForm;
                   Middletown, DE 19709;
                 </p>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
         <form onSubmit={handleSubmit} className="space-y-6">;"
           <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">;"
             <div>;
@@ -426,7 +406,6 @@ export default ContactForm;
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent";"
                 placeholder="your@email.com";" />;
             </div>;
-          </div>;
           <div className="grid grid-cols-1 "md":grid-cols-2 gap-4">;"
             <div>;
               <label;
@@ -472,7 +451,6 @@ export default ContactForm;
                 <option value="other">Other</option>;"
               </select>;
             </div>;
-          </div>;
           <div>;
             <label;
               htmlFor="message";"
@@ -511,7 +489,6 @@ export default ContactForm;
           </button>;
         </form>;
       </div>;
-    </div>;
   )}export default ContactForm;
             className="w-full px-3 py-2 border border-gray-300 rounded-md "focus":outline-none "focus":ring-"2focus":ring-blue-"500focus":border-transparent""
   )}
@@ -567,7 +544,6 @@ type="submit""
     } finally {;
       setIsSubmitting(false);
     }
-  }
   return (
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
@@ -627,14 +603,12 @@ type="submit""
                 <p className="font-medium text-gray-900">Email</p>
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
-            </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-blue-600" />
               <div>
                 <p className="font-medium text-gray-900">Phone</p>
                 <p className="text-gray-600">+1 (302) 464-0950</p>
               </div>
-            </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-blue-600" />
               <div>
@@ -645,9 +619,6 @@ type="submit""
                   Middletown, DE 19709
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div>
@@ -686,7 +657,6 @@ type="submit""
                 placeholder="your@email.com"
               />
             </div>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
@@ -727,7 +697,6 @@ type="submit""
                 <option value="other">Other</option>
               </select>
             </div>
-          </div>
           <div>
             <label
               htmlFor="message"
@@ -765,9 +734,7 @@ type="submit""
           </button>
         </form>
       </div>
-    </div>
   )
 };
 
 export default ContactForm;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

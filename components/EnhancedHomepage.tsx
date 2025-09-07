@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 import React, { useEffect, useState } from 'react';'
@@ -55,10 +54,6 @@ return (<div className={className || ',;'
       <p>This component is under development.</p>;
     </div>;
   )}"visible": {"opacity": 1, "transition": {"duration": 0.8, "staggerChildren": 0.1;
-}
-}
-}
-}
 }
       clearInterval(interval)clearTimeout(performanceTimer)window && window.removeEventListener('mousemove', handleMouseMove)}'
   }, [])//Filter services by category //Animation variants const container_variants = {"hidden": {"opacity": 0;
@@ -335,8 +330,6 @@ const allRevolutionaryServices = [;
                         </div>;
                         <p className="text-cyan-400 font-medium">Revolutionary Technology</p>;"
                       </div>;
-                    </div>;
-                  </div>;
                 </motion.div>;
               </AnimatePresence>;
             </motion.div>;
@@ -374,8 +367,6 @@ const allRevolutionaryServices = [;
                         </div>;
                         <p className="text-cyan-400 font-medium">Revolutionary Technology</p>;"
                       </div>;
-                    </div>;
-                  </div>;
                 </motion && motion.div>;
               </AnimatePresence>;
             </motion && motion.div>;
@@ -402,8 +393,6 @@ const allRevolutionaryServices = [;
                         </div>;
                         <p className="text-cyan-400 font-medium">Revolutionary Technology</p>;"
                       </div>;
-                    </div>;
-                  </div>;
                 </motion.div>;
               </AnimatePresence>;
             </motion.div>;

@@ -12,7 +12,6 @@ const { execSync } = require("child_process")
     this.log(" Master Controller started successfully")
   this.log("� Stopping Master Automation Controller...")
     for (const ["name", "automation")]
-    for (const ["name", "automation")]
     this.log(" Master Controller stopped")
   this.log(" Initializing automation scripts...")
   const AutoErrorFixer = require("./auto-error-fixer.cjs")
@@ -31,7 +30,6 @@ const { execSync } = require("child_process")
           if (AutomationClass && typeof AutomationClass === "function")
             const name = script.replace(".cjs", "")
   this.log(" Monitoring automation status...")
-  this.log(" Monitoring automation status...")
       await this.generateHealthReport()} catch (error) {  this.log(` Error during "monitoring"`})
   const status = execSync("pm2 jlist", { "encoding": "utf8"})
       return JSON.parse(status)} catch (error) {  this.log(` Could not get PM2 "status"`})
@@ -43,7 +41,6 @@ const { execSync } = require("child_process")
   try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
   "stdio": "pipe"
   try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
-  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
   "timestamp"
         "controllerStatus"
           "automationsCount"
@@ -53,7 +50,6 @@ const { execSync } = require("child_process")
       this.log(" Health report generated")} catch (error) {  this.log(` Failed to generate health "report"`})
     for (const ["name", "automation")]
   health[name] = { "status": "unknown", "error": "No status method"}
-  health[name] = { "status": "error", "error"}
   health[name] = { "status": "error", "error"}
   "type": "high_error_rate"
           "message": High error rate detected, consider reviewing automation logic"
@@ -103,7 +99,6 @@ const { execSync } = require("child_process")
       "logFile"
   try {this.log(` Running "command": ${command} ${args.join(" "`})
   case "start"
-  case "start"
         case "stop"
         case "restart"
         case "status"
@@ -114,9 +109,4 @@ const { execSync } = require("child_process")
         "default"
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
-<<<<<<< HEAD
   process.on("SIGTERM")
-  process.on("SIGTERM")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

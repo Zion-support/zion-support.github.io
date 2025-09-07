@@ -94,11 +94,7 @@ const { data, error } = await supabase;
       .from('email_signups')'
 
 
-<<<<<<< HEAD
 pr-12243
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')'
     return res.status(400).send('Invalid email');'
@@ -179,7 +175,6 @@ function handler() { return null; }
 }
   try {}
     // Basic validation;
-<<<<<<< HEAD
     const normalized = email.trim ().toLowerCase ();
     const is_valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test (normalized);'
     if (return res.status (400).send ('Invalid email format')) {}
@@ -224,22 +219,10 @@ if ( {) {}
       return res.status (500).send (error.message || 'Database error');
     }
     return res.status (200).json ({ ok: true, data });
-<<<<<<< HEAD
   } catch (e: any) {
-<<<<<<< HEAD
-=======
-const normalized = email && email.trim().toLowerCase();
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
-<<<<<<< HEAD
-=======
-    if (isPlaceholder) {}
-      return res && res.status(200).json({ ok: true;, simulated: true ;})
-   ,
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
@@ -260,7 +243,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   try {
     // Basic validation
@@ -268,106 +250,27 @@ const { email } = req.body |{}
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
     if (!isValid) return res.status(400).send('Invalid email format');
 
-<<<<<<< HEAD
     // If placeholders are still used, just accept without DB write
     const isPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
     if (isPlaceholder) {
       return res.status(200).json({ ok: true, simulated: true })
     }
 
-<<<<<<< HEAD
     const { data, error } = await supabase
       .from('email_signups')
       .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
-=======
-
-      .select('*')
-      .single();
-
-
-
-      .select('*')
-      .single();
-
-
-    if (!isValid) return res.status(400).send('Invalid email format');
-    // If placeholders are still used, just accept without DB write
-const isPlaceholder =
-      (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
-      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
-    if (isPlaceholder) {
-      return res.status(200).json({ ok: true, simulated: true });
-    }
-    const { data, error } = await supabase
-      .from('email_signups')
-.insert({
-        email: normalized,
-        source: 'mobile-launch',
-        created_at: new Date().toISOString(),
-      })
-      .select('*')
-      .single();
-
->>>>>>> origin/main
       .select('*')
       .single();
 
     if (error) {
-<<<<<<< HEAD
       if (error.message && error.message.includes('duplicate')) {
         return res.status(200).json({ ok: true, duplicate: true })
-=======
-
-
-
-
-
-
-
-    if (error) {
-
-
-
-
-}
-=======
-const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
-
-const isPlaceholder =
-      (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
-      (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
-    if (isPlaceholder) {}
-      return res && res.status(200).json({ ok: true;, simulated: true;,}
-});    }
-    }
-
-const { data, error } = await supabase;
-      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
-    if (isPlaceholder) {}
-      return res && res.status(200).json({ ok: true;, simulated: true ;})
-   ,
-}
-
-const { data, error } = await supabase;
-      .from('email_signups')
-      .insert({
-        email: normalized;
-source: 'mobile-launch';,
-  created_at: new Date().toISOString();}
-     ,}
-})      .select('*')      .insert({ email: normalized;, source: 'mobile-launch';,}
-  created_at: new Date().toISOString();,}
-})
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       .select('*')
       .single();
 
     if (error) {}
-<<<<<<< HEAD
 }
 import { supabase } from '../../utils / supabase / client';
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
 export default async /**
  * handler - Function description
@@ -449,8 +352,6 @@ return res.status (500).send (error.message || 'Database error',;'
     return res.status(500).send(e?.message || 'Unexpected error')}'
   }
     return res.status(500).send(e?.message || 'Unexpected error')}'
-    return res.status(500).send(e?.message || 'Unexpected error')}'
-    return res.status(500).send(e?.message || 'Unexpected error')}'
 return res.status (200).json ({ "ok": true, "duplicate": true,;
 });
       }
@@ -470,7 +371,6 @@ return res.status (200).json ({ "ok": true, "duplicate": true,;
     }
     return res.status (500).send (e?.message || 'Unexpected error');'
 }
-}
 
     return res.status(500).send(e?.message || 'Unexpected error');'
 
@@ -479,7 +379,6 @@ return res.status (200).json ({ "ok": true, "duplicate": true,;
 
 }
     return res.status(500).send(e?.message || 'Unexpected error');'
-  }
   }
     return res.status(500).send(e?.message || 'Unexpected error');'
 }

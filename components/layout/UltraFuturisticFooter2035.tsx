@@ -1,12 +1,9 @@
 import React from 'react';,
-=======
 import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   Zap
   Globe
   Phone
@@ -119,7 +116,6 @@ import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
 
 
-=======
   Zap;
   Globe;
   Phone;
@@ -231,7 +227,6 @@ import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
 
 
-<<<<<<< HEAD
 
 import React from 'react','
 import Link from 'next/link';'
@@ -243,7 +238,6 @@ import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
       { name: 'Services Advertising';, href: '/services-advertising' ;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ]
   }
 ];
@@ -252,7 +246,6 @@ import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
 
  } from 'lucide-react';'
 
-<<<<<<< HEAD
   Zap;
   Globe;
   Phone;
@@ -314,8 +307,6 @@ import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;Brain, Atom, Shield, Rocket
     ];
   }
 ];Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
  } from 'lucide-react';
 const contactInfo = null;
     "links": [;
@@ -758,7 +749,6 @@ className='space-y-6'>'
                       Revolutionary Technology Solutions;
                     </p>;
                   </div>;
-                </div>;
                 <p className='text-gray-300 leading-relaxed max-w-md'>;'
                   Leading the future with cutting-edge AI consciousness, quantum;
                   computing, and innovative micro SAAS solutions. Transform your;
@@ -784,7 +774,6 @@ className='space-y-6'>'
                     <MapPin className='w-4 h-4' />;'
                     <span className='text-sm'>{contactInfo.address}</span>;'
                   </div>;
-                </div>;
                 {/* Social Links */}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -842,15 +831,12 @@ className='space-y-4'>'
 
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
-=======
 <div className='relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
         <div className='container mx - auto px - 4 py - 20'>;
-=======
         {/* Main Footer Content */}'
         <div className='container mx - auto px - 4 py - 20'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8'>;
             {/* Company Info */}
                       Revolutionary Technology Solutions;
@@ -892,7 +878,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <MapPin className="w-4 h-4" />;"
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                   </div>;
-                </div>;
 
                     <a;
                       key={social && social.name}
@@ -938,7 +923,6 @@ className='space-y-6'
                       Revolutionary Technology Solutions
                     </p>
                   </div>
-                </div>
                 <p className='text-gray-300 leading-relaxed max-w-md'>
                   Leading the future with cutting-edge AI consciousness, quantum
                   computing, and innovative micro SAAS solutions. Transform your
@@ -964,7 +948,6 @@ className='space-y-6'
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>
                   </div>
-                </div>
                 {/* Social Links */}
 <div className='flex items-center gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1002,38 +985,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 className='space-y-4'
               >
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}'
-                className='space-y-4'
-              >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='flex items-center gap-2'>
                   {section.icon}'
                   <h4 className='font-semibold text-white'>{section.title}</h4>
                 </div>'
                 <p className='text-sm text-gray-400'>{section.description}</p>'
                 <ul className='space-y-2'>
-<<<<<<< HEAD
                   {section.links.map(link => (
-=======
-                  {section.links.map(link => (                    <li key={link.name}>
-                      <Link;
-                        href={link.href}`
-                        className={`text-sm transition-colors duration-200 ${}
-                          link.featured'
-                            ? 'text-cyan-400 hover:text-cyan-300'                            : 'text-gray-400 hover:text-white'              >"
-                <div className="flex items-center gap-2">
-                  {section.icon}"
-                  <h4 className="font-semibold text-white">{section.title}</h4>
-                </div>"
-                <p className="text-sm text-gray-400">{section.description}</p>"
-                <ul className="space-y-2">
-                  {section.links.map((link) => (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <li key={link.name}>
                       <Link;
                         href={link && link.href}`
@@ -1055,7 +1016,6 @@ className='space-y-4'
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured '
                             ? 'text-cyan-400 hover:text-cyan-300' 
 
-<<<<<<< HEAD
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
 link.featured
@@ -1075,7 +1035,6 @@ link.featured
                         }`}>;`                        {link && link.name}
                       </Link>;
                     </li>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   ))}
                 </ul>
               </motion.div>
@@ -1144,7 +1103,6 @@ href='/cookies''
                 </Link>;
               </div>;
 /* Animated grid */ 
-  /* Animated grid */ 
 
               <button,
 onClick={scrollToTop}
@@ -1157,7 +1115,6 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
             </div>
           </motion.div>
         </div>
-      </div>
     </footer>
 )
 };
@@ -1169,11 +1126,9 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
 }</div> </motion.div> </div> {}
   /* Footer Sections */
 }{}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   footerSections.map ( (section, index) => (<motion.div key= {}
   section.title;
 }<li key= {}
-<<<<<<< HEAD
   link.name}
 }    /> <Link href= {}
   link.href}
@@ -1191,36 +1146,14 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
 }</div> </motion && motion.div> </div> {;}
   /* Footer Sections */ ;}
 }{
-=======
-  link.name;
-}> <Link href= {}
-  link.href;
-}className= {}`
-  `text-sm transition-colors duration-200 $ {'
-  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'`
-}`
-}> </li>) )
-}</ul> </motion.div>) )
-}</div> {}
-  /* Animated grid */ ;"
-}<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {;
-  social && social.icon ;
-}</a>) ) ;
-}</div> </motion && motion.div> </div> {;
-  /* Footer Sections */ ;
-}{;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {}
   section && section.title;
 }<li key= {}
-<<<<<<< HEAD
   link && link.name }
 }    /> <Linkhref= {}
   link && link.href }
 }className= {
   `text-sm transition-colors duration-200 $ {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className='text - gray - 300 leading - relaxed max - w-md' />;
 
   /* Animated grid */ 
@@ -1307,7 +1240,6 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
                     <MapPin className="w - 4 h - 4" />;"
                     <span className="text - sm">{contact_info.address}</span>;"
                   </div>;
-                </div>;
                 {/* Social Links */}
                 <div className='flex items - center gap - 4'>;'
                   {social_links.map (social => { return (<a; }
@@ -1391,7 +1323,6 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
 
                   Privacy Policy;
                 </Link>;
-<<<<<<< HEAD
                 <Link;
                   href='/terms';'
                   className='"hover":text - white transition - colors duration - 200'>'
@@ -1418,7 +1349,6 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
                 </Link>;
               </div>;
               <button;
-<<<<<<< HEAD
                 on_click={scrollToTop}
                 className='p - 2 bg - gray - 800 / 50 "hover":bg - gray - 700 / 50 rounded - lg text - gray - 400 "hover":text - white transition - all duration - 200 "hover":scale - 110';'
                 aria - label='Scroll to top'>'
@@ -1430,8 +1360,6 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
             </div>;
           </motion.div>;
         </div>;
-      </div>;
-<<<<<<< HEAD
     </footer>)}/* Animated grid */;
 }<motion.div > <div className="flex items - center gap - 3" > <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center" > <Brain className="w - 6 h - 6 text - white" /> </div> <div> <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </h3> <p className="text - sm text - gray - 400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text - gray - 300 leading - relaxed max - w-md" > Leading the future with cutting - edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {social.icon;"
 }</a>) )}</div> </motion.div> </div> {/* Footer Sections */;
@@ -1450,6 +1378,5 @@ className='p-2 bg-gray-800/50 "hover": bg-gray-700/50 rounded-lg text-gray-400 "
 export default UltraFuturisticFooter2035)
 };
 export default UltraFuturisticFooter2035;
-<<<<<<< HEAD
 
 "

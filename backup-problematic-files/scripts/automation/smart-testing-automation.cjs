@@ -36,7 +36,6 @@ const crypto = require("crypto")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
   this.log("🧪 Starting smart testing automation...")
-  this.log("🧪 Starting smart testing automation...")
     } catch (error) {  this.log(`Smart testing automation "failed": ${error.message  }`, "ERROR"`)
   "total"
       "covered"
@@ -105,7 +104,6 @@ const crypto = require("crypto")
   "components"
       "utilities"
       "hooks"
-    for (const ["category", "patterns")]
     for (const ["category", "patterns")]
   "name"
             "file"
@@ -202,7 +200,6 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       "failed"
       /"Tests"
     this.log(" Attempting to auto-fix failing tests...")
-  this.log(" Attempting to auto-fix failing tests...")
   this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}")
             "
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}")
@@ -210,7 +207,6 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
             `ERROR
     } catch (error) {  this.log("Auto-fix process "failed": ${error.message  }", "ERROR")
   // This would typically involve parsing Jest"
-    // For now, we"
     // For now, we"
   "timestamp"
       "summary"
@@ -220,7 +216,6 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       "details"
     this.log(Test report "generated")
   // This would typically involve parsing Jest"
-    // For now, we"
     // For now, we"
   "timestamp"
       "summary"
@@ -238,9 +233,4 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
-<<<<<<< HEAD
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client';
 
@@ -99,7 +98,6 @@ const Navigation = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>;
           </div>;
-        </div>;
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isOpen && (<motion.div;
@@ -150,7 +148,6 @@ const Navigation = () => {
                     Get Started;
                   </Link>;
                 </div>;
-              </div>;
             </motion.div>;
           )}
         </AnimatePresence>;
@@ -254,7 +251,6 @@ import SearchModal from "./SearchModal";
 
 export default function Navigation() {
 export default function Navigation() {;
-export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -287,7 +283,6 @@ export default function Navigation() {;
       icon: Zap
     }
     {
-    {
       name: "Training"
       href: "/training"
       description: "Professional development"
@@ -317,10 +312,6 @@ export default function Navigation() {;
                 <a
                 </a>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">;
         <div className="container mx-auto px-4">;
@@ -328,7 +319,6 @@ export default function Navigation() {;
             {/* Logo */}
                   Technology Solutions;
                 </div>;
-              </div>;
             </Link>;
               {/* Services Dropdown */}
               <div className="relative group">;
@@ -418,7 +408,6 @@ export default function Navigation() {;
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
                                   {service.name}
                                 </div>;
-                              </div>;
                               <div className="text - sm text - gray - 500">;
                                 {service.description}
                               </div>;
@@ -686,7 +675,6 @@ export default function Navigation() {;
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
                                   {solution.name}
                                 </div>;
-                              </div>;
                               <div className="text - sm text - gray - 500">;
                                 {solution.description}
                               </div>;
@@ -853,7 +841,6 @@ export default function Navigation() {;
                           {service.name}
                         </Link>))}
                     </div>;
-                  </div>;
                   {/* Mobile Solutions */}
                   <div className="px - 4 py - 2">;
                     <div className="font - medium text - gray - 900 mb - 2">;
@@ -870,7 +857,6 @@ export default function Navigation() {;
                           {solution.name}
                         </Link>))}
                     </div>;
-                  </div>;
                   {/* Mobile Industries */}
                   <div className="px - 4 py - 2">;
                     <div className="font - medium text - gray - 900 mb - 2">;
@@ -887,7 +873,6 @@ export default function Navigation() {;
                           {industry.name}
                         </Link>))}
                     </div>;
-                  </div>;
                   {/* Mobile Resources */}
                   <div className="px - 4 py - 2">;
                     <div className="font - medium text - gray - 900 mb - 2">;
@@ -904,7 +889,6 @@ export default function Navigation() {;
                           {resource.name}
                         </Link>))}
                     </div>;
-                  </div>;
                   <Link;
                     href="/pricing";
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
@@ -928,7 +912,6 @@ export default function Navigation() {;
                       Call Now;
                     </a>;
                   </div>;
-                </div>;
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -1034,7 +1017,6 @@ const Navigation = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>;
           </div>;
-        </div>;
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isOpen && (<motion.div;
@@ -1085,7 +1067,6 @@ const Navigation = () => {
                     Get Started;
                   </Link>;
                 </div>;
-              </div>;
             </motion.div>;
           )}
         </AnimatePresence>;
@@ -1209,10 +1190,6 @@ export default function Navigation() {
                 <a
                 </a>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">;
         <div className="container mx-auto px-4">;
@@ -1220,7 +1197,6 @@ export default function Navigation() {
             {/* Logo */}
                   Technology Solutions;
                 </div>;
-              </div>;
             </Link>;
               {/* Services Dropdown */}
               <div className="relative group">;
@@ -1332,7 +1308,6 @@ export default function Navigation() {
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
                                   {service.name}
                                 </div>;
-                              </div>;
                               <div className="text - sm text - gray - 500">;
                                 {service.description}
                               </div>;
@@ -1640,14 +1615,6 @@ const Navigation = () => {
               </div>
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -1772,7 +1739,6 @@ export default function Navigation() {
       description: "Scalable startup platforms"
       icon: Zap
     {
-    {
       name: "Training"
       href: "/training"
       description: "Professional development"
@@ -1809,10 +1775,6 @@ export default function Navigation() {
                 <a
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4">
@@ -1820,7 +1782,6 @@ export default function Navigation() {
             {/* Logo */}
                   Technology Solutions
                 </div>
-              </div>
             </Link>
               {/* Services Dropdown */}
               <div className="relative group">
@@ -1910,7 +1871,6 @@ export default function Navigation() {
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">
                                   {service.name}
                                 </div>
-                              </div>
                               <div className="text - sm text - gray - 500">
                                 {service.description}
                               </div>
@@ -2168,7 +2128,6 @@ export default function Navigation() {
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">
                                   {solution.name}
                                 </div>
-                              </div>
                               <div className="text - sm text - gray - 500">
                                 {solution.description}
                               </div>
@@ -2335,7 +2294,6 @@ export default function Navigation() {
                           {service.name}
                         </Link>))}
                     </div>
-                  </div>
                   {/* Mobile Solutions */}
                   <div className="px - 4 py - 2">
                     <div className="font - medium text - gray - 900 mb - 2">
@@ -2352,7 +2310,6 @@ export default function Navigation() {
                           {solution.name}
                         </Link>))}
                     </div>
-                  </div>
                   {/* Mobile Industries */}
                   <div className="px - 4 py - 2">
                     <div className="font - medium text - gray - 900 mb - 2">
@@ -2369,7 +2326,6 @@ export default function Navigation() {
                           {industry.name}
                         </Link>))}
                     </div>
-                  </div>
                   {/* Mobile Resources */}
                   <div className="px - 4 py - 2">
                     <div className="font - medium text - gray - 900 mb - 2">
@@ -2386,7 +2342,6 @@ export default function Navigation() {
                           {resource.name}
                         </Link>))}
                     </div>
-                  </div>
                   <Link
                     href="/pricing"
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg"
@@ -2410,7 +2365,6 @@ export default function Navigation() {
                       Call Now
                     </a>
                   </div>
-                </div>
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -2518,7 +2472,6 @@ const Navigation = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
@@ -2579,12 +2532,10 @@ const Navigation = () => {
                     Get Started
                   </Link>
                 </div>
-              </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -2605,7 +2556,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -2662,8 +2612,6 @@ const Navigation: React.FC = () => {
               </svg>
             </button>
           </div>
-        </div>
-      </div>
 
       {isMenuOpen && (
         <div className="md: hidden">
@@ -2693,7 +2641,6 @@ const Navigation: React.FC = () => {
               Contact
             </Link>
           </div>
-        </div>
       )}
     </nav>
   );
@@ -2702,94 +2649,7 @@ const Navigation: React.FC = () => {
 export default Navigation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-=======
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden p-2 rounded-lg transition-colors duration-200"
-            onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.95 }}
-          >
-            <AnimatePresence mode="wait">
-              {isOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <X className={`w-6 h-6 ${
-                    scrolled ? 'text-gray-700' : 'text-white'
-                  }`}    />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Menu className={`w-6 h-6 ${
-                    scrolled ? 'text-gray-700' : 'text-white'
-                  }`}    />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.button>
-        </div>
-      )}
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-<<<<<<< HEAD
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="md:hidden overflow-hidden"
-              variants={mobileMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              <div className="py-4 space-y-2">
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.name}
-                    href={item.href}
-                    className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-200 hover:bg-gray-100 ${
-                      scrolled ? 'text-gray-700' : 'text-white hover:bg-white/10'
-                    }`}
-                    variants={mobileItemVariants}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </motion.a>
-                ))}
-                <motion.button
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group mt-4"
-                  variants={mobileItemVariants}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.nav>
-  );
-};
-
-export default Navigation;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     </nav>
   )
 }
 export default Navigation
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

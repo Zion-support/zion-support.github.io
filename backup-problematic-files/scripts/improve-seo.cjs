@@ -1,9 +1,6 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
@@ -69,26 +66,13 @@ export default function Page() {}
       // Generate robots.txt;
       const robotsContent = "User-"agent": *
 Allow: /
-<<<<<<< HEAD
 Sitemap: https://ziontechgroup.com/sitemap.xml;";
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
       
       
       
-=======
-
-Sitemap: https://ziontechgroup.com/sitemap.xml;";
-      
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
-};
-<<<<<<< HEAD
 improveSEO();
       
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

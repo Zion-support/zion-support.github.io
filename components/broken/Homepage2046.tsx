@@ -45,7 +45,6 @@ animate={{
             "boxShadow": { "duration": 2, "repeat": Infinity, "ease": 'easeInOut' }'
           
 }
-=======
 
           className='w-32 h-32 mx-auto mb-8''
         >
@@ -82,7 +81,6 @@ className='text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via
       </div>
     </motion.div>
   </div>
-<<<<<<< HEAD
 );
 
 const "Homepage2046": React.FC = () => {
@@ -144,7 +142,6 @@ sections.forEach(section => { return observer.observe(section)); }
 
       return () => observer.disconnect()
     }
-<<<<<<< HEAD
   }, []);
   if (isLoading) {
     }
@@ -301,7 +298,6 @@ Revolutionary{' '}'
                   Space Technology;
                 </span>{' '}'
                 Solutions;
-<<<<<<< HEAD
               <motion.div;
                 className='flex flex-col "sm":flex-row gap-4 justify-center items-center mb-12';'
                 initial={{ "opacity": 0, "y": 30 
@@ -358,7 +354,6 @@ whileHover={{
                   </motion.button>
                 </Link>
               </motion.div>
-            </motion.div>
             {/* Contact Information *
 }
 
@@ -393,7 +388,6 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
                   </p>
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </motion.div>
           </div>
@@ -404,10 +398,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section id='services' className='relative z-10 py-20 px-4'>'
           <div className='max-w-7xl mx-auto'>'
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             >
 
             >
@@ -474,7 +464,6 @@ className='mb-12''
 type='text''
                     placeholder='Search services...''
                     value={searchQuery}
-<<<<<<< HEAD
               viewport={{ once: true }}className='mb-12';
             >;
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>;
@@ -559,126 +548,6 @@ type='text''
               viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
             >;
               {filteredServices.map((service, index) => (<motion.div;
-=======
-<<<<<<< HEAD
-                  {categories.map(category => (                    <button
-
-                    onChange={e => setSearchQuery(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":border-cyan-400 "focus":ring-2 "focus":ring-cyan-400/50 backdrop-blur-lg''
-                  />
-                </div>
-                <div className='flex gap-2'>'
-                  {categories.map(category => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <button
-}
-key={category}
-                      onClick={() => setSelectedCategory(category
-}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${selectedCategory === category;`                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';'
-                          : 'bg-black/30 border border-cyan-400/30 text-gray-300 "hover":border-cyan-400 "hover":text-cyan-400';'
-                      }`}>`
-                      {category === 'all' ? 'All Categories' : category}'
-            {/* Services Grid */}
-            <motion&& motion.div;
-              initial={{ "opacity": 0, "y": 50 
-}
-              whileInView={{ "opacity": 1, "y": 0 
-}
-              transition={{ "duration": 1, "delay": 0 && 0.4 }}
-
-              viewport={{ "once": true 
-}
-
-className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8''
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-}
-key={service.id}
-                  initial={{ "opacity": 0, "y": 30 
-}
-                  whileInView={{ "opacity": 1, "y": 0 
-}
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-
-                  viewport={{ "once": true 
-}
-
-                  whileHover={{ "y": -10, "scale": 1.02 }}
-className='group''
-                >
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 "hover":border-cyan-400/60 transition-all duration-300 h-full'>'
-                    <div className='flex items-start justify-between mb-4'>'
-                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>'
-                        <Brain className='w-6 h-6 text-white' />'
-                      </div>
-                      <div className='text-right'>'
-                        <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>'
-                          {service.categor
-}
-                        </span>
-<<<<<<< HEAD
-                        <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (
-
-                        <div className='flex items-center gap-1 mt-1'>'
-                          {[...Array(5)].map((_, i) => (
-
-                  }
-
-                  whileHover={{ "y": -10, "scale": 1 && 1.02 
-}
-
-                  className='group'>;'
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 "hover":border-cyan-400/60 transition-all duration-300 h-full'>;'
-                    <div className='flex items-start justify-between mb-4'>;'
-                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;'
-                        <Brain className='w-6 h-6 text-white' />;'
-                      </div>;
-                      <div className='text-right'>;'
-                        <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>;'
-                          {service && service.category}
-                        </span>;
-                        <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >;'
-                  <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 "hover":border-cyan-400/60 transition-all duration-300 h-full">;"
-                    <div className="flex items-start justify-between mb-4">;"
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;"
-                        <Brain className="w-6 h-6 text-white" />;"
-                      </div>;
-                      <div className="text-right">;"
-                        <span className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full">;"
-                          {service && service.category}
-                        </span>;
-                        <div className="flex items-center gap-1 mt-1">;"
-                          {[...Array(5)].map((_, i) => (<Star;
-                              }
-                              key={i}
-                              className={`w-4 h-4 ${i < Math && Math.floor(service && service.rating)? 'text-yellow-400 fill-current';'
-                                  : 'text-gray-600';'
-                              }`}` />;
-                          ))}
-
-<span className='text-gray-400 text-sm ml-1'>'
-                            ({service.reviews})
-                          </span>
-                            />
-                          ))}
-                          <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
-=======
-<<<<<<< HEAD
-                  whileHover={{ y: -10, scale: 1.02 }}
-className='group'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                >
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
-                    <div className='flex items-start justify-between mb-4'>
-                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
-=======
-                >'
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>'
-                    <div className='flex items-start justify-between mb-4'>'
-                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Brain className='w-6 h-6 text-white' />
                       </div>'
                       <div className='text-right'>'
@@ -727,48 +596,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             ({service.reviews})
                           </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         </div>
-                      </div>
-<<<<<<< HEAD
-                    </div>
 
-<<<<<<< HEAD
                           ))}<span className='text-gray-400 text-sm ml-1'>;
                             ({service.reviews})</span>;
                         </div>;
-                      </div>;
-                    </div>;
 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>;
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.name}
                     </h3>
                     
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-=======
-<h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
-=======
-                    </div>'
-                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {service.name}
                     </h3>'
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       {service.description}
                     </p>'
                     <div className='mb-4'>'
                       <div className='flex items-center gap-2 text-cyan-400 font-semibold'>'
                         <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
                       </div>
-                    </div>
 '
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
 
-<<<<<<< HEAD
                         <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
                       </div>
-                    </div>
 
 <h3 className='text-xl font-bold text-white mb-3 group-"hover": text-cyan-400 transition-colors duration-300'>'
 
@@ -784,7 +636,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <DollarSign className='w-4 h-4' />'
                         <span>{service.price}</span>
                       </div>
-                    </div>
 
 <div className='space-y-2 mb-6'>'
                       <h4 className='text-sm font-semibold text-white'>'
@@ -824,9 +675,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                           <Clock className='w-3 h-3' />'
                           <span>{service.launchDate}</span>
                         </div>
-                      </div>
-                    </div>
-                  </div>
                 </motion.div>
               )
 }
@@ -862,12 +710,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                           <Clock className='w-3 h-3' />;'
                           <span>{service.launchDate}</span>;
                         </div>;
-                      </div>;
-                    </div>;
-                  </div>;
                 </motion.div>;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               ))}
             </motion.div>
                       </ul>;
@@ -909,7 +752,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                   Space Technology;
                 </span>{' '}'
                 Solutions;
-<<<<<<< HEAD
               <motion.div;
                 className='flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 12'                initial={{ "opacity": 0, "coordinate_y": 30 ,'
 }
@@ -963,9 +805,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                   </motion.button>;
                 </Link>;
               </motion.div>;
-            </motion.div>;
             {/* Contact Information */}
-<<<<<<< HEAD
             <motion.div;
               className='bg - black / 20 backdrop - blur - lg rounded - 2xl p - 6 max - w-2xl mx - auto border border - cyan - 400 / 30'              initial={{ "opacity": 0, "coordinate_y": 30 ,'
 }
@@ -1009,7 +849,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Services Showcase Section */}
         <section id='services' className='relative z - 10 py - 20 px - 4'>;'
           <div className='max - w-7xl mx - auto'>            <motion.div        <section id="services" className="relative z - 10 py - 20 px - 4">;"
@@ -1088,7 +927,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                       {category === 'all' ? 'All Categories' : category}'
                     </button>))}
                 </div>;
-              </div>;
             </motion.div>;
             {/* Services Grid */}
             <motion.div;
@@ -1144,12 +982,9 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                           <span className='text - gray - 400 text - sm ml - 1'>;'
                             ({service.reviews})</span>                        </div>;
                       </div>;
-                    </div>;
                     <h3 className='text - xl font - bold text - white mb - 3 group - "hover": text - cyan - 400 transition - colors duration - 300'>                          <span className="text - gray - 400 text - sm ml - 1">({service.review,"
 })</span>;
                         </div>;
-                      </div>;
-                    </div>;
                     <h3 className='text - xl font - bold text - white mb - 3 group - "hover":text - cyan - 400 transition - colors duration - 300'>;'
                       {service.name}
                     </h3>;
@@ -1160,9 +995,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                       <div className='flex items - center gap - 2 text - cyan - 400 font - semibold'>;'
                         <DollarSign className='w - 4 h - 4' />                        <span>{service.price}</span>;'
                       </div>;
-                    </div>;
                       {service.name}
-<<<<<<< HEAD
                     </h3>;
                     <p className="text - gray - 300 text - sm mb - 4 line - clamp - 3">;"
                       {service.description}
@@ -1172,7 +1005,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                         <DollarSign className="w - 4 h - 4" />;"
                         <span>{service.price}</span>;
                       </div>;
-                    </div>;
                     <div className='space - y-2 mb - 6'>;'
                       <h4 className='text - sm font - semibold text - white'>;'
                         Key "Features":;
@@ -1226,13 +1058,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                           <Clock className="w - 3 h - 3" />;"
                           <span>{service.launch_date}</span>;
                         </div>;
-                      </div>;
-                    </div>;
-                  </div>;
-=======
-              ))}
-            </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             {/* Call to Action */}
             <motion&& motion.div;
               initial={{ "opacity": 0, "y": 50 
@@ -1285,7 +1110,6 @@ whileHover={{
                     </motion && motion.button>;
                   </Link>;
                 </div>;
-              </div>;
             </motion && motion.div>;
           </div>;
         </section>;
@@ -1350,7 +1174,6 @@ whileHover={{
                     </motion.button>;
                   </Link>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -1363,7 +1186,6 @@ whileHover={{
                     </motion.button>;
                   </Link>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -1376,7 +1198,6 @@ export default Homepage2046);
 }
 ;
 export default Homepage2046;
-<<<<<<< HEAD
 
                       whileTap={{ "scale": 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold "hover":bg-cyan-400 "hover":text-gray-900 transition-all duration-300''
@@ -1385,7 +1206,6 @@ export default Homepage2046;
                     </motion.button>
                   </Link>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -1395,10 +1215,4 @@ export default Homepage2046;
 };
 export default Homepage2046;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

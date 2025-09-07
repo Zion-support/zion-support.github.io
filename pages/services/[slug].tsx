@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
@@ -42,7 +41,6 @@ function extractServiceSlugFromLink(link: string): string | null {
 	} catch {
 		return null
 	}
-}
 
 export async function getStaticPaths() {
 	const services = getAllServices($2);
@@ -81,7 +79,6 @@ export async function getStaticProps({ params }: { params: { slug: string} }) {
 	return {
 		props: { service }
 	}
-}
 
 export default function ServiceDetailPage({ service }: { service: Service}) {
 	return (
@@ -140,30 +137,6 @@ export default function ServiceDetailPage({ service }: { service: Service}) {
 							</div>
 						</Card>
 					</div>
-				</div>
-			</div>
 		</UltraFuturisticBackground>
 	)
-=======
-import Layout from '../components/layout/Layout';
-
-export default function [slug]() {
-  return (
-    <Layout>
-      <Head>
-        <title>[Slug] - Zion Tech Group</title>
-        <meta name="description" content="[Slug] solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">[Slug]</h1>
-          <p className="text-lg text-gray-600">
-            Professional [slug] solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

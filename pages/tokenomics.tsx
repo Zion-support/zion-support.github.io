@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 type DistributionItem = { label: string, percent: number },
@@ -69,7 +68,6 @@ export default function TokenomicsWhitepaperBuilder() {
     } finally {
       setIsGenerating(false)
     }
-  }
 
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
@@ -94,7 +92,6 @@ export default function TokenomicsWhitepaperBuilder() {
       const { url } = await res.json();
       window.open(url, '_blank')
     }
-  }
 
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
@@ -129,26 +126,14 @@ export default function TokenomicsWhitepaperBuilder() {
     alert('Shareable link copied to clipboard')
   }
 
-<<<<<<< HEAD
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'];
 
-=======
-  const sections = $2;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function tokenomics() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   return (
     <Layout>
       <Head>
         <title>Tokenomics - Zion Tech Group</title>
         <meta name="description" content="Tokenomics solutions and services." />
       </Head>
-<<<<<<< HEAD
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
@@ -163,7 +148,6 @@ export default function tokenomics() {
             </label>
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
@@ -203,8 +187,6 @@ export default function tokenomics() {
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
                 </div>
-              </div>
-            </div>
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Distribution</h3>
@@ -220,11 +202,9 @@ export default function tokenomics() {
                   <span>Total: {totalPercent}%</span>
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
                 </div>
-              </div>
               <div className="mt-3">
                 <DistributionDonut data={distribution} />
               </div>
-            </div>
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
@@ -235,7 +215,6 @@ export default function tokenomics() {
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
-            </div>
 
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
@@ -243,8 +222,6 @@ export default function tokenomics() {
                 <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
                 <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
               </div>
-            </div>
-          </div>
 
           <div className="rounded-lg border p-4">
             <div className="flex items-center justify-between mb-3">
@@ -257,8 +234,6 @@ export default function tokenomics() {
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
-        </div>
-      </div>
     </>
   )
 }
@@ -291,7 +266,6 @@ function jurisdictionalNote(j: string) {
     default:
       return 'Intended strictly for utility use.'
   }
-}
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
@@ -328,17 +302,4 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   return (
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Tokenomics</h1>
-          <p className="text-lg text-gray-600">
-            Professional tokenomics solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

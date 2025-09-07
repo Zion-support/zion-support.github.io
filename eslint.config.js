@@ -41,7 +41,6 @@ export default [
           }
           "jsx": true
         }
-      }
     },
     "plugins": {
       '@typescript-eslint': typescript,'
@@ -67,7 +66,6 @@ export default [
         }
         "version": 'detect''
       }
-    }
   },
   {
     ignores: [
@@ -203,7 +201,6 @@ export default [
       'lib.disabled/**',
       'lib_backup/**',
       'lint-target/**',
-<<<<<<< HEAD
       'components/api/**',
       'components/apps/**',
       'components/auth/**',
@@ -296,62 +293,5 @@ export default [
       'simple-test.js';
       'syntax-fixer.js';
       'performance-monitor.js']}];
-=======
-      ...jsxA11y.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true }
-      ],
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    }
-  },
-  {
-    files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
-      globals: {
-        ...globals.node,
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
-      }
-    },
-    rules: {
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error",
-      "prefer-const": "error"
-    }
-=======
-      'pages-backup/**',
-      'pages-disabled/**',
-      'pages-quarantine/**',
-      'app/**'
-    ]
->>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   }
 ];

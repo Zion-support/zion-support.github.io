@@ -6,7 +6,6 @@ export default function customerserviceautomation() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Intelligent Customer Service Automation - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing. Read our detailed case study." />
         <meta name="keywords" content="customer service automation, chatbots, AI automation, ticket routing, sentiment analysis" />
@@ -64,8 +63,6 @@ export default function customerserviceautomation() {
                     <div className="text-3xl font-bold text-green-400">$100M+</div>
                     <div className="text-white/70">Annual Revenue</div>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Challenge */}
@@ -136,8 +133,6 @@ export default function customerserviceautomation() {
                       to human agents when needed.
                     </p>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Results */}
@@ -164,8 +159,6 @@ export default function customerserviceautomation() {
                         <span className="text-white/90">Support Coverage</span>
                         <span className="text-2xl font-bold text-green-400">24/7</span>
                       </div>
-                    </div>
-                  </div>
                   
                   <div>
                     <h3 className="text-2xl font-semibold text-green-400 mb-6">Additional Benefits</h3>
@@ -188,8 +181,6 @@ export default function customerserviceautomation() {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
             </section>
 
             {/* Technologies */}
@@ -203,7 +194,6 @@ export default function customerserviceautomation() {
                     </div>
                   ))}
                 </div>
-              </div>
             </section>
 
             {/* Implementation */}
@@ -217,7 +207,6 @@ export default function customerserviceautomation() {
                       <h4 className="text-lg font-semibold text-white">System Design & Planning (Month 1)</h4>
                       <p className="text-white/70">Customer service workflow analysis and system architecture design</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
@@ -225,7 +214,6 @@ export default function customerserviceautomation() {
                       <h4 className="text-lg font-semibold text-white">AI Model Training (Months 2-3)</h4>
                       <p className="text-white/70">Training chatbots and routing algorithms on historical customer data</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
@@ -233,7 +221,6 @@ export default function customerserviceautomation() {
                       <h4 className="text-lg font-semibold text-white">Integration & Testing (Month 4)</h4>
                       <p className="text-white/70">System integration and comprehensive testing with live customer interactions</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">4</div>
@@ -241,9 +228,6 @@ export default function customerserviceautomation() {
                       <h4 className="text-lg font-semibold text-white">Deployment & Training (Month 5)</h4>
                       <p className="text-white/70">Full deployment and staff training on new systems</p>
                     </div>
-                  </div>
-                </div>
-              </div>
             </section>
 
             {/* Call to Action */}
@@ -268,27 +252,10 @@ export default function customerserviceautomation() {
                     View All Case Studies
                   </Link>
                 </div>
-              </div>
             </section>
           </div>
         </main>
       </div>
     </>
   )
-=======
-        <title>Customer Service Automation - Zion Tech Group</title>
-        <meta name="description" content="Customer Service Automation solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Customer Service Automation</h1>
-          <p className="text-lg text-gray-600">
-            Professional customer service automation solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

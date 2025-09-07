@@ -62,7 +62,6 @@ interface PaginationProps  {"currentPage": number;
 }
       if (startPage > 1) {pages && pages.push(1)if (startPage > 2) {pages && pages.push('...')}'
       }
-}
         pages && pages.push(totalPages)}
     }
     return pages;
@@ -171,8 +170,6 @@ if ( {) {$2;
         </Link>) : (<span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
           Next;
 }
-}
-}
           <ChevronRight className="w - 4 h-4 ml-1" />;
         </span>)}
     </nav>)})export default Pagination;
@@ -207,15 +204,3 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-"
-=======
-Next </EnhancedButton> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

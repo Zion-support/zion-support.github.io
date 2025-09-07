@@ -168,7 +168,6 @@ const filteredServices = services;
         selectedCategory === 'all' || service.category === selectedCategory'
     )
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     .sort((a, b) => {
       }
       switch (sortBy) {
@@ -180,7 +179,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const bLevel = (b as any).innovationLevel || 'Advanced';'
 
-=======
           const aLevel = (a as any).innovationLevel || 'Advanced';
           const bLevel = (b as any).innovationLevel || 'Advanced';
 const innovationOrder = {
@@ -192,7 +190,6 @@ const innovationOrder = {
           };
 return (;
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           );
         case 'price':'
 return (;
@@ -205,7 +202,6 @@ return (;
         "default":;
           return 0;
       }
-<<<<<<< HEAD
           const aLevel = $2;
           const bLevel = $2;
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
@@ -224,7 +220,6 @@ return (;
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -234,28 +229,13 @@ return (;
       y: 0,
       transition: {
   return (
-<<<<<<< HEAD
     <section className="py-20 relative overflow-hidden">;
-=======
-    <section className='py-20 relative overflow-hidden'>
-      {/* Background Elements */}
-      <div className='absolute inset-0 pointer-events-none'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
-      </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-  return (
-    <section className="py-20 relative overflow-hidden">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Background Elements */}
         {/* Header */}
         duration: 0.6,
         ease: "easeOut" as const
       }
-    }
   },
-=======
     })
     .slice(0, maxServices);
 
@@ -270,7 +250,6 @@ const containerVariants = {
 }
 "staggerChildren": 0.1
       }
-    }
   };
 
 const itemVariants = {
@@ -288,9 +267,7 @@ const itemVariants = {
         "duration": 0.6,
 "ease": 'easeOut' as const,'
       }
-    }
   };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 return (;
     <section className="py-20 relative overflow-hidden">;"
@@ -355,7 +332,6 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed''
         </motion.div>;
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >;
           >;
-=======
             whileInView={{ opacity: 1, y: 0 }}
 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
           >
@@ -375,7 +351,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           >
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             {subtitle}
           </motion.p>
         </motion.div>
@@ -414,14 +389,9 @@ key={category}
 
               ))}
             </div>;
-          </div>;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </button>
               ))}
             </div>
-          </div>
-<<<<<<< HEAD
 
 <div className='flex items-center space-x-2'>'
             <span className='text-gray-300 text-sm font-medium'>Sort "by": </span>'
@@ -512,7 +482,6 @@ href='/pricing''
                 View Pricing
               </a>
             </div>
-          </div>
         </motion.div>
 
         {/* Innovation Stats *
@@ -552,7 +521,6 @@ className='mt-20'>'
                 "label": 'Average Rating''
                 "value": (
                   services.reduce((sum, s) => sum + s.rating, 0) /
-<<<<<<< HEAD
                   services.length
 
                 ).toFixed(1),
@@ -601,35 +569,9 @@ className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-cen
 export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
-<<<<<<< HEAD
 
 export default UltraFuturistic2029ServiceShowcase;
-export default UltraFuturistic2029ServiceShowcase;
 
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-className='text-center'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div;`
-                  className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
-                >'
-                  <stat.icon className='w-8 h-8 text-white' />
-                </div>'
-                <div className='text-3xl font-bold text-white mb-2'>
-                  {stat.value}
-<<<<<<< HEAD
-                </div>
-                <div className='text-gray-400'>{stat.label}</div>
-=======
-                </div>'
-                <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >`
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>"
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>"
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"
-                <div className="text-gray-400">{stat.label}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
 
 
@@ -643,7 +585,6 @@ export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
 
-export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
 
 };
@@ -689,14 +630,11 @@ export default UltraFuturistic2029ServiceShowcase);
 ;
 export default UltraFuturistic2029ServiceShowcase;
 ;
-<<<<<<< HEAD
 );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 };
 
 export default UltraFuturistic2029ServiceShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
           </div>;
         </motion.div>;
       </div>;
@@ -756,70 +694,5 @@ export default UltraFuturistic2029ServiceShowcase;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className = $2;
 export default UltraFuturistic2029ServiceShowcase,
-=======
-<<<<<<< HEAD
-
-"
-=======
-//Filter and sort services const filteredServices = services .filter (service => selectedCategory === 'all' || service.category === selectedCategory) .sort ( (a, b) => {
-  switch (sortBy) {
-  case 'innovation': //Default to 'Advanced' if innovationLevel is not available case 'price': return parseFloat (a.price.replace (/[^0-9.]/g, '') ) - parseFloat (b.price.replace (/[^0-9.]/g, '') )
-case 'rating': return b.rating - a.rating
-default: return 0
-}
-}) .slice (0, maxServices)
-const containerVariants = {
-  hidden: {
-  opacity: 0 
-}
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
-}
-}
-}
-}
-}
-> {
-  title 
-}</motion.h2> <motion.p > {
-  subtitle 
-}</motion.p> </motion.div> {
-  /* Filters and Controls */ 
-}<motion.div key= {
-  category 
-}onClick= {
-  () => setSelectedCategory (category) 
-}className= {
-  `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 $ {
-  selectedCategory === category ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg': 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50' 
-}` 
-}> {
-  category === 'all'? 'All Categories' : category 
-}</button>) ) 
-}</div> </div> > <option value="innovation" >Innovation Level</option> <option value="price" >Price</option> <option value="rating" >Rating</option> </select> </div> </motion.div> {
-  /* Services Grid */ 
-}<motion.div > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
-}/> </motion.div>) ) 
-}</motion.div> {
-  /* Call to Action */ 
-}<motion.div > <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm" > <h3 className="text-3xl font-bold text-white mb-4" > Ready to Experience the Future? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-4" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25" > Get Started Today </a> <a href="/pricing" className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > View Pricing </a> </div> </div> </motion.div> {
-  /* Innovation Stats */ 
-}<motion.div </motion.div>) ) 
-}</div> </motion.div> </div> </section>) 
-}
-export default UltraFuturistic2029ServiceShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -71,7 +71,6 @@ console.log(""� Starting continuous link integrity automation...")
   const href = match.match(/href=["]([^"]+)["]
               if (href.startsWith("/") || href.startsWith("./") || href.startsWith("../")
   // Skip directories that can"
-  // Skip directories that can"
   const fullPath = path.join(currentDir, ")
   const relativePath = path.relative(distPath")
           // If it"
@@ -80,7 +79,6 @@ console.log(""� Starting continuous link integrity automation...")
             const fileMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]
   const fileRef = match.match(/src=["]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=["]([^"]+)[""]
                 if (fileRef && !fileRef.startsWith("http")
-  // Skip directories that can"
   // Skip directories that can"
            !file.endsWith(".html")
            !file.endsWith(".css")
@@ -105,9 +103,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start continuous link integrity "checker": ")
-  console.error(" Failed to start continuous link integrity "checker": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

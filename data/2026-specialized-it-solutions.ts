@@ -679,7 +679,6 @@ export const getPopularSpecializedITSolutions2026  = () => {}export const getPop
     "popular": false, "icon": '💾',"color": 'from-gray-600 to-slate-600', "textColor": 'text-gray-400',"link": '"https"://ziontechgroup.com/ai-backup-disaster-recovery',"marketPosition": 'Competes with Veeam ($1000+/month), Commvault ($800/month), Acronis ($500/month). Our "advantage": AI automation reduces backup time by 50% and improves recovery success rates by 90%.',"targetAudience": 'IT administrators, DevOps teams, Enterprises, MSPs',"trialDays": 14, "setupTime": '3-4 hours',"category": 'Backup & Disaster Recovery', "realService": true,"technology": ['PythonReactNode.jsPostgreSQLRedisMachine Learning'], "integrations": ['AWS S3Azure BlobGoogle Cloud StorageVMwareHyper-VDocker'],"useCases": ['Backup automationDisaster recoveryData protectionBusiness continuityCompliance management'], "roi": 'Organizations report 400% ROI through improved data protection and reduced downtime.',"competitors": ['VeeamCommvaultAcronisRubrik'], "marketSize": '$11.8B backup and recovery market',"growthRate": '16% annual growth', "contactInfo": contact,"realImplementation": true,"implementationDetails": 'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',"launchDate": '2024-05-25', "customers": 67,"rating": 4.4,"reviews": 33;'
 export interface SpecializedITSolution2026  {})}"website": string;
   }
-  }
 ];
 export const getSpecializedITSolutions2026ByCategory = ("category": string) => {return specializedITSolutions2026.filter(solution => solution.category === category)}export const getPopularSpecializedITSolutions2026 = () => {return specializedITSolutions2026.filter(solution => solution.popular)}export const getSpecializedITSolutions2026ByPriceRange = ("minPrice": number, "maxPrice": number) => {return specializedITSolutions2026.filter((solution) => {const price = parseInt(solution.price.replace('$', ''))return price >= minPrice && price <= maxPrice;'
   })}export const getSpecializedITSolutions2026ByCategory = ("category": string) =>: any {return specializedITSolutions2026.filter (solution => solution.category === category)}export const getPopularSpecializedITSolutions2026 = () =>: any {return specializedITSolutions2026.filter (solution => solution.popular)}export const getSpecializedITSolutions2026ByPriceRange = ("min_price": number,"max_price": number) =>: any {return specializedITSolutions2026.filter ((solution) => {const price = parse_int (solution.price.replace ('$', ''))return price >= min_price && price <= max_price;'
@@ -698,8 +697,6 @@ export const getSpecializedITSolutions2026ByCategory = ("category": string) => {
 };
 export const "specializedITSolutions2026": SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.''
     }
@@ -721,7 +718,6 @@ return specializedITSolutions2026.filter(;
     solution => { return solution.category === category; }
   );
 }
-<<<<<<< HEAD
 export const getPopularSpecializedITSolutions2026 = () => {};
 export const getPopularSpecializedITSolutions2026 = () => {;
   }
@@ -979,11 +975,6 @@ export const getSpecializedITSolutions2026ByCategory = ("category": string) =>: 
 return specializedITSolutions2026.filter (;
     solution => { return solution.category === category); }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 export interface SpecializedITSolution2026 {;
   }

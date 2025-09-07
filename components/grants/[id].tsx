@@ -9,12 +9,10 @@ export default function GrantDetailPage() {
   }
   const router = null;
 
-<<<<<<< HEAD
   const router = useRouter();
   const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
   const { id } = router.query as { id: string }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
@@ -92,7 +90,6 @@ return (;
           <div className='text-sm text-gray-600 dark:text-gray-400'>;
             {item.sector |'General'} • {item.region |'Global'} •{' '}{item.program === 'incubator' ? 'Incubator' : 'Grant'}
           </div>;
-<<<<<<< HEAD
         </div>;'
         <div className='flex gap - 2 items - center'>;'
           {item.program === 'incubator' && (
@@ -105,26 +102,7 @@ return (;
                       <a'
                         className='text-blue-600'
                         href={l}'
-=======
-        </div>;
-        <div className='flex gap - 2 items - center'>;'
-          {item.program === 'incubator' && ()}'
-          {item && item.status === 'Approved' && (<span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;'
-              }
-              Grant Winner;
-            </span>;
-          )}
-                      <a;
-                        className='text-blue-600';'
-                        href={l}
-<<<<<<< HEAD
-                        target='_blank';
-                        rel='noreferrer';
-                      >;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         target='_blank'
-<<<<<<< HEAD
                         rel='noreferrer'
                       >
                         {l}
@@ -141,7 +119,6 @@ return (;
                         rel='noreferrer''
                       >
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                         {l}
                       </a>;
                     </li>;
@@ -180,14 +157,12 @@ return (;
           {item.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}
           <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{item.status}</span>
         </div>
-      </div>
 
                   className='mt-2 px-3 py-2 bg-gray-900 text-white rounded''
                 >
                   Add Update
                 </button>
               </div>
-            </div>
           </section>
         </div>
 
@@ -214,8 +189,6 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
                         }
                         "Due": {new Date(m && m.dueDate).toLocaleDateString(
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       </div>;
                     )}
                   </div>;
@@ -235,8 +208,6 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
                     {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
                   </div>
                 </li>
-              ))}
-<<<<<<< HEAD
               ))}
                     <div className="font-medium">{m.title}</div>
                     {m.description && <div className="text-gray-600">{m.description}</div>}
@@ -260,16 +231,6 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
-=======
-<<<<<<< HEAD
-                    <div className="font-medium">{m.title}</div>"
-                    {m.description && <div className="text-gray-600">{m.description}</div>}"
-                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}"
-=======
-                    <div className="font-medium">{m.title}</div>
-                    {m.description && <div className="text-gray-600">{m.description}</div>}
-                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
                   </div>
                 </li>
@@ -281,10 +242,6 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">"
             <h3 className="font-medium mb-2">Team</h3>"
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {(!item.milestones |item.milestones.length === 0) && (
                 <div className='text-sm text-gray-600'>'
                   }
@@ -302,13 +259,9 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
             <h3 className='font-medium mb-2'>Team</h3>'
             <div className='text-sm whitespace-pre-wrap'>{item.teamInf,'
 }</div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </section>
         </aside>
       </div>
     </EnhancedLayout>
-    </EnhancedLayout>
-<<<<<<< HEAD
-=======
   );
 }

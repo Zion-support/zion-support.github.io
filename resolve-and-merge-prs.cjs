@@ -20,7 +20,6 @@ function runGitCommand(command, description) {
     console.log(`❌ ${description} failed: ${error.message}`);
     return null;
   }
-}
 
 // Function to check if we can merge a PR
 function canMergePR(prNumber) {
@@ -81,38 +80,22 @@ function resolveMergeConflicts() {
             
             // Remove conflict markers and keep both versions where possible
             content = content
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               .replace(/
               .replace(/<<<<<<< [^\n]+\n/g, '')
               .replace(/
-=======
-              .replace(/[^\n]+\n/g, '')
-              .replace(/<<<<<<< [^\n]+\n/g, '')
-              .replace(/=======\n/g, '')
-              .replace(/[^\n]+\n/g, '');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-              .replace(/\n/g, '')
               .replace(/\n/g, '')
               .replace(/
               .replace(/<<<<<<< [^\n]+\n/g, '')
               .replace(/\n/g, '')
-=======
               .replace(/
               .replace(/<<<<<<< [^\n]+\n/g, '')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               .replace(/
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);
           } catch (error) {
             console.log(`❌ Failed to resolve conflicts in ${file}: ${error.message}`);
           }
-        }
-      }
       
       // Add resolved files
       runGitCommand('git add .', 'Adding resolved files');
@@ -120,8 +103,6 @@ function resolveMergeConflicts() {
       // Commit the merge
       runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing merge resolution');
     }
-  }
-}
 
 // Function to merge a PR
 function mergePR(prNumber, prInfo) {
@@ -157,7 +138,6 @@ function mergePR(prNumber, prInfo) {
       console.log(`❌ Failed to merge PR #${prNumber}: ${result.message}`);
       return false;
     }
-  }
   
   return false;
 }
@@ -197,8 +177,6 @@ async function main() {
       } else {
         console.log(`⚠️  PR #${pr.number} cannot be merged automatically`);
       }
-    }
-  }
   
   // Update local main branch
   console.log('\n🔄 Updating local main branch...');

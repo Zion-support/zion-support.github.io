@@ -306,7 +306,6 @@ export interface AdvancedAIAutomationService  {{}
     "customers": 89;
     "rating": 4.8;
     "reviews": 38;
-    "reviews": 38;
   }
 ];"reviews": 38;
   }
@@ -359,7 +358,6 @@ export interface AdvancedAIAutomationService  {{}
     "customers": 89;
     "rating": 4.8,
     "reviews": 38;
-  }
   }
 
 ];
@@ -676,7 +674,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 34;
   },;
   // AI-Powered DevOps Automation;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-devops-automation',;'
@@ -723,7 +720,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 28;
   },;
   // AI-Powered Customer Support Automation;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-customer-support-automation',;'
@@ -770,7 +766,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 41;
   },;
   // AI-Powered Marketing Automation;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-marketing-automation',;'
@@ -817,7 +812,6 @@ export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] =
     "reviews": 67;
   },;
   // AI-Powered Sales Intelligence;
-<<<<<<< HEAD
   {;
     }
     "id": 'ai-sales-intelligence',;'

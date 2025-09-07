@@ -1750,7 +1750,6 @@ export const newInnovativeServices = [
       'Complete autonomous manufacturing platform with AI - driven optimization, predictive maintenance, and zero - downtime operations. Achieve 300% productivity increase.',"features": [;'
       'AI - powered production planning','Predictive maintenance','Quality control automation','Supply chain optimization','Energy efficiency management','Real - time monitoring','Autonomous decision making','Performance analytics','Integration with existing systems','24 / 7 AI operations';'
       '24 / 7 AI operations';'
-      '24 / 7 AI operations';'
     ],"popular": true,"icon": '🏭',"color": 'from - green - 600 to - blue - 700',"text_color": 'text - green - 400',"link": '"https"://ziontechgroup.com / ai - powered - autonomous - manufacturing',"market_position":;'
       'Leading autonomous manufacturing platform with AI integration',"target_audience":;'
       'Manufacturing companies, Industrial facilities, Automotive industry, Aerospace companies, Electronics manufacturers',"trial_days": 30,"setup_time": '6 - 8 weeks',"category": 'AI & Manufacturing',"real_service": true,"technology": [;'
@@ -2087,7 +2086,6 @@ export const "innovativeMicroSaasServices": InnovativeMicroSaasService[] = [;
     "rating": 4 && 4.8,
     "reviews": 15
   },
-<<<<<<< HEAD
   {
       'Satellite mission control','
       'Orbital mechanics calculation','
@@ -2130,7 +2128,6 @@ export const "innovativeMicroSaasServices": InnovativeMicroSaasService[] = [;
     "rating": 4.9,
     "reviews": 8
   };
-<<<<<<< HEAD
   {
     }
     "id": 'quantum-internet-security-platform', "name": 'Quantum Internet Security Platform','
@@ -3643,7 +3640,6 @@ export const newInnovativeServices = [;
     "rating": 4 && 4.8,
     "reviews": 12
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Biotech AI Services
   {
@@ -3722,7 +3718,6 @@ export const newInnovativeServices = [;
     "rating": 4 && 4.7,
     "reviews": 18
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Quantum Financial Trading
   {
@@ -3806,7 +3801,6 @@ export const newInnovativeServices = [;
     "rating": 4 && 4.9,
     "reviews": 15
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Quantum Cybersecurity
   {
@@ -3889,7 +3883,6 @@ export const newInnovativeServices = [;
     "rating": 4 && 4.8,
     "reviews": 32
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Quantum Internet Security
   {
@@ -4378,7 +4371,6 @@ export const newInnovativeServices = [;
   {
 
   },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Autonomous Vehicle AI
   {
@@ -5029,11 +5021,3 @@ export interface InnovativeMicroSaasService  {ursor/fix-website-loading-errors-a
   }
 ];
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

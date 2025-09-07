@@ -277,7 +277,6 @@ export interface Innovative2026EmergingTechService  {"id": string;
     "rating": 4.9;
     "reviews": 30;
   }
-<<<<<<< HEAD
 ],export const getPopularEmergingTechServices = null;
 export const "innovative2026EmergingTechServices": Innovative2026EmergingTechService[] =;
   [;
@@ -766,7 +765,6 @@ export const getPopularEmergingTechServices = () => {;
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
   ];
-<<<<<<< HEAD
 
 export const getPopularEmergingTechServices = () => {
   ];

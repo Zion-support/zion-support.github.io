@@ -20,20 +20,10 @@ const vendor = null;
   try {
     }
     const item = addPipelineItem(vendorId, title);
-<<<<<<< HEAD
-=======
-    res.status(201).json({ item });
-  } catch (e: any) {
-    res.status(500).json({ error: e.message });
-  }  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { vendorId, title } = req.body |{}
-  if (!vendorId |!title) return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const vendor = getVendorById(vendorId);
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);
-<<<<<<< HEAD
 
 res.status(201).json({ item });
   } catch ("e": any) {
@@ -48,13 +38,7 @@ res.status(201).json({ item });
     }
     res.status(500).json({ "error": e.message })
   }
-}
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     const item = addPipelineItem(vendorId, title);}
 }
 res.status(201).json({ item });

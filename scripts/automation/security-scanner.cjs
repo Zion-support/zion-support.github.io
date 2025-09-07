@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**
  * Security Scanner Automation;
  * Comprehensive security scanning and vulnerability detection;
  */
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -29,10 +22,6 @@ class SecurityScanner {}
 });
 const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     scanForVulnerabilities() {}
         this.log('Scanning for security vulnerabilities...');
@@ -50,74 +39,18 @@ const auditResult = execSync('npm audit --json', { });
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-<<<<<<< HEAD
         
-=======
-            
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-                "status": 'success',
-                "vulnerabilities": vulnerabilities,
-                "details": auditData.vulnerabilities,
-                "metadata": auditData.metadata;
-            }} catch (error) {}
-            this.log(`Vulnerability scan "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    scanForSecrets() {}
-        this.log('Scanning for exposed secrets...');
-        
-const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },;
-            { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
-            { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
-            { "name": 'Tokens', "pattern": /token\s*[:=]\s*['"][^'"]+['"]/gi },
-            { "name": 'Private Keys', "pattern": /private[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
-            { "name": 'Database URLs', "pattern": /database[_-]?url\s*[:=]\s*['"][^'"]+['"]/gi },
-            { "name": 'AWS Keys', "pattern": /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*['"][^'"]+['"]/gi },
-            { "name": 'GitHub Tokens', "pattern": /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi };
-       ];
-<<<<<<< HEAD
-        
-            `;
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-
-       ];
-        const files = this.findSourceFiles(;);
-        const foundSecrets = [];
-        for (const file of files) {}
-            try {}"
-
-=======
-        const files = this.findSourceFiles(;);
-        const foundSecrets = [];
-        for (const file of files) {}
-            try {}
-                const content = fs.readFileSync(file, 'utf8';);
-        const files = this.findSourceFiles(;);
-        const foundSecrets = [];
-        for (const file of files) {}
-            try {}
-                const content = fs.readFileSync(file, 'utf8';);
-                
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 for (const secretType of secretPatterns) {}
                     const matches = content.match(secretType.pattern;);
                     if ( {})
                         foundSecrets.push({})
 
         const files = [];
-<<<<<<< HEAD
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
-=======
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
@@ -125,10 +58,7 @@ const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*[
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
                 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -143,7 +73,6 @@ const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*[
         scanDirectory(this.projectRoot);
         return files};
     checkFilePermissions() {}
-<<<<<<< HEAD
         
 const criticalFiles = ['package.json',];
             'package-lock.json',
@@ -152,13 +81,9 @@ const criticalFiles = ['package.json',];
             '.env.production',
             '.env.development'
         ];
-<<<<<<< HEAD
         
         const permissionIssues = [];
         
-=======
-        const permissionIssues = [];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
         const permissionIssues = [];
         for (const file of criticalFiles) {}
@@ -170,10 +95,7 @@ const criticalFiles = ['package.json',];
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
                 const isExecutableByOthers = (mode & 0o001) !==;0;
-<<<<<<< HEAD
                 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
@@ -183,7 +105,6 @@ const criticalFiles = ['package.json',];
                         "severity": 'medium'
                     })};
             };
-        };
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
      {}
                     permissionIssues.push({})
@@ -194,27 +115,19 @@ const criticalFiles = ['package.json',];
                         "severity": 'medium'
                     })};
             };
-        };
         this.log(`Found ${permissionIssues.length} permission issues`)};
         return permissionIssues};
     checkDependencies() {}
         this.log('Checking dependencies for security issues...');
-<<<<<<< HEAD
         
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             
-=======
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
-<<<<<<< HEAD
             
             const totalDeps = Object.keys(dependencies).lengt;h;
 
@@ -228,32 +141,6 @@ const criticalFiles = ['package.json',];
         
         const vulnerable = [];
         
-=======
-            const totalDeps = Object.keys(dependencies).lengt;h;
-            this.log(`Analyzing ${totalDeps} dependencies`);
-            // Check for known vulnerable packages;
-            const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-            this.log(`Analyzing ${totalDeps} dependencies`);
-            // Check for known vulnerable packages;
-            const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-            
-            return {;}
-                "status": 'success',
-                "totalDependencies": totalDeps,
-                "vulnerablePackages": vulnerablePackages,
-                "dependencies": Object.keys(dependencies);
-            }} catch (error) {}
-            this.log(`Dependency check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    checkForVulnerablePackages(dependencies) {}
-        // This is a simplified check - in practice, you'd use a vulnerability database;
-const knownVulnerable = ['lodash@4.17.0',];
-            'jquery@1.12.0',
-            'moment@2.24.0'
-        ];
-        const vulnerable = [];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (const [name, version] of Object.entries(dependencies)) {}
 const packageVersion = \`\${name}@\${version}\;`;`;
             if ([0]))) {}
@@ -274,15 +161,10 @@ const packageVersion = \`\${name}@\${version}\;`;`;
         return vulnerable}};
     generateSecurityHeaders() {}
         this.log('Generating security headers configuration...');
-<<<<<<< HEAD
         
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
         
-=======
-        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
-        let nextConfig = ;';';
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
 
@@ -327,7 +209,6 @@ return }[;];
           {}
             "key": 'Content-Security-Policy',
             "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             // Insert security headers before the closing brace;
             const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
@@ -335,10 +216,7 @@ return }[;];
         return { "status": 'success' }};
     generateSecurityReport() {}
         this.log('Generating security scan report...');
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -351,15 +229,10 @@ return }[;];
             },
             "recommendations": this.generateSecurityRecommendations();
        };
-<<<<<<< HEAD
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Security scan report saved to ${this.reportFile}");
         
-=======
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log("Security scan report saved to ${this.reportFile}");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return report};
     generateSecurityRecommendations() {}
 return [;];
@@ -378,10 +251,7 @@ return [;];
         ]};
     async run() {}
         this.log('Security Scanner started');
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
@@ -414,39 +284,10 @@ return [;];
     const scanner = new SecurityScanner) {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = SecurityScanner;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = SecurityScanner;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = SecurityScanner;
-<<<<<<< HEAD
-module.exports = SecurityScanner;
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

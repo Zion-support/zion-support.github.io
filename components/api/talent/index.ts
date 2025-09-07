@@ -40,8 +40,6 @@ return res && res.status(200).json({ "items": LOCAL,;
 return res.status(500).json({ "error": e.message,;
 });
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  }
   if (req.method = == 'POST') {try ;'
   }
   const payload = req.body as Partial<TalentProfile>;
@@ -82,7 +80,6 @@ const slug =;
             lang;
             originalLang;
           )}
-<<<<<<< HEAD
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
@@ -103,7 +100,6 @@ if (throw error) {
       return res.status (201).json ({ slug: item.slug });
       return res.status(500).json({ error: e.message })
     }
-  }
 
   if (req.method = $2;
       const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice($2);
@@ -136,7 +132,6 @@ if (throw error) {
           translations.category = $2;
           translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
-      }
       item.originalLanguage = $2;
       item.translations = $2;
       if (hasSupabase) {
@@ -182,9 +177,7 @@ return res.status (500).json ({ "error": e.message,;
     }
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
-}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 return res;
     .setHeader('Allow', 'GET, POST')'

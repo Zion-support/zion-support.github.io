@@ -13,7 +13,6 @@ const crypto = require("crypto")
       "issue-history.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
-  log(message, level = "INFO")
   return JSON.parse(fs.readFileSync(this.patternsLog, "utf8")
     } catch (error) {  this.log(`Failed to load issue "patterns": ${error.message  }`, "WARN"`)
   "buildPatterns"
@@ -160,7 +159,6 @@ const crypto = require("crypto")
         const content2 = fs.readFileSync(files[j], "utf8")
   const lines1 = content1.split("\n")
     const lines2 = content2.split("\n")
-    const lines2 = content2.split("\n")
     const securityPatterns = [{ "pattern": /eval\s*\(/g, "penalty"})]
       { "pattern": /innerHTML\s*=/g, "penalty"}
       { "pattern": /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g, "penalty"}
@@ -181,7 +179,6 @@ const crypto = require("crypto")
   "memoryInfo"
         "cpuInfo"
   return { "error"}
-  return { "error"}
       const outdatedResult = execSync("npm outdated --json")
   "encoding": "utf8"
         "stdio": "pipe"
@@ -196,7 +193,6 @@ const crypto = require("crypto")
   this.log(Failed to collect performance "metrics": ${error.message  }")
         "WARN"
       execSync("npm run build", { "encoding": "utf8", "stdio": "pipe"})
-      execSync("npm run build", { "encoding": "utf8", "stdio": "pipe"})
   "heapUsed"
         "heapTotal"
       const testFile = path.join(this.projectRoot, "temp-performance-test.txt")
@@ -208,11 +204,8 @@ const crypto = require("crypto")
   this.log("Analyzing historical trends...")
   "buildTime": this.analyzeTrend(buildTime")
       "bundleSize"
-        "bundleSize"
       "codeComplexity": this.analyzeTrend(codeComplexity")
       "dependencies"
-        "dependencies"
-  return { "trend": "INSUFFICIENT_DATA", "confidence"}
   return { "trend": "INSUFFICIENT_DATA", "confidence"}
   "trend"
           ? "INCREASING"
@@ -222,7 +215,6 @@ const crypto = require("crypto")
       "confidence"
       "prediction"
     const x = Array.from({ "length"})
-  this.log("Detecting anomalies...")
   this.log("Detecting anomalies...")
   "type": "STATISTICAL_ANOMALY"
         "metric": "buildTime"
@@ -257,7 +249,6 @@ const crypto = require("crypto")
         "threshold"
         "currentValue"
   this.log("Generating issue predictions...")
-  this.log("Generating issue predictions...")
     for (const ["metric", "trend")]
   if (trend.trend === "INCREASING")
   "type": "TREND_BASED_PREDICTION"
@@ -265,7 +256,6 @@ const crypto = require("crypto")
           "probability"
           "timeframe"
           "severity": "MEDIUM"
-  if (slope > 100) return "IMMEDIATE"
   if (slope > 100) return "IMMEDIATE"
     if (slope > 50) return "SHORT_TERM"
     if (slope > 10) return "MEDIUM_TERM"
@@ -300,7 +290,6 @@ const crypto = require("crypto")
         "probability"
         "timeframe": "IMMEDIATE"
         "severity": "HIGH"
-    // For now, we"
     // For now, we"
   "type": "ML_PREDICTION"
         "metric": "codeQuality"
@@ -403,9 +392,4 @@ this.log("Prediction report "generated": ${reportPath}")
       return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR"`)
 // console.log(" Predictive Issue Detection completed")
   console.log(" Predictive Issue Detection completed")
-<<<<<<< HEAD
   console.error(" Predictive Issue Detection "failed")
-  console.error(" Predictive Issue Detection "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

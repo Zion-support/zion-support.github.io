@@ -1,5 +1,5 @@
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -40,7 +40,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:
         return "bg-gray-100 text-gray-800"
 
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
 
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -79,7 +79,7 @@ export function ApplicationScoreCard() {const [isScoring, setIsScoring] = useSta
         return "bg-orange-100 text-orange-800";
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
 
 
 
@@ -151,7 +151,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         return "bg-orange-100 text-orange-800",default:;
         return "bg-gray-100 text-gray-800";
     }
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
   },// Trigger the scoring process;
   const handleScore = async () => {try {setIsScoring(true),// Call the trigger_resume_scoring function;
       const { error } = await supabase && supabase.rpc('trigger_resume_scoring',{ application_id: application && application.id }
@@ -252,12 +252,12 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
   },;
 
 >  // Render the score result or button to score;
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
   const hasScore = null;
   // Render the score result or button to score
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
     <Card className="overflow-hidden">;
   return (<Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
@@ -300,7 +300,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-sm text-muted-foreground">Match Score</div>
                 <div className="font-semibold text-xl">{application.match_score}/100</div>
               </div>
-            </div>
             
             {/* Summary */}
 >            <div className="flex items-start mb-4">;
@@ -311,7 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-sm text-muted-foreground">Summary</div>;
                 <div className="font-medium">{application && application.match_summary}</div>;
               </div>;
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
             </div>;{/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
@@ -337,13 +336,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <p className="font-medium">Skills Match: {application && application.match_breakdown.skills_match && skills_match.score}/100</p>;
                         {application && application.match_breakdown.skills_match && skills_match.matching && (<p>Matching skills: {application && application.match_breakdown.skills_match && skills_match.matching.join(", ")}</p>;
                         )}
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
 
 
-                      </div>;
                       </div>;
 
 
@@ -367,7 +365,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
 
               </div>;
-            </div>;
 
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (
@@ -395,7 +392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
 import { useState  } from './react';
 import { Badge  } from '@/components/ui/ badge';
 import { Button  } from '@/components/ui/ button';
@@ -480,7 +477,6 @@ if ( {) {$2;
                 <div className="text - sm text - muted - foreground">Match Score</div>;
                 <div className="font - semibold text - xl">{application.match_score}/100</div>;
               </div>;
-            </div>;
             {/* Summary */}
             <div className="flex items - start mb - 4">;
               <div className="p - 2 bg - primary / 10 rounded - full mr - 3 mt - 0.5">;
@@ -490,7 +486,6 @@ if ( {) {$2;
                 <div className="text - sm text - muted - foreground">Summary</div>;
                 <div className="font - medium">{application.match_summary}</div>;
               </div>;
-            </div>;
             {/* Suggestion */}
             <div className="flex items - start">;
               <div className="p - 2 bg - primary / 10 rounded - full mr - 3 mt - 0.5">;
@@ -505,7 +500,6 @@ if ( {) {$2;
                     Scored on {scored_date}
                   </div>)}
               </div>;
-            </div>;
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (<div className="mt - 4 pt - 4 border - t">;
                 <details className="text - sm">;
@@ -521,14 +515,14 @@ if ( {) {$2;
                     {application.match_breakdown.experience_match && (<div>;
                         <p className="font - medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>;
                         <p>{application.match_breakdown.experience_match.analysis}</p>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
                       </div>)}
 =>
                     {application.match_breakdown.certifications_match && (
                       <div>
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
                         {application.match_breakdown.certifications_match.matching && (
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
 
@@ -542,11 +536,9 @@ if ( {) {$2;
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>;
                         <p>{application.match_breakdown.education_match.analysis}</p>;
                       </div>;
-                  </div>;
                 </details>;
               </div>;
-                      </div>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
 
 
 
@@ -561,7 +553,7 @@ if ( {) {$2;
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
                       </div>;
                     )}
 
@@ -585,7 +577,7 @@ if ( {) {$2;
                     )}
                   </div>;
                 </details>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
               </div>;
 =>
             )}
@@ -605,7 +597,7 @@ if ( {) {$2;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                   Scoring Resume...;
                 </>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
               ) : (;
                 "Score Resume";
 
@@ -628,7 +620,7 @@ if ( {) {$2;
                 </>
               ) : (
                 "Score Resume"
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
               )}
             </Button>;
           </div>;
@@ -693,7 +685,7 @@ if ( {) {$2;
 }</div>) ";
 }</div> </div> View detailed breakdown </summary> <div className="mt-2 space-y-2 text-muted-foreground" > {application.match breakdown.skills match && (<div>)}</div>)}{application.match breakdown.experience match && (<div> </div>)}{application.match breakdown.certifications match && (<div>)}</div>)}{application.match breakdown.education match && (<div> </div>)}</div> </details> </div>) ";
 }</div>) : (<div className="text-center py-4" > <p className="text-muted-foreground mb-4" > Analyze how well this resume matches your job requirements. </p> <Button > {";
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+:src_backup/components/jobs/ApplicationScoreCard.tsx
   isScoring ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Scoring Resume... </>) : ("Score Resume") ;
 }</Button> </div>) ;
 }</CardContent> </Card>) ;

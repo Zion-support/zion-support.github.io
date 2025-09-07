@@ -31,9 +31,4 @@ console.log(' Starting master error fixing orchestrator...')
             execSync(`pm2 restart ${fixer}`, { "stdio"`})
       console.log('⚠  Critical fixes "failed")
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
-<<<<<<< HEAD
   console.error(' Master error fixing orchestrator failed to "start")
-  console.error(' Master error fixing orchestrator failed to "start")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

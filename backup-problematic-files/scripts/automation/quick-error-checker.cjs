@@ -66,9 +66,4 @@ const path = require("path")
           "file": ".eslintrc.js"
           "timestamp"
   type: "eslint-config-fix"
-<<<<<<< HEAD
           "file": "
-          "file": "
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

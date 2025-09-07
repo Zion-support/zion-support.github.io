@@ -4,7 +4,6 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';'
 
 export type AIAssistantProps = any;
 
-<<<<<<< HEAD
   buttonLabel = \"Generate with AI\","
   title = \"AI Writing Assistant\",
   defaultPrompt,
@@ -26,44 +25,16 @@ const [isEditing, setIsEditing] = useState(false);
 const [error, setError] = useState<string | null />(null);
 
   useEffect(() => {
-=======
-try {
-  const res = await fetch ('/api/ai/operator', {
-  method: 'POST', headers: {
-  'Content-Type': 'application/json', ... (authorizationToken ? {
-  Authorization: `Bearer $ {
-  authorizationToken 
-}` 
-}: process.env.NEXT PUBLIC OPERATOR TOKEN ? {
-  Authorization: `Bearer $ {
-  process.env.NEXT PUBLIC OPERATOR TOKEN 
-}` 
-}: {
-  
-}) 
-}
-return (<> <button > {
-  buttonLabel 
-}</button> </div> <div className="p-4 space-y-3" > <div> <label className="block text-xs font-medium mb-1" >Operator prompt</label> <textarea <button onClick= {
-  () => {
-  onAccept (output), onClose () 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
 export default function AIAssistant({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   buttonLabel = "Generate with AI"
   title = "AI Writing Assistant"
   defaultPrompt
@@ -231,7 +202,6 @@ onClick={onClos
                 </button>
                 <button
                   onClick={() =    /> {onAccept(output)onClose()}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   disabled={!canAccept}
 
                   className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm "disabled": opacity-60''
@@ -264,9 +234,6 @@ value={output}
 
                 )}
               </div>;
-            </div>;
-          </div>;
-        </div>;
       )}
     </>;
   )}
@@ -295,9 +262,6 @@ value={output}
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
                 )}
               </div>
-            </div>
-          </div>
-        </div>
       )}
     </>;
   )}
@@ -305,7 +269,6 @@ value={output}
 }
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
                 )}
-=======
 {error && <div className='text-red-600 text-sm'    />{error}</div
 
               <div    />
@@ -327,22 +290,15 @@ value={output}
                   </pre>
 
                 )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               </div>
-            </div>
-          </div>
-        </div>
       )}
     </>
 
 
   );
 }
-<<<<<<< HEAD
     </>;
   )}
     </>
   )
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

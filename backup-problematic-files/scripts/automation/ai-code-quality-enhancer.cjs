@@ -109,11 +109,8 @@ class $1 {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -223,7 +220,6 @@ class $1 {}
             "frequency": matches.length,
             "files": [filePath]})};
       };
-    };
 ;
     // Additional intelligent analysis;
     const additionalIssues = this.findAdditionalQualityIssues(;)
@@ -581,7 +577,6 @@ class $1 {}
         ["unused-imports", "component-naming", "console-log"].includes(;)
           imp.pattern;
         );
-    );
 
     for (const fix of safeFixes) {}
   try {}
@@ -706,7 +701,6 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
         if (extensions.includes(ext)) {}
   files.push(fullPath)};
       };
-    };
 ;
     return files};
 ;
@@ -715,7 +709,6 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
   await this.analyzeCodeQuality();
       this.log("🤖 AI Code Quality Enhancement completed successfully")} catch (error) {  this.log(`AI Code Quality Enhancement "failed": ${error.message  }`, "ERROR")};
   };
-};
 ;
 // Run the automation if called directly;
 if (require.main === module) {}
@@ -724,9 +717,4 @@ if (require.main === module) {}
   const enhancer = new AICodeQualityEnhancer();
   enhancer.run()};
 ;
-<<<<<<< HEAD
 module.exports = AICodeQualityEnhancer;
-module.exports = AICodeQualityEnhancer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

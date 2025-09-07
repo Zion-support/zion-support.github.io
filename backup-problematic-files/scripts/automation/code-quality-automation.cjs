@@ -108,7 +108,6 @@ console.log(` Starting comprehensive code quality automation...``)
   const filePath = path.join(dir, ")
   let content = fs.readFileSync(filePath", "utf8")
             const lines = content.split("\n")
-            const lines = content.split("\n")
                   !line.includes("export")
   content = filteredLines.join("\n")
             if (file.endsWith(".tsx")
@@ -174,7 +173,6 @@ console.log(`   Optimized structure in ${improvements} files`)} catch (error) { 
   // Skip directories that can"
   count += countTestFiles(fullPath)} else if (item.includes(".test.") || item.includes(".spec.")
   // Skip directories that can"
-  // Skip directories that can"
     const consoleFiles = findFilesWithPattern("src", "console.")
     const todoFiles = findFilesWithPattern("src", "TODO")
     const fixmeFiles = findFilesWithPattern("src", "FIXME")
@@ -201,9 +199,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start code quality "automation": ")
-  console.error(" Failed to start code quality "automation": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

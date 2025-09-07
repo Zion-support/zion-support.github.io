@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -14,9 +13,5 @@ const backupPath = filePath + '.backup;';
 console.log(' File size optimization completed')
 
 console.log(' File size optimization completed')
-<<<<<<< HEAD
-console.log(' File size optimization completed')
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const backupPath = filePath + '.backup;
 

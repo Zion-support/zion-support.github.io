@@ -17,13 +17,9 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -45,11 +41,8 @@ class BuildMonitor {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -75,11 +68,8 @@ class BuildMonitor {}
         "cwd": process.cwd();
       };);
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -119,9 +109,4 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = BuildMonitor;
-module.exports = BuildMonitor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

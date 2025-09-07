@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
-=======
-<<<<<<< HEAD
-
-import { getFraudStore } from '../../../../utils/fraud/store',;
->>>>>>> origin/main
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'];
   if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
@@ -22,7 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return
   }
 
-<<<<<<< HEAD
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>;
   const store = getFraudStore();
   const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
@@ -33,19 +26,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
   res.status(200).json({ items })
 }
-=======
-  res.status(200).json({ items })
-
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
 
 }
 
@@ -67,12 +52,10 @@ if ( {) {
     res.status (401).json ({ error: 'Unauthorized' })
     return;
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 ;
 export default async function handler(req, res) {
   try {
@@ -87,7 +70,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -102,9 +84,3 @@ export default async function handler(req, res) {
 };
 }
 
-=======
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

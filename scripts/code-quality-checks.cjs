@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node;
@@ -37,40 +36,13 @@ const reportPath = "code-quality-report.json";
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
-<<<<<<< HEAD
 
     console.log(`� Report saved "to"`)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     console.log(`� Report saved "to"`)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-    console.log(`� Report saved "to"`)
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
     console.log(`� Report saved "to"`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 class CodeQualityChecker {
   constructor() {
@@ -81,7 +53,6 @@ class CodeQualityChecker {
     };
   }
 
-<<<<<<< HEAD
   async runLint() {
     try {
       console.log('🔍 Running ESLint...');
@@ -94,7 +65,6 @@ class CodeQualityChecker {
       this.results.summary.failed++;
       console.log('❌ ESLint failed');
     }
-  }
 
   async runTypeCheck() {
     try {
@@ -108,7 +78,6 @@ class CodeQualityChecker {
       this.results.summary.failed++;
       console.log('❌ TypeScript check failed');
     }
-  }
 
   async runBuild() {
     try {
@@ -122,7 +91,6 @@ class CodeQualityChecker {
       this.results.summary.failed++;
       console.log('❌ Build failed');
     }
-  }
 
   async generateReport() {
     const reportPath = 'code-quality-report.json';
@@ -141,13 +109,7 @@ class CodeQualityChecker {
     console.log('✅ Code quality checks completed');
     console.log(`📊 Summary: ${this.results.summary.passed} passed, ${this.results.summary.failed} failed`);
   }
-}
 
 const checker = new CodeQualityChecker();
 checker.run().catch(console.error);
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

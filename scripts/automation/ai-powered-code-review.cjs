@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -45,7 +41,6 @@ const data = fs.readFileSync(this.reviewHistory, "utf8");
   // Review ""TypeScript/JavaScript""
   // Review "TypeScript/JavaScript"
       console.log( Code review completed in ${reviewResults.duration}ms);console.log( Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements"")
-  console.error(" Error during code "review": ")
   console.error(" Error during code "review": ")
 this.logError("Code review failed")
   console.log("" Reviewing ""TypeScript/JavaScript"" files...")
@@ -142,7 +137,6 @@ const content = fs.readFileSync(configFile, "utf8");
             "line": this.findLineNumber(content, "--inspect")
             "suggestion": "Remove --inspect flag from production scripts"
   console.error("Error parsing package."json": ")
-  console.error("Error parsing package."json": ")
   console.log(""� Reviewing package dependencies...")
 const outdatedCheck = execSync("npm outdated --json");
   "cwd"
@@ -229,14 +223,12 @@ const lines = content.split("\n");
       "details"
   fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"
   console.error("Error logging review "results": ")
-  console.error("Error logging review "results": ")
   "timestamp"
       "error"
   "timestamp"
       "error"
       "stack"
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
-  console.error("Error logging "error": ")
   console.error("Error logging "error": ")
   console.log(""� Setting up file change monitoring...")
     // In production, you"
@@ -253,12 +245,5 @@ const gitStatus = execSync("git status --porcelain");
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const content = fs.readFileSync(filePath, ");

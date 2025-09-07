@@ -56,13 +56,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
 interface PaymentSummaryProps  {
             </p>
           </div>
-        </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src/components/projects/milestones/PaymentSummary.tsx
+:src/components/projects/milestones/PaymentSummary.tsx
 };
-=======
 },
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/PaymentSummary.tsx

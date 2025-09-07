@@ -45,7 +45,6 @@ const { execSync } = require("child_process")
   "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"
     } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")
   this.log("Generating unified automation dashboard...")
-  this.log("Generating unified automation dashboard...")
   "timestamp"
         "pm2Status"
           "online": pm2Status.filter(p => p.pm2_env.status === "online")
@@ -67,9 +66,7 @@ const { execSync } = require("child_process")
 this.log("Dashboard generated successfully at ${htmlPath}")
       return dashboard} catch (error) {  this.log("Dashboard generation "failed": ${error.message  }", "ERROR")
     if (reports["console-error-fixer")]
-  if (reports["console-error-fixer")]
   total += reports["console-error-fixer"]
-      total += reports["console-error-fixer"]
       codeQuality.metrics.typescript.status === "failed"
       codeQuality.metrics.eslint.status === "failed"
       codeQuality.metrics.typescript.status === "failed"
@@ -80,7 +77,6 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   actions.push("Run TypeScript compiler to identify and fix type errors")
       codeQuality.metrics.eslint.status === "failed"
   actions.push("Run ESLint to identify and fix code style issues")
-      reports["console-error-fixer"]
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
   generateHTMLDashboard(dashboard) {return "}
@@ -221,9 +217,4 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   dashboard.log("Shutting down gracefully...")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
-<<<<<<< HEAD
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

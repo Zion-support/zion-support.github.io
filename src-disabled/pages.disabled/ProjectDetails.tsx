@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+:src_backup/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from 'react';
 :src/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from "react",
@@ -10,7 +10,7 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+:src_backup/pages/ProjectDetails.tsx
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -135,7 +135,6 @@ function ProjectDetailsContent() {
         variant: 'destructive'
       })
     }
-  }
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return
     setIsSubmittingNote(true)
@@ -192,7 +191,6 @@ function ProjectDetailsContent() {
     } finally {
       setIsSubmittingNote(false)
     }
-  }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return;
     const success = await updateProjectStatus(project.id, newStatus)
@@ -241,8 +239,6 @@ function ProjectDetailsContent() {
           description: 'The project is now in progress. Congratulations!'
         })
       }
-    }
-  }
   const getStatusBadge = (status: ProjectStatus) => {    switch (status) {
       case 'offer_sent':
         return <Badge variant='outline'>Offer Sent</Badge>
@@ -261,7 +257,6 @@ function ProjectDetailsContent() {
       default:
         return <Badge variant='outline'>{status}</Badge>
     }
-  }
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -270,8 +265,6 @@ function ProjectDetailsContent() {
             <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
             <p>Loading project details...</p>
           </div>
-        </div>
-      </div>
     )
   }
   if (!project) {
@@ -359,7 +352,7 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+:src_backup/pages/ProjectDetails.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
@@ -384,7 +377,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Started on {format(new Date(project.start_date), "PPP")}
                 </span>
               </div>
-            </div>
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -490,7 +482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 )}            </div>
           </div>
-        </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='order-2 lg:order-1 lg:col-span-2'>
             <Tabs
@@ -518,8 +509,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               )}
             </div>
-          </div>
-        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="order-2 lg:order-1 lg:col-span-2">
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
@@ -547,7 +536,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="bg-muted/30 p-4 rounded-md">
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
-                      </div>
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
@@ -559,8 +547,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="bg-muted/30 p-4 rounded-md">
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>
                         </div>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -582,7 +568,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <h3 className="font-semibold">Start Date</h3>
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
-                      </div>
 :src/pages/ProjectDetails.tsx
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
@@ -593,9 +578,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="mt-1">
                             {getStatusBadge(project.status)}
                           </div>
-                        </div>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -923,7 +905,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>
                       )}
                     </div>
-                  </div>
 :src/pages/ProjectDetails.tsx
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
@@ -973,8 +954,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>
                       )}
                     </div>
-                  </div>
-                </div>
               </CardContent>
             </Card>
             {/* Project Status Card */}
@@ -1050,7 +1029,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"});
       }
-    }
   },;
   const getStatusBadge = (status: ProjectStatus) => {;
     switch (status) {;
@@ -1077,8 +1055,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>;
             <p>Loading project details...</p>;
           </div>;
-        </div>;
-      </div>;
     );
   }
 ;
@@ -1129,7 +1105,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Started on {format(new Date(project.start_date), "PPP")}
                 </span>;
               </div>;
-            </div>;
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
@@ -1212,8 +1187,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               )}
             </div>;
-          </div>;
-        </div>;
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="order-2 lg:order-1 lg:col-span-2">;
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>;
@@ -1241,7 +1214,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="bg-muted/30 p-4 rounded-md">;
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>;
                         </div>;
-                      </div>;
                       <div>;
                         <h3 className="font-semibold mb-2">Payment Terms</h3>;
                         <Badge variant="outline" className="capitalize">;
@@ -1253,8 +1225,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="bg-muted/30 p-4 rounded-md">;
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>;
                         </div>;
-                      </div>;
-                    </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
@@ -1274,7 +1244,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <h3 className="font-semibold">Start Date</h3>;
                           <p>{format(new Date(project.start_date), "PPP")}</p>;
                         </div>;
-                      </div>;
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
                         <Clock className="h-5 w-5 text-primary mt-0.5" />;
                         <div>;
@@ -1282,9 +1251,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="mt-1">;
                             {getStatusBadge(project.status)}
                           </div>;
-                        </div>;
-                      </div>;
-                    </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
@@ -1307,7 +1273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               Uploaded when project was created;
                             </p>;
                           </div>;
-                        </div>;
                         <Button variant="outline" size="sm" asChild>;
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">;
                             View;
@@ -1433,7 +1398,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>;
                       )}
                     </div>;
-                  </div>;
                   <div className="flex items-start gap-4">;
                     <Avatar className="h-10 w-10">;
                       {project.talent_profile?.profile_picture_url ? (;
@@ -1462,8 +1426,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>;
                       )}
                     </div>;
-                  </div>;
-                </div>;
               </CardContent>;
             </Card>;
             {/* Project Status Card */}
@@ -1510,7 +1472,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     </span>
                   </div>
-                </div>
               </CardContent>
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
@@ -1581,7 +1542,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </CardFooter>
               )}
-              )}
 
               {project && project.status === 'offer_sent' && isClient && (;
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
@@ -1610,10 +1570,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </Card>
           </div>
-        </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+:src_backup/pages/ProjectDetails.tsx
 :src/pages/ProjectDetails.tsx
   )
 }
@@ -1697,7 +1656,6 @@ default: return <Badge variant="outline"> {
 }className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>)
 }Waiting for the talent to accept your offer. </p> </CardFooter>)
 }</p> </CardFooter>)
-}</p> </CardFooter>)
 }</Card> </div> </div> </main> </>)
 }export default function ProjectDetails () {
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"export default function ProjectDetails() {
@@ -1756,7 +1714,6 @@ const ProjectDetails = () => {
 }
             </Card>;
           </div>;
-        </div>;
       </main>;
     </>;
   );
@@ -1859,7 +1816,6 @@ default: return <Badge variant="outline"> {;
 }`) ";
 }className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>) ;
 }Waiting for the talent to accept your offer. </p> </CardFooter>) ;
-}</p> </CardFooter>) ;
 }</p> </CardFooter>) ;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;

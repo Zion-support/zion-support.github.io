@@ -96,7 +96,6 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   return "vulnerable"
     return "secure"
   return "unknown"
-  return "unknown"
     if (fs.existsSync("dist")
   const distSize = getDirectorySize("dist")
     if (fs.existsSync("dist")
@@ -120,8 +119,6 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   // Skip files that can"
   // Skip directories that can"
   // Skip files that can"
-  // Skip directories that can"
-  // Skip directories that can"
   // Skip directories that can"
   if (projectState.buildStatus === "failed")
   automations.push("enhanced-error-fixer")
@@ -226,9 +223,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error( Failed to start intelligent automation "orchestrator")
-  console.error( Failed to start intelligent automation "orchestrator")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

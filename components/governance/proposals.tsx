@@ -14,7 +14,6 @@
             </div>;
             <div className='text-sm opacity-70'>;'
               by {p.author} · {new Date(p.created_at).toLocaleString()}
-<<<<<<< HEAD
             </div>
             <a
               className='text-blue-600 underline'
@@ -25,17 +24,6 @@
               View
             </a>
           </li>
-=======
-            </div>;
-            <a;
-              className='text-blue-600 underline';'
-              href={p && p.url}
-              target='_blank';'
-              rel='noreferrer'>;'
-              View;
-            </a>;
-          </li>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         ))}
         )}
 

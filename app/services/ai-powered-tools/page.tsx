@@ -44,7 +44,6 @@ export default function ServicePage() {
               Grow with your business with our flexible and scalable platform.
             </p>
           </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -55,11 +54,5 @@ export default function ServicePage() {
             Contact Sales
           </button>
         </div>
-      </div>
-    </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

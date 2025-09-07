@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
@@ -30,7 +29,6 @@ export default function BrowserAutomationCloudPage() {
 							<p className="mt-2 text-gray-300">SAML/SCIM, VPC deploy, dedicated subnets, custom guards & retries.</p>
 							<p className="mt-4 text-3xl font-bold">Custom</p>
 						</div>
-					</div>
 					<div className="mt-8 flex flex-wrap items-center gap-4">
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $99/mo</a>
 						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
@@ -46,27 +44,3 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
-=======
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function browserautomationcloud() {
-  return (
-    <Layout>
-      <Head>
-        <title>Browser Automation Cloud - Zion Tech Group</title>
-        <meta name="description" content="Browser Automation Cloud solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Browser Automation Cloud</h1>
-          <p className="text-lg text-gray-600">
-            Professional browser automation cloud solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

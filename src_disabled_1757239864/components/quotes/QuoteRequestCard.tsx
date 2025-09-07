@@ -117,7 +117,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 },) => {// Format date for display;
   const formatDate = (dateString: string,) => {try {return format(new Date(dateString), 'PP')} catch (e) {return dateString;
     }
-  }
   return (<Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -172,20 +171,16 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
               )}
             </Button>;
           </div>;
-        </div>;
       </CardContent>;
     </Card>;
   )}";
               )}
             </Button>
           </div>
-        </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src/components/quotes/QuoteRequestCard.tsx
+:src/components/quotes/QuoteRequestCard.tsx
 };
-=======
 },
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/quotes/QuoteRequestCard.tsx

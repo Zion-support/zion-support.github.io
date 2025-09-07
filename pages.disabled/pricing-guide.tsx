@@ -321,7 +321,6 @@ const "PricingGuide": React.FC = () => {const pricingFactors = [;
                       </h3>;
                       <p className="text-gray-300">{factor.description}</p>;"
                     </div>;
-                  </div>;
                   <ul className="space-y-3">;"
                     {factor.details.map((detail, detailIndex) => (<li;
                         }
@@ -337,7 +336,6 @@ const "PricingGuide": React.FC = () => {const pricingFactors = [;
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Pricing Examples */}
       <section className="py-20 px-4 "sm": px-6 "lg":px-8 bg-slate-800/50">;"
@@ -377,7 +375,6 @@ const "PricingGuide": React.FC = () => {const pricingFactors = [;
                     <div className="text-sm text-gray-400">;"
                       "Timeline": {example.timeline}
                     </div>;
-                  </div>;
                   <ul className="space-y-3 mb-6">;"
                     {example.features.map((feature, featureIndex) => (<li;
                         }
@@ -399,7 +396,6 @@ const "PricingGuide": React.FC = () => {const pricingFactors = [;
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Cost Saving Tips */}
       <section className="py-20 px-4 "sm": px-6 "lg":px-8">;"
@@ -439,12 +435,10 @@ const "PricingGuide": React.FC = () => {const pricingFactors = [;
                         {tip.savings}
                       </Badge>;
                     </div>;
-                  </div>;
                 </Card>;
               </motion.div>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
       <section className="py-20 px-4 "sm": px-6 "lg":px-8 bg-slate-800/50">;"
@@ -479,13 +473,3 @@ const "PricingGuide": React.FC = () => {const pricingFactors = [;
       </section>;
     </div>;
   )}export default PricingGuide;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

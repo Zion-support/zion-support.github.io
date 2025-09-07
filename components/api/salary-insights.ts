@@ -9,7 +9,6 @@ type RequestBody = any;
 
 return res.status(200).json(response);
 }
-}
 
 const completion = await client.chat.completions.create ({
   }
@@ -39,7 +38,6 @@ function median("values": number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
-<<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
@@ -134,26 +132,12 @@ const completion = await client.chat.completions.create({model: 'gpt-4o-mini'
 {role: 'system',
   content:;}
             'You are a compensation analyst. Be specific and concise. Use USD.';}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 function extractCountry(location: string): string {
-<<<<<<< HEAD
   const parts = location.split().map((p) => p.trim());
-=======
-  const now = new Date ()const seed = prng (seed_key)const series: { label: string; value: number }[]  = [];const key = getKey(item)(acc[key] |= []).push(item)return acc;
-  }, {} as Record<K, T[]>)}
-function extractCountry(location: string): string {current = Math.max (base_monthly * 0.7, current * (1 + drift))series.push ({ label: months[date.get_month ()], value: Math.round (current) })}
-  return series;
-  // Check condition
-if (return undefined) {
-  $2
-}
-  const parts = $2;
->>>>>>> origin/main
   return parts[parts.length - 1] || 'Global'
 }
 
-<<<<<<< HEAD
 function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile): number {
   const set = new Set(targetSkills.map((s) => s.toLowerCase()));
   const overlap = profile.skills.filter((s) => set.has(s.toLowerCase())).length;
@@ -167,7 +151,6 @@ function prng(seed: string): () => number {
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5;
     return (h >>> 0) / 4294967295
   }
-}
 
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
   const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'];
@@ -185,50 +168,10 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
 }
 
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
-=======
-  const now = new Date ();
-  const seed = prng (seed_key);
-  const series: { label: string; value: number }[] = [];
-    const key = getKey(item);
-    (acc[key] |= []).push(item);
-    return acc;
-  }, {} as Record<K, T[]>)
-}
-function extractCountry(location: string): string {}
-    current = Math.max (base_monthly * 0.7, current * (1 + drift));
-    series.push ({ label: months[date.get_month ()], value: Math.round (current) });
-  }
-  return series;
-  // Check condition;
-if (return undefined) {}
-  $2;
-}
-  try {}
-    const client = new OpenAI ({ api_key });'
-            'You are a compensation analyst. Be specific and concise. Use USD.',
-        },'
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0 && 0.2,
-      max_tokens: 300,
-  let current = baseMonthly * 0.92; // start slightly below base
-  for (let i = 11; i >= 0; i--) {
-    const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
-    const drift = (seed() - 0.5) * 0.03; // +/-3%
-    current = Math.max(baseMonthly * 0.7, current * (1 + drift));
-    series.push({ label: months[date.getMonth()], value: Math.round(current) });
-  }
-  return series;
-async function maybeGetGptRecommendation(
-  input: RequestBody
-  stats: { median: number; min: number; max: number; country: string }
-) {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
-<<<<<<< HEAD
     const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 
@@ -243,7 +186,6 @@ async function maybeGetGptRecommendation(
   } catch {
     return undefined
   }
-}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
@@ -260,14 +202,11 @@ const body: RequestBody = req.body
 const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
     body
 const country = extractCountry(region || 'Global')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   // Score and filter candidate profiles
   const scored = TALENT_PROFILES.map((p) => ({
     profile: p;
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
     .filter((s) => s.score > 0)
-=======
 const skillsStr = input.skills.join(', ');
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
     const completion = await client.chat.completions.create({

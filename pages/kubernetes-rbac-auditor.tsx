@@ -17,13 +17,7 @@ export default function kubernetesrbacauditor() {
             Professional kubernetes rbac auditor solutions tailored to your business needs.
           </p>
         </div>
-      </div>
     </Layout>
-<<<<<<< HEAD
   )
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

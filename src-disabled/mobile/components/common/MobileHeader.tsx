@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
 
 title: string;  showBack?: boolean;  title: string;
   title: string;
@@ -12,10 +11,10 @@ title: string;  showBack?: boolean;  title: string
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
 onSettingsClick?: () => void;export function MobileHeader({title;
   showBack;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
   title: string;  showBack?: boolean;  title: string
 origin/cursor/automate-test-improve-and-merge-code-2533
   showBack?: boolean
@@ -36,7 +35,7 @@ export function MobileHeader({
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
 
 export function MobileHeader({
 
@@ -51,7 +50,7 @@ export function MobileHeader({
 
   return (
     <header className={cn(
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
@@ -74,7 +73,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <span className="sr-only">Back</span>
             </Button>
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
 interface MobileHeaderProps {;
   title: string;  showBack?: boolean;  title: string,;
   showBack?: boolean;
@@ -151,7 +150,7 @@ import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button"
 }export function MobileHeader() {const router  = useRouter()>;
       <div className='flex items-center justify-between h-14 px-4'>;
         <div className='flex items-center'>;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
           {showBack && (;
             <Button
               variant='ghost'
@@ -179,7 +178,6 @@ import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button"
             </Button>
           )}
         </div>
-      </div>
     </header>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -240,7 +238,7 @@ interface MobileHeaderProps {;
               <ChevronLeft className="h-5 w-5" />;
               <span className="sr-only">Back</span>;
             </Button>;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
             <Button;
               <span className='sr-only'>Settings</span>            </Button>            <Button;
             <Button;
@@ -264,7 +262,7 @@ interface MobileHeaderProps {;
             {title}
           </h1>;
         </div>;
-<<<<<<< HEAD:src_backup/mobile/components/common/MobileHeader.tsx
+:src_backup/mobile/components/common/MobileHeader.tsx
         <div className='flex items-center space-x-2'>;
           {showNotifications && (<Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
               <Bell className='h-5 w-5' />;
@@ -298,7 +296,6 @@ interface MobileHeaderProps {;
             </Button>;
           )}
         </div>;
-      </div>;
     </header>;
 )
         <div className="flex items-center space-x-2">;
@@ -325,7 +322,6 @@ interface MobileHeaderProps {;
           )}
 
         </div>;
-      </div>;
     </header>;
   );
 }
@@ -354,6 +350,5 @@ interface MobileHeaderProps {;
             </Button>
           )}
         </div>
-      </div>
     </header>
 );

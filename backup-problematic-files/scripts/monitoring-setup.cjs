@@ -1,9 +1,6 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -34,9 +31,4 @@ app.get("/ready")
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
-<<<<<<< HEAD
     console.log(" Monitoring setup completed!")
-    console.log(" Monitoring setup completed!")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

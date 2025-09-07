@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -164,7 +163,6 @@ export default function Ultimate2026ServicesShowcase() {
                 <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">{enterpriseCount}+</div>
                 <div className="text-gray-400">Enterprise Solutions</div>
               </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -201,14 +199,12 @@ export default function Ultimate2026ServicesShowcase() {
               <MapPin className="w-4 h-4 mr-2" />
               <span className="text-sm">{contactInfo.address}</span>
             </div>
-          </div>
           <div className="flex items-center space-x-4">
             <span className="text-sm font-semibold">Ready to Transform Your Business?</span>
             <Link href="/contact" className="bg-white text-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors">
               Contact Us
             </Link>
           </div>
-        </div>
       </section>
 
       {/* Featured Services */}
@@ -264,7 +260,6 @@ export default function Ultimate2026ServicesShowcase() {
                         <Star className="w-4 h-4 fill-current" />
                         <span className="ml-1 text-sm text-gray-400">{service.rating}</span>
                       </div>
-                    </div>
 
                     <div className="flex items-center justify-between">
                       <div className="text-sm text-gray-500">
@@ -276,12 +271,9 @@ export default function Ultimate2026ServicesShowcase() {
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
                     </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Services Section */}
@@ -370,8 +362,6 @@ export default function Ultimate2026ServicesShowcase() {
                   <List className="w-4 h-4" />
                 </button>
               </div>
-            </div>
-          </div>
 
           {/* Services Grid/List */}
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
@@ -415,7 +405,6 @@ export default function Ultimate2026ServicesShowcase() {
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm text-gray-400">{service.rating}</span>
                         </div>
-                      </div>
 
                       <div className="flex items-center justify-between">
                         <div className="text-sm text-gray-500">
@@ -427,8 +416,6 @@ export default function Ultimate2026ServicesShowcase() {
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </Link>
                       </div>
-                    </div>
-                  </div>
                 ) : (
                   <div className="flex items-center space-x-6">
                     <div className="text-4xl">{service.icon}</div>
@@ -450,7 +437,6 @@ export default function Ultimate2026ServicesShowcase() {
                         <span>{service.customers.toLocaleString()} customers</span>
                         <span>Rating: {service.rating}/5</span>
                       </div>
-                    </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">
                         {service.price}
@@ -462,7 +448,6 @@ export default function Ultimate2026ServicesShowcase() {
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
                     </div>
-                  </div>
                 )}
               </motion.div>
             ))}
@@ -520,7 +505,6 @@ export default function Ultimate2026ServicesShowcase() {
                 <div className="text-3xl font-bold text-white mb-2">99.9%</div>
                 <div className="text-white/80">Uptime Guarantee</div>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -551,8 +535,6 @@ export default function Ultimate2026ServicesShowcase() {
                   <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
                   <span>{contactInfo.address}</span>
                 </div>
-              </div>
-            </div>
 
             <div>
               <h4 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h4>
@@ -563,57 +545,25 @@ export default function Ultimate2026ServicesShowcase() {
                     <h5 className="text-white font-semibold mb-1">First-to-Market Innovations</h5>
                     <p className="text-gray-400">Access cutting-edge technology before your competitors</p>
                   </div>
-                </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="text-white font-semibold mb-1">Proven ROI</h5>
                     <p className="text-gray-400">Average customers see 300-500% return on investment</p>
                   </div>
-                </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="text-white font-semibold mb-1">Expert Implementation</h5>
                     <p className="text-gray-400">Full-service deployment and ongoing support</p>
                   </div>
-                </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="text-white font-semibold mb-1">Future-Proof Technology</h5>
                     <p className="text-gray-400">Built for the challenges and opportunities of tomorrow</p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function ultimate2026servicesshowcase() {
-  return (
-    <Layout>
-      <Head>
-        <title>Ultimate 2026 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Ultimate 2026 Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ultimate 2026 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional ultimate 2026 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

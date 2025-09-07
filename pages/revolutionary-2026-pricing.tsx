@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -185,7 +184,6 @@ export default function Revolutionary2026Pricing() {
                   <div className="text-2xl font-bold text-yellow-400">{pricingStats.popularServices}</div>
                   <div className="text-gray-400 text-sm">Popular Services</div>
                 </div>
-              </div>
             </motion.div>
 
             {/* Contact Information */}
@@ -210,7 +208,6 @@ export default function Revolutionary2026Pricing() {
                   <MapPin className="w-5 h-5 text-purple-400" />
                   <span className="text-sm text-gray-300">{contactInfo.address}</span>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -268,9 +265,6 @@ export default function Revolutionary2026Pricing() {
                     ))}
                   </select>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Services Pricing Grid */}
@@ -335,8 +329,6 @@ export default function Revolutionary2026Pricing() {
                             <div className="text-gray-400 text-sm">
                               {service.trialDays > 0 ? `${service.trialDays}-day free trial` : 'No trial available'}
                             </div>
-                          </div>
-                        </div>
 
                         {/* Features */}
                         <div className="mb-6">
@@ -366,7 +358,6 @@ export default function Revolutionary2026Pricing() {
                               <Star className="w-4 h-4 text-yellow-400 mr-1" />
                               {service.rating}/5
                             </div>
-                          </div>
                           <div>
                             <span className="text-gray-400">Customers:</span>
                             <div className="text-white">{service.customers.toLocaleString()}+</div>
@@ -375,7 +366,6 @@ export default function Revolutionary2026Pricing() {
                             <span className="text-gray-400">Setup:</span>
                             <div className="text-white">{service.setupTime}</div>
                           </div>
-                        </div>
 
                         {/* ROI and Market Info */}
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">
@@ -385,7 +375,6 @@ export default function Revolutionary2026Pricing() {
                           <div className="text-xs text-gray-400">
                             <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
                           </div>
-                        </div>
 
                         {/* Action Buttons */}
                         <div className="flex flex-col gap-3">
@@ -418,7 +407,6 @@ export default function Revolutionary2026Pricing() {
                             </div>
                           )}
                         </div>
-                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -500,7 +488,6 @@ export default function Revolutionary2026Pricing() {
                 </p>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -546,28 +533,4 @@ export default function Revolutionary2026Pricing() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function revolutionary2026pricing() {
-  return (
-    <Layout>
-      <Head>
-        <title>Revolutionary 2026 Pricing - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary 2026 Pricing solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Revolutionary 2026 Pricing</h1>
-          <p className="text-lg text-gray-600">
-            Professional revolutionary 2026 pricing solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

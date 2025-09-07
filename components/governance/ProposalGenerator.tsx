@@ -6,8 +6,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }
     return this.props.children;
   }
-<<<<<<< HEAD
-}
 import React, { useState } from 'react';'
 
 
@@ -42,7 +40,6 @@ export type ProposalForm = {
   budgetOrGoals: string,
   supportingMultiverses: string,;
   language?: string;
-<<<<<<< HEAD
   customPrompt?: string
 }
   customPrompt?: string}
@@ -80,7 +77,6 @@ const [statusMessage, setStatusMessage] = useState('');'
   ) {
     }
     setForm(prev => ({ ...prev, [key]: value }));
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   async function handleGenerate() {
     }
@@ -108,13 +104,11 @@ const data = await res.json();
       }
       setIsGenerating(false);
     }
-  }
     } finally {
 
       }
 
       setIsGenerating(false);    }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     }
 
@@ -156,9 +150,7 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
   }
       setIsGenerating(false)
     }
-  }
 
-<<<<<<< HEAD
   async function handleExport() {
     setStatusMessage($2);
     try {
@@ -169,7 +161,6 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
           markdown: draftMarkdown,
           json: draftJson,
     }
-  }
 
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
@@ -188,216 +179,6 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
         pdfUrl: data && data.pdfUrl,;
         jsonUrl: data && data.jsonUrl,;
         mdUrl: data && data.mdUrl,;
-=======
-      setIsGenerating(false)
-    }
-  }
-  async function handleExport() {
-    }
-    setStatusMessage('Exporting to PDF/Markdown/JSON...');'
-    try {
-      }
-      const res = await fetch('/api/proposals/export', {'
-        }
-        "method": 'POST''
-        "headers": { 'Content-Type': 'application/json','
-}
-        "body": JSON.stringify({
-
-          }
-
-          "markdown": draftMarkdown,
-          "json": draftJson,
-"meta": form
-        })
-      });
-      const data = await res.json();
-      setExportLinks({
-        }
-        "pdfUrl": data.pdfUrl,
-"jsonUrl": data.jsonUrl,
-"mdUrl": data.mdUrl
-     
-});
-      setStatusMessage('Exported. Files saved.');'
-    } catch (e) {
-      }
-      console.error(e);
-      setStatusMessage('Export failed');'
-    }
-      setStatusMessage('Export failed');    }'
-
-    }
-
-  }
-  async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {"method": 'POST',"headers": { 'Content-Type': 'application/json','
-},"body": JSON && JSON.stringify({"markdown": draftMarkdown,"json": draftJson,"meta": form})};
-const data = await res && res.json()setStatusMessage(`Submitted. "Status": ${data && data.status || 'queued'}. "IPFS": ${data && data.ipfsCid || 'N/A,;'}`;`      )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}'
-  }
-
-  async function handleSubmitBridge() {
-    }
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');'
-    try {
-      }
-      const res = await fetch('/api/proposals/submit', {'
-
-        }
-
-        "method": 'POST','
-        "headers": { 'Content-Type': 'application/json','
-},
-"body": JSON.stringify({
-          }
-          "markdown": draftMarkdown,
-          "json": draftJson,
-          "meta": form
-        })
-      });
-
-const data = await res && res.json();
-      setExportLinks({;
-        }
-        "pdfUrl": data && data.pdfUrl,;
-        "jsonUrl": data && data.jsonUrl,;
-        "mdUrl": data && data.mdUrl,;
-      });
-      setStatusMessage('Exported. Files saved.');'
-    } catch (e) {;
-      }
-      console && console.error(e);
-      setStatusMessage('Export failed');    }'
-
-const data = await res && res.json();
-      setExportLinks({ "pdfUrl": data && data.pdfUrl, "jsonUrl": data && data.jsonUrl, "mdUrl": data && data.mdUrl
-}),;
-      setStatusMessage('Exported. Files saved.');'
-    } catch (e) {;
-      }
-      console && console.error(e);
-      setStatusMessage('Export failed');'
-    }
-  }
-  async function handleSubmitBridge() {;
-    }
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');'
-    try {;
-<<<<<<< HEAD
-      const res = await fetch('/api/proposals/submit', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-=======
-
-}
-
-const res = await fetch('/api/proposals/submit', {;'
-        }
-        "method": 'POST',;'
-        "headers": { 'Content-Type': 'application/json','
-},;
-        "body": JSON && JSON.stringify({;
-          }
-          "markdown": draftMarkdown,;
-          "json": draftJson,;
-          "meta": form,;
-        }),;
-      });
-<<<<<<< HEAD
-      const data = await res && res.json();
-      setStatusMessage(;
-        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
-      );
-          meta: form})}),
-      const data = await res.json($2);
-      setExportLinks($2);
-      setStatusMessage('Exported. Files saved.')
-    } catch (e) {
-      console.error($2);
-      setStatusMessage('Export failed')
-    }
-  }
-=======
-<<<<<<< HEAD
-      const data = await res && res.json();
-      setStatusMessage(;'
-        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
-=======
-
-const data = await res && res.json();
-      setStatusMessage(;
-        `Submitted. "Status": ${data && data.status || 'queued'}. "IPFS": ${data && data.ipfsCid || 'N/A,'
-}`;`
-      );
-    } catch (e) {;
-      console && console.error(e);'
-      setStatusMessage('Submission failed');    }
-  }
-  return ('
-        <div className='space-y-4'>      const data = await res.json();'`
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {}
-      console.error(e);'
-        <div className='space-y-4'>      const data = await res.json();'`
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {}
-      console.error(e);
-'
-    <div className='space-y-6'>;'
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;'
-        <div className='space-y-4'>      const data = await res && res.json();'`
-      setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`);
-    } catch (e) {;
-      console && console.error(e);'
-      setStatusMessage('Submission failed');
-
-    } catch (e) {
-      }
-      console.error(e);
-      setStatusMessage('Submission failed');'
-      setStatusMessage('Submission failed')'
-    }
-
-  async function handleSubmitBridge() {
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...'),
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form})}),
-      const data = await res.json($2);
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
-    } catch (e) {
-      console.error($2);
-      setStatusMessage('Submission failed')
-    } catch (e) {;
-      console && console.error(e);
-      setStatusMessage('Submission failed');    }
-  }
-  return (<div className='space-y-6'>;'
-      <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
-        <div className='space-y-4'>;'
-          <div>;
-            <label className='block text-sm font-medium'>;'
-              Target institution;
-            </label>;
-            <input;
-              className='w-full border rounded px-3 py-2';'
-              value={form && form.targetInstitution}
-              onChange={e => { return handleChange('targetInstitution', e && e.target.value)}'
-              placeholder='UNDP / World Bank / ILO'; }'
-            />;
-          </div>;
-          <div>;
-            <label className='block text-sm font-medium'>Type</label>;'
-
-            <select,
-className='w-full border rounded px-3 py-2''
-
-            <select;
-className='w-full border rounded px-3 py-2'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               value={form.type}
               onChange={e =>
                 }
@@ -463,7 +244,6 @@ className='w-full border rounded px-3 py-2''
                 onChange={e => { return handleChange('customPrompt', e && e.target.value)}'
               />; }
             </div>;
-          </div>;
           <div className='flex gap-2'>;'
 
             <button,
@@ -489,101 +269,17 @@ className='px-4 py-2 bg-purple-600 text-white rounded''
               Submit Bridge
             </button>
           </div>
-<<<<<<< HEAD
             <button;
 className='px-4 py-2 bg-emerald-600 text-white rounded';
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
-=======
-{statusMessage && (
-            <p className='text-sm text-gray-600'>{statusMessage}</p>'
-
-              onClick={handleGenerate}
-              disabled={isGenerating}>;
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-            <button;
-              onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD)</button>;
-            <button;
-            <button
-
-              onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
-            <button
-
-              disabled={!draftMarkdown}>;
-              Submit Bridge;
-            </button>;
-          </div>;
-          {statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;className='px-4 py-2 bg-purple-600 text-white rounded';
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
-            >;
-              Submit Bridge;
-            </button>;
-          </div>;
-{statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;
-          )}
-          {exportLinks && (<div className='text-sm space-y-1'>;'
-              {exportLinks && exportLinks.pdfUrl && (<div>;
-                  <a;
-                    }
-                    className='text-blue-600 underline';'
-                    href={exportLinks && exportLinks.pdfUrl}
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
-          {exportLinks && (
-            <div className="text-sm space-y-1">
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-=======
-<<<<<<< HEAD
-          {exportLinks && (;'
-            <div className='text-sm space-y-1'>;
-              {exportLinks && exportLinks.pdfUrl && (;
-                <div>;
-                  <a'
-                    className='text-blue-600 underline'
-                    href={exportLinks && exportLinks.pdfUrl}'
-                    target='_blank''
-=======
-          {exportLinks && (<div className='text-sm space-y-1' />;
-              {exportLinks && exportLinks.pdfUrl && (<div />;
-                  <a;}
-                    className='text-blue-600 underline';}
-                    href={exportLinks && exportLinks.pdfUrl}
-
-                    target='_blank''
-
-                    rel='noreferrer''
-                  >
-                    PDF
-                  </a>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-<<<<<<< HEAD
                   <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-=======
-<a
-}
-className='text-blue-600 underline''
-                    href={exportLinks && exportLinks.mdUrl}
-                    target='_blank''
-
-                    rel='noreferrer''
-                  >
-                    Markdown
-                  </a>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
               )}
               {exportLinks.jsonUrl && (
@@ -603,13 +299,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           )}
-<<<<<<< HEAD
         </div>;'
         <div className='space-y-2'>;'
-=======
-        </div>;
-        <div className='space-y-2'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <label className='block text-sm font-medium'>Draft (Markdown)</label>;
           <textarea'
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
@@ -621,16 +312,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
-      </div>;
-    </div>;
             onChange={(e) => setDraftMarkdown(e.target.value)}
-<<<<<<< HEAD
-=======
-              )}
-            </div>;
-          )}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
 <div className='space-y-2'>'
           <label className='block text-sm font-medium'>Draft (Markdown)</label>'
@@ -640,8 +322,6 @@ className='w-full border rounded px-3 py-2 min-h-[520px] font-mono''
             onChange={e => { return setDraftMarkdown(e.target.value)}
           />
         </div>
-      </div>
-    </div>
   ); }
 
   );

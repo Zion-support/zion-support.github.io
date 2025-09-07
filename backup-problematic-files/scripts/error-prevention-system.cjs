@@ -7,18 +7,14 @@ const { execSync } = require('child_process')
       const result = execSync('npx tsc --noEmit')
         "encoding"
         "status"
-        "status"
             "file"
         "encoding"
-        "status"
         "status"
             "message"
         "encoding"
         "status"
-        "status"
           "type"
         "encoding"
-        "status"
         "status"
       if (line.includes('FAIL') || line.includes('"Error")
           "type"
@@ -50,9 +46,4 @@ const { execSync } = require('child_process')
         "impact"
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
-<<<<<<< HEAD
       console.error('\n� Error Prevention System "failed")
-      console.error('\n� Error Prevention System "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

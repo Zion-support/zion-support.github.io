@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
 export default function MDMPage() {
   const features = [
@@ -17,17 +16,12 @@ export default function MDMPage() {
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
 
-=======
-
-export default function mobiledevicemanagement() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Mobile Device Management - Zion Tech Group</title>
         <meta name="description" content="Mobile Device Management solutions and services." />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -87,20 +81,6 @@ export default function mobiledevicemanagement() {
             </div>
           </section>
         </div>
-      </div>
     </Layout>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Mobile Device Management</h1>
-          <p className="text-lg text-gray-600">
-            Professional mobile device management solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -14,7 +10,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   ],
   "securityIssues": [
     {
@@ -139,7 +134,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   ],
   "recommendations": [
     {
@@ -159,7 +153,6 @@
     "securityScore": 90,
     "status": "good"
   }
-}
   ],
   "securityIssues": [
     {
@@ -284,7 +277,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   ],
   "recommendations": [
     {
@@ -304,15 +296,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "message": "Address code security issues",
       "action": "Review and fix dangerous code patterns identified in the audit"
     },
-=======
   "timestamp": "2025-09-07T10:14:30.085Z",
   "vulnerabilities": [],
   "recommendations": [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-  "recommendations": [
     {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     {
       "type": "file_permissions",
       "message": "package.json is world-readable",
@@ -330,142 +317,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "securityScore": 90,
     "status": "good"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-  ],
-  "securityIssues": [
-    {
-      "file": "/workspace/src/utils/chunkErrorHandler.ts",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "innerHTML assignment detected - potential XSS risk",
-      "line": 13
-    },
-    {
-      "file": "/workspace/pages/[slug].tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 172
-    },
-    {
-      "file": "/workspace/components/2030-revolutionary-services.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 9
-    },
-    {
-      "file": "/workspace/components/Analytics.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 95
-    },
-    {
-      "file": "/workspace/components/SEOHead.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 91
-    },
-    {
-      "file": "/workspace/components/broken/SEO.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 65
-    },
-    {
-      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-140146.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 1
-    },
-    {
-      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-141021.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 1
-    },
-    {
-      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-142038.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 1
-    },
-    {
-      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-140146.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 1
-    },
-    {
-      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-141021.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 1
-    },
-    {
-      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-142038.tsx",
-      "type": "code_security",
-      "severity": "warning",
-      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
-      "line": 1
-    },
-    {
-      "file": ".env",
-      "type": "environment",
-      "severity": "warning",
-      "message": "Sensitive environment variable detected - ensure proper security",
-      "line": "NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdud3RnZ2VwdHprcW5kdXV0aHRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0MTQyMjcsImV4cCI6MjA2MDk5MDIyN30.mIyYJWh3S1FLCmjwoJ7FNHz0XLRiUHBd3r9we-E4DIY"
-    },
-    {
-      "file": ".env",
-      "type": "permissions",
-      "severity": "info",
-      "message": "File is world-readable - consider restricting permissions",
-      "details": "Current permissions: 100644"
-    },
-    {
-      "file": "package.json",
-      "type": "permissions",
-      "severity": "info",
-      "message": "File is world-readable - consider restricting permissions",
-      "details": "Current permissions: 100644"
-    },
-    {
-      "file": "next.config.cjs",
-      "type": "permissions",
-      "severity": "info",
-      "message": "File is world-readable - consider restricting permissions",
-      "details": "Current permissions: 100644"
-    },
-    {
-      "file": "ecosystem.config.cjs",
-      "type": "permissions",
-      "severity": "info",
-      "message": "File is world-readable - consider restricting permissions",
-      "details": "Current permissions: 100755"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  "recommendations": [
-    {
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",
@@ -492,7 +343,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   ],
   "summary": {
     "totalVulnerabilities": 0,
@@ -505,25 +355,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 
 
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "auditReportVersion": 2,
   "vulnerabilities": {},
   "metadata": {
@@ -543,9 +386,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "peerOptional": 0,
       "total": 1090
     }
-  }
-}
-<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
@@ -555,9 +395,3 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   "vulnerabilities": 11,
   "recommendations": [
 
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

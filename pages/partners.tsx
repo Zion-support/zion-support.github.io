@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -112,18 +111,10 @@ export default function PartnersPage() {
     { number: "300%", label: "Growth Rate", icon: TrendingUp}
   ],
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function partners() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Partners - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators." />
         <meta property="og:title" content="Partners - Zion Tech Group" />
         <meta property="og:description" content="Strategic partnerships and collaboration opportunities." />
@@ -176,11 +167,9 @@ export default function partners() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
           </div>;
-        </div>;
       </section>;
 
             initial={{ opacity: 0, y: 30 }}
@@ -235,7 +224,6 @@ export default function partners() {
             ))}
 
           </div>;
-        </div>;
       </section>;
 
       {/* Current Partners */}
@@ -294,7 +282,6 @@ export default function partners() {
                         {partner.partnership}
                       </span>
                     </div>
-                  </div>
                   
                   <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
                   <p className="text-white/70 text-sm mb-4">{partner.description}</p>
@@ -325,11 +312,9 @@ export default function partners() {
                       Learn More
                     </button>
                   </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Become a Partner CTA */}
@@ -433,22 +418,5 @@ export default function partners() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 ;
 
-=======
-        <meta name="description" content="Partners solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Partners</h1>
-          <p className="text-lg text-gray-600">
-            Professional partners solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

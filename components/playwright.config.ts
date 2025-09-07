@@ -19,7 +19,6 @@
 // {// "name": firefox', // "use": {...devices['Desktop Firefox'];'
 }, //;
 }
-<<<<<<< HEAD
 // {// name: webkit', // use: {timeout: 120 * 1000, // 2 minutes timeout for server to start;
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers;
@@ -40,7 +39,6 @@
   // ];
 import { defineConfig } from @playwright/test';
 default defineConfig($2);
-=======
 
 // {
   // "name": webkit', // "use": {'
@@ -48,7 +46,6 @@ default defineConfig($2);
   //     "name": webkit',  //     "use": { ...devices['Desktop Safari'],'
 },  //   };
   // ]
-<<<<<<< HEAD
 });
   //     "name": webkit',  //     "use": { ...devices['Desktop Safari'],'
 },  //   }

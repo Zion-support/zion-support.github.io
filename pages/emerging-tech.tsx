@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
 export default function EmergingTechPage() {
   const features = [
@@ -13,17 +12,12 @@ export default function EmergingTechPage() {
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
 
-=======
-
-export default function emergingtech() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Emerging Tech - Zion Tech Group</title>
         <meta name="description" content="Emerging Tech solutions and services." />
       </Head>
-<<<<<<< HEAD
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -62,20 +56,6 @@ export default function emergingtech() {
             </div>
           </section>
         </div>
-      </div>
     </Layout>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Emerging Tech</h1>
-          <p className="text-lg text-gray-600">
-            Professional emerging tech solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

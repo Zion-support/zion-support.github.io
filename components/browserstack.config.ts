@@ -7,8 +7,6 @@ default defineConfig({"testDir": tests/e2e',  "use": {"baseURL": process.env.PLA
 }
     "baseURL": process && process.env.PLAYWRIGHT_BASE_URL || "http"://"localhost":3000',    "trace": on-first-retry,'
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   "projects": [
       "name": Desktop Chrome',      "use": {'
@@ -66,17 +64,7 @@ default define_config ({"test_dir": tests / e2e',  "use": {"baseURL": process.en
     {"name": Mobile Safari',      "use": {"browserName": webkit',        ...devices['iPhone 12']}'
     }
   ];
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 });
   "reporter": [;
     ['list'],    ['html', { "outputFolder": playwright-logs/html-report', "open": never','
@@ -134,7 +122,6 @@ default define_config ({"test_dir": tests / e2e',  "use": {"baseURL": process.en
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-=======
 
 
 
@@ -146,7 +133,6 @@ default define_config ({"test_dir": tests / e2e',  "use": {"baseURL": process.en
     }
   ];
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -188,12 +174,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ['list'],    ['html', { "output_folder": playwright - logs / html - report', "open": never','
 }]];
 });
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
-});
 });

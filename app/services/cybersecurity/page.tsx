@@ -65,8 +65,6 @@ return (;
               Ensure compliance with industry standards and regulations for data protection.
             </p>
           </div>
-        </div>
-<<<<<<< HEAD
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -77,7 +75,6 @@ return (;
             Contact Sales
           </button>
         </div>
-      </div>
     <div className="space-y-16">"
       <section className="text-center py-16 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">"
         <h1 className="text-4xl "md":text-6xl font-bold text-gray-900 mb-6">"
@@ -169,11 +166,6 @@ href=""tel":+13024640950""
       </section>
 
       <ContactSection />
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     </div>
   );
 }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

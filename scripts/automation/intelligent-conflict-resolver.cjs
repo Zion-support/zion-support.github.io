@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 #!/usr/bin/env node;"
@@ -325,7 +321,6 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
   this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");
       throw error};
   };
-};
 ;
 // Main execution;
 if (require.main === module) {}

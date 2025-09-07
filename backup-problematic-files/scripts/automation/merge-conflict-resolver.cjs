@@ -9,9 +9,7 @@ const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
   this.log(" Starting Merge Conflict Resolver...")
   this.log("� Stopping Merge Conflict Resolver...")
-  this.log("� Stopping Merge Conflict Resolver...")
   this.log(" Checking for merge conflicts...")
-  this.log(" No merge conflicts found")
   this.log(" No merge conflicts found")
       this.saveReport()} catch (error) {  this.log(` Error during conflict "resolution"`})
     const files = this.findFiles(".ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml")
@@ -21,14 +19,12 @@ const { execSync } = require("child_process")
             "type": "merge_conflict"
             "markers"
     const lines = content.split("\n")
-    const lines = content.split("\n")
       if (line.includes("")
   // Middle marker} else if (line.includes(")
   "start"
           "end"
           "content": lines.slice(conflictStart, conflictEnd + 1).join("\n")
   try {this.log(" Resolving conflict in ${conflict.file}")
-      const content = fs.readFileSync(conflict.file, "utf8")
       const content = fs.readFileSync(conflict.file, "utf8")
   fs.writeFileSync(conflict.file, resolvedContent);this.log(" Auto-resolved conflict in ${conflict.file}")
         try {execSync("git add "${conflict.file}", { "stdio": "pipe" }
@@ -74,7 +70,6 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
         this.log(" Conflicts committed successfully")
     } catch (error) {  this.log(" Could not commit resolved "conflicts": ${error.message  }")
   const exts = extensions.split(",")
-  const exts = extensions.split(",")
           !item.startsWith(")
           item !== "node_modules"
   "timestamp"
@@ -87,10 +82,4 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "lastCheck"
       "logFile"
   process.on("SIGINT")
-  process.on("SIGINT")
-<<<<<<< HEAD
   process.on(")
-  process.on(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

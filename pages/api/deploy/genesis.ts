@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-    });
-
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
@@ -37,42 +30,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       modules = {},
       bonusModules = {}
     } = body;
-<<<<<<< HEAD
 
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
     }
 
-=======
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({
-      error: 'Method not allowed'
-    });
-  }
-  
-  try {
-    const body = req.body || {};
-    const {
-      instanceName,
-      defaultLanguage,
-      deploymentRegion,
-      tokenActivation,
-      governanceMode,
-      branding,
-      modules = {},
-      bonusModules = {}
-    } = body;
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({
         error: 'Missing required fields: instanceName, deploymentRegion'
       });
-<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -80,13 +46,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
->>>>>>> origin/main
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
@@ -118,7 +81,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ]
     };
 
-<<<<<<< HEAD
     const deployLog = {
       provisionId,
       instanceName,
@@ -150,42 +112,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
-}
-=======
-=======
-    }
-    
-    // Simulated provisioning operations – replace with real infra hooks later
-    const now = new Date().toISOString();
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-    
-    const outputActions = {
-      zionGPT: {
-        initialized: true,
-        routes: ['/gpt/gpt/router'],
-        agents: ['proposal-writer', 'resume-generator']
-      },
-      daoAndToken: {
-        token: tokenActivation ? 'ZION$' : 'disabled',
-        treasury: tokenActivation ? `${provisionId}-treasury` : null,
-        votingDashboard: '/dao'
-      },
-      assets: {
-        whitepaper: '/whitepaper',
-        roadmap: '/roadmap',
-        book: {
-          pdf: '/book/manifesto.pdf',
-          trailerScript: '/trailer/script'
-        },
-        summit: '/summit'
-      },
-      publicPages: []
-    };
-    
-    res.status(200).json(outputActions);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

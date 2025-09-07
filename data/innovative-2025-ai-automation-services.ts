@@ -938,7 +938,6 @@ export interface InnovativeAIAutomationService  {"id": string,"name": string,"ta
     "email": string;
     "address": string;
   }
-  }
   "realImplementation": boolean;
   "implementationDetails": string;
   "launchDate": string;
@@ -1309,12 +1308,6 @@ export const "innovative2025AIAutomationServices": InnovativeAIAutomationService
     "rating": 4.9,
 "reviews": 28
   }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
   }
@@ -1327,7 +1320,6 @@ export interface InnovativeAIAutomationService {;
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
       launchDate: '2025-03-01'
       customers: 35
@@ -1335,11 +1327,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 28
     }
 
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     },;
   ];    features: [
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI, CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts';
@@ -1370,9 +1357,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     reviews: 28
   }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
   }
 ];

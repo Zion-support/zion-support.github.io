@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -76,7 +75,6 @@ export default function InnovativeServicesShowcase2036() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   };
 
   const itemVariants = {
@@ -87,7 +85,6 @@ export default function InnovativeServicesShowcase2036() {
       transition: {
         duration: 0.5
       }
-    }
   };
 
   return (
@@ -256,8 +253,6 @@ export default function InnovativeServicesShowcase2036() {
                     <List className="w-5 h-5" />
                   </button>
                 </div>
-              </div>
-            </div>
 
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 justify-center">
@@ -299,7 +294,6 @@ export default function InnovativeServicesShowcase2036() {
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
                       {categoryIcons[service.category] || <Star className="w-8 h-8" />}
                     </div>
-                  </div>
                 )}
                 
                 <div className="flex-1">
@@ -311,7 +305,6 @@ export default function InnovativeServicesShowcase2036() {
                         <span className="text-cyan-400 font-semibold">{service.price}</span>
                         {service.period && <span className="text-gray-400 text-sm">{service.period}</span>}
                       </div>
-                    </div>
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
@@ -354,7 +347,6 @@ export default function InnovativeServicesShowcase2036() {
                           </div>
                         )}
                       </div>
-                    </div>
 
                     {/* Target Audience */}
                     {service.targetAudience && (
@@ -382,8 +374,6 @@ export default function InnovativeServicesShowcase2036() {
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -437,28 +427,3 @@ export default function InnovativeServicesShowcase2036() {
     </Layout>
   )
 }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function 2036innovativeservicesshowcase() {
-  return (
-    <Layout>
-      <Head>
-        <title>2036 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="2036 Innovative Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">2036 Innovative Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional 2036 innovative services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

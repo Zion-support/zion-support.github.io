@@ -42,7 +42,6 @@ const { execSync, spawn } = require("child_process")
   // Review "TypeScript/JavaScript"
       console.log( Code review completed in ${reviewResults.duration}ms);console.log( Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements"")
   console.error(" Error during code "review": ")
-  console.error(" Error during code "review": ")
 this.logError("Code review failed")
   console.log("" Reviewing ""TypeScript/JavaScript"" files...")
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")]
@@ -138,7 +137,6 @@ this.logError("Code review failed")
             "line": this.findLineNumber(content, "--inspect")
             "suggestion": "Remove --inspect flag from production scripts"
   console.error("Error parsing package."json": ")
-  console.error("Error parsing package."json": ")
   console.log(""� Reviewing package dependencies...")
       const outdatedCheck = execSync("npm outdated --json")
   "cwd"
@@ -225,14 +223,12 @@ this.logError("Code review failed")
       "details"
   fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"
   console.error("Error logging review "results": ")
-  console.error("Error logging review "results": ")
   "timestamp"
       "error"
   "timestamp"
       "error"
       "stack"
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
-  console.error("Error logging "error": ")
   console.error("Error logging "error": ")
   console.log(""� Setting up file change monitoring...")
     // In production, you"
@@ -249,9 +245,4 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
-<<<<<<< HEAD
   const content = fs.readFileSync(filePath, ")
-  const content = fs.readFileSync(filePath, ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

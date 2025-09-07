@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
     return res.status(200).json({ url })
@@ -10,7 +9,6 @@
     `</body></html>`,
 
   res.setHeader($2);
-  res.setHeader($2);
   res.status(200).send(html)
 
     .replace(/</g, '&lt,')
@@ -18,15 +16,3 @@
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).send('<html><body>Export content</body></html>');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

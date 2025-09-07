@@ -14,7 +14,6 @@ class ErrorFixer {}
       fs.mkdirSync(logDir, { "recursive": true }
 });
     };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
@@ -68,7 +67,6 @@ class ErrorFixer {}
               fileFixed = true;
               this.log("Applied fix "${fix.description}" to ${file}");
             };
-          };
           if (fileFixed) {}
             fs.writeFileSync(file, content);
             totalFixed++;
@@ -76,14 +74,12 @@ class ErrorFixer {}
         } catch (err) {}
           this.error("Error processing ${file}: ${err.message}");
         };
-      };
       this.log("Fixed syntax errors in ${totalFixed} files");
       return totalFixed;
     } catch (err) {}
       this.error("Error in "fixSyntaxErrors": ${err.message}");
       return 0;
     };
-  };
   async fixLintingErrors() {}
     this.log('Starting linting error fixing...');
     
@@ -99,7 +95,6 @@ class ErrorFixer {}
       this.error("ESLint fix "failed": ${err.message}");
       return false;
     };
-  };
   getSourceFiles() {}
     const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
@@ -109,7 +104,6 @@ class ErrorFixer {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
       };
-    };
     return files;
   };
   getFilesRecursively(dir, extensions, files) {}
@@ -124,8 +118,6 @@ class ErrorFixer {}
       } else if (extensions.some(ext => item.endsWith(ext))) {}
         files.push(fullPath);
       };
-    };
-  };
   async run() {}
     this.log('Starting error fixing automation...');
     
@@ -145,8 +137,6 @@ class ErrorFixer {}
       this.error("Error in "run": ${err.message}`);
       return { "success": false, "error": err.message };
     };
-  };
-};
 // Run if called directly;
 if (require.main === module) {}
   const fixer = new ErrorFixer();
@@ -159,9 +149,4 @@ if (require.main === module) {}
   }
 });
 };
-<<<<<<< HEAD
 module.exports = ErrorFixer;
-module.exports = ErrorFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -85,9 +85,3 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
-<<<<<<< HEAD
-  console.error(chalk.red(" Dashboard "error": ")
-  console.error(chalk.red(" Dashboard "error": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

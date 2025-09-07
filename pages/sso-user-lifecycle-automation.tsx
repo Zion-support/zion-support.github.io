@@ -17,13 +17,7 @@ export default function ssouserlifecycleautomation() {
             Professional sso user lifecycle automation solutions tailored to your business needs.
           </p>
         </div>
-      </div>
     </Layout>
-<<<<<<< HEAD
   )
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

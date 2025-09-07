@@ -272,16 +272,10 @@ export const logger = new Logger}(;);
             this.log("Console Error Fixer "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the fixer if this script is executed directly;
 if ( {})
     const fixer = new ConsoleErrorFixer) {}
      {}
     const fixer = new ConsoleErrorFixer}(;);
     fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ConsoleErrorFixer;
-module.exports = ConsoleErrorFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

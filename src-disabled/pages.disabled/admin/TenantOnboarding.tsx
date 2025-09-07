@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
+:src_backup/pages/admin/TenantOnboarding.tsx
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -61,7 +61,7 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
+:src_backup/pages/admin/TenantOnboarding.tsx
     brand_name: "";
     subdomain: "";
     logo_url: "";
@@ -298,7 +298,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           placeholder="#9b87f5"
                         />
                       </div>
-                    </div>
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
@@ -349,7 +348,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         </div>
-                      </div>
                       <p className="text-xs text-muted-foreground">
                         Leave blank to auto-generate from company name
                       </p>
@@ -385,7 +383,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
+:src_backup/pages/admin/TenantOnboarding.tsx
   );
 
 };'";
@@ -394,7 +392,3 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/main

@@ -83,7 +83,6 @@ return (;
           </div>
         ))}
       </div>
-    </div>
   );
 }
 
@@ -115,7 +114,6 @@ name="Enterprise""
           features={["Full SOC services", "Custom security policies", "Dedicated team", "24/7 phone support", "Unlimited users", "Custom integrations"]}"
           popular={false} />
       </div>
-    </div>
   );
 }
 
@@ -183,10 +181,5 @@ href=""mailto":kleber@ziontechgroup.com""
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
-    </div>
-<<<<<<< HEAD
   )
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

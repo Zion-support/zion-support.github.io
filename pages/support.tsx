@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/main
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -188,7 +183,6 @@ export default function Support() {
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
-            </div>
             
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 text-cyan-400">
@@ -203,7 +197,6 @@ export default function Support() {
                 <CheckCircle className="w-6 h-6" />
                 <span>Quick Solutions</span>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -247,7 +240,6 @@ export default function Support() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Support Categories */}
@@ -292,7 +284,6 @@ export default function Support() {
                 </button>
               ))}
             </div>
-          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category, index) => (
@@ -312,7 +303,6 @@ export default function Support() {
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
                     </div>
-                  </div>
                   
                   <div className="flex items-center justify-between pt-4 border-t border-gray-800/50">
                     <span className="text-sm text-gray-400">{category.articles} articles</span>
@@ -320,8 +310,6 @@ export default function Support() {
                       <span className="text-sm font-medium">Browse</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -371,11 +359,9 @@ export default function Support() {
                       <span className="text-gray-400">Priority:</span>
                       <span className="text-purple-400">{channel.priority}</span>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Search and Filter */}
@@ -394,7 +380,6 @@ export default function Support() {
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
-              </div>
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
@@ -414,8 +399,6 @@ export default function Support() {
                   </button>
                 ))}
               </div>
-            </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -597,18 +580,14 @@ export default function Support() {
                           {article.helpful} helpful
                         </span>
                       </div>
-                    </div>
                     
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Read</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Support Hours & Contact */}
@@ -673,7 +652,6 @@ export default function Support() {
                     <MessageCircle className="w-5 h-5 text-green-400" />
                     <span className="text-white">Live Chat Available</span>
                   </div>
-                </div>
                 
                 <div className="mt-6 pt-6 border-t border-cyan-500/20">
                   <a
@@ -684,10 +662,8 @@ export default function Support() {
                     <ArrowRight className="w-5 h-5" />
                   </a>
                 </div>
-              </div>
             </motion.div>
           </div>
-        </div>
       </section>
 
       {/* Contact CTA */}
@@ -776,56 +752,4 @@ export default Support;
   )
 };
 
-<<<<<<< HEAD
 export default SupportPage;
-=======
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function SupportPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Support | Zion Tech Group</title>
-        <meta name="description" content="Professional support services for your business." />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Support
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional support services for your business.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Technical Support</h3>
-            <p className="text-gray-300">
-              24/7 technical support for all our services.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
-            <p className="text-gray-300">
-              Comprehensive documentation and guides.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Community</h3>
-            <p className="text-gray-300">
-              Join our community for help and discussions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

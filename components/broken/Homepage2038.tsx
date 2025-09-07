@@ -63,13 +63,11 @@ return (;
   return (
     <Layout>;
       {/* Main Content */}
-<<<<<<< HEAD
 
 <main className='relative z-10'>'
 
 
 
-<<<<<<< HEAD
             <motion.div
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>;'
@@ -82,7 +80,6 @@ return (;
             <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500'></div>'
             <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500'></div>'
           </div>
-<<<<<<< HEAD
 
           <div className='text-center max-w-5xl mx-auto relative z-10'>'
             <motion.div,
@@ -155,21 +152,12 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
                     whileTap={{ "scale": 0.95 }}
                   >
                     Explore Services
-=======
-                    Explore Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </motion.button>
 
 
 
                 </Link>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
               {/* Trust Indicators *
@@ -203,7 +191,6 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
                   <span>Industry Leader</span>;
                 </div>;
               </motion.div>;
-            </motion.div>;
           </div>;
         </section>;
         {/* Company Stats */}
@@ -267,215 +254,19 @@ className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300'
         {/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
-=======
 initial={{ opacity: 0, y: 20 }
 }
-<<<<<<< HEAD
-=======
-              {/* Trust Indicators */}
-              <motion.div
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
         {/* Company Stats */}"
         <section className="py-24 px-4 bg-black/30 relative">"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>"
           <div className="max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0.4 }}
-className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400'
-              >
-                <div className='text-5xl font-bold text-purple-400 mb-3 group-"hover":text-purple-300 transition-colors'>'
-                  24/7
-                </div>
-                <div className='text-gray-300 text-lg'>'
-                  Autonomous Operations
-                </div>
-                <div className='text-sm text-purple-400 mt-3 opacity-0 group-"hover":opacity-100 transition-opacity'>'
-                  Always available
-                </div>
-              </motion.div>
-              <motion.div,
-className='p-8 group "hover":bg-white/5 rounded-2xl transition-all duration-300''
-
-                whileHover={{ "scale": 1.05 }}
-              >
-                <div className='text-5xl font-bold text-green-400 mb-3 group-"hover":text-green-300 transition-colors'>'
-                  ∞
-                </div>
-                <div className='text-gray-300 text-lg'>'
-                  Future Possibilities
-                </div>
-                <div className='text-sm text-green-400 mt-3 opacity-0 group-"hover":opacity-100 transition-opacity'>'
-                  Unlimited potential
-                </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Featured AI Services *
-}
-
-<section className='py-24 px-4'>'
-          <div className='max-w-7xl mx-auto'>'
-            <motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true 
-}
-
-className='text-center mb-20''
-            >
-              <h2 className='text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'
-                Revolutionary AI Services
-              </h2>
-              <p className='text-xl text-gray-300 max-w-4xl mx-auto'>'
-                Experience the next evolution of artificial intelligence with,
-our consciousness evolution and quantum AI platforms
-              </p>
-            </motion.div>'
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >"
-              className="text-center mb-20"
-            >"
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Revolutionary AI Services;
-              </h2>"
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms;
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-
-            <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16'>'
-              {featuredAI.map((service, index) => (
-                <motion.div
-}
-key={service.id}
-              className='text-center mb-20'>;'
-              <h2 className='text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;'
-                Revolutionary AI Services;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;'
-                Experience the next evolution of artificial intelligence with;
-                our consciousness evolution and quantum AI platforms;
-              </p>;
-<<<<<<< HEAD
-            </motion && motion.div>;
-            <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16'>              {featuredAI && featuredAI.map((service, index) => (            >;'
-              <h2 className="text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;"
-                }
-                Revolutionary AI Services;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">;"
-                Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16">;"
-              {featuredAI && featuredAI.map((service, index) => (<motion&& motion.div;
-                  }
-                  key={service && service.id}
-                  initial={{ "opacity": 0, "y": 20 
-}
-                  whileInView={{ "opacity": 1, "y": 0 
-}
-                  transition={{ "duration": 0 && 0.6, "delay": index * 0 && 0.1 }}
-                  viewport={{ "once": true 
-}>;
-
-                  <UltraFuturisticServiceCard2038,
-service={service}
-
-variant='consciousness';' />
-                </motion.div>
-
-              ))}
-
-                    variant="consciousness"
-              >
-                <div className="text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors">∞</div>
-                <div className="text-gray-300 text-lg">Future Possibilities</div>
-                <div className="text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Unlimited potential</div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Featured AI Services */}
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Revolutionary AI Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {featuredAI.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-=======
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'    />
-              {featuredAI.map((service, index) => (}
-                <motion.div;}
-key={service.id}
-              className='text-center mb-20'    />
-              <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'    />
-                Revolutionary AI Services
-              </h2>
-              <p className='text-xl text-gray-300 max-w-4xl mx-auto'    />
-                Experience the next evolution of artificial intelligence with
-                our consciousness evolution and quantum AI platforms
-              </p>
-            </motion && motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'    />              {featuredAI && featuredAI.map((service, index) => (            >
-              <h2 className=\"text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"    />
-                Revolutionary AI Services
-              </h2>;"
-              <p className=\"text-xl text-gray-300 max-w-4xl mx-auto\"    />
-                Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms
-              </p>
-            </motion && motion.div>;"
-<<<<<<< HEAD
-            <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16\"    />;}
-              {featuredAI && featuredAI.map((service, index) => (<motion&& motion.div;}
-                  key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }
-
-                  whileInView={{ opacity: 1, y: 0 }
-
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }
-}    />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant="consciousness"
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
               {featuredAI && featuredAI.map((service, index) => (;
                 <motion&& motion.div;
@@ -492,12 +283,10 @@ key={service.id}
                     variant="consciousness"
 variant='consciousness'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
 
 
 <div className='text-center'>'
@@ -510,7 +299,6 @@ className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold ro
                 >
                   View All AI Services
                 </motion.button>
-<<<<<<< HEAD
                   <UltraFuturisticServiceCard2038;
                     service={service}))}variant="consciousness";
 variant='consciousness';
@@ -608,7 +396,6 @@ variant='consciousness';
                 </Link>;
               </div>;
               {/* Trust Indicators */}
-<<<<<<< HEAD
               <motion.div;
                 initial={{ "opacity": 0, "coordinate_y": 20 
 }
@@ -648,10 +435,8 @@ variant='consciousness';
                   <span > Industry Leader</span>;
                 </div>;
               </motion.div>;
-            </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Company Stats */}
         <section className='py - 24 px - 4 bg - black / 30 relative'>;'
           <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5'></div>;'
@@ -764,7 +549,6 @@ variant='consciousness';
                 <div className=\"text - gray - 300 text - lg\"    />Future Possibilities</div>;"
                 <div className=\"text - sm text - green - 400 mt - 3 opacity - 0 group - hover:opacity - 100 transition - opacity\"    />Unlimited potential</div>
               </motion.div>
-            </motion.div>
           </div>
         </section>
         {/* Featured AI Services */}
@@ -772,12 +556,10 @@ variant='consciousness';
           <div className='max - w-7xl mx - auto'    />            <motion.div        <section className=\"py - 24 px - 4\"    />;"
           <div className=\"max - w-7xl mx - auto\"    />
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 text - center';
             >;
               <motion.div;
@@ -871,10 +653,8 @@ variant='consciousness';
                 <div className="text - gray - 300 text - lg">Future Possibilities</div>;"
                 <div className="text - sm text - green - 400 mt - 3 opacity - 0 group - "hover":opacity - 100 transition - opacity">Unlimited potential</div>;"
               </motion.div>;
-            </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Featured AI Services */}
         <section className='py - 24 px - 4'>;'
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 24 px - 4">;"
@@ -895,7 +675,6 @@ variant='consciousness';
                 Experience the next evolution of artificial intelligence with;
                 our consciousness evolution and quantum AI platforms;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8 mb - 16'>              {featuredAI.map ((service, index) => (            >;'
               <h2 className="text - 5xl "md":text - 6xl font - bold mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;"
@@ -940,44 +719,10 @@ variant='consciousness';
 
               </Link>;
             </div>;
-          </div>;
         </section>;
-<<<<<<< HEAD
-=======
-                >
-                  <UltraFuturisticServiceCard2038
-                    service={service}
-                    variant='consciousness'                  />                    variant="consciousness"
-                  />
-                </motion.div>))}
-            </div>
-            <div className='text - center'    />
-              <Link href='/ai - services'    />
-                <motion.button
-                  className='px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl hover: bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 text - lg'                  while_hover={{ scale: 1.05 }"
-}            <div className=\"text - center\"    />;"
-              <Link href=\"/ai - services\"    />
-                <motion.button;"
-                  className=\'px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 text - lg\'
-                  while_tap={{ scale: 0.95 }
-
-                    />
-                  View All AI Services
-                </motion.button>;</Link>
-            </div>
-          </div>
-        </section>
               </Link>
             </div>
-          </div>
         </section>
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-              </Link>
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
         {/* Featured Micro SAAS Services */}
 <section className='py-24 px-4 bg-black/20'>;'
           <div className='max-w-7xl mx-auto'>;'
@@ -1109,7 +854,6 @@ variant='automation';
                 Transform your business with our cutting - edge micro SAAS;
                 solutions designed for the future;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8 mb - 16'>              {featuredMicroSaas.map ((service, index) => (            >;'
               <h2 className="text - 5xl "md":text - 6xl font - bold mb - 8 bg - gradient - to - r from - emerald - 400 to - cyan - 500 bg - clip - text text - transparent">;"
@@ -1133,7 +877,6 @@ variant='automation';
 }
                 >;
                   <UltraFuturisticServiceCard2038;
-<<<<<<< HEAD
                     service={service}
                     variant='automation' />                    variant="automation";"
                   />;
@@ -1155,13 +898,10 @@ variant='automation';
 
               </Link>;
             </div>;
-          </div>;
         </section>;
               </Link>
             </div>
-          </div>
         </section>
-<<<<<<< HEAD
 
         {/* Featured IT Services */}
 <section className='py-24 px-4'>;'
@@ -1219,13 +959,6 @@ key={service.id}
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>;
                 Advanced IT Infrastructure;
               </h2>;
-=======
-className='text-center mb-20'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure;
               </h2>'
@@ -1255,12 +988,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>;
                 Advanced IT Infrastructure;
               </h2>;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
                 Build the future with our quantum cloud infrastructure and;
                 AI-powered DevOps automation;
               </p>;
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16'>              {featuredIT && featuredIT.map((service, index) => (            >;'
               <h2 className="text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">;"
@@ -1303,21 +1034,10 @@ variant='quantum';' />
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant="quantum"
-=======
-                  <UltraFuturisticServiceCard2038;
-                    service={service}
-
-              ))}
-"
-                    variant="quantum"
-variant='quantum'
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
 
 
 <div className='text-center'>'
@@ -1383,7 +1103,6 @@ variant='quantum';
                 Build the future with our quantum cloud infrastructure and;
                 AI - powered DevOps automation;
               </p>;
-<<<<<<< HEAD
             </motion.div>;
             <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8 mb - 16'>              {featuredIT.map ((service, index) => (            >;'
               <h2 className="text - 5xl "md":text - 6xl font - bold mb - 8 bg - gradient - to - r from - blue - 400 to - indigo - 500 bg - clip - text text - transparent">;"
@@ -1407,7 +1126,6 @@ variant='quantum';
 }
                 >;
                   <UltraFuturisticServiceCard2038;
-<<<<<<< HEAD
                     service={service}
                     variant='quantum' />                    variant="quantum";"
                   />;
@@ -1429,14 +1147,11 @@ variant='quantum';
 
               </Link>;
             </div>;
-          </div>;
         </section>;
-<<<<<<< HEAD
         {/* Why Choose Us */}
         <section className="py-24 px-4 bg-black/30">;"
               </Link>;
             </div>;
-          </div>;
         </section>;
         {/* Why Choose Us */}
 <section className='py-24 px-4 bg-black/30'>;'
@@ -1502,11 +1217,6 @@ className='text-center mb-20''
                     'World-class team with experience across cutting-edge technologies','
                   "color": 'from-indigo-500 to-purple-500','
                 },
-=======
-                    'Leading the development of artificial consciousness and emotional intelligence'
-                  color: 'from-purple-500 to-pink-500'
-                }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 {
                   }
                   "icon": <Award className='w-12 h-12' />,'
@@ -1577,7 +1287,6 @@ className='text-center p-8 group "hover":bg-white/5 rounded-2xl transition-all d
                     {feature.description}
                   </p>                </motion.div>
 
-=======
 className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   whileHover={{ scale: 1.05 }}
@@ -1596,13 +1305,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.description}
                   </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </motion.div>
 
               ))}
-<<<<<<< HEAD
             </div>;
-          </div>;
         </section>;
                   key={index}
                   initial={{ "opacity": 0, "y": 20 
@@ -1634,7 +1340,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="text-white">;"
                       {feature && feature.icon}
                     </div>;
-                  </div>;
                   <h3 className="text-xl font-bold text-white mb-4">{feature && feature.title}</h3>;"
                   <p className="text-gray-300 leading-relaxed">{feature && feature.description}</p>;"
                 </motion && motion.div>;
@@ -1647,7 +1352,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion&& motion.div
 
             </div>
-          </div>
         </section>
         {/* CTA Section */}
 
@@ -1702,9 +1406,3 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
 };
 export default Homepage2038;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

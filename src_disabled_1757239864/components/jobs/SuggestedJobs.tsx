@@ -1,5 +1,5 @@
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
+:src_backup/components/jobs/SuggestedJobs.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 interface SuggestedJobsProps  {talent_id?: string;
@@ -14,7 +14,7 @@ function SuggestedJobs() {const { user } = use_auth ()const currentTalentId = ta
   const { user } = useAuth(),const currentTalentId = talentId || user?.id,const {isLoading,updateJobMatchStatus,categorizedMatches: {if (isLoading) {// Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+:src_backup/components/jobs/SuggestedJobs.tsx
     return (
 
 
@@ -167,7 +167,7 @@ export function SuggestedJobs() {const { user } = useAuth()const currentTalentId
   if (isLoading) {return (<div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
     )import { useAuth } from "@/hooks/useAuth",import { Loader2  } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from "@/hooks/useJobSuggestions",import { JobMatchesCard } from "./JobMatchesCard",import { NoJobsCard } from "./NoJobsCard",interface SuggestedJobsProps  {talentId?: string;
 }export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {const { user } = useAuth()const currentTalentId = talentId || user?.id;
@@ -197,7 +197,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
             <Badge className="bg-green-100 text-green-800 border-green-300">;
               {newMatches && newMatches.length} New;
             </Badge>;
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
           </div>;<div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (<JobMatchesCard;
                 key = {match && match.id}match = {match}
@@ -208,8 +208,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
                 key={match.id}match={match}onApply={handleApply}onDecline={handleDecline}/>;
             ))}
           </div>;
-        </div>;
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+:src_backup/components/jobs/SuggestedJobs.tsx
       )}
 
 
@@ -241,7 +240,6 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
               />
             ))}
           </div>
-        </div>
       )}
 
 >      {/* Previously Viewed Section */}
@@ -259,7 +257,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Previously Viewed</h3>;
           </div>;
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (<div className="space-y-4">;
           <div className="flex items-center justify-between">;
@@ -274,8 +272,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
                 key={match.id}match={match}onApply={handleApply}onDecline={handleDecline}/>;
             ))}
           </div>;
-        </div>;
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+:src_backup/components/jobs/SuggestedJobs.tsx
       )}
 
 
@@ -306,7 +303,6 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
               />
             ))}
           </div>
-        </div>
       )}
 
 >      {/* Applied Jobs Section */}
@@ -320,7 +316,7 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
 
                 key = {match.id,}
 
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
         <div className="space-y-4">;
@@ -341,9 +337,8 @@ import { Badge } from "@/components/ui/badge",import { useJobSuggestions } from 
 
             ))}
           </div>
-        </div>
       )}
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
 ;
 
     </div>
@@ -420,7 +415,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 showApplied = {true}
               />;))}
           </div>;
-        </div>;
       )}</div>;
   )// Check condition;
 if ( {) {$2;
@@ -452,7 +446,7 @@ if ( {) {
             </Badge>;
           </div>;
           <div className="grid gap - 4 md:grid - cols - 2">;
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
             {new_matches.map (match => (<JobMatchesCard;
                 key = {match.id }
                 match = {match }
@@ -468,7 +462,7 @@ if ( {) {
           </div>;
         </div>)}
       {/* Previously Viewed Section */}
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
       {viewed_matches.length > 0 && (<div className="space - y-4">;
 =      {viewed_matches.length > 0 && (
         <div className="space - y-4">;
@@ -476,7 +470,7 @@ if ( {) {
             <h3 className="text - lg font - medium">Previously Viewed</h3>;
           </div>;
           <div className="grid gap - 4 md:grid - cols - 2">;
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
             {viewed_matches.map (match => (<JobMatchesCard;
                 key = {match.id }
                 match = {match }
@@ -492,7 +486,7 @@ if ( {) {
           </div>;
         </div>)}
       {/* Applied Jobs Section */}
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
       {applied_matches.length > 0 && (<div className="space - y-4">;
 =      {applied_matches.length > 0 && (
         <div className="space - y-4">;
@@ -500,7 +494,7 @@ if ( {) {
             <h3 className="text - lg font - medium">Applied Jobs</h3>;
           </div>;
           <div className="grid gap - 4 md:grid - cols - 2">;
-<<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
+<:src_backup/components/jobs/SuggestedJobs.tsx
             {applied_matches.map (match => (<JobMatchesCard;
                 key = {match.id }
                 match = {match }

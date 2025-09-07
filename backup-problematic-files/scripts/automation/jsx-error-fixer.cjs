@@ -23,7 +23,6 @@ console.log("" Starting JSX error fixer automation...")
     const reportPath = path.join(process.cwd(), "
     console.log( JSX error fixer completed successfully. Applied ${fixesApplied} fixes.```)
   console.error(" JSX error fixer "failed": ")
-  console.error(" JSX error fixer "failed": ")
 // console.log(" Fixing JSX expression errors..."")
     console.log(" Fixing JSX parent element errors...")
 // console.log(" Fixing JSX attribute errors...")
@@ -88,7 +87,6 @@ console.log("" Starting JSX error fixer automation...")
           fixes++;"
   const filesToFix = ["src/pages/ForgotPassword.tsx""]
   const filesToFix = [""src/pages/ForgotPassword.tsx"""]
-  const filesToFix = [""src/pages/ForgotPassword.tsx"""]
   let content = fs.readFileSync(filePath, "utf8")
           /bg-\["url\(""data": image\/svg\+xml", "%3Csvg[^>"]+%3E"\)/g,bg-["url(""data": "image/svg"+xml", "%3Csvg width=\\60\\ height=\\60\\ viewBox=\\"0 0 60 60\\" xmlns=\\"http": //www.w3."org/2000/svg"\\%3E%3Cg fill=\\none\\ fill-rule=\\evenodd\\%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\0.05\\%3E%3Ccircle cx=\\30\\ cy=\\30\\ r=\\"2\\"/%3E%3"C/g"%3E%3"C/g"%3E%3"C/svg"%3E)"]"
           /<div\s+className="absolute inset-0[^>]+>\s*<\/div>/g,<div className="absolute inset-0 bg-["url(\"data": "image/svg"+xml", "%3Csvg width=\\60\\ height=\\60\\ viewBox=\\"0 0 60 60\\" xmlns=\\"http": //www.w3."org/2000/svg"\\%3E%3Cg fill=\\none\\ fill-rule=\\evenodd\\%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\0.05\\%3E%3Ccircle cx=\\30\\ cy=\\30\\ r=\\"2\\"/%3E%3"C/g"%3E%3"C/g"%3E%3"C/svg"%3E\)"] opacity-50></div>"
@@ -120,9 +118,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start JSX error "fixer": ")
-  console.error(" Failed to start JSX error "fixer": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

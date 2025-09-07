@@ -3,7 +3,6 @@ import SEO from '../components/SEO';'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
 import Link from 'next/link';'
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +26,6 @@ class ErrorBoundary extends React.Component {
 export default function ResourcesPage() {return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}
 import React from 'react';
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -55,7 +53,6 @@ import Link from 'next/link';
               <div className="mt-3 text-cyan-300">Open →</div>;
           ))}
         </div>;
-      </div>;
     </UltraFuturisticBackground>;
   );  )
 };
@@ -103,12 +100,10 @@ export default ResourcesPage;
               <p className="mt - 1 text-gray-300">{it.blurb}</p>;
               <div className="mt - 3 text-cyan-300">Open →</div>))}
         </div>;
-      </div>;
     </UltraFuturisticBackground>))}export default ResourcesPage;<div className='mt-3 text-cyan-300'>Open →</div>;
             </Link>;
           ))}
         </div>;
-      </div>;
     </UltraFuturisticBackground>;
     </UltraFuturisticBackground>));
 }
@@ -124,18 +119,11 @@ return (;
             </Link>
           ))}
         </div>
-      </div>
     </UltraFuturisticBackground>
   )
 };
 
 export default ResourcesPage;
-=======
-            <Link key = $2;
-export default ResourcesPage,
-=======
- </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   [ {
   name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
 }, {
@@ -150,13 +138,5 @@ export default ResourcesPage,
   name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' 
 }].map ( (it) => () ) 
 }</div> </div> </UltraFuturisticBackground>) 
-<<<<<<< HEAD
 }
 export default ResourcesPage
-=======
-};
-
-export default Resources;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

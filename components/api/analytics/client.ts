@@ -93,7 +93,6 @@ const funnel = [;
       { "label": 'Hire', "value": filled && filled.length,'
 }
     ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       timeToHireDays,
       talentViewed,
       shortlisted,
@@ -114,22 +113,14 @@ const funnel = [;
   }
         { "label": 'Hire', "value": 2 }]})'
   }
-}
 
         { label: 'Hire', value: 2 }]})
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'Post',}
   value: 3,}
 }
-<<<<<<< HEAD
 '
-=======
-        { label: 'Invite',}
-  value: 2,}
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
         { label: 'Hire', value: 2 }]})

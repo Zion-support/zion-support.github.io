@@ -3,7 +3,6 @@
     "isRoleBased": boolean;
     "isFreeProvider": boolean
   }
-}
 
 export default async function handler() {
   }
@@ -64,13 +63,11 @@ const freeProviders = [;
 const isFreeProvider = freeProviders.some(provider => { return domain === provider); }
     // Calculate score (0-100)
     let score = 100;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
-<<<<<<< HEAD
 
   try {
     const { email } = req.body,
@@ -149,7 +146,6 @@ isDisposable
         isRoleBased,
 isFreeProvider
       }
-    }
     res.status(200).json(result);
   } catch (error) {
     }
@@ -159,5 +155,4 @@ isFreeProvider
   }
     res.status(500).json({ "error": 'Internal server error' })'
   }
-}
 

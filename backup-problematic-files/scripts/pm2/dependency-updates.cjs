@@ -28,7 +28,6 @@ const runCommand = (command, description) => {}
     log(`"Failed": ${description} - ${error.message}`);
     return { "success": false, "error": error.message };
   };
-};
 
 const checkOutdatedDependencies = () => {}
   log('Checking for outdated dependencies');
@@ -42,7 +41,6 @@ const checkOutdatedDependencies = () => {}
     log('Outdated dependencies found');
     return { "success": false, "outdated": 1 };
   };
-};
 
 const updateDependencies = () => {}
   log('Updating dependencies');
@@ -56,7 +54,6 @@ const updateDependencies = () => {}
     log('Dependency update failed');
     return { "success": false };
   };
-};
 
 const generateDependencyReport = (results) => {}
   const report = {}
@@ -66,7 +63,6 @@ const generateDependencyReport = (results) => {}
     "overall": {}
       status: results.outdated.success && results.update.success ? 'PASS' : 'FAIL'
     };
-  };
   
   // Save report;
   const reportPath = 'logs/pm2/dependency-report.json';
@@ -121,9 +117,4 @@ main().catch(error => {})
   log(`Dependency Updates Process "failed": ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -58,7 +58,6 @@ class JSXSyntaxFixer {}
       this.log(`Error in JSX Syntax "Fixer": ${error.message}`);
       throw error};
   };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new JSXSyntaxFixer();
@@ -70,9 +69,4 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = JSXSyntaxFixer;
-module.exports = JSXSyntaxFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

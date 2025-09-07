@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
- return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
 
 
 import React from 'react','
@@ -79,8 +77,6 @@ return (;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>"
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>"
               </div>
-            </div>
-          </div>
           <div className="grid grid-cols-1 "lg":grid-cols-3 gap-6">"
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">"
               <h3 className="text-xl font-semibold mb-3">Who is this for</h3>"
@@ -95,9 +91,6 @@ return (;
               <p className="text-slate-300">{service.ro,"
 }</p>
             </div>
-          </div>
-        </div>
-      </div>
     </UltraAdvancedFuturisticBackground>
               </ul>;
             </div>;
@@ -119,8 +112,6 @@ return (;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
               </div>;
-            </div>;
-          </div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">;
               <h3 className="text-xl font-semibold mb-3">Who is this for</h3>;
@@ -134,9 +125,6 @@ return (;
               <h3 className="text-xl font-semibold mb-3">Expected ROI</h3>;
               <p className="text-slate-300">{service.roi}</p>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>;
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )}</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p-6 h-fit" > <div className="flex items - end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
@@ -152,7 +140,6 @@ export default /**;
 function QuantumAICognitivePage() {const service  = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/quantum - ai - cognitive'))// Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD
     return null;
   }
   const contact_info  = service.contact_info;return (<UltraAdvancedFuturisticBackground>;
@@ -198,8 +185,6 @@ if ( {) {$2;
                 <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{contact_info.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{contact_info.address}</span></div>;
               </div>;
-            </div>;
-          </div>;
           <div className="grid grid - cols - 1 lg:grid - cols-3 gap-6">;
             <div className="bg - black / 30 rounded - 2xl border border - purple-500 / 30 p-6">;
               <h3 className="text - xl font-semibold mb-3">Who is this for</h3>;
@@ -213,9 +198,6 @@ if ( {) {$2;
               <h3 className="text - xl font-semibold mb-3">Expected ROI</h3>;
               <p className="text-slate-300">{service.roi}</p>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
     </UltraAdvancedFuturisticBackground>);
 }
 ;
@@ -223,6 +205,3 @@ if ( {) {$2;
   )
 }
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

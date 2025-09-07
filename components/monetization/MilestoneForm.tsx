@@ -24,9 +24,6 @@ export default function MilestoneForm({ onSubmit }: Props) {
     if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
       setError($2);
       return
-=======
-<<<<<<< HEAD
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   }) => Promise<void> | void;
 };
@@ -56,7 +53,6 @@ const parsedAmount = Number(amountUsd);
       }
       setError('Please provide Title, Due Date and a valid Amount.');'
 return;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
     setLoading($2);
     try {
@@ -134,12 +130,10 @@ dueDate
             required;
           />;
         </div>;
-      </div>;
       <button;
 type='submit';'
         className='bg-blue-600 text-white px-4 py-2 rounded "hover":bg-blue-700 "disabled":opacity-50';'
         disabled={loading}
-<<<<<<< HEAD
       >;
         {loading ? 'Adding...' : 'Add Milestone'}'
 
@@ -190,7 +184,6 @@ type='submit';'
             required
           />
         </div>
-      </div>
       <button
         type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"

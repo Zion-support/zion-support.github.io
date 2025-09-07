@@ -1,7 +1,6 @@
-<<<<<<< HEAD:src/components/BackToTopButton.tsx
+:src/components/BackToTopButton.tsx
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react";
-=======
 import { useEffect, useState } from 'react';
 import { useEffect, useState  } from './react';
 export /**
@@ -30,18 +29,15 @@ export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
   useEffect(() => {;
     const updateVisibility = () => {;
->>>>>>> origin/main:src_disabled_1757239864/components/BackToTopButton.tsx
 
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const updateVisibility = () => {
-<<<<<<< HEAD:src/components/BackToTopButton.tsx
+:src/components/BackToTopButton.tsx
       setVisible(window.scrollY > 400)
-=======
       setVisible(window.scrollY > 400);
->>>>>>> origin/main:src_disabled_1757239864/components/BackToTopButton.tsx
     };
 
     updateVisibility();
@@ -49,8 +45,7 @@ export function BackToTopButton() {
     return () => window.removeEventListener("scroll", updateVisibility)
   }, []);
 
-<<<<<<< HEAD:src/components/BackToTopButton.tsx
-=======
+:src/components/BackToTopButton.tsx
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -59,7 +54,6 @@ export function BackToTopButton() {
   };
   
   
->>>>>>> origin/main:src_disabled_1757239864/components/BackToTopButton.tsx
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: "smooth" },
     window.scrollTo(opts);

@@ -1,24 +1,11 @@
-<<<<<<< HEAD
 import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export default function DisputesIndexPage() {
-<<<<<<< HEAD
   const { data } = useSWR('/api/disputes', fetcher);
   const disputes = data?.disputes || [];
-=======
-  const { data } = useSWR($2);
-  const disputes = $2;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function DisputesIndex() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
   return (
     <Layout>
       <Head>
@@ -33,7 +20,6 @@ export default function DisputesIndex() {
             Professional disputes solutions tailored to your business needs.
           </p>
         </div>
-<<<<<<< HEAD
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50 dark:bg-gray-900">
@@ -61,12 +47,6 @@ export default function DisputesIndex() {
             </tbody>
           </table>
         </div>
-      </div>
     </EnhancedLayout>
   )
-=======
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

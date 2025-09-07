@@ -170,7 +170,6 @@ class TypeScriptErrorAutoFixer {}
             "description": `Added type annotation for ${varName}
           }};
       };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixInterfaceIssues(lines, error) {}
     if (error.message.includes('Property') && error.message.includes('does not exist on type')) {}
@@ -192,8 +191,6 @@ class TypeScriptErrorAutoFixer {}
               "description": `Added missing property ${propName} to ${typeName}
             }};
         };
-      };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixGenericTypes(lines, error) {}
     const lineIndex = error.line - 1;
@@ -213,7 +210,6 @@ class TypeScriptErrorAutoFixer {}
             "description": 'Added generic type parameter'
           }};
       };
-    };
     return { "modified": false, "content": lines.join('\n') }};
   fixOptionalProperties(lines, error) {}
     const lineIndex = error.line - 1;
@@ -304,9 +300,4 @@ if (require.main === module) {}
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = TypeScriptErrorAutoFixer;
-module.exports = TypeScriptErrorAutoFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

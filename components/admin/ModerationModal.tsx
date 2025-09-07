@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export type ModerationModalProps = {
   flag: any | null;
@@ -19,13 +18,6 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-}
-=======
-<<<<<<< HEAD
-</div> <div className="p-4 space-y-4 text-sm" > <div className="grid grid-cols-2 gap-4" > <div> </div> </div> </div>) 
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
 
 
@@ -80,7 +72,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-}
 import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
@@ -126,33 +117,27 @@ export type ModerationModalProps = {;
               <div className='text-gray-500'>Status</div>;
               <div className='font-medium'>{flag && flag.status}</div>;
             </div>;
-          </div>;
           <div>;
             <div className='text-gray-500 mb-1'>Preview</div>;
             <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>;
               {flag && flag.snippet}
             </div>;
-          </div>;
           <div className='grid grid-cols-3 gap-4'>;
             <div className='p-3 border rounded'>;
               <div className='text-gray-500'>Toxicity</div>;
               <div className='font-semibold'>;
                 {Math && Math.round((flag && flag.aiScores?.toxicity || 0) * 100)}%;
               </div>;
-            </div>;
             <div className='p-3 border rounded'>;
               <div className='text-gray-500'>NSFW</div>;
               <div className='font-semibold'>;
                 {Math && Math.round((flag && flag.aiScores?.nsfw || 0) * 100)}%;
               </div>;
-            </div>;
             <div className='p-3 border rounded'>;
               <div className='text-gray-500'>Scam</div>;
               <div className='font-semibold'>;
                 {Math && Math.round((flag && flag.aiScores?.scam || 0) * 100)}%;
               </div>;
-            </div>;
-          </div>;
           <div>;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
@@ -167,7 +152,6 @@ export type ModerationModalProps = {;
               className='w-full border rounded px-3 py-2 bg-white dark:bg-black';
             />;
           </div>;
-        </div>;
         <div className='p-4 border-t flex items-center justify-end gap-2'>;
           <button
             onClick={() => onAction('approve', adminNotes)}
@@ -194,7 +178,6 @@ export type ModerationModalProps = {;
             Ban User;
           </button>        </div>;
       </div>;
-    </div>;
   );
 
 
@@ -231,7 +214,6 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
               <div className="text-gray-500">Status</div>
               <div className="font-medium">{flag.status}</div>
             </div>
-          </div>
           <div>
             <div className="text-gray-500 mb-1">Preview</div>
             <div className="border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet}</div>
@@ -249,12 +231,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
               <div className="text-gray-500">Scam</div>
               <div className="font-semibold">{Math.round((flag.aiScores?.scam || 0) * 100)}%</div>
             </div>
-          </div>
           <div>
             <label className="block text-sm font-medium mb-1" htmlFor="input-Admin Notes">Admin Notes</label>
             <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
-        </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
 
   );
@@ -275,7 +255,6 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
-    </div>
 );
 
 
@@ -283,7 +262,6 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
   );
 
   );
-);
 
 }
   on_close: () => void;
@@ -330,33 +308,27 @@ if (return null) {
               <div className='text - gray - 500'>Status</div>;
               <div className='font - medium'>{flag.status}</div>;
             </div>;
-          </div>;
           <div>;
             <div className='text - gray - 500 mb - 1'>Preview</div>;
             <div className='border rounded p - 3 bg - gray - 50 dark:bg - gray - 900 whitespace - pre - wrap max - h-48 overflow - auto'>;
               {flag.snippet}
             </div>;
-          </div>;
           <div className='grid grid - cols - 3 gap - 4'>;
             <div className='p - 3 border rounded'>;
               <div className='text - gray - 500'>Toxicity</div>;
               <div className='font - semibold'>;
                 {Math.round ((flag.ai_scores?.toxicity || 0) * 100)}%;
               </div>;
-            </div>;
             <div className='p - 3 border rounded'>;
               <div className='text - gray - 500'>NSFW</div>;
               <div className='font - semibold'>;
                 {Math.round ((flag.ai_scores?.nsfw || 0) * 100)}%;
               </div>;
-            </div>;
             <div className='p - 3 border rounded'>;
               <div className='text - gray - 500'>Scam</div>;
               <div className='font - semibold'>;
                 {Math.round ((flag.ai_scores?.scam || 0) * 100)}%;
               </div>;
-            </div>;
-          </div>;
           <div>;
             <label className='block text - sm font - medium mb - 1'>;
               Admin Notes;
@@ -368,7 +340,6 @@ if (return null) {
               className='w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
             />;
           </div>;
-        </div>;
         <div className='p - 4 border - t flex items - center justify - end gap - 2'>;
           <button;
             on_click={() => on_action ('approve', admin_notes)}
@@ -470,33 +441,27 @@ export default function ModerationModal({
               <div className='text-gray-500'>Status</div>;
               <div className='font-medium'>{flag.status}</div>;
             </div>;
-          </div>;
           <div>;
             <div className='text-gray-500 mb-1'>Preview</div>;
             <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>;
               {flag.snippet}
             </div>;
-          </div>;
           <div className='grid grid-cols-3 gap-4'>;
             <div className='p-3 border rounded'>;
               <div className='text-gray-500'>Toxicity</div>;
               <div className='font-semibold'>;
                 {Math.round((flag.aiScores?.toxicity |0) * 100)}%;
               </div>;
-            </div>;
             <div className='p-3 border rounded'>;
               <div className='text-gray-500'>NSFW</div>;
               <div className='font-semibold'>;
                 {Math.round((flag.aiScores?.nsfw |0) * 100)}%;
               </div>;
-            </div>;
             <div className='p-3 border rounded'>;
               <div className='text-gray-500'>Scam</div>;
               <div className='font-semibold'>;
                 {Math.round((flag.aiScores?.scam |0) * 100)}%;
               </div>;
-            </div>;
-          </div>;
           <div>;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
@@ -508,7 +473,6 @@ export default function ModerationModal({
               className='w-full border rounded px-3 py-2 bg-white dark:bg-black';
             />;
           </div>;
-        </div>;
         <div className='p-4 border-t flex items-center justify-end gap-2'>;
           <button;
             onClick={() => onAction('approve', adminNotes)}
@@ -535,26 +499,20 @@ export default function ModerationModal({
             Ban User;
           </button>        </div>;
       </div>;
-    </div>;
   )</button>;
         </div>;
-      </div>;
-    </div>;
   )}        <div className="p-4 border-t flex items-center justify-end gap-2">;
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>;
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>;
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>;
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>;
       </div>;
-    </div>;
 )}
-  )}
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
           </button>        </div>
       </div>
-    </div>
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
@@ -562,10 +520,7 @@ export default function ModerationModal({
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
-    </div>
 );
-}
-<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -575,6 +530,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

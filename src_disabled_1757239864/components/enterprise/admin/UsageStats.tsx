@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -39,7 +37,7 @@ import React from "react",import { Badge } from "@/components/ui/badge",import {
   CardDescription;
   CardFooter;
   CardHeader;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
   CardTitle} from "@/components/ui/card",
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -62,7 +60,7 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
 return (
 
@@ -71,7 +69,7 @@ return (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
         <Card>
           <CardHeader>
@@ -94,17 +92,15 @@ return (
                 <div className="col-span-2">
                   <Input type="number" min="1" defaultValue="50" />
                 </div>
-              </div>
-            </div>
           </CardContent>
           <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
         
 
@@ -131,17 +127,15 @@ return (
                 <div className="col-span-2">
                   <Input type="number" min="1" defaultValue="500" />
                 </div>
-              </div>
-            </div>
           </CardContent>
           <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
         
 
 
@@ -167,17 +161,15 @@ return (
                 <div className="col-span-2">
                   <Input type="number" min="1" defaultValue="1000" />
                 </div>
-              </div>
-            </div>
           </CardContent>
           <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
         
 
 
@@ -207,7 +199,6 @@ return (
                 <div className="col-span-2">
                   <Input type="number" min="0" step="100" defaultValue="5000" />
                 </div>
-              </div>
               <div className="grid grid-cols-3 items-center gap-4">
                 <div className="text-sm">Alert threshold:</div>
                 <div className="col-span-2">
@@ -218,8 +209,6 @@ return (
                     <option value="95">95% of limit</option>
                   </select>
                 </div>
-              </div>
-            </div>
           </CardContent>
           <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
@@ -227,9 +216,9 @@ return (
         </Card>
       </div>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
       
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -245,7 +234,6 @@ return (
               Contact your account manager to discuss custom limits for your enterprise.
             </p>
           </div>
-        </div>
         <Button>Contact Us</Button>
       </div>
 
@@ -299,8 +287,6 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
                 <div className='col-span-2'>;
                   <Input type='number' min='1' defaultValue='50' />;
                 </div>;
-              </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;
             <Button size='sm' onClick={handleSaveChanges}>;
@@ -330,8 +316,6 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
                 <div className='col-span-2'>;
                   <Input type='number' min='1' defaultValue='500' />;
                 </div>;
-              </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;
             <Button size='sm' onClick={handleSaveChanges}>;
@@ -359,8 +343,6 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
                 <div className='col-span-2'>;
                   <Input type='number' min='1' defaultValue='1000' />;
                 </div>;
-              </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;
             <Button size='sm' onClick={handleSaveChanges}>;
@@ -388,7 +370,6 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
                 <div className='col-span-2'>;
                   <Input type='number' min='0' step='100' defaultValue='5000' />;
                 </div>;
-              </div>;
               <div className='grid grid-cols-3 items-center gap-4'>;
                 <div className='text-sm'>Alert threshold:</div>;
                 <div className='col-span-2'>;
@@ -399,8 +380,6 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
                     <option value='95'>95% of limit</option>;
                   </select>;
                 </div>;
-              </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;
             <Button size='sm' onClick={handleSaveChanges}>;
@@ -421,7 +400,6 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
               enterprise.;
             </p>;
           </div>;
-        </div>;
         <Button>Contact Us</Button>;
       </div>;
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
@@ -454,7 +432,6 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
                 <div className='col - span - 2'>;
                   <Input type='number' min='1' default_value='50' />;</div>;
               </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;<Button size='sm' on_click={handleSaveChanges}>;Save Changes;
             </Button>;
@@ -477,7 +454,6 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
                 <div className='col - span - 2'>;
                   <Input type='number' min='1' default_value='500' />;</div>;
               </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;<Button size='sm' on_click={handleSaveChanges}>;Save Changes;
             </Button>;
@@ -500,7 +476,6 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
                 <div className='col - span - 2'>;
                   <Input type='number' min='1' default_value='1000' />;</div>;
               </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;<Button size='sm' on_click={handleSaveChanges}>;Save Changes;
             </Button>;
@@ -523,7 +498,6 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
                 <div className='col - span - 2'>;
                   <Input type='number' min='0' step='100' default_value='5000' />;
                 </div>;
-              </div>;
               <div className='grid grid - cols - 3 items - center gap - 4'>;
                 <div className='text - sm'>Alert threshold:</div>;
                 <div className='col - span - 2'>;
@@ -533,17 +507,14 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
                     <option value='95'>95% of limit</option>;
                   </select>;
                 </div>;
-              </div>;
-            </div>;
           </CardContent>;
           <CardFooter>;<Button size='sm' on_click={handleSaveChanges}>;Save Changes;
             </Button>;
           </CardFooter>;
         </Card>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
 
       <div className='bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
       </div>;</div>;
@@ -560,7 +531,7 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
           </div>;
         </div>;<Button > Contact Us</Button>;
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+:src_backup/components/enterprise/admin/UsageStats.tsx
     </div>);
 }"}
 

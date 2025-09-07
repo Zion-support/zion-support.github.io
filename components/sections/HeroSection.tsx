@@ -42,9 +42,7 @@ const stats = [;
             duration: 8;
             repeat: Infinity'
             ease: 'easeInOut'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
         {/* Grid Pattern *
 }
@@ -174,7 +172,6 @@ href='/contact'
             </span>;
           </motion.h1>;
 
-=======
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}'
             className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'>;'
             <Star className='w-5 h-5 text-yellow-400 fill-current' />;'
@@ -299,7 +296,6 @@ in the modern technology landscape.
           </motion.p>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {/* CTA Buttons */}
           <motion.div;
             initial={{ "opacity": 0, "y": 30 
@@ -362,16 +358,13 @@ className='text-center group''
 
             ))}
           </motion.div>
-        </motion.div>
       </div>
 
             )
 }
           </motion.div>;
-        </motion.div>;
       </div>;
           </motion && motion.div>;
-        </motion && motion.div>;
       </div>;
 
 
@@ -390,7 +383,6 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2''
         <motion.div,
 animate={{ "y": [0, 10, 0] }}
 ;
-=======
         transition={{ duration: 1, delay: 1 }}"
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 export default HeroSection;
@@ -409,49 +401,16 @@ animate={{ "y": [0, 12, 0] }}
             transition={{ "duration": 2, "repeat": Infinity }}
 className='w-1 h-3 bg-white/60 rounded-full mt-2'' />
         </motion.div>
-      </motion.div>
     </section>
 )
 };
 
 
 export default HeroSection;
-<<<<<<< HEAD
 
 "
-=======
-'use client'
-> {
-  /* Badge */ 
-}<motion.div > <Star className="w-5 h-5 text-yellow-400 fill-current" /> <span className="text-white font-medium" >Leading Technology Solutions Provider</span> </motion.div> {
-  /* Main Heading */ 
-}<motion.h1 > Transform Your Business with <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Cutting-Edge Technology </span> </motion.h1> {
-  /* Subtitle */ 
-}<motion.p > From AI development to cloud architecture, we help companies revolutionize their digital presence and achieve sustainable growth in the modern technology landscape. </motion.p> {
-  /* CTA Buttons */ 
-}<motion.div > <Link href="/contact" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1" > Get Started Today <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /> </a> <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300" > <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors" > <Play className="w-6 h-6 ml-1" /> </div> <span className="text-lg font-medium" >Watch Demo</span> </button> </motion.div> {
-  /* Stats */ 
-}<motion.div > {
-  stats.map ( (stat, index) => (<motion.div key= {
-  stat.label 
-}> <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors" > <stat.icon className="w-8 h-8 text-blue-400" /> </div> </motion.div>) ) 
-}</motion.div> </motion.div> </div> {
-  /* Scroll Indicator */ 
-}<motion.div /> </motion.div> </motion.div> </section>) 
-}
-export default HeroSection
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 );
 };
 export default HeroSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

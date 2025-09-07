@@ -282,9 +282,6 @@ onChange={e => setSortBy(e.target.value)}
                   <option value='category'>Sort by Category</option>'
                 </select>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* Services Grid *
 }
@@ -321,7 +318,6 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border bord
                       </div>;
                       <div className='text-sm text-gray-400'>/month</div>;'
                     </div>;
-                  </div>;
                   <h3 className='text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>;'
                     {service.name}
                   </h3>;
@@ -390,15 +386,12 @@ key={featureIndex}
                     <div className='text-white font-semibold'>'
                       {service.marketSize}
                     </div>
-                  </div>
                   <div>
                     <div className='text-gray-400'>Target Audience</div>'
                     <div className='text-white font-semibold truncate'>'
                       {service.targetAudience}
 
                     </div>
-                  </div>
-                </div>
 
                 {/* Market Info */}
                 <div className="mb-6 grid grid-cols-2 gap-4 text-sm">
@@ -410,13 +403,11 @@ key={featureIndex}
                     </div>                  </div>
                 </div>
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>;
-<div className='mb-6 grid grid-cols-2 gap-4 text-sm'>;
                   <div>;
                     <div className='text-gray-400'>Market Size</div>;
                     <div className='text-white font-semibold'>;
                       {service.marketSize}
                     </div>;
-                  </div>;
                   <div>;
                     <div className='text-gray-400'>Target Audience</div>;
                     <div className='text-white font-semibold truncate'>;
@@ -432,7 +423,6 @@ key={featureIndex}
                     <div className="text-gray-400">Target Audience</div>;
                     <div className="text-white font-semibold truncate">{service.targetAudience}</div>;
                   </div>;
-                </div>;
                     href={service && service.website}
                     className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>                  <div>;
                     <div className="text-gray-400">Market Size</div>;
@@ -442,12 +432,9 @@ key={featureIndex}
                     <div className="text-gray-400">Target Audience</div>;
                     <div className="text-white font-semibold truncate">{service && service.targetAudience}</div>;
                   </div>;
-                </div>;
                   >;
                     <Mail className="w-5 h-5" />;
                     </div>;
-                  </div>;
-                </div>;
                 {/* CTA */}
 <div className='flex gap-3'>;'
                   <a;
@@ -641,15 +628,12 @@ className='text-center''
 }</p>
             </motion.div>
           </div>
-        </div>
       </section>
     </Layout>
   )
 }
-<<<<<<< HEAD
               viewport={{ once: true }}>;
               className='text-center';
-className='text-center';
             >;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <MapPin className='w-8 h-8 text-white' />;
@@ -658,7 +642,6 @@ className='text-center';
               <p className='text-gray-300'>{contactInfo.address}</p>;
             </motion.div>;
           </div>;
-        </div>;
       </section>;
     </Layout>;
   )}}</p>;
@@ -700,7 +683,6 @@ className='text-center';
                     <div className='text - white font - semibold'>;
                       {service.market_size}
                     </div>;
-                  </div>;
                   <div>;
                     <div className='text - gray - 400'>Target Audience</div>;
                     <div className='text - white font - semibold truncate'>;
@@ -719,7 +701,6 @@ className='text-center';
                     <div className="text - gray - 400">Target Audience</div>;
                     <div className="text - white font - semibold truncate">{service.target_audience}</div>;
                   </div>;
-                </div>;
                 {/* CTA */}
                 <div className='flex gap - 3'>;
                   <a;
@@ -840,12 +821,8 @@ className='text-center';
               <p className="text - gray - 300">{contact_info.address}</p>;
             </motion.div>;
           </div>;
-        </div>;
       </section>;
     </Layout>);
 }
 
     </Layout>)}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

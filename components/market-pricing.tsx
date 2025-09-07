@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-]
-
-  'ai-consciousness': {
-  marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
-  ]
-pricingAnalysis: {
-  lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features' 
-=======
-import { motion } from 'framer-motion'
-import { TrendingUp, TrendingDown, DollarSign, Target
-  ArrowRight, Check, Star, BarChart3
-  Globe, Zap, Shield, Crown, Brain, Atom'
- } from 'lucide-react';'
-import Link from 'next/link';'
-import React, { useState } from 'react';'
-import {motion} from 'framer-motion';'
-import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';'
-import Link from 'next/link'
-  ]
-pricingAnalysis: {'
-  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 
   const markets = null;
@@ -71,7 +46,4 @@ pricingAnalysis: {'
             whileInView={{ opacity: 1, y: 0}}
             transition = $2;
 export default MarketPricing,
-=======
 export default MarketPricing;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/components/interviews/InterviewCard.tsx
+:src_backup/components/interviews/InterviewCard.tsx
 }
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -88,7 +88,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 }/> </DialogContent> </Dialog> </Card>) ;
 }'"
   )
-<<<<<<< HEAD:src_backup/components/interviews/InterviewCard.tsx
+:src_backup/components/interviews/InterviewCard.tsx
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }

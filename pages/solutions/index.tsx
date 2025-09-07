@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -203,11 +202,6 @@ const SolutionsPage: NextPage = () => {
       ]
     }
   ];
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
->>>>>>> origin/main
 
 export default function index() {
   return (
@@ -224,7 +218,6 @@ export default function index() {
             Professional index solutions tailored to your business needs.
           </p>
         </div>
-<<<<<<< HEAD
 
         {/* Solutions Grid */}
         <div className="space-y-16">
@@ -283,7 +276,6 @@ export default function index() {
                   </div>
                 ))}
               </div>
-            </div>
           ))}
         </div>
 
@@ -308,7 +300,6 @@ export default function index() {
               <h3 className="font-semibold mb-2">🏦 Financial Institution</h3>
               <p>80% reduction in fraud losses with AI risk assessment</p>
             </div>
-          </div>
           <Link 
             href="/contact"
             className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -342,7 +333,6 @@ export default function index() {
               <h3 className="text-xl font-semibold mb-2">Training & Support</h3>
               <p className="text-gray-600">Comprehensive training and ongoing support</p>
             </div>
-          </div>
           <Link 
             href="/contact"
             className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -387,17 +377,9 @@ export default function index() {
               <h3 className="font-semibold mb-2">🌐 Website</h3>
               <p>https://ziontechgroup.com</p>
             </div>
-          </div>
-        </div>
       </main>
     </div>
   )
 };
 
 export default SolutionsPage;
-=======
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/main

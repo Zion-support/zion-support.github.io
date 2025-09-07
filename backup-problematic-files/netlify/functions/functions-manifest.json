@@ -1,26 +1,12 @@
 {
-<<<<<<< HEAD
   "generatedAt": "2025-08-17T01:15:21.757Z",
   "functions": [
   "generatedAt": "2025-08-17T01:15:21.757Z",
   "functions": [
-=======
-
-
-
-:netlify/functions/functions-manifest.json
-  "generatedAt": "2025-08-17T01:15:21.757Z",
-  "functions": [
-:backup-problematic-files/netlify/functions/functions-manifest.json
-:backup-problematic-files/netlify/functions/functions-manifest.json
-  "generatedAt": "2025-08-17T01:15:21.757Z",
-  "functions": [
->>>>>>> main:netlify/functions/functions-manifest.json
   "generatedAt": "2025-08-17T01:15:21.757Z",
   "functions": [
   "generatedAt": "2025-08-17T01:15:21.757Z",
   "functions": [
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
     "ai-changelog-runner",
@@ -116,24 +102,10 @@
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
     "unused-media-scanner"
-<<<<<<< HEAD
-=======
-:netlify/functions/functions-manifest.json
-:backup-problematic-files/netlify/functions/functions-manifest.json
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   ]}
   ]
   "generatedAt": "2025-08-19T18:22:42.684Z",
   "functions": []
 }
-<<<<<<< HEAD
-}
-=======
-ursor/automate-test-improve-and-merge-code-59d5
-}
-  ]}
-:backup-problematic-files/netlify/functions/functions-manifest.json
->>>>>>> main:netlify/functions/functions-manifest.json
 ursor/automate-test-improve-and-merge-code-646c
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

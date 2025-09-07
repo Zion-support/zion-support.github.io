@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/ card';
@@ -14,9 +12,9 @@ import {
   Clock,
   DollarSign,
 } from 'lucide-react';
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -123,7 +121,7 @@ interface BrowseItem  {id: string;
   badges: string[],price?: string;
   image?: string;
   match?: number;
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
   timePosted?: string
 }
 
@@ -157,7 +155,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} alt={item.title} />
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : (
@@ -170,7 +168,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <h3 className="font-medium">{item && item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
                   </div>;
-                </div>;
 
                 <button
                   className="h-8 w-8 flex items-center justify-center"
@@ -201,7 +198,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
-                </div>
                 
                 <button 
                   className="h-8 w-8 flex items-center justify-center"
@@ -227,7 +223,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
-                </div>
                 <button
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
@@ -248,7 +243,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     className="text-xs font-normal";
                   >;
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
                       <AvatarFallback>
                         {item.title.charAt(0).toUpperCase()}
                       </AvatarFallback>
@@ -264,7 +259,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                       {item.subtitle}
                     </p>
                   </div>
-                </div>
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item.id)}                >
@@ -287,7 +281,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Badge>
                 ))}
               </div>
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
 <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
 
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
@@ -339,8 +333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 )}
               </div>
-            </div>
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
 <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
@@ -393,7 +386,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="font-medium">{item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>;
                   </div>;
-                </div>;
                 <button;
                   className="h-8 w-8 flex items-center justify-center";
                   onClick={() => toggleSaved(item.id)}
@@ -412,7 +404,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="font-medium">{item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>;
                   </div>;
-                </div>;
                 <button;
                   className="h-8 w-8 flex items-center justify-center";
                   onClick={() => toggleSaved(item.id)}
@@ -438,7 +429,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {item.subtitle}
                     </p>;
                   </div>;
-                </div>;
                 <button;
                   className='h-8 w-8 flex items-center justify-center';
                   onClick={() => toggleSaved(item.id)}                >;
@@ -492,7 +482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 )}
               </div>;
-            </div>;
               </div>;<p className='mt-3 text-sm line-clamp-2'>{item && item.description}</p>;<div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>;
                 {item && item.location && (<div className='flex items-center gap-1'>;
                     <MapPin className='h-3 w-3' />;
@@ -553,7 +542,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
 
       ))}
 
@@ -603,7 +592,6 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
                       {item.subtitle}
                     </p>;
                   </div>;
-                </div>;
                 <button;
                   className='h - 8 w - 8 flex items - center justify - center';
                   on_click={() => toggle_saved (item.id)}                >;
@@ -623,7 +611,6 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
                     <h3 className="font - medium">{item.title}</h3>;
                     <p className="text - sm text - muted - foreground">{item.subtitle}</p>;
                   </div>;
-                </div>;
                 <button;
                   className="h - 8 w - 8 flex items - center justify - center";
                   on_click={() => toggle_saved (item.id)}
@@ -669,7 +656,6 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
                     {item.match}% match;
                   </div>)}
               </div>;
-            </div>;
             <div className='border - t border - border p - 3 flex justify - end'>;
               <Button;
                 size='sm';
@@ -685,13 +671,12 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
             </div>;
           </CardContent>;
         </Card>))}
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
     </div>);
 }
 
       ))}
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
+:src_backup/mobile/components/browse/BrowseCards.tsx
     </div>
   );
 }

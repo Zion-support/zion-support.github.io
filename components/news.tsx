@@ -219,7 +219,6 @@ please contact our communications team. </p> <div className="flex flex - col "sm
 "category": "Partnerships";"
 "author": "Sarah Chen";"
 }
-}
 {"image": "🤝";"
 }
 }{"id": 6;
@@ -353,7 +352,6 @@ return (;
                       Read Full Article;
                     </button>;
                   </div>;
-                </div>;
             {/* Newsletter Signup */}
             <div className="text-center mt-16">;"
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;"
@@ -371,15 +369,12 @@ type="email""
                     Subscribe
                   </button>
                 </div>
-              </div>
-            </div>
           </section>
         </main>
       </div>
     </>
   )
 }
-<<<<<<< HEAD
                   <input;
                     type="email";
                     placeholder="Enter your email";
@@ -387,8 +382,6 @@ type="email""
                     Subscribe;
                   </button>;
                 </div>;
-              </div>;
-            </div>;
           </section>;
         </main>;
       </div>;/>;
@@ -396,13 +389,8 @@ type="email""
                     Subscribe;
                   </button>;
                 </div>;
-              </div>;
-            </div>;
           </section>;
         </main>;
       </div>;
     </>;
   )}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 
 const fs = require('fs').promises;
@@ -17,10 +13,6 @@ class ComprehensiveMergeConflictResolver {}
     this.totalFiles = 0};
   async log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${level}] ${message}`)};
     console.log(`[${timestamp}] [${level}] ${message})};
   async findFilesWithConflicts() {}
@@ -34,13 +26,8 @@ class ComprehensiveMergeConflictResolver {}
         if (file) {}
           filesWithConflicts.push(path.join(this.projectRoot, file))};
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const entries = await fs.readdir(dir, { "withFileTypes": true }")
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     } catch (error) {}
       await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')};
     // Also scan for files with merge conflict markers;
@@ -54,16 +41,11 @@ class ComprehensiveMergeConflictResolver {}
       } catch (error) {}
         // Skip files that can't be read;
       };
-    };
     return filesWithConflicts};
   async getAllFiles(dir) {}
     const files = [];
     try {}
       const entries = await fs.readdir(dir, { "withFileTypes": true }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);

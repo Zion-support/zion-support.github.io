@@ -156,122 +156,11 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
         >;
           Send;
         </button>;
-<<<<<<< HEAD
       </section>;'
       <section className='space - y-2'>;'
         <h2 className='font - semibold'>DAO Voting</h2>;
         <input;'
           className='border p - 2 w - full';'
-=======
-      </section>;
-      <section className='space - y-2'>;'
-        <h2 className='font - semibold'>DAO Voting</h2>;'
-        <input;
-          className='border p - 2 w - full';'
-          placeholder='Proposal ID';'
-          value={proposal_id}
-          on_change={e => { return setProposalId (e.target.value)}
-        />; }
-        <select;
-          className='border p - 2';'
-          value={vote_choice}
-          on_change={e => { return setVoteChoice (e.target.value)}
-        >; }
-          <option value='yes'>Yes</option>;'
-          <option value='no'>No</option>;'
-          <option value='abstain'>Abstain</option>;'
-        </select>;
-        <input'
-          className='border p-2 w-full''
-          placeholder='Name'
-          value={name}
-          onChange={e => setName(e && e.target.value)}
-        />;
-        <input'
-          className='border p-2 w-full''
-          placeholder='Skills (comma separated)'
-          value={skills}
-          onChange={e => setSkills(e && e.target.value)}
-        />;
-        <button'
-          className='px-3 py-2 bg-black text-white rounded''
-      <section className='space-y-2'>;'
-        <h2 className='font-semibold'>Broadcast Manifesto</h2>;
-        <button'
-          className='px-3 py-2 bg-indigo-600 text-white rounded'
-          onClick={broadcast}>;
-          Broadcast;
-        </button>;
-      </section>;
-'
-      {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>
-);
-}
-        <button;'
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={cast_vote}
-        >;
-          Vote;
-        </button>;
-      </section>;'
-      <section className='space - y-2'>;'
-        <h2 className='font - semibold'>Talent Profile Sync</h2>;
-<<<<<<< HEAD
-        <input;'
-          className='border p - 2 w - full';'
-=======
-        <input;
-          className='border p-2 w-full';'
-          placeholder='Name';'
-          value={name}
-          onChange={e => { return setName(e && e.target.value)}
-        />; }
-        <input;
-          className='border p-2 w-full';'
-          placeholder='Skills (comma separated)';'
-          value={skills}
-          onChange={e => { return setSkills(e && e.target.value)}
-        />; }
-        <button;
-          className='px-3 py-2 bg-black text-white rounded';'
-      <section className='space-y-2'>;'
-        <h2 className='font-semibold'>Broadcast Manifesto</h2>;'
-        <button;
-          className='px-3 py-2 bg-indigo-600 text-white rounded';'
-          onClick={broadcast}>;
-          Broadcast;
-        </button>;
-import { useState } from 'react';
-import Head from 'next/head';
-export default function OffworldConsole() {
-  const [chat, setChat] = useState($2);
-  const [voteChoice, setVoteChoice] = useState($2);
-  const [proposalId, setProposalId] = useState($2);
-  const [name, setName] = useState($2);
-  const [skills, setSkills] = useState($2);
-  const [status, setStatus] = useState($2);
-  async function sendChat() {
-    setStatus($2);
-    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat}) }),
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-
-<<<<<<< HEAD
-  async function castVote() {
-    setStatus($2);
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice}) }),
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
-  }
-=======
-      </section>;
-
-      {status && <p className='text-sm text-gray-700'>{status}</p>}'
-    </div>
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   async function syncProfile() {
     setStatus($2);
@@ -324,7 +213,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {status && <p className="text-sm text-gray-700">{status}</p>}
     </div>
-<<<<<<< HEAD
       </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
 )}
@@ -375,7 +263,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>))
   )
 }
-=======
-<<<<<<< HEAD
 
   );

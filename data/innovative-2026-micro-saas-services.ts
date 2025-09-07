@@ -1366,7 +1366,6 @@ export const "innovative2026MicroSaasServices": Innovative2026MicroSaasService[]
 ];
   }
 ];
-];
 ;
 export interface Innovative2026MicroSaasService {;
   }
@@ -1919,18 +1918,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.8,
     reviews: 500}
 ],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
-=======
   {;
   mobile: '+1 302 464 0950';,;
       email: 'kleber@ziontechgroup.com';,;
@@ -2802,25 +2794,10 @@ pr-12325
     customers: 800;,;
     rating: 4.8;,
   reviews: 500;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 ];
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

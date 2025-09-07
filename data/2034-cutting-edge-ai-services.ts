@@ -1,33 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
   real_service?: boolean;
   id: string;
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type CuttingEdgeAIService = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
   real_service?: boolean;
   id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 export type CuttingEdgeAIService = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   name: string;
   description: string;
   category:
@@ -38,7 +23,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     | 'AI Business Management'
     | 'AI Healthcare'
     | 'AI Neural Interfaces'
-<<<<<<< HEAD
     | 'AI Quantum Computing';
   pricing: { starter: string; professional?: string; enterprise?: string }
   features: string[];
@@ -52,17 +36,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-
-
-  {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
 
@@ -70,7 +43,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai - product - spec - writer',
-=======
 
 export type CuttingEdgeAIService = {}
       'CBT-guided prompts',;
@@ -78,7 +50,6 @@ export type CuttingEdgeAIService = {}
   real_service?: boolean;
 '
     id: 'ai - product - spec - writer','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     name: 'AI Product Spec Writer',
     description:;'
       'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.','
@@ -98,7 +69,6 @@ export type CuttingEdgeAIService = {}
     real_service: true,
 
   },
-<<<<<<< HEAD
   {'
     id: 'ai - creative - studio','
     name: 'AI Creative Studio',
@@ -107,12 +77,7 @@ export type CuttingEdgeAIService = {}
     category: 'AI Creativity','
     pricing: { starter: '$149 / mo' },
     features: [;
-<<<<<<< HEAD
 
-=======
-  {
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: 'ai-creative-studio'
     name: 'AI Creative Studio'
     description:
@@ -121,8 +86,6 @@ export type CuttingEdgeAIService = {}
     pricing: { starter: '$149/mo' }
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
 
 ;
     "useCases": ['Marketing velocity', 'Cost savings'],"link": '"https"://ziontechgroup.com/services/ai-creative-studio',"realService": true;'
@@ -200,7 +163,6 @@ export const "cuttingEdgeAIServices": CuttingEdgeAIService[] = [;
 		| 'AI Quantum Computing';'
 export const "cuttingEdgeAIServices": CuttingEdgeAIService[] = [
   {
-  {
     }
     "id": 'ai - product - spec - writer','
     "name": 'AI Product Spec Writer','
@@ -238,7 +200,6 @@ export const "cuttingEdgeAIServices": CuttingEdgeAIService[] = [
     "link": '"https"://ziontechgroup.com/services/ai-creative-studio','
     "realService": true
   },;
-];	"id": string;
 ];	"id": string;
     "useCases": ['Marketing velocity', 'Cost savings'],'
     "link": '"https"://ziontechgroup.com/services/ai-creative-studio','
@@ -496,7 +457,6 @@ export type CuttingEdgeAIService = {;
 ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-<<<<<<< HEAD
 
 export type CuttingEdgeAIService = {;
 

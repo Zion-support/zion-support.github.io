@@ -36,8 +36,6 @@ const path = require("path")
       Next "Maintenance": ${this.predictions.nextMaintenance}"
       suggestions.push(Consider increasing memory limits or optimizing memory usage")
         "High CPU usage detected - consider process optimization"
-        "High CPU usage detected - consider process optimization"
-        "High CPU usage detected - consider process optimization"
   suggestions.push("Multiple errors detected - review error handling")
   return "Immediate attention required"
   return "Within 24 hours"
@@ -68,9 +66,3 @@ const path = require("path")
 // console.log(" Intelligent Predictive Monitor initialized successfully")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
-<<<<<<< HEAD
-  console.error(" Intelligent Predictive Monitor "failed": ")
-  console.error(" Intelligent Predictive Monitor "failed": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

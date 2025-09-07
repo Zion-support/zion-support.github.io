@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,61 +9,6 @@ import {
   Phone;
   Mail;
   MapPin;
-=======
-
-;
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { useRouter  } from 'next/router';
-import { X,ChevronDown,ChevronRight,Home,Briefcase,Users,FileText,HelpCircle,LogOut,User,Search,Brain,Shield,Cloud,Code,Network,Zap,Phone,Mail,MapPin,Building2;
- } from 'lucide-react';
-const navigation = {'Services': [;
-    { name: 'AI Services', href: '/ai-services' },{ name: 'IT Services', href: '/it-services' },{ name: 'Micro SaaS', href: '/micro-saas' },{ name: 'Cloud Solutions', href: '/cloud-solutions' },{ name: 'Cybersecurity', href: '/cybersecurity' },{ name: 'Quantum Computing', href: '/quantum-computing' },{ name: 'Blockchain', href: '/blockchain' },{ name: 'IoT Solutions', href: '/iot-solutions' }
-  ],'Solutions': [;
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },{ name: 'Startup Solutions', href: '/solutions/startup' },{ name: 'Digital Transformation', href: '/solutions/digital-transformation' },{ name: 'Custom Development', href: '/solutions/custom' }
-  ],'Industries': [;
-    { name: 'Healthcare', href: '/industries/healthcare' },{ name: 'Finance', href: '/industries/finance' },{ name: 'Education', href: '/industries/education' },{ name: 'Government', href: '/industries/government' },{ name: 'Manufacturing', href: '/industries/manufacturing' },{ name: 'Retail', href: '/industries/retail' },{ name: 'Agriculture', href: '/industries/agriculture' },{ name: 'Energy', href: '/industries/energy' }
-  ],'Resources': [;
-    { name: 'Blog', href: '/blog' },{ name: 'Documentation', href: '/docs' },{ name: 'API Documentation', href: '/docs/api' },{ name: 'Tutorials', href: '/tutorials' },{ name: 'White Papers', href: '/white-papers' },{ name: 'Webinars', href: '/webinars' },{ name: 'Training', href: '/training' },{ name: 'FAQ', href: '/faq' }
-  ],'Company': [;
-    { name: 'About Us', href: '/about' },{ name: 'Our Team', href: '/team' },{ name: 'Careers', href: '/careers' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'News', href: '/news' },{ name: 'Partners', href: '/partners' },{ name: 'Contact', href: '/contact' },{ name: 'Privacy Policy', href: '/privacy' }
-  ];
-}const quickLinks = [;
-  { name: 'Free Consultation', href: '/consultation' },{ name: 'Get Quote', href: '/quote' },{ name: 'Support', href: '/support' }
-];interface SidebarProps  {isOpen: boolean;
-  onClose: () => void;
-}export function Sidebar() {const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)useEffect(() => {if (isOpen) {document.body.style.overflow = 'hidden';
-    } else {document.body.style.overflow = 'unset';
-    }
-    return () => {document.body.style.overflow = 'unset';
-    }}, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
-      {isOpen && (<>;
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
-import { useRouter } from 'next/router';
-=======
-<<<<<<< HEAD
-{/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-            onClick={onClose}
-          />
-          {/* Sidebar */}
-=======
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react'
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/router'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import {
   X,
   ChevronDown,
@@ -88,7 +31,6 @@ import {
   Mail,
   MapPin,
   Building2
->>>>>>> origin/main
 } from 'lucide-react';
 const navigation = {
   'Services': [
@@ -99,53 +41,6 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
-<<<<<<< HEAD
-=======
-    { name: 'IoT Solutions', href: '/iot-solutions' }
-  ],
-  'Solutions': [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Startup Solutions', href: '/solutions/startup' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'Custom Development', href: '/solutions/custom' }
-  ],
-  'Industries': [
-    { name: 'Healthcare', href: '/industries/healthcare' },
-    { name: 'Finance', href: '/industries/finance' },
-    { name: 'Education', href: '/industries/education' },
-    { name: 'Government', href: '/industries/government' },
-    { name: 'Manufacturing', href: '/industries/manufacturing' },
-    { name: 'Retail', href: '/industries/retail' },
-    { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' }
-  ],
-  'Resources': [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Documentation', href: '/docs/api' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' }
-  ],
-  'Company': [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' }
-  ]
-};
-const quickLinks = [
-  { name: 'Free Consultation', href: '/consultation' },
-  { name: 'Get Quote', href: '/quote' },
-  { name: 'Support', href: '/support' }
-];
->>>>>>> origin/main
 
     { name: 'IoT Solutions', href: '/iot-solutions' }
 
@@ -200,7 +95,6 @@ interface SidebarProps {
   onClose: () => void,
 }
 
-<<<<<<< HEAD
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -217,42 +111,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
-=======
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-
-  const navigation = {
-    'Services': [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' }
-    ],
-    'Solutions': [
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-      { name: 'Cybersecurity', href: '/solutions/cybersecurity' },
-      { name: 'Data Analytics', href: '/solutions/data-analytics' }
-    ],
-    'Industries': [
-      { name: 'Healthcare', href: '/industries/healthcare' },
-      { name: 'Finance', href: '/industries/finance' },
-      { name: 'Manufacturing', href: '/industries/manufacturing' }
-    ]
-  };
-
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' }
-  ];
-
-  const handleDropdownToggle = (title: string) => {
-    setOpenDropdowns(prev => 
-      prev.includes(title) 
-        ? prev.filter(item => item !== title)
-        : [...prev, title]
-    );
->>>>>>> origin/main
   };
 
   return (
@@ -260,7 +118,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {isOpen && (
         <>
           {/* Backdrop */}
-<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -275,21 +132,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-<<<<<<< HEAD
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
-
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
-          >;
-            <div className="p-6">;
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-
->>>>>>> origin/main
           >
             <div className="p-6">
-=======
           <motion&& motion.div
             initial={{ opacity: 0 ;}}
             animate={{ opacity: 1 ;}}
@@ -299,8 +145,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             exit={{ x: -300 ;}}
             transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center space-x-2">
@@ -311,55 +155,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
                 <button
                   onClick={onClose}
-<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-=======
-
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors";
-                >;
-                  <X className="w-6 h-6" />;
-                </button>;
-              </div>;
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-
->>>>>>> origin/main
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
               {/* Navigation */}
               <nav className="space-y-4">
-<<<<<<< HEAD
                 {Object.entries(navigation).map(([title, links]) => (
-=======
-<<<<<<< HEAD
-                {Object.entries(navigation).map(([title, links]) => (
-                  <div key={title}>
-                    <button
-                      onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-=======
-                            key={link.name}
-                            href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                            onClick={onClose}
-                          >
-                            {link.name}
-                          </Link>))}
-              {/* Quick Links */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <div className="space-y-2">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                      onClick={onClose}
-=======
-                {Object && Object.entries(navigation).map(([title, links]) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
@@ -422,7 +225,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   </div>
                 ))}
               </nav>
->>>>>>> origin/main
 
                     >;
 
@@ -468,8 +270,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </Link>
                   ))}
                 </div>
-              </div>
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -486,24 +286,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <MapPin className="w-4 h-4 mr-3 mt-1" />
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
-                </div>
                 <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
-=======
-
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>24/7 Support Available</p>
-                </div>
->>>>>>> origin/main
               </div>
-            </div>
           </motion.div>
         </>
       )}
@@ -534,7 +321,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-}
   X, 
   Building2, 
   Code, 
@@ -610,7 +396,6 @@ interface SidebarProps {
                     <Mail className="w-4 h-4" />;
                     <span>kleber@ziontechgroup && ziontechgroup.com</span>;
                   </div>;
-                </div>;
                 <div className="mt-4">;
                   <Link
                     href="/contact"
@@ -707,23 +492,14 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                       href={link.href}
                       className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
                       on_click={on_close}
-<<<<<<< HEAD
                     >;
                       {link.name}
                     </Link>))}
                 </div>;
-              </div>;
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
                     >
                       {link.name}
                     </Link>))}
                 </div>
-              </div>
-<<<<<<< HEAD
-              {/* Contact Info */}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Contact Info */}
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
@@ -736,7 +512,6 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                     <Mail className="w - 4 h - 4" />;
                     <span > kleber@ziontechgroup.com</span>;
                   </div>;
-                </div>;
                 <div className="mt - 4">;
                   <Link;
                     href="/contact";
@@ -747,7 +522,6 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                     <ExternalLink className="w - 4 h - 4" />;
                   </Link>;
               </div>;
-            </div>;
           </motion.div>;
         </>)}
     </AnimatePresence>);
@@ -761,58 +535,6 @@ export default Sidebar;
 import React from 'react';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-          {/* Backdrop */},
-          <motion.div,
-            initial = $2;
-            animate = $2;
-            exit = $2;
-            className = $2;
-            onClick = $2;
-          />,
-          {/* Sidebar */},
-              {/* Header */},
-              <div className = $2;
-                <div className = $2;
-                  <div className = $2;
-                    <Building2 className = $2;
-                  </div>,
-                  <span className = $2;
-                </div>,
-                <button,
-                  onClick = $2;
-              {/* Navigation */},
-              <nav className = $2;
-                {Object.entries(navigation).map(([title, links]) => (,
-                  <div key = $2;
-                    <button,
-                      onClick = $2;
-                            key = $2;
-                            href = $2;
-                            className = $2;
-                            onClick = $2;
-                          >,
-                            {link.name},
-                          </Link>))},
-              {/* Quick Links */},
-              <div className = $2;
-                <h3 className = $2;
-                <div className = $2;
-                  {quickLinks.map((link) => (,
-                    <Link,
-                      key = $2;
-                      href = $2;
-                      className = $2;
-                      onClick = $2;
-                    >,
-                      {link.name},
-                    </Link>))},
-                </div>,
-              </div>,
-              {/* Contact Info */},
->>>>>>> origin/merge-automation-changes
-=======
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -958,18 +680,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <Mail className="h-4 w-4 mr-2" />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>
   );
 }
-<<<<<<< HEAD
-=======
-export default Sidebar;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

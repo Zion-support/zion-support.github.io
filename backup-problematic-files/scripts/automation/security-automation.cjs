@@ -34,10 +34,6 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -136,7 +132,6 @@ class $1 {}
   "success": false,
         "error": error.message};
     };
-  };
 ;
   async checkOutdatedPackages() {}
   this.log("Checking for outdated packages...");
@@ -155,7 +150,6 @@ this.log(`Found ${outdatedCount} outdated packages`);
   "success": false,
         "error": error.message};
     };
-  };
 ;
   async checkOutdatedPackages() {}
   this.log("Checking for outdated packages...");
@@ -201,7 +195,6 @@ fs.writeFileSync(;)
   "success": false,
         "error": error.message};
     };
-  };
 ;
   async runSecurityScan() {}
   this.log("Running comprehensive security scan...");
@@ -222,7 +215,6 @@ fs.writeFileSync(;)
   "success": false,
         "error": error.message};
     };
-  };
 ;
   async runSecurityScan() {}
   this.log("Running comprehensive security scan...");
@@ -352,7 +344,6 @@ this.log(`Security automation completed. "Status": ${report.status}`);this.log(`
       report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`)})} else {`}
   this.log("No security vulnerabilities found. System is secure.", "INFO")};
   };
-};
 ;
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
@@ -360,7 +351,6 @@ if (require.main === module) {}
 } else {}
   this.log("No security vulnerabilities found. System is secure.", "INFO")};
   };
-};
 ;
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
@@ -371,9 +361,4 @@ security.run().catch(error => {})
   console.error("Security automation "failed": ', error);
     process.exit(1)})};
 ;
-<<<<<<< HEAD
 module.exports = SecurityAutomation;
-module.exports = SecurityAutomation;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

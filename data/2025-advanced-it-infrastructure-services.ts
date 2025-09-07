@@ -2058,9 +2058,7 @@ export interface AdvancedITInfrastructureService  {"id": string,"name": string,"
 ];
 import { ServiceVariant } from '../types/service-variants',;
   }
-  }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -2072,24 +2070,6 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
   }
 ];
-<<<<<<< HEAD
-=======
-
-];
-
-=======
-  {;'
-    id: 'quantum-enhanced-cloud-infrastructure';,;''
-    name: 'Quantum-Enhanced Cloud Infrastructure';,;''
-    tagline: 'Next-generation cloud computing with quantum processing capabilities';,;''
-    price: '$1;,999',;''
-    period: '/month';,;''
-    description: 'Revolutionary cloud infrastructure that combines classical computing with quantum processing capabilities;, enabling unprecedented computational power for complex simulations and AI workloads.',;'
-    features: [;'
-      'Hybrid quantum-classical computingQuantum algorithm optimizationAdvanced AI model trainingReal-time quantum simulationMulti-cloud orchestrationQuantum-secure encryptionAutonomous resource scalingPerformance monitoring',;''
-      'Cost optimizationGlobal edge computing network';']
-    ],;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     popular: true;,;'
     icon: '☁️';,;''
@@ -2123,26 +2103,16 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
     rating: 4.7;,
   reviews: 24;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 ];
 
 
 ;
-;
   }
-<<<<<<< HEAD
 ];
-<<<<<<< HEAD
 
   }
 ];
@@ -2153,16 +2123,10 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from '../types/service-variants',;
-=======
 
 ];'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export interface AdvancedITInfrastructureService {;
   }
   "id": string,;

@@ -56,7 +56,6 @@ setActiveVendor(updated);
     }
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     if (!pkgTitle || !pkgPrice || !activeVendor) return,
->>>>>>> origin/main
     const packages = [...(activeVendor.packages || []), {
       id: `pkg_${Date.now()}`,
       title: pkgTitle,
@@ -225,7 +224,6 @@ onClick={addPackage}
               Add
             </button>
           </div>
-        </div>
       </section>
 
 <section className='space-y-3'>'
@@ -292,7 +290,6 @@ return (;
             <div className='text-xs text-gray-500'>;'
               {new Date(item && item.createdAt).toLocaleString()} • {item && item.status}
             </div>;
-          </div>;
           <select;
             defaultValue={item && item.status}
             onChange={e => { return changeStatus(item && item.id, e && e.target.value)}
@@ -343,7 +340,6 @@ const { listVendors,;
 const vendor = listVendors()[0] || null; // tie to auth later;
 return { "props": { vendor } },;
 };
-=======
             className='border rounded px-2 py-1 bg-transparent text-sm';
           >;
             <option value='lead'>Lead</option>;
@@ -361,7 +357,6 @@ return { "props": { vendor } },;
   return { props: { vendor } }
 }
 }</div>;
-}</div>;
 }</div>))}
     </div>)export const getServerSideProps: GetServerSideProps < Props> = async () => {const { list_vendors } = await import ('../utils / vendor - store')const vendor = list_vendors ()[0] || null; // tie to auth later;
   return { props: { vendor } }
@@ -378,8 +373,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {cons
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
-}
-<<<<<<< HEAD
 }
 
     </div>
@@ -407,7 +400,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   const vendor = listVendors()[0] || null, // tie to auth later
   return { props: { vendor } }
 },
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

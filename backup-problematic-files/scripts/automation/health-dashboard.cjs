@@ -4,11 +4,8 @@
  * Comprehensive monitoring dashboard for PM2 processes;
  */
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -25,7 +22,6 @@ const { execSync } = require('child_process')
       this.log(` Dashboard update "failed"`)
       return { "status": 'offline', "color": 'red', "message"}
       return { "status": 'unstable', "color": 'orange', "message"}
-      return { "status": 'warning', "color": 'yellow', "message"}
       return { "status": 'warning', "color": 'yellow', "message"}
     return { "status": 'healthy', "color": 'green', "message"}
       this.log(` Failed to get system "metrics"`)
@@ -60,9 +56,4 @@ const { execSync } = require('child_process')
             \"
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
-<<<<<<< HEAD
       this.log(` Fatal "error"`)
-      this.log(` Fatal "error"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

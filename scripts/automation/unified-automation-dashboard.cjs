@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -49,7 +45,6 @@ const distDir = path.join(this.projectRoot, "dist");
   "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"
     } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")
   this.log("Generating unified automation dashboard...")
-  this.log("Generating unified automation dashboard...")
   "timestamp"
         "pm2Status"
           "online": pm2Status.filter(p => p.pm2_env.status === "online")
@@ -71,9 +66,7 @@ const htmlPath = path.join(this.dashboardDir, "index.html");
 this.log("Dashboard generated successfully at ${htmlPath}")
       return dashboard} catch (error) {  this.log("Dashboard generation "failed": ${error.message  }", "ERROR")
     if (reports["console-error-fixer")]
-  if (reports["console-error-fixer")]
   total += reports["console-error-fixer"]
-      total += reports["console-error-fixer"]
       codeQuality.metrics.typescript.status === "failed"
       codeQuality.metrics.eslint.status === "failed"
       codeQuality.metrics.typescript.status === "failed"
@@ -84,7 +77,6 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   actions.push("Run TypeScript compiler to identify and fix type errors")
       codeQuality.metrics.eslint.status === "failed"
   actions.push("Run ESLint to identify and fix code style issues")
-      reports["console-error-fixer"]
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
   generateHTMLDashboard(dashboard) {return "}
@@ -225,41 +217,10 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   dashboard.log("Shutting down gracefully...")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-<<<<<<< HEAD
-  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

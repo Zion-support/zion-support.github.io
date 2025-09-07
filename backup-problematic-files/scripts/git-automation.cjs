@@ -14,7 +14,6 @@
         stderr: error.stderr || error.message 
       };
     }
-  }
 
   async checkGitStatus() {
     this.log('Checking git status...');
@@ -28,7 +27,6 @@
       this.log('Failed to check git status');
       return [];
     }
-  }
 
   async addAllChanges() {
     this.log('Adding all changes...');
@@ -41,7 +39,6 @@
       this.log('❌ Failed to add changes');
       return false;
     }
-  }
 
   async commitChanges(message) {
     this.log(`Committing changes: ${message}`);
@@ -54,7 +51,6 @@
       this.log('❌ Failed to commit changes');
       return false;
     }
-  }
 
   async pushChanges(branch = 'main') {
     this.log(`Pushing changes to ${branch}...`);
@@ -67,7 +63,6 @@
       this.log('❌ Failed to push changes');
       return false;
     }
-  }
 
   async mergeToMain() {
     this.log('Merging to main branch...');
@@ -147,7 +142,6 @@
     this.log('Full git automation workflow completed successfully');
     return true;
   }
-}
 
 // Handle command line arguments
 if (require.main === module) {
@@ -182,10 +176,8 @@ if (require.main === module) {
       console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]");
       process.exit(1);
   }
-}
 
 module.exports = GitAutomation;
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
@@ -196,7 +188,6 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
-  log(message, level = 'INFO')
   log(message, level = 'INFO')
     const logFile = path.join(this.logDir, 'git-automation.log')
     fs.appendFileSync(logFile, logMessage + '\n')
@@ -209,13 +200,7 @@ const path = require('path')
       "operation"
     const result = await this.runCommand(`git commit -m "${message}"`)
       "operation"
-      "operation"
-      "operation"
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
       this.log(" Git automation workflow "failed": ${error.message}")
-      this.log(" Git automation workflow "failed": ${error.message}")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

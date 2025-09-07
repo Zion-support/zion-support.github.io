@@ -1,6 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:src/pages/Services.tsx
-=======
+:src/pages/Services.tsx
 
   Lock,
   Zap,
@@ -10,7 +9,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
->>>>>>> origin/main:src_disabled_1757239864/pages/Services.tsx
 
 const Services: React.FC = () => {
   const services = [
@@ -82,14 +80,12 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:src/pages/Services.tsx
+:src/pages/Services.tsx
       </div>
-    </div>
   );
 };
 
 export default Services;
-=======
 
         {/* Benefits Section */}
         <motion.div
@@ -273,9 +269,7 @@ export default function ServicesPage() {
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>📧 kleber@ziontechgroup.com</p>
           </div>
-        </div>
       </section>
     </div>
   );
 }
->>>>>>> origin/main:src_disabled_1757239864/pages/Services.tsx

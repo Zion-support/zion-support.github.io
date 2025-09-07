@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 const fs = require("fs").promises;
@@ -20,10 +16,6 @@ class BuildHealthCheck {;}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {;}
       await fs.appendFile(this.logFile, logEntry);
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       console.log(logEntry.trim()),} catch (error) {;}
       console.error("Failed to write to log "file": ", error),};
       console.log(logEntry.trim())} catch (error) {;}"
@@ -49,28 +41,6 @@ const packageJson = JSON.parse(;);
       } catch (fixError) {;}"
         await this.log(Failed to fix "dependencies": ${fixError.message}")
           "ERROR");
-<<<<<<< HEAD
-=======
-        return { "status": "failed", "error": error.message };
-      };
-    };
-  };
-;
-  async checkConfigFiles() {;}
-const configs = [package.json",];
-      "tsconfig.json",vite.config.ts",
-      "eslint.config.js",tailwind.config.js",];
-const fs = require("fs").promises;const path = require("$1");
-const { exec } = require("$1");
-const util = require("util")";const execAsync = util.promisify(exec);
-class BuildHealthCheck {;}
-  constructor() {;}
-    this.logFile = path.join(__dirname, "../logs/build-health.log");    this.reportFile = path.join(__dirname, "../logs/build-health-report.json");    this.projectRoot = path.join(__dirname, "..")}";
-  async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;`
-    try {;}
-      await fs.appendFile(this.logFile, logEntry);
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       console.log(logEntry.trim())} catch (error) {;}
       console.error("Failed to write to log ""file": ", error)}"};
 ;
@@ -141,49 +111,13 @@ if (require.main === module) {;}
   // Run once immediately, then every 15 minutes;
   checker.run();
   setInterval(() => checker.run(), 15 * 60 * 1000);
-<<<<<<< HEAD
 module.exports = BuildHealthCheck;
-=======
-  // Keep process alive;
-  process.on("SIGINT", () => {;}
-    checker.log("Build health checker shutting down", "INFO');
-    process.exit(0),}),};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-module.exports = BuildHealthCheck;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = BuildHealthCheck;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = BuildHealthCheck;
-<<<<<<< HEAD
 module.exports = BuildHealthCheck;
   // Keep process alive;"
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Keep process alive;"
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 `;
 

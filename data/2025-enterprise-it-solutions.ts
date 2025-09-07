@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
   {
 
@@ -16,12 +15,6 @@
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
   {"id": 'enterprise - api - governance - platform',"name": 'Enterprise API Governance Platform',"tagline":;'
       'Comprehensive API governance, security, and lifecycle management for enterprise APIs',"price": '$599',"period": '/month',"description":;'
@@ -270,14 +263,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     "rating": 4.8,
     "reviews": 38
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ];	{
 }
 const contact = {
@@ -654,16 +639,13 @@ export const "enterpriseITSolutions": MicroSaasService[] = [
 		"launchDate": '2025-01-18';'
 		"customers": 56;"rating": 4 && 4.8,"reviews": 38;
 	}];];;
-=======
 		realImplementation: true
 		implementationDetails: 'Enterprise platform with monitoring engine;, observability tools, and alerting system.';
 		launchDate: '2025-01-18';
 		customers: 56;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ];
 ;
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 	}
 ];"rating": 4 && 4.8,"reviews": 38;
 	}

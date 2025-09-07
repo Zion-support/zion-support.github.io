@@ -31,7 +31,6 @@ interface Transaction {
   service?: {
     title?: string
   }
-}
 
 export function TransactionHistory() {
   const { user } = useAuth();
@@ -173,7 +172,6 @@ export function TransactionHistory() {
             Try Again
           </Button>
         </div>
-      </div>
     )
   }
 
@@ -217,7 +215,6 @@ export function TransactionHistory() {
               Escrow
             </Button>
           </div>
-        </div>
         
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
@@ -255,7 +252,7 @@ export function TransactionHistory() {
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client';
 
-<<<<<<< HEAD:src/components/transactions/TransactionHistory.tsx
+:src/components/transactions/TransactionHistory.tsx
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -360,9 +357,6 @@ export function TransactionHistory() {
           </div>
         )}
       </div>
-    </div>
   )
-=======
   );
->>>>>>> origin/main:src_disabled_1757239864/components/transactions/TransactionHistory.tsx
 }

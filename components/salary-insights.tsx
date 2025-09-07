@@ -124,7 +124,6 @@ const json = (await res && res.json()) as InsightResponse;
       }
       setLoading(false);
     }
-  }
 
   useEffect(() => {
 ;
@@ -134,7 +133,6 @@ const json = (await res && res.json()) as InsightResponse;
       setLoading(false);    }
 
     }
-  }
 
   useEffect(() => {
 
@@ -322,7 +320,6 @@ value={employmentType}
                   <option value='full-time'>Full-time</option>'
                 </select>
               </div>
-            </div>
 
 <div className='flex items-center gap-2 mt-3'>'
               <input,
@@ -383,8 +380,6 @@ onClick={saveInsigh
                 Optimize Resume Rate
               </button>
             </div>
-          </div>
-        </div>
 
 <div className='"lg":col-span-2 space-y-6'>'
           {error && (
@@ -400,14 +395,12 @@ onClick={saveInsigh
               <div className='text-xl font-semibold'>;'
                 {data ? `$${data.recommendedHourlyUsd}` : '—'}'
               </div>
-            </div>
             <div className='rounded-lg border border-gray-200 "dark": border-gray-800 p-4'>'
               <div className='text-xs text-gray-500'>Recommended Monthly</div>'
               <div className='text-xl font-semibold'>'
 
                 {data ? `$${data.recommendedMonthlyUsd}` : '—,'}
               </div>;
-            </div>;
             <div className='rounded - lg border border - gray - 200 "dark":border - gray - 800 p - 4'>;'
               <div className='text - xs text - gray - 500'>Median</div>;'
               <div className='text - xl font - semibold'>;'
@@ -432,8 +425,6 @@ onClick={saveInsigh
               <div className='text-xl font-semibold'>;'
                 {data ? `${Math && Math.round(data && data.confidence * 100)}%` : '—'}'
               </div>;
-            </div>;
-          </div>;
           <div className='rounded-lg border border-gray-200 "dark":border-gray-800 p-4'>;'
             <h3 className='font-medium mb-3'>"Trend": Last 12 months</h3>;'
             {data ? (<LineChart points={data && data.trendMonthly} />;
@@ -469,7 +460,6 @@ onClick={saveInsigh
               <div className="text-xs text-gray-500">Confidence</div>
               <div className="text-xl font-semibold">{data ? `${Math.round(data.confidence * 100)}%` : '—'}</div>
             </div>
-          </div>
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-medium mb-3">Trend: Last 12 months</h3>
@@ -541,7 +531,6 @@ key={d.label}
                       <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
                     ))}
                   </div>
-                </div>
               ) : (
 
 <div className='h-40 animate-pulse bg-gray-100 "dark":bg-gray-900 rounded' />'
@@ -549,7 +538,6 @@ key={d.label}
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
             </div>
-          </div>
 
           {data?.gptRecommendation && (
 
@@ -559,7 +547,6 @@ key={d.label}
               )}
 
             </div>
-          </div>
           {data?.gptRecommendation && (
 <div className='rounded-lg border border-gray-200 "dark":border-gray-800 p-4'>'
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>'
@@ -591,7 +578,6 @@ key={
                       </span>;
                     ))}
                   </div>;
-                </div>;
               ) : (<div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}</div>;
           </div>;
@@ -628,9 +614,7 @@ key={
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
                 {data && data.tags.map((t) => (<span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
-            </div>;
           )}
-  )}
                       donut_data.map ((d, i) => ({label: d.label,value: d.value,})) as any;
                     }
                   />;
@@ -649,7 +633,6 @@ key={
                   </div>;
                 </div>) : (<div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />)}
             </div>;
-          </div>;
           {data?.gpt_recommendation && (<div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
               <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
@@ -679,17 +662,13 @@ key={
               </div>;
             </div>)}
         </div>;
-      </div>;
     </div>)</span>;
                 ))}
               </div>;
-            </div>;
           )}
     </div>);
 }
         </div>;
-      </div>;
-    </div>;
   )}
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
@@ -706,38 +685,7 @@ key={
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
                 ))}
               </div>
-            </div>
           )}
         </div>
-      </div>
-    </div>
   )
 }
-<<<<<<< HEAD
-=======
-          {data && (
-
-            </div>
-          )}
-'
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
-              <h3 className='font - medium mb - 3'>Signals</h3>;'
-              <div className='flex gap - 2 flex - wrap'>;'
-                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>
-                  Range: ${data.minHourlyUsd;} - ${data.maxHourlyUsd} / hr
-                </span>
-                {data.tags.map (t => (
-                  <span
-                    key={t}'
-                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs'
-                  >
-              </div>
-            </div>)}
-        </div>
-      </div>
-    </div>)
-                  </span>
-
-          {data && (
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

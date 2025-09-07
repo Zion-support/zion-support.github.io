@@ -9,7 +9,6 @@ const crypto = require("crypto")
       "ai-suggestions.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
-  log(message, level = "INFO")
   return JSON.parse(fs.readFileSync(this.reviewsLog, "utf8")
     } catch (error) {  this.log(`Failed to load review "history": ${error.message  }`, "WARN"`)
       )} catch (error) {  this.log(`Failed to save review "history": ${error.message  }`, "ERROR"`)
@@ -76,7 +75,6 @@ const crypto = require("crypto")
     const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
   const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const lines = content.split("\n")
-  const lines = content.split("\n")
   "duplicateLines"
       "duplicateContent"
     const antiPatterns = ["]
@@ -104,7 +102,6 @@ const crypto = require("crypto")
   "pattern"
         "message": "Potential localStorage injection vulnerability"
         "severity": "MEDIUM"
-        "severity": "MEDIUM"
   "type": "SECURITY_VULNERABILITY"
           "severity"
           "message"
@@ -116,7 +113,6 @@ const crypto = require("crypto")
           "file"
           "occurrences"
   const severityScores = { "HIGH": 20, "MEDIUM": 10, "LOW"}
-  this.log("Generating intelligent suggestions...")
   this.log("Generating intelligent suggestions...")
   "HIGH_COMPLEXITY"
   title: "Reduce Function Complexity"
@@ -194,9 +190,4 @@ this.log("Review report "generated": ${reportPath}")
       this.log("AI Code Review completed successfully")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
-<<<<<<< HEAD
   console.error(" AI Code Review Automation "failed")
-  console.error(" AI Code Review Automation "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

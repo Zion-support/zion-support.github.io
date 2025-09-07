@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -8,7 +7,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       const csv = 'event,timestamp\nvisit,2025-01-01T00: 00: 00Z\nsignup,2025-01-02T00: 00: 00Z',
-      res.setHeader($2);
       res.setHeader($2);
       return res.status(200).send(csv)
     }
@@ -23,20 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const rows = [['eventtimestamp'], ...(data || []).map((r: any) => [r.event, r.created_at])],
     const csv = rows.map(r => r.join()).join($2);
     res.setHeader($2);
-    res.setHeader($2);
     return res.status(200).send(csv)
   } catch (e: any) {
     return res.status(500).json({ error: e ?.message })
   }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}

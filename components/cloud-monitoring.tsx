@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,7 +16,6 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-}
 import React from 'react';
   Activity,
   BarChart3,
@@ -130,7 +128,6 @@ const monitoringCapabilities = [;
     },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
   const monitoringCapabilities = $2;
       icon: <Server className = $2;
->>>>>>> origin/main
       metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork PerformanceContainer Metrics']
     };
     {
@@ -362,7 +359,6 @@ property='"og":description''
               <Eye className='w-4 h-4 mr-2' />;'
               Real-time Infrastructure Monitoring;
             </div>;
-          </div>;
           <h1 className='text-4xl "sm":text-5xl "md":text-6xl font-black mb-8 text-white leading-tight'>;'
             Cloud Monitoring & Analytics;
           </h1>;
@@ -415,8 +411,6 @@ property='"og":description''
               </div>;
               <div className='text-gray-400'>Latency</div>;'
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* Features Section */}
 
@@ -446,7 +440,6 @@ className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center 
                     {feature.ico
 }
                   </div>;
-                </div>;
                 <h3 className='text-xl font-bold mb-4 text-white group-"hover":text-green-400 transition-colors duration-300'>;'
                   {feature.title}
                 </h3>;
@@ -463,7 +456,6 @@ className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center 
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
                     {feature.icon}
                   </div>
-                </div>
                 <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
@@ -474,7 +466,6 @@ className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center 
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Monitoring Capabilities */}
@@ -522,12 +513,9 @@ key={index}
                         </div>
                       ))}
                     </div>
-                  </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Use Cases Section */}
@@ -577,12 +565,9 @@ key={index}
                         </div>
                       ))}
                     </div>
-                  </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Pricing Section */}
@@ -630,7 +615,6 @@ key={index}
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;'
                 </div>;
-                  </div>;
                   <p className='text-gray-400'>{plan.description}</p>;'
                 </div>;
                 <ul className='space-y-4 mb-8'>;'
@@ -676,7 +660,6 @@ href='/contact''
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
 <section className='py-24 bg-gray-900 relative overflow-hidden'>'
@@ -715,15 +698,12 @@ key={index}
 
             ))}
           </div>;
-        </div>;
       </section>;
             ))}
           </div>;
-        </div>;
       </section>;
               </Card>
             ))}
-      {/* CTA Section */}
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-["size":20px_20px] opacity-10' />;'
@@ -763,7 +743,6 @@ variant='outline';'
               Watch Demo
             </Button>
           </div>
-        </div>
       </section>
     </>
             <Button;
@@ -795,7 +774,6 @@ variant='outline';'
               Watch Demo;
             </Button>;
           </div>;
-        </div>;
       </section>;
 })}
     </>)}className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl';
@@ -804,7 +782,6 @@ variant='outline';'
               Watch Demo;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
 }
@@ -816,4 +793,3 @@ variant='outline';'
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

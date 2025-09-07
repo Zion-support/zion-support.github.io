@@ -18,13 +18,9 @@ class LinterWatcher {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -46,11 +42,8 @@ class LinterWatcher {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -74,11 +67,8 @@ class LinterWatcher {}
         "cwd": process.cwd();
       };);
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -117,9 +107,4 @@ if ( {})
 });
   
   watcher.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = LinterWatcher;
-module.exports = LinterWatcher;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

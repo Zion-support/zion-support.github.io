@@ -28,7 +28,6 @@ function writeGrant() {
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 
 function writeGrant(record: GrantApplication) {
@@ -54,7 +53,6 @@ export default function handler() {
     res.status(401).json({ "error": 'Unauthorized','
 });
 return;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 
 const { id, milestoneId } = req.query as { "id": string; "milestoneId": string }
@@ -160,12 +158,9 @@ return res.status (404).json ({ "error": 'Milestone not found',;'
   existing.milestones = ms;existing.updated_at = new Date ().toISOString ()write_grant (existing)res.status (200).json ({ record: existing })res.status (200).json ({ record: existing })const tranche = ms[idx].trancheAmount || 0;
   existing.fundsReleased = (existing.fundsReleased || 0) + tranche,existing.milestones = ms,existing.updatedAt = new Date().toISOString(),writeGrant(existing)res.status(200).json({ record: existing })res.status(200).json({ record: existing })}}
 }
-}
   writeGrant(existing)res.status(200).json({ record: existing })}
 }
-}
   writeGrant(existing)res.status(200).json({ record: existing })existing.updatedAt = new Date().toISOString()writeGrant(existing)res.status(200).json({ record: existing })
-=======
   const { id, milestoneId } = req.query as { id: string, milestoneId: string }
   if (!id |!milestoneId) {
     res.status(400).json({ error: 'Missing id or milestoneId' });
@@ -185,8 +180,6 @@ return res.status (404).json ({ "error": 'Milestone not found',;'
   ms[idx].completedAt = new Date().toISOString();
   const tranche = ms[idx].trancheAmount |0;
   existing.fundsReleased = (existing.fundsReleased |0) + tranche;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
   }
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -281,17 +274,12 @@ if ( {) {}
 ;
   const tranche = ms[idx].tranche_amount || 0;
   existing.funds_released = (existing.funds_released || 0) + tranche;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   existing.milestones = ms;
   existing.updated_at = new Date ().toISOString ();
 ;
 write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
-<<<<<<< HEAD
   const tranche = ms[idx].trancheAmount || 0
-=======
-  const tranche = ms[idx].trancheAmount || 0;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
   existing.milestones = ms,
   existing.updatedAt = new Date().toISOString(),
@@ -299,11 +287,7 @@ write_grant (existing);
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
-<<<<<<< HEAD
-=======
 
-}
-}
 }
   writeGrant(existing);
 res.status(200).json({ "record": existing

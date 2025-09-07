@@ -33,7 +33,6 @@ export interface RealMicroSaasService  {"id": string;"name": string;
     "email": string;
     "address": string;"website": string;
   }
-}
 export const "realMicroSaasServices": RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
   {"id": 'ai-legal-document-generator',"name": 'AI Legal Document Generator',"tagline": 'Generate legally compliant documents in seconds with AI',"price": '$89',"period": '/month',"description":;'
@@ -1102,19 +1101,10 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
-<<<<<<< HEAD
-=======
-    contactInfo: {,
-  mobile: '+1 302 464 0950',
-pr-12325
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-customer-service-automation','
@@ -1182,11 +1172,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-seo-optimizer-pro','
@@ -1254,11 +1241,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-video-editing-suite','
@@ -1331,11 +1315,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-data-analytics-platform','
@@ -1404,11 +1385,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-hr-recruitment-platform','
@@ -1483,11 +1461,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-sales-automation-platform','
@@ -1562,11 +1537,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-market-research-platform','
@@ -1639,11 +1611,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-blockchain-analytics','
@@ -1716,11 +1685,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-cloud-cost-optimizer','
@@ -1794,11 +1760,8 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai-database-performance-monitor','
@@ -2527,7 +2490,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-customer-service-automation''
@@ -2595,7 +2557,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-seo-optimizer-pro''
@@ -2663,7 +2624,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-video-editing-suite''
@@ -2736,7 +2696,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-data-analytics-platform''
@@ -2805,7 +2764,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-hr-recruitment-platform''
@@ -2880,7 +2838,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-sales-automation-platform''
@@ -2955,7 +2912,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-market-research-platform''
@@ -3028,7 +2984,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-blockchain-analytics''
@@ -3101,7 +3056,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-cloud-cost-optimizer''
@@ -3175,7 +3129,6 @@ pr-12325
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-database-performance-monitor''
@@ -4292,7 +4245,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-customer-service-automation';'
     }
     "name": 'AI Customer Service Automation';'
@@ -4358,7 +4310,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-seo-optimizer-pro';'
     }
     "name": 'AI SEO Optimizer Pro';'
@@ -4424,7 +4375,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-video-editing-suite';'
     }
     "name": 'AI Video Editing Suite';'
@@ -4495,7 +4445,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-data-analytics-platform';'
     }
     "name": 'AI Data Analytics Platform';'
@@ -4562,7 +4511,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-hr-recruitment-platform';'
     }
     "name": 'AI HR Recruitment Platform';'
@@ -4635,7 +4583,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-sales-automation-platform';'
     }
     "name": 'AI Sales Automation Platform';'
@@ -4708,7 +4655,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-market-research-platform';'
     }
     "name": 'AI Market Research Platform';'
@@ -4779,7 +4725,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-blockchain-analytics';'
     }
     "name": 'AI Blockchain Analytics Platform';'
@@ -4850,7 +4795,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-cloud-cost-optimizer';'
     }
     "name": 'AI Cloud Cost Optimizer';'
@@ -4922,7 +4866,6 @@ export const getServicesByCategory = ("category": string) => {return realMicroSa
       "address": '364 E Main St STE 1008 Middletown DE 19709';'
       "website": '"https"://ziontechgroup.com';'
     }
-  }
   {"id": 'ai-database-performance-monitor';'
     }
     "name": 'AI Database Performance Monitor';'
@@ -5712,7 +5655,6 @@ export const serviceCategories = [;
 "reviews": 14;
 }export const service_categories  = [;'Legal Technology','Customer Service & Support','Digital Marketing & SEO','Creative & Media','Data & Analytics','Human Resources','Sales & CRM','Market Research','Blockchain & Cryptocurrency','Cloud & DevOps','Database & Performance','Design & UI / UX','Design & UI / UX','Design & UI/UX','Development & DevOps','Business Intelligence','Quantum Computing','Cybersecurity','Metaverse & Virtual Reality','Web3 & DeFi','IoT & Edge Computing','Autonomous Vehicles & Robotics','Climate & Environmental','Biotechnology & Healthcare','Financial Technology','Education Technology','Enterprise IT';'
   'Enterprise IT';'
-  'Enterprise IT';'
 "compliance": ['GDPR'];'
 "color": 'from - purple - 600 to - pink - 600';'
 "popular": false;
@@ -5817,7 +5759,6 @@ export const serviceCategories = [
     "address": string,;
     "website": string;
   }
-}
 ;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';'
   'Enterprise IT';'
@@ -5858,7 +5799,6 @@ export interface RealMicroSaasService {;
     "address": string,;
     "website": string;
   }
-}
 ;
 export const "realMicroSaasServices": RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
@@ -6769,11 +6709,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - customer - service - automation','
@@ -6827,11 +6764,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - seo - optimizer - pro','
@@ -6891,11 +6825,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - video - editing - suite','
@@ -6959,11 +6890,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - data - analytics - platform','
@@ -7024,11 +6952,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - hr - recruitment - platform','
@@ -7095,11 +7020,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - sales - automation - platform','
@@ -7164,11 +7086,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - market - research - platform','
@@ -7233,11 +7152,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - blockchain - analytics','
@@ -7300,11 +7216,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - cloud - cost - optimizer','
@@ -7370,11 +7283,8 @@ export const serviceCategories = [;
       "address": '364 E Main St STE 1008 Middletown DE 19709','
       "website": '"https"://ziontechgroup && ziontechgroup.com''
     }
-=======
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
   {
     }
     "id": 'ai - database - performance - monitor','
@@ -7998,7 +7908,6 @@ export const serviceCategories = [;
     "address": string,
     "website": string
   }
-}
 export const "realMicroSaasServices": RealMicroSaasService[] = [
     "id": 'ai-legal-document-generator''
     "name": 'AI Legal Document Generator''
@@ -8065,7 +7974,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-customer-service-automation''
@@ -8133,7 +8041,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-seo-optimizer-pro''
@@ -8201,7 +8108,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-video-editing-suite''
@@ -8274,7 +8180,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-data-analytics-platform''
@@ -8343,7 +8248,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-hr-recruitment-platform''
@@ -8418,7 +8322,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-sales-automation-platform''
@@ -8493,7 +8396,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-market-research-platform''
@@ -8566,7 +8468,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-blockchain-analytics''
@@ -8639,7 +8540,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-cloud-cost-optimizer''
@@ -8713,7 +8613,6 @@ export const "realMicroSaasServices": RealMicroSaasService[] = [
       "address": '364 E Main St STE 1008 Middletown DE 19709''
       "website": '"https"://ziontechgroup.com''
     }
-  }
   {
     }
     "id": 'ai-database-performance-monitor''
@@ -9479,7 +9378,6 @@ export const serviceCategories = [
 "reviews": 14;
 }
 ;
-<<<<<<< HEAD
 export const service_categories = [;
   'Legal Technology','
   'Customer Service & Support','
@@ -9515,7 +9413,6 @@ export const service_categories = [;
   }
 }export interface RealMicroSaasService  {export interface RealMicroSaasService  {ursor/fix-website-loading-errors-and-merge-6662;
 ];
-];
 ;
   }
   "id": string,;
@@ -9550,17 +9447,13 @@ export const service_categories = [;
     "address": string,;
     "website": string;
   }
-}
 ;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export interface RealMicroSaasService {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -9576,18 +9469,10 @@ export interface RealMicroSaasService {;
 
 
 ];
-=======
-];
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 
 export interface RealMicroSaasService {;
 
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 6}
 ],
@@ -9600,17 +9485,6 @@ export const getServicesByPriceRange = (min: number, max: number) => {
     return price >= min && (max = $2;
 export const getPopularServices = $2;
 export const serviceCategories = $2;
-=======
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export interface RealMicroSaasService {;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

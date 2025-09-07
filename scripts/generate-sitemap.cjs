@@ -112,7 +112,6 @@ module.exports = {};
 
 
 
-<<<<<<< HEAD
 /**
  * Generate sitemap for the application
  */
@@ -162,8 +161,6 @@ class SitemapGenerator {
           priority: this.priority[route] || 0.5
         });
       }
-    }
-  }
 
   async scanPagesDirectory(dir, basePath) {
     const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -199,9 +196,6 @@ class SitemapGenerator {
             priority: 1.0
           });
         }
-      }
-    }
-  }
 
   addStaticPages() {
     const staticPages = [
@@ -223,8 +217,6 @@ class SitemapGenerator {
           priority: page.priority
         });
       }
-    }
-  }
 
   generateSitemap() {
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -254,53 +246,20 @@ class SitemapGenerator {
       fs.writeFileSync(sitemapPath, sitemap);
       
       console.log(`✅ Sitemap generated successfully: ${sitemapPath}`);
-=======
-<<<<<<< HEAD
-  async generateSitemap() {
-    console.log('🗺️ Generating sitemap...');
-    try {
-      // Add main pages
-      this.addPage('/', '2025-01-01', '1.0');
-      this.addPage('/about', '2025-01-01', '0.8');
-      this.addPage('/services', '2025-01-01', '0.9');
-      this.addPage('/contact', '2025-01-01', '0.7');
-      this.addPage('/portfolio', '2025-01-01', '0.8');
-      this.addPage('/blog', '2025-01-01', '0.6');
-      
-      // Generate XML
-      const xml = this.generateXML();
-      
-      // Ensure public directory exists
-      const publicDir = path.dirname(this.outputFile);
-      if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
-      }
-      
-      // Write sitemap
-      fs.writeFileSync(this.outputFile, xml);
-      console.log(`✅ Sitemap generated: ${this.outputFile}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       console.log(`📊 Total pages: ${this.pages.length}`);
       
       return {
         success: true,
         pages: this.pages.length,
-<<<<<<< HEAD
         path: sitemapPath
-=======
-        outputFile: this.outputFile,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       };
     } catch (error) {
       console.error('❌ Error generating sitemap:', error.message);
       return {
         success: false,
-<<<<<<< HEAD
         error: error.message
       };
     }
-  }
-}
 
 // Run the sitemap generator
 if (require.main === module) {
@@ -318,44 +277,3 @@ console.log('✅ Sitemap generation completed');
 module.exports = {};
 
 module.exports = SitemapGenerator;
-=======
-        error: error.message,
-      };
-    }
-  }
-
-  addPage(url, lastmod, priority) {
-    this.pages.push({
-      url: `${this.baseUrl}${url}`,
-      lastmod,
-      priority,
-    });
-  }
-
-  generateXML() {
-    const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-    const footer = `</urlset>`;
-    
-    const urlEntries = this.pages
-      .map(
-        page => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <priority>${page.priority}</priority>
-  </url>`
-      )
-      .join('\n');
-    
-    return `${header}\n${urlEntries}\n${footer}`;
-  }
-}
-
-// Run if called directly
-if (require.main === module) {
-  const generator = new SitemapGenerator();
-  generator.generateSitemap().catch(console.error);
-}
-
-module.exports = SitemapGenerator;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

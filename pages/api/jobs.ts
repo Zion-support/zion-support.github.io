@@ -17,7 +17,6 @@ export default async function handler() {
 return;
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
-    }
     const nowIso = new Date().toISOString();
     const job: Job = {
 
@@ -44,7 +43,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             s && s.includes("rag"),
 
         )
-      )
         job && job.category = "LLM App";
       else if (
         skills && skills.some(
@@ -55,7 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             s && s.includes("terraform"),
 
         )
-      )
         job && job.category = "Cloud";
       else job && job.category = "General";
 
@@ -119,7 +116,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             s.includes("langchain") ||"
             s.includes("rag"),"
         )
-      )
         job.category = "LLM App";"
       else if (
         skills && skills.some(
@@ -128,7 +124,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             s.includes("kubernetes") ||"
             s.includes("terraform"),"
         )
-      )
         job.category = "Cloud";"
       else job.category = "General";"
     }
@@ -137,7 +132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
-<<<<<<< HEAD:pages_backup/api/jobs.ts
+:pages_backup/api/jobs.ts
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -165,7 +160,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 
 
 
@@ -174,10 +168,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/api/jobs.ts
+:pages_backup/api/jobs.ts
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
-}
 }
 
 
@@ -197,7 +190,6 @@ return;
   res.status(405).end("Method Not Allowed");"
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -208,5 +200,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

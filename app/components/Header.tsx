@@ -3,11 +3,9 @@
 import React, { useState } from 'react';'
 import Link from 'next/link';'
 
-=======
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export default function Header() {
 
   }
@@ -92,7 +90,6 @@ onClick={toggleMenu}
               </svg>
             </button>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -137,17 +134,11 @@ href="/contact""
                   Get Started
                 </Link>
               </div>
-            </div>
-          </div>
         )}
-<<<<<<< HEAD
       </div>
     </header>
   );
 }
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -177,12 +168,6 @@ export default function Header() {
             </Link>
           </nav>
         </div>
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      </div>
     </header>
   );
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

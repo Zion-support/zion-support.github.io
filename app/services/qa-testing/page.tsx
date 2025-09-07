@@ -62,7 +62,6 @@ return (;
             Contact Sales
           </button>
         </div>
-      </div>
 
       <div className="text-center">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">"
@@ -78,10 +77,5 @@ href="/contact""
           Get Started Today
         </a>
       </div>
-    </div>
-<<<<<<< HEAD
   )
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

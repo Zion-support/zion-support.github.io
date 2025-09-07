@@ -31,7 +31,6 @@ const runCommand = (command, description) => {}
     log(`"Failed": ${description} - ${error.message}`);
     return { "success": false, "error": error.message };
   };
-};
 
 const main = async () => {}
   log('Starting CI/CD Automation Process');
@@ -73,7 +72,6 @@ const main = async () => {}
         runCommand('git add .', 'Staging changes');
         runCommand('git commit -m "Auto-"fix": CI/CD automation fixes"', 'Committing fixes');
       };
-    };
   } catch (error) {}
     log(`Git status check "failed": ${error.message}`);
   };
@@ -98,9 +96,4 @@ main().catch(error => {})
   log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

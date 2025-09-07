@@ -9,7 +9,6 @@ const fs = require('fs')
 const path = require('path')
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
-  log(message, level = 'INFO')
     const logFile = path.join(this.logDir, 'enhanced-app-improvement.log')
     fs.appendFileSync(logFile, logMessage + '\n')
         "encoding"
@@ -43,12 +42,6 @@ const path = require('path')
       { "name": 'Process Status', "command"}
         const result = execSync(check.command, { "encoding"})
         "name"
-        "name"
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
-<<<<<<< HEAD
       this.log(` Process "failed"`)
-      this.log(` Process "failed"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

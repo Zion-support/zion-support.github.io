@@ -420,16 +420,12 @@ export const "advancedCybersecurityServices2025": AdvancedCybersecurityService[]
       },"realImplementation": true,"implementationDetails":;
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',"launchDate": '2024-09-25',"customers": 43,"rating": 4.7,"reviews": 21;'
       "reviews": 21;
-      "reviews": 21;
     },"id": 'iot - security - platform',"name": 'IoT Security Platform',"tagline": 'Secure your IoT ecosystem with comprehensive protection',"price": '$199',"period": '/month',"description":;'
         'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',"features": [;'IoT device authentication and management','Network traffic monitoring and analysis','Threat detection and response','Device vulnerability assessment','Secure firmware updates','Data encryption and protection','Compliance monitoring and reporting','Real - time security alerts','Integration with IoT platforms','Mobile security management';'
         'Mobile security management';'
-        'Mobile security management';'
       ],"popular": true,"icon": '📱','IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',"trial_days": 14,"setup_time": '1 - 2 weeks',"category": 'IoT Security & Protection','Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';'
         'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';'
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';'
       ],"roi": 'IoT companies report 300% ROI through improved security and reduced breach risks.',"competitors": ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup && ziontechgroup.com';'
-        "website": '"https"://ziontechgroup && ziontechgroup.com';'
         "website": '"https"://ziontechgroup && ziontechgroup.com';'
       },"real_implementation": true,"implementation_details":;
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',"launch_date": '2024 - 09 - 25',"customers": 43,"rating": 4 && 4.7,"reviews": 21;'
@@ -877,7 +873,6 @@ export const "advancedCybersecurityServices2025": AdvancedCybersecurityService[]
 ];
   }
 ];
-];
 ;
 export interface AdvancedCybersecurityService {;
   }
@@ -1157,18 +1152,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.7,
     reviews: 21}
 ],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
-=======
   {;
   mobile: '+1 302 464 0950';,;
       email: 'kleber@ziontechgroup.com';,;
@@ -1558,25 +1546,10 @@ pr-12325
     customers: 43;,;
     rating: 4.7;,
   reviews: 21;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
 ];
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

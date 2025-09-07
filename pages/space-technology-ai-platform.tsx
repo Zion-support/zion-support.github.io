@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -106,7 +105,6 @@ export default function SpaceTechnologyAIPlatform() {
                   <Users className="w-5 h-5 text-blue-400" />
                   <span>120+ customers</span>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -154,7 +152,6 @@ export default function SpaceTechnologyAIPlatform() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Market Position Section */}
@@ -199,7 +196,6 @@ export default function SpaceTechnologyAIPlatform() {
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     <span className="text-green-300 font-semibold">Our Advantage: AI integration, comprehensive platform, affordable pricing</span>
                   </div>
-                </div>
               </motion.div>
 
               <motion.div
@@ -227,10 +223,8 @@ export default function SpaceTechnologyAIPlatform() {
                     <div className="text-3xl font-bold text-yellow-400 mb-2">24</div>
                     <div className="text-yellow-300 text-sm">Months to ROI</div>
                   </div>
-                </div>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Use Cases Section */}
@@ -276,7 +270,6 @@ export default function SpaceTechnologyAIPlatform() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -333,8 +326,6 @@ export default function SpaceTechnologyAIPlatform() {
                     <MapPin className="w-6 h-6 text-purple-400 mx-auto mb-2" />
                     <p className="text-white font-medium">{contactInfo.address}</p>
                   </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -343,26 +334,3 @@ export default function SpaceTechnologyAIPlatform() {
   )
 }
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function spacetechnologyaiplatform() {
-  return (
-    <Layout>
-      <Head>
-        <title>Space Technology Ai Platform - Zion Tech Group</title>
-        <meta name="description" content="Space Technology Ai Platform solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Space Technology Ai Platform</h1>
-          <p className="text-lg text-gray-600">
-            Professional space technology ai platform solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

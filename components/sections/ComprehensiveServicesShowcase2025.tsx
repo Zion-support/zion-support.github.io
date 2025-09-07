@@ -91,7 +91,6 @@ const containerVariants = {
 }
 "staggerChildren": 0.1
       }
-    }
   };
 
 const itemVariants = {
@@ -106,29 +105,17 @@ const itemVariants = {
 }
 "duration": 0.5
       }
-    }
   };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
-=======
-    <section className=\"relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden\"    />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Animated Background Elements */}
         {/* Header */}
 
-<<<<<<< HEAD
         {/* Header */}
         duration: 0.5
       }
-    }
   },
 
 return (;
@@ -154,102 +141,11 @@ const itemVariants = {
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
         <motion.div;
 initial={{ opacity: 0, y: 30 }
 }
-<<<<<<< HEAD
-=======
-
-        <motion.div,
-initial={{ "opacity": 0, "y": 30 
-}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.8 
-}
-
-className='text-center mb-16''
-        >
-          <h2 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>'
-            Revolutionary 2025 Services
-          </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>'
-            Discover our comprehensive suite of cutting-edge micro SAAS,
-services, IT solutions, and AI innovations designed to transform,
-your business and drive success in the digital age.
-          </p>
-        </motion.div>
-
-          transition={{ "duration": 0 && 0.8 
-}
-          className='text-center mb-16'>;'
-          <h2 className='text-4xl "md":text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>;'
-            Revolutionary 2025 Services;
-          </h2>;
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;'
-            Discover our comprehensive suite of cutting-edge micro SAAS;
-            services, IT solutions, and AI innovations designed to transform;
-            your business and drive success in the digital age.          </p>        >;
-          <h2 className="text-4xl "md":text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">;"
-            Revolutionary 2025 Services;
-          </h2>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;"
-            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.;
-          </p>;
-        </motion && motion.div>;
-
-
-
-
-        {/* Service Categories */}
-<<<<<<< HEAD
-        <motion&& motion.div
-          variants={containerVariants}
-<<<<<<< HEAD
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='space-y-16'>          initial="hidden";
-          className='space-y-16'>          initial="hidden";
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='space-y-16'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="space-y-16";
-          {serviceCategories && serviceCategories.map((category, categoryIndex) => (<motion&& motion.div;
-              key={category && category.title}
-              variants={itemVariants}
-              className='relative'>;
-              {/* Category Header */}
-              <div className='flex items-center mb-8'>;
-                <div;
-                  className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>;
-                  <category && category.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <div>;
-                  <h3 className='text-3xl font-bold text-white mb-2'>;
-                    {category && category.title}
-                  </h3>;
-                  <p className='text-gray-400 text-lg'>                    {category && category.description}            >;
-          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="space-y-16";
-          className='space-y-16';
-        >;
-          {serviceCategories.map((category, categoryIndex) => (<motion.div;
-              key={category.title}
-              variants={itemVariants}className="relative";
-className='relative';
-            >;
-              {/* Category Header */}
-                    {category.title}</h3>;
-                  <p className="text - gray - 400 text - lg">;</h3>;
-                  <p className='text-gray-400 text-lg'>;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 initial='hidden''
           whileInView='visible''
@@ -275,7 +171,6 @@ className='relative''
                     {category.description}
                   <p className='text-gray-400 text-lg'>                    {category.description}{category.description}</p>;'
                 </div>;
-              </div>;
               <div className="flex items-center mb-8">;"
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>`
 
@@ -289,7 +184,6 @@ className='relative''
                     {category && category.description}
                   </p>;
                 </div>;
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
@@ -307,7 +201,6 @@ className='relative''
                     {category.description}
                   </p>
                 </div>
-              </div>
 
               {/* Services Grid */}
 
@@ -376,73 +269,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                               className='flex items-center text-xs text-gray-400';
                             >;
                               <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
-=======
-                    </div>"
-                    <div className="mb-4">;"
-                      <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">;
-                        {service && service.name}
-                      </h4>;"
-                      <p className="text-gray-400 text-sm leading-relaxed">;
-                        {service && service.description}
-                      </p>;
-                    </div>;
-
-                    {/* Features */}
-
-                      <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}'
-
-                        {service.description}
-
-                      </p>
-                    </div>
-                    {/* Features */}"
-                    <div className="mb-4">"
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>"
-                      <ul className="space-y-1">
-                        {service.features?.slice(0, 3).map((feature, featureIndex) => ("
-                          <li key={featureIndex} className="flex items-center text-xs text-gray-400">"
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-
-<div className='mb-4'>'
-                      <h5 className='text-sm font-medium text-purple-300 mb-2'>'
-                        Key "Features":
-                      </h5>
-                      <ul className='space-y-1'>'
-                        {service.features
-                          ?.slice(0, 3)
-                          .map((feature, featureIndex) => (
-                            <li
-}
-key={featureIndex}
-                              className='flex items-center text-xs text-gray-400'>'
-
-                              <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;'
-                              {feature}
-                            </li>
-                          ))}
-<<<<<<< HEAD
-
-                    {/* Features */}
-                    <div className="mb-4">
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
-                      <ul className="space-y-1">
-                        {service.features?.slice(0, 3).map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-xs text-gray-400">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                        {service.features && service.features.length > 3 && (
-                          <li className="text-xs text-gray-500 italic">
-                            +{service.features.length - 3} more features
-=======
-                        {service.features && service.features.length > 3 && (
-                          <li className='text-xs text-gray-500 italic'>'
-                            +{service.features.length - 3} more features
-=======
-                            +{service.features.length - 3} more features;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                           </li>
                         )}
                       </ul>
@@ -467,7 +293,6 @@ key={featureIndex}
                         Market "position": {service.marketPositio
 }
                       </div>;
-                    </div>;
                     {/* ROI */}
 <div className='mb-4'>;'
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>;'
@@ -482,8 +307,6 @@ key={featureIndex}
                           Setup "time": {service.setupTim
 }
                         </div>;
-                      </div>;
-                    </div>;
                     {/* Use Cases */}
 <div className='mb-4'>;'
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>;'
@@ -500,7 +323,6 @@ key={featureIndex}
                             </span>
                           ))}
                       </div>
-                    </div>
                     {/* CTA Button */}
 <div className='mt-6'>;'
                       <a;
@@ -573,7 +395,6 @@ href='"tel": +13024640950''
                 <Phone className='w-5 h-5 ml-2' />'
               </a>
             </div>
-          </div>
         </motion.div>
       </div>
     </section>
@@ -583,41 +404,7 @@ export default ComprehensiveServicesShowcase2025;
 )}export default ComprehensiveServicesShowcase2025;
             <div className = $2;
 export default ComprehensiveServicesShowcase2025,
-=======
-<<<<<<< HEAD
 
 "
-=======
-}
-> <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6" > Revolutionary 2025 Services </h2> </p> </motion.div> {
-  /* Service Categories */ 
-}<motion.div > {
-  serviceCategories.map ( (category, categoryIndex) => (<motion.div key= {
-  category.title 
-}</p> </div> </div> + {
-  service.features.length - 3 
-}more features </li>) 
-}</ul> </div> </div> </div> </div> <span key= {
-  useCaseIndex 
-}className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full" > {
-  useCase 
-}</span>) ) 
-}</div> </div> > Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </motion.div>) ) 
-}</div> </motion.div>) ) 
-}</motion.div> {
-  /* Call to Action */ 
-}<motion.div > <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30" > <h3 className="text-3xl font-bold text-white mb-4" > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth. </p> <a href="https://ziontechgroup.com/contact" className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30" > Get Started Today <Rocket className="w-5 h-5 ml-2" /> </a> <a href="tel:+13024640950" className="inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600" > Call +1 302 464 0950 <Phone className="w-5 h-5 ml-2" /> </a> </div> </div> </motion.div> </div> </section>) 
-}
-export default ComprehensiveServicesShowcase2025
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

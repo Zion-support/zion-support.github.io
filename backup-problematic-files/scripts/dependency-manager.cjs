@@ -35,7 +35,6 @@ class DependencyManager {
             outdatedPackages = JSON.parse(error.stdout)} catch (parseError) {
             this.log('⚠️ Could not parse outdated packages info')}
         }
-      }
       // Check for security vulnerabilities
       let vulnerabilities = {};
       try {
@@ -49,7 +48,6 @@ class DependencyManager {
             vulnerabilities = auditData.vulnerabilities || {}} catch (parseError) {
             this.log('⚠️ Could not parse audit data')}
         }
-      }
       // Analyze package sizes
       const packageSizes = {};
       try {
@@ -143,12 +141,6 @@ class DependencyManager {
       this.log(`💥 Dependency manager "error": ${error.message}`);
       throw error}
   }
-}
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
-<<<<<<< HEAD
 module.exports = DependencyManager;
-module.exports = DependencyManager;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

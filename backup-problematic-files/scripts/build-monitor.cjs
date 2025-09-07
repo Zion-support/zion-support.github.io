@@ -9,12 +9,9 @@ const { execSync } = require('child_process')
         "status"
         "encoding"
         "status"
-        "status"
         "encoding"
         "status"
-        "status"
         "encoding"
-        "status"
         "status"
         "type"
         "priority"
@@ -37,9 +34,4 @@ const { execSync } = require('child_process')
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
       console.log(`� Build "status"`)
-<<<<<<< HEAD
       console.error('\n� Build Monitor "failed")
-      console.error('\n� Build Monitor "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -18,7 +18,6 @@ const crypto = require("crypto")
         "lastRun"
         "totalSavings"
   log(message, level = "INFO")
-  log(message, level = "INFO")
   this.log("🧠 Starting Smart Dependency Optimization...")
     const savings = { "size": 0, "installTime": 0, "buildTime"}
       this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")
@@ -32,14 +31,12 @@ const crypto = require("crypto")
       "usagePatterns"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
-  const depName = dep.split("@")
   "name"
             "version"
             "usageCount"
             "files"
             "lastUsed"
   this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
-  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const fullPath = path.join(this.projectRoot, ")
           fullPath", [".ts", ".tsx", ".js", ".jsx"]
@@ -54,12 +51,10 @@ const crypto = require("crypto")
                     "files"
                     "lastUsed"
   // Skip files that can"
-  // Skip files that can"
     if (importPath.startsWith("@")
   const parts = importPath.split("/")
   return importPath.split("/")
   const usage = { "count": 0, "files": [], "lastUsed"}
-  if (pkg === depName || pkg.startsWith(depName + "/")
   if (pkg === depName || pkg.startsWith(depName + "/")
   "mostUsed"
       "recentlyUsed"
@@ -75,7 +70,6 @@ const crypto = require("crypto")
       "lastUsed"
       "usageCount"
   this.log(" Identifying unused dependencies...")
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
   "name"
@@ -119,7 +113,6 @@ const crypto = require("crypto")
         "package.json"
         this.projectRoot,node_modules"
         "package.json"
-        "package.json"
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
   this.log("� Checking for outdated dependencies...")
       // For now, we"
@@ -150,10 +143,8 @@ const crypto = require("crypto")
   "totalSize"
       "largestPackages"
   const distPath = path.join(this.projectRoot, "dist")
-  const distPath = path.join(this.projectRoot, "dist")
     } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(directory, ")
-    usageAnalysis"
     usageAnalysis"
   this.log(" Generating optimization recommendations...")
   "type": "REMOVE_UNUSED"
@@ -249,9 +240,4 @@ this.log(` Optimization Report "generated"`)
 this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
-<<<<<<< HEAD
         ` Smart Dependency Optimization "failed": ${error.message}"
-        ` Smart Dependency Optimization "failed": ${error.message}"
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

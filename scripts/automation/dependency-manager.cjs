@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;"
 /**;
@@ -13,11 +9,7 @@
  */;"
 const fs = require("fs");
 const path = require("path");
-<<<<<<< HEAD
 
-=======
-const { execSync, spawn } = require("child_process");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const { execSync, spawn } = require("child_process");"
 class $1 {}
   constructor() {}
@@ -35,7 +27,6 @@ class $1 {}
   fs.mkdirSync(logsDir, { "recursive": true })};"
     if (!fs.existsSync(this.reportsDir)) {}"
   fs.mkdirSync(this.reportsDir, { "recursive": true })};"
-<<<<<<< HEAD
   };
 ;"
   log(message, level = "INFO") {}
@@ -46,8 +37,6 @@ class $1 {}
 ;
     if (!fs.existsSync(this.reportsDir)) {}
   fs.mkdirSync(this.reportsDir, { "recursive": true })};
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   };
 ;"
   log(message, level = "INFO") {}
@@ -100,20 +89,8 @@ const report = await this.generateDependencyReport(;);
       // 3. Clean corrupted dependencies;
       // 4. Reinstall dependencies if needed;
       // 5. Update outdated dependencies;
-<<<<<<< HEAD
 
       // 6. Generate dependency report;
-=======
-      const updateActions = await this.updateDependencies();
-      actions.push(...updateActions);
-
-      // 6. Generate dependency report;
-const report = await this.generateDependencyReport(;);
-        status,
-        actions,
-        errors;
-      );
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       // 7. Commit changes if successful;
 
@@ -148,27 +125,7 @@ const report = await this.generateDependencyReport(;);
                   "current": version})};"
           if (packageJson.devDependencies) {}"
               packageJson.devDependencies;
-<<<<<<< HEAD
   
-=======
-            )) {}
-  if (typeof version !== "string" || version.trim() === "") {}
-  status.packageJsonIssues.push({})
-  "type": "INVALID_DEV_VERSION",
-                  "dependency": dep,
-                  "current": version})};
-            };
-          };
-        } catch (error) {}
-  status.packageJsonIssues.push({})
-  "type": "PARSE_ERROR",
-            "error": error.message})};
-      };
-;
-      // Check node_modules;
-      const nodeModulesPath = path.join(this.projectRoot, "node_modules");
-      if (fs.existsSync(nodeModulesPath)) {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 } catch (error) {}
   status.packageJsonIssues.push({})
   "type": "PARSE_ERROR",
@@ -186,10 +143,7 @@ const report = await this.generateDependencyReport(;);
       // Check node_modules;"
   const corrupted = await this.findCorruptedPackages(nodeModulesPath);
         status.corruptedDeps = corrupted;
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         if (corrupted.length > 0) {}
   status.needsReinstall = true};
       } else {}
@@ -203,7 +157,6 @@ const report = await this.generateDependencyReport(;);
     return status};
   async findCorruptedPackages(nodeModulesPath) {}
   const corrupted = [];
-<<<<<<< HEAD
 
 
       for (const pkg of packages) {}
@@ -212,16 +165,6 @@ const report = await this.generateDependencyReport(;);
         const pkgPath = path.join(nodeModulesPath, "pkg);
         const pkgJsonPath = path.join(pkgPath", "package.json");
 
-=======
-    try {}
-  const packages = fs.readdirSync(nodeModulesPath);
-      for (const pkg of packages) {}
-  if (pkg.startsWith(".")) continue;
-      for (const pkg of packages) {}
-  if (pkg.startsWith(".")) continue;
-        const pkgPath = path.join(nodeModulesPath, "pkg);
-        const pkgJsonPath = path.join(pkgPath", "package.json");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   const packages = fs.readdirSync(nodeModulesPath);
       for (const pkg of packages) {}"
   if (pkg.startsWith(".")) continue;"
@@ -235,32 +178,8 @@ const report = await this.generateDependencyReport(;);
                 "issue": "Missing name or version",
                 "path": pkgPath})};"
           } catch {}
-<<<<<<< HEAD
 
 
-=======
-  corrupted.push({})
-  "name": pkg,
-              "issue": "Invalid package.json",
-              "path": pkgPath})};
-        } else {}
-  corrupted.push({})
-  "name": pkg,
-            "issue": "Missing package.json",
-            "path": pkgPath})};
-      };
-    } catch (error) {  this.log(`Error scanning "packages": ${error.message  }`, "WARN")};
-;
-    return corrupted};
-;
-  async checkOutdatedDependencies() {}
-  try {}
-const result = execSync("npm outdated --json", {});
-  "cwd": this.projectRoot,
-        "stdio": "pipe",
-        "encoding": "utf8",
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     return corrupted};
   async checkOutdatedDependencies() {}
   try {}
@@ -272,13 +191,7 @@ const result = execSync("npm outdated --json", {});
 
         "encoding": "utf8"}"
 });
-<<<<<<< HEAD
 
-=======
-      const outdated = JSON.parse(result);
-      return Object.entries(outdated).map((["name", "info"]) => ({})
-  name,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const outdated = JSON.parse(result);"
       return Object.entries(outdated).map((["name", "info"]) => ({})"
   name,"
@@ -287,17 +200,7 @@ const result = execSync("npm outdated --json", {});
         "latest": info.latest}))} catch (error) {}"
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {}
-<<<<<<< HEAD
   
-=======
-  try {}
-  const outdated = JSON.parse(error.stdout);
-          return Object.entries(outdated).map((["name", "info"]) => ({})
-  name,
-            "current": info.current,
-            "wanted": info.wanted,
-            "latest": info.latest}))} catch {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 } catch (error) {}
   const outdated = JSON.parse(error.stdout);"
 
@@ -308,14 +211,7 @@ const result = execSync("npm outdated --json", {});
   return []};
   async fixPackageJsonIssues(issues) {}
   const fixes = [];
-<<<<<<< HEAD
 
-=======
-    try {}
-  const packagePath = path.join(this.projectRoot, "package.json");
-      const packageContent = fs.readFileSync(packagePath, "utf8");
-      const packageJson = JSON.parse(packageContent);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       let modified = false;
       for (const issue of issues) {}
@@ -331,14 +227,7 @@ const result = execSync("npm outdated --json", {});
   // Set a reasonable default version;"
             deps[issue.dependency] = "^1.0.0";"
             modified = true;
-<<<<<<< HEAD
 
-=======
-            fixes.push({})
-  "type": "PACKAGE_JSON_FIX",
-              "dependency": issue.dependency,"action": `Fixed invalid version for ${issue.dependency}`,`
-              "timestamp": new Date().toISOString(),
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       for (const issue of issues) {}
   if (;)
           issue.type === "INVALID_VERSION" ||;
@@ -348,24 +237,17 @@ const result = execSync("npm outdated --json", {});
             issue.type === "INVALID_VERSION";
               ? packageJson.dependencies;
               : packageJson.devDependencies;
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
           if (deps && deps[issue.dependency]) {}
   // Set a reasonable default version;
             deps[issue.dependency] = "^1.0.0";
             modified = true;
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             fixes.push({})
   "type": "PACKAGE_JSON_FIX",
               "dependency": issue.dependency,"action": `Fixed invalid version for ${issue.dependency}`,`
               "timestamp": new Date().toISOString()})};
         };
-      };
 ;
       if (modified) {}
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
@@ -376,28 +258,15 @@ const result = execSync("npm outdated --json", {});
 
   // Set a reasonable default version;"
 
-<<<<<<< HEAD
 
     return fixes};
   async cleanCorruptedDependencies() {}
 
-=======
-    return fixes};
-  async cleanCorruptedDependencies() {}
-  const actions = [];
-    try {}
-  this.log("Cleaning corrupted dependencies...");
-      const nodeModulesPath = path.join(this.projectRoot, "node_modules");
-      const packageLockPath = path.join(this.projectRoot, "package-lock.json");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if (fs.existsSync(nodeModulesPath)) {}
   fs.rmSync(nodeModulesPath, { "recursive": true, "force": true }
 });
         this.log("Removed corrupted node_modules");
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         actions.push({})
   "type": "CLEANUP",
           "action": "Removed corrupted node_modules directory",
@@ -427,18 +296,7 @@ const result = execSync("npm outdated --json", {});
 
     return actions};
   async reinstallDependencies() {}
-<<<<<<< HEAD
 
-=======
-  const actions = [];
-    try {}
-  this.log("Reinstalling dependencies...");
-      // Run npm install;
-      execSync("npm install", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe"}
-});
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.log("Dependencies reinstalled successfully");
       actions.push({})
   "type": "REINSTALL",
@@ -459,11 +317,7 @@ const result = execSync("npm outdated --json", {});
       throw error};
   async updateDependencies() {}
   // Check for outdated dependencies;
-<<<<<<< HEAD
 
-=======
-      const outdated = await this.checkOutdatedDependencies();
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {}
@@ -476,10 +330,7 @@ const result = execSync("npm outdated --json", {});
   "type": "UPDATE",
                 "dependency": dep.name,"action": `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,`
                 "timestamp": new Date().toISOString(),
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {}
   try {}
@@ -487,17 +338,13 @@ const result = execSync("npm outdated --json", {});
   "cwd": this.projectRoot,
                 "stdio": "pipe"}
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               actions.push({})
   "type": "UPDATE",
                 "dependency": dep.name,"action": `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,`
                 "timestamp": new Date().toISOString()})};
           } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, "WARN")};
         };
-      };
     } catch (error) {  this.log(`Failed to update "dependencies": ${error.message  }`, "WARN")};
 ;
     return actions};
@@ -529,14 +376,12 @@ const result = execSync("npm outdated --json", {});
       "errors": errors};
 const reportFile = path.join(;);
       this.reportsDir,dependency-report-${Date.now()}.json`;`
-<<<<<<< HEAD
 
 const reportFile = path.join(;);
       this.reportsDir,dependency-report-${Date.now()}.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`Dependency report "generated": ${reportFile}");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const reportFile = path.join(;)"
       this.reportsDir,dependency-report-${Date.now()}.json";"
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"`;
@@ -549,11 +394,7 @@ this.log(`Dependency report "generated": ${reportFile}");"
 // Main execution;
 async function $1() {}
   const manager = new DependencyManager();
-<<<<<<< HEAD
 
-=======
-  try {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   const result = await manager.runDependencyManagement();
     if (result.errors.length === 0 && result.actions.length > 0) {}
   process.exit(0); // Success} else if (result.errors.length > 0) {}
@@ -562,41 +403,8 @@ async function $1() {}
     process.exit(1)};
 if (require.main === module) {}
   main()};
-<<<<<<< HEAD
 module.exports = DependencyManager;
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-module.exports = DependencyManager;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = DependencyManager;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = DependencyManager;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = DependencyManager;
 
 module.exports = DependencyManager;
-<<<<<<< HEAD
-module.exports = DependencyManager;
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -33,7 +33,6 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 });
   ensureStorage();
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
-<<<<<<< HEAD
 
 const siteUrl = process.env.SITE_URL |'"http"://"localhost":3000';'
 

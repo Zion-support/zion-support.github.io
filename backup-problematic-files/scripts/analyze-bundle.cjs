@@ -1,9 +1,6 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -16,21 +13,13 @@ async function analyzeBundle() {}
     // Run bundle analysis;
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
 };
 analyzeBundle();
-<<<<<<< HEAD
     
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
 };
 analyzeBundle();
       
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

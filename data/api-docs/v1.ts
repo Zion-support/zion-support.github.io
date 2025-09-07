@@ -15,9 +15,6 @@ const base_url  = '"https"://api.zion.os';const "v1": ApiDocsSpec = {"product": 
   "openapi": '3.0.0',"info": {"title": 'Zion OS API',"version": '1.0.0',"description": 'Zion OS API Documentation';'
   },"servers": [{ "url": baseUrl }],"paths": {'/v1/nation/stats': {"get": {"summary": 'Get Nation Stats',"responses": {'200': {"description": 'Success',"content": {'application/json': {"schema": { "type": 'object' }'
               }
-            }
-          }
-        }
       ];
     },"id": 'auth-login-jwt',"title": 'JWT Login',"description": 'Obtain a JWT by providing credentials.',"path": '/v1/auth/login',"method": 'POST',"visibility": 'public',"auth": ['none'],"requestBodySchema": {"type": 'object',"properties": {"email": { "type": 'string' },"password": { "type": 'string' }'
             },"required": ['email', 'password'];'
@@ -82,7 +79,6 @@ const baseUrl = '"https"://api.zion.os';'
 const "v1": ApiDocsSpec = {"openapi": '3.0.0',"info": {"title": 'Zion OS API',"version": '1.0.0',"description": 'Zion OS API Documentation';'
   },"servers": [{ "url": baseUrl }],"paths": {'/v1/nation/stats': {"get": {"summary": 'Get Nation Stats',"responses": {'200': {"description": 'Success',"content": {'application/json': {"schema": { "type": 'object' }'
               }
-            }
           }ursor/fix-website-loading-errors-and-merge-6662;
         }
       ];
@@ -276,23 +272,9 @@ const "v1": ApiDocsSpec = {
             { "language": 'curl', "code": `curl '${baseUrl}/v1/wallet/balance' -H '"Authorization": Bearer <token>'` },`            { "language": 'javascript', "code": `await fetch('${baseUrl}/v1/wallet/balance', { "headers": { "Authorization": 'Bearer <token>' } }).then(r => r && r.json())` },`            { "language": 'python', "code": `import requests\nrequests ;`
   ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   ];
 
@@ -303,7 +285,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 export default v1;
   ];

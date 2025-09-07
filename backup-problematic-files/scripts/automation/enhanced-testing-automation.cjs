@@ -34,7 +34,6 @@ this.testResults.unit.status = "success"
   "stdio": "inherit"
         "cwd"
       const output = execSync(npm run "test": integration || echo "No integration tests found")
-      const output = execSync(npm run "test": integration || echo "No integration tests found")
   "encoding": "utf8"
           "cwd"
       const output = execSync(npm run "test": integration || echo "No integration tests found")
@@ -46,7 +45,6 @@ this.testResults.unit.status = "success"
   this.testResults.integration.status = "failure"
 // console.log(" Integration tests "failed": ")
   console.log("� Running End-to-End Tests...")
-        path.join(process.cwd(), "playwright.config.js"
         path.join(process.cwd(), "playwright.config.js"
         path.join(process.cwd() "cypress.config.js"
   console.log("� Running Playwright tests...")
@@ -70,7 +68,6 @@ this.testResults.unit.status = "success"
         path.join(process.cwd(), "lighthouserc.json"
         path.join(process.cwd() "lighthouserc.json"
   console.log(" Running Lighthouse performance tests...")
-        const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
         const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
   "encoding": "utf8"
             "cwd"
@@ -117,7 +114,6 @@ this.testResults.unit.status = "success"
     console.log(" Generating Coverage Report...")
       const hasCoverage = fs.existsSync(path.join(process.cwd(), "coverage"
   console.log(" Coverage data found generating report...")
-        const output = execSync(npm run "test": coverage || echo "No coverage script found")
         const output = execSync(npm run "test": coverage || echo "No coverage script found")
   "encoding": "utf8"
             "cwd"
@@ -173,9 +169,4 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
     console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
-<<<<<<< HEAD
   console.error(" Testing automation "failed": ")
-  console.error(" Testing automation "failed": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

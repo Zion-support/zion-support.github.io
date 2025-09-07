@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -18,7 +14,6 @@ const logFile = path.join(this.logsDir, "targeted-merge.log");
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log(" Starting Targeted Merge Conflict Resolver...")
   // Step "1": Ensure we"
-      // Step "3"
       // Step "3"
       // Step "4"
       await this.finalizeMerges()} catch (error) {  this.log(` Fatal "error": ${error.message  }`, "ERROR"`)
@@ -93,10 +88,8 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "ERROR"
     // "Strategy"
       /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
     if (fileExt === ".json")
   resolvedContent = this.cleanupJson(resolvedContent)} else if ([".js", ".jsx", ".ts", ".tsx")]
-      fixed = fixed.replace(/,(\s*[}\]])/g, "$1"
       fixed = fixed.replace(/,(\s*[}\]])/g, "$1"
 const lines = content.split("\n");
         trimmedLine.startsWith("import ")

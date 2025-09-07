@@ -138,7 +138,6 @@ export default function Pricing() {
                 our core services with the option to add additional features.
               </p>
             </div>
-          </div>
         </section>
 
         {/* Pricing Plans */}
@@ -174,7 +173,6 @@ export default function Pricing() {
                       </span>
                       <span className="text-gray-600 ml-2">{plan.period}</span>
                     </div>
-                  </div>
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -198,7 +196,6 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Add-ons Section */}
@@ -233,7 +230,6 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Features Comparison */}
@@ -286,8 +282,6 @@ export default function Pricing() {
                   Dedicated support from our team of technology experts.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -315,7 +309,6 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -342,24 +335,12 @@ export default function Pricing() {
                 View Our Services
               </Link>
             </div>
-          </div>
         </section>
       </main>
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -413,7 +394,6 @@ export default function Pricing() {const plans = [;
                 our core services with the option to add additional features.;
               </p>;
             </div>;
-          </div>;
         </section>;
         {/* Pricing Plans */}
         <section className="py-20">;
@@ -443,7 +423,6 @@ export default function Pricing() {const plans = [;
                       </span>;
                       <span className="text-gray-600 ml-2">{plan.period}</span>;
                     </div>;
-                  </div>;
                   <ul className="space-y-4 mb-8">;
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-start">;
                         <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
@@ -463,7 +442,6 @@ export default function Pricing() {const plans = [;
                 </div>;
               ))}
             </div>;
-          </div>;
         </section>;
         {/* Add-ons Section */}
         <section className="py-20 bg-gray-50">;
@@ -495,7 +473,6 @@ export default function Pricing() {const plans = [;
                 </div>;
               ))}
             </div>;
-          </div>;
         </section>;
         {/* Features Comparison */}
         <section className="py-20">;
@@ -544,8 +521,6 @@ export default function Pricing() {const plans = [;
                   Dedicated support from our team of technology experts.;
                 </p>;
               </div>;
-            </div>;
-          </div>;
         </section>;
         {/* FAQ Section */}
         <section className="py-20 bg-gray-50">;
@@ -570,7 +545,6 @@ export default function Pricing() {const plans = [;
                 </div>;
               ))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
@@ -596,18 +570,7 @@ export default function Pricing() {const plans = [;
                 View Our Services;
               </Link>;
             </div>;
-          </div>;
         </section>;
       </main>;
     </>;
   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

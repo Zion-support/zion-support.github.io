@@ -99,7 +99,6 @@ for (const filePath of filesToFix) {
         } catch (error) {
   this.log("Error fixing TypeScript errors in ${filePath  }: ${error.message}")}
       }
-    }
 ;
     return fixes}
 ;
@@ -137,7 +136,6 @@ for (const filePath of filesToFix) {
         } catch (error) {
   this.log("Error fixing JSX errors in ${filePath  }: ${error.message}")}
       }
-    }
 ;
     return fixes}
 ;
@@ -226,7 +224,6 @@ for (const filePath of filesToFix) {
         } catch (error) {
   this.log("Error fixing console statements in ${filePath  }: ${error.message}")}
       }
-    }
 ;
     return fixes}
 ;
@@ -712,7 +709,6 @@ class ComprehensiveErrorFixer {
       console.error('❌ Error during "fixing": ', error.message);
       throw error;
     }
-  }
   async fixTypeScriptErrors() {
     this.log('Fixing TypeScript errors...');
     try {
@@ -781,7 +777,6 @@ class ComprehensiveErrorFixer {
             if (fs.existsSync(fullPath)) {
               return `from '${importPath}${ext}'`}
           }
-        }
         return match});
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
@@ -847,7 +842,6 @@ class ComprehensiveErrorFixer {
           "reason": fixError.message
         })}
     }
-  }
   async fixTypeScriptError(error) {
     const filePath = path.resolve(error.file);
     if (!fs.existsSync(filePath)) {
@@ -896,10 +890,6 @@ class ComprehensiveErrorFixer {
               lines[lineIndex] = line.replace(moduleName, relativePath.replace(/\\/g, '/'));
               break}
           }
-        }
-      }
-    }
-  }
   async fixTypeError(error, lines) {
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
@@ -917,8 +907,6 @@ class ComprehensiveErrorFixer {
         if (line.includes(propName)) {
           lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`)}
       }
-    }
-  }
   async fixPropertyError(error, lines) {
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
@@ -930,8 +918,6 @@ class ComprehensiveErrorFixer {
         if (line.includes(propName)) {
           lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`)}
       }
-    }
-  }
   async fixFunctionError(error, lines) {
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
@@ -940,7 +926,6 @@ class ComprehensiveErrorFixer {
       if (line.includes('(') && line.includes(')')) {
         lines[lineIndex] = line.replace(/(\w+)\(/g, '$1?.(')}
     }
-  }
   async fixGeneralTypeScriptError(error, lines) {
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
@@ -952,7 +937,6 @@ class ComprehensiveErrorFixer {
       if (line.includes('=')) {
         lines[lineIndex] = line.replace(/(\w+)\s*=\s*(.+)/, '$"1": any = $2')}
     }
-  }
   async fixESLintErrors() {
     console.log('🔧 Fixing ESLint errors...');
     // Check if we have ESLint errors
@@ -981,7 +965,6 @@ class ComprehensiveErrorFixer {
         "count": eslintErrors.length
       });
     }
-  }
   async fixDependencyIssues() {
     this.log('Fixing dependency issues...');
     try {
@@ -1044,7 +1027,6 @@ class ComprehensiveErrorFixer {
         "count": this.errorReport.errors.security.length
       });
     }
-  }
   async fixBuildErrors() {
     this.log('Checking for build errors...');
     try {
@@ -1165,7 +1147,6 @@ module.exports = ComprehensiveErrorFixer;
       this.fixesFailed.forEach((fix, index) => {
         }] ${fix.error.file}: ${fix.reason}`)})}
   }
-}
 // Main execution
 async function main() {
   const fixer = new ComprehensiveErrorFixer();
@@ -1181,9 +1162,4 @@ async function main() {
 module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
-<<<<<<< HEAD
   main()}
-  main()}
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

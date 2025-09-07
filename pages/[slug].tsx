@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -124,13 +123,10 @@ function getExistingRootPageSlugs(): Set<string> {
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
 					slugs.add(base)
 				}
-			}
-		}
 		// Directories at root (folder routes)
 		if (entry.isDirectory()) {
 			slugs.add(entry.name)
 		}
-	}
 	return slugs
 }
 
@@ -158,7 +154,6 @@ export async function getStaticProps({ params }: { params: { slug: string} }) {
 	return {
 		props: { service }
 	}
-}
 
 export default function RootServiceDetailPage({ service }: { service: Service}) {
 	const canonical = $2;
@@ -238,7 +233,6 @@ export default function RootServiceDetailPage({ service }: { service: Service}) 
 								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
-							</div>
 							<div className="mt-6">
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
@@ -251,69 +245,6 @@ export default function RootServiceDetailPage({ service }: { service: Service}) 
 							</a>
 						</Card>
 					</div>
-				</div>
-			</div>
 		</UltraFuturisticBackground>
 	)
 }
-=======
-import React from 'react'
-import Head from 'next/head'
-import { GetStaticPaths, GetStaticProps } from 'next'
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
-import Button from '../components/ui/Button'
-interface Service {
-  id: string
-  name: string
-  description: string
-  slug: string
-}
-
-interface ServicePageProps {
-  service: Service
-}
-
-const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
-  return (
-    <UltraFuturisticBackground variant="quantum" intensity="high">
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-      </Head>
-      
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-6">{service.name}</h1>
-          <p className="text-xl mb-8">{service.description}</p>
-          <Button href="/contact" className="w-full">
-            Talk to Sales
-          </Button>
-        </div>
-      </div>
-    </UltraFuturisticBackground>
-  )
-}
-export const getStaticPaths: GetStaticPaths = async () => {
-  // Return empty paths for now - this can be populated with actual services
-  return {
-    paths: [],
-    fallback: false
-  }
-}
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string
-  // Mock service data - replace with actual data fetching
-  const service: Service = {
-    id: slug,
-    name: 'Service Name',
-    description: 'Service description',
-    slug: slug
-  }
-  return {
-    props: {
-      service
-    }
-  }
-}
-export default ServicePage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

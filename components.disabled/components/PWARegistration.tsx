@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
@@ -108,7 +106,6 @@ const PWARegistration: React.FC = () => {
                     Get quick access to our platform
                   </p>
                 </div>
-              </div>
               <button
                 onClick={handleDismiss}
                 className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -126,7 +123,6 @@ const PWARegistration: React.FC = () => {
                 <Monitor className="w-4 h-4 mr-1" />
                 <span>Desktop</span>
               </div>
-            </div>
 
             <div className="flex space-x-3">
               <button
@@ -142,7 +138,6 @@ const PWARegistration: React.FC = () => {
                 Not now
               </button>
             </div>
-          </div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -151,13 +146,5 @@ const PWARegistration: React.FC = () => {
 
 export default PWARegistration;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
 
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

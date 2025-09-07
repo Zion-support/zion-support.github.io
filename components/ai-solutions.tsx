@@ -177,7 +177,6 @@ key={index}
                   </div>
                 ))}
               </div>
-            </div>
 
 <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;
@@ -207,7 +206,6 @@ key={index}
                   </div>
                 ))}
               </div>
-            </div>
 
             {/* Technologies */}
             <div className="mb-16">
@@ -223,8 +221,6 @@ key={index}
                     </span>
                   ))}
                 </div>
-              </div>
-            </div>
 
             {/* Success Stories */}
 
@@ -263,8 +259,6 @@ href='/case-studies#content-generation-scale''
                     Read Case Study →
                   </Link>
                 </div>
-              </div>
-            </div>
             {/* Call to Action *
 }
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>'
@@ -289,7 +283,6 @@ href='/automation-insights''
                   Explore Insights
                 </Link>
               </div>
-            </div>
           </section>
         </main>
       </div>
@@ -332,8 +325,6 @@ href='/automation-insights''
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors";
                   </Link>;
                 </div>;
-              </div>;
-            </div>;
                   href="/contact";
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105";
 <div className='mb-16'>;
@@ -371,8 +362,6 @@ href='/automation-insights''
                     Read Case Study →;
                   </Link>;
                 </div>;
-              </div>;
-            </div>;
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;
               <h2 className='text-3xl font-bold mb-4 text-white'>;
@@ -394,7 +383,6 @@ href='/automation-insights''
                   Explore Insights;
                 </Link>;
               </div>;
-            </div>;
           </section>;
         </main>;
       </div>;}
@@ -408,7 +396,6 @@ href='/automation-insights''
                   Explore Insights;
                 </Link>;
               </div>;
-            </div>;
           </section>;
         </main>;
       </div>;
@@ -416,8 +403,6 @@ href='/automation-insights''
 }
   );
 }
-}
-<<<<<<< HEAD
 
 }
     </>);
@@ -426,6 +411,3 @@ href='/automation-insights''
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

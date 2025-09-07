@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export default AccessibilityEnhancer;
-ursor/automate-test-improve-and-merge-code-646c;
-import React, { useEffect, useState } from 'react';
-interface AccessibilitySettings  {highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusVisible: boolean;
-  screenReader: boolean;
-}export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false;
-    screenReader: false;
-    screenReader: false;
-  })useEffect(() => {// Check for reduced motion preference;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))// Check for high contrast preference;
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches }))// Detect screen reader usage;
-    const screenReaderDetected =;
-      'speechSynthesis' in window ||;
-      'speechRecognition' in window ||;
-      navigator.userAgent.includes('NVDA') ||;
-      navigator.userAgent.includes('JAWS') ||;
-      navigator.userAgent.includes('VoiceOver')setSettings(prev => ({ ...prev, screenReader: screenReaderDetected }))// Apply initial settings;
-    applyAccessibilitySettings({...settings,reducedMotion: mediaQuery.matches,highContrast: highContrastQuery.matches,screenReader: screenReaderDetected;
-      screenReader: screenReaderDetected;
-      screenReader: screenReaderDetected;
-    })}, [])const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {const root  = document.documentElement;// Apply high contrast;
-    if (newSettings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Apply large text;
-    if (newSettings.largeText) {root.classList.add('large-text')} else {root.classList.remove('large-text')}// Apply reduced motion;
-    if (newSettings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}// Apply focus visible;
-    if (newSettings.focusVisible) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Apply screen reader optimizations;
-    if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')} else {root.classList.remove('screen-reader-optimized')}
-  }const toggleSetting = (setting: keyof AccessibilitySettings) => {const newSettings = {...settings,[setting]: !settings[setting];
-      [setting]: !settings[setting];
-      [setting]: !settings[setting];
-    }setSettings(newSettings)applyAccessibilitySettings(newSettings)// Save to localStorage;
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;
-  useEffect(() => {const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
-    }
-import React, { useEffect, useState } from 'react';
-
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -66,7 +18,6 @@ const AccessibilityEnhancer: React.FC = () => {
         isUsingMouse = false
         document.body.classList.remove('using-mouse')
       }
-    }
     document.addEventListener('mousedown', handleMouseDown)
     document.addEventListener('keydown', handleKeyDown)
     // Add ARIA live region for announcements
@@ -82,7 +33,6 @@ const AccessibilityEnhancer: React.FC = () => {
       if (liveRegion) {
         liveRegion.textContent = message
       }
-    }
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
       announcePageChange('Page loaded')
@@ -112,7 +62,6 @@ const AccessibilityEnhancer: React.FC = () => {
       if (liveRegion.parentNode) {
         liveRegion.parentNode.removeChild(liveRegion)
       }
-    }
   }, [])
   return null
 }
@@ -155,10 +104,6 @@ if (typeof document !== 'undefined') {
 }
 
 export default AccessibilityEnhancer
-=======
-'use client'
-import React, { useState, useEffect } from 'react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -177,13 +122,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
->>>>>>> origin/main
 
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
       }
-    }
   }, []);
   return null;
     } else {
@@ -229,7 +172,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 }
 export default AccessibilityEnhancer;</div>;
         </div>;
-      </div>;
 }{/* Skip to main content link */}
       <a;
         href="#main-content";"
@@ -279,7 +221,6 @@ interface AccessibilitySettings {
 export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({"highContrast": false,"largeText": false,"reducedMotion": false,"focusVisible": false,"screenReader": false;
     }
     "screenReader": false;
-    "screenReader": false;
   })useEffect(() => {
 // Check for reduced motion preference;
 
@@ -301,7 +242,6 @@ const screenReaderDetected =;
     applyAccessibilitySettings({...settings,"reducedMotion": mediaQuery.matches,"highContrast": highContrastQuery.matches,"screenReader": screenReaderDetected;
       }
       "screenReader": screenReaderDetected;
-      "screenReader": screenReaderDetected;
     })}, [])const applyAccessibilitySettings = ("newSettings": AccessibilitySettings) => ;
   const root  = document.documentElement;// Apply high contrast;
     if (newSettings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Apply large text;'
@@ -313,7 +253,6 @@ const screenReaderDetected =;
 
 const toggleSetting = ("setting": keyof AccessibilitySettings) => ;
   const newSettings = {...settings,[setting]: !settings[setting];
-      [setting]: !settings[setting];
       [setting]: !settings[setting];
     }setSettings(newSettings)applyAccessibilitySettings(newSettings)// Save to localStorage;
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;'
@@ -399,8 +338,6 @@ key={size}
               </button>
             ))}
           </div>
-        </div>
-      </div>
 
       <a,
 href="#main-content""
@@ -423,7 +360,6 @@ href="#main-content""
 };
 
 export default AccessibilityEnhancer;
-export default AccessibilityEnhancer;
 ursor/automate-test-improve-and-merge-code-646c;
 import React, { useEffect, useState } from 'react';'
 interface AccessibilitySettings  {"highContrast": boolean;
@@ -434,7 +370,6 @@ interface AccessibilitySettings  {"highContrast": boolean;
   "screenReader": boolean;
 }export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({"highContrast": false,"largeText": false,"reducedMotion": false,"focusVisible": false,"screenReader": false;
     }
-    "screenReader": false;
     "screenReader": false;
   })useEffect(() => {// Check for reduced motion preference;
     }
@@ -449,7 +384,6 @@ interface AccessibilitySettings  {"highContrast": boolean;
     applyAccessibilitySettings({...settings,"reducedMotion": mediaQuery.matches,"highContrast": highContrastQuery.matches,"screenReader": screenReaderDetected;
       }
       "screenReader": screenReaderDetected;
-      "screenReader": screenReaderDetected;
     })}, [])const applyAccessibilitySettings = ("newSettings": AccessibilitySettings) => {const root  = document.documentElement;// Apply high contrast;
     }
     if (newSettings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Apply large text;'
@@ -458,7 +392,6 @@ interface AccessibilitySettings  {"highContrast": boolean;
     if (newSettings.focusVisible) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Apply screen reader optimizations;'
     if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')} else {root.classList.remove('screen-reader-optimized')}'
   }const toggleSetting = ("setting": keyof AccessibilitySettings) => {const newSettings = {...settings,[setting]: !settings[setting];
-      [setting]: !settings[setting];
       [setting]: !settings[setting];
     }setSettings(newSettings)applyAccessibilitySettings(newSettings)// Save to localStorage;
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;'
@@ -512,8 +445,6 @@ const savedSettings = localStorage.getItem('accessibility-settings')if (savedSet
         <div className="text-sm text-gray-600">;"
           Screen "Reader": {settings.screenReader ? 'Detected' : 'Not detected'}'
         </div>;
-      </div>;
-    </div>;
   )}}
       if (liveRegion && liveRegion.parentNode) {liveRegion && liveRegion.parentNode.removeChild(liveRegion)}
     }
@@ -555,8 +486,6 @@ const savedSettings = localStorage.getItem('accessibility-settings')if (savedSet
           Screen "Reader": {settings.screenReader ? 'Detected' : 'Not detected,'
 }
         </div>;
-      </div>;
-    </div>;
   )}}
       if (liveRegion && liveRegion.parentNode) {liveRegion && liveRegion.parentNode.removeChild(liveRegion)}
     }
@@ -602,8 +531,6 @@ export default AccessibilityEnhancer;</div>;
 export default AccessibilityEnhancer;
 
           </div>;
-        </div>;
-      </div>;
 }{/* Skip to main content link */}
       <a;
         href="#main-content";"
@@ -624,7 +551,6 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 
@@ -735,7 +661,6 @@ export default function AccessibilityEnhancer() {
       } catch (error) {
         console.warn('Failed to load accessibility settings:', error);
       }
-    }
   }, []);
 
   return (
@@ -786,145 +711,10 @@ export default function AccessibilityEnhancer() {
         <div className="text-sm text-gray-600">
           Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
         </div>
-      </div>
-    </div>
   );
 }
 
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
-
-    // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
-
-    // Load saved font size preference
-    const savedFontSize = localStorage.getItem('fontSize');
-    if (savedFontSize) {
-      setFontSize(parseInt(savedFontSize, 10));
-    }
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-    };
-    // Add ARIA live region for announcements;
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-    // Announce page changes;
-    const announcePageChange = (message: string) => {;
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {;
-        liveRegion.textContent = message;
-      ,};
-    };
-    // Listen for route changes (Next.js specific);
-    const handleRouteChange = () => {;
-      announcePageChange('Page loaded');
-    };
-    // Add route change listener if available;
-    if (typeof window !== 'undefined' && window.history) {;
-      const originalPushState = window.history.pushState;
-      const originalReplaceState = window.history.replaceState;
-      window.history.pushState = function(...args) {;
-        originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-      window.history.replaceState = function(...args) {;
-        originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-      window.addEventListener('popstate', handleRouteChange);
-    };
-    // Cleanup;
-    return () => {;
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('keydown', handleKeyDown);
-      if (skipLink.parentNode) {;
-        skipLink.parentNode.removeChild(skipLink);
-      };
-      if (liveRegion.parentNode) {;
-        liveRegion.parentNode.removeChild(liveRegion);
-      };
-    };
-  }, []);
-  return null;
-};
-// Add CSS for focus management;
-const focusStyles = `;
-  .using-mouse *:focus {;
-    outline: none !important;
-  ,};
-  .focus-visible: focus {;
-    outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;
-  ,};
-  .sr-only {;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  ,};
-  .sr-only.focus: not-sr-only:focus {;
-    position: static;
-    width: auto;
-    height: auto;
-    padding: inherit;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  ,};
-`;
-// Inject styles;
-if (typeof document !== 'undefined') {;
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
-};
->>>>>>> origin/merge-automation-changes
-=======
 export default AccessibilityEnhancer;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 'use client';
 
 import React, { useEffect } from 'react';
@@ -1004,4 +794,3 @@ export default function AccessibilityEnhancer() {
     </>
   );
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

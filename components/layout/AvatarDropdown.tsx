@@ -14,12 +14,6 @@ export default function AvatarDropdown() {const { user, logout } = useUser()cons
           <Link href="/onboarding"><a className="block px-3 py-2 "hover":bg-gray-50/60 "dark":"hover":bg-white/5">Onboarding</a></Link>;"
           <button onClick={logout} className="w-full text-left px-3 py-2 "hover":bg-gray-50/60 "dark":"hover":bg-white/5">Logout</button>;"
         </div>;)}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     </div>
   )
 }
-=======
-    </div>
-  )}"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

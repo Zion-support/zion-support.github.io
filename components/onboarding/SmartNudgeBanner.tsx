@@ -32,7 +32,6 @@ const storageKey = React.useMemo(;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [hidden, setHidden] = React.useState<boolean>(false);
-<<<<<<< HEAD
 
   React.useEffect(() => {
 
@@ -129,13 +128,6 @@ if (return null) {}
 }
   return ('
     <div className='relative rounded - xl border border - cyan - 300 / 40 dark:border - cyan - 400 / 30 bg - cyan - 50 / 60 dark:bg - cyan - 900 / 20 p - 4'>;
-=======
-
-import React from 'react';
-
-  return (
-<div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <button;
         on_click={dismiss}'
         aria - label='Dismiss';'
@@ -151,24 +143,16 @@ import React from 'react';
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
 if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
 
   return (
-<<<<<<< HEAD
         {message}
-<<<<<<< HEAD
 }
-  );
   );
 
   );
@@ -177,12 +161,6 @@ if (typeof window !== 'undefined')
 
 }
 ;
-=======
-
-  )
-  )
-  )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export default /**
  * SmartNudgeBanner - Function description
  */
@@ -215,7 +193,6 @@ function SmartNudgeBanner() {
       set_hidden (v === 'dismissed');      const v = typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
       set_hidden (v === 'dismissed');
     } catch {}
-<<<<<<< HEAD
   }, [storage_key]);
 ;
   const dismiss = React.useCallback (() => {
@@ -264,19 +241,7 @@ if (return null) {
     </div>);
 }
   )
-  )
 }
-=======
-  }, [storageKey])
-  if (hidden) return null
-  return (
-<div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'    />
-      <button
-=======
-<div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>
-      <button
-        onClick={dismiss}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 onClick={dismiss}
         aria-label='Dismiss'
         className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'

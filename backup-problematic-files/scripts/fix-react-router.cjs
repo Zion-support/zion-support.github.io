@@ -12,9 +12,4 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       /import\s*{\s*useNavigate\s*}\s*from\s*['']
       "
     content = content.replace(/to="/g, 'href=')
-<<<<<<< HEAD
         "
-        "
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

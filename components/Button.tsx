@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   variant?: 'primary' | 'secondary' | 'outline';'
   size?: 'sm' | 'md' | 'lg';'
@@ -142,12 +141,6 @@ export default function Button({children;
       {_children}
     </button>;
   )}</button>)}
-  )}</button>)}
     </button>
-<<<<<<< HEAD
   )
 }
-=======
-  );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

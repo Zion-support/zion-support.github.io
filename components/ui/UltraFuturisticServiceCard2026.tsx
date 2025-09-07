@@ -26,11 +26,9 @@ import React from 'react';
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-<<<<<<< HEAD
     switch (variant) {case 'ai':;
         return {}
     }
-  }
   const styles = getVariantStyles()return (<motion&& motion.div;
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -91,29 +89,6 @@ interface Service {
     currency?: string,
     trialDays?: number,
     setupTime?: string
-=======
-  integration?: string[],benefits?: string[];
-=======
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
-  service, variant = 'default' 
-}) => {
-  const getVariantStyles = () => {
-  switch (variant) {
-  case 'ai': return {
-  
-}
-}
-{
-  /* Popular Badge */ 
-}{
-  service.popular && (<motion.div > <Star className="w-4 h-4 inline mr-1" /> Popular </motion.div>) 
-}Key Features </h4> {
-  service.features.slice (0, 6) .map ( (feature, idx) => (<motion.div key= {
-  idx 
-}</motion.div>) ) 
-}</div> 
-}</div>) 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
   "category": string;

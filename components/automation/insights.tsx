@@ -34,26 +34,13 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useState  } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 import Head from 'next/head';;
 export default function AutomationInsightsPage() {
-<<<<<<< HEAD
   const [intel, setIntel] = useState<any>(null);
-=======
-export default function AutomationInsightsPage() {};
-  const [intel, setIntel] = useState<any>(null);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {'
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});'
@@ -89,7 +76,6 @@ function AutomationInsightsPage() {}
             <div className="text - xs text - gray - 500">Generated at {intel.generated_at}</div>;"
             <div className="mt - 3">;"
               <h3 className="font - medium">Top Keywords</h3>;"
-=======
   const [intel, setIntel] = useState<any />(null);
 
 const [talentMd, setTalentMd] = useState<string />('');
@@ -113,7 +99,6 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
       <section className=\"mb - 8\" />;"
         <h2 className=\"font - medium\" />Market Intelligence</h2>;
 
-=======
 return (<div> <Head><title > Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>);"
 }</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {}
@@ -131,7 +116,6 @@ function AutomationInsightsPage() {}
     fetch ('/data / automation / market - intel.json').then ((r) => r.json ()).then (set_intel).catch (() => {});'
     fetch ('/data / automation / talent - highlights.md').then ((r) => r.text ()).then (setTalentMd).catch (() => {})
   }, [])
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div>
       <Head><title>Automation Insights — Zion</title></Head>
@@ -149,7 +133,6 @@ function AutomationInsightsPage() {}
               <ul className="list-disc list-inside">"
                 {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>
-<<<<<<< HEAD
         {!intel ? (<div className="text - sm text - gray - 500">Loading…</div>) : (<div className="mt - 3 text - sm">;
         {!intel ? (
           <div className="text - sm text - gray - 500">Loading…</div>) : (
@@ -161,40 +144,6 @@ function AutomationInsightsPage() {}
               <ul className="list - disc list - inside">;
                 {Object.entries (intel.insights.keyword_counts).map (([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>))}
-=======
-                ))}
-              </ul>
-            </div>
-            <div className="mt-4">
-              <h3 className="font-medium">Top Languages</h3>
-              <ul className="list-disc list-inside">
-                {intel.insights.topLanguages.map((l: any) => (
-                  <li key={l.lang}>{l.lang}: {l.count}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-"
-          <div className=\"text-sm text-gray-500\" />Loading…</div>
-        ) : (}"
-          <div className=\"mt-3 text-sm\" />}"
-            <div className=\"text-xs text-gray-500\" />Generated at {intel.generatedAt}</div>"
-            <div className=\"mt-3\" />"
-              <h3 className=\"font-medium\" />Top Keywords</h3>"
-              <ul className=\"list-disc list-inside\" />
-                {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (}
-                  <li key={k} />{k}: {v as any}</li>
-
-                ))}
-              </ul>;
-            </div>;
-            <div className="mt-4">;"
-              <h3 className="font-medium">Top Languages</h3>;"
-              <ul className="list-disc list-inside">;"
-                {intel.insights.topLanguages.map(("l": any) => (<li key={l.lang}>{l.lang}: {l.coun
-}</li>;
-                ))}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </ul>;
             </div>;
             <div className="mt - 4">;
@@ -224,23 +173,13 @@ function AutomationInsightsPage() {}
                 ))}
               </ul>
             </div>
-          </div>
         )}
       </section>;"
-<<<<<<< HEAD
       <section id=\"talent\" className=\"mb-8\"    />;"
         <h2 className=\"font-medium\"    />Talent Highlights</h2>;"
         {!talentMd ? (<div className=\"text-sm text-gray-500\"    />Loading…</div>;}"
         ) : (<pre className=\"mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800\"    />{talentM}
 }</pre>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-      <section id=\"talent\" className=\"mb-8\" />;"
-        <h2 className=\"font-medium\" />Talent Highlights</h2>;"
-        {!talentMd ? (<div className=\"text-sm text-gray-500\" />Loading…</div>;}"
-        ) : (<pre className=\"mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800\" />{talentM;}
-}</pre>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         )}
       </section>
 
@@ -255,32 +194,6 @@ function AutomationInsightsPage() {}
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-"
-=======
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-}</ul> </div> </div>) 
-}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
-  talentMd 
-}</pre>) 
-}</section> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -148,18 +148,11 @@ function analyzeFile(filePath) {
       this.log(`SEO optimizer "failed": ${error.message}`, 'ERROR');
       throw error;
     }
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const optimizer = new SEOOptimizer();
 optimizer.run().catch(console.error);
 
 module.exports = SEOOptimizer;
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -202,14 +195,9 @@ if (require.main === module) {
 </urlset>`;"`;
 
 module.exports = SEOOptimizer;
-module.exports = SEOOptimizer;
 
 const optimizer = new SEOOptimizer();
 optimizer.run().catch(console.error);
 
 module.exports = SEOOptimizer;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

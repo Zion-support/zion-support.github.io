@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage() {
@@ -48,7 +47,6 @@ export default function PostJobPage() {
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -80,7 +78,6 @@ export default function PostJobPage() {
             <label className="block text-sm font-medium">Budget Max (USD)</label>
             <input type="number" className="mt-1 w-full border rounded p-2" value={budgetMaxUsd} onChange={(e) => setBudgetMaxUsd(e.target.value)} />
           </div>
-        </div>
         <div>
           <label className="block text-sm font-medium">Delivery Deadline (ISO or YYYY-MM-DD)</label>
           <input className="mt-1 w-full border rounded p-2" value={deliveryDeadlineIso} onChange={(e) => setDeliveryDeadlineIso(e.target.value)} placeholder="2025-09-30" />
@@ -97,28 +94,4 @@ export default function PostJobPage() {
       </form>
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function postjob() {
-  return (
-    <Layout>
-      <Head>
-        <title>Post Job - Zion Tech Group</title>
-        <meta name="description" content="Post Job solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Post Job</h1>
-          <p className="text-lg text-gray-600">
-            Professional post job solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

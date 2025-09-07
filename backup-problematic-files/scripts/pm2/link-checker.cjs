@@ -28,7 +28,6 @@ const runCommand = (command, description) => {}
     log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
-};
 
 const checkLinks = () => {}
   log('Checking for broken links');
@@ -47,7 +46,6 @@ const checkLinks = () => {}
       if (result.success) {}
         linksChecked = true;
       };
-    };
   }
 });
   
@@ -64,7 +62,6 @@ const generateLinkReport = (results) => {}
     overall: {}
       status: results.linkCheck.success ? 'PASS' : 'FAIL'
     };
-  };
   
   // Save report;
   const reportPath = 'logs/pm2/link-report.json';
@@ -113,9 +110,4 @@ main().catch(error => {})
   log(`Link Checker Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

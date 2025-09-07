@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/case-studies.tsx
+:pages_backup/case-studies.tsx
 export default Page;
-<<<<<<< HEAD:pages_backup/case-studies.tsx
+:pages_backup/case-studies.tsx
 export default Page;
 
 
@@ -111,7 +110,7 @@ const stats = [
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
-<<<<<<< HEAD:pages_backup/case-studies.tsx
+:pages_backup/case-studies.tsx
 import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -189,7 +188,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
                             <p className="text-gray-600">{study.solution}</p>
                           </div>
-                        </div>
                         <div className="mb-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
                           <ul className="space-y-2">
@@ -265,7 +263,6 @@ export default function CaseStudiesPage() {
                   <div className="text - gray - 600 font - medium">{stat.label}</div>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* Case Studies */}
         <section className="py - 20 bg - gray - 50">;
@@ -349,7 +346,6 @@ export default function CaseStudiesPage() {
                             <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>;
                             <p className="text-gray-600">{study && study.solution}</p>;
                           </div>;
-                        </div>;
 
                         <div className="mb-6">;
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>;
@@ -387,7 +383,6 @@ export default function CaseStudiesPage() {
                             <ArrowRight className="w-4 h-4 ml-2" />;
                           </a>;
                         </div>;
-                      </div>;
 
                       <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">;
                         <div className="text-center text-white">;
@@ -412,7 +407,6 @@ export default function CaseStudiesPage() {
                             <h4 className="font - semibold text - gray - 900 mb - 2">Solution:</h4>;
                             <p className="text - gray - 600">{study.solution}</p>;
                           </div>;
-                        </div>;
                         <div className="mb - 6">;
                           <h4 className="font - semibold text - gray - 900 mb - 3">Key Results:</h4>;
                           <ul className="space - y-2">;
@@ -442,7 +436,6 @@ export default function CaseStudiesPage() {
                             <ArrowRight className="w - 4 h - 4 ml - 2" />;
                           </a>;
                         </div>;
-                      </div>;
                       <div className="bg - gradient - to - br from - green - 500 to - teal - 600 p - 8 flex items - center justify - center">;
                         <div className="text - center text - white">;
                           <Building className="w - 16 h - 16 mx - auto mb - 4 opacity - 80" />;
@@ -452,11 +445,6 @@ export default function CaseStudiesPage() {
                             A comprehensive solution that transformed our client's business operations;
                           </p>;
                         </div>;
-                      </div>;
-                    </div>;
-              </div>;
-            </div>;
-          </div>;
         </section>;
                 <a
                   href="/contact"
@@ -469,7 +457,7 @@ import Head from 'next/head';
 
 import Head from 'next/head';
 
-<<<<<<< HEAD:pages_backup/case-studies.tsx
+:pages_backup/case-studies.tsx
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -591,8 +579,6 @@ export default function CaseStudies() {
                   </button>
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
@@ -619,7 +605,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center">
                       <study.icon className="w-24 h-24 text-gray-400" />
                     </div>
-                  </div>
                   <div className="lg:w-1/2 flex flex-col justify-center">
                     <div className="flex items-center space-x-4 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -630,7 +615,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {study.industry}
                         </span>
                       </div>
-                    </div>
                     <h3 className="text-3xl font-bold text-gray-900 mb-4">{study.title}</h3>
                     <p className="text-lg text-gray-600 mb-6 font-semibold">{study.client}</p>
                     
@@ -662,7 +646,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <Users className="w-4 h-4 mr-1" />
                         {study.team}
                       </div>
-                    </div>
                     
                     <Link href="/contact">
                       <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -671,10 +654,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </button>
                     </Link>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Testimonials */}
@@ -709,11 +690,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text-gray-600">{testimonial.title}</p>
                       <p className="text-blue-600 font-semibold">{testimonial.company}</p>
                     </div>
-                  </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -738,7 +716,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
               </Link>
             </div>
-          </div>
         </section>
       </main>
 </>
@@ -854,52 +831,3 @@ import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
 
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function CaseStudiesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Professional case studies solutions for your business." />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional case studies solutions for your business.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300">
-              Professional solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300">
-              Advanced technology solutions.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300">
-              Scalable and reliable solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

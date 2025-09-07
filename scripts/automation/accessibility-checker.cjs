@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**
  * Accessibility Checker Automation;
  * Checks and improves accessibility compliance;
  */
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -29,10 +22,6 @@ class AccessibilityChecker {}
 });
 const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     checkAccessibilityIssues() {}
         this.log('Checking accessibility issues...');
@@ -43,25 +32,15 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
 
         const files = this.findSourceFiles(;);
         const issues = [];
-<<<<<<< HEAD
-=======
-        
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (const file of files) {}
             try {}
 
         const files = [];
-<<<<<<< HEAD
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
-=======
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
@@ -69,10 +48,7 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
                 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -89,17 +65,11 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
     analyzeFileForAccessibility(content, file) {}
 
         const lines = content.split('\n';);
-<<<<<<< HEAD
         
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
             
-=======
-        for (let i = ;0; i < lines.length i++) {}
-            const line = lines[i];
-            const lineNumber = i +;1;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
@@ -116,76 +86,7 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
             if (line.match(/<h[1-6]/)) {}
 const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}];
      {}
-<<<<<<< HEAD
         
-=======
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_form_label',
-                        "severity": 'error',
-                        "message": 'Input missing label',
-                        "suggestion": 'Add label element or aria-label to input'
-                    })};
-            };
-            // Check for heading hierarchy;
-            if (line.match(/<h[1-6]/)) {}
-                const headingLevel = parseInt(line.match(/<h([1-6])/)[1}];);
-                // This is a simplified check - in practice, you'd track heading hierarchy;
-                if ( {})
-                    const hasH1 = lines.slice(0, i).some(l => l.includes('<h1') {}
-     {}
-                    const hasH1 = lines.slice(0, i).some(l => l.includes('<h1'}
-}););
-                    if ( {})
-                        issues.push({})
-                            "file": path.relative(this.projectRoot, file),
-                            "line": lineNumber,
-                            "type": 'missing_h1',
-                            "severity": 'warning',
-                            "message": 'Page should have an H1 heading',
-                            "suggestion": 'Add H1 heading to page'
-                        })};
-                };
-            };
-            // Check for color contrast issues (simplified);
-            if (line.includes('"color": ') || line.includes('background-color:')) {}
-                issues.push({})
-                    file: path.relative(this.projectRoot, file),
-                    "line": lineNumber,
-                    "type": 'color_contrast',
-                    "severity": 'warning',
-                    "message": 'Check color contrast ratio',
-                    "suggestion": 'Ensure color contrast meets WCAG AA standards (4.5:1)'
-                })};
-        };
-        return issues) {}
-     {}
-                        issues.push({})
-                            "file": path.relative(this.projectRoot, file),
-                            "line": lineNumber,
-                            "type": 'missing_h1',
-                            "severity": 'warning',
-                            "message": 'Page should have an H1 heading',
-                            "suggestion": 'Add H1 heading to page'
-                        })};
-                };
-            };
-            // Check for color contrast issues (simplified);
-            if (line.includes('"color": ') || line.includes('background-color:')) {}
-                issues.push({})
-                    file: path.relative(this.projectRoot, file),
-                    "line": lineNumber,
-                    "type": 'color_contrast',
-                    "severity": 'warning',
-                    "message": 'Check color contrast ratio',
-                    "suggestion": 'Ensure color contrast meets WCAG AA standards (4.5:1)'
-                })};
-        };
-        return issues}};
-    createAccessibilityUtilities() {}
-        this.log('Creating accessibility utilities...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
@@ -204,25 +105,12 @@ const accessibilityUtils = "/**;
 export const accessibility = {}
   // Generate unique IDs for form elements;"
   "generateId": (prefix = 'element') => {}
-<<<<<<< HEAD
 
-=======
-    return \"\${prefi) {}
-    ) {}
-            fs.mkdirSync(utilsDir, { "recursive": true })};
-        // Accessibility utilities;
-const accessibilityUtils = "/**;
- * Accessibility Utilities;
- * Helper functions for accessibility compliance;
- */
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export const accessibility = {}
   // Generate unique IDs for form elements;
   "generateId": (prefix = 'element') => {}
 return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},;
   
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Check if element is focusable;
   "isFocusable": (element) => {}
 const focusableSelectors = ['a[href]',;
@@ -234,27 +122,18 @@ const focusableSelectors = ['a[href]',;
       'details',
       'summary'
    ];
-<<<<<<< HEAD
     
     return focusableSelectors.some(selector => element.matches(selector))},
   
-=======
-    return focusableSelectors.some(selector => element.matches(selector))},
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Trap focus within an element;
   "trapFocus": (element) => {}
 const focusableElements = element.querySelectorAll();
       'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])"
    ;);
-<<<<<<< HEAD
     
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
     
-=======
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const handleTabKey = (e) => {}
       if ( {})
         if (e.shiftKey) {}
@@ -273,20 +152,12 @@ const focusableElements = element.querySelectorAll();
             firstElement.focus()};
             e.preventDefault()};
         };
-      };
-    };
-<<<<<<< HEAD
     
     element.addEventListener('keydown', handleTabKey);
     
     return () => {;}
       element.removeEventListener('keydown', handleTabKey)}},
   
-=======
-    element.addEventListener('keydown', handleTabKey);
-    return () => {;}
-      element.removeEventListener('keydown', handleTabKey)}},
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Announce message to screen readers;
   "announce": (message, priority = 'polite') => {}
     const announcement = document.createElement('div';);
@@ -294,18 +165,12 @@ const focusableElements = element.querySelectorAll();
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-<<<<<<< HEAD
     
     document.body.appendChild(announcement);
     
     setTimeout(() => {}
       document.body.removeChild(announcement)}, 1000)},
   
-=======
-    document.body.appendChild(announcement);
-    setTimeout(() => {}
-      document.body.removeChild(announcement)}, 1000)},
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Skip to main content link;
   "createSkipLink": (targetId = 'main') => {}
     const skipLink = document.createElement('a';);
@@ -323,7 +188,6 @@ const focusableElements = element.querySelectorAll();
       z-index: 1000;
       transition: top 0.3s;
     \";
-<<<<<<< HEAD
     
     skipLink.addEventListener('focus', () => {}
       skipLink.style.top = '6px'}
@@ -336,16 +200,6 @@ const focusableElements = element.querySelectorAll();
     return skipLink};
 };
 
-=======
-    skipLink.addEventListener('focus', () => {}
-      skipLink.style.top = '6px'}
-});
-    skipLink.addEventListener('blur', () => {}
-      skipLink.style.top = '-40px'}
-});
-    return skipLink};
-};
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Screen reader only class;
 export const srOnly = \'
 .sr-only {}
@@ -365,26 +219,17 @@ export const srOnly = \'
   z-index: 1000};
 \";
 ";
-<<<<<<< HEAD
 
         fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
         
         // Accessibility testing component;
         const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
 
-=======
-        fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
-        // Accessibility testing component;
-        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 interface AccessibilityTestProps {}
   "children": React.ReactNode};
 export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}
   const [issues, setIssues] = useState<string[]>([]);
-<<<<<<< HEAD
   
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   useEffect(() => {}
     if ( {})
       // Run accessibility checks in development;
@@ -394,19 +239,13 @@ const "newIssues": string[] = [) {}];
       // Run accessibility checks in development;
       const checkAccessibility = () => {}
         const newIssues: string[] = [}];
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Check for missing alt attributes;
         const images = document.querySelectorAll('"img": not([alt]);';);
         images.forEach((img, index) => {}
           newIssues.push(\"Image \${index + 1} missing alt attribute\")}
 });
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Check for missing form labels;
         const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby]);';);
         inputs.forEach((input, index) => {}
@@ -418,26 +257,17 @@ const "newIssues": string[] = [) {}];
             newIssues.push(\"Input \${index + 1} missing label\")};
         })};
         setIssues(newIssues)};
-<<<<<<< HEAD
       
       checkAccessibility();
       
-=======
-      checkAccessibility();
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Re-check when DOM changes;
       const observer = new MutationObserver(checkAccessibilit;y;);
       observer.observe(document.body, { "childList": true, "subtree": true }
 });
-<<<<<<< HEAD
       
       return () => observer.disconnect()};
   }, []);
   
-=======
-      return () => observer.disconnect()};
-  }, []);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   if ( {})
     return () {}
      {}
@@ -465,26 +295,17 @@ return (};);
     )};
   return <>{children}</>};
 ";
-<<<<<<< HEAD
 
         fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
         
-=======
-        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         this.log('Accessibility utilities created');
         return { "status": 'success' }};
     generateAccessibilityReport() {}
         this.log('Generating accessibility report...');
-<<<<<<< HEAD
         
         const issues = this.checkAccessibilityIssues(;);
         const utilities = this.createAccessibilityUtilities(;);
         
-=======
-        const issues = this.checkAccessibilityIssues(;);
-        const utilities = this.createAccessibilityUtilities(;);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -499,15 +320,10 @@ return (};);
             },
             "recommendations": this.generateAccessibilityRecommendations(issues);
        };
-<<<<<<< HEAD
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Accessibility report saved to ${this.reportFile}`);
         
-=======
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Accessibility report saved to ${this.reportFile}`);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return report};
     generateAccessibilityRecommendations(issues) {}
 const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',];
@@ -521,10 +337,7 @@ const recommendations = ['Use semantic HTML elements (header, nav, main, section
             'Test with screen readers and keyboard-only navigation',
             'Implement skip links for main content'
         ];
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         if () {}
             recommendations.push('Add alt attributes to all images')};
         if (issues.some(i => i.type === 'missing_form_label')) {}
@@ -537,10 +350,7 @@ const recommendations = ['Use semantic HTML elements (header, nav, main, section
         return recommendations}};
     async run() {}
         this.log('Accessibility Checker started');
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             const report = this.generateAccessibilityReport(;);
             this.log('Accessibility Checker completed successfully');
@@ -568,48 +378,16 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             },
             "recommendations": this.generateAccessibilityRecommendations(issues);"
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             throw error};
 // Run the checker if this script is executed directly;
     const checker = new AccessibilityChecker) {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AccessibilityChecker;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = AccessibilityChecker;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = AccessibilityChecker;
-<<<<<<< HEAD
-module.exports = AccessibilityChecker;
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

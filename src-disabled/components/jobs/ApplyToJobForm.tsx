@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
@@ -18,7 +16,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'"
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 
 
 :src/components/jobs/ApplyToJobForm.tsx
@@ -122,13 +120,12 @@ import { toast } from "sonner",
         if (onSuccess) {
           onSuccess()
         }
-      }
     } catch (err: any) {
       setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 :src/components/jobs/ApplyToJobForm.tsx
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -159,7 +156,7 @@ import { Label  } from '@/components/ui/ label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/ select';
 import { Alert, AlertDescription  } from '@/components/ui/ alert';
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow  } from './date - fns';
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 import { Job  } from '@/types/ jobs';
 import { Job  } from '@/types / jobs';
 
@@ -216,7 +213,6 @@ if ( {) {}
 }
           on_success ();
         }
-      }
     } catch (err: any) {"
       set_error (err.message || "Failed to submit application"),"
       toast.error ("Failed to submit application");
@@ -224,11 +220,11 @@ if ( {) {}
     }
   },
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
   },
   
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -306,7 +302,7 @@ import { useJobApplications } from "@/hooks/useJobApplications",import { useResu
 import { formatDistanceToNow } from "date-fns",import { Job } from "@/types/jobs",import { toast } from "sonner",interface ApplyToJobFormProps  {job: Job;
   onSuccess?: () => void;
 }
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 export function ApplyToJobForm() {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading } = useResume()const router = useRouter()const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`)const [selectedResumeId, setSelectedResumeId] = useState<string>("")const [resumeFile, setResumeFile] = useState<File | null>(null)const [isSubmitting, setIsSubmitting] = useState(false)const [error, setError] = useState<string | null>(null)const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()if (!user) {toast.error("You must be logged in to apply")router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)return;
     }if (!coverLetter.trim()) {setError("Please provide a cover letter")return;
     }setIsSubmitting(true)setError(null)try {const success = await applyToJob(job.id;
@@ -404,7 +400,7 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
       )}<div className="space-y-4">;
         <div>;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           <Textarea
             id="coverLetter"
 export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps) {;
@@ -433,9 +429,9 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
             onChange = {(e,) => setCoverLetter(e && e.target.value),}
             rows = {6,}
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
         
 
 
@@ -450,7 +446,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
           ) : resumes && resumes.length > 0 ? (
 
             <Select
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           <Textarea;
             id="coverLetter";
             value = {coverLetter}
@@ -557,7 +553,6 @@ interface ApplyToJobFormProps {;
         if (onSuccess) {;
           onSuccess();
         }
-      }
 
       toast.error("Failed to submit application");
     } finally {;
@@ -572,7 +567,7 @@ interface ApplyToJobFormProps {;
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>;
       </div>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
       {error && (<Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
@@ -593,7 +588,7 @@ interface ApplyToJobFormProps {;
             id="coverLetter";
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
             rows={6}placeholder="Introduce yourself and explain why you are a good fit for this job...";
             rows={6}
 
@@ -604,7 +599,7 @@ interface ApplyToJobFormProps {;
           <p className="text-xs text-muted-foreground mt-1">;
             Provide a brief introduction and highlight your relevant skills and experience.;
           </p>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
         </div>;<div>;
           <Label htmlFor="resume">Select Resume (Optional)</Label>;
           {isResumesLoading ? (<div className="flex items-center gap-2 mt-2">;
@@ -643,7 +638,7 @@ interface ApplyToJobFormProps {;
           <Label html_for="cover_letter">Cover Letter</Label>;
           <Textarea;"
             id="cover_letter";
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
             value = {cover_letter }
             on_change = {(e, ) => setCoverLetter (e.target.value) }
             rows = {6 }
@@ -659,7 +654,7 @@ interface ApplyToJobFormProps {;
         </div>;
         <div>;"
           <Label html_for="resume">Select Resume (Optional)</Label>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           {isResumesLoading ? (<div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
               <span > Loading your resumes...</span>;
@@ -695,7 +690,7 @@ interface ApplyToJobFormProps {;
                   return null;
                 })}</SelectContent>;
             </Select>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           ) : (<div className="flex items-center justify-between mt-2 p-3 border rounded-md">;
               <div className="flex items-center gap-2">;
                 <FileText className="h-5 w-5 text-muted-foreground" />;
@@ -717,7 +712,7 @@ interface ApplyToJobFormProps {;
                 Create Resume;
               </Button>;
             </div>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           )}</div>;<div>;
           <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>;<input;
             id="cvUpload";
@@ -739,29 +734,25 @@ interface ApplyToJobFormProps {;
             onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
           />
         </div>
-      </div>
 
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           />
         </div>
-      </div>
 
       <div className="flex justify-end gap-2">
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
           />;
         </div>;
-      </div>;
       <div className="flex justify-end gap-2">;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 
         <Button
           type="button"
           variant="outline"
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           type="button"
           variant="outline"
 :src/components/jobs/ApplyToJobForm.tsx
@@ -788,7 +779,7 @@ interface ApplyToJobFormProps {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 
           }}
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null)}
@@ -803,16 +794,16 @@ interface ApplyToJobFormProps {;
           Cancel;
         </Button>;"
         <Button type="submit" disabled={isSubmitting}>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           {isSubmitting ? (<>;
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
               Submitting...;
             </>;
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
           ) : (;
             "Submit Application";
           )}
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;
           ) : ("Submit Application";
@@ -852,7 +843,6 @@ if ( {) {$2;
             on_change = {(e, ) => setResumeFile (e.target.files?.[0] || null) }
           />;
         </div>;
-      </div>;
       <div className="flex justify - end gap - 2">;
         <Button;
           type="button";
@@ -881,7 +871,7 @@ if ( {) {$2;
 handle_submit;
 }className="space - y-6"> <div> <AlertCircle className="h - 4 w - 4" /> <AlertDescription> {error;
 }</AlertDescription> </Alert>) ";
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 }<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
   selectedResumeId;
 }onValueChange= {
@@ -946,7 +936,7 @@ if ( {) {}
   $2;
 }
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;"
                         {resume.basic_info.title || "Untitled Resume"}
@@ -1051,7 +1041,7 @@ handleSubmit ;
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
+:src_backup/components/jobs/ApplyToJobForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {selectedResumeId;
 }onValueChange= {setSelectedResumeId ";

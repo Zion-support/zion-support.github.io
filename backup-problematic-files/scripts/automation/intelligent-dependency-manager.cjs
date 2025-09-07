@@ -176,16 +176,10 @@ class IntelligentDependencyManager {}
             this.log(`Intelligent Dependency Manager "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the manager if this script is executed directly;
 if ( {})
     const manager = new IntelligentDependencyManager) {}
      {}
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = IntelligentDependencyManager;
-module.exports = IntelligentDependencyManager;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

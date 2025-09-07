@@ -29,7 +29,6 @@ const runCommand = (command, description) => {}
     log(`"Failed": ${description} - ${error.message}`);
     return { "success": false, "error": error.message };
   };
-};
 
 const runTests = () => {}
   log('Running test suite');
@@ -92,7 +91,6 @@ const buildProject = () => {}
         buildVerified = true;
         break;
       };
-    };
     if (!buildVerified) {}
       log('"Warning": No build output directory found');
     };
@@ -101,7 +99,6 @@ const buildProject = () => {}
     log('Build failed');
     return false;
   };
-};
 
 const generateTestReport = (testResults) => {}
   const report = {}
@@ -114,7 +111,6 @@ const generateTestReport = (testResults) => {}
     "build": {}
       success: true;
     };
-  };
   
   // Save report;
   const reportPath = 'logs/pm2/test-report.json';
@@ -146,7 +142,6 @@ const main = async () => {}
       log('Retrying build after fixes');
       buildProject();
     };
-  };
   log('Daily Build and Test Process completed');
 };
 
@@ -168,9 +163,4 @@ main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-});
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

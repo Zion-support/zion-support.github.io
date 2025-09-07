@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -15,7 +11,6 @@ const { execSync } = require("child_process");
   this.log(" Starting Master Automation Controller...")
     this.log(" Master Controller started successfully")
   this.log("� Stopping Master Automation Controller...")
-    for (const ["name", "automation")]
     for (const ["name", "automation")]
     this.log(" Master Controller stopped")
   this.log(" Initializing automation scripts...")
@@ -35,7 +30,6 @@ const MergeConflictResolver = require("./merge-conflict-resolver.cjs");
           if (AutomationClass && typeof AutomationClass === "function")
 const name = script.replace(".cjs", "");
   this.log(" Monitoring automation status...")
-  this.log(" Monitoring automation status...")
       await this.generateHealthReport()} catch (error) {  this.log(` Error during "monitoring"`})
 const status = execSync("pm2 jlist", { "encoding": "utf8"});
       return JSON.parse(status)} catch (error) {  this.log(` Could not get PM2 "status"`})
@@ -47,7 +41,6 @@ const status = execSync("pm2 jlist", { "encoding": "utf8"});
   try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
   "stdio": "pipe"
   try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
-  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
   "timestamp"
         "controllerStatus"
           "automationsCount"
@@ -57,7 +50,6 @@ const status = execSync("pm2 jlist", { "encoding": "utf8"});
       this.log(" Health report generated")} catch (error) {  this.log(` Failed to generate health "report"`})
     for (const ["name", "automation")]
   health[name] = { "status": "unknown", "error": "No status method"}
-  health[name] = { "status": "error", "error"}
   health[name] = { "status": "error", "error"}
   "type": "high_error_rate"
           "message": High error rate detected, consider reviewing automation logic"
@@ -107,7 +99,6 @@ const result = execSync("npm outdated --json", { "encoding": "utf8"});
       "logFile"
   try {this.log(` Running "command": ${command} ${args.join(" "`})
   case "start"
-  case "start"
         case "stop"
         case "restart"
         case "status"
@@ -118,41 +109,10 @@ const result = execSync("npm outdated --json", { "encoding": "utf8"});
         "default"
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   process.on("SIGTERM")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  process.on("SIGTERM")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  process.on("SIGTERM")
-<<<<<<< HEAD
-  process.on("SIGTERM")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

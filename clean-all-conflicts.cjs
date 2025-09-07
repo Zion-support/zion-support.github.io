@@ -10,7 +10,6 @@ function findFilesWithConflicts() {
     console.log('No files with merge conflicts found');
     return [];
   }
-}
 
 function cleanMergeConflicts(filePath) {
   try {
@@ -21,12 +20,11 @@ function cleanMergeConflicts(filePath) {
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep our version (the part after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)    
-    // Also handle cases where there's no content after     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n    
+    // Remove merge conflict markers and keep our version (the part after )
+    content = content.replace(/[\s\S]*?\n([\s\S]*?)    
+    // Also handle cases where there's no content after     content = content.replace(/[\s\S]*?\n    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD.*?\n/g, '');
-    content = content.replace(/=======.*?\n/g, '');
+    content = content.replace(/.*?\n/g, '');
     content = content.replace(/    
     // If file becomes empty or just whitespace, create a simple export
     if (content.trim().length === 0) {
@@ -35,14 +33,12 @@ function cleanMergeConflicts(filePath) {
       } else if (filePath.endsWith('.js') || filePath.endsWith('.jsx')) {
         content = '// JavaScript file\nmodule.exports = {};\n';
       }
-    }
     
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned merge conflicts in: ${filePath}`);
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
   }
-}
 
 // Find and clean all files with conflicts
 const conflictFiles = findFilesWithConflicts();

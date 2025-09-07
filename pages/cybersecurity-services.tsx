@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -217,7 +216,6 @@ export default function CybersecurityServices() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Detailed Services */}
@@ -256,7 +254,6 @@ export default function CybersecurityServices() {
                         <h3 className="text-xl font-bold text-white">{service.name}</h3>
                         <p className="text-red-400 font-medium">{service.tagline}</p>
                       </div>
-                    </div>
                     {service.popular && (
                       <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Popular
@@ -276,7 +273,6 @@ export default function CybersecurityServices() {
                       ))}
                       <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
                     </div>
-                  </div>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center p-3 bg-gray-800/50 rounded-lg">
@@ -287,7 +283,6 @@ export default function CybersecurityServices() {
                       <div className="text-red-400 font-bold">{service.trialDays}</div>
                       <div className="text-gray-400 text-sm">Trial Days</div>
                     </div>
-                  </div>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -307,11 +302,9 @@ export default function CybersecurityServices() {
                       Get Protected
                     </Link>
                   </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -351,7 +344,6 @@ export default function CybersecurityServices() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -401,32 +393,9 @@ export default function CybersecurityServices() {
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
               </div>
-            </div>
           </motion.div>
         </div>
       </section>
     </Layout>
   )
-=======
-import Layout from '../components/layout/Layout';
-
-export default function cybersecurityservices() {
-  return (
-    <Layout>
-      <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Cybersecurity Services solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cybersecurity Services</h1>
-          <p className="text-lg text-gray-600">
-            Professional cybersecurity services solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

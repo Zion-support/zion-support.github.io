@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -1772,7 +1771,6 @@ export const "emergingTechInnovations": EmergingTechInnovation[] = [;
       '90% faster threat detection70% reduction in false positivesQuantum advantageAI-driven intelligence24/7 monitoring';'
     ],"capabilities": [;
 ];
-    ];
     }
     "market_advantage": 'Only quantum - powered cybersecurity platform with proven AI integration';'
       'Only quantum-powered cybersecurity platform with proven AI integration''
@@ -2291,14 +2289,6 @@ export const "emergingTechInnovations": EmergingTechInnovation[] = [;
 ;
   }
 ];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 pr-12325
 
 const contact = {;'
@@ -2764,10 +2754,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 
   }
 ];}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
   }
-<<<<<<< HEAD
 ];
 
 
@@ -2792,10 +2780,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 ],
-=======
-
-];
-'
-
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

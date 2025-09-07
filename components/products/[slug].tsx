@@ -46,11 +46,8 @@ src={`"https"://picsum && picsum.photos/seed/${encodeURIComponent(item && item.s
           <div className='flex flex-wrap gap-2'>;'
             <span className='text-xs px-2 py-1 rounded-full bg-gray-100 "dark":bg-zinc-800 text-gray-700 "dark":text-gray-200 border border-gray-200 "dark":border-zinc-700'>;'
               {item && item.category}
-<<<<<<< HEAD
             </span>;
           </div>;
-<<<<<<< HEAD
-        </div>;
         <aside className='"md":col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-zinc-900 h-max'>;'
           <div className='text-sm opacity-70'>Daily Rate</div>;'
           <div className='text-xl font-semibold'>${item && item.dailyRateUsd}/day</div>;'
@@ -85,7 +82,6 @@ export default EquipmentDetail;          <div>;
             <span className="text-xs px-2 py-1 rounded-full bg-gray-100 "dark": bg-zinc-800 text-gray-700 "dark":text-gray-200 border border-gray-200 "dark":border-zinc-700">{item && item.categor,"
 }</span>;
           </div>;
-        </div>;
         <aside className=""md":col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 "dark":border-gray-800 bg-white "dark":bg-zinc-900 h-max">;"
           <div className="text-sm opacity-70">Daily Rate</div>;"
           <div className="text-xl font-semibold">${item && item.dailyRateUsd}/day</div>;"
@@ -142,7 +138,6 @@ if ( {) {$2;
               {item.category}
             </span>;
           </div>;
-        </div>;
         <aside className='md:col - span - 1 space - y-3 p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - zinc - 900 h - max'>;
           <div className='text - sm opacity - 70'>Daily Rate</div>;
           <div className='text - xl font - semibold'>${item.dailyRateUsd}/day</div>;
@@ -168,7 +163,6 @@ if ( {) {$2;
           <div className="flex flex-wrap gap-2">;
             <span className="text - xs px - 2 py - 1 rounded - full bg - gray - 100 dark:bg - zinc - 800 text - gray - 700 dark:text - gray - 200 border border - gray - 200 dark:border-zinc-700">{item.category}</span>;
           </div>;
-        </div>;
         <aside className="md:col - span - 1 space - y-3 p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - zinc-900 h-max">;
           <div className="text-sm opacity-70">Daily Rate</div>;
           <div className="text-xl font-semibold">${item.dailyRateUsd}/day</div>;
@@ -186,34 +180,16 @@ export default EquipmentDetail;
     </EnhancedLayout>)}export default EquipmentDetail;}export default EquipmentDetail;
         <div className = $2;
 export default EquipmentDetail,
-=======
-<<<<<<< HEAD
-
-"
-=======
-if (!item) {
-  return (<EnhancedLayout> <Head> <title>Equipment Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-  item.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link> 
-}
-export default EquipmentDetail
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components / layout / EnhancedLayout';
-=======
 '
 import Head from 'next / head';'
 import {use_router} from 'next / router';'
 import Link from 'next / link';'
 import EnhancedLayout from '@/components / layout / EnhancedLayout';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import equipment from '@/data / equipment.json';
 const EquipmentDetail: NextPage = () => {}
   const router = use_router (),
@@ -235,17 +211,10 @@ if ( {) {}
           <Link href='/products'>;'
             <a className='text - blue - 600 hover:underline'>Back to Equipment</a>;
           </Link>;
-<<<<<<< HEAD
         </div>;
       </EnhancedLayout>);  }        <div className="space-y-4">;
           <h1 className="text-xl font-semibold">Equipment not found</h1>;
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>;
-=======
-        </div>;"
-      </EnhancedLayout>);  }        <div className="space - y-4">;"
-          <h1 className="text - xl font - semibold">Equipment not found</h1>;"
-          <Link href="/products"><a className="text - blue - 600 hover: underline">Back to Equipment</a></Link>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
       </EnhancedLayout>);
   return (
@@ -289,7 +258,6 @@ if ( {) {}
         </aside>;
       </div>;
     </EnhancedLayout>);
-<<<<<<< HEAD
 }export default EquipmentDetail;          <div>;
             <h1 className="text-2xl font-semibold">{item.name}</h1>;
             <p className="opacity-80">Category: {item.category}</p>;
@@ -298,7 +266,6 @@ if ( {) {}
           <div className="flex flex-wrap gap-2">;
             <span className="text - xs px - 2 py - 1 rounded - full bg - gray - 100 dark:bg - zinc - 800 text - gray - 700 dark:text - gray - 200 border border - gray - 200 dark:border-zinc-700">{item.category}</span>;
           </div>;
-        </div>;
         <aside className="md:col - span - 1 space - y-3 p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - zinc-900 h-max">;
           <div className="text-sm opacity-70">Daily Rate</div>;
           <div className="text-xl font-semibold">${item.dailyRateUsd}/day</div>;
@@ -306,24 +273,6 @@ if ( {) {}
             <a className="inline - flex items - center justify - center w - full px - 4 py - 2 rounded - md bg - blue - 600 text - white hover: bg-blue-700">Request Quote</a>;
           </Link>;
           <Link href="/products"><a className="text - sm text-blue-600 hover:underline">Back to Equipment</a></Link>;
-=======
-}export default EquipmentDetail;          <div>;"
-            <h1 className="text - 2xl font - semibold">{item.name}</h1>;"
-            <p className="opacity - 80">Category: {item.category}</p>;
-          </div>;"
-          <p className="leading - relaxed">{item.description}</p>;"
-          <div className="flex flex - wrap gap - 2">;"
-            <span className="text - xs px - 2 py - 1 rounded - full bg - gray - 100 dark:bg - zinc - 800 text - gray - 700 dark:text - gray - 200 border border - gray - 200 dark:border - zinc - 700">{item.category}</span>;
-          </div>;
-        </div>;"
-        <aside className="md:col - span - 1 space - y-3 p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - zinc - 900 h - max">;"
-          <div className="text - sm opacity - 70">Daily Rate</div>;"
-          <div className="text - xl font - semibold">${item.dailyRateUsd}/day</div>;'`
-          <Link href={`/contact?subject=${encodeURIComponent ('Equipment quote: ' + item.name)}`}>;"
-            <a className="inline - flex items - center justify - center w - full px - 4 py - 2 rounded - md bg - blue - 600 text - white hover: bg - blue - 700">Request Quote</a>;
-          </Link>;"
-          <Link href="/products"><a className="text - sm text - blue - 600 hover:underline">Back to Equipment</a></Link>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </aside>;
       </div>;
     </EnhancedLayout>);
@@ -331,14 +280,7 @@ if ( {) {}
 ;
 export default EquipmentDetail;
 ;
-<<<<<<< HEAD
 };
 export default EquipmentDetail;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -54,7 +54,6 @@ export function ResumeWizard() {
       if (nextStep) {
         setActiveTab(nextStep.id)
       }
-    }
   };
   
   const prevStep = () => {
@@ -64,7 +63,6 @@ export function ResumeWizard() {
       if (prevStep) {
         setActiveTab(prevStep.id)
       }
-    }
   };
 
   const handleResumeChange = (resumeId: string) => {
@@ -119,7 +117,6 @@ export function ResumeWizard() {
             Create New
           </Button>
         </div>
-      </div>
       
       <Card>
         <CardContent className="pt-6">
@@ -149,8 +146,7 @@ export function ResumeWizard() {
     </div>
   )
 }
-<<<<<<< HEAD:src/components/resume-builder/wizard/ResumeWizard.tsx
-=======
+:src/components/resume-builder/wizard/ResumeWizard.tsx
 }
 <AlertTitle > Error</AlertTitle> <AlertDescription> {
   error;
@@ -187,4 +183,3 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
->>>>>>> origin/main:src_disabled_1757239864/components/resume-builder/wizard/ResumeWizard.tsx

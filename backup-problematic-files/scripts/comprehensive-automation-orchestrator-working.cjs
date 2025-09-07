@@ -8,13 +8,7 @@ const { execSync } = require('child_process')
         const result = execSync(script.command, {"encoding": 'utf8',"stdio"})
         "path": 'scripts/syntax-fixer-working.cjs',"description"
         "path"
-        "path"
     const healthChecks = {"packageJsonExists": fs.existsSync(path.join(this.projectRoot, 'package.json')),"nodeModulesExists": fs.existsSync(path.join(this.projectRoot, 'node_modules')),"srcExists"}
       "gitExists"
       console.log('\n⚠  Failed "Operations")
-<<<<<<< HEAD
       console.error('Fatal "error")
-      console.error('Fatal "error")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

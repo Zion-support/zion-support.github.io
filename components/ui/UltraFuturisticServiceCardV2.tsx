@@ -156,8 +156,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service.category}
                   </span>
                 </div>
-              </div>
-            </div>
 
 
             {service.popular && (
@@ -179,8 +177,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service && service.category}
                   </span>;
                 </div>;
-              </div>;
-            </div>;
                 initial={{ "scale": 0 }}
 
                 animate={{ "scale": 1 
@@ -244,9 +240,6 @@ transition={{ "delay": 0.5, "type": 'spring', "stiffness": 200 }}'
               </div>
               <div className='text-xs text-gray-400'>Reviews</div>'
             </div>
-          </div>
-        </div>
-<<<<<<< HEAD
                 {service.reviews}<div className="text-center">;
               <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>;
               <div className="text-xs text-gray-400">Customers</div>;
@@ -255,8 +248,6 @@ transition={{ "delay": 0.5, "type": 'spring', "stiffness": 200 }}'
               <div className="text-2xl font-bold text-pink-400">{service.reviews}</div>;
               <div className="text-xs text-gray-400">Reviews</div>;
             </div>;
-          </div>;
-        </div>;
         {/* Stats */}
         <div className='relative z-10 mb-6'>;
           <div className='grid grid-cols-3 gap-4'>;
@@ -283,45 +274,11 @@ transition={{ "delay": 0.5, "type": 'spring', "stiffness": 200 }}'
             </div>;
             <div className="text-center">;
               <div className="text-2xl font-bold text-pink-400">{service && service.reviews}</div>;
-=======
-        {/* Stats */}'
-        <div className='relative z-10 mb-6'>;'
-          <div className='grid grid-cols-3 gap-4'>;'
-            <div className='text-center'>;'
-              <div className='text-2xl font-bold text-cyan-400'>;
-                {service && service.rating}
-              </div>;'
-              <div className='text-xs text-gray-400'>Rating</div>;
-            </div>;'
-            <div className='text-center'>;'
-              <div className='text-2xl font-bold text-purple-400'>;
-                {service && service.customers.toLocaleString()}
-              </div>;'
-              <div className='text-xs text-gray-400'>Customers</div>;
-            </div>;'
-            <div className='text-center'>;'
-              <div className='text-2xl font-bold text-pink-400'>;
-                {service && service.reviews}
-              </div>;'
-              <div className='text-xs text-gray-400'>Reviews</div>            </div>            </div>;"
-            <div className="text-center">;"
-              <div className="text-2xl font-bold text-purple-400">{service && service.customers.toLocaleString()}</div>;"
-              <div className="text-xs text-gray-400">Customers</div>;
-            </div>;"
-            <div className="text-center">;"
-              <div className="text-2xl font-bold text-pink-400">{service && service.reviews}</div>;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <div className="text-xs text-gray-400">Reviews</div>;
             </div>;
-          </div>;
-        </div>;
-          </div>;
-<<<<<<< HEAD
         </div>;</div>;
               <div className='text-xs text-gray-400'>Reviews</div>;
             </div>;
-          </div>;
-        </div>;
 
         {/* Pricing */}
 <div className='relative z-10 mb-6'>;'
@@ -444,53 +401,6 @@ className='flex items-center space-x-2 text-sm''
             {service.features.length > 3 && (
               <div className="text-xs text-gray-500 mt-2">
                 +{service.features.length - 3} more features
-=======
-        </div>;
-
-
-<<<<<<< HEAD
-              </div>
-              <div className='text-xs text-gray-400'>Reviews</div>
-            </div>
-          </div>
-        </div>
-        {/* Pricing */}
-<div className='relative z-10 mb-6'>
-          <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-600/30'>
-            <div className='flex items-center justify-between mb-2'>
-              <span className='text-sm text-gray-400'>Starting at</span>
-              <span className='text-xs text-gray-500'>per month</span>
-            </div>
-            <div className='flex items-baseline space-x-2'>
-              <span className='text-3xl font-bold text-white'>
-                ${service.price.monthly}
-              </span>
-              <span className='text-lg text-gray-400'>/mo</span>
-            </div>
-            <div className='flex items-center space-x-2 mt-2'>
-              <span className='text-xs text-gray-500'>or</span>
-              <span className='text-sm text-cyan-400 font-medium'>
-                ${service.price.yearly}/year
-              </span>
-              <span className='text-xs text-gray-500'>(save 17%)</span>
-            </div>
-            {service.price.enterprise && (
-              <div className='mt-2 pt-2 border-t border-gray-600/30'>
-                <span className='text-xs text-gray-500'>Enterprise: </span>
-                <span className='text-sm text-purple-400 font-medium'>
-                  ${service.price.enterprise}/mo
-                </span>
-              </div>
-            )}
-          </div>
-        </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Features preview */}
-<div className='relative z-10 mb-6'>
-=======
-        {/* Features preview */}'
-        <div className='relative z-10 mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features;
           </h4>'"
@@ -523,12 +433,10 @@ className='flex items-center space-x-2 text-sm''
 }
 
           </div>;
-        </div>;
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>'
 
         {/* Market info */}
 
-<<<<<<< HEAD
         {service.marketSize && service.growthRate && (
 
 <div className='relative z-10 mb-6'>'
@@ -553,26 +461,6 @@ className='flex items-center space-x-2 text-sm''
               <div className="flex items-center justify-between text-xs mt-1">
                 <span className="text-gray-400">Growth Rate</span>
                 <span className="text-green-400 font-medium">{service.growthRate}</span>
-=======
-        {service.marketSize && service.growthRate && ("
-          <div className="relative z-10 mb-6">"
-            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">"
-              <div className="flex items-center justify-between text-xs">"
-                <span className="text-gray-400">Market Size</span>"
-                <span className="text-cyan-400 font-medium">{service.marketSize}</span>
-              </div>"
-              <div className="flex items-center justify-between text-xs mt-1">"
-                <span className="text-gray-400">Growth Rate</span>"
-                <span className="text-green-400 font-medium">{service.growthRate}</span>
-              </div>
-<div className='relative z-10 mb-6'>
-            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>
-              <div className='flex items-center justify-between text-xs'>
-                <span className='text-gray-400'>Market Size</span>
-                <span className='text-cyan-400 font-medium'>
-                  {service.marketSize}
-                </span>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
               <div className='flex items-center justify-between text-xs mt-1'>
                 <span className='text-gray-400'>Growth Rate</span>
@@ -582,12 +470,9 @@ className='flex items-center space-x-2 text-sm''
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
-          </div>
             ))}
 
         {/* Market info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         {service && service.marketSize && service && service.growthRate && (;
           <div className='relative z-10 mb-6'>;'
 
@@ -612,34 +497,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-gray-400">Growth Rate</span>;"
                 <span className="text-green-400 font-medium">{service && service.growthRate}</span>;"
             </div>;
-          </div>;
-=======
-        {service && service.marketSize && service && service.growthRate && (
-          <div className='relative z-10 mb-6'    />
-            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'    />
-              <div className='flex items-center justify-between text-xs'    />
-                <span className='text-gray-400'    />Market Size</span>;}
-                <span className='text-cyan-400 font-medium'    />;}
-                  {service && service.marketSize}
-                </span>
-              </div>
-              <div className='flex items-center justify-between text-xs mt-1'    />
-                <span className='text-gray-400'    />Growth Rate</span>
-                <span className='text-green-400 font-medium'    />
-                  {service && service.growthRate}"
-                </span>              </div>          <div className=\"relative z-10 mb-6\"    />;"
-            <div className=\"bg-gray-800/30 rounded-lg p-3 border border-gray-600/20\"    />;"
-              <div className=\"flex items-center justify-between text-xs\"    />;"
-                <span className=\"text-gray-400\"    />Market Size</span>;"
-                <span className=\"text-cyan-400 font-medium\"    />{service && service.marketSize}</span>
-              </div>;"
-              <div className=\"flex items-center justify-between text-xs mt-1\"    />;"
-                <span className=\"text-gray-400\"    />Growth Rate</span>;"
-                <span className=\"text-green-400 font-medium\"    />{service && service.growthRate}</span>
-            </div>
-          </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
         {service && service.marketSize && service && service.growthRate && (;'
           <div className='relative z-10 mb-6'>;'
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;'
@@ -663,10 +520,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-gray-400">Growth Rate</span>;"
                 <span className="text-green-400 font-medium">{service && service.growthRate}</span>;
             </div>;
-          </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         )}
-<<<<<<< HEAD
         {/* CTA Button */}
 <div className='relative z-10'>'
           <motion.a,
@@ -711,38 +565,10 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/"btn":opacity-100 transition-opacity duration-300"></div>;"
           </motion && motion.a>;
         </div>;
-<<<<<<< HEAD
-=======
-            whileTap={{ scale: 0 && 0.95 }
-
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'    />
-            <span className='relative z-10 flex items-center space-x-2'    />
-              <span    />Learn More</span>
-              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200'    />
-            </span>;</motion.a>
-            {/* Button glow effect */}
-            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'    /></div>          </motion && motion.a>          >;"
-            <span className=\"relative z-10 flex items-center space-x-2\"    />
-              <span    />Learn More</span>;"
-              <ArrowRight className=\"w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200\"    />
-            </span>
-            {/* Button glow effect */}"
-            <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300\"    /></div>
-          </motion && motion.a>
-        </div>;</motion.a>
-        </div>
-=======
-
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </motion.a>
 
         </div>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         {/* Hover overlay */}
         <motion&& motion.div;
           initial={{ "opacity": 0 }}
@@ -756,14 +582,7 @@ className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 
 };
 
 
-<<<<<<< HEAD
 };
 
 export default UltraFuturisticServiceCardV2;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

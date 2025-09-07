@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
   const [items, setItems] = useState<any[]>([]),
@@ -19,13 +18,6 @@ export default function InternationalProposals() {
     setItems(data.proposals || [])
   }
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function index() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -40,13 +32,7 @@ export default function index() {
             Professional index solutions tailored to your business needs.
           </p>
         </div>
-<<<<<<< HEAD
       )}
     </div>
   )
-=======
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

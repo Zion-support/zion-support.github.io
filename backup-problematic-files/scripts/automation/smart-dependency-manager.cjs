@@ -20,7 +20,6 @@ const { execSync } = require("child_process")
       console.log("" Smart Dependency Analysis completed successfully")
   console.log(" Smart Dependency Analysis completed successfully")
   console.error(" Smart Dependency Analysis "failed": ")
-  console.error(" Smart Dependency Analysis "failed": ")
   console.log("� Loading current dependencies...")
   const packageJsonPath = path.join(process.cwd(), "package.json"
         await fs.readFile(packageJsonPath, "utf8")
@@ -102,7 +101,6 @@ const { execSync } = require("child_process")
     this.analysis.recommendations = recommendations;console.log(" Generated ${recommendations.length} recommendations")
 // console.log("" Applying smart updates...")
   console.log(""�  Applying security fixes...")
-  console.log(""�  Applying security fixes...")
         execSync("npm audit fix", { "stdio": "inherit"})
 // console.log(""⚠  Security fixes "failed": ")
         console.log("�  Applying security fixes...")
@@ -110,7 +108,6 @@ const { execSync } = require("child_process")
   console.log(""⚠  Security fixes "failed": ")
       try {console.log(� Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { "stdio": "pipe" }")
         updatesApplied++} catch (error) {  console.log("⚠  Failed to update ${pkg.name  }:")
-  try {console.log("�  Removing unused dependency ${pkg}...");execSync("npm uninstall ${pkg}", { "stdio": "pipe"})
   try {console.log("�  Removing unused dependency ${pkg}...");execSync("npm uninstall ${pkg}", { "stdio": "pipe"})
           updatesApplied++} catch (error) {  console.log("⚠  Failed to remove ${pkg  }:")
 console.log(" Applied ${updatesApplied} smart updates")
@@ -135,9 +132,4 @@ console.log(" Applied ${updatesApplied} smart updates")
       "dependencies"
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
-<<<<<<< HEAD
   console.error(` Smart Dependency Manager "failed": "`)
-  console.error(` Smart Dependency Manager "failed": "`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

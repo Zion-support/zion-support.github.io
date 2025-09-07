@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -50,20 +49,12 @@ export default function ComprehensivePricingPage() {
   },
 
   const toggleServiceExpansion = $2;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensivepricing2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Comprehensive Pricing 2025 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive Pricing 2025 solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Header */}
@@ -120,7 +111,6 @@ export default function comprehensivepricing2025() {
                   <div className="text-3xl font-bold text-orange-400">500%+</div>
                   <div className="text-white/60">Average ROI</div>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -185,8 +175,6 @@ export default function comprehensivepricing2025() {
                           <div className="text-white/60">
                             {billingCycle === 'yearly' ? '/year' : service.period}
                           </div>
-                        </div>
-                      </div>
 
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
@@ -215,7 +203,6 @@ export default function comprehensivepricing2025() {
                           <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
                           <div className="text-xs text-white/60">Trial</div>
                         </div>
-                      </div>
 
                       {/* Expand/Collapse Button */}
                       <button
@@ -267,7 +254,6 @@ export default function comprehensivepricing2025() {
                                   </span>
                                 ))}
                               </div>
-                            </div>
 
                             {/* Use Cases */}
                             <div className="mb-6">
@@ -280,7 +266,6 @@ export default function comprehensivepricing2025() {
                                   </div>
                                 ))}
                               </div>
-                            </div>
 
                             {/* ROI and Benefits */}
                             <div className="mb-6">
@@ -294,7 +279,6 @@ export default function comprehensivepricing2025() {
                                   </div>
                                 ))}
                               </div>
-                            </div>
 
                             {/* Contact Information */}
                             <div className="bg-white/5 rounded-xl p-4">
@@ -305,8 +289,6 @@ export default function comprehensivepricing2025() {
                                 <div>📍 {service.contactInfo.address}</div>
                                 <div>🌐 {service.contactInfo.website}</div>
                               </div>
-                            </div>
-                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -314,7 +296,6 @@ export default function comprehensivepricing2025() {
                 ))}
               </AnimatePresence>
             </div>
-          </div>
         </section>
 
         {/* Contact CTA */}
@@ -349,24 +330,10 @@ export default function comprehensivepricing2025() {
                     Call +1 302 464 0950
                   </a>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive Pricing 2025</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive pricing 2025 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

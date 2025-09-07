@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -117,18 +116,12 @@ const testimonials = $2;
 ],
 
 export default function InnovativeBusinessSolutions() {
-=======
-import Layout from '../components/layout/Layout';
-
-export default function innovativebusinesssolutions() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Innovative Business Solutions - Zion Tech Group</title>
         <meta name="description" content="Innovative Business Solutions solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -211,12 +204,9 @@ export default function innovativebusinesssolutions() {
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Services Section */}
@@ -305,15 +295,12 @@ export default function innovativebusinesssolutions() {
                               Get Started
                             </Link>
                           </div>
-                        </div>
-                      </div>
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Testimonials Section */}
@@ -351,7 +338,6 @@ export default function innovativebusinesssolutions() {
                     <p className="text-teal-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-400 text-sm">{testimonial.company}</p>
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4">{testimonial.content}</p>
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
@@ -359,11 +345,9 @@ export default function innovativebusinesssolutions() {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -406,17 +390,4 @@ export default function innovativebusinesssolutions() {
       </section>
     </Layout>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Innovative Business Solutions</h1>
-          <p className="text-lg text-gray-600">
-            Professional innovative business solutions solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

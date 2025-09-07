@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require("child_process");
 class AutoFixer {}
   constructor() {}
@@ -185,9 +180,4 @@ if (require.main === module) {}
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = AutoFixer;
-module.exports = AutoFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

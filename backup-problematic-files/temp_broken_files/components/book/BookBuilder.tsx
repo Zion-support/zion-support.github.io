@@ -31,7 +31,6 @@ reader.readAsDataURL(file)})export default function BookBuilder() {return (<div 
           <div className='text-lg opacity-80'>{project.meta.subtitle}</div>;'
           <div className='pt-6 text-sm opacity-70'>;'
             By {project.meta.author}
-=======
     return (
 <div className='w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900'>
         <div className='p-8 space-y-2'>
@@ -46,14 +45,12 @@ reader.readAsDataURL(file)})export default function BookBuilder() {return (<div 
             By {project.meta.author}
           </div>
           {project.meta.isbn ? (
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 
             <div className='pt-4'>
               <img
                 alt='ISBN barcode'
                 className='h-16'
-<<<<<<< HEAD
           </div>;
           {project.meta.isbn ? (<div className='pt-4'>;'
               <img;
@@ -107,7 +104,6 @@ return (;
             </div>
           ) : null}
         </div>;
-      </div>;
 )}, [project])async function handleGenerateWithAI() {setBusy(true)try {const res = await fetch('/api/book/generate', {"method": 'POST',"headers": { 'Content-Type': 'application/json' },"body": JSON.stringify({"meta": project.meta,"chapters": project.chapters})})const data = await res.json()if (data?.chapters) {setProject(p => ({ ...p, "chapters": data.chapters }))}'
     } finally {setBusy(false)}
   }
@@ -129,24 +125,9 @@ return (;
             onClick={handleGenerateWithAI}
             disabled={busy}
           >
-<<<<<<< HEAD
 
             <option value="LETTER">8.5x11 Letter</option>
             <option value="A4">A4</option>
-=======
-            <Wand2 className='w-4 h-4 mr-1' /> AI Assist
-          </button>
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-
-          <select
-            className='border rounded px-2 py-1 text-sm'
-            value={pageSize}
-            onChange={e => setPageSize(e.target.value as any)}
-          >
-            <option value='LETTER'>8.5x11 Letter</option>
-            <option value='A4'>A4</option>
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
@@ -160,24 +141,12 @@ return (;
           >
             <FileType className='w-4 h-4 mr-1' /> EPUB
           </button>
-<<<<<<< HEAD
 
           <button className="btn btn-sm btn-secondary" onClick={handleExportEpub} disabled={busy}>
             <FileType className="w-4 h-4 mr-1" /> EPUB
-=======
-:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-
-          <button
-            className='btn btn-sm btn-secondary'
-            onClick={handleExportEpub}
-            disabled={busy}
-          >
-            <FileType className='w-4 h-4 mr-1' /> EPUB
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
           </button>
 
         </div>
-      </div>
 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
@@ -202,7 +171,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             <label className='space-y-1'>
               <div className='text-xs uppercase opacity-60'>Title</div>
-<<<<<<< HEAD
               <input
                 className='w-full border rounded px-3 py-2'
           >;
@@ -231,7 +199,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
             <FileType className='w-4 h-4 mr-1' /> EPUB;'
           </button>;
         </div>;
-      </div>;
 <section className='grid grid-cols-1 "lg":grid-cols-2 gap-6'>;'
         <div className='space-y-4'>;'
           <h2 className='font-semibold flex items-center gap-2'>;'
@@ -275,21 +242,10 @@ className=&quot;w-full border rounded px-3 py-2&quot;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <label className="space-y-1">
               <div className="text-xs uppercase opacity-60">Title</div>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               <input
                 className='w-full border rounded px-3 py-2'
                 value={project.meta.title}
-<<<<<<< HEAD
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}
-=======
-                onChange={e =>
-                  setProject({
-                    ...project,
-                    meta: { ...project.meta, title: e.target.value },
-                  })
-                }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               />
             </label>
             <label className='space-y-1'>
@@ -297,16 +253,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <input
                 className='w-full border rounded px-3 py-2'
                 value={project.meta.subtitle}
-<<<<<<< HEAD
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
-=======
-                onChange={e =>
-                  setProject({
-                    ...project,
-                    meta: { ...project.meta, subtitle: e.target.value },
-                  })
-                }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               />
             </label>
             <label className='space-y-1'>
@@ -314,16 +261,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <input
                 className='w-full border rounded px-3 py-2'
                 value={project.meta.author}
-<<<<<<< HEAD
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}
-=======
-                onChange={e =>
-                  setProject({
-                    ...project,
-                    meta: { ...project.meta, author: e.target.value },
-                  })
-                }
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               />
             </label>
             <label className='space-y-1'>
@@ -331,15 +269,9 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 ISBN (optional)
               </div>
               <input
-<<<<<<< HEAD
 
                 className="w-full border rounded px-3 py-2"
                 placeholder="9781234567897"
-=======
-                className='w-full border rounded px-3 py-2'
-                placeholder='9781234567897'
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
@@ -348,7 +280,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 
           <div className='pt-2'>{coverPreview}</div>
-<<<<<<< HEAD
         </div>
 
         <div className='space-y-4'>
@@ -361,14 +292,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <div className="space-y-4">
           <h2 className="font-semibold flex items-center gap-2">
             <Settings className="w-4 h-4" /> Visual Elements
-=======
-        </div>
-
-        <div className='space-y-4'>
-          <h2 className='font-semibold flex items-center gap-2'>
-            <Settings className='w-4 h-4' /> Visual Elements
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
           </h2>
           <div className="space-y-3">
             <label className="block">
@@ -385,12 +308,9 @@ className=&quot;w-full border rounded px-3 py-2&quot;
             </label>
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
-<<<<<<< HEAD
                 <div key={i} className="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
                   <img src={src} alt="visual" className="object-cover w-full h-full" />
                 </div>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
               ))}
 
             <div className='grid grid-cols-3 gap-2'>
@@ -400,7 +320,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 .slice(0, 6)
                 .map((src, i) => (
                   <div
-<<<<<<< HEAD
                 onChange={e =>;
                   }
                   setProject({...project,"meta": { ...project.meta, "author": e.target.value }})}
@@ -474,7 +393,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                   </div>;
                 ))}</div>;
           </div>;
-        </div>;
       </section>;
 <section className='space-y-4'>;'
         <h2 className='font-semibold'>Chapters</h2>;'
@@ -525,7 +443,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
     </div>;
   )}
         </div>
-      </div>
     )
   }, [project])
   async function handleGenerateWithAI() {
@@ -547,7 +464,6 @@ const data = await res.json();
       }
       setBusy(false)
     }
-  }
   async function handleExportPdf() {
     }
     setBusy(true)
@@ -570,7 +486,6 @@ a.download = 'zion-os-book.pdf''
       }
       setBusy(false)
     }
-  }
   async function handleExportEpub() {
     }
     setBusy(true)
@@ -592,7 +507,6 @@ a.download = 'zion-os-book.epub''
       }
       setBusy(false)
     }
-  }
   async function onUploadImages() {
     }
     if (!files) return;
@@ -617,7 +531,6 @@ return (;
             <Download className="w-4 h-4 mr-1" /> PDF"
           </button>
         </div>
-      </div>
       <section className="grid grid-cols-1 "lg":grid-cols-2 gap-6">"
         <div className="space-y-4">"
           <h2 className="font-semibold flex items-center gap-2">"
@@ -659,8 +572,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
               ))}
             </div>
-          </div>
-        </div>
       </section>
       <section className="space-y-4">"
         <h2 className="font-semibold">Chapters</h2>"
@@ -710,8 +621,5 @@ const quoteCallouts = [...project.visuals.quoteCallouts],;
   );
 }
 
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

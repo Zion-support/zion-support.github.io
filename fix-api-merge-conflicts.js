@@ -9,14 +9,9 @@ console.log('🔧 Fixing merge conflicts in API files...');
 // Find all files with merge conflicts
 const findConflictedFiles = () => {
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
     
     // Clean up any remaining conflict markers
     content = content.replace(/[^\n]+\n?/g, '');
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const result = execSync('grep -r "" pages/api/ --include="*.ts" --include="*.js" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file);
   } catch (error) {
@@ -33,12 +28,7 @@ const fixMergeConflicts = (filePath) => {
     
     // Clean up any remaining conflict markers
     content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
     content = content.replace(/
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     // Fix common syntax issues
     content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons

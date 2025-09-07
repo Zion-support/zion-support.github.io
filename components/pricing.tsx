@@ -325,7 +325,6 @@ are already operational and delivering transformative results
                                   Most Popular;
                                 </span>;
                               </div>;
-                            </div>;
                           )}
                           {/* Service Icon */}
                           <div;
@@ -438,7 +437,6 @@ href={service.link |`/services/${service.id}`}`                            >;
                             </Link>;
                             <ExternalLink className='w-5 h-5 text-gray-400 group-"hover":text-cyan-400 transition-colors' />;'
                           </div>;
-                        </div>;
                       </motion.div>;
                     ))}
                   </div>;
@@ -500,7 +498,6 @@ initial={{ "opacity": 0, "y": 30
                   <MapPin className='w-5 h-5 text-pink-400' />'
                   <span className='text-sm'>{contactInfo.address}</span>'
                 </div>
-              </div>
               {/* Additional Info *
 }
 <div className='mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20'>'
@@ -532,8 +529,6 @@ initial={{ "opacity": 0, "y": 30
                     <Check className='w-4 h-4 text-green-400' />'
                     <span>Cutting-edge 2029 technology</span>
                   </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -550,7 +545,6 @@ initial={{ "opacity": 0, "y": 30
   "duration": 0.8
 }viewport= {
   {
-<<<<<<< HEAD
             >;
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">;
                 Ready to Get Started with;
@@ -592,7 +586,6 @@ initial={{ "opacity": 0, "y": 30
                   <MapPin className="w-5 h-5 text-pink-400" />;
                   <span className="text-sm">{contactInfo.address}</span>;
                 </div>;
-              </div>;
               {/* Additional Info */}{/* Contact Information */}
 <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
                 <div className='flex items-center justify-center space-x-2'>;
@@ -607,7 +600,6 @@ initial={{ "opacity": 0, "y": 30
                   <MapPin className='w-5 h-5 text-pink-400' />;
                   <span className='text-sm'>{contactInfo.address}</span>;
                 </div>;
-              </div>;
               {/* Additional Info */}
 <div className='mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20'>;
                 <h3 className='text-xl font-semibold text-white mb-4'>;
@@ -639,8 +631,6 @@ initial={{ "opacity": 0, "y": 30
                     <Check className='w-4 h-4 text-green-400' />;
                     <span>Cutting-edge 2029 technology</span>;
                   </div>;
-                </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -671,7 +661,6 @@ initial={{ "opacity": 0, "y": 30
                                   +{service.features.length - 4} more features;
                                 </span>)}
                             </div>;
-                          </div>;
                           {/* Additional Info */}
                           <div className='mb - 6 p - 4 bg - gray - 800 / 30 rounded - xl'>;
                             <div className='grid grid - cols - 2 gap - 4 text - sm'>;
@@ -704,7 +693,6 @@ initial={{ "opacity": 0, "y": 30
                                   </span>;
                                 </div>)}
                             </div>;
-                          </div>;
                           {/* Market Position */}
                           {service.market_position && (<div className='mb - 6 p - 3 bg - blue - 900 / 20 border border - blue - 500 / 20 rounded - lg'>;
                               <p className='text - xs text - blue - 300 leading - relaxed'>;
@@ -731,7 +719,6 @@ initial={{ "opacity": 0, "y": 30
                             </Link>;
                             <ExternalLink className='w - 5 h - 5 text - gray - 400 group - hover:text - cyan - 400 transition - colors' />;
                           </div>;
-                        </div>;
                       </motion.div>))}
                   </div>;
                 </motion.div>))}          </div>;
@@ -763,7 +750,6 @@ initial={{ "opacity": 0, "y": 30
                           </Link>;
                           <ExternalLink className="w - 5 h - 5 text - gray - 400 group - hover:text - cyan-400 transition-colors" />;
                         </div>;
-                      </div>;
                     </motion.div>))}
                 </div>;
               </motion.div>))}
@@ -835,7 +821,6 @@ initial={{ "opacity": 0, "y": 30
                   <MapPin className="w - 5 h - 5 text-pink-400" />;
                   <span className="text-sm">{contact_info.address}</span>;
                 </div>;
-              </div>;
               {/* Additional Info */}
               <div className='mt - 12 p - 6 bg - gray - 900 / 30 rounded - 2xl border border - cyan - 500 / 20'>;
                 <h3 className='text - xl font - semibold text - white mb - 4'>;
@@ -868,8 +853,6 @@ initial={{ "opacity": 0, "y": 30
                     <Check className="w - 4 h - 4 text-green-400" />;
                     <span > Cutting - edge 2029 technology</span>;
                   </div>;
-                </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
@@ -892,8 +875,3 @@ initial={{ "opacity": 0, "y": 30
     </UltraFuturisticBackground2029>
   )
 }
-=======
-  once: true
-}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -6,10 +6,9 @@ interface TalentCardAvailabilityProps {
   availabilityType: string
 }
 
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardAvailability.tsx
+:src/components/profile/talent-card/TalentCardAvailability.tsx
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
-=======
 interface TalentCardAvailabilityProps  {availability_type: string;
 }export /**;
  * TalentCardAvailability - Function description;
@@ -39,7 +38,6 @@ interface TalentCardAvailabilityProps {
         return 'bg-yellow-500/20 text-yellow-400';
   }
 
->>>>>>> origin/main:src_disabled_1757239864/components/profile/talent-card/TalentCardAvailability.tsx
   const getAvailabilityColor = (status: string) => {
     switch (status) {
       case 'full-time':
@@ -67,8 +65,7 @@ interface TalentCardAvailabilityProps {
     }
   };
 
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardAvailability.tsx
-=======
+:src/components/profile/talent-card/TalentCardAvailability.tsx
   const getAvailabilityLabel = (status: string,) => {;
     switch (status) {;
       case 'full-time':;
@@ -98,7 +95,6 @@ interface TalentCardAvailabilityProps {
       <span>{getAvailabilityLabel (availability_type)}</span>;
     </div>);
 }
->>>>>>> origin/main:src_disabled_1757239864/components/profile/talent-card/TalentCardAvailability.tsx
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
@@ -106,9 +102,7 @@ interface TalentCardAvailabilityProps {
     </div>
   )
 }
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardAvailability.tsx
-=======
+:src/components/profile/talent-card/TalentCardAvailability.tsx
 ;
 
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/talent-card/TalentCardAvailability.tsx

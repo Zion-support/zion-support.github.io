@@ -1,6 +1,5 @@
-<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
+:src/components/TestimonialCarousel.tsx
 
-=======
 
 
 
@@ -46,10 +45,8 @@ const TestimonialCarousel = () => {
               <p className="font-semibold text-gray-900">{testimonial.name}</p>
               <p className="text-sm text-gray-500">{testimonial.company}</p>
             </div>
-          </div>
         ))}
       </div>
-    </div>
   );
 };
 
@@ -63,15 +60,13 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 
 
->>>>>>> origin/main:src_disabled_1757239864/components/TestimonialCarousel.tsx
 import {
   Carousel;
   CarouselContent;
   CarouselItem;
   CarouselNext;
-<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
+:src/components/TestimonialCarousel.tsx
   CarouselPrevious} from "@/components/ui/carousel";
-=======
   CarouselPrevious} from "@/components/ui/carousel",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
@@ -213,7 +208,6 @@ interface Testimonial  {id: number;
 
 
   CarouselPrevious} from "@/components/ui/carousel",
->>>>>>> origin/main:src_disabled_1757239864/components/TestimonialCarousel.tsx
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -260,7 +254,6 @@ export function TestimonialCarousel() {
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <Image
@@ -292,12 +285,10 @@ export function TestimonialCarousel() {
             </div>
           </Carousel>
         </div>
-      </div>
     </section>
-<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
+:src/components/TestimonialCarousel.tsx
   )
 }
-=======
 
 const TestimonialCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -431,9 +422,6 @@ const TestimonialCarousel: React.FC = () => {
                 {currentTestimonial.company}
               </p>
             </div>
-          </div>
-        </div>
-      </div>
 
       {/* Navigation Controls */}
       <div className="flex items-center justify-center mt-8 space-x-4">
@@ -486,8 +474,6 @@ const TestimonialCarousel: React.FC = () => {
           <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
           <div className="text-gray-600">Support Available</div>
         </div>
-      </div>
-    </div>
   );
 };
 
@@ -538,11 +524,8 @@ export default TestimonialCarousel;
           <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>;
           <div className="text-gray-600">Support Available</div>;
         </div>;
-      </div>;
-    </div>;
   )}export default TestimonialCarousel;
 
 
 export default TestimonialCarousel;
 
->>>>>>> origin/main:src_disabled_1757239864/components/TestimonialCarousel.tsx

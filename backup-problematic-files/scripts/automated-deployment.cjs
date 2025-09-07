@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
 // console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
@@ -20,21 +15,12 @@ const { execSync } = require('child_process')
       this.deploymentSteps.push({ "step": 'build', "status"})
       execSync('node scripts/comprehensive-test-suite.cjs', { "stdio"})
       this.deploymentSteps.push({ "step": 'tests', "status"})
-      this.deploymentSteps.push({ "step": 'tests', "status"})
         this.deploymentSteps.push({ "step": 'staging-deploy', "status"})
-        this.deploymentSteps.push({ "step": 'staging-deploy', "status"})
-      this.deploymentSteps.push({ "step": 'staging-deploy', "status"})
       this.deploymentSteps.push({ step: 'production-deploy', "status"})
-      this.deploymentSteps.push({ "step": 'verification', "status"})
       this.deploymentSteps.push({ "step": 'verification', "status"})
         "successfulSteps"
         "warningSteps"
         "failedSteps"
         "skippedSteps"
 // console.log('\n Deployment "Report")
-<<<<<<< HEAD
       console.log('\n Errors "encountered")
-      console.log('\n Errors "encountered")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

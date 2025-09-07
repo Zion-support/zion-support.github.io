@@ -899,7 +899,6 @@ export interface AdvancedFintechSolution2025  {"id": string,"name": string,"tagl
     "reviews": 52;
   }
 ];
-<<<<<<< HEAD
   }
 ];];
     "rating": 4.5,
@@ -909,7 +908,6 @@ export interface AdvancedFintechSolution2025  {"id": string,"name": string,"tagl
 ;
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
 ];
 

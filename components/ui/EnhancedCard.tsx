@@ -10,7 +10,6 @@ return (;
     <div className={["card-base p-4", className].join(" ")}>{children}</div>"
   );
 
-<<<<<<< HEAD
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
@@ -19,15 +18,6 @@ export default function EnhancedCard(): any ({;
   children: React && React.ReactNode;
   className?: string;
 }) {;
-=======
-<<<<<<< HEAD
-"
-=======
-</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
@@ -50,7 +40,3 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

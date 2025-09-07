@@ -144,9 +144,4 @@ class ErrorReportGenerator {}
 };
 ;
 const generator = new ErrorReportGenerator();
-<<<<<<< HEAD
 generator.run().catch(console.error);
-generator.run().catch(console.error);
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

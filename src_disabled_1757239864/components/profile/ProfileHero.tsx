@@ -6,7 +6,7 @@ avatarUrl?: string;
   aiScore?: number;
 
 
-<<<<<<< HEAD:src/components/profile/ProfileHero.tsx
+:src/components/profile/ProfileHero.tsx
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +26,6 @@ interface ProfileHeroProps {
 
 export function ProfileHero({
   name;
-=======
   return (
     <div className='w-full overflow-hidden'>;
       <div className='relative'>;
@@ -36,7 +35,6 @@ export function ProfileHero({
               className='w-full h-full object-cover';
               loading='lazy';
 export function ProfileHero(): any ({name;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileHero.tsx
   title;
   avatarUrl;
   coverImageUrl;
@@ -69,7 +67,7 @@ export function ProfileHero(): any ({name;
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-<<<<<<< HEAD:src/components/profile/ProfileHero.tsx
+:src/components/profile/ProfileHero.tsx
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -79,7 +77,6 @@ export function ProfileHero(): any ({name;
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge 
-=======
 
         </AspectRatio>;
 
@@ -127,7 +124,6 @@ export function ProfileHero(): any ({name;
                     profileType === 'service'
                       ? 'bg-zion-purple/10'
 
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileHero.tsx
                   variant="outline" 
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
@@ -168,7 +164,7 @@ export function ProfileHero(): any ({name;
                     )}
                   </div>
                 )}
-<<<<<<< HEAD:src/components/profile/ProfileHero.tsx
+:src/components/profile/ProfileHero.tsx
                 
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
@@ -176,14 +172,8 @@ export function ProfileHero(): any ({name;
                   </div>
                 )}
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   )
 }
-=======
 
                 {aiScore && (;
                   <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
@@ -204,5 +194,3 @@ export function ProfileHero(): any ({name;
 
 
 ;
-;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileHero.tsx

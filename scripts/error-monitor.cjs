@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -72,7 +56,6 @@ const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "ut
       this.log("warn", `Linting errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async checkBuildErrors() {}
     try {}
       this.log("info", "Checking build errors...");
@@ -85,7 +68,6 @@ const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "u
       this.log("warn", `Build errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async checkTestErrors() {}
     try {}
       this.log("info", "Checking test errors...");
@@ -98,7 +80,6 @@ const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";
       this.log("warn", `Test errors "found": ${errors.length} characters`);
       return { "status": "errors", "errors": errors.toString() };
     };
-  };
   async scanLogFiles() {}
     this.log("info", "Scanning log files for errors...");
     const logFiles = [];
@@ -131,16 +112,6 @@ const errorPatterns = [/error/i,/exception/i,/failed/i;];
             if (pattern.test(line)) {}"
               foundErrors.push({"file": logFile,"line": index + 1,"content": line.trim();}"
                 timestamp: new Date().toISOString()})};
-<<<<<<< HEAD
-=======
-          })})} catch (error) {}
-        this.log("warn", `Could not read log file ${logFile}: ${error.message}`);
-const fs = require("fs").promises;
-const path = require("child_process");
-const { exec } = require("child_process");
-const util = require("child_process");
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const execAsync = util.promisify(exec);
 class ErrorMonitor {}
   constructor() {}
@@ -215,7 +186,6 @@ class ErrorMonitor {}
 const reportFile = path.join();
       this.reportsDir;
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log("info", `Error report saved to ${reportFile}`);
@@ -258,39 +228,10 @@ module.exports = ErrorMonitor;
 
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = ErrorMonitor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = ErrorMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ErrorMonitor;
-<<<<<<< HEAD
-module.exports = ErrorMonitor;
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

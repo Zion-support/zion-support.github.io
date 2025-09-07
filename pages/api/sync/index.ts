@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   if (req.method === "GET") {
@@ -41,12 +40,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   });
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState } from "../../../utils/sync/storage"
@@ -78,15 +75,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

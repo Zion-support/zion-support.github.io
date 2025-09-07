@@ -4,11 +4,8 @@
  * Automatically refactors and improves code quality;
  */
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -30,20 +27,12 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
   iconPosition = 'left'
       case 'primary'
         return { "variant": 'contained' as const, "color"}
-        return { "variant": 'contained' as const, "color"}
-        return { "variant"}
         return { "variant"}
       "default"
-        return { "size"}
         return { "size"}
       "default"
       this.log(` Utilities refactoring "failed"`)
         "status"
       this.log(` Total "refactors"`)
       this.log(` Intelligent Code Refactor "failed"`)
-<<<<<<< HEAD
     console.error('Intelligent Code Refactor "failed")
-    console.error('Intelligent Code Refactor "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

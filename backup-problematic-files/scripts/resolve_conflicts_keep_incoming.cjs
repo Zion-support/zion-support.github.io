@@ -53,9 +53,4 @@ function main() {}
   console.log(`Done. Files "updated": ${count}`)};
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

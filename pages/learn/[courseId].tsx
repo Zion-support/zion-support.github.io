@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar';
@@ -64,7 +63,6 @@ export default function CourseView() {
             <ProgressBar value={progress.percent || 0} />
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
-        </div>
 
         <div className="grid lg:grid-cols-5 gap-4">
           <aside className="lg:col-span-2 border rounded p-3 h-max">
@@ -112,7 +110,6 @@ export default function CourseView() {
             )}
           </section>
         </div>
-      </div>
 
       <div className="space-y-4">
         <CoachWidget />
@@ -121,31 +118,5 @@ export default function CourseView() {
           <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>
           <button className="mt-2 px-3 py-2 bg-indigo-600 text-white rounded" onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
         </div>
-      </div>
-    </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function LearnCourseId() {
-  return (
-    <Layout>
-      <Head>
-        <title>Learn Course - Zion Tech Group</title>
-        <meta name="description" content="Learn Course solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Learn Course</h1>
-          <p className="text-lg text-gray-600">
-            Professional learn course solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
+:src_backup/pages/UpdatePassword.tsx
 
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -38,7 +38,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-FormMessage} from "@/components/ui/form",
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
@@ -442,12 +441,10 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
+:src_backup/pages/UpdatePassword.tsx
 :src/pages/UpdatePassword.tsx
 
             </div>
-          </div>
-        </div>
         <div className="hidden lg: block relative w-0 flex-1">
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
             <div className="flex flex-col justify-center items-center h-full px-8">
@@ -457,10 +454,6 @@ export default function UpdatePassword() {;
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
 :src/pages/UpdatePassword.tsx
   )

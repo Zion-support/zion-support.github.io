@@ -11,7 +11,6 @@ const crypto = require("crypto")
       "build-optimizations.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
-  log(message, level = "INFO")
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}``)
         this.projectRoot,build-pipeline.config.json"
   return JSON.parse(fs.readFileSync(configPath, "utf8")
@@ -47,9 +46,7 @@ const crypto = require("crypto")
         "dependencyOptimization"
         "bundleSplitting"
         this.projectRoot,build-pipeline.config.json"
-        this.projectRoot,build-pipeline.config.json"
       )} catch (error) {  this.log("Failed to save pipeline "config": ${error.message  }", "ERROR")
-  return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8")
   return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8")
     } catch (error) {  this.log("Failed to load build "history": ${error.message  }", "WARN")
   "builds"
@@ -136,7 +133,6 @@ const crypto = require("crypto")
   "cpuCores"
         "memoryInfo"
   return { "error"}
-  return { "error"}
       execSync("npm ci --only=production", { "encoding": "utf8", "stdio": "pipe"})
       const packageLockPath = path.join(this.projectRoot, "package-lock.json")
           fs.readFileSync(packageLockPath, "utf8")
@@ -145,7 +141,6 @@ const crypto = require("crypto")
           "stdio": "
   this.log(Failed to measure dependency "performance")
         "WARN"
-    for (const ["name", "dep")]
     for (const ["name", "dep")]
   this.log(Failed to measure optimization "opportunities": ${error.message  }")
         "WARN"
@@ -300,13 +295,11 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
   },"
       return { "success": true, "message": "Bundle optimization enabled"}
   return { "success": false, "message"}
-  return { "success": false, "message"}
 const packageJsonPath = path.join(this.projectRoot, "package.json")
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
       if (!packageJson.scripts[""build": optimized")]
   packageJson.scripts["build:optimized"] =NODE_OPTIONS="--max-old-space-size=4096" vite build"
       return { "success": true, "message": "Memory optimization enabled"}
-  return { "success": false, "message"}
   return { "success": false, "message"}
   this.log("Executing optimized build...")
   "timestamp"
@@ -320,7 +313,6 @@ const packageJsonPath = path.join(this.projectRoot, "package.json")
           "delta"
             "heapTotal"
         "success"
-      const distPath = path.join(this.projectRoot, "dist")
       const distPath = path.join(this.projectRoot, "dist")
       this.log("Optimized build completed successfully")
   "success"
@@ -425,9 +417,4 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
-<<<<<<< HEAD
   console.error(" Intelligent Build Pipeline "failed": ")
-  console.error(" Intelligent Build Pipeline "failed": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

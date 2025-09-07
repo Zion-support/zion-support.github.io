@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 ;
 
 import React, { useState } from 'react';
@@ -21,7 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/compone
 import { Textarea  } from '@/components/ui/textarea';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import React, { useState } from 'react'
@@ -40,7 +38,7 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
   useAIContentEnhancer
   AIEnhancementOptions
 } from '@/hooks/useAIContentEnhancer'
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface AIEnhancementPanelProps {
 import React, { useState } from 'react';
@@ -70,8 +68,7 @@ interface AIEnhancementPanelProps {
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
 import React, { useState } from 'react';
 import {
@@ -125,8 +122,7 @@ if ( {) {$2;
   , ) =>: any {set_options ({...options,[field]: e.target.value})}
   const handle_apply = () =>: any {on_apply (generated_content)if (on_close ()) {$2;
 }
-  }
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   const handle_copy = () =>: any {
     navigator.clipboard.write_text (generated_content);
     set_copied (true);
@@ -157,7 +153,7 @@ export function AIEnhancementPanel({;
   onApply,;
   onClose,;
   showInstructions = true,;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   initialContent = '',;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -189,7 +185,7 @@ export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose
             className='min-h-[60px]';
             value={options && options.context}
             onChange={e => handleInputChange(e, 'context')}          />;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         </div>;
 
 
@@ -201,8 +197,7 @@ export function AIEnhancementPanel(): any ({title,defaultOptions,onApply,onClose
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
       ...options,
 
@@ -249,7 +244,7 @@ export function AIEnhancementPanel({
   onApply;
   onClose;
   showInstructions;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
@@ -275,14 +270,14 @@ export function AIEnhancementPanel({title;
       </CardHeader>;
       <CardContent className="space-y-4">;
         {/* Input area */}
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
@@ -304,7 +299,7 @@ export function AIEnhancementPanel({title;
             className="min-h-[60px]";
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
           />;
         </div>;{/* Instructions input (optional) */}
         {showInstructions && (<div className='space-y-2'>;
@@ -316,7 +311,7 @@ export function AIEnhancementPanel({title;
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
           />
         </div>
 
@@ -333,7 +328,7 @@ export function AIEnhancementPanel({title;
         )}
 
         {/* Generate button */}
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
@@ -353,9 +348,9 @@ export function AIEnhancementPanel({title;
             </>
           )}
         </Button>
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -390,12 +385,12 @@ export function AIEnhancementPanel({title;
                 variant="ghost";
                 size="sm";
                 onClick={handleCopy}
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
                 className="h-8"
               >
 
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
@@ -406,11 +401,11 @@ export function AIEnhancementPanel({title;
                 {copied ? (<><Check className="h-4 w-4 mr-1" /> Copied</>;
                 ) : (<><Copy className="h-4 w-4 mr-1" /> Copy</>;
                 )}
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
               </Button>;
             </div>;
             <div className='relative'>;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
               </Button>
             </div>
             <div className="relative">
@@ -422,12 +417,11 @@ export function AIEnhancementPanel({title;
               />
 
             </div>
-          </div>
         )}
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       
 
 
@@ -438,9 +432,9 @@ export function AIEnhancementPanel({title;
             <Button variant="outline" onClick={onClose}>
               Cancel
             </Button>
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       </CardContent>;
 
       {generatedContent && (;
@@ -453,7 +447,7 @@ export function AIEnhancementPanel({title;
 
     </Card>;
   );
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
 }
 
@@ -463,7 +457,6 @@ export function AIEnhancementPanel({title;
                 className="min-h-[200px]";
               />;
             </div>;
-          </div>;
         )}{generatedContent && (<CardFooter className='flex justify-between'>;
           {onClose && (<Button variant='outline' onClick={onClose}>;
               Cancel;
@@ -556,17 +549,15 @@ export function AIEnhancementPanel({title;
             Apply to Form;
           </Button>;
         </CardFooter>;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       )}
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 ;
 
     </Card>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
       )}</Card>;
-  )}</Card>;
   )
     </Card>;
   );

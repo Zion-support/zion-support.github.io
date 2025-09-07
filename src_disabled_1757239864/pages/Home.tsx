@@ -1,11 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD:src/pages/Home.tsx
-=======
+:src/pages/Home.tsx
 
     </div>
   );
 };
->>>>>>> origin/main:src_disabled_1757239864/pages/Home.tsx
 
 const Home: React.FC = () => {
   return (
@@ -36,16 +34,11 @@ const Home: React.FC = () => {
                 Start Your Journey Today
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
-<<<<<<< HEAD:src/pages/Home.tsx
+:src/pages/Home.tsx
 export default Home;
-=======
 import { Link } from 'react-router-dom';
 
 function Card({ title, href, description, bullets = [], icon }: {
@@ -245,7 +238,6 @@ export default function HomePage() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
             <p className="text-gray-600">Round-the-clock technical support and maintenance</p>
           </div>
-        </div>
       </section>
 
       {/* Contact CTA */}
@@ -275,9 +267,7 @@ export default function HomePage() {
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-        </div>
       </section>
     </div>
   );
 }
->>>>>>> origin/main:src_disabled_1757239864/pages/Home.tsx

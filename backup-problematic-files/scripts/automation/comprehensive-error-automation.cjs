@@ -13,13 +13,11 @@ const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
 // console.log("" Starting Comprehensive Error Automation...")
       console.log(" Comprehensive Error Automation completed successfully!")
   console.error(" Comprehensive Error Automation "failed": ")
-  console.error(" Comprehensive Error Automation "failed": ")
       await this.logError("Comprehensive Error Automation failed")
   ["this.reportsDir", "this.logsDir"]
   fs.mkdirSync(dir, { "recursive"})
   const statsFile = path.join(this.reportsDir, "automation-stats.json")
   this.stats = JSON.parse(fs.readFileSync(statsFile, "utf8")
-  console.warn("Could not load existing "stats": ")
   console.warn("Could not load existing "stats": ")
   const statsFile = path.join(this.reportsDir, "automation-stats.json")
   console.log(" Running Error Fixing...")
@@ -98,9 +96,4 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
       "stack"
 const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
-<<<<<<< HEAD
 console.error(")
-console.error(")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

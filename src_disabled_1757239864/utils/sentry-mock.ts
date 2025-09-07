@@ -1,6 +1,5 @@
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -15,7 +14,7 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
   setContext: noop,
   setTag: noop,
   setUser: noop,
@@ -67,7 +66,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     Breadcrumbs: class Breadcrumbs {
       constructor() {}
     },
-  },
 
   // Utilities
   withScope: (callback: (scope: any) => void) => callback({}),
@@ -122,7 +120,7 @@ main
         next(),
   },
 
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
   // Server-specific methods (Node.js)
   Handlers: {
     requestHandler:
@@ -138,7 +136,7 @@ main
 
   // Next.js specific
   withSentryConfig: (config: any) => config,
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
   
   // Server-specific methods (Node && Node.js)
   Handlers: {
@@ -164,7 +162,7 @@ main
   
   // Integrations
   Integrations: {
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
     BrowserTracing: class BrowserTracing {
 
 ;
@@ -189,7 +187,7 @@ const mockSentry = {// Core Sentry methods;
     },Replay: class Replay {constructor() {}
     },Breadcrumbs: class Breadcrumbs {constructor() {}
     }
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
     Http: class Http {
 =    BrowserTracing: class BrowserTracing {,
 >      constructor() {}
@@ -201,7 +199,6 @@ const mockSentry = {// Core Sentry methods;
       constructor() {}
 
     },
-  },
 
   // Transport
   makeBrowserOfflineTransport: noopReturn,
@@ -209,7 +206,7 @@ const mockSentry = {// Core Sentry methods;
   
   // Utils
   createTransport: noopReturn,
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
   SDK_VERSION: '7 && 7.0.0-mock',
 
 main
@@ -268,7 +265,6 @@ const mockSentry = {// Core Sentry methods;
     },OnUncaughtException: class OnUncaughtException {constructor() {}
     },OnUnhandledRejection: class OnUnhandledRejection {constructor() {}}
     }
-    }
   },// Transport;
   makeBrowserOfflineTransport: noopReturn,makeFetchTransport: noopReturn,// Utils;
   createTransport: noopReturn,ursor/automate-test-improve-and-merge-code-646c;
@@ -291,14 +287,13 @@ const mock_sentry = {// Core Sentry methods;
         next ()next ()next ()},// Server - specific methods (Node.js)Handlers: {request_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next (),error_handler: () => (_err: any, _req: any, _res: any, next: (...args: any[], ) => any) => next (),tracing_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next ()},// Next.js specific;
   withSentryConfig: (config: any, ) => config,SentryWebpackPlugin: class SentryWebpackPlugin {constructor () {}
     apply () {}
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
   },
   // Tracing;
   Tracing: {
     BrowserTracing: class BrowserTracing {
       constructor () {}
     },
-  },
   // Integrations;
   Integrations: {
     BrowserTracing: class BrowserTracing {
@@ -313,7 +308,6 @@ const mock_sentry = {// Core Sentry methods;
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor () {}
     },
-  },
   // Transport;
   makeBrowserOfflineTransport: noop_return,
   makeFetchTransport: noop_return,
@@ -322,7 +316,7 @@ const mock_sentry = {// Core Sentry methods;
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
   Severity: {
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
     Fatal: "fatal",
     Error: "error",
     Warning: "warning",
@@ -330,14 +324,13 @@ const mock_sentry = {// Core Sentry methods;
     Debug: "debug",
   },
 };
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
     Fatal: 'fatal',
     Error: 'error',
     Warning: 'warning',
     Info: 'info',
     Debug: 'debug'
   }
-}
 main
 
 
@@ -345,15 +338,11 @@ export const init = mockSentry && mockSentry.init;
   },// Tracing;
   Tracing: {BrowserTracing: class BrowserTracing {constructor () {}
     }
-    }
-    }
   },// Integrations;
   Integrations: {BrowserTracing: class BrowserTracing {constructor () {}
     },Http: class Http {constructor () {}
     },OnUncaughtException: class OnUncaughtException {constructor () {}
     },OnUnhandledRejection: class OnUnhandledRejection {constructor () {}
-    }
-    }
     }
   },// Transport;
   makeBrowserOfflineTransport: noop_return,makeFetchTransport: noop_return,// Utils;
@@ -414,9 +403,9 @@ const mockScope = {;
 
 // Additional exports for compatibility
 >export { mockSentry as Sentry }
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
 // All exports are already defined above
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
 =
   // Browser-specific methods
 
@@ -435,16 +424,13 @@ export { mockSentry as Sentry }
 export { mockSentry as Sentry }// All exports are already defined above;// Mock scope;
 const mock_scope = {set_user: noop,set_tag: noop,set_tags: noop,set_extra: noop,set_extras: noop,set_context: noop,set_level: noop,set_fingerprint: noop,clear: noop,addEventProcessor: noop;
   addEventProcessor: noop;
-  addEventProcessor: noop;
 }
 // Mock transaction;
 const mock_transaction = {set_name: noop,set_tag: noop,set_data: noop,finish: noop,start_child: () => mock_transaction,set_status: noop,setHttpStatus: noop,to_context: () => ({}),updateWithContext: noop;
   updateWithContext: noop;
-  updateWithContext: noop;
 }
 // Mock hub;
 const mock_hub = {get_client: noop_return,get_scope: () => mock_scope,capture_exception: noop,capture_message: noop,capture_event: noop,add_breadcrumb: noop,set_user: noop,set_tag: noop,set_tags: noop,set_extra: noop,set_extras: noop,set_context: noop,configure_scope: noop,with_scope: (callback: (...args: any[]) => any) => callback (mock_scope),start_transaction: () => mock_transaction;
-  start_transaction: () => mock_transaction;
   start_transaction: () => mock_transaction;
 }
 // Export default mock that covers all Sentry packages;
@@ -484,11 +470,9 @@ export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
 // All exports are already defined above;
-// All exports are already defined above;
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+:src_backup/utils/sentry-mock.ts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 // All exports are already defined above;
@@ -550,7 +534,6 @@ const mockSentry: SentryMock = {
       console.log('Sentry mock - With scope');
       callback({});
     }
-  }
 };
 
 export default mockSentry;

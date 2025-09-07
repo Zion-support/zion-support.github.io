@@ -14,11 +14,8 @@ const { execSync } = require('child_process')
       'WARNING': '⚠'
       'PROGRESS': '�'
     this.log('Creating unit test files...', 'PROGRESS')
-    this.log('Creating unit test files...', 'PROGRESS')
         "path"
         "content": "
-      "target"
-      "target"
       "target"
         "path"
         "content": "
@@ -27,7 +24,6 @@ const { execSync } = require('child_process')
         "path"
         "content": "
     const integrationTestContent = "
-      "method"
       "method"
       "error"
     const e2eTestContent = "
@@ -38,7 +34,6 @@ const { execSync } = require('child_process')
     const performanceTestContent = "
           resolve(lastEntry.startTime)}).observe({ "entryTypes"})
           resolve(firstEntry.processingStart - firstEntry.startTime)}).observe({ "entryTypes"})
-          resolve(clsValue)}).observe({ "entryTypes"})
           resolve(clsValue)}).observe({ "entryTypes"})
     const securityTestContent = "
     await page.fill('[name="name"]', '<script>alert("xss")
@@ -77,9 +72,4 @@ const { execSync } = require('child_process')
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
-<<<<<<< HEAD
     console.error('Advanced testing automation "failed")
-    console.error('Advanced testing automation "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

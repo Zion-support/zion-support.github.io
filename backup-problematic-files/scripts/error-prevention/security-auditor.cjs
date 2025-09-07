@@ -17,13 +17,9 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
-<<<<<<< HEAD
     
     
     
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
@@ -45,11 +41,8 @@ class SecurityAuditor {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -73,11 +66,8 @@ class SecurityAuditor {}
         "cwd": process.cwd();
       };);
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -116,9 +106,4 @@ if ( {})
 });
   
   auditor.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SecurityAuditor;
-module.exports = SecurityAuditor;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

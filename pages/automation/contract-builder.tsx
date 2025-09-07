@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -92,7 +91,6 @@ export default function ContractBuilderPage() {
     } finally {
       setLoading(false)
     }
-  }
 
   function copyToClipboard() {
     if (!contract) return,
@@ -165,7 +163,6 @@ export default function ContractBuilderPage() {
                 <label className="block text-sm font-medium mb-1">Payment schedule</label>
                 <input className="w-full input input-bordered" value={paymentSchedule} onChange={(e) => setPaymentSchedule(e.target.value)} placeholder="e.g., weekly, Net 15" />
               </div>
-            </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
@@ -180,7 +177,6 @@ export default function ContractBuilderPage() {
                 <label className="block text-sm font-medium mb-1">Payment schedule</label>
                 <input className="w-full input input-bordered" value={paymentSchedule} onChange={(e) => setPaymentSchedule(e.target.value)} placeholder="e.g., 50% upfront, 50% on delivery" />
               </div>
-            </div>
           )}
         </div>
 
@@ -194,7 +190,6 @@ export default function ContractBuilderPage() {
               <input type="checkbox" checked={ipTransfer} onChange={(e) => setIpTransfer(e.target.checked)} /> IP Transfer / Assignment
             </label>
           </div>
-        </div>
 
         <div>
           <label className="block text-sm font-medium mb-1">Governing law</label>
@@ -221,7 +216,6 @@ export default function ContractBuilderPage() {
               <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>
               <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
             </div>
-          </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
             {contract}
           </article>
@@ -229,28 +223,4 @@ export default function ContractBuilderPage() {
       )}
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-
-export default function ContractBuilder() {
-  return (
-    <Layout>
-      <Head>
-        <title>Contract Builder - Zion Tech Group</title>
-        <meta name="description" content="Contract Builder solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Contract Builder</h1>
-          <p className="text-lg text-gray-600">
-            Professional contract builder solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -1,5 +1,5 @@
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
 
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -43,13 +43,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     switch (status) {
       case 'completed':
 
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 
 ;
 import React from 'react',import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { Button  } from '@/components/ui/button';
 import { format   } from 'date-fns';
 import React from 'react';
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
 
 =import React from 'react';
 >import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -57,7 +57,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 import { Check, ArrowDown, X } from 'lucide-react';
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
@@ -70,7 +70,7 @@ interface MilestoneCardProps {;
   amount: number,;
   status: string,;
   dueDate?: string,;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
   onApprove?: (id: string) => Promise<void>,;
   onReject?: (id: string) => Promise<void>;
 }
@@ -85,7 +85,7 @@ export function MilestoneCard({;
   status,;
   dueDate,;
   onApprove,;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
   onReject;
 =>
 }: MilestoneCardProps) {;
@@ -93,7 +93,7 @@ export function MilestoneCard({;
 
         return 'bg-green-500';
       case 'in_progress':;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
         return 'bg-blue-500',;
 =>
       case 'pending':;
@@ -118,7 +118,7 @@ import { DisputeStatusBadge } from '@/components/ disputes / DisputeStatusBadge'
 import { RaiseDisputeButton } from '@/components/ disputes / RaiseDisputeButton';
 interface MilestoneCardProps {
   id: string;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 import { Card;
   CardContent;
   CardFooter;
@@ -185,7 +185,7 @@ interface MilestoneCardProps  {id: string;
   due_date?: string;
   on_approve?: (id: string) => Promise < void>;
   on_reject?: (id: string) => Promise < void>; import React from 'react';
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 import { Card, CardContent, CardFooter, CardHeader, CardTitle   } from '@/components / ui / card';
 import { Badge   } from '@/components / ui / badge';
 import { Button   } from '@/components / ui / button';
@@ -219,7 +219,7 @@ interface MilestoneCardProps {
         <div className="flex justify-between items-start">;
           <div>;
             <CardTitle className="text-xl">{title}</CardTitle>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
@@ -227,7 +227,7 @@ interface MilestoneCardProps {
   onReject?: (id: string) => Promise<void>,
 }
 
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 default:
         return 'bg-gray-500';
     }
@@ -261,7 +261,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             )}
           </div>
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 <div className='flex gap-2'>
             <Badge
               variant='outline'
@@ -289,7 +289,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             )}
           </div>;
-          </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
 =
@@ -305,9 +304,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={`capitalize ${getStatusBadgeColor()} text-white`}
             >;
               {status.replace('_', ' ')}
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
             </Badge>
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
             {isUnderDispute && disputeStatus && (
 origin/cursor/automate-test-improve-and-merge-code-2533
 =
@@ -316,9 +315,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >              <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
-        </div>
       </CardHeader>
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
 <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
@@ -344,7 +342,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {isUnderDispute && disputeStatus && (<DisputeStatusBadge status={disputeStatus} />;
             )}
           </div>;
-        </div>;
       </CardHeader>;
       <CardContent className="pb-2">;
         {description && (<p className="text-muted-foreground">{description}</p>;
@@ -368,7 +365,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>;<DisputeStatusBadge status={disputeStatus} />;
             )}
           </div>;
-        </div>;
       </CardHeader>;<CardContent className='pb-2'>;
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>;
@@ -376,14 +372,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </CardContent>;<CardFooter className='pt-2 flex justify-between'>;
         <div>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
           {status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton;
 =          {status !== 'completed' && status !== 'rejected' && (;
 
             <RaiseDisputeButton
 >              projectId={projectId}
               milestoneId={id}
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
               variant='ghost'
               size='sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -391,7 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </div>
 
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
         <div className='flex gap-2'>
 =>          {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
@@ -399,7 +395,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           )}
 
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
           {status === 'pending' && onApprove && !isUnderDispute && (
             <Button variant='default' size='sm' onClick={() => onApprove(id)}>
               <Check className='h-4 w-4 mr-1' /> Approve
@@ -417,7 +413,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >            </Button>
 
           )}
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
       </CardHeader>;
               variant='ghost';
               variant="ghost";
@@ -432,7 +428,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >          )}
         </div>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
           {status === 'pending' && onReject && !isUnderDispute && (<Button variant='outline' size='sm' onClick={() => onReject(id)}>;
               <X className='h-4 w-4 mr-1' /> Reject            </Button>;
         <div className="flex gap-2">;
@@ -477,7 +473,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}{status === 'pending' && onApprove && !isUnderDispute && (<Button variant="default" size="sm" onClick={() => onApprove(id)}>;
               <Check className="h-4 w-4 mr-1" /> Approve;
             </Button>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
           )}
 ;
           {isUnderDispute && (;
@@ -490,7 +486,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </CardFooter>;
     </Card>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+<:src_backup/components/projects/milestones/MilestoneCard.tsx
   )})}
       <CardHeader className='pb - 2'>;
         <div className='flex justify - between items - start'>;
@@ -521,7 +517,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>;
               <DisputeStatusBadge status={dispute_status} />)}
           </div>;
-        </div>;
       </CardHeader>;
       <CardContent className='pb - 2'>;
         {description && <p className='text - muted - foreground'>{description}</p>}
@@ -552,7 +547,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>)}
         </div>;
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
+:src_backup/components/projects/milestones/MilestoneCard.tsx
     </Card>);
 }
         </div>

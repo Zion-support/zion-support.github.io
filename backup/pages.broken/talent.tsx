@@ -1,4 +1,4 @@
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
 
 import React from 'react';''
 import Link from 'next/link';''
@@ -315,9 +315,7 @@ export default function TalentPage() {;
             </h1>"
             <p className="text-xl text-blue-100">"
 </p>
-            </p>
           </div>
-        </div>
       </section>"
       <section className="py-16">"
 </section>"
@@ -375,7 +373,6 @@ export default function TalentPage() {;
 </p>
             </p>;
           </div>;
-        </div>;
       </section>;"
       <section className="py-16">;"
 </section>"
@@ -422,15 +419,12 @@ export default function TalentPage() {;
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
 </Link>
 
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 
-=======
-=======
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
@@ -438,8 +432,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
@@ -447,8 +439,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
@@ -456,8 +446,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
@@ -465,8 +453,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
@@ -474,8 +460,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   {
 
 
-=======
-=======
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
@@ -483,7 +467,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
 ];
 
 
-=======
 
 
   "Client success focus"
@@ -492,8 +475,6 @@ export default function TalentPage() {
   return (
 
 
-=======
-=======
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
@@ -502,8 +483,6 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">
 
 
-=======
-=======
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -518,12 +497,11 @@ export default function TalentPage() {
                 </Link>
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get In Touch
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                 </Link>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
 
         </section>"
         <section className="py-20 bg-white">"
@@ -594,7 +572,6 @@ export default function TalentPage() {
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
-              </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
@@ -625,9 +602,7 @@ export default function TalentPage() {
                     </h3>"
                     <p className="text-gray-600">"
 </p>
-                    </p>
                   </motion.div>)
-=======
         </section>
 
         {/* Benefits Section */}
@@ -635,8 +610,6 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">
 
 
-=======
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -721,12 +694,10 @@ export default function TalentPage() {
                       {benefit.description}
                     </p>
                   </motion.div>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                 );
               })}
             </div>
-          </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
         </section>"
         <section className="py-20 bg-gray-50">"
 </section>"
@@ -753,7 +724,6 @@ export default function TalentPage() {
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
-              </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>"
@@ -767,7 +737,6 @@ export default function TalentPage() {
                     </h3>"
                     <p className="text-gray-600">"
 </p>
-                    </p>
                   </motion.div>
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;"
@@ -783,7 +752,6 @@ export default function TalentPage() {
                   <motion&& motion.div,
     key={index}"
                     className="text-center p-6""
-=======
         </section>
 
         {/* Values Section */}
@@ -830,12 +798,11 @@ export default function TalentPage() {
                   <motion&& motion.div,
     key={index}
                     className="text-center p-6"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}>;
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
 </motion>"
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;"
 </div>"
@@ -852,7 +819,6 @@ export default function TalentPage() {
                   </motion && motion.div>;
                 )})}
             </div>;
-          </div>;
         </section>;
 
             <motion.div,"
@@ -884,7 +850,6 @@ export default function TalentPage() {
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
-              </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
@@ -936,8 +901,6 @@ export default function TalentPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
 
       </section>"
       <section className="py-16 bg-gray-100">"
@@ -968,7 +931,6 @@ export default function TalentPage() {
             <motion.div;"
               className="text-center mb-16""
 
-=======
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
                       <IconComponent className="w-8 h-8" />;
                     </div>;
@@ -982,31 +944,18 @@ export default function TalentPage() {
                 );
               })}
             </div>
-          </div>
         </section>
 
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
 
 
-=======
-=======
-            <motion.div,
-    className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true }}
-            <motion.div
-              className="text-center mb-16"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
 
             >
 </motion>"
@@ -1015,7 +964,6 @@ export default function TalentPage() {
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
-              </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
@@ -1079,8 +1027,6 @@ export default function TalentPage() {
                 </motion && motion.div>;
               ))}
             </div>;
-          </div>;
-        </div>;
 
       </section>;"
       <section className="py-16 bg-gray-100">;"
@@ -1115,7 +1061,6 @@ export default function TalentPage() {
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
-              </p>
             </motion.div>"
             <div className="space-y-8">"
 </div>
@@ -1163,8 +1108,6 @@ export default function TalentPage() {
                         </div>"
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">"
 </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -1218,8 +1161,6 @@ export default function TalentPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -1240,8 +1181,6 @@ export default function TalentPage() {
           <div className="container mx-auto px-4">
 
 
-=======
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -1290,12 +1229,10 @@ export default function TalentPage() {
                         </div>
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">
                           {job.department}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                         </span>
                       </div>
-                    </div>
                     <Link,
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
     href={`/talent/${job.id}`}"
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center""
                     >
@@ -1331,7 +1268,6 @@ export default function TalentPage() {
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />"
 </CheckCircle>
                           </li>
-=======
     href={`/talent/${job.id}`}
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
@@ -1363,16 +1299,12 @@ export default function TalentPage() {
                             {benefit}
                           </li>
                         ))}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
                       </ul>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
       </section>"
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
 </section>"
@@ -1388,7 +1320,6 @@ export default function TalentPage() {
             </p>"
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
 </button>
-=======
       </section>
 
       {/* CTA Section */}
@@ -1403,13 +1334,11 @@ export default function TalentPage() {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Send Resume
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
             </button>
           </div>
-        </div>
       </section>
     </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
         </section>"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
 </section>"
@@ -1432,7 +1361,6 @@ export default function TalentPage() {
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
-              </p>
             </motion.div>"
             <div className="space-y-8">"
 </div>
@@ -1495,7 +1423,6 @@ export default function TalentPage() {
 </span>
                         </span>;
                       </div>;
-                    </div>;
                     <Link,
     href={`/talent/${job && job.id}`}"
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center">;"
@@ -1536,12 +1463,9 @@ export default function TalentPage() {
                           </li>;
                       </ul>;
                     </div>;
-                  </div>;
                 </motion.div>;
               ))}
             </div>;
-          </div>;
-        </div>;
 
       </section>;"
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
@@ -1561,7 +1485,6 @@ export default function TalentPage() {
 
             </button>;
           </div>;
-        </div>;
       </section>;
     </div>;
         </section>;
@@ -1662,7 +1585,6 @@ initial={{ opacity: 0, y: 30 }}
                           {job && job.department}
                         </span>;
                       </div>;
-                    </div>;
                     <Link,href={`/talent/${job && job.id}`}
                       className=\"mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center\" />;
                       Apply Now;
@@ -1693,12 +1615,9 @@ initial={{ opacity: 0, y: 30 }}
                         ))}
                       </ul>;
                     </div>;
-                  </div>;
                 </motion && motion.div>;
               ))}
             </div>;
-          </div>;
-        </div>;
       </section>;
       {/* CTA Section */}
       <section className=\"py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />;
@@ -1714,7 +1633,6 @@ initial={{ opacity: 0, y: 30 }}
               Send Resume;
             </button>;
           </div>;
-        </div>;
       </section>;
     </div>;
         </section>;
@@ -1787,7 +1705,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
 
-=======
         </section>
 
         {/* CTA Section */}
@@ -1795,8 +1712,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="container mx-auto px-4 text-center">
 
 
-=======
-=======
             >
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1807,15 +1722,12 @@ ursor/automate-test-improve-and-merge-code-646c;
               </p>
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx
               </Link>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup/pages.broken/talent.tsx
+:backup/pages.broken/talent.tsx
     </MainLayout>"
-=======
     </MainLayout>
   );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7:pages.broken/talent.tsx

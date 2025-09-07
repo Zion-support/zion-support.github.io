@@ -157,8 +157,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   }
 ];
-<<<<<<< HEAD:src/components/support/help-content.tsx
-=======
+:src/components/support/help-content.tsx
 
 import React from 'react';
 import { HelpCategory } from './types';
@@ -339,4 +338,3 @@ id: 'dispute - prevention',
     ],
   },
 ];
->>>>>>> origin/main:src_disabled_1757239864/components/support/help-content.tsx

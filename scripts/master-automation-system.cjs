@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -6,11 +5,6 @@
 
 main
 
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 
 
@@ -36,15 +30,8 @@ const result = execSync(command, {"encoding": 'utf8',"stdio"});
 // console.log('\n Errors "encountered")
     console.log('\n Comprehensive report saved "to")
   console.error('Master automation "failed")
-<<<<<<< HEAD
 ///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 // console.log(' Master Automation System')
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

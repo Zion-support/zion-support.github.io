@@ -67,13 +67,9 @@ function $1() {}
   fs.writeFileSync(f, updated, "utf8');
         changed += 1};
     } catch (e) {}
-<<<<<<< HEAD
   
   
   
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -81,9 +77,4 @@ function $1() {}
   console.log(`Cleaned ${changed} files.`)};
 ;
 if (require.main === module) {}
-<<<<<<< HEAD
   main()};
-  main()};
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

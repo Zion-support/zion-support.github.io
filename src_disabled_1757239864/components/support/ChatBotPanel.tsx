@@ -120,7 +120,6 @@ export function ChatBotPanel() {
           success: false,
           message: "I'm having trouble connecting to my knowledge base right now."
         }
-      }
       
       const data = await response.json();
       return {
@@ -133,7 +132,6 @@ export function ChatBotPanel() {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
       }
-    }
   };
 
   const suggestEscalation = () => {
@@ -247,7 +245,6 @@ export function ChatBotPanel() {
               />
             ))}
           </div>
-        </div>
       )}
       
       {failedAttempts >= 3 && (
@@ -271,7 +268,6 @@ export function ChatBotPanel() {
               Email Support
             </Button>
           </div>
-        </div>
       )}
       
       <div className={cn(
@@ -308,11 +304,9 @@ export function ChatBotPanel() {
           </Button>
         </form>
       </div>
-    </div>
-<<<<<<< HEAD:src/components/support/ChatBotPanel.tsx
+:src/components/support/ChatBotPanel.tsx
   )
 }
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { Button  } from '@/components/ui/button';
@@ -352,8 +346,6 @@ timestamp: new Date ()}timestamp: new Date ()}])}</div>)}</div> </ScrollArea> ke
 }Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";
 }aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>)}'";
   )}
-  )}
   ),
 }
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/support/ChatBotPanel.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -67,7 +66,6 @@ export default function Comprehensive2026ServicesShowcase() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   },
 
   const itemVariants = {
@@ -78,7 +76,6 @@ export default function Comprehensive2026ServicesShowcase() {
       transition: {
         duration: 0.5
       }
-    }
   },
 
   return (
@@ -138,7 +135,6 @@ export default function Comprehensive2026ServicesShowcase() {
                   <div className="text-3xl font-bold text-orange-400 mb-2">1000+</div>
                   <div className="text-gray-300">Happy Customers</div>
                 </div>
-              </div>
 
               {/* Contact Information */}
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-600/30 max-w-4xl mx-auto">
@@ -159,8 +155,6 @@ export default function Comprehensive2026ServicesShowcase() {
                     <MapPin className="w-5 h-5 text-green-400" />
                     <span>{contactInfo.address}</span>
                   </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -240,10 +234,6 @@ export default function Comprehensive2026ServicesShowcase() {
                       </svg>
                     </button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Services Grid */}
@@ -295,7 +285,6 @@ export default function Comprehensive2026ServicesShowcase() {
                           <span className="text-white text-sm">{service.rating}</span>
                           <span className="text-gray-400 text-sm">({service.reviews})</span>
                         </div>
-                      </div>
 
                       <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                         <div className="flex items-center gap-1">
@@ -306,8 +295,6 @@ export default function Comprehensive2026ServicesShowcase() {
                           <Clock className="w-4 h-4" />
                           {service.setupTime}
                         </div>
-                      </div>
-                    </div>
 
                     {/* Service Details */}
                     <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
@@ -333,7 +320,6 @@ export default function Comprehensive2026ServicesShowcase() {
                             </div>
                           )}
                         </div>
-                      </div>
 
                       {/* Market Info */}
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
@@ -345,7 +331,6 @@ export default function Comprehensive2026ServicesShowcase() {
                           <div className="text-gray-400 mb-1">Growth Rate</div>
                           <div className="text-white font-semibold">{service.growthRate}</div>
                         </div>
-                      </div>
 
                       {/* ROI */}
                       <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-4 mb-6 border border-green-500/20">
@@ -367,7 +352,6 @@ export default function Comprehensive2026ServicesShowcase() {
                           Contact
                         </button>
                       </div>
-                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>
@@ -437,28 +421,4 @@ export default function Comprehensive2026ServicesShowcase() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function comprehensive2026servicesshowcase() {
-  return (
-    <Layout>
-      <Head>
-        <title>Comprehensive 2026 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive 2026 Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Comprehensive 2026 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional comprehensive 2026 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

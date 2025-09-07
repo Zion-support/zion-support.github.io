@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
@@ -111,7 +110,6 @@ export default function InnovationsPage() {
                 </a>
               </motion.div>
             </div>
-          </div>
         </section>
 
         {/* Innovation Categories Overview */}
@@ -193,11 +191,9 @@ export default function InnovationsPage() {
                         </div>
                       ))}
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Comprehensive Services Showcase */}
@@ -268,7 +264,6 @@ export default function InnovationsPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Call to Action */}
@@ -308,9 +303,6 @@ export default function InnovationsPage() {
                       <Mail className="w-5 h-5 text-cyan-400" />
                       <span>{contactInfo.email}</span>
                     </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -320,26 +312,4 @@ export default function InnovationsPage() {
       </div>
     </UltraFuturisticBackground2029>
   )
-=======
-import Layout from '../components/layout/Layout';
-
-export default function innovations() {
-  return (
-    <Layout>
-      <Head>
-        <title>Innovations - Zion Tech Group</title>
-        <meta name="description" content="Innovations solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Innovations</h1>
-          <p className="text-lg text-gray-600">
-            Professional innovations solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

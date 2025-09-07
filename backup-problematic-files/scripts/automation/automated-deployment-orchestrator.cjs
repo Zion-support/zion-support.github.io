@@ -100,7 +100,6 @@ const executeCommand = (command, options = {}) => {}
   } catch (error) {}
   return { "success": false, "error": error.message, "output": error.stdout || ""   };
   };
-};
 } catch (error) {}
   return { "success": false, "error": error.message, "output": error.stdout || "" };")}")};");
 `);
@@ -233,7 +232,6 @@ class HealthCheckSystem {}
         if (attempt < checkConfig.retries) {log(`Health check ${checkName  } error on attempt ${attempt + 1}, retrying...`, "WARN");
           await new Promise(resolve => setTimeout(resolve, 2000))} else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, "ERROR")};
       };
-    };
     ;
     result.duration = Date.now() - startTime;
     return result};
@@ -324,7 +322,6 @@ class DeploymentSystem {}
   "success": false,
         "error": error.message};
     };
-  };
   ;
   async executeDeployment(environment, deployment) {}
   try {log(`Executing deployment to ${environment.name}`);
@@ -386,7 +383,6 @@ class DeploymentSystem {}
   "success": false,
         "error": error.message};
     };
-  };
   ;
   async updateSourceCode(environment) {}
   try {log(`Updating source code from ${environment.branch} branch`);
@@ -434,7 +430,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "update-source"};
     };
-  };
   ;
   async installDependencies(environment) {}
   try {}
@@ -457,7 +452,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "install"};
     };
-  };
   ;
   async buildApplication(environment) {}
   try {}
@@ -480,7 +474,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "build"};
     };
-  };
   ;
   async deployWithPM2(environment) {}
   try {}
@@ -526,7 +519,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "pm2-deploy"};
     };
-  };
   ;
   async verifyDeployment(environment) {}
   try {}
@@ -553,7 +545,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "verify"};
     };
-  };
   ;
   shouldAutoRollback(environment, healthCheckResults) {}
   // Check if health check score is below threshold;
@@ -568,7 +559,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "verify"};
     };
-  };
   ;
   shouldAutoRollback(environment, healthCheckResults) {}
   // Check if health check score is below threshold;
@@ -624,7 +614,6 @@ class DeploymentSystem {}
   "success": false,
         "error": error.message};
     };
-  };
   ;
   async executeRollback(environment, rollback) {}
   try {log(`Executing rollback for ${environment.name}`);
@@ -673,7 +662,6 @@ class DeploymentSystem {}
   "success": false,
         "error": error.message};
     };
-  };
   ;
   async revertToPreviousCommit(environment) {}
   try {}
@@ -743,7 +731,6 @@ class DeploymentSystem {}
         "error": error.message,
         "step": "revert-commit"};
     };
-  };
   ;
   generateDeploymentId() {return `deploy-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`};
   ;
@@ -848,9 +835,4 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-<<<<<<< HEAD
   main};
-  main};
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

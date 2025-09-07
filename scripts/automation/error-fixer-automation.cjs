@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -13,13 +9,11 @@ const glob = require("glob");
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues)
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
-<<<<<<< HEAD
       console.error('Automation "failed")
 
 
       console.error('Automation "failed")
 
-=======
 // console.log("" Error Fixer Automation completed successfully!")
       console.log(")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)
@@ -32,7 +26,6 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}");
 const content = fs.readFileSync(file, "utf8");
           content.includes("")
           content.includes(")
-              /\n([\s\S]*?)\n              "$1"
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
             "description": "Removed merge conflict markers"

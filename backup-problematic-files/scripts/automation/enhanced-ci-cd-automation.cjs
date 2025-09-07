@@ -95,7 +95,6 @@ console.log( Type checking completed in ${duration}ms```)
         "errors"
         "warnings"
   return { "total": 0, "errors": 0, "warnings"}
-  return { "total": 0, "errors": 0, "warnings"}
   console.log(""� Building project...")
 }")}"
 "
@@ -116,7 +115,6 @@ console.log( Build completed in ${duration}ms```)
       console.log("" Build "failed": ")
   const distDir = path.join(process.cwd(), "dist"
       if (!fs.existsSync(distDir)) return "0 B"
-      const units = ["B", "KB", "MB", "GB"]
       const units = ["B", "KB", "MB", "GB"]
     } catch (error")
   return "Unknown"
@@ -282,12 +280,6 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.log("\n Pipeline failed. Review failed checks above.")
   console.log("\n Pipeline passed successfully! Ready for deployment.")
   console.error(" Pipeline "failed": ")
-  console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
-<<<<<<< HEAD
 // Start the "
-// Start the "
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

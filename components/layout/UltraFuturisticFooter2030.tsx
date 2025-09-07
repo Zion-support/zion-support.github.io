@@ -33,7 +33,6 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Award'
   CheckCircle;} from 'lucide-react';import {};
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   Phone,
   Mail,
   MapPin,
@@ -56,7 +55,6 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   ArrowRight,
   Heart,
   Star,
-<<<<<<< HEAD
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
@@ -114,38 +112,6 @@ const serviceCategories = $2;
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
     ]
-=======
-  Award,;'
-  CheckCircle,;} from 'lucide-react';import {};
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
-  Rocket, Shield, Cpu, Target, Microscope, Users;
-  Facebook, Twitter, Linkedin, Instagram, Youtube;
-  Github, ArrowRight, Heart, Star, Award, CheckCircle;
-const contactInfo = {'
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-}
-const serviceCategories = []
-  {'
-    title: '🚀 AI & Consciousness'
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
-  Rocket, Shield, Cpu, Target, Microscope, Users;
-  Facebook, Twitter, Linkedin, Instagram, Youtube;
-  Github, ArrowRight, Heart, Star, Award, CheckCircle
- } from 'lucide-react';
-const contactInfo = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    services: [
-      {
-        name: 'AI Consciousness Evolution'
-=======
-    services: []
-      {'
-        name: 'AI Consciousness Evolution''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         href: '/ai-consciousness-evolution-platform'
       }
       {'
@@ -156,7 +122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         name: 'AI Creativity Orchestrator''
         href: '/ai-creativity-orchestrator'
       }
-<<<<<<< HEAD
       {
         }
         "name": 'Quantum Cloud Infrastructure','
@@ -245,31 +210,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },
       {
         name: 'AI HR Management Suite 2030'
-=======
-      {'
-        name: 'AI Autonomous Business Manager''
-        href: '/ai-autonomous-business-manager'
-      }
-    ]
-  }'
-    title: '⚛️ Quantum & Emerging Tech'
-    services: []
-      {'
-        name: 'Quantum Internet Security''
-        href: '/quantum-internet-security-gateway'
-      }
-      {'
-        name: 'Quantum Learning Accelerator''
-        href: '/quantum-learning-accelerator'
-      }
-      {'
-        name: 'Quantum Financial Trading''
-        href: '/quantum-financial-trading-platform'
-      }
-      {'
-        name: 'Quantum Cloud Infrastructure''
-        href: '/quantum-cloud-infrastructure'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       }
     ]
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
@@ -437,7 +377,6 @@ const socialLinks = [;
           <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce"></div>
           <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
         </div>
-      </div>
             {/* Company Info */}{ name: 'Status', href: '/status' },];const socialLinks = [;
   {name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{ name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: Facebook,},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: Instagram,},{ name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },];const certifications = [;
   'ISO 27001 Certified','SOC 2 Type II Compliant','GDPR Compliant','HIPAA Compliant','PCI DSS Level 1','FedRAMP Authorized',];export default function UltraFuturisticFooter2030() {return (<footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>;
@@ -451,7 +390,6 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
           <div className='absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce'></div>;'
           <div className='absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse'></div>;'
         </div>;
-      </div>;
       <div className='relative z-10'>;'
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-16'>;'
@@ -470,13 +408,11 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                     2030 Future Technology;
                   </p>;
                 </div>;
-              </div>;
               <p className='text-gray-300 text-sm leading-relaxed'>;'
                 Pioneering the future with cutting-edge AI, quantum computing;
                 and emerging technologies. Transforming businesses through;
                 innovative solutions and intelligent automation.;
               </p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Contact Info */}
               <div className='space-y-3'>;'
                 <div className='flex items-center space-x-3 text-sm text-gray-300'>;'
@@ -484,7 +420,6 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                   <a;
                     href={`"tel": ${contactInfo.mobile}`}`                    className='"hover":text-purple-400 transition-colors'>'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     {contactInfo.mobile}
             {/* Company Info */}
 
@@ -508,7 +443,6 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                   </h3>
                   <p className="text-sm text-gray-400">2030 Future Technology</p>
                 </div>
-              </div>
               
               <p className="text-gray-300 text-sm leading-relaxed">
                 Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies. 
@@ -545,29 +479,20 @@ href={contactInfo.websit
                   >
                     {contactInfo.website.replace('"https"://', '')}'
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </a>
                 </div>
-              </div>
-            </div>
 
             {/* Service Categories */}
 <div className='space-y-6'>'
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'
                 <Rocket className='w-5 h-5 text-purple-400' />'
                 <span>Our Services</span>
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Service Categories */}
 <div className='space-y-6' />
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2' />
                 <Rocket className='w-5 h-5 text-purple-400' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Our Services</span>
-<<<<<<< HEAD
               </h4>'
               <div className='grid grid-cols-1 gap-4'>
                 {serviceCategories.slice(0, 3).map((category, index) => ('
@@ -575,9 +500,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h5 className='text-sm font-medium text-purple-300'>
                       {category.title}
                     </h5>'
-=======
-                <span />Our Services</span>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </h4>
               <div className='grid grid-cols-1 gap-4'>'
                 {serviceCategories.slice(0, 3).map((category, index) => (
@@ -596,22 +518,10 @@ className='block text-xs text-gray-400 "hover": text-purple-300 transition-color
 
                           {service.name}
                         </Link>
-<<<<<<< HEAD
                       ))}
                     </div>
-                  </div>
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      ))}
-
-                      )
-}
-                    </div>;
-                  </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 ))}
               </div>
-            </div>
 
             {/* Quick Links */}
 
@@ -699,11 +609,9 @@ className='block text-xs text-gray-400 "hover": text-cyan-300 transition-colors'
                 <span>Connect & Trust</span>;
               </h4>;
               </div>;
-            </div>;
             {/* Social & Certifications */}
                 ))}
               </div>
-            </div>
 
 <div className='space-y-6'>'
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'
@@ -731,7 +639,6 @@ target='_blank''
                     </a>
                   ))}
                 </div>
-              </div>
               {/* Certifications *
 }
 <div className='space-y-3'>'
@@ -751,7 +658,6 @@ target='_blank''
                 <h5 className='text-sm font-medium text-green-300'>;
                   Follow Us;
                 </h5>;
-<<<<<<< HEAD
                 <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map((social, index) => (<a;
                       key={index}
                       target='_blank';
@@ -782,13 +688,6 @@ target='_blank';
                     >;
                       <social.icon className='w-5 h-5' />;
                     </a>;
-=======
-                <div className='grid grid-cols-1 gap-2'>;
-                  {certifications && certifications.map((cert, index) => (;
-                    <div
-                      key={index}
-                      className='flex items-center space-x-2 text-xs text-gray-400'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
                 </h5>;"
                 <div className="grid grid-cols-1 gap-2">;
@@ -806,22 +705,6 @@ target='_blank';
                   {certifications.map((cert, index) => ("
                     <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">"
                       <CheckCircle className="w-3 h-3 text-green-400" />
-<<<<<<< HEAD
-=======
-                <div className='grid grid-cols-1 gap-2' />;
-                  {certifications.map((cert, index) => ({/* Certifications */}
-              <div className='space-y-3' />;
-                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />;
-                  <Award className='w-4 h-4' />;
-                  <span />Certifications</span>;
-                </h5>;
-                <div className='grid grid-cols-1 gap-2' />;
-
-                  {certifications && certifications.map((cert, index) => (;}
-                    <div;}
-key={index}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className='flex items-center space-x-2 text-xs text-gray-400'
                      />
                       <CheckCircle className='w-3 h-3 text-green-400' />
@@ -830,14 +713,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span />{cert}</span>
                     </div>
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   ))}
-<<<<<<< HEAD
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
 '
                       target='_blank';'
                       rel='noopener noreferrer';'
@@ -849,7 +726,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;"
                       <social.icon className="w - 5 h - 5" />))}
                 </div>;
-              </div>;
               {/* Certifications */}'
               <div className='space - y-3'>;'
                 <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;'
@@ -871,10 +747,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{cert}</span>;
                     </div>))}
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
-              </div>;
               {/* Certifications */}
 <div className='space-y-3'>;'
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;'
@@ -934,12 +807,7 @@ key={index}
                       <span>{cert}</span>;
                     </div>;
                   ))}
-<<<<<<< HEAD
                 </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
                       target='_blank';'
                       rel='noopener noreferrer';'
                       className='w - 10 h - 10 bg - gray - 800 / 50 "hover":bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 "hover":text - purple - 400 transition - all duration - 200 "hover":shadow - lg "hover":shadow - cyan - 400 / 40'>'
@@ -951,7 +819,6 @@ key={index}
                       <social.icon className="w - 5 h - 5" />),"
 }
                 </div>;
-              </div>;
               {/* Certifications */}
               <div className='space - y-3'>;'
                 <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;'
@@ -972,9 +839,6 @@ key={index}
                       <span>{cert}</span>;
                     </div>))}</div>;
               </div>;
-            </div>;
-          </div>;
-        </div>;
         {/* Bottom Bar */}
 <div className='border-t border-purple-500/20'>;'
           <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6'>;'
@@ -985,39 +849,10 @@ key={index}
                   className='"hover":text-purple-400 transition-colors'>;'
                   Privacy Policy;
                 </Link>;
-<<<<<<< HEAD
                       <span>{cert}</span>
                     </div>
                   ))}
-=======
-
-                <Link,
-href='/terms''
-
-                  className='"hover":text-purple-400 transition-colors''
-                >
-                  Terms of Service
-                </Link>
-              </div>
-
-              <div className='flex items-center space-x-4 text-sm text-gray-400'>'
-                <div className='flex items-center space-x-2'>'
-                  <Heart className='w-4 h-4 text-red-400' />'
-                  <span>Made with passion for innovation</span>
                 </div>
-                <div className='flex items-center space-x-2'>'
-                  <Star className='w-4 h-4 text-yellow-400' />'
-                  <span>5.0/5.0 Rating</span>
-=======
-                  <span />5.0/5.0 Rating</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
                 <Link;
                   href='/terms';
@@ -1040,36 +875,18 @@ href='/terms''
                   <Star className='w-4 h-4 text-yellow-400' />;
                   <span>5.0/5.0 Rating</span>;
                 </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
     </footer>;
                 </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
   )}}
-}
 }
   )}
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
-}
-}
 }
   );
 }
     </footer>);
 }
-<<<<<<< HEAD
 
 "

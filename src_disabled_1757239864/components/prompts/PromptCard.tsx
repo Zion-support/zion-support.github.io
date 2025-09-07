@@ -31,10 +31,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
           <Send className="w-4 h-4" />
         </Button>
       </div>
-    </div>
   )
 }
-<<<<<<< HEAD:src/components/prompts/PromptCard.tsx
-=======
+:src/components/prompts/PromptCard.tsx
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/prompts/PromptCard.tsx

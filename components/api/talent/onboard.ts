@@ -50,7 +50,6 @@ if (
   } catch (err) {
 
 // ignore and fallback
-    // ignore and fallback
   }
 
 const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { "summary": fallbackSummary, "tags": basicTags.slice(0, 24) }
@@ -79,11 +78,7 @@ fullName,
       full_name,
       professional_title,
       profile_picture,
-<<<<<<< HEAD
       fullName,
-=======
-fullName,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       professionalTitle,
       profilePicture,
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -93,10 +88,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       skills,
       tools,
       availability,
-<<<<<<< HEAD
       timezone,
       hourlyRate,
-<<<<<<< HEAD
       portfolioLinks,
       cvFile} = req.body || {},
 
@@ -155,7 +148,6 @@ if ( {) {$2;
       const filePath = path && path.join(uploadsDir, filename)const base64Data = profilePicture && profilePicture.base64.split(',')[1];
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;
       }
-    }
       const filename = `${id}-cv${ext}`;
       const filePath = path && path.join(uploadsDir, filename)const base64Data = cvFile && cvFile.base64.split(',')[1];
       if (base64Data) {await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;      }
@@ -165,7 +157,6 @@ if ( {) {$2;
       const filePath = path.join(uploadsDir, filename)const base64Data = profilePicture.base64.split()[1];
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;
       }
-    }
       if (base64Data) {await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;
       ai: {summary;
         tags}}const perRecordPath = path && path.join(dataDir, `${id}.json`)await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 })const aggregatePath = path && path.join(process && process.cwd(),'data','talent-submissions && submissions.json';
@@ -185,7 +176,6 @@ if ( {) {$2;
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;
     const uploadsDir = path.join(process.cwd(), 'publicuploads'),
     const dataDir = path.join(process.cwd(), 'datatalent-submissions'),
-    await fse.ensureDir($2);
     await fse.ensureDir($2);
     let savedProfileImagePath: string | null = $2;
     if (profilePicture?.base64 && profilePicture?.name) {
@@ -227,7 +217,6 @@ if ( {) {$2;
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedProfileImagePath = `/uploads/${filename}`;
       }
-    }
       const filename = `${id}-cv${ext}`;
       const filePath = path && path.join(uploadsDir, filename);
       const base64Data = cvFile && cvFile.base64.split(',')[1];
@@ -237,226 +226,6 @@ if ( {) {$2;
     }
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
-=======
-      timezone,'
-    const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');'
-    const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
-    await fse && fse.ensureDir(uploadsDir);
-    await fse && fse.ensureDir(dataDir);`
-      const filename = `${id}-profile${ext}`;
-      const filePath = path && path.join(uploadsDir, filename);'
-      const base64Data = profilePicture && profilePicture.base64.split(',')[1];'
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));`
-        savedProfileImagePath = `/uploads/${filename}`;
-      }
-    }`
-      const filename = `${id}-cv${ext}`;
-      const filePath = path && path.join(uploadsDir, filename);'
-      const base64Data = cvFile && cvFile.base64.split(',')[1];
-      if (base64Data) {'
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));`
-        savedCvPath = `/uploads/${filename}`;      }
-    }'
-    const uploadsDir = path.join(process.cwd(), 'publicuploads');'
-    const dataDir = path.join(process.cwd(), 'datatalent-submissions');
-    await fse.ensureDir(uploadsDir);
-    await fse.ensureDir(dataDir);
-
-    let savedProfileImagePath: string | null = null,
-    if (profilePicture?.base64 && profilePicture?.name) {'
-      const ext = path.extname(profilePicture.name) || '.png';`
-      const filename = `${id}-profile${ext}`;
-      const filePath = path.join(uploadsDir, filename);
-      const base64Data = profilePicture.base64.split()[1];
-      if (base64Data) {'
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));`
-        savedProfileImagePath = `/uploads/${filename}`
-      }
-    }
-      if (base64Data) {'
-        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));`
-        savedCvPath = `/uploads/${filename}`
-      ai: {}
-        summary;
-        tags}};
-`
-    const perRecordPath = path && path.join(dataDir, `${id}.json`);
-    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
-
-    const aggregatePath = path && path.join(
-      process && process.cwd(),'
-      'data','
-      'talent-submissions && submissions.json'
-    );    let aggregate: any[] = [];
-    if (fs && fs.existsSync(aggregatePath)) {}
-      try {}
-        const content = await fse && fse.readJSON(aggregatePath);'
-        if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json');
-      hourlyRate,
-      portfolioLinks,
-      cvFile
-    } = req.body || {};
-
-    if (
-      !fullName |
-      !professionalTitle |
-      !bio |
-      !yearsOfExperience |
-      !skills |
-      !availability |
-      !timezone
-    ) {
-}
-return res.status(400).json({ "error": 'Missing required fields',;'
-});
-    }
-
-const uploadsDir = path.join(process.cwd(), 'public', 'uploads');'
-
-const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');'
-    await fse.ensureDir(uploadsDir);
-    await fse.ensureDir(dataDir);
-
-    let "savedProfileImagePath": string | null = null;
-    if (profilePicture?.base64 && profilePicture?.name) {
-      }
-      const ext = path.extname(profilePicture.name) || '.png';'
-
-const filename = `${id}-profile${ext}`;`
-const filePath = path.join(uploadsDir, filename;
-  const base64Data = profilePicture.base64.split(',')[1];'
-      if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;`      }
-    }let "savedCvPath": string | null = null;
-    if (cvFile?.base64 && cvFile?.name) {const ext = path.extname(cvFile.name) || '.pdf';'
-
-}
-
-const filename = `${id}-cv${ext}`;`
-const filePath = path.join(uploadsDir, filename;
-  const base64Data = cvFile.base64.split(',')[1];'
-      if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;`      }
-
-    return res.status(200).json({ ok: true, id, summary, tags })
-=======
-      portfolioLinks,}
-      cvFile,}
-    } = req.body || {}
-  if($2) {}
-      return res.status(400).json({ error: 'Missing required fields',}
-})
-const uploadsDir = path.join(process.cwd(), 'public', 'uploads')
-const dataDir = path.join(process.cwd(), 'data', 'talent-submissions')
-    await fse.ensureDir(uploadsDir)
-    await fse.ensureDir(dataDir)
-    let savedProfileImagePath: string | null = null
-  if($2) {
-      const ext = path.extname(profilePicture.name) || '.png';}
-
-const filename = `${id}-profile${ext}`
-const filePath = path.join(uploadsDir, filename
-  const base64Data = profilePicture.base64.split(',')[1]
-  if($2) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`
-    }let savedCvPath: string | null = null
-  if($2) {const ext = path.extname(cvFile.name) || '.pdf';}
-
-const filename = `${id}-cv${ext}`
-const filePath = path.join(uploadsDir, filename
-  const base64Data = cvFile.base64.split(',')[1]
-  if($2) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`
-const { summary, tags } = await summarizeAndTag({
-=======
-    let savedCvPath: string | null = null;
-    if (cvFile?.base64 && cvFile?.name) {
-      const ext = path.extname(cvFile.name) || '.pdf';
-      const filename = `${id}-cv${ext}`;
-      const filePath = path.join(uploadsDir, filename);
-const base64Data = cvFile.base64.split(',')[1];
-      if (base64Data) {
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`;
-      }
-    }
-
-const { summary, tags } = await summarizeAndTag({
-}
-fullName,
-      professionalTitle,
-      bio,
-      projects,
-<<<<<<< HEAD
-      skills,}
-      tools,}
-    })
-const record = {
-=======
-      skills,
-      tools
-    });
-
-const record = {
-      }
-      id,
-      "createdAt": new Date().toISOString(),
-      fullName,
-      professionalTitle,
-      bio,
-      projects,
-      "yearsOfExperience": Number(yearsOfExperience) || 0,
-      skills,
-      tools,
-      availability,
-      timezone,
-      "hourlyRate": hourlyRate ? Number(hourlyRate) : null,
-      portfolioLinks,
-      "assets": {
-        }
-        "profileImage": savedProfileImagePath,
-        "cv": savedCvPath
-      },
-      "ai": {
-        }
-        summary,
-        tags
-      }
-    };
-
-const perRecordPath = path.join(dataDir, `${id}.json`);`
-    await fse.writeJSON(perRecordPath, record, { "spaces": 2
-});
-
-const aggregatePath = path.join(;
-      process.cwd(),
-      'data','
-      'talent-submissions.json''
-    );
-
-    let "aggregate": any[] = [];
-    if () {) {$2;
-}
-    aggregate.push (record);
-    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
-;
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
-    // For now, just return success with AI data;
-    return res.status (200).json ({ ok: true, id, summary, tags });
-  } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' });
-  }    return res.status (200).json ({ ok: true, id, summary, tags });
-  } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' });
-}
-}
-<<<<<<< HEAD
-  }
-  }
-  }
-}
-}aggregate.push(record)await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 })// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)// For now, just return success with AI data;
-return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {return res.status(500).json({ error: 'Internal server error' })}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
     );
 origin/cursor/automate-test-improve-and-merge-code-2533
     let aggregate: any[] = [];
@@ -468,7 +237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if () {) {}
   $2;
 }
-<<<<<<< HEAD
       try {
 
         }
@@ -477,13 +245,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if (Array.isArray(content)) aggregate = content;
 origin/cursor/automate-test-improve-and-merge-code-2533
       } catch (_) {
-=======
-      try {}
-      } catch (_) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         // ignore;
       }
-    }
   } catch (error) {'
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
@@ -501,17 +264,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error) {'
     return res.status (500).json ({ error: 'Internal server error' });
 }
-}
-  }
-  }
-  }
-}
-<<<<<<< HEAD
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 
@@ -520,7 +274,6 @@ if (Array.isArray(content)) aggregate = content;}
       } catch (_) {}
         // ignore;}
       }
-    }
 
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { "spaces": 2

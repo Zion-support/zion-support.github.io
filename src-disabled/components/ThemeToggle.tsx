@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/components/ThemeToggle.tsx
+:src_backup/components/ThemeToggle.tsx
 import React from 'react';
 import { Sun, Moon, Monitor  } from 'lucide-react';
 import { useTheme  } from './ThemeProvider';
@@ -22,7 +22,6 @@ const ThemeToggle: React.FC = () => {const { theme, setTheme }  = useTheme()cons
             </button>;
           )})}
       </div>;
-    </div>;
   )}export default ThemeToggle;
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';

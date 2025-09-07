@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -621,7 +620,6 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
         'Microservices architecture growth','API-first development','Rate limiting importance','Developer experience focus',],topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],opportunities: [;
         'API rate limiting services','Developer portal platforms','API analytics tools','Webhook management systems',],color: 'from-indigo-500 to-purple-600',icon: <Globe className='w-8 h-8 text-white' />,},    {{name: 'User Experience Analytics',marketSize: '$9.4B',growthRate: '20.5% CAGR',keyTrends: [;
         'Privacy-compliant tracking','Real-time user insights','Conversion optimization focus','Mobile app analytics growth',],topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],opportunities: [;
-'Privacy-compliant tracking','Real-time user insights','Conversion optimization focus','Mobile app analytics growth',],topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],opportunities: [;
         'Heatmap and session recording','A/B testing platforms','User journey mapping tools','Conversion funnel analytics',],color: 'from-teal-500 to-cyan-600',icon: <Users className='w-8 h-8 text-white' />,},  ];];
   const competitiveAnalysis = [;
     {company: 'Enterprise Giants',examples: ['SalesforceMicrosoftOracleSAP'],},];
@@ -764,11 +762,9 @@ import { Zap  } from 'lucide-react';
                     <TrendingUp className='w-4 h-4 mr-1' />;
                     {insight.change}
                   </div>;
-                </div>;
               </Card>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Market Segments */}
 <section className='section-padding bg-gradient-cursor'>;
@@ -1300,9 +1296,6 @@ key={index}
                               {segment.growthRate}
                             </span>;
                           </div>;
-                        </div>;
-                      </div>;
-                    </div>;
                     {/* Market Analysis */}
 <div className='"lg":w-2/3'>;'
                       <div className='grid grid-cols-1 "lg":grid-cols-2 gap-8'>;'
@@ -1376,9 +1369,6 @@ key={index}
                             <span className="text-gray-400">Growth Rate:</span>
                             <span className="text-green-400 font-semibold">{segment.growthRate}</span>
                           </div>
-                        </div>
-                      </div>
-                    </div>
 
                     {/* Market Analysis */}
                     <div className="lg:w-2/3">
@@ -1414,7 +1404,6 @@ key={index}
                             ))}
                           </ul>
                         </div>
-                      </div>
 
                       {/* Opportunities */}
                       <div className="mt-8 pt-6 border-t border-gray-700">
@@ -1430,15 +1419,10 @@ key={index}
                             </div>
                           ))}
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </Card>
 
             ))}
           </div>;
-        </div>;
       </section>;
       {/* Competitive Analysis */}
 <section className='section-padding bg-gradient-cursor-accent'>;'
@@ -1469,7 +1453,6 @@ key={index}
                       <div className='text - white font - semibold'>;'
                         {analysis.market_share}
                       </div>;
-                    </div>;
                     <div>;
                       <span className='text - gray - 400'>"Pricing":</span>;'
                       <div className='text - white font - semibold'>;'
@@ -1516,8 +1499,6 @@ key={index}
                       {analysis.strengths.map((strength, strengthIndex) => (<li key={strengthIndex} className="flex items-start">;
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />;
                       </div>;
-                    </div>;
-                  </div>;
                   {/* Strengths */}
 <div className='mb-4'>'
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>'
@@ -1568,7 +1549,6 @@ key={index}
                       ))}
                     </ul>;
                   </div>;
-                </div>;
               </Card>;
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div>
@@ -1579,7 +1559,6 @@ key={index}
                       <span className="text-gray-400">Pricing:</span>
                       <div className="text-white font-semibold">{analysis.pricing}</div>
                     </div>
-                  </div>
 
                   {/* Strengths */}
                   <div className="mb-4">
@@ -1606,11 +1585,9 @@ key={index}
                       ))}
                     </ul>
                   </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Market Trends */}
@@ -1676,7 +1653,6 @@ key={index}
                         {trend.timeline}
                       </span>
                     </div>
-                  </div>
 <p className='text-gray-300 mb-4'>{trend.description}</p>'
 
                   <div className='mb-4'>'
@@ -1700,13 +1676,11 @@ key={index}
                       {trend.opportunities}
                     </p>
                   </div>
-                </div>
               </Card>
 
             )
 }
           </div>;
-        </div>;
       </section>;
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>;'
@@ -1749,7 +1723,6 @@ key={index}
                         {trend.timeline}
                       </span>;
                     </div>;
-                  </div>;
                   <p className='text - gray - 300 mb - 4'>{trend.description}</p>;'
                   <div className='mb - 4'>;'
                     <h4 className='text - sm font - semibold text - gray - 400 mb - 2'>;'
@@ -1776,10 +1749,8 @@ key={index}
                     </p>                  </div>                    <h4 className="text - sm font - semibold text - green - 400 mb - 2">"Opportunities":</h4>;"
                     <p className="text - xs text - gray - 300">{trend.opportunities}</p>;"
                   </div>;
-                </div>;
               </Card>))}
           </div>;
-        </div>;
       </section>;
       {/* Pricing Strategies */}
       <section className='section - padding bg - gradient - cursor - accent'>;'
@@ -1857,11 +1828,9 @@ key={index}
                       Best "For": </h4>
                     <p className='text-xs text-gray-300'>{strategy.bestFor}</p>'
                   </div>
-                </div>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Pricing Strategies *
@@ -1939,7 +1908,6 @@ key={index}
                     <p className='text-xs text-gray-300'>{strategy && strategy.bestFor}</p>                  </div>                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best "For":</h4>;"
                     <p className="text-xs text-gray-300">{strategy && strategy.bestFor}</p>;"
                   </div>;
-                </div>;
               </Card>;
             ))}
       {/* CTA Section */}
@@ -1973,13 +1941,11 @@ variant='outline';'
               View Our Services
             </Button>
           </div>
-        </div>
       </section>
     </>
               View Our Services
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>);
 }
@@ -2020,7 +1986,6 @@ variant='outline';'
               View Our Services;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>)href='/services';
               variant='outline';
@@ -2030,10 +1995,8 @@ variant='outline';'
               View Our Services;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

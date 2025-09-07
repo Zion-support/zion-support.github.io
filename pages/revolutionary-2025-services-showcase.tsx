@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -180,7 +179,6 @@ export default function Revolutionary2025ServicesShowcase() {
                   <Award className="w-5 h-5 text-green-400" />
                   <span className="text-green-300">Market Leaders</span>
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -255,9 +253,6 @@ export default function Revolutionary2025ServicesShowcase() {
                     </svg>
                   </button>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Services Grid */}
@@ -342,7 +337,6 @@ export default function Revolutionary2025ServicesShowcase() {
                             <div className="text-xs text-gray-400 mb-1">Growth Rate</div>
                             <div className="text-sm text-gray-200">{service.growthRate}</div>
                           </div>
-                        </div>
 
                         {/* Action Buttons */}
                         <div className="flex space-x-3 mb-4">
@@ -373,8 +367,6 @@ export default function Revolutionary2025ServicesShowcase() {
                               {service.contactInfo.email}
                             </a>
                           </div>
-                        </div>
-                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -411,7 +403,6 @@ export default function Revolutionary2025ServicesShowcase() {
                               </div>
                               <p className="text-gray-300 text-sm">{service.tagline}</p>
                             </div>
-                          </div>
                           
                           <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                           
@@ -436,9 +427,6 @@ export default function Revolutionary2025ServicesShowcase() {
                                   </span>
                                 ))}
                               </div>
-                            </div>
-                          </div>
-                        </div>
 
                         {/* Right Column */}
                         <div className="lg:w-80 space-y-4">
@@ -461,7 +449,6 @@ export default function Revolutionary2025ServicesShowcase() {
                               <div className="text-xs text-gray-400 mb-1">Growth Rate</div>
                               <div className="text-sm text-gray-200">{service.growthRate}</div>
                             </div>
-                          </div>
 
                           {/* ROI */}
                           <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
@@ -498,9 +485,6 @@ export default function Revolutionary2025ServicesShowcase() {
                                 {service.contactInfo.email}
                               </a>
                             </div>
-                          </div>
-                        </div>
-                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -570,7 +554,6 @@ export default function Revolutionary2025ServicesShowcase() {
                     Get Directions →
                   </a>
                 </div>
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
@@ -590,28 +573,4 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function revolutionary2025servicesshowcase() {
-  return (
-    <Layout>
-      <Head>
-        <title>Revolutionary 2025 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary 2025 Services Showcase solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Revolutionary 2025 Services Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional revolutionary 2025 services showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

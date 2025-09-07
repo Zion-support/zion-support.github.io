@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -23,7 +8,6 @@ const { execSync } = require('child_process');
   log(message, type = 'info')
     this.log('🧪 Generating component tests...')
 const componentsDir = path.join(this.projectRoot, 'components');
-      this.log('Components directory not found', 'warn')
       this.log('Components directory not found', 'warn')
       .filter(item => item.isFile() && item.name.endsWith('.tsx')
 const componentName = component.replace('.tsx', '');
@@ -40,50 +24,20 @@ const componentName = component.replace('.tsx', '');
         "type"
         "status"
       this.log(` Tests "failed"`)
-<<<<<<< HEAD
 
         "successRate"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
         "successRate"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-        "successRate"
-<<<<<<< HEAD
 /**
  * Automated Testing Enhancer
  * Comprehensive testing automation and enhancement script
  */
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
         "successRate"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 class AutomatedTestingEnhancer {
   constructor() {
     this.startTime = Date.now();
@@ -135,7 +89,6 @@ class AutomatedTestingEnhancer {
       this.log(`Testing enhancement failed: ${error.message}`, 'error');
       this.errors.push(error.message);
     }
-  }
 
   async runExistingTests() {
     this.log('🔍 Running existing tests...', 'info');
@@ -155,7 +108,6 @@ class AutomatedTestingEnhancer {
       this.testResults.push({ type: 'existing', status: 'failed', error: error.message });
       this.errors.push(`Existing tests failed: ${error.message}`);
     }
-  }
 
   async generateTestCases() {
     this.log('📝 Generating additional test cases...', 'info');
@@ -190,7 +142,6 @@ describe('ComponentName', () => {
     render(<ComponentName {...testProps} />);
     expect(screen.getByText('test value')).toBeInTheDocument();
   });
-});
 `;
 
       // Create API test template
@@ -223,7 +174,6 @@ describe('/api/test-endpoint', () => {
 
     expect(res._getStatusCode()).toBe(405);
   });
-});
 `;
 
       // Save templates
@@ -235,7 +185,6 @@ describe('/api/test-endpoint', () => {
     } catch (error) {
       this.errors.push(`Test case generation failed: ${error.message}`);
     }
-  }
 
   async createIntegrationTests() {
     this.log('🔗 Creating integration tests...', 'info');
@@ -284,7 +233,6 @@ describe('Integration Tests', () => {
     render(<HomePage />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-});
 `;
 
       fs.writeFileSync('__tests__/integration.test.tsx', integrationTest);
@@ -293,7 +241,6 @@ describe('Integration Tests', () => {
     } catch (error) {
       this.errors.push(`Integration test creation failed: ${error.message}`);
     }
-  }
 
   async setupE2ETests() {
     this.log('🌐 Setting up E2E tests...', 'info');
@@ -349,7 +296,6 @@ test.describe('E2E Tests', () => {
     // Check for success message
     await expect(page.getByText('Thank you for your message')).toBeVisible();
   });
-});
 `;
 
       fs.writeFileSync('e2e/homepage.spec.ts', e2eTest);
@@ -397,7 +343,6 @@ export default defineConfig({
     } catch (error) {
       this.errors.push(`E2E test setup failed: ${error.message}`);
     }
-  }
 
   async addPerformanceTests() {
     this.log('⚡ Adding performance tests...', 'info');
@@ -426,13 +371,11 @@ test.describe('Performance Tests', () => {
         // This would integrate with lighthouse API
         resolve({ performance: 90, accessibility: 95, seo: 85 });
       });
-    });
     
     expect(lighthouse.performance).toBeGreaterThan(80);
     expect(lighthouse.accessibility).toBeGreaterThan(90);
     expect(lighthouse.seo).toBeGreaterThan(80);
   });
-});
 `;
 
       fs.writeFileSync('e2e/performance.spec.ts', performanceTest);
@@ -441,7 +384,6 @@ test.describe('Performance Tests', () => {
     } catch (error) {
       this.errors.push(`Performance test addition failed: ${error.message}`);
     }
-  }
 
   async addAccessibilityTests() {
     this.log('♿ Adding accessibility tests...', 'info');
@@ -489,7 +431,6 @@ test.describe('Accessibility Tests', () => {
       expect(text?.trim()).toBeTruthy();
     }
   });
-});
 `;
 
       fs.writeFileSync('e2e/accessibility.spec.ts', accessibilityTest);
@@ -498,7 +439,6 @@ test.describe('Accessibility Tests', () => {
     } catch (error) {
       this.errors.push(`Accessibility test addition failed: ${error.message}`);
     }
-  }
 
   async generateTestReport() {
     this.log('📊 Generating test report...', 'info');
@@ -522,14 +462,8 @@ test.describe('Accessibility Tests', () => {
     fs.writeFileSync('automated-testing-report.json', JSON.stringify(report, null, 2));
     this.log('📄 Test report saved to automated-testing-report.json', 'success');
   }
-}
 
 // Run the enhancer
 const enhancer = new AutomatedTestingEnhancer();
 enhancer.runEnhancement().catch(console.error);
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -17,12 +17,6 @@ export default function industrysolutions() {
             Professional industry solutions solutions tailored to your business needs.
           </p>
         </div>
-      </div>
-<<<<<<< HEAD
     </>
   )
-=======
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -39,7 +35,6 @@ const crypto = require("crypto");
   "pattern": /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility", "}", "
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
-  this.log("🧪 Starting smart testing automation...")
   this.log("🧪 Starting smart testing automation...")
     } catch (error) {  this.log(`Smart testing automation "failed": ${error.message  }`, "ERROR"`)
   "total"
@@ -109,7 +104,6 @@ const content = fs.readFileSync(file, "utf8");
   "components"
       "utilities"
       "hooks"
-    for (const ["category", "patterns")]
     for (const ["category", "patterns")]
   "name"
             "file"
@@ -206,7 +200,6 @@ const testOutput = execSync("npm test -- --watchAll=false");
       "failed"
       /"Tests"
     this.log(" Attempting to auto-fix failing tests...")
-  this.log(" Attempting to auto-fix failing tests...")
   this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}")
             "
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}")
@@ -214,7 +207,6 @@ const testOutput = execSync("npm test -- --watchAll=false");
             `ERROR
     } catch (error) {  this.log("Auto-fix process "failed": ${error.message  }", "ERROR")
   // This would typically involve parsing Jest"
-    // For now, we"
     // For now, we"
   "timestamp"
       "summary"
@@ -224,7 +216,6 @@ const testOutput = execSync("npm test -- --watchAll=false");
       "details"
     this.log(Test report "generated")
   // This would typically involve parsing Jest"
-    // For now, we"
     // For now, we"
   "timestamp"
       "summary"
@@ -242,41 +233,10 @@ const testOutput = execSync("npm test -- --watchAll=false");
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
 const fullPath = path.join(dir, ");
   files.push(...this.getAllFiles(fullPath")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-<<<<<<< HEAD
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

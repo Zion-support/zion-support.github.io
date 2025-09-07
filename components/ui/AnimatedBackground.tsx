@@ -16,7 +16,6 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
             }
             "transform": translateY(0px) rotate(0deg);
           }
-        }
       `}</style>;
     </div>;
   );  return (
@@ -29,12 +28,8 @@ class ErrorBoundary extends React.Component {}
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-<<<<<<< HEAD
   
   componentDidCatch(error, errorInfo) {}
-=======
-  componentDidCatch(error, errorInfo) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Gradient Background */}
       {/* Animated Orbs */}
       <motion&& motion.div"
@@ -51,7 +46,6 @@ export default /**;
 function AnimatedBackground() {}
   return ('
     <div className='pointer - events - none fixed inset - 0 -z - 10 overflow - hidden'>;
-<<<<<<< HEAD
       <div;'
         className='absolute -inset-[20%] opacity - 40 blur - 3xl animate-[bgflow_20s_linear_infinite]';
         style={{}
@@ -69,19 +63,12 @@ function AnimatedBackground() {}
           }
           100% {}
             transform: translate_y (0px) rotate (0deg);
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default function AnimatedBackground() {return (<div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div;
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]';
         style={{background:;
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)';
         }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
       `}</style>`
     </div>

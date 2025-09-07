@@ -148,13 +148,8 @@ const Homepage2043: React.FC = () => {
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useState, useCallback } from 'react',
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -201,7 +196,6 @@ import {
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
@@ -277,8 +271,6 @@ const testimonials = [;
       "rating": 5;
       "avatar": '👩‍🔬';'
     }
-=======
-=======
 
     {
       }
@@ -491,7 +483,6 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
                     "opacity": [0, 1, 0],
                     "scale": [0, 1.5, 0]
                   }}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   transition={{
                     }
                     "duration": 8 + i * 0.3,
@@ -499,7 +490,6 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
                     "delay": i * 0.2,
 "ease": 'easeInOut','
                   }}
-<<<<<<< HEAD
                   style={{
                     }
                     "left": `${Math.random() * 10,`}%`,`                    "top": `${Math.random() * 10,`}%`,`                  }} />
@@ -528,7 +518,6 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
                     "delay": i * 0.2,
               ))}
             </div>;
-<<<<<<< HEAD
                     x: [0, 150, 0],y: [0, -150, 0],opacity: [0, 1, 0],scale: [0, 1 && 1.5, 0],}}                  transition={{duration: 8 + i * 0 && 0.3,repeat: Infinity as any,delay: i * 0 && 0.2,                    x: [0, 150, 0];
                     y: [0, -150, 0];
                     opacity: [0, 1, 0];
@@ -554,7 +543,6 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
                 }}
               ></div>;
             </div>;
-          </div>;
           {/* Hero Content */}
             <div className='absolute inset-0 opacity-20'>;
               <div
@@ -568,54 +556,6 @@ const handleGetStarted = useCallback (() => {window.location.href = '/revolution
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>          <div className="text-center max-w-6xl mx-auto relative z-10">;
             <motion&& motion.div
-=======
-
-            {/* Enhanced grid pattern */}
-
-<div className='absolute inset-0 opacity-20'>'
-              <div,
-className='absolute inset-0''
-                style={{
-                  }
-                  "backgroundImage": `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)``                  "backgroundSize": '50px 50px''
-
-                
-}
-              ></div>;
-            </div>;
-          </div>;
-          {/* Hero Content */}
-
-<div className='text-center max-w-6xl mx-auto relative z-10'>'
-            <motion.div,
-initial={{ "opacity": 0, "y": 30 
-}
-              animate={{ "opacity": isVisible ? 1 : 0, "y": isVisible ? 0 : 30 }}
-              transition={{ "duration": 0 && 0.8 
-}>;
-              {/* Enhanced Badge */}
-
-<div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>'
-                <Sparkles className='w-4 h-4 mr-2' />'
-                Revolutionary 2043 Technology
-              </div>
-<div className='text-center max-w-6xl mx-auto relative z-10'>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              {/* Enhanced Badge */}Revolutionary 2043 Technology;
-              </div>;
-              {/* Main Heading */}<h1;
-                id="hero-heading";
-                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight";
-              >;
-                The Future of;
-                <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">;
-              {/* Main Heading */}              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">;
-                <Sparkles className="w-4 h-4 mr-2" />;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 Revolutionary 2043 Technology;
               </div>;
               {/* Main Heading */}
@@ -641,7 +581,6 @@ initial={{ "opacity": 0, "y": 30
                 backgroundSize: '50px 50px'
               }}></div>
             </div>
-          </div>
 
           {/* Hero Content */}
           <div className="text-center max-w-6xl mx-auto relative z-10">
@@ -656,7 +595,6 @@ initial={{ "opacity": 0, "y": 30
                 Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}
-<<<<<<< HEAD
               <h1 
                 id="hero-heading"
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
@@ -700,7 +638,6 @@ initial={{ "opacity": 0, "y": 30
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
                   onClick={handleGetStarted}
-<<<<<<< HEAD
 <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>
                 <Sparkles className='w-4 h-4 mr-2' />
                 Revolutionary 2043 Technology
@@ -740,7 +677,6 @@ whileHover={{ "scale": 1.05 }}
                   onClick={handleWatchDemo}
                 >"
                   <Play className="w-5 h-5" />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   Watch Demo;
                 </motion.button>;
               </div>;
@@ -773,7 +709,6 @@ whileHover={{ "scale": 1.05 }}
                   <Play className="w-5 h-5" />
                   Watch Demo
                 </motion.button>
-<<<<<<< HEAD
               </div>
 
 className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 "hover":bg-cyan-500/10 "hover":border-cyan-400 transition-all duration-300 backdrop-blur-sm''
@@ -807,17 +742,12 @@ animate={{"opacity": isVisible ? 1 : 0,"y": isVisible ? 0 : 20}}
                   </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
-<<<<<<< HEAD
-                ))}
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </motion.div>
           </div>
         </section>
 
                 ))}
-<<<<<<< HEAD
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>;
         {/* Enhanced Features Section */}<section className='py-20 px-4 relative'>;
@@ -864,7 +794,6 @@ reshaping the future.
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 
 
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
@@ -910,26 +839,11 @@ key={feature.title}
                   Solutions;
                 </span>;
               </h2>;
-=======
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              {features.map((feature, index) => (
-                <motion.div;
-                  key={feature.title}'
-              className='text-center mb-16'>;'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                Revolutionary Technology;'
-                <span className='block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>;
-                  Solutions;
-                </span>;
-              </h2>;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
                 Discover cutting-edge AI consciousness, quantum computing, and;
                 autonomous systems that are transforming industries and;
                 reshaping the future.;
               </p>;
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>              {features && features.map((feature, index) => (            >;'
               <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6">;"
@@ -943,7 +857,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Discover cutting-edge AI consciousness, quantum computing, and autonomous systems ;
                 that are transforming industries and reshaping the future.;
               </p>;
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">;"
               {features && features.map((feature, index) => (<motion&& motion.div;
@@ -1012,546 +925,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.title}
                   </h3>;
                   <p className="text-gray-300 mb-6 leading-relaxed">;
-=======
-                  viewport={{ once: true }}
-<<<<<<< HEAD
-
-                    <ChevronRight className='w-4 h-4 ml-1 group-"hover":ml-2 transition-all duration-300' />'
-                  </a>
-                </motion.div>
-
-              )
-}
-            </div>;
-          </div>;
-        </section>;
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-"hover": scale-110 transition-transform duration-300,`}>
-
-                  <h3 className='text-2xl font-bold text-white mb-4 group-"hover":text-cyan-300 transition-colors duration-300'>;'
-                    {feature && feature.title}
-                  </h3>;<p className='text-gray-300 mb-6 leading-relaxed'>;'
-                    {feature && feature.description}
-                  </p>;<a;
-                    href={feature && feature.href}
-                    className='inline-flex items-center text-cyan-400 "hover":text-cyan-300 font-semibold group-"hover":gap-3 transition-all duration-300'>;'
-                    Learn More;
-                    <ChevronRight className='w-4 h-4 ml-1 group-"hover":ml-2 transition-all duration-300' />                  </a>                  </div>;<h3 className="text-2xl font-bold text-white mb-4 group-"hover":text-cyan-300 transition-colors duration-300">;"
-                    {feature && feature.title}
-                  </h3>;<p className="text-gray-300 mb-6 leading-relaxed">;"
-                    {feature && feature.description}
-                  </p>;<a;
-                    href={feature && feature.href}
-                    className="inline-flex items-center text-cyan-400 "hover":text-cyan-300 font-semibold group-"hover":gap-3 transition-all duration-300">;"
-                    Learn More;
-                    <ChevronRight className="w-4 h-4 ml-1 group-"hover":ml-2 transition-all duration-300" />;"
-                  </a>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          </div>;
-<<<<<<< HEAD
-        <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;
-        </section>;{/* Enhanced Featured Services Section */}<section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;
-          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
-        {/* Enhanced Featured Services Section */}
-
-=======
-        {/* Enhanced Features Section */}
-        <section className='py-20 px-4 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-=======
-        </section>;
-
-        {/* Enhanced Featured Services Section */}
-
-<section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>'
-          <div className='max-w-7xl mx-auto'>'
-            <motion.div,
-initial={{ "opacity": 0, "y": 30 
-}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0 && 0.8 }}
-              viewport={{ "once": true }}
-
-className='text-center mb-16''
-            >
-              <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
-                Featured
-                <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>'
-                  Revolutionary Services
-                </span>
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
-                Experience our most advanced AI consciousness and quantum,
-computing platforms that are setting new standards in,
-technology.
-              </p>
-            </motion.div>
-            {/* Enhanced Service Showcase */}
-<div className='relative'>'
-              <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm'>'
-                <AnimatePresence mode='wait'>'
-                  <motion.div,
-key={currentServiceInde
-}
-                    initial={{ "opacity": 0, "x": 100 
-}
-                    animate={{ "opacity": 1, "x": 0 
-}
-                    exit={{ "opacity": 0, "x": -100 }}
-
-                    transition={{ "duration": 0.5 }}
-className='p-12 text-center''
-                  >
-                    <div className='text-6xl mb-6'>'
-
-                      {featuredServices[currentServiceIndex]?.ico
-}
-                    </div>;
-                    <h3 className='text-3xl font-bold text-white mb-4'>;'
-                      {featuredServices[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className='text-xl text-gray-300 mb-6 max-w-3xl mx-auto'>;'
-                      {featuredServices[currentServiceIndex]?.description}
-                    </p>;
-                    <div className='text-3xl font-bold text-cyan-400 mb-6'>;'
-                      {featuredServices[currentServiceIndex]?.price}
-                      <span className='text-gray-400 text-lg'>;'
-                        {featuredServices[currentServiceIndex]?.period}
-                      </span>
-                    </div>
-                    <a,
-href={featuredServices[currentServiceIndex]?.link}
-
-                      className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg "hover": from-cyan-700 "hover":to-blue-700 transition-all duration-300''
-                    >
-                      Get Started
-                      <ArrowRight className='w-5 h-5 ml-2' />'
-                    </a>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Navigation Controls */}
-                <button,
-onClick={prevService}
-
-className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 "hover":bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm''
-                >
-                  <ChevronLeft className='w-6 h-6' />'
-                </button>
-                <button,
-onClick={nextService}
-                  className='absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 "hover":bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm''
-                >
-                  <ChevronRight className='w-6 h-6' />'
-                </button>
-                {/* Service Indicators *
-}
-
-                <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>'
-                  {featuredServices.map((_, index) => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <button
-}
-key={index}
-                      onClick={() => setCurrentServiceIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentServiceIndex;`                          ? 'bg-cyan-400 w-8';'
-                          : 'bg-white/30 "hover":bg-white/50';'
-                      }`}`                    />;
-                  ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-                    "left": `${Math.random () * 10,`}%`,"top": `${Math.random () * 10,`}%`}}                />                    "ease": "easeInOut";"
-                  }}
-                  style={{"left": `${Math.random () * 10,`}%`,"top": `${Math.random () * 100}%`}}`              )
-}
-            </div>;
-            {/* Enhanced grid pattern */}
-            <div className='absolute inset - 0 opacity - 20'>;'
-              <div;
-                className='absolute inset - 0';'
-                style={{"background_image": `radial - gradient (circle at 1px 1px, rgba (255, 255, 255, 0.15) 1px, transparent 0)`,"background_size": '50px 50px'}}'              ></div>            </div>;
-          </div>;
-          {/* Hero Content */}
-          <div className='text - center max - w-6xl mx - auto relative z - 10'>            <motion.div            <div className="absolute inset - 0 opacity - 20">;"
-              <div className="absolute inset - 0" style={{"background_image": `radial - gradient (circle at 1px 1px, rgba (255, 255, 255, 0.15) 1px, transparent 0)`;`                }
-                "background_size": '50px 50px';'
-              }}></div>;
-          </div>;
-          {/* Hero Content */}
-          <div className='text - center max - w-6xl mx - auto relative z - 10'>          <div className="text - center max - w-6xl mx - auto relative z - 10">;"
-            <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
-}
-              animate={{ "opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30 }}
-              transition={{ "duration": 0.8 
-}
-            >;
-              {/* Enhanced Badge */}
-              <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 text - cyan - 300 text - sm font - medium mb - 6 backdrop - blur - sm'>;'
-                <Sparkles className='w - 4 h - 4 mr - 2' />                Revolutionary 2043 Technology;'
-              </div>;
-              {/* Main Heading */}              <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 text - cyan - 300 text - sm font - medium mb - 6 backdrop - blur - sm">;"
-                <Sparkles className="w - 4 h - 4 mr - 2" />;"
-                Revolutionary 2043 Technology;
-              </div>;
-              {/* Main Heading */}
-              <h1;
-                id='hero - heading';'
-                className='text - 5xl "md":text - 7xl "lg":text - 8xl font - bold mb - 6 bg - gradient - to - r from - white via - cyan - 200 to - blue - 300 bg - clip - text text - transparent leading - tight'>'
-
-                The Future of;
-                <span className='block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent'>                  AI Consciousness              <h1;'
-                id="hero - heading";"
-                className="text - 5xl "md":text - 7xl "lg":text - 8xl font - bold mb - 6 bg - gradient - to - r from - white via - cyan - 200 to - blue - 300 bg - clip - text text - transparent leading - tight">"
-
-                The Future of;
-                <span className="block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent">;"
-                </span>;
-                is Here;
-              </h1>;
-              {/* Enhanced Subtitle */}
-              <p className='text - xl "md":text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed'>;'
-                Experience the world's most advanced AI consciousness platforms,quantum computing solutions, and autonomous systems that;'
-                redefine what's possible in technology.;'
-              </p>;
-              {/* Enhanced CTA Buttons */}
-              <div className='flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 12'>                <motion.button;'
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
-                  on_click={handleGetStarte
-}
-                  className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - full text - lg flex items - center gap - 2 "hover":from - purple - 700 "hover":to - pink - 700 transition - all duration - 300 shadow - lg "hover":shadow - xl'              <p className="text - xl "md":text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;"
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.;'
-              </p>;
-              {/* Enhanced CTA Buttons */}
-              <div className="flex flex - col "sm":flex - row gap - 4 justify - center items - center mb - 12">;"
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
-                  on_click={handleGetStarte
-}
-                  className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - full text - lg flex items - center gap - 2 "hover":from - purple - 700 "hover":to - pink - 700 transition - all duration - 300 shadow - lg "hover":shadow - xl'>'
-
-                  Get Started Today;
-                  <ArrowRight className='w - 5 h - 5' />;'
-                </motion.button>                >;
-                  Get Started Today;
-                  <ArrowRight className="w - 5 h - 5" />;"
-                </motion.button>;
-                <motion.button;
-                  while_hover={{ "scale": 1.05 }}
-                  while_tap={{ "scale": 0.95 }}
-                  on_click={handleWatchDem
-}
-                  className='px - 8 py - 4 bg - transparent border - 2 border - cyan - 500 / 50 text - cyan - 300 font - semibold rounded - full text - lg flex items - center gap - 2 "hover":bg - cyan - 500 / 10 "hover":border - cyan - 400 transition - all duration - 300 backdrop - blur - sm'>'
-
-                  <Play className='w - 5 h - 5' />                  Watch Demo                  className="px - 8 py - 4 bg - transparent border - 2 border - cyan - 500 / 50 text - cyan - 300 font - semibold rounded - full text - lg flex items - center gap - 2 "hover":bg - cyan - 500 / 10 "hover":border - cyan - 400 transition - all duration - 300 backdrop - blur - sm">"
-
-                  <Play className="w - 5 h - 5" />;"
-                  Watch Demo;
-                </motion.button>;
-              </div>;
-              {/* Enhanced Stats */}
-              <div className='grid grid - cols - 2 "md":grid - cols - 4 gap - 6 max - w-4xl mx - auto'>                {stats.map ((stat, index) => (<motion.div;'
-                    }
-                    key={stat.label}
-                    initial={{ "opacity": 0, "coordinate_y": 20 
-}              <div className="grid grid - cols - 2 "md":grid - cols - 4 gap - 6 max - w-4xl mx - auto">;"
-                {stats.map ((stat, index) => (<motion.div;
-                    }
-                    key={stat.label}
-                    initial={{ "opacity": 0, "coordinate_y": 20 
-}
-                    animate={{"opacity": is_visible ? 1 : 0,"coordinate_y": is_visible ? 0 : 20}}
-                    transition={{ "duration": 0.6, "delay": index * 0.1 
-}
-                    className='text - center'>'
-
-                    <div;
-                      className={`inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r ${stat.color} mb - 3`}>`
-                      <stat.icon className='w - 8 h - 8 text - white' />;'
-                    </div>;
-                    <div className='text - 3xl font - bold text - white mb - 1'>;'
-                      {stat.number}
-                    </div>;
-                    <div className='text - gray - 400 text - sm'>{stat.label}</div>                  </motion.div>                    transition={{ "duration": 0.6, "delay": index * 0.1 }}'
-                    className="text - center">"
-
-                    <div className={`inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r ${stat.color} mb - 3,`}>
-
-                      <stat.icon className="w - 8 h - 8 text - white" />;"
-                    </div>;
-                    <div className="text - 3xl font - bold text - white mb - 1">{stat.number}</div>;"
-                    <div className="text - gray - 400 text - sm">{stat.label}</div>;"
-                  </motion.div>))}
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Enhanced Features Section */}
-        <section className='py - 20 px - 4 relative'>;'
-          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 relative">;"
-          <div className="max - w-7xl mx - auto">;"
-            <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
-}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
-}
-              className='text - center mb - 16'>'
-
-              <h2 className='text - 4xl "md":text - 5xl font - bold text - white mb - 6'>;'
-                Revolutionary Technology;
-                <span className='block bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent'>;'
-                  Solutions;
-                </span>;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;'
-                Discover cutting - edge AI consciousness, quantum computing, and;
-                autonomous systems that are transforming industries and;
-                reshaping the future.;
-              </p>;
-            </motion.div>;
-            <div className='grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8'>              {features.map ((feature, index) => (            >;'
-              <h2 className="text - 4xl "md":text - 5xl font - bold text - white mb - 6">;"
-                }
-                Revolutionary Technology;
-                <span className="block bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent">;"
-                  Solutions;
-                </span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;"
-                Discover cutting - edge AI consciousness, quantum computing, and autonomous systems;
-                that are transforming industries and reshaping the future.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 3 gap - 8">;"
-              {features.map ((feature, index) => (<motion.div;
-                  }
-                  key={feature.title}
-                  initial={{ "opacity": 0, "coordinate_y": 30 
-}
-                  whileInView={{ "opacity": 1, "coordinate_y": 0 
-}
-                  transition={{ "duration": 0.6, "delay": index * 0.1 }}
-                  viewport={{ "once": true 
-}
-                  while_hover={{ "coordinate_y": -10, "scale": 1.02 }}
-                  className={`group relative p - 8 rounded - 2xl ${feature.gradient} border border - white / 10 backdrop - blur - sm "hover":border - white / 20 transition - all duration - 300,`}>
-
-                  <div;
-                    className={`inline - flex items - center justify - center w - 16 h - 16 rounded - 2xl bg - gradient - to - r ${feature.color} mb - 6 group - "hover": scale - 110 transition - transform duration - 300,`}>
-
-                    <feature.icon className='w - 8 h - 8 text - white' />;'
-                  </div>;
-                  <h3 className='text - 2xl font - bold text - white mb - 4 group - "hover":text - cyan - 300 transition - colors duration - 300'>;'
-                    {feature.title}
-                  </h3>;
-                  <p className='text - gray - 300 mb - 6 leading - relaxed'>;'
-                    {feature.description}
-                  </p>;
-                  <a;
-                    href={feature.href}
-                    className='inline - flex items - center text - cyan - 400 "hover":text - cyan - 300 font - semibold group - "hover":gap - 3 transition - all duration - 300'>'
-
-                    Learn More;
-                    <ChevronRight className='w - 4 h - 4 ml - 1 group - "hover":ml - 2 transition - all duration - 300' />                  </a>                  </div>;'
-                  <h3 className="text - 2xl font - bold text - white mb - 4 group - "hover":text - cyan - 300 transition - colors duration - 300">;"
-                    {feature.title}
-                  </h3>;
-                  <p className="text - gray - 300 mb - 6 leading - relaxed">;"
-                    {feature.description}
-                  </p>;
-                  <a;
-                    href={feature.href}
-                    className="inline - flex items - center text - cyan - 400 "hover":text - cyan - 300 font - semibold group - "hover":gap - 3 transition - all duration - 300">"
-
-                    Learn More;
-                    <ChevronRight className="w - 4 h - 4 ml - 1 group - "hover":ml - 2 transition - all duration - 300" />;"
-                  </a>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Enhanced Featured Services Section */}
-        <section className='py - 20 px - 4 relative bg - gradient - to - b from - black / 50 to - black / 80'>;'
-          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 relative bg - gradient - to - b from - black / 50 to - black / 80">;"
-          <div className="max - w-7xl mx - auto">;"
-            <motion.div;
-              initial={{ "opacity": 0, "coordinate_y": 30 
-}
-              whileInView={{ "opacity": 1, "coordinate_y": 0 }}
-              transition={{ "duration": 0.8 }}
-              viewport={{ "once": true 
-}
-              className='text - center mb - 16'>'
-
-              <h2 className='text - 4xl "md":text - 5xl font - bold text - white mb - 6'>;'
-                Featured;
-                <span className='block bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;'
-                  Revolutionary Services;
-                </span>;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;'
-                Experience our most advanced AI consciousness and quantum;
-                computing platforms that are setting new standards in;
-                technology.              </p>;
-            </motion.div>;
-<<<<<<< HEAD
-            {/* Enhanced Service Showcase */}
-            <div className='relative'>;'
-              <div className='relative overflow - hidden rounded - 3xl bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - white / 10 backdrop - blur - sm'>;'
-                <AnimatePresence mode='wait'>                  <motion.div            >;'
-              <h2 className="text - 4xl "md":text - 5xl font - bold text - white mb - 6">;"
-                Featured;
-                <span className="block bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent">;"
-                  Revolutionary Services;
-                </span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;"
-                Experience our most advanced AI consciousness and quantum computing platforms;
-                that are setting new standards in technology.;
-              </p>;
-            </motion.div>;
-<<<<<<< HEAD
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                Featured;
-                <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                  Revolutionary Services;
-                </span>;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Experience our most advanced AI consciousness and quantum;
-                computing platforms that are setting new standards in;
-                technology.              </p>;
-            </motion && motion.div>;
-            <div className="relative">;
-              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">;
-                <AnimatePresence mode="wait">;
-                technology.;
-              </p>;
-            </motion.div>;
-            {/* Enhanced Service Showcase */}
-            <div className='relative'>;'
-              <div className='relative overflow - hidden rounded - 3xl bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - white / 10 backdrop - blur - sm'>;'
-                <AnimatePresence mode='wait'>            <div className="relative">;"
-              <div className="relative overflow - hidden rounded - 3xl bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - white / 10 backdrop - blur - sm">;"
-                <AnimatePresence mode="wait">;"
-                  <motion.div;
-                    key={currentServiceIndex}
-                    initial={{ "opacity": 0, "coordinate_x": 100 
-}
-                    animate={{ "opacity": 1, "coordinate_x": 0 
-}
-                    exit={{ "opacity": 0, "coordinate_x": -100 }}
-                    transition={{ "duration": 0.5 
-}
-                    className='p - 12 text - center'>'
-
-                    <div className='text - 6xl mb - 6'>;'
-                      {featured_services[currentServiceIndex]?.icon}
-                    </div>;
-                    <h3 className='text - 3xl font - bold text - white mb - 4'>;'
-                      {featured_services[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className='text - xl text - gray - 300 mb - 6 max - w-3xl mx - auto'>;'
-                      {featured_services[currentServiceIndex]?.description}
-                    </p>;
-                    <div className='text - 3xl font - bold text - cyan - 400 mb - 6'>;'
-                      {featured_services[currentServiceIndex]?.price}
-                      <span className='text - gray - 400 text - lg'>;'
-                        {featured_services[currentServiceIndex]?.period}
-                      </span>;
-                    </div>;
-                    <a;
-                      href={featured_services[currentServiceIndex]?.link}
-                      className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white font - semibold rounded - full text - lg "hover":from - cyan - 700 "hover":to - blue - 700 transition - all duration - 300'>'
-
-                      Get Started;
-                      <ArrowRight className='w - 5 h - 5 ml - 2' />                    </a>                  >;'
-                    <div className="text - 6xl mb - 6">{featured_services[currentServiceIndex]?.icon}</div>;"
-                    <h3 className="text - 3xl font - bold text - white mb - 4">;"
-                      {featured_services[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className="text - xl text - gray - 300 mb - 6 max - w-3xl mx - auto">;"
-                      {featured_services[currentServiceIndex]?.description}
-                    </p>;
-                    <div className="text - 3xl font - bold text - cyan - 400 mb - 6">;"
-                      {featured_services[currentServiceIndex]?.price}
-                      <span className="text - gray - 400 text - lg">{featured_services[currentServiceIndex]?.period}</span>;"
-                    </div>;
-                    <a;
-                      href={featured_services[currentServiceIndex]?.link}
-                      className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white font - semibold rounded - full text - lg "hover":from - cyan - 700 "hover":to - blue - 700 transition - all duration - 300">"
-
-                      Get Started;
-                      <ArrowRight className="w - 5 h - 5 ml - 2" />;"
-                    </a>;
-                  </motion.div>;
-                </AnimatePresence>;
-                {/* Navigation Controls */}
-                <button;
-                  on_click={prev_service}
-                  className='absolute left - 4 top - 1/2 -translate - y-1 / 2 w - 12 h - 12 rounded - full bg - white / 10 "hover":bg - white / 20 border border - white / 20 flex items - center justify - center text - white transition - all duration - 300 backdrop - blur - sm'>'
-
-                  <ChevronLeft className='w - 6 h - 6' />;'
-                </button>;
-                <button;
-                  on_click={next_service}
-                  className='absolute right - 4 top - 1/2 -translate - y-1 / 2 w - 12 h - 12 rounded - full bg - white / 10 "hover":bg - white / 20 border border - white / 20 flex items - center justify - center text - white transition - all duration - 300 backdrop - blur - sm'>'
-
-                  <ChevronRight className='w - 6 h - 6' />;'
-                </button>;
-                {/* Service Indicators */}
-                <div className='absolute bottom - 6 left - 1/2 -translate - x-1 / 2 flex gap - 2'>                  {featured_services.map ((_, index) => (                >;'
-                  <ChevronLeft className="w - 6 h - 6" />;"
-                </button>;
-                <button;
-                  }
-                  on_click={next_service}
-                  className="absolute right - 4 top - 1/2 -translate - y-1 / 2 w - 12 h - 12 rounded - full bg - white / 10 "hover":bg - white / 20 border border - white / 20 flex items - center justify - center text - white transition - all duration - 300 backdrop - blur - sm">"
-
-                  <ChevronRight className="w - 6 h - 6" />;"
-                </button>;
-                {/* Service Indicators */}
-                <div className="absolute bottom - 6 left - 1/2 -translate - x-1 / 2 flex gap - 2">;"
-                  {featured_services.map ((_, index) => (<button;
-                      }
-                      key={index}
-                      on_click={() => setCurrentServiceIndex (index)}
-                      className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentServiceIndex;`                          ? 'bg - cyan - 400 w - 8'                          : 'bg - white / 30 "hover":bg - white / 50'                        index === currentServiceIndex;'
-                          ? 'bg - cyan - 400 w - 8';'
-                          : 'bg - white / 30 "hover":bg - white / 50';'
-                      }`}`                    />))}className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentServiceIndex;`                          ? 'bg-cyan-400 w-8'                          : 'bg-white/30 "hover":bg-white/50'                        index === currentServiceIndex ;'
-                          ? 'bg-cyan-400 w-8' ;'
-                          : 'bg-white/30 "hover":bg-white/50';'
-                      }`}`                    />;
-                  ))}
-<<<<<<< HEAD
-=======
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-                      }`}`                    />;
-                  ))}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
-<<<<<<< HEAD
 
         {/* Enhanced Testimonials Section */}
 <section className='py-20 px-4 relative'>;'
@@ -1619,7 +994,6 @@ className='text-center mb-16'>;'
                 Discover how our revolutionary AI consciousness and quantum;
                 computing platforms are transforming industries and driving;
                 innovation.;
-<<<<<<< HEAD
               </p>;key={currentTestimonialIndex}
                   initial={{ "opacity": 0, "y": 30 
 }
@@ -1651,8 +1025,6 @@ className='text-center max-w-4xl mx-auto''
                         {testimonials[currentTestimonialIndex].company}
 
                       </div>
-                    </div>
-                  </div>
                   <div className='flex justify-center gap-1'>'
                     {[
                       ...Array(testimonials[currentTestimonialIndex].rating)
@@ -1666,7 +1038,6 @@ key={i}
                 </motion.div>
               </AnimatePresence>
               {/* Testimonial Indicators */}
-<<<<<<< HEAD
                         {testimonials[currentTestimonialIndex].company}
 
 <div className='flex justify-center gap-2 mt-8'>'
@@ -1689,23 +1060,16 @@ index === currentTestimonialIndex
                         : 'bg-white/30 "hover":bg-white/50';}`}`                  />;
                 ))}
               </div>;
-            </div>;
-          </div>;
         </section>;}`}`                  />;
                 ))}
               </div>;
-            </div>;
-          </div>;
         </section>;
 
 
                     }`}`                  />
                 ))}
               </div>
-            </div>
-          </div>
         </section>
-<<<<<<< HEAD
 
 <section className='py-20 px-4 relative'>'
           <div className='max-w-6xl mx-auto text-center'>'
@@ -1734,69 +1098,13 @@ computing platforms.
 whileHover={{ "scale": 1.05 }}
                   whileTap={{ "scale": 0.95 }}
                   onClick={handleGetStarted}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Start Your Journey
                   <ArrowRight className="w-6 h-6" />
                 </motion.button>
                 
-=======
-
-className='px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 "hover":from-purple-700 "hover":to-pink-700 transition-all duration-300 shadow-lg "hover":shadow-xl''
-                >
-                  Start Your Journey
-                  <ArrowRight className='w-6 h-6' />'
-                </motion.button>
-                <motion.button,
-whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 }}
-                  onClick={handleContact}
-
-className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 "hover":bg-cyan-500/10 "hover":border-cyan-400 transition-all duration-300 backdrop-blur-sm''
-                >
-                  <Phone className='w-6 h-6' />'
-                  Contact Us
-                </motion.button>
-              </div>
-<<<<<<< HEAD
-
-<div className='mt-16 grid grid-cols-1 "md":grid-cols-3 gap-8'>'
-                <div className='text-center'>'
-                  <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4'>'
-                    <Phone className='w-8 h-8 text-white' />'
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-2'>'
-                    Call Us
-                  </h3>
-                  <p className='text-cyan-400'>+1 302 464 0950</p>'
                 </div>
-                <div className='text-center'>'
-                  <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4'>'
-                    <Mail className='w-8 h-8 text-white' />'
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-2'>'
-                    Email Us
-                  </h3>
-                  <p className='text-cyan-400'>kleber@ziontechgroup.com</p>'
-                </div>
-                <div className='text-center'>'
-                  <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4'>'
-                    <MapPin className='w-8 h-8 text-white' />'
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-2'>'
-                    Visit Us
-                  </h3>
-                  <p className='text-cyan-400'>'
-                    364 E Main St STE 1008
-                    <br />
-                    Middletown DE 19709
-                  </p>
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -1820,14 +1128,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Middletown DE 19709;
                   </p>;
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
       </main>;
     </Layout>;
 Math.random () * 100;
-  Math.random () * 100;
 )}Math.random () * 100;
 }%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> <motion.div initial= {364 E Main St STE 1008;
                     <br />;
@@ -1860,12 +1166,10 @@ export default Homepage2043;
                   <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>;"
                   <p className="text - cyan - 400">364 E Main St STE 1008 < br />Middletown DE 19709</p>;"
                 </div>;
-              </div>;
             </motion.div>;
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
     </Layout>)}Math.random () * 100;
 }%`;`"top": `$ {Math.random () * 100;`}%`;`}/>) )}</div> <motion.div initial= {{"opacity": 0, "coordinate_y": 30;
 }animate= {{"opacity": is_visible ? 1 : 0, "coordinate_y": is_visible ? 0 : 30;
@@ -1898,7 +1202,6 @@ export default Homepage2043)}export default Homepage2043;;
               whileInView={{ opacity: 1, y: 0}}
               transition = $2;
 export default Homepage2043,
-=======
   {
   }
   "opacity": 0, "coordinate_y": 30;
@@ -1919,6 +1222,5 @@ export default Homepage2043,
 export default Homepage2043)
 };
 export default Homepage2043;
-<<<<<<< HEAD
 
 "

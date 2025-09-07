@@ -87,10 +87,9 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
-<<<<<<< HEAD:src/components/interviews/InterviewCard.tsx
+:src/components/interviews/InterviewCard.tsx
   interview: Interview,
   onRefresh: () => Promise<void>
-=======
   interview: Interview;
   )}import React, { useState } from 'react';
 import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
@@ -119,7 +118,6 @@ export function InterviewCard() {)}</p> </CardHeader> <CardContent className="pt
 }/> </DialogContent> </Dialog> </Card>)}'";
   )}
   onRefresh: () => Promise<void>,
->>>>>>> origin/main:src_disabled_1757239864/components/interviews/InterviewCard.tsx
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
@@ -252,7 +250,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                 {getRelativeTime()}
               </p>
             </div>
-          </div>
 
           {interview.meeting_platform && (
             <div className="flex items-center gap-3">
@@ -260,7 +257,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               <div>
                 <p className="font-medium capitalize">{interview.meeting_platform}</p>
               </div>
-            </div>
           )}
           
           {interview.notes && (

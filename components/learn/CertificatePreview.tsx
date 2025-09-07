@@ -16,7 +16,6 @@ return (;
           <div className="text-xl font-semibold">Certificate of Completion</div>"
           <div className="text-xs opacity-80">Preview</div>"
         </div>
-      </div>
       <a,
 href={url}
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded""
@@ -25,11 +24,6 @@ href={url}
       </a>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
-=======
 
 "

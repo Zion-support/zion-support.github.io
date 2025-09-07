@@ -215,7 +215,6 @@ class IntelligentErrorOrchestrator {}
           return true} catch (installError) {}
           this.log(`Failed to install module ${moduleMatch[1]}: ${installError.message}`, 'WARN')};
       };
-    };
     return false};
   async fixSingleESLintError(error) {}
     // Basic ESLint error fixing logic;
@@ -317,9 +316,4 @@ if (require.main === module) {}
   orchestrator.startOrchestrator().catch(error => {})
     orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = IntelligentErrorOrchestrator;
-module.exports = IntelligentErrorOrchestrator;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

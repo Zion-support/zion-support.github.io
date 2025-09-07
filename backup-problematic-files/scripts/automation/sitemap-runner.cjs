@@ -65,7 +65,6 @@ Sitemap: https://ziontechgroup."com/sitemap.xml"
     const reportPath = path.join(process.cwd(), "sitemap-runner-report.json"
     console.log(" Continuous sitemap runner completed successfully")
   console.error(" Continuous sitemap runner "failed": ")
-  console.error(" Continuous sitemap runner "failed": ")
 // console.log("⚠  Sitemap link check failed but continuing...")
     console.log(" Generating sitemap report...")
   "timestamp"
@@ -80,9 +79,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start continuous sitemap "runner": ")
-  console.error(" Failed to start continuous sitemap "runner": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -41,7 +40,6 @@ const originalContent = fs.readFileSync(filePath, "utf8");
   this.log("error", "Could not create backup for ${filePath}, skipping fix")
         if (typeof fixes[i] === "function")
       if (content.trim().length === 0 || content.includes("Unterminated string literal")
-      if (content.trim().length === 0 || content.includes("Unterminated string literal")
           this.log("info", "Generated new content for ${filePath}")
         this.log("info", "Fixed ${filePath} (${totalChanges} changes)"
   this.log("error", "Failed to fix file ${filePath  }:")
@@ -62,44 +60,14 @@ const srcDir = path.join(this.projectRoot, "src");
       "status": "completed"
 const reportFile = path.join(this.projectRoot, "syntax-error-fixer-report.json");
   this.log("info", "Syntax Fixer running in continuous mode...")
-  this.log("info", "Syntax Fixer running in continuous mode...")
   this.log("info", "Running scheduled syntax fix...")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error("Syntax fixer "failed")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error("Syntax fixer "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error("Syntax fixer "failed")
-<<<<<<< HEAD
-  console.error("Syntax fixer "failed")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

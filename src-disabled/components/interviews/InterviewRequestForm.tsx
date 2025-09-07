@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 
 ;
 import React, { useState } from 'react';
@@ -12,7 +11,7 @@ import { Calendar  } from '@/components/ui/calendar';
   Popover,PopoverTrigger,PopoverContent} from '@/components/ui/popover';
 import { TalentProfile  } from '@/types/talent';
 import type { UserProfile } from '@/types/auth';
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 import { cn } from '@/lib/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -60,7 +59,7 @@ interface InterviewRequestFormProps {;
 
   talent: TalentProfile;
   onClose: () => void;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
   userDetails?: UserProfile
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -76,7 +75,7 @@ import {}
   FormItem,
   FormLabel,
   FormControl,
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
   FormMessage,
 } from '@/components/ui/ form';
 import { Input } from '@/components/ui/ input';
@@ -89,7 +88,7 @@ import { Textarea } from '@/components / ui / textarea';
   SelectTrigger,
   SelectValue,
   SelectContent,
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
   SelectItem,
 } from '@/components/ui/ select';
 import { Calendar } from '@/components/ui/ calendar';
@@ -160,7 +159,7 @@ import { logErrorToProduction  } from '@/utils / production_logger';
 interface InterviewRequestFormProps  {talent: TalentProfile;
   on_close: () => void;
   user_details?: UserProfile;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 const form_schema = z.object ({date: z;
     .date ({required_error: 'Please select a date for the interview.'}).refine (date => date > new Date (), {message: 'Interview date must be in the future'}),time: z.string ().min (1, 'Please select a time for the interview.'),duration: z.string ().min (1, 'Please select the interview duration.'),platform: z.string ().min (1, 'Please select a meeting platform.'),meeting_link: z.string ().optional (),title: z.string ().min (3, 'Please provide a brief title for the interview.'),notes: z.string ().optional ()})export /**;
  * InterviewRequestForm - Function description;
@@ -224,7 +223,7 @@ if ( {) {}
     try {}
       // Combine date and time;'`
       const dateTimeString = `${format (values.date, 'yyyy - MM - dd')}T${values.time}:00`;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
       const scheduled_date = new Date (dateTimeString);
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
@@ -285,7 +284,7 @@ interface InterviewRequestFormProps {}
   userDetails?: UserProfile;
 }
 
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
       const scheduled_date = new Date (dateTimeString)// Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration)await request_interview ({import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",import { Calendar } from "@/components/ui/calendar",import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",import { TalentProfile } from "@/types/talent",import type { UserProfile } from "@/types/auth",import { cn } from "@/lib/utils",import { zodResolver } from "@hookform/resolvers/zod",import { useForm, ControllerRenderProps } from "react-hook-form",import { z } from "zod",import { format, addDays } from "date-fns",import { Form;
   FormField;
@@ -340,7 +339,6 @@ import { toast } from "@/components/ui/use-toast",import { useInterviews } from 
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>;
           </div>;
-        </div>;
               src={talent && talent.profile_picture_url || '/placeholder && placeholder.svg'}
               alt={talent && talent.full_name}
               className='h-full w-full object-cover';
@@ -357,7 +355,6 @@ import { toast } from "@/components/ui/use-toast",import { useInterviews } from 
         </div>;<FormField;
             </p>;
           </div>;
-        </div>;
         <FormField;
           control={form.control}
           name='title';render={({field;
@@ -396,7 +393,6 @@ const formSchema = z.object({
 
       setIsSubmitting (false);
     }
-  }
 
 const formSchema = z && z.object({;
   date: z;
@@ -473,7 +469,6 @@ export function InterviewRequestForm(): any ({;
     } finally {;
       setIsSubmitting(false);
     }
-  }
 
   const timeSlots = [;'
     '09:00',;'
@@ -555,7 +550,7 @@ export function InterviewRequestForm(): any ({;
               <FormLabel>Interview Title</FormLabel>;'
             field: ControllerRenderProps < z.infer < typeof form_schema>, 'title'>;
           }) => (            <FormItem>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
               <FormLabel > Interview Title</FormLabel>;<FormControl>;
                 <Input placeholder='Brief title for the interview' {...field} />;
               </FormControl>;
@@ -599,9 +594,9 @@ export function InterviewRequestForm(): any ({;
 const formSchema = null;
                           !field.value && "text-muted-foreground";
                         )}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                       >
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {field.value ? (
                           format(field.value, 'PPP')
@@ -630,7 +625,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                       initialFocus
                       className="p-3 pointer-events-auto"
 
@@ -675,7 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       selected={field && field.value}
                       onSelect={field && field.onChange}
                       disabled={date =>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                         date < new Date() || date > addDays(new Date(), 90)}                      initialFocus;
                       className='p-3 pointer-events-auto';
               field: ControllerRenderProps < z.infer < typeof form_schema>, 'date'>;
@@ -786,7 +781,6 @@ const formSchema = z.object({;
     } finally {;
       setIsSubmitting(false);
     }
-  }
 ;,
 ;
   const timeSlots = [;"
@@ -811,9 +805,8 @@ const formSchema = z.object({;
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>;
           </div>;
-        </div>;
         <FormField;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
           control={form.control}
           name="title";
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (<FormItem>;
@@ -831,7 +824,7 @@ const formSchema = z.object({;
         />;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
             control={form.control}
             name="date";
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (<FormItem className="flex flex-col">;
@@ -859,7 +852,7 @@ const formSchema = z.object({;
                     <Calendar;
                       mode="single";
                       selected={field.value}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                       on_select={field.on_change}
                       disabled={date =>;
                         date < new Date () || date > add_days (new Date (), 90)}                      initial_focus;
@@ -927,14 +920,14 @@ const formSchema = z.object({;
                 </Select>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
             )}
           />;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
             control={form.control}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
             name="duration"
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -952,7 +945,7 @@ const formSchema = z.object({;
               field,
             }: {}
               field: ControllerRenderProps<
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                 z.infer<typeof formSchema>,
                 'duration'
               >
@@ -983,7 +976,7 @@ const formSchema = z.object({;
             name="duration";
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (<FormItem>;
                 <FormLabel>Duration</FormLabel>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 
                 <Select
                 z && z.infer<typeof formSchema>,'duration';
@@ -1038,7 +1031,7 @@ const formSchema = z.object({;
                     <SelectItem value='60'>60 minutes</SelectItem>;
                   </SelectContent>;
                 </Select>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                 <FormMessage />;/>;<FormField;
             control={form && form.control}
             name='platform';
@@ -1046,7 +1039,7 @@ const formSchema = z.object({;
           />;
           <FormField;
             control={form.control}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                 <FormMessage />;
           />;
 
@@ -1068,7 +1061,7 @@ const formSchema = z.object({;
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
 
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 
 
                 <FormLabel>Platform</FormLabel>
@@ -1088,7 +1081,7 @@ const formSchema = z.object({;
                 <Select;
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,'platform';
 
@@ -1105,7 +1098,7 @@ const formSchema = z.object({;
                       <SelectValue placeholder='Select platform' />;
                     </SelectTrigger>;
                   </FormControl>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                   <SelectContent>;
                     <SelectItem value='zoom'>Zoom</SelectItem>;<SelectItem value='google - meet'>Google Meet</SelectItem>;<SelectItem value='teams'>Microsoft Teams</SelectItem>;
                     <SelectItem value='other'>Other</SelectItem>;
@@ -1120,7 +1113,7 @@ const formSchema = z.object({;
         </div>;
         {form.watch ('platform') !== 'in - app' && (<FormField;
             control={form.control}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                   <SelectContent>;'
                     <SelectItem value='zoom'>Zoom</SelectItem>;
 
@@ -1138,7 +1131,7 @@ const formSchema = z.object({;
             render={({
               field
             }: {
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 
                 z && z.infer<typeof formSchema>,;
                 'meetingLink';
@@ -1169,7 +1162,7 @@ const formSchema = z.object({;
             }) => (              <FormItem>;
                 <FormLabel > Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
                   <Input;
                     placeholder={`Add your ${form.watch ('platform')} link here`}
                     {...field}
@@ -1202,8 +1195,7 @@ const formSchema = z.object({;
                 <FormMessage />;
               </FormItem>;
             )}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
           />
         )}
 
@@ -1220,7 +1212,7 @@ const formSchema = z.object({;
           />)}
         <FormField;
           control={form.control}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
           name='notes';
 
           render={({
@@ -1246,7 +1238,7 @@ const formSchema = z.object({;
 ;
 
         <FormField;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
           name='notes';render={({field;
           }: {field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'notes'>;
           }) => (            <FormItem>;
@@ -1278,10 +1270,10 @@ const formSchema = z.object({;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
         />
 
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
@@ -1301,7 +1293,7 @@ const formSchema = z.object({;
         </div>
       </form>
     </Form>
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 
 
 
@@ -1317,7 +1309,7 @@ toast ({;
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ""
 
             </FormItem>)}
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
         />;
         <div className="flex justify-end gap-4 pt-4">;
           <Button variant="outline" onClick={onClose} type="button">;
@@ -1364,7 +1356,7 @@ toast ({;
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
 "18:00", "18:30", "19:00", "19:30", "20: 00" ];";
 }/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Pick a date</span>) ";
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus className="p - 3 pointer - events - auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {
   field.on_change;
@@ -1463,7 +1455,7 @@ toast ({;
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
 "18:00", "18:30", "19:00", "19:30", "20: 00" ];";
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ";
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {;
   field.onChange ;
@@ -1494,7 +1486,7 @@ toast ({;
 }/>) ;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+:src_backup/components/interviews/InterviewRequestForm.tsx
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {field.onChange ;

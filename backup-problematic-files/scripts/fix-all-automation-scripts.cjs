@@ -33,8 +33,6 @@ class AutomationScriptFixer {}
         await fs.mkdir(dir, { "recursive": true })} catch (error) {}
         // Directory might already exist;
       };
-    };
-  };
   async findScriptFiles() {}
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
       path.join(this.projectRoot, 'scripts/automation');
@@ -181,9 +179,4 @@ class AutomationScriptFixer {}
 if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = AutomationScriptFixer;
-module.exports = AutomationScriptFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

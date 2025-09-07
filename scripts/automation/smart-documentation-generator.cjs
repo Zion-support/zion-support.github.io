@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -163,7 +159,6 @@ const structure = this.documentationMetrics.docPatterns.get("structure");
       "missing"
       "documentation-report.json"
   // Skip directories that can"
-  // Skip directories that can"
 const docExtensions = [".md", ".mdx", ".txt"];
 const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, "";
 return match ? match[1] : "UnknownComponent";
@@ -175,7 +170,6 @@ return match ? match[1] : ";
 const result = await ${service.name}.methodName(params`);\"\";
 \"\"
   )}\`\"\"
-return ";
 return ";
 1. Clone the "repository": \"\"\"
 cd zion-app\"\"\"
@@ -189,13 +183,10 @@ Create a \".env\"
 VITE_APP_ENV=development\"\"\"
 - \"npm run dev\" - Start development server- \"npm run build\" - Build for production- \"npm run preview\" - Preview production build- \"npm run lint\" - Run ESLint- \"npm run type-check\"
 return ";
-return ";
-\"\"\"
 \"\"\"
 └── styles/        # CSS and styling files\"\"\"
 2. Make your changes3. Run "tests": \"npm test\"
 4. Run linting: \"npm run lint\"
-return ";
 return ";
 1. Build the "application": \"\"\"
 npm run build\"\"\"
@@ -259,10 +250,6 @@ return "- Network errors are handled automatically\n- API errors are thrown with
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -281,41 +268,10 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(" Failed to start smart documentation "generator")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Failed to start smart documentation "generator")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start smart documentation "generator")
-<<<<<<< HEAD
-  console.error(" Failed to start smart documentation "generator")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

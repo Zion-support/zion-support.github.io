@@ -48,7 +48,6 @@ const glob = require("glob")
     "sanitizeInput"
       return input.replace(/[<>\""]/g, ")
     const securityConfig = "
-    const securityConfig = "
   "csp": {default-src": ["self""],script-src": ["self"", ""unsafe-inline""],style-src": ["self", ""unsafe-inline""],img-src": [""self", ""data": ", ""https": "],connect-src": ["self"", ""https": "],font-src": [""self", ""https": "],object-src": ["none""],media-src": [""self""],frame-src": [""none""}]
   "csp": {default-src": ["self""]script-src": ["self", "unsafe-inline""],style-src": ["self", ""unsafe-inline""],img-src": [""self", ""data": ", ""https": "]connect-src": ["self", ""https": "],font-src": ["self", ""https": "],object-src": ["none""],media-src": [""self""],frame-src": [""none""}]
   "headers": {X-Content-Type-Options": "nosniff",X-Frame-Options": "DENY",X-XSS-Protection": "1; mode=block",Referrer-Policy": "strict-origin-when-cross-origin",Permissions-Policy": "camera=(), microphone=(), geolocation=()"}
@@ -216,9 +215,4 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
-<<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, ")
-    fs.writeFileSync(path.join(this.projectRoot, ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

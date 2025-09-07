@@ -182,9 +182,6 @@ emerging technology services designed to transform your business
 
           viewport={{ "once": true 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 className='grid grid-cols-2 "md":grid-cols-4 gap-6 mb-16''
         >
@@ -262,7 +259,6 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                     </h3>;
                     <p className='text-gray-400 text-sm'>{service.category}</p>;'
                   </div>;
-                </div>;
                 {/* Description */}
 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>;
 
@@ -276,7 +272,6 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                   <div>;
                     <h3 className='text-lg font-bold text-white'>;'
                       {service && service.name}
-<<<<<<< HEAD
                     </h3>;
                     <p className='text-gray-400 text-sm'>{service && service.category}</p>                  </div>;'
                 </div>;
@@ -292,7 +287,6 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                     <h3 className="text-lg font-bold text-white">{service && service.name}</h3>;"
                     <p className="text-gray-400 text-sm">{service && service.category}</p>;"
                   </div>;
-                </div>;
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">;"
                   {service && service.description}
@@ -349,7 +343,6 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                     <h3 className="text-lg font-bold text-white">{service.name}</h3>
                     <p className="text-gray-400 text-sm">{service.category}</p>
                   </div>
-                </div>
 
                 {/* Description */}
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -384,16 +377,6 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                       {service.price}
                     </span>;
                     <span className='text-gray-400 text-sm'>;
-=======
-              viewport={{ once: true }}
-
-<<<<<<< HEAD
-              whileHover={{ scale: 1.02, y: -5 }}
-className='group relative'
-=======
-              whileHover={{ scale: 1.02, y: -5 }}'
-              className='group relative'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               <div;`
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
@@ -413,7 +396,6 @@ className='group relative'
                     <h3 className="text-lg font-bold text-white">{service.name}</h3>"
                     <p className="text-gray-400 text-sm">{service.category}</p>
                   </div>
-                </div>
                 {/* Description */}
                     className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
                   >
@@ -425,7 +407,6 @@ className='group relative'
                     </h3>
                     <p className='text-gray-400 text-sm'>{service.category}</p>
                   </div>
-                </div>
                 {/* Description */}
 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -452,7 +433,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="text-lg font-bold text-white">{service && service.name}</h3>;"
                     <p className="text-gray-400 text-sm">{service && service.category}</p>;
                   </div>;
-                </div>;
                 {/* Description */}'"
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
                   {service && service.description}
@@ -499,7 +479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>
                   </div>
                     ))}
-<<<<<<< HEAD
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>;'
                   <div>;
@@ -517,7 +496,6 @@ href={`/${service.id}`}`                    className='inline-flex items-center 
                     Learn More <ArrowRight className='w-4 h-4 ml-1' />'
                   </Link>
                 </div>
-              </div>
             </motion.div>
 
           )
@@ -534,10 +512,8 @@ href={`/${service.id}`}`                    className='inline-flex items-center 
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />;"
                   </Link>;
                 </div>;
-              </div>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD
         </div>;{/* Call to Action */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 20 
@@ -587,23 +563,15 @@ href='/contact''
                 </Link>
               </motion.div>
             </div>
-          </div>
         </motion.div>
       </div>
     </section>
 )
 };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 export default Enhanced2026ServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-<<<<<<< HEAD
-}
 }
 export default Enhanced2026ServicesShowcase;
 
@@ -726,7 +694,6 @@ export default Enhanced2026ServicesShowcase;}}export default Enhanced2026Service
                     <h3 className="text - lg font - bold text - white">{service.name}</h3>;
                     <p className="text - gray - 400 text - sm">{service.category}</p>;
                   </div>;
-                </div>;
                 {/* Description */}
                 <p className='text - gray - 300 text - sm mb - 4 leading - relaxed'>                <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                   {service.description}
@@ -770,7 +737,6 @@ export default Enhanced2026ServicesShowcase;}}export default Enhanced2026Service
                     Learn More <ArrowRight className="w - 4 h - 4 ml - 1" />;
                   </Link>;
                 </div>;
-              </div>;
             </motion.div>))}
         </div>;
         {/* Call to Action */}
@@ -829,7 +795,6 @@ export default Enhanced2026ServicesShowcase;}}export default Enhanced2026Service
                 </Link>;
               </motion.div>;
             </div>;
-          </div>;
         </motion.div>;
       </div>;
     </section>)}export default Enhanced2026ServicesShowcase)}export default Enhanced2026ServicesShowcase;href='/contact';
@@ -840,7 +805,6 @@ export default Enhanced2026ServicesShowcase;}}export default Enhanced2026Service
                 </Link>;
               </motion.div>;
             </div>;
-          </div>;
         </motion.div>;
       </div>;
     </section>;
@@ -851,23 +815,7 @@ export default Enhanced2026ServicesShowcase);
 }
 ;
 export default Enhanced2026ServicesShowcase;
-<<<<<<< HEAD
 ;
 )}export default Enhanced2026ServicesShowcase;
                   href = $2;
 export default Enhanced2026ServicesShowcase,
-=======
-<<<<<<< HEAD
-
-"
-=======
-}> <Link > <Shield className="w-5 h-5 mr-2" /> Get Started </a> </motion.div> </div> </div> </motion.div> </div> </section>) 
-}
-export default Enhanced2026ServicesShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

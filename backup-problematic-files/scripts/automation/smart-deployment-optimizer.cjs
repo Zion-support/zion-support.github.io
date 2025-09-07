@@ -80,7 +80,6 @@ console.log("" Starting Smart Deployment Optimizer...")
 // console.log(""⚠ Build analysis "failed": ")
   console.log(" Analyzing deployment patterns...")
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
-    console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;"
     console.log(  Success "rate")
   "type": "build_time"
@@ -170,9 +169,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start smart deployment "optimizer": ")
-  console.error(" Failed to start smart deployment "optimizer": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

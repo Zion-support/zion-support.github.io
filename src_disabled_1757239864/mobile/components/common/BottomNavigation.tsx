@@ -49,12 +49,11 @@ export function BottomNavigation() {
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD:src/mobile/components/common/BottomNavigation.tsx
+:src/mobile/components/common/BottomNavigation.tsx
       })}
     </div>
   )
 }
-=======
 
           </Link>);
       })}
@@ -63,4 +62,3 @@ export function BottomNavigation() {
 }
 
 ;
->>>>>>> origin/main:src_disabled_1757239864/mobile/components/common/BottomNavigation.tsx

@@ -155,7 +155,6 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
       this.reportDir,refactoring-${Date.now()}.json"
       "
   // Skip directories that can"
-  // Skip directories that can"
     const lines = content.split("\n")
     let functionName = "
         line.includes("function ")
@@ -206,7 +205,6 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
               "line"
     const prefix = contextWords[0] ? contextWords[0].toUpperCase() : "
   isConsistentNaming(name")
-  isConsistentNaming(name")
       /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)"}
     "
 process.on("SIGINT")
@@ -215,9 +213,4 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
   console.error(" Failed to start intelligent code "refactorer")
-  console.error(" Failed to start intelligent code "refactorer")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

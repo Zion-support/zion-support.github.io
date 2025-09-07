@@ -65,7 +65,6 @@ value
   suffix = '''
 }: {
     </div>);
-    </div>);
 }
 /**
  * Stat - Function description
@@ -85,29 +84,9 @@ function Stat() {return (<div className='p - 5 rounded - xl border border - gray
       <div className='text - 3xl font - bold'>;'
         {value}
         {suffix}
-<<<<<<< HEAD
       </div>;
       <div className='text - sm text - gray - 600 "dark": text - gray - 300'>{labe,'
 }</div>;
 
   )
-  )
 }
-=======
-      </div>
-      <div className='text-sm text-gray-600 "dark": text-gray-300'>{labe,'
-}</div>
-    </div>
-  );
-<<<<<<< HEAD
-
-"
-=======
-</div>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

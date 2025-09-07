@@ -59,7 +59,6 @@ export function ITServicePricingTable() {
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
         </div>
-      </div>
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
         <Table>
@@ -75,7 +74,7 @@ export function ITServicePricingTable() {
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
+:src/components/services/ITServicePricingTable.tsx
               <TableHead className="text-right text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -109,8 +108,5 @@ export function ITServicePricingTable() {
           </TableBody>
         </Table>
       </div>
-    </div>
   )
 }
-=======
->>>>>>> origin/main:src_disabled_1757239864/components/services/ITServicePricingTable.tsx

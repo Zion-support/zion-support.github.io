@@ -77,9 +77,4 @@ const path = require('path')
         "details"
       return { "success": false, "reason"}
       "ignore"
-<<<<<<< HEAD
     console.error(' Error recovery manager "failed")
-    console.error(' Error recovery manager "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -4,11 +4,8 @@
  * Advanced ML-powered prediction system for system failures and optimization;
  */
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -17,7 +14,6 @@ const { execSync } = require('child_process')
     this.dataFile = path.join(this.projectRoot, 'logs', 'analytics-data.json')
     this.modelFile = path.join(this.projectRoot, 'logs', 'ml-model.json')
         "features"
-        "features"
       this.log(` Failed to save historical "data"`)
           this.log(` Failed to connect to "PM2"`)
       this.log(` Metrics collection "failed"`)
@@ -25,7 +21,6 @@ const { execSync } = require('child_process')
       const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding"}
       const result = execSync('uptime', { "encoding"})
       this.log(` Pattern analysis "failed"`)
-      "direction"
       "direction"
       "trend"
       "risk"
@@ -37,7 +32,6 @@ const { execSync } = require('child_process')
         "urgency"
         "recommendation"
         "urgency"
-      "urgency"
       this.log(`� HIGH FAILURE RISK "ALERT"`)
       this.log(`⚠ PERFORMANCE "ALERT"`)
       this.log(" RESOURCE "ALERT": Memory/CPU needs attention")
@@ -48,9 +42,4 @@ const { execSync } = require('child_process')
       return { "message"}
       "level"
       this.log(` ML model update "failed"`)
-<<<<<<< HEAD
       this.log(` Fatal "error"`)
-      this.log(` Fatal "error"`)
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

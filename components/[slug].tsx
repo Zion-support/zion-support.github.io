@@ -53,7 +53,6 @@ return (;
               Browse Services
             </Button>
           </div>
-        </div>
       </UltraAdvancedFuturisticBackground>
     )
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
@@ -142,7 +141,6 @@ export default function DynamicServicePage() {
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
           </div>
-        </div>
       </UltraAdvancedFuturisticBackground>
     )
   }
@@ -172,7 +170,6 @@ return (;
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>;
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>;
           </div>;
-        </div>;
       </UltraAdvancedFuturisticBackground>;
     )return undefined;
   }, [slug])if (!service) {return (<UltraAdvancedFuturisticBackground>;
@@ -189,7 +186,6 @@ return (;
               Browse Services;
             </Button>;
           </div>;
-        </div>;
       </UltraAdvancedFuturisticBackground>;
     )}const canonicalUrl = `https://ziontechgroup.com/${slug}`;
   return (<UltraAdvancedFuturisticBackground>;
@@ -232,13 +228,11 @@ return (;
                     {service && service.setupTim
 }
                   </div>;
-                </div>;
                 <div className='flex items-center text-yellow-400'>;'
                   <Star className='w-4 h-4 mr-1' />;'
                   {service && service.rating?.toFixed;
                     ? service && service.rating.toFixed(1): service && service.rating}
                 </div>;
-              </div>;
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -267,11 +261,6 @@ variant='quantum';'
                   <MapPin className='w-4 h-4 text-green-400' />'
                   <span className='text-xs'>{service.contactInfo.address}</span>'
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </UltraAdvancedFuturisticBackground>
   );
 // Static export "support": generate root-level pages for service slugs,
@@ -342,7 +331,6 @@ function collectAllServices(): any (): Svc[] {;
     return null;
   } catch {return null;
   }
-}
 export const getStaticPaths: GetStaticPaths = async () => {const services = collectAllServices ()const candidate_slugs = new Set < string>(),// Gather existing root - level page slugs to avoid conflicts;
   const pages_dir = path.join (process.cwd (), 'pages')const static_slugs = new Set < string>()try {const entries = fs.readdir_sync (pages_dir, { withFileTypes: true })}
     }
@@ -361,13 +349,11 @@ export const getStaticPaths: GetStaticPaths = async () => {const services = coll
 }// Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting  = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))return {paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),fallback: true;
   }
-}
 export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} }}
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))return {paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))fallback: true;
   }
-}
 export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed, the component resolves the service client-side.;
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),for (const entry of entries) {if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {const base = entry && entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '')if (base !== 'index' && base !== '[slug]' && !base && base.startsWith('_')) {staticSlugs && staticSlugs.add(base && base.toLowerCase())}
     }
@@ -400,12 +386,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 }export const getStaticProps: GetStaticProps = async ({ params }) => {// No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} }}
     if (path && !path.includes('/')) return path,
->>>>>>> origin/main
     return null
   } catch {
     return null
   }
-}
 
 const staticSlugs = new Set<string>();
 
@@ -417,7 +401,6 @@ const staticSlugs = new Set<string>();
 const entries = fs.readdirSync(pagesDir, { "withFileTypes": true,;
 });
       }
-    }
   } catch {}
 
 // Exclude any slug that conflicts with an existing root page file,
@@ -441,11 +424,4 @@ export const "getStaticProps": GetStaticProps = async ({ params
 }
 return { "props": {} },;
 };
-=======
-<<<<<<< HEAD
 },
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

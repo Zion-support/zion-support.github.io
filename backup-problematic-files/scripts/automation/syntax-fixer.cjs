@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -45,7 +40,6 @@ const { exec } = require("child_process")
   this.log("error", "Could not create backup for ${filePath}, skipping fix")
         if (typeof fixes[i] === "function")
       if (content.trim().length === 0 || content.includes("Unterminated string literal")
-      if (content.trim().length === 0 || content.includes("Unterminated string literal")
           this.log("info", "Generated new content for ${filePath}")
         this.log("info", "Fixed ${filePath} (${totalChanges} changes)"
   this.log("error", "Failed to fix file ${filePath  }:")
@@ -66,14 +60,8 @@ const { exec } = require("child_process")
       "status": "completed"
     const reportFile = path.join(this.projectRoot, "syntax-error-fixer-report.json")
   this.log("info", "Syntax Fixer running in continuous mode...")
-  this.log("info", "Syntax Fixer running in continuous mode...")
   this.log("info", "Running scheduled syntax fix...")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
-<<<<<<< HEAD
   console.error("Syntax fixer "failed")
-  console.error("Syntax fixer "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

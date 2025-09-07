@@ -142,7 +142,5 @@ onChange={e => setMessage(e.target.value)}
     </div>
   )
 }
-<<<<<<< HEAD:src/components/profile/ProfileContact.tsx
-=======
+:src/components/profile/ProfileContact.tsx
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/profile/ProfileContact.tsx

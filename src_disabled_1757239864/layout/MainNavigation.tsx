@@ -1,5 +1,5 @@
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
+:src_backup/layout/MainNavigation.tsx
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -115,7 +115,6 @@ if ( {) {$2;
     {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-}
 import React from 'react';
 import {Heart,MessageSquare,CreditCard,ShoppingCart,Wallet} from 'lucide-react';
 import { LanguageSelector  } from '@/components/header/LanguageSelector';
@@ -225,7 +224,7 @@ interface MainNavigationProps {
                 </Link>;
               </li>;
             )}
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+:src_backup/layout/MainNavigation.tsx
 
                     onClick={handleCartClick}
                     className={cn(
@@ -456,7 +455,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                           on_click={() => setActiveDropdown (active_dropdown === link.key ? null : link.key)}`;
                           className={`w - full flex items - center justify - between px - 4 py - 3 text - left text - sm font - medium rounded - md transition - colors ${is_active (link)? 'bg - zion - cyan text - white'';
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
 }`}{/* Wishlist link */}
             {isAuthenticated && (<li className="nav-item">;
                 <Link;
@@ -483,7 +482,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                       {count}
                     </span>
                   )}
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
                 </Link>;
               </li>;
             )}{/* Wallet link */}
@@ -553,7 +552,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>
                   )}
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
                 </Link>;
               </li>;
             )}{/* Cart icon with badge */}
@@ -661,7 +660,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 >                        {cartCount}
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+:src_backup/layout/MainNavigation.tsx
                       </span>;
 
                     )}
@@ -676,7 +675,6 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
           <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">
             <LanguageSelector />
           </div>
-        </div>
       </nav>,
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
@@ -694,9 +692,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>;
             <LanguageSelector />;
           </div>;
-        </div>;
       </nav>;
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
                         {link && link.name}
@@ -722,7 +719,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </li>;
           </ul>;<div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;<LanguageSelector />;
           </div>;
-        </div>;
       </nav>;<LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>))}})})
 =

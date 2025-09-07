@@ -10,7 +10,6 @@ const Revolutionary2027Hero = null;
 
 const containerVariants = {}
     hidden: { opacity: 0}
-=======
 const containerVariants = {
     }
     "hidden": { "opacity": 0
@@ -24,7 +23,6 @@ const containerVariants = {
 
 "staggerChildren": 0.1
       }
-    }
   };
 
 const itemVariants = {
@@ -42,9 +40,7 @@ const itemVariants = {
         "duration": 0.8,
 "ease": 'easeOut' as const,'
       }
-    }
   };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 return (;
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;'
@@ -61,7 +57,6 @@ return (;
       {/* Animated Grid Pattern */}<div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;<div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
-=======
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]'></div>
@@ -70,10 +65,7 @@ return (;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
-=======
-=======
   return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
       {/* Enhanced Background Effects */}'
       <div className='absolute inset-0 opacity-20'>;'
@@ -128,7 +120,6 @@ return (;
 
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>;
@@ -140,7 +131,6 @@ return (;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>;
       </div>;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>;
-      </div>;
       </div>;
   return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
       {/* Enhanced Background Effects */}
@@ -362,7 +352,6 @@ variants={containerVariant,;
                 <TestTube className='w-6 h-6 text-white' />;
               </div>;
               <h3 className='text-lg font-semibold text-white mb-2'>Biotech</h3>;
-=======
           {/* Subtitle */}'
           <motion && motion.div variants={itemVariants} className='max-w-4xl mx-auto'>;'
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>;
@@ -421,7 +410,6 @@ variants={containerVariant,;
                 <TestTube className='w-6 h-6 text-white' />;
               </div>;'
               <h3 className='text-lg font-semibold text-white mb-2'>Biotech</h3>;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <p className='text-gray-300 text-sm'>;
                 DNA computing and molecular biology;
               </p>            </div>;
@@ -444,7 +432,6 @@ variants={containerVariant,;
               <h3 className="text-lg font-semibold text-white mb-2">Biotech</h3>;"
               <p className="text-gray-300 text-sm">DNA computing and molecular biology</p>;
             </div>;
-<<<<<<< HEAD
           </motion.div>;
           {/* CTA Buttons */}
 <motion.div;
@@ -477,7 +464,6 @@ variants={containerVariant,;
               </div>
               <div className='text-gray-400 text-sm'>'
                 Revolutionary Services
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Quantum AI</h3>
               <p className="text-gray-300 text-sm">Consciousness simulation and neural computing</p>
@@ -501,7 +487,6 @@ variants={containerVariant,;
               <div className='text-gray-400 text-sm'>Uptime Guarantee</div>'
             </div>
           </motion.div>
-        </motion.div>
       </div>
 
 
@@ -582,19 +567,8 @@ key={i}
         ))}
       </div>
     </section>
-<<<<<<< HEAD
   )
 },
-=======
-);
-};
-export default Revolutionary2027Hero;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-"
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
 ;
 export default Revolutionary2027Hero;              delay: Math.random () * 2}}
@@ -605,49 +579,10 @@ export default Revolutionary2027Hero;              delay: Math.random () * 2}}
 ;
 export default Revolutionary2027Hero);
 }
-<<<<<<< HEAD
 ;
 export default Revolutionary2027Hero;
 ;
 )}export default Revolutionary2027Hero;
 export default Revolutionary2027Hero,
-=======
-return (</div> {
-  /* Floating Icons */ 
-}{
-  floatingIcons.map ( (item, index) => (<motion.div key= {
-  index 
-}> <item.icon className="w-8 h-8" /> </motion.div>) ) 
-}Future </span> <br /> <span className="text-white" >is Now</span> </h1> <div className="flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300" > <span>2027</span> <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full" ></div> <span>Revolutionary</span> <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" ></div> <span>Technology</span> </div> </motion.div> Experience the next generation of AI, quantum computing, and emerging technologies. Transform your business with solutions that were once science fiction. </p> </motion.div> </div> <h3 className="text-lg font-semibold text-white mb-2" >Quantum AI</h3> <p className="text-gray-300 text-sm" >Consciousness simulation and neural computing</p> </div> <div className="bg-gradient-to-br from-cyan-900/30 to-cyan-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6" > <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4" > <Rocket className="w-6 h-6 text-white" /> </div> <h3 className="text-lg font-semibold text-white mb-2" >Space Tech</h3> <p className="text-gray-300 text-sm" >Autonomous mining and debris management</p> </div> <div className="bg-gradient-to-br from-pink-900/30 to-pink-800/30 backdrop-blur-xl border border-pink-500/30 rounded-2xl p-6" > <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4" > <TestTube className="w-6 h-6 text-white" /> </div> <h3 className="text-lg font-semibold text-white mb-2" >Biotech</h3> <p className="text-gray-300 text-sm" >DNA computing and molecular biology</p> </div> </motion.div> <Link href="https://ziontechgroup.com/services" className="group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25" > <span>Explore Services</span> <ArrowRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" /> </a> <a href="tel:+13024640950" className="group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50" > <span>Call +1 302 464 0950</span> <Zap className="w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40" /> </a> </motion.div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-white mb-2" >$50T+</div> <div className="text-gray-400 text-sm" >Total Market Value</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-white mb-2" >1000+</div> <div className="text-gray-400 text-sm" >Global Customers</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-white mb-2" >99.9%</div> <div className="text-gray-400 text-sm" >Uptime Guarantee</div> </div> </motion.div> </motion.div> </div> {
-  /* Scroll Indicator */ 
-}<motion.div > <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center" > <motion.div /> </div> </motion.div> left: `$ {
-  Math.random () * 100 
-}%`
-top: `$ {
-  Math.random () * 100 
-}%` 
-}
-}animate= {
-  {
-  y: [0, -100], opacity: [0, 1, 0] 
-}
-}transition= {
-  {
-  duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 2 
-}
-}/>) ) 
-}</div> </section>) 
-}
-export default Revolutionary2027Hero
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

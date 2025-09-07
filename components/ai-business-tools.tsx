@@ -349,7 +349,6 @@ variant='outline';'
                 Get AI Consultation
               </Button>
             </div>
-          </div>
 
 <div,
 className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in''
@@ -379,8 +378,6 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-8 max-w-5xl mx-auto animate-fad
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>'
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Category Filter */}
@@ -419,7 +416,6 @@ key={category}
                     <div;
                       {tool.icon}
                     </div>;
-                  </div>;
                   <div className='flex-1'>;'
                     <div className='flex items-center justify-between mb-2'>;'
                       <h3 className='text-2xl font-bold text-white group-"hover":text-green-400 transition-colors duration-300'>;'
@@ -431,7 +427,6 @@ key={category}
                           {tool.rating}
                         </span>;
                       </div>;
-                    </div>;
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;'
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>;'
                         {tool.category}
@@ -453,7 +448,6 @@ key={category}
                       {tool && tool.ico
 }
                     </div>;
-                  </div>;
                   <div className='flex-1'>;'
                     <div className='flex items-center justify-between mb-2'>;'
                       <h3 className='text-2xl font-bold text-white group-"hover":text-green-400 transition-colors duration-300'>;'
@@ -507,24 +501,16 @@ variant='outline';'
                           {tool.useCas
 }
                         </div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
               </Card>;
                       
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
               </Card>
             ))}
 
           </div>
-        </div>
       </section>
       {/* AI Benefits Section */}
 <section className='py-24 bg-gray-900'>'
@@ -585,7 +571,6 @@ seamless, personalized experiences for your customers.
               </p>
             </Card>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -617,11 +602,9 @@ variant='outline';'
               Explore More Tools
             </Button>
           </div>
-        </div>
       </section>
     </>
           </div>;
-        </div>;
       </section>;
       {/* AI Benefits Section */}
 <section className='py-24 bg-gray-900'>;
@@ -705,7 +688,6 @@ variant='outline';'
               </p>;
             </Card>;
           </div>;
-        </div>;
       </section>;
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
@@ -722,12 +704,9 @@ variant='outline';'
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>;
                         <div className="text-sm text-gray-300 max-w-xs">{tool && tool.useCase}</div>;
                     </div>;
-                  </div>;
-                </div>;
               </Card>;
             ))}
           </div>;
-        </div>;
       </section>;
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>;
@@ -751,7 +730,6 @@ variant='outline';'
               <p className='text-gray-400'>;
                         </span>;
                       </div>;
-                    </div>;
                     <div className='flex items - center space - x-4 mb - 3 text - sm text - gray - 400'>;
                       <span className='px - 2 py - 1 bg - gray - 800 rounded - full'>;
                         {tool.category}
@@ -776,7 +754,6 @@ variant='outline';'
                               {feature}
                             </div>))}
                       </div>;
-                    </div>;
                     <div className='mb - 4'>;
                       <h4 className='text - sm font - semibold text - gray - 300 mb - 2'>;
                         Best For:;
@@ -804,11 +781,8 @@ variant='outline';'
                         <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
                         <div className="text - sm text - gray-300 max-w-xs">{tool.use_case}</div>;
                     </div>;
-                  </div>;
-                </div>;
               </Card>))}
           </div>;
-        </div>;
       </section>;
       {/* AI Benefits Section */}
       <section className='py - 24 bg - gray - 900'>;
@@ -838,7 +812,6 @@ variant='outline';'
               </p>;
             </Card>;
           </div>;
-        </div>;
       </section>;
     </>)}
   )}
@@ -872,18 +845,12 @@ variant='outline';'
               Explore More Tools;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
   );
 }
-}
-<<<<<<< HEAD
     </>);
 }
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

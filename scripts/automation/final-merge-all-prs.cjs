@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -23,7 +19,6 @@ const logFile = path.join(this.logsDir, "final-merge-all-prs.log");
       for (let i = 0; i < allBranches.length; i += batchSize) {"}
 const batch = allBranches.slice(i, i + batchSize);";
       // Step "4"
-  // Step "4"
   this.log( Fatal "error": ${error.message  }`, "ERROR""`)
       // Step "4"
       await this.finalizeMerges();"
@@ -89,9 +84,6 @@ const content = fs.readFileSync(filePath, "utf8");
 this.log(" Resolved conflicts "in")
         "ERROR"
     // "Strategy"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
   this.log(" Finalizing all merges...")
   execSync(git commit -m "Final merge of all remaining PRs and branches")

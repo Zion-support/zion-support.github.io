@@ -1,7 +1,7 @@
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+:src_backup/components/gamification/AchievementBadges.tsx
 export interface Achievement {
 
-<<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+<:src_backup/components/gamification/AchievementBadges.tsx
 export interface Achievement  {id: string;
 =  id: string
   title: string
@@ -23,9 +23,8 @@ export interface Achievement {
 >  title: string;
   description: string;
   achieved: boolean;
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+:src_backup/components/gamification/AchievementBadges.tsx
 interface AchievementBadgesProps {
-  achievements: Achievement[];
   achievements: Achievement[];
 
 }
@@ -60,7 +59,7 @@ export interface Achievement  {id: string;
   title: string;
   description: string;
   achieved: boolean;
-<<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+<:src_backup/components/gamification/AchievementBadges.tsx
 interface AchievementBadgesProps  {achievements: Achievement[];
   achievements: Achievement[];}
 export interface Achievement  {id: string;
@@ -72,7 +71,6 @@ export interface Achievement  {achieved: boolean;interface AchievementBadgesProp
 interface AchievementBadgesProps  {achievements: Achievement[];
 =
 interface AchievementBadgesProps {;
-  achievements: Achievement[];
   achievements: Achievement[];
 
 import { BadgeCheck } from 'lucide-react'
@@ -87,12 +85,12 @@ export interface Achievement {
 interface AchievementBadgesProps {
   achievements: Achievement[],
 >}
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+:src_backup/components/gamification/AchievementBadges.tsx
 
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
 
-<<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+<:src_backup/components/gamification/AchievementBadges.tsx
 
 
       </CardContent>;
@@ -105,7 +103,6 @@ export function AchievementBadges() {export interface Achievement  {id: string;
 }export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {return (<p className="font-medium">{a.title}</p>;
               <p className="text-sm text-muted-foreground">{a.description}</p>;
             </div>;
-          </div>;
         ))}</CardContent>;
     </Card>;
   )})}achieved: boolean;
@@ -137,7 +134,7 @@ function AchievementBadges() {return (<Card>;
             </div>;
           </div>))}
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+:src_backup/components/gamification/AchievementBadges.tsx
     </Card>);
 }
 ;
@@ -161,9 +158,8 @@ function AchievementBadges() {return (<Card>;
               <p className='font-medium'>{a.title}</p>;
               <p className='text-sm text-muted-foreground'>{a.description}</p>;
             </div>;
-          </div>;
         ))}
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+:src_backup/components/gamification/AchievementBadges.tsx
       </CardContent>
     </Card>
   );
@@ -175,7 +171,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =              <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
-          </div>
         ))}
 
 >

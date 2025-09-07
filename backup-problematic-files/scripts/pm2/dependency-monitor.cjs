@@ -2,8 +2,6 @@
 ,"}),"
 const fs = require(,"}),"
         "stdio"
-        "stdio"
-        return { "exists": false, "message"}
         return { "exists": false, "message"}
         "priority"
         "action"
@@ -23,7 +21,6 @@ const fs = require(,"}),"
         "message"
         "action"
         "priority"
-        "priority"
         "message"
         "action"
         "message"
@@ -32,9 +29,4 @@ const fs = require(,"}),"
         "action"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
-<<<<<<< HEAD
       '\n� "CRITICAL"
-      '\n� "CRITICAL"
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

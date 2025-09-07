@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 export default function ServiceDescriptionGeneratorPage() {
   const [title, setTitle] = useState($2);
@@ -46,7 +45,6 @@ export default function ServiceDescriptionGeneratorPage() {
     } finally {
       setLoading(false)
     }
-  }
 
   function handleAccept() {
     setAccepted(true)
@@ -154,7 +152,6 @@ export default function ServiceDescriptionGeneratorPage() {
                 Accept
               </button>
             </div>
-          </div>
 
           <textarea
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -169,28 +166,4 @@ export default function ServiceDescriptionGeneratorPage() {
       )}
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function descriptiongenerator() {
-  return (
-    <Layout>
-      <Head>
-        <title>Description Generator - Zion Tech Group</title>
-        <meta name="description" content="Description Generator solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Description Generator</h1>
-          <p className="text-lg text-gray-600">
-            Professional description generator solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

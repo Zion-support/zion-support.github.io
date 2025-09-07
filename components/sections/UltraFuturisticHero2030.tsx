@@ -19,18 +19,15 @@ const contactInfo = null;
 const contactInfo = null;
             "ease": "easeInOut""
 ];
-<<<<<<< HEAD
 const stats = [
   { number: '500+', label: 'Active Clients', icon: Users },
   { number: '99.9%', label: 'Uptime SLA', icon: Clock },
   { number: '24/7', label: 'Support', icon: Shield },
 { number: '2030', label: 'Future Ready', icon: Star },
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
 export default function UltraFuturisticHero2030() {
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-<<<<<<< HEAD
 const stats = [;
   { number: '500+', label: 'Active Clients', icon: Users },{ number: '99.9%', label: 'Uptime SLA', icon: Clock },{ number: '24/7', label: 'Support', icon: Shield },{ number: '2030', label: 'Future Ready', icon: Star },];export default function UltraFuturisticHero2030() {<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
   return (<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
@@ -147,9 +144,6 @@ className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from
           >
             <Sparkles className='w-4 h-4 mr-2' />'
             Welcome to 2030 - The Future is Now
-=======
-            Welcome to 2030 - The Future is Now;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </motion.div>
           <motion.h1,
 initial={{ "opacity": 0, "y": 30 
@@ -163,10 +157,7 @@ className='text-5xl "md":text-7xl "lg":text-8xl font-bold mb-6''
           >
             <span className='bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent'>'
               Zion Tech Group
-=======
               Zion Tech Group;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </span>
           </motion.h1>
           <motion.p,
@@ -224,9 +215,7 @@ initial={{ "opacity": 0, "y": 30
 
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.p
-=======
           <motion.p;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -249,7 +238,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'>;
             Transform your business with cutting-edge micro SAAS solutions,;
             enterprise IT services, and revolutionary AI platforms that define;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             the next decade of technological innovation.          </motion && motion.p>            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto";
           >;
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.;
@@ -599,32 +587,18 @@ className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 bord
               </h3>;
               <p className='text-gray-400 text-sm'>{feature.description}</p>;'
             </motion.div>;
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
-=======
             >'
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <feature.icon className='w-6 h-6 text-white' />
               </div>'
               <h3 className='text-lg font-semibold text-white mb-2'>
                 {feature.title}
-<<<<<<< HEAD
               </h3>
               <p className='text-gray-400 text-sm'>{feature.description}</p>
-=======
-              </h3>'
-              <p className='text-gray-400 text-sm'>{feature.description}</p>            </motion.div>            >"
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">"
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
-              <p className="text-gray-400 text-sm">{feature.description}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           ))}
         {/* Stats Section */}
         <motion&& motion.div;
@@ -758,8 +732,6 @@ href={`"tel":${contactInfo.mobile}`}`                className='text-white font-
                 {contactInfo.website.replace('"https"://', '')}'
               </a>;
             </div>;
-          </div>;
-<<<<<<< HEAD
         </motion.div>;
                 href={contactInfo && contactInfo.website}
                 className='text-white font-semibold "hover":text-emerald-400 transition-colors'>                {contactInfo && contactInfo.website.replace('"https"://', '')}            <div className="flex flex-col items-center">;"
@@ -768,7 +740,6 @@ href={`"tel":${contactInfo.mobile}`}`                className='text-white font-
               <a href={contactInfo && contactInfo.website} className="text-white font-semibold "hover":text-emerald-400 transition-colors">;"
               </a>;
             </div>;
-          </div>;
         </motion && motion.div>;{/* Trust Indicators */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 30 
@@ -797,7 +768,6 @@ className='mt-16 text-center''
 
               <span className='text-gray-300 text-sm'>Industry Leader</span>'
             </div>
-          </div>
         </motion.div>
       </div>
 
@@ -829,7 +799,6 @@ className='absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full''
           animate={{ />;
       </div>;
     </section>;
-<<<<<<< HEAD
   )ease: "easeInOut";
           }}/>;
       </div>;
@@ -864,20 +833,13 @@ className='absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full''
           }}
 
     </section>
-<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
           transition={{
             duration: 5,
             repeat: Infinity}
             ease: 'easeInOut'}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }}
         />
         <motion.div
@@ -903,9 +865,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </section>
 )
-  )
 }
-=======
           transition={{
             duration: 4
             repeat: Infinity
@@ -944,41 +904,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{   />
       </div>
     </section>
-<<<<<<< HEAD
 
 );
 
 "
-<<<<<<< HEAD
-=======
-{
-  /* Background Glow Effects */ 
-}<div className="absolute inset-0 pointer-events-none" > <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" ></div> <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" ></div> <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl" ></div> </div> > <Sparkles className="w-4 h-4 mr-2" /> Welcome to 2030 - The Future is Now </motion.div> <motion.h1 > <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent" > Zion Tech Group </span> </motion.h1> <motion.p > Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation. </motion.p> </motion.div> {
-  /* CTA Buttons */ 
-}<motion.div > <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25" > <span className="relative z-10 flex items-center" > Get Started Today <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> </a> <Link href="/services" className="group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > <span className="flex items-center" > Explore Services <Play className="ml-2 w-5 h-5 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" /> </span> </a> </motion.div> {
-  /* Features Grid */ 
-}<motion.div > {
-  features.map ( (feature, index) => (<motion.div key= {
-  index 
-}> <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300" > <feature.icon className="w-6 h-6 text-white" /> </div> </motion.div>) ) 
-}</motion.div> {
-  /* Stats Section */ 
-}<motion.div > {
-  stats.map ( (stat, index) => (<motion.div key= {
-  index 
-}> <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300" > <stat.icon className="w-8 h-8 text-purple-400" /> </div> </motion.div>) ) 
-}</motion.div> {
-  /* Contact Information */ 
-}<motion.div </a> </div> </div> </motion.div> {
-  /* Trust Indicators */ 
-}<motion.div > <p className="text-gray-400 text-sm mb-4" >Trusted by leading companies worldwide</p> <div className="flex items-center justify-center space-x-8 opacity-60" > <div className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span className="text-gray-300 text-sm" >ISO 27001 Certified</span> </div> <div className="flex items-center space-x-2" > <Award className="w-5 h-5 text-yellow-400" /> <span className="text-gray-300 text-sm" >Award Winning</span> </div> <div className="flex items-center space-x-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span className="text-gray-300 text-sm" >Industry Leader</span> </div> </div> </motion.div> </div> /> </div> </section>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );  )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -173,7 +173,6 @@ class AccessibilityChecker {}
                             "suggestion": 'Add H1 heading to page'
                         })};
                 };
-            };
             // Check for color contrast issues (simplified);
             if (line.includes('"color": ') || line.includes('background-color:')) {}
                 issues.push({})
@@ -196,7 +195,6 @@ class AccessibilityChecker {}
                             "suggestion": 'Add H1 heading to page'
                         })};
                 };
-            };
             // Check for color contrast issues (simplified);
             if (line.includes('"color": ') || line.includes('background-color:')) {}
                 issues.push({})
@@ -279,8 +277,6 @@ export const accessibility = {}
             firstElement.focus()};
             e.preventDefault()};
         };
-      };
-    };
     
     element.addEventListener('keydown', handleTabKey);
     
@@ -487,16 +483,10 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             this.log(`Accessibility Checker "failed": ${error.message}`);
             throw error};
     };
-};
 // Run the checker if this script is executed directly;
 if ( {})
     const checker = new AccessibilityChecker) {}
      {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = AccessibilityChecker;
-module.exports = AccessibilityChecker;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

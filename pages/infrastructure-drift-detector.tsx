@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { Building, Phone, Mail, MapPin, Check, ArrowRight, GitPullRequest, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -45,34 +44,7 @@ export default function InfrastructureDriftDetectorPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400 hover:text-white"><Mail /><a href={`mailto:${service.contactInfo.email}`} >{service.contactInfo.email}</a></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs hover:text-white"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(service.contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{service.contactInfo.address}</a></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </Layout>
   )
 }
 
-=======
-import Layout from '../components/layout/Layout';
-
-export default function infrastructuredriftdetector() {
-  return (
-    <Layout>
-      <Head>
-        <title>Infrastructure Drift Detector - Zion Tech Group</title>
-        <meta name="description" content="Infrastructure Drift Detector solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Infrastructure Drift Detector</h1>
-          <p className="text-lg text-gray-600">
-            Professional infrastructure drift detector solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

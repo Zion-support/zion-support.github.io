@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
@@ -26,10 +19,6 @@ class $1 {}
 ;"
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
 ;
@@ -53,15 +42,7 @@ const result = execSync(command, {});
     const result = await this.runCommand("npm audit --json");"
     if (result.success) {}
   const auditData = JSON.parse(result.output);
-<<<<<<< HEAD
 
-=======
-        if (auditData.vulnerabilities) {}
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");
-          for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`)};
-        } else {}
-  this.log("No security vulnerabilities found", "success");
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async runCommand(command, options = {}) {}
   try {}
 const result = execSync(command, {});
@@ -74,7 +55,6 @@ const result = execSync(command, {});
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status };
     };
-  };
 ;
   async checkSecurityVulnerabilities() {}
   this.log("Checking for security vulnerabilities...");
@@ -111,10 +91,7 @@ const result = execSync(command, {});
 ;
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
     const result = await this.runCommand("npm ls --json");
@@ -209,43 +186,12 @@ const result = execSync(command, {});
   await this.fixSecurityIssues()};
 
       await this.generateReport()};
-<<<<<<< HEAD
 monitor.run().catch(console.error);
-=======
-  };
-};
-;
-// Run the security monitor;
-const monitor = new SecurityMonitor();
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 
-<<<<<<< HEAD
 monitor.run().catch(console.error);
 
 monitor.run().catch(console.error);
-monitor.run().catch(console.error);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-monitor.run().catch(console.error);
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-monitor.run().catch(console.error);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-monitor.run().catch(console.error);
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

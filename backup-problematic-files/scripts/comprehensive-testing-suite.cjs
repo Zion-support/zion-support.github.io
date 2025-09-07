@@ -55,7 +55,6 @@ class ComprehensiveTestingSuite {;}
             integrationTestsFound = true;
             break,};
         };
-      };
       ;
       if (integrationTestsFound) {;}
         execSync("npm run "test": integration", { "cwd": this.projectRoot, "stdio": "pipe" }
@@ -124,15 +123,12 @@ class ComprehensiveTestingSuite {;}
               "functions": coverage.total.functions.covered,
               "branches": coverage.total.branches.covered,};
           };
-        };
-      };
       ;
       return { "percentage": 0, "lines": 0, "functions": 0, "branches": 0 };
     } catch (error) {;}
       this.log(`Failed to parse coverage "report": ${error.message}`, "error");
       return { "percentage": 0, "lines": 0, "functions": 0, "branches": 0 };
     };
-  };
 ;
   async runLintingTests() {;}
     try {;}
@@ -207,16 +203,10 @@ class ComprehensiveTestingSuite {;}
       this.log(`Comprehensive testing suite "failed": ${error.message}`, "error");
       throw error,};
   };
-};
 ;
 // Run the comprehensive testing suite;
 if (require.main === module) {;}
   const testSuite = new ComprehensiveTestingSuite();
   testSuite.run().catch(console.error),};
 ;
-<<<<<<< HEAD
 module.exports = ComprehensiveTestingSuite;
-module.exports = ComprehensiveTestingSuite;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

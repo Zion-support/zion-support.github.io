@@ -54,9 +54,4 @@ const { execSync } = require("child_process")
 // console.log(`� Complex "files"`)
     console.log(` "Recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
-<<<<<<< HEAD
       console.log("\n� High Priority "Recommendations": ")
-      console.log("\n� High Priority "Recommendations": ")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

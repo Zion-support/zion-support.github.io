@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
@@ -107,7 +105,6 @@ const Header: React.FC = () => {
                                 <div className="text-xs text-gray-500">
                                   {service.description}
                                 </div>
-                              </div>
                             </Link>
                           ))}
                         </div>
@@ -155,7 +152,6 @@ const Header: React.FC = () => {
               )}
             </button>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -183,7 +179,6 @@ const Header: React.FC = () => {
                           </Link>
                         ))}
                       </div>
-                    </div>
                   ) : (
                     <Link
                       href={item.href}
@@ -220,7 +215,6 @@ const Header: React.FC = () => {
                 Get Started
               </Link>
             </div>
-          </div>
         )}
       </div>
     </header>
@@ -229,13 +223,5 @@ const Header: React.FC = () => {
 
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
 
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

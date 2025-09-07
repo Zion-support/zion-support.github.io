@@ -600,7 +600,6 @@ export default specializedEnterpriseServices;    "id": 'quantum-machine-learning
   },
       'Advanced predictive analytics platform with custom ML model development''
   }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ];
 ;
 export default specializedEnterpriseServices;    "id": 'quantum - machine - learning - platform';'
@@ -667,26 +666,14 @@ export default specializedEnterpriseServices;    "id": 'quantum - machine - lear
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
   }
 ;
   // Advanced Cybersecurity Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     }
     "id": 'quantum - resistant - cryptography';'
@@ -780,26 +767,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
   }
 ;
   // Neural Interface Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     }
     "id": 'brain - computer - interface - platform';'
@@ -849,26 +824,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
   }
 ;
   // Advanced IoT Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     }
     "id": 'autonomous - iot - ecosystem';'
@@ -918,26 +881,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
     ];
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
   }
 ;
   // Advanced Analytics Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   {
     }
     "id": 'predictive - analytics - engine';'
@@ -983,7 +934,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
     "market_advantage": 'Advanced predictive analytics platform with custom ML model development';'
   }
-<<<<<<< HEAD
 ];;
 export default specializedEnterpriseServices;export default specializedEnterpriseServices;export default specializedEnterpriseServices;export default specializedEnterpriseServices;export default specializedEnterpriseServices;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -992,5 +942,4 @@ export default specializedEnterpriseServices;export default specializedEnterpris
 ;
 export default specializedEnterpriseServices;
 ;
-export default specializedEnterpriseServices;
 export default specializedEnterpriseServices;

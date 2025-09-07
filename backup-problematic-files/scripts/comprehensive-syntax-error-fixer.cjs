@@ -63,9 +63,4 @@ class ComprehensiveSyntaxErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ComprehensiveSyntaxErrorFixer;
-module.exports = ComprehensiveSyntaxErrorFixer;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -72,20 +71,12 @@ export default function InnovativeMicroSaasShowcase() {
     }
   }),
 
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function innovativemicrosaasshowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
         <title>Innovative Micro Saas Showcase - Zion Tech Group</title>
         <meta name="description" content="Innovative Micro Saas Showcase solutions and services." />
       </Head>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -135,8 +126,6 @@ export default function innovativemicrosaasshowcase() {
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Filters and Search */}
@@ -202,8 +191,6 @@ export default function innovativemicrosaasshowcase() {
                 <option value="newest">Newest First</option>
               </select>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -257,7 +244,6 @@ export default function innovativemicrosaasshowcase() {
                       <span className="text-sm text-gray-300">{service.rating}</span>
                       <span className="text-xs text-gray-500">({service.reviews})</span>
                     </div>
-                  </div>
 
                   {/* Features */}
                   <div className="mb-4">
@@ -270,7 +256,6 @@ export default function innovativemicrosaasshowcase() {
                         </div>
                       ))}
                     </div>
-                  </div>
 
                   {/* Category and Setup */}
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
@@ -303,7 +288,6 @@ export default function innovativemicrosaasshowcase() {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
@@ -340,8 +324,6 @@ export default function innovativemicrosaasshowcase() {
                             <span className="text-sm text-gray-300">{service.rating}</span>
                             <span className="text-xs text-gray-500">({service.reviews})</span>
                           </div>
-                        </div>
-                      </div>
 
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
 
@@ -362,9 +344,6 @@ export default function innovativemicrosaasshowcase() {
                             <Heart className="w-4 h-4" />
                           </button>
                         </div>
-                      </div>
-                    </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
@@ -406,17 +385,4 @@ export default function innovativemicrosaasshowcase() {
       </section>
     </Layout>
   )
-=======
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Innovative Micro Saas Showcase</h1>
-          <p className="text-lg text-gray-600">
-            Professional innovative micro saas showcase solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

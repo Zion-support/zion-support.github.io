@@ -15,8 +15,6 @@ interface UseApiOptions  {immediate?: boolean;
 }}
 }setLoading(false)}setLoading(false)}return { data, loading, error, execute }}
 }
-}
-}
 ursor/automate-test-improve-and-merge-code-646c;
 }ursor/fix-website-loading-errors-and-merge-6662;
 interface ApiState<T> {}import { useState, useEffect   } from 'react';interface ApiState < T> {}import { useState, useEffect  } from 'react';'
@@ -69,8 +67,6 @@ export const useApi = <T>(
       setLoading(false)};
   return { data, loading, error, execute }};
 };
-};
-};
       setLoading(false)};
   return { data, loading, error, execute }
 };      setLoading(false)};
@@ -82,17 +78,14 @@ export const useApi = <T>(
       setLoading(false)};      setLoading(false)};
 ;
   return { data, loading, error, execute }}
->>>>>>> origin/main
 }
 
 interface UseApiOptions {
   immediate?: boolean;
 }
-<<<<<<< HEAD
 
 export function useApi<T>(
   apiCall: () => Promise<T>;
-=======
 }
 interface ApiState<T> {}import { useState, useEffect } from 'react';'
 ;
@@ -230,7 +223,6 @@ interface ApiState<T>  {"data": T | null, "loading": boolean,"error": string | n
 }
 interface ApiState<T>  {"data": T | null, "loading": boolean,"error": string | null,interface ApiState<T>  {"data": T | null, "loading": boolean,"error": string | null;
 }
-}
 export function useApi<T>("apiCall": () => Promise<T>,"options": UseApiOptions = {}
 ): ApiState<T> & { "refetch": () => void } {const [data, setData] = useState<T | null>(null)const [loading, setLoading] = useState(false)const [error, setError]  = useState<string | null>(null)try {const result = await apiCall(),setData(result)} catch (err) {setError(err instanceof Error ? err.message : 'An error occurred')} finally {setLoading(false)}'
   }, [apiCall])useEffect(() => {if (options.immediate !== false) {fetchData()}
@@ -270,9 +262,7 @@ export function useApi<T>(
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-<<<<<<< HEAD
   const fetchData = useCallback(async () => {
-=======
   const fetchData = async () => {
     }
     setLoading(true);
@@ -289,11 +279,9 @@ export function useApi<T>(
       }
       setLoading(false);
     }
-<<<<<<< HEAD
   }, [apiCall]);
 
   useEffect(() => {
-=======
   };
 
   useEffect(() => {
@@ -313,8 +301,6 @@ return (;
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
 }
 export function useApi<T>(
   "apiCall": () => Promise<T>,
@@ -351,12 +337,6 @@ const result = await apiCall(),;
 }
 if ( {) {
   $2
-}
-}
-}
-}
-}
-}
 }
     if (options.immediate !== false) {fetchData()}
   }, [])return {data,loading,error,"refetch": fetchData;

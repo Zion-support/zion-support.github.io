@@ -160,83 +160,12 @@ return res.status(500).json({ "error": e.message || 'OpenAI error' },;'
     title?: string;
     bio?: string;
     experience?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
     skills?: string
-=======
-
-
-  if (!name) return res && res.status(400).json({ "error": 'Name is required','
-});
-
-  try {
-}
-const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with "fields": summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one "of": AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.;`INPUT\"nName": ${name}\nCurrent "Title": ${title || ''}\"nBio": ${bio || ''}\"nExperience": ${experience || ''}\"nSkills": ${skills || ','
-}`;`
-const completion = await openai && openai.chat.completions && completions.create({
-      }
-      "model": process && process.env.OPENAI_MODEL || 'gpt-4o-mini','
-      "messages": [
-
-
-        {
-          }
-          "role": 'system','
-          "content": 'You produce only valid JSON. No commentary.''
-       
-},
-        { "role": 'user', "content": prompt,'
-}
-      ],
-      "response_format": { "type": 'json_object','
-},
-
-        { "role": 'system', "content": 'You produce only valid JSON. No commentary.','
-};
-        { "role": 'user', "content": prompt,'
-}];
-      "response_format": {
-       }
-       "type": 'json_object' '
-   
-},
-    "temperature": 0.6
-     
-});
-
-const content = completion && completion.choices?.[0]?.message?.content || '{}';'
-
-const parsed = JSON && JSON.parse(content);
-
-const content = completion && completion.choices?.[0]?.message?.content || '{}';'
-
-const parsed = JSON && JSON.parse(content);
-      "temperature": 0.6
-   
-});        { "role": 'system', "content": 'You produce only valid JSON. No commentary.','
-}
-        { "role": 'user', "content": prompt,'
-}];
-      "response_format": { "type": 'json_object' }'
-      "temperature": 0.
-});
-;
-  if (return res.status (400).json ({ error: 'Name is required' })) {
-  $2
-}
-<<<<<<< HEAD
-
-const content = completion.choices?.[0]?.message?.content || '{}';'
-
-
-
->>>>>>> origin/main
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
       response_format: { type: 'json_object' };
       temperature: 0.6});
 
-<<<<<<< HEAD
     const content = completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse(content);
 
@@ -246,62 +175,27 @@ const content = completion.choices?.[0]?.message?.content || '{}';'
       category: parsed.category || null;
       summary: parsed.summary || '';
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
-=======
-
-
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';
-    const parsed = JSON && JSON.parse(content);
-
-
-
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';
-    const parsed = JSON && JSON.parse(content);
-      temperature: 0.6
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
-=======
 '
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         { role: 'user', content: prompt }];
       response_format: {'
        type: 'json_object' 
     },
     temperature: 0.6;
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';
-    const parsed = JSON && JSON.parse(content);
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
 
-<<<<<<< HEAD
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
       temperature: 0.6,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     });        { role: 'system', content: 'You produce only valid JSON. No commentary.' }
         { role: 'user', content: prompt }];
       response_format: { type: 'json_object' }
@@ -359,59 +253,21 @@ const content = completion && completion.choices?.[0]?.message?.content || '{}';
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
-=======
-  }
-'
-  if (!name) return res && res.status(400).json({ error: 'Name is required' })
-  try {}
-    const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.}
-INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ',}
-}`
-pr-12243
-        {
-          role: 'system',
 
-          content: 'You produce only valid JSON. No commentary.',
-        },'
-        { role: 'user', content: prompt },
-      ],'
-      response_format: { type: 'json_object' },
-
-        { role: 'system', content: 'You produce only valid JSON. No commentary.' }
-        { role: 'user', content: prompt }]
-      response_format: {'
-       type: 'json_object'
-    },
-    temperature: 0.6
-      })
-pr-12243
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-=======
 skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
     });
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
-<<<<<<< HEAD
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
 pr-12243
-=======
-<<<<<<< HEAD
+
+
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-
-
-=======
-    const content = completion && completion.choices?.[0]?.message?.content || '{}';
-    const parsed = JSON && JSON.parse(content);
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }      name;
       "title": parsed && parsed.title || title || 'Professional';'
       "category": parsed && parsed.category || null;
@@ -435,9 +291,5 @@ pr-12243
 return res.status (500).json ({ "error": e.message || 'OpenAI error',;'
 });
 }
-  }
-<<<<<<< HEAD
-}
-=======
 
 }

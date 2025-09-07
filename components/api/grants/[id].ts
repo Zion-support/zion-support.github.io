@@ -121,17 +121,13 @@ if ( {) {}
       ...existing;
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ...existing,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       ...payload,
       status: payload.submit ? 'Submitted' : existing.status,
-<<<<<<< HEAD
       updatedAt: new Date().toISOString()} as GrantApplication,
     writeGrant($2);
     res.status(200).json($2);
     return
-<<<<<<< HEAD
   }
 
   res.setHeader('Allow', 'GET, PUT');'

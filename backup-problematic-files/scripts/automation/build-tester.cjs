@@ -31,9 +31,4 @@ const { execSync } = require('child_process')
         "issue"
         "action"
         "impact"
-<<<<<<< HEAD
   console.error('Fatal "error")
-  console.error('Fatal "error")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

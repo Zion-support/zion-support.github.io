@@ -50,7 +50,6 @@ return (;
                 making advanced technology accessible to enterprises of all sizes.
               </p>
             </div>
-          </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
@@ -78,9 +77,6 @@ return (;
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Results</h3>
                 <p className="text-gray-600">Proven track record of success</p>
               </div>
-            </div>
-          </div>
-        </div>
         <div className="max-w-6xl mx-auto">"
           {/* Company Overview */}
           <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12 mb-16">"
@@ -106,31 +102,24 @@ various industries, helping companies of all sizes achieve their digital;
                     <h4 className="font-semibold text-gray-900">Innovation</h4>"
                     <p className="text-gray-600">Constantly pushing the boundaries of what's possible with technology</p>'
                   </div>
-                </div>
                 <div className="flex items-start">"
                   <span className="w-3 h-3 bg-green-500 rounded-full mr-3 mt-2"></span>"
                   <div>
                     <h4 className="font-semibold text-gray-900">Quality</h4>"
                     <p className="text-gray-600">Delivering exceptional solutions that exceed expectations</p>"
                   </div>
-                </div>
                 <div className="flex items-start">"
                   <span className="w-3 h-3 bg-purple-500 rounded-full mr-3 mt-2"></span>"
                   <div>
                     <h4 className="font-semibold text-gray-900">Integrity</h4>"
                     <p className="text-gray-600">Building trust through transparency and honest communication</p>"
                   </div>
-                </div>
                 <div className="flex items-start">"
                   <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 mt-2"></span>"
                   <div>
                     <h4 className="font-semibold text-gray-900">Collaboration</h4>"
                     <p className="text-gray-600">Working closely with clients as partners in their success</p>"
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
           {/* Team Section */}
           <div className="mb-16">"
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Expertise</h2>"
@@ -163,8 +152,6 @@ various industries, helping companies of all sizes achieve their digital;
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Cybersecurity</h3>"
                 <p className="text-gray-600">Comprehensive security solutions</p>"
               </div>
-            </div>
-          </div>
           {/* Stats Section */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-white mb-16">"
             <h2 className="text-3xl font-bold mb-8 text-center">Our Impact</h2>"
@@ -185,8 +172,6 @@ various industries, helping companies of all sizes achieve their digital;
                 <div className="text-4xl font-bold mb-2">24/7</div>"
                 <div className="text-blue-100">Support Available</div>"
               </div>
-            </div>
-          </div>
           {/* CTA Section */}
           <div className="text-center bg-white rounded-xl shadow-lg p-12">"
             <h2 className="text-3xl font-bold text-gray-900 mb-6">"
@@ -211,16 +196,7 @@ href="/services""
                 View Our Services
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
-=======
-<<<<<<< HEAD
       </section>
-=======
-      </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
     </div>
   );
 }

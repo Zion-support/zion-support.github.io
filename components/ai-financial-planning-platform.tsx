@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react','
@@ -120,7 +119,6 @@ export default function AIFinancialPlanningPlatform() {
         </p>;
         <p className='mt-4 text-3xl font-bold'>Custom</p>;'
       </div>;
-    </div>;
     <p className='mt-4 text-sm text-gray-400'>;'
       Market "references": {' ,'
 }
@@ -197,7 +195,6 @@ className='text-center'>'
                 <div className='w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4'>;'
                   <DollarSign className='w-8 h-8 text-white' />;'
                 </div>;
-              </div>;
               <h1 className='text-5xl "md":text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6'>;'
                 AI Financial Planning Platform;
               </h1>;
@@ -283,10 +280,8 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
               )
 }
             </div>;
-          </div>;
         </section>;
             </div>;
-          </div>;
         </section>;transition={{ "duration": 0 && 0.8 
 }
               className='text-center mb-16'>;'
@@ -368,7 +363,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
         {/* Use Cases Section *
 }
@@ -436,7 +430,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                 </motion.div>
               ))}
             </div>
-          </div>
         </section>
 
               ))}
@@ -449,7 +442,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 "hover":border-yellow-500/30 transition-all duration-300 group text-center';'
               ))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}<section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;"
           <div className="max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">;"
@@ -534,7 +526,6 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
                   <span className="text - white font - medium text - sm">{use_case}</span>;
                 </motion.div>))}
             </div>;
-          </div>;
         </section>;
         {/* CTA Section */}
         <section className='py - 20 bg - gradient - to - r from - yellow - 900 / 20 via - amber - 900 / 20 to - orange - 900 / 20'>;
@@ -587,4 +578,3 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
     </>))}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

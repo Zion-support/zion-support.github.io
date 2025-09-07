@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -63,11 +59,7 @@ this.log(" Resolved conflicts "in")
         "ERROR"
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"
-        "ERROR"
     // "Strategy"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
-      /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
     if (fileExt === ".json")
   resolvedContent = this.cleanupJson(resolvedContent)} else if ([".js", ".jsx", ".ts", ".tsx")]

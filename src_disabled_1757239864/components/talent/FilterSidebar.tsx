@@ -47,9 +47,8 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-<<<<<<< HEAD:src/components/talent/FilterSidebar.tsx
+:src/components/talent/FilterSidebar.tsx
       
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -114,15 +113,13 @@ import React from "react",import { Button } from "@/components/ui/button",export
         </Button>;
       </div>;
 
->>>>>>> origin/main:src_disabled_1757239864/components/talent/FilterSidebar.tsx
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       
       {/* Sorting */}
-<<<<<<< HEAD:src/components/talent/FilterSidebar.tsx
+:src/components/talent/FilterSidebar.tsx
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
       
-=======
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
           Clear All;
@@ -290,13 +287,11 @@ function FilterSidebar() {return (<>;
           className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
         <Button;
           on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }
-          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
       {/* Search */}
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
       <SortFilter sort_option={sort_option} setSortOption={setSortOption} />;
->>>>>>> origin/main:src_disabled_1757239864/components/talent/FilterSidebar.tsx
       {/* Skills */}
       <SkillsFilter 
         selectedSkills={selectedSkills} 
@@ -304,7 +299,7 @@ function FilterSidebar() {return (<>;
         expanded={expandedSections.skills} 
         toggleSection={() => toggleSection('skills')}
         isMobileFilterOpen={isMobileFilterOpen}
-<<<<<<< HEAD:src/components/talent/FilterSidebar.tsx
+:src/components/talent/FilterSidebar.tsx
       />
       
       {/* Availability */}
@@ -345,23 +340,20 @@ function FilterSidebar() {return (<>;
       
       {isMobileFilterOpen && (
         <Button 
-=======
       />;{isMobileFilterOpen && (<Button;onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
         <Button;
 
->>>>>>> origin/main:src_disabled_1757239864/components/talent/FilterSidebar.tsx
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
-<<<<<<< HEAD:src/components/talent/FilterSidebar.tsx
+:src/components/talent/FilterSidebar.tsx
     </>
   )
 }
-=======
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
@@ -418,4 +410,3 @@ function FilterSidebar() {return (<>;
 
 }
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/talent/FilterSidebar.tsx

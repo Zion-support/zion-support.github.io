@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 
@@ -65,10 +64,7 @@ interface PerformanceMetrics {
               '(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw';'
           }optimizedCount++;
         }
-      }
-      }
           img.loading = $2;
->>>>>>> origin/main
           // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -76,7 +72,6 @@ interface PerformanceMetrics {
           
           optimizedCount++
         }
-      }
 
       setOptimizationStatus(`Optimized ${optimizedCount} images`);`// Simulate optimization delay,
 await new Promise(resolve => { return setTimeout(resolve, 1000)); }
@@ -271,29 +266,9 @@ const observer = new PerformanceObserver((list) => {
 }
 console.warn('LCP is too "slow":', lcp);'
             }
-          }
-        }
-<<<<<<< HEAD
       });
       
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-=======
-      const addResourceHint = (href: string, as: string, type?: string) => {;
-        const link = document && document.createElement('link');
-        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
-          if (key === 'crossorigin') {;
-            link && link.setAttribute(key, value as string);
-          } else {;
-            (link as any)[key] = value;
-          }
-        });
-            }
-          }
-        }
-      });
-
-      }),
->>>>>>> origin/main
       
       return () => {
         window.removeEventListener('load', measurePerformance);
@@ -307,45 +282,16 @@ console.warn('LCP is too "slow":', lcp);'
         }
         console.log('Performance monitoring not fully supported')'
       }
-    }
   }, [measurePerformance]);
 
 const getPerformanceScore = (): (number) => {
     }
     let score = 100;
     
-=======
->>>>>>> origin/main
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;
-<<<<<<< HEAD
-=======
-  };
-
-  const getPerformanceGrade = (score: number): string => {;
-    if (score >= 90) return 'A';
-    if (score >= 80) return 'B';
-    if (score >= 70) return 'C';
-    if (score >= 60) return 'D';
-
-return 'F';
-  };
-
-  const performanceScore = getPerformanceScore();
-  const performanceGrade = getPerformanceGrade(performanceScore);
-
->
-      <div className='flex items-center justify-between mb-6'>
-        <h3 className='text-xl font-bold text-white flex items-center gap-2'>
-          <Gauge className='w-5 h-5 text-cyan-400' />
-  const getPerformanceScore = $2;
-    if (metrics.firstContentfulPaint > 1800) score -= 20,
-    if (metrics.largestContentfulPaint > 2500) score -= 25,
-    if (metrics.loadTime > 3000) score -= 15,
-    if (metrics.timeToInteractive > 3500) score -= 20,
->>>>>>> origin/main
     
     return Math.max(0, score)
   };
@@ -440,7 +386,6 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
         <div className='text-right mt-1'>'
           <span className='text-sm text-white/60'>{performanceScore}/100</span>'
         </div>
-      </div>
 
       {/* Metrics Display *
 }
@@ -599,7 +544,6 @@ onClick={runAllOptimizations}
           <li>• Enable gzip compression</li>
         </ul>
       </div>
-    </div>
 
   }, [measure_performance]);
 ;
@@ -616,13 +560,11 @@ interface PerformanceMetrics {
     "total": number;
     "limit": number;
   }
-}
 
 interface PerformanceOptimizerProps  {onMetricsUpdate?: ("metrics": PerformanceMetrics) => void;
   }
   enable_reporting?: boolean;
 }
-<<<<<<< HEAD
       measureWebVitals()} else {window && window.addEventListener('load', measureWebVitals)}
 export default PerformanceOptimizer;)
 
@@ -667,6 +609,3 @@ export default PerformanceOptimizer;)
   return null;
 }
 export default PerformanceOptimizer;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

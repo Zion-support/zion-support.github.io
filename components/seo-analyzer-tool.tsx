@@ -528,7 +528,6 @@ type="url""
                 )}
               </Button>
             </div>
-          </div>
 
 <div className='flex flex-col "sm": flex-row gap-6 justify-center'>'
             <Button,
@@ -550,7 +549,6 @@ variant='outline';'
               Schedule Demo
             </Button>
           </div>
-        </div>
       </section>
       {/* Features Section *
 }
@@ -623,7 +621,6 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
                 className="card-hover group border-gradient-green"
                     </p>
                   </div>
-                </div>
               </Card>
             ))}
 
@@ -674,7 +671,6 @@ key={index}
                     <li key={factorIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;
           </div>
-        </div>
       </section>
 
                       className='flex items-center text-gray-300''
@@ -703,7 +699,6 @@ key={index}
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Demo Analysis Results */}
@@ -780,7 +775,6 @@ key={index}
                       {analysisResults.mobileScore}/100
                     </span>
                   </div>
-                </div>
               </Card>
 
               {/* Issues */}
@@ -800,10 +794,8 @@ key={index}
                           "Priority": {issue.priorit
 }
                         </div>;
-                      </div>;
                         </div>                      </div>;
                       </div>;
-                    </div>;
                   ))}
 
                 </div>
@@ -890,12 +882,10 @@ className={`px-2 py-1 rounded text-xs ${`                            }
                           {keyword.difficulty}
                         </span>
                       </div>
-                    </div>
                   ))}
                 </div>
               </Card>
             </div>
-          </div>
         </section>
                         <span;
                           className={`px-2 py-1 rounded text-xs ${keyword && keyword.difficulty === 'low';
@@ -929,7 +919,6 @@ className={`px-2 py-1 rounded text-xs ${`                            }
                         >;
                           {keyword.difficulty}</span>;
                       </div>;
-                    </div>;
                   ))}<div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
@@ -1032,7 +1021,6 @@ className={`px-2 py-1 rounded text-xs ${`                            }
                     <span className="text - gray - 400">Mobile SEO</span>;
                     <span className="font - bold text - green - 400">{analysis_results.mobile_score}/100</span>;
                   </div>;
-                </div>;
               </Card>;
               {/* Issues */}
               <Card className='border - gradient - green'>;
@@ -1114,7 +1102,6 @@ className={`px-2 py-1 rounded text-xs ${`                            }
                 </div>;
               </Card>;
             </div>;
-          </div>;
               Simple Pricing;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -1144,7 +1131,6 @@ className={`px-2 py-1 rounded text-xs ${`                            }
           </div>;</div>;
               </Card>;
             </div>;
-          </div>;
         </section>;
       )}
       {/* Pricing Section */}
@@ -1263,12 +1249,10 @@ href='/contact''
             )
 }
           </div>;
-        </div>;
       </section>;
               </Card>;
             ))}
           </div>;
-        </div>;
       </section>;
               </Card>;
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 "hover": from-green-600 "hover":to-emerald-700' : 'bg-gray-700 "hover":bg-gray-600'} text-white,'
@@ -1300,7 +1284,6 @@ href='/contact''
                 </Button>
               </Card>
             ))}
-      {/* CTA Section */}
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-["size":20px_20px] opacity-10' />;'
@@ -1336,7 +1319,6 @@ variant='outline';'
               Schedule Demo
             </Button>
           </div>
-        </div>
       </section>
     </>
             <Button;
@@ -1352,24 +1334,17 @@ variant='outline';'
               Schedule Demo;
             </Button>;
           </div>;
-        </div>;
       </section>;className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl';
             >;
   );
 }
-}
-<<<<<<< HEAD
   );
 }
               Schedule Demo;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

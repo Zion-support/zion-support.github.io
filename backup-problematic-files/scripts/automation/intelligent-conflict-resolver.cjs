@@ -88,7 +88,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, "ERROR");
       return { "type": "error", "resolvable": false, "error": error.message };
     };
-  };
 ;
   extractConflictMarkers(content) {}
   const markers = [];
@@ -122,7 +121,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         if (marker.end) {}
   markers.push(marker)};
       };
-    };
 ;
     return markers};
 ;
@@ -188,7 +186,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       startContent.includes("tailwind");
     )};
 ;
-  canAutoResolve(markers) {}
   canAutoResolve(markers) {}
   // Can auto-resolve package.json, lock files, and some config conflicts;
     const autoResolvableTypes = ["package-json", "lock-file", "config-file"];
@@ -462,7 +459,6 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
   this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");
       throw error};
   };
-};
 ;
 // Main execution;
 if (require.main === module) {}
@@ -492,9 +488,4 @@ if (require.main === module) {}
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
-<<<<<<< HEAD
 module.exports = IntelligentConflictResolver;
-module.exports = IntelligentConflictResolver;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

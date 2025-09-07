@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true},
-<<<<<<< HEAD
   typescript: { 
     ignoreBuildErrors: true 
   },
@@ -18,14 +17,9 @@ const nextConfig = {
   },
   
   // Image optimization
-=======
-  typescript: {
-    ignoreBuildErrors: true},
->>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-<<<<<<< HEAD
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
@@ -55,14 +49,6 @@ const nextConfig = {
         ]
       }
     ];
-=======
-    unoptimized: true,
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
->>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   },
   experimental: {
     optimizePackageImports: ['@heroicons/react']},
@@ -123,7 +109,6 @@ const nextConfig = {
       net: false,
       tls: false
     };
-<<<<<<< HEAD
     
     // Development watch options
     if (dev) {
@@ -165,21 +150,12 @@ const nextConfig = {
         poll: 1000,
         aggregateTimeout: 300
       }
-    }
     return config;
   },
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
-=======
-
-    return config;
-  },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
->>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
     pagesBufferLength: 2
   }
 };

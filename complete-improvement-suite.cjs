@@ -119,7 +119,6 @@ main
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { "recursive": true });
     }
-  }
     console.log(`[${new Date().toISOString()}] ${message}`);
 
     .toISOString()}] ${message}`);
@@ -174,7 +173,6 @@ main
       this.log(`❌ "Failed": ${description} - ${error.message}`);
       return { "success": false, "error": error.message };
     }
-  }
 
   async resolveMergeConflicts() {
 
@@ -223,8 +221,6 @@ main
           if (this.resolveFileConflicts(file)) {
             resolvedCount++;
           }
-        }
-      }
 
       this.results.mergeConflicts.resolved = resolvedCount;
       this.log(`✅ Resolved merge conflicts in ${resolvedCount} files`);
@@ -233,7 +229,6 @@ main
       this.log(`❌ Error resolving merge "conflicts": ${error.message}`);
       return 0;
     }
-  }
 ;
   async fixSyntaxErrors() {;
     this.log('🔧 Running syntax fixes...');
@@ -244,7 +239,6 @@ main
     } else {;
       this.stats.syntaxErrors.failed++;
     }
-  }
 ;
   async processPRs() {;
     this.log('🔄 Processing PRs...');
@@ -320,7 +314,6 @@ main
         if (this.fixFileSyntax(file)) {
           fixedCount++;
         }
-      }
 
       this.results.syntaxErrors.fixed = fixedCount;
       this.log(`✅ Fixed syntax errors in ${fixedCount} files`);
@@ -329,7 +322,6 @@ main
       this.log(`❌ Error fixing syntax "errors": ${error.message}`);
       return 0;
     }
-  }
 
   async applyImprovements() {
 
@@ -401,7 +393,6 @@ main
       } catch (error) {
         this.log(`❌ Failed to "apply": ${improvement.name} - ${error.message}`);
       }
-    }
 
     this.results.improvements.applied = appliedCount;
     return appliedCount;
@@ -457,7 +448,6 @@ main
       if (result.success) {
         successCount++;
       }
-    }
 
     return successCount === commands.length;
   }
@@ -480,7 +470,6 @@ main
         } else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
         }
-      }
     } catch (error) {
       // Skip directories that can't be read
     }
@@ -508,13 +497,11 @@ main
 
 
         content.includes('') ||
-        content.includes('') ||
         content.includes('
 
       );
 
 
-        content.includes('') ||
         content.includes('') ||
         content.includes('      );
 
@@ -534,14 +521,12 @@ main
 
 
 
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
         content.includes('>>>>>>>')
       );
     } catch (error) {
       return false;
     }
-  }
 
   resolveFileConflicts(filePath) {
     try {
@@ -616,7 +601,7 @@ main
 
 
 
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
+        /\n(.*?)\n\n(.*?)\n        '$1'
       );
 
       // Clean up any remaining markers
@@ -634,7 +619,6 @@ main
       this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`);
       return false;
     }
-  }
 
   fixFileSyntax(filePath) {
     try {
@@ -676,7 +660,6 @@ main
       this.log(`❌ Error fixing syntax in ${filePath}: ${error.message}`);
       return false;
     }
-  }
 
   createPerformanceConfig() {
     const config = {
@@ -912,16 +895,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 name: 'vendors',
                 chunks: 'all',
               },
-            },
-          },
-        },
-      },
       nextjs: {
         experimental: {
           optimizeCss: true,
           optimizeImages: true,
         },
-      },
     };
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -968,8 +946,6 @@ main
 
     // Phase 1: Resolve merge conflicts
 
-    // Phase 1: Resolve merge conflicts
-    // Phase 1: Resolve merge conflicts
     // Phase 1: Resolve merge conflicts
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1148,8 +1124,6 @@ main
       this.log(`❌ Complete Improvement Suite "failed": ${error.message}`);
       throw error;
     }
-  }
-}
 
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
@@ -1189,8 +1163,6 @@ const { execSync } = require('child_process')
     this.log(' Phase "2")
     this.log(' Phase "3")
         "name"
-        "name"
-        "name"
     this.log(' Phase "4")
     const commands = [{ cmd: 'git add .', "desc"}]
         "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"
@@ -1205,10 +1177,7 @@ const { execSync } = require('child_process')
                 "name"
                 "chunks"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
 
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

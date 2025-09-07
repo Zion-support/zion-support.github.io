@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -7,7 +6,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 }
 
 
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 
 main
 
@@ -31,7 +30,7 @@ export default function handler(req: any, res: any) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
 import { getGitStatus, requireRoles } from "../../../utils/devAccess"
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -54,7 +53,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
@@ -86,7 +85,7 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
       res.status(400).json({ error: "Invalid path" })
 
       return;
@@ -109,12 +108,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 ;
   if (req.method === "POST") {;
     const { path: repoRelativePath } = req.body || {};
@@ -128,12 +125,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
     const result = deployBasicTemplateForPath(repoRelativePath);
     res.status(200).json({ ok: true, result });
     return;
@@ -144,14 +139,12 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   res.setHeader("Allow", "GET, POST")
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+:pages_backup/api/dev/source-map.ts
   const identity = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(405).end("Method Not Allowed")
@@ -165,15 +158,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
-}
+:pages_backup/api/dev/source-map.ts
 }
 
 
@@ -182,15 +171,3 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ sourceMap: 'available' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

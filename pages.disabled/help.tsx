@@ -155,8 +155,6 @@ export default function Help() {
                   className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
                 />
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Support Channels */}
@@ -191,7 +189,6 @@ export default function Help() {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Resources */}
@@ -219,7 +216,6 @@ export default function Help() {
                 </Link>
               ))}
             </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -240,8 +236,6 @@ export default function Help() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Quick Actions */}
@@ -301,7 +295,6 @@ export default function Help() {
                 <p className="text-sm text-blue-100">Join our growing team</p>
               </Link>
             </div>
-          </div>
         </section>
 
         {/* Contact CTA */}
@@ -330,24 +323,12 @@ export default function Help() {
                 Call Us
               </a>
             </div>
-          </div>
         </section>
       </main>
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -376,7 +357,6 @@ export default function Help() {const faqs = [;
   ];const resources = [;
     {icon: BookOpen,title: 'Documentation',description: 'Comprehensive guides and API documentation',link: '/docs';
     },{icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides and tutorials',link: '/tutorials';
-    },{icon: FileText,title: 'Knowledge Base',description: 'Searchable articles and troubleshooting guides',link: '/knowledge-base';
     },{icon: FileText,title: 'Knowledge Base',description: 'Searchable articles and troubleshooting guides',link: '/knowledge-base';
     },{icon: Users,title: 'Community Forum',description: 'Connect with other users and get peer support',link: '/community';
     }
@@ -419,8 +399,6 @@ export default function Help() {const faqs = [;
                   className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-lg";
                 />;
               </div>;
-            </div>;
-          </div>;
         </section>;
         {/* Support Channels */}
         <section className="py-20 bg-white">;
@@ -453,7 +431,6 @@ export default function Help() {const faqs = [;
                 </div>;
               ))}
             </div>;
-          </div>;
         </section>;
         {/* Resources */}
         <section className="py-20 bg-gray-50">;
@@ -479,7 +456,6 @@ export default function Help() {const faqs = [;
                 </Link>;
               ))}
             </div>;
-          </div>;
         </section>;
         {/* FAQ Section */}
         <section className="py-20 bg-white">;
@@ -498,8 +474,6 @@ export default function Help() {const faqs = [;
                   </div>;
                 ))}
               </div>;
-            </div>;
-          </div>;
         </section>;
         {/* Quick Actions */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
@@ -555,7 +529,6 @@ export default function Help() {const faqs = [;
                 <p className="text-sm text-blue-100">Join our growing team</p>;
               </Link>;
             </div>;
-          </div>;
         </section>;
         {/* Contact CTA */}
         <section className="py-20 bg-white">;
@@ -583,18 +556,7 @@ export default function Help() {const faqs = [;
                 Call Us;
               </a>;
             </div>;
-          </div>;
         </section>;
       </main>;
     </>;
   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

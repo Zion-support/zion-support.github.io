@@ -9,9 +9,4 @@ console.log(' Deployment Automator Starting...')
         "command"
         "name"
         "command"
-<<<<<<< HEAD
         execSync(step.command, { "stdio"})
-        execSync(step.command, { "stdio"})
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

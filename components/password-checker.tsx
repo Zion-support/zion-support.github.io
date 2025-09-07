@@ -66,62 +66,7 @@ export default function PasswordCheckerPage() {;
     } else {
       resetAnalysis()
     }
-<<<<<<< HEAD
   }, [password]);
-=======
-
-      "length": pass.length >= 8,
-      "uppercase": /[A-Z]/.test(pass),
-      "lowercase": /[a-z]/.test(pass),
-      "numbers": /\d/.test(pass),
-"symbols": /[!@#$%^&*()_+\-=\[\]
-};':"\\|,.<>\/?]/.test(pass),"
-      "noCommon": !isCommonPassword(pass),
-      "noSequential": !hasSequentialChars(pass)
-    };
-
-
-    setChecks(newChecks);
-    // Calculate strength score,
-let score = 0;
-    score += newChecks.length ? 15 : 0;
-    score += newChecks.uppercase ? 15 : 0;
-    score += newChecks.lowercase ? 15 : 0;
-    score += newChecks.numbers ? 15 : 0;
-    score += newChecks.symbols ? 20 : 0;
-    score += newChecks.noCommon ? 10 : 0;
-    score += newChecks.noSequential ? 10 : 0;
-    // Bonus for length;
-    if (pass.length >= 12) score += 10;
-    if (pass.length >= 16) score += 5;
-
-    setStrength(score);
-    // Set strength text and color,
-if (score >= 90) {
-
-      }
-
-      setStrengthText('Very Strong');'
-setStrengthColor('text-green-400');'
-    } else if (score >= 70) {
-      }
-      setStrengthText('Strong');'
-      setStrengthColor('text-green-400');'
-    } else if (score >= 50) {;
-      }
-      setStrengthText('Moderate');'
-      setStrengthColor('text-yellow-400');'
-    } else if (score >= 30) {;
-      }
-      setStrengthText('Weak');'
-      setStrengthColor('text-orange-400');'
-    } else {;
-      }
-      setStrengthText('Very Weak');'
-      setStrengthColor('text-red-400');'
-    }
-  }, [password]),
->>>>>>> origin/main
 
   const analyzePassword = (pass: string) => {
     const newChecks = {
@@ -376,7 +321,6 @@ property='"og":description''
               <Lock className='w-4 h-4 mr-2' />'
               Password Security & Analysis
             </div>
-          </div>
           <h1 className='text-4xl "sm":text-5xl "lg":text-6xl font-bold text-white mb-8 leading-tight'>'
             Password Strength Checker
           </h1>
@@ -467,8 +411,6 @@ variant='outline';'
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}{generatedPasswor,'
 }</div>;
                   </div>;
-                    </div>;
-                  </div>;
                 )}
 
 
@@ -478,7 +420,6 @@ variant='outline';'
                   <p>• Detailed feedback and suggestions</p>
                   <p>• Strong password generator</p>
                 </div>
-              </div>
             </Card>
 
 <Card className='p-8 bg-gray-800 border border-gray-700'>'
@@ -501,7 +442,6 @@ variant='outline';'
                       <div,
 className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}`                        style={{ "width": `${strength}%` ,`} />
                     </div>
-                  </div>
 
                   <div>;
                     <div className='flex items-center justify-between mb-2'>;'
@@ -516,7 +456,6 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                       <div;
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}`                        style={{ "width": `${strength}%` ,`} />;
                     </div>;
-                  </div>;
                   <div>;
                     <div className="flex items-center justify-between mb-2">;"
                       <span className="text-sm text-gray-300">Password "Strength":</span>;"
@@ -570,7 +509,6 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                       {show_password ? <EyeOff className="w - 5 h - 5" /> : <Eye className="w - 5 h - 5" />}
                     </button>;
                   </div>;
-                </div>;
                 {/* Generate Password */}
                 <div>;
                   <Button;
@@ -619,7 +557,6 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                   <p>• Detailed feedback and suggestions</p>;
                   <p>• Strong password generator</p>;
                 </div>;
-              </div>;
             </Card>;
             {/* Strength Analysis */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
@@ -655,7 +592,6 @@ className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()
                         style={{ width: `${strength}%` }}
                       />;
                     </div>;
-                  </div>;
                   {/* Security Checks */}
                   <div>;
                     <h4 className='text - lg font - semibold text - white mb - 3'>;
@@ -690,7 +626,6 @@ className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}`
                         </div>
                       ))}
                     </div>
-                  </div>
 
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
@@ -715,7 +650,6 @@ key={index}
 
                         ))}
                       </div>;
-                    </div>;
                   )}
                 </div>;
               ) : (<div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>;'
@@ -728,7 +662,6 @@ key={index}
               )}
             </Card>;
           </div>;
-        </div>;
       </section>;
                   {/* Suggestions */}
                   {suggestions && suggestions.length > 0 && (<div>;
@@ -751,8 +684,6 @@ key={index}
                             <span className="text-sm text-yellow-300">{suggestion}</span>;"
                         ))}
                       </div>;
-                    </div>;
-                  </div>;
 
 
                   {/* Suggestions */}
@@ -766,7 +697,6 @@ key={index}
                           </div>
                         ))}
                       </div>
-                    </div>
                   )}
                 </div>
               ) : (
@@ -780,7 +710,6 @@ key={index}
 
             </Card>
           </div>
-        </div>
       </section>
 
       {/* Features */}
@@ -847,7 +776,6 @@ happens locally in your browser.
               </p>
             </Card>
           </div>
-        </div>
       </section>
 
 <section className='py-20 bg-gray-900'>'
@@ -929,7 +857,6 @@ passwords for all your accounts.
               </ul>
             </Card>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -955,20 +882,16 @@ variant='outline';'
               View Pricing
             </Button>
           </div>
-        </div>
       </section>
     </>
   );
 }
-}
-<<<<<<< HEAD
   );
 }
   )}
               View Pricing;
             </Button>;
           </div>;
-        </div>;
       </section>;
   )}
     </>)}className='border-white text-white hover:bg-white hover:text-indigo-600';
@@ -976,7 +899,6 @@ variant='outline';'
               View Pricing;
             </Button>;
           </div>;
-        </div>;
       </section>;
     </>;
   );
@@ -986,6 +908,3 @@ variant='outline';'
   )}
   )
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

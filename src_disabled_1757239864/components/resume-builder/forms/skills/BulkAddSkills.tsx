@@ -40,8 +40,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
                   category: category,
                   proficiency: 3})
               }
-            }
-          }
           
           // Reset the form and bulk input
           setBulkSkills('');
@@ -51,7 +49,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
         }
-      }
     } catch (err: any) {
       setError(err.message || 'Failed to categorize skills')
     }
@@ -90,11 +87,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
-    </div>
   )
-<<<<<<< HEAD:src/components/resume-builder/forms/skills/BulkAddSkills.tsx
+:src/components/resume-builder/forms/skills/BulkAddSkills.tsx
 };
-=======
 },
 ;
->>>>>>> origin/main:src_disabled_1757239864/components/resume-builder/forms/skills/BulkAddSkills.tsx

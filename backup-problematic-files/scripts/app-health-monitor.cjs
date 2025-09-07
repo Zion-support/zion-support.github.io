@@ -7,7 +7,6 @@ const { execSync } = require('child_process')
       const result = execSync('npm run build')
         "encoding"
       this.log(' Build "health")
-      this.log(' Build "health")
         "encoding"
       this.log(' "Dependencies")
       this.log('⚠ "Dependencies")
@@ -25,9 +24,4 @@ const { execSync } = require('child_process')
       "dependencies"
       "codeQuality"
       "performance"
-<<<<<<< HEAD
       console.error('\n� App Health Monitor "failed")
-      console.error('\n� App Health Monitor "failed")
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

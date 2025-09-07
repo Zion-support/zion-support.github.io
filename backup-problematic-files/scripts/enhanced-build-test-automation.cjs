@@ -48,9 +48,4 @@ const path = require("path")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
-<<<<<<< HEAD
       return { "success": false, "error"}
-      return { "success": false, "error"}
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

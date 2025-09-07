@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -229,7 +228,6 @@ export default function ExplorePage() {
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
                 </div>
-              </div>
 
               {/* Sort Options */}
               <div className="flex items-center gap-4">
@@ -243,9 +241,6 @@ export default function ExplorePage() {
                   <option value="featured">Sort by Featured</option>
                 </select>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Featured Services */}
@@ -309,7 +304,6 @@ export default function ExplorePage() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Categories Grid */}
@@ -399,8 +393,6 @@ export default function ExplorePage() {
                           <div className="text-xs text-white/60">
                             {category.featured ? 'Featured' : 'Active'}
                           </div>
-                        </div>
-                      </div>
                       
                       {/* CTA */}
                       <div className="flex items-center justify-between">
@@ -409,7 +401,6 @@ export default function ExplorePage() {
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
                       </div>
-                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -511,7 +502,6 @@ export default function ExplorePage() {
               </motion.div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -551,28 +541,4 @@ export default function ExplorePage() {
       <SmartFooter />
     </div>
   )
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function Explore() {
-  return (
-    <Layout>
-      <Head>
-        <title>Explore - Zion Tech Group</title>
-        <meta name="description" content="Explore solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Explore</h1>
-          <p className="text-lg text-gray-600">
-            Professional explore solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

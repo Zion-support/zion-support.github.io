@@ -51,7 +51,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Customer Success''
     "tags": [
       'Customer Success''
@@ -140,7 +139,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Supply Chain''
     "tags": [
       'Supply Chain''
@@ -232,7 +230,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Identity Verification''
     "tags": [
       'Identity Verification''
@@ -326,7 +323,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'HR Analytics''
     "tags": [
       'HR Analytics''
@@ -419,7 +415,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
           '24/7 support''
         ]
       }
-    }
     "category": 'Financial Risk Management''
     "tags": [
       'Risk Management''
@@ -461,16 +456,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards''
     ]
   }
-<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -478,8 +465,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Risk Management Standards'
     ]
   }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution''

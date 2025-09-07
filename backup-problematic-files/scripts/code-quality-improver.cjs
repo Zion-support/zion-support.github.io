@@ -52,9 +52,4 @@ const { execSync } = require('child_process')
         "action"
         "status"
         "successful"
-<<<<<<< HEAD
         "failed"
-        "failed"
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

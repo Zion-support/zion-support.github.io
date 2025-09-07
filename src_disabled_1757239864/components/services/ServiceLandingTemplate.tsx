@@ -88,7 +88,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-16 bg-zion-blue">
@@ -123,12 +122,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
                     </div>
-                  </div>
                 </CardFooter>
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="py-12 bg-zion-blue-dark text-center">
@@ -142,15 +139,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
+:src/components/services/ServiceLandingTemplate.tsx
 };
-=======
 
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
                 </div>))}
             </div>;
-          </div>;
         </section>)}
       <section className="py - 16 px - 4 bg - blue - 600">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -172,4 +167,3 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 }
 
 },
->>>>>>> origin/main:src_disabled_1757239864/components/services/ServiceLandingTemplate.tsx

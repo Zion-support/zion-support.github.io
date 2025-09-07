@@ -4,11 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Final Syntax Fix');
-<<<<<<< HEAD
-=======
-console.log('====');
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -89,7 +84,6 @@ for (const file of filesToFix) {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-}
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 console.log('🎉 Final syntax fix completed!');
