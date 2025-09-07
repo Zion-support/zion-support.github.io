@@ -6,8 +6,8 @@ interface TestimonialCardProps {
   role: string;
   company: string;
   content: string;
-  avatar?: string;}
-  rating?: number;}
+  avatar?: string;
+  rating?: number;
 }
 export default function TestimonialCard({
   name,

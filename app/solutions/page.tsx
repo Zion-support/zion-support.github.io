@@ -153,7 +153,7 @@ export default function SolutionsPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Let's discuss how our solutions can help you achieve your goals
+            Let&apos;s discuss how our solutions can help you achieve your goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

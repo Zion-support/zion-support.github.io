@@ -1,15 +1,15 @@
 import React from 'react';
 interface FeatureCardProps {
-icon: string | React.ReactNode;
+  icon: string | React.ReactNode;
   title: string;
-  description: string;}
-  color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';}
+  description: string;
+  color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';
 }
 export default function FeatureCard({
   icon,
   title,
-  description}
-  color = 'blue'}
+  description,
+  color = 'blue'
 }: FeatureCardProps) {
 
   const colorClasses = {

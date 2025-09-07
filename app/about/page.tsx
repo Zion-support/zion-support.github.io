@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Metadata } from 'next';
 import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
 
@@ -45,7 +44,7 @@ export default function AboutPage() {
               <Users className="h-12 w-12 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Innovation</h3>
               <p className="text-slate-300">
-                Pushing the boundaries of what's possible with technology.
+                Pushing the boundaries of what&apos;s possible with technology.
               </p>
             </div>
             <div className="text-center p-6 bg-slate-800 rounded-lg">
