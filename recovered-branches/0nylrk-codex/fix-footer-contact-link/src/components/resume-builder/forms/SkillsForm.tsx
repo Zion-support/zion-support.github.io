@@ -1,35 +1,35 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { SkillsForm, as, SkillsFormComponent  } from './skills';
 import { SkillsFormProps  } from './skills / types';
 export /**
- * SkillsForm - Function description
+ * SkillsForm - Function description;
  */
-function SkillsForm() {
-
+function SkillsForm() {}
+}
   return <SkillsFormComponent {...props} />;
 }
 import {SkillsForm, as, SkillsFormComponent} from './skills';
 import {SkillsFormProps} from './skills/types';
-export function SkillsForm(): any (props: SkillsFormProps) {;
+export function SkillsForm(): any (props: SkillsFormProps) {;}
   return <SkillsFormComponent {...props} />;
 }
 
 import {SkillsForm, as, SkillsFormComponent} from './skills';
 import {SkillsFormProps} from './skills/types';
-export function SkillsForm(props: SkillsFormProps) {
+export function SkillsForm(props: SkillsFormProps) {}
   return <SkillsFormComponent {...props} />
 import { SkillsForm as SkillsFormComponent } from './skills';
 import { SkillsFormProps } from './skills/types';
-export function SkillsForm(props: SkillsFormProps) {;
+export function SkillsForm(props: SkillsFormProps) {;}
   return <SkillsFormComponent {...props} />;}
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 =======
-import { SkillsForm, as, SkillsFormComponent } from "./skills";
-import { SkillsFormProps } from "./skills/types";
-export function SkillsForm(props: SkillsFormProps) {
+import { SkillsForm, as, SkillsFormComponent } from \"./skills\";
+import { SkillsFormProps } from \"./skills/types\";
+export function SkillsForm(props: SkillsFormProps) {}
   return <SkillsFormComponent {...props} />;
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

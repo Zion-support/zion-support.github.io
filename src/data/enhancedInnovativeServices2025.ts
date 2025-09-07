@@ -1,8 +1,8 @@
  export interface ServiceContact {
   phone: string;
    email: string;
-   website: string;
-   address: string,
+   website: string;}
+   address: string,}
 }
 
 export interface MicroSaasService {
@@ -24,8 +24,8 @@ export interface MicroSaasService {
    roi: string;
    setupTime: string;
    integrations: string[];
-   freeTier: boolean;
-   trialPeriod: string,
+   freeTier: boolean;}
+   trialPeriod: string,}
 }
 
 export interface ITService {
@@ -44,8 +44,8 @@ export interface ITService {
    responseTime: string;
    sla: string;
    certifications: string[];
-   deliveryTime: string;
-   support: string,
+   deliveryTime: string;}
+   support: string,}
 }
 
 export interface AIService {
@@ -66,8 +66,8 @@ export interface AIService {
    accuracy: string;
    trainingData: string;
    compliance: string[];
-   aiScore: number;
-   useCases: string[],
+   aiScore: number;}
+   useCases: string[],}
 }
 
-export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';"";
+export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';\"\";

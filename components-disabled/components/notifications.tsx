@@ -1,10 +1,10 @@
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props) {}
+    super(props);}
     this.state = { hasError: false };
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
 
   componentDidCatch(error, errorInfo) {
@@ -12,7 +12,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+      return <div />Something went wrong.</div>;
 
 import React from 'react';
 
@@ -23,8 +23,7 @@ import dynamic from 'next / dynamic';
 const NotificationCenter = dynamic (
   () => import ('../components / notifications / NotificationCenter'),
   {
-    ssr: false
-
+    ssr: false;
 );
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
@@ -33,21 +32,22 @@ const NotificationCenter = dynamic(;
     ssr: false,;
 
 );
-export default function NotificationsPage() {;
-  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
+export default function NotificationsPage() {;}
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;}
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
 
 ;
 export default /**
- * NotificationsPage - Function description
+ * NotificationsPage - Function description;
  */
-function NotificationsPage() {
-  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+function NotificationsPage() {}
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {}
   ssr: false}),
 export default /**
- * NotificationsPage - Function description
+ * NotificationsPage - Function description;
  */
 function NotificationsPage() {
-  return <NotificationCenter />;
+  return <NotificationCenter />;}
+}

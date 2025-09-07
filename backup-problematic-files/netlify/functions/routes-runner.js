@@ -1,9 +1,9 @@
-const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '..', '..', relPath)const res = spawnSync('node', [abs, ...args], {stdio: 'pipe';
-    encoding: 'utf8';
+const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '..', '..', relPath)const res = spawnSync('node', [abs, ...args], {stdio: 'pipe';}
+    encoding: 'utf8';}
   })return {status: res.status |0;
-    stdout: res.stdout |'';
-    stderr: res.stderr |'';
-  }exports.handler = async () => {const logs = [];
+    stdout: res.stdout |'';}
+    stderr: res.stderr |'';}
+  }exports.handler = async () => {const logs = [];}
   function logStep() {logs.push(`\n=== ${name} ===`)const { status, stdout, stderr } = fn()if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return status;
   }
   logStep('routes:generate', () =>;
@@ -13,17 +13,17 @@ const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
-    stdio: "stdio",
-    encoding: 'utf8'
+    stdio: \"stdio\",}
+    encoding: 'utf8'}
   });
   return {
     status: res.status |0;
-    stdout: res.stdout |''
-    stderr: res.stderr |''
+    stdout: res.stdout |''}
+    stderr: res.stderr |''}
   }
 exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
+  const logs = [];}
+  function logStep(name, fn) {}
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);

@@ -1,4 +1,6 @@
-import { useState, useCallback, useRef, useEffect } from 'react' import { useAnalytics } from './useAnalytics' export const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true,
+import { useState, useCallback, useRef, useEffect } from 'react' import { useAnalytics } from './useAnalytics' export const useAICodeGeneration = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true,}
 }) const [isGenerating, setIsGenerating] =;
   useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -6,5 +8,5 @@ import { useState, useCallback, useRef, useEffect } from 'react' import { useAna
   const [codeAnalysis, setCodeAnalysis] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [history, setHistory] = useState([]);
-  const generationTimeoutRef = useRef(null)"";
+  const generationTimeoutRef = useRef(null)\"\";
 }

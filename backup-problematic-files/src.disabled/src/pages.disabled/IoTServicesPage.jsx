@@ -1,15 +1,19 @@
 import React from 'react';
-const IoTServicesPage = ({ className }) => {return (<div className={className || ''}>;
-      <h1>IoTServicesPage</h1>;
-      <p>This component is under development.</p>;
+const IoTServicesPage = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />IoTServicesPage</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const IoTServicesPage = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>IoTServicesPage</h1>
-      <p>This component is under development.</p>
+const IoTServicesPage = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />IoTServicesPage</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

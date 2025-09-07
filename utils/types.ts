@@ -5,8 +5,8 @@ export interface Application {;
   position: string;
   experience: number;
   skills: string[];
-  createdAt: string;
-  updatedAt?: string;
+  createdAt: string;}
+  updatedAt?: string;}
 }
 
 
@@ -16,13 +16,13 @@ export interface Application {;
   id: string;
   jobId: string;
   talentSlug: string;
-  status: "applied" | "skipped" | "pending";
-  createdAtIso: string;
+  status: \"applied\" | \"skipped\" | \"pending\";}
+  createdAtIso: string;}
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
-export type UserRole = "admin" | "user" | "guest";
-export type UserRole = "admin" | "user" | "guest";
+export type UserRole = \"admin\" | \"user\" | \"guest\";
+export type UserRole = \"admin\" | \"user\" | \"guest\";
 
 
 export interface Application {
@@ -32,8 +32,8 @@ export interface Application {
   position: string;
   experience: number;
   skills: string[];
-  createdAt: string;
-  updatedAt?: string;
+  createdAt: string;}
+  updatedAt?: string;}
 }
 
 export type UserRole = 'admin' | 'user' | 'guest';

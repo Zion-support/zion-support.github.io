@@ -12,12 +12,13 @@ const { execSync, spawn } = require("child_process")
       "warnings"
       "metrics"
       "comprehensive-error-fixer.cjs"
-      "advanced-build-optimizer.js"
-      "performance-monitor-enhanced.js"
-      "auto-fixer.js"
-      "optimize-build.js"
+      "advanced-build-optimizer.js",
+      "performance-monitor-enhanced.js",
+      "auto-fixer.js",
+      "optimize-build.js",
       "performance-optimizer.js"
-      fs.mkdirSync(this.reportsDir, { "recursive"})
+    ];
+    fs.mkdirSync(this.reportsDir, { recursive: true });
   log(message, type = "info")
     const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ"
     this.log("� Starting Comprehensive Automation Orchestration...")

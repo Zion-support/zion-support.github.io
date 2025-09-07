@@ -1,7 +1,7 @@
 
-if (isLoading) {return (<div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
+if (isLoading) {return (<div className=\"flex justify-center items-center h-64\" />;
+        <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />;}
+      </div>;}
     )}if (error) {if (error) {import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -32,96 +32,96 @@ import { RESUME_STEPS  } from './constants';
 export function ResumeWizard() {const { user } = useAuth()const {isLoading;
     error;
     resume;
-    fetchResume;
-    createResume;
+    fetchResume;}
+    createResume;}
   } = useResume()const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false)// Use the extracted hook for progress calculation;
 
 const progress = null;
-  if (isLoading) {return (<div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    )}if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
+  if (isLoading) {return (<div className=\"flex justify-center items-center h-64\" />;
+        <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />;}
+      </div>;}
+    )}if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() = /> setShowNewResumeForm(true)} />;
   }
-  if (showNewResumeForm) {if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-  }if (showNewResumeForm) {return (<CreateResumeForm;
+  if (showNewResumeForm) {if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() = /> setShowNewResumeForm(true)} />;
+  }if (showNewResumeForm) {return (<CreateResumeForm;}
         onCreateResume = {handleCreateNewResume}
-        onCancel = {(,) => setShowNewResumeForm(false)}
+        onCancel = {(,) = /> setShowNewResumeForm(false)}
         isLoading = {isLoading}/>;
-    )}if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-  }if (showNewResumeForm) {return (<CreateResumeForm;
+    )}if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() = /> setShowNewResumeForm(true)} />;
+  }if (showNewResumeForm) {return (<CreateResumeForm;}
         onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
+        onCancel={() = /> setShowNewResumeForm(false)}
         isLoading={isLoading}
       />;
     )}return ({resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}<Button;
-            onClick={() => setShowNewResumeForm(true)}variant="outline";
-            size="sm";
-            className="gap-2">
+            onClick={() = /> setShowNewResumeForm(true)}variant=\"outline\";
+            size=\"sm\";
+            className=\"gap-2\">
 
-            <FilePlus className="h-4 w-4" />;
+            <FilePlus className=\"h-4 w-4\" />;
             Create New;
           </Button>;
         </div>;
       </div>;
-      <Card>;
-        <CardContent className="pt-6">;
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>;
+      <Card />;
+        <CardContent className=\"pt-6\" />;
+          <div className=\"flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6\" />;
+            <h2 className=\"text-xl font-semibold\" />{resume?.basic_info?.title |'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
-          <Tabs value={activeTab} onValueChange={setActiveTab}>;
-            variant="outline";
-            size="sm";
-            className="gap-2">
+          <Tabs value={activeTab} onValueChange={setActiveTab} />;
+            variant=\"outline\";
+            size=\"sm\";
+            className=\"gap-2\">
 
-            <FilePlus className="h-4 w-4" /> ;
+            <FilePlus className=\"h-4 w-4\" /> ;
   // Check condition;
-if ( {) {$2;
+if ( {) {$2;}
 }
-    return (<div className="flex justify - center items - center h - 64">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />
+    return (<div className=\"flex justify - center items - center h - 64\" />;
+        <Loader2 className=\"h - 8 w - 8 animate - spin text - primary\" />
     </div>
   );
 }
   // Check condition;
-if ( {) {$2;
+if ( {) {$2;}
 }
-    return (<Alert variant="destructive" className="mb - 6">;
-        <AlertCircle className="h - 4 w - 4" />;
-        <AlertTitle > Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
+    return (<Alert variant=\"destructive\" className=\"mb - 6\" />;
+        <AlertCircle className=\"h - 4 w - 4\" />;
+        <AlertTitle  /> Error</AlertTitle>;
+        <AlertDescription />{error}</AlertDescription>;
       </Alert>)}
   // Check condition;
-if ( {) {$2;
+if ( {) {$2;}
 }
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
+    return <EmptyResumeState onCreateClick={() = /> setShowNewResumeForm (true)} />;
   }
   // Check condition;
-if ( {) {$2;
+if ( {) {$2;}
 }
     return (<CreateResumeForm;
         onCreateResume = {handleCreateNewResume }
-        on_cancel = {(, ) => setShowNewResumeForm (false) }
+        on_cancel = {(, ) = /> setShowNewResumeForm (false) }
         is_loading = {is_loading }
       />)}
  ;
-  return (<div className="space - y-6">;
-      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
-        <h1 className="text - 2xl font - bold">Resume Builder</h1>;
-        <div className="flex gap - 4 flex - wrap items - center">;
+  return (<div className=\"space - y-6\" />;
+      <div className=\"flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4\" />;
+        <h1 className=\"text - 2xl font - bold\" />Resume Builder</h1>;
+        <div className=\"flex gap - 4 flex - wrap items - center\" />;
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
           <Button;
-            on_click = {(, ) => setShowNewResumeForm (true) }
-            variant="outline";
-            size="sm";
-            className="gap - 2">
+            on_click = {(, ) = /> setShowNewResumeForm (true) }
+            variant=\"outline\";
+            size=\"sm\";
+            className=\"gap - 2\">
 
-            <FilePlus className="h - 4 w - 4" />;
+            <FilePlus className=\"h - 4 w - 4\" />;
             Create New;
           </Button>;
         </div>;
-      </div>;/>;{resume && (<ResumeStepContent;
+      </div>;/>;{resume && (<ResumeStepContent;}
                 activeTab = {activeTab}
                 resume = {resume as Resume}
                 onNextStep = {nextStep}
@@ -134,27 +134,27 @@ if ( {) {$2;
         </CardContent>;
       </Card>;
     </div>;
-  )}}<AlertTitle>Error</AlertTitle> <AlertDescription> {error ;
-}</AlertDescription> </Alert>)}if (showNewResumeForm) {() => setShowNewResumeForm (false)}isLoading= {isLoading ;
-}/>)}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {activeTab;
-}onValueChange= {setActiveTab;
-}> <ResumeStepssteps= {RESUME STEPS;
-}activeTab= {activeTab;
-}onChange= {setActiveTab;
+  )}}<AlertTitle />Error</AlertTitle> <AlertDescription /> {error ;}
+}</AlertDescription> </Alert>)}if (showNewResumeForm) {() => setShowNewResumeForm (false)}isLoading= {isLoading ;}
+}/>)}> <FilePlus className=\"h-4 w-4\" /> Create New </Button> </div> </div> <Card /> </div> <Tabsvalue= {activeTab;}
+}onValueChange= {setActiveTab;}
+} /> <ResumeStepssteps= {RESUME STEPS;}
+}activeTab= {activeTab;}
+}onChange= {setActiveTab;}
 }/> {resume && (<ResumeStepContentactiveTab= {activeTab;
-      <Card>;
-        <CardContent className="pt - 6">;
-          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
-            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+      <Card />;
+        <CardContent className=\"pt - 6\" />;}
+          <div className=\"flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6\" />;}
+            <h2 className=\"text - xl font - semibold\" />{resume?.basic_info?.title || 'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
-          <Tabs value={active_tab} onValueChange={setActiveTab}>;
+          <Tabs value={active_tab} onValueChange={setActiveTab} />;
             <ResumeSteps;
               steps = {RESUME_STEPS }
               active_tab = {active_tab }
               on_change = {setActiveTab }
             />;
-            {resume && (<ResumeStepContent;
+            {resume && (<ResumeStepContent;}
                 active_tab = {active_tab }
                 resume = {resume as Resume }
                 onNextStep = {next_step }
@@ -167,26 +167,26 @@ if ( {) {$2;
   );
 }
 }
-<AlertTitle > Error</AlertTitle> <AlertDescription> {error;
+<AlertTitle  /> Error</AlertTitle> <AlertDescription /> {error;}
 }</AlertDescription> </Alert>)}// Check condition;
-if ( {) {$2;
+if ( {) {$2;}
 }
-  () => setShowNewResumeForm (false)}is_loading= {is_loading;
-}/>)}> <FilePlus className="h - 4 w - 4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {active_tab;
-}onValueChange= {setActiveTab;
-}> <ResumeSteps steps= {RESUME STEPS;
-}active_tab= {active_tab;
-}on_change= {setActiveTab;
-}/> {resume && (<ResumeStepContent active_tab= {active_tab;}resume= {resume as Resume;
-}onNextStep= {next_step;
-}onPrevStep= {prev_step;
-}/>)}</Tabs> </CardContent> </Card> </div>)}'"}}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab ;
-}onValueChange= {setActiveTab ;
-}> <ResumeSteps steps= {RESUME STEPS ;
-}activeTab= {activeTab ;
-}onChange= {setActiveTab ;
-}/> {resume && (<ResumeStepContent activeTab= {activeTab ;
-}resume= {resume as Resume ;
-}onNextStep= {nextStep ;
-}onPrevStep= {prevStep ;
-}/>)}</Tabs> </CardContent> </Card> </div>)}'";
+  () => setShowNewResumeForm (false)}is_loading= {is_loading;}
+}/>)}> <FilePlus className=\"h - 4 w - 4\" /> Create New </Button> </div> </div> <Card /> </div> <Tabs value= {active_tab;}
+}onValueChange= {setActiveTab;}
+} /> <ResumeSteps steps= {RESUME STEPS;}
+}active_tab= {active_tab;}
+}on_change= {setActiveTab;}
+}/> {resume && (<ResumeStepContent active_tab= {active_tab;}resume= {resume as Resume;}
+}onNextStep= {next_step;}
+}onPrevStep= {prev_step;}
+}/>)}</Tabs> </CardContent> </Card> </div>)}'\"}}> <FilePlus className=\"h-4 w-4\" /> Create New </Button> </div> </div> <Card /> </div> <Tabs value= {activeTab ;}
+}onValueChange= {setActiveTab ;}
+} /> <ResumeSteps steps= {RESUME STEPS ;}
+}activeTab= {activeTab ;}
+}onChange= {setActiveTab ;}
+}/> {resume && (<ResumeStepContent activeTab= {activeTab ;}
+}resume= {resume as Resume ;}
+}onNextStep= {nextStep ;}
+}onPrevStep= {prevStep ;}
+}/>)}</Tabs> </CardContent> </Card> </div>)}'\";

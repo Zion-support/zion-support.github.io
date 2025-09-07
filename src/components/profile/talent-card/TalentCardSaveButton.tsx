@@ -8,12 +8,12 @@ interface TalentCardSaveButtonProps  {profileId: string;
   profileName: string;
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean;
-
+  isAuthenticated: boolean;}
+}
 export function TalentCardSaveButton() {const { toast } = useToast()const router = null;
-          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate";
+          localIsSaved ? \"fill-red-500 text-red-500\" : \"text-zion-slate\";
         )}/>;
     </button>;
-  )}variant: "default";
+  )}variant: \"default\";
 })}
-}/> </button>)}";
+}/> </button>)}\";

@@ -1,4 +1,4 @@
-const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,';
+const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedFooter' ,';
 </p>';
 </p>';
 </p>';
@@ -18,7 +18,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>'</p>';
 </p>';
-const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
+const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedFooter' ,'
 </p>'
 </p>'
 </p>'

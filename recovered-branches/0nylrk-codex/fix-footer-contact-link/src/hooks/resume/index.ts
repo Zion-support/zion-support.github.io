@@ -7,7 +7,7 @@ import { useEducation  } from './useEducation';
 import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
-export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
+export function useResume() {  const [resume, setResume] = useState<Resume | null />(null);
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   const workOperations = useWorkExperience();
@@ -15,15 +15,15 @@ export function useResume() {  const [resume, setResume] = useState<Resume | nul
   const skillsOperations = useSkills();
   const certOperations = useCertifications();
   const resumeListOperations = useResumeList();
-  // Determine overall loading state  // Override the fetch resume function to update local state
-  const fetchResume = async (resumeId?: string) => {
-    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state
-  const fetchResume = async (resumeId?: string) => {
+  // Determine overall loading state  // Override the fetch resume function to update local state;
+const fetchResume = async (resumeId?: string) => {
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state;
+const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
-    if (result) {
-      setResume(result)
+    if (result) {}
+      setResume(result)}
     }
-    return result
+    return result;
   }export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './use_education';
@@ -42,7 +42,7 @@ import { useSkills } from './useSkills',;
 import { useCertifications } from './useCertifications',;
 import { useResumeList } from './useResumeList',;
 export function useResume() {;
-  const [resume, setResume] = useState<Resume | null>(null),;
+  const [resume, setResume] = useState<Resume | null />(null),;
   const fetchResumeOperations = useFetchResume(),;
   const resumeActions = useResumeActions(),;
   const workOperations = useWorkExperience(),;
@@ -71,8 +71,8 @@ export function useResume() {;
   // Override the fetch resume function to update local state;
   const fetchResume = async (resumeId?: string) => {;
     const result = await fetchResumeOperations.fetchResume(resumeId),;
-    if (result) {;
-      setResume(result);
+    if (result) {;}
+      setResume(result);}
     }
     return result;
   },;
@@ -100,8 +100,8 @@ export function useResume() {;
     deleteSkill: skillsOperations.deleteSkill,;
     // Certifications operations;
     addCertification: certOperations.addCertification,;
-    updateCertification: certOperations.updateCertification,;
-    deleteCertification: certOperations.deleteCertification;
+    updateCertification: certOperations.updateCertification,;}
+    deleteCertification: certOperations.deleteCertification;}
   }
 }
 ;

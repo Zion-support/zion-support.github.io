@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface SitemapProps  {// Add props here as needed;
+interface SitemapProps  {// Add props here as needed;}
 }  res.status(200).send(sitemap)}
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
-interface SitemapProps  {// Add props here as needed;
+interface SitemapProps  {// Add props here as needed;}
 }res.status(200).send(sitemap)}
 import { NextApiRequest,NextApiResponse } from';next'';export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify';';]';
 
@@ -19,15 +19,15 @@ const chatContentPages = [ '/chat-content/ai-powered-business-solutions-discussi
 
 const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages];
 
-const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages; .map((page) => { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';
-
-const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/';';) ? 'weekly';'; : 'monthly';return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('',
+const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages; .map((page) = /> { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';}
+}
+const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/';';) ? 'weekly';'; : 'monthly';return `; <url /> <loc />${baseUr,l}${page}</loc> <lastmod />${new: Date().toISOString()}</lastmod> <changefreq />${changefreq}</changefreq> <priority />${priority}</priority> </url>`}) .join('',
 }'; </urlset>`; res.setHeader( 'Content-Type','';text/xml')';res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';res.status(200).send(sitemap)}
 
-export default function Sitemap() {return (<div>;
-      <h1>Sitemap</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+export default function Sitemap() {return (<div />;
+      <h1 />Sitemap</h1>;
+      <p />This component is currently under development.</p>;}
+    </div>;}
   )}}
 export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   const baseUrl ,=
@@ -35,39 +35,39 @@ export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
 
 const staticPages = [',';
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
-ursor/add-new-services-and-deploy-updates-0462
-interface SitemapProps {
-  // Add props here as needed
+ursor/add-new-services-and-deploy-updates-0462;
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
   res.status(200).send(sitemap)}
   res.status(200).send(sitemap)}
 
-interface SitemapProps {
-  // Add props here as needed
+interface SitemapProps {}
+  // Add props here as needed}
 }
 
   res.status(200).send(sitemap)}
@@ -83,18 +83,18 @@ const chatContentPages = [ '/chat-content/ai-powered-business-solutions-discussi
 
 const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages];
 
-const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages; .map((page) => { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';;
-
-const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/';';) ? 'weekly';'; : 'monthly';; return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('',
+const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages; .map((page) = /> { const priority = page === '' ?';';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';;}
+}
+const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/';';) ? 'weekly';'; : 'monthly';; return `; <url /> <loc />${baseUr,l}${page}</loc> <lastmod />${new: Date().toISOString()}</lastmod> <changefreq />${changefreq}</changefreq> <priority />${priority}</priority> </url>`}) .join('',
 }'; </urlset>`; res.setHeader( 'Content-Type','';text/xml')';; res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';; res.status(200).send(sitemap)}
 
 export default function Sitemap({}: SitemapProps) {
   return (
-    <div>
-      <h1>Sitemap</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+    <div />
+      <h1 />Sitemap</h1>
+      <p />This component is currently under development.</p>
+    </div>}
+  );}
 }
 }
 }
@@ -111,9 +111,7 @@ export default function Sitemap({}: SitemapProps) {
 
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
 }
 }

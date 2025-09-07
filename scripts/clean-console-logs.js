@@ -1,17 +1,17 @@
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node];import { glob } from "glob;"";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node];import { glob } from \"glob;\"\";
 ursor/automate-test-improve-and-merge-code-646c;
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node];import { glob } from "glob;"";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node];import { glob } from \"glob;\"\";
 ursor/automate-test-improve-and-merge-code-646c;
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
-#!/usr/bin/env node];import { glob } from "glob;"";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\";
+#!/usr/bin/env node];import { glob } from \"glob;\"\";
 // Directories to clean;
 
 const directories = [
@@ -31,19 +31,19 @@ const patterns = [
   // Remove standalone console.log statements;
     /^\s*console\.log\s*\([^)]*\)\s*;?\s*$/gm,// Remove console.warn statements;
     /^\s*console\.warn\s*\([^)]*\)\s*;?\s*$/gm,// Remove console.debug statements;
-    /^\s*console\.debug\s*\([^)]*\)\s*;?\s*$/gm,// Remove console.log in multi-line statements (be careful with this)/console\.log\s*\([^)]*\)\s*;?\s*(?=\n)/g
+    /^\s*console\.debug\s*\([^)]*\)\s*;?\s*$/gm,// Remove console.log in multi-line statements (be careful with this)/console\.log\s*\([^)]*\)\s*;?\s*(?=\n)/g;
 ];
 let cleanedContent = content;
-  let removedCount  = 0;patterns.forEach(pattern = > ;
-  const matches = cleanedContent.match(pattern)if (matches) {removedCount += matches.length;
+  let removedCount  = 0;patterns.forEach(pattern = > ;}
+  const matches = cleanedContent.match(pattern)if (matches) {removedCount += matches.length;}
       cleanedContent = cleanedContent.replace(pattern, '')}
   })// Clean up empty lines that might be left behind;
-  cleanedContent = cleanedContent.replace(/\n\s*\n\s*\n/g, '\n\n')if (cleanedContent !== originalContent) {return { content: cleanedContent, removed: removedCount,
+  cleanedContent = cleanedContent.replace(/\n\s*\n\s*\n/g, '\n\n')if (cleanedContent !== originalContent) {return { content: cleanedContent, removed: removedCount,}
 };
   return null;
 }function processFile() {try {const content = fs.readFileSync(filePath, 'utf8';
-  const result  = cleanConsoleLogs(content, filePath)if (result) {fs.writeFileSync(filePath, result.content, 'utf8')cleanedFiles++;
-      totalRemoved += result.removed;
+  const result  = cleanConsoleLogs(content, filePath)if (result) {fs.writeFileSync(filePath, result.content, 'utf8')cleanedFiles++;}
+      totalRemoved += result.removed;}
       console.log(`✅ Cleaned ${filePath} (removed ${result.removed} console statements)`;
       )}totalFiles++;
   } catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message)}
@@ -54,13 +54,13 @@ let cleanedContent = content;
   }console.log(`\n📊 Cleanup Summary: `)console.log(`   Total files processed: ${totalFiles}`)console.log(`   Files cleaned: ${cleanedFiles}`)console.log(`   Console statements removed: ${totalRemoved}`)console.log(`\n✨ Console.log cleanup completed!`,
 }// Run the script;
 main().catch(console.error)export { cleanConsoleLogs, processFile }
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\"
+#!/usr/bin/env node];import { glob } from \"glob;\"\"
 
 
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\"
+#!/usr/bin/env node];import { glob } from \"glob;\"\"
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\"
+#!/usr/bin/env node];import { glob } from \"glob;\"\"
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from \"glob;\"\"
+#!/usr/bin/env node];import { glob } from \"glob;\"\"

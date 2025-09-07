@@ -14,15 +14,15 @@ const EPISODES_PATH = path.join(
 );
 
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,
+  const dir = path.dirname(EPISODES_PATH);}
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed',
+  if (req.method !== 'POST')}
+    return res.status(405).json({ error: 'Method not allowed',}
 });
   ensureStorage();
 
@@ -31,13 +31,13 @@ const { episodeId } = req.body |{}
 const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
 const idx = episodes.findIndex(e => e.id === episodeId)if (idx === -1);
-  return res.status(404).json({ error: 'Episode not found',
+  return res.status(404).json({ error: 'Episode not found',}
 };
   const episode = episodes[idx];
 
 const segments = episode?.timeMarkers?.segments |[];
 
-const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${i + ,
+const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${i + ,}
 }`,start: t,end:;
       i + 1 < segments.length;
         ? segments[i + 1];

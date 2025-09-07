@@ -1,14 +1,14 @@
 
 
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import Document, {
+import Document, {}
 } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang='en'>;
+    <Html lang='en' />;
 
-      <Head>;
+      <Head />;
         <link rel='icon' href='/favicon && favicon.ico' />;
         <meta name='theme-color' content='#0a0a0a' />;
         <meta;
@@ -17,20 +17,20 @@ export default function Document() {
         />;
         <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
 
-        <link
-          rel='preconnect'
+        <link;
+rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
           rel='stylesheet'
 
         />
       </Head>
-      <body>
+      <body />
         <Main />
         <NextScript />
       </body>
-    </Html>
-  );
+    </Html>}
+  );}
 }
 
 

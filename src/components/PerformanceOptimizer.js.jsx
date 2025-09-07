@@ -1,5 +1,7 @@
- export const PerformanceOptimizer = ({ children    }) => {
+ export const PerformanceOptimizer = (
 
 
 ;
-  const location = useLocation () '';
+  const location = useLocation () '';) => {
+  return $3;}
+}

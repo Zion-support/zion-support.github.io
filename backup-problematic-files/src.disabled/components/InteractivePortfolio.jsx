@@ -1,15 +1,19 @@
 import React from 'react';
-const InteractivePortfolio = ({ className }) => {return (<div className={className || ''}>;
-      <h1>InteractivePortfolio</h1>;
-      <p>This component is under development.</p>;
+const InteractivePortfolio = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />InteractivePortfolio</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const InteractivePortfolio = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>InteractivePortfolio</h1>
-      <p>This component is under development.</p>
+const InteractivePortfolio = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />InteractivePortfolio</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

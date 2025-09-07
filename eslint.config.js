@@ -1,15 +1,15 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 import nextPlugin from '@next/eslint-plugin-next';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e;
 import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,11 +18,11 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-<<<<<<< HEAD
-// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
+<<<<<<< HEAD;
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project;
 import globals from 'globals';
-
-import path from 'path';
+}
+import path from 'path';}
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -32,41 +32,39 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-
-  allConfig: js.configs.all,
-  allConfig: js.configs.all
-
+  allConfig: js.configs.all;
+allConfig: js.configs.all,
+  allConfig: js.configs.all;
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
-  allConfig: js.configs.all
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e;}
+allConfig: js.configs.all}
 });
 
 export default [
-<<<<<<< HEAD
+<<<<<<< HEAD;
   ...compat.extends('next/core-web-vitals'),
 =======
   js.configs.recommended,
-  {
+  {}
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
+  parserOptions: {
+        ecmaFeatures: {}
+          jsx: true}
         }
       }
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'prefer-const': 'warn'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+      'prefer-const': 'warn'}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e}
     }
 
       '*.config.js',
@@ -334,16 +332,16 @@ export default [
       '*.js'
     ],
   },
-  {
+  {}
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
-      ecmaVersion: 'latest',
-
-    ]
+  ecmaVersion: 'latest',
+}
+    ]}
   },
-  {
+  {}
     files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -352,21 +350,21 @@ export default [
         ...globals.browser,
         ...globals.node,
         jest: 'readonly',
-        describe: 'readonly',
+  describe: 'readonly',
         it: 'readonly',
-        test: 'readonly',
+  test: 'readonly',
         expect: 'readonly',
-        beforeEach: 'readonly',
+  beforeEach: 'readonly',
         afterEach: 'readonly',
-        beforeAll: 'readonly',
+  beforeAll: 'readonly',
 
-        afterAll: 'readonly',
-
+        afterAll: 'readonly',}
+}
       },
       parser: typescriptParser,
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
+        ecmaFeatures: {}
+          jsx: true}
         }
       }
 
@@ -377,27 +375,27 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin
+      'react-hooks': reactHooks,}
+      '@next/next': nextPlugin}
     },
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off'
+      'react/react-in-jsx-scope': 'off',}
+      'react/prop-types': 'off'}
     }
   },
   {
 =======
 
 export default [
-  js.configs.recommended,
-  {
+  js.configs.recommended,}
+  {}
     files: ['**/*.{js,jsx,ts,tsx}'],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93
-    ignores: [
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93;
+ignores: [
       'node_modules/**',
       '.next/**',
       '.next/**/*',
@@ -534,7 +532,7 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
-<<<<<<< HEAD
+<<<<<<< HEAD;
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -560,7 +558,7 @@ export default [
       'pages-disabled/**',
       'pages-quarantine/**',
       'app/**'
-<<<<<<< HEAD
+<<<<<<< HEAD;
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_exclude/**',
@@ -582,7 +580,7 @@ export default [
       'vite.config-backup.ts'
     ]
   },
-  {
+  {}
     files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -590,15 +588,15 @@ export default [
         ...globals.browser,
         ...globals.node,
         jest: 'readonly',
-        describe: 'readonly',
+  describe: 'readonly',
         it: 'readonly',
-        test: 'readonly',
+  test: 'readonly',
         expect: 'readonly',
-        beforeEach: 'readonly',
+  beforeEach: 'readonly',
         afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-  allConfig: js.configs.all
+  beforeAll: 'readonly',
+        afterAll: 'readonly',}
+  allConfig: js.configs.all}
 });
 
 export default [
@@ -609,15 +607,15 @@ export default [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended'
   ),
-  {
+  {}
     files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module',
+  sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.es2021
+        ...globals.es2021;
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -678,10 +676,10 @@ export default [
       'pages_backup/**',
       'components_backup/**',
       '*.cjs',
-      '*.mjs'
-    ],
+      '*.mjs'}
+    ],}
   },
-  {
+  {}
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -690,25 +688,25 @@ export default [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
+  parserOptions: {
+        ecmaFeatures: {}
+          jsx: true,}
         },
       },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93
-      globals: {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93;
+globals: {
         console: 'readonly',
-        process: 'readonly',
+  process: 'readonly',
         Buffer: 'readonly',
-        __dirname: 'readonly',
+  __dirname: 'readonly',
         __filename: 'readonly',
-        global: 'readonly',
+  global: 'readonly',
         module: 'readonly',
-        require: 'readonly',
+  require: 'readonly',
         exports: 'readonly',
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e;
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -733,7 +731,7 @@ export default [
       'pages-disabled/**',
       'pages-quarantine/**',
       'app/**'
-<<<<<<< HEAD
+<<<<<<< HEAD;
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_exclude/**',
@@ -751,13 +749,13 @@ export default [
       'pages_api.disabled/**',
       'pages_backup_conflicts/**',
       'pages_disabled/**',
-      'src.pages.disabled/**',
-      'vite.config-backup.ts'
+      'src.pages.disabled/**',}
+      'vite.config-backup.ts'}
       },
 =======
     ]
   },
-  {
+  {}
     files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -765,21 +763,21 @@ export default [
         ...globals.browser,
         ...globals.node,
         jest: 'readonly',
-        describe: 'readonly',
+  describe: 'readonly',
         it: 'readonly',
-        test: 'readonly',
+  test: 'readonly',
         expect: 'readonly',
-        beforeEach: 'readonly',
+  beforeEach: 'readonly',
         afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
+  beforeAll: 'readonly',}
+        afterAll: 'readonly'}
       },
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
+  sourceType: 'module',
+        ecmaFeatures: {}
+          jsx: true}
         }
       }
     },
@@ -787,11 +785,11 @@ export default [
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': nextPlugin
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+      '@next/next': nextPlugin}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e}
     },
-    rules: {
-      'react/display-name': 'off',
+    rules: {}
+      'react/display-name': 'off',}
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
@@ -800,7 +798,7 @@ export default [
       'react/prop-types': 'off',
 
       'react/display-name': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_',}
 }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
@@ -826,8 +824,8 @@ export default [
       'no-var': 'error'
     },
     settings: {
-      react: {
-        version: 'detect'
+      react: {}
+        version: 'detect'}
       }
     }
  ,
@@ -836,161 +834,161 @@ export default [
     files: ['**/*.js', '**/*.jsx'],
     languageOptions: {
       globals: {
-        ...globals.browser,
-        ...globals.node
+        ...globals.browser,}
+        ...globals.node}
       }
       'no-console': 'off'
 =======
         window: 'readonly',
-        document: 'readonly',
+  document: 'readonly',
         navigator: 'readonly',
-        localStorage: 'readonly',
+  localStorage: 'readonly',
         sessionStorage: 'readonly',
-        fetch: 'readonly',
+  fetch: 'readonly',
         URL: 'readonly',
-        URLSearchParams: 'readonly',
+  URLSearchParams: 'readonly',
         FormData: 'readonly',
-        Headers: 'readonly',
+  Headers: 'readonly',
         Request: 'readonly',
-        Response: 'readonly',
+  Response: 'readonly',
         AbortController: 'readonly',
-        AbortSignal: 'readonly',
+  AbortSignal: 'readonly',
         setTimeout: 'readonly',
-        setInterval: 'readonly',
+  setInterval: 'readonly',
         clearTimeout: 'readonly',
-        clearInterval: 'readonly',
+  clearInterval: 'readonly',
         setImmediate: 'readonly',
-        clearImmediate: 'readonly',
+  clearImmediate: 'readonly',
         queueMicrotask: 'readonly',
-        performance: 'readonly',
+  performance: 'readonly',
         crypto: 'readonly',
-        TextEncoder: 'readonly',
+  TextEncoder: 'readonly',
         TextDecoder: 'readonly',
-        ReadableStream: 'readonly',
+  ReadableStream: 'readonly',
         WritableStream: 'readonly',
-        TransformStream: 'readonly',
+  TransformStream: 'readonly',
         CompressionStream: 'readonly',
-        DecompressionStream: 'readonly',
+  DecompressionStream: 'readonly',
         Event: 'readonly',
-        EventTarget: 'readonly',
+  EventTarget: 'readonly',
         CustomEvent: 'readonly',
-        ErrorEvent: 'readonly',
+  ErrorEvent: 'readonly',
         MessageEvent: 'readonly',
-        CloseEvent: 'readonly',
+  CloseEvent: 'readonly',
         ProgressEvent: 'readonly',
-        File: 'readonly',
+  File: 'readonly',
         FileList: 'readonly',
-        FileReader: 'readonly',
+  FileReader: 'readonly',
         Blob: 'readonly',
-        ArrayBuffer: 'readonly',
+  ArrayBuffer: 'readonly',
         Uint8Array: 'readonly',
-        Uint16Array: 'readonly',
+  Uint16Array: 'readonly',
         Uint32Array: 'readonly',
-        Int8Array: 'readonly',
+  Int8Array: 'readonly',
         Int16Array: 'readonly',
-        Int32Array: 'readonly',
+  Int32Array: 'readonly',
         Float32Array: 'readonly',
-        Float64Array: 'readonly',
+  Float64Array: 'readonly',
         DataView: 'readonly',
-        Map: 'readonly',
+  Map: 'readonly',
         Set: 'readonly',
-        WeakMap: 'readonly',
+  WeakMap: 'readonly',
         WeakSet: 'readonly',
-        Symbol: 'readonly',
+  Symbol: 'readonly',
         Proxy: 'readonly',
-        Reflect: 'readonly',
+  Reflect: 'readonly',
         Promise: 'readonly',
-        Generator: 'readonly',
+  Generator: 'readonly',
         GeneratorFunction: 'readonly',
-        AsyncGenerator: 'readonly',
+  AsyncGenerator: 'readonly',
         AsyncGeneratorFunction: 'readonly',
-        AsyncFunction: 'readonly',
+  AsyncFunction: 'readonly',
         BigInt: 'readonly',
-        BigInt64Array: 'readonly',
+  BigInt64Array: 'readonly',
         BigUint64Array: 'readonly',
-        SharedArrayBuffer: 'readonly',
+  SharedArrayBuffer: 'readonly',
         Atomics: 'readonly',
-        WebAssembly: 'readonly',
+  WebAssembly: 'readonly',
         Intl: 'readonly',
-        console: 'readonly',
+  console: 'readonly',
         process: 'readonly',
-        Buffer: 'readonly',
+  Buffer: 'readonly',
         __dirname: 'readonly',
-        __filename: 'readonly',
+  __filename: 'readonly',
         global: 'readonly',
-        module: 'readonly',
+  module: 'readonly',
         require: 'readonly',
-        exports: 'readonly',
+  exports: 'readonly',
         window: 'readonly',
-        document: 'readonly',
+  document: 'readonly',
         navigator: 'readonly',
-        localStorage: 'readonly',
+  localStorage: 'readonly',
         sessionStorage: 'readonly',
-        fetch: 'readonly',
+  fetch: 'readonly',
         URL: 'readonly',
-        URLSearchParams: 'readonly',
+  URLSearchParams: 'readonly',
         FormData: 'readonly',
-        Headers: 'readonly',
+  Headers: 'readonly',
         Request: 'readonly',
-        Response: 'readonly',
+  Response: 'readonly',
         AbortController: 'readonly',
-        AbortSignal: 'readonly',
+  AbortSignal: 'readonly',
         setTimeout: 'readonly',
-        setInterval: 'readonly',
+  setInterval: 'readonly',
         clearTimeout: 'readonly',
-        clearInterval: 'readonly',
+  clearInterval: 'readonly',
         setImmediate: 'readonly',
-        clearImmediate: 'readonly',
+  clearImmediate: 'readonly',
         queueMicrotask: 'readonly',
-        performance: 'readonly',
+  performance: 'readonly',
         crypto: 'readonly',
-        TextEncoder: 'readonly',
+  TextEncoder: 'readonly',
         TextDecoder: 'readonly',
-        ReadableStream: 'readonly',
+  ReadableStream: 'readonly',
         WritableStream: 'readonly',
-        TransformStream: 'readonly',
+  TransformStream: 'readonly',
         CompressionStream: 'readonly',
-        DecompressionStream: 'readonly',
+  DecompressionStream: 'readonly',
         Event: 'readonly',
-        EventTarget: 'readonly',
+  EventTarget: 'readonly',
         CustomEvent: 'readonly',
-        ErrorEvent: 'readonly',
+  ErrorEvent: 'readonly',
         MessageEvent: 'readonly',
-        CloseEvent: 'readonly',
+  CloseEvent: 'readonly',
         ProgressEvent: 'readonly',
-        File: 'readonly',
+  File: 'readonly',
         FileList: 'readonly',
-        FileReader: 'readonly',
+  FileReader: 'readonly',
         Blob: 'readonly',
-        ArrayBuffer: 'readonly',
+  ArrayBuffer: 'readonly',
         Uint8Array: 'readonly',
-        Uint16Array: 'readonly',
+  Uint16Array: 'readonly',
         Uint32Array: 'readonly',
-        Int8Array: 'readonly',
+  Int8Array: 'readonly',
         Int16Array: 'readonly',
-        Int32Array: 'readonly',
+  Int32Array: 'readonly',
         Float32Array: 'readonly',
-        Float64Array: 'readonly',
+  Float64Array: 'readonly',
         DataView: 'readonly',
-        Map: 'readonly',
+  Map: 'readonly',
         Set: 'readonly',
-        WeakMap: 'readonly',
+  WeakMap: 'readonly',
         WeakSet: 'readonly',
-        Symbol: 'readonly',
+  Symbol: 'readonly',
         Proxy: 'readonly',
-        Reflect: 'readonly',
+  Reflect: 'readonly',
         Promise: 'readonly',
-        Generator: 'readonly',
+  Generator: 'readonly',
         GeneratorFunction: 'readonly',
-        AsyncGenerator: 'readonly',
+  AsyncGenerator: 'readonly',
         AsyncGeneratorFunction: 'readonly',
-        AsyncFunction: 'readonly',
+  AsyncFunction: 'readonly',
         BigInt: 'readonly',
-        BigInt64Array: 'readonly',
+  BigInt64Array: 'readonly',
         BigUint64Array: 'readonly',
-        SharedArrayBuffer: 'readonly',
+  SharedArrayBuffer: 'readonly',
         Atomics: 'readonly',
-        WebAssembly: 'readonly',
+  WebAssembly: 'readonly',
         Intl: 'readonly'
       }
     },
@@ -1039,8 +1037,8 @@ export default [
       'no-with': 'error',
       'radix': 'warn',
       'wrap-iife': 'error',
-      'yoda': 'warn'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93
+      'yoda': 'warn'}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4e93}
     }
   }
       'no-console': 'off'
@@ -1057,7 +1055,7 @@ export default [
       'no-console': 'off'
     }
   }
-<<<<<<< HEAD
+<<<<<<< HEAD;
       'no-console': 'off'
     }
   }
@@ -1084,4 +1082,4 @@ export default [
 ];
 =======
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e;

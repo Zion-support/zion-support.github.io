@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-  rounded?: string
+  rounded?: string;
 }
 
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className;
+const Skeleton: React.FC<SkeletonProps /> = ({ }
+  className;}
           ))}
         </div>
       </div>

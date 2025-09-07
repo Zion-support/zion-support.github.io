@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   return (
 
-              <div className='mt-3 text-cyan-300'>Open →</div>
-            </Link>
+              <div className='mt-3 text-cyan-300' />Open →</div>}
+            </Link>}
           ))}
         </div>
       </div>

@@ -1,10 +1,10 @@
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
- * Hook to handle message operations
+ * Hook to handle message operations;
  */  user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -13,10 +13,10 @@ type UserWithProfile = UserProfile | UserDetails | null;
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
-      if (unreadMessages && unreadMessages.length > 0) {
-        await markAsRead(conversationId)
+      if (unreadMessages && unreadMessages.length > 0) {}
+        await markAsRead(conversationId)}
       }
-    } catch (error) {
+    } catch (error) {}
       console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth';
 import { supabase } from '@/integrations/supabase/client';
 import { Message, Conversation } from '@/types/messaging',;
@@ -35,15 +35,15 @@ export function useMessages(;
   setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,;
   setUnreadCount: (updater: (prev: number) => number) => void,;
   setIsLoading: (loading: boolean) => void,;
-  fetchConversations: () => Promise<void>;
+  fetchConversations: () => Promise<void />;
 ) {;
   /**;
    * Fetch messages for a conversation;
    */;
   const loadMessages = async (conversationId: string) => {;
     if (!user) return,;
-    setIsLoading(true),;
-    try {;
+    setIsLoading(true),;}
+    try {;}
       const { data, error } = await supabase;
         .from('messages');
         .select('*');
@@ -56,20 +56,20 @@ export function useMessages(;
       const unreadMessages = data.filter(;
         msg => !msg.read && msg.recipient_id === user.id;
       ),;
-      if (unreadMessages.length > 0) {;
-        await markAsRead(conversationId);
+      if (unreadMessages.length > 0) {;}
+        await markAsRead(conversationId);}
       }
-    } catch (error) {
-      console.error('Error fetching messages:', error)
-    } finally {
-      setIsLoading(false)
+    } catch (error) {}
+      console.error('Error fetching messages:', error)}
+    } finally {}
+      setIsLoading(false)}
     }
   };
-      if (!conversation) {
-        throw new Error('Conversation not found')
+      if (!conversation) {}
+        throw new Error('Conversation not found')}
       }
-      // Send the message
-      const { data, error } = await supabase
+      // Send the message;
+const { data, error } = await supabase;
         .from('messages')
         .insert({
           conversation_id: conversationId;
@@ -77,15 +77,15 @@ export function useMessages(;
           recipient_id: conversation && conversation.user_id;          sender_id: user && user.id;
           recipient_id: conversation && conversation.user_id;
           content;
-          created_at: new Date().toISOString()
-          read: false
+          created_at: new Date().toISOString()}
+          read: false}
         })
         .select('*')
         .single();
       if (error) throw error;
-      // Update active messages if this conversation is selected
-      if (activeConversation && activeConversation.id === conversationId) {
-        setActiveMessages(prev => [...prev, data as Message])
+      // Update active messages if this conversation is selected;
+if (activeConversation && activeConversation.id === conversationId) {}
+        setActiveMessages(prev => [...prev, data as Message])}
       }  },;
   /**;
    * Send a message to an existing conversation;
@@ -94,8 +94,8 @@ export function useMessages(;
     if (!user || !content.trim() || !conversationId) return,;
     try {;
       const conversation = conversations.find(c => c.id === conversationId),;
-      if (!conversation) {;
-        throw new Error('Conversation not found');
+      if (!conversation) {;}
+        throw new Error('Conversation not found');}
       }
 ;
       // Send the message;
@@ -106,52 +106,52 @@ export function useMessages(;
           sender_id: user.id,;
           recipient_id: conversation.user_id,;
           content,;
-          created_at: new Date().toISOString(),;
-          read: false;
+          created_at: new Date().toISOString(),;}
+          read: false;}
         });
         .select('*');
         .single(),;
       if (error) throw error,;
       // Update active messages if this conversation is selected;
-      if (activeConversation && activeConversation.id === conversationId) {;
-        setActiveMessages(prev => [...prev, data as Message]);
+      if (activeConversation && activeConversation.id === conversationId) {;}
+        setActiveMessages(prev => [...prev, data as Message]);}
       }      
-      // Update conversations list
-      await fetchConversations(),
+      // Update conversations list;
+await fetchConversations(),
               .eq('recipient_id', user && user.id)
         .eq('read', false);
       if (error) throw error;
-      // Update active messages to show they've been read
+      // Update active messages to show they've been read;
         )
       );
-      // Update conversations to reflect read messages
-      setConversations(prev =>
+      // Update conversations to reflect read messages;
+setConversations(prev =>
         prev.map(conv =>
-          conv.id === conversationId
-            : conv
+          conv.id === conversationId;
+            : conv;
         )
       );
-      // Recalculate unread count
-      setUnreadCount(prev => {          0
-        )
+      // Recalculate unread count;
+setUnreadCount(prev => {          0}
+        )}
       })
-    } catch (error) {
-      console && console.error('Error marking messages as read:', error)      console && console.error('Error marking messages as read:', error)
+    } catch (error) {}
+      console && console.error('Error marking messages as read:', error)      console && console.error('Error marking messages as read:', error)}
     }
   }
-  return {
-    loadMessages;
+  return {}
+    loadMessages;}
     sendMessage;  }
 ;
   /**;
   * Mark messages as read;
   */;
   const markAsRead = async (conversation_id: string) => {
-    // Check condition
-if (return, ) {
-  $2
+    // Check condition;
+if (return, ) {}
+  $2}
 }
-    try {
+    try {}
       const { error } = await supabase;
         .from ('messages');
         .update ({ read: true });
@@ -159,9 +159,9 @@ if (return, ) {
         .eq ('recipient_id', user.id);
         .eq ('read', false);
 ;
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2}
 }
       // Update active messages to show they've been read;
       setActiveMessages (prev =>;
@@ -177,8 +177,8 @@ if (throw error) {
 ;
       // Recalculate unread count;
       setUnreadCount (prev => {
-        const updated_conversations = conversations.map (conv =>;
-          conv.id === conversation_id;
+        const updated_conversations = conversations.map (conv =>;}
+          conv.id === conversation_id;}
             ? { ...conv, unread_count: 0 }
             : conv);
 ;
@@ -186,15 +186,15 @@ if (throw error) {
           (total, conv) => total + (conv.unread_count || 0),
           0);
       });
-    } catch (error) {
-      console.error ('Error marking messages as read:', error);
+    } catch (error) {}
+      console.error ('Error marking messages as read:', error);}
     }
   }
 ;
   return {
     load_messages;
-    send_message;
-    markAsRead;
+    send_message;}
+    markAsRead;}
   }
 }
 }

@@ -5,145 +5,183 @@ import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin  } from 'lucide-react';
 
-const Header = () => {const [isMenuOpen, setIsMenuOpen] =;
+const Header = (const [isMenuOpen, setIsMenuOpen] =;
   useState(false);
-  const [activeDropdown, setActiveDropdown]  = useState<string | null>(null;
+  const [activeDropdown, setActiveDropdown]  = useState<string | null />(null;
   const navigation = [
-  {name: 'Home',href: '/';
-    },{name: 'Services',href: '/services',dropdown: [;
-          { name: 'AI Services', href: '/ai-services',
+  {name: 'Home',
+  href: '/';) => {
+  return $3;}
+}
+    },{name: 'Services',
+  href: '/services',dropdown: [;
+          { name: 'AI Services',}
+  href: '/ai-services',}
 },
-  { name: 'IT Services', href: '/it-services',
+  { name: 'IT Services',}
+  href: '/it-services',}
 },
-  { name: 'Micro SaaS', href: '/micro-saas',
+  { name: 'Micro SaaS',}
+  href: '/micro-saas',}
 },
-  { name: 'Cloud Solutions', href: '/solutions/cloud-migration',
+  { name: 'Cloud Solutions',}
+  href: '/solutions/cloud-migration',}
 },
-  { name: 'Cybersecurity', href: '/services/cybersecurity',
+  { name: 'Cybersecurity',}
+  href: '/services/cybersecurity',}
 },
-{ name: 'Data Analytics', href: '/services/data-analytics',
+{ name: 'Data Analytics',}
+  href: '/services/data-analytics',}
 }
       ];
-    },{name: 'Solutions',href: '/solutions',dropdown: [;
-          { name: 'Enterprise Solutions', href: '/solutions/enterprise',
+    },{name: 'Solutions',
+  href: '/solutions',dropdown: [;
+          { name: 'Enterprise Solutions',}
+  href: '/solutions/enterprise',}
 },
-  { name: 'Healthcare', href: '/solutions/healthcare',
+  { name: 'Healthcare',}
+  href: '/solutions/healthcare',}
 },
-  { name: 'Finance', href: '/solutions/finance',
+  { name: 'Finance',}
+  href: '/solutions/finance',}
 },
-  { name: 'Government', href: '/solutions/government',
+  { name: 'Government',}
+  href: '/solutions/government',}
 },
-  { name: 'Retail', href: '/solutions/retail',
+  { name: 'Retail',}
+  href: '/solutions/retail',}
 },
-{ name: 'Education', href: '/solutions/education',
+{ name: 'Education',}
+  href: '/solutions/education',}
 }
       ];
-    },{name: 'Industries',href: '/industries',dropdown: [;
-          { name: 'Financial Services', href: '/industries/financial',
+    },{name: 'Industries',
+  href: '/industries',dropdown: [;
+          { name: 'Financial Services',}
+  href: '/industries/financial',}
 },
-  { name: 'Healthcare', href: '/industries/healthcare',
+  { name: 'Healthcare',}
+  href: '/industries/healthcare',}
 },
-  { name: 'Manufacturing', href: '/industries/manufacturing',
+  { name: 'Manufacturing',}
+  href: '/industries/manufacturing',}
 },
-  { name: 'Retail', href: '/industries/retail',
+  { name: 'Retail',}
+  href: '/industries/retail',}
 },
-{ name: 'Government', href: '/industries/government',
+{ name: 'Government',}
+  href: '/industries/government',}
 }
       ];
-    },{name: 'Company',href: '/about',dropdown: [;
-          { name: 'About Us', href: '/about',
+    },{name: 'Company',
+  href: '/about',dropdown: [;
+          { name: 'About Us',}
+  href: '/about',}
 },
-  { name: 'Our Team', href: '/team',
+  { name: 'Our Team',}
+  href: '/team',}
 },
-  { name: 'Careers', href: '/careers',
+  { name: 'Careers',}
+  href: '/careers',}
 },
-  { name: 'Partners', href: '/partners',
+  { name: 'Partners',}
+  href: '/partners',}
 },
-{ name: 'Case Studies', href: '/case-studies',
+{ name: 'Case Studies',}
+  href: '/case-studies',}
 }
       ];
-    },{name: 'Resources',href: '/resources',dropdown: [;
-          { name: 'Blog', href: '/blog',
+    },{name: 'Resources',
+  href: '/resources',dropdown: [;
+          { name: 'Blog',}
+  href: '/blog',}
 },
-  { name: 'White Papers', href: '/white-papers',
+  { name: 'White Papers',}
+  href: '/white-papers',}
 },
-  { name: 'Webinars', href: '/webinars',
+  { name: 'Webinars',}
+  href: '/webinars',}
 },
-  { name: 'Tutorials', href: '/tutorials',
+  { name: 'Tutorials',}
+  href: '/tutorials',}
 },
-{ name: 'API Documentation', href: '/api-docs',
+{ name: 'API Documentation',}
+  href: '/api-docs',}
 }
       ];
-    },{name: 'Contact',href: '/contact';
+    },{name: 'Contact',}
+  href: '/contact';}
     }
   ];
 
 const toggleMenu = () => setIsMenuOpen(!isMenuOpen;
-  const toggleDropdown = (name: string) => {setActiveDropdown(activeDropdown === name ? null : name);
-  return (<header className="bg-white shadow-lg sticky top-0 z-50">;
+  const toggleDropdown = (setActiveDropdown(activeDropdown === name ? null : name);
+  return (<header className=\"bg-white shadow-lg sticky top-0 z-50\" />;) => {
+  return $3;}
+}
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">;
-        <div className="container mx-auto px-4">;
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">;
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">;
-              <div className="flex items-center space-x-2">;
-                <Phone className="w-4 h-4" />;
-                <span>+1 302 464 0950</span>;
+      <div className=\"bg-blue-900 text-white py-2\" />;
+        <div className=\"container mx-auto px-4\" />;
+          <div className=\"flex flex-col md:flex-row justify-between items-center text-sm\" />;
+            <div className=\"flex items-center space-x-6 mb-2 md:mb-0\" />;
+              <div className=\"flex items-center space-x-2\" />;
+                <Phone className=\"w-4 h-4\" />;
+                <span />+1 302 464 0950</span>;
               </div>;
-              <div className="flex items-center space-x-2">;
-                <Mail className="w-4 h-4" />;
-                <span>kleber@ziontechgroup.com</span>;
+              <div className=\"flex items-center space-x-2\" />;
+                <Mail className=\"w-4 h-4\" />;
+                <span />kleber@ziontechgroup.com</span>;
               </div>;
             </div>;
-            <div className="flex items-center space-x-2">;
-              <MapPin className="w-4 h-4" />;
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>;
+            <div className=\"flex items-center space-x-2\" />;
+              <MapPin className=\"w-4 h-4\" />;
+              <span />364 E Main St STE 1008, Middletown, DE 19709</span>;
             </div>;
           </div>;
         </div>;
       </div>;
       {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">;
-        <div className="flex justify-between items-center">;
+      <nav className=\"container mx-auto px-4 py-4\" />;
+        <div className=\"flex justify-between items-center\" />;
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">;
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
-              <span className="text-white font-bold text-xl">Z</span>;
+          <Link href=\"/\" className=\"flex items-center space-x-2\" />;
+            <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" />;
+              <span className=\"text-white font-bold text-xl\" />Z</span>;
             </div>;
-            <div>;
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>;
-              <p className="text-sm text-gray-600">AI & Technology Solutions</p>;
+            <div />;
+              <h1 className=\"text-2xl font-bold text-gray-900\" />Zion Tech Group</h1>;
+              <p className=\"text-sm text-gray-600\" />AI & Technology Solutions</p>;
             </div>;
           </Link>;
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">;
-            {navigation.map((item) => (<div key={item.name} className="relative group">;
+          <div className=\"hidden lg:flex items-center space-x-8\" />;
+            {navigation.map((item) => (<div key={item.name} className=\"relative group\" />;
                 <button;
-                  onClick={() => item.dropdown && toggleDropdown(item.name)}
-                  className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors duration-200 font-medium">
+                  onClick={() = /> item.dropdown && toggleDropdown(item.name)}
+                  className=\"flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors duration-200 font-medium\">
 
-                  <Link href={item.href}>{item.nam,
+                  <Link href={item.href} />{item.nam,}
 }</Link>;
-                  {item.dropdown && (<ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';
+                  {item.dropdown && (<ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';}
                     }`} />;
                   )}
                 </button>;
                 {/* Dropdown Menu */}
-                {item.dropdown && (<AnimatePresence>;
-                    {activeDropdown === item.name && (<motion.div;
-                        initial={{ opacity: 0, y: 10 ,
+                {item.dropdown && (<AnimatePresence />;
+                    {activeDropdown === item.name && (<motion.div;}
+                        initial={{ opacity: 0, y: 10 ,}
 }
-                        animate={{ opacity: 1, y: 0 ,
+                        animate={{ opacity: 1, y: 0 ,}
 }
-                        exit={{ opacity: 0, y: 10 ,
+                        exit={{ opacity: 0, y: 10 ,}
 }
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        className=\"absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50\" />
 
-                        {item.dropdown.map((subItem) => (<Link;
+                        {item.dropdown.map((subItem) => (<Link;}
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200";
-                            onClick={() => setActiveDropdown(null)}
+                            className=\"block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200\";
+                            onClick={() = /> setActiveDropdown(null)}
                           >;
                             {subItem.name}
                           </Link>;
@@ -158,47 +196,47 @@ const toggleMenu = () => setIsMenuOpen(!isMenuOpen;
           {/* Mobile Menu Button */}
           <button;
             onClick={toggleMenu}
-            className="lg: hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+            className=\"lg: hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\" />
 
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /,
+            {isMenuOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" /,}
 }
-          </button>;
+          </button />;
         </div>;
         {/* Mobile Navigation */}
-        <AnimatePresence>;
-          {isMenuOpen && (<motion.div;
-              initial={{ opacity: 0, height: 0 ,
+        <AnimatePresence />;
+          {isMenuOpen && (<motion.div;}
+              initial={{ opacity: 0, height: 0 ,}
 }
-              animate={{ opacity: 1, height: 'auto' ,
+              animate={{ opacity: 1, height: 'auto' ,}
 }
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 border-t border-gray-200 pt-4">
+              className=\"lg:hidden mt-4 border-t border-gray-200 pt-4\" />
 
-              {navigation.map((item) => (<div key={item.nam,
-} className="mb-2">;
-                  <div className="flex items-center justify-between">;
+              {navigation.map((item) => (<div key={item.nam,}
+} className=\"mb-2\" />;
+                  <div className=\"flex items-center justify-between\" />;
                     <Link;
                       href={item.href}
-                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2";
-                      onClick={() => setIsMenuOpen(false)}
+                      className=\"text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2\";
+                      onClick={() = /> setIsMenuOpen(false)}
                     >;
                       {item.name}
                     </Link>;
-                    {item.dropdown && (<button;
-                        onClick={() => toggleDropdown(item.name)}
-                        className="p-1">
+                    {item.dropdown && (<button;}
+                        onClick={() = /> toggleDropdown(item.name)}
+                        className=\"p-1\">
 
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';}
                         }`} />;
                       </button>;
                     )}
                   </div>;
-                  {item.dropdown && activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-1">;
-                      {item.dropdown.map((subItem) => (<Link;
+                  {item.dropdown && activeDropdown === item.name && (<div className=\"ml-4 mt-2 space-y-1\" />;}
+                      {item.dropdown.map((subItem) => (<Link;}
                           key={subItem.name}
                           href={subItem.href}
-                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1";
-                          onClick={() => setIsMenuOpen(false)}
+                          className=\"block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1\";
+                          onClick={() = /> setIsMenuOpen(false)}
                         >;
                           {subItem.name}
                         </Link>;
@@ -207,11 +245,11 @@ const toggleMenu = () => setIsMenuOpen(!isMenuOpen;
                   )}
                 </div>;
               ))}
-              <div className="mt-4 pt-4 border-t border-gray-200">;
+              <div className=\"mt-4 pt-4 border-t border-gray-200\" />;
                 <Link;
-                  href="/contact";
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold";
-                  onClick={() => setIsMenuOpen(false)}
+                  href=\"/contact\";
+                  className=\"block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold\";
+                  onClick={() = /> setIsMenuOpen(false)}
                 >;
                   Get Started;
                 </Link>;
@@ -231,77 +269,90 @@ export default Header;
 }
 import React, { useState, useEffect } from 'react';
 import { useRouter  } from 'next/router';
-import { Menu,X,Search,Phone,Mail,MapPin,ChevronDown,Building2;
+import { Menu,X,Search,Phone,Mail,MapPin,ChevronDown,Building2;}
  } from 'lucide-react';
 
 const navigation = {'Services': [;
-      { name: 'AI Services', href: '/ai-services',
+      { name: 'AI Services',}
+  href: '/ai-services',}
 },
-  { name: 'IT Services', href: '/it-services',
+  { name: 'IT Services',}
+  href: '/it-services',}
 },
-  { name: 'Micro SaaS', href: '/micro-saas',
+  { name: 'Micro SaaS',}
+  href: '/micro-saas',}
 },
-{ name: 'Consulting', href: '/consulting',
+{ name: 'Consulting',}
+  href: '/consulting',}
 }
   ],'Solutions': [;
-      { name: 'Enterprise', href: '/enterprise',
+      { name: 'Enterprise',}
+  href: '/enterprise',}
 },
-  { name: 'Startup', href: '/startup',
+  { name: 'Startup',}
+  href: '/startup',}
 },
-{ name: 'Industry', href: '/industries',
+{ name: 'Industry',}
+  href: '/industries',}
 }
   ],'Company': [;
-      { name: 'About', href: '/about',
+      { name: 'About',}
+  href: '/about',}
 },
-  { name: 'Team', href: '/team',
+  { name: 'Team',}
+  href: '/team',}
 },
-  { name: 'Careers', href: '/careers',
+  { name: 'Careers',}
+  href: '/careers',}
 },
-{ name: 'Contact', href: '/contact',
+{ name: 'Contact',}
+  href: '/contact',}
 }
   ];
 }
 
 export default function Header() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const router = useRouter(;
-  useEffect(() => ;
-  const handleRouteChange = () => {setMobileMenuOpen(false)setActiveDropdown(null)}router.events.on('routeChangeStart', handleRouteChange)return () => {router.events.off('routeChangeStart', handleRouteChange)}}, [router.events];
-  return (<header className="bg-white shadow-lg sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-          <div className="flex items-center">;
-            <Link href="/" className="flex items-center space-x-2">;
-              <Building2 className="h-8 w-8 text-blue-600" />;
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>;
+  const [activeDropdown, setActiveDropdown] = useState<string | null />(null)const router = useRouter(;}
+  useEffect(() => ;}
+  const handleRouteChange = (setMobileMenuOpen(false)setActiveDropdown(null)) => {
+  return $3;}
+}router.events.on('routeChangeStart', handleRouteChange)return () => {router.events.off('routeChangeStart', handleRouteChange)}}, [router.events];
+  return (<header className=\"bg-white shadow-lg sticky top-0 z-50\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className=\"flex justify-between items-center h-16\" />;
+          <div className=\"flex items-center\" />;
+            <Link href=\"/\" className=\"flex items-center space-x-2\" />;
+              <Building2 className=\"h-8 w-8 text-blue-600\" />;
+              <span className=\"text-xl font-bold text-gray-900\" />Zion Tech Group</span>;
             </Link>;
           </div>;
-          <nav className="hidden md:flex space-x-8">;
-            {Object.entries(navigation).map(([key, items]) => (<div;
+          <nav className=\"hidden md:flex space-x-8\" />;
+            {Object.entries(navigation).map(([key, items]) => (<div;}
                 key={key}
-                className="relative";
-                onMouseEnter={() => setActiveDropdown(key)}
+                className=\"relative\";
+                onMouseEnter={() = /> setActiveDropdown(key)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >;
-                <button className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">;
+                <button className=\"flex items-center text-gray-700 hover:text-blue-600 transition-colors\" />;
                   {key}
-                  <ChevronDown className="ml-1 h-4 w-4" />;
+                  <ChevronDown className=\"ml-1 h-4 w-4\" />;
                 </button>;
-                <AnimatePresence>;
-                  {activeDropdown === key && (<motion.div;
-                      initial={{ opacity: 0, y: 10 ,
+                <AnimatePresence />;
+                  {activeDropdown === key && (<motion.div;}
+                      initial={{ opacity: 0, y: 10 ,}
 }
-                      animate={{ opacity: 1, y: 0 ,
+                      animate={{ opacity: 1, y: 0 ,}
 }
-                      exit={{ opacity: 0, y: 10 ,
+                      exit={{ opacity: 0, y: 10 ,}
 }
-                      className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50">
+                      className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50\" />
 
-                      {items.map((item) => (<Link;
+                      {items.map((item) => (<Link;}
                           key={item.name}
                           href={item.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover: bg-gray-100">
+                          className=\"block px-4 py-2 text-sm text-gray-700 hover: bg-gray-100\" />
 
-                          {item.nam,
+                          {item.nam,}
 }
                         </Link>;
                       ))}
@@ -311,38 +362,38 @@ export default function Header() {const [mobileMenuOpen, setMobileMenuOpen] = us
               </div>;
             ))}
           </nav>;
-          <div className="hidden md:flex items-center space-x-4">;
-            <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">;
+          <div className=\"hidden md:flex items-center space-x-4\" />;
+            <Link href=\"/contact\" className=\"bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors\" />;
               Get Started;
             </Link>;
           </div>;
           <button;
-            className="md:hidden";
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className=\"md:hidden\";
+            onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
           >;
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? <X className=\"h-6 w-6\" /> : <Menu className=\"h-6 w-6\" />}
           </button>;
         </div>;
       </div>;
-      <AnimatePresence>;
-        {mobileMenuOpen && (<motion.div;
-            initial={{ opacity: 0, height: 0 ,
+      <AnimatePresence />;
+        {mobileMenuOpen && (<motion.div;}
+            initial={{ opacity: 0, height: 0 ,}
 }
-            animate={{ opacity: 1, height: 'auto' ,
+            animate={{ opacity: 1, height: 'auto' ,}
 }
-            exit={{ opacity: 0, height: 0 ,
+            exit={{ opacity: 0, height: 0 ,}
 }
-            className="md:hidden bg-white border-t">
+            className=\"md:hidden bg-white border-t\" />
 
-            <div className="px-4 py-2 space-y-1">;
-              {Object.entries(navigation).map(([key, items]) => (<div key={key} className="py-2">;
-                  <div className="text-sm font-medium text-gray-900 mb-2">{key}</div>;
-                  {items.map((item) => (<Link;
+            <div className=\"px-4 py-2 space-y-1\" />;
+              {Object.entries(navigation).map(([key, items]) => (<div key={key} className=\"py-2\" />;
+                  <div className=\"text-sm font-medium text-gray-900 mb-2\" />{key}</div>;
+                  {items.map((item) => (<Link;}
                       key={item.name}
                       href={item.href}
-                      className="block py-1 text-sm text-gray-600 hover: text-blue-600">
+                      className=\"block py-1 text-sm text-gray-600 hover: text-blue-600\" />
 
-                      {item.nam,
+                      {item.nam,}
 }
                     </Link>;
                   ))}
@@ -358,62 +409,64 @@ import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram  } from 'l
 
 const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  =;
   useState(false;
-  const toggleMenu = () => {setIsMenuOpen(!isMenuOpen);
-  return (<header className="bg-white shadow-lg">;
-      <div className="bg-blue-900 text-white py-2">;
-        <div className="container mx-auto px-4">;
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">;
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">;
-              <div className="flex items-center">;
-                <Phone className="w-4 h-4 mr-2" />;
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>;
+  const toggleMenu = (setIsMenuOpen(!isMenuOpen);
+  return (<header className=\"bg-white shadow-lg\" />;
+      <div className=\"bg-blue-900 text-white py-2\" />;
+        <div className=\"container mx-auto px-4\" />;
+          <div className=\"flex flex-col md:flex-row justify-between items-center text-sm\" />;
+            <div className=\"flex items-center space-x-6 mb-2 md:mb-0\" />;
+              <div className=\"flex items-center\" />;
+                <Phone className=\"w-4 h-4 mr-2\" />;
+                <a href=\"tel:+13024640950\" className=\"hover:text-blue-300\" />+1 302 464 0950</a>;
               </div>;
-              <div className="flex items-center">;
-                <Mail className="w-4 h-4 mr-2" />;
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>;
+              <div className=\"flex items-center\" />;
+                <Mail className=\"w-4 h-4 mr-2\" />;
+                <a href=\"mailto:kleber@ziontechgroup.com\" className=\"hover:text-blue-300\" />kleber@ziontechgroup.com</a>;
               </div>;
             </div>;
-            <div className="flex items-center space-x-4">;
-              <span className="text-blue-200">24/7 Support Available</span>;
-              <div className="flex space-x-2">;
-                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>;
-                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>;
-                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>;
-                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>;
+            <div className=\"flex items-center space-x-4\" />;
+              <span className=\"text-blue-200\" />24/7 Support Available</span>;
+              <div className=\"flex space-x-2\" />;
+                <a href=\"#\" className=\"hover:text-blue-300\" /><Facebook className=\"w-4 h-4\" /></a>;
+                <a href=\"#\" className=\"hover:text-blue-300\" /><Twitter className=\"w-4 h-4\" /></a>;
+                <a href=\"#\" className=\"hover:text-blue-300\" /><Linkedin className=\"w-4 h-4\" /></a>;
+                <a href=\"#\" className=\"hover:text-blue-300\" /><Instagram className=\"w-4 h-4\" /></a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-      <nav className="container mx-auto px-4">;
-        <div className="flex justify-between items-center py-4">;
-          <Link href="/" className="flex items-center">;
-            <span className="text-2xl font-bold text-blue-900">Zion Tech Group</span>;
+      <nav className=\"container mx-auto px-4\" />;
+        <div className=\"flex justify-between items-center py-4\" />;
+          <Link href=\"/\" className=\"flex items-center\" />;
+            <span className=\"text-2xl font-bold text-blue-900\" />Zion Tech Group</span>;
           </Link>;
-          <div className="hidden md:flex items-center space-x-8">;
-            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>;
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>;
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>;
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>;
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>;
+          <div className=\"hidden md:flex items-center space-x-8\" />;
+            <Link href=\"/\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Home</Link>;
+            <Link href=\"/services\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Services</Link>;
+            <Link href=\"/about\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />About</Link>;
+            <Link href=\"/contact\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Contact</Link>;
+            <Link href=\"/blog\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Blog</Link>;
           </div>;
-          <button;
-            onClick={toggleMenu}
-            className="md: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
-
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /,
+          <button;) = /> {
+  return $3;}
 }
-          </button>;
+            onClick={toggleMenu}
+            className=\"md: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100\" />
+
+            {isMenuOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" /,}
+}
+          </button />;
         </div>;
-        {isMenuOpen && (<div className="md:hidden py-4 border-t border-gray-200">;
-            <div className="flex flex-col space-y-4">;
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>;
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>;
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>;
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>;
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>;
-            </div>;
-          </div>;
+        {isMenuOpen && (<div className=\"md:hidden py-4 border-t border-gray-200\" />;
+            <div className=\"flex flex-col space-y-4\" />;
+              <Link href=\"/\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Home</Link>;
+              <Link href=\"/services\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Services</Link>;
+              <Link href=\"/about\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />About</Link>;
+              <Link href=\"/contact\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Contact</Link>;
+              <Link href=\"/blog\" className=\"text-gray-700 hover:text-blue-600 font-medium\" />Blog</Link>;
+            </div>;}
+          </div>;}
         )}
       </nav>;
     </header>;
@@ -439,111 +492,124 @@ import {
   Phone, 
   Mail, 
   MapPin,
-  ChevronDown,
-  Building2
+  ChevronDown,}
+  Building2}
 } from 'lucide-react';
 
 const navigation = {
   'Services': [
-      { name: 'AI Services', href: '/ai-services',
+      { name: 'AI Services',}
+  href: '/ai-services',}
 },
 
-      { name: 'IT Services', href: '/it-services',
+      { name: 'IT Services',}
+  href: '/it-services',}
 },
 
-      { name: 'Micro SaaS', href: '/micro-saas',
+      { name: 'Micro SaaS',}
+  href: '/micro-saas',}
 },
 
-    { name: 'Consulting', href: '/consulting',
+    { name: 'Consulting',}
+  href: '/consulting',}
 }
   ],
   'Solutions': [
-      { name: 'Enterprise', href: '/enterprise',
+      { name: 'Enterprise',}
+  href: '/enterprise',}
 },
 
-      { name: 'Startup', href: '/startup',
+      { name: 'Startup',}
+  href: '/startup',}
 },
 
-    { name: 'Industry', href: '/industries',
+    { name: 'Industry',}
+  href: '/industries',}
 }
   ],
   'Company': [
-      { name: 'About', href: '/about',
+      { name: 'About',}
+  href: '/about',}
 },
 
-      { name: 'Team', href: '/team',
+      { name: 'Team',}
+  href: '/team',}
 },
 
-      { name: 'Careers', href: '/careers',
+      { name: 'Careers',}
+  href: '/careers',}
 },
 
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact',}
+  href: '/contact' }
   ],
 };
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
 
 const router = useRouter();
 
   useEffect(() => {
 
-    const handleRouteChange = () => {
+    const handleRouteChange = (
       setMobileMenuOpen(false);
-      setActiveDropdown(null)
+      setActiveDropdown(null)) => {
+  return $3;}
+}
 };
 
 
     router.events.on('routeChangeStart', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeStart', handleRouteChange)
+    return () => {}
+      router.events.off('routeChangeStart', handleRouteChange)}
 };
 
   }, [router.events]);
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Building2 className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+    <header className=\"bg-white shadow-lg sticky top-0 z-50\" />
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />
+        <div className=\"flex justify-between items-center h-16\" />
+          <div className=\"flex items-center\" />
+            <Link href=\"/\" className=\"flex items-center space-x-2\" />
+              <Building2 className=\"h-8 w-8 text-blue-600\" />
+              <span className=\"text-xl font-bold text-gray-900\" />Zion Tech Group</span>
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
-            {Object.entries(navigation).map(([key, items]) => (
-              <div
-                key={key}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown(key)}
+          <nav className=\"hidden md:flex space-x-8\" />
+            {Object.entries(navigation).map(([key, items]) => (}
+              <div;}
+key={key}
+                className=\"relative\"
+                onMouseEnter={() = /> setActiveDropdown(key)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center text-gray-700 hover: text-blue-600 transition-colors">
-                  {ke,
+                <button className=\"flex items-center text-gray-700 hover: text-blue-600 transition-colors\" />
+                  {ke,}
 }
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  <ChevronDown className=\"ml-1 h-4 w-4\" />
                 </button>
                 
-                <AnimatePresence>
+                <AnimatePresence />
                   {activeDropdown === key && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 ,
+                    <motion.div;}
+initial={{ opacity: 0, y: 10 ,}
 }
-                      animate={{ opacity: 1, y: 0 ,
+                      animate={{ opacity: 1, y: 0 ,}
 }
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50"
-                    >
-                      {items.map((item) => (
-                        <Link
-                          key={item.name}
+                      className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50\"
+                     />
+                      {items.map((item) => (}
+                        <Link;}
+key={item.name}
                           href={item.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
+                          className=\"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100\"
+                         />
                           {item.name}
                         </Link>
                       ))}
@@ -554,43 +620,43 @@ const router = useRouter();
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-              Get Started
+          <div className=\"hidden md:flex items-center space-x-4\" />
+            <Link href=\"/contact\" className=\"bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors\" />
+              Get Started;
             </Link>
           </div>
 
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          <button;
+className=\"md:hidden\"
+            onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" /,
+            {mobileMenuOpen ? <X className=\"h-6 w-6\" /> : <Menu className=\"h-6 w-6\" /,}
 }
-          </button>
+          </button />
         </div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence />
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 ,
+          <motion.div;}
+initial={{ opacity: 0, height: 0 ,}
 }
-            animate={{ opacity: 1, height: 'auto' ,
+            animate={{ opacity: 1, height: 'auto' ,}
 }
-            exit={{ opacity: 0, height: 0 ,
+            exit={{ opacity: 0, height: 0 ,}
 }
-            className="md:hidden bg-white border-t"
-          >
-            <div className="px-4 py-2 space-y-1">
-              {Object.entries(navigation).map(([key, items]) => (
-                <div key={key} className="py-2">
-                  <div className="text-sm font-medium text-gray-900 mb-2">{key}</div>
-                  {items.map((item) => (
-                    <Link
-                      key={item.name}
+            className=\"md:hidden bg-white border-t\"
+           />
+            <div className=\"px-4 py-2 space-y-1\" />
+              {Object.entries(navigation).map(([key, items]) => (}
+                <div key={key} className=\"py-2\" />
+                  <div className=\"text-sm font-medium text-gray-900 mb-2\" />{key}</div>
+                  {items.map((item) => (}
+                    <Link;}
+key={item.name}
                       href={item.href}
-                      className="block py-1 text-sm text-gray-600 hover: text-blue-600"
-                    >
+                      className=\"block py-1 text-sm text-gray-600 hover: text-blue-600\"
+                     />
                       {item.name}
                     </Link>
                   ))}

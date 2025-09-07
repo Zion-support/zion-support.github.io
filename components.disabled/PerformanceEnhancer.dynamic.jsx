@@ -1,4 +1,4 @@
-const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,';
+const PerformanceEnhancer = dynamic(() => import(\"./PerformanceEnhancer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceEnhancer' ,';
 </p>';
 </p>';
 </p>';
@@ -17,7 +17,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
-const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
+const PerformanceEnhancer = dynamic(() => import(\"./PerformanceEnhancer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default PerformanceEnhancer' ,'
 </p>'
 </p>'
 </p>'

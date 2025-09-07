@@ -3,118 +3,155 @@ import Link from 'next/link';
 import { Brain, Menu, X, ChevronDown  } from 'lucide-react';
 import { useRouter  } from 'next/router';
 ursor/automate-test-improve-and-merge-code-646c;
-const "Navigation": React.FC = () => {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const router = useRouter()useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const navigation = [;
-      setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, []){ name: 'Services', href: '/services', hasDropdown: 'true' },{ name: 'Solutions', href: '/solutions', hasDropdown: 'true' },{ name: 'About', href: '/about' },{ name: 'Blog', href: '/blog' },{ name: 'Contact', href: '/contact' }
-    { name: 'Contact', href: '/contact' }
-    { name: 'Contact', href: '/contact' }
+const \"Navigation\": React.FC = () => {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null />(null)const router = useRouter()useEffect(() => {const handleScroll = (setIsScrolled(window.scrollY > 10)) => {
+  return $3;}
+}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const navigation = [;
+      setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, []){ name: 'Services',}
+  href: '/services', hasDropdown: 'true' },{ name: 'Solutions',}
+  href: '/solutions', hasDropdown: 'true' },{ name: 'About',}
+  href: '/about' },{ name: 'Blog',}
+  href: '/blog' },{ name: 'Contact',}
+  href: '/contact' }
+    { name: 'Contact',}
+  href: '/contact' }
+    { name: 'Contact',}
+  href: '/contact' }
 import { Brain, Menu, X, ChevronDown } from 'lucide-react';
 import { useRouter } from 'next/router';
-const "Navigation": React.FC = () => {
+const \"Navigation\": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
   const router = useRouter();
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+    const handleScroll = (
+      setIsScrolled(window.scrollY > 10);) => {
+  return $3;}
+}
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const navigation = [
-    { name: 'Services', href: '/services', hasDropdown: 'true' },
-    { name: 'Solutions', href: '/solutions', hasDropdown: 'true' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Services',}
+  href: '/services', hasDropdown: 'true' },
+    { name: 'Solutions',}
+  href: '/solutions', hasDropdown: 'true' },
+    { name: 'About',}
+  href: '/about' },
+    { name: 'Blog',}
+  href: '/blog' },
+    { name: 'Contact',}
+  href: '/contact' }
   ];
   const servicesDropdown = [;
-    { name: 'AI Services', href: '/services/ai-services' },{ name: 'IT Services', href: '/services/it-services' },{ name: 'Micro SaaS', href: '/services/micro-saas' },{ name: 'Cloud Services', href: '/services/cloud-services' },{ name: 'Cybersecurity', href: '/services/cybersecurity' }
-    { name: 'Cybersecurity', href: '/services/cybersecurity' }
-    { name: 'Cybersecurity', href: '/services/cybersecurity' }
+    { name: 'AI Services',}
+  href: '/services/ai-services' },{ name: 'IT Services',}
+  href: '/services/it-services' },{ name: 'Micro SaaS',}
+  href: '/services/micro-saas' },{ name: 'Cloud Services',}
+  href: '/services/cloud-services' },{ name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }
+    { name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }
+    { name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }
   ];
   const solutionsDropdown = [;
-    { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },{ name: 'Customer Support', href: '/solutions/customer-support' },{ name: 'Email Automation', href: '/solutions/email-automation' },{ name: 'Project Management', href: '/solutions/project-management' }
+    { name: 'AI Content Creation',}
+  href: '/solutions/ai-content-creation' },{ name: 'Customer Support',}
+  href: '/solutions/customer-support' },{ name: 'Email Automation',}
+  href: '/solutions/email-automation' },{ name: 'Project Management',}
+  href: '/solutions/project-management' }
   ];
-  const handleDropdownToggle = (itemName: string) => {ursor/automate-test-improve-and-merge-code-646c;
-    { name: 'Project Management', href: '/solutions/project-management' }
-    { name: 'Project Management', href: '/solutions/project-management' }
+  const handleDropdownToggle = (ursor/automate-test-improve-and-merge-code-646c;) => {
+  return $3;}
+}
+    { name: 'Project Management',}
+  href: '/solutions/project-management' }
+    { name: 'Project Management',}
+  href: '/solutions/project-management' }
   ];
-  const handleDropdownToggle = (itemName: string) => {const navigation = [{ "name": 'Services', "href": '/services', "hasDropdown": 'true' },{ "name": 'Solutions', "href": '/solutions', "hasDropdown": 'true' },{ "name": 'About', "href": '/about' },{ "name": 'Blog', "href": '/blog' },{ "name": 'Contact', "href": '/contact' }
-    { "name": 'Contact', "href": '/contact' }
-    { "name": 'Contact', "href": '/contact' }
+  const handleDropdownToggle = (const navigation = [{ \"name\": 'Services', \"href\": '/services', \"hasDropdown\": 'true' ) => {
+  return $3;}
+},{ \"name\": 'Solutions', \"href\": '/solutions', \"hasDropdown\": 'true' },{ \"name\": 'About', \"href\": '/about' },{ \"name\": 'Blog', \"href\": '/blog' },{ \"name\": 'Contact', \"href\": '/contact' }
+    { \"name\": 'Contact', \"href\": '/contact' }
+    { \"name\": 'Contact', \"href\": '/contact' }
   ];
-  const servicesDropdown = [{ "name": 'AI Services', "href": '/services/ai-services' },{ "name": 'IT Services', "href": '/services/it-services' },{ "name": 'Micro SaaS', "href": '/services/micro-saas' },{ "name": 'Cloud Services', "href": '/services/cloud-services' },{ "name": 'Cybersecurity', "href": '/services/cybersecurity' }
-    { "name": 'Cybersecurity', "href": '/services/cybersecurity' }
-    { "name": 'Cybersecurity', "href": '/services/cybersecurity' }
+  const servicesDropdown = [{ \"name\": 'AI Services', \"href\": '/services/ai-services' },{ \"name\": 'IT Services', \"href\": '/services/it-services' },{ \"name\": 'Micro SaaS', \"href\": '/services/micro-saas' },{ \"name\": 'Cloud Services', \"href\": '/services/cloud-services' },{ \"name\": 'Cybersecurity', \"href\": '/services/cybersecurity' }
+    { \"name\": 'Cybersecurity', \"href\": '/services/cybersecurity' }
+    { \"name\": 'Cybersecurity', \"href\": '/services/cybersecurity' }
   ];
-  const solutionsDropdown = [{ "name": 'AI Content Creation', "href": '/solutions/ai-content-creation' },{ "name": 'Customer Support', "href": '/solutions/customer-support' },{ "name": 'Email Automation', "href": '/solutions/email-automation' },{ "name": 'Project Management', "href": '/solutions/project-management' }
-    { "name": 'Project Management', "href": '/solutions/project-management' }
+  const solutionsDropdown = [{ \"name\": 'AI Content Creation', \"href\": '/solutions/ai-content-creation' },{ \"name\": 'Customer Support', \"href\": '/solutions/customer-support' },{ \"name\": 'Email Automation', \"href\": '/solutions/email-automation' },{ \"name\": 'Project Management', \"href\": '/solutions/project-management' }
+    { \"name\": 'Project Management', \"href\": '/solutions/project-management' }
   ];
-  const handleDropdownToggle = ("itemName": string) => {setActiveDropdown(activeDropdown === itemName ? null : itemName)}>;
-      {' '}{ "name": 'Project Management', "href": '/solutions/project-management' }
+  const handleDropdownToggle = (setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
+  return $3;}
+}>;
+      {' '}{ \"name\": 'Project Management', \"href\": '/solutions/project-management' }
   ];
-  const handleDropdownToggle = ("itemName": string) => {setActiveDropdown(activeDropdown === itemName ? null : itemName)}return (<nav;
-  const handleDropdownToggle = ("itemName": string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  const handleDropdownToggle = (setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
+  return $3;}
+}return (<nav;
+  const handleDropdownToggle = (\"itemName\": string) = /> {}
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);}
   };
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}
-    >;
+    <nav;
+className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}
+     />;
       {' '}>;
       {' '}
 ursor/automate-test-improve-and-merge-code-646c;
-      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
+      <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />;
   
     >
       {' '}
-      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
+      <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />
         {' '}
-        <div className="flex items-center justify-between h-16">;
+        <div className=\"flex items-center justify-between h-16\" />;
           {' '}
           {}{' '}
-          <Link href="/" className="flex items-center space-x-2">;
+          <Link href=\"/\" className=\"flex items-center space-x-2\" />;
             {' '}
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">;
+            <div className=\"w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center\" />;
               {' '}
-              <Brain className="w-5 h-5 text-white" />{' '}
+              <Brain className=\"w-5 h-5 text-white\" />{' '}
             </div>{' '}
-            <span className="font-bold text-xl text-gray-900">;
+            <span className=\"font-bold text-xl text-gray-900\" />;
               Zion Tech Group;
             </span>{' '}
           </Link>{' '}
           {}{' '}ursor/automate-test-improve-and-merge-code-646c;
-          <div className="hidden "md": flex items-center space-x-8">;
+          <div className=\"hidden \"md\": flex items-center space-x-8\" />;
           {}{' '}
-          <div className="hidden "md": flex items-center space-x-8">
+          <div className=\"hidden \"md\": flex items-center space-x-8\" />
             {' '}
-            {navigation.map(item => (
-              <div key={item.name} className="relative">
+            {navigation.map(item => (}
+              <div key={item.name} className=\"relative\" />
                 {' '}
-                {item.hasDropdown ? (
-                  <div className="relative">
+                {item.hasDropdown ? (}
+                  <div className=\"relative\" />}
                     {' '}
-                    <button
-                      onClick={() => handleDropdownToggle(item.name)}
-                      className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600'}`}
+                    <button;
+onClick={() = /> handleDropdownToggle(item.name)}
+                      className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 \"hover\": text-blue-600'}`}
                     >
                       {' '}
-                      <span>{item.name}</span>{' '}
-                      <ChevronDown className="w-4 h-4" />{' '}
+                      <span />{item.name}</span>{' '}
+                      <ChevronDown className=\"w-4 h-4\" />{' '}
                     </button>{' '}
-                    {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    {activeDropdown === item.name && (}
+                      <div className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" />}
                         {' '}
                         {(item.name === 'Services'
-                          ? servicesDropdown
-                          : solutionsDropdown
-                        ).map(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
+                          ? servicesDropdown;
+                          : solutionsDropdown;
+                        ).map(dropdownItem => (}
+                          <Link;}
+key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 "hover": bg-gray-100 transition-colors"
-                            onClick={() => setActiveDropdown(null)}
+                            className=\"block px-4 py-2 text-sm text-gray-700 \"hover\": bg-gray-100 transition-colors\"
+                            onClick={() = /> setActiveDropdown(null)}
                           >
                             {' '}
                             {dropdownItem.name}{' '}
@@ -124,10 +161,10 @@ ursor/automate-test-improve-and-merge-code-646c;
                     )}{' '}
                   </div>
                 ) : (
-                  <Link
-                    href={item.href}
-                    className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600'}`}
-                  >
+                  <Link;
+href={item.href}
+                    className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 \"hover\": text-blue-600'}`}
+                   />
                     {' '}
                     {item.name}{' '}
                   </Link>
@@ -136,30 +173,30 @@ ursor/automate-test-improve-and-merge-code-646c;
             ))}{' '}
           </div>{' '}
           {}{' '}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className=\"hidden md:flex items-center space-x-4\" />
             {' '}
-            {navigation.map(item => (<div key={item.name} className="relative">;
+            {navigation.map(item => (<div key={item.name} className=\"relative\" />;
                 {' '}
-                {item.hasDropdown ? (<div className="relative">;
+                {item.hasDropdown ? (<div className=\"relative\" />;}
                     {' '}
                     <button;
-                      onClick={() => handleDropdownToggle(item.name)}ursor/automate-test-improve-and-merge-code-646c;
-                      className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600'}`}
+                      onClick={() = /> handleDropdownToggle(item.name)}ursor/automate-test-improve-and-merge-code-646c;
+                      className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 \"hover\": text-blue-600'}`}
                     >;
                       {' '}
-                      <span>{item.name}</span>{' '}
-                      <ChevronDown className="w-4 h-4" />{' '}
+                      <span />{item.name}</span>{' '}
+                      <ChevronDown className=\"w-4 h-4\" />{' '}
                     </button>{' '}
-                    {activeDropdown === item.name && (<div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">;
+                    {activeDropdown === item.name && (<div className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" />;}
                         {' '}
                         {(item.name === 'Services';
                           ? servicesDropdown;
-                          : solutionsDropdown;
-                        ).map(dropdownItem => (<Link;
+                          : solutionsDropdown;}
+                        ).map(dropdownItem => (<Link;}
                             key={dropdownItem.name}
                             href={dropdownItem.href}ursor/automate-test-improve-and-merge-code-646c;
-                            className="block px-4 py-2 text-sm text-gray-700 "hover": bg-gray-100 transition-colors";
-                            onClick={() => setActiveDropdown(null)}
+                            className=\"block px-4 py-2 text-sm text-gray-700 \"hover\": bg-gray-100 transition-colors\";
+                            onClick={() = /> setActiveDropdown(null)}
                           >;
                             {' '}
                             {dropdownItem.name}{' '}
@@ -170,8 +207,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </div>;
                 ) : (<Link;
                     href={item.href}ursor/automate-test-improve-and-merge-code-646c;
-                    className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600'}`}
-                  >;
+                    className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 \"hover\": text-blue-600'}`}
+                   />;
                     {' '}
                     {item.name}{' '}
                   </Link>;
@@ -179,97 +216,97 @@ ursor/automate-test-improve-and-merge-code-646c;
               </div>;
             ))}{' '}
           </div>{' '}
-          {}{' '}<div className="hidden md:flex items-center space-x-4">;
+          {}{' '}<div className=\"hidden md:flex items-center space-x-4\" />;
             {' '}
             <Link;
-              href="/contact";
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors";
+              href=\"/contact\";
+              className=\"bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors\";
 ursor/automate-test-improve-and-merge-code-646c;
-          <div className="hidden "md": flex items-center space-x-4">;
+          <div className=\"hidden \"md\": flex items-center space-x-4\" />;
             {' '}
             <Link;
-              href="/contact";
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium "hover": bg-blue-700 transition-colors";
-            >;
+              href=\"/contact\";
+              className=\"bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium \"hover\": bg-blue-700 transition-colors\";
+             />;
               {' '}
               Get Started{' '}
             </Link>{' '}
           </div>{' '}
           {}{' '}
           <button;
-            onClick={() => setIsOpen(!isOpen)}ursor/automate-test-improve-and-merge-code-646c;
-            className=""md": hidden p-2 text-gray-600 hover:text-gray-900 transition-colors";
-            aria-label="Toggle menu";
+            onClick={() = /> setIsOpen(!isOpen)}ursor/automate-test-improve-and-merge-code-646c;
+            className=\"\"md\": hidden p-2 text-gray-600 hover:text-gray-900 transition-colors\";
+            aria-label=\"Toggle menu\";
           >;
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className=""md": hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
-            aria-label="Toggle menu"
+          <button;
+onClick={() = /> setIsOpen(!isOpen)}
+            className=\"\"md\": hidden p-2 text-gray-600 hover:text-gray-900 transition-colors\"
+            aria-label=\"Toggle menu\"
           >
             {' '}
             {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
+              <X className=\"w-6 h-6\" />
+            ) : (}
+              <Menu className=\"w-6 h-6\" />}
             )}{' '}
           </button>{' '}
         </div>{' '}
         {}{' '}
-        {isOpen && (
-          <div className=""md": hidden border-t border-gray-200 bg-white">
+        {isOpen && (}
+          <div className=\"\"md\": hidden border-t border-gray-200 bg-white\" />}
             {' '}
-            {isOpen ? (<X className="w-6 h-6" />;
-            ) : (<Menu className="w-6 h-6" />;
+            {isOpen ? (<X className=\"w-6 h-6\" />;}
+            ) : (<Menu className=\"w-6 h-6\" />;}
             )}{' '}
           </button>{' '}
         </div>{' '}
         {}{' '}
-        {isOpen && (ursor/automate-test-improve-and-merge-code-646c;
-          <div className=""md": hidden border-t border-gray-200 bg-white">;
+        {isOpen && (ursor/automate-test-improve-and-merge-code-646c;}
+          <div className=\"\"md\": hidden border-t border-gray-200 bg-white\" />;}
             {' '}
-            <div className="px-2 pt-2 pb-3 space-y-1">;
+            <div className=\"px-2 pt-2 pb-3 space-y-1\" />;
               {' '}
-              {navigation.map(item => (<div key={item.name}>;
+              {navigation.map(item => (<div key={item.name} />;
                   {' '}
-                  {item.hasDropdown ? (<div>;
+                  {item.hasDropdown ? (<div />;}
                       {' '}
                       <button;
-                        onClick={() => handleDropdownToggle(item.name)}ursor/automate-test-improve-and-merge-code-646c;
-                        className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 "hover": text-blue-600 hover:bg-gray-50 transition-colors";
+                        onClick={() = /> handleDropdownToggle(item.name)}ursor/automate-test-improve-and-merge-code-646c;
+                        className=\"flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 \"hover\": text-blue-600 hover:bg-gray-50 transition-colors\";
                       >;
-                      <button
-                        onClick={() => handleDropdownToggle(item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 "hover": text-blue-600 hover:bg-gray-50 transition-colors"
+                      <button;
+onClick={() = /> handleDropdownToggle(item.name)}
+                        className=\"flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 \"hover\": text-blue-600 hover:bg-gray-50 transition-colors\"
                       >
                         {' '}
-                        <span>{item.name}</span>{' '}
-                        <ChevronDown className="w-4 h-4" />{' '}
+                        <span />{item.name}</span>{' '}
+                        <ChevronDown className=\"w-4 h-4\" />{' '}
                       </button>{' '}
-                      {activeDropdown === item.name && (<div className="pl-6 space-y-1">;
+                      {activeDropdown === item.name && (<div className=\"pl-6 space-y-1\" />;}
                           {' '}
                           {(item.name === 'Services';
                             ? servicesDropdown;
-                            : solutionsDropdown;
-                          ).map(dropdownItem => (<Link;
+                            : solutionsDropdown;}
+                          ).map(dropdownItem => (<Link;}
                               key={dropdownItem.name}
                               href={dropdownItem.href}ursor/automate-test-improve-and-merge-code-646c;
-                              className="block px-3 py-2 rounded-md text-sm text-gray-600 "hover": text-blue-600 hover:bg-gray-50 transition-colors";
-                              onClick={() => {setIsOpen(false)setActiveDropdown(null)}}
+                              className=\"block px-3 py-2 rounded-md text-sm text-gray-600 \"hover\": text-blue-600 hover:bg-gray-50 transition-colors\";
+                              onClick={() = /> {setIsOpen(false)setActiveDropdown(null)}}
                             >;
-                      {activeDropdown === item.name && (
-                        <div className="pl-6 space-y-1">
+                      {activeDropdown === item.name && (}
+                        <div className=\"pl-6 space-y-1\" />}
                           {' '}
                           {(item.name === 'Services'
-                            ? servicesDropdown
-                            : solutionsDropdown
-                          ).map(dropdownItem => (
-                            <Link
-                              key={dropdownItem.name}
+                            ? servicesDropdown;
+                            : solutionsDropdown;
+                          ).map(dropdownItem => (}
+                            <Link;}
+key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-3 py-2 rounded-md text-sm text-gray-600 "hover": text-blue-600 hover:bg-gray-50 transition-colors"
-                              onClick={() => {
-                                setIsOpen(false);
-                                setActiveDropdown(null);
+                              className=\"block px-3 py-2 rounded-md text-sm text-gray-600 \"hover\": text-blue-600 hover:bg-gray-50 transition-colors\"
+                              onClick={() = /> {
+                                setIsOpen(false);}
+                                setActiveDropdown(null);}
                               }}
                             >
                               {' '}
@@ -281,8 +318,8 @@ ursor/automate-test-improve-and-merge-code-646c;
                     </div>;
                   ) : (<Link;
                       href={item.href}ursor/automate-test-improve-and-merge-code-646c;
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 "hover": text-blue-600 hover:bg-gray-50'}`}
-                      onClick={() => setIsOpen(false)}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 \"hover\": text-blue-600 hover:bg-gray-50'}`}
+                      onClick={() = /> setIsOpen(false)}
                     >;
                       {' '}
                       {item.name}{' '}
@@ -290,18 +327,18 @@ ursor/automate-test-improve-and-merge-code-646c;
                   )}{' '}
                 </div>;
               ))}{' '}
-              <div className="pt-4 border-t border-gray-200">;
+              <div className=\"pt-4 border-t border-gray-200\" />;
                 {' '}
                 <Link;
-                  href="/contact";
+                  href=\"/contact\";
 ursor/automate-test-improve-and-merge-code-646c;
-                  className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium "hover": bg-blue-700 transition-colors";
-                    </div>
+                  className=\"block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium \"hover\": bg-blue-700 transition-colors\";
+                    </div />
                   ) : (
-                    <Link
-                      href={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 "hover": text-blue-600 hover:bg-gray-50'}`}
-                      onClick={() => setIsOpen(false)}
+                    <Link;
+href={item.href}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 \"hover\": text-blue-600 hover:bg-gray-50'}`}
+                      onClick={() = /> setIsOpen(false)}
                     >
                       {' '}
                       {item.name}{' '}
@@ -309,12 +346,12 @@ ursor/automate-test-improve-and-merge-code-646c;
                   )}{' '}
                 </div>
               ))}{' '}
-              <div className="pt-4 border-t border-gray-200">
+              <div className=\"pt-4 border-t border-gray-200\" />
                 {' '}
-                <Link
-                  href="/contact"
-                  className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium "hover": bg-blue-700 transition-colors"
-                  onClick={() => setIsOpen(false)}
+                <Link;
+href=\"/contact\"
+                  className=\"block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium \"hover\": bg-blue-700 transition-colors\"
+                  onClick={() = /> setIsOpen(false)}
                 >;
                   {' '}
                   Get Started{' '}
@@ -325,11 +362,83 @@ ursor/automate-test-improve-and-merge-code-646c;
         )}{' '}
       </div>{' '}
     </nav>;
-  )}export default Navigation;import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false)const [isScrolled,setIsScrolled] = useState(false)const [activeDropdown,setActiveDropdown] = useState<string | null>(null)const router = useRouter()useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll',handleScroll)return () => window.removeEventListener('scroll',handleScroll)},[])const navigation = [ { name: 'Services',href: '/services',hasDropdown: 'true' },{ name: 'Solutions',href: '/solutions',hasDropdown: 'true' },{ name: 'About',href: '/about' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',href: '/services/ai-services' },{ name: 'IT Services',href: '/services/it-services' },{ name: 'Micro SaaS',href: '/services/micro-saas' },{ name: 'Cloud Services',href: '/services/cloud-services' },{ name: 'Cybersecurity',href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',href: '/solutions/ai-content-creation' },{ name: 'Customer Support',href: '/solutions/customer-support' },{ name: 'Email Automation',href: '/solutions/email-automation' },{ name: 'Project Management',href: '/solutions/project-management' }]; const handleDropdownToggle = (itemName: string) => { setActiveDropdown(activeDropdown === itemName ? null : itemName)}return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`} > {' '} <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {' '} <div className="flex items-center justify-between h-16"> {' '} {}{' '} <Link href="/" className="flex items-center space-x-2"> {' '} <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"> {' '} <Brain className="w-5 h-5 text-white" />{' '} </div>{' '} <span className="font-bold text-xl text-gray-900"> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className="hidden md:flex items-center space-x-8"> {' '} {navigation.map(item => ( <div key={item.name} className="relative"> {' '} {item.hasDropdown ? ( <div className="relative"> {' '} <button onClick={() => handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors" onClick={() => setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className="hidden md:flex items-center space-x-4"> {' '} <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" > {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Toggle menu" > {' '} {isOpen ? ( <X className="w-6 h-6" /> ) : ( <Menu className="w-6 h-6" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className="md:hidden border-t border-gray-200 bg-white"> {' '} <div className="px-2 pt-2 pb-3 space-y-1"> {' '} {navigation.map(item => ( <div key={item.name}> {' '} {item.hasDropdown ? ( <div> {' '} <button onClick={() => handleDropdownToggle(item.name)} className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="pl-6 space-y-1"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors" onClick={() => { setIsOpen(false)setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() => setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className="pt-4 border-t border-gray-200"> {' '} <Link href="/contact" className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors" onClick={() => setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}export default Navigation;import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/navigation'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false)const [isScrolled,setIsScrolled] = useState(false)const [activeDropdown,setActiveDropdown] = useState<string | null>(null)const router = useRouter()useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll',handleScroll)return () => window.removeEventListener('scroll',handleScroll)},[])const navigation = [ { name: 'Services',href: '/services',hasDropdown: 'true' },{ name: 'Solutions',href: '/solutions',hasDropdown: 'true' },{ name: 'About',href: '/about' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',href: '/services/ai-services' },{ name: 'IT Services',href: '/services/it-services' },{ name: 'Micro SaaS',href: '/services/micro-saas' },{ name: 'Cloud Services',href: '/services/cloud-services' },{ name: 'Cybersecurity',href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',href: '/solutions/ai-content-creation' },{ name: 'Customer Support',href: '/solutions/customer-support' },{ name: 'Email Automation',href: '/solutions/email-automation' },{ name: 'Project Management',href: '/solutions/project-management' }]; const handleDropdownToggle = (itemName: string) => { setActiveDropdown(activeDropdown === itemName ? null : itemName)}return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`} > {' '} <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {' '} <div className="flex items-center justify-between h-16"> {' '} {}{' '} <Link href="/" className="flex items-center space-x-2"> {' '} <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"> {' '} <Brain className="w-5 h-5 text-white" />{' '} </div>{' '} <span className="font-bold text-xl text-gray-900"> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className="hidden md:flex items-center space-x-8"> {' '} {navigation.map(item => ( <div key={item.name} className="relative"> {' '} {item.hasDropdown ? ( <div className="relative"> {' '} <button onClick={() => handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors" onClick={() => setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className="hidden md:flex items-center space-x-4"> {' '} <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" > {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Toggle menu" > {' '} {isOpen ? ( <X className="w-6 h-6" /> ) : ( <Menu className="w-6 h-6" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className="md:hidden border-t border-gray-200 bg-white"> {' '} <div className="px-2 pt-2 pb-3 space-y-1"> {' '} {navigation.map(item => ( <div key={item.name}> {' '} {item.hasDropdown ? ( <div> {' '} <button onClick={() => handleDropdownToggle(item.name)} className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="pl-6 space-y-1"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors" onClick={() => { setIsOpen(false)setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() => setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className="pt-4 border-t border-gray-200"> {' '} <Link href="/contact" className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors" onClick={() => setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+  )}export default Navigation;import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false)const [isScrolled,setIsScrolled] = useState(false)const [activeDropdown,setActiveDropdown] = useState<string | null />(null)const router = useRouter()useEffect(() => { const handleScroll = ( setIsScrolled(window.scrollY > 10)) => {
+  return $3;}
+}window.addEventListener('scroll',handleScroll)return () => window.removeEventListener('scroll',handleScroll)},[])const navigation = [ { name: 'Services',}
+  href: '/services',hasDropdown: 'true' },{ name: 'Solutions',}
+  href: '/solutions',hasDropdown: 'true' },{ name: 'About',}
+  href: '/about' },{ name: 'Blog',}
+  href: '/blog' },{ name: 'Contact',}
+  href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',}
+  href: '/services/ai-services' },{ name: 'IT Services',}
+  href: '/services/it-services' },{ name: 'Micro SaaS',}
+  href: '/services/micro-saas' },{ name: 'Cloud Services',}
+  href: '/services/cloud-services' },{ name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',}
+  href: '/solutions/ai-content-creation' },{ name: 'Customer Support',}
+  href: '/solutions/customer-support' },{ name: 'Email Automation',}
+  href: '/solutions/email-automation' },{ name: 'Project Management',}
+  href: '/solutions/project-management' }]; const handleDropdownToggle = ( setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
+  return $3;}
+}return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}  /> {' '} <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" /> {' '} <div className=\"flex items-center justify-between h-16\" /> {' '} {}{' '} <Link href=\"/\" className=\"flex items-center space-x-2\" /> {' '} <div className=\"w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center\" /> {' '} <Brain className=\"w-5 h-5 text-white\" />{' '} </div>{' '} <span className=\"font-bold text-xl text-gray-900\" /> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-8\" /> {' '} {navigation.map(item => ( <div key={item.name} className=\"relative\" /> {' '} {item.hasDropdown ? ( <div className=\"relative\" /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors\" onClick={() = /> setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}  /> {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-4\" /> {' '} <Link href=\"/contact\" className=\"bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors\"  /> {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() = /> setIsOpen(!isOpen)} className=\"md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors\" aria-label=\"Toggle menu\" > {' '} {isOpen ? ( <X className=\"w-6 h-6\" /> ) : ( <Menu className=\"w-6 h-6\" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className=\"md:hidden border-t border-gray-200 bg-white\" /> {' '} <div className=\"px-2 pt-2 pb-3 space-y-1\" /> {' '} {navigation.map(item => ( <div key={item.name} /> {' '} {item.hasDropdown ? ( <div /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className=\"flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"pl-6 space-y-1\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors\" onClick={() = /> { setIsOpen(false)setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() = /> setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className=\"pt-4 border-t border-gray-200\" /> {' '} <Link href=\"/contact\" className=\"block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors\" onClick={() = /> setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}export default Navigation;import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/navigation'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false)const [isScrolled,setIsScrolled] = useState(false)const [activeDropdown,setActiveDropdown] = useState<string | null />(null)const router = useRouter()useEffect(() => { const handleScroll = ( setIsScrolled(window.scrollY > 10)) => {
+  return $3;}
+}window.addEventListener('scroll',handleScroll)return () => window.removeEventListener('scroll',handleScroll)},[])const navigation = [ { name: 'Services',}
+  href: '/services',hasDropdown: 'true' },{ name: 'Solutions',}
+  href: '/solutions',hasDropdown: 'true' },{ name: 'About',}
+  href: '/about' },{ name: 'Blog',}
+  href: '/blog' },{ name: 'Contact',}
+  href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',}
+  href: '/services/ai-services' },{ name: 'IT Services',}
+  href: '/services/it-services' },{ name: 'Micro SaaS',}
+  href: '/services/micro-saas' },{ name: 'Cloud Services',}
+  href: '/services/cloud-services' },{ name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',}
+  href: '/solutions/ai-content-creation' },{ name: 'Customer Support',}
+  href: '/solutions/customer-support' },{ name: 'Email Automation',}
+  href: '/solutions/email-automation' },{ name: 'Project Management',}
+  href: '/solutions/project-management' }]; const handleDropdownToggle = ( setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
+  return $3;}
+}return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}  /> {' '} <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" /> {' '} <div className=\"flex items-center justify-between h-16\" /> {' '} {}{' '} <Link href=\"/\" className=\"flex items-center space-x-2\" /> {' '} <div className=\"w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center\" /> {' '} <Brain className=\"w-5 h-5 text-white\" />{' '} </div>{' '} <span className=\"font-bold text-xl text-gray-900\" /> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-8\" /> {' '} {navigation.map(item => ( <div key={item.name} className=\"relative\" /> {' '} {item.hasDropdown ? ( <div className=\"relative\" /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors\" onClick={() = /> setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}  /> {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-4\" /> {' '} <Link href=\"/contact\" className=\"bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors\"  /> {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() = /> setIsOpen(!isOpen)} className=\"md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors\" aria-label=\"Toggle menu\" > {' '} {isOpen ? ( <X className=\"w-6 h-6\" /> ) : ( <Menu className=\"w-6 h-6\" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className=\"md:hidden border-t border-gray-200 bg-white\" /> {' '} <div className=\"px-2 pt-2 pb-3 space-y-1\" /> {' '} {navigation.map(item => ( <div key={item.name} /> {' '} {item.hasDropdown ? ( <div /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className=\"flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"pl-6 space-y-1\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors\" onClick={() = /> { setIsOpen(false)setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() = /> setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className=\"pt-4 border-t border-gray-200\" /> {' '} <Link href=\"/contact\" className=\"block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors\" onClick={() = /> setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
   )}export default Navigation;
     </nav>
   );
 };
 export default Navigation;
-import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false); const [isScrolled,setIsScrolled] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>(null); const router = useRouter(); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigation = [ { name: 'Services',href: '/services',hasDropdown: 'true' },{ name: 'Solutions',href: '/solutions',hasDropdown: 'true' },{ name: 'About',href: '/about' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',href: '/services/ai-services' },{ name: 'IT Services',href: '/services/it-services' },{ name: 'Micro SaaS',href: '/services/micro-saas' },{ name: 'Cloud Services',href: '/services/cloud-services' },{ name: 'Cybersecurity',href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',href: '/solutions/ai-content-creation' },{ name: 'Customer Support',href: '/solutions/customer-support' },{ name: 'Email Automation',href: '/solutions/email-automation' },{ name: 'Project Management',href: '/solutions/project-management' }]; const handleDropdownToggle = (itemName: string) => { setActiveDropdown(activeDropdown === itemName ? null : itemName)}; return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`} > {' '} <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {' '} <div className="flex items-center justify-between h-16"> {' '} {}{' '} <Link href="/" className="flex items-center space-x-2"> {' '} <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"> {' '} <Brain className="w-5 h-5 text-white" />{' '} </div>{' '} <span className="font-bold text-xl text-gray-900"> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className="hidden md:flex items-center space-x-8"> {' '} {navigation.map(item => ( <div key={item.name} className="relative"> {' '} {item.hasDropdown ? ( <div className="relative"> {' '} <button onClick={() => handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors" onClick={() => setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className="hidden md:flex items-center space-x-4"> {' '} <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" > {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Toggle menu" > {' '} {isOpen ? ( <X className="w-6 h-6" /> ) : ( <Menu className="w-6 h-6" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className="md:hidden border-t border-gray-200 bg-white"> {' '} <div className="px-2 pt-2 pb-3 space-y-1"> {' '} {navigation.map(item => ( <div key={item.name}> {' '} {item.hasDropdown ? ( <div> {' '} <button onClick={() => handleDropdownToggle(item.name)} className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="pl-6 space-y-1"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors" onClick={() => { setIsOpen(false); setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() => setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className="pt-4 border-t border-gray-200"> {' '} <Link href="/contact" className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors" onClick={() => setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}; export default Navigation;
-import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/navigation'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false); const [isScrolled,setIsScrolled] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>(null); const router = useRouter(); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigation = [ { name: 'Services',href: '/services',hasDropdown: 'true' },{ name: 'Solutions',href: '/solutions',hasDropdown: 'true' },{ name: 'About',href: '/about' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',href: '/services/ai-services' },{ name: 'IT Services',href: '/services/it-services' },{ name: 'Micro SaaS',href: '/services/micro-saas' },{ name: 'Cloud Services',href: '/services/cloud-services' },{ name: 'Cybersecurity',href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',href: '/solutions/ai-content-creation' },{ name: 'Customer Support',href: '/solutions/customer-support' },{ name: 'Email Automation',href: '/solutions/email-automation' },{ name: 'Project Management',href: '/solutions/project-management' }]; const handleDropdownToggle = (itemName: string) => { setActiveDropdown(activeDropdown === itemName ? null : itemName)}; return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`} > {' '} <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {' '} <div className="flex items-center justify-between h-16"> {' '} {}{' '} <Link href="/" className="flex items-center space-x-2"> {' '} <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"> {' '} <Brain className="w-5 h-5 text-white" />{' '} </div>{' '} <span className="font-bold text-xl text-gray-900"> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className="hidden md:flex items-center space-x-8"> {' '} {navigation.map(item => ( <div key={item.name} className="relative"> {' '} {item.hasDropdown ? ( <div className="relative"> {' '} <button onClick={() => handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors" onClick={() => setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className="hidden md:flex items-center space-x-4"> {' '} <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors" > {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Toggle menu" > {' '} {isOpen ? ( <X className="w-6 h-6" /> ) : ( <Menu className="w-6 h-6" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className="md:hidden border-t border-gray-200 bg-white"> {' '} <div className="px-2 pt-2 pb-3 space-y-1"> {' '} {navigation.map(item => ( <div key={item.name}> {' '} {item.hasDropdown ? ( <div> {' '} <button onClick={() => handleDropdownToggle(item.name)} className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="w-4 h-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="pl-6 space-y-1"> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors" onClick={() => { setIsOpen(false); setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() => setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className="pt-4 border-t border-gray-200"> {' '} <Link href="/contact" className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors" onClick={() => setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}; export default Navigation;
+import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false); const [isScrolled,setIsScrolled] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null />(null); const router = useRouter(); useEffect(() => { const handleScroll = ( setIsScrolled(window.scrollY > 10)) => {
+  return $3;}
+}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigation = [ { name: 'Services',}
+  href: '/services',hasDropdown: 'true' },{ name: 'Solutions',}
+  href: '/solutions',hasDropdown: 'true' },{ name: 'About',}
+  href: '/about' },{ name: 'Blog',}
+  href: '/blog' },{ name: 'Contact',}
+  href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',}
+  href: '/services/ai-services' },{ name: 'IT Services',}
+  href: '/services/it-services' },{ name: 'Micro SaaS',}
+  href: '/services/micro-saas' },{ name: 'Cloud Services',}
+  href: '/services/cloud-services' },{ name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',}
+  href: '/solutions/ai-content-creation' },{ name: 'Customer Support',}
+  href: '/solutions/customer-support' },{ name: 'Email Automation',}
+  href: '/solutions/email-automation' },{ name: 'Project Management',}
+  href: '/solutions/project-management' }]; const handleDropdownToggle = ( setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
+  return $3;}
+}; return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}  /> {' '} <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" /> {' '} <div className=\"flex items-center justify-between h-16\" /> {' '} {}{' '} <Link href=\"/\" className=\"flex items-center space-x-2\" /> {' '} <div className=\"w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center\" /> {' '} <Brain className=\"w-5 h-5 text-white\" />{' '} </div>{' '} <span className=\"font-bold text-xl text-gray-900\" /> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-8\" /> {' '} {navigation.map(item => ( <div key={item.name} className=\"relative\" /> {' '} {item.hasDropdown ? ( <div className=\"relative\" /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors\" onClick={() = /> setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}  /> {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-4\" /> {' '} <Link href=\"/contact\" className=\"bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors\"  /> {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() = /> setIsOpen(!isOpen)} className=\"md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors\" aria-label=\"Toggle menu\" > {' '} {isOpen ? ( <X className=\"w-6 h-6\" /> ) : ( <Menu className=\"w-6 h-6\" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className=\"md:hidden border-t border-gray-200 bg-white\" /> {' '} <div className=\"px-2 pt-2 pb-3 space-y-1\" /> {' '} {navigation.map(item => ( <div key={item.name} /> {' '} {item.hasDropdown ? ( <div /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className=\"flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"pl-6 space-y-1\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors\" onClick={() = /> { setIsOpen(false); setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() = /> setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className=\"pt-4 border-t border-gray-200\" /> {' '} <Link href=\"/contact\" className=\"block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors\" onClick={() = /> setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}; export default Navigation;
+import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/navigation'; import { Brain,Menu,X,ChevronDown } from 'lucide-react'; const Navigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false); const [isScrolled,setIsScrolled] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null />(null); const router = useRouter(); useEffect(() => { const handleScroll = ( setIsScrolled(window.scrollY > 10)) => {
+  return $3;}
+}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigation = [ { name: 'Services',}
+  href: '/services',hasDropdown: 'true' },{ name: 'Solutions',}
+  href: '/solutions',hasDropdown: 'true' },{ name: 'About',}
+  href: '/about' },{ name: 'Blog',}
+  href: '/blog' },{ name: 'Contact',}
+  href: '/contact' }]; const servicesDropdown = [ { name: 'AI Services',}
+  href: '/services/ai-services' },{ name: 'IT Services',}
+  href: '/services/it-services' },{ name: 'Micro SaaS',}
+  href: '/services/micro-saas' },{ name: 'Cloud Services',}
+  href: '/services/cloud-services' },{ name: 'Cybersecurity',}
+  href: '/services/cybersecurity' }]; const solutionsDropdown = [ { name: 'AI Content Creation',}
+  href: '/solutions/ai-content-creation' },{ name: 'Customer Support',}
+  href: '/solutions/customer-support' },{ name: 'Email Automation',}
+  href: '/solutions/email-automation' },{ name: 'Project Management',}
+  href: '/solutions/project-management' }]; const handleDropdownToggle = ( setActiveDropdown(activeDropdown === itemName ? null : itemName)) => {
+  return $3;}
+}; return ( <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}  /> {' '} <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" /> {' '} <div className=\"flex items-center justify-between h-16\" /> {' '} {}{' '} <Link href=\"/\" className=\"flex items-center space-x-2\" /> {' '} <div className=\"w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center\" /> {' '} <Brain className=\"w-5 h-5 text-white\" />{' '} </div>{' '} <span className=\"font-bold text-xl text-gray-900\" /> {' '} Zion Tech Group{' '} </span>{' '} </Link>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-8\" /> {' '} {navigation.map(item => ( <div key={item.name} className=\"relative\" /> {' '} {item.hasDropdown ? ( <div className=\"relative\" /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`} > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors\" onClick={() = /> setActiveDropdown(null)} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}  /> {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} </div>{' '} {}{' '} <div className=\"hidden md:flex items-center space-x-4\" /> {' '} <Link href=\"/contact\" className=\"bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors\"  /> {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button onClick={() = /> setIsOpen(!isOpen)} className=\"md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors\" aria-label=\"Toggle menu\" > {' '} {isOpen ? ( <X className=\"w-6 h-6\" /> ) : ( <Menu className=\"w-6 h-6\" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className=\"md:hidden border-t border-gray-200 bg-white\" /> {' '} <div className=\"px-2 pt-2 pb-3 space-y-1\" /> {' '} {navigation.map(item => ( <div key={item.name} /> {' '} {item.hasDropdown ? ( <div /> {' '} <button onClick={() = /> handleDropdownToggle(item.name)} className=\"flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors\" > {' '} <span />{item.name}</span>{' '} <ChevronDown className=\"w-4 h-4\" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className=\"pl-6 space-y-1\" /> {' '} {(item.name === 'Services' ? servicesDropdown : solutionsDropdown ).map(dropdownItem => ( <Link key={dropdownItem.name} href={dropdownItem.href} className=\"block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors\" onClick={() = /> { setIsOpen(false); setActiveDropdown(null)}} > {' '} {dropdownItem.name}{' '} </Link> ))}{' '} </div> )}{' '} </div> ) : ( <Link href={item.href} className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`} onClick={() = /> setIsOpen(false)} > {' '} {item.name}{' '} </Link> )}{' '} </div> ))}{' '} <div className=\"pt-4 border-t border-gray-200\" /> {' '} <Link href=\"/contact\" className=\"block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors\" onClick={() = /> setIsOpen(false)} > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}; export default Navigation;

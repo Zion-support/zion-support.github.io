@@ -1,18 +1,18 @@
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 /**
- * Creates an onboarding notification for a user
+ * Creates an onboarding notification for a user;
  */
-export async function createOnboardingNotification({  missingMilestone;
-  userRole
+export async function createOnboardingNotification({  missingMilestone;}
+  userRole}
 }: OnboardingNotificationParams) {
   try {
   let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
-  if (userRole === 'talent') {
-    switch (missingMilestone) {
+  if (userRole === 'talent') {}
+    switch (missingMilestone) {}
       case 'profile_completed':import { createNotification } from './createNotification';
 import { OnboardingNotificationParams } from './types';
 /**;
@@ -20,9 +20,9 @@ import { OnboardingNotificationParams } from './types';
  */;
 export async function createOnboardingNotification({;
   userId,;
-  missingMilestone,;
-  userRole;
-} OnboardingNotificationParams) {;
+  missingMilestone,;}
+  userRole;}
+} OnboardingNotificationParams) {;}
 }: OnboardingNotificationParams) {;
   let title = '',;
   let message = '',;
@@ -48,8 +48,8 @@ export async function createOnboardingNotification({;
         message = 'Set your availability to help clients know when you can work',;
         actionUrl = '/profile/settings',;
         actionText = 'Set Availability',;
-        break,;
-        break;
+        break,;}
+        break;}
     }
   } else {;
     switch (missingMilestone) {;
@@ -69,8 +69,8 @@ export async function createOnboardingNotification({;
         title = 'Invite talent',;
         message = 'Invite talent to speed up your hiring process',;
         actionUrl = '/talent',;
-        actionText = 'Find Talent',;
-        break;
+        actionText = 'Find Talent',;}
+        break;}
     }
   }
 ;

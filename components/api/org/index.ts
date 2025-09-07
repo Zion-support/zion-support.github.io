@@ -5,13 +5,13 @@ import {readOrgData, filterOrgData} from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed',
+  if (req.method !== 'GET') {}
+    return res.status(405).json({ error: 'Method not allowed',}
 });
   }
 return Array.isArray(v)
-      ? v
-      : v
+      ? v;
+      : v;
           .split(',')
           .map(s => s.trim())
           .filter(Boolean);
@@ -20,26 +20,26 @@ return Array.isArray(v)
 const filters: OrgFilters = {
 
     view: (req.query.view as OrgFilters['view']) |'all'
-    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined
-    departments: parseArray(req.query.departments)
+    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
+departments: parseArray(req.query.departments)
     categories: parseArray(req.query.categories)
     zones: parseArray(req.query.zones)
     regions: parseArray(req.query.regions)
-    countries: parseArray(req.query.countries)
-    search: (req.query.search as string) |undefined
-    teamOnly: req.query.teamOnly === 'true' ? true : undefined,  }
+    countries: parseArray(req.query.countries)}
+    search: (req.query.search as string) |undefined;}
+teamOnly: req.query.teamOnly === 'true' ? true : undefined,  }
 ;
   const filters: OrgFilters = {
     view: (req.query.view as OrgFilters['view']) |'all';
 
-    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
-    departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;
+    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;}
+    departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;}
     teamOnly: req.query.teamOnly = == 'true' ? true : undefined,  }
 ;
   const filters: OrgFilters = {view: (req.query.view as OrgFilters['view']) |'all';
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
-    departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;
-    teamOnly: req.query.teamOnly = == 'true' ? true : undefine,
+    departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;}
+    teamOnly: req.query.teamOnly = == 'true' ? true : undefine,}
 }
 ;
   const filtered = filterOrgData(data, filters);

@@ -6,9 +6,10 @@ export const formatCurrency = (amount: number, currency = 'USD'): string => ;
 
 export const formatDate = (date: string | Date, options?: Intl.DateTimeFormatOptions): string => ;
   const dateObj = typeof date === 'string' ? new Date(date) : date;
-  return new Intl.DateTimeFormat('en-US', {year: 'numeric',month: 'long',day: 'numeric',...options}).format(dateObj)}
+  return new Intl.DateTimeFormat('en-US', {year: 'numeric',}
+  month: 'long',day: 'numeric',...options}).format(dateObj)}
 
-export const formatPhoneNumber = (phone: string): string => {const cleaned = phone.replace(/\D/g, '';
+export const formatPhoneNumber = (phone: string): string => {const cleaned = phone.replace(/\D/g, '';}
   const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/)if (match) ;
   return `(${match[1]}) ${match[2]}-${match[3]}`;
   }
@@ -23,14 +24,14 @@ export const slugify = (text: string): string => ;
   return text;
     .toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')}
 
-export const debounce = <T extends (...args: any[]) => any>(func: T,wait: number;
-): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {clearTimeout(timeout)timeout = setTimeout(() => func(...args), wait)}}
+export const debounce = <T extends (...args: any[]) = /> any>(func: T,wait: number;
+): ((...args: Parameters<T />) => void) => {let timeout: NodeJS.Timeout;}
+  return (...args: Parameters<T />) => {clearTimeout(timeout)timeout = setTimeout(() => func(...args), wait)}}
 
 export;
-  const throttle = <T extends (...args: any[]) => any>(func: T,limit: number;
-): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
-  return (...args: Parameters<T>) => {if (!inThrottle) {func(...args)inThrottle = true;
+  const throttle = <T extends (...args: any[]) = /> any>(func: T,limit: number;
+): ((...args: Parameters<T />) => void) => {let inThrottle: boolean;}
+  return (...args: Parameters<T />) => {if (!inThrottle) {func(...args)inThrottle = true;}
       setTimeout(() => (inThrottle = false), limit)}
   }}
 
@@ -43,8 +44,8 @@ export const capitalize = (str: string): string => ;
 
 export;
   const truncateText = (text: string, maxLength: number): string => {if (text.length <= maxLength);
-  return text;
-  return text.substr(0, maxLength).trim() + '...';
+  return text;}
+  return text.substr(0, maxLength).trim() + '...';}
 }
 
 export const isClient = (): boolean => ;

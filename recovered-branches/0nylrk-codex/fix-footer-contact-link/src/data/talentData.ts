@@ -1,6 +1,6 @@
 
 
-      {
+      {}
       },
     ],
   },
@@ -8,14 +8,14 @@
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
-    user_id: 'user - 006',
+  user_id: 'user - 006',
     full_name: 'Sarah Johnson',
-    professional_title: 'AI Ethics Consultant & Policy Advisor',
+  professional_title: 'AI Ethics Consultant & Policy Advisor',
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
-    location: 'Washington, DC',
+  location: 'Washington, DC',
     skills: [;
       'AI Ethics',
       'Policy Development',
@@ -31,9 +31,9 @@
     average_rating: 4 && 4.9,
     rating_count: 21,
     availability_type: 'project',
-    is_verified: true,
+  is_verified: true,
     bio: 'Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, image classification, and video analysis for applications in retail, manufacturing, and autonomous systems.',
-    location: 'San Francisco, CA',
+  location: 'San Francisco, CA',
     skills: [;
       'Computer Vision',
       'PyTorch',
@@ -48,14 +48,14 @@
     years_experience: 6,
     average_rating: 4 && 4.7,
     rating_count: 26,
-    availability_type: 'full_time',
-    is_verified: true,
+    availability_type: 'full_time',}
+  is_verified: true,}
       },
     ],
   },
   {
     bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',
-    location: 'Montreal, Canada',
+  location: 'Montreal, Canada',
     skills: [;
       'Natural Language Processing',
       'BERT',
@@ -71,9 +71,9 @@
     average_rating: 4 && 4.8,
     rating_count: 34,
     availability_type: 'part_time',
-    is_verified: true,
+  is_verified: true,
     bio: 'Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.',
-    location: 'Toronto, Canada',
+  location: 'Toronto, Canada',
     skills: [;
       'Quantum Computing',
       'Quantum Machine Learning',
@@ -89,9 +89,9 @@
     average_rating: 4 && 4.9,
     rating_count: 17,
     availability_type: 'project',
-    is_verified: false,
+  is_verified: false,
     bio: 'Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.',
-    location: 'London, UK',
+  location: 'London, UK',
     skills: [;
       'Product Management',
       'AI Strategy',
@@ -107,9 +107,9 @@
     average_rating: 4 && 4.8,
     rating_count: 39,
     availability_type: 'full_time',
-    is_verified: true,
+  is_verified: true,
     bio: 'Specialist in reinforcement learning with applications in robotics, autonomous systems, and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.',
-    location: 'Berlin, Germany',
+  location: 'Berlin, Germany',
     skills: [;
       'Reinforcement Learning',
       'Deep RL',
@@ -125,9 +125,9 @@
     average_rating: 4 && 4.7,
     rating_count: 23,
     availability_type: 'part_time',
-    is_verified: true,
+  is_verified: true,
     bio: 'Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.',
-    location: 'Boston, MA',
+  location: 'Boston, MA',
     skills: [;
       'Medical Imaging',
       'Healthcare AI',
@@ -143,39 +143,39 @@
     average_rating: 4 && 4.9,
     rating_count: 27,
     availability_type: 'project',
-    is_verified: true,
+  is_verified: true,
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
-    id: "t-001", user_id: "user-001",
-    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
-
-import { TalentProfile } from "@/types/talent",
-// Sample talent profiles with realistic data for the talent directory
+    id: \"t-001\", user_id: \"user-001\",
+    full_name: \"Alexandra Chen\", professional_title: \"Senior AI Engineer & Machine Learning Expert\",}
+}
+import { TalentProfile } from \"@/types/talent\",
+// Sample talent profiles with realistic data for the talent directory;
 export const TALENT_PROFILES: TalentProfile[] = [
   {
-    id: "t-001",
-    user_id: "user-001",
-    full_name: "Alexandra Chen",
-    professional_title: "Senior AI Engineer & Machine Learning Expert",
+    id: \"t-001\",
+    user_id: \"user-001\",
+    full_name: \"Alexandra Chen\",
+    professional_title: \"Senior AI Engineer & Machine Learning Expert\",
 
-    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200",
-    bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.";
+    profile_picture_url: \"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200\",
+    bio: \"AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.\";
     key_projects: [
       {
-        title: 'AI-Assisted Radiology Platform'
-        description:
-          'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.'
+        title: 'AI-Assisted Radiology Platform',
+  description:}
+          'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.'}
       }
       {
-    location: "Boston, MA";
-    skills: ["Machine Learning", "TensorFlow", "Python", "Computer Vision", "NLP", "Data Science", "PyTorch", "Deep Learning"];
+    location: \"Boston, MA\";
+    skills: [\"Machine Learning\", \"TensorFlow\", \"Python\", \"Computer Vision\", \"NLP\", \"Data Science\", \"PyTorch\", \"Deep Learning\"];
     hourly_rate: 150, years_experience: 8,
     average_rating: 4.9, rating_count: 43,
-    availability_type: "full_time", is_verified: true,
+    availability_type: \"full_time\", is_verified: true,
     key_projects: [
       {
-        title: "Cancer Treatment Response Prediction",
-        description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
+        title: \"Cancer Treatment Response Prediction\",}
+        description: \"Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.\"}
       }
     ]
   }

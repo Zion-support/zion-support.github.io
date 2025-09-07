@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 FormField,
   FormItem,
   FormLabel,
@@ -8,105 +8,105 @@ FormField,
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { CertificationFormValues  } from './types';
-interface CertificationFormFieldsProps {
-  form: UseFormReturn < CertificationFormValues>;
+interface CertificationFormFieldsProps {}
+  form: UseFormReturn < CertificationFormValues>;}
 }
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
 import {UseFormReturn} from 'react-hook-form';
 import {CertificationFormValues} from './types';
-interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>
+interface CertificationFormFieldsProps {}
+  form: UseFormReturn<CertificationFormValues />}
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
-  form: UseFormReturn<CertificationFormValues>;
+  form: UseFormReturn<CertificationFormValues />;
 =======
 import {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-  FormField,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+FormField,
   FormItem,
   FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { CertificationFormValues } from "./types";
-interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>;
+  FormControl,}
+  FormMessage,}
+} from \"@/components/ui/form\";
+import { Input } from \"@/components/ui/input\";
+import { UseFormReturn } from \"react-hook-form\";
+import { CertificationFormValues } from \"./types\";
+interface CertificationFormFieldsProps {}
+  form: UseFormReturn<CertificationFormValues />;}
 }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-export function CertificationFormFields({
-  form,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+export function CertificationFormFields({}
+  form,}
 }: CertificationFormFieldsProps) {
   return (
-<<<<<<< HEAD
+<<<<<<< HEAD;
     <>;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-        <FormField
-          control={form && form.control}
-          name="name"
-            <FormItem>;
-              <FormLabel > Certification Name</FormLabel>;
-              <FormControl>;
+      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />;}
+        <FormField;}
+control={form && form.control}
+          name=\"name\"
+            <FormItem />;
+              <FormLabel  /> Certification Name</FormLabel>;
+              <FormControl />;
                 <Input;
-                  placeholder="AWS Certified Solutions Architect, PMP, etc.";
+                  placeholder=\"AWS Certified Solutions Architect, PMP, etc.\";
                   {...field}
-                <Input 
-                  type="date" 
+                <Input;
+type=\"date\" 
                   {...field}
                   value={field.value || ''}export /**
- * CertificationFormFields - Function description
+ * CertificationFormFields - Function description;
  */
 function CertificationFormFields() {
   return (
-    <>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
-        <FormField;
+    < />;
+      <div className=\"grid grid - cols - 1 md:grid - cols - 2 gap-4\" />;}
+        <FormField;}
           control={form.control}
-          name="name";
+          name=\"name\";
 =======
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={form.control}
-          name="name"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Certification Name</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="AWS Certified Solutions Architect, PMP, etc."
+    < />
+      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />
+        <FormField;
+control={form.control}
+          name=\"name\"
+ />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+render={({ field }) => (
+            <FormItem />
+              <FormLabel />Certification Name</FormLabel>
+              <FormControl />
+                <Input;
+placeholder=\"AWS Certified Solutions Architect, PMP, etc.\"
                   {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
+<<<<<<< HEAD;
         />;
-        <FormField
-          control={form && form.control}
+        <FormField;
+control={form && form.control}
 =======
         />
 
-        <FormField
-          control={form.control}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-          name="issuing_organization"
+        <FormField;
+control={form.control}
+ />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+name=\"issuing_organization\"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Issuing Organization</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Amazon Web Services, PMI, etc."
+            <FormItem />
+              <FormLabel />Issuing Organization</FormLabel>
+              <FormControl />
+                <Input;
+placeholder=\"Amazon Web Services, PMI, etc.\"
                   {...field}
                 />
               </FormControl>
@@ -115,7 +115,7 @@ function CertificationFormFields() {
           )}
         />
       </div>
-<<<<<<< HEAD
+<<<<<<< HEAD;
                 />;
               </FormControl>;
               <FormMessage />;
@@ -128,40 +128,40 @@ function CertificationFormFields() {
           )}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={form.control}
-          name="issuing_organization";
+      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />
+        <FormField;
+control={form.control}
+          name=\"issuing_organization\";
 =======
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={form.control}
-          name="issue_date"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Issue Date</FormLabel>
-              <FormControl>
-                <Input type="date" {...field} value={field.value || ""} />
+      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />
+        <FormField;
+control={form.control}
+          name=\"issue_date\"
+ />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+render={({ field }) => (
+            <FormItem />
+              <FormLabel />Issue Date</FormLabel>
+              <FormControl />
+                <Input type=\"date\" {...field} value={field.value || \"\"} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Issue Date</FormLabel>;
-              <FormControl>;
-                <Input          control={form.control}        <FormField
-          control={form && form.control}
-          name="expiration_date"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Expiration Date (Optional)</FormLabel>;
-              <FormControl>;
-                <Input
-                  type="date" 
+<<<<<<< HEAD;
+render={({ field }) => (;
+            <FormItem />;
+              <FormLabel />Issue Date</FormLabel>;
+              <FormControl />;
+                <Input          control={form.control}        <FormField;
+control={form && form.control}
+          name=\"expiration_date\"
+          render={({ field }) = /> (;
+            <FormItem />;
+              <FormLabel />Expiration Date (Optional)</FormLabel>;
+              <FormControl />;
+                <Input;
+type=\"date\" 
                   {...field}
                   value={field && field.value || ''}
                 />;
@@ -171,75 +171,75 @@ function CertificationFormFields() {
           )}
         />;
       </div>;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;        <FormField
-          control={form && form.control}
-          name="credential_id"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Credential ID (Optional)</FormLabel>;
+      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />;        <FormField;
+control={form && form.control}
+          name=\"credential_id\"
+          render={({ field }) = /> (;
+            <FormItem />;
+              <FormLabel />Credential ID (Optional)</FormLabel>;
                 />;
               </FormControl>;
               <FormMessage />;
             </FormItem>)}
         />;
       </div>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+      <div className=\"grid grid - cols - 1 md:grid - cols - 2 gap-4\" />;
         <FormField;
           control={form.control}
-          name="issue_date";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Issue Date</FormLabel>;
-              <FormControl>;
-                <Input type="date" {...field} value={field.value || ""} />;
+          name=\"issue_date\";
+          render={({ field }) = /> (
+            <FormItem />;
+              <FormLabel  /> Issue Date</FormLabel>;
+              <FormControl />;
+                <Input type=\"date\" {...field} value={field.value || \"\"} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
-          name="expiration_date";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Expiration Date (Optional)</FormLabel>;
-              <FormControl>;
-                <Input type="date" {...field} value={field.value || ""} />;
+          name=\"expiration_date\";
+          render={({ field }) = /> (
+            <FormItem />;
+              <FormLabel  /> Expiration Date (Optional)</FormLabel>;
+              <FormControl />;
+                <Input type=\"date\" {...field} value={field.value || \"\"} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>)}
         />;
       </div>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+      <div className=\"grid grid - cols - 1 md:grid - cols - 2 gap-4\" />;
         <FormField;
           control={form.control}
-          name="credential_id";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Credential ID (Optional)</FormLabel>;
-              <FormControl>;
-                <Input placeholder="ABC123XYZ" {...field} />;
+          name=\"credential_id\";
+          render={({ field }) = /> (
+            <FormItem />;
+              <FormLabel  /> Credential ID (Optional)</FormLabel>;
+              <FormControl />;
+                <Input placeholder=\"ABC123XYZ\" {...field} />;
               </FormControl>;
               <FormMessage />;
         />;
-        <FormField
-          control={form && form.control}
-          name="credential_url"
-            </FormItem>)}
+        <FormField;
+control={form && form.control}
+          name=\"credential_url\"
+            </FormItem />)}
         />;
         <FormField;
           control={form.control}
-          name="credential_url";
+          name=\"credential_url\";
 =======
         />
 
-        <FormField
-          control={form.control}
-          name="expiration_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Expiration Date (Optional)</FormLabel>
-              <FormControl>
-                <Input type="date" {...field} value={field.value || ""} />
+        <FormField;
+control={form.control}
+          name=\"expiration_date\"
+          render={({ field }) = /> (
+            <FormItem />
+              <FormLabel />Expiration Date (Optional)</FormLabel>
+              <FormControl />
+                <Input type=\"date\" {...field} value={field.value || \"\"} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -247,31 +247,31 @@ function CertificationFormFields() {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={form.control}
-          name="credential_id"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Credential ID (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="ABC123XYZ" {...field} />
+      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />
+        <FormField;
+control={form.control}
+          name=\"credential_id\"
+          render={({ field }) = /> (
+            <FormItem />
+              <FormLabel />Credential ID (Optional)</FormLabel>
+              <FormControl />
+                <Input placeholder=\"ABC123XYZ\" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <FormField
-          control={form.control}
-          name="credential_url"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Credential URL (Optional)</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="https://www.credential.com/verify/abc123"
+        <FormField;
+control={form.control}
+          name=\"credential_url\"
+ />>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+render={({ field }) => (
+            <FormItem />
+              <FormLabel />Credential URL (Optional)</FormLabel>
+              <FormControl />
+                <Input;
+placeholder=\"https://www.credential.com/verify/abc123\"
                   {...field}
                 />
               </FormControl>
@@ -283,9 +283,9 @@ function CertificationFormFields() {
     </>
   );
 }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 ;
 }
 }
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

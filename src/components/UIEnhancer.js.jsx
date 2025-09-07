@@ -1,6 +1,8 @@
- export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true, enableScrollEffects = true    }) => {
+ export const UIEnhancer = (
 
 
  const [theme, setTheme] = useState ('dark')  const [isParticleMode, setIsParticleMode] = useState (enableParticles)  const [showScrollToTop, setShowScrollToTop] =;
   useState (false) ;
-  const [deviceType, setDeviceType] = useState ('desktop')  useEffect ( () => {''"";
+  const [deviceType, setDeviceType] = useState ('desktop')  useEffect ( () => {''\"\";) => {
+  return $3;}
+}

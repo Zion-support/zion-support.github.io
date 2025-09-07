@@ -1,11 +1,11 @@
 
-export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;import Head from 'next/head';
+export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
+      <Head />;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;import Head from 'next/head';
 
-export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
+export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
+      <Head />;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;
         <meta;
           name='description';
           content='An inventive insight derived from autonomous research.';
@@ -19,68 +19,68 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
           content='An inventive insight derived from autonomous research.';
 
   return (
-    <div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta
-          name='description'
+    <div className='min-h-screen bg-slate-950 text-white' />;
+      <Head />;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;
+        <meta;
+name='description'
           content='An inventive insight derived from autonomous research.'
         />;
-        <meta
-          property='og:title'
+        <meta;
+property='og:title'
           content='Innovation Insight — 2025-08-14 21-47'
         />;
-        <meta
-          property='og:description'
+        <meta;
+property='og:description'
           content='An inventive insight derived from autonomous research.'
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
-        <h1 className='text-3xl font-extrabold'>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert' />;
+        <h1 className='text-3xl font-extrabold' />;
           Innovation Insight — 2025-08-14 21-47;
         </h1>;
         <div;
           className='mt-4';
-          dangerouslySetInnerHTML={{__html:;
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>','<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>','<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',
+          dangerouslySetInnerHTML={{__html:;}
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>','<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>','<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',}
 }
         />;
-        <p className='mt-6 text-white/60 text-sm'>;
+        <p className='mt-6 text-white/60 text-sm' />;
           Auto-generated by Cloud Content Factory.;
         </p>;
       </main>;
     </div>;
-  )export default function Page() {'<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-        <div
-          className='mt-4'
+  )export default function Page() {'<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>';
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>';
+        <div;
+className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
 
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
-
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;}
+}
           }}
         />;
-        <p className='mt-6 text-white/60 text-sm'>;
+        <p className='mt-6 text-white/60 text-sm' />;
           Auto-generated by Cloud Content Factory.;
         </p>;
       </main>;
   )export default function Page() {return (export default function Page() {return (</div>;)export default function Page() {return (export default function Page() {export default function Page() {export default function Page() {return (export default function Page() {export default function Page() {return (}
 
-export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta name="description" content="An inventive insight derived from autonomous research." />;
-        <meta property="og:title" content="Innovation Insight — 2025-08-14 21-47" />;
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />;
-        <meta name="twitter:card" content="summary_large_image" />;
+export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+      <Head />;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;
+        <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />;
+        <meta property=\"og:title\" content=\"Innovation Insight — 2025-08-14 21-47\" />;
+        <meta property=\"og:description\" content=\"An inventive insight derived from autonomous research.\" />;
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
       </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Innovation Insight — 2025-08-14 21-47</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>" ,
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;
+        <h1 className=\"text-3xl font-extrabold\" />Innovation Insight — 2025-08-14 21-47</h1>;}
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>\" ,}
 } />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Content Factory.</p>;
       </main>;
     </div>;
   )}
@@ -90,18 +90,18 @@ export default function Page() {return (import Head from 'next / head';
 export default /**;
  * Page - Function description;
  */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
     </div>;
   );
 
 export default function Page() {;
 
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
-
-          ,
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>'
+}
+          ,}
 }
         />
-        <p className='mt-6 text-white/60 text-sm'>
+        <p className='mt-6 text-white/60 text-sm' />
           Auto-generated by Cloud Content Factory.
         </p>
       </main>
@@ -121,8 +121,8 @@ export default function Page() {
   return (
 
 export default function Page() {
-  return (
-
+  return (}
+}
 }
 
 export default function Page() {
@@ -130,13 +130,13 @@ export default function Page() {
 import Head from 'next / head';
 
 export default /**
- * Page - Function description
+ * Page - Function description;
  */
 function Page() {
   return (
-    <div className='min - h-screen bg - slate - 950 text - white'>;
-      <Head>;
-        <title > Innovation Insight — 2025 - 08 - 14 21 - 47</title>;
+    <div className='min - h-screen bg - slate - 950 text - white' />;
+      <Head />;
+        <title  /> Innovation Insight — 2025 - 08 - 14 21 - 47</title>;
         <meta;
           name='description';
           content='An inventive insight derived from autonomous research.';
@@ -151,98 +151,98 @@ function Page() {
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;
-        <h1 className='text - 3xl font - extrabold'>;
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert' />;
+        <h1 className='text - 3xl font - extrabold' />;
           Innovation Insight — 2025 - 08 - 14 21 - 47;
         </h1>;
         <div;
           className='mt - 4';
           dangerouslySetInnerHTML={{__html:;
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>';
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>';
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>';
+              '<ul class=\"list - disc pl - 6\" /><li  /> Opportunity: Transform recurring signals into structured guides</li><li  /> Idea: Build a feature row summarizing value, capability, and link to details</li><li  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / newsroom</a></li></ul>';
+              '<ul class=\"list - disc pl - 6\" /><li  /> Opportunity: Transform recurring signals into structured guides</li><li  /> Idea: Build a feature row summarizing value, capability, and link to details</li><li  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / newsroom</a></li></ul>';
+              '<ul class=\"list - disc pl - 6\" /><li  /> Opportunity: Transform recurring signals into structured guides</li><li  /> Idea: Build a feature row summarizing value, capability, and link to details</li><li  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / newsroom</a></li></ul>';
           dangerouslySetInnerHTML={{
             __html:;
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>'
-          ,
+              '<ul class=\"list - disc pl - 6\" /><li  /> Opportunity: Transform recurring signals into structured guides</li><li  /> Idea: Build a feature row summarizing value, capability, and link to details</li><li  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / newsroom</a></li></ul>'}
+          ,}
 }
         />;
-        <p className='mt - 6 text - white / 60 text - sm'>;
+        <p className='mt - 6 text - white / 60 text - sm' />;
           Auto - generated by Cloud Content Factory.;
         </p>;
       </main>;
     </div>)export default /**;
  * Page - Function description;
  */;
-function Page() {return (<div className="min - h-screen bg - slate - 950 text - white">;
+function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);
 
 export default /**
- * Page - Function description
+ * Page - Function description;
  */
 function Page() {
   return (
-    <div className="min - h-screen bg - slate - 950 text - white">;
-      <Head>;
-        <title > Innovation Insight — 2025 - 08 - 14 21 - 47</title>;
-        <meta name="description" content="An inventive insight derived from autonomous research." />;
-        <meta property="og:title" content="Innovation Insight — 2025 - 08 - 14 21 - 47" />;
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />;
-        <meta name="twitter:card" content="summary_large_image" />;
+    <div className=\"min - h-screen bg - slate - 950 text - white\" />;
+      <Head />;
+        <title  /> Innovation Insight — 2025 - 08 - 14 21 - 47</title>;
+        <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />;
+        <meta property=\"og:title\" content=\"Innovation Insight — 2025 - 08 - 14 21 - 47\" />;
+        <meta property=\"og:description\" content=\"An inventive insight derived from autonomous research.\" />;
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
       </Head>;
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
-        <h1 className="text - 3xl font - extrabold">Innovation Insight — 2025 - 08 - 14 21 - 47</h1>;
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>" ,
+      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;
+        <h1 className=\"text - 3xl font - extrabold\" />Innovation Insight — 2025 - 08 - 14 21 - 47</h1>;}
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<ul class=\"list - disc pl - 6\" /><li  /> Opportunity: Transform recurring signals into structured guides</li><li  /> Idea: Build a feature row summarizing value, capability, and link to details</li><li  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / newsroom</a></li></ul>\" ,}
 } />;
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Content Factory.</p>;
+        <p className=\"mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Content Factory.</p>;
       </main>
     </div>
   );
-}<Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
+}<Head />;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;
         <meta name=&quot;description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />;
         <meta property=&quot;og:title&quot; content=&quot;Innovation Insight — 2025-08-14 21-47&quot; />;
         <meta property=&quot;og:description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />;
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />;
       </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
-        <h1 className='text-3xl font-extrabold'>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert' />;
+        <h1 className='text-3xl font-extrabold' />;
           Innovation Insight — 2025-08-14 21-47;
         </h1>;
         <div;
           className='mt-4';
           dangerouslySetInnerHTML={{__html:;
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>';
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>';}
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>';}
           }}
         />;
-        <p className='mt-6 text-white/60 text-sm'>;
+        <p className='mt-6 text-white/60 text-sm' />;
           Auto-generated by Cloud Content Factory.;
         </p>;
       </main>;
     </div>;
     </div>;
-  )export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta name="description" content="An inventive insight derived from autonomous research." />;
-        <meta property="og:title" content="Innovation Insight — 2025-08-14 21-47" />;
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />;
-        <meta name="twitter:card" content="summary_large_image" />;
+  )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+      <Head />;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;
+        <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />;
+        <meta property=\"og:title\" content=\"Innovation Insight — 2025-08-14 21-47\" />;
+        <meta property=\"og:description\" content=\"An inventive insight derived from autonomous research.\" />;
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
       </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Innovation Insight — 2025-08-14 21-47</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/newsroom</a></li></ul>" ,
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;
+        <h1 className=\"text-3xl font-extrabold\" />Innovation Insight — 2025-08-14 21-47</h1>;}
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>\" ,}
 } />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Content Factory.</p>;
       </main>;
     </div>;
   )}ursor/fix-website-loading-errors-and-merge-6662;
     </div>;
   )}
     </div>;
-  )})} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })},
+  )})} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })},
 })
     </div>);
 }
@@ -250,27 +250,27 @@ function Page() {
 
 
 
-      <Head>
-        <title>Innovation Insight — 2025-08-14 21-47</title>
+      <Head />
+        <title />Innovation Insight — 2025-08-14 21-47</title>
         <meta name=&quot;description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Innovation Insight — 2025-08-14 21-47&quot; />
         <meta property=&quot;og:description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>
-        <h1 className='text-3xl font-extrabold'>
-          Innovation Insight — 2025-08-14 21-47
+      <main className='container mx-auto px-6 py-12 prose prose-invert' />
+        <h1 className='text-3xl font-extrabold' />
+          Innovation Insight — 2025-08-14 21-47;
         </h1>
-        <div
-          className='mt-4'
+        <div;
+className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
-          ,
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>'
+              '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>'}
+          ,}
 }
         />
-        <p className='mt-6 text-white/60 text-sm'>
+        <p className='mt-6 text-white/60 text-sm' />
           Auto-generated by Cloud Content Factory.
         </p>
       </main>
@@ -285,19 +285,19 @@ export default function Page() {
   return (
 
 
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Head>
-        <title>Innovation Insight — 2025-08-14 21-47</title>
-        <meta name="description" content="An inventive insight derived from autonomous research." />
-        <meta property="og:title" content="Innovation Insight — 2025-08-14 21-47" />
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />
-        <meta name="twitter:card" content="summary_large_image" />
+    <div className=\"min-h-screen bg-slate-950 text-white\" />
+      <Head />
+        <title />Innovation Insight — 2025-08-14 21-47</title>
+        <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />
+        <meta property=\"og:title\" content=\"Innovation Insight — 2025-08-14 21-47\" />
+        <meta property=\"og:description\" content=\"An inventive insight derived from autonomous research.\" />
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />
       </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">
-        <h1 className="text-3xl font-extrabold">Innovation Insight — 2025-08-14 21-47</h1>
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/newsroom</a></li></ul>" ,
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />
+        <h1 className=\"text-3xl font-extrabold\" />Innovation Insight — 2025-08-14 21-47</h1>}
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>\" ,}
 } />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Content Factory.</p>
       </main>
 
     </div>
@@ -309,8 +309,8 @@ export default function Page() {
 
   )
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error",
+    console.error(\"Error:\", error);}
+    return res.status(500).json({ error: \"Internal server error\",}
 });
   }
 }

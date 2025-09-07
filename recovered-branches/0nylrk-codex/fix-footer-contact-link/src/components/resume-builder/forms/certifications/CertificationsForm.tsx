@@ -13,28 +13,32 @@ import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';interface CertificationsFormProps {
   resumeId: string;
     certifications: Certification[]
-  onComplete: () => void
-  onBack: () => void
+  onComplete: () => void;}
+onBack: () => void}
 }
   };
-  const handleEdit = (cert: Certification) => {
+  const handleEdit = (
     setEditingId(cert.id!);
     form.reset({
-      ...cert
-      issue_date: formatDateValue(cert.issue_date)
+      ...cert;
+issue_date: formatDateValue(cert.issue_date)) => {
+  return $3;}
+}
       expiration_date: formatDateValue(cert.expiration_date)})
   }
   const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this certification?')) {
-      await deleteCertification(id)
+    if (confirm('Are you sure you want to delete this certification?')) {}
+      await deleteCertification(id)}
     }
   };
   },;
-  const handleEdit = (cert: Certification) => {;
+  const handleEdit = (;
     setEditingId(cert && cert.id!);
     form && form.reset({;
       ...cert,;
-      issue_date: formatDateValue(cert && cert.issue_date),;
+      issue_date: formatDateValue(cert && cert.issue_date),;) => {
+  return $3;}
+}
       expiration_date: formatDateValue(cert && cert.expiration_date)})
 };
   return (
@@ -42,47 +46,49 @@ import { CertificationFormValues, certificationSchema } from './types';interface
     }
   },;
 ;
-  const handleEdit = (cert:Certification) => {;
+  const handleEdit = (;
     setEditingId(cert.id!),;
     form.reset({;
       ...cert,;
-      issue_date:formatDateValue(cert.issue_date),;
+      issue_date:formatDateValue(cert.issue_date),;) => {
+  return $3;}
+}
       expiration_date:formatDateValue(cert.expiration_date)}),;
   },;
 ;
   const handleDelete = async (id:string) => {;
-    if (confirm('Are you sure you want to delete this certification?')) {;
-      await deleteCertification(id);
+    if (confirm('Are you sure you want to delete this certification?')) {;}
+      await deleteCertification(id);}
     }
   },;
 ;
   return (;
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
-        <p className="text-muted-foreground">;
+    <div className=\"space-y-6\" />;
+      <div />;
+        <h2 className=\"text-xl font-semibold mb-2\" />Certifications & Licenses</h2>;
+        <p className=\"text-muted-foreground\" />;
           Add any professional certifications, licenses, or credentials you have earned.;
         </p>;
       </div>;
-      {certifications && certifications.length > 0 && (;
-        <CertificationsList
-          certifications={certifications} 
+      {certifications && certifications.length > 0 && (;}
+        <CertificationsList;}
+certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />;
       )}
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
+      <div className=\"bg-muted/40 p-6 rounded-lg\" />;
+        <h3 className=\"text-md font-medium mb-4\" />;
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
+        <Form {...form} />;
+          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className=\"space-y-4\" />;
             <CertificationFormFields form={form} />;
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify-between pt-2">;
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
+            {error && <Alert variant=\"destructive\" /><AlertDescription />{error}</AlertDescription></Alert>}
+            <div className=\"flex justify-between pt-2\" />;
+              <Button;
+type=\"button\"
+                variant=\"outline\"
+                onClick={() = /> {;
+                  if (editingId) {;}
+                    setEditingId(null);}

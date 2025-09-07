@@ -1,15 +1,19 @@
 import React from 'react';
-const AIAnalyticsCopilot = ({ className }) => {return (<div className={className || ''}>;
-      <h1>AIAnalyticsCopilot</h1>;
-      <p>This component is under development.</p>;
+const AIAnalyticsCopilot = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />AIAnalyticsCopilot</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const AIAnalyticsCopilot = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AIAnalyticsCopilot</h1>
-      <p>This component is under development.</p>
+const AIAnalyticsCopilot = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />AIAnalyticsCopilot</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

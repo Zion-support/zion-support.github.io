@@ -4,34 +4,36 @@ import {useState, useEffect} from 'react';
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 768 : false,
+    typeof window !== \"undefined\" ? window.innerWidth < 768 : false,
   );
   useEffect(() => {
 
-    const handleResize = () => {
+    const handleResize = (
 
     if (typeof window !== 'undefined') {
-      window && window.addEventListener('resize', handleResize);
+      window && window.addEventListener('resize', handleResize);) => {
+  return $3;}
+}
       return () => window && window.removeEventListener('resize', handleResize)    }
     return undefined;
   }, []);
 
-  return isMobile
+  return isMobile;
 import {useState, useEffect} from 'react';
 export /**
- * useIsMobile - Function description
+ * useIsMobile - Function description;
  */
 function useIsMobile() {
   const [is_mobile, setIsMobile] = useState (
     typeof window !== 'undefined' ? window.inner_width < 768 : false);
 ;
   useEffect (() => {
-    const handle_resize = () =>: any {
-      setIsMobile (window.inner_width < 768);
+    const handle_resize = () =>: any {}
+      setIsMobile (window.inner_width < 768);}
     }
 ;
-    // Check condition
-if ( {) {
+    // Check condition;
+if ( {) {}
   $2}
       window.addEventListener ('resize', handle_resize);
       return () => window.removeEventListener ('resize', handle_resize);
@@ -43,12 +45,14 @@ export function useIsMobile() {;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
   ),;
   useEffect(() => {;
-    const handleResize = () => {;
-      setIsMobile(window.innerWidth < 768);
+    const handleResize = (;
+      setIsMobile(window.innerWidth < 768);) => {
+  return $3;}
+}
     },;
     if (typeof window !== 'undefined') {;
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+      window.addEventListener('resize', handleResize);}
+      return () => window.removeEventListener('resize', handleResize);}
     }
     return undefined;
   }, []);
