@@ -1,5 +1,8 @@
 import { ProductListing } from "@/types/listings";
 
+// Innovative Micro SAAS Services 2030 - Zion Tech Group
+// Real, market-ready micro SAAS solutions with transparent pricing
+
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
   // AI-Powered Micro SAAS Solutions
   {
@@ -143,7 +146,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     images: ["https://ziontechgroup.com/images/ai-marketing-predictor.jpg"],
     createdAt: "2024-01-05T10:00:00.000Z",
     rating: 4.9,
-    reviewCount: 178,
     featured: true,
     location: "Global",
     availability: "2 weeks",
@@ -321,3 +323,72 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     integrations: ["Energy Management Systems", "Transportation APIs", "Supply Chain Systems", "Accounting Software"]
   }
 ];
+
+// Service Categories for 2030
+export const MICRO_SAAS_CATEGORIES_2030 = [
+  'AI & Research',
+  'AI & Operations', 
+  'AI & FinTech',
+  'AI & Metaverse',
+  'AI & Healthcare',
+  'AI & Space Tech',
+  'AI & Content'
+];
+
+// Market Statistics for 2030
+export const MICRO_SAAS_STATISTICS_2030 = {
+  totalServices: INNOVATIVE_MICRO_SAAS_SERVICES_2030.length,
+  totalCategories: MICRO_SAAS_CATEGORIES_2030.length,
+  averagePrice: Math.round(
+    INNOVATIVE_MICRO_SAAS_SERVICES_2030.reduce((sum, service) => sum + service.price, 0) / 
+    INNOVATIVE_MICRO_SAAS_SERVICES_2030.length
+  ),
+  averageMonthlyPrice: Math.round(
+    INNOVATIVE_MICRO_SAAS_SERVICES_2030.reduce((sum, service) => sum + service.monthlyPrice, 0) / 
+    INNOVATIVE_MICRO_SAAS_SERVICES_2030.length
+  ),
+  averageRating: Math.round(
+    (INNOVATIVE_MICRO_SAAS_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / 
+    INNOVATIVE_MICRO_SAAS_SERVICES_2030.length) * 10
+  ) / 10,
+  featuredServices: INNOVATIVE_MICRO_SAAS_SERVICES_2030.filter(service => service.featured).length,
+  aiServices: INNOVATIVE_MICRO_SAAS_SERVICES_2030.filter(service => 
+    service.category.includes('AI') || service.aiScore > 90
+  ).length,
+  highROIServices: INNOVATIVE_MICRO_SAAS_SERVICES_2030.filter(service => {
+    const roi = service.roi;
+    if (typeof roi === 'string') {
+      const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+      return roiNumber > 500;
+    }
+    return false;
+  }).length
+};
+
+// Featured Services for 2030
+export const FEATURED_MICRO_SAAS_2030 = INNOVATIVE_MICRO_SAAS_SERVICES_2030.filter(service => service.featured);
+
+// High-ROI Services (ROI > 500%)
+export const HIGH_ROI_MICRO_SAAS_2030 = INNOVATIVE_MICRO_SAAS_SERVICES_2030.filter(service => {
+  const roi = service.roi;
+  if (typeof roi === 'string') {
+    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    return roiNumber > 500;
+  }
+  return false;
+});
+
+// Quick Setup Services (< 4 weeks)
+export const QUICK_SETUP_MICRO_SAAS_2030 = INNOVATIVE_MICRO_SAAS_SERVICES_2030.filter(service => {
+  const setupTime = service.setupTime;
+  if (typeof setupTime === 'string') {
+    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    return weeks < 4;
+  }
+  return false;
+});
+
+// Export individual service arrays for specific use cases
+export {
+  INNOVATIVE_MICRO_SAAS_SERVICES_2030 as default
+};

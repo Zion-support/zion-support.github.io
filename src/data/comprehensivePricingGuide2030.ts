@@ -32,7 +32,25 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     category: "AI & Business Intelligence",
     pricing: [
       {
-        name: "Starter",
+        name: 'Starter',
+        price: 2499,
+        monthlyPrice: 249,
+        description: 'Perfect for small research teams and startups',
+        features: [
+          'Autonomous market research and analysis',
+          'Real-time competitive intelligence',
+          'Predictive trend forecasting',
+          'Basic dashboard and reporting',
+          'Email support',
+          'Up to 5 research projects'
+        ],
+        bestFor: 'Startups, small research teams, individual researchers',
+        setupTime: '2-4 weeks',
+        support: 'Email support + documentation',
+        roi: '800%'
+      },
+      {
+        name: 'Professional',
         price: 4999,
         currency: "$",
         billing: "one-time setup",
@@ -62,7 +80,26 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         cta: "Most Popular"
       },
       {
-        name: "Enterprise",
+        name: 'Professional',
+        price: 7999,
+        monthlyPrice: 799,
+        description: 'Comprehensive governance for medium organizations',
+        features: [
+          'Everything in Basic',
+          'Advanced ethical AI framework',
+          'Real-time compliance alerts',
+          'Stakeholder communication platform',
+          'AI ethics training modules',
+          'Priority support',
+          'Up to 50 AI models'
+        ],
+        bestFor: 'Medium AI organizations, healthcare, finance',
+        setupTime: '4-8 weeks',
+        support: 'Priority support + dedicated specialist',
+        roi: '800%'
+      },
+      {
+        name: 'Enterprise',
         price: 15999,
         currency: "$",
         billing: "one-time setup",
