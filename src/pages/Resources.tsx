@@ -10,31 +10,7 @@ import {
   HelpCircle, 
   ArrowRight, 
   Star, 
-  Calendar, 
-  Clock, 
-  Download, 
-  ExternalLink,
-  Search,
-  Filter,
-  TrendingUp,
-  Lightbulb,
-  Award,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Leaf,
-  Globe,
-  Building,
-  TrendingDown,
-  Eye,
-  MessageCircle,
-  Play,
-  Headphones,
-  Bookmark,
-  Share2
+  Search
 } from 'lucide-react';
 // import SEO from '@/components/SEO';
 
