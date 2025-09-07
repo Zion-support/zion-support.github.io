@@ -71,7 +71,6 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
->>>>>>> origin/resolved-merge-conflicts
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
